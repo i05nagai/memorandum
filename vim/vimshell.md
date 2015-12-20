@@ -17,4 +17,12 @@ g:vimshell_vimshrc_path=expand('~/.vim/vimshrc')
 `g:vimshell_popup_command`が空白の場合は、`split`が`g:vimshell_popup_height`で実行される。
 `g:vimshell_popup_height`の初期値は30
 
+## vimshellでのcommit
+vimshell上で`git commit`を実行した時に、commit messsage編集画面に行くが、commit message編集画面を閉じるときは、`:w`かつ`:bd`で保存しバッファを閉じる。
+
+## インタープリタを起動する場合
+iexeを使う。
+```zsh
+iexe python
+```
 
