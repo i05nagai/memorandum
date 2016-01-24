@@ -18,3 +18,53 @@ IME->プロパティ->全般タブ->編集操作のキー設定の変更
 * 選択して検索
     * 検索プロバイダを指定して検索
 
+## フォント
+
+### Ricty
+https://github.com/yascentur/Ricty
+
+Windwosでは下記のように生成
+
+1.以下をDL
+    * Ricty
+        * https://github.com/yascentur/Ricty
+    * unofficial fontfrge
+        * http://www.geocities.jp/meir000/fontforge/index.html
+        * `fontforge-cygwin_2015_01_21.zip`をDL
+    * Inconsolata
+        * http://levien.com/type/myfonts/inconsolata.html
+        * OpenType fileをDL
+    * Migu_1M
+        * http://mix-mplus-ipa.osdn.jp/migu/
+        * `migu-1m-20150712.zip`をDL
+2. 作業用のtempディレクトリを適当に作成し以下を配置。
+
+| 解凍フォルダ                    | 移動対象ファイル、フォルダ                               |
+|---------------------------------|--------------------------------------------------------  |
+| Rictyフォント生成生成スクリプト | `ricty_generator.sh,ricty_discord_patch.pe,miscフォルダ` |
+| unofficial fontforge            | fontforge.bat,`_image.7z`,`7zr.exe`                      |
+| Inconsolata                     | Inconsolata.otf                                          |
+| Migu 1M                         | migu-1m-regular.ttf,migu-1m-bold.ttf                     |
+
+3. `fontforge.bat`の下記を修正
+
+変更前
+```bat
+xwin-close.exe -wait
+fontforge.exe -nosplash %file0% %1 %2 %3 %4 %5 %6 %7
+xwin-close.exe -close
+```
+変更後
+```bat
+xwin-close.exe -wait
+sh ricty_generator.sh auto
+sh misc/os2version_reviser.sh Ricty-*.tty RictyDiscord-*.ttf
+xwin-close.exe -close
+```
+
+4. cmdから`fontforge.bat`を実行すると以下が作成されるので、インストール。
+    * Ricty-Regular.ttf
+    * Ricty-Bold.ttf
+    * RictyDiscord-Regular.ttf
+    * RictyDiscord-Bold.ttf
+
