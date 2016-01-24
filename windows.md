@@ -32,8 +32,8 @@ Windwosでは下記のように生成
         * http://www.geocities.jp/meir000/fontforge/index.html
         * `fontforge-cygwin_2015_01_21.zip`をDL
     * Inconsolata
-        * http://levien.com/type/myfonts/inconsolata.html
-        * OpenType fileをDL
+        * https://www.google.com/fonts#UsePlace:use/Collection:Inconsolata
+        * 右のDLからダウンロード。
     * Migu_1M
         * http://mix-mplus-ipa.osdn.jp/migu/
         * `migu-1m-20150712.zip`をDL
