@@ -43,10 +43,21 @@ Git‚ÍƒCƒ“ƒXƒg[ƒ‹Ï‚İ‚Ì‘O’ñB
     git clone git://github.com/Shougo/neobundle.vim
 
 
-##ƒJƒ‰[ƒXƒL[ƒ}‚É‚Â‚¢‚Ä
+## option
 
+##ƒJƒ‰[ƒXƒL[ƒ}‚É‚Â‚¢‚Ä
 ‚Æ‚è‚ ‚¦‚¸ƒfƒtƒHƒ‹ƒg‚ÌƒJƒ‰[ƒXƒL[ƒ}‚©‚ç‚æ‚³‚°‚È‚à‚Ì‚ğ‘I‚ÔB
 http://nanasi.jp/colorscheme/default_install.html
+
+‚¨‚·‚·‚ß‚Í`colorscheme desert`
+
+### wombat
+’Ç‰Á‚Å‚¢‚ê‚é‚È‚çˆÈ‰º‚ª—Ç‚¢B
+http://www.vim.org/scripts/script.php?script_id=1778
+
+1. ã‹LƒTƒCƒg‚©‚ç`wombat.vim`‚ğDL
+2. `vim73-kaoriya-win64\vim73\colors`‚É”z’uB
+3. vimrc‚É`colorscheme wombat`
 
 ##gvimrc‚Ævimrc‚ÌêŠ
 ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚Å‚¢‚¸‚ê‚©‚ÅŠm”F‚Å‚«‚éB
@@ -55,5 +66,16 @@ windows‚Ìê‡AƒVƒ“ƒ{ƒŠƒbƒNƒŠƒ“ƒN‚ğì‚ê‚Î“Ç‚İ‚ñ‚Å‚­‚ê‚éBiƒVƒ‡[ƒgƒJƒbƒg‚Í‚¾‚
 ```vimrc
 :echo $HOME
 :echo $VIM
+```
+
+
+## ƒtƒHƒ“ƒg
+vimrc‚ÉˆÈ‰º‚ğ‹LÚ‚·‚ê‚Îİ’è‰Â”\B
+RictyƒtƒHƒ“ƒg‚ª‚¨‚·‚·‚ßB
+```vim
+"”¼Šp•¶š‚Ìİ’è
+set guifont=Ricty\ Discord:h12
+"‘SŠp•¶š‚Ìİ’è
+set guifontwide=Ricty\ Discord:h12
 ```
 
