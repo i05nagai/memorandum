@@ -1,4 +1,9 @@
-# bat
+# batch
+
+## batファイルのパスの取得
+```cmd
+echo %~dp0
+```
 
 ## 一行で複数コマンド
 ```cmd
@@ -39,6 +44,15 @@ rem comment here
 ```bat
 SET 変数名=[文字列]
 SET /A 変数名=[数式]
+```
+
+### ローカル変数
+`setlocal`から`endlocal`まで有効なローカル変数
+```bat
+setlocal
+    set num=1
+    echo %num%
+endlocal
 ```
 
 ## 文字列

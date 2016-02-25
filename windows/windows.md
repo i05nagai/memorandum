@@ -1,5 +1,55 @@
 # windows
 
+## Windowsでパッケージ管理
+Chocolatelyは、Windowsのパッケージマネージャー。
+Linuxのapt-getとかmacのmacportsとかhomebrewの類のもの。
+[Chocolately](https://chocolatey.org/)
+
+### インストール
+インストールは既定のディレクトリのデータの展開とパスを通すだけ。
+レジストリ等は汚さないので、コントロールパネルからアンインストールなどもできない。（する意味がいない）
+
+1. cmdかpowershellを管理者として実行で起動する。
+2. 以下を実行すると、`C:\ProgramData\chocolatey\`にインストールされる。
+    * cmdの場合
+```bat
+ @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+```
+    * powershellの場合
+```bat
+iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+### 機能
+オプションはUnix系のオプション指定`/h`ではなく`-h`などで指定可能。
+* インストール
+```
+choco install git
+```
+* アンインストール
+```
+choco uninstall git
+```
+* 検索
+```
+choco search git
+```
+* localのパッケージ一覧
+```
+clist -l
+```
+* help
+```
+choco -h
+```
+
+### メモ
+```
+choco install 7zip.install 
+choco install ruby
+choco install jruby
+```
+
 
 ## pdfのテキスト抽出
 Xpdfで抽出できる。
