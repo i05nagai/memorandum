@@ -1,4 +1,27 @@
 # ruby
+## gemの作り方 with bundler
+### プロジェクトを作成
+`bundler gem project_name`
+
+###
+
+
+## jruby
+### jrubyでjavaにコンパイル
+1. `sample.rb`を用意
+2. `jruby -S jrubyc sample`をすると`sample.class`ができる。
+3. 実行時は、jrubyの`jruby.jar`をクラスパスに追加して実行する
+```java
+java -cp .;C:\path\to\jruby.jar sample
+```
+    * 注意として上記コマンドで`sample.class`としないこと
+
+またコンパイルしたコードは、jrubyでも実行できる。
+```
+jruby sample.class
+```
+
+しかし、遅い。
 
 ## WindowsでRuby処理系の切り替え
 windows以外だとrvmが一般的だが、windowsの場合は下記が候補となる。

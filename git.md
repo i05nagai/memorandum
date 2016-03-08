@@ -46,3 +46,35 @@ https://hoge@github.com/hage/hage.git
 ```
 とするとパスワードが求められるので、入力する。
 
+
+## windowsでのlocale error
+Windowsのgitで`git add -p`をすると以下のエラーがでた。
+```
+!!!perl: warning: Setting locale failed.!!!
+!!!perl: warning: Please check that your locale settings:!!!
+!!!	LC_ALL = (unset),!!!
+!!!	LANG = "ja"!!!
+!!!    are supported and installed on your system.!!!
+!!!perl: warning: Falling back to the standard locale ("C").!!!
+```
+gitは中でperlを呼んでいるが、localeが設定されていないので起こられている。
+よってlocaleの設定をしてあげればOK。
+Linuxなどの場合は設定方法が色々調べれば出るので、扱わない。
+以下ではWindowsでのlocaleの設定方法について述べる。
+
+### 方法1 cmdで設定
+cmd上でgitを利用している場合はcmdの環境変数として`LC_ALL`と`LANG`を設定する。
+```cmd
+set LC_ALL=ja_JP.UTF-8
+set LANG=ja_JP.UTF-8
+```
+
+### 方法2 環境変数を設定
+vimshellなどから使う場合は、環境変数として設定する。
+コントロールパネル->システム->詳細タブ->環境変数から以下のように設定する。
+* 変数:LC_ALL
+* 値:ja_JP.UTF-8
+* 変数:LANG
+* 値:ja_JP.UTF-8
+
+

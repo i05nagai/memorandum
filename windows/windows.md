@@ -1,5 +1,12 @@
 # windows
 
+## console
+ConEmuがよさそう。
+Chocolatelyがあれば次でOK.
+```
+choco install conemu
+```
+
 ## Windowsでパッケージ管理
 Chocolatelyは、Windowsのパッケージマネージャー。
 Linuxのapt-getとかmacのmacportsとかhomebrewの類のもの。
