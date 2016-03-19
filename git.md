@@ -1,5 +1,21 @@
 # Git
 
+## 設定
+`git config --global`でアカウント共通設定が可能。
+* windowsは、`~/.gitconfig`
+
+### alias
+下記のようにaliasを設定可能。
+```git
+git cofing --gloabl alias.st st
+```
+ただ、一度にaliasを追加する場合やまとめて編集する場合は、`.gitconfig`ファイルを開いて編集した方が楽。
+フォーマットは下記の通り。
+```
+[alias]
+	l = log --abbrev-commit --date=iso --graph --pretty=format:'%C(red)%h %C(yellow)%d%C(green)%cd %C(blue)%cn\n%C(reset)%s\n'
+```
+
 ## windowsでのpushエラー
 ### 症状
 使用しているgitは以下。
