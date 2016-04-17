@@ -13,3 +13,7 @@ gitのplugin
 | git log                | :Glog             |                                                                             |
 | git mv                 | :Gmove            |                                                                             |
 | git rm                 | :Gremove          |                                                                             |
+
+
+## 設定
+
