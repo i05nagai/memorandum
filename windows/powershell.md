@@ -16,6 +16,9 @@ C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -NoExit -ExecutionPoli
 ```
 これで、起動時に`01_setup.ps1`に書かれている内容が読み込まれる。
 
+## vim
+powershellのシンタックスハイライトとか
+https://github.com/PProvost/vim-ps1
 
 ## alias
 - 組み込みAliasの取得
@@ -99,6 +102,16 @@ PowerShell.exe -ExecutionPolicy UnRestricted -File .runme.ps1
 ```
 
 ## 基本構文
+### コメント
+```ps1
+<#
+block comment
+#>
+```
+
+```ps1
+# one line comment
+```
 
 ### if
 
