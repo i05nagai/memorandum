@@ -93,4 +93,19 @@ vimshellなどから使う場合は、環境変数として設定する。
 * 変数:LANG
 * 値:ja_JP.UTF-8
 
+## tips
+
+### Gitの最初のコミットは空コミット
+[Gitの最初のコミットは空コミットにしよう](http://qiita.com/NorsteinBekkler/items/b2418cd5e14a52189d19)
+最初のコミットは`git rebase -i`できないので、
+
+```shell
+# リポジトリ作成
+git init
+# 最初のコミット
+git commit --allow-empty -m "first commit"
+```
+
+
+
 
