@@ -1,5 +1,13 @@
 # boost
 
+## インストール
+### github
+```shell
+git clone https://github.com/boostorg/boost
+git submodule init
+git submodule update
+```
+
 ## ublas
 ### matrix
 ```cpp
