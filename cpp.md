@@ -1,5 +1,34 @@
 # C++
 
+## 環境変数
+### g++
+下記の環境変数のパスのheader fileを探す。
+```shell
+CPATH
+C_INCLUDE_PATH
+CPLUS_INCLUDE_PATH
+OBJC_INCLUDE_PATH
+```
+
+下記の環境変数のパスのlibファイルを探す。
+```shell
+LD_LIBRARY_PATH
+```
+
+### clang
+下記の環境変数のパスのheader fileを探す。
+```shell
+CPATH
+C_INCLUDE_PATH
+CPLUS_INCLUDE_PATH
+OBJC_INCLUDE_PATH
+```
+
+
+```shell
+LIBRARY_PATH
+```
+
 ## pyclewn
 debugger
 
@@ -223,4 +252,27 @@ objdumpコマンドを使う。
 * `-T`
     * オブジェクトファイル内のヘッダーのDynamicSYMBOL情報
 
+## pre_compiled_header
+### gcc
+下記で`pre_compiled_header.h`から`pre_compiled_header.h.pch`が生成される。
+```shell
+g++ -I/path/to/hearder pre_compiled_header.h
+```
+
+`pre_compiled_header.H`の中身は下記の通り。
+```cpp
+#pragma once
+#include <boost/shared_ptr.hpp>
+```
+
+### clang
+下記で`pre_compiled_header.h`から`pre_compiled_header.h.pch`が生成される。
+```shell
+clang -ccl pre_compiled_header.h -emit-pch -o pre_compiled_header.h.pch
+clang++ -x c++-header pre_compiled_header.h
+```
+
+```shell
+cang++ -include pre_compiled_header.h.gch source.cpp
+```
 
