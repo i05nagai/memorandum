@@ -4,9 +4,12 @@
 ## インストール
 [qiita](http://qiita.com/sadayuki-matsuno/items/87fb9793b1d38ab58e18)
 
-
-
 alfresco-community-installer-201604-linux-x64.bin`を実行すると足りないライブラリが表示されるので、yumでいれる。
+基本的にlibreofficeを入れればことたりるはず。
+
+```
+sudo yum install libreoffice
+```
 
 ```
 sudo yum install fontconfig libSM libICE libXrender libXextlibcups libGLU
