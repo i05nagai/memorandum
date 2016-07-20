@@ -93,6 +93,19 @@ vimshellなどから使う場合は、環境変数として設定する。
 * 変数:LANG
 * 値:ja_JP.UTF-8
 
+## patch
+gitでpatchを作る場合は以下のようにする。
+`--no-prefix`をつけないと、`a/file_name`, `b/file_name`などのファイル名で差分が生成される。
+
+```shell
+git diff --no-prefix > diff.patch
+```
+
+patchの適用は`patch`コマンドを使う。
+```shell
+patch -p0 < diff.patch
+```
+
 ## tips
 
 ### Gitの最初のコミットは空コミット
