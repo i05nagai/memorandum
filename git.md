@@ -119,6 +119,21 @@ git init
 git commit --allow-empty -m "first commit"
 ```
 
+### reset/checkout
+`master`ブランチにいるとする。
+`HEAD`は`master`ブランチを指しているとする。
 
+* 最初のコミットのSHA1が`11...`
+* 2つ目のコミットのSHA1が`22...`
+* `master`は`22...`を指している
+* `HEAD`も`22...`を指している
+
+1. `git reset --soft HEAD~`
+  * `master`ブランチの指しているコミットが一つ前(`11....`)に戻る
+2. `git reset HEAD~` or `git reset --mixed HEAD~`
+  * オプションを省略すると`--mixed`がつく
+  * この場合は1に加えて、indexに一つ前のコミット(`11....`)をコピーする。
+3. `git reset --hard HEAD~`の場合
+  * 2に加えて、作業ディレクトリも一つ前のコミット(`11....`)をコピーする。
 
 
