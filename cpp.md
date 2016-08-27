@@ -268,11 +268,56 @@ g++ -I/path/to/hearder pre_compiled_header.h
 ### clang
 下記で`pre_compiled_header.h`から`pre_compiled_header.h.pch`が生成される。
 ```shell
-clang -ccl pre_compiled_header.h -emit-pch -o pre_compiled_header.h.pch
-clang++ -x c++-header pre_compiled_header.h
+clang++ -cc1 -emit-pch -o pre_compiled_header.h.gch pre_compiled_header.h
 ```
 
 ```shell
-cang++ -include pre_compiled_header.h.gch source.cpp
+clang++ -include-pch pre_compiled_header.h.gch source.cpp
 ```
+
+## clang
+
+### c++11
+下記を指定
+
+```shell
+clang++ -std=c++11 -stdlib=libc++ main.cpp
+```
+
+### mac
+macでのclangのupdateはxcodeからupdateする。
+
+[](http://minus9d.hatenablog.com/entries/2013/08/06)
+
+### error
+* `-fcxx-exceptions`
+```shell
+error: C++ exceptions was disabled in PCH file but is currently enabled
+```
+* `-fexceptions`
+```shell
+error: exception handling was disabled in PCH file but is currently enabled
+```
+* `-x c++`
+* `-x c++-headers`
+* `-fblocks`
+```shell
+error: blocks extension to C was disabled in PCH file but is currently enable
+```
+* `-fmax-type-align=16`
+    * 数字は？
+```
+error: default maximum alignment for types differs in PCH file vs. current file
+```
+*
+```shell
+
+```
+
+
+## 参考
+* [isocpp](https://isocpp.org/)
+
+
+
 
