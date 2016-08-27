@@ -35,3 +35,15 @@ FFでサポートなし。アドインで対応。TabMixPlusが対応してい�
 | キャレットブラウズモードの切り替え              | F7                    |
 | ロケーションバーを選択                          | F6, Alt + D, Ctrl + L |
 
+## addon
+
+### firelink
+URLとタイトルを好きな形式でコピー。
+* [FireLink - Copy link with keyboard shortcuts :: Add-ons for Firefox](https://addons.mozilla.org/ja/firefox/addon/firelink/)
+* [FireLink - Copy title and URL in any format](http://firelink.ongaeshi.me/)
+
+#### shortcut
+* Ctrl+C
+    * 未選択状態で押すと現在開いているサイトのURLとタイトルをコピーできる。
+* Shift+Ctrl+C
+    * 選択状態で押すと現在開いているサイトのURLと選択テキストをタイトルとしてコピーできる。
