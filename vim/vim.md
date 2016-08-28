@@ -209,4 +209,26 @@ j オプションをつけると、マッチした場所にジャンプしませ
 1. でpathにパスをコピー。
 1. 貼り付け先で、`<C-R>=`とし、`=path`と入力する。
 
+## clipboard
+### mac
+vim, vim+tmuxでvimの選択範囲やファイルをクリップボードへコピーする方法は色々ある。
+vim単体の場合は、vimを`+clipboard`でbuildして、設定を加える。
+tmux+vimの場合は、tmux側のコピー方法に設定を加えるなどがある。
+
+環境依存であったり、準備が面倒なので、ちょっとしたコピーしかない場合は下記のコマンドでOK.
+
+ファイルをクリップボードへコピー
+```
+:w !pbcopy
+```
+
+選択範囲をクリップボードへコピー。
+visual modeで選択して`:w !pbcopy`と打てば下記が入力される。
+```
+:'<,'>w !pbcopy
+```
+
+### reference
+* [vim commands and piping](http://seejohncode.com/2014/01/27/vim-commands-piping/)
+
 
