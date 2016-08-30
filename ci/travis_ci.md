@@ -190,6 +190,71 @@ compiler:
 C++のbuild matrixの変数は、`env`と`compiler`の2つである。
 つまり、`env`と`compiler`で指定した組み合わせの数だけbuildが実行される。
 
+## Configuring Build Notifications
+### Notifications
+
+## Notifications
+### slack
+1. slackの`App & Integraiton`より、Travis CIを選択
+2. 登録するとTokenが発行される
+3. 以下のいずれかを`.travis.yml`に記載
+    * simple
+
+```yml
+notifications:
+  slack: i05nagai:Onqc91K8U1WKSLYGgThWftTY
+```
+
+    * multi-channel
+
+```yml
+notifications:
+  slack:
+    rooms:
+      - account_name:token#channel
+      - account_name:token#channel
+```
+
+    * 
+
+### Encrypting your credentials
+tokenがわかると誰でも通知できてしまうので、tokenを暗号化したものを`.travis.yml`に記載する。
+暗号化はCommand line toolsをインストールし、以下を実行する。
+
+```shell
+travis encrypt "account_name:token#channel"
+```
+
+実行すると下記が出力される。
+
+```
+Detected repository as repository/name, is this correct? |yes| yes
+Please add the following to your .travis.yml file:
+
+  secure: "key"
+
+  Pro Tip: You can add it automatically by running with --add.
+```
+
+`secure: "key"`の部分をコピーして`.travis.ylm`に以下のように貼り付ける。　
+
+```
+notifications:
+  slack:
+    rooms:
+      - secure: "key"
+```
+
+
+## tips
+### travis command line tools
+* [travis-ci/travis.rb: Travis CI Client (CLI and Ruby library)](https://github.com/travis-ci/travis.rb)
+
+```
+gem install travis
+```
+
+
 ## .travis.yml
 ### C++
 下記指定でC++としてのbuildとなる。
@@ -215,4 +280,6 @@ compiler: gcc
 
 
 #### reference
-[C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
+* [C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
+* [http://packsaddle.org/articles/differences-between-travis-ci-and-circle-ci/ TravisCIとCircleCIでちょっとずつ違うビルド環境の考え方の違い – Saddler - checkstyle to anywhere]
+
