@@ -317,7 +317,7 @@ error: default maximum alignment for types differs in PCH file vs. current file
 
 ## 参考
 * [isocpp](https://isocpp.org/)
-
+* [msgpack/msgpack-c: MessagePack implementation for C and C++ / msgpack.org](https://github.com/msgpack/msgpack-c)
 
 
 
