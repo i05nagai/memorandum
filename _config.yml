@@ -2,6 +2,17 @@
 markdown: kramdown
 author:
   name: i05nagai
+baseurl: /memorandum
+#currrently github only supports minima
+theme: minima
+## following items are set by Gihutb io. We cannot override.
+lsi: false
+safe: true
+incremental: false
 # GFM style code highlight syntax
 highlighter: rouge
-baseurl: /memorandum
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+
