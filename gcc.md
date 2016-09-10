@@ -1,5 +1,12 @@
 # gcc
 
+## gcc-4.6
+* friend宣言はclassキーワードがいる
+```
+frined class HogeClass;//OK
+frined HogeClass;//NO
+```
+
 ## C++11 Suport in GCC
 * [C++ Standards Support in GCC - GNU Project - Free Software Foundation (FSF)](https://gcc.gnu.org/projects/cxx-status.html#cxx11)
 
