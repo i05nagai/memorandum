@@ -1,3 +1,8 @@
+---
+layout: math
+title: Gauss-Newton Method
+---
+
 # Gauss-Newton Method
 
 ## Symbol

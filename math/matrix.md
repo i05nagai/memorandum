@@ -1,3 +1,8 @@
+---
+layout: math
+title: Matrix
+---
+
 # matrix
 
 ## 行列の微分
@@ -38,7 +43,7 @@ A
 $$
 
 同様に
-* $B = (a_{j}^{i})_{i,j}$
+* $B = (b_{j}^{i})_{i,j}$
     * $M$行$N$列の行列
     * $B$の$i$行$j$番目の要素を$b_{j}^{i}$とかく
 * $b^{i}$
@@ -241,4 +246,6 @@ $$
     \right)
     = B^{T}
 $$
+
+### $g(f(x)):\mathbb{R}^{L} \rightarrow \mathbb{N}$の合成関数の微分 
 
