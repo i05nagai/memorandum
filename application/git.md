@@ -1,5 +1,6 @@
 # Git
 
+
 ## 設定
 `git config --global`でアカウント共通設定が可能。
 * windowsは、`~/.gitconfig`
@@ -61,6 +62,53 @@ git remote add origin https://hoge:fuga@github.com/hage/hage.git
 https://hoge@github.com/hage/hage.git
 ```
 とするとパスワードが求められるので、入力する。
+
+## Commit message
+一応古典的には下記が原則
+1. タイトルの後は1行空けて本文を書く
+1. タイトルを50字以内におさめる
+1. タイトルの文頭を大文字にする
+1. タイトルの文末にピリオドを付けない
+1. タイトルは命令形で記述する
+1. 本文は1行あたり72字以内におさめる
+1. 本文ではどのようにではなく何をとなぜを説明する
+
+```
+Summarize changes in around 50 characters or less
+ 
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like `log`, `shortlog`
+and `rebase` can get confused if you run the two together.
+ 
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequenses of this
+change? Here's the place to explain them.
+ 
+Further paragraphs come after blank lines.
+ 
+ - Bullet points are okay, too
+ 
+ - Typically a hyphen or asterisk is used for the bullet, preceded
+   by a single space, with blank lines in between, but conventions
+   vary here
+ 
+If you use an issue tracker, put references to them at the bottom,
+like this:
+ 
+Resolves: #123
+See also: #456, #789
+```
+
+チケット番号を要約に含める場合もある。
+
+### reference
+* [Gitのコミットメッセージの書き方 | プログラミング | POSTD](http://postd.cc/how-to-write-a-git-commit-message/)
+* [spring-framework/CONTRIBUTING.md at 30bce7fa169df320bbff8e56efe9610449a9d60b · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/30bce7fa169df320bbff8e56efe9610449a9d60b/CONTRIBUTING.md)
+* [tbaggery - A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 
 ## windowsでのlocale error
@@ -136,4 +184,6 @@ git commit --allow-empty -m "first commit"
 3. `git reset --hard HEAD~`の場合
   * 2に加えて、作業ディレクトリも一つ前のコミット(`11....`)をコピーする。
 
+
+## hooks
 
