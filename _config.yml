@@ -4,3 +4,4 @@ author:
   name: i05nagai
 # GFM style code highlight syntax
 highlighter: rouge
+baseurl: /memorandum
