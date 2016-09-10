@@ -1,0 +1,4 @@
+#for jekyll
+/Gemfile.lock
+/_*
+
