@@ -1,5 +1,53 @@
 # C++
 
+## 設計
+### privateな関数
+publicなinterfaceにのみテストが必要であると思うと、 privateな関数にテストが必要な時は設計を一旦見直す必要がある。
+class内のprivateなメソッドをprivateでない形にするには以下の3通りが考えられる。
+状況として、publicな`TargetClass.publicMethod()`メソッド内で`TargetClass.privateMethod()`メソッドなるprivateメソッドを使っている状況を考える。
+
+1. ある名前空間に属す関数とする
+    * `namespace::privateMehod()`を宣言して、`publicMethod()`内で使用する。
+2. クラスのstaticメソッドとする
+    * 静的なクラスを作成し、そのクラスの`static StaticClass.privateMethod()`メンバ関数とする
+3. そのメソッド（と関係するメソッドがあれば）を持つクラス（オブジェクト）を新たに作る
+    * `PrivateMethodClass.privateMethod()`を作り、`PrivateMethodClass`クラス内ではPublicな`privateMethod`をテストする。
+    `TargetClass`のコンストラクタで、`PrivateMethodClass`を渡sて、`TargetClass.publicMethod()`内で使用する。
+4. inteface用のクラスを作成`virutal InterfacePrivateMethodClass.privateMethod() = 0`、その具象クラスとして`PrivateMethodClss.priavteMethod()`をテストする。
+    * 3と同様だが、4はinterface用のクラスを作り動的ポリモーフィズムに備える。
+
+#### 1
+* 良い
+    * 他のクラスでも使用できる
+    * `TargetClass`のコンストラクタの引数が増えない
+* 悪い
+    * 何でもかんでも関数化すると関数であふれる
+    * 適切なファイル配置が難しい場合がある
+
+#### 2
+* 良い
+    * 他のクラスでも使用できる
+    * `TargetClass`のコンストラクタの引数が増えない
+    * interfaceの違いに影響されない
+* 悪い
+    * 意味ある
+    * 適切なクラス名の付与が難しい場合がある
+
+#### 3
+* 良い
+    * 
+* 悪い
+    * コンストラクタで渡す必要がある 
+
+#### 4
+* 良い
+    * 
+* 悪い
+    * コンストラクタでクラスを渡す必要がある 
+    * interfaceとして利用できないクラスには使えない
+        * 例えば、具象クラスとして`TargetClass.privateMethod()`の実装しかないなど。
+
+
 ## 環境変数
 ### g++
 下記の環境変数のパスのheader fileを探す。
