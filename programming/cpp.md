@@ -245,6 +245,21 @@ void main()
 
 ```
 
+## Autimatic differentiation
+実装の方法は
+1. operator overloadingで、演算結果の変わりに演算のオブジェクトを返す
+    * 演算結果からObjectを取り出す時に、値とderivativeの評価をする
+    * 式のオブジェクトをクラスとして持つ為、explicit instanciationができない
+2. operator overloading時に、値と微分値の計算結果を返す
+    * 一時オブジェクトを作るか、計算結果を左オペランドにいれるか、何かしらのstorageが必要
+    * 式を持たないので、explicit instanciationが使える。
+
+### 1について
+`dual_add`などを作る
+
+### 2について
+
+
 
 ## tips
 ### case1: CRTPのインスタンス化の順序
@@ -363,9 +378,12 @@ error: default maximum alignment for types differs in PCH file vs. current file
 ```
 
 
+## 開発環境
+* [C/C++プログラマのための開発ツール](http://www.slideshare.net/herumi/cc-66035712)
+
 ## 参考
 * [isocpp](https://isocpp.org/)
 * [msgpack/msgpack-c: MessagePack implementation for C and C++ / msgpack.org](https://github.com/msgpack/msgpack-c)
-
+* [とあるエンジニアの備忘log: インライン関数まとめ](http://masahir0y.blogspot.com/2012/08/blog-post.html)
 
 
