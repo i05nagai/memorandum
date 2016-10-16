@@ -1,5 +1,21 @@
 # vim
 
+## vimscripts
+
+```vim
+:echo expand("%")
+"# => カレントファイルの名前を出力
+
+:echo expand("%:p")
+"# => カレントファイルのフルパスを出力
+
+:echo expand("%:r")
+"# => カレントファイルの名前、拡張子抜きを出力
+
+:echo expand("%:e")
+"# => カレントファイルの拡張子を出力
+```
+
 ## vimのデフォルト機能
 
 ### 移動系
@@ -226,6 +242,13 @@ tmux+vimの場合は、tmux側のコピー方法に設定を加えるなどが�
 visual modeで選択して`:w !pbcopy`と打てば下記が入力される。
 ```
 :'<,'>w !pbcopy
+```
+
+## ctags
+
+### 新しいタブで開く
+```vim
+nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 ```
 
 ### reference
