@@ -59,3 +59,21 @@ bool isSame = ublas::detail::expression_type_check(m1, m2);
     //1
     //0
 ```
+
+## vector
+
+```cpp
+A a; //A is ublas::vector
+B b; //B is ublas::vector
+a + b; //return type is vector_binary<A, B, scalar_plus<A, B>>
+a - b; //return type is vector_binary<B, B, scalar_minus<A, B>>
+(a + b)(0); //return type is scalar_plus<A, B>::result_type
+
+//scalar_plus<A, B>::result_type is vector_binary<A, B, scalar_plus<A, B>>::value_type
+//vector_binary<A, B, scalar_plus<A, B>>::value_type is vector_binary<A, B, scalar_plus<A, B>>::const_reference
+//vector_binary<A, B, scalar_plus<A, B>>::const_reference is vector_binary<A, B, scalar_plus<A, B>>::reference
+// type_deduction_detail::base_result_of<X, Y> promote_traits<X, Y>::base_type;
+//remove_cv<X>::type x_type
+//remove_cv<Y>::type y_type
+```
+
