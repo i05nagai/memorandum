@@ -12,6 +12,16 @@
 * [pyclewn]()
     * vimballが動かない
 
+### coloring
+`~/.gdbinit`でgdbの色付けなど設定ができる。
+
+
+* [terminal - How to highlight and color gdb output during interactive debugging? - Stack Overflow](http://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging)
+    * [Gdbinit | Reverse Engineering Mac OS X](https://reverse.put.as/gdbinit/)
+    * [cyrus-and/gdb-dashboard: Modular visual interface for GDB in Python](https://github.com/cyrus-and/gdb-dashboard)
+    * [dholm/voidwalker: A GDB toolbox for low-level debugging](https://github.com/dholm/voidwalker)
+
+
 ## lldb
 ### front end of lldb
 [list](http://usevim.com/2014/03/05/lldb/)
