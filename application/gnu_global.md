@@ -39,10 +39,24 @@ pygmentsを使うと対応言語を増やせる。
 
 ## Install
 ### Mac
+pygments optionをつけておけば、defaultのparserで対応していない言語まで対応可能。
 
 ```shell
-brew install global
+brew install global --with-pygments
 ```
+
+## Usage
+
+```
+gtags -v
+```
+
+### with pygments
+
+```
+gtags --globallabel=pygments
+```
+
 
 ## vim
 globalのインストール先に、vim scriptがインストールされるので、vim上でも同様に使える。
