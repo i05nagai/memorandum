@@ -142,6 +142,35 @@ $$
 \end{eqnarray*}
 $$
 
+### Topology in metric space
+$(S, d)$を距離空間とする。
+$a \in S$, $\epsilon > 0$について、球体$B(a; \epsilon)$を以下で定義する。
+
+$$
+    B(a; \epsilon) := \left\{ x \mid x \in S, d(a, x) < \epsilon \right\} 
+$$
+
+$$
+    O_{d} 
+        := \left\{ O \subset S \mid \forall a \in O, \exists \epsilon >0, \mathrm{s.t. } B(a; \epsilon) \subset O \right\} 
+$$
+
+$S$の位相を$O_{d}$と$\emptyset$をからなる集合系$\mathcal{D}_{d}$として定義する。
+
+
+#### Theorem
+任意の距離空間$(S, d)$は第一可算公理を満足する。
+また、第二可算公理を満足するためには、$S$が可分であることが必要十分である。
+
+##### Proof
+
+#### Theorem
+$M \neq \emptyset \subset S$とする。
+以下は同値。
+* $a \in S$が$M$の触点
+* $a$がある点列$(a_{n})$の極限点
+
+
 ### Diameter
 $(S, d)$を距離空間とする。
 $A \subset S$の直径$\delta(A)$を以下で定義する。
