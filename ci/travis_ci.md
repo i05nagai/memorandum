@@ -1,5 +1,6 @@
 # Travis CI
 
+
 ## Customizing the Build
 repositoryのtopにある`.travis.yml`ファイルに基づいてCIが実行される。
 `.travis.yml`の中では以下を記載する。
@@ -245,14 +246,18 @@ notifications:
       - secure: "key"
 ```
 
+## CI Environment Reference
+
+### The OS X Build Environment - Travis CI
+* [The OS X Build Environment - Travis CI](https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
+
+```
+brew install gcc48
+```
 
 ## tips
 ### travis command line tools
 * [travis-ci/travis.rb: Travis CI Client (CLI and Ruby library)](https://github.com/travis-ci/travis.rb)
-
-```
-gem install travis
-```
 
 
 ## .travis.yml
