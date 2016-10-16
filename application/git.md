@@ -1,5 +1,20 @@
 # Git
 
+## Gitの内部動作
+
+### command
+GitはPlumbingコマンドとPorcelainコマンドと呼ばれるものがある。
+PlumbingコマンドはGitのオブジェクトなどの`.git`以下に格納されるファイルを直接操作するpremitiveなコマンド群である。
+Porcelainコマンドは,Plumbingコマンドの使いづらさを解消する為のGitのPlumbingコマンドのフロントエンドのコマンド群となる。
+Gitの内部動作を知る上では、Plumbingコマンドが重要となる。
+
+#### Plumbing
+* `git cat-file -p sha1`
+* `git cat-file -t sha1`
+* `git hash-object file`
+* `git update-index`
+* `git commit-tree`
+
 
 ## 設定
 `git config --global`でアカウント共通設定が可能。
@@ -183,6 +198,58 @@ git commit --allow-empty -m "first commit"
   * この場合は1に加えて、indexに一つ前のコミット(`11....`)をコピーする。
 3. `git reset --hard HEAD~`の場合
   * 2に加えて、作業ディレクトリも一つ前のコミット(`11....`)をコピーする。
+
+### `git worktree`
+Git2.7から。
+
+
+### `git commit --fixup`
+
+### `--`の意味
+`--`は、オプションの引数とコマンドの引数を区別する為に用いる。
+`--`以降の引数はファイルとして扱われる。
+
+
+### `git log -S/-G`
+
+#### `git log -S`
+```
+-S<string>
+   Look for differences that change the number of occurrences of the specified string (i.e. addition/deletion) in a file. Intended for the scripter's use.
+
+   It is useful when you're looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the
+   feature iteratively to feed the interesting block in the preimage back into -S, and keep going until you get the very first version of the block.
+```
+
+#### `git log -G`
+
+```
+-G<regex>
+   Look for differences whose patch text contains added/removed lines that match <regex>.
+
+   To illustrate the difference between -S<regex> --pickaxe-regex and -G<regex>, consider a commit with the following diff in the same file:
+
+       +    return !regexec(regexp, two->ptr, 1, &regmatch, 0);
+       ...
+       -    hit = !regexec(regexp, mf2.ptr, 1, &regmatch, 0);
+
+   While git log -G"regexec\(regexp" will show this commit, git log -S"regexec\(regexp" --pickaxe-regex will not (because the number of occurrences of that string did
+   not change).
+
+   See the pickaxe entry in gitdiffcore(7) for more information.
+```
+
+### git bisect
+
+```shell
+git bisect start <bad-commit> <good-commit>
+git bisect run <テストスクリプトのファイル名>
+git bisect view
+git bisect log
+git bisect reset
+```
+
+* [git bisect で問題箇所を特定する - Qiita](http://qiita.com/usamik26/items/cce867b3b139ea5568a6)
 
 
 ## hooks
