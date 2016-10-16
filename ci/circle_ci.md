@@ -1,5 +1,13 @@
 # Circle CI
 
+### Manual build setup 
+
+
+## Build Image
+* Ubuntu 12.04 (Precise)
+* Ubuntu 14.04 (Trusty)
+
+
 ## reference
 * [CircleCIアンチパターン 2015春 - tehepero note(・ω<)](http://blog.stormcat.io/entry/2015/03/31/154300)
 * [まだ Travis で消耗してるの？ - Qiita](http://qiita.com/KeithYokoma/items/cf56ef89c8362953a6a7)
