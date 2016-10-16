@@ -1,6 +1,23 @@
 # C++
 
 ## 設計
+
+### template
+template meta programmingでのtemplateの分類
+下記分類に当てはまらないようなtemplateの使い方は避ける
+
+1. traitsによる型に対する関数
+2. duck typingによる型の振る舞いの指定
+
+
+* 単体テストは、仕様として想定している型についてすべてかく
+* 単体テストは、ユーザにとっての振る舞いを中心にテストする
+    * テストの厳密性は捨てる
+    * 仕様として保証する型についての動作に集中する
+    * すべての型についてcv, reference, pointerをテストするのが望ましいが無理な場合は型として受け入れることを想定しているものについてはテストする。
+* 型が境界値を持つように設計する
+
+
 ### privateな関数
 publicなinterfaceにのみテストが必要であると思うと、 privateな関数にテストが必要な時は設計を一旦見直す必要がある。
 class内のprivateなメソッドをprivateでない形にするには以下の3通りが考えられる。
@@ -46,6 +63,7 @@ class内のprivateなメソッドをprivateでない形にするには以下の3
     * コンストラクタでクラスを渡す必要がある 
     * interfaceとして利用できないクラスには使えない
         * 例えば、具象クラスとして`TargetClass.privateMethod()`の実装しかないなど。
+
 
 
 ## 環境変数
@@ -385,5 +403,5 @@ error: default maximum alignment for types differs in PCH file vs. current file
 * [isocpp](https://isocpp.org/)
 * [msgpack/msgpack-c: MessagePack implementation for C and C++ / msgpack.org](https://github.com/msgpack/msgpack-c)
 * [とあるエンジニアの備忘log: インライン関数まとめ](http://masahir0y.blogspot.com/2012/08/blog-post.html)
-
+* [Extensible Templates: Via Inheritance or Traits?](http://www.gotw.ca/publications/mxc++-item-4.htm)
 
