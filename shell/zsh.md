@@ -1,14 +1,10 @@
 # zsh
 
 ## completion
-`~/.zshrc`に以下を追加する。
+`echo $fpath`で設定されているディレクトリにリンクをはる。
+もしくは、下記をzshrcの上部にかく。
+上部というのは、どこかのタイミングで補完用のファイルが読み込まれるが、そのタイミングより上であれば良い。
 
-```zsh
-fpath=(~/.zsh/completion/folder $fpath)
-```
- 
-`~/.zsh/completion/folder`においてあるzshの補完用ファイルが読み込まれる。
-`/usr/share/zsh`以下にzshの設定ファイルがあり、デフォルトの補完ファイルもこの中に存在する。
 
 ### zhs-completions
 
