@@ -544,5 +544,77 @@ $$
 $$
 
 ### 16.6.4 Linear and Other TSR Models
+* 上記のTSR modelの議論は、Sec 16.3で熱方一般のTSR modelに用意に拡張できる
+* simpleなlinear TSR modelから扱う
+
+
+$$
+    \alpha(s) := \alpha_{1}s + \alpha_{2}
+$$
+
+と定義する。
+Sec 16.3では、$\alpha_{1} = a(T_{p}), \alpha_{2} = b(T_{p})$であった。
+$\alpha_{1}$は入力として、与えられるものである。
+$\alpha_{1}$が与えられると、$\alpha_{2}$は無裁定性を満たすように定義される。
+つまり、
+
+$$
+    \frac{P(0, T_{p})}{A(0)}
+        = E^{A}
+            \left[
+                \frac{P(T, T_{p})}{A(T)}
+            \right]
+        = E^{A}
+        \left[
+            \alpha_{1}S(T) + \alpha_{2}
+        \right]
+        = \alpha_{1}S(0) + \alpha_{2}
+$$
+
+が満たされるように、
+
+$$
+    \alpha_{2} := \frac{P(0, T_{p})}{A(0)} - \alpha_{1}S(0),
+$$
+
+と置く。
+以上のもと、CMSの価格は
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{CMS}}
+        & = &
+            A(0) E^{A}
+            \left[
+                (\alpha_{1}S(T) + \alpha_{2})S(T)
+            \right]
+            \\
+        & = & 
+            \alpha_{2}A(0)S(0) + A(0) E^{A}
+            \left[
+                \alpha_{1}S(T)^{2}
+            \right]
+            \\
+        & = &
+            P(0, T_{p})S(0) - A(0)\alpha_{1}S(0)^{2} + \alpha_{1}A(0) E^{A}
+            \left[
+                S(T)^{2}
+            \right]
+            \\
+        & = &
+            P(0, T_{p})S(0) + \mathrm{Var}^{A}(S(T))
+\end{eqnarray}
+$$
+
+となり、convexity ajustmentは
+
+$$
+    D_{\mathrm{CMS}}(0) 
+        = \alpha_{1} \frac{A(0)}{P(0, T_{p})} \mathrm{Var}^{A}
+        \left[
+            S(T)
+        \right]
+        
+$$
 
 
