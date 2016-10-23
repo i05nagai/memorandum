@@ -3,6 +3,25 @@ layout: math
 title: Interest Rate Modeling 3
 ---
 
+# TOC
+
+<!-- vim-markdown-toc GFM -->
+
+* [Interest Rate Modeling 3](#interest-rate-modeling-3)
+	* [Symbols](#symbols)
+	* [16.3 Terminal Swap Rate Models](#163-terminal-swap-rate-models)
+		* [16.3.4 Swap-Yield TSR Model](#1634-swap-yield-tsr-model)
+	* [16.4 Libor-in-Arrears](#164-libor-in-arrears)
+	* [16.6 CMS and CMS-Linked Cash Flows](#166-cms-and-cms-linked-cash-flows)
+	* [16.6.1 The replication Method for CMS](#1661-the-replication-method-for-cms)
+		* [16.6.2 Annuity Mapping Function as a Conditional Expected Value](#1662-annuity-mapping-function-as-a-conditional-expected-value)
+			* [Proposition 16.6.1](#proposition-1661)
+			* [Proposition 16.6.2](#proposition-1662)
+		* [16.6.3 Swap-Yield TSR Model](#1663-swap-yield-tsr-model)
+		* [16.6.4 Linear and Other TSR Models](#1664-linear-and-other-tsr-models)
+
+<!-- vim-markdown-toc -->
+
 # Interest Rate Modeling 3
 
 ## Symbols
@@ -296,9 +315,9 @@ $$
 $$
 
 
-propsitionから今まできた近似は、 $\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義される条件つき期待値の近似と見ることができる。
+propositionから今までみてきた近似は、 $\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義される条件つき期待値の近似と見ることができる。
 前節までに見てきた方法の他に、条件付き期待値を直接近似する方法を考えることができる。
-条件付き期待値は、確率変数$X, Y$Nについて、$X$の$Y$での条件付き期待値は、$Y$を可測にする関数全体への空間を$\mathcal{B}$とする。
+条件付き期待値は、確率変数$X, Y$について、$X$の$Y$での条件付き期待値は、$Y$を可測にする関数全体への空間を$\mathcal{B}$とする。
 
 $$
     E(X|Y) = f^{*}(Y), 
@@ -324,14 +343,15 @@ $$
     \right\}
 $$
 
+として、近似する。
 $\tilde{\mathcal{B}}$を以下のように$\theta$のparameterでモデル化する。
 
 $$
     \tilde{\mathcal{B}} 
         := { f(y; \theta), \theta \in \Theta }
+        , \Theta \subset \mathbb{R}^{d}.
 $$
 
-ここで、$\Theta \subset \mathbb{R}^{d}$ととる。
 最適値をとるためには、以下の必要条件
 満たす必要がある。
 
