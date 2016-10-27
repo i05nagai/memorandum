@@ -88,7 +88,7 @@ $$
         + 2 \int_{L(0)}^{\infty} c(T, x; T, K)\ dK = x^{2} - L(0)^{2}
 $$
 
-$\bar{w}$と$\underline{w}$は離散化した積分の上端と下端をとれば良い？
+$\bar{w}$と$\underline{w}$は離散化した被積分関数の上端と下端をとれば良い？
 
 * super-replicationの最小値はlong LIAのupper bound
 * sub-replicationの最大値はshort LIAのlower bound
@@ -124,7 +124,7 @@ $$
 \begin{equation}
     D_{\mathrm{CMS}}(0) 
         := E^{T_{p}}(S(T)) - S(0)
-        = \frac{V_\mathrm{CMS}}{P(0, T_{p}} - S(0)
+        = \frac{V_\mathrm{CMS}}{P(0, T_{p})} - S(0)
         = \frac{A(0)}{P(0, T_{p})} E^{A}
             \left(
                 \frac{P(T, T_{p})}{A(T)}S(T)
@@ -140,8 +140,6 @@ $$
     * LIAやLibor-with-delayですでにやった
 
 ### 16.6.1 The replication Method for CMS
-* Prop 8.4.13をCMPSのpayoffに適用する。
-
 $P(T, T_{p})/A(T)$を$S(T)$の関数としてモデル化するために、$S(T)$から$P(T, T_{p})/A(T)$への関数を$\alpha(S(T))$をannuity mapping functionとして定義する。
 つまり、
 
@@ -215,8 +213,8 @@ $$
 $$
 
 である。
-swaptionの価格は、marketの価格か選択したmodelで直接計算される。
-replicatoin methodはmarketのすべての価格のstrikesと一貫したCMSの価格を計算するだけでなく、modelに依存しない($\alpha(s)$には依存する）payer/recieverのswaptionのポートフォリオを提供する。
+swaptionの価格は、marketの価格を直接に使うか選択したmodelで直接計算される。
+replicatoin methodはmarketのすべてのstrikesのswaptionの価格と一貫したCMSの価格を計算するだけでなく、modelに依存しない($\alpha(s)$には依存する）payer/recieverのswaptionのポートフォリオを提供する。
 
 $\eqref{chap16_value_cms_static_hedge}$に対して、いくつかの制約をいれることができる。
 例えば、low strikeやhigh stirkeのswaptionは流動性が低いので、以下のように
@@ -228,10 +226,10 @@ $$
     \label{chap16_value_cms_static_hedge_low_liquid}
 $$
 
-かける。
-有限個の場合のrepliationについては、Sec16.4で議論をしている。
+strikeに上限と下限をつけた形にもできる。
+strikeが有限個の場合のrepliationについては、Sec16.4で議論をしている。
 
-replication methodは、$g(S(T))$をpayoffに持ち、$T_{p} \ge T$に支払いがある場合に拡張できる。
+replication methodは、$g(S(T))$をpayoffに持ち、$T_{p} \ge T$にも支払いがある場合に拡張できる。
 ただし、$g$は十分なめらかであるとする。
 例えば、payoffとして、capletとfloorletの場合は以下のようになる。
 
@@ -258,13 +256,13 @@ $$
 $$
 
 となる。
-financeで現れるおおくのpayoff関数は、二階微分をするとdelta関数があらわれる。
+financeで現れる多くのpayoff関数は、二階微分をするとdelta関数を含む。
 capletとfloorletの場合は、delta関数が集中する点$s_{0}$での$V_{\mathrm{rec}}(0, s_{0})$ないし、$V_{\mathrm{pay}}(0, s_{0})$ (どちらを考慮するかは$s_{0}$と$K$の値による) の値の寄与を考えれば良い。
 
 ### 16.6.2 Annuity Mapping Function as a Conditional Expected Value
-* $\alpha(s)$を前節で導入したが、$\alpha(s)$をどうするかは議論しなかった
-* 前節までで議論したTerminal Swap Rate modelsやTerm structure modelによる近似の例が参考になると期待できる
-* まずはじめに、annuity mapping functionの理論的な意味についてみる
+$\alpha(s)$を前節で導入したが、$\alpha(s)$を何とするかについては議論しなかった。
+前節までで議論したTerminal Swap Rate modelsやTerm structure modelによる近似の例が参考になると期待できる。
+まずはじめに、annuity mapping functionの理論的な意味についてみる。
 
 $$
 \begin{eqnarray*}
@@ -323,24 +321,23 @@ $$
 
 propositionから今までみてきた近似は、 $\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義される条件つき期待値の近似と見ることができる。
 前節までに見てきた方法の他に、条件付き期待値を直接近似する方法を考えることができる。
-条件付き期待値は、確率変数$X, Y$について、$X$の$Y$での条件付き期待値は、$Y$を可測にする関数全体への空間を$\mathcal{B}$とする。
+条件付き期待値は、確率変数$X, Y$について、$X$の$Y$での条件付き期待値は、$\sigma(Y) = \sigma(\{f(Y)) \mid f \in \mathcal{B} \})$を満たす関数全体を$\mathcal{B}$とすると、
 
 $$
     E(X|Y) = f^{*}(Y), 
-    \mathrm{where}\ 
     f^{*} = \mathrm{argmin} \left\{
         E \left(
-            (X - F(Y))^{2}, f \in \mathcal{B}
+            (X - f(Y))^{2}, f \in \mathcal{B}
         \right)
     \right\}
 $$
 
+である。
 条件付き期待値の近似として$\mathcal{B}$をsubspace $\tilde{\mathcal{B}} \subset \mathcal{B}$ として近似する方法がある。
 つまり、
 
 $$
-    E(X|Y) \approx f^{*}(Y)
-    \mathrm{where}
+    E(X|Y) \approx f^{*}(Y),
     f^{*} = \mathrm{argmin} \left\{
        E
        \left(
@@ -421,7 +418,7 @@ $$
     \right)
 $$
 
-より成立。
+であることと、最適値では1階微分が0でなければならないことより成立
 
 ### 16.6.3 Swap-Yield TSR Model
 16.3.4でのswap-yield modelを考える。
