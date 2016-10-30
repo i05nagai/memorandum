@@ -10,6 +10,7 @@ title: Interest Rate Modeling 3
 * [Interest Rate Modeling 3](#interest-rate-modeling-3)
 	* [Symbols](#symbols)
 	* [16.3 Terminal Swap Rate Models](#163-terminal-swap-rate-models)
+		* [16.3.2 Linear TSR Model](#1632-linear-tsr-model)
 		* [16.3.4 Swap-Yield TSR Model](#1634-swap-yield-tsr-model)
 	* [16.4 Libor-in-Arrears](#164-libor-in-arrears)
 	* [16.6 CMS and CMS-Linked Cash Flows](#166-cms-and-cms-linked-cash-flows)
@@ -22,6 +23,17 @@ title: Interest Rate Modeling 3
 		* [16.6.4 Linear and Other TSR Models](#1664-linear-and-other-tsr-models)
 		* [16.6.5 The Quasi-Gaussian Model](#1665-the-quasi-gaussian-model)
 		* [16.6.6 The Libor Market Model](#1666-the-libor-market-model)
+				* [Proposition 16.6.3](#proposition-1663)
+			* [16.6.7 Correcting Non-Arbitrage-Free Methods](#1667-correcting-non-arbitrage-free-methods)
+			* [16.6.8 Impact of Annuity Mapping Function and Mean Reversion](#1668-impact-of-annuity-mapping-function-and-mean-reversion)
+			* [16.6.9 CDF and PDF of CMS Rate in Forward Measure](#1669-cdf-and-pdf-of-cms-rate-in-forward-measure)
+				* [Proposition 16.6.4](#proposition-1664)
+				* [sketch of proof](#sketch-of-proof-1)
+				* [Corollary 16.6.5](#corollary-1665)
+				* [sketch of proof](#sketch-of-proof-2)
+				* [Corollary 16.6.6](#corollary-1666)
+				* [sketch of proof](#sketch-of-proof-3)
+				* [lemma 16.6.7](#lemma-1667)
 
 <!-- vim-markdown-toc -->
 
@@ -1615,7 +1627,7 @@ $$
 
 である。
 
-###### sketch of proof
+##### sketch of proof
 $K$での$\psi^{T_{p}}(K)$の値は、delta関数$\delta(S(T) - K)$のpayoffを持つderivativeの価値に等しい
 
 $$
@@ -1675,7 +1687,7 @@ $$
 ここで$Psi^{A}(s)$は$\eqref{chap16_66_cdf_in_annuity_measure}$で与えられる。
 $c(s)$は$\eqref{chap16_68_cms_call_option_value}$で定義された、 strike $s$のcall option価格である。
 
-###### sketch of proof
+##### sketch of proof
 
 $$
 \begin{eqnarray*}
@@ -1761,7 +1773,7 @@ $$
 \end{equation}
 $$
 
-###### sketch of proof
+##### sketch of proof
 Corollary 16.6.5と同様に$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$から直接求めるか、$\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を微分して求めれば良い。
 $\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を両辺微分する。
 まず、
