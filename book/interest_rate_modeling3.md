@@ -57,6 +57,210 @@ $$
 
 ここでで、$\pi$は
 
+### 16.3.2 Linear TSR Model
+linear TSR modelは、以下のようにzero coupon bondとannuityの比を線形に近似する。
+
+$$
+\begin{equation}
+    \frac{\pi(x, M)}{\sum_{n=0}^{N-1} \tau_{n} \pi(x, T_{n+1})}
+        = a(M) x + b(M),
+    \quad
+    M \ge T,
+    \label{chap16_linear_tsr_model_def_a_b}
+\end{equation}
+$$
+
+ここで、$a(\cdot), b(\cdot)$はdeterministic functionである。
+no-arbitrage conditionは以下のようになる。
+
+$$
+    P(0, M)
+        = A(0) \mathrm{E}^{A}
+        \left[
+            a(M)S(T) + b(M)
+        \right],
+$$
+
+上記を整理すると
+
+$$
+\begin{equation}
+    b(M) = \frac{P(0, M)}{A(0)} - a(M) S(0),
+    \label{chap16_linear_tsr_model_b_from_no_arbitrage_condition}
+\end{equation}
+$$
+
+となる。
+consistency conditionより、$\forall x$について、
+
+$$
+\begin{eqnarray*}
+    x 
+        & = & \frac{1 - \pi(x, T_{N})}{\sum_{n=0}^{N-1} \tau_{n} \pi(x, T_{n+1}) }
+        \\
+        & = & \frac{1}{\sum_{n=0}^{N-1} \tau_{n} \pi(x, T_{n+1})}
+            - \frac{\pi(x, T_{N})}{\sum_{n=0}^{N-1} \tau_{n} \pi(x, T_{n+1})}
+        \\
+    \iff
+    x
+        & = & (a(T_{0})x + b(T_{0})) - (a(T_{N})x + b(T_{N})),
+    \iff
+    x
+        & = & (a(T_{0}) - a(T_{N}))x + b(T_{0})) - b(T_{N}),
+        \\
+\end{eqnarray*}
+$$
+
+より、
+
+$$
+\begin{eqnarray}
+    b(T_{0}) & = & b(T_{N}),
+    \label{chap16_linear_tsr_model_b_from_consistency_condition}
+    \\
+    a(T_{0}) & = & 1 + a(T_{N}).
+    \label{chap16_linear_tsr_model_a_from_consistency_condition}
+\end{eqnarray}
+$$
+
+が成り立つ必要がある。
+$\eqref{chap16_linear_tsr_model_b_from_no_arbitrage_condition}$と$\eqref{chap16_linear_tsr_model_b_from_consistency_condition}$より、$\eqref{chap16_linear_tsr_model_a_from_consistency_condition}$が求まる。
+また、逆に$\eqref{chap16_linear_tsr_model_b_from_no_arbitrage_condition}$と$\eqref{chap16_linear_tsr_model_a_from_consistency_condition}$より、$\eqref{chap16_linear_tsr_model_b_from_consistency_condition}$が求まる。
+
+$\eqref{chap16_linear_tsr_model_def_a_b}$より、consistency condition、no-arbitrage conditionに加えて以下が成り立つ。
+
+$$
+    \sum_{n=0}^{N-1} \tau_{n}(a(T_{n+1})x + b(T_{n+1})) \equiv 1,
+    \quad
+    \forall x
+$$
+
+また、これより
+
+$$
+\begin{eqnarray}
+    \sum_{n=0}^{N-1} \tau_{n}a(T_{n+1}) & = & 0,
+    \label{chap16_linear_tsr_model_a_from_annuity}
+    \\
+    \sum_{n=0}^{N-1} \tau_{n}b(T_{n+1}) & = & 1,
+    \label{chap16_linear_tsr_model_b_from_annuity}
+\end{eqnarray}
+$$
+
+である。
+上の２つの式は一方が成立すれば、$\eqref{chap16_linear_tsr_model_def_a_b}$よりもう一方が自然に従う。
+
+modelのparameterが満たすべき条件について述べた。
+parameterを決める具体的な方法は以下となる。
+
+1. $\{\alpha(T_{1}), \ldots, \alpha_{T_{N}}\}$を$\eqref{chap16_linear_tsr_model_a_from_annuity}$から求める
+    * 詳細についてはあとで述べる
+2. $a(T) = a(T_{0})$を$\eqref{chap16_linear_tsr_model_a_from_consistency_condition}$から求める。
+3. 残りの$a(M)$については線形補間などで求める。
+4. 最後に$b(M)$は$\eqref{chap16_linear_tsr_model_b_from_no_arbitrage_condition}$から求める。
+
+linearという単純なモデルを仮定したが、実際のマーケットとは一致しない場合もある。
+特に、linear TSR modelの場合はparameterの選び方によってはdiscount bondが負になるという問題があり、問題ごとに適切なparameterを選ぶ必要がある。
+
+linear TSR modelは$\eqref{chap16_linear_tsr_model_a_from_annuity}$から$\{a_{T_{1}}, \ldots, a_{T_{N}}\}$を決めるので、決め方には自由度がある。
+$a(\cdot)$を決めるために、$a$の意味をもう少し深く考える。
+まず、$a$が状態$S(T)$に応じて$T$でのyield curveの形を決めることをみる。
+これは、Section 10.1.2で扱った平均回帰係数と同じ性質である。
+$a$を平均回帰係数とみなすことは、parameterの数を減らすだけではなく、parameterのファイナンスうにおける解釈に役立つ。
+
+$a(\cdot)$を平均回帰係数と関連付けるために、$\eqref{chap16_linear_tsr_model_def_a_b}$より、両辺$x$について微分し$x=S(T)$とおくと、
+
+$$
+    a(M)
+        = \frac{\partial}{\partial S(T)} 
+            \frac{P(T, M)}{\sum_{n=0}^{N-1} \tau_{n}P(T, T_{n+1}}
+$$
+
+が成り立つ。
+Gaussian one-factor modelの下では以下のようにかける。
+
+$$
+    a(M)
+        = \frac{\partial}{\partial x}
+            \left.
+                \frac{P(T, M)}{\sum_{n=0}^{N-1} \tau_{n}P(T, T_{n+1}, x)}
+            \right|_{S(T, x) = S(0)}
+            \left(
+                \left.
+                    \frac{\partial S(T, x)}{\partial x}
+                \right|_{S(T, x) = S(0)}
+            \right)^{-1},
+$$
+
+とかける。
+ここで、$x$はshort rateを表すGaussian modelの状態変数である。
+$A(T, x)$を$x$に依存したannuityとすると
+
+$$
+    A(T, x) = \sum_{n=0}^{N-1} \tau_{n} P(T, T_{n+1}, x),
+$$
+
+より、
+
+$$
+    S(T, x) = \frac{1 - P(T, T_{N}, x)}{A(T, x)},
+$$
+
+さらに、
+
+$$
+\begin{eqnarray*}
+    \frac{\partial}{\partial x} \frac{P(T, M, x)}{A(T, x)}
+        & = & - \frac{P(T, M, x) G(T, M)}{A(T, x)}
+            - \frac{P(T, M, x)}{A(T, x)^{2}} 
+                \frac{\partial A(T,x)}{\partial x}, 
+    \\
+    \frac{\partial }{\partial x} S(T, x)
+        & = & \frac{P(T, T_{N}, x) G(T, T_{N})}{A(T, x)} 
+            - \frac{S(T, x)}{A(T, x)}
+                \frac{\partial A(T, x)}{\partial x},
+\end{eqnarray*}
+$$
+
+ここで、$G(\cdot, \cdot)$は(10.19)の平均回帰の関数である。
+以下の近似により
+
+$$
+    P(T, t, x) |_{S(T, x)} = S(0)
+        \approx \frac{P(0, t)}{P(0, T)},
+    \quad
+    \forall t \ge T
+$$
+
+以下の式を得る。
+
+$$
+\begin{equation}
+    a(M)
+        = \frac{P(0, M) (\gamma - G(T, M))}{P(0, T_{N}) G(T, T_{N}) + A(0)S(0) \gamma}
+        \label{chap16_linear_tsr_model_a_relation_to_mean_reversion}
+\end{equation}
+$$
+
+ここで、
+
+$$
+\begin{eqnarray}
+    \gamma 
+        & := &
+            - \frac{1}{A(T, x)} 
+                \left.
+                    \frac{\partial A(T, x)}{\partial x} 
+                \right|_{P(T, t, x) = P(0, T), \forall t  \ge T}
+        \nonumber
+        \\
+        & = &
+            \frac{\sum_{n=0}^{N-1} \tau_{n}P(0, T_{n+1}) G(T, T_{n+1})
+            }{\sum_{n=0}^{N-1} P(0, T_{n+1})}
+            \label{chap16_linear_tsr_model_def_gamma}
+\end{eqnarray}
+$$
+
 ### 16.3.4 Swap-Yield TSR Model
 coupon bond yield forumlaから考え出されたTSR model。
 
@@ -118,7 +322,7 @@ $$
 \end{equation}
 $$
 
-CMSのconvexity ajustment$D_{\mathrm{CMS}}$を以下で定義する。
+CMSのconvexity adjustment$D_{\mathrm{CMS}}$を以下で定義する。
 
 $$
 \begin{equation}
@@ -129,7 +333,7 @@ $$
             \left(
                 \frac{P(T, T_{p})}{A(T)}S(T)
             \right) - S(0)
-    \label{chap16_cms_convexity_ajustment}
+    \label{chap16_cms_convexity_adjustment}
 \end{equation}
 $$
 
@@ -252,7 +456,10 @@ $$
 また、weightは
 
 $$
+\begin{equation}
     w(s) := \frac{d^{2}}{ds^{2}} (\alpha(s)g(s)),
+    \label{chap16_49_replication_method_stochastic_weight}
+\end{equation}
 $$
 
 となる。
@@ -581,7 +788,10 @@ $$
 
 
 $$
+\begin{equation}
     \alpha(s) := \alpha_{1}s + \alpha_{2}
+    \label{chap16_52_linear_tsr_model_def_alpha}
+\end{equation}
 $$
 
 と定義する。
@@ -624,25 +834,29 @@ $$
             \left[
                 (\alpha_{1}S(T) + \alpha_{2})S(T)
             \right]
+            \nonumber
             \\
         & = & 
             \alpha_{2}A(0)S(0) + A(0) E^{A}
             \left[
                 \alpha_{1}S(T)^{2}
             \right]
+            \nonumber
             \\
         & = &
             P(0, T_{p})S(0) - A(0)\alpha_{1}S(0)^{2} + \alpha_{1}A(0) E^{A}
             \left[
                 S(T)^{2}
             \right]
+            \nonumber
             \\
         & = &
             P(0, T_{p})S(0) + A(0)\alpha_{1}\mathrm{Var}^{A}(S(T))
+            \label{chap16_linear_tsr_model_cms_value}
 \end{eqnarray}
 $$
 
-となり、convexity ajustmentは $\eqref{chap16_cms_convexity_ajustment}$より、
+となり、convexity adjustmentは $\eqref{chap16_cms_convexity_adjustment}$より、
 
 $$
 \begin{equation}
@@ -652,13 +866,13 @@ $$
         \left[
             S(T)
         \right]
-        \label{chap16_cms_convexity_ajustment_linear_tsr_model}
+        \label{chap16_linear_tsr_model_cms_convexity_adjustment}
 \end{equation}
 $$
 
 となる。
 $S(T)$のぶんさんは、選択したModelないし、$(S(T) - S(0))$を積分して計算される。
-$\eqref{chap16_cms_convexity_ajustment_linear_tsr_model}$は、LIAの式に似ておりよく使われるモデルである。
+$\eqref{chap16_linear_tsr_model_cms_convexity_adjustment}$は、LIAの式に似ておりよく使われるモデルである。
 しかし、$\alpha$のとり方によっては、discount factorが負になるという問題がある。
 Sec 16.3.2で述べたように$\alpha_{1}$は平均回帰的な役割を持つが、これについてはSec 16.6.8で扱う。
 大雑把には、$T$のyield curveが十分低い状況（つまり、$S(T)$がゼロに近い状況）を考えることで、
@@ -686,6 +900,7 @@ $$
         \left(
             \frac{P(0, T_{p})}{A(0)} - \alpha_{2}
         \right)
+    \label{chap16_linear_tsr_model_simple_alpha_estimation}
 \end{equation}
 $$
 
@@ -844,7 +1059,7 @@ TODO
 
 解 $\eqref{chap16_linear_tsr_model_conditional_expectation_solution}$はlinear TSR modelの$\alpha_{1}, \alpha_{2}$と一致する。
 
-CMSのconvexity ajustmentはparameterのあるannuity mappincg functionで一意に決定できる。
+CMSのconvexity adjustmentはparameterのあるannuity mappincg functionで一意に決定できる。
 これは、流動性のあるCMS swapにcalibrationする場合に重要である。
 calibrationしたannuity mapping functionは、より複雑で流動性の低いCMS capやCMS range accrualsの計算に利用される。
 
@@ -911,7 +1126,7 @@ marketと整合的なCMSの価値を計算するために、replication method�
 ### 16.6.6 The Libor Market Model
 Libor Market Model(LMM)は、forward swap rateとannuityの関係を具体化する別の方法である。
 callable CMS range accrualsやCMS spread TARNsのようなexotic optionのLMMの応用に役立つ。
-LMMのCMS convexity adjustmentの値がmarketのconvexity ajustmentの値を裏付けることが望まれる。
+LMMのCMS convexity adjustmentの値がmarketのconvexity adjustmentの値を裏付けることが望まれる。
 LMMのCMS adjustmentの値をMonte carloで計算することもできるが、perforamnceが悪いので、semi-analytic approchが望まれる。
 
 LMMのCMS adjustmentの計算の問題は、Gatarek[2003]のrepresentative approachなどがあるが、多くの方法はforward measureでのdriftの近似をする"freezing"という手法とみなせる。
@@ -944,7 +1159,8 @@ $$
 
 とする。
 簡単のため$T_{p} = T$とする。
-$1/A(T)$は$\mathbb{L}(T) = (L_{0}(T), \ldots, L_{N-1}(T))^{\mathrm{T}}$の関数として
+$1/A(T)$は$\mathbb{L}(T) = (L_{0}(T), \ldots, L_{N-1}(T))^{\mathrm{T}}$の関数としてかける。
+実際
 
 $$
     \prod_{i=0}^{n}(1 + \tau_{i}L_{i}(T))^{-1}
@@ -964,7 +1180,7 @@ $$
         \right)^{-1}
 $$
 
-であった。
+である。
 $\alpha(s)$を以下で近似する。
 
 $$
@@ -982,19 +1198,23 @@ $$
 $$
 
 以上より、LMMで$\mathrm{E}^{A}(\mathbb{L}(T)|S(T)=s)$を計算する問題となった。
-よく行われる方法として、Gaussian approximationを応用する。
+よく行われる方法として、Gaussian approximationを近似する方法がある。
 具体的な議論をするために以下のLMMを考える。
 
 $$
 \begin{eqnarray}
     dL_{n}(t) 
         & = & \sqrt{z(t)}\phi(L_{n}(t)) \lambda_{n}(t) ^{\mathrm{T}} dW^{T_{n+1}}(t),
+        \label{chap16_lmm_stochastic_volatility}
         \\
     d z(t)
-        & = & \theta(z_{0} - z(t)) dt + \eta(t) \sqrt{z(t)} dZ(t), z(0) = z_{0} = 1,
+        & = & \theta(z_{0} - z(t)) dt + \eta(t) \sqrt{z(t)} dZ(t), 
+        \quad
+        z(0) = z_{0} = 1,
         \\
     \langle dW^{T_{n+1}}(t), dZ(t) \rangle
-        & = & 0
+        & = & 0,
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -1007,32 +1227,608 @@ $$
     S(t) \approx \hat{S}(t)
 $$
 
-$$
-    d \hat{L}(t) 
-        = \phi(L_{n}(0)) \lambda_{n}(t) ^{\mathrm{T}} dW^{A}(t), 
-            \hat{L}_{n}(0) = L_{n}(0), 
-            n = 0, \ldots, N-1,
-$$
+ここで、
 
 $$
+\begin{eqnarray*}
+    d \hat{L}_{n}(t) 
+        & = & \phi(L_{n}(0)) \lambda_{n}(t) ^{\mathrm{T}} dW^{A}(t), 
+    \quad
+    \hat{L}_{n}(0) = L_{n}(0), 
+    \quad
+    n = 0, \ldots, N-1,
+    \\
     d \hat{S}(t)
-        = \phi(S(0))
+        & = & \phi(S(0))
             \left(
                 \sum_{i=0}^{N-1} w_{i}\lambda(t)^{\mathrm{T}}
             \right)
             d W^{A}(t),
-            \hat{S}(0) = S(0),
+    \quad
+    \hat{S}(0) = S(0),
+    \\
+    w_{i}
+        & = & \frac{\phi(L_{i}(0))}{\phi(S(0))}
+            \frac{\partial S(0)}{\partial L_{i}(0)}
+    \\
+        & = & \frac{\phi(L_{i}(0))}{\phi(S(0))} \frac{\tau_{n}S(0)}{1 + \tau_{n}L_{n}(0)}
+            \left[
+                \frac{P(0, \tau_{k})}{P(0, T_{j}) - P(0, T_{k})}
+                    + \frac{\sum_{i=n}^{k-1} \tau_{i} P(0, T_{i+1})}{A(0)}
+            \right],
+    \quad
+    i = 0, \ldots, N-1,
+\end{eqnarray*}
+$$
+
+である。
+この近似はSection 14.4.2と同様である。
+以上の近似を用いて条件付き期待値を計算する。
+
+$$
+\begin{eqnarray*}
+    \mathrm{E}^{A}
+    \left[
+        L_{n}(T) | S(T) = s
+    \right]
+        & \approx &
+            \mathrm{E}^{A}
+            \left[
+            \left.
+                \hat{L}_{n}(T)
+            \right|
+                \hat{S}(T) = s
+            \right]
+     \\
+        & = &
+            L_{n}(0)
+                \left(
+                    1 + c_{n} \frac{s - S(0)}{S(0)}
+                \right)
+\end{eqnarray*}
+$$
+
+ここで、
+
+$$
+\begin{equation}
+    c_{n} 
+        = \frac{
+            \phi(L_{n}(0)) S(0) \int_{0}^{T} \lambda_{n}(t)^{\mathrm{T}} 
+                \left(
+                    \sum_{i=0}^{N-1} w_{i}\lambda_{i}(t)
+                \right)
+                \ dt
+            }{
+                \phi(S(0)) L_{n}(0)
+                    \int_{0}^{T} 
+                        \left\| \sum_{i=0}^{N-1} w_{i} \lambda_{i}(t)
+                        \right\|^{2} \ dt
+            }
+\end{equation}
+$$
+
+TODO:
+
+
+##### Proposition 16.6.3
+mapping function $\alpha(s)$が$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
+$\eqref{chap16_lmm_stochastic_volatility}$のLMMにおいて、$\alpha$は以下で与えられる。
+
+$$
+    \alpha(s)
+        = \mathrm{E}^{A}
+        \left[
+            \frac{1}{A(T)} | S(T) = s
+        \right]
+        \approx
+            \left(
+                \sum_{n=0}^{N-1} \tau_{n}
+                    \prod_{i=0}^{n}(1 + \tau_{i}l_{i}(s))^{-1}
+            \right),
+$$
+
+ここで、
+
+$$
+i   l_{n}(s) 
+        := L_{n}(0)
+            \left(
+                1 + c_{n} \frac{s - S(0)}{(0)}
+            \right),
+    \quad
+    n = 0, \ldots, N-1,
+$$
+
+である。
+
+
+#### 16.6.7 Correcting Non-Arbitrage-Free Methods
+Section 16.6.3, 16.6.5, 16.6.6などで扱ったannuity mapping functionはarbitrage-freeではなかった。
+一方、linear TSR modelのようなものは理論的にはarbitrage-freeかもしれないが、計算上(非線形性のために)誤差が存在する。
+この節では、arbitrageに関する問題を修正する方法について議論する。
+
+CMSの価値は以下で計算された。
+
+$$
+    V_{\mathrm{CMS}}(0) 
+        = A(0) E^{A}
+            \left(
+                \frac{P(T, T_{p})}{A(T)}S(T) 
+            \right)
+        = A(0) E^{A}
+            \left(
+                \alpha(S(T))S(T) 
+            \right),
+$$
+
+$\frac{P(T, T_{p})}{A(T)}$は、取引可能な$P$とnumeraire$A$との比で、annuity measureの下でマルチンゲールである。
+よって、arbitrage-freeのモデルのもとでは、
+
+$$
+    \mathrm{E}^{A}
+    \left[
+        \frac{P(T, T_{p}}{A(T)}
+    \right]
+    = \frac{P(0, T_{p})}{A(0)},
+$$
+
+が成り立つべきである。
+つまり、以下が成り立つ。
+
+$$
+\begin{equation}
+    \mathrm{E}^{A}
+    \left[
+        \alpha(S(T))
+    \right]
+    = \frac{P(0, T_{p})}{A(0)}.
+    \label{chap16_annuity_mapping_function_no_arbitrage_condition}
+\end{equation}
+
+$$
+
+もし、$\alpha(s)$が上記を満たさない場合は
+
+$$
+\begin{equation}
+    \bar{\alpha} 
+        := \mathrm{E}^{A}
+        \left[
+            \alpha(S(T))
+        \right]
+        \neq
+        \frac{P(0, T_{p})}{A(0)}
+    \label{chap16_mapping_function_not_satisfied_no_arbitrage_condition}
+\end{equation}
+$$
+
+となる。
+この場合、新たに$tilde{\alpha}(s)$を以下のように定義し、$\eqref{chap16_mapping_function_not_satisfied_no_arbitrage_condition}$を満たすように$\alpha$を取り直せば、式は満たされる。
+
+$$
+\begin{equation}
+    \tilde{\alpha}(s)
+        = \frac{P(0, T_{p})}{A(0)} \frac{\alpha(s)}{\bar{\alpha}}.
+    \label{chap16_mapping_function_satisfy_no_aribitrage_condition}
+\end{equation}
+$$
+
+以上より、CMSの価格を下記のimproed CMS valuation formulaで計算すれば良い。
+
+$$
+    V_{\mathrm{CMS}}
+        = A(0) \mathrm{E}^{A}
+        \left[
+            S(T) \tilde{\alpha}(S(T))
+        \right]
+        =  P(0, T_{p}) \frac{\mathrm{E}^{A}(S(T)\alpha(S(T)))}
+            {\mathrm{E}^{A}(\alpha(S(T)))}.
+$$
+
+上記の修正は、no-arbitrageのmodelにも有効である。
+no-arbitrageのmodelも理論的には無裁定の式が成立するが、数値計算の方法によって発生する計算上の誤差が存在するため、計算上の誤差を改善する目的で適用できるからである。
+
+annuity mapping functionにおいては、$\eqref{chap16_annuity_mapping_function_no_arbitrage_condition}$は成り立つことが期待される基本的な式であるが、他にもCMSの計算の上で考慮すべき関係式がある。
+以下は、自明に成り立つ等式である。
+この両辺に$S(T)$をかけて期待値をとったものを考える。
+
+$$
+    \sum_{n=0}^{N_1} \frac{\tau_{n} P(T, T_{n+1})}{A(T)} = 1,
 $$
 
 
+両辺の期待値を取るために、annuity mapping functionを$P$の満期ごとに定義しておく。
 
+$$
+    \alpha(S(T), T_{n}) := \frac{P(T, T_{n})}{A(T)}.
+$$
 
+両辺の期待値を取ると
 
+$$
+\begin{eqnarray*}
+    \sum_{n=0}^{N_1} \frac{\tau_{n} P(T, T_{n+1})}{A(T)}S(T)
+        & = & S(T)
+        \\
+    \Rightarrow
+    \sum_{n=0}^{N_1} \tau_{n} \mathrm{E}^{A}
+    \left[
+        \alpha(S(T), T_{n+1})S(T)
+    \right]
+        & = & S(0),
+\end{eqnarray*}
+$$
 
+となる。
+この期待値を取った式は、全てのtenorのCMSのconvexity adjustmentの和がswap rateに等しいことを述べている。
 
+また、別の関係式として、$T_{0} = T$として
 
+$$
+\begin{eqnarray*}
+    \frac{P(T, T_{0}) - P(T, T_{N})}{A(T)}
+        & = & S(T)
+        \\
+    \iff
+    \frac{P(T, T_{0})}{A(T)} - \frac{P(T, T_{N})}{A(T)}
+        & = & S(T),
+        \\
+\end{eqnarray*}
+$$
 
+が成り立つ。
+両辺に$S(T)$をかけて期待値をとると、
 
+$$
+    \mathrm{E}^{A}
+    \left[
+        \alpha(S(T), T_{0})S(T)
+    \right]
+    - 
+    \mathrm{E}^{A}
+    \left[
+        \alpha(S(T), T_{N})S(T)
+    \right]
+         = \mathrm{E}^{A}(S(T)^{2}),
+$$
+
+が成立。
+右辺は $S(T)$ の二乗の期待値で、replication methodで求めることができ、これは、annuity mapping functionには依存しない。
+一方左辺は、annuity mapping functionによって決まる。
+この等式は、CMSのswap rateのfixing date$T_{0}$の支払いと最後の支払日$T_{N}$の支払いの差は、annuity mapping functionに依存しないことを示している。
+よって、この等式もannuity mapping functionの選び方によらず満たされるべきである。
+
+#### 16.6.8 Impact of Annuity Mapping Function and Mean Reversion
+CMSの評価において、volatility smileの影響を捉える(通常、replication methodの$\eqref{chap16_value_cms_static_hedge}$によって)ことの重要性は、広く知られている。
+一方、CMSの評価の別の要素であるannuity mapping functionの影響は見落とされがちである。
+linear TSR modelの$\eqref{chap16_linear_tsr_model_cms_value}$において、$\alpha_{1}$を自由に取るとすると、CMSのconvexity adjustmentを任意の値にとることがきできる。
+
+勿論、$\alpha_{1}$の全ての値が、実際のマーケットに合うというわけではないが、$\alpha_{1}$の妥当な範囲は明らかではない。
+この場合、Section 16.3.2でやったように、平均回帰係数などの性質とその影響を理解している別のparameterとみなすことは有用である。
+また、平均回帰係数の場合、Section 13.1.8で扱ったように取引可能な商品の市場価格と直接関係しているという、好ましい性質もある。
+CMS convexity adjustmentは平均回帰の妥当な範囲内での水準の違いによって、10%-20%異なることになる。
+
+以下の条件で具体的な例を計算する。
+* 10年満期
+* semi-annual fixing
+* 金利は5%のflat
+* linear TSR modelを使う
+* swap rateはlog-normal
+    * volatilityは全てのfixing dateで$\sigma_{S}$ = 17%
+
+上記の仮定のもとでは以下が成り立つので、$\eqref{chap16_linear_tsr_model_cms_convexity_adjustment}$よりclosed formで解を記述できる。
+
+$$
+    \mathrm{Var}^{A}
+    \left[
+        S(T)
+    \right]
+    = \mathrm{E}^{A}
+        \left[
+            S(T)^{2}
+        \right]
+        -
+        \mathrm{E}^{A}
+        \left[
+            S(T)
+        \right]^{2}
+    = S(0)^{2} 
+        \left(
+            e^{\sigma_{S}^{2}T} - 1
+        \right),
+$$
+
+1. Simple approach
+    * $\eqref{chap16_linear_tsr_model_simple_alpha_estimation}$で計算したもの
+2. Mean reversion 
+    * $\eqref{chap16_linear_tsr_model_a_relation_to_mean_reversion}$より、平均回帰係数$\varkappa$をparameterとして計算。
+    * $\varkappa$を0.0, 0.1, 0.2と変化させる
+
+$$
+    G(t, T) = \int_{t}^{T} e^{- \int_{t}^{u} \varkappa(s)\ ds}\ du.
+$$
+
+![Fig. 16.1](image/interest_rate_modeling3_figure_16_1.png)
+
+* 横軸は満期$T$
+* 縦軸はb.p.でconvexity adjustmentの値を表している
+
+#### 16.6.9 CDF and PDF of CMS Rate in Forward Measure
+CMS-linked cash flowsに対して、replication methodは有用だが、常に良いやけではない。
+payoffが不連続な場合は、不連続関数の微分が出てくるので特別なケアが必要。
+ここでは、replication methodではない別の方法をここでは見る。
+$T_{p}\ (T_{p} \ge T)$に$g(S(T))$をpayoffに持つcash flowのpricingを考える。
+この問題は$S(T)$の$T_{p}$-forward measureの下での密度$\psi^{T_{p}}(s)$を求める問題とみなせる。
+
+$$
+\begin{equation}
+    \mathrm{E}^{T_{p}}
+    \left[
+        g(S(T))
+    \right]
+    = \int_{-\infty}^{\infty} g(s) \psi^{T_{p}}(s)\ ds.
+    \label{chap16_65_density_integration_method}
+\end{equation}
+$$
+
+この密度は常に求まるわけではないが、annuity measureの下での分布$\Psi^{A}(\cdot)$と密度関数$\psi^{A}(\cdot)$はmarketにキャリブレーションしたvanilla modelのclosed formとしてか、swaptionの全てのstrikeの価格からnon-parametricに求めたものから
+
+$$
+\begin{eqnarray}
+    \Psi^{A}(K) 
+        & = & 1 + \frac{\partial}{\partial K} c(K),
+    \label{chap16_66_cdf_in_annuity_measure}
+    \\
+    \psi^{A}(K)
+        & = & \frac{\partial^{2}}{\partial K^{2}} c(K),
+    \label{chap16_67_pdf_in_annuity_measure}
+    \\
+    c(K)
+        & := & \mathrm{E}^{A}
+        \left[
+            (S(T) - K)^{+}
+        \right],
+    \label{chap16_68_cms_call_option_value}
+\end{eqnarray}
+$$
+
+で求まる。
+以下の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFとで特徴づける。
+
+##### Proposition 16.6.4
+annuity mapping function $\alpha(s)$が条件付き期待値$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義する。
+forward measureの下でのPDF$\psi^{T_{p}}(s)$とCDF$\Psi^{T_{p}}(s)$は、annuity measureの下でのPDF$\psi^{A}(s)$とCDF$\Psi^{A}(s)$と以下の関係が成り立つ。
+
+$$
+\begin{eqnarray}
+    \psi^{T_{p}}
+        & = & \frac{A(0)}{P(0, T_{p})} \alpha(s) \psi^{A}(s),
+    \label{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}
+    \\
+    \Psi^{T_{p}}(s)
+        & = & \frac{A(0)}{P(0, T_{p})} 
+            \int_{-\infty}^{s} \alpha(s) \psi^{A}(u)\ du.
+    \label{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}
+\end{eqnarray}
+$$
+
+である。
+
+###### sketch of proof
+$K$での$\psi^{T_{p}}(K)$の値は、delta関数$\delta(S(T) - K)$のpayoffを持つderivativeの価値に等しい
+
+$$
+    \psi^{T_{p}}(K) 
+        = \mathrm{E}^{T_{p}}
+        \left[
+            \delta(S(T) - K)
+        \right]
+        = \int_{-\infty}^{\infty} \psi^{T_{p}}(s) \delta(S(T) - K)\ ds.
+$$
+
+ここで、左辺をannuity measureに変更する。
+
+$$
+\begin{eqnarray*}
+    \psi^{T_{p}}
+        & = & \frac{A(0)}{P(0, T_{p})} \mathrm{E}^{A}
+            \left[
+                \frac{P(T, T_{p})}{A(T)} \delta(S(T) - K)
+            \right]
+        \\
+        & = & \frac{A(0)}{P(0, T_{p})} \mathrm{E}^{A}
+            \left[
+                \alpha(S(T)) \delta(S(T) - K)
+            \right]
+        \\
+        & = & \frac{A(0)}{P(0, T_{p})}
+            \alpha(K) \psi^{A}(K).
+\end{eqnarray*}
+$$
+
+よって、$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$が求まった。
+両辺積分すれば$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$が求まる。
+
+実務的には、$\alpha(s)$はSection 16.6.3, 16.6.4, 16.6.5, 16.6.6のように近似して求める。
+$\eqref{chap16_65_density_integration_method}$のdensity integration methodは、理論的にはreplicaton methodと等しいが、非連続な関数や滑らかでない関数をpayoffにもつdigital optionやrange acrrulasのようなものにたいしては、良い数値的性質を持つ。
+Chapter17で議論する複数のCMS rateに依存するCash flowを持つ商品において重要である。
+
+$\alpha(s)$がlinear TSR modelのときは$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$のCDFはよりsimpleな形を持つ。
+
+##### Corollary 16.6.5
+$\eqref{chap16_52_linear_tsr_model_def_alpha}$のlinear TSR modelを考える。
+このとき、swap rateの$T_{p}$-forward measureの下でのCDF$\Psi^{T_{p}}(s)$は以下で与えられる。
+
+$$
+\begin{equation}
+    \Psi^{T_{p}}(s)
+        = \frac{A(0)}{P(0, T_{p})} 
+            \left(
+                \alpha_{1} (S(0) - s - c(s)) + \alpha(s) \Psi^{A}(s)),
+            \right)
+    \label{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}
+\end{equation}
+$$
+
+が成立。
+ここで$Psi^{A}(s)$は$\eqref{chap16_66_cdf_in_annuity_measure}$で与えられる。
+$c(s)$は$\eqref{chap16_68_cms_call_option_value}$で定義された、 strike $s$のcall option価格である。
+
+###### sketch of proof
+
+$$
+\begin{eqnarray*}
+    \frac{P(0, T_{p})}{A(0)} \Psi^{T_{p}}(s)
+        & = & \int_{-\infty}^{s} (\alpha_{1} u + \alpha_{2}) \psi^{A}(u)\ du
+        \\
+        & = & \alpha_{1}
+            \left(
+                \int_{-\infty}^{\infty} u\psi^{A}(u)\ du
+                - \int_{s}^{\infty} (u - s) \psi^{A}(u)\ du
+                - s \int_{s}^{\infty} \psi^{A}(u)\ du
+            \right)
+            + \alpha_{2} \int_{-\infty}^{s} \psi^{A}(u)\ du
+\end{eqnarray*}
+$$
+
+が成り立つ。
+ここで、
+
+$$
+\begin{eqnarray*}
+    \int_{-\infty}^{\infty} u \psi^{A}(u)\ du
+        & = & S(0),
+    \\
+    \int_{s}^{\infty} (u - s)\psi^{A}(u)\ du,
+        & = & c(s),
+    \\
+    \int_{s}^{\infty} \phi^{A}(u)\ du
+        & = & 1 - \Psi^{A}(s),
+    \\
+    \int_{-\infty}^{s} \psi^{A}(u) \ du
+        & = & \Psi^{A}(s),
+\end{eqnarray*}
+$$
+
+である。
+これを代入すると、
+
+$$
+\begin{eqnarray*}
+    \frac{P(0, T_{p})}{A(0)} \Psi^{T_{p}}(s)
+        & = & \alpha_{1}
+            \left(
+                \int_{-\infty}^{\infty} \psi^{A}(u)\ du
+                - \int_{s}^{\infty} (u - s) \psi^{A}(u)\ du
+                - s \int_{s}^{\infty} \psi^{A}(u)\ du
+            \right)
+            + \alpha_{2} \int_{-\infty}^{s} \psi^{A}(u)\ du
+        \\
+        & = & \alpha_{1}
+            (
+                S(0)
+                - c(s)
+                - s (1 - \Psi^{A}(s))
+            )
+            + \alpha_{2}  \Psi^{A}(s)
+        \\
+        & = & \alpha_{1}
+            (
+                S(0)
+                - c(s)
+                - s 
+            )
+            + s \alpha_{1} \Psi^{A}(s)
+            + \alpha_{2}  \Psi^{A}(s)
+        \\
+        & = & \alpha_{1} (S(0) - c(s) - s)
+            + \alpha(s) \Psi^{A}(s)) 
+\end{eqnarray*}
+$$
+
+より成立。
+
+##### Corollary 16.6.6
+linear TSR model $\eqref{chap16_52_linear_tsr_model_def_alpha}$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
+
+$$
+\begin{equation}
+    \psi^{T_{p}}(s)
+        = \frac{A(0)}{P(0, T_{p})} (\alpha_{1}(s) + \alpha_{2})
+            \psi^{A}(s),
+    \label{chap16_72_pdf_in_forward_measure_with_linear_tsr_model}
+\end{equation}
+$$
+
+###### sketch of proof
+Corollary 16.6.5と同様に$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$から直接求めるか、$\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を微分して求めれば良い。
+$\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を両辺微分する。
+まず、
+
+$$
+   \frac{d }{d s} c(s)
+        = \mathrm{E}^{A}
+        \left[
+            \frac{d }{d s} (S(T) - s)^{+}
+        \right]
+        = \mathrm{E}^{A}
+        \left[
+            -1_{\{S(T) \ge s\}}
+        \right]
+        = -P^{A}(S(T) \ge s)
+        = -1 + \Psi^{A}(s)
+$$
+
+である。
+$\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$の両辺を微分すると、
+
+$$
+\begin{eqnarray*}
+    \Psi^{T_{p}}(s)
+        & = & \frac{A(0)}{P(0, T_{p})} 
+            \left(
+                \alpha_{1} (S(0) - s - c(s)) + \alpha(s) \Psi^{A}(s)),
+            \right)
+    \\
+    \Rightarrow
+    \psi^{T_{p}}(s)
+        & = & \frac{A(0)}{P(0, T_{p})} 
+            \left(
+                \alpha_{1}(-1  - \frac{d}{d s}c(s)) + \alpha_{1} \Psi^{A}(s) + \alpha(s) \psi^{A}(s),
+            \right)
+        & = & \frac{A(0)}{P(0, T_{p})} (\alpha(s) \psi^{A}(s))
+\end{eqnarray*}
+$$
+
+より成立。
+
+forward measureの下でのp.d.f.が求まった。
+このp.d.f.と取引されているderivativeとの関係は、CMS capletのかあっくが以下で表現されていたのを思い出すと、
+
+$$
+\begin{equation}
+    V_{\mathrm{cmscaplet}}(0, K)
+        = P(0, T_{p}) \mathrm{E}^{T_{p}}
+        \left[
+            (S(T) - K)^{+}
+        \right]
+    \label{chap16_73_cms_caplet_value_under_forward_measure}
+\end{equation}
+$$
+
+次の補題を得る。
+
+##### lemma 16.6.7
+marketにimpliedされた$T_{p}$-forward measureの下でのp.d.f.$\psi^{T_{p}}(s)$はCMS capletの価値から直接求めることができる。
+
+$$
+\begin{equation}
+    \psi^{T_{p}}(K)
+        = \frac{1}{P(0, T_{p})} \frac{\partial^{2}}{\partial K^{2}} V_{\mathrm{cmscaplet}}(0, K)
+    \label{chap16_74_pdf_implied_by_cms_caplet}
+\end{equation}
+$$
 
 
 
