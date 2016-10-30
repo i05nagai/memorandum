@@ -165,7 +165,7 @@ $$
 modelのparameterが満たすべき条件について述べた。
 parameterを決める具体的な方法は以下となる。
 
-1. $\{\alpha(T_{1}), \ldots, \alpha_{T_{N}}\}$を$\eqref{chap16_linear_tsr_model_a_from_annuity}$から求める
+1. $\\{ a(T_{1}), \ldots, a(T_{N}) \\}$を$\eqref{chap16_linear_tsr_model_a_from_annuity}$から求める
     * 詳細についてはあとで述べる
 2. $a(T) = a(T_{0})$を$\eqref{chap16_linear_tsr_model_a_from_consistency_condition}$から求める。
 3. 残りの$a(M)$については線形補間などで求める。
@@ -174,7 +174,7 @@ parameterを決める具体的な方法は以下となる。
 linearという単純なモデルを仮定したが、実際のマーケットとは一致しない場合もある。
 特に、linear TSR modelの場合はparameterの選び方によってはdiscount bondが負になるという問題があり、問題ごとに適切なparameterを選ぶ必要がある。
 
-linear TSR modelは$\eqref{chap16_linear_tsr_model_a_from_annuity}$から$\{a_{T_{1}}, \ldots, a_{T_{N}}\}$を決めるので、決め方には自由度がある。
+linear TSR modelは $$\eqref{chap16_linear_tsr_model_a_from_annuity}$$から$a(T_{1}), \ldots, a(T_{N})$を決めるので、決め方には自由度がある。
 $a(\cdot)$を決めるために、$a$の意味をもう少し深く考える。
 まず、$a$が状態$S(T)$に応じて$T$でのyield curveの形を決めることをみる。
 これは、Section 10.1.2で扱った平均回帰係数と同じ性質である。
@@ -883,8 +883,8 @@ $$
 $$
 
 となる。
-$S(T)$のぶんさんは、選択したModelないし、$(S(T) - S(0))$を積分して計算される。
-$\eqref{chap16_linear_tsr_model_cms_convexity_adjustment}$は、LIAの式に似ておりよく使われるモデルである。
+$S(T)$の分散は、選択したModelないし、$(S(T) - S(0))^{2}$を積分して計算される。
+$$\eqref{chap16_linear_tsr_model_cms_convexity_adjustment}$$は、LIAの式に似ておりよく使われるモデルである。
 しかし、$\alpha$のとり方によっては、discount factorが負になるという問題がある。
 Sec 16.3.2で述べたように$\alpha_{1}$は平均回帰的な役割を持つが、これについてはSec 16.6.8で扱う。
 大雑把には、$T$のyield curveが十分低い状況（つまり、$S(T)$がゼロに近い状況）を考えることで、
@@ -1069,7 +1069,7 @@ $$
 TODO
 
 
-解 $\eqref{chap16_linear_tsr_model_conditional_expectation_solution}$はlinear TSR modelの$\alpha_{1}, \alpha_{2}$と一致する。
+解$$\eqref{chap16_linear_tsr_model_conditional_expectation_solution}$$はlinear TSR modelの$\alpha_{1}, \alpha_{2}$と一致する。
 
 CMSのconvexity adjustmentはparameterのあるannuity mappincg functionで一意に決定できる。
 これは、流動性のあるCMS swapにcalibrationする場合に重要である。
@@ -1131,7 +1131,7 @@ $$
 \end{equation}
 $$
 
-と定義し、 $\eqref{chap16_value_cms_static_hedge}$より、$V_{\mathrm{CMS}}$を計算する。
+と定義し、$$\eqref{chap16_value_cms_static_hedge}$$より、$V_{\mathrm{CMS}}$を計算する。
 marketと整合的なCMSの価値を計算するために、replication methodのswaptionの価値は、marketから直接得るか、marketにcalibrationしたvanilla modelを使って計算する。
 一方、目的がquasi-Gaussian modelでのCMSのcash flowの価値の解析的近似が目的であるならば、swaptionをquasi-Gaussian modelで直接（Proposition 13.1.10のような近似を使って）計算すべきである。
 
@@ -1512,9 +1512,9 @@ $$
 よって、この等式もannuity mapping functionの選び方によらず満たされるべきである。
 
 #### 16.6.8 Impact of Annuity Mapping Function and Mean Reversion
-CMSの評価において、volatility smileの影響を捉える(通常、replication methodの$\eqref{chap16_value_cms_static_hedge}$によって)ことの重要性は、広く知られている。
+CMSの評価において、volatility smileの影響を捉える(通常、replication methodの$$\eqref{chap16_value_cms_static_hedge}$$によって)ことの重要性は、広く知られている。
 一方、CMSの評価の別の要素であるannuity mapping functionの影響は見落とされがちである。
-linear TSR modelの$\eqref{chap16_linear_tsr_model_cms_value}$において、$\alpha_{1}$を自由に取るとすると、CMSのconvexity adjustmentを任意の値にとることがきできる。
+linear TSR modelの$$\eqref{chap16_linear_tsr_model_cms_value}$$において、$\alpha_{1}$を自由に取るとすると、CMSのconvexity adjustmentを任意の値にとることがきできる。
 
 勿論、$\alpha_{1}$の全ての値が、実際のマーケットに合うというわけではないが、$\alpha_{1}$の妥当な範囲は明らかではない。
 この場合、Section 16.3.2でやったように、平均回帰係数などの性質とその影響を理解している別のparameterとみなすことは有用である。
@@ -1609,7 +1609,7 @@ $$
 以下の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFとで特徴づける。
 
 ##### Proposition 16.6.4
-annuity mapping function $\alpha(s)$が条件付き期待値$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義する。
+annuity mapping function $\alpha(s)$が条件付き期待値$$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$$で定義する。
 forward measureの下でのPDF$\psi^{T_{p}}(s)$とCDF$\Psi^{T_{p}}(s)$は、annuity measureの下でのPDF$\psi^{A}(s)$とCDF$\Psi^{A}(s)$と以下の関係が成り立つ。
 
 $$
@@ -1669,7 +1669,7 @@ Chapter17で議論する複数のCMS rateに依存するCash flowを持つ商品
 $\alpha(s)$がlinear TSR modelのときは$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$のCDFはよりsimpleな形を持つ。
 
 ##### Corollary 16.6.5
-$\eqref{chap16_52_linear_tsr_model_def_alpha}$のlinear TSR modelを考える。
+$$\eqref{chap16_52_linear_tsr_model_def_alpha}$$のlinear TSR modelを考える。
 このとき、swap rateの$T_{p}$-forward measureの下でのCDF$\Psi^{T_{p}}(s)$は以下で与えられる。
 
 $$
@@ -1762,7 +1762,7 @@ $$
 より成立。
 
 ##### Corollary 16.6.6
-linear TSR model $\eqref{chap16_52_linear_tsr_model_def_alpha}$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
+linear TSR model$$\eqref{chap16_52_linear_tsr_model_def_alpha}$$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
 
 $$
 \begin{equation}
