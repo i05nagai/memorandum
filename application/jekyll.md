@@ -147,3 +147,4 @@ github上でURLが`/repository_name/js/main.js`と解釈される。
 * [Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/)
 * [Jekyllで作るシンプルWebサイト - Jekyllとはなにか | CodeGrid](https://app.codegrid.net/entry/jekyll-introduction)
 * [mattn/mattn.github.io: mattn.github.io](https://github.com/mattn/mattn.github.io)
+* [Extras - Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/extras/)
