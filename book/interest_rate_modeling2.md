@@ -27,6 +27,93 @@ title: Interest Rate Modeling 2
 
 # Interest Rate Modeling 2
 
+## 10 One-Factor Short Rate Model I
+
+### 10.1 The One-Factor Gaussian Short Rate Model
+
+#### 10.1.1 Notation
+
+#### 10.1.2 The Mean-Reverting 
+
+##### 10.1.2.2 The General One-Factor GSR Model
+1-factorのGSR odelの一般形は以下で与えられる。
+
+$$
+\begin{equation}
+    dr(t)
+        = \varkappa (\vartheta(t) - r(t)) dt + \sigma_{r}(t) dW(t),
+    \label{chap10_general_one_factor_short_rate_model}
+\end{equation}
+$$
+
+Section 4.5.2で示したように、HJMのもとでのshort rateのdynamicsは以下のようなseparableな形となる。
+
+$$
+\begin{eqnarray}
+    df(t, T)
+        & = & \sigma_{f}(t, T)
+            \left(
+                \int_{t}^{T} \sigma_{f}(t, u)\ du
+            \right)
+            dt
+            + \sigma_{f}(t, T) dW(t),
+    \label{chap10_instantaneous_forward_rate_of_general_one_factor_short_rate_model}
+    \\
+    \sigma_{f}(t, T)
+        & = & \sigma_{r}(t) \exp
+            \left(
+                - \int_{t}^{T} \varkappa(u) \ du
+            \right).
+    \nonumber
+\end{eqnarray}
+$$
+
+###### Proposition 10.1.6
+
+###### Proposition 10.1.7 
+$$
+    x(t) := r(t) - f(0, t).
+$$
+
+このとき、$\eqref{chap10_general_one_factor_short_rate_model}$と$\eqref{chap10_instantaneous_forward_rate_of_general_one_factor_short_rate_model}$は
+
+$$
+\begin{equation}
+    d x(t) 
+        = (y(t) - \varkappa(t) x(t)) dt
+            + \sigma_{r}(t) dW(t),
+    \quad
+    x(0) = 0
+\end{equation}
+$$
+
+とかける。
+ここで、
+
+$$
+\begin{equation}
+    y(t) := \int_{0}^{t} e^{-2 \int_{u}^{t} \varkappa(s)\ ds} \sigma_{r}(u)^{2} \ du
+\end{equation}
+$$
+
+である。
+また、discount bondは以下のようにかける。
+
+$$
+\begin{eqnarray}
+    P(t, T)
+        & = & \frac{P(0, T)}{P(0, t)} \exp
+            \left(
+                -x(t) G(t, T) - \frac{1}{2} y(t) G(t, T)^{2}
+            \right),
+    \\
+    G(t, T) 
+        & := & \int_{t}^{T} e^{- \int_{t}^{u} \varkappa(s)\ ds}\ du.
+    \nonumber
+\end{eqnarray}
+$$
+
+
 ## 14 The Libor Market Model I
 
 ### 14.2 LM Dynamics and Measures
@@ -34,6 +121,35 @@ title: Interest Rate Modeling 2
 #### 14.2.4 Separable Deterministic Volatility Function
 
 #### 14.2.5 Stochastic Volatility
+
+spot measureの下で以下のSDEが成立するとする。
+
+$$
+\begin{equation}
+    d z(t) = \theta(z_{0} - z(t)) dt 
+        - \eta \psi(z(t)) dZ(t),
+    \quad
+    z(0) = z_{0}
+    \label{chap14_lmm_volatility_process_stochastic_volatility_under_spot_measure}
+\end{equation}
+$$
+
+
+$$
+\begin{eqnarray}
+    dL_{n}(t) 
+        & = & \sqrt{z(t)} \phi(L_{n}(t)) \lambda_{n}(t)^{\mathrm{T}}
+            \left(
+                \sqrt{z(t)} \mu_{n}(t) dt + dW^{B}
+            \right),
+    \label{chap14_lmm_foward_rate_process_stochastic_volatility_under_spot_measure}
+    \\
+    \mu_{n}(t) 
+        & := &
+            \sum_{j=q(t)}^{n} \frac{\tau_{j} \phi(L_{j}(t)) \lambda_{j}(t)}{1 + \tau_{j}L_{j}(t)},
+        \nonumber
+\end{eqnarray}
+$$
 
 #### 14.2.6 Time-Dependence in Model Parameters
 
@@ -48,6 +164,40 @@ title: Interest Rate Modeling 2
 ### 14.4 Pricing of European Options
 
 #### 14.4.1 Caplets
+
+##### Proposition 14.4.1
+spot measureの下で、forward rateが$\eqref{chap14_lmm_foward_rate_process_stochastic_volatility_under_spot_measure}$及び$\eqref{chap14_lmm_volatility_process_stochastic_volatility_under_spot_measure}$とmodel化されているとする。
+また、Assumption 14.2.7を仮定する。
+このとき、
+
+$$
+    V_{\mathrm{caplet}}(0) = P(0, T_{n+1}) \tau_{n} \mathrm{E}^{T_{n+1}}
+    \left[
+        (L_{n}(T_{n}) - c)^{+}
+    \right]
+$$
+
+である。
+ここで、
+
+$$
+\begin{eqnarray}
+    d L_{n}(t)
+        & = & \sqrt{z(t)} \phi(L_{n}(t)) \| \lambda_{n}(t) \| dY^{n+1}(t),
+    \\
+    d z(t) 
+        & = & \theta (z_{0} - z(t)) dt + \eta \psi(z(t)) dZ(t),
+        \nonumber
+\end{eqnarray}
+$$
+
+で、$Y^{n+1}(t)$及び$Z(t)$は独立で、$Q^{T_{n+1}}$の下で一次元BMである。
+また、$Y^{n+1}$は以下で与えられる。
+
+$$
+    Y^{n+1}(t) 
+        = \int_{0}^{t} \frac{\lambda_{n}(s)^{\mathrm{T}}}{\| \lambda_{n}(s) \|} \ d W^{n+1}(s).
+$$
 
 #### 14.4.1 Swaptions
 
@@ -366,4 +516,48 @@ $$
 $$
 
 となる。
+
+##### Proposition 14.4.3
+時刻0のswaptionの価格は以下で与えられる。
+
+$$
+\begin{equation}
+    V_{\mathrm{swaption}}(0) 
+        = A(0) \mathrm{E}^{A}
+        \left[
+            (S(T_{j}) - c)^{+}
+        \right].
+\end{equation}
+$$
+
+ここで、$w_{n}(t)$をProposition 14.4.2のものとし、
+
+$$
+    \lambda_{S}(t) 
+        = \sum_{n=j}^{k-1} w_{n}(0) \lambda_{n}(t),
+$$
+
+とおく。
+Proposition 14.4.2のswap rateのdynamicsは以下で近似される。
+
+$$
+\begin{eqnarray}
+    d S(t)
+        & \approx & \sqrt{z(t)} \phi(S(t)) \| \lambda_{S}(t) \| dY^{A},
+    \\
+    dz(t)
+        & = & \theta (z_{0} - z(t)) dt + \eta \psi(z(t)) dZ(t),
+\end{eqnarray}
+$$
+
+ここで、$Y^{A}(t)$及び$Z(t)$は独立で、$Q^{A}$の下に一次元BMである。
+また、$Y^{A}(t)$は以下で与えられる。
+
+$$
+    \| \lambda_{S}(t) \| dY^{A}(t)
+        = \sum_{n=j}^{k-1} w_{n}(0) \lambda_{n}(0)^{\mathrm{T}} dW^{A}(t).
+$$
+
+
+
 
