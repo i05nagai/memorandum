@@ -23,17 +23,18 @@ title: Interest Rate Modeling 3
 		* [16.6.4 Linear and Other TSR Models](#1664-linear-and-other-tsr-models)
 		* [16.6.5 The Quasi-Gaussian Model](#1665-the-quasi-gaussian-model)
 		* [16.6.6 The Libor Market Model](#1666-the-libor-market-model)
-				* [Proposition 16.6.3](#proposition-1663)
-			* [16.6.7 Correcting Non-Arbitrage-Free Methods](#1667-correcting-non-arbitrage-free-methods)
-			* [16.6.8 Impact of Annuity Mapping Function and Mean Reversion](#1668-impact-of-annuity-mapping-function-and-mean-reversion)
-			* [16.6.9 CDF and PDF of CMS Rate in Forward Measure](#1669-cdf-and-pdf-of-cms-rate-in-forward-measure)
-				* [Proposition 16.6.4](#proposition-1664)
-				* [sketch of proof](#sketch-of-proof-1)
-				* [Corollary 16.6.5](#corollary-1665)
-				* [sketch of proof](#sketch-of-proof-2)
-				* [Corollary 16.6.6](#corollary-1666)
-				* [sketch of proof](#sketch-of-proof-3)
-				* [lemma 16.6.7](#lemma-1667)
+			* [Proposition 16.6.3](#proposition-1663)
+		* [16.6.7 Correcting Non-Arbitrage-Free Methods](#1667-correcting-non-arbitrage-free-methods)
+		* [16.6.8 Impact of Annuity Mapping Function and Mean Reversion](#1668-impact-of-annuity-mapping-function-and-mean-reversion)
+		* [16.6.9 CDF and PDF of CMS Rate in Forward Measure](#1669-cdf-and-pdf-of-cms-rate-in-forward-measure)
+			* [Proposition 16.6.4](#proposition-1664)
+			* [sketch of proof](#sketch-of-proof-1)
+			* [Corollary 16.6.5](#corollary-1665)
+			* [sketch of proof](#sketch-of-proof-2)
+			* [Corollary 16.6.6](#corollary-1666)
+			* [sketch of proof](#sketch-of-proof-3)
+			* [lemma 16.6.7](#lemma-1667)
+		* [16.6.10 SV Model for CMS Rate](#16610-sv-model-for-cms-rate)
 
 <!-- vim-markdown-toc -->
 
@@ -1323,7 +1324,7 @@ $$
 TODO:
 
 
-##### Proposition 16.6.3
+#### Proposition 16.6.3
 mapping function $\alpha(s)$が$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
 $\eqref{chap16_lmm_stochastic_volatility}$のLMMにおいて、$\alpha$は以下で与えられる。
 
@@ -1355,7 +1356,7 @@ $$
 である。
 
 
-#### 16.6.7 Correcting Non-Arbitrage-Free Methods
+### 16.6.7 Correcting Non-Arbitrage-Free Methods
 Section 16.6.3, 16.6.5, 16.6.6などで扱ったannuity mapping functionはarbitrage-freeではなかった。
 一方、linear TSR modelのようなものは理論的にはarbitrage-freeかもしれないが、計算上(非線形性のために)誤差が存在する。
 この節では、arbitrageに関する問題を修正する方法について議論する。
@@ -1511,7 +1512,7 @@ $$
 この等式は、CMSのswap rateのfixing date$T_{0}$の支払いと最後の支払日$T_{N}$の支払いの差は、annuity mapping functionに依存しないことを示している。
 よって、この等式もannuity mapping functionの選び方によらず満たされるべきである。
 
-#### 16.6.8 Impact of Annuity Mapping Function and Mean Reversion
+### 16.6.8 Impact of Annuity Mapping Function and Mean Reversion
 CMSの評価において、volatility smileの影響を捉える(通常、replication methodの$$\eqref{chap16_value_cms_static_hedge}$$によって)ことの重要性は、広く知られている。
 一方、CMSの評価の別の要素であるannuity mapping functionの影響は見落とされがちである。
 linear TSR modelの$$\eqref{chap16_linear_tsr_model_cms_value}$$において、$\alpha_{1}$を自由に取るとすると、CMSのconvexity adjustmentを任意の値にとることがきできる。
@@ -1566,7 +1567,7 @@ $$
 * 横軸は満期$T$
 * 縦軸はb.p.でconvexity adjustmentの値を表している
 
-#### 16.6.9 CDF and PDF of CMS Rate in Forward Measure
+### 16.6.9 CDF and PDF of CMS Rate in Forward Measure
 CMS-linked cash flowsに対して、replication methodは有用だが、常に良いやけではない。
 payoffが不連続な場合は、不連続関数の微分が出てくるので特別なケアが必要。
 ここでは、replication methodではない別の方法をここでは見る。
@@ -1608,7 +1609,7 @@ $$
 で求まる。
 以下の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFとで特徴づける。
 
-##### Proposition 16.6.4
+#### Proposition 16.6.4
 annuity mapping function $\alpha(s)$が条件付き期待値$$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$$で定義する。
 forward measureの下でのPDF$\psi^{T_{p}}(s)$とCDF$\Psi^{T_{p}}(s)$は、annuity measureの下でのPDF$\psi^{A}(s)$とCDF$\Psi^{A}(s)$と以下の関係が成り立つ。
 
@@ -1627,7 +1628,7 @@ $$
 
 である。
 
-##### sketch of proof
+#### sketch of proof
 $K$での$\psi^{T_{p}}(K)$の値は、delta関数$\delta(S(T) - K)$のpayoffを持つderivativeの価値に等しい
 
 $$
@@ -1668,7 +1669,7 @@ Chapter17で議論する複数のCMS rateに依存するCash flowを持つ商品
 
 $\alpha(s)$がlinear TSR modelのときは$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$のCDFはよりsimpleな形を持つ。
 
-##### Corollary 16.6.5
+#### Corollary 16.6.5
 $$\eqref{chap16_52_linear_tsr_model_def_alpha}$$のlinear TSR modelを考える。
 このとき、swap rateの$T_{p}$-forward measureの下でのCDF$\Psi^{T_{p}}(s)$は以下で与えられる。
 
@@ -1687,7 +1688,7 @@ $$
 ここで$Psi^{A}(s)$は$\eqref{chap16_66_cdf_in_annuity_measure}$で与えられる。
 $c(s)$は$\eqref{chap16_68_cms_call_option_value}$で定義された、 strike $s$のcall option価格である。
 
-##### sketch of proof
+#### sketch of proof
 
 $$
 \begin{eqnarray*}
@@ -1761,7 +1762,7 @@ $$
 
 より成立。
 
-##### Corollary 16.6.6
+#### Corollary 16.6.6
 linear TSR model$$\eqref{chap16_52_linear_tsr_model_def_alpha}$$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
 
 $$
@@ -1773,7 +1774,7 @@ $$
 \end{equation}
 $$
 
-##### sketch of proof
+#### sketch of proof
 Corollary 16.6.5と同様に$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$から直接求めるか、$\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を微分して求めれば良い。
 $\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$を両辺微分する。
 まず、
@@ -1800,14 +1801,14 @@ $$
     \Psi^{T_{p}}(s)
         & = & \frac{A(0)}{P(0, T_{p})} 
             \left(
-                \alpha_{1} (S(0) - s - c(s)) + \alpha(s) \Psi^{A}(s)),
+                \alpha_{1} (S(0) - s - c(s)) + \alpha(s) \Psi^{A}(s))
             \right)
     \\
     \Rightarrow
     \psi^{T_{p}}(s)
         & = & \frac{A(0)}{P(0, T_{p})} 
             \left(
-                \alpha_{1}(-1  - \frac{d}{d s}c(s)) + \alpha_{1} \Psi^{A}(s) + \alpha(s) \psi^{A}(s),
+                \alpha_{1}(-1  - \frac{d}{d s}c(s)) + \alpha_{1} \Psi^{A}(s) + \alpha(s) \psi^{A}(s)
             \right)
         & = & \frac{A(0)}{P(0, T_{p})} (\alpha(s) \psi^{A}(s))
 \end{eqnarray*}
@@ -1831,7 +1832,7 @@ $$
 
 次の補題を得る。
 
-##### lemma 16.6.7
+#### lemma 16.6.7
 marketにimpliedされた$T_{p}$-forward measureの下でのp.d.f.$\psi^{T_{p}}(s)$はCMS capletの価値から直接求めることができる。
 
 $$
@@ -1842,11 +1843,115 @@ $$
 \end{equation}
 $$
 
+#### sketch of proof
 
 
+### 16.6.10 SV Model for CMS Rate
+次の章で議論するように、支払日のforward measureは複数のmarket rateに関連したvanilla derivativeを扱うときに、最も有用なmeasureである。
+forward measureの下でのp.d.f.とc.d.f.を扱える形で表現することも有用であると思われる。
+つまり、Chapter8のようなSV modelのようなparameter化されたmodelの
+しかし、annuity measureの下でswap rateをSV modelで定義する場合は、うまくは行かない。
+この章では、annuity measureの下で定義したSV modelをどのように扱うかについて議論する。
 
+Proposition 16.6.4とCorollary 16.6.6は $T_{p}$-forward measureがannuity measureへのmeasure変換において、swap rateのp.d.f.がどのように変化するかについて述べている。
+この変換は、modelに依存していない議論であり、厳密に一致する。
+上で述べたように、p.d.f.$\psi^{T_{p}}$の近似を得ることは有用である。
+以下では、議論を厳密にするために次のSV modelを考える。
 
+$$
+\begin{eqnarray}
+    dS(t) 
+        & = & \lambda(b S(t) + (1 - b)S(0)) \sqrt{z(t)} dW^{A}(t),
+        \label{chap16_75_swap_rate_stochastic_volatility_displaced_diffusion}
+    \\
+    dz(t) 
+        & = & \theta(1 - z(t)) dt + \eta \sqrt{z(t)} dZ^{A}(t),
+        \quad
+        z(0) = 1,
+        \label{chap16_76_volatility_stochastic_volatility_displaced_diffusion}
+    \\
+    \langle dZ^{A}(t), dW^{A}(t) \rangle
+        & = & 0,
+\end{eqnarray}
+$$
 
+ここで、$Z^{A}(t), W^{A}(t)$は$Q^{A}$上のBMである。
+上記のSDEは分布を持ち、特に$S(T)$のp.d.f.$\psi^{A}(\cdot)$をもつ。
+ここで、調整をいれたprocess $\tilde{S}(t)$を$T_{P}$-forward measureの下次で与える。
+
+$$
+    \begin{eqnarray}
+        d \tilde{S}(t) 
+            & = & \tilde{\lambda} 
+                \left(
+                    \tilde{b} \tilde{S}(t) 
+                        + (1 - \tilde{b}) \tilde{S}(0)
+                \right)
+                \sqrt{z(t)} dW^{T_{p}},
+    \nonumber
+    \\
+    d \tilde{z}(t)
+        & = &
+            \theta(1 - \tilde{z}(t)) dt
+                + \tilde{\eta}\sqrt{\tilde{z}(t)} dZ^{T_{p}}(t),
+    \quad
+    \tilde{z}(0) = 1,
+    \label{chap16_77_ajusted_sde}
+    \end{eqnarray}
+$$
+
+ここで、$Z^{T_{p}}, W^{T_{p}}$は$Q^{T_{p}}$の下でのBMで、$\langle d Z^{T_{p}}, dW^{T_{p}} \rangle = 0,$ である。
+$\tilde{S}(T)$の平均をCMSの価値と一致させるようにとる。
+つまり、
+
+$$
+    \tilde{S}(0) := \mathrm{E}^{T_{p}}
+    \left[
+        S(T)
+    \right].
+$$
+
+最後に、$T_{p}$-forward measureでの$S(T)$の分布に近くなるように$\tilde{\lambda}, \tilde{b}, \tilde{\eta}$を取り$\tilde{S}(T)$のp.d.f.$\psi^{T_{p}}$を定義する。
+
+measure変換はSDEのdriftに影響を与えるので、measure変換をdiffusion項のparameterのみで表現しているこの方法では、一般的には$Q^{T_{p}}$の下で$S(T)$と$\tilde{S}(T)$は一致しない。
+しかし、節のはじめに述べたように、近似であっても、chapter17のmulti-rate derivativeにおいては有用である。
+
+$(S(0), \lambda, b, \eta)$から$(\tilde{S}(0), \tilde{\lambda}, \tilde{b}, \tilde{\eta})$の解析的な計算は難しいので、数値的に行うのが良い。
+以下の方法でparameterを決める。
+
+1. convexityの調整された$\tilde{S}(0)$は、replication methodで計算
+    * $\mathrm{E}^{T_{p}}(S(T))$をreplication methodで計算
+2. $\eqref{chap16_73_cms_caplet_value_under_forward_measure}$の$\tilde{S}(T)$に対する式を計算
+    * $\eqref{chap16_77_ajusted_sde}$のcalibrationで$(\tilde{\lambda}, \tilde{b}, \tilde{\eta}$を求める。
+    * 下記式の右辺は$\tilde{S}(T)$に対するEuropean call optionなので計算可能
+    * 下記式の左辺は$S(T)$についてreplication methodで求まる。
+    * 一定範囲のstrikeで、下記式が必要
+
+$$
+    V_{\mathrm{cmscaplet}}(0, K) = P(0, T_{p}) \mathrm{E}^{T_{p}}
+    \left[
+        (\tilde{S}(T) - K)^{+}
+    \right]
+$$
+    
+問は、$(\lambda, b, \eta)$はannuity measureからforward measureへの変更で変化するか？
+つまり、measure変換の影響が、$S(0) \rightarrow \tilde{S}(0) = \mathrm{E}^{T_{p}}(S(T))$で説明されるか？
+一般には変化する。
+
+* $\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$は、$S(T)$の平均のshiftではない
+* 平均をshiftせずに、平均をあわせるためには分布全体を動かす必要がある
+* 実際linear TSRで$$\eqref{chap16_72_pdf_in_forward_measure_with_linear_tsr_model}$$で示されるように、p.d.f.が$\alpha_{1}>0$であればswap rateが高い値ほどp.d.f.の値が大きくなる。
+    * 少なくともskew parameter $b$が変化するし、他のparameterも変化する
+
+よって、CMS caps/floorsは単純にconvexity adjustmentしたforward swap rateで評価すべきではなく、 european swaptionに対するものと同じparameterと同じmodelで評価されるべきである。
+かなりの誤差があるにも関わらず、実務ではよく使われている。
+
+### 16.6.11 Dynamics of CMS Rate in Forward Measure
+前の節で、実際にはdriftに影響のあるmeasure変換を、SV modelのdiffusionのparameterでmeasure変換の影響を表現した。
+SV modelの場合に、この問題を詳しく扱う。
+single-rateの場合はあまり重要ではないが、Section 17.8.1のmultiple-rateでMonte Carlo pricingをする際に重要である。
+
+swap rate$S(t)$とannuity $A(t)$を考える。
 
 
 
