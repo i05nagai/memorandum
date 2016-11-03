@@ -526,6 +526,8 @@ $$
 
 となる。
 
+<div class="QED" style="float: right">$\Box$</div>
+
 ##### Proposition 14.4.3
 時刻0のswaptionの価格は以下で与えられる。
 
