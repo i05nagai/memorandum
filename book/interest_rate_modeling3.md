@@ -650,7 +650,7 @@ $$
 
 であることと、最適値では1階微分が0でなければならないことより成立
 
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ### 16.6.3 Swap-Yield TSR Model
 16.3.4でのswap-yield modelを考える。
@@ -1156,8 +1156,7 @@ LMMのCMS adjustmentの値をMonte carloで計算することもできるが、p
 
 LMMのCMS adjustmentの計算の問題は、Gatarek[2003]のrepresentative approachなどがあるが、多くの方法はforward measureでのdriftの近似をする"freezing"という手法とみなせる。
 freezingは精度の良い手法ではない。
-Antonov and Arneguy[2009]が、$P(t, T_{P})/A(t)$を近似したSDEを導出することで、 $\eqref{chap16_linear_tsr_model_conditional_expectation_solution}$よりlinear annuity mapping functionを得え、以下の期待値を計算した。
-
+Antonov and Arneguy[2009]が、$P(t, T_{P})/A(t)$を近似したSDEを導出することで、 $\eqref{chap16_linear_tsr_model_conditional_expectation_solution}$よりlinear annuity mapping functionを得、以下の期待値を計算した。
 
 $$
     \frac{P(0, T_{p})}{A(0)} \mathrm{E}^{T_{p}}
@@ -1172,11 +1171,11 @@ $$
     \right]
 $$
 
-上記の方法は、精度は十分であったが、LMMで重要なのはannnuity mapping functionの非線形の影響を捉えることにある。
+linear TSR modelは、精度は十分であったが、LMMで重要なのはannnuity mapping functionの非線形の影響を捉えることにある。
 以下でその方法について議論する。
 $\alpha(s)$が$P(T, T_{p})/A(T)$を$S(T)=s$として条件付けたものであった。
 以下では、LMMのもとでこの条件付き期待値を近似することを考える。
-Chap14と同様に
+Chapter 14と同様に
 
 $$
     L_{n}(t) := L(t, T_{n}, T_{n+1}), n = 0, \ldots, N-1 
@@ -1223,8 +1222,8 @@ $$
 $$
 
 以上より、LMMで$\mathrm{E}^{A}(\mathbb{L}(T)|S(T)=s)$を計算する問題となった。
-よく行われる方法として、Gaussian approximationを近似する方法がある。
-具体的な議論をするために以下のLMMを考える。
+よく行われる方法として、Gaussian approximationで近似する方法がある。
+具体的に議論をするために以下のLMMを考える。
 
 $$
 \begin{eqnarray}
@@ -1249,6 +1248,7 @@ $\mathrm{E}^{A}(\mathbb{L}(T)|S(T) = s)$を計算するために、$Q^{A}$での
 
 $$
     L_{n}(t) \approx \hat{L}_{n}(t),
+    \quad
     S(t) \approx \hat{S}(t)
 $$
 
@@ -1335,6 +1335,7 @@ $$
 
 TODO:
 
+以上をまとめると、
 
 #### Proposition 16.6.3
 mapping function $\alpha(s)$が$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
@@ -1356,7 +1357,7 @@ $$
 ここで、
 
 $$
-i   l_{n}(s) 
+   l_{n}(s) 
         := L_{n}(0)
             \left(
                 1 + c_{n} \frac{s - S(0)}{(0)}
@@ -1367,10 +1368,39 @@ $$
 
 である。
 
+#### sketch of proof
+
+$$
+    \alpha(s)
+        = \mathrm{E}^{A}
+            \left[
+                \frac{1}{A(T)} | S(T) = s
+            \right]
+        = \mathrm{E}^{A}
+            \left[
+                \rho(\mathbb{L}) | S(T) = s
+            \right]
+        \approx \rho
+            \left(
+                \mathrm{E}^{A}
+                \left[
+                    \mathbb{L}) | S(T) = s
+                \right]
+            \right)
+        =
+            \left(
+                \sum_{n=0}^{N-1} \tau_{n}
+                    \prod_{i=0}^{n}(1 + \tau_{i}l_{i}(s))^{-1}
+            \right),
+$$
+
+より、成立。
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ### 16.6.7 Correcting Non-Arbitrage-Free Methods
 Section 16.6.3, 16.6.5, 16.6.6などで扱ったannuity mapping functionはarbitrage-freeではなかった。
-一方、linear TSR modelのようなものは理論的にはarbitrage-freeかもしれないが、計算上(非線形性のために)誤差が存在する。
+一方、linear TSR modelのようなものは理論的にはarbitrage-freeとみなせるかもしれないが、計算上誤差が存在する。
 この節では、arbitrageに関する問題を修正する方法について議論する。
 
 CMSの価値は以下で計算された。
@@ -1429,7 +1459,7 @@ $$
 $$
 
 となる。
-この場合、新たに$tilde{\alpha}(s)$を以下のように定義し、$\eqref{chap16_mapping_function_not_satisfied_no_arbitrage_condition}$を満たすように$\alpha$を取り直せば、式は満たされる。
+この場合、新たに$\tilde{\alpha}(s)$を以下のように定義し、$\eqref{chap16_mapping_function_not_satisfied_no_arbitrage_condition}$を満たすように$\alpha$を取り直せば、式は満たされる。
 
 $$
 \begin{equation}
@@ -1439,10 +1469,10 @@ $$
 \end{equation}
 $$
 
-以上より、CMSの価格を下記のimproed CMS valuation formulaで計算すれば良い。
+以上より、CMSの価格を下記のimproved CMS valuation formulaで計算すれば良い。
 
 $$
-    V_{\mathrm{CMS}}
+    V_{\mathrm{CMS}}(0)
         = A(0) \mathrm{E}^{A}
         \left[
             S(T) \tilde{\alpha}(S(T))
@@ -1456,17 +1486,16 @@ no-arbitrageのmodelも理論的には無裁定の式が成立するが、数値
 
 annuity mapping functionにおいては、$\eqref{chap16_annuity_mapping_function_no_arbitrage_condition}$は成り立つことが期待される基本的な式であるが、他にもCMSの計算の上で考慮すべき関係式がある。
 以下は、自明に成り立つ等式である。
-この両辺に$S(T)$をかけて期待値をとったものを考える。
 
 $$
     \sum_{n=0}^{N_1} \frac{\tau_{n} P(T, T_{n+1})}{A(T)} = 1,
 $$
 
-
+この両辺に$S(T)$をかけて期待値をとったものを考える。
 両辺の期待値を取るために、annuity mapping functionを$P$の満期ごとに定義しておく。
 
 $$
-    \alpha(S(T), T_{n}) := \frac{P(T, T_{n})}{A(T)}.
+    \alpha(S(T), T_{n}) = \frac{P(T, T_{n})}{A(T)}.
 $$
 
 両辺の期待値を取ると
@@ -1527,10 +1556,10 @@ $$
 ### 16.6.8 Impact of Annuity Mapping Function and Mean Reversion
 CMSの評価において、volatility smileの影響を捉える(通常、replication methodの$$\eqref{chap16_value_cms_static_hedge}$$によって)ことの重要性は、広く知られている。
 一方、CMSの評価の別の要素であるannuity mapping functionの影響は見落とされがちである。
-linear TSR modelの$$\eqref{chap16_linear_tsr_model_cms_value}$$において、$\alpha_{1}$を自由に取るとすると、CMSのconvexity adjustmentを任意の値にとることがきできる。
+linear TSR modelの$$\eqref{chap16_linear_tsr_model_cms_value}$$において、$\alpha_{1}$を自由に取れるとすると、CMSのconvexity adjustmentを任意の値にとることができる。
 
-勿論、$\alpha_{1}$の全ての値が、実際のマーケットに合うというわけではないが、$\alpha_{1}$の妥当な範囲は明らかではない。
-この場合、Section 16.3.2でやったように、平均回帰係数などの性質とその影響を理解している別のparameterとみなすことは有用である。
+勿論、$\alpha_{1}$の全ての値が実際のマーケットに合うというわけではないが、$\alpha_{1}$の妥当な範囲は明らかではない。
+この場合、Section 16.3.2でやったように、平均回帰係数などの理解しやすいparameterとして解釈しと、その影響をみることは有用である。
 また、平均回帰係数の場合、Section 13.1.8で扱ったように取引可能な商品の市場価格と直接関係しているという、好ましい性質もある。
 CMS convexity adjustmentは平均回帰の妥当な範囲内での水準の違いによって、10%-20%異なることになる。
 
@@ -1580,7 +1609,7 @@ $$
 * 縦軸はb.p.でconvexity adjustmentの値を表している
 
 ### 16.6.9 CDF and PDF of CMS Rate in Forward Measure
-CMS-linked cash flowsに対して、replication methodは有用だが、常に良いやけではない。
+CMS-linked cash flowsに対して、replication methodは有用だが、常に良いわけではない。
 payoffが不連続な場合は、不連続関数の微分が出てくるので特別なケアが必要。
 ここでは、replication methodではない別の方法をここでは見る。
 $T_{p}\ (T_{p} \ge T)$に$g(S(T))$をpayoffに持つcash flowのpricingを考える。
@@ -1597,7 +1626,8 @@ $$
 \end{equation}
 $$
 
-この密度は常に求まるわけではないが、annuity measureの下での分布$\Psi^{A}(\cdot)$と密度関数$\psi^{A}(\cdot)$はmarketにキャリブレーションしたvanilla modelのclosed formとしてか、swaptionの全てのstrikeの価格からnon-parametricに求めたものから
+annuity measureの下での分布$\Psi^{A}(\cdot)$と密度関数$\psi^{A}(\cdot)$はは直接求まるわけではない。
+しかし、marketにキャリブレーションしたvanilla modelからclosed formとして求めるか、もしくはSection 7.12でやったようにswaptionの全てのstrikeの価格からnon-parametricに求めたものから以下の式、
 
 $$
 \begin{eqnarray}
@@ -1619,7 +1649,7 @@ $$
 $$
 
 で求まる。
-以下の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFとで特徴づける。
+次の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFで特徴づける。
 
 #### Proposition 16.6.4
 annuity mapping function $\alpha(s)$が条件付き期待値$$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$$で定義する。
@@ -1675,7 +1705,7 @@ $$
 よって、$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$が求まった。
 両辺積分すれば$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$が求まる。
 
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 実務的には、$\alpha(s)$はSection 16.6.3, 16.6.4, 16.6.5, 16.6.6のように近似して求める。
 $\eqref{chap16_65_density_integration_method}$のdensity integration methodは、理論的にはreplicaton methodと等しいが、非連続な関数や滑らかでない関数をpayoffにもつdigital optionやrange acrrulasのようなものにたいしては、良い数値的性質を持つ。
@@ -1775,7 +1805,7 @@ $$
 $$
 
 より成立。
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 #### Corollary 16.6.6
 linear TSR model$$\eqref{chap16_52_linear_tsr_model_def_alpha}$$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
@@ -1830,7 +1860,7 @@ $$
 $$
 
 より成立。
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 forward measureの下でのp.d.f.が求まった。
 このp.d.f.と取引されているderivativeとの関係は、CMS capletのかあっくが以下で表現されていたのを思い出すと、
@@ -1861,7 +1891,7 @@ $$
 
 #### sketch of proof
 
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ### 16.6.10 SV Model for CMS Rate
 支払日のforward measureは、複数のmarket rateに依存したvanilla derivativeを扱うときに、有用なmeasureである。
@@ -2168,7 +2198,7 @@ $$
 である。
 
 TODO
-<div class="QED" style="float: right">$\Box$</div>
+<div class="QED" style="text-align: right">$\Box$</div>
 
 #### Corollary 16.6.9
 $\hat{\alpha}$が以下でかけるとする。
@@ -2215,7 +2245,8 @@ $$
 $$
 
 より、$\eqref{chap16_81_proposition_drift_adjustment}$を計算れば良い。
-<div class="QED" style="float: right">$\Box$</div>
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 
 ### 16.6.12 Cash-Settled Swaptions
