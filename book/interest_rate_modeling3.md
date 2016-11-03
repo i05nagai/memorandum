@@ -34,7 +34,17 @@ title: Interest Rate Modeling 3
 			* [Corollary 16.6.6](#corollary-1666)
 			* [sketch of proof](#sketch-of-proof-3)
 			* [lemma 16.6.7](#lemma-1667)
+			* [sketch of proof](#sketch-of-proof-4)
 		* [16.6.10 SV Model for CMS Rate](#16610-sv-model-for-cms-rate)
+		* [16.6.11 Dynamics of CMS Rate in Forward Measure](#16611-dynamics-of-cms-rate-in-forward-measure)
+			* [Proposition 16.6.8](#proposition-1668)
+			* [skecth of proof](#skecth-of-proof)
+			* [Corollary 16.6.9](#corollary-1669)
+			* [sketch of proof](#sketch-of-proof-5)
+		* [16.6.12 Cash-Settled Swaptions](#16612-cash-settled-swaptions)
+	* [16.7 Quonto CMS](#167-quonto-cms)
+		* [16.7.1 Overview](#1671-overview)
+		* [16.7.2 Modeling the Joint Distribution of Swap Rate and Forward Exchange Rate](#1672-modeling-the-joint-distribution-of-swap-rate-and-forward-exchange-rate)
 
 <!-- vim-markdown-toc -->
 
@@ -534,12 +544,12 @@ $$
         \right|
             S(T) = s
         \right]
-        \label{chap16_annutiy_mapping_function_as_conditional_expectation}
+        \label{chap16_50_annutiy_mapping_function_as_conditional_expectation}
 \end{equation}
 $$
 
 
-propositionから今までみてきた近似は、 $\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義される条件つき期待値の近似と見ることができる。
+propositionから今までみてきた近似は、 $\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$で定義される条件つき期待値の近似と見ることができる。
 前節までに見てきた方法の他に、条件付き期待値を直接近似する方法を考えることができる。
 条件付き期待値は、確率変数$X, Y$について、$X$の$Y$での条件付き期待値は、$\sigma(Y) = \sigma(\{f(Y)) \mid f \in \mathcal{B} \})$を満たす関数全体を$\mathcal{B}$とすると、
 
@@ -639,6 +649,8 @@ $$
 $$
 
 であることと、最適値では1階微分が0でなければならないことより成立
+
+<div class="QED" style="float: right">$\Box$</div>
 
 ### 16.6.3 Swap-Yield TSR Model
 16.3.4でのswap-yield modelを考える。
@@ -1079,7 +1091,7 @@ calibrationしたannuity mapping functionは、より複雑で流動性の低い
 linear TSR modelは解析しやすく、 Proposition 16.6.2は、他のexponential TSR modelなどにも同様に利用できる
 
 ### 16.6.5 The Quasi-Gaussian Model
-auasi-Gaussian(qG)は、Sec16.5.3のLiboar-with-delayで見たように、annuityとswap rateの関係についての直感を与える。
+quasi-Gaussian(qG)は、Sec16.5.3のLiboar-with-delayで見たように、annuityとswap rateの関係についての直感を与える。
 (13.5)で見たように、 quasi-Gaussianのもと、discount bondは
 
 $$
@@ -1325,7 +1337,7 @@ TODO:
 
 
 #### Proposition 16.6.3
-mapping function $\alpha(s)$が$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
+mapping function $\alpha(s)$が$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
 $\eqref{chap16_lmm_stochastic_volatility}$のLMMにおいて、$\alpha$は以下で与えられる。
 
 $$
@@ -1610,7 +1622,7 @@ $$
 以下の命題はswap rateのforward measureの下でのCDFとPDFとannuity measureの下でのCDF, PDFとで特徴づける。
 
 #### Proposition 16.6.4
-annuity mapping function $\alpha(s)$が条件付き期待値$$\eqref{chap16_annutiy_mapping_function_as_conditional_expectation}$$で定義する。
+annuity mapping function $\alpha(s)$が条件付き期待値$$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$$で定義する。
 forward measureの下でのPDF$\psi^{T_{p}}(s)$とCDF$\Psi^{T_{p}}(s)$は、annuity measureの下でのPDF$\psi^{A}(s)$とCDF$\Psi^{A}(s)$と以下の関係が成り立つ。
 
 $$
@@ -1662,6 +1674,8 @@ $$
 
 よって、$\eqref{chap16_69_pdf_in_forward_measure_related_to_pdf_in_annuity_measure}$が求まった。
 両辺積分すれば$\eqref{chap16_70_cdf_in_forward_measure_related_to_cdf_in_annuity_measure}$が求まる。
+
+<div class="QED" style="float: right">$\Box$</div>
 
 実務的には、$\alpha(s)$はSection 16.6.3, 16.6.4, 16.6.5, 16.6.6のように近似して求める。
 $\eqref{chap16_65_density_integration_method}$のdensity integration methodは、理論的にはreplicaton methodと等しいが、非連続な関数や滑らかでない関数をpayoffにもつdigital optionやrange acrrulasのようなものにたいしては、良い数値的性質を持つ。
@@ -1761,6 +1775,7 @@ $$
 $$
 
 より成立。
+<div class="QED" style="float: right">$\Box$</div>
 
 #### Corollary 16.6.6
 linear TSR model$$\eqref{chap16_52_linear_tsr_model_def_alpha}$$において、p.d.f. $\psi^{T_{p}}(s)$は以下のようにかける。
@@ -1815,6 +1830,7 @@ $$
 $$
 
 より成立。
+<div class="QED" style="float: right">$\Box$</div>
 
 forward measureの下でのp.d.f.が求まった。
 このp.d.f.と取引されているderivativeとの関係は、CMS capletのかあっくが以下で表現されていたのを思い出すと、
@@ -1845,13 +1861,12 @@ $$
 
 #### sketch of proof
 
+<div class="QED" style="float: right">$\Box$</div>
 
 ### 16.6.10 SV Model for CMS Rate
-次の章で議論するように、支払日のforward measureは複数のmarket rateに関連したvanilla derivativeを扱うときに、最も有用なmeasureである。
-forward measureの下でのp.d.f.とc.d.f.を扱える形で表現することも有用であると思われる。
-つまり、Chapter8のようなSV modelのようなparameter化されたmodelの
-しかし、annuity measureの下でswap rateをSV modelで定義する場合は、うまくは行かない。
-この章では、annuity measureの下で定義したSV modelをどのように扱うかについて議論する。
+支払日のforward measureは、複数のmarket rateに依存したvanilla derivativeを扱うときに、有用なmeasureである。
+次の章では複数のmarket rateから決まるvanilla derivativeを扱うがその準備として、この節ではforward measureの下でのp.d.f.とc.d.f.の表現を求める。
+特に、annuity measureの下でswap rateをSV modelで定義した場合に、forward measureの下での分布をSV modelのparameterを調節することで近似的に求める方法について議論する。
 
 Proposition 16.6.4とCorollary 16.6.6は $T_{p}$-forward measureがannuity measureへのmeasure変換において、swap rateのp.d.f.がどのように変化するかについて述べている。
 この変換は、modelに依存していない議論であり、厳密に一致する。
@@ -1872,12 +1887,13 @@ $$
     \\
     \langle dZ^{A}(t), dW^{A}(t) \rangle
         & = & 0,
+    \nonumber
 \end{eqnarray}
 $$
 
 ここで、$Z^{A}(t), W^{A}(t)$は$Q^{A}$上のBMである。
 上記のSDEは分布を持ち、特に$S(T)$のp.d.f.$\psi^{A}(\cdot)$をもつ。
-ここで、調整をいれたprocess $\tilde{S}(t)$を$T_{P}$-forward measureの下次で与える。
+ここで、調整をいれたprocess $\tilde{S}(t)$を$T_{P}$-forward measureの下、次で与える。
 
 $$
     \begin{eqnarray}
@@ -1888,7 +1904,7 @@ $$
                         + (1 - \tilde{b}) \tilde{S}(0)
                 \right)
                 \sqrt{z(t)} dW^{T_{p}},
-    \nonumber
+    \label{chap16_77_ajusted_sde}
     \\
     d \tilde{z}(t)
         & = &
@@ -1896,7 +1912,7 @@ $$
                 + \tilde{\eta}\sqrt{\tilde{z}(t)} dZ^{T_{p}}(t),
     \quad
     \tilde{z}(0) = 1,
-    \label{chap16_77_ajusted_sde}
+    \nonumber
     \end{eqnarray}
 $$
 
@@ -1922,10 +1938,10 @@ $(S(0), \lambda, b, \eta)$から$(\tilde{S}(0), \tilde{\lambda}, \tilde{b}, \til
 1. convexityの調整された$\tilde{S}(0)$は、replication methodで計算
     * $\mathrm{E}^{T_{p}}(S(T))$をreplication methodで計算
 2. $\eqref{chap16_73_cms_caplet_value_under_forward_measure}$の$\tilde{S}(T)$に対する式を計算
-    * $\eqref{chap16_77_ajusted_sde}$のcalibrationで$(\tilde{\lambda}, \tilde{b}, \tilde{\eta}$を求める。
+    * $\eqref{chap16_77_ajusted_sde}$のcalibrationで$(\tilde{\lambda}, \tilde{b}, \tilde{\eta})$を求める。
     * 下記式の右辺は$\tilde{S}(T)$に対するEuropean call optionなので計算可能
     * 下記式の左辺は$S(T)$についてreplication methodで求まる。
-    * 一定範囲のstrikeで、下記式が必要
+    * 左辺のreplication methodの計算のために一定範囲のstrikeで、下記式が必要
 
 $$
     V_{\mathrm{cmscaplet}}(0, K) = P(0, T_{p}) \mathrm{E}^{T_{p}}
@@ -1934,11 +1950,11 @@ $$
     \right]
 $$
     
-問は、$(\lambda, b, \eta)$はannuity measureからforward measureへの変更で変化するか？
-つまり、measure変換の影響が、$S(0) \rightarrow \tilde{S}(0) = \mathrm{E}^{T_{p}}(S(T))$で説明されるか？
-一般には変化する。
+$(\lambda, b, \eta)$はannuity measureからforward measureへの変更で変化するか？という疑問がある。
+つまり、measure変換の影響が、$S(0) \rightarrow \tilde{S}(0) = \mathrm{E}^{T_{p}}(S(T))$で説明されるか？という問である。
+答えとしては、一般には変化すると考えるべきである。
 
-* $\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$は、$S(T)$の平均のshiftではない
+* $\eqref{chap16_71_cdf_in_forward_measure_with_linear_tsr_model}$は、$S(T)$の分布の平均のshiftではない
 * 平均をshiftせずに、平均をあわせるためには分布全体を動かす必要がある
 * 実際linear TSRで$$\eqref{chap16_72_pdf_in_forward_measure_with_linear_tsr_model}$$で示されるように、p.d.f.が$\alpha_{1}>0$であればswap rateが高い値ほどp.d.f.の値が大きくなる。
     * 少なくともskew parameter $b$が変化するし、他のparameterも変化する
@@ -1953,17 +1969,662 @@ single-rateの場合はあまり重要ではないが、Section 17.8.1のmultipl
 
 swap rate$S(t)$とannuity $A(t)$を考える。
 
+$$
+\begin{eqnarray}
+    dS(t)
+        & = & \lambda \phi(S(t))\sqrt{z(t)} dW^{A}(t),
+        \label{chap16_78_swap_rate_stochastic_volatility}
+        \\
+    dz(t)
+        & = & \theta(1 - z(t)) dt + \eta \psi(z(t)) dZ^{A}(t), 
+        \quad
+        z(0) = 1,
+        \label{chap16_79_volatility_stochastic_volatility}
+\end{eqnarray}
+$$
+
+ここで、$\langle dZ^{A}(t), dW^{A}(t) \rangle = 0$で、$Z^{A}(t), W^{A}(t)$は$Q^{A}$の下でBM。
+$$\eqref{chap16_78_swap_rate_stochastic_volatility}$$, $$\eqref{chap16_79_volatility_stochastic_volatility}$$は$T_{p}$-forwrd measureを一意には定めない。
+一方条件付き期待値$$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$$についての知識があると仮定すれば、$T_{p}$に支払い$T$にfixingするEuropean-typeのpayoffを持つ商品に対してforward measureに似た速度を構成できる。
+（$T$以外にfixingするEuropean-typeの商品は扱えない）
+より正確には、fixing timeの$T$においては、以下がなりつ様なmeasure$\tilde{Q}^{T_{p}}$を定義したい。
+適当な関数$f$て、
+
+$$
+    \mathrm{E}^{A}
+    \left[
+        \frac{P(T, T_{p})}{A(T)} f(S(T))
+    \right]
+        = \frac{P(0, T_{p})}{A(0)} \tilde{\mathrm{E}}^{T_{p}}
+        \left[
+            f(S(T))
+        \right],
+$$
+
+ここで、$\tilde{\mathrm{E}}^{T_{p}}$は$\tilde{Q}^{T_{p}}$の下での期待値である。
+
+記号を簡潔にするために、$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$の$\alpha$をscaleした$\hat{\alpha}$を定義しておく。
+
+$$
+    \hat{\alpha}(s)
+        := \frac{A(0)}{P(0, T_{p})}\alpha(s)
+        = \frac{A(0)}{P(0, T_{p})} \mathrm{E}^{A}
+        \left[
+            \left.
+                \frac{P(T, T_{p})}{A(T)}
+            \right|
+                S(T) = s
+        \right].
+$$
+
+#### Proposition 16.6.8
+$z(t), S(t)$が$$\eqref{chap16_78_swap_rate_stochastic_volatility}$$, $$\eqref{chap16_79_volatility_stochastic_volatility}$$のSDEとする。
+ある確率測度$\tilde{Q}^{T_{p}}$が存在して、$\tilde{Q}^{T_{p}}$の下、以下のSDEを満たすとする。
+
+$$
+\begin{eqnarray}
+    dS(t)    
+        & = & \lambda \phi(S(t)) \sqrt{z(t)} (d W^{T_{p}}(t) + v^{S}(t) dt),
+        \label{chap16_80_stochastic_volatility_proposition_16_6_8}
+        \\
+    dz(t)
+        & = & \theta(1 - z(t)) dt + \eta \psi(z(t))(dZ^{T_{p}} + v^{z}(t) dt),
+        \quad
+        z(0) = 1,
+        \nonumber
+\end{eqnarray}
+$$
+
+ここで、$Z^{T_{p}}, W^{T_{p}}$は無相関のdriftのない$\tilde{Q}^{T_{p}}$の下でのBMで、driftの調整項は以下のようにかけるとする。
+
+$$
+\begin{eqnarray}
+    v^{z}(t) 
+        & := & \eta \psi(z(t)) \frac{\partial}{\partial z}  \ln( \Lambda(t, z(t), S(t))),
+        \label{chap16_81_proposition_drift_adjustment}
+        \\
+    v^{S}(t)
+        & := & \lambda \phi(S(t)) \sqrt{z(t)} \frac{\partial}{\partial S} \ln(\Lambda(t, z(t), S(t))),
+        \nonumber
+\end{eqnarray}
+$$
+
+また、関数$\Lambda(t, z, s)$は以下のPDEに従っているとする。
+
+$$
+\begin{equation}
+    \frac{\partial}{\partial t} \Lambda(t, z, s)
+        + \theta(1 - z) \frac{\partial}{\partial z} \Lambda(t, z, s)
+        + \frac{\eta^{2}}{2} \psi(z)^{2} \frac{\partial^{2}}{\partial z^{2}}  \Lambda(t, z, s)
+        + \frac{\lambda^{2}}{2}\phi(s)^{2} z \frac{\partial^{2}}{\partial s^{2}} \Lambda(t, z, s) = 0,
+        \quad
+        t \in [0, T],
+        \label{chap16_82_proposition_pde}
+\end{equation}
+$$
+
+境界条件は$t = T$
+
+$$
+\begin{equation}
+    \Lambda(T, z, s) = \hat{\alpha}(s).
+    \label{chap16_83_proposition_terminal_condition}
+\end{equation}
+$$
+
+である。
+このとき、適当な関数$f(\cdot)$に対して、
+
+$$
+\begin{equation}
+    \frac{A(0)}{P(0, T_{p})} \mathrm{E}^{A}
+    \left[
+        \frac{P(T, T_{p})}{A(T)} f(S(T))
+    \right]
+        = \tilde{\mathrm{E}}^{T_{p}}
+        \left[
+            f(S(T))
+        \right].
+    \label{chap16_84_proposition_measure_change}
+\end{equation}
+$$
+
+#### skecth of proof
+$f(\cdot)$について、
+
+$$
+    \frac{A(0)}{P(0, T_{p})} \mathrm{E}^{A}
+    \left[
+        \frac{P(T, T_{p})}{A(T)} f(S(T))
+    \right]
+    = \mathrm{E}^{A}
+    \left[
+        \hat{\alpha}(S(T))f(S(T))
+    \right].
+$$
+
+であった。
+よって、Propositionの結論は
+
+$$
+    \mathrm{E}^{A}
+    \left[
+        \hat{\alpha}(S(T))f(S(T))
+    \right]
+        = \tilde{\mathrm{E}}^{T_{p}}
+        \left[
+            f(S(T))
+        \right]
+$$
+
+が成り立つことである。
+この為には、$\hat{\alpha}(S(T))$が$T$でのdensity processであれば良い。
+そのようなdeinsity processは、以下の条件付き期待値を考えれば、$T$で$\hat{\alpha}(S(T))$を満たす。
+
+$$
+    \Lambda(t) := \mathrm{E}_{t}^{A}
+    \left[
+        \hat{\alpha}(S(T))
+    \right],
+$$
+
+density processは新たなmeasure を定めるからこれを$\tilde{Q}^{T_{p}}$とする。
+$\Lambda(t)$が以下のようにかけるとする。
+
+$$
+    \frac{d\Lambda(t)}{\Lambda(t)} 
+        = v^{z}(t) dZ^{A}(t) + v^{S} dW^{A}(t)
+$$
+
+$$
+\begin{eqnarray*}
+    dZ^{A}(t)
+        & = & dZ^{T_{p}}(t) + v^{z}(t) dt,
+        \\
+    dW^{A}(t)
+        & = & dW^{T_{p}}(t) + v^{S}(t) dt,
+\end{eqnarray*}
+$$
+
+$\Lambda(t)$
+
+$$
+    d\Lambda(t, z(t), S(t))
+        = \Lambda_{z}(t, z(t), S(t)) \eta \psi(z(t)) dZ^{A}(t)
+            + \Lambda_{S}(t, z(t), S(t)) \lambda \phi(S(t)) \sqrt{z(t)} dW^{A}(t).
+$$
+
+Feyman-KacよりPDEの解は、$u(t, x_{1}, x_{2}) = \Lambda(t, z, s)$, $h(t,x_{1}, x_{2}) \equiv 0$, $r(t,x_{1}, x_{2}) \equiv 0$, $g(x_{1}, x_{2}) \equiv \hat{\alpha}(x_{2})$とおくと
+
+$$
+    \Lambda(t, z, s)
+        = \mathrm{E}^{P}
+            \left[
+                \hat{\alpha}(S(T)) 
+                | (z(t), S(t))  = (z, s)
+            \right]
+$$
+
+である。
+
+TODO
+<div class="QED" style="float: right">$\Box$</div>
+
+#### Corollary 16.6.9
+$\hat{\alpha}$が以下でかけるとする。
+
+$$
+    \hat{\alpha}(s) = \hat{\alpha}_{1} s + \hat{\alpha}_{2}
+$$
+
+このとき、
+
+$$
+\begin{equation}
+    v^{z}(t) = 0,
+    v^{S}(t) = \lambda \phi(S(t)) \sqrt{z(t)} 
+        \frac{\hat{\alpha}_{1}}{\hat{\alpha}_{1}S(t) + \hat{\alpha}_{2}}
+    \label{chap16_85_linear_tsr_model_drift_adjustment}
+\end{equation}
+$$
+
+#### sketch of proof
+$S(t)$は$Q^{A}$-マルチンゲールなので
+
+$$
+    \Lambda(t, z, s)
+        = \mathrm{E}^{A}
+            \left[
+                \hat{\alpha}(S(T)) | z(t) = z, S(t) = s
+            \right]
+        = \hat{\alpha}_{1} s + \hat{\alpha}_{2}.
+$$
+
+よって、
+
+$$
+    \frac{\partial}{\partial z} \ln (\Lambda(t, z, s))
+        = 0
+$$
+
+かつ、
+
+$$
+    \frac{\partial}{\partial S} \ln (\Lambda(t, z, S))
+        = \frac{1}{\hat{\alpha}_{1} S + \hat{\alpha}_{2}} \hat{\alpha}_{1}
+$$
+
+より、$\eqref{chap16_81_proposition_drift_adjustment}$を計算れば良い。
+<div class="QED" style="float: right">$\Box$</div>
 
 
+### 16.6.12 Cash-Settled Swaptions
+Section 5.10で述べたcash-settled swaptionの話。
+特に、EURとGBPで広くとr引きされている。
+Section 16.6.11の議論を応用する。
+swap rateの関数の支払いを持つ、cach settled swaptionは、replication methodでphysical settlementのswaptionの積分を使って表現できる。
+cach-settledとphysical settledが同じマーケットで取引されていることはないが、physical settled swaptionはmodelのキャリブレーションの対象とする基本的なvanilla optionなので重要である。
+cach-settled payer swaptionのpayoffを$g(\cdot)$と書くと、
 
+$$
+    g(s) 
+        := \left(
+            \sum_{n=0}^{N-1} \tau_{n}
+                \prod_{i=0}^{n}\frac{1}{1+\tau_{i}s}
+        \right)
+        (s - K)^{+}
+$$
 
+である。
+annuity mapping functionを使って書くと
 
+$$
+\begin{equation}
+    V_{\mathrm{CSS}}(0)
+        = A(0) \mathrm{E}^{A}
+        \left[
+            \alpha(S(T)) g(S(T))
+        \right],
+    \label{chap16_86_value_of_cach_settled_payer_swaption}
+\end{equation}
+$$
 
+で、これは今まで議論で計算できる。
 
+$\eqref{chap16_86_value_of_cach_settled_payer_swaption}$を具体的に計算する為にannuity mapping functionの具体形を定める必要がある。
+我々は、linear TSR model(Section 16.3.2)を推奨する。
+特に、annutiy mapping functionとしてswap-yield model(Section 16.6.3)を考えると
 
+$$
+    \alpha(s)g(s) = (s - K)^{+},
+$$
 
+となって、swap-yield modelの場合は以下のようにpysical settled swaptionと等しくなる。
 
+$$
+    V_{\mathrm{CSS}}(0) 
+        = A(0) \mathrm{E}^{A}
+        \left[
+            (S(T) - K)^{+}
+        \right].
+$$
 
+しかし、多くの場合marketのpysical settled swaptionとcach-settled swaptionの価格は異なっており、これはswap-yieldのmodelの仮定が、現実のmarketに即していないこと表している。
+
+cach-settled swaptionは通常のput-call parityは成り立たない。
+
+$$
+\begin{eqnarray*}
+    V_{\mathrm{CSS,pay}}(0) - V_{\mathrm{CSS,rec}}(0)
+        & = & A(0) \mathrm{E}^{A}
+        \left[
+            \alpha(S(T))
+                \sum_{n=0}^{N-1} \tau_{n} \prod_{i=0}^{n} \frac{1}{1+\tau_{i}S(T)} (S(T) - K)^{+}
+        \right]
+        - A(0) \mathrm{E}^{A}
+        \left[
+            \alpha(S(T))
+                \sum_{n=0}^{N-1} \tau_{n} \prod_{i=0}^{n} \frac{1}{1+\tau_{i}S(T)} (K - S(T))^{+}
+        \right]
+        \\
+        & = & A(0) \mathrm{E}^{A}
+        \left[
+            \alpha(S(T)) \left(
+                \sum_{n=0}^{N-1} \tau_{n} \prod_{i=0}^{n} \frac{1}{1+\tau_{i}S(T)}
+            \right)
+            (S(T) - K)
+        \right]
+        \\
+        & \neq &
+            A(0) (S(0) - K).
+\end{eqnarray*}
+$$
+
+cash-settled payer swaptionとcash-settled reciever swaptionは、以下のcash-settled swapともいうべき商品(多くの場合実際には取引されてない)と等しくなる。
+
+$$
+    \left(
+        \sum_{n=0}^{N-1} \tau_{n} \prod_{i=0}^{n}\frac{1}{1+\tau_{i}S(T)}
+    \right)
+    (S(T) - K).
+$$
+
+## 16.7 Quonto CMS
+Quanto CMSは、domesticの$S(T)$を参照するCMSで、支払いはforeign currencyで行われる。
+
+### 16.7.1 Overview
+$S(T)$がdomestic currencyのyield curveとする。
+quanto CMSは、payoff $g(S(T))$をforeign currencyで$T_{p}$に受け取る取引である。
+
+$$
+    V_{\mathrm{QuantoCMS}}(0)
+        = \beta_{f}(0) \mathrm{E}^{f}
+        \left[
+            \frac{1}{\beta_{f}(T_{p})} g(S(T))
+        \right]
+$$
+
+$\beta_{f}(t)$はforeign money market accountで、$\mathrm{E}^{f}$はforeign risk-neutral measureを
+$S(t)$はdomestic interest rate curveで定義されているので、その分布はdomestic annuity measureでswaption marketより得られる。
+Lemma 4.3.1 より、
+
+$$
+    \mathrm{E}_{t}^{d}
+    \left[
+        \frac{d Q^{f}}{d Q^{d}} 
+    \right]
+        = \frac{\beta_{f}(t) X(t)}{\beta_{d}(t) X(0)}
+        = \frac{
+            \frac{
+                \beta_{d}(0)
+            }{
+                \beta_{d}(t)
+            }
+        }{
+            \frac{
+                \beta_{f}(0)X(0)
+            }{
+                \beta_{f}(t)X(t)
+            }
+        },
+    \quad
+    t \ge 0,
+$$
+
+$$
+    \mathrm{E}_{t}^{f}
+    \left[
+        \frac{d Q^{d}}{d Q^{f}} 
+    \right]
+        = \frac{\beta_{d}(t) X(0)}{\beta_{f}(t) X(t)}
+        = \frac{
+            \frac{
+                \beta_{f}(0)X(0)
+            }{
+                \beta_{f}(t)X(t)
+            }
+        }{
+            \frac{
+                \beta_{d}(0)
+            }{
+                \beta_{d}(t)
+            }
+        },
+    \quad
+    t \ge 0,
+$$
+
+$X(t)$[DOM/FOR]は、spot FXはforeign currency 1単位に対するdomestic currencyである。
+上記を用いて、domestic risk-neutral measureでの期待値は
+
+$$
+\begin{equation}
+    V_{\mathrm{QuantoCMS}}(0)
+        = \mathrm{E}^{f}
+        \left[
+            \mathrm{E}_{t}^{f}
+            \left[
+                \frac{d Q^{d}}{d Q^{f}}
+            \right]
+            \frac{X(t)\beta_{d}(0)}{X(0) \beta_{d}(t)} g(S(T))
+        \right]
+        = \frac{\beta_{d}(0)}{X(0)}
+            \mathrm{E}^{d}
+            \left[
+                \frac{1}{\beta_{d}(T_{p})} g(S(T)) X(T_{p})
+            \right],
+    \label{chap16_87_value_of_quanto_cms_under_domestic_measure}
+\end{equation}
+$$
+
+となる。
+また、$T_{p}$にdomestic currencyで$g(S(T))X(T_{p})$支払われる取引も同様である。
+
+$$
+\begin{eqnarray*}
+    V_{\mathrm{QuantoCMS}}(0)
+        & = &
+            \frac{\beta_{d}(0)}{X(0)} \mathrm{E}^{d}
+            \left[
+                \mathrm{E}_{T}^{d}
+                \left[
+                    \frac{\beta_{d}(T)}{\beta_{d}(T)} g(S(T))
+                    \frac{1}{\beta_{d}(T_{p})} X(T_{p})
+                \right]
+            \right]
+        \\
+        & = &
+            \frac{\beta_{d}(0)}{X(0)} \mathrm{E}^{d}
+            \left[
+                \frac{1}{\beta_{d}(T)} g(S(T))
+                    \beta_{d}(T)
+                    \mathrm{E}_{T}^{d}
+                    \left[
+                        \frac{1}{\beta_{d}(T_{p})} X(T_{p})
+                    \right]
+            \right]
+        \\
+        & = &
+            \frac{\beta_{d}(0)}{X(0)} \mathrm{E}^{d}
+            \left[
+                \frac{1}{\beta_{d}(T)} g(S(T))
+                    \beta_{d}(T)
+                    \mathrm{E}_{T}^{d}
+                    \left[
+                        \frac{P_{d}(T_{p}, T_{p})}{\beta_{d}(T_{p})} X_{T_{p}}(T_{p})
+                    \right]
+            \right]
+        \\
+        & = &
+            \frac{\beta_{d}(0)}{X(0)} \mathrm{E}^{d}
+            \left[
+                \frac{1}{\beta_{d}(T)} g(S(T))
+                    \beta_{d}(T)
+                        \frac{P_{d}(T, T_{p})}{\beta_{d}(T)} X_{T_{p}}(T)
+            \right]
+        \\
+        & = &
+            \frac{\beta_{d}(0)}{X(0)} 
+                \mathrm{E}^{d}
+                \left[
+                    \frac{1}{\beta_{d}(T)} g(S(T)) P_{d}(T, T_{p}) X_{T_{p}}(T)
+                \right]
+\end{eqnarray*}
+$$
+
+ここで、$X_{T}(t)$は$t$での$T$-forward FX rateで以下が成り立つ。
+
+$$
+    X_{T_{p}}(T)
+        = \frac{P_{f}(T, T_{p})}{P_{d}(T, T_{p})}X(T).
+$$
+
+domestic annuity measureの下で、以下となる。
+
+$$
+    V_{\mathrm{QuantoCMS}}(0)
+        = \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+        \left[
+            g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
+        \right].
+$$
+
+一方、Quantoでない通常のCMSにおいて、CMSの価値は以下で与えられていた。
+
+$$
+    V_{\mathrm{CMS}}(0) 
+        = A(0) \mathrm{E}^{A, d}
+        \left[
+            g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)}
+        \right].
+$$
+
+以上より、Quanto adjustmentをこの2つの比として定義する。
+
+$$
+    D_{\mathrm{Quanto}}(0) 
+        := \frac{V_{\mathrm{QuantoCMS}}}{V_{\mathrm{CMS}}}
+        = \frac{\mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
+            \right]
+            }{X(0) \mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)}
+            \right]
+            }
+$$
+
+quanto CMSの評価では、full term structure interest rate modelより、今まで議論したsingle-currencyのCMS linked cash flowに対する方法を拡張する方が適している。
+
+Section 16.6.2の議論と同様に
+
+$$
+\begin{equation}
+    V_{\mathrm{QuantoCMS}}
+        = \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+        \left[
+            g(S(T)) v(S(T))
+        \right],
+    \label{chap16_88_quanto_cms_nu}
+\end{equation}
+$$
+
+ここで、
+
+$$
+    v(s) := \mathrm{E}^{A,d}
+    \left[
+        \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
+        | S(T) = s
+    \right]
+$$
+
+さらに
+
+$$
+    \chi(s)
+        := \mathrm{E}^{A,d}
+        \left[
+            X_{T_{p}}(T) | S(T) = s
+        \right]
+$$
+
+とおき、近似的に
+
+$$
+    v(s) \approx \alpha(s)\chi(s),
+$$
+
+とかく。
+よって、(yield curveとforward FX rateが独立と思えば）近似的に
+
+$$
+\begin{equation}
+    V_{\mathrm{QuantoCMS}}(0)
+        \approx \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+        \left[
+            g(S(T)) \alpha(S(T)) \chi(S(T))
+        \right].
+    \label{chap16_90_value_of_quanto_cms_approximtely}
+\end{equation}
+$$
+
+$\eqref{chap16_90_value_of_quanto_cms_approximtely}$で表現できれば、今までの議論と同様にreplication methodで計算可能。
+
+### 16.7.2 Modeling the Joint Distribution of Swap Rate and Forward Exchange Rate
+$\chi(s)$を計算する為には、$S(T)$と$X_{T_{p}}(T)$の同時分布が必要。
+$$\eqref{chap16_66_cdf_in_annuity_measure}$$で示したように、$S(T)$のc.d.f.$\Psi^{A}(s)$は$S(T)$の$Q^{A,d}$での分布はswaption modelで与えられる。
+quanto CMSのcash flow $$\eqref{chap16_88_quanto_cms_nu}$$は、$X_{T_{p}}(T)$に線形に依存しており、FX rateの分布への依存はある程度制限される。
+実際、数値検証ではこれを裏付ける結果が示されている。
+ただし、満期の長いquanto CMSでは、FX volatilityのsmileが問題となってくる。
+Chapter 17の方法でFX smileを扱ったmodelに拡張できる。
+以下では解析のしやすさのため、$X_{T_{p}}$が$Q^{A,d}$の下でlog-normalであるとする。
+
+$$
+\begin{equation}
+    X_{T_{p}} = X(0) e^{\sigma_{X}\sqrt{T}\chi_{1} + m_{X}T},
+    \label{chap16_91_forward_fx_log_normal}
+\end{equation}
+$$
+
+ここで、$\xi_{1}$は標準正規乱数で、$\sigma_{X}$はvolatility、$m_{x}$は定数である。
+volatility $\sigma_{X}$は$T$満期のFX rateのATM optionにキャリブレーションして求める。
+$m_{X}$については以下で述べる方法でキャリブレーションする。
+
+$S(T)$と$X_{T_{p}}$の同時分布を表現する為に、copula methodを使う。
+Chapter 17でcopula methodについて詳しく述べるが、ここでは次のように$S(T)$を定義する。
+$\xi_{2}$が標準正規乱数とすると、
+
+$$
+    S(T) := (\Psi^{A})^{-1}(\Phi(\xi_{2})),
+$$
+
+ここで、$\Phi(\cdot)$は標準正規分布のc.d.f.である。
+以上の設定の下、$S(T)$と$X_{T_{p}}(T)$の相関は$\xi_{1}$と$xi_{2}$の相関$\rho_{XS}$で表現される。
+
+$$
+\begin{eqnarray*}
+    X_{T_{p}}
+        & = & X(0) e^{\sigma_{X} \sqrt{T} \xi_{1} + m_{X}T,
+        \\
+    S(T) 
+        & = & (\Psi^{A})^{-1}(\Phi(\xi_{2})),
+        \\
+    Corr(\xi_{1}, \xi_{2}) 
+        & = & \rho_{XS}.
+\end{eqnarray*}
+$$
+
+$$
+\begin{eqnarray*}
+    \chi(s)
+        & = & \mathrm{E}^{A,d}
+            \left[
+                X_{T_{p}}(T) | S(T) = s
+            \right]
+            \nonumber
+            \\
+        & = & 
+            X(0) e^{m_{X}T} \mathrm{E}^{A,d}
+            \left[
+                e^{\sigma_{X}\sqrt{T}\xi_{1} | \xi_{2} = \Psi^{-1}(\Phi^{A}(s))
+            \right]
+            \nonumber
+            \\
+        & = &
+            X(0) e^{m_{X}T} \hat{\chi}(s),
+\end{eqnarray*}
+$$
+
+$$
+    \tilde{\chi} 
+        = \exp 
+            \left(
+                \rho{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2}
+            \right).
+$$
 
 
 
