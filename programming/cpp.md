@@ -405,3 +405,12 @@ error: default maximum alignment for types differs in PCH file vs. current file
 * [とあるエンジニアの備忘log: インライン関数まとめ](http://masahir0y.blogspot.com/2012/08/blog-post.html)
 * [Extensible Templates: Via Inheritance or Traits?](http://www.gotw.ca/publications/mxc++-item-4.htm)
 
+* [コンセプト・チェックの利用 - boostjp](http://boostjp.github.io/archive/boost_docs/libs/concept_check/using_concept_check.html)
+* [一人でBoost勉強会:Concept Check #1 - Qiita](http://qiita.com/termoshtt/items/47c8e3a7b2b84b3c883c)
+* [一人でBoost勉強会:Concept Check #2 - Qiita](http://qiita.com/termoshtt/items/8e91c50dbf299376442f)
+* [一人でBoost勉強会:Concept Check #3 - Qiita](http://qiita.com/termoshtt/items/fd343dbff0d12c94d243#_reference-c4ab26d42a6adfde8f09)
+* [コンセプトは滅びぬ！何度でもよみがえるさ！コンセプトの力こそC++erの夢だからだ！ - spinorの日記](http://d.hatena.ne.jp/spinor/20111215/1323951052)
+* [C++1y 軽量Concept - Faith and Brave - C++で遊ぼう](http://faithandbrave.hateblo.jp/entry/20130226/1361862112)
+* [C++17の標準ライブラリ](http://ezoeryou.github.io/cpp17lib-slide/#/)
+* [EzoeRyou/cpp-history: Presentation slide for C++ history](https://github.com/EzoeRyou/cpp-history)
+* [EzoeRyou/boost-benkyo-18: Boost勉強会#18大阪の発表の資料](https://github.com/EzoeRyou/boost-benkyo-18)
