@@ -3,133 +3,13 @@ layout: math
 title: Interest Rate Modeling 2
 ---
 
-# TOC
+# 14 The Libor Market Model I
 
-<!-- vim-markdown-toc GFM -->
+## 14.2 LM Dynamics and Measures
 
-* [Interest Rate Modeling 2](#interest-rate-modeling-2)
-	* [10 One-Factor Short Rate Model I](#10-one-factor-short-rate-model-i)
-		* [10.1 The One-Factor Gaussian Short Rate Model](#101-the-one-factor-gaussian-short-rate-model)
-			* [10.1.1 Notation](#1011-notation)
-			* [10.1.2 The Mean-Reverting](#1012-the-mean-reverting)
-				* [10.1.2.2 The General One-Factor GSR Model](#10122-the-general-one-factor-gsr-model)
-					* [Proposition 10.1.6](#proposition-1016)
-					* [Proposition 10.1.7](#proposition-1017)
-	* [14 The Libor Market Model I](#14-the-libor-market-model-i)
-		* [14.2 LM Dynamics and Measures](#142-lm-dynamics-and-measures)
-			* [14.2.4 Separable Deterministic Volatility Function](#1424-separable-deterministic-volatility-function)
-			* [14.2.5 Stochastic Volatility](#1425-stochastic-volatility)
-			* [14.2.6 Time-Dependence in Model Parameters](#1426-time-dependence-in-model-parameters)
-		* [14.3 Correlation](#143-correlation)
-			* [14.3.1 Empirical Principal Components Analysis](#1431-empirical-principal-components-analysis)
-			* [14.3.3 Negative Eigenvalues](#1433-negative-eigenvalues)
-			* [14.3.4 Correlation PCA](#1434-correlation-pca)
-		* [14.4 Pricing of European Options](#144-pricing-of-european-options)
-			* [14.4.1 Caplets](#1441-caplets)
-				* [Proposition 14.4.1](#proposition-1441)
-			* [14.4.1 Swaptions](#1441-swaptions)
-				* [Proposition 14.4.2](#proposition-1442)
-				* [sketch of proof](#sketch-of-proof)
-				* [Proposition 14.4.3](#proposition-1443)
+### 14.2.4 Separable Deterministic Volatility Function
 
-<!-- vim-markdown-toc -->
-
-# Interest Rate Modeling 2
-
-## 10 One-Factor Short Rate Model I
-
-### 10.1 The One-Factor Gaussian Short Rate Model
-
-#### 10.1.1 Notation
-
-#### 10.1.2 The Mean-Reverting 
-
-##### 10.1.2.2 The General One-Factor GSR Model
-1-factorのGSR odelの一般形は以下で与えられる。
-
-$$
-\begin{equation}
-    dr(t)
-        = \varkappa (\vartheta(t) - r(t)) dt + \sigma_{r}(t) dW(t),
-    \label{chap10_general_one_factor_short_rate_model}
-\end{equation}
-$$
-
-Section 4.5.2で示したように、HJMのもとでのshort rateのdynamicsは以下のようなseparableな形となる。
-
-$$
-\begin{eqnarray}
-    df(t, T)
-        & = & \sigma_{f}(t, T)
-            \left(
-                \int_{t}^{T} \sigma_{f}(t, u)\ du
-            \right)
-            dt
-            + \sigma_{f}(t, T) dW(t),
-    \label{chap10_instantaneous_forward_rate_of_general_one_factor_short_rate_model}
-    \\
-    \sigma_{f}(t, T)
-        & = & \sigma_{r}(t) \exp
-            \left(
-                - \int_{t}^{T} \varkappa(u) \ du
-            \right).
-    \nonumber
-\end{eqnarray}
-$$
-
-###### Proposition 10.1.6
-
-###### Proposition 10.1.7 
-$$
-    x(t) := r(t) - f(0, t).
-$$
-
-このとき、$\eqref{chap10_general_one_factor_short_rate_model}$と$\eqref{chap10_instantaneous_forward_rate_of_general_one_factor_short_rate_model}$は
-
-$$
-\begin{equation}
-    d x(t) 
-        = (y(t) - \varkappa(t) x(t)) dt
-            + \sigma_{r}(t) dW(t),
-    \quad
-    x(0) = 0
-\end{equation}
-$$
-
-とかける。
-ここで、
-
-$$
-\begin{equation}
-    y(t) := \int_{0}^{t} e^{-2 \int_{u}^{t} \varkappa(s)\ ds} \sigma_{r}(u)^{2} \ du
-\end{equation}
-$$
-
-である。
-また、discount bondは以下のようにかける。
-
-$$
-\begin{eqnarray}
-    P(t, T)
-        & = & \frac{P(0, T)}{P(0, t)} \exp
-            \left(
-                -x(t) G(t, T) - \frac{1}{2} y(t) G(t, T)^{2}
-            \right),
-    \\
-    G(t, T) 
-        & := & \int_{t}^{T} e^{- \int_{t}^{u} \varkappa(s)\ ds}\ du.
-    \nonumber
-\end{eqnarray}
-$$
-
-
-## 14 The Libor Market Model I
-
-### 14.2 LM Dynamics and Measures
-
-#### 14.2.4 Separable Deterministic Volatility Function
-
-#### 14.2.5 Stochastic Volatility
+### 14.2.5 Stochastic Volatility
 
 spot measureの下で以下のSDEが成立するとする。
 
@@ -160,21 +40,21 @@ $$
 \end{eqnarray}
 $$
 
-#### 14.2.6 Time-Dependence in Model Parameters
+### 14.2.6 Time-Dependence in Model Parameters
 
-### 14.3 Correlation
+## 14.3 Correlation
 
-#### 14.3.1 Empirical Principal Components Analysis
+### 14.3.1 Empirical Principal Components Analysis
 
-#### 14.3.3 Negative Eigenvalues
+### 14.3.3 Negative Eigenvalues
 
-#### 14.3.4 Correlation PCA
+### 14.3.4 Correlation PCA
 
-### 14.4 Pricing of European Options
+## 14.4 Pricing of European Options
 
-#### 14.4.1 Caplets
+### 14.4.1 Caplets
 
-##### Proposition 14.4.1
+#### Proposition 14.4.1
 spot measureの下で、forward rateが$\eqref{chap14_lmm_foward_rate_process_stochastic_volatility_under_spot_measure}$及び$\eqref{chap14_lmm_volatility_process_stochastic_volatility_under_spot_measure}$とmodel化されているとする。
 また、Assumption 14.2.7を仮定する。
 このとき、
@@ -208,9 +88,9 @@ $$
         = \int_{0}^{t} \frac{\lambda_{n}(s)^{\mathrm{T}}}{\| \lambda_{n}(s) \|} \ d W^{n+1}(s).
 $$
 
-#### 14.4.1 Swaptions
+### 14.4.1 Swaptions
 
-##### Proposition 14.4.2
+#### Proposition 14.4.2
 $Q^{A}$を$A(t)$をnumeraireとするannuity measureとして、$W^{A}(t)$を$Q^{A}$のもとでの$m$次元BMとする。
 このとき、
 
@@ -238,7 +118,7 @@ $$
 であり、$S(t)$の$L_{n}$の偏微分はforward rate$L_{j}(t), \ldots, L_{k-1}(t)$の関数とみなしたときのforwad rateによる偏微分である。
 
 
-##### sketch of proof
+#### sketch of proof
 $S(t)$がswap measureのもとでマルチンゲールであるので、$S(t)$のドリフトはswap measureの下で0である。
 $S(t)$が$L_{j}(t), \ldots, L_{k-1}(t)$の関数なので、その関数を$\tilde{S}(L_{j}, \ldots, L_{k-1})$と書くとする。
 Itoの補題より
