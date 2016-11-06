@@ -4,6 +4,7 @@ title: Interest Rate Modeling 3
 ---
 
 # TOC
+    
 
 <!-- vim-markdown-toc GFM -->
 
@@ -48,7 +49,7 @@ title: Interest Rate Modeling 3
 
 <!-- vim-markdown-toc -->
 
-# Interest Rate Modeling 3
+# 16
 
 ## Symbols
 
@@ -2493,11 +2494,27 @@ $$
 domestic annuity measureの下で、以下となる。
 
 $$
+\begin{eqnarray*}
     V_{\mathrm{QuantoCMS}}(0)
-        = \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+        & = &
+            \frac{1}{X(0)} 
+                \mathrm{E}^{d}
+                \left[
+                    \frac{\beta_{d}(0)}{\beta_{d}(T)} g(S(T)) P_{d}(T, T_{p}) X_{T_{p}}(T)
+                \right]
+        \\
+        & = &
+            \frac{1}{X(0)} 
+                \mathrm{E}^{A, d}
+                \left[
+                    \frac{A(0)}{A(T)} g(S(T)) P_{d}(T, T_{p}) X_{T_{p}}(T)
+                \right]
+        \\
+        & = & \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
         \left[
             g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
         \right].
+\end{eqnarray*}
 $$
 
 一方、Quantoでない通常のCMSにおいて、CMSの価値は以下で与えられていた。
@@ -2514,7 +2531,7 @@ $$
 
 $$
     D_{\mathrm{Quanto}}(0) 
-        := \frac{V_{\mathrm{QuantoCMS}}}{V_{\mathrm{CMS}}}
+        := \frac{V_{\mathrm{QuantoCMS}}(0)}{V_{\mathrm{CMS}}(0)}
         = \frac{\mathrm{E}^{A,d}
             \left[
                 g(S(T)) \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
@@ -2532,7 +2549,7 @@ Section 16.6.2の議論と同様に
 
 $$
 \begin{equation}
-    V_{\mathrm{QuantoCMS}}
+    V_{\mathrm{QuantoCMS}}(0)
         = \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
         \left[
             g(S(T)) v(S(T))
@@ -2567,7 +2584,7 @@ $$
     v(s) \approx \alpha(s)\chi(s),
 $$
 
-とかく。
+とする。
 よって、(yield curveとforward FX rateが独立と思えば）近似的に
 
 $$
@@ -2576,11 +2593,12 @@ $$
         \approx \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
         \left[
             g(S(T)) \alpha(S(T)) \chi(S(T))
-        \right].
+        \right],
     \label{chap16_90_value_of_quanto_cms_approximtely}
 \end{equation}
 $$
 
+とかける。
 $\eqref{chap16_90_value_of_quanto_cms_approximtely}$で表現できれば、今までの議論と同様にreplication methodで計算可能。
 
 ### 16.7.2 Modeling the Joint Distribution of Swap Rate and Forward Exchange Rate
@@ -2594,12 +2612,12 @@ Chapter 17の方法でFX smileを扱ったmodelに拡張できる。
 
 $$
 \begin{equation}
-    X_{T_{p}} = X(0) e^{\sigma_{X}\sqrt{T}\chi_{1} + m_{X}T},
+    X_{T_{p}} = X(0) e^{\sigma_{X}\sqrt{T}\xi_{1} + m_{X}T},
     \label{chap16_91_forward_fx_log_normal}
 \end{equation}
 $$
 
-ここで、$\xi_{1}$は標準正規乱数で、$\sigma_{X}$はvolatility、$m_{x}$は定数である。
+ここで、$\xi_{1}$は標準正規乱数で、$\sigma_{X}$はvolatility、$m_{X}$は定数である。
 volatility $\sigma_{X}$は$T$満期のFX rateのATM optionにキャリブレーションして求める。
 $m_{X}$については以下で述べる方法でキャリブレーションする。
 
@@ -2612,12 +2630,12 @@ $$
 $$
 
 ここで、$\Phi(\cdot)$は標準正規分布のc.d.f.である。
-以上の設定の下、$S(T)$と$X_{T_{p}}(T)$の相関は$\xi_{1}$と$xi_{2}$の相関$\rho_{XS}$で表現される。
+以上の設定の下、$S(T)$と$X_{T_{p}}(T)$の相関は$\xi_{1}$と$\xi_{2}$の相関$\rho_{XS}$で表現される。
 
 $$
 \begin{eqnarray*}
-    X_{T_{p}}
-        & = & X(0) e^{\sigma_{X} \sqrt{T} \xi_{1} + m_{X}T,
+    X_{T_{p}}(T)
+        & = & X(0) e^{\sigma_{X} \sqrt{T} \xi_{1} + m_{X}T},
         \\
     S(T) 
         & = & (\Psi^{A})^{-1}(\Phi(\xi_{2})),
@@ -2639,7 +2657,7 @@ $$
         & = & 
             X(0) e^{m_{X}T} \mathrm{E}^{A,d}
             \left[
-                e^{\sigma_{X}\sqrt{T}\xi_{1} | \xi_{2} = \Psi^{-1}(\Phi^{A}(s))
+                e^{\sigma_{X}\sqrt{T}\xi_{1}} | \xi_{2} = \Psi^{-1}(\Phi^{A}(s))
             \right]
             \nonumber
             \\
@@ -2648,15 +2666,266 @@ $$
 \end{eqnarray*}
 $$
 
+ここで、
+
 $$
     \tilde{\chi} 
-        = \exp 
+        := \exp 
             \left(
-                \rho{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
-                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2}
+                \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
             \right).
 $$
 
+である。
+$\xi_{1}, \xi_{2}$は相関$\rho_{XS}$の標準正規乱数である。
+$\rho := \rho_{XS}$とおき、$x_{2} := \Psi^{-1}(\Phi^{A}(s))$とおく。
+
+$$
+\begin{eqnarray*}
+    \mathrm{E}^{A,d}
+        \left[
+            e^{\sigma_{X}\sqrt{T}\xi_{1}} | \xi_{2} = x_{2}
+        \right]
+    & = &
+        \frac{1}{\sqrt{2 \pi \sigma_{11}^{2}(1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \sigma_{X} \sqrt{T} x_{1}
+            \right)
+            \exp
+            \left(
+                \frac{
+                    \left(
+                        x_{1}
+                        - x_{2} \frac{\sigma_{11}\rho}{\sigma_{22}} 
+                    \right)^{2}
+                }{
+                    \sigma_{11}^{2}(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \sigma_{X} \sqrt{T} x_{1}
+            \right)
+            \exp
+            \left(
+                -\frac{1}{2}
+                \frac{
+                    (x_{1} - x_{2}\rho)^{2}
+                }{
+                    (1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{2 \sigma_{X} \sqrt{T} x_{1}(1 - \rho^{2})}{2(1 - \rho^{2})}
+                -
+                \frac{
+                    (x_{1} - x_{2}\rho)^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    2 \sigma_{X} \sqrt{T} x_{1}(1 - \rho^{2}) - (x_{1} - x_{2}\rho)^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    2 \sigma_{X} \sqrt{T} x_{1}(1 - \rho^{2}) - x_{1}^{2} + 2x_{1}x_{2}\rho - x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+        \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -x_{1}^{2} + 2 x_{1}(\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho) -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                    +(\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho)^{2}
+                    -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                    +\sigma_{X}^{2} T(1 - \rho^{2})^{2} 
+                    + 2\sigma_{X} \sqrt{T} (1 - \rho^{2})x_{2}\rho
+                    + x_{2}^{2}\rho^{2}
+                    -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{1}{2} \sigma_{X}^{2} T(1 - \rho^{2})
+                + \sigma_{X} \sqrt{T} x_{2}\rho
+            \right)
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \exp
+        \left(
+            \frac{1}{2} \sigma_{X}^{2} T(1 - \rho^{2})
+            + \sigma_{X} \sqrt{T} x_{2}\rho
+        \right)
+\end{eqnarray*}
+$$
+
+
+### 16.7.3 Normalizing Constant and Final Formula
+最後に$m_{X}$を求める方法を述べる。
+$X_{T_{p}}(\cdot)$が、$T_{p}$-forward measure$Q^{T_{p},d}$の下でマルチンゲールである。
+
+$$
+    X_{T_{p}}(0) = \mathrm{E}^{T_{p},d}
+    \left[
+        X_{T_{p}}(T)
+    \right].
+$$
+
+ここで、domestic measure $Q^{A,d}$に変更すると
+
+$$
+    X_{T_{p}}(0)
+        = \frac{A(0)}{P_{d}(0,T_{p})} \mathrm{E}^{A,d}
+        \left[
+            \frac{P_{d}(T, T_{p})}{A(T)} X_{T_{p}}(T)
+        \right].
+$$
+
+となる。
+$\alpha(s)$と$\chi(s)$の定義より
+
+$$
+\begin{eqnarray*}
+    X_{T_{p}}(0)
+        & = & \frac{A(0)}{P_{d}(0, T_{p})}
+            \mathrm{E}^{A,d}
+            \left[
+                \alpha(S(T)) \chi(S(T))
+            \right]
+        \\
+        & = &
+            X(0) e^{m_{X}T} \frac{A(0)}{P_{d}(0, T_{p})}
+                \mathrm{E}^{A, d}
+                \left[
+                    \alpha(S(T)) \tilde{\chi}(S(T))
+                \right].
+\end{eqnarray*}
+$$
+
+よって、
+
+$$
+    e^{-m_{X}T}
+        = \frac{X(0)}{X_{T_{p}}} \frac{A(0)}{P_{d}(0, T_{p})}
+            \mathrm{E}^{A, d}
+            \left[
+                \alpha(S(T)) \tilde{\chi}(S(T))
+            \right].
+$$
+
+#### Proposition 16.7.1
+Forward FXを$X_{T_{p}}(T)$がlog-normalで$\sigma_{X}$で$\eqref{chap16_91_forward_fx_log_normal}$で定義されているとする。
+また、annuity mapping function $\alpha(\cdot)$は条件付き期待値$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
+
+$$
+\begin{equation}
+    V_{\mathrm{QuantoCMS}}
+        \approx
+            P_{f}(0, T_{p})
+            \frac{\mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \alpha(S(T)) \tilde{\chi}(S(T))
+            \right]
+            }{\mathrm{E}^{A,d}
+            \left[
+                \alpha(S(T)) \tilde{\chi}(S(T))
+            \right]
+            }
+    \label{chap16_93_approximated_value_of_quanto_cms}
+\end{equation}
+$$
+
+ここで、$\tilde{\chi}$は
+
+$$
+    \tilde{\chi}(s)
+        = \exp
+            \left(
+                \rho_{XS} \sigma_{X}\sqrt{T} \Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+            \right),
+$$
+
+で、$\Psi^{A}(s) := P^{A,d}(S(T) < s)$である。
 
 
 
