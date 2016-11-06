@@ -251,6 +251,14 @@ visual modeで選択して`:w !pbcopy`と打てば下記が入力される。
 nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 ```
 
+## Tips
+### Operator Pending Mode
+
+### text object
+
+* [Vimのテキストオブジェクトについてまとめた - Qiita](http://qiita.com/kasei-san/items/143af11bb2559cf0e540)
+* [Vimのテキストオブジェクトを本気出して纏めてみた - 人生リアルタイムアタック](http://shinespark.hatenablog.com/entry/2015/11/12/070000)
+
 ### reference
 * [vim commands and piping](http://seejohncode.com/2014/01/27/vim-commands-piping/)
 * [Route 477](http://route477.net/w/VimMemo.html)
