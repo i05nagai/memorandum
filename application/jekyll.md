@@ -80,6 +80,14 @@ gem "minima"
 ```
 
 ## Github.io連携
+Github pagesではgemは利用できない。
+gemを利用したい場合は、ローカルで生成してpushするしか今のところない。
+
+
+### Table of Contetns
+
+* [dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jeklyll pages](https://github.com/dafi/jekyll-toc-generator)
+* [dafi/tocmd-generator: Table of Contents Generator for Markdown pages](https://github.com/dafi/tocmd-generator)
 
 ### Github向け導入
 必要なもの
