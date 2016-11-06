@@ -69,4 +69,102 @@ conda create -n py2_copy --file env.txt
 # pipで入れたパッケージはエクスポートできないのでpip freezeで別途出力しておく必要がある。
 ```
 
+## pyenv
+pythonの仮想環境作成する。
+`python`コマンドのversionは変わらない。
+`python`コマンドのversionを変更する場合は、`pyenv-virtualenv`をいれる。
 
+```shell
+brew install pyenv
+```
+
+`bash_profile`などに以下を追加する。
+
+```shell
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/var/pyenv
+```
+
+### 全体で利用するバージョンの設定
+`3.5.2`は、installされているpythonを指定する。
+pyenvのpythonのversionが設定される。
+
+```
+pyenv global 3.5.2
+```
+
+### 特定のディレクトリ以下のversionの指定
+
+`3.5.2`は、installされているpythonを指定する。
+カレントディレクト以下で利用するpyenvのpythonのversionが設定される。
+
+```
+pyenv local 3.5.2
+pyenv version
+# 3.5.2
+cd ..
+pyenv version
+# other version
+```
+
+## pyenv-virtualenv
+以下を実行すると、`pyenv virtualenv`系のコマンドが使えるようになる。
+
+```shell
+brew install pyenv-virtualenv
+```
+
+`bash_profile`に以下を追加する。
+
+```shell
+## pyenv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+```
+
+### 環境作成
+
+以下で現在pyenvに設定されているpython環境が`env_name`という名前で作成される。
+
+```shell
+pyenv virtualenv env_name
+```
+
+### 環境をactiveにする
+
+以下で、作成した`env_name`に入ることができる。
+
+```shell
+pyenv activate env_name
+```
+
+### 環境をdeactiveにする
+
+```shell
+pyenv deactivate
+```
+
+## unit testing framework
+nose が良さそう。
+
+| テストツール      | 特徴                                                                                                 | カバレッジ |
+|-------------------|------------------------------------------------------------------------------------------------------|------------|
+| unittest          | Python標準パッケージに含まれている単体テストライブラリ                                               | ×          |
+| Django + unittest | Django の manage.py ユーティリティから、unittest が便利に使うことができる                            | ×          |
+| nose              | 多彩なオプションで柔軟なテストができ、カバレッジを取ることもできる。特定のクラスを継承する必要がない | ○          |
+| django-nose       | Django の manage.py ユーティリティから、nose を使えるようにしたもの                                  | ○          |
+
+### nose
+
+```
+pip install nose
+pip install coverage
+```
+
+noseの命名規則
+
+* [Finding and running tests — nose 1.3.7 documentation](http://nose.readthedocs.io/en/latest/finding_tests.html)
+
+### reference
+* [Python, Django 界隈の単体テスト事情（unittest / nose / django-nose） - akiyoko blog](http://akiyoko.hatenablog.jp/entry/2015/01/01/212712)
+* [Python nose でユニットテストを書いてみた / 桃缶食べたい。](http://blog.chocolapod.net/momokan/entry/80)
