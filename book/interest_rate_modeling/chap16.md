@@ -1758,7 +1758,7 @@ $$
     \int_{-\infty}^{\infty} u \psi^{A}(u)\ du
         & = & S(0),
     \\
-    \int_{s}^{\infty} (u - s)\psi^{A}(u)\ du,
+    \int_{s}^{\infty} (u - s)\psi^{A}(u)\ du
         & = & c(s),
     \\
     \int_{s}^{\infty} \phi^{A}(u)\ du
@@ -2612,7 +2612,7 @@ Chapter 17の方法でFX smileを扱ったmodelに拡張できる。
 
 $$
 \begin{equation}
-    X_{T_{p}} = X(0) e^{\sigma_{X}\sqrt{T}\xi_{1} + m_{X}T},
+    X_{T_{p}}(T) = X(0) e^{\sigma_{X}\sqrt{T}\xi_{1} + m_{X}T},
     \label{chap16_91_forward_fx_log_normal}
 \end{equation}
 $$
@@ -2669,7 +2669,7 @@ $$
 ここで、
 
 $$
-    \tilde{\chi} 
+    \tilde{\chi}(s)
         := \exp 
             \left(
                 \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
@@ -2678,8 +2678,7 @@ $$
 $$
 
 である。
-$\xi_{1}, \xi_{2}$は相関$\rho_{XS}$の標準正規乱数である。
-$\rho := \rho_{XS}$とおき、$x_{2} := \Psi^{-1}(\Phi^{A}(s))$とおく。
+条件付き期待値の計算は$\xi_{1}, \xi_{2}$は相関$\rho_{XS}$の標準正規乱数であるので、 簡単のため、$\rho := \rho_{XS}$とおき、$x_{2} := \Psi^{-1}(\Phi^{A}(s))$とおくと
 
 $$
 \begin{eqnarray*}
@@ -2834,9 +2833,11 @@ $$
         \left(
             \frac{1}{2} \sigma_{X}^{2} T(1 - \rho^{2})
             + \sigma_{X} \sqrt{T} x_{2}\rho
-        \right)
+        \right),
 \end{eqnarray*}
 $$
+
+である。
 
 
 ### 16.7.3 Normalizing Constant and Final Formula
@@ -2885,7 +2886,7 @@ $$
 
 $$
     e^{-m_{X}T}
-        = \frac{X(0)}{X_{T_{p}}} \frac{A(0)}{P_{d}(0, T_{p})}
+        = \frac{X(0)}{X_{T_{p}}(0)} \frac{A(0)}{P_{d}(0, T_{p})}
             \mathrm{E}^{A, d}
             \left[
                 \alpha(S(T)) \tilde{\chi}(S(T))
@@ -2893,12 +2894,12 @@ $$
 $$
 
 #### Proposition 16.7.1
-Forward FXを$X_{T_{p}}(T)$がlog-normalで$\sigma_{X}$で$\eqref{chap16_91_forward_fx_log_normal}$で定義されているとする。
+Forward FXを$X_{T_{p}}(T)$がvolatilityが$\sigma_{X}$のlog-normalで$\eqref{chap16_91_forward_fx_log_normal}$で定義されているとする。
 また、annuity mapping function $\alpha(\cdot)$は条件付き期待値$\eqref{chap16_50_annutiy_mapping_function_as_conditional_expectation}$で定義されているとする。
 
 $$
 \begin{equation}
-    V_{\mathrm{QuantoCMS}}
+    V_{\mathrm{QuantoCMS}}(0)
         \approx
             P_{f}(0, T_{p})
             \frac{\mathrm{E}^{A,d}
@@ -2927,6 +2928,87 @@ $$
 
 で、$\Psi^{A}(s) := P^{A,d}(S(T) < s)$である。
 
+#### sketch of proof
+以下の仮定をおくと、
 
+$$
+    v(s) \approx \alpha(s)\chi(s),
+$$
+
+$\eqref{chap16_90_value_of_quanto_cms_approximtely}$と近似できた。
+$\eqref{chap16_90_value_of_quanto_cms_approximtely}$と
+
+$$
+    \chi(s) = X(0) e^{m_{X}T} \tilde{\chi}(s),
+$$
+
+と
+
+$$
+    e^{-m_{X}T}
+        = \frac{X(0)}{X_{T_{p}}(0)} \frac{A(0)}{P_{d}(0, T_{p})}
+            \mathrm{E}^{A, d}
+            \left[
+                \alpha(S(T)) \tilde{\chi}(S(T))
+            \right].
+$$
+
+より
+
+$$
+\begin{eqnarray*}
+    V_{\mathrm{QuantoCMS}}(0)
+        & \approx & 
+            \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \alpha(S(T)) \chi(S(T))
+            \right]
+        \\
+        & = & 
+            \frac{A(0)}{X(0)} \mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \alpha(S(T)) X(0) e^{m_{X}T} \tilde{chi}(S(T))
+            \right]
+        \\
+        & = & 
+            \frac{A(0)}{X(0)} 
+            \mathrm{E}^{A,d}
+            \left[
+                g(S(T)) \alpha(S(T)) X(0)\tilde{\chi}(S(T))
+            \right]
+            \frac{X_{T_{p}}(0)}{X(0)} 
+            \frac{P_{d}(0, T_{p})}{A(0)}
+            \frac{1}{
+                \mathrm{E}^{A, d}
+                \left[
+                    \alpha(S(T)) \tilde{\chi}(S(T))
+                \right]
+            }
+            \\
+        & = & 
+            \frac{P_{d}(0, T_{p})X_{T_{p}}(0)}{X(0)} 
+            \frac{
+                \mathrm{E}^{A,d}
+                \left[
+                    g(S(T)) \alpha(S(T)) X(0)\tilde{\chi}(S(T))
+                \right]
+            }{
+                \mathrm{E}^{A, d}
+                \left[
+                    \alpha(S(T)) \tilde{\chi}(S(T))
+                \right]
+            },
+\end{eqnarray*}
+$$
+
+成立。
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Remark 16.7.2
+$\eqref{chap16_93_approximated_value_of_quanto_cms}$の右辺の分母と分子は、replication methodで計算できる。
+
+
+## 16.8 Eurodollar Futures
 
 
