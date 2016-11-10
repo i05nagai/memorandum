@@ -1,3 +1,9 @@
+---
+layout: math
+title: formula
+---
+
+
 # formula
 
 
