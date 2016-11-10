@@ -2345,7 +2345,7 @@ $$
 Quanto CMSは、domesticの$S(T)$を参照するCMSで、支払いはforeign currencyで行われる。
 
 ### 16.7.1 Overview
-$S(T)$がdomestic currencyのyield curveとする。
+$S(T)$がdomestic currencyのyield curveから決まるとする。
 quanto CMSは、payoff $g(S(T))$をforeign currencyで$T_{p}$に受け取る取引である。
 
 $$
@@ -2357,7 +2357,7 @@ $$
 $$
 
 $\beta_{f}(t)$はforeign money market accountで、$\mathrm{E}^{f}$はforeign risk-neutral measureを
-$S(t)$はdomestic interest rate curveで定義されているので、その分布はdomestic annuity measureでswaption marketより得られる。
+$S(t)$はdomestic interest rate curveで定義されているので、その分布はdomestic annuity measureでswaption marketより得られ、$S(T)$はdomestic annutiy measureの下でmartingaleである。
 Lemma 4.3.1 より、
 
 $$
@@ -2618,8 +2618,8 @@ $$
 $$
 
 ここで、$\xi_{1}$は標準正規乱数で、$\sigma_{X}$はvolatility、$m_{X}$は定数である。
-volatility $\sigma_{X}$は$T$満期のFX rateのATM optionにキャリブレーションして求める。
-$m_{X}$については以下で述べる方法でキャリブレーションする。
+volatility $\sigma_{X}$は、$\eqref{chap16_91_forward_fx_log_normal}$より$T$満期のFX rateのATM optionにキャリブレーションして求める。
+$m_{X}$については以下で述べる方法で求める。
 
 $S(T)$と$X_{T_{p}}$の同時分布を表現する為に、copula methodを使う。
 Chapter 17でcopula methodについて詳しく述べるが、ここでは次のように$S(T)$を定義する。

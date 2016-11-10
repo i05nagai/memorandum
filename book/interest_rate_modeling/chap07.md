@@ -3,7 +3,33 @@ layout: math
 title: Interest Rate Modeling 1
 ---
 
-# 7
+# 7 Vanilla Models with Local Volatility
+
+## 7.1 General Framework
+
+### 7.1.1 Model Dynamics
+
+$$
+\begin{equation}
+    dS(t) 
+        = \lambda \phi(S(t)) dW(t),
+    \label{chap7_1_general_local_volatility}
+\end{equation}
+$$
+
+$\lambda$は正の定数で、$\phi: \mathbb{R} \rightarrow \mathbb{R}$はTheorem 1.6.1のような条件を満たすとする。
+$S(t)$が非負になる為には、以下の条件を満たす必要がある。
+
+$$
+\begin{equation}
+    \phi(0) = 1.
+    \label{chap7_2_non_negative_condition}
+\end{equation}
+$$
+
+modelの解析のために、必要に応じて$\eqref{chap7_2_non_negative_condition}$を無視する。
+$P$をpropability measureとし、$\mathrm{E}^{P}$を$\mathrm{E}$と書く。
+
 
 ### 7.1.2. Volatility  Smile and Implied Density
 
