@@ -2341,7 +2341,7 @@ $$
     (S(T) - K).
 $$
 
-## 16.7 Quonto CMS
+## 16.7 Quanto CMS
 Quanto CMSは、domesticの$S(T)$を参照するCMSで、支払いはforeign currencyで行われる。
 
 ### 16.7.1 Overview
@@ -2618,7 +2618,7 @@ $$
 $$
 
 ここで、$\xi_{1}$は標準正規乱数で、$\sigma_{X}$はvolatility、$m_{X}$は定数である。
-volatility $\sigma_{X}$は、$\eqref{chap16_91_forward_fx_log_normal}$より$T$満期のFX rateのATM optionにキャリブレーションして求める。
+volatility $\sigma_{X}$は、$$\eqref{chap16_91_forward_fx_log_normal}$$より$T$満期のFX rateのATM optionにキャリブレーションして求める。
 $m_{X}$については以下で述べる方法で求める。
 
 $S(T)$と$X_{T_{p}}$の同時分布を表現する為に、copula methodを使う。
