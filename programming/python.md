@@ -253,6 +253,15 @@ pythonのinterepreterに`-O`の最適化オプションを渡すと0になる。
 `-O`が渡されているときは、interepreterはコンパイル時にassertに関するコードは一切生成しない。
 つまり、上記のifにあたるコードは生成されない。
 
+### import
+import下のディレクトリは、環境変数`PYTHONPATH`で指定されたディレクトリも対象になる。
+正確には以下の順序でimport先のディレクトリが決定される。
+
+1. 実行ディレクトリと同ディレクトリ
+1. カレントディレクトリ
+1. 環境変数「PYTHONPATH」に列挙したディレクトリ
+1. sys.pathに含むディレクトリ
+
 
 #### Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
