@@ -1,4 +1,73 @@
+
+<!-- vim-markdown-toc GFM -->
+
+* [python](#python)
+	* [setup](#setup)
+		* [reference](#reference)
+	* [doc](#doc)
+		* [Sphinx](#sphinx)
+	* [reference](#reference-1)
+	* [環境構築](#環境構築)
+		* [windows](#windows)
+	* [anaconda](#anaconda)
+		* [仮想環境](#仮想環境)
+		* [パッケージ管理](#管理)
+	* [pyenv](#pyenv)
+		* [全体で利用するバージョンの設定](#全体利用設定)
+		* [特定のディレクトリ以下のversionの指定](#特定以下version指定)
+	* [pyenv-virtualenv](#pyenv-virtualenv)
+		* [環境作成](#環境作成)
+		* [環境をactiveにする](#環境active)
+		* [環境をdeactiveにする](#環境deactive)
+	* [unit testing framework](#unit-testing-framework)
+		* [nose](#nose)
+		* [reference](#reference-2)
+	* [Tips](#tips)
+		* [assert](#assert)
+			* [Reference](#reference-3)
+
+<!-- vim-markdown-toc -->
+
+
 # python
+
+## setup
+
+### reference
+* [Python/setup.pyによるインストール - Glamenv-Septzen.net](http://www.glamenv-septzen.net/view/373#idbc17a7)
+
+## doc
+
+### Sphinx
+directory構造が以下のとき。
+
+```
+- project # Pythonプロジェクト
+   |
+   |- src # APIドキュメントを自動生成したいPythonコードのディレクトリ
+   |   |- __init__.pyとか
+   |   |- hoge # サブモジュールとか
+   |
+   |- docs # Sphinxプロジェクトのディレクトリ
+```
+
+```python
+cd project
+sphinx-apidoc -F -o docs/ src/
+```
+
+* `-F`
+	* full project
+* `-o dir`
+	* doucment生成用の設定ファイルの置き場所
+* `sphinx-apidoc dir`
+	* プロジェクトファイルのdirectory
+
+## reference
+* [Sphinx でPythonのAPIドキュメントを自動作成 - Qiita](http://qiita.com/some-nyan/items/1980198a05c12d90e5c3) 
+* [Sphinxドメイン — Sphinx 1.4.4 ドキュメント](http://docs.sphinx-users.jp/domains.html#directive-py:function)
+    * autodocの書き方など
+
 
 ## 環境構築
 ### windows
@@ -168,3 +237,22 @@ noseの命名規則
 ### reference
 * [Python, Django 界隈の単体テスト事情（unittest / nose / django-nose） - akiyoko blog](http://akiyoko.hatenablog.jp/entry/2015/01/01/212712)
 * [Python nose でユニットテストを書いてみた / 桃缶食べたい。](http://blog.chocolapod.net/momokan/entry/80)
+
+## Tips
+
+### assert
+pythonのassertは以下と等価。
+
+```python
+if __debug__:
+       if not expression: raise AssertionError
+```
+
+`__debug__`は、通常は1。
+pythonのinterepreterに`-O`の最適化オプションを渡すと0になる。
+`-O`が渡されているときは、interepreterはコンパイル時にassertに関するコードは一切生成しない。
+つまり、上記のifにあたるコードは生成されない。
+
+
+#### Reference
+* [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
