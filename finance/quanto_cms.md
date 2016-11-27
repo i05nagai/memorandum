@@ -1,6 +1,6 @@
 ---
 layout: math
-title: Quant CMS
+title: Quanto CMS
 ---
 
 
@@ -30,10 +30,10 @@ title: Quant CMS
     * strike $K$, Maturity $T$のput optionの$t$での価格
 * $\Psi^{A}(K)$
     * $S(T)$の分布
-    * $\Phi^{A}(K) = 1 + \frac{\partial }{\partial K} c(0, S(0); K, T)$
+    * $\Psi^{A}(K) = 1 + \frac{\partial }{\partial K} c(0, S(0); K, T)$
 * $\psi^{A}$
     * $S(T)$の密度関数
-    * $\phi^{A}(K) = \frac{\partial^{2} }{\partial K^{2}} c(0, S(0); K, T)$
+    * $\psi^{A}(K) = \frac{\partial^{2} }{\partial K^{2}} c(0, S(0); K, T)$
 
 
 ## Simple case
@@ -114,146 +114,457 @@ $$
     \left[
         g(S(T)) \alpha(S(T)) \tilde{\chi}(S(T))
     \right]
-        = S(0) \alpha(S(0)) \tilde{\chi}(S(0))
-        + \int_{-\infty}^{S(0)} c(0, S(0); K, T) w(K) \ dK
-        + \int_{S(0)}^{\infty} c(0, S(0); K, T) w(K) \ dK
+        = g(S(0)) \alpha(S(0)) \tilde{\chi}(S(0))
+        + \int_{-\infty}^{S(0)} p(0, S(0); k, T) w(k) \ dk
+        + \int_{S(0)}^{\infty} c(0, S(0); k, T) w(k) \ dk
 $$
 
 ここで、
 
 $$
-    w(k) := \frac{d^{2} }{d k^{2}} (g(k) \alpha(k) \tilde{\chi}(k))
+\begin{eqnarray*}
+    w(s) 
+        & := & 
+            \frac{d^{2} }{d s^{2}} (g(s) \alpha(s) \tilde{\chi}(s))
+        \\
+        & = &
+            g^{\prime\prime}(s)\alpha(s)\tilde{\chi}(s) 
+                + g(s)\alpha^{\prime\prime}(s)\tilde{\chi}(s)
+                + g(s)\alpha(s)\tilde{\chi}^{\prime\prime}(s)
+                + 2g^{\prime}(s)\alpha^{\prime}(s)\tilde{\chi}(s)
+                + 2g^{\prime}(s)\alpha(s)\tilde{\chi}^{\prime}(s)
+                + 2g(s)\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+\end{eqnarray*}
 $$
+
+
+### linear TSR model
+
+linear TSR modelの場合、$\alpha$の微分を考える。
+
+$$
+\begin{eqnarray}
+    \alpha(s) & := & \alpha_{1}s + \alpha_{2}
+    \\
+    \alpha^{\prime}(s) & = &\alpha_{1}
+    \\
+    \alpha^{\prime\prime}(s) & = & 0
+\end{eqnarray}
+$$
+
+#### call option
+
+$$
+\begin{eqnarray*}
+    g^{\prime\prime}(s; K)\alpha(s)\tilde{\chi}(s) 
+        & = &
+            \delta(s - K)\alpha(s)\tilde{\chi}(s),
+    \\
+    g(s)\alpha^{\prime\prime}(s)\tilde{\chi}(s) 
+        & = & 0,
+    \\
+    g(s)\alpha(s)\tilde{\chi}^{\prime\prime}(s)
+        & = &
+        (s - K)^{+}  
+        (\alpha_{1}s + \alpha_{2})
+        \rho_{XS}\sigma_{X}\sqrt{T}
+        \left(
+               h^{\prime\prime}(s)\tilde{\chi}(s)
+            + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
+        \right),
+    \\
+	2g^{\prime}(s)\alpha^{\prime}(s)\tilde{\chi}(s)
+        & = & 2 1_{[K, \infty)}(s) \alpha_{1} 
+            \exp 
+            \left(
+                \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+            \right),
+    \\
+    2g^{\prime}(s)\alpha(s)\tilde{\chi}^{\prime}(s)
+        & = & 2 1_{[K, \infty)}(s) 
+            (\alpha_{1}s + \alpha_{2})
+            \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+    \\ 
+    2g(s)\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+        & = & 
+            2(s - K)^{+} \alpha_{1}
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+\end{eqnarray*}
+$$
+
+より、
+
+$$
+\begin{eqnarray}
+    \int_{-\infty}^{S(0)} p(0, S(0); k, T)w(k) \ dk
+        & = & 
+            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            \nonumber
+            \\
+        & &  + 0
+            \nonumber
+            \\
+        & &  + \int_{-\infty}^{S(0)} 
+                p(0, S(0); k, T) 
+                (k - K)^{+}  
+                (\alpha_{1}k + \alpha_{2})
+                \rho_{XS}\sigma_{X}\sqrt{T}
+                \left(
+                    h^{\prime\prime}(k)\tilde{\chi}(k)
+                    + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(k)^{2} \tilde{\chi}(k)
+                \right)
+                \ dk
+            \nonumber
+            \\
+        & &  + \int_{-\infty}^{S(0)} 
+                2 \alpha_{1}
+                p(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \exp 
+                \left(
+                    \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(k))
+                        + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+                \right)
+                \ dk
+            \nonumber
+        \\
+        & & + \int_{-\infty}^{S(0)} 
+                2 (\alpha_{1}k + \alpha_{2})
+                p(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk
+        \nonumber
+        \\
+        & & + \int_{-\infty}^{S(0)} 
+                2(k - K)^{+} \alpha_{1}
+                p(0, S(0); k, T) 
+                    \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk
+        \nonumber
+\end{eqnarray}
+$$
+
+である。
+更に、$S(T)$が非負過程(BSなど)とすると、$k < 0$では、$p(0, S(0); k, T) = 0$である。
+よって、その場合は
+
+
+$$
+\begin{eqnarray}
+    \int_{-\infty}^{S(0)} p(0, S(0); k, T)w(k) \ dk
+        & = & 
+            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            \nonumber
+            \\
+        & &  + 0
+            \nonumber
+            \\
+        & &  + \int_{0}^{S(0)} 
+                p(0, S(0); k, T) 
+                (k - K)^{+}  
+                (\alpha_{1}k + \alpha_{2})
+                \rho_{XS}\sigma_{X}\sqrt{T}
+                \left(
+                    h^{\prime\prime}(k)\tilde{\chi}(k)
+                    + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(k)^{2} \tilde{\chi}(k)
+                \right)
+                \ dk
+            \nonumber
+            \\
+        & &  + \int_{0}^{S(0)} 
+                2 \alpha_{1}
+                p(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \exp 
+                \left(
+                    \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(k))
+                        + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+                \right)
+                \ dk
+            \nonumber
+        \\
+        & & + \int_{0}^{S(0)} 
+                2 (\alpha_{1}k + \alpha_{2})
+                p(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk
+        \nonumber
+        \\
+        & & + \int_{0}^{S(0)} 
+                2(k - K)^{+} \alpha_{1}
+                p(0, S(0); k, T) 
+                    \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk
+        \nonumber
+\end{eqnarray}
+$$
+
+となる。
+第三項も同様に計算すると、
+
+$$
+\begin{eqnarray}
+    \int_{-\infty}^{S(0)} c(0, S(0); k, T)w(k) \ dk
+        & = & 
+            c(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            \nonumber
+            \\
+        & &  + 0
+            \nonumber
+            \\
+        & &  + \int_{S(0)}^{\infty} 
+                c(0, S(0); k, T) 
+                (k - K)^{+}  
+                (\alpha_{1}k + \alpha_{2})
+                \rho_{XS}\sigma_{X}\sqrt{T}
+                \left(
+                    h^{\prime\prime}(k)\tilde{\chi}(k)
+                    + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(k)^{2} \tilde{\chi}(k)
+                \right)
+                \ dk
+            \nonumber
+            \\
+        & &  + \int_{S(0)}^{\infty} 
+                2 \alpha_{1}
+                c(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \exp 
+                \left(
+                    \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(k))
+                        + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+                \right)
+                \ dk
+            \nonumber
+        \\
+        & & + \int_{S(0)}^{\infty} 
+                2 (\alpha_{1}k + \alpha_{2})
+                c(0, S(0); k, T) 
+                1_{[K, \infty)}(k)
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk
+        \nonumber
+        \\
+        & & + \int_{S(0)}^{\infty} 
+                2(k - K)^{+} \alpha_{1}
+                c(0, S(0); k, T) 
+                    \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(k)\tilde{\chi}(k)
+                \ dk,
+        \nonumber
+\end{eqnarray}
+$$
+
+#### put option
+
+#### cap floor
+
+### Swap-Yield Model
+
+#### call option
+
+#### put option
+
+#### cap floor
+
+### fundamental calculation
 
 $\tilde{\chi}$の微分を考える。
 $h(s) := \Phi^{-1}(\Psi^{A}(s))$とおくと
 
 $$
-    \frac{d}{d s} h(s) 
-        = \frac{1}{\phi(\Phi^{-1}(\Psi^{A}(s)))} \psi^{A}(s)
+\begin{eqnarray}
+    h(s) & := & \Phi^{-1}(\Psi^{A}(s)),
+    \label{def_h}
+    \\
+    h^{\prime}(s) 
+        & = & \frac{1}{\phi(\Phi^{-1}(\Psi^{A}(s)))} \psi^{A}(s)
         = \frac{1}{\phi(h(s))} \psi^{A}(s),
-$$
-
-$$
-    \frac{d^{2}}{d s^{2}} h(s) 
-        = \frac{
+    \label{derivaitve_h}
+    \\
+    h^{\prime\prime}(s) 
+        & = & \frac{
             (\psi^{A})^{\prime}(s) \phi(h(s)) - \psi^{A}(s) \phi^{\prime}(h(s)) h^{\prime}(s)
         }{
             \phi(h(s))^{2}
         } 
+    \label{derivaitve2_h}
+\end{eqnarray}
 $$
 
 $$
+\begin{eqnarray}
     \tilde{\chi}(s)
-        = \exp 
+        & = & \exp 
             \left(
                 \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
                     + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
-            \right).
-$$
-
-$$
-    \tilde{\chi}'(s)
-        = \rho_{XS}\sigma_{X}\sqrt{T}h'(s) \tilde{\chi}(s)
-$$
-
-$$
-    \tilde{\chi}''(s)
-        = \rho_{XS}\sigma_{X}\sqrt{T}
+            \right),
+    \label{forward_fx_diffusion}
+    \\
+    \tilde{\chi}^{\prime}(s)
+        & = & \rho_{XS}\sigma_{X}\sqrt{T}h'(s) \tilde{\chi}(s)
+    \label{derivative_forward_fx_diffusion}
+    \\
+    \tilde{\chi}^{\prime\prime}(s)
+        & = & \rho_{XS}\sigma_{X}\sqrt{T}
         \left(
                h^{\prime\prime}(s)\tilde{\chi}(s)
             + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
         \right)
-        
+    \label{derivative2_forward_fx_diffusion}
+\end{eqnarray}
 $$
 
-linear TSR modelの場合、$\alpha$の微分を考える。
+call optionのとき、$g_{\mathrm{cap}}$の微分を考える。
 
 $$
-    \alpha(s) := \alpha_{1}s + \alpha_{2}
+\begin{eqnarray}
+    g_{\mathrm{cap}}(s;K) & := & (s - K)^{+} = \max(s - K, 0),
+    \label{def_payoff_cap}
+    \\
+    g_{\mathrm{cap}}^{\prime}(s; K) & = & 1_{[K, \infty)}(s),
+    \label{derivative_payoff_cap_by_strike}
+    \\
+    g_{\mathrm{cap}}^{\prime\prime}(s; K) & = & \delta(s - K),
+    \label{derivative2_payoff_cap_by_strike}
+\end{eqnarray}
 $$
 
-$$
-    \alpha'(s) = \alpha_{1}
-$$
+put(floor) optionのとき、$g_{\mathrm{floor}}$の微分を考える。
 
 $$
-    \alpha''(s) = 0
+\begin{eqnarray}
+    g_{\mathrm{floor}}(s; K) 
+        & := & (K - s)^{+} = \max(K - s, 0)
+    \label{def_payoff_floor}
+    \\
+    g_{\mathrm{floor}}^{\prime}(s; K) 
+        & = & -1_{(-\infty, K]}(s),
+    \label{derivative_payoff_floor_by_strike}
+    \\
+    g_{\mathrm{floor}}^{\prime\prime}(s; K) 
+        & = & -\delta(s - K),
+    \label{derivative2_payoff_floor_by_strike}
+\end{eqnarray}
 $$
 
-$g(k) := (S - k)^{+} = \max(S -k, 0)$のcall optionのとき、$g$の微分を考える。
+cap floor optionのとき、$g_{\mathrm{capfloor}}$の微分を考える。
 
 $$
-    g^{\prime}(k) = -1_{(-\infty, S]}(k),
-$$
-
-$$
-    g^{\prime\prime}(k) = -\delta(S - k),
-$$
-
-$g(k) := (k - S)^{+} = \max(k - S, 0)$のput optionのとき、$g$の微分を考える。
-
-$$
-    g^{\prime}(k) = 1_{[S, \infty)}(k),
-$$
-
-$$
-    g^{\prime\prime}(k) = \delta(S - k),
-$$
-
-$g(k) := \min(\max(S - k, 0), c)$のcap call optionのとき、$g$の微分を考える。
-
-$$
-    g^{\prime}(k) = -1_{[S - c, S]}(k),
-$$
-
-$$
-    g^{\prime\prime}(k) = \delta(S - k)+\delta(S - c - k),
+\begin{eqnarray}
+    g_{\mathrm{capfloor}}(s; K_{f}, K_{c}) & := & \min(\max(s - K_{f}, 0), K_{c}),
+    \label{def_payoff_cap_floor}
+    \\
+    g_{\mathrm{capfloor}}^{\prime}(s; K_{f}, K_{c}) & = & 1_{[K_{f}, K_{c}]}(s),
+    \label{derivaitve_payoff_cap_floor_by_strike}
+    \\
+    g_{\mathrm{capfloor}}^{\prime\prime}(s; K_{f}, K_{c}) 
+        & = & \delta(s - K_{f}) + \delta(K_{c} - s),
+    \label{derivaitve2_payoff_cap_floor_by_strike}
+\end{eqnarray}
 $$
 
 Black Scholesのcall optionの微分を考えるために、$d_{1}$の微分を考える。
 
 $$
+\begin{eqnarray}
     d_{1}(K)
-        := \frac{
-           \frac{S}{K} + (r + \sigma^{2}/2)T
+        & := & \frac{
+           \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
         }{
             \sqrt{T}\sigma
-        }
-$$
-
-$$
-\begin{eqnarray*}
+        },
+    \label{def_d1}
+    \\
     d_{1}(K)^{2}
         & = & \frac{1}{T\sigma^{2}} 
             \left(
                 \ln\left( \frac{S}{K} \right) + (r + \sigma^{2}/2)T
             \right)^{2}
+        \nonumber
         \\
         & = & \frac{1}{T\sigma^{2}} 
             \left(
                 \ln\left( \frac{S}{K} \right)^{2}
                     + 2\ln\left( \frac{S}{K} \right) (r + \sigma^{2}/2)T
                     + ((r + \sigma^{2}/2)T)^{2}
-            \right)
-\end{eqnarray*}
-$$
-
-$$
+            \right),
+        \label{square_d1}
+    \\
     d_{1}^{\prime}(K)
-        = \frac{1}{\sqrt{T}\sigma} \frac{K}{S}
-$$
-
-$$
+        & = & \frac{1}{\sqrt{T}\sigma} \frac{K}{S},
+    \label{derivative_d1}
+    \\
     d_{1}^{\prime\prime}(K)
-        = \frac{1}{\sqrt{T}\sigma S}
+        & = & \frac{1}{\sqrt{T}\sigma S},
+    \label{derivative2_d1}
+\end{eqnarray}
+$$
+
+$d_{2}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    d_{2}(K)
+        & := & \frac{
+           \ln\left(\frac{S}{K}\right) - (r + \sigma^{2}/2)T
+        }{
+            \sqrt{T}\sigma
+        },
+    \label{def_d2}
+    \\
+    d_{2}(K)^{2}
+        & = & \frac{1}{T\sigma^{2}} 
+            \left(
+                \ln\left( \frac{S}{K} \right) + (r - \sigma^{2}/2)T
+            \right)^{2}
+        \nonumber
+        \\
+        & = & \frac{1}{T\sigma^{2}} 
+            \left(
+                \ln\left( \frac{S}{K} \right)^{2}
+                    + 2\ln\left( \frac{S}{K} \right) (r - \sigma^{2}/2)T
+                    + ((r - \sigma^{2}/2)T)^{2}
+            \right),
+        \label{square_d2}
+    \\
+    d_{2}^{\prime}(K)
+        & = & \frac{1}{\sqrt{T}\sigma} \frac{K}{S},
+    \label{derivative_d2}
+    \\
+    d_{2}^{\prime\prime}(K)
+        & = & \frac{1}{\sqrt{T}\sigma S},
+    \label{derivative2_d2}
+\end{eqnarray}
+$$
+
+$\phi(x)$の微分を考える。
+
+$$
+    \phi(x) := \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
 $$
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
+    \phi^{\prime}(x)
+        & = & 
+            -x \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
+        \nonumber
+        \\
+        & = &
+            -x \phi(x)
+        \label{phi_derivative}
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
     \phi(d_{1}(K))
         & = &
             \frac{1}{\sqrt{T}\sigma} e^{-\frac{1}{2}d_{2}(K)^{2}}
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -266,6 +577,7 @@ $$
                         + ((r + \sigma^{2}/2)T)^{2}
                 \right)
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -287,6 +599,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
             \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -302,6 +615,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -317,6 +631,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -335,53 +650,17 @@ $$
                     -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
                 \right]
             \right)
-\end{eqnarray*}
-$$
-
-$d_{2}$の微分を考える。
-
-$$
-    d_{2}(K)
-        := \frac{
-           \frac{S}{K} - (r + \sigma^{2}/2)T
-        }{
-            \sqrt{T}\sigma
-        }
-$$
-
-$$
-\begin{eqnarray*}
-    d_{2}(K)^{2}
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right) + (r - \sigma^{2}/2)T
-            \right)^{2}
-        \\
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right)^{2}
-                    + 2\ln\left( \frac{S}{K} \right) (r - \sigma^{2}/2)T
-                    + ((r - \sigma^{2}/2)T)^{2}
-            \right)
-\end{eqnarray*}
-$$
-
-$$
-    d_{2}^{\prime}(K)
-        = \frac{1}{\sqrt{T}\sigma} \frac{K}{S}
-$$
-
-$$
-    d_{2}^{\prime\prime}(K)
-        = \frac{1}{\sqrt{T}\sigma S}
+        \label{phi_d1}
+\end{eqnarray}
 $$
 
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     \phi(d_{2}(K))
         & = &
             \frac{1}{\sqrt{T}\sigma} e^{-\frac{1}{2}d_{2}(K)^{2}}
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -394,6 +673,7 @@ $$
                         + ((r - \sigma^{2}/2)T)^{2}
                 \right)
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -415,6 +695,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
             \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -430,6 +711,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -445,6 +727,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
                 \right]
             \right)
+        \nonumber
         \\
         & = &
             \frac{1}{\sqrt{T}\sigma} 
@@ -463,16 +746,69 @@ $$
                     -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
                 \right]
             \right)
-\end{eqnarray*}
+        \label{phi_d2}
+\end{eqnarray}
 $$
 
 $$
-\begin{eqnarray*}
-    \phi^{\prime}(x)
+\begin{eqnarray}
+    \phi^{\prime}(d_{1}(K))
         & = & 
-\end{eqnarray*}
+            -d_{1}(K) \phi(d_{1}(K))
+        \nonumber
+        \\
+        & = &
+            -
+            \frac{
+               \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
+            }{
+                \sqrt{T}\sigma
+            }
+            \frac{1}{\sqrt{T}\sigma} 
+            \left(
+                \left(
+                    \frac{S}{K}
+                \right)^{
+                    -\frac{1}{2T\sigma^{2}} 
+                    \left(
+                        \ln\left( \frac{S}{K} \right)
+                        + 2(r + \sigma^{2}/2)T
+                    \right)
+                }
+                \exp
+                \left[
+                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
+                \right]
+            \right)
+        \nonumber
+        \\
+        & = &
+            -
+            \frac{
+               \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
+            }{
+                T\sigma^{2}
+            }
+            \left(
+                \left(
+                    \frac{S}{K}
+                \right)^{
+                    -\frac{1}{2T\sigma^{2}} 
+                    \left(
+                        \ln\left( \frac{S}{K} \right)
+                        + 2(r + \sigma^{2}/2)T
+                    \right)
+                }
+                \exp
+                \left[
+                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
+                \right]
+            \right)
+        \label{phi_derivative_d1}
+\end{eqnarray}
 $$
 
+次に$\Phi(x)$の微分を考える。
 
 $$
     \Phi(x) := 
@@ -611,10 +947,24 @@ $$
 
 call option $c(0, S(0); T, K)$の微分を考える。
 $S := S(0)$とおく。 
+$S(T)$の分布を考える。
+
+$$
+    P(S(T) \le x) 
+        = P((\Psi^{A})^{-1}(\Phi(\xi_{2})) \le x)
+        = P(\xi_{2} \le \Phi^{-1}((\Psi^{A}(x)))
+        = \Phi(\Phi^{-1}(\Psi^{A}(x)))
+        = \Psi^{A}(x)
+$$
 
 $$
     c(0, S; T, K)
-        = S\Phi(d_{1}(K)) - K\Phi(d_{2}(K))
+        = \mathrm{E}^{A}
+        \left[
+            (S - K)^{+}
+        \right]
+        =
+        S\Phi(d_{1}(K)) - K\Phi(d_{2}(K))
 $$
 
 $$
