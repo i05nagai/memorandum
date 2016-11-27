@@ -395,13 +395,13 @@ $$
         & = &
             S(0) \alpha(S(0))
             + (\alpha'(S(0))S(0) + \alpha(S(0)))(S(0) - S(0))
-            + \int_{-\infty}^{(0)} w(K)p(0, S(0); T, K)\ dK
+            + \int_{-\infty}^{S(0)} w(K)p(0, S(0); T, K)\ dK
             + \int_{S(0)}^{\infty} w(K)c(0, S(0); T, K\ dK
             \\
         & = & 
             S(0) \alpha(S(0))
-            + \int_{-\infty}^{(0)} w(K)p(0, S(0); T, K)\ dK
-            + \int_{S(0)}^{\infty} w(K)c(0, S(0); T, K\ dK
+            + \int_{-\infty}^{S(0)} w(K)p(0, S(0); T, K)\ dK
+            + \int_{S(0)}^{\infty} w(K)c(0, S(0); T, K) \ dK
     \label{chap16_expectation_static_hedge}
 \end{eqnarray}
 
