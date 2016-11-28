@@ -24,4 +24,5 @@ layout: math
     * [chap21](interest_rate_modeling/chap21)
     * [chap22](interest_rate_modeling/chap22)
     * [chap23](interest_rate_modeling/chap23)
+* [統計のための行列代数](matrix_algebra_from_a_statisticians_perspective)
 
