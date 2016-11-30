@@ -1,5 +1,38 @@
 # shell script
 
+## Tips
+
+### set -euを使う
+
+* `set -e`
+    * errorがあればそこで処理を終了する
+* `set -u`
+    * 未定義の変数があれば処理を終了する
+
+-e は command1 || command2 みたいなことが出来なくなるの使うことないな。-uは付けといて良いが。
+
+### `-x`
+`sh -x`やshebangの`#!/bin/bash -x`などとつけると、shell scriptの中のコマンドが出力される。
+ciなどで便利。
+
+`file.sh`が以下のようにかかれているとすると
+
+```shell
+echo "hoge"
+```
+
+```shell
+$ sh file.sh
+hoge
+
+$ sh -x file.sh
++echo "hoge"
+hoge
+```
+
+#### Reference
+* [シェルスクリプトを書くときはset -euしておく - Qiita](http://qiita.com/youcune/items/fcfb4ad3d7c1edf9dc96)
+
 ## help
 shell scriptを書いたら下記のような`usage`関数を書いておく。
 
