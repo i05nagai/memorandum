@@ -154,6 +154,20 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/var/pyenv
 ```
 
+### pyenvに特定のversionのpythonをInstall
+
+以下のコマンドでインストール可能なpythonのversionが表示される。
+
+```shell
+pyenv install -l
+```
+
+例えば、2.7.9のpythonをインストールしたければ以下のようにかく。
+
+```shell
+pyenv install 2.7.9
+```
+
 ### 全体で利用するバージョンの設定
 `3.5.2`は、installされているpythonを指定する。
 pyenvのpythonのversionが設定される。
