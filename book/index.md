@@ -25,4 +25,7 @@ layout: math
     * [chap22](interest_rate_modeling/chap22)
     * [chap23](interest_rate_modeling/chap23)
 * [統計のための行列代数](matrix_algebra_from_a_statisticians_perspective)
+* バンディット問題の理論とアルゴリズム
+    * [chap07](theory_and_algorithms_for_bandit_problems/chap07)
+    * [chap08](theory_and_algorithms_for_bandit_problems/chap08)
 

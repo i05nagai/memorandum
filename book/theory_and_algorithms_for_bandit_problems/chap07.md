@@ -3,19 +3,17 @@ layout: math
 title: Theory and Algorithms for Bandit Problems
 ---
 
-# バンディット問題の理論とアルゴリズム
-
-## Symbols
+# Symbols
 * $\mathbb{R}_{\geq 0}^{d}$
     * $d$次元の非負ベクトル
 
-## Chapter 7. 線形モデル上のバンディット問題
+# Chapter 7. 線形モデル上のバンディット問題
 
-### Symbols
+## Symbols
 * $i^{*} := \arg \max_{i} \theta^{\mathrm{T}} a_{i}$
 * $a^{*} := \arg \max_{i} \theta^{\mathrm{T}} a_{i}$
 
-### 7.1 線形バンディット
+## 7.1 線形バンディット
 
 $$
     X_{i}(t) := \theta ^{\mathrm{T}} a_{i} + \epsilon(t) 
@@ -246,3 +244,4 @@ $$
 
 
 ### proof
+
