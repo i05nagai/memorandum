@@ -2,6 +2,17 @@
 
 ## Tips
 
+### `[ :Unexpected operator in shell programming`
+`sh`で実行しているため。
+`bash`拡張のいくつかの記法が認識されていない。
+以下のように実行すれば良い。
+
+````shell
+bash script.sh
+```
+
+* [linux - [ :Unexpected operator in shell programming - Stack Overflow](http://stackoverflow.com/questions/3411048/unexpected-operator-in-shell-programming)
+
 ### set -euを使う
 
 * `set -e`
