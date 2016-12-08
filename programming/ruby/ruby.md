@@ -1,5 +1,90 @@
+
+<!-- vim-markdown-toc GFM -->
+
+* [ruby](#ruby)
+	* [gemの作り方 with bundler](#gem作方-with-bundler)
+		* [プロジェクトを作成](#作成)
+	* [jruby](#jruby)
+		* [jrubyでjavaにコンパイル](#jrubyjava)
+	* [WindowsでRuby処理系の切り替え](#windowsruby処理系切替)
+		* [インストール(without Chocolately)](#without-chocolately)
+		* [インストール(with Chocolately)](#with-chocolately)
+		* [既に存在している処理系を追加](#既存在処理系追加)
+		* [コマンド](#)
+		* [Chocolatelyでrubyをいれた場合](#chocolatelyruby場合)
+		* [参考](#参考)
+	* [tips](#tips)
+		* [ファイル読み込み1](#読込1)
+		* [ファイル読み込み4](#読込4)
+		* [ファイル読み込み1](#読込1-1)
+		* [n進数へ変換](#n進数変換)
+		* [n進数から数値へ変換](#n進数数値変換)
+	* [配列](#配列)
+		* [逆からeach](#逆each)
+
+<!-- vim-markdown-toc -->
+
 # ruby
+
+## rbenv
+rubyの仮想環境の作り方。
+
+### Install on Mac
+
+```
+brew install rbenv
+```
+
+`~/.bash_profile`か`~/.zprofile`に以下を記載する。
+
+```shell
+## renv
+if which rbenv > /dev/null 2>&1; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+fi
+```
+
+gemの環境を分ける場合は、
+
+```
+brew install rbenv-gemset
+``
+
+### Usage
+
+pyenv と同じ。
+
+```shell
+# show ruby versions which can be available to install
+rbenv install -l
+# install ruby specified [version]
+rbenv install [version]
+# 
+rbenv rehash
+# set ruby [version] globally
+rbenv global [version] 
+```
+
+localに環境を分ける場合は、`rbenv local`を使う。
+
+### rbenv-gemset
+
+```shell
+# show list of gemset
+rbenv gemset list
+# show active gemset
+rbenv gemset active
+# [gemset]を有効にする
+rbenv gemset init [gemset]
+```
+
+### Reference
+* [ちょっとgem試したい時にrbenv-gemset使う - Qiita](http://qiita.com/chinmo@github/items/6f531b4dd748c1cf5497)
+
+
 ## gemの作り方 with bundler
+
 ### プロジェクトを作成
 `bundler gem project_name`
 
