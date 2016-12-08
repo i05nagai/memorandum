@@ -137,33 +137,21 @@ $$
 \end{eqnarray*}
 $$
 
+$g, \alpha, \tilde{\chi}$の微分はAppendixで計算している。
 
-### linear TSR model
-
-linear TSR modelの場合、$\alpha$の微分を考える。
-
-$$
-\begin{eqnarray}
-    \alpha(s) & := & \alpha_{1}s + \alpha_{2}
-    \\
-    \alpha^{\prime}(s) & = &\alpha_{1}
-    \\
-    \alpha^{\prime\prime}(s) & = & 0
-\end{eqnarray}
-$$
-
-#### call option
+### linear TSR model + cap
+$\alpha$がlinear annuity mapping functionで、$g$がcapの場合を考える。
 
 $$
 \begin{eqnarray*}
-    g^{\prime\prime}(s; K)\alpha(s)\tilde{\chi}(s) 
+    g_{\mathrm{cap}}^{\prime\prime}(s; K)\alpha(s)\tilde{\chi}(s) 
         & = &
             \delta(s - K)\alpha(s)\tilde{\chi}(s),
     \\
-    g(s)\alpha^{\prime\prime}(s)\tilde{\chi}(s) 
+    g_{\mathrm{cap}}(s; K)\alpha^{\prime\prime}(s)\tilde{\chi}(s) 
         & = & 0,
     \\
-    g(s)\alpha(s)\tilde{\chi}^{\prime\prime}(s)
+    g_{\mathrm{cap}}(s; K)\alpha(s)\tilde{\chi}^{\prime\prime}(s)
         & = &
         (s - K)^{+}  
         (\alpha_{1}s + \alpha_{2})
@@ -173,7 +161,7 @@ $$
             + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
         \right),
     \\
-	2g^{\prime}(s)\alpha^{\prime}(s)\tilde{\chi}(s)
+	2g_{\mathrm{cap}}^{\prime}(s; K)\alpha^{\prime}(s)\tilde{\chi}(s)
         & = & 2 1_{[K, \infty)}(s) \alpha_{1} 
             \exp 
             \left(
@@ -181,12 +169,12 @@ $$
                     + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
             \right),
     \\
-    2g^{\prime}(s)\alpha(s)\tilde{\chi}^{\prime}(s)
+    2g_{\mathrm{cap}}^{\prime}(s; K)\alpha(s)\tilde{\chi}^{\prime}(s)
         & = & 2 1_{[K, \infty)}(s) 
             (\alpha_{1}s + \alpha_{2})
             \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
     \\ 
-    2g(s)\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+    2g_{\mathrm{cap}}(s; K)\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
         & = & 
             2(s - K)^{+} \alpha_{1}
                 \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
@@ -356,22 +344,133 @@ $$
 \end{eqnarray}
 $$
 
-#### put option
+#### linear TSR model + floor
 
-#### cap floor
+$$
+\begin{eqnarray*}
+    g_{\mathrm{floor}}^{\prime\prime}(s; K)\alpha(s)\tilde{\chi}(s) 
+        & = &
+            \delta(s - K)\alpha(s)\tilde{\chi}(s),
+    \\
+    g_{\mathrm{floor}}(s; K)\alpha^{\prime\prime}(s)\tilde{\chi}(s) 
+        & = & 0,
+    \\
+    g_{\mathrm{floor}}(s; K)\alpha(s)\tilde{\chi}^{\prime\prime}(s)
+        & = &
+        (s - K)^{+}  
+        (\alpha_{1}s + \alpha_{2})
+        \rho_{XS}\sigma_{X}\sqrt{T}
+        \left(
+               h^{\prime\prime}(s)\tilde{\chi}(s)
+            + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
+        \right),
+    \\
+	2g_{\mathrm{floor}}^{\prime}(s; K)\alpha^{\prime}(s)\tilde{\chi}(s)
+        & = & 2 1_{[K, \infty)}(s) \alpha_{1} 
+            \exp 
+            \left(
+                \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+            \right),
+    \\
+    2g_{\mathrm{floor}}^{\prime}(s; K)\alpha(s)\tilde{\chi}^{\prime}(s)
+        & = & 2 1_{[K, \infty)}(s) 
+            (\alpha_{1}s + \alpha_{2})
+            \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+    \\ 
+    2g_{\mathrm{floor}}(s; K)\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+        & = & 
+            2(s - K)^{+} \alpha_{1}
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+\end{eqnarray*}
+$$
 
-### Swap-Yield Model
+#### linear TSR model + bull spread
+TBD.
 
-#### call option
+### Appendix
+ここでは、$g, \alpha, \tilde{\chi}$の微分を計算する。
 
-#### put option
+#### payoff $g$の微分
+各payoff $g$の微分を考える。
 
-#### cap floor
+##### cap option
+call optionのとき、$g_{\mathrm{cap}}$の微分を考える。
 
-### fundamental calculation
+$$
+\begin{eqnarray}
+    g_{\mathrm{cap}}(s;K) & := & (s - K)^{+} = \max(s - K, 0),
+    \label{def_payoff_cap}
+    \\
+    g_{\mathrm{cap}}^{\prime}(s; K) & = & 1_{[K, \infty)}(s),
+    \label{derivative_payoff_cap_by_strike}
+    \\
+    g_{\mathrm{cap}}^{\prime\prime}(s; K) & = & \delta(s - K),
+    \label{derivative2_payoff_cap_by_strike}
+\end{eqnarray}
+$$
+
+##### floor option
+put(floor) optionのとき、$g_{\mathrm{floor}}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    g_{\mathrm{floor}}(s; K) 
+        & := & (K - s)^{+} = \max(K - s, 0)
+    \label{def_payoff_floor}
+    \\
+    g_{\mathrm{floor}}^{\prime}(s; K) 
+        & = & -1_{(-\infty, K]}(s),
+    \label{derivative_payoff_floor_by_strike}
+    \\
+    g_{\mathrm{floor}}^{\prime\prime}(s; K) 
+        & = & -\delta(s - K),
+    \label{derivative2_payoff_floor_by_strike}
+\end{eqnarray}
+$$
+
+
+##### cap-floor (bull spread) option
+cap floor optionのとき、$g_{\mathrm{capfloor}}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    g_{\mathrm{capfloor}}(s; K_{f}, K_{c}) & := & \min(\max(s - K_{f}, 0), K_{c}),
+    \label{def_payoff_cap_floor}
+    \\
+    g_{\mathrm{capfloor}}^{\prime}(s; K_{f}, K_{c}) & = & 1_{[K_{f}, K_{c}]}(s),
+    \label{derivaitve_payoff_cap_floor_by_strike}
+    \\
+    g_{\mathrm{capfloor}}^{\prime\prime}(s; K_{f}, K_{c}) 
+        & = & \delta(s - K_{f}) + \delta(K_{c} - s),
+    \label{derivaitve2_payoff_cap_floor_by_strike}
+\end{eqnarray}
+$$
+
+#### annuity mapping funciton $\alpha$の微分
+annuity mapping function $\alpha$の各modelごとの微分を考える
+
+##### linear TSR model
+
+linear TSR modelの場合、$\alpha$の微分を考える。
+
+$$
+\begin{eqnarray}
+    \alpha(s) & := & \alpha_{1}s + \alpha_{2}
+    \\
+    \alpha^{\prime}(s) & = &\alpha_{1}
+    \\
+    \alpha^{\prime\prime}(s) & = & 0
+\end{eqnarray}
+$$
+
+##### swap yiedl model
+TBD.
+
+#### $\chi$の微分
 
 $\tilde{\chi}$の微分を考える。
-$h(s) := \Phi^{-1}(\Psi^{A}(s))$とおくと
+まず、$h(s) := \Phi^{-1}(\Psi^{A}(s))$とおくと
 
 $$
 \begin{eqnarray}
@@ -417,56 +516,8 @@ $$
 \end{eqnarray}
 $$
 
-call optionのとき、$g_{\mathrm{cap}}$の微分を考える。
-
-$$
-\begin{eqnarray}
-    g_{\mathrm{cap}}(s;K) & := & (s - K)^{+} = \max(s - K, 0),
-    \label{def_payoff_cap}
-    \\
-    g_{\mathrm{cap}}^{\prime}(s; K) & = & 1_{[K, \infty)}(s),
-    \label{derivative_payoff_cap_by_strike}
-    \\
-    g_{\mathrm{cap}}^{\prime\prime}(s; K) & = & \delta(s - K),
-    \label{derivative2_payoff_cap_by_strike}
-\end{eqnarray}
-$$
-
-put(floor) optionのとき、$g_{\mathrm{floor}}$の微分を考える。
-
-$$
-\begin{eqnarray}
-    g_{\mathrm{floor}}(s; K) 
-        & := & (K - s)^{+} = \max(K - s, 0)
-    \label{def_payoff_floor}
-    \\
-    g_{\mathrm{floor}}^{\prime}(s; K) 
-        & = & -1_{(-\infty, K]}(s),
-    \label{derivative_payoff_floor_by_strike}
-    \\
-    g_{\mathrm{floor}}^{\prime\prime}(s; K) 
-        & = & -\delta(s - K),
-    \label{derivative2_payoff_floor_by_strike}
-\end{eqnarray}
-$$
-
-cap floor optionのとき、$g_{\mathrm{capfloor}}$の微分を考える。
-
-$$
-\begin{eqnarray}
-    g_{\mathrm{capfloor}}(s; K_{f}, K_{c}) & := & \min(\max(s - K_{f}, 0), K_{c}),
-    \label{def_payoff_cap_floor}
-    \\
-    g_{\mathrm{capfloor}}^{\prime}(s; K_{f}, K_{c}) & = & 1_{[K_{f}, K_{c}]}(s),
-    \label{derivaitve_payoff_cap_floor_by_strike}
-    \\
-    g_{\mathrm{capfloor}}^{\prime\prime}(s; K_{f}, K_{c}) 
-        & = & \delta(s - K_{f}) + \delta(K_{c} - s),
-    \label{derivaitve2_payoff_cap_floor_by_strike}
-\end{eqnarray}
-$$
-
-Black Scholesのcall optionの微分を考えるために、$d_{1}$の微分を考える。
+更に、$\Psi^{A}(s)$の計算をする為に、 Black Scholesのcall optionの微分を考える。
+まず、$d_{1}$の微分を考える。
 
 $$
 \begin{eqnarray}
@@ -958,20 +1009,20 @@ $$
 $$
 
 $$
-    c(0, S; T, K)
+    c(0, S; T, K, r)
         = \mathrm{E}^{A}
         \left[
             (S - K)^{+}
         \right]
         =
-        S\Phi(d_{1}(K)) - K\Phi(d_{2}(K))
+        S\Phi(d_{1}(K)) - e^{-rT}K\Phi(d_{2}(K))
 $$
 
 $$
 \begin{eqnarray*}
-    \frac{\partial}{\partial K} c(0, S; T, K)
+    \frac{\partial}{\partial K} c(0, S; T, K, r)
         & = & 
-            S\phi(d_{1}(K))d_{1}^{\prime}(K) - \Phi(d_{2}(K)) - K\phi(d_{2}(K))d_{2}^{\prime}(K)
+            S\phi(d_{1}(K))d_{1}^{\prime}(K) - e^{-rT}\Phi(d_{2}(K)) - e^{-rT}K\phi(d_{2}(K))d_{2}^{\prime}(K)
         \\
         & = &
             S \frac{1}{T\sigma^{2}} 
@@ -991,7 +1042,7 @@ $$
             \right]
         \\
         & & 
-            - K \frac{1}{T\sigma^{2}} 
+            - e^{-rT}K \frac{1}{T\sigma^{2}} 
             \left(
                 \frac{S}{K}
             \right)^{
@@ -1006,7 +1057,7 @@ $$
             \left[
                 -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
             \right]
-            - \Phi(d_{2}(K))
+            - e^{-rT}\Phi(d_{2}(K))
         \\
         & = &
             \frac{1}{T\sigma^{2}} 
@@ -1029,7 +1080,7 @@ $$
                 \left[
                     -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
                 \right]
-                - K \left(
+                - e^{-rT}K \left(
                     \frac{S}{K}
                 \right)^{
                     2(r - \sigma^{2}/2)T
@@ -1039,7 +1090,7 @@ $$
                     -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
                 \right]
             \right)
-            - \Phi(d_{2}(K))
+            - e^{-rT}\Phi(d_{2}(K))
 \end{eqnarray*}
 $$
 
