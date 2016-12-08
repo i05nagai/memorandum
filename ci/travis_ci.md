@@ -1,3 +1,55 @@
+
+<!-- vim-markdown-toc GFM -->
+
+* [Travis CI](#travis-ci)
+	* [Customizing the Build](#customizing-the-build)
+		* [The Build Lifecycle](#the-build-lifecycle)
+		* [Installing Packages Using apt](#installing-packages-using-apt)
+		* [Builds Time out](#builds-time-out)
+		* [Git clone depth](#git-clone-depth)
+		* [Building specific branches](#building-specific-branches)
+		* [Skipping a build](#skipping-a-build)
+		* [Build Matrix](#build-matrix)
+			* [Excluding Jobs](#excluding-jobs)
+	* [Installing Dependencies](#installing-dependencies)
+	* [Validating .travis.yml files](#validating-travisyml-files)
+		* [online](#online)
+		* [offline](#offline)
+	* [Building a Python  Project](#building-a-python--project)
+		* [What This Guide Covers](#what-this-guide-covers)
+		* [Choosing Python versions to test against](#choosing-python-versions-to-test-against)
+		* [Travis CI Uses Isolated virtualenv](#travis-ci-uses-isolated-virtualenv)
+		* [PyPy Support](#pypy-support)
+		* [Default Python Version](#default-python-version)
+		* [Specifying Test Scrip](#specifying-test-scrip)
+	* [Building a C++ Project](#building-a-c-project)
+		* [What This Guide Covers](#what-this-guide-covers-1)
+		* [CI environment for C++ Projects](#ci-environment-for-c-projects)
+		* [Dependency Management](#dependency-management)
+		* [Default Test Script](#default-test-script)
+		* [Choosing compilers to test against](#choosing-compilers-to-test-against)
+		* [Build Matrix](#build-matrix-1)
+	* [Configuring Build Notifications](#configuring-build-notifications)
+		* [Notifications](#notifications)
+	* [Notifications](#notifications-1)
+		* [slack](#slack)
+		* [Encrypting your credentials](#encrypting-your-credentials)
+	* [CI Environment Reference](#ci-environment-reference)
+		* [The OS X Build Environment - Travis CI](#the-os-x-build-environment---travis-ci)
+	* [Encrypting Files and Data](#encrypting-files-and-data)
+		* [Usages](#usages)
+			* [Note on escaping certain symbols](#note-on-escaping-certain-symbols)
+			* [Notifications Example](#notifications-example)
+			* [Detailed Discussion](#detailed-discussion)
+	* [tips](#tips)
+		* [travis command line tools](#travis-command-line-tools)
+	* [.travis.yml](#travisyml)
+		* [C++](#c)
+			* [reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+
 # Travis CI
 
 
@@ -131,7 +183,71 @@ gem install travis --no-rdoc --no-ri
 travis lint /path/to/.travis.yml
 ```
 
+## Building a Python  Project
+
+### What This Guide Covers
+
+### Choosing Python versions to test against
+pythonの2.6, 2.7,...3.6でテストしたいときは以下のようにかく。
+```yml
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "3.6-dev" # 3.6 development branch
+  - "nightly" # currently points to 3.7-dev
+# command to install dependencies
+install: "pip install -r requirements.txt"
+# command to run tests
+script: pytest
+```
+
+### Travis CI Uses Isolated virtualenv
+ciのpythonは全てvirtualenv上で実行される。
+なのでpythonのpackageはaptではなくpipでいれる。
+
+
+### PyPy Support
+Travis CIはPyPyとPyPy3に対応している。
+
+```yml
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  # PyPy versions
+  - "pypy"
+  - "pypy"  # PyPy2 2.5.0
+  - "pypy3" # Pypy3 2.4.0
+  - "pypy-5.3.1"
+```
+
+### Default Python Version
+defaultは2.7
+
+### Specifying Test Scrip
+testの実行方法を記載。
+以下では`pytest`というコマンドが実行される。
+`script`がないとfailする。
+
+```yml
+# command to run tests
+script: pytest
+```
+
+### Build Matrix
+pythonのBuild matrixは`python`と`env`によって生成される。
+
+
 ## Building a C++ Project
+
 ### What This Guide Covers 
 先にGetting Startedとgeneral build configurationを見るように。
 
@@ -254,6 +370,84 @@ notifications:
 ```
 brew install gcc48
 ```
+
+## Encrypting Files and Data
+
+### Usages
+Travis CLIで、暗号化ができる。
+どのくらい信頼度があるかは不明。
+
+```shell
+gem install travis
+```
+
+```shell
+travis encrypt SOMEVAR=secretvalue
+```
+
+を実行すると
+
+```shell
+secure: ".... encrypted data ...."
+```
+
+と暗号化されたデータが得られる。
+これを暗号化前のkeyとしてymlにおけば良い。
+
+#### Note on escaping certain symbols
+
+#### Notifications Example 
+
+#### Detailed Discussion
+どのように暗号化されたテキストが復号化されるかを説明する。
+
+以下のようになっているとすると
+
+```yml
+notifications:
+  campfire:
+    rooms:
+      secure: "encrypted string"
+```
+
+次のように解釈される。
+
+```yml
+notifications:
+  campfire:
+    rooms: "decrypted string"
+```
+
+一方、次の場合は
+
+```yml
+notifications:
+  campfire:
+    rooms:
+      - secure: "encrypted string"
+```
+
+次のようになる。
+
+```yml
+notifications:
+  campfire:
+    rooms:
+      - "decrypted string"
+```
+
+環境変数も同様である。
+
+```yml
+env:
+  - secure: "encrypted string"
+```
+
+```yml
+env:
+  - "decrypted string"
+```
+
 
 ## tips
 ### travis command line tools
