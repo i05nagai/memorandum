@@ -50,7 +50,7 @@ $$
 ここで、$N$は標準正規分布関数で、
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     d_{1}
         & := & 
             \frac{
@@ -66,10 +66,38 @@ $$
             }{
                 \sigma \sqrt{T}
             }
-\end{eqnarray*}
+\end{eqnarray}
 $$
 
 である。
+また、
+
+$$
+\begin{eqnarray}
+    d_{1}
+        & = & 
+            \frac{
+                \ln\left(\frac{S(0)}{K} \right) + (r + \frac{1}{2}\sigma^{2})T
+            }{
+                \sigma \sqrt{T}
+            }
+        \nonumber
+        \\
+        & = &
+            \frac{
+                \ln\left(\frac{S(0)}{K} \right) + (r - \frac{1}{2}\sigma^{2} + \sigma^{2})T
+            }{
+                \sigma \sqrt{T}
+            }
+        \nonumber
+        \\
+        & = &
+            d_{2} + \sigma \sqrt{T}
+        \label{d1_d2_relation}
+\end{eqnarray}
+$$
+
+が成り立つ。
 $K < 0 $とすると、$S(T) > 0$より
 
 $$
@@ -241,7 +269,7 @@ $$
 とし、
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     d_{1}(S, r, T, \sigma)
         & := & 
             \frac{
@@ -249,6 +277,7 @@ $$
             }{
                 \sigma \sqrt{T}
             },
+        \label{def_d1}
         \\
     d_{2}(S, r, T, \sigma)
         & := & 
@@ -257,7 +286,8 @@ $$
             }{
                 \sigma \sqrt{T}
             }
-\end{eqnarray*}
+        \label{def_d2}
+\end{eqnarray}
 $$
 
 とおく。
@@ -301,6 +331,97 @@ $$
     \Phi^{\prime}(x) = \phi(x)
 $$
 
+また、以下が成り立つ。
+
+$$
+\begin{eqnarray}
+    S\phi(d_{1})
+        & = &
+            S \frac{1}{\sqrt{2\pi}}
+            \exp
+            \left(
+                -\frac{ d_{1}^{2} }{2} 
+            \right)
+        \nonumber
+        \\
+        & = &
+            S \frac{1}{\sqrt{2\pi}}
+            \exp
+            \left(
+                -\frac{ (d_{2} + \sigma\sqrt{T})^{2} }{2}
+            \right)
+        \nonumber
+        \\
+        & = &
+            S \frac{1}{\sqrt{2\pi}}
+            \exp
+            \left(
+                -\frac{ (d_{2}^{2} 
+                + 2d_{2}\sigma\sqrt{T}
+                + \sigma^{2}T) }{2}
+            \right)
+        \nonumber
+        \\
+        & = &
+            S \frac{1}{\sqrt{2\pi}}
+            e^{-\frac{d_{2}^{2} }{2} }
+            \exp
+            \left(
+                -\frac{ 
+                2(\ln(S/K) + (r - \frac{1}{2}\sigma^{2})T)
+                + \sigma^{2}T) }{2}
+            \right)
+        \nonumber
+        \\
+        & = &
+            S
+            \phi(d_{2})
+            \exp
+            \left(
+                -
+                \left(
+                    \ln(S/K) + (r - \frac{1}{2}\sigma^{2})T
+                    + \frac{1}{2}\sigma^{2}T)
+                \right)
+            \right)
+        \nonumber
+        \\
+        & = &
+            S
+            \phi(d_{2})
+            \exp
+            \left(
+                -
+                \left(
+                    \ln(S/K) + rT
+                \right)
+            \right)
+        \nonumber
+        \\
+        & = &
+            S
+            \phi(d_{2})
+            \exp
+            \left(
+                - \ln(S/K)
+            \right)
+            e^{-rT}
+        \nonumber
+        \\
+        & = &
+            S
+            \phi(d_{2})
+            \frac{K}{S}
+            e^{-rT}
+        \nonumber
+        \\
+        & = &
+            \phi(d_{2})
+            K e^{-rT}
+        \label{d1_d2_density_relation}
+\end{eqnarray}
+$$
+
 
 ## Delta
 deltaは原資産による微分である。
@@ -308,34 +429,52 @@ deltaは原資産による微分である。
 まず、$d_{1}, d_{2}$の微分を考える。
 
 $$
+\begin{eqnarray}
     \frac{\partial}{\partial S} d_{1}(S)
-        = \frac{K}{S} \frac{1}{ \sigma \sqrt{T} }
+        & = &
+        \frac{\partial}{\partial S}
+            \left(
+                \frac{
+                    \left(\ln(S) - \ln(K) \right) + (r + \frac{1}{2}\sigma^{2})T
+                }{
+                    \sigma \sqrt{T}
+                }
+            \right)
+        \nonumber
+        \\
+        & = & \frac{1}{S} \frac{1}{ \sigma \sqrt{T} }
+    \\
+    \frac{\partial}{\partial S} d_{2}(S)
+        & = & \frac{1}{S} \frac{1}{ \sigma \sqrt{T} }
+\end{eqnarray}
 $$
 
-$$
-    \frac{\partial}{\partial S} d_{2}(S)
-        = \frac{K}{S} \frac{1}{ \sigma \sqrt{T} }
-$$
+以上と$$\eqref{d1_d2_density_relation}$$より
 
 $$
 \begin{eqnarray}
     \frac{\partial}{\partial S} c(S)
         & = & 
-        \Phi(d_{1}(S))
-        + S\phi(d_{1}(S)) \frac{\partial}{\partial S} d_{1}(S)
-        - K\phi(d_{2}(S)) \frac{\partial}{\partial S} d_{2}(S)
+            \Phi(d_{1}(S))
+                + S\phi(d_{1}(S)) \frac{\partial}{\partial S} d_{1}(S)
+                - e^{-rT}K\phi(d_{2}(S)) \frac{\partial}{\partial S} d_{2}(S)
         \nonumber
         \\
         & = &
-        \Phi(d_{1}(S))
-        + 
-        \frac{K}{S} \frac{1}{ \sigma \sqrt{T} }
-        \left(
-            S\phi(d_{1}(S)) - K\phi(d_{2}(S)) 
-        \right)
+            \Phi(d_{1}(S))
+            + 
+            \frac{1}{S} \frac{1}{ \sigma \sqrt{T} }
+            \left(
+                S\phi(d_{1}(S)) - e^{-rT}K\phi(d_{2}(S)) 
+            \right)
+        \nonumber
+        \\
+        & = &
+            \Phi(d_{1}(S))
 \end{eqnarray}
 $$
 
+となる。
 
 ## Gamma
 Gammaは原資産による2階微分である。
@@ -343,13 +482,13 @@ Gammaは原資産による2階微分である。
 まず、$d_{1}, d_{2}$の2階微分を考える。
 
 $$
+\begin{eqnarray}
     \frac{\partial^{2}}{\partial S^{2}} d_{1}(S)
-        = - \frac{K}{S^{2}} \frac{1}{ \sigma \sqrt{T} }
-$$
-
-$$
+        & = & -\frac{1}{S^{2}} \frac{1}{ \sigma \sqrt{T} }
+    \\
     \frac{\partial^{2}}{\partial S^{2}} d_{2}(S)
-        = -\frac{K}{S^{2}} \frac{1}{ \sigma \sqrt{T} }
+        & = & -\frac{1}{S^{2}} \frac{1}{ \sigma \sqrt{T} }
+\end{eqnarray}
 $$
 
 $$
@@ -357,39 +496,17 @@ $$
     \frac{\partial^{2}}{\partial S^{2}} c(S)
         & = & 
             \frac{\partial}{\partial S} 
-            \left(
                 \Phi(d_{1}(S))
-                + \frac{K}{S} \frac{1}{ \sigma \sqrt{T} }
-                \left(
-                    S\phi(d_{1}(S)) - K\phi(d_{2}(S)) 
-                \right)
-            \right)
             \nonumber
         \\
         & = & 
             \phi(d_{1}(S))d_{1}^{\prime}(S)
-            + d_{1}^{\prime\prime}(S)
-            \left(
-                \phi(d_{1}(S)) 
-                + S\phi^{\prime}(d_{1}(S)) 
-                - K\phi^{\prime}(d_{2}(S)) d_{2}^{\prime}(S)
-            \right)
-        \nonumber
-        \\
-        & = &
-            \phi(d_{1}(S))d_{1}^{\prime}(S)
-            + d_{1}^{\prime\prime}(S)
-            \left(
-                \phi(d_{1}(S)) 
-                - Sd_{1}(S)\phi(d_{1}(S)) 
-                + Kd_{2}(S)\phi(d_{2}(S)) d_{2}^{\prime}(S)
-            \right)
 \end{eqnarray}
 $$
 
 ## Vega
 vegaはvolatility $\sigma$による微分である。
-簡単のため、$d_{1}, d_{2}, c$を$S$の関数として書く。
+簡単のため、$d_{1}, d_{2}, c$を$\sigma$の関数として書く。
 まず、$d_{1}, d_{2}$の微分を考える。
 
 $$
@@ -402,39 +519,53 @@ $$
             }{
                 \sigma 
             }
-            \nonumber
+        \nonumber
         \\
         & = &
             \frac{
-                 \sigma\sqrt{T}
-                 - (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                 (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                     - \sigma \sigma\sqrt{T}
             }{
                 \sigma^{2}
             }
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
+        \nonumber
+        \\
+        & = &
+            \frac{
+                 (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+            }{
+                \sigma^{2}
+            }
+        \\
     \frac{\partial}{\partial \sigma} d_{2}(\sigma)
         & = &
             \frac{\partial}{\partial \sigma}
             \frac{
                  (r - \frac{1}{2}\sigma^{2})\sqrt{T}
             }{
-                \sigma 
+                \sigma^{2}
             }
-            \nonumber
+        \nonumber
         \\
         & = &
             \frac{
-                 \sigma\sqrt{T}
-                 - (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                 (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                    + \sigma \sigma\sqrt{T}
+            }{
+                \sigma^{2}
+            }
+        \nonumber
+        \\
+        & = &
+            \frac{
+                 (r + \frac{1}{2}\sigma^{2})\sqrt{T}
             }{
                 \sigma^{2}
             }
 \end{eqnarray}
 $$
+
+以上と$$\eqref{d1_d2_density_relation}$$より、
 
 $$
 \begin{eqnarray}
@@ -447,16 +578,249 @@ $$
         \nonumber
         \\
         & = &
-            \left(
-                S\phi(d_{1}(\sigma)) \frac{\partial}{\partial \sigma} d_{1}(\sigma)
+            S\phi(d_{1}(\sigma)) \frac{\partial}{\partial \sigma} d_{1}(\sigma)
                 - e^{-rT}K\phi(d_{2}(\sigma)) \frac{\partial}{\partial \sigma} d_{2}(\sigma)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(\sigma)) \frac{\partial}{\partial \sigma} d_{1}(\sigma)
+                - S\phi(d_{1}(\sigma)) \frac{\partial}{\partial \sigma} d_{2}(\sigma)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(\sigma)) 
+            \left(
+                \frac{\partial}{\partial \sigma} d_{1}(\sigma)
+                    - \frac{\partial}{\partial \sigma} d_{2}(\sigma)
             \right)
         \nonumber
         \\
+        & = &
+            S\phi(d_{1}(\sigma)) 
+            \left(
+                \frac{
+                     (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                }{
+                    \sigma^{2}
+                }
+                - 
+                \frac{
+                     (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                }{
+                    \sigma^{2}
+                }
+            \right)
+        \nonumber
+        \\
+        & = &
+             - \sqrt{T} S\phi(d_{1}(\sigma)) 
 \end{eqnarray}
 $$
 
 ## Theta
+Thetaは現在時刻$t$による微分である。
+簡単のため、$d_{1}, d_{2}, c$を$t$の関数として書く。
+まず、$d_{1}, d_{2}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial t} d_{1}(t)
+        & = &
+            \frac{\partial}{\partial t}
+            \left(
+                \frac{
+                    \ln\left(\frac{S}{K} \right) + (r + \frac{1}{2}\sigma^{2})(T - t)
+                }{
+                    \sigma \sqrt{T - t}
+                }
+            \right)
+        \nonumber
+        \\
+        & = &
+            \frac{\partial}{\partial t}
+            \left(
+                \frac{
+                    (r + \frac{1}{2}\sigma^{2})
+                }{
+                    \sigma
+                }
+                \sqrt{T - t}
+            \right)
+        \nonumber
+        \\
+        & = &
+            -
+            \frac{
+                (r + \frac{1}{2}\sigma^{2})
+            }{
+                2\sigma\sqrt{T - t}
+            }
+        \\
+    \frac{\partial}{\partial t} d_{2}(t)
+        & = &
+            -
+            \frac{
+                (r - \frac{1}{2}\sigma^{2})
+            }{
+                2\sigma\sqrt{T - t}
+            }
+\end{eqnarray}
+$$
+
+以上と$$\eqref{d1_d2_density_relation}$$より
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial t} c(t)
+        & = &
+            \frac{\partial}{\partial t} 
+            \left(
+                S\Phi(d_{1}(t)) - e^{-r(T - t)}K\Phi(d_{2}(t))
+            \right)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(t))
+                \frac{\partial}{\partial t} d_{1}(t) 
+            - re^{-r(T - t)}K\Phi(d_{2}(t))
+            - e^{-r(T - t)}K\phi(d_{2}(t))
+                \frac{\partial}{\partial t} d_{2}(t) 
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(t))
+                \frac{\partial}{\partial t} d_{1}(t) 
+            - S\phi(d_{1}(t))
+                \frac{\partial}{\partial t} d_{2}(t) 
+            - re^{-r(T - t)}K\Phi(d_{2}(t))
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(t))
+            \left(
+                \frac{\partial}{\partial t} d_{1}(t) 
+                - \frac{\partial}{\partial t} d_{2}(t) 
+            \right)
+            - re^{-r(T - t)}K\Phi(d_{2}(t))
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(t))
+            \left(
+                -
+                \frac{
+                    (r + \frac{1}{2}\sigma^{2})
+                }{
+                    2\sigma\sqrt{T - t}
+                }
+                + \frac{
+                    (r - \frac{1}{2}\sigma^{2})
+                }{
+                    2\sigma\sqrt{T - t}
+                }
+            \right)
+            - re^{-r(T - t)}K\Phi(d_{2}(t))
+        \nonumber
+        \\
+        & = &
+            - S\phi(d_{1}(t))
+            \left(
+                \frac{
+                    \sigma
+                }{
+                    2\sqrt{T - t}
+                }
+            \right)
+            - re^{-r(T - t)}K\Phi(d_{2}(t))
+\end{eqnarray}
+$$
+
 
 ## Rho
+Rhoは金利$r$による微分である。
+簡単のため、$d_{1}, d_{2}, c$を$r$の関数として書く。
+まず、$d_{1}, d_{2}$の微分を考える。
 
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial r} d_{1}(r)
+        & = &
+            \frac{\partial}{\partial r}
+            \left(
+                \frac{
+                    \ln\left(\frac{S}{K} \right) + (r + \frac{1}{2}\sigma^{2})(T - t)
+                }{
+                    \sigma \sqrt{T - t}
+                }
+            \right)
+        \nonumber
+        \\
+        & = &
+            \frac{\partial}{\partial t}
+            \left(
+                \frac{
+                    \sqrt{T - t}
+                }{
+                    \sigma
+                } r
+            \right)
+        \nonumber
+        \\
+        & = &
+            \frac{
+                \sqrt{T - t}
+            }{
+                \sigma
+            }
+        \\
+    \frac{\partial}{\partial t} d_{2}(t)
+        & = &
+            \frac{
+                \sqrt{T - t}
+            }{
+                \sigma
+            }
+\end{eqnarray}
+$$
+
+以上と$$\eqref{d1_d2_density_relation}$$より
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial r} c(r)
+        & = &
+            \frac{\partial}{\partial r} 
+            \left(
+                S\Phi(d_{1}(r)) - e^{-r(T - t)}K\Phi(d_{2}(r))
+            \right)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(r))
+                \frac{\partial}{\partial r} d_{1}(r) 
+            + (T - t)e^{-r(T - t)}K\Phi(d_{2}(r))
+            - e^{-r(T - t)}K\phi(d_{2}(r))
+                \frac{\partial}{\partial r} d_{2}(r) 
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(r))
+                \frac{\partial}{\partial r} d_{1}(r) 
+            - S\phi(d_{1}(r))
+                \frac{\partial}{\partial r} d_{2}(r) 
+            + (T - t)e^{-r(T - t)}K\Phi(d_{2}(r))
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(r))
+            \left(
+                \frac{\partial}{\partial r} d_{1}(r) 
+                - \frac{\partial}{\partial r} d_{2}(r) 
+            \right)
+            + (T - t)e^{-r(T - t)}K\Phi(d_{2}(r))
+        \nonumber
+        \\
+        & = &
+            (T - t)e^{-r(T - t)}K\Phi(d_{2}(r))
+\end{eqnarray}
+$$
