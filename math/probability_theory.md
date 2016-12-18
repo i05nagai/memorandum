@@ -5,6 +5,94 @@ title: Probability Theory
 
 # Probability Theory
 
+## Independence
+
+### Def. Independenc of $\sigma$-algebra
+$N \in \mathbb{N}$とする。
+$\mathcal{A}\_{1}, \ldots, \mathcal{A}\_{N}$が $\mathcal{F}$ 上の $\sigma$ -algebraとする。
+以下が成り立つとき、$\mathcal{A}_{1}, \ldots, \mathcal{A}\_{N}$が独立であるという。
+
+$$
+    P(A_{1} \cap \cdots \cap A_{N}) 
+        = \prod_{i=1}^{N}P(A_{i}),
+    \quad
+    \forall A_{1} \in \mathcal{A}_{1}, \ldots, \forall A_{N} \in \mathcal{A}_{N}
+$$
+
+### Def. Independence of random variables
+$N \in \mathbb{N}$とする。
+$X\_{1}, \ldots, X\_{N}$が $\mathcal{F}$ 上の確率変数とする。
+各確率変数が生成する$\sigma$-algebraが独立のとき、$X_{1}, \ldots, X\_{N}$が独立であるという。
+つまり、
+
+$$
+    P(A_{1} \cap \cdots \cap A_{N}) 
+        = \prod_{i=1}^{N}P(A_{i}),
+    \quad
+    \forall A_{1} \in \sigma(X_{1}), \ldots, \forall A_{N} \in \sigma(X_{N}).
+$$
+
+
+### Remark
+$\mathcal{A}\_{1}, \ldots, \mathcal{A}\_{N}$は、sub-$\sigma$-algebraとする。
+$\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_{1}, \ldots, A_{N}$が独立であるとは限らない。
+実際、
+
+* $N=3$
+* $\Omega := \\{\omega_{000}, \omega_{001}, \omega_{010}, \ldots, \omega_{111} \\}$
+* $\mathcal{F} := 2^{\Omega}$
+    * $\Omega$のべき集合
+* $X_{1}, X_{2}, X_{3}$は0,1の値を取る確率変数
+    * $X_{i}(\omega_{k_{1}k_{2}k_{3}}) := k_{i}$とする
+
+確率変数の確率$P$を以下で定義する。
+
+
+* $P(X_{1}=1,\ X_{2}=1,\ X_{3}=1) = 1/8$
+* $P(X_{1}=1,\ X_{2}=1,\ X_{3}=0) = 0$
+* $P(X_{1}=1,\ X_{2}=0,\ X_{3}=1) = 0$
+* $P(X_{1}=1,\ X_{2}=0,\ X_{3}=0) = 1/8$
+* $P(X_{1}=0,\ X_{2}=1,\ X_{3}=1) = 1/8$
+* $P(X_{1}=0,\ X_{2}=1,\ X_{3}=0) = 1/4$
+* $P(X_{1}=0,\ X_{2}=0,\ X_{3}=1) = 1/4$
+* $P(X_{1}=0,\ X_{2}=0,\ X_{3}=0) = 1/8$
+
+以上より、
+
+* $P(X_{1} = 1) = 1/4$
+* $P(X_{1} = 0) = 3/4$
+* $P(X_{2} = 1) = 1/2$
+* $P(X_{2} = 0) = 1/2$
+* $P(X_{3} = 1) = 1/2$
+* $P(X_{3} = 0) = 1/2$
+* $P(X_{1} = 1)P(X_{2} = 1) = 1/8$
+* $P(X_{1} = 1)P(X_{2} = 0) = 1/8$
+* $P(X_{1} = 0)P(X_{2} = 1) = 3/8$
+* $P(X_{1} = 0)P(X_{2} = 0) = 3/8$
+* $P(X_{1} = 1)P(X_{3} = 1) = 1/8$
+* $P(X_{1} = 1)P(X_{3} = 0) = 1/8$
+* $P(X_{1} = 0)P(X_{3} = 1) = 3/8$
+* $P(X_{1} = 0)P(X_{3} = 0) = 3/8$ 
+* $P(X_{1} = 1,\ X_{2} = 1) = 1/8$
+* $P(X_{1} = 1,\ X_{2} = 0) = 1/8$
+* $P(X_{1} = 0,\ X_{2} = 1) = 3/8$
+* $P(X_{1} = 0,\ X_{2} = 0) = 3/8$
+* $P(X_{1} = 1,\ X_{3} = 1) = 1/8$
+* $P(X_{1} = 1,\ X_{3} = 0) = 1/8$
+* $P(X_{1} = 0,\ X_{3} = 1) = 3/8$
+* $P(X_{1} = 0,\ X_{3} = 0) = 3/8$
+
+であり、$\forall i \neq j$について$X_{i}, X_{j}$は独立である。
+一方、
+
+* $P(X_{1}=1,\ X_{2}=1,\ X_{3}=1) = 1/8$
+* $P(X_{1}=1)P(X_{2}=1)P(X_{3}=1) = 1/16$
+
+で$X_{1}, X_{2}, X_{3}$は独立でない。
+
+### Def. Conditional Independence
+
+
 ## Conditional Expectation
 
 ### Gaussian Distribution
