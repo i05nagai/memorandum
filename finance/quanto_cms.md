@@ -808,6 +808,7 @@ $$
 \end{eqnarray}
 $$
 
+また、[d1とd2の関係式]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-d1_d2_density_relation)より、call optionの1階微分は
 
 $$
 \begin{eqnarray}
