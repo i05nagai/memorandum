@@ -45,6 +45,7 @@ $$
 $f(x) \in C^{2}$とする。
 満期$T$、payoffが$f$のeuropean optionの価値は、callとputの積分で表現できる。
 つまり、以下が$\forall K^{*}$について成立。
+
 $$
 \begin{equation}
     E(f(S(T))) 
@@ -57,44 +58,70 @@ $$
 $$
 
 #### skecth of proof
-$\eqref{chap8_34_expectation_with_pdf}$を部分積分する。
-$F(K) := \frac{\partial c(0, S(0); T, K)}{\partial K}$は$S(T)$の分布関数であるから、
+簡単のため$S := S(T)$とおくと、
 
 $$
-  \lim_{K \rightarrow \infty} F(K) = 1,
-  \quad
-  \lim_{K \rightarrow -\infty} F(K) = 0,
-$$
-
-である。
-
-$$
-\begin{eqnarray*}
-    \int_{-\infty}^{\infty} f(K) \frac{\partial^{2} c(0, S(0);T, K)}{\partial K^{2}} \ dK
+\begin{eqnarray}
+    f(S)
         & = &
-            \int_{-\infty}^{K^{*}} f(K) \frac{\partial^{2} c(0, S(0);T, K)}{\partial K^{2}} \ dK
-            + \int_{K^{*}}^{\infty} f(K) \frac{\partial^{2} c(0, S(0);T, K)}{\partial K^{2}} \ dK
+            \int_{-\infty}^{\infty} f(K)\delta(S - K) \ dK
+        \nonumber
+        \\
+        & = &
+            \int_{-\infty}^{K^{*}} f(K) \delta(S - K) \ dK
+                + \int_{K^{*}}^{\infty} f(K) \delta(S - K) \ dK
+        \nonumber
         \\
         & = &
             \left[
-                f(K) \frac{\partial c(0, S(0);T, K)}{\partial K} 
+                f(K) 1_{[S, \infty)}(K)
             \right]_{-\infty}^{K^{*}}
-            +
-            \left[
-                f(K) \frac{\partial c(0, S(0);T, K)}{\partial K} 
+            - \int_{-\infty}^{K^{*}} f^{\prime}(K) 1_{[S, \infty)}(K)\ dK
+            + \left[
+                f(K)1_{(-\infty, S]}(K)
             \right]_{K^{*}}^{\infty}
-                + \int_{-\infty}^{\infty} f'(K) \frac{\partial c(0, S(0);T, K)}{\partial K} \ d K
+            + \int_{K^{*}}^{\infty} f^{\prime}(K)1_{(-\infty, S]}(K)\ dK
+        \nonumber
         \\
         & = &
-            f(
-                + \int_{-\infty}^{\infty} f'(K) \frac{\partial c(0, S(0);T, K)}{\partial K} \ d K
+            f(K^{*}) 1_{[S, \infty)}(K^{*})
+            - \int_{-\infty}^{K^{*}} f^{\prime}(K) 1_{[S, \infty)}(K)\ dK
+            + f(K^{*})1_{(-\infty, S]}(K^{*})
+            + \int_{K^{*}}^{\infty} f^{\prime}(K)1_{(-\infty, S]}(K)\ dK
+        \nonumber
         \\
         & = &
-            + f'(K) c(0, S(0);T, K)
-            + \int_{-\infty}^{\infty} f''(K) c(0, S(0);T, K) \ d K
-            
-\end{eqnarray*}
+            f(K^{*}) 1_{[S, \infty)}(K^{*})
+            + f(K^{*})1_{(-\infty, S]}(K^{*})
+            - 
+            \left[
+                f^{\prime}(K) (K - S)^{+}
+            \right]_{-\infty}^{K^{*}}
+            + \int_{-\infty}^{K^{*}} f^{\prime\prime}(K) (K - S)^{+}\ dK
+            -
+            \left[
+                f^{\prime}(K)(S - K)^{+}
+            \right]_{K^{*}}^{\infty}
+            + \int_{K^{*}}^{\infty} f^{\prime\prime}(K)(S - K)^{+}\ dK
+        \nonumber
+        \\
+        & = &
+            f(K^{*})
+            - f^{\prime}(K) (K^{*} - S)^{+}
+            + \int_{-\infty}^{K^{*}} f^{\prime\prime}(K) (K - S)^{+}\ dK
+            + f^{\prime}(K)(S - K^{*})^{+}
+            + \int_{K^{*}}^{\infty} f^{\prime\prime}(K)(S - K)^{+}\ dK
+        \nonumber
+        \\
+        & = &
+            f(K^{*})
+            + f^{\prime}(K)(S - K^{*})
+            + \int_{-\infty}^{K^{*}} f^{\prime\prime}(K) (K - S)^{+}\ dK
+            + \int_{K^{*}}^{\infty} f^{\prime\prime}(K)(S - K)^{+}\ dK
+\end{eqnarray}
 $$
+
+より、両辺期待値をとると$$\label{chap8_35_replication_formula}$$を得る。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
