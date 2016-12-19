@@ -12,6 +12,8 @@ layout: math
     * [chap05](interest_rate_modeling/chap05)
     * [chap06](interest_rate_modeling/chap06)
     * [chap07](interest_rate_modeling/chap07)
+    * [chap08](interest_rate_modeling/chap08)
+    * [chap09](interest_rate_modeling/chap09)
     * [chap10](interest_rate_modeling/chap10)
     * [chap11](interest_rate_modeling/chap11)
     * [chap12](interest_rate_modeling/chap12)
