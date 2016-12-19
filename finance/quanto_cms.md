@@ -725,198 +725,7 @@ $$
         \\
         & = &
             -x \phi(x)
-        \label{phi_derivative}
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-    \phi(d_{1}(K))
-        & = &
-            \frac{1}{\sqrt{T}\sigma} e^{-\frac{1}{2}d_{2}(K)^{2}}
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \exp
-            \left(
-                -\frac{1}{2T\sigma^{2}}
-                \left(
-                    \ln\left( \frac{S}{K} \right)^{2}
-                        + 2\ln\left( \frac{S}{K} \right) (r + \sigma^{2}/2)T
-                        + ((r + \sigma^{2}/2)T)^{2}
-                \right)
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \exp
-                    \left[
-                        \ln\left( \frac{S}{K} \right)
-                    \right]
-                \right)^{ -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)}
-                \left(
-                    \exp
-                    \left[
-                        \ln\left( \frac{S}{K} \right) 
-                    \right]
-                \right)^{-\frac{1}{T\sigma^{2}} (r + \sigma^{2}/2)T}
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-            \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{ -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)}
-                \left(
-                    \frac{S}{K}
-                \right)^{-\frac{1}{T\sigma^{2}} (r + \sigma^{2}/2)T}
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)
-                    -\frac{1}{T\sigma^{2}} (r + \sigma^{2}/2)T
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r + \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \label{phi_d1}
-\end{eqnarray}
-$$
-
-
-$$
-\begin{eqnarray}
-    \phi(d_{2}(K))
-        & = &
-            \frac{1}{\sqrt{T}\sigma} e^{-\frac{1}{2}d_{2}(K)^{2}}
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \exp
-            \left(
-                -\frac{1}{2T\sigma^{2}}
-                \left(
-                    \ln\left( \frac{S}{K} \right)^{2}
-                        + 2\ln\left( \frac{S}{K} \right) (r - \sigma^{2}/2)T
-                        + ((r - \sigma^{2}/2)T)^{2}
-                \right)
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \exp
-                    \left[
-                        \ln\left( \frac{S}{K} \right)
-                    \right]
-                \right)^{ -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)}
-                \left(
-                    \exp
-                    \left[
-                        \ln\left( \frac{S}{K} \right) 
-                    \right]
-                \right)^{-\frac{1}{\sigma^{2}} (r - \sigma^{2}/2)}
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-            \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{ -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)}
-                \left(
-                    \frac{S}{K}
-                \right)^{-\frac{1}{T\sigma^{2}} (r - \sigma^{2}/2)T}
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} \ln\left( \frac{S}{K} \right)
-                    -\frac{1}{T\sigma^{2}} (r - \sigma^{2}/2)T
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-        \\
-        & = &
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r - \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \label{phi_d2}
+        \label{first_derivative_phi}
 \end{eqnarray}
 $$
 
@@ -925,56 +734,7 @@ $$
     \phi^{\prime}(d_{1}(K))
         & = & 
             -d_{1}(K) \phi(d_{1}(K))
-        \nonumber
-        \\
-        & = &
-            -
-            \frac{
-               \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
-            }{
-                \sqrt{T}\sigma
-            }
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r + \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \nonumber
-        \\
-        & = &
-            -
-            \frac{
-               \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
-            }{
-                T\sigma^{2}
-            }
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r + \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \label{phi_derivative_d1}
+        \label{first_derivative_phi_d1}
 \end{eqnarray}
 $$
 
@@ -986,134 +746,26 @@ $$
             \int_{-\infty}^{x} e^{-x^{2}/2}\ dx
 $$
 
+1階微分は、
+
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     \frac{d}{d K} \Phi(d_{1}(K))
-        & = & \phi(d_{1}(K)) d_{1}^{\prime}(K)
-        \\
-        & = & 
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r + \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2))^{2}T
-                \right]
-            \right)
-            \frac{1}{\sqrt{T}\sigma} \left(\frac{K}{S}\right)
-        \\
         & = &
-            \frac{1}{T\sigma^{2}} \left(\frac{S}{K} \right)^{-1}
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r + \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2))^{2}T
-                \right]
-            \right)
-        \\
-        & = &
-            \frac{1}{T\sigma^{2}} 
-            \left(
-                \frac{S}{K}
-            \right)^{
-                -\frac{1}{2T\sigma^{2}} 
-                \left(
-                    \ln\left( \frac{S}{K} \right)
-                    + 2(r + \sigma^{2}/2)T
-                    +2T\sigma^{2}
-                \right)
-            }
-            \exp
-            \left[
-                -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2))^{2}T
-            \right]
-\end{eqnarray*}
+            \phi(d_{1}(K)) d_{1}^{\prime}(K)
+\end{eqnarray}
 $$
 
 
 $$
-    \Phi(d_{2}(K)) = 
-        \frac{1}{\sqrt{2\pi}}
-            \int_{-\infty}^{d_{2}(K)} e^{-x^{2}/2}\ dx
-$$
-
-$$
-\begin{eqnarray*}
+\begin{eqnarray}
     \frac{d}{d K} \Phi(d_{2}(K))
-        & = & \phi(d_{2}(K)) d_{2}^{\prime}(K)
-        \\
-        & = & 
-            \frac{1}{\sqrt{T}\sigma} 
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r - \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-            \frac{1}{\sqrt{T}\sigma} \left(\frac{K}{S}\right)
-        \\
         & = &
-            \frac{1}{T\sigma^{2}} \left(\frac{S}{K} \right)^{-1}
-            \left(
-                \left(
-                    \frac{S}{K}
-                \right)^{
-                    -\frac{1}{2T\sigma^{2}} 
-                    \left(
-                        \ln\left( \frac{S}{K} \right)
-                        + 2(r - \sigma^{2}/2)T
-                    \right)
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-        \\
-        & = &
-            \frac{1}{T\sigma^{2}} 
-            \left(
-                \frac{S}{K}
-            \right)^{
-                -\frac{1}{2T\sigma^{2}} 
-                \left(
-                    \ln\left( \frac{S}{K} \right)
-                    + 2(r - \sigma^{2}/2)T
-                    +2T\sigma^{2}
-                \right)
-            }
-            \exp
-            \left[
-                -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-            \right]
-\end{eqnarray*}
+            \phi(d_{2}(K)) d_{2}^{\prime}(K)
+\end{eqnarray}
 $$
+
+となる。
 
 call option $c(0, S(0); T, K)$の微分を考える。
 $S := S(0)$とおく。 
