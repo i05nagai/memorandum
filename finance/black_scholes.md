@@ -7,7 +7,7 @@ title: Black Scholes
 
 $$
 \begin{equation}
-    S(t) = S(0) 
+    S(t) = S_{0}
         + \int_{0}^{t} \mu S(s)\ ds 
         + \int_{0}^{t} \sigma S(s)\ dW_{s}
     \label{black_scholes_model_integral_form}
@@ -18,7 +18,9 @@ $$
 
 $$
 \begin{equation}
-    d S(t) = \mu S(t) dt + \sigma S(t) dW_{t}
+    d S(t) = \mu S(t) dt + \sigma S(t) dW_{t},
+    \quad
+    S(0) = S_{0}
     \label{black_scholes_model_differential_form}
 \end{equation}
 $$
@@ -28,7 +30,7 @@ $$
 $S(t)$は解析的にとけて、以下の解を持つ。
 
 $$
-    S(t) = S(0) \exp
+    S(t) = S_{0} \exp
         \left(
             \left(
                 \mu - \frac{\sigma^{2}}{2}
@@ -40,11 +42,18 @@ $$
 ## call option
 
 $$
-    \mathrm{E}^{Q}
-    \left[
-        e^{-rT}(S(T) - K)^{+}
-    \right]
-    = S(0)N(d_{1}) - e^{-rT}KN(d_{2})
+\begin{eqnarray}
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        & :=  &
+            \mathrm{E}^{Q}
+            \left[
+                e^{-rT}(S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            S(0)N(d_{1}) - e^{-rT}KN(d_{2})
+\end{eqnarray}
 $$
 
 ここで、$N$は標準正規分布関数で、
@@ -98,7 +107,9 @@ $$
 $$
 
 が成り立つ。
-$K < 0 $とすると、$S(T) > 0$より
+
+### case1: strike is negative, underlying is positive
+$K < 0, S_{0} > 0$とすると、$S(T) > 0$より
 
 $$
 \begin{eqnarray*}
@@ -111,6 +122,64 @@ $$
 $$
 
 でforwardとなる。
+
+### case2: strike is positive, underlying is negative
+$K > 0, S_{0} < 0$とすると、$S(T) < 0$より
+
+$$
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        = 0
+$$
+
+### case3: strike is negative, underlying is negative
+$K < 0, S_{0} < 0$とすると、put-call parityより
+
+$$
+    (S(T) - K)^{+}
+        = (S(T) - K) + (-(S(T) - K))^{+}
+$$
+
+である。
+よって、
+
+$$
+\begin{eqnarray}
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        & = &
+            \mathrm{E}^{Q}
+            \left[
+                e^{-rT}
+                \left(
+                    (S(T) - K)
+                        + (-(S(T) - K))^{+}
+                \right)
+            \right]
+        \nonumber
+        \\
+        & = &
+            (S_{0} - e^{-rT}K)
+            + 
+            \mathrm{E}^{Q}
+            \left[
+                e^{-rT} (-(S(T) - K))^{+}
+            \right]
+\end{eqnarray}
+$$
+
+となって、第二項はunderlying, strikeが正のcall optionの価格と等しくなる。
+put optionをput-call parityで計算する場合は、実装上の循環呼び出しを避けるため重要となる。
+
+### case4: option is expired
+$T < 0$のときは、optionがexpiryしていると考えると以下の定義が妥当。
+
+$$
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        := 0
+$$
+
+### case5: negative volatility
+$\sigma < 0$のときは、未定義が妥当。
+volatilityは一般には負にはならない。
 
 ## put option
 
