@@ -1148,170 +1148,65 @@ $$
 \end{eqnarray}
 $$
 
+また、[d1とd2の関係式]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-d1_d2_density_relation)より、call optionの1階微分は
+
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     \frac{\partial}{\partial K} c(0, S; T, K, r)
         & = & 
-            S\phi(d_{1}(K))d_{1}^{\prime}(K) - e^{-rT}\Phi(d_{2}(K)) - e^{-rT}K\phi(d_{2}(K))d_{2}^{\prime}(K)
+            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
+                - e^{-rT}\Phi(d_{2}(K)) 
+                - e^{-rT}K\phi(d_{2}(K))d_{2}^{\prime}(K)
+        \nonumber
         \\
         & = &
-            S \frac{1}{T\sigma^{2}} 
-            \left(
-                \frac{S}{K}
-            \right)^{
-                -\frac{1}{2T\sigma^{2}} 
-                \left(
-                    \ln\left( \frac{S}{K} \right)
-                    + 2(r + \sigma^{2}/2)T
-                    +2T\sigma^{2}
-                \right)
-            }
-            \exp
-            \left[
-                -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2))^{2}T
-            \right]
-        \\
-        & & 
-            - e^{-rT}K \frac{1}{T\sigma^{2}} 
-            \left(
-                \frac{S}{K}
-            \right)^{
-                -\frac{1}{2T\sigma^{2}} 
-                \left(
-                    \ln\left( \frac{S}{K} \right)
-                    + 2(r - \sigma^{2}/2)T
-                    +2T\sigma^{2}
-                \right)
-            }
-            \exp
-            \left[
-                -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-            \right]
-            - e^{-rT}\Phi(d_{2}(K))
+            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
+                - S\phi(d_{1}(K))d_{2}^{\prime}(K)
+                - e^{-rT}\Phi(d_{2}(K)) 
+        \nonumber
         \\
         & = &
-            \frac{1}{T\sigma^{2}} 
-            \left(
-                \frac{S}{K}
-            \right)^{
-                -\frac{1}{2T\sigma^{2}} 
-                \left(
-                    \ln\left( \frac{S}{K} \right)
-                    +2T\sigma^{2}
-                \right)
-            }
-            \left(
-                S \left(
-                    \frac{S}{K}
-                \right)^{
-                    2(r + \sigma^{2}/2)T
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r + \sigma^{2}/2)^{2}T
-                \right]
-                - e^{-rT}K \left(
-                    \frac{S}{K}
-                \right)^{
-                    2(r - \sigma^{2}/2)T
-                }
-                \exp
-                \left[
-                    -\frac{1}{2\sigma^{2}} (r - \sigma^{2}/2)^{2}T
-                \right]
-            \right)
-            - e^{-rT}\Phi(d_{2}(K))
-\end{eqnarray*}
+            - e^{-rT}\Phi(d_{2}(K)) 
+            \label{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
+\end{eqnarray}
 $$
 
-$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime} := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
+となる。
+簡単のため、$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime} := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
+call optionの2階微分は、$$\eqref{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}$$より、
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     \frac{\partial^{2}}{\partial K^{2}} c(0, S; T, K)
         & = & 
-            S\phi^{\prime}(d_{1}(K))(d_{1}^{\prime}(K))^{2} 
-                + S\phi(d_{1}(K))d_{1}^{\prime\prime}(K)
-                - \phi(d_{2}(K))d_{2}^{\prime}(K)
-                - \phi(d_{2}(K))d_{2}^{\prime}(K)
-                - K\phi^{\prime}(d_{2}(K))(d_{2}^{\prime}(K))^{2}
-                - K\phi(d_{2}(K))d_{2}^{\prime\prime}(K))
+            \frac{\partial^{2}}{\partial K^{2}}(- e^{-rT}\Phi(d_{2}(K)))
+        \nonumber
         \\
         & = & 
-            S\phi^{\prime}(d_{1}(K))(d^{\prime}(K))^{2} 
-                + S\phi(d_{1}(K))d^{\prime\prime}
-                - 2\phi(d_{2}(K))d^{\prime}(K)
-                - K\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-                - K\phi(d_{2}(K))d^{\prime\prime}
+            -e^{-rT} \phi(d_{2}(K)) d^{\prime}(K)
+        \nonumber
         \\
         & = & 
-            (d^{\prime}(K))^{2} 
-                (S\phi^{\prime}(d_{1}(K)) - K\phi^{\prime}(d_{2}(K)))
-            + d^{\prime\prime}
-                (S\phi(d_{1}(K)) - K\phi(d_{2}(K)))
-            - 2\phi(d_{2}(K))d^{\prime}(K)
-\end{eqnarray*}
+            S\phi(d_{1}(K)) d^{\prime}(K)
+        \label{second_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
+\end{eqnarray}
 $$
 
+となる。
+最後にcall optionの3階微分も同様に計算する。
+
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     \frac{\partial^{3}}{\partial K^{3}} c(0, S; T, K)
         & = & 
-            S\phi^{\prime}(d_{1}(K))(d^{\prime}(K))^{2} 
-                + S\phi(d_{1}(K))d^{\prime\prime}
-                - 2\phi(d_{2}(K))d^{\prime}(K)
-                - K\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-                - K\phi(d_{2}(K))d^{\prime\prime}
+            \frac{\partial^{3}}{\partial K^{3}}(S\phi(d_{1}(K)) d^{\prime}(K))
+        \nonumber
         \\
-        & = & 
-            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
-                + 2S\phi^{\prime}(d_{1}(K))(d^{\prime}(K))d^{\prime\prime}
-                + S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
-                + S\phi(d_{1}(K))0
-                - 2\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-                - 2\phi(d_{2}(K))d^{\prime\prime}
-        \\
-        & &
-                - \phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
-                - 2K\phi^{\prime}(d_{2}(K))(d^{\prime}(K))d^{\prime\prime}
-                - \phi(d_{2}(K))d^{\prime\prime}
-                - K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
-                - K\phi(d_{2}(K))0
-        \\
-        & = & 
-            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
-                + 3S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
-                - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-                - 3\phi(d_{2}(K))d^{\prime\prime}
-        \\
-        & &
-                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
-                - 3K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
-        \\
-        & = & 
-            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
-                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
-                + 3S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
-                - 3K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
-        \\
-        & &
-                - 3\phi(d_{2}(K))d^{\prime\prime}
-                - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-        \\
-        & = & 
-            \left(
-                S\phi^{\prime\prime}(d_{1}(K))
-                - K\phi^{\prime\prime}(d_{2}(K))
-            \right)
-            (d^{\prime}(K))^{3} 
-            + 
-            \left(
-                S\phi^{\prime}(d_{1}(K))
-                - K\phi^{\prime}(d_{2}(K))
-            \right)
-            3d^{\prime}(K)d^{\prime\prime}
-            - 3\phi(d_{2}(K))d^{\prime\prime}
-            - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
-\end{eqnarray*}
+        & = &
+            S \phi^{\prime}(d_{1}(K)) (d^{\prime}(K))^{2}
+                + S \phi(d_{1}(K)) d^{\prime\prime}
+        \label{third_derivative_of_black_scholes_formula_with_respect_to_strike}
+\end{eqnarray}
 $$
+
+となる。
