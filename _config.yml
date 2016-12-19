@@ -15,4 +15,4 @@ gist:
   noscript: false
 kramdown:
   math_engine: mathjax
-exclude: [application, aws, ci, browser, format, db, gpu, os, programming, shell, vim]
+exclude: [application, aws, ci, browser, format, db, gpu, os, programming, shell]
