@@ -832,7 +832,7 @@ $$
 $$
 
 となる。
-簡単のため、$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime} := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
+簡単のため、$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime}(K) := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
 call optionの2階微分は、$$\eqref{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}$$より、
 
 $$
@@ -844,10 +844,6 @@ $$
         \\
         & = & 
             -e^{-rT} \phi(d_{2}(K)) d^{\prime}(K)
-        \nonumber
-        \\
-        & = & 
-            S\phi(d_{1}(K)) d^{\prime}(K)
         \label{second_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
 \end{eqnarray}
 $$
@@ -859,12 +855,15 @@ $$
 \begin{eqnarray}
     \frac{\partial^{3}}{\partial K^{3}} c(0, S; T, K)
         & = & 
-            \frac{\partial^{3}}{\partial K^{3}}(S\phi(d_{1}(K)) d^{\prime}(K))
+            \frac{\partial^{3}}{\partial K^{3}} (-e^{-rT} \phi(d_{2}(K)) d^{\prime}(K))
         \nonumber
         \\
         & = &
-            S \phi^{\prime}(d_{1}(K)) (d^{\prime}(K))^{2}
-                + S \phi(d_{1}(K)) d^{\prime\prime}
+            -e^{-rT} 
+            \left(
+                \phi^{\prime}(d_{2}(K)) (d^{\prime}(K))^{2}
+                    + \phi(d_{2}(K)) d^{\prime\prime}(K)
+            \right)
         \label{third_derivative_of_black_scholes_formula_with_respect_to_strike}
 \end{eqnarray}
 $$
