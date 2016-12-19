@@ -656,12 +656,18 @@ $$
         \label{square_d1}
     \\
     d_{1}^{\prime}(K)
-        & = & \frac{1}{\sqrt{T}\sigma} \frac{K}{S},
-    \label{derivative_d1}
+        & = &
+            \frac{1}{\sqrt{T}\sigma} \frac{K}{S} -\frac{S}{K^{2}},
+        \nonumber
+        \\
+        & = &
+            - \frac{1}{\sqrt{T}\sigma K},
+    \label{first_derivative_d1}
     \\
     d_{1}^{\prime\prime}(K)
-        & = & \frac{1}{\sqrt{T}\sigma S},
-    \label{derivative2_d1}
+        & = &
+            \frac{1}{\sqrt{T}\sigma K^{2}},
+    \label{second_derivative_d1}
 \end{eqnarray}
 $$
 
@@ -693,12 +699,14 @@ $$
         \label{square_d2}
     \\
     d_{2}^{\prime}(K)
-        & = & \frac{1}{\sqrt{T}\sigma} \frac{K}{S},
-    \label{derivative_d2}
+        & = &
+            - \frac{1}{\sqrt{T}\sigma K},
+    \label{first_derivative_d2}
     \\
     d_{2}^{\prime\prime}(K)
-        & = & \frac{1}{\sqrt{T}\sigma S},
-    \label{derivative2_d2}
+        & = &
+            \frac{1}{\sqrt{T}\sigma K^{2}},
+    \label{second_derivative_d2}
 \end{eqnarray}
 $$
 
