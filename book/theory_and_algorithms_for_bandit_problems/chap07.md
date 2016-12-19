@@ -3,10 +3,6 @@ layout: math
 title: Theory and Algorithms for Bandit Problems
 ---
 
-# Symbols
-* $\mathbb{R}_{\geq 0}^{d}$
-    * $d$次元の非負ベクトル
-
 # Chapter 7. 線形モデル上のバンディット問題
 
 ## Symbols
@@ -21,9 +17,9 @@ $$
     (\forall i = 1, \ldots, K)
 $$
 
-$a_{i} = (a_{i,1}, \ldots, a_{i,d})^{\mathrm{T}} \in \{0, 1}^{d}$で、$\theta = (\theta_{1}, \ldots, \theta_{d})^{\mathrm{T}} \in \mathbb{R}^{d}$、$\epsilon(t)$は$t$での誤差項で、期待値0のある確率分布に従うとする。
+$a_{i} = (a_{i,1}, \ldots, a_{i,d})^{\mathrm{T}} \in \\{0, 1\\}^{d}$で、$\theta = (\theta_{1}, \ldots, \theta_{d})^{\mathrm{T}} \in \mathbb{R}^{d}$、$\epsilon(t)$は$t$での誤差項で、期待値0のある確率分布に従うとする。
 
-* $a_{i}$はスロットに対応するプレイヤーの選択肢で、特に行動(action)と呼ぶ
+* $a_{i} (i = 1, \ldots K)$はスロットに対応するプレイヤーの選択肢で、特に行動(action)と呼ぶ
     * $a_{i}$は既知
 * $\theta$は選択肢$a_{i}$を選んだときの報酬ないし、損失である
     * $\theta$は未知
@@ -32,19 +28,39 @@ $a_{i} = (a_{i,1}, \ldots, a_{i,d})^{\mathrm{T}} \in \{0, 1}^{d}$で、$\theta =
 前章までのバンディット問題は
 
 $$
-    A := (a_{1}, \ldots, a_{d}) = 
+    A^{\mathrm{T}} := (a_{1}, \ldots, a_{K})^{\mathrm{T}} 
+        = 
        \left(
            \begin{array}{ccccc}
-               a_{1,1}   & a_{2,1} & \cdots & a_{d-1,1}  & a_{d, 1} \\
+               a_{1,1}   & a_{2,1} & \cdots & a_{d-1,1}  & a_{K, 1} \\
                a_{1,2}   &         &        & \cdots     & \vdots \\
-               \vdots    &         &        & \ddots     & a_{d, d-2} \\
-               a_{1,d-1} & \vdots  & \ddots & \ddots     & a_{d, d-1} \\
-               a_{1,d}   & \cdots  &        & a_{d-1, d} & a_{d, d}
+               \vdots    &         &        & \ddots     & a_{K, d-2} \\
+               a_{1,d-1} & \vdots  & \ddots & \ddots     & a_{K, d-1} \\
+               a_{1,d}   & \cdots  &        & a_{K-1, d} & a_{K, d}
+           \end{array}
+       \right)^{\mathrm{T}}
+       = 
+       \left(
+           \begin{array}{ccccc}
+               a_{1,1}   & a_{1,2} & \cdots & a_{1,d-1}  & a_{1, d} \\
+               a_{2,2}   &         &        & \cdots     & \vdots \\
+               \vdots    &         &        & \ddots     & a_{K-2, d} \\
+               a_{K-1,1} & \vdots  & \ddots & \ddots     & a_{K-1, d} \\
+               a_{K,1}   & \cdots  &        & a_{K, d-1} & a_{K, d}
            \end{array}
        \right)
 $$
 
 が単位行列の場合に相当する。
+
+$$
+    i^{*}(t) = \arg\max_{i} \{a_{i, t}^{\mathrm{T}} \theta + \epsilon(t) \mid i = 1, \ldots, K\}
+$$
+
+$$
+    \max_{\theta} \sum_{s=0}^{T} a_{i^{*}(s), s}^{\mathrm{T}} \theta + \epsilon(s)
+$$
+
 問題設定としては、指定された組み合わせについてはスロットを同時に引けるとした場合の報酬最大化を目指す問題となる。
 
 $$
