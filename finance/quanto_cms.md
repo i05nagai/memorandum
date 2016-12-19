@@ -107,7 +107,7 @@ $$
 \end{equation}
 $$
 
-### Calculation
+### Calculation of numerator
 
 $$
     \mathrm{E}^{A,d}
@@ -137,13 +137,13 @@ $$
 \end{eqnarray*}
 $$
 
-$g, \alpha, \tilde{\chi}$の微分はAppendixで計算している。
+$g, \alpha, \tilde{\chi}$の微分は[Appendix](#appendix)で計算している。
 
 ### linear TSR model + cap
 $\alpha$がlinear annuity mapping functionで、$g$がcapの場合を考える。
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     g_{\mathrm{cap}}^{\prime\prime}(s; K)\alpha(s)\tilde{\chi}(s) 
         & = &
             \delta(s - K)\alpha(s)\tilde{\chi}(s),
@@ -178,7 +178,7 @@ $$
         & = & 
             2(s - K)^{+} \alpha_{1}
                 \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
-\end{eqnarray*}
+\end{eqnarray}
 $$
 
 より、
@@ -187,7 +187,7 @@ $$
 \begin{eqnarray}
     \int_{-\infty}^{S(0)} p(0, S(0); k, T)w(k) \ dk
         & = & 
-            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K) 1_{(-\infty, S(0)]}(K)
             \nonumber
             \\
         & &  + 0
@@ -235,15 +235,16 @@ $$
 $$
 
 である。
+第一項は、積分範囲が行使価格$K$を含んでいれば1となる。
+
 更に、$S(T)$が非負過程(BSなど)とすると、$k < 0$では、$p(0, S(0); k, T) = 0$である。
 よって、その場合は
-
 
 $$
 \begin{eqnarray}
     \int_{-\infty}^{S(0)} p(0, S(0); k, T)w(k) \ dk
         & = & 
-            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            p(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)1_{(0, S(0)]}(K)
             \nonumber
             \\
         & &  + 0
@@ -297,7 +298,7 @@ $$
 \begin{eqnarray}
     \int_{-\infty}^{S(0)} c(0, S(0); k, T)w(k) \ dk
         & = & 
-            c(0, S(0); K, T) \alpha(K) \tilde{\chi}(K)
+            c(0, S(0); K, T) \alpha(K) \tilde{\chi}(K) 1_{[S(0), \infty)}(K)
             \nonumber
             \\
         & &  + 0
@@ -344,7 +345,10 @@ $$
 \end{eqnarray}
 $$
 
+第一項は、積分範囲が行使価格$K$を含んでいれば1となる。
+
 #### linear TSR model + floor
+linear TSR modelにおいて、payoffがfloor(put)型のstochastic weightの計算をする。
 
 $$
 \begin{eqnarray*}
@@ -386,6 +390,106 @@ $$
 $$
 
 #### linear TSR model + bull spread
+
+$$
+\begin{eqnarray*}
+    g_{\mathrm{bullspread}}^{\prime\prime}(s; K_{f}, K_{c})\alpha(s)\tilde{\chi}(s) 
+        & = &
+            \left(
+                \delta(s - K_{f}) + \delta(K_{c} - s)
+            \right)
+            \alpha(s)\tilde{\chi}(s),
+    \\
+    g_{\mathrm{bullspread}}(s; K_{f}, K_{c})\alpha^{\prime\prime}(s)\tilde{\chi}(s) 
+        & = & 0,
+    \\
+    g_{\mathrm{bullspread}}(s; K_{f}, K_{c})\alpha(s)\tilde{\chi}^{\prime\prime}(s)
+        & = &
+        g_{\mathrm{bullspread}}(s; K_{f}, K_{c})
+        (\alpha_{1}s + \alpha_{2})
+        \rho_{XS}\sigma_{X}\sqrt{T}
+        \left(
+               h^{\prime\prime}(s)\tilde{\chi}(s)
+            + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
+        \right),
+    \\
+	2g_{\mathrm{bullspread}}^{\prime}(s; K_{f}, K_{c})\alpha^{\prime}(s)\tilde{\chi}(s)
+        & = & 2 1_{[K_{f}, K_{c}]}(s) \alpha_{1} 
+            \exp 
+            \left(
+                \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+            \right),
+    \\
+    2g_{\mathrm{bullspread}}^{\prime}(s; K_{f}, K_{c})\alpha(s)\tilde{\chi}^{\prime}(s)
+        & = & 2 1_{[K_{f}, K_{c}]}(s) 
+            (\alpha_{1}s + \alpha_{2})
+            \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+    \\ 
+    2g_{\mathrm{bullspread}}(s; K_{f}, K_{c})\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+        & = & 
+            2 g_{\mathrm{bullspread}}(s; K_{f}, K_{c}) 
+                \alpha_{1}
+                \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+\end{eqnarray*}
+$$
+
+### Calculation of denominator
+分母を計算する。
+
+$$
+    \mathrm{E}^{A,d}
+    \left[
+        \alpha(S(T)) \tilde{\chi}(S(T))
+    \right]
+        = \alpha(S(0)) \tilde{\chi}(S(0))
+        + \int_{-\infty}^{S(0)} p(0, S(0); k, T) w(k) \ dk
+        + \int_{S(0)}^{\infty} c(0, S(0); k, T) w(k) \ dk
+$$
+
+ここで、
+
+$$
+\begin{eqnarray*}
+    w(s) 
+        & := & 
+            \frac{d^{2} }{d s^{2}} (\alpha(s) \tilde{\chi}(s))
+        \\
+        & = &
+            \alpha^{\prime\prime}(s)\tilde{\chi}(s)
+                + \alpha(s)\tilde{\chi}^{\prime\prime}(s)
+                + 2\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+\end{eqnarray*}
+$$
+
+$\alpha, \tilde{\chi}$の微分は[Appendix](#appendix)で計算している。
+以下では、$\alpha$はTSR modelとして何を選択するのかに依存するので、$\alpha$で分けて計算する。
+
+#### linear TSR model
+linear TSR modelの場合を考える。
+
+$$
+\begin{eqnarray}
+    \alpha^{\prime\prime}(s)\tilde{\chi}(s)
+        & = & 0
+        \\
+    \alpha(s)\tilde{\chi}^{\prime\prime}(s)
+        & = &
+        (\alpha_{1}s + \alpha_{2})
+        \rho_{XS}\sigma_{X}\sqrt{T}
+        \left(
+               h^{\prime\prime}(s)\tilde{\chi}(s)
+            + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
+        \right),
+        \\
+    2\alpha^{\prime}(s)\tilde{\chi}^{\prime}(s)
+        & = &
+            2\alpha_{1}
+            \rho_{XS}\sigma_{X}\sqrt{T}h^{\prime}(s)\tilde{\chi}(s),
+\end{eqnarray}
+$$
+
+#### swap yield TSR model
 TBD.
 
 ### Appendix
@@ -435,14 +539,21 @@ cap floor optionのとき、$g_{\mathrm{capfloor}}$の微分を考える。
 
 $$
 \begin{eqnarray}
-    g_{\mathrm{capfloor}}(s; K_{f}, K_{c}) & := & \min(\max(s - K_{f}, 0), K_{c}),
+    g_{\mathrm{capfloor}}(s; K_{f}, K_{c})
+        & := &
+            \min(\max(s - K_{f}, 0), K_{c}),
+        & = &
+            \min((s - K_{f})^{+}, K_{c}),
     \label{def_payoff_cap_floor}
     \\
-    g_{\mathrm{capfloor}}^{\prime}(s; K_{f}, K_{c}) & = & 1_{[K_{f}, K_{c}]}(s),
+    g_{\mathrm{capfloor}}^{\prime}(s; K_{f}, K_{c})
+        & = &
+            1_{[K_{f}, K_{c}]}(s),
     \label{derivaitve_payoff_cap_floor_by_strike}
     \\
     g_{\mathrm{capfloor}}^{\prime\prime}(s; K_{f}, K_{c}) 
-        & = & \delta(s - K_{f}) + \delta(K_{c} - s),
+        & = &
+            \delta(s - K_{f}) + \delta(K_{c} - s),
     \label{derivaitve2_payoff_cap_floor_by_strike}
 \end{eqnarray}
 $$
@@ -464,7 +575,7 @@ $$
 \end{eqnarray}
 $$
 
-##### swap yiedl model
+##### swap yield model
 TBD.
 
 #### $\chi$の微分
@@ -1001,21 +1112,40 @@ $S := S(0)$とおく。
 $S(T)$の分布を考える。
 
 $$
+\begin{eqnarray}
     P(S(T) \le x) 
-        = P((\Psi^{A})^{-1}(\Phi(\xi_{2})) \le x)
-        = P(\xi_{2} \le \Phi^{-1}((\Psi^{A}(x)))
-        = \Phi(\Phi^{-1}(\Psi^{A}(x)))
-        = \Psi^{A}(x)
+        & = &
+            P((\Psi^{A})^{-1}(\Phi(\xi_{2})) \le x)
+        \nonumber
+        \\
+        & = &
+            P(\xi_{2} \le \Phi^{-1}((\Psi^{A}(x)))
+        \nonumber
+        \\
+        & = &
+            \Phi(\Phi^{-1}(\Psi^{A}(x)))
+        \nonumber
+        \\
+        & = &
+            \Psi^{A}(x)
+        \nonumber
+\end{eqnarray}
 $$
 
 $$
+\begin{eqnarray}
     c(0, S; T, K, r)
-        = \mathrm{E}^{A}
-        \left[
-            (S - K)^{+}
-        \right]
-        =
-        S\Phi(d_{1}(K)) - e^{-rT}K\Phi(d_{2}(K))
+        & = &
+            \mathrm{E}^{A}
+            \left[
+                (S - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            S\Phi(d_{1}(K)) - e^{-rT}K\Phi(d_{2}(K))
+        \nonumber
+\end{eqnarray}
 $$
 
 $$
@@ -1120,5 +1250,68 @@ $$
             + d^{\prime\prime}
                 (S\phi(d_{1}(K)) - K\phi(d_{2}(K)))
             - 2\phi(d_{2}(K))d^{\prime}(K)
+\end{eqnarray*}
+$$
+
+$$
+\begin{eqnarray*}
+    \frac{\partial^{3}}{\partial K^{3}} c(0, S; T, K)
+        & = & 
+            S\phi^{\prime}(d_{1}(K))(d^{\prime}(K))^{2} 
+                + S\phi(d_{1}(K))d^{\prime\prime}
+                - 2\phi(d_{2}(K))d^{\prime}(K)
+                - K\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
+                - K\phi(d_{2}(K))d^{\prime\prime}
+        \\
+        & = & 
+            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
+                + 2S\phi^{\prime}(d_{1}(K))(d^{\prime}(K))d^{\prime\prime}
+                + S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
+                + S\phi(d_{1}(K))0
+                - 2\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
+                - 2\phi(d_{2}(K))d^{\prime\prime}
+        \\
+        & &
+                - \phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
+                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
+                - 2K\phi^{\prime}(d_{2}(K))(d^{\prime}(K))d^{\prime\prime}
+                - \phi(d_{2}(K))d^{\prime\prime}
+                - K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
+                - K\phi(d_{2}(K))0
+        \\
+        & = & 
+            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
+                + 3S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
+                - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
+                - 3\phi(d_{2}(K))d^{\prime\prime}
+        \\
+        & &
+                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
+                - 3K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
+        \\
+        & = & 
+            S\phi^{\prime\prime}(d_{1}(K))(d^{\prime}(K))^{3} 
+                - K\phi^{\prime\prime}(d_{2}(K))(d^{\prime}(K))^{3}
+                + 3S\phi^{\prime}(d_{1}(K))d^{\prime}(K)d^{\prime\prime}
+                - 3K\phi^{\prime}(d_{2}(K))d^{\prime}(K)d^{\prime\prime}
+        \\
+        & &
+                - 3\phi(d_{2}(K))d^{\prime\prime}
+                - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
+        \\
+        & = & 
+            \left(
+                S\phi^{\prime\prime}(d_{1}(K))
+                - K\phi^{\prime\prime}(d_{2}(K))
+            \right)
+            (d^{\prime}(K))^{3} 
+            + 
+            \left(
+                S\phi^{\prime}(d_{1}(K))
+                - K\phi^{\prime}(d_{2}(K))
+            \right)
+            3d^{\prime}(K)d^{\prime\prime}
+            - 3\phi(d_{2}(K))d^{\prime\prime}
+            - 3\phi^{\prime}(d_{2}(K))(d^{\prime}(K))^{2}
 \end{eqnarray*}
 $$
