@@ -91,9 +91,10 @@ $\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_
 で$X_{1}, X_{2}, X_{3}$は独立でない。
 
 ### Def. Conditional Independence
+TBD.
 
-
-## Conditional Expectation
+## Conditional Probability Density Function
+条件付き確率密度関数について考える。
 
 ### Gaussian Distribution
 $N$変数の正規分布の密度関数は以下でかける。
@@ -108,6 +109,9 @@ $$
 $$
 
 ここで、$\mu \in \mathbb{R}^{N}$, $\Sigma \in \mathbb{R}^{N} \times \mathbb{R}^{N}$ の対称正定値行列である。
+
+#### Example 2-dim gaussian distribution
+
 2変数の場合の正規分布の条件付き期待値の例をみる。
 
 $$
@@ -283,3 +287,65 @@ $$
 
 である。
 
+#### Example $N$-dim gaussian distribution
+$N$次元のガウス分布を考える。
+$N_{1}, N_{2} \in \mathbb{N}$とし、$N = N_{1} + N_{2}$とする。
+$\mu \in \mathbb{R}^{N}$とし、$\Sigma \in \mathbb{R}^{N} \times \mathbb{R}^{N}$は正定値行列とする。
+確率変数の組$X := (X_{1}, \ldots, X_{N})$は以下の確率分布に従うとする。
+
+$$
+    X \sim
+        \mathcal{N}^{N}(\mu, \Sigma)
+$$
+
+このとき、条件付き確率密度関数$f_{X_{1}, \ldots, X_{N_{1}} \mid X_{N_{1} + 1}, \ldots, X_{N}}$は、平均$$\mu_{X_{1}, \ldots, X_{N_{1}} \mid X_{N_{1}+1}, \ldots, X_{N}}$$分散$$\Sigma_{X_{1}, \ldots, X_{N_{1}} \mid X_{N_{1}+1}, \ldots, X_{N}}$$である。
+
+$$
+\begin{eqnarray}
+    \mu_{X_{1}, \ldots, X_{N_{1}} \mid X_{N_{1}+1}, \ldots, X_{N}}
+        & := & 
+            \mu_{1} + \Sigma_{12}\Sigma_{22}^{-1}(a - \mu_{2}),
+    \\
+    \Sigma_{X_{1}, \ldots, X_{N_{1}} \mid X_{N_{1}+1}, \ldots, X_{N}}
+        & := &
+            \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}
+\end{eqnarray}
+$$
+
+ここで、
+
+$$
+\begin{eqnarray}
+    \mu 
+        & = &
+        \left(
+            \begin{array}{c}
+                \mu_{1} \\
+                \mu_{2}
+            \end{array}
+        \right)
+    \\
+    \Sigma
+        & = &
+        \left(
+            \begin{array}{cc}
+                \Sigma_{11} & \Sigma_{12} \\
+                \Sigma_{21} & \Sigma_{22}
+            \end{array}
+        \right),
+\end{eqnarray}
+$$
+
+であり、
+
+* $\mu_{1} \in \mathbb{R}^{N_{1}}$
+* $\mu_{2} \in \mathbb{R}^{N_{2}}$
+* $\Sigma_{11} \in \mathbb{R}^{N_{1}} \times \mathbb{R}^{N_{1}}$,
+* $\Sigma_{12} \in \mathbb{R}^{N_{1}} \times \mathbb{R}^{N_{2}}$, 
+* $\Sigma_{21} \in \mathbb{R}^{N_{2}} \times \mathbb{R}^{N_{1}}$, 
+* $\Sigma_{22} \in \mathbb{R}^{N_{2}} \times \mathbb{R}^{N_{2}}$,
+
+である。
+
+# Reference
+* [Multivariate normal distribution - Wikipedia](https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Conditional_distributions)
