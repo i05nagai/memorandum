@@ -1,7 +1,6 @@
 #github markdown rendering engine
 markdown: kramdown
-author:
-  name: i05nagai
+author: i05nagai
 baseurl: /memorandum
 #currrently github only supports minima
 theme: minima
