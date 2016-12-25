@@ -43,7 +43,7 @@ Feinstein (1989)も独立に同様の結果を得ている。
 $$
 \begin{equation}
     \sigma \sqrt{T}
-        = \sqrt{2} \pi
+        = \sqrt{2\pi }
             \frac{C}{S}.
     \label{brenner_subrahmanyam_formula}
 \end{equation}
