@@ -309,15 +309,11 @@ $$
 $S(T)$が$Q^{A}$の下マルチンゲールなので、black scholes call option formulaより、
 
 $$
-\begin{equation}
-    V_{\mathrm{payerswapion}}(t)
-        =
-        A(t)(S(t)N(d_{1}) - KN(d_{2}))
-\end{equation}
-$$
-
-$$
 \begin{eqnarray}
+    V_{\mathrm{payerswapion}}(t)
+        & = &
+        A(t)(S(t)N(d_{1}) - KN(d_{2}))
+    \\
     d_{1}
         & := & 
             \frac{
@@ -325,8 +321,8 @@ $$
             }{
                 \sigma \sqrt{T - t}
             },
-        \label{def_d1_payers_swaption}
-        \\
+    \label{def_d1_payers_swaption}
+    \\
     d_{2}
         & := & 
             \frac{
@@ -334,8 +330,8 @@ $$
             }{
                 \sigma \sqrt{T - t}
             }
-        \label{def_d2_payers_swaption}
-\end{eqnarray*}
+    \label{def_d2_payers_swaption}
+\end{eqnarray}
 $$
 
 となる。
