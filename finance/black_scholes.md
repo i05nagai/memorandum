@@ -184,11 +184,13 @@ volatilityは一般には負にはならない。
 ## put option
 
 $$
+\begin{equation}
     \mathrm{E}^{Q}
     \left[
         e^{-rT}(K - S(T))^{+}
     \right]
-    = -S(0)N(-d_{1}) - e^{-rT}KN(-d_{2})
+        = e^{-rT}KN(-d_{2}) - S(0)N(-d_{1})
+\end{equation}
 $$
 
 $K < 0 $とすると、$S(T) > 0$より
@@ -274,55 +276,131 @@ physical settled swaptionは、swaptionの固定レートを$K$とすると、�
 よって、payer's swaptionの価値は
 
 $$
+\begin{eqnarray}
     V_{\mathrm{payersswap}}(t)
-    = 
-    \mathrm{E}_{t}^{Q}
-    \left[
-        \frac{D(T)}{D(t)}
-        \left(
-            (S(T) - K)A(T)
-        \right)^{+}
-    \right]
-    =
-    \mathrm{E}_{t}^{Q}
-    \left[
-        D(T) (S(T) - K)^{+} A(T)
-    \right]
-    =
-    A(t)
-    \mathrm{E}_{t}^{A}
-    \left[
-        (S(T) - K)^{+}
-    \right]
+    & = &
+        \mathrm{E}_{t}^{Q}
+        \left[
+            \frac{D(T)}{D(t)}
+            \left(
+                (S(T) - K)A(T)
+            \right)^{+}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{t}^{Q}
+        \left[
+            D(T) (S(T) - K)^{+} A(T)
+        \right]
+    \nonumber
+    \\
+    & = &
+        A(t)
+        \mathrm{E}_{t}^{A}
+        \left[
+            (S(T) - K)^{+}
+        \right]
+        \label{def_payers_swaption_value}
+\end{eqnarray}
 $$
 
 となる。
 $S(T)$が$Q^{A}$の下マルチンゲールなので、black scholes call option formulaより、
 
 $$
+\begin{equation}
     V_{\mathrm{payerswapion}}(t)
-    =
-    A(t)(S(t)N(d_{1}) - KN(d_{2}))
+        =
+        A(t)(S(t)N(d_{1}) - KN(d_{2}))
+\end{equation}
 $$
 
 $$
-\begin{eqnarray*}
+\begin{eqnarray}
     d_{1}
-        & = & 
+        & := & 
             \frac{
-                \ln\left(\frac{S(0)}{K} \right) + \frac{1}{2}\sigma^{2}(T - t)
+                \ln\left(\frac{S(t)}{K} \right) + \frac{1}{2}\sigma^{2}(T - t)
             }{
                 \sigma \sqrt{T - t}
             },
+        \label{def_d1_payers_swaption}
         \\
     d_{2}
-        & = & 
+        & := & 
             \frac{
-                \ln\left(\frac{S(0)}{K} \right) - \frac{1}{2}\sigma^{2}(T - t)
+                \ln\left(\frac{S(t)}{K} \right) - \frac{1}{2}\sigma^{2}(T - t)
             }{
                 \sigma \sqrt{T - t}
             }
+        \label{def_d2_payers_swaption}
 \end{eqnarray*}
+$$
+
+となる。
+同様にreceiver's swaptionについて
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{receiversswap}}(t)
+    & = &
+        A(t)
+        \mathrm{E}_{t}^{A}
+        \left[
+            (K - S(T))^{+}
+        \right]
+    \\
+    & = &
+        A(t)
+        (K \Phi(-d_{2}) - S(t)\Phi(-d_{1}))
+\end{eqnarray}
+$$
+
+## first derivative with respect to strike
+$$\eqref{def_d1_payers_swaption}$$と$$\eqref{def_d2_payers_swaption}$$を$d_{1}(K)$と$d_{2}(K)$とおく。
+また、payer`s swaptionの価値$$\eqref{def_payers_swaption_value}$$を$V(t, K)$とおく。
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial K} 
+        V_{\mathrm{payersswap}}(t, K)
+    & = &
+        A(t)
+        \frac{\partial}{\partial K} 
+            \left(
+                (S(t)\Phi(d_{1}(K)) - K\Phi(d_{2}(K)))
+            \right)
+    \nonumber
+    \\
+    & = &
+        A(t)(S(t)\phi(d_{1}(K)) d_{1}^{\prime}(K)
+            - \Phi(d_{2}(K)) 
+            - K \phi(d_{2}(K)) d_{2}^{\prime}(K))
+    \nonumber
+    \\
+    & = &
+        - A(t)\Phi(d_{2}(K)) 
+\end{eqnarray}
+$$
+
+また、2階微分は以下のようにする。
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2}}{\partial K^{2}} 
+        V_{\mathrm{payersswap}}(t, K)
+    & = &
+        -A(t)
+        \frac{\partial}{\partial K} 
+            \left(
+                \Phi(d_{2}(K)) 
+            \right)
+    \nonumber
+    \\
+    & = &
+        -A(t) \phi(d_{2}(K)) d_{2}^{\prime}(K)
+\end{eqnarray}
 $$
 
 # Greeks
