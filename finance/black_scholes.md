@@ -249,11 +249,201 @@ $$
         \right]
 $$
 
+## derivative with respect to strike
+Black Scholesのcall optionの$K$での微分を考える。
+まず、$d_{1}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    d_{1}(K)
+        & := & \frac{
+           \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
+        }{
+            \sqrt{T}\sigma
+        },
+    \label{def_d1_as_function_of_strike}
+    \\
+    d_{1}^{\prime}(K)
+        & = &
+            \frac{1}{\sqrt{T}\sigma} \frac{K}{S} -\frac{S}{K^{2}},
+        \nonumber
+        \\
+        & = &
+            - \frac{1}{\sqrt{T}\sigma K},
+    \label{first_derivative_d1}
+    \\
+    d_{1}^{\prime\prime}(K)
+        & = &
+            \frac{1}{\sqrt{T}\sigma K^{2}},
+    \label{second_derivative_d1}
+\end{eqnarray}
+$$
+
+$d_{2}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    d_{2}(K)
+        & := & \frac{
+           \ln\left(\frac{S}{K}\right) + (r - \sigma^{2}/2)T
+        }{
+            \sqrt{T}\sigma
+        },
+    \label{def_d2_as_function_of_strike}
+    \\
+    d_{2}^{\prime}(K)
+        & = &
+            - \frac{1}{\sqrt{T}\sigma K},
+    \label{first_derivative_d2}
+    \\
+    d_{2}^{\prime\prime}(K)
+        & = &
+            \frac{1}{\sqrt{T}\sigma K^{2}},
+    \label{second_derivative_d2}
+\end{eqnarray}
+$$
+
+$\phi(x)$の微分を考える。
+
+$$
+    \phi(x) := \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
+$$
+
+$$
+\begin{eqnarray}
+    \phi^{\prime}(x)
+        & = & 
+            -x \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
+        \nonumber
+        \\
+        & = &
+            -x \phi(x)
+        \label{first_derivative_phi}
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \phi^{\prime}(d_{1}(K))
+        & = & 
+            -d_{1}(K) \phi(d_{1}(K))
+        \label{first_derivative_phi_d1}
+\end{eqnarray}
+$$
+
+次に$\Phi(x)$の微分を考える。
+
+$$
+    \Phi(x) := 
+        \frac{1}{\sqrt{2\pi}}
+            \int_{-\infty}^{x} e^{-x^{2}/2}\ dx
+$$
+
+1階微分は、
+
+$$
+\begin{eqnarray}
+    \frac{d}{d K} \Phi(d_{1}(K))
+        & = &
+            \phi(d_{1}(K)) d_{1}^{\prime}(K)
+\end{eqnarray}
+$$
+
+
+$$
+\begin{eqnarray}
+    \frac{d}{d K} \Phi(d_{2}(K))
+        & = &
+            \phi(d_{2}(K)) d_{2}^{\prime}(K)
+\end{eqnarray}
+$$
+
+となる。
+
+call option $c_{BS}(0; S_{0} K, r, T, \sigma)$の微分を考える。
+
+$$
+\begin{eqnarray}
+    c_{BS}(0; S_{0} K, r, T, \sigma)
+        & = &
+            \mathrm{E}^{Q}
+            \left[
+                D(T)(S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            S\Phi(d_{1}(K)) - e^{-rT}K\Phi(d_{2}(K))
+        \nonumber
+\end{eqnarray}
+$$
+
+また、[d1とd2の関係式]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-d1_d2_density_relation)より、call optionの1階微分は
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial K} c_{BS}(0; S_{0} K, r, T, \sigma)
+        & = & 
+            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
+                - e^{-rT}\Phi(d_{2}(K)) 
+                - e^{-rT}K\phi(d_{2}(K))d_{2}^{\prime}(K)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
+                - S\phi(d_{1}(K))d_{2}^{\prime}(K)
+                - e^{-rT}\Phi(d_{2}(K)) 
+        \nonumber
+        \\
+        & = &
+            - e^{-rT}\Phi(d_{2}(K)) 
+            \label{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
+\end{eqnarray}
+$$
+
+となる。
+簡単のため、$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime}(K) := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
+call optionの2階微分は、$$\eqref{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}$$より、
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2}}{\partial K^{2}} c_{BS}(0; S_{0} K, r, T, \sigma)
+        & = & 
+            \frac{\partial^{2}}{\partial K^{2}}(- e^{-rT}\Phi(d_{2}(K)))
+        \nonumber
+        \\
+        & = & 
+            -e^{-rT} \phi(d_{2}(K)) d^{\prime}(K)
+        \label{second_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
+\end{eqnarray}
+$$
+
+となる。
+最後にcall optionの3階微分も同様に計算する。
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{3}}{\partial K^{3}} c_{BS}(0; S_{0} K, r, T, \sigma)
+        & = & 
+            \frac{\partial^{3}}{\partial K^{3}} (-e^{-rT} \phi(d_{2}(K)) d^{\prime}(K))
+        \nonumber
+        \\
+        & = &
+            -e^{-rT} 
+            \left(
+                \phi^{\prime}(d_{2}(K)) (d^{\prime}(K))^{2}
+                    + \phi(d_{2}(K)) d^{\prime\prime}(K)
+            \right)
+        \label{third_derivative_of_black_scholes_formula_with_respect_to_strike}
+\end{eqnarray}
+$$
+
+となる。
 
 # swaption pricing
 swap rate $S(T)$をBlack-scholes modelとしてswaptionのPricingをする。
 swap rateが$$\eqref{black_scholes_model_integral_form}$$で定義されているとする。
-$S(T)$どの測度の下で定義されているかは、以下の議論においてはさほど重要ではない。
+$S(T)$がどの測度の下で定義されているかは、以下の議論においてはさほど重要ではない。
 $S(T)$がannuity measureの下でマルチンゲールであるため、annuity measureの下では以下の形でかける。
 
 $$
@@ -266,10 +456,19 @@ $$
 payer's swaptionのpayoffとreciever's swaptionを以下のように
 
 $$
+\begin{eqnarray}
     V_{\mathrm{swap}}(t) 
-        := P(t, T_{0}) - P(t, T_{N}) - K \sum_{i=1}^{N} \delta_{i} P(t, T_{i})
-        = P(t, T_{0}) - P(t, T_{N}) - K A(t)
-        = (S(t) - K)A(t)
+        & := &
+            P(t, T_{0}) - P(t, T_{N}) - K \sum_{i=1}^{N} \delta_{i} P(t, T_{i})
+        \nonumber
+        \\
+        & = &
+            P(t, T_{0}) - P(t, T_{N}) - K A(t)
+        \nonumber
+        \\
+        & = &
+            (S(t) - K)A(t)
+\end{eqnarray}
 $$
 
 physical settled swaptionは、swaptionの固定レートを$K$とすると、満期日$T$とすると、満期日にswapの価値が正であれば、payer's swaptionの持ちては権利を行使する。
@@ -277,7 +476,7 @@ physical settled swaptionは、swaptionの固定レートを$K$とすると、�
 
 $$
 \begin{eqnarray}
-    V_{\mathrm{payersswap}}(t)
+    V_{\mathrm{payer}}(t)
     & = &
         \mathrm{E}_{t}^{Q}
         \left[
@@ -291,7 +490,8 @@ $$
     & = &
         \mathrm{E}_{t}^{Q}
         \left[
-            D(T) (S(T) - K)^{+} A(T)
+            \frac{D(T)}{D(t)}
+            (S(T) - K)^{+} A(T)
         \right]
     \nonumber
     \\
@@ -310,7 +510,7 @@ $S(T)$が$Q^{A}$の下マルチンゲールなので、black scholes call option
 
 $$
 \begin{eqnarray}
-    V_{\mathrm{payerswapion}}(t)
+    V_{\mathrm{payer}}(t)
         & = &
         A(t)(S(t)N(d_{1}) - KN(d_{2}))
     \\
@@ -339,7 +539,7 @@ $$
 
 $$
 \begin{eqnarray}
-    V_{\mathrm{receiversswap}}(t)
+    V_{\mathrm{receiver}}(t)
     & = &
         A(t)
         \mathrm{E}_{t}^{A}
@@ -360,7 +560,7 @@ $$\eqref{def_d1_payers_swaption}$$と$$\eqref{def_d2_payers_swaption}$$を$d_{1}
 $$
 \begin{eqnarray}
     \frac{\partial}{\partial K} 
-        V_{\mathrm{payersswap}}(t, K)
+        V_{\mathrm{payer}}(t, K)
     & = &
         A(t)
         \frac{\partial}{\partial K} 
@@ -377,6 +577,7 @@ $$
     \\
     & = &
         - A(t)\Phi(d_{2}(K)) 
+    \label{first_derivative_of_payers_swaption_with_respect_to_strike}
 \end{eqnarray}
 $$
 
@@ -385,7 +586,7 @@ $$
 $$
 \begin{eqnarray}
     \frac{\partial^{2}}{\partial K^{2}} 
-        V_{\mathrm{payersswap}}(t, K)
+        V_{\mathrm{payer}}(t, K)
     & = &
         -A(t)
         \frac{\partial}{\partial K} 
@@ -396,6 +597,23 @@ $$
     \\
     & = &
         -A(t) \phi(d_{2}(K)) d_{2}^{\prime}(K)
+    \label{second_derivative_of_payers_swaption_with_respect_to_strike}
+\end{eqnarray}
+$$
+
+同様に3階微分は、
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{3}}{\partial K^{3}} 
+        V_{\mathrm{payer}}(t, K)
+    & = &
+        -A(t)
+        \left(
+            \phi^{\prime}(d_{2}(K)) (d^{\prime}(K))^{2}
+                + \phi(d_{2}(K)) d^{\prime\prime}(K)
+        \right)
+    \label{third_derivative_of_payers_swaption_with_respect_to_strike}
 \end{eqnarray}
 $$
 
