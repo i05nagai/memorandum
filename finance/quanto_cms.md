@@ -627,149 +627,7 @@ $$
 \end{eqnarray}
 $$
 
-更に、$\Psi^{A}(s)$の計算をする為に、 Black Scholesのcall optionの微分を考える。
-まず、$d_{1}$の微分を考える。
-
-$$
-\begin{eqnarray}
-    d_{1}(K)
-        & := & \frac{
-           \ln\left(\frac{S}{K}\right) + (r + \sigma^{2}/2)T
-        }{
-            \sqrt{T}\sigma
-        },
-    \label{def_d1}
-    \\
-    d_{1}(K)^{2}
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right) + (r + \sigma^{2}/2)T
-            \right)^{2}
-        \nonumber
-        \\
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right)^{2}
-                    + 2\ln\left( \frac{S}{K} \right) (r + \sigma^{2}/2)T
-                    + ((r + \sigma^{2}/2)T)^{2}
-            \right),
-        \label{square_d1}
-    \\
-    d_{1}^{\prime}(K)
-        & = &
-            \frac{1}{\sqrt{T}\sigma} \frac{K}{S} -\frac{S}{K^{2}},
-        \nonumber
-        \\
-        & = &
-            - \frac{1}{\sqrt{T}\sigma K},
-    \label{first_derivative_d1}
-    \\
-    d_{1}^{\prime\prime}(K)
-        & = &
-            \frac{1}{\sqrt{T}\sigma K^{2}},
-    \label{second_derivative_d1}
-\end{eqnarray}
-$$
-
-$d_{2}$の微分を考える。
-
-$$
-\begin{eqnarray}
-    d_{2}(K)
-        & := & \frac{
-           \ln\left(\frac{S}{K}\right) - (r + \sigma^{2}/2)T
-        }{
-            \sqrt{T}\sigma
-        },
-    \label{def_d2}
-    \\
-    d_{2}(K)^{2}
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right) + (r - \sigma^{2}/2)T
-            \right)^{2}
-        \nonumber
-        \\
-        & = & \frac{1}{T\sigma^{2}} 
-            \left(
-                \ln\left( \frac{S}{K} \right)^{2}
-                    + 2\ln\left( \frac{S}{K} \right) (r - \sigma^{2}/2)T
-                    + ((r - \sigma^{2}/2)T)^{2}
-            \right),
-        \label{square_d2}
-    \\
-    d_{2}^{\prime}(K)
-        & = &
-            - \frac{1}{\sqrt{T}\sigma K},
-    \label{first_derivative_d2}
-    \\
-    d_{2}^{\prime\prime}(K)
-        & = &
-            \frac{1}{\sqrt{T}\sigma K^{2}},
-    \label{second_derivative_d2}
-\end{eqnarray}
-$$
-
-$\phi(x)$の微分を考える。
-
-$$
-    \phi(x) := \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
-$$
-
-$$
-\begin{eqnarray}
-    \phi^{\prime}(x)
-        & = & 
-            -x \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^{2}}{2} \right)
-        \nonumber
-        \\
-        & = &
-            -x \phi(x)
-        \label{first_derivative_phi}
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-    \phi^{\prime}(d_{1}(K))
-        & = & 
-            -d_{1}(K) \phi(d_{1}(K))
-        \label{first_derivative_phi_d1}
-\end{eqnarray}
-$$
-
-次に$\Phi(x)$の微分を考える。
-
-$$
-    \Phi(x) := 
-        \frac{1}{\sqrt{2\pi}}
-            \int_{-\infty}^{x} e^{-x^{2}/2}\ dx
-$$
-
-1階微分は、
-
-$$
-\begin{eqnarray}
-    \frac{d}{d K} \Phi(d_{1}(K))
-        & = &
-            \phi(d_{1}(K)) d_{1}^{\prime}(K)
-\end{eqnarray}
-$$
-
-
-$$
-\begin{eqnarray}
-    \frac{d}{d K} \Phi(d_{2}(K))
-        & = &
-            \phi(d_{2}(K)) d_{2}^{\prime}(K)
-\end{eqnarray}
-$$
-
-となる。
-
-call option $c(0, S(0); T, K)$の微分を考える。
-$S := S(0)$とおく。 
-$S(T)$の分布を考える。
+更に、$\Psi^{A}(s)$の計算をする為に、$S(T)$の分布を考える。
 
 $$
 \begin{eqnarray}
@@ -789,83 +647,64 @@ $$
         & = &
             \Psi^{A}(x)
         \nonumber
+        \\
+        & = &
+            1 +
+            \frac{1}{A(t)}
+            \frac{\partial}{\partial K} V_{\mathrm{payer}}(t; S(t), K, A(t), T, \sigma)
 \end{eqnarray}
 $$
 
+である。
+payer's swaptionの[first derivative]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-first_derivative_of_payers_swaption_with_respect_to_strike), [second derivative]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-second_derivative_of_payers_swaption_with_respect_to_strike), [third derivative]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-third_derivative_of_payers_swaption_with_respect_to_strike)より
+
 $$
 \begin{eqnarray}
-    c(0, S; T, K, r)
+    V_{\mathrm{payer}}(t; S, K, 1, T, \sigma)
         & = &
             \mathrm{E}^{A}
             \left[
-                (S - K)^{+}
-            \right]
-        \nonumber
-        \\
+                (S(T) - K)^{+}
+            \right],
+    \nonumber
+    \\
+    \Psi^{A}(\tilde{K})
         & = &
-            S\Phi(d_{1}(K)) - e^{-rT}K\Phi(d_{2}(K))
-        \nonumber
+            1 + 
+            \left.
+                \frac{\partial}{\partial K} 
+                V_{\mathrm{payer}}(t; S, K, 1, T, \sigma)
+            \right|_{K=\tilde{K}}
+    \nonumber
+    \\
+        & = &
+            1 - \Phi(d_{2}(\tilde{K})),
+    \nonumber
+    \\
+    \psi^{A}(\tilde{K})
+        & = &
+            \left.
+                \frac{\partial^{2}}{\partial K^{2}}
+                V_{\mathrm{payer}}(t; S, K, 1, T, \sigma)
+            \right|_{K=\tilde{K}}
+    \nonumber
+    \\
+        & = &
+            -\phi(d_{2}(\tilde{K})) d_{2}^{\prime}(\tilde{K}),
+    \nonumber
+    \\
+    (\psi^{A})^{\prime}(\tilde{K})
+        & = &
+            \left.
+                \frac{\partial^{3}}{\partial K^{3}}
+                V_{\mathrm{payer}}(t; S, K, 1, T, \sigma)
+            \right|_{K=\tilde{K}}
+    \nonumber
+    \\
+    & = &
+            -\left(
+                \phi^{\prime}(d_{2}(\tilde{K})) (d^{\prime}(\tilde{K}))^{2}
+                    + \phi(d_{2}(\tilde{K})) d^{\prime\prime}(\tilde{K})
+            \right),
 \end{eqnarray}
 $$
-
-また、[d1とd2の関係式]({{ site.baseurl }}/finance/black_scholes#mjx-eqn-d1_d2_density_relation)より、call optionの1階微分は
-
-$$
-\begin{eqnarray}
-    \frac{\partial}{\partial K} c(0, S; T, K, r)
-        & = & 
-            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
-                - e^{-rT}\Phi(d_{2}(K)) 
-                - e^{-rT}K\phi(d_{2}(K))d_{2}^{\prime}(K)
-        \nonumber
-        \\
-        & = &
-            S\phi(d_{1}(K))d_{1}^{\prime}(K) 
-                - S\phi(d_{1}(K))d_{2}^{\prime}(K)
-                - e^{-rT}\Phi(d_{2}(K)) 
-        \nonumber
-        \\
-        & = &
-            - e^{-rT}\Phi(d_{2}(K)) 
-            \label{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
-\end{eqnarray}
-$$
-
-となる。
-簡単のため、$d^{\prime}(K) := d_{1}^{\prime}(K) = d_{2}^{\prime}(K)$と$d^{\prime\prime}(K) := d_{2}^{\prime\prime}(K) = d_{2}^{\prime\prime}(K)$とする。
-call optionの2階微分は、$$\eqref{first_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}$$より、
-
-$$
-\begin{eqnarray}
-    \frac{\partial^{2}}{\partial K^{2}} c(0, S; T, K)
-        & = & 
-            \frac{\partial^{2}}{\partial K^{2}}(- e^{-rT}\Phi(d_{2}(K)))
-        \nonumber
-        \\
-        & = & 
-            -e^{-rT} \phi(d_{2}(K)) d^{\prime}(K)
-        \label{second_derivative_of_black_scholes_call_option_formula_with_respect_to_strike}
-\end{eqnarray}
-$$
-
-となる。
-最後にcall optionの3階微分も同様に計算する。
-
-$$
-\begin{eqnarray}
-    \frac{\partial^{3}}{\partial K^{3}} c(0, S; T, K)
-        & = & 
-            \frac{\partial^{3}}{\partial K^{3}} (-e^{-rT} \phi(d_{2}(K)) d^{\prime}(K))
-        \nonumber
-        \\
-        & = &
-            -e^{-rT} 
-            \left(
-                \phi^{\prime}(d_{2}(K)) (d^{\prime}(K))^{2}
-                    + \phi(d_{2}(K)) d^{\prime\prime}(K)
-            \right)
-        \label{third_derivative_of_black_scholes_formula_with_respect_to_strike}
-\end{eqnarray}
-$$
-
-となる。
