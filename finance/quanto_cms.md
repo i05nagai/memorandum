@@ -708,3 +708,14 @@ $$
             \right),
 \end{eqnarray}
 $$
+
+
+## Tips
+replicationの積分範囲の決め方。
+以下はQuantLibの実装より引用。
+
+* 自分で指定する
+* atm swaptionのvegaが1%以下になるようなvanilla swaptionのstrike
+* 割り引かれていないpayer、reciever swaptionの価格が与えられたしきい値以下になるようなStrike
+* ATM volatilityを持つBlack scholes process
+
