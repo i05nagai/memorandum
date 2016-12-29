@@ -710,7 +710,7 @@ $$
 $$
 
 
-## Tips
+### Tips
 replicationの積分範囲の決め方。
 以下はQuantLibの実装より引用。
 
@@ -719,3 +719,245 @@ replicationの積分範囲の決め方。
 * 割り引かれていないpayer、reciever swaptionの価格が与えられたしきい値以下になるようなStrike
 * ATM volatilityを持つBlack scholes process
 
+### Examples of simple case
+ドルCMSを参照する$T$での円払いのQuanto CMSを考える。
+
+* $S^{\$}(T)$
+    * ドルのswap rate
+* $\beta_{\$}(T)$
+    * ドルのrisk neutral measureの下でのnumeraire
+* $\beta_{\yen}(T)$
+    * 円のrisk neutral measureの下でのnumeraire
+* $T_{p}$
+    * Quanto CMSのpayment date
+* $T$
+    * $S(T)$のfixing date
+* $Q^{\$}$
+    * ドルのrisk neutral measure
+* $Q^{\yen}$
+    * 円のrisk neutral measure
+* $X(t)$
+    * 時刻$t$でのDOM=円、FOR=ドル、ドル円のtoday FX[DOM/FOR]
+* $X_{T}(t)$
+    * 時刻$t$での$T$のドル円のforward FX[DOM/FOR]
+* $g(\cdot)$
+    * payoff関数
+* $A^{\$}$
+    * ドルのannuity measure
+* $P_{\$}(t, T)$
+    * ドルのZero Coupon Bond
+* $P_{\yen}(t, T)$
+    * 円のZero Coupon Bond
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(0)
+        := 
+        \mathrm{E}_{t}^{\yen}
+        \left[
+            \frac{\beta_{\yen}(t)}{\beta_{\yen}(T_{p})}
+            g(S^{\$}(T))
+        \right]
+\end{eqnarray}
+$$
+
+ここで、
+
+$$
+\begin{eqnarray}
+    \mathrm{E}_{t}^{\yen}
+    \left[
+        \frac{dQ^{\$}}{dQ^{\yen}}
+    \right]
+        & = &
+            \frac{
+                \frac{\beta_{\yen}(0)}{\beta_{\yen}(t)}
+            }{
+                \frac{\beta_{\$}(0) X(0)}{\beta_{\$}(t) X(t)}
+            }
+    \nonumber
+    \\
+        & = &
+            \frac{
+                \beta_{\$}(t) X(t)
+            }{
+                \beta_{\yen}(t) X(0)
+            }
+\end{eqnarray}
+$$
+
+となる。
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(t)
+        & = &
+            \mathrm{E}_{t}^{\yen}
+            \left[
+                \frac{\beta_{\yen}(t)}{\beta_{\yen}(T_{p})}
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\yen}
+            \left[
+                \frac{\beta_{\yen}(t)}{\beta_{\yen}(T_{p})}
+                \mathrm{E}_{T_{p}}^{\yen}
+                \left[
+                    \frac{dQ^{\$}}{dQ^{\yen}}
+                \right]
+                \frac{
+                    \beta_{\yen}(T_{p}) X(0)
+                }{
+                    \beta_{\$}(T_{p}) X(T_{p})
+                }
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\yen}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t)
+                }{
+                    \beta_{\$}(T_{p}) X(T_{p})
+                }
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\$}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t) P^{\$}(T_{p}, T_{p})
+                }{
+                    \beta_{\$}(T_{p}) X_{T_{p}}(T_{p}) P^{\yen}(T_{p}, T_{p})
+                }
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\$}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t)
+                }{
+                    \beta_{\$}(T)
+                }
+                \mathrm{E}_{T}^{\$}
+                \left[
+                    \beta_{\$}(T)
+                    \frac{
+                         P^{\$}(T_{p}, T_{p})
+                    }{
+                        \beta_{\$}(T_{p}) X_{T_{p}}(T_{p})
+                    }
+                \right]
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\$}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t)
+                }{
+                    \beta_{\$}(T)
+                }
+                \beta_{\$}(T)
+                \frac{
+                     P^{\$}(T, T_{p})
+                }{
+                    \beta_{\$}(T) X_{T_{p}}(T)
+                }
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \mathrm{E}_{t}^{\$}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t)
+                }{
+                    \beta_{\$}(T)
+                }
+                \frac{
+                     P^{\$}(T, T_{p})
+                }{
+                    X_{T_{p}}(T)
+                }
+                g(S^{\$}(T))
+            \right]
+\end{eqnarray}
+$$
+
+となる。
+更にannuity measureの下では
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(t)
+        & = &
+            \mathrm{E}_{t}^{A^{\$}}
+            \left[
+                \frac{
+                    X(0) \beta_{\yen}(t) A^{\$}(t)
+                }{
+                    \beta_{\$}(t) A^{\$}(T)
+                }
+                \frac{
+                     P^{\$}(T, T_{p})
+                }{
+                    X_{T_{p}}(T)
+                }
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            \frac{
+                X(0) \beta_{\yen}(t) A^{\$}(t)
+            }{
+                \beta_{\$}(t)
+            }
+            \mathrm{E}_{t}^{A^{\$}}
+            \left[
+                \frac{
+                     P^{\$}(T, T_{p})
+                }{
+                    A^{\$}(T)
+                }
+                \frac{ 1 }{ X_{T_{p}}(T) }
+                g(S^{\$}(T))
+            \right]
+\end{eqnarray}
+$$
+
+となる。
+特に時刻$t=0$では
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(0)
+        & = &
+            X(0) 
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \frac{
+                     P^{\$}(T, T_{p})
+                }{
+                    A^{\$}(T)
+                }
+                \frac{ 1 }{ X_{T_{p}}(T) }
+                g(S^{\$}(T))
+            \right]
+\end{eqnarray}
+$$
+
+となる。
