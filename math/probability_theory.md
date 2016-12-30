@@ -249,6 +249,7 @@ $$
 			\frac{1}{\sqrt{2 \pi \sigma_{22}^{2}(1 - \rho^{2})}}
 			\exp
 			\left(
+                -\frac{1}{2}
 				\frac{
 					\left(
 						(x_{2} - \mu_{2})
@@ -273,6 +274,7 @@ $$
 			\frac{1}{\sqrt{2 \pi \sigma_{11}^{2}(1 - \rho^{2})}}
 			\exp
 			\left(
+                -\frac{1}{2}
 				\frac{
 					\left(
 						(x_{1} - \mu_{1})
