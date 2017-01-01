@@ -82,6 +82,26 @@ python, php, ruby, javascriptのみ対応。
 #### Refrence
 * [Example .codeclimate.yml](https://docs.codeclimate.com/docs/example-codeclimateyml)
 
+## Tips
+
+### Travis CIでtest coverageが送信されない
+travis CIで、test coverageを送信するとき`codeclimate-test-reporter`を利用するが、codeclimateは現状test coverageはcodeclimateに設定しているdefault branch以外のcoverage reportは受け入れていない。
+よって、
+
+以下のような状況でのmergeでは、test coverageの更新はされない。
+
+* codeclimateのdefault branchがmaster
+* pull requestでmasterにmergeしている
+* Travis CIの設定で、`build pushs`がOFF
+
+Travis CIのpull-requestのbuildはmasterにmergeしたと仮定してbuildを行う。
+pull-requestでmasterにmergeした場合は、masterへのBuildが行われない為、codeclimateの結果も送信されない。
+これを修正する単純な方法は
+
+* Travis CIの設定で、`build pushs`をON
+
+とすること。
+
 
 ## Reference
 * [Code Climate](https://docs.codeclimate.com/)
