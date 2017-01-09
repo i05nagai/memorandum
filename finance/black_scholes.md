@@ -174,12 +174,36 @@ $T < 0$のときは、optionがexpiryしていると考えると以下の定義�
 
 $$
     c_{BS}(0; S_{0}, K, r, T, \sigma)
-        := 0
+        = 0
 $$
 
 ### case5: negative volatility
 $\sigma < 0$のときは、未定義が妥当。
 volatilityは一般には負にはならない。
+
+### case6: underlying is 0
+$S_{0} = 0$のときは、$\forall t, S(t) = 0$なので、
+
+$$
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        = e^{-rT} \max(-K, 0.0)
+$$
+
+### case7: strike is 0 and underlying is positive 
+$K = 0, S_{0} > 0$のときは、
+
+$$
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        = S_{0}
+$$
+
+### case8: strike is 0 and underlying is negative
+$K = 0, S_{0} < 0$のときは、
+
+$$
+    c_{BS}(0; S_{0}, K, r, T, \sigma)
+        = 0
+$$
 
 ## put option
 
@@ -884,8 +908,9 @@ $$
         \\
         & = &
             \frac{
+                 \sigma \sigma\sqrt{T}
+                 -
                  (r + \frac{1}{2}\sigma^{2})\sqrt{T}
-                     - \sigma \sigma\sqrt{T}
             }{
                 \sigma^{2}
             }
@@ -893,7 +918,7 @@ $$
         \\
         & = &
             \frac{
-                 (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                 (\frac{1}{2}\sigma^{2} - r)\sqrt{T}
             }{
                 \sigma^{2}
             }
@@ -910,8 +935,8 @@ $$
         \\
         & = &
             \frac{
-                 (r - \frac{1}{2}\sigma^{2})\sqrt{T}
-                    + \sigma \sigma\sqrt{T}
+                -\sigma \sigma\sqrt{T}
+                    - (r - \frac{1}{2}\sigma^{2})\sqrt{T}
             }{
                 \sigma^{2}
             }
@@ -919,7 +944,7 @@ $$
         \\
         & = &
             \frac{
-                 (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                 (-\frac{1}{2}\sigma^{2} - r)\sqrt{T}
             }{
                 \sigma^{2}
             }
@@ -960,13 +985,13 @@ $$
             S\phi(d_{1}(\sigma)) 
             \left(
                 \frac{
-                     (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                     (\frac{1}{2}\sigma^{2} - r)\sqrt{T}
                 }{
                     \sigma^{2}
                 }
                 - 
                 \frac{
-                     (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                     (-\frac{1}{2}\sigma^{2} - r)\sqrt{T}
                 }{
                     \sigma^{2}
                 }
@@ -974,7 +999,43 @@ $$
         \nonumber
         \\
         & = &
-             - \sqrt{T} S\phi(d_{1}(\sigma)) 
+              \sqrt{T} S\phi(d_{1}(\sigma)) 
+\end{eqnarray}
+$$
+
+## Volga
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2}}{\partial \sigma^{2}} c(\sigma)
+        & = &
+            \frac{\partial}{\partial \sigma} 
+            \left(
+                \sqrt{T} S\phi(d_{1}(\sigma)) 
+            \right)
+        \nonumber
+        \\
+        & = &
+            \sqrt{T} S \phi^{\prime}(d_{1}(\sigma))
+            \frac{\partial}{\partial \sigma} d_{1}(\sigma)
+    \nonumber
+    \\
+        & = &
+            \sqrt{T} S \phi^{\prime}(d_{1}(\sigma))
+            \frac{
+                (\frac{1}{2} \sigma^{2} - r)\sqrt{T}
+            }{
+                \sigma^{2}
+            }
+    \nonumber
+    \\
+        & = &
+            S \phi^{\prime}(d_{1}(\sigma))
+            \frac{
+                (\frac{1}{2} \sigma^{2} - r)T
+            }{
+                \sigma^{2}
+            }
 \end{eqnarray}
 $$
 
