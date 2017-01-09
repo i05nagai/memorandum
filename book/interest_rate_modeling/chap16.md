@@ -2687,7 +2687,7 @@ $$
             e^{\sigma_{X}\sqrt{T}\xi_{1}} | \xi_{2} = x_{2}
         \right]
     & = &
-        \frac{1}{\sqrt{2 \pi \sigma_{11}^{2}(1 - \rho^{2})}}
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
         \int_{-\infty}^{\infty} 
             \exp
             \left(
@@ -2695,13 +2695,14 @@ $$
             \right)
             \exp
             \left(
+                -\frac{1}{2}
                 \frac{
                     \left(
                         x_{1}
-                        - x_{2} \frac{\sigma_{11}\rho}{\sigma_{22}} 
+                        - x_{2} \rho
                     \right)^{2}
                 }{
-                    \sigma_{11}^{2}(1 - \rho^{2})
+                    (1 - \rho^{2})
                 }
             \right)
         \ dx_{1}
