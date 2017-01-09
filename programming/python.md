@@ -35,7 +35,7 @@
 
 * pytest
 * travis CI
-* codeclimate
+* codeclimate / coverall
 * docs(sphinx)
 * benchmark(asv)
 
