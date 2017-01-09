@@ -27,7 +27,7 @@ $$
 \end{equation}
 $$
 
-modelの解析のために、必要に応じて$\eqref{chap7_2_non_negative_condition}$を無視する。
+modelの解析のために、必要に応じて$$\eqref{chap7_2_non_negative_condition}$$を無視する。
 $P$をpropability measureとし、$\mathrm{E}^{P}$を$\mathrm{E}$と書く。
 
 
@@ -96,22 +96,23 @@ option marketでは、call optionとput optionのstrikeへの依存関係ををi
 $$
 \begin{equation}
     c(t, S; T, K)
-        = S\Phi(d_{+}) - K\Phi(d_{-})
+        = S \Phi(d_{+}) - K \Phi(d_{-}),
     \label{chap07_6_call_option}
 \end{equation}
 $$
 
 $$
     d_{\pm} 
-        := \frac{
-            \ln \frac{S}{K} \pm \\frac{1}{2}\sigma-{B}(t, S; T, K)^{2}(T - T)
+        := 
+        \frac{
+            \ln \frac{S}{K} \pm \frac{1}{2}\sigma_{B}(t, S; T, K)^{2}(T - t)
         }{
             \sigma_{B}(t, S; T, K) \sqrt{T - t}
         }
 $$
 
-$\eqref{chap07_6_call_option}$の右辺は$\sigma_{B}(t, S; T, K)$を定数volatilityとしたBlack-Scholes-Merton formulaである。
-写像$K \mapsto \sgima_{B}(t, S; T, K)$は$T$-maturity volatility smileとして知られている。
+$$\eqref{chap07_6_call_option}$$の右辺は$\sigma_{B}(t, S; T, K)$を定数volatilityとしたBlack-Scholes-Merton formulaである。
+写像$K \mapsto \sigma_{B}(t, S; T, K)$は$T$-maturity volatility smileとして知られている。
 金利のmarketでは、volatility smileは大抵downward-slopingである。
 しかし、十分大きな$K$についてvolatilityが増加する傾向も一般的である。
 smileが単調に増加、減少し、Uの形状でない場合volatility skewという。
