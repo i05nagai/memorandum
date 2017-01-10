@@ -606,7 +606,8 @@ $$
 $$
 \begin{eqnarray}
     \tilde{\chi}(s)
-        & = & \exp 
+        & = &
+            \exp 
             \left(
                 \rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
                     + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
@@ -946,7 +947,7 @@ $$
 \begin{eqnarray}
     V_{\mathrm{QuantoCMS}}(0)
         & = &
-            X(0) 
+            X(0) A^{\$}(0)
             \mathrm{E}^{A^{\$}}
             \left[
                 \frac{
@@ -957,6 +958,475 @@ $$
                 \frac{ 1 }{ X_{T_{p}}(T) }
                 g(S^{\$}(T))
             \right]
+\end{eqnarray}
+$$
+
+となる。
+[Andersen and Piterbarg]({{ site.baseurl }}/book/interest_rate_modeling/chap16)と同様の議論で
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(0)
+        & \approx &
+            X(0) A^{\$}(0)
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \alpha(S^{\$}(T))
+                \chi(S^{\$}(T))
+                g(S^{\$}(T))
+            \right]
+    \label{dollar_yen_quanto_cms_approx_value_by_replication}
+\end{eqnarray}
+$$
+
+と近似する。
+ここで、
+
+$$
+\begin{eqnarray}
+    \chi(S^{\$}(T))
+        & := &
+            \mathrm{E}^{A^{\$}}
+            \left[
+            \left.
+                \frac{1}{X_{T_{p}}(T)}
+            \right|
+                S^{\$}(T) = s
+            \right]
+\end{eqnarray}
+$$
+
+
+以下では具体的なモデルを考える。
+$X_{T}(t)$が以下で与えられていると
+
+$$
+\begin{equation}
+    X_{T_{p}}(T) 
+        = X(0) e^{\sigma_{X}\sqrt{T}\xi_{1} + m_{X}T},
+\end{equation}
+$$
+
+その逆数は
+
+$$
+\begin{equation}
+    \frac{1}{X_{T_{p}}(T)}
+        = \frac{1}{X(0)}
+            e^{-\sigma_{X}\sqrt{T}\xi_{1} - m_{X}T},
+\end{equation}
+$$
+
+となる。
+上記の下、$chi(\cdot)$を計算すると
+
+$$
+\begin{eqnarray*}
+    \chi(s)
+        & = & 
+            \frac{1}{X(0)}
+            e^{-m_{X}T} \mathrm{E}^{A,d}
+            \left[
+                e^{-\sigma_{X}\sqrt{T}\xi_{1}} | \xi_{2} = \Psi^{-1}(\Phi^{A}(s))
+            \right]
+            \nonumber
+            \\
+        & = &
+            \frac{1}{X(0)}
+            e^{-m_{X}T} \hat{\chi}(s),
+\end{eqnarray*}
+$$
+
+ここで、最後の等式は以下による。
+
+$$
+\begin{eqnarray*}
+    \mathrm{E}^{A,d}
+        \left[
+            e^{-\sigma_{X}\sqrt{T}\xi_{1}} | \xi_{2} = x_{2}
+        \right]
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{-2 \sigma_{X} \sqrt{T} x_{1}(1 - \rho^{2})}{2(1 - \rho^{2})}
+                -
+                \frac{
+                    (x_{1} - x_{2}\rho)^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -2 \sigma_{X} \sqrt{T} x_{1}(1 - \rho^{2}) 
+                        - x_{1}^{2} 
+                        + 2x_{1}x_{2}\rho 
+                        - x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+        \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -x_{1}^{2} 
+                        - 2 x_{1}(\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho) 
+                        -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (-\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                    +(-\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho)^{2}
+                    -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (-\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                    \sigma_{X}^{2} T(1 - \rho^{2})^{2} 
+                    - 2\sigma_{X} \sqrt{T} (1 - \rho^{2})x_{2}\rho
+                    + x_{2}^{2}\rho^{2}
+                    -x_{2}^{2}\rho^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \frac{1}{\sqrt{2 \pi (1 - \rho^{2})}}
+        \int_{-\infty}^{\infty} 
+            \exp
+            \left(
+                \frac{1}{2} \sigma_{X}^{2} T(1 - \rho^{2})
+                - \sigma_{X} \sqrt{T} x_{2}\rho
+            \right)
+            \exp
+            \left(
+                \frac{
+                    -(x_{1} - (\sigma_{X} \sqrt{T}(1 - \rho^{2}) + x_{2}\rho))^{2}
+                }{
+                    2(1 - \rho^{2})
+                }
+            \right)
+        \ dx_{1}
+    \\
+    & = &
+        \exp
+        \left(
+            \frac{1}{2} \sigma_{X}^{2} T(1 - \rho^{2})
+            - \sigma_{X} \sqrt{T} x_{2}\rho
+        \right).
+\end{eqnarray*}
+$$
+
+ここで、
+
+$$
+\begin{eqnarray}
+    \frac{1}{X_{T_{p}}(0)}
+        & = &
+            \mathrm{E}^{T_{p},d}
+            \left[
+                \frac{1}{X_{T_{p}}(T)}
+            \right]
+        \nonumber
+        \\
+        & = &
+            \frac{A^{\$}(0)}{P_{\$}(0,T_{p})}
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \frac{P_{\$}(T, T_{p})}{A^{\$}(T)}
+                \frac{1}{X_{T_{p}}(T)}
+            \right]
+        \nonumber
+        \\
+        & = &
+            \frac{A^{\$}(0)}{P_{\$}(0,T_{p})}
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \alpha(S^{\$}(T))
+                \chi(S^{\$}(T))
+            \right]
+        \nonumber
+        \\
+        & = &
+            \frac{A^{\$}(0)}{P_{\$}(0,T_{p})}
+            \frac{1}{X(0)}
+            e^{-m_{X}T}
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \alpha(S^{\$}(T))
+                \hat{\chi}(S^{\$}(T))
+            \right].
+\end{eqnarray}
+$$
+
+よって、
+
+$$
+\begin{eqnarray}
+    e^{-m_{X}T}
+        & = &
+            \frac{P_{\$}(0,T_{p})}{A^{\$}(0)}
+            \frac{X(0)}{X_{T_{p}}(0)}
+            \frac{
+                1
+            }{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                \right]
+            }
+    \label{dollar_yen_quanto_cms_forward_fx}
+\end{eqnarray}
+$$
+
+$$\eqref{dollar_yen_quanto_cms_forward_fx}$$と$$\eqref{dollar_yen_quanto_cms_approx_value_by_replication}$$と
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(0)
+        & \approx &
+            X(0) A^{\$}(0)
+            \frac{1}{X(0)}
+            e^{-m_{X}T} 
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \alpha(S^{\$}(T))
+                \hat{\chi}(S^{\$}(T))
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            A^{\$}(0)
+            \frac{P_{\$}(0,T_{p})}{A^{\$}(0)}
+            \frac{X(0)}{X_{T_{p}}(0)}
+            \frac{
+                1
+            }{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                \right]
+            }
+            \mathrm{E}^{A^{\$}}
+            \left[
+                \alpha(S^{\$}(T))
+                \hat{\chi}(S^{\$}(T))
+                g(S^{\$}(T))
+            \right]
+    \nonumber
+    \\
+        & = &
+            P_{\$}(0,T_{p})
+            \frac{X(0)}{X_{T_{p}}(0)}
+            \frac{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                    g(S^{\$}(T))
+                \right]
+            }{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                \right]
+            }
+    \nonumber
+    \\
+        & = &
+            P_{\yen}(0,T_{p})
+            \frac{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                    g(S^{\$}(T))
+                \right]
+            }{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \hat{\chi}(S^{\$}(T))
+                \right]
+            }
+\end{eqnarray}
+$$
+
+また、$\chi(\cdot)$の微分を計算すると、
+
+$$
+\begin{eqnarray}
+    \tilde{\chi}(s)
+        & = & \exp 
+            \left(
+                -\rho_{XS}\sigma_{X}\sqrt{T}\Phi^{-1}(\Psi^{A}(s))
+                    + \frac{\sigma_{X}^{2}T}{2}(1 - \rho_{XS}^{2})
+            \right),
+    \label{dollar_yen_quanto_cms_forward_fx_diffusion}
+    \\
+    \tilde{\chi}^{\prime}(s)
+        & = & 
+        -\rho_{XS}\sigma_{X}\sqrt{T}h'(s) \tilde{\chi}(s)
+    \label{dollar_yen_quanto_cms_derivative_forward_fx_diffusion}
+    \\
+    \tilde{\chi}^{\prime\prime}(s)
+        & = &
+        \rho_{XS}\sigma_{X}\sqrt{T}
+        \left(
+            -h^{\prime\prime}(s)\tilde{\chi}(s)
+            + \rho_{XS}\sigma_{X}\sqrt{T} h^{\prime}(s)^{2} \tilde{\chi}(s)
+        \right)
+    \label{dollar_yen_quanto_cms_derivative2_forward_fx_diffusion}
+\end{eqnarray}
+$$
+
+となる。
+
+### Analysis
+linear TSR modelで$\alpha_{0} = 0$かつ$\rho=0$の特別な場合を考える。
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{QuantoCMS}}(0)
+        & \approx &
+            P_{\yen}(0,T_{p})
+            \frac{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \exp
+                    \left(
+                        \frac{1}{2} \sigma_{X}^{2}T
+                    \right)
+                    g(S^{\$}(T))
+                \right]
+            }{
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha(S^{\$}(T))
+                    \exp
+                    \left(
+                        \frac{1}{2} \sigma_{X}^{2}T
+                    \right)
+                \right]
+            }
+    \nonumber
+    \\
+        & = &
+            P_{\yen}(0,T_{p})
+            \frac{
+                \alpha_{0}
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    S^{\$}(T)
+                    g(S^{\$}(T))
+                \right]
+                +
+                \mathrm{E}^{A^{\$}}
+                \left[
+                    \alpha_{1}
+                    g(S^{\$}(T))
+                \right]
+            }{
+                \alpha_{0}S^{\$}(0)
+                + \alpha_{1}
+            }
+    \nonumber
+    \\
+        & = &
+            P_{\yen}(0,T_{p})
+            \mathrm{E}^{A^{\$}}
+            \left[
+                g(S^{\$}(T))
+            \right]
+\end{eqnarray}
+$$
+
+となる。
+replication methodで計算される2階微分を考えると
+
+$$
+\begin{eqnarray}
+    \alpha^{\prime\prime}(S^{\$}(T)) g(S^{\$}(T))
+        & = &
+            0
+    \nonumber
+    \\
+    2\alpha^{\prime}(S^{\$}(T)) g^{\prime}(S^{\$}(T))
+        & = &
+            \alpha_{0} g^{\prime}(S^{\$}(T))
+    \nonumber
+    \\
+    \alpha(S^{\$}(T)) g^{\prime\prime}(S^{\$}(T))
+        & = &
+            \alpha(S^{\$}(T)) g^{\prime\prime}(S^{\$}(T))
+\end{eqnarray}
+$$
+
+更にpayoff関数がstrike $K$のcall optionの場合は、
+
+$$
+\begin{eqnarray}
+    2\alpha^{\prime}(S^{\$}(T)) g^{\prime}(S^{\$}(T))
+        & = &
+            \alpha_{0} 1_{[K, \infty)}(S^{\$}(T))
+    \nonumber
+    \\
+    \alpha(S^{\$}(T)) g^{\prime\prime}(S^{\$}(T))
+        & = &
+            \alpha(S^{\$}(T)) \delta(S^{\$}(T) - K)
+\end{eqnarray}
+$$
+
+となり、payoff関数が$K_{\mathrm{lower}}, K_{\mathrm{upper}}$をstrikeとするbull-spreadの場合は
+
+$$
+\begin{eqnarray}
+    2\alpha^{\prime}(S^{\$}(T)) g^{\prime}(S^{\$}(T))
+        & = &
+            \alpha_{0} 1_{[K_{\mathrm{lower}}, K_{\mathrm{upper}})}(S^{\$}(T))
+    \nonumber
+    \\
+    \alpha(S^{\$}(T)) g^{\prime\prime}(S^{\$}(T))
+        & = &{
+            \alpha(S^{\$}(T))(\delta(S^{\$}(T) - K_{\mathrm{lower} - \delta{})
 \end{eqnarray}
 $$
 
