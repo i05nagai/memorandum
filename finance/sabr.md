@@ -633,9 +633,6 @@ $$
             \frac{1 - \beta}{2} S^{(1 - \beta)/2}K^{(-1 - \beta)/2}
     \nonumber
     \\
-        & =: &
-    \nonumber
-    \\
     \frac{\partial^{2}}{\partial K^{2}}
         B_{11}
         & = &
@@ -713,24 +710,24 @@ $$
     \frac{\partial}{\partial K}
         A_{1}(K, S; T) 
         & = &
-            B_{11}
-                B_{12}^{\prime}
+            A_{11}
+                A_{12}^{\prime}
             +
-            B_{11}^{\prime}
-                B_{12}
+            A_{11}^{\prime}
+                A_{12}
     \nonumber
     \\
     \frac{\partial^{2}}{\partial K^{2}}
         A_{1}(K, S; T) 
         & = &
-            B_{11}
-                B_{12}^{\prime\prime}
+            A_{11}
+                A_{12}^{\prime\prime}
             +
-            2 B_{11}^{\prime}
-                B_{12}^{\prime}
+            2 A_{11}^{\prime}
+                A_{12}^{\prime}
             +
-            B_{11}^{\prime\prime}
-                B_{12}
+            A_{11}^{\prime\prime}
+                A_{12}
 \end{eqnarray}
 $$
 
@@ -772,6 +769,17 @@ $$
                 \log\left( \frac{S}{K} \right)
             -
             K^{(-1-\beta)/2} 
+        \right)
+    \nonumber
+    \\
+        & = &
+        \frac{\nu}{\alpha}
+            S^{(1-\beta)/2}
+            K^{(-1-\beta)/2} 
+        \left(
+            \log\left( \frac{S}{K} \right)
+            -
+            1
         \right)
     \nonumber
     \\
@@ -826,13 +834,13 @@ $A_{2}(K) = z$に注意すると、
 
 $$
 \begin{eqnarray}
-    B_{1}
+    A_{31}
         & := &
             \sqrt{1 - 2\rho z + z^{2}} + z - \rho
     \nonumber
     \\
     \frac{\partial }{\partial K}
-        B_{1}
+        A_{31}
         & = &
             \frac{1}{2}
             \frac{
@@ -853,7 +861,7 @@ $$
     \nonumber
     \\
     \frac{\partial^{2} }{\partial K^{2}}
-        B_{1}
+        A_{31}
         & = &
             \frac{
                 (-\rho A_{2}^{\prime\prime}(K)
@@ -897,12 +905,12 @@ $$
             \frac{
                 1 - \rho
             }{
-                B_{1}
+                A_{31}
             }
             \frac{\partial}{\partial K}
             \left(
                 \frac{
-                    B_{1}
+                    A_{31}
                 }{
                     1 - \rho
                 }
@@ -910,35 +918,35 @@ $$
     \nonumber
     \\
         & = &
-            \frac{ 1 }{ B_{1} }
+            \frac{ 1 }{ A_{31} }
             \frac{\partial}{\partial K}
-            B_{1}
+            A_{31}
     \nonumber
     \\
     \frac{\partial^{2} }{\partial K^{2}}
     A_{3}(K, S; T)
         & = &
-            -B_{1}^{-2}
+            -A_{31}^{-2}
                 \frac{\partial}{\partial K}
-                B_{1}
+                A_{31}
                 \frac{\partial}{\partial K}
-                B_{1}
+                A_{31}
             +
-            B_{1}^{-1}
+            A_{31}^{-1}
                 \frac{\partial^{2}}{\partial K^{2}}
-                B_{1}
+                A_{31}
     \nonumber
     \\
         & = &
-            -B_{1}^{-2}
+            -A_{31}^{-2}
             \left(
                 \frac{\partial}{\partial K}
-                B_{1}
+                A_{31}
             \right)^{2}
             +
-            B_{1}^{-1}
+            A_{31}^{-1}
                 \frac{\partial^{2}}{\partial K^{2}}
-                B_{1}
+                A_{31}
 \end{eqnarray}
 $$
 
@@ -1019,7 +1027,7 @@ $$
 
 $$
 \begin{eqnarray}
-    \frac{\partial^{2}}{\partial K^{2}} 
+    \frac{\partial}{\partial K} 
     \alpha
     A_{1}(K)^{-1}
         & = &
