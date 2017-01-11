@@ -1,3 +1,8 @@
+---
+layout: math
+title: Set theory
+---
+
 # Set Theory
 
 ## Symbol
@@ -294,10 +299,226 @@ $$
 
 #### Note1
 
+## Def. (inverse map)
+$X, Y$を集合とし、$f:X \rightarrow Y$とする。
+inverse map $f^{-1}:Y \rightarrow X$を以下で定義する。
+
+$$
+    B \subset Y,
+    f^{-1}(B)
+        := \{x \in X \mid f(x) \in Y\}
+$$
+
+## Theorem
+
+$$
+\begin{eqnarray}
+    & &
+    P_{1} \subset P_{2} \Rightarrow f(P_{1}) \subset f(P_{2})
+    \\
+    & &
+    f(P_{1} \cup P_{2})
+        = f(P_{1}) \cup f(P_{2})
+    \\
+    & &
+    f(P_{1} \cap P_{2})
+        \subset f(P_{1}) \cap f(P_{2})
+    \\
+    & &
+    f(A - P)
+        \supset f(A) - f(P)
+    \\
+    & &
+    Q_{1} \subset Q_{2}
+        \Rightarrow f^{-1}(Q_{1}) \subset f^{-1}(Q_{2})
+    \\
+    & &
+    f^{-1}(Q_{1} \cup Q_{2})
+        = f^{-1}(Q_{1}) \cup f^{-1}(Q_{2})
+    \\
+    & &
+    f^{-1}(Q_{1} \cap Q_{2})
+        = f^{-1}(Q_{1}) \cap f^{-1}(Q_{2})
+    \\
+    & &
+    f^{-1}(B-Q)
+        = A - f^{-1}(Q)
+    \\
+    & &
+    f^{-1}(f(P))
+        \supset P
+    \label{4_5}
+    \\
+    & &
+    f(f^{-1}(Q))
+        \subset Q
+    \label{4_5_prime}
+\end{eqnarray}
+$$
+
+さらに、$f$が単射とすると、
+
+$$
+\begin{equation}
+    f^{-1}(f(P))
+        = P
+    \label{4_5_one_to_one}
+\end{equation}
+$$
+
+となる。
+また、$f$が全射とすると、
+
+$$
+\begin{eqnarray}
+    f(f^{-1}(Q))
+        = Q
+    \label{4_5_prime_onto}
+\end{eqnarray}
+$$
+
+となる。
 
 
-## Theory
+## proof.
 
+$$\eqref{4_5}$$を示す。
+$\forall p \in P$とする。
+
+$$
+    f^{-1}(f(P)) 
+        = \{x \in A \mid f(x) \in f(P)\}
+$$
+
+よって、$f(p) \in f(P)$より$p \in f^{-1}(f(P))$となる。
+また、$f$が単射とすると、等号で成り立つ。
+実際、$\forall p \in f^{-1}(f(P))$とする。
+$f(p) \in f(P)$より、$\exists p^{\prime} \in P$, $f(p) = f(p^{\prime})$となる。
+$f$が単射より、$p = p^{\prime} \in P$が成り立ち等号が成立する。
+
+$$\eqref{4_5_prime}$$を示す。
+$\forall q \in f(f^{-1}(Q))$とする。
+$\exists p \in f^{-1}(Q)$, $f(p) = q$である。
+$p \in f^{-1}(Q)$より、$q = f(p) \in Q$となって成立。
+$f$が全射とする。
+$q \in Q$とすると、$f$が全射より$\exists p \in A$, $f(p) = q \in Q$である。
+よって、$p \in f^{-1}(Q)$であり、$q \in f(f^{-1}(Q))$となる。
+
+
+## Def. Quotient topological space
+$X$を位相空間とする。
+$\sim$を$X$上の同値関係とする。
+$Y := X/~$を商集合とし、$\pi:X \rightarrow Y$を標準射影とする。
+このとき、$\pi$を連続とする最強の位相$\mathcal{O}$とすると、$(Y, \mathcal{O})$を商位相空間という。
+
+## Lemma
+$X$を集合、$(Y, \mathcal{O}_{Y})$を位相空間とする。
+$f:X \rightarrow Y$とすると、以下で定義される集合族は$f$を連続にする$X$の最弱の位相である。
+
+$$
+\begin{equation}
+    \mathcal{O}_{X}
+        := \{f^{-1}(O_{Y}) \mid O_{Y} \subset \mathcal{O}_{Y} \}
+\end{equation}
+$$
+
+## Lemma
+$(X, \mathcal{O}_{X})$を位相空間、$Y$を集合とする。
+$f:X \rightarrow Y$とすると、以下で定義される集合族は$f$を連続にする$Y$の最強の位相である。
+
+$$
+\begin{equation}
+    \mathcal{O}_{Y}
+        := \{O_{Y} \subset Y \mid f^{-1}(O_{Y}) \in \mathcal{O}_{X} \}
+\end{equation}
+$$
+
+## Lemma(quotient topological spaces and countable basis)
+$X$がtopological spacesとする。
+$\sim$が$X$上のequivalenceとする。
+$Y := X / \sim$をquotient topological spaceとし、$\pi: X \rightarrow Y$をquotient mapとする。
+$X$がcountable basisを持つとすると、$Y$はcountable basisをもつ。
+
+## proof.
+$\\{A_{n}\\}_{n \in \mathbb{N}}$を$X$のcountable basisとする。
+$B \subset Y$をopenとすると、 $\pi^{-1}(B)$はopenである。
+よって、
+
+$$
+    \exists \{A_{i}\}_{i \in I} \subset \{A_{n}\}_{n \in \mathbb{N}},
+    \pi^{-1}(B) = \bigcup_{i \in I} A_{i}
+$$
+
+となる。
+$\pi$が全射かつ開写像より、
+
+$$
+\begin{eqnarray}
+    & &
+    \pi^{-1}(B) = \bigcup_{i \in I} A_{i}
+    \nonumber
+    \\
+        & \iff &
+            B = \pi(\bigcup_{i \in I} A_{i})
+    \nonumber
+    \\
+        & \iff &
+            B = \bigcup_{i \in I} \pi(A_{i})
+\end{eqnarray}
+$$
+
+となる。
+$B$は任意だったので、$$\{ \pi(A_{n}) \}_{n \in \mathbb{N}} $$がcountable basisとなる。
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Lemma (equivalent condition to Hausdorff spaces)
+$(X, \mathcal{O}_{X})$をtopological spacesとする。
+以下は同値
+
+1. $X \times X$上$$A := \{ (x, x) \in X \times X \mid x \in X\}$$が閉である
+2. $X$がHausdorff spaces
+
+## proof.
+1 $\Rightarrow$ 2を示す。
+$x, y \in X, x \neq y$とすると、 $(x, y) \in A^{c}$である。
+直積位相は、$$\{ U \times V \mid U, V \in \mathcal{O}_{X} \}$$を基底に持つ。
+$A^{c}$がopenより、$U, V \in \mathcal{O}_{X}$で、$(x, y) \in U \times V \subset A^{c}$とできる。
+$U \cap V = \emptyset$である。
+実際、$U \cap V \neq \emptyset$とすると、$z \in U \cap V$について、$(z ,z) \in U \times V$となるが、$U \times V \subset A^{c}$に矛盾する。
+よって、$x \in U, y \in Y, U \cap V = \emptyset$となる。
+$x, y$は任意だったので、$X$はHausdorffとなる。
+
+2 $\Rightarrow$ 1を示す。
+$A^{c}$がopenであることを示す。
+$A^{c} \subset A^{ci}$を示せば良いが、その為には$p \in A^{c}$について、$O \subset A^{c}$がopenで, $p \in O$を示せば良い。
+$\forall (x, y) \in A^{c}$とすると、$x \neq y$と$X$がHausdorffより、$$x \in U \in \mathcal{O}_{X}$$, $$y \in V \in \mathcal{O}_{X}$$, $U \cap V = \emptyset$とできる。
+$(x, y) \in U \times V$で、$U \times V \subset A^{c}$である。
+実際、$U \times V \subset A^{c}$でないとすると、$U \times V \cap A \neq \emptyset$より、$(z, z) \in U \times V \cap A$が存在する。
+$U \subset V = \emptyset$であったから、$z \in U$, $z \in V$となり矛盾する。
+よって、$A^{c}$はopenである。
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Lemma.
+$(X, \mathcal{O}_{X})$をtopological spacesとする。
+$\sim$を$X$上の同値関係とする。
+以下は同値
+
+1. $X \times X$上$$A := \{ (x_{1}, x_{2}) \in X \times X \mid x_{1} \sim x_{2}\}$$が閉である
+2. $Y := X/\sim$がHausdorff spaces
+
+## proof.
+2は以下と同値である。
+1と以下が同値であることを示す。
+
+* $Y \times Y$上$$B := \{ (y, y) \in Y \times Y \mid y \in Y\}$$が閉である
+
+1を仮定する。
+$B^{c}$が開であることを示す。
+$(y_{1}, y_{2}) \in B^{c}$, $y_{1} \neq y_{2}$である。
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
 
