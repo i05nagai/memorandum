@@ -1,3 +1,8 @@
+---
+layout: math
+title: Theory and Algorithms for Bandit Problems
+---
+
 # 14 Credit and Debt Value Ajustments
 
 ## 14.1 OVERVIEW
