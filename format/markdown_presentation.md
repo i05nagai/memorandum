@@ -2,6 +2,33 @@
 Markdownでプレゼンテーションを行うソフトと使い方
 
 ## Reveal.js + GitHub Pages(jekyll)
+
+最終的なディレクトリの構成は以下のようになる。
+
+```
+.
+├── README.md
+├── asset
+│   └── css
+│       └── theme
+│           └── black.css
+├── reveal.js
+└── sample_slide
+    ├── contents.md
+    ├── index.html
+    ├── reference.md
+    └── title.md
+```
+
+* `reveal.js`
+	* submodule
+* `asset`以下
+	* themeをカスタムしたものやcssなどなどを置く
+* `sample_slide`
+	* スライド置き場
+	* `contents.md`にスライドの内容をかく
+
+
 1. `slides_reveal_js`というディレクトリを作る
 2. gitのrepositoryとして初期化する
 
@@ -26,21 +53,32 @@ Markdownでプレゼンテーションを行うソフトと使い方
 
 5. `sample_slide`に必要なファイルを置く
     * 以下をコピー
-    * [index.html](https://github.com/i05nagai/slides_reveal/blob/master/sample_simple/index.html)
+    * [index.html](https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/index.html)
 		* `reveal.js`を読み込んだりslide表示用の設定が記載されている
-    * [title.md](https://github.com/i05nagai/slides_reveal/blob/master/sample_simple/title.md)
+    * [title.md](https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/title.md)
         * slideの1枚目のタイトル用のmarkdownファイル
 		* titleはcenteringしたりfontのサイズを変えたり、メインの中身と異なる設定をしたい場合があるので分けている
-    * [contents.md](https://github.com/i05nagai/slides_reveal/blob/master/sample_simple/contents.md)
+    * [contents.md](https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/contents.md)
         * 2枚目以降のスライド用のmarkdownファイル
 		slideの区切りは`---`を記載する。
-    * [reference.md](https://github.com/i05nagai/slides_reveal/blob/master/sample_simple/reference.md)
+    * [reference.md](https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/reference.md)
 		* slide最後のreference用。
         趣味で分けているだけなので、分けずに`contents.md`に書いても良い。
+	* OSX (curlがある)の場合
 
     ```bash
     cd sample_slide
-    wget https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/index.md
+    curl https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/index.html -o index.html
+    curl https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/title.md -o title.md
+    curl https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/contents.md -o contents.md
+    curl https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/reference.md -o reference.md
+    ```
+
+	* wgetがある場合
+
+    ```bash
+    cd sample_slide
+    wget https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/index.html
     wget https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/title.md
     wget https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/contents.md
     wget https://raw.githubusercontent.com/i05nagai/slides_reveal/master/sample_simple/reference.md
@@ -54,7 +92,7 @@ Markdownでプレゼンテーションを行うソフトと使い方
     * `{repository_name}`
         * githubのrepositoryの名前に変更
 
-    ```md
+    ```markdown
     # Presentation
     
     See [top page](https://{username}.github.io/{repository_name}/).
@@ -83,7 +121,43 @@ Markdownでプレゼンテーションを行うソフトと使い方
 ![image](image/markdown_presentation_reveal_js_github_pages_settings.png)
 ![image](image/markdown_presentation_reveal_js_github_pages_choose_theme.png)
 
+新しくスライドを作る場合は、`sample_slide`をコピーして、`contents.md`と`title.md`,`reference.md`を変更する。
+
 ## Tips
+
+### ローカルでプレビューしたい
+firefoxの場合は、`index.html`を開けばローカルでpreviewできる。
+Chromeの場合は、ローカルサーバを立ち上げる必要がある。
+`reveal.js`はnode.jsが使えるようになっているので、`npm install`をしておく。
+
+```bash
+cd reveal.js
+npm install
+cd ..
+```
+
+`npm start`で`node.js`を起動できるが、`revea.js`のrootをrepositoryのrootにするために`Gruntfile.js`を編集する必要がある。
+毎回編集するのが面倒な場合は以下のスクリプトを`npm_start.sh`などと名前をつけて、repositoryのトップにおいておけば良い。
+
+```
+#!/bin/bash
+
+set -e
+
+REPLACEE="var root = grunt.option('root') || '.';"
+REPLACER="var root = grunt.option('root') || '..';"
+sed -i '' -e "s/${REPLACEE}/${REPLACER}/" reveal.js/Gruntfile.js
+pushd reveal.js
+npm start
+popd
+```
+
+スクリプトで行っているのは、`reveal.js/Gruntfile.js`のテキストを置換と`npm start`の実行。
+以下のコマンドを実行する。
+
+```
+bash npm_start.sh
+```
 
 ### 文字のサイズとか変更したい
 用意されているthemeだと文字サイズが大きすぎたり全てcenteringされているので、やや気持ち悪い。
