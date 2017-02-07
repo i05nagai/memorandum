@@ -477,8 +477,15 @@ compiler:
 compiler: gcc
 ```
 
+### Private key
+Private keyを追加する方法。
+
+* [squeezing private SSH key into .travis.yml file](https://gist.github.com/lukewpatterson/4242707)
+* [Travis-CI でコミットして GitHub にプッシュする - 公開鍵認証を利用してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/)
+
 
 #### reference
 * [C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
 * [http://packsaddle.org/articles/differences-between-travis-ci-and-circle-ci/ TravisCIとCircleCIでちょっとずつ違うビルド環境の考え方の違い – Saddler - checkstyle to anywhere]
-
+* [Travis CIからgithub.ioにデプロイする方法 - Qiita](http://qiita.com/dora56/items/cafae475daec802b6b8f)
+* [promises-guide/deploy-gh-pages.sh at master · w3ctag/promises-guide · GitHub](https://github.com/w3ctag/promises-guide/blob/master/deploy-gh-pages.sh)
