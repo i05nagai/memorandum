@@ -43,7 +43,7 @@ $$
 
 $$
 \begin{eqnarray}
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         & :=  &
             \mathrm{E}^{Q}
             \left[
@@ -127,7 +127,7 @@ $$
 $K > 0, S_{0} < 0$とすると、$S(T) < 0$より
 
 $$
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         = 0
 $$
 
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{eqnarray}
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         & = &
             \mathrm{E}^{Q}
             \left[
@@ -173,7 +173,7 @@ put optionをput-call parityで計算する場合は、実装上の循環呼び�
 $T < 0$のときは、optionがexpiryしていると考えると以下の定義が妥当。
 
 $$
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         = 0
 $$
 
@@ -185,7 +185,7 @@ volatilityは一般には負にはならない。
 $S_{0} = 0$のときは、$\forall t, S(t) = 0$なので、
 
 $$
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         = e^{-rT} \max(-K, 0.0)
 $$
 
@@ -193,7 +193,7 @@ $$
 $K = 0, S_{0} > 0$のときは、
 
 $$
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         = S_{0}
 $$
 
@@ -201,7 +201,7 @@ $$
 $K = 0, S_{0} < 0$のときは、
 
 $$
-    c_{BS}(0; S_{0}, K, r, T, \sigma)
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
         = 0
 $$
 
@@ -232,48 +232,22 @@ $$
 となる。
 
 
-# Shifted black scholes model
-Shifted Black model, Shifted lognormal model or displaced diffusionともいう。
+## Distributions
 
 $$
-    S_{\theta}(t) = (S(0) - \theta)
-        + \int_{0}^{t} \sigma (S_{\theta}(s) - \theta)\ dW_{s}^{Q}
-$$
-
-微分形でかくと
-
-$$
-    d S_{\theta}(t) = \sigma (S_{\theta}(t) - \theta) dW_{t}^{Q},
-    \quad
-    S(0) = S(0) - \theta
-
-$$
-
-である。
-
-$S_{\theta}(t)$は解析的にとけて、以下の解を持つ。
-
-$$
-    S_{\theta}(t) =  \theta
-        + (S(0) - \theta)\exp
-        \left(
-            - \frac{\sigma^{2}}{2} t
-            + \sigma W_{t}
-k        \right)
-$$
-
-## call option
-
-$$
-    C(S(0), T; K, r)
-        := 
+\begin{eqnarray}
+    V_{BS}(0; S_{0}, K, r, T, \sigma)
+        :=
         \mathrm{E}^{Q}
         \left[
-            e^{-rT}((S(T) - \theta) - (K - \theta))^{+}
+            e^{-rT}(S(T) - K)^{+}
         \right]
+\end{eqnarray}
 $$
 
-## derivative with respect to strike
+とする。
+
+### Derivative with respect to strike
 Black Scholesのcall optionの$K$での微分を考える。
 まず、$d_{1}$の微分を考える。
 
@@ -294,12 +268,12 @@ $$
         \\
         & = &
             - \frac{1}{\sqrt{T}\sigma K},
-    \label{first_derivative_d1}
+    \label{first_derivative_d1_with_respect_to_strike}
     \\
     d_{1}^{\prime\prime}(K)
         & = &
             \frac{1}{\sqrt{T}\sigma K^{2}},
-    \label{second_derivative_d1}
+    \label{second_derivative_d1_with_respect_to_strike}
 \end{eqnarray}
 $$
 
@@ -318,12 +292,12 @@ $$
     d_{2}^{\prime}(K)
         & = &
             - \frac{1}{\sqrt{T}\sigma K},
-    \label{first_derivative_d2}
+    \label{first_derivative_d2_with_respect_to_strike}
     \\
     d_{2}^{\prime\prime}(K)
         & = &
             \frac{1}{\sqrt{T}\sigma K^{2}},
-    \label{second_derivative_d2}
+    \label{second_derivative_d2_with_respect_to_strike}
 \end{eqnarray}
 $$
 
@@ -384,11 +358,11 @@ $$
 
 となる。
 
-call option $c_{BS}(0; S_{0} K, r, T, \sigma)$の微分を考える。
+call option $V_{BS}(0; S_{0} K, r, T, \sigma)$の微分を考える。
 
 $$
 \begin{eqnarray}
-    c_{BS}(0; S_{0} K, r, T, \sigma)
+    V_{BS}(0; S_{0} K, r, T, \sigma)
         & = &
             \mathrm{E}^{Q}
             \left[
@@ -406,7 +380,8 @@ $$
 
 $$
 \begin{eqnarray}
-    \frac{\partial}{\partial K} c_{BS}(0; S_{0} K, r, T, \sigma)
+    \frac{\partial}{\partial K}
+    V_{BS}(0; S_{0} K, r, T, \sigma)
         & = & 
             S\phi(d_{1}(K))d_{1}^{\prime}(K) 
                 - e^{-rT}\Phi(d_{2}(K)) 
@@ -431,7 +406,7 @@ call optionの2階微分は、$$\eqref{first_derivative_of_black_scholes_call_op
 
 $$
 \begin{eqnarray}
-    \frac{\partial^{2}}{\partial K^{2}} c_{BS}(0; S_{0} K, r, T, \sigma)
+    \frac{\partial^{2}}{\partial K^{2}} V_{BS}(0; S_{0} K, r, T, \sigma)
         & = & 
             \frac{\partial^{2}}{\partial K^{2}}(- e^{-rT}\Phi(d_{2}(K)))
         \nonumber
@@ -447,7 +422,7 @@ $$
 
 $$
 \begin{eqnarray}
-    \frac{\partial^{3}}{\partial K^{3}} c_{BS}(0; S_{0} K, r, T, \sigma)
+    \frac{\partial^{3}}{\partial K^{3}} V_{BS}(0; S_{0} K, r, T, \sigma)
         & = & 
             \frac{\partial^{3}}{\partial K^{3}} (-e^{-rT} \phi(d_{2}(K)) d^{\prime}(K))
         \nonumber
@@ -463,6 +438,108 @@ $$
 $$
 
 となる。
+
+### Cumulative Distribution Function under risk neutral measure
+
+$$
+\begin{eqnarray}
+    \Phi_{BS}(s)
+        & := &
+            1
+            +
+            \frac{\partial}{\partial K} 
+            \mathrm{E}^{Q}
+            \left[
+                (S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            1
+            +
+            \frac{\partial}{\partial K} 
+            e^{rT}
+            V_{BS}(0; S_{0}, K, r, T, \sigma)
+        \nonumber
+        \\
+        & = &
+            1
+            +
+            e^{rT}
+            \frac{\partial}{\partial K} 
+            V_{BS}(0; S_{0}, K, r, T, \sigma)
+\end{eqnarray}
+$$
+
+
+### Probability Density Function under risk neutral measure
+
+$$
+\begin{eqnarray}
+    \phi_{BS}(s; S_{0}, K, r, T, \sigma)
+        & := &
+            \frac{\partial^{2}}{\partial K^{2}} 
+            \mathrm{E}^{Q}
+            \left[
+                (S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            \frac{\partial^{2}}{\partial K^{2}} 
+            e^{rT}
+            V_{BS}(0; S_{0}, K, r, T, \sigma)
+        \nonumber
+        \\
+        & = &
+            e^{rT}
+            \frac{\partial^{2}}{\partial K^{2}} 
+            V_{BS}(0; S_{0}, K, r, T, \sigma)
+\end{eqnarray}
+$$
+
+
+# Shifted black scholes model
+Shifted Black model, Shifted lognormal model or displaced diffusionともいう。
+
+$$
+    S_{\theta}(t) = (S(0) - \theta)
+        + \int_{0}^{t} \sigma (S_{\theta}(s) - \theta)\ dW_{s}^{Q}
+$$
+
+微分形でかくと
+
+$$
+    d S_{\theta}(t) = \sigma (S_{\theta}(t) - \theta) dW_{t}^{Q},
+    \quad
+    S(0) = S(0) - \theta
+
+$$
+
+である。
+
+$S_{\theta}(t)$は解析的にとけて、以下の解を持つ。
+
+$$
+    S_{\theta}(t) =  \theta
+        + (S(0) - \theta)\exp
+        \left(
+            - \frac{\sigma^{2}}{2} t
+            + \sigma W_{t}
+k        \right)
+$$
+
+## call option
+
+$$
+    C(S(0), T; K, r)
+        := 
+        \mathrm{E}^{Q}
+        \left[
+            e^{-rT}((S(T) - \theta) - (K - \theta))^{+}
+        \right]
+$$
+
 
 # swaption pricing
 swap rate $S(T)$をBlack-scholes modelとしてswaptionのPricingをする。
@@ -577,9 +654,11 @@ $$
 \end{eqnarray}
 $$
 
-## first derivative with respect to strike
+## Distribution
+
+### derivative with respect to strike
 $$\eqref{def_d1_payers_swaption}$$と$$\eqref{def_d2_payers_swaption}$$を$d_{1}(K)$と$d_{2}(K)$とおく。
-また、payer`s swaptionの価値$$\eqref{def_payers_swaption_value}$$を$V(t, K)$とおく。
+また、payer's swaptionの価値$$\eqref{def_payers_swaption_value}$$を$V(t, K)$とおく。
 
 $$
 \begin{eqnarray}
@@ -640,6 +719,65 @@ $$
     \label{third_derivative_of_payers_swaption_with_respect_to_strike}
 \end{eqnarray}
 $$
+
+### Cumulative Distribution Function under annuity measure
+
+$$
+\begin{eqnarray}
+    \Phi_{BSSwaption}(s)
+        & := &
+            1
+            +
+            \frac{\partial}{\partial K} 
+            \mathrm{E}^{A}
+            \left[
+                (S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            1
+            +
+            \frac{\partial}{\partial K} 
+            A^{-1}
+            V_{payer}(0; S_{0}, K, A, T, \sigma)
+        \nonumber
+        \\
+        & = &
+            1
+            +
+            A^{-1}
+            \frac{\partial}{\partial K} 
+            V_{payer}(0; S_{0}, K, A, T, \sigma)
+\end{eqnarray}
+$$
+
+### Probability Distribution Function under annuity measure
+
+$$
+\begin{eqnarray}
+    \phi_{BSSwaption}(s; S_{0}, K, A, T, \sigma)
+        & := &
+            \frac{\partial^{2}}{\partial K^{2}} 
+            \mathrm{E}^{A}
+            \left[
+                (S(T) - K)^{+}
+            \right]
+        \nonumber
+        \\
+        & = &
+            \frac{\partial^{2}}{\partial K^{2}} 
+            A^{-1}
+            V_{payer}(0; S_{0}, K, A, T, \sigma)
+        \nonumber
+        \\
+        & = &
+            A^{-1}
+            \frac{\partial^{2}}{\partial K^{2}} 
+            V_{payer}(0; S_{0}, K, A, T, \sigma)
+\end{eqnarray}
+$$
+
 
 # Greeks
 black scholes modelのvanilla optionは解析的に求まる。
@@ -898,53 +1036,78 @@ $$
 \begin{eqnarray}
     \frac{\partial}{\partial \sigma} d_{1}(\sigma)
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{\partial}{\partial \sigma}
             \frac{
-                 (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                \ln(S/K)
+                +
+                (r + \frac{1}{2}\sigma^{2})T
             }{
-                \sigma 
+                \sigma
             }
         \nonumber
         \\
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{
-                 \sigma \sigma\sqrt{T}
+                 \sigma \sigma T
                  -
-                 (r + \frac{1}{2}\sigma^{2})\sqrt{T}
+                 \left(
+                     \ln(S/K)
+                     +
+                     +(r + \frac{1}{2}\sigma^{2})T
+                 \right)
             }{
                 \sigma^{2}
             }
         \nonumber
         \\
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{
-                 (\frac{1}{2}\sigma^{2} - r)\sqrt{T}
+                -
+                \ln(S/K)
+                +
+                (\frac{1}{2}\sigma^{2} - r)T
             }{
                 \sigma^{2}
             }
         \\
     \frac{\partial}{\partial \sigma} d_{2}(\sigma)
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{\partial}{\partial \sigma}
             \frac{
-                 (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                \ln(S/K)
+                +
+                 (r - \frac{1}{2}\sigma^{2})T
             }{
                 \sigma^{2}
             }
         \nonumber
         \\
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{
-                -\sigma \sigma\sqrt{T}
-                    - (r - \frac{1}{2}\sigma^{2})\sqrt{T}
+                -\sigma \sigma T
+                -
+                \left(
+                    \ln(S/K)
+                    +
+                    (r - \frac{1}{2}\sigma^{2})T
+                \right)
             }{
                 \sigma^{2}
             }
         \nonumber
         \\
         & = &
+            \frac{1}{\sqrt{T}}
             \frac{
-                 (-\frac{1}{2}\sigma^{2} - r)\sqrt{T}
+                -
+                \ln(S/K)
+                -
+                (\frac{1}{2}\sigma^{2} + r)T
             }{
                 \sigma^{2}
             }
@@ -984,18 +1147,38 @@ $$
         & = &
             S\phi(d_{1}(\sigma)) 
             \left(
+                \frac{1}{\sqrt{T}}
                 \frac{
-                     (\frac{1}{2}\sigma^{2} - r)\sqrt{T}
+                    -
+                    \ln(S/K)
+                    +
+                    (\frac{1}{2}\sigma^{2} - r)T
                 }{
                     \sigma^{2}
                 }
                 - 
+                \frac{1}{\sqrt{T}}
                 \frac{
-                     (-\frac{1}{2}\sigma^{2} - r)\sqrt{T}
+                    -
+                    \ln(S/K)
+                    -
+                    (\frac{1}{2}\sigma^{2} + r)T
                 }{
                     \sigma^{2}
                 }
             \right)
+        \nonumber
+        \\
+        & = &
+            S\phi(d_{1}(\sigma)) 
+            \sqrt{T}
+            \frac{
+                (\frac{1}{2}\sigma^{2} - r)
+                +
+                (\frac{1}{2}\sigma^{2} + r)
+            }{
+                \sigma^{2}
+            }
         \nonumber
         \\
         & = &
@@ -1023,16 +1206,22 @@ $$
         & = &
             \sqrt{T} S \phi^{\prime}(d_{1}(\sigma))
             \frac{
-                (\frac{1}{2} \sigma^{2} - r)\sqrt{T}
+                -
+                \ln(S/K)
+                +
+                (\frac{1}{2}\sigma^{2} - r)T
             }{
-                \sigma^{2}
+                \sigma^{2}\sqrt{T}
             }
     \nonumber
     \\
         & = &
             S \phi^{\prime}(d_{1}(\sigma))
             \frac{
-                (\frac{1}{2} \sigma^{2} - r)T
+                -
+                \ln(S/K)
+                +
+                (\frac{1}{2}\sigma^{2} - r)T
             }{
                 \sigma^{2}
             }
@@ -1244,5 +1433,36 @@ $$
         \\
         & = &
             (T - t)e^{-r(T - t)}K\Phi(d_{2}(r))
+\end{eqnarray}
+$$
+
+
+### Derivative of Vega with respect to strike
+SABR modelの分布の計算で、Greeksのstrikeでの微分がでてくる。
+簡単のため、Vegaを$K$の関数として$\mathrm{Vega}_{\mathrm{BSCall}}(K)$とかく。
+$$\eqref{first_derivative_d1_with_respect_to_strike}$$より、
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial K}
+    \mathrm{Vega}_{\mathrm{BSCall}}(K)
+    & = &
+        \frac{\partial}{\partial K}
+        \left(
+            \sqrt{T} S\phi(d_{1}(K)) 
+        \right)
+    \nonumber
+    \\
+    & = &
+        \sqrt{T} S\phi^{\prime}(d_{1}(K)) 
+        \left(
+            - \frac{1}{\sqrt{T}\sigma K},
+        \right)
+    \nonumber
+    \\
+    & = &
+        -
+        S\phi^{\prime}(d_{1}(K)) 
+        \frac{1}{\sigma K},
 \end{eqnarray}
 $$
