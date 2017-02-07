@@ -520,5 +520,122 @@ $(y_{1}, y_{2}) \in B^{c}$, $y_{1} \neq y_{2}$である。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+
+## example
+位相空間$$(X, \mathcal{O}_{X})$$の部分位相空間$$(A, \mathcal{O}_{A})$$とする。
+* $A$が$X$で開とすると
+    * $B \subset A$が$A$で開ならば、$X$でも開
+* $A$が$X$で開とし、$X$がHausdorffとすると
+    * $B \subset A$が$A$で閉ならば、$X$でも閉
+
+$X := (0, 1)$とし、$$\mathcal{O}_{X} := \{\emptyset, (0, 1/2), \{1/2\}, (0, 1/2], X\}$$とおくと、$(X, \mathcal{O}_{X})$は位相空間となる。
+$A := (1/4, 1/2)$とおくと、$$\mathcal{O}_{A} := \{\emptyset, (1/4, 1/2), A\}$$となる。
+
+$X := (0, 1)$とし、$$\mathcal{O}_{X} := \{\emptyset, (0, 1/4), (0, 1/2), (0, 3/4), X\}$$とおくと、$(X, \mathcal{O}_{X})$は位相空間となる。
+$A := (0, 1/2)$とおくと、$$\mathcal{O}_{A} := \{\emptyset, (0, 1/4), A\}$$となる。
+
+## Lemma.
+$$(X, \mathcal{O}_{X})$$, $$(Y, \mathcal{O}_{Y})$$を位相空間とする。
+$F:X \rightarrow Y$し、$$O_{X} \in \mathcal{O}_{X}$$, $$O_{Y} \in \mathcal{O}_{Y}$$とする。
+
+* $F$が単射とすると$F(O_{X}^{c}) \supset F(O_{X})^{c}$
+* $F$が全射とすると$F(O_{X}^{c}) \subset F(O_{X})^{c}$
+
+## proof.
+$\forall F(a) \in F(O_{X}^{c})$とすると、$a \in O_{X}^{c}$である。
+$F(a) \notin F(O_{X})^{c}$とすると、$F(a) \in F(O_{X})$である。
+よって、ある$b \in O_{X}$が存在して、$F(a) = F(b)$となる。
+$F$が単射より、$a = b$となって矛盾。
+よって、$F(O_{X}^{c}) \supset F(O_{X})^{c}$となる。
+
+$y \in F(O_{X})^{c}$とする。
+全射よりある$x \in X$が存在して$F(x) = y$となる。
+$y \notin F(O_{X}^{c})$とすると、$F(x) \notin F(O_{X}^{c})$である。
+よって、$x \in O_{X}$となるから、$y = F(x) \in F(O_{X})$となって矛盾。
+
+## Lemma.
+$$(X, \mathcal{O}_{X})$$, $$(Y, \mathcal{O}_{Y})$$を位相空間とする。
+$F: X \rightarrow Y$とする。
+
+* $\forall B \subset Y$, $F^{-1}(B)^{c} = F^{-1}(B^{c})$
+
+## proof.
+$\forall a \in F^{-1}(B)^{c}$とすると、$F(a) \notin B$となる。
+よって、$F(a) \in B^{c}$で、$a \in F^{-1}(B^{c})$となる。
+
+## Def(interior, closure)
+$A \subset X$とすると、$A$の内部$\mathrm{Int}A$, $A^{\circ}$を以下で定義する。
+
+$$
+    \mathcal{O}(A) :=
+        \left\{
+            A^{\prime} \in \mathcal{O}_{X} \mid A^{\prime} \subseteq A
+        \right\},
+    \quad
+    A^{\circ} := \bigcup_{A^{\prime} \in \mathcal{O}(A)} A^{\prime}
+$$
+
+$A$の内部は、$A$に含まれる開集合全体の和集合である。
+
+$A$の外部$\overline{A}$を以下で定義する。　
+$\mathcal{U}_{X}$を$X$の閉集合全体とする。
+
+$$
+    \mathcal{U}(A)
+        := 
+        \left\{
+            A^{\prime} \in \mathcal{U}_{X} \mid A \subseteq A^{\prime}
+        \right\},
+    \quad
+    \overline{A} := \bigcap_{A^{\prime} \in \mathcal{A}} A^{\prime}
+$$
+
+$A$の外部は、$A$を含む閉集合全体である。
+
+## Lemma.
+$A \subset X$
+
+* $\overline{A^{c}} = (A^{\circ})^{c}$
+* $(\overline{A})^{c} = (A^{c})^{\circ}$
+
+## proof.
+$\forall B \in \mathcal{O}(A)$について、$B \subset A$より$B^{c} \supset A^{c}$となるから、$B^{c}$は$A$を含む閉集合である。
+
+$$
+\begin{eqnarray}
+    (A^{\circ})^{c}
+        & = &
+            (\bigcup_{B \in \mathcal{O}(A)} B)^{c} 
+    \nonumber
+    \\
+        & = &
+            \bigcap_{B \in \mathcal{O}(A)} B^{c}
+    \nonumber
+    \\
+    & = &
+        \overline{A^{c}}    
+    \nonumber
+\end{eqnarray}
+$$
+
+$\forall B \in \mathcal{U}(A)$について、$B \supset A$より$B^{c} \subset A^{c}$となるから、$B^{c}$は$A$をに含まれる開集合である。
+
+$$
+\begin{eqnarray}
+    (\overline{A})^{c}
+        & = &
+            (\bigcap_{B \in \mathcal{U}(A)} B)^{c} 
+    \nonumber
+    \\
+        & = &
+            \bigcup_{B \in \mathcal{U}(A)} B^{c}
+    \nonumber
+    \\
+    & = &
+        (A^{c})^{\circ}
+    \nonumber
+\end{eqnarray}
+$$
+
 ## Reference
 
