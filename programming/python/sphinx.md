@@ -1,6 +1,52 @@
 # Sphinx
 
 ## Theme
+sphinx_rtd_doc
+
+## autosummary
+
+```
+.. currentmodule:: sphinx
+
+.. autosummary::
+
+   environment.BuildEnvironment
+      util.relative_uri
+```
+
+
+```rest
+.. autosummary::
+   :toctree: DIRNAME
+
+   sphinx.environment.BuildEnvironment
+   sphinx.util.relative_uri
+```
+
+### sphinx-autogen autodocのスタブページを作成
+スタブページとは、autosmmaryされている関数用のページを指す。
+`autosammary`のリンク先を自動で作成することができる。
+
+
+以下のコマンドでカレントディレクトリの`*.rst`ファイルを走査し、中に定義されている`autosammary`テーブルを読み込む。
+
+```
+$ sphinx-autogen -o generated *.rst
+```
+
+`autosummary`の各要素に対応するファイルを`generated`ディレクトリに出力する。
+デフォルトでは以下のような`rst`ファイルが作成される。
+
+```
+sphinx.util.relative_uri
+========================
+
+.. autofunction:: sphinx.util.relative_uri
+```
+
+### Reference
+* [sphinx.ext.autosummary – autodocのサマリーの生成 — Sphinx 1.4.4 ドキュメント](http://docs.sphinx-users.jp/ext/autosummary.html?highlight=autosummary#directive-autosummary)
+
 
 ## autodoc
 Sphinxは汎用的なdocument builderだが、重要な機能としてソースコードのコメントからAPI documentを生成する機能がある。
