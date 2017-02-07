@@ -157,6 +157,20 @@ $$
 \end{eqnarray}
 $$
 
+European put optionはput-call parityにより求める。
+
+$$
+\begin{eqnarray}
+    V_{\mathrm{SABRput}}(S, K, r, T)
+        & := &
+            V_{\mathrm{SABRcall}}(S, K, r, T)
+                - (S - e^{-rT}K)
+    \nonumber
+\end{eqnarray}
+$$
+
+swaptionの場合は、$r=1$として計算する。
+
 # Greeks
 簡単のため、Black Scholes call option formulaのGreeksを以下のようにかく。
 
@@ -552,6 +566,394 @@ $$
 
 ## with respect to underlying
 
+$$
+\begin{eqnarray}
+    A_{1}(K, S; T)
+        & := &
+            (SK)^{(1-\beta)/2}
+            \left(
+                1
+                + \frac{(1 - \beta)^{2}}{24}
+                    \log^{2}\frac{S}{K}
+                + \frac{(1 - \beta)^{4}}{1920}
+                    \log^{4}\frac{S}{K}
+            \right)
+    \nonumber
+    \\
+    A_{2}(K, S; T)
+        & := &
+            z
+    \nonumber
+    \\
+        & = &
+        \frac{\nu}{\alpha}
+            (SK)^{(1-\beta)/2}
+            \log\left( \frac{S}{K} \right),
+    \nonumber
+    \\
+    A_{3}(K, S; T)
+        & := &
+            x(z)
+    \nonumber
+    \\
+        & = &
+            \log
+            \left(
+                \frac{
+                    \sqrt{1 - 2\rho z + z^{2}} + z - \rho
+                }{
+                    1 - \rho
+                }
+            \right)
+    \nonumber
+    \\
+    A_{4}(K, S; T)
+        & := &
+            1
+            +
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{(SK)^{1-\beta}}
+                + \frac{1}{4}
+                    \frac{\rho\beta\nu\alpha}{(SK)^{(1-\beta)/2}}
+                + \frac{2 - 3\rho^{2}}{24}\nu^{2}
+            \right) T
+    \nonumber
+    \\
+	\sigma_{B}(K, S; T)
+        & \approx &
+            \frac{
+                \alpha
+            }{
+                A_{1}(K, S; T)
+            }
+            \frac{A_{2}(K, S; T)}{A_{3}(K, S; T)}
+            A_{4}(K, S; T)
+\end{eqnarray}
+$$
+
+とおく。
+$A_{1}$の微分を考える。
+まず、$A_{11} := (SK)^{(1-\beta)/2}$とおく。
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial S}
+        A_{11}
+        & = &
+            \frac{1 - \beta}{2} K^{(1 - \beta)/2} S^{(-1 - \beta)/2}
+    \nonumber
+    \\
+    \frac{\partial^{2}}{\partial S^{2}}
+        A_{11}
+        & = &
+            \frac{1 - \beta}{2}
+                K^{(1 - \beta)/2}
+                \frac{-1 - \beta}{2}
+                S^{(-3 - \beta)/2}
+    \nonumber
+    \\
+        & = &
+            -\frac{1 - \beta^{2}}{4}
+                K^{(1 - \beta)/2}
+                S^{(-3 - \beta)/2}
+    \nonumber
+\end{eqnarray}
+$$
+
+また、
+
+$$
+\begin{eqnarray}
+    A_{12}
+        & := &
+        \left(
+            1
+            + \frac{(1 - \beta)^{2}}{24}
+                \log^{2}\frac{S}{K}
+            + \frac{(1 - \beta)^{4}}{1920}
+                \log^{4}\frac{S}{K}
+        \right)
+    \\
+    \frac{\partial}{\partial S}
+        A_{12}
+        & = &
+            \frac{(1 - \beta)^{2}}{12S}
+                \log\left( \frac{S}{K} \right)
+                \frac{1}{S}
+            + \frac{(1 - \beta)^{4}}{480S}
+                \log^{3}\left( \frac{S}{K} \right)
+                \frac{1}{S}
+    \nonumber
+    \\
+        & = &
+            \frac{(1 - \beta)^{2}}{12S}
+                \log \left( \frac{S}{K} \right)
+            + \frac{(1 - \beta)^{4}}{480S}
+                \log^{3}\left( \frac{S}{K} \right)
+    \nonumber
+    \\
+    \frac{\partial^{2}}{\partial S^{2}}
+        A_{12}
+        & = &
+            -\frac{(1 - \beta)^{2}}{12S^{2}}
+                \log \left( \frac{S}{K} \right)
+            + \frac{(1 - \beta)^{2}}{12S}
+                \frac{1}{S}
+            - \frac{(1 - \beta)^{4}}{480S^{2}}
+                \log^{3}\left( \frac{S}{K} \right)
+            + \frac{(1 - \beta)^{4}}{480S}
+                3
+                \log^{2}\left( \frac{S}{K} \right)
+                \frac{1}{S}
+    \nonumber
+    \\
+        & = &
+            \frac{(1 - \beta)^{2}}{12S^{2}}
+                \left(
+                    -\log \left( \frac{S}{K} \right)
+                    + 1
+                \right)
+            + \frac{(1 - \beta)^{4}}{480S^{2}}
+                \left(
+                    -\log^{3}\left( \frac{S}{K} \right)
+                    + 3\log^{2}\left( \frac{S}{K} \right)
+                \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+以上より、
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial S}
+        A_{1}(K, S; T) 
+        & = &
+            A_{11}
+                A_{12}^{\prime}
+            +
+            A_{11}^{\prime}
+                A_{12}
+    \nonumber
+    \\
+    \frac{\partial^{2}}{\partial S^{2}}
+        A_{1}(K, S; T) 
+        & = &
+            A_{11}
+                A_{12}^{\prime\prime}
+            +
+            2 A_{11}^{\prime}
+                A_{12}^{\prime}
+            +
+            A_{11}^{\prime\prime}
+                A_{12}
+\end{eqnarray}
+$$
+
+となる。
+$A_{2}$の微分を考える。
+
+$$
+\begin{eqnarray}
+    \frac{\partial }{\partial S}
+    A_{2}(K, S; T)
+        & = &
+        \frac{\nu}{\alpha}
+        \left(
+            \frac{1 - \beta}{2}
+            K^{(1-\beta)/2}
+                S^{(-1-\beta)/2} 
+            \log\left( \frac{S}{K} \right)
+            +
+                (SK)^{(1-\beta)/2} 
+                \frac{1}{S}
+        \right)
+    \nonumber
+    \\
+        & = &
+        \frac{\nu}{\alpha}
+        \left(
+            \frac{1 - \beta}{2}
+                K^{(1-\beta)/2}
+                S^{(-1-\beta)/2} 
+                \log\left( \frac{S}{K} \right)
+            +
+            K^{(1-\beta)/2} 
+                S^{(-1-\beta)/2} 
+        \right)
+    \nonumber
+    \\
+        & = &
+        \frac{\nu}{\alpha}
+            K^{(1-\beta)/2}
+        \left(
+            \frac{1 - \beta}{2}
+                S^{(-1-\beta)/2} 
+                \log\left( \frac{S}{K} \right)
+            +
+            S^{(-1-\beta)/2} 
+        \right)
+    \nonumber
+    \\
+        & = &
+        \frac{\nu}{\alpha}
+            K^{(1-\beta)/2}
+            S^{(-1-\beta)/2} 
+        \left(
+            \frac{1 - \beta}{2}
+            \log\left( \frac{S}{K} \right)
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    \frac{\partial^{2} }{\partial S^{2}}
+    A_{2}(K, S; T)
+        & = &
+            \frac{\nu}{\alpha}
+                K^{(1-\beta)/2}
+            \left(
+                \frac{-1-\beta}{2}
+                    S^{(-3-\beta)/2}
+                    \left(
+                        \frac{1 - \beta}{2}
+                        \log\left( \frac{S}{K} \right)
+                        +
+                        1
+                    \right)
+                +
+                S^{(-1-\beta)/2}
+                    \frac{1 - \beta}{2S}
+            \right)
+    \nonumber
+    \\
+        & = &
+            \frac{\nu}{\alpha}
+                K^{(1-\beta)/2}
+            \left(
+                S^{(-3-\beta)/2}
+                \left(
+                    -
+                    \frac{1 - \beta^{2}}{4}
+                        \log\left( \frac{S}{K} \right)
+                    +
+                    \frac{-1-\beta}{2}
+                \right)
+                +
+                S^{(-3-\beta)/2}
+                    \frac{1 - \beta}{2}
+            \right)
+    \nonumber
+    \\
+        & = &
+            \frac{\nu}{\alpha}
+                K^{(1-\beta)/2}
+                S^{(-3-\beta)/2}
+            \left(
+                -
+                \frac{1-\beta^{2}}{4}
+                    \log\left( \frac{S}{K} \right)
+                - \beta
+            \right)
+\end{eqnarray}
+$$
+
+次に、$A_{3}$の部分を考える。
+簡単のため、$A_{3}(K) := A_{3}(K, S; T)$, $A_{2}(K) := A(K, S; T)$と書く。
+$A_{2}(K)$の$K$での微分を$A_{2}^{\prime}(K)$とかく。
+$A_{2}(K) = z$に注意すると、
+
+
+となる。
+次に、$A_{4}(K, S; T)$の微分を考える。
+
+$$
+\begin{eqnarray}
+    \frac{\partial}{\partial S}
+    A_{4}(K, S; T)
+        & = &
+            \frac{\partial}{\partial S}
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{K^{1-\beta}}
+                    S^{-(1-\beta)}
+                + \frac{1}{4}
+                    \frac{\rho\beta\nu\alpha}{K^{(1-\beta)/2}}
+                    S^{-(1-\beta)/2}
+            \right) T
+    \nonumber
+    \\
+        & = &
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{K^{1-\beta}}
+                    (\beta - 1)
+                    S^{\beta - 2}
+                + \frac{1}{4}
+                    \frac{\rho\beta\nu\alpha}{K^{(1-\beta)/2}}
+                    \frac{(\beta - 1)}{2}
+                    S^{(\beta-3)/2}
+            \right) T
+    \nonumber
+    \\
+        & = &
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{K^{1-\beta}}
+                    S^{\beta - 2}
+                + \frac{1}{8}
+                    \frac{\rho\beta\nu\alpha}{K^{(1-\beta)/2}}
+                    S^{(\beta-3)/2}
+            \right) T (\beta - 1)
+    \nonumber
+    \\
+    \frac{\partial^{2}}{\partial S^{2}}
+    A_{4}(K, S; T)
+        & = &
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{K^{1-\beta}}
+                    (\beta - 2)
+                    S^{\beta - 3}
+                + \frac{1}{8}
+                    \frac{\rho\beta\nu\alpha}{K^{(1-\beta)/2}}
+                    \frac{\beta - 3}{2}
+                    S^{(\beta-5)/2}
+            \right) T (\beta - 1)
+    \nonumber
+    \\
+        & = &
+            \left(
+                \frac{(1 - \beta)^{2}}{24}
+                    \frac{\alpha^{2}}{K^{1-\beta}}
+                    (\beta - 2)
+                    S^{\beta - 3}
+                + \frac{1}{16}
+                    \frac{\rho\beta\nu\alpha}{K^{(1-\beta)/2}}
+                    (\beta - 3)
+                    S^{(\beta-5)/2}
+            \right) T (\beta - 1)
+\end{eqnarray}
+$$
+
+ここで、以下に注意する。
+
+$$
+\begin{eqnarray}
+    \left.
+        \frac{\partial}{\partial \bar{K}} 
+        A_{4}(\bar{K}, S; T)
+    \right|_{\bar{K}=K}
+        & = &
+            \left.
+                \frac{\partial}{\partial \bar{S}} 
+                A_{4}(S, \bar{S}; T)
+            \right|_{\bar{S}=K}
+    \nonumber
+\end{eqnarray}
+$$
+
 ## with respect to strike
 strikeによる微分を考える。
 まず、以下のようにおく。
@@ -687,8 +1089,12 @@ $$
     \frac{\partial^{2}}{\partial K^{2}}
         B_{12}
         & = &
+            \frac{(1 - \beta)^{2}}{12K^{2}}
+                \log \left( \frac{S}{K} \right)
             -\frac{(1 - \beta)^{2}}{12K}
                 (-\frac{1}{K})
+            + \frac{(1 - \beta)^{4}}{480K^{2}}
+                \log^{3}\left( \frac{S}{K} \right)
             - \frac{(1 - \beta)^{4}}{480K}
                 3
                 \log^{2}\left( \frac{S}{K} \right)
@@ -697,8 +1103,15 @@ $$
     \\
         & = &
             \frac{(1 - \beta)^{2}}{12K^{2}}
-            + \frac{(1 - \beta)^{4}}{160K^{2}}
-                \log^{2}\left( \frac{S}{K} \right)
+                \left(
+                    \log \left( \frac{S}{K} \right)
+                    + 1
+                \right)
+            + \frac{(1 - \beta)^{4}}{480K^{2}}
+                \left(
+                    \log^{3}\left( \frac{S}{K} \right)
+                    + 3\log^{2}\left( \frac{S}{K} \right)
+                \right)
     \nonumber
 \end{eqnarray}
 $$
@@ -741,7 +1154,9 @@ $$
         & = &
         \frac{\nu}{\alpha}
         \left(
-            S^{(1-\beta)/2} K^{(-1-\beta)/2} 
+            \frac{1 - \beta}{2}
+            S^{(1-\beta)/2}
+                K^{(-1-\beta)/2} 
             \log\left( \frac{S}{K} \right)
             +
             (SK)^{(1-\beta)/2} 
@@ -753,6 +1168,7 @@ $$
         & = &
         \frac{\nu}{\alpha}
         \left(
+            \frac{1 - \beta}{2}
             S^{(1-\beta)/2} K^{(-1-\beta)/2} 
             \log\left( \frac{S}{K} \right)
             -
@@ -765,6 +1181,7 @@ $$
         \frac{\nu}{\alpha}
             S^{(1-\beta)/2}
         \left(
+            \frac{1 - \beta}{2}
             K^{(-1-\beta)/2} 
                 \log\left( \frac{S}{K} \right)
             -
@@ -777,6 +1194,7 @@ $$
             S^{(1-\beta)/2}
             K^{(-1-\beta)/2} 
         \left(
+            \frac{1 - \beta}{2}
             \log\left( \frac{S}{K} \right)
             -
             1
@@ -789,10 +1207,12 @@ $$
         \frac{\nu}{\alpha}
             S^{(1-\beta)/2}
         \left(
-            \frac{-1-\beta}{2}
+            -
+            \frac{1-\beta^{2}}{4}
                 K^{(-3-\beta)/2} 
                 \log\left( \frac{S}{K} \right)
             +
+            \frac{1-\beta}{2}
             K^{(-1-\beta)/2} 
                 (-\frac{1}{K})
             -
@@ -806,9 +1226,10 @@ $$
             S^{(1-\beta)/2}
             K^{(-3-\beta)/2} 
             \left(
-                \frac{-1-\beta}{2}
+                -
+                \frac{1-\beta^{2}}{4}
                     \log\left( \frac{S}{K} \right)
-                - 1
+                - \frac{1-\beta}{2}
                 -
                 \frac{-1-\beta}{2}
             \right)
@@ -819,10 +1240,10 @@ $$
             S^{(1-\beta)/2}
             K^{(-3-\beta)/2} 
             \left(
-                \frac{-1-\beta}{2}
+                -
+                \frac{1-\beta^{2}}{4}
                     \log\left( \frac{S}{K} \right)
-                +
-                \frac{-1+\beta}{2}
+                + \beta
             \right)
 \end{eqnarray}
 $$
@@ -848,7 +1269,7 @@ $$
             }{
                 \sqrt{1 - 2\rho z + z^{2}}
             }
-            + 1
+            + A_{2}^{\prime}(K)
     \nonumber
     \\
         & = &
@@ -857,7 +1278,7 @@ $$
             }{
                 \sqrt{1 - 2\rho z + z^{2}}
             }
-            + 1
+            + A_{2}^{\prime}(K)
     \nonumber
     \\
     \frac{\partial^{2} }{\partial K^{2}}
@@ -868,7 +1289,7 @@ $$
                     + A_{2}^{\prime}(K)^{2}
                     + zA_{2}^{\prime\prime}(K))
                     \sqrt{1 - 2\rho z + z^{2}}
-                +
+                -
                 (-\rho A_{2}^{\prime}(K)
                     + zA_{2}^{\prime}(K))
                     \frac{1}{2}
@@ -878,6 +1299,7 @@ $$
             }{
                 1 - 2\rho z + z^{2}
             }
+            + A_{2}^{\prime\prime}(K)
     \nonumber
     \\
         & = &
@@ -886,12 +1308,13 @@ $$
                     + A_{2}^{\prime}(K)^{2}
                     + zA_{2}^{\prime\prime}(K))
                     (1 - 2\rho z + z^{2})
-                +
+               - 
                 (-\rho A_{2}^{\prime}(K)
                     + zA_{2}^{\prime}(K))^{2}
             }{
                 (1 - 2\rho z + z^{2})^{3/2}
             }
+            + A_{2}^{\prime\prime}(K)
 \end{eqnarray}
 $$
 
@@ -1051,6 +1474,18 @@ $$
             )
     \nonumber
     \\
+        & = &
+            \alpha
+            (
+            2
+                A_{1}(K)^{-3}
+                A_{1}^{\prime}(K)^{2}
+            -
+            A_{1}(K)^{-2}
+                A_{1}^{\prime\prime}(K)
+            )
+        \nonumber
+        \\
     \frac{\partial}{\partial K}
     \frac{A_{2}(K)}{A_{3}(K)}
         & = &
@@ -1068,43 +1503,41 @@ $$
             A_{2}^{\prime\prime}(K)
                 A_{3}(K)^{-1}
             +
-            2
             A_{2}^{\prime}(K)
                 (-
                 A_{3}(K)^{-2}
                 A_{3}^{\prime}(K)
                 )
             -
-            A_{2}(K)
-                (
-                A_{3}^{\prime\prime}(K)
-                    A_{3}(K)^{-2}
-                +
+            A_{2}^{\prime}(K)
                 A_{3}^{\prime}(K)
-                    (-2
-                    A_{3}(K)^{-3}
-                    A_{3}^{\prime}(K)
-                    )
-                )
+                A_{3}(K)^{-2}
+            -
+            A_{2}(K)
+                A_{3}^{\prime\prime}(K)
+                A_{3}(K)^{-2}
+            + 2
+            A_{2}(K)
+                A_{3}^{\prime}(K)
+                A_{3}(K)^{-3}
+                A_{3}^{\prime}(K)
     \nonumber
     \\
         & = &
             A_{2}^{\prime\prime}(K)
                 A_{3}(K)^{-1}
-            -
-            2
+           -2
             A_{2}^{\prime}(K)
-                A_{3}(K)^{-2}
                 A_{3}^{\prime}(K)
+                A_{3}(K)^{-2}
             -
             A_{2}(K)
-                (
                 A_{3}^{\prime\prime}(K)
-                    A_{3}(K)^{-2}
-                -2
+                A_{3}(K)^{-2}
+            + 2
+            A_{2}(K)
                 A_{3}^{\prime}(K)^{2}
-                    A_{3}(K)^{-3}
-                )
+                A_{3}(K)^{-3}
 \end{eqnarray}
 $$
 
