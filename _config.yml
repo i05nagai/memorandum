@@ -3,7 +3,7 @@ markdown: kramdown
 author: i05nagai
 baseurl: /memorandum
 #currrently github only supports minima
-theme: minima
+theme: jekyll-theme-slate
 ## following items are set by Gihutb io. We cannot override.
 lsi: false
 safe: true
