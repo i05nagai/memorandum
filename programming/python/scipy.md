@@ -39,3 +39,10 @@ norm.pdf(q, loc=0, scale=1)
 from scipy.stats import norm
 norm.cdf(x, loc=0, scale=1)
 ```
+
+## optimize
+
+### L-BFGS-B
+一次元でも初期値と目的関数の入力は、`list`か、`numpy.array`にする。
+Jacobian matrixを返す関数の返り値は`numpy.array`にする。
+
