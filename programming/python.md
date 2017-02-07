@@ -127,8 +127,80 @@ git submodule add https://github.com/i05nagai/mafipy_docs.git docs/build
 git commit -m "Add docs as git submodule"
 ```
 
-
 ### benchmark(asv)
+
+* `results`と`html`はsubmodule管理するので、出力ディレクトリを変更する
+    * `env`も統一感の為同じ位置にかえる
+* resultsとhtmlはsubmodule化する
+    * resultsが増えすぎる場合は
+
+
+```
+pip install asv
+pip install virtualenv
+```
+
+```
+mkdir benchmarks
+cd benchmarks
+asv quickstart
+```
+
+`asv quickstart`で`asv.conf.json`が生成される。
+依存するライブラリなどは、`asv.conf.json`の`matrix`に記載する。
+benchamrkの実行は以下でできる。
+
+```
+asv run
+```
+
+実行結果から、htmlを作成する。
+
+```
+asv publish
+```
+
+localにhtmlサーバをたてし、htmlをpreviewする。
+
+```
+asv preview
+```
+
+```
+cd bechmarks/html
+git init
+git commit --alow-empty -m "Initial commit"
+git add .
+git commit -m "Add first benchmarks"
+git remote add origin https://github.com/i05nagai/mafipy_benchmarks.git
+git push origin master
+```
+
+Settings -> OptionsからGithu pagesのSourceをmaster branchに変更する。
+READMEを以下の形で書いておくと、Github pagesにたどり着けるので楽。
+
+```
+echo "
+mafipy benchmraks
+=================
+
+mafipy benchmarks
+
+reference
+=========
+* Benchmark pages
+
+    * https://i05nagai.github.io/mafipy_benchmarks/
+" > README.rst
+
+```
+
+## circle ci with asv
+
+最初の`asv run`実行時にmachine情報が必要。
+Circle CIにsshでログインして、`asv run`を実行すると、入力画面がでて`~/.asv-machine.json`が生成される。
+この中身をコピーしておき、`asv run`の前に`~/.asv-machine.json`を配置する。
+
 
 ## setup
 
