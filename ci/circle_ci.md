@@ -56,6 +56,45 @@ repositoryのroot directoryに`circle.yml`ファイルを置くことで、設�
 * `experimental:`
 	* 開発中の機能をtestするためのコマンド
 
+#### Timezone
+wikipediaのTZの値が利用できる。
+
+```yml
+machine:
+  timezone:
+    America/Los_Angeles
+```
+
+* [List of tz database time zones - Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+#### Python Version
+Circle CIはpyenvを使っている。
+下記の方法でversion番号を指定できる。
+
+```
+machine:
+  python:
+    version: 2.7.5
+```
+
+#### Deployment
+branchにあわせてdeploy先を変更できる。
+
+```yml
+deployment:
+  production:
+    branch: production
+    commands:
+      - ./deploy_prod.sh
+  staging:
+    branch: master
+    commands:
+      - ./deploy_staging.sh
+```
+
+branchはリストで指定できる。
+
+
 ### Manual build setup 
 
 #### The anatomy of a CircleCI build
@@ -146,6 +185,34 @@ test:
 ## Troubleshooting
 
 ### SSH access to builds
+debugの最も効率的な方法の1つは、sshでCI端末にアクセスし、log fileやprocessを確認することである。
+
+
+<img src="https://circleci.com/docs/assets/img/docs/ssh-build-button-current.png" width="640px">
+
+<img src="https://circleci.com/docs/assets/img/docs/ssh-build-button-rebuild.png" width="640px">
+
+#### Reference
+* [SSH access to builds - CircleCI](https://circleci.com/docs/ssh-build/)
+
+
+## Circle CIのenvironment variableに登録できるサイズの上限
+約130KB。
+環境変数の数にもよる。
+
+### Reference
+* [CircleCIに任意のデータを登録しておく方法 - Qiita](http://qiita.com/minodisk/items/ce488178d74ce63c3e53)
+
+## email notification
+Account settings -> 
+
+* [Streamline Your Inbox with Per-Project Notification Settings - CircleCI](https://circleci.com/blog/streamline-your-inbox-with-per-project-notification-settings/)
+
+## slack integration
+* [Slack Integration - CircleCI](https://circleci.com/blog/slack-integration/)
+
+## githubのprivate key
+
 
 ## reference
 * [CircleCIアンチパターン 2015春 - tehepero note(・ω<)](http://blog.stormcat.io/entry/2015/03/31/154300)
