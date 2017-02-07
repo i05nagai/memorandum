@@ -38,6 +38,25 @@ project(<PROJECT-NAME>
 ## pre compile header
 [pch](http://qiita.com/mrk_21/items/264f6135679239ff018a)
 
+## debug build
+* 指定なし
+    * 初期状態で CMAKE_BUILD_TYPE シンボルを書き換えないとこの状態
+    * 一度でも他の値で書き換えるとずっと記憶するので、あらためて指定なしにしたい場合は -DCMAKE_BUILD_TYPE= とする
+* Debug
+    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_DEBUG / CMAKE_CXX_FLAGS_DEBUG の値も使われる
+* Release
+    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_RELEASE / CMAKE_CXX_FLAGS_RELEASE の値も使われる
+* RelWithDebInfo
+    * 最適化しつつデバッグ用情報も付加するためのモード
+    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_RELWITHDEBINFO / CMAKE_CXX_FLAGS_RELWITHDEBINFO の値も使われる
+* MinSizeRel
+    * 実行ファイルのサイズを一番小さくするためのモード
+    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_MINSIZEREL / CMAKE_CXX_FLAGS_MINSIZEREL の値も使われる
+
+
+
+* [CMake 簡易まとめ - Qiita](http://qiita.com/janus_wel/items/a673793d448c72cbc95e)
+
 ## reference
 
 * [便利なコマンド](http://qiita.com/mrk_21/items/5e7ca775b463a4141a58)
