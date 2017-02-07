@@ -252,15 +252,26 @@ nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 ```
 
 ## Tips
+
 ### cinkeys
 vimのindentの設定をするのもの。
 `help cinkeys-format`で設定方法が見られる。
--
-
 
 * [Vimで心地良い自動インデント設定を書くためのポイント9個 - TIM Labs](http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html)
 
-### Operator Pending Mode
+### 編集中のファイルのディレクトリを開く
+`%:p:h`で編集のファイルのディレクトリとなる。
+
+```
+:e %:p:h
+```
+
+### filename modifier
+`%:p`とかの`:p`はfilename-modifiersという。
+
+```
+:help filename-modifiers
+```
 
 ### text object
 
