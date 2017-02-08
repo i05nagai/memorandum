@@ -1,6 +1,8 @@
 ---
-layout: math
-title: Interest Rate Modeling 1
+layout: slate_page
+t1itle: Interest Rate Modeling 1
+book_title: Interest Rate Modeling
+book_chapter: 7
 ---
 
 # 7 Vanilla Models with Local Volatility

@@ -1,6 +1,7 @@
 ---
-layout: math
 title: Theory and Algorithms for Bandit Problems
+book_title: Theory and Algorithms for Bandit Problems
+book_chapter: 8
 ---
 
 # 8 連続腕バンディットとベイズ最適化

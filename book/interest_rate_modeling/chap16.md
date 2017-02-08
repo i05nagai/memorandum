@@ -1,6 +1,8 @@
 ---
-layout: math
+layout: slate_page
 title: Interest Rate Modeling 3
+book_title: Interest Rate Modeling
+book_chapter: 16
 ---
 
 # TOC

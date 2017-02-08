@@ -1,6 +1,13 @@
+---
+title: 5 Netting, Close-out and Related Aspects
+book_title: The XVA Challenges
+book_chapter: 5
+---
+
 # 5 Netting, Close-out and Related Aspects.
 
 ## 5.1 Introduction
+
 ### 5.1.1 Overview
 　この章では、Nettingとclose-outについて述べる。
 * Nettingは、Counterparty riskを軽減する伝統的な方法

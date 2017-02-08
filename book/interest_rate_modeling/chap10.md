@@ -1,5 +1,5 @@
 ---
-layout: math
+layout: slate_page
 title: Interest Rate Modeling 2
 ---
 

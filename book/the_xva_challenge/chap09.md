@@ -1,3 +1,9 @@
+---
+title: 9 Counterparty Risk Intermediation
+book_title: The XVA Challenges
+book_chapter: 9
+---
+
 # 9 Counterparty Risk Intermediation.
 
 ## 9.1 INTROUCTION

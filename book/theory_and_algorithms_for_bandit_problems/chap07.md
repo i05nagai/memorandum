@@ -1,6 +1,7 @@
 ---
-layout: math
 title: Theory and Algorithms for Bandit Problems
+book_title: Theory and Algorithms for Bandit Problems
+book_chapter: 7
 ---
 
 # Chapter 7. 線形モデル上のバンディット問題

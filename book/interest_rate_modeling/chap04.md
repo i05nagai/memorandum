@@ -1,6 +1,8 @@
 ---
-layout: math
+layout: slate_page
 title: Interest Rate Modeling 1
+book_title: Interest Rate Modeling
+book_chapter: 4
 ---
 
 # 4

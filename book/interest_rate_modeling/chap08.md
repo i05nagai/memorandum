@@ -1,6 +1,8 @@
 ---
-layout: math
+layout: slate_page
 title: Interest Rate Modeling 1
+book_title: Interest Rate Modeling
+book_chapter: 8
 ---
 
 # 8 Vanilla Models with Stochastic Volatility I
