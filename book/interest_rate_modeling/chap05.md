@@ -1,6 +1,8 @@
 ---
 layout: math
 title: Interest Rate Modeling 1
+book_title: Interest Rate Modeling
+book_chapter: 4
 ---
 
 # 5 Fixed Income Instruments

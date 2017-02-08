@@ -1,6 +1,7 @@
 ---
-layout: math
 title: Theory and Algorithms for Bandit Problems
+book_title: Theory and Algorithms for Bandit Problems
+book_chapter: 1
 ---
 
 # 1 バンディット問題とは

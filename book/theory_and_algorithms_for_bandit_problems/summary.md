@@ -1,6 +1,6 @@
 ---
-layout: math
-title: Theory and Algorithms for Bandit Problems
+title: Summary
+book_title: Theory and Algorithms for Bandit Problems
 ---
 
 

@@ -4,6 +4,19 @@ author: i05nagai
 baseurl: /memorandum
 #currrently github only supports minima
 theme: jekyll-theme-slate
+
+defaults:
+  -
+    scope:
+      path: book
+    values:
+      categories: [book]
+  -
+    scope:
+      path: ""
+    values:
+      layout: slate_page
+
 ## following items are set by Gihutb io. We cannot override.
 lsi: false
 safe: true

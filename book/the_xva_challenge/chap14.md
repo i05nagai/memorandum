@@ -1,6 +1,7 @@
 ---
-layout: math
-title: Theory and Algorithms for Bandit Problems
+title: 14 Credit and Debt Value Ajustments
+book_title: The XVA Challenges
+book_chapter: 14
 ---
 
 # 14 Credit and Debt Value Ajustments

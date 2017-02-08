@@ -1,5 +1,5 @@
 ---
-layout: math
+layout: slate_book_list
 ---
 
 # Index

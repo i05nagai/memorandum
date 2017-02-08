@@ -1,6 +1,7 @@
 ---
-layout: math
 title: Theory and Algorithms for Bandit Problems
+book_title: Theory and Algorithms for Bandit Problems
+book_chapter: 3
 ---
 
 # 3 確率的バンディット問題の方策

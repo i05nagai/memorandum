@@ -1,4 +1,8 @@
-
+---
+title: chapter4
+book_title: The XVA Challenges
+book_chapter: 4
+---
 
 ## 4.1 BackGround
 Counterparty riskとは、financial contractの相手方が契約上の合意を満たすことができない場合に伴うリスクのことである。
