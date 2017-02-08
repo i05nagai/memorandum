@@ -1,0 +1,35 @@
+{% assign book_pages = "" | split: "!" %}
+
+{% for page in site.pages %}
+  {% if page.categories contains "book" %}
+    {% assign book_pages = book_pages | push: page %}
+  {% endif %}
+{% endfor %}
+
+{% assign book_groups = book_pages | group_by: "book_title" %}
+
+<ul>
+  {% for book_group in book_groups %}
+    {% if book_group.name != "" %}
+      <li>
+        {{ book_group.name }}
+        <ul>
+        {% for book_page in book_group.items | sort:"book_chapter" %}
+          <li>
+            <a href="{{ site.url }}{{ book_page.url | relative_url }}">
+              {% if book_page.book_chapter %}
+                Chapter {{ book_page.book_chapter }}
+                {% if book_page.book_section %}
+                  Section {{ book_page.book_section }}
+                {% endif %}
+              {% else %}
+                {{ book_page.title }}
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
