@@ -12,6 +12,11 @@ defaults:
       categories: [book]
   -
     scope:
+      path: vim
+    values:
+      categories: [vim]
+  -
+    scope:
       path: ""
     values:
       layout: slate_page
