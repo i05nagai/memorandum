@@ -1,5 +1,5 @@
 ---
-layout: math
+layout: slate_page
 title: Matrix Algebra from a Statisticians perspective
 ---
 
