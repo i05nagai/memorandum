@@ -12,6 +12,11 @@ defaults:
       categories: [book]
   -
     scope:
+      path: thesis
+    values:
+      categories: [thesis]
+  -
+    scope:
       path: vim
     values:
       categories: [vim]

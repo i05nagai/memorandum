@@ -1,0 +1,15 @@
+{% assign categories = "" | split: "!" %}
+{% for site_page in site.pages %}
+  {% for category in site_page.categories %}
+    {% assign categories = categories | push: category %}
+  {% endfor %}
+{% endfor %}
+{% assign categories = categories | uniq | sort %}
+
+<h2><a href="{{ dummy | relative_url }}book">book</a><h2>
+
+{% for category in categories %}
+  {% if category != "book" %}
+    {% include make_category_list.html category=category %}
+  {% endif %}
+{% endfor %}
