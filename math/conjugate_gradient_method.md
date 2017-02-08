@@ -1,5 +1,4 @@
 ---
-layout: math
 title: Conjugate Gradient Method
 ---
 
