@@ -1,4 +1,5 @@
 ---
+layout: slate_categories_list
 ---
 
 # Top
