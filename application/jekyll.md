@@ -149,6 +149,20 @@ github上でURLが`/repository_name/js/main.js`と解釈される。
 * [baseurl / base-url: GitHub Pages Project Pages - Relative Links Fail · Issue #332 · jekyll/jekyll](https://github.com/jekyll/jekyll/issues/332)
 * [Using Jekyll as a static site generator with GitHub Pages - User Documentation](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
 
+## Tips
+
+### GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data
+jekyll用にGithubのpersonal access tokenを設定する必要がある。
+
+1. GitHubの`Settings`->`personal access token` -> `Generate new token`
+2. `public_repo`にcheckをいれてtokenを作成
+3. 作成したtokenを`export JEKYLL_GITHUB_TOKEN=<token>`で環境変数に設定する。
+
+### Github Pagesで使えるMetadata一覧
+
+* [Repository metadata on GitHub Pages - User Documentation](https://help.github.com/articles/repository-metadata-on-github-pages/)
+
+
 
 ## Reference
 * [30分のチュートリアルでJekyllを理解する](http://melborne.github.io/2012/05/13/first-step-of-jekyll/)
