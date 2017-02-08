@@ -1,5 +1,4 @@
 ---
-layout: math
 ---
 
 * [Bachelier model](./bachelier)
