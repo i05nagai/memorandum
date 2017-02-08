@@ -1,53 +1,53 @@
 # batch
 
-## bat�t�@�C���̃p�X�̎擾
+## batファイルのパスの取得
 ```cmd
 echo %~dp0
 ```
 
-## ��s�ŕ����R�}���h
+## 一行で複数コマンド
 ```cmd
 command1 & command2
 ```
-�V���[�g�J�b�g��cmd�v�����v�g��ݒ肷��Ƃ��A���L�̂悤�ɃR�}���h�����������s�����V���[�g�J�b�g��ݒ�ł���B
+ショートカットにcmdプロンプトを設定するとき、下記のようにコマンドをいくつか実行したショートカットを設定できる。
 ```
 %comspec% /k "cmd1 & cmd2"
 ```
 
-## �t�@�C���ړ�
+## ファイル移動
 `move from to`
 
-## �Ȃ�����
-* �z��
-* �n�b�V��
+## ないもの
+* 配列
+* ハッシュ
 
-## ���΃p�X
-bat���̑��΃p�X�́A���s�ꏊ����̑��΃p�X�ŁAbat�t�@�C���̏ꏊ����ł͂Ȃ��B
-## �R�}���h�v�����v�g�̃z�[���f�B���N�g���̐ݒ�
-�V���[�g�J�b�g��cmd���N������ꍇ�ɁA��ƃt�H���_�Ɏw�肵���f�B���N�g�����z�[���f�B���N�g���ɂȂ�B
+## 相対パス
+bat内の相対パスは、実行場所からの相対パスで、batファイルの場所からではない。
+## コマンドプロンプトのホームディレクトリの設定
+ショートカットでcmdを起動する場合に、作業フォルダに指定したディレクトリがホームディレクトリになる。
 
-## �Ǘ��҂Ƃ��Ď��s
-* cmd��bat�����s����ꍇ�ɁA�v���p�e�B->�V���[�g�J�b�g�^�u->�ڍאݒ�->�Ǘ��҂Ƃ��Ď��s�Ƀ`�F�b�N�ŊǗ��҂Ƃ��Ď��s�\�B
-* �R�}���h��I�����Ď��s���鎞�ɁACtrl+Shift+Enter
+## 管理者として実行
+* cmdやbatを実行する場合に、プロパティ->ショートカットタブ->詳細設定->管理者として実行にチェックで管理者として実行可能。
+* コマンドを選択して実行する時に、Ctrl+Shift+Enter
 
-## %�̈���
-bat�t�@�C������`%`�𕶎���Ƃ��ēn�������ꍇ�́A`%%`�Ƃ���B
-�ϐ���`%%`�Ƃ���̂͂��̂��߁B
+## %の扱い
+batファイル内で`%`を文字列として渡したい場合は、`%%`とする。
+変数に`%%`とつけるのはそのため。
 
 ## comment
 ```bat
 rem comment here
 ```
 
-## �ϐ��̐錾
-`=`�̑O��ɋ󔒂͓���Ȃ��B�ϐ��ɏ����͑���ł��Ȃ��B
+## 変数の宣言
+`=`の前後に空白は入れない。変数に小数は代入できない。
 ```bat
-SET �ϐ���=[������]
-SET /A �ϐ���=[����]
+SET 変数名=[文字列]
+SET /A 変数名=[数式]
 ```
 
-### ���[�J���ϐ�
-`setlocal`����`endlocal`�܂ŗL���ȃ��[�J���ϐ�
+### ローカル変数
+`setlocal`から`endlocal`まで有効なローカル変数
 ```bat
 setlocal
     set num=1
@@ -55,26 +55,26 @@ setlocal
 endlocal
 ```
 
-## ������
-������̒��������߂�R�}���h�͂Ȃ��B
+## 文字列
+文字列の長さを求めるコマンドはない。
 ```bat
 SET str1=abc
 SET str2=de f
 SET str2= g hi
-rem ����
+rem 結合
 SET str1=aaa
 SET str2=bbb
-SET str3=%str1%%str2%              �c aaabbb
+SET str3=%str1%%str2%              … aaabbb
 ```
-������̐؂�o��
+文字列の切り出し
 ```bat
-:: �؂�o��
+:: 切り出し
 SET str1=abcd
-SET str2=%str1:~0,2%               �c ab�i1���ځi�I�t�Z�b�g0�j����2�����j
+SET str2=%str1:~0,2%               … ab（1桁目（オフセット0）から2文字）
 ```
 
 ## redirect
-`>>`�ŒǋL�B
+`>>`で追記。
 ```bat
 input.bat > output.txt
 input.bat >> output.txt
@@ -82,13 +82,13 @@ input.bat >> output.txt
 
 ## alias
 ```bat
-doskey �}�N����=�e�L�X�g
+doskey マクロ名=テキスト
 
 
-## for���Aif���𕡐��s�ɏ����Ƃ��̒���
+## for文、if文を複数行に書くときの注意
 http://tounderlinedk.blogspot.jp/2011/01/if-windowsbatcmd.html
 
-## �����R�[�h�̕ϊ�
+## 文字コードの変換
 ```bat
 chcp charcter_code
 ```
@@ -103,49 +103,49 @@ chcp charcter_code
     * 51932    euc-jp        EUC Japanese
     * 65001    utf-8         Unicode (UTF-8)
 
-## �V���{���b�N�����N�̍쐬
-cmd�ňȉ��̃R�}���h�����s�B
+## シンボリックリンクの作成
+cmdで以下のコマンドを実行。
 ```cmd
 mklink link target
 mklink path\to\link path\to\target
 ```
-* link:�V���{���b�N�����N��
-* �����N���Q�Ƃ���p�X
-* `/D`�Ńf�B���N�g���ւ̃����N
-* `/H`�Ńn�[�h�����N
-* `/J`�f�B���N�g���W�����N�V����
+* link:シンボリックリンク名
+* リンクが参照するパス
+* `/D`でディレクトリへのリンク
+* `/H`でハードリンク
+* `/J`ディレクトリジャンクション
 
-## �t�@�C���ꗗ
+## ファイル一覧
 ```bat
 @echo off
-echo -----------------------�t���p�X
+echo -----------------------フルパス
 for %%A in (*.txt) do echo %%~fA
-echo -----------------------�h���C�u��
+echo -----------------------ドライブ名
 for %%A in (*.txt) do echo %%~dA
-echo -----------------------�e�p�X
+echo -----------------------親パス
 for %%A in (*.txt) do echo %%~pA
-echo -----------------------�t�@�C����
+echo -----------------------ファイル名
 for /F %%A in ('dir /b *.txt') do echo %%A
-echo -----------------------�t�@�C�����i�g���q�����j
+echo -----------------------ファイル名（拡張子抜き）
 for %%A in (*.txt) do echo %%~nA
-echo -----------------------�g���q
+echo -----------------------拡張子
 for %%A in (*.txt) do echo %%~xA
 ```
 
-## �t�@�C���폜
-�f�B���N�g���̍폜�͂ł��Ȃ��B
+## ファイル削除
+ディレクトリの削除はできない。
 ```bat
 del (option) [file / directory] 
 ```
 
-## �f�B���N�g���폜
+## ディレクトリ削除
 ```bat
 rmdir directory
 ```
 * `/s`
-    * �t�@�C����T�u�f�B���N�g�����܂߂č폜����
+    * ファイルやサブディレクトリも含めて削除する
 
-## for��
+## for文
 ```bat
 for %variable in (<pattern>) do <command-line>
 for /D %variable in (<pattern>) do <command-line>
@@ -154,36 +154,36 @@ for /L %variable in (<start>,<step>,<end>) do <command-line>
 for /F ["<options>"] %variable in (<pattern>) do <command-line>
 ```
 * %variable
-    * �uvariable�v�ɂ�1�����̉p�������w�肵�܂��B���̕ϐ��́A���L�� <command-line> �ŗp���邱�Ƃ��ł��A�g�p����Ɨ񋓒��̃t�@�C�����ɒu���������܂��B�啶���E����������ʂ���܂��B
+    * 「variable」には1文字の英数字を指定します。この変数は、下記の <command-line> で用いることができ、使用すると列挙中のファイル名に置き換えられます。大文字・小文字が区別されます。
 
-�����s�ɏ����Ƃ���`()`�ň͂ށB
+複数行に書くときは`()`で囲む。
 ```bat
 foir %variable in (<pattern>) do (
 
 )
 ```
-����Ƃ���`)`�͍s���ɒu���B
+閉じるときの`)`は行頭に置く。
 
-## if��
+## if文
 ```bat
-IF ���� (
-    ����
+IF 条件 (
+    処理
 ) ELSE (
-    ����
+    処理
 )
 ```
-����
+条件
 ```bat
-IF [NOT] ERRORLEVEL �ԍ� �R�}���h
-IF [NOT] ������1==������2 �R�}���h
-IF [NOT] EXIST �t�@�C���� �R�}���h
-IF ������1 ��r���Z�q ������2 �R�}���h
+IF [NOT] ERRORLEVEL 番号 コマンド
+IF [NOT] 文字列1==文字列2 コマンド
+IF [NOT] EXIST ファイル名 コマンド
+IF 文字列1 比較演算子 文字列2 コマンド
 ```
 
-��r���Z�q
-* EQU - ������
-* NEQ - �������Ȃ�
-* LSS - ��菬����
-* LEQ - �ȉ�
-* GTR - ���傫��
-* GEQ - �ȏ�
+比較演算子
+* EQU - 等しい
+* NEQ - 等しくない
+* LSS - より小さい
+* LEQ - 以下
+* GTR - より大きい
+* GEQ - 以上

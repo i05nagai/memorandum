@@ -1,5 +1,6 @@
 ---
 layout: slate_book_list
+title: book
 ---
 
 # Index

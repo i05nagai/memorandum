@@ -1,19 +1,19 @@
 #gvim
 
-##�C���X�g�[��(Win7)
-VimShell��Vimfiler��unix�R�}���h���g�p����̂ŁAcygwin��MSYS���C���X�g�[������K�v������B
-cygwin�͏d���̂ŁAMSYS�̃C���X�g�[��������B
+##インストール(Win7)
+VimShellやVimfilerでunixコマンドを使用するので、cygwinかMSYSをインストールする必要がある。
+cygwinは重いので、MSYSのインストールをする。
 
-### MSYS�̃C���X�g�[��(32bit)
-1. `http://sourceforge.net/projects/mingw/files/`���A`mingw-get-setup.exe`���_�E�����[�h�B
-2. ���s����ƁA�C���X�g�[������p�b�P�[�W�̑I����ʂɂȂ�B
-3. `MSYS Basic System`�ƓK����gcc�R���p�C��(64bit�̏ꍇ�́A64bit��gcc�R���p�C��������̂ŕs�v�H�j��I�����A���͂��D�ނŃC���X�g�[������B
-4. MSYS�̃C���X�g�[�����bin�t�H���_��PATH��ʂ��B
-    * �C���X�g�[���悪`C:\MinGW`�Ȃ�A`C:\MinGW\msys\1.0\bin`
+### MSYSのインストール(32bit)
+1. `http://sourceforge.net/projects/mingw/files/`より、`mingw-get-setup.exe`をダウンロード。
+2. 実行すると、インストールするパッケージの選択画面になる。
+3. `MSYS Basic System`と適当にgccコンパイラ(64bitの場合は、64bitのgccコンパイラを入れるので不要？）を選択し、他はお好むでインストールする。
+4. MSYSのインストール先のbinフォルダにPATHを通す。
+    * インストール先が`C:\MinGW`なら、`C:\MinGW\msys\1.0\bin`
 
-### MSYS�̃C���X�g�[��(64bit)
-MSYS32bit�̃C���X�g�[���ɉ�����64bit��MinGW64���C���X�g�[������B
-`vimproc`��`make-mingw64.mak`�ł́AMinGW64��gcc���ĂԂ悤�ɂȂ��Ă���̂ŁA���L��ݒ���L�q���ANeoBundleInstall��OK
+### MSYSのインストール(64bit)
+MSYS32bitのインストールに加えて64bitのMinGW64をインストールする。
+`vimproc`の`make-mingw64.mak`では、MinGW64のgccを呼ぶようになっているので、下記を設定を記述し、NeoBundleInstallでOK
 ```vim
 		NeoBundle 'Shougo/vimproc', {
 		  \ 'build' : {
@@ -24,20 +24,20 @@ MSYS32bit�̃C���X�g�[���ɉ�����64bit��MinGW64���C���X�g�[������B
 		  \ },
 		\ }
 ```
-1. ���L���64bit�C���X�g�[��`mingw-w64-install.exe`��DL����B
+1. 下記より64bitインストーラ`mingw-w64-install.exe`をDLする。
     `http://sourceforge.net/projects/mingw-w64/`
-2. �N�������architecture�̑I�����ł�̂ŁA�K���ɑI�����A`C:\MinGW64`�ɃC���X�g�[������B�i�ǂ��ł��ǂ����j
-    * version�͍ŐV
-    * cpu architecture��`x86_64`��I��
-    * thread��posix
-    * exception��`SEF`��I���Bwin64���Ƒ����炵���B
-    * build version�͓K����1��I���B
-3. �C���X�g�[��������������A`C:\MinGW64\mingw64\bin`�Ƀp�X��ʂ��B���̂Ƃ��AMSYS�̂��̂���Ƀp�X��ʂ��B
+2. 起動するとarchitectureの選択がでるので、適当に選択肢、`C:\MinGW64`にインストールする。（どこでも良いが）
+    * versionは最新
+    * cpu architectureは`x86_64`を選択
+    * threadはposix
+    * exceptionは`SEF`を選択。win64だと早いらしい。
+    * build versionは適当に1を選択。
+3. インストールが完了したら、`C:\MinGW64\mingw64\bin`にパスを通す。このとき、MSYSのものより先にパスを通す。
 
-## VimShell�̃C���X�g�[��
+## VimShellのインストール
 
-##NeoBundle�̃C���X�g�[��
-Git�̓C���X�g�[���ς݂̑O��B
+##NeoBundleのインストール
+Gitはインストール済みの前提。
     mkdir %userprofile%\.vim\bundle
     cd %userprofile%\.vim\bundle
     git clone git://github.com/Shougo/neobundle.vim
@@ -45,37 +45,37 @@ Git�̓C���X�g�[���ς݂̑O��B
 
 ## option
 
-##�J���[�X�L�[�}�ɂ���
-�Ƃ肠�����f�t�H���g�̃J���[�X�L�[�}����悳���Ȃ��̂�I�ԁB
+##カラースキーマについて
+とりあえずデフォルトのカラースキーマからよさげなものを選ぶ。
 http://nanasi.jp/colorscheme/default_install.html
 
-�������߂�`colorscheme desert`
+おすすめは`colorscheme desert`
 
 ### wombat
-�ǉ��ł����Ȃ�ȉ����ǂ��B
+追加でいれるなら以下が良い。
 http://www.vim.org/scripts/script.php?script_id=1778
 
-1. ��L�T�C�g����`wombat.vim`��DL
-2. `vim73-kaoriya-win64\vim73\colors`�ɔz�u�B
-3. vimrc��`colorscheme wombat`
+1. 上記サイトから`wombat.vim`をDL
+2. `vim73-kaoriya-win64\vim73\colors`に配置。
+3. vimrcに`colorscheme wombat`
 
-##gvimrc��vimrc�̏ꏊ
-�ȉ��̃R�}���h�ł����ꂩ�Ŋm�F�ł���B
-windows�̏ꍇ�́A`%userprofile%`�Ɍ��т��Ă�̂����B
-windows�̏ꍇ�A�V���{���b�N�����N�����Γǂݍ���ł����B�i�V���[�g�J�b�g�͂��߁j
+##gvimrcとvimrcの場所
+以下のコマンドでいずれかで確認できる。
+windowsの場合は、`%userprofile%`に結びついてるのかも。
+windowsの場合、シンボリックリンクを作れば読み込んでくれる。（ショートカットはだめ）
 ```vimrc
 :echo $HOME
 :echo $VIM
 ```
 
 
-## �t�H���g
-vimrc�Ɉȉ����L�ڂ���ΐݒ�\�B
-Ricty�t�H���g���������߁B
+## フォント
+vimrcに以下を記載すれば設定可能。
+Rictyフォントがおすすめ。
 ```vim
-"���p�����̐ݒ�
+"半角文字の設定
 set guifont=Ricty\ Discord:h12
-"�S�p�����̐ݒ�
+"全角文字の設定
 set guifontwide=Ricty\ Discord:h12
 ```
 

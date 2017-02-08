@@ -1,8 +1,7 @@
-#github markdown rendering engine
-markdown: kramdown
+# github markdown rendering engine
 author: i05nagai
+title: memo
 baseurl: /memorandum
-#currrently github only supports minima
 theme: jekyll-theme-slate
 
 defaults:
@@ -17,7 +16,7 @@ defaults:
     values:
       layout: slate_page
 
-## following items are set by Gihutb io. We cannot override.
+# following items are set by Gihutb io. We cannot override.
 lsi: false
 safe: true
 incremental: false
@@ -27,4 +26,4 @@ gist:
   noscript: false
 kramdown:
   math_engine: mathjax
-exclude: [application, format, db, gpu, os, programming, shell, vim]
+markdown: kramdown
