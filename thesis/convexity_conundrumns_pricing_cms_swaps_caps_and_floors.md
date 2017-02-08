@@ -1,5 +1,4 @@
 ---
-layout: math
 title: "Convexity Conundrums: Pricing CMS Swaps, Caps, and Floors"
 ---
 

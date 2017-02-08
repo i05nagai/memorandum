@@ -1,5 +1,4 @@
 ---
-layout: math
 title: "A note on a simple, accurate formula to compute implied standard deviations"
 ---
 

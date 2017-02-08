@@ -1,5 +1,4 @@
 ---
-layout: math
 title: "Techniques for Scientific C++"
 ---
 
