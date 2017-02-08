@@ -1,4 +1,4 @@
 #for jekyll
 /Gemfile.lock
-/_*
+/_site
 /.rbenv-*
