@@ -282,3 +282,14 @@ vimのindentの設定をするのもの。
 * [vim commands and piping](http://seejohncode.com/2014/01/27/vim-commands-piping/)
 * [Route 477](http://route477.net/w/VimMemo.html)
 
+## 挿入モードからノーマルモードへの復帰
+| キーストローク | 結果                         |
+|----------------|------------------------------|
+| <Esc>          | ノーマルモードに切り替え     |
+| <C-[>          | ノーマルモードに切り替え     |
+| <C-o>          | 挿入ノーマルモードに切り替え |
+
+* [挿入ノーマルモード - Qiita](http://qiita.com/takasianpride/items/6900eebb7cde9fbb5298)
+
+## 挿入ノーマルモード
+Normal modeでのコマンドを1つ実行して、insert modeに戻る。
