@@ -12,6 +12,11 @@ defaults:
       categories: [book]
   -
     scope:
+      path: machine_learning
+    values:
+      categories: [machine_learning]
+  -
+    scope:
       path: math
     values:
       categories: [math]
