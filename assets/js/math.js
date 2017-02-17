@@ -12,6 +12,11 @@
         formatNumber: function (n) {
           return n;
         }
+      },
+      Macros: {
+        diag: '\\mathop{\\mathrm{diag}}\\nolimits',
+        argmax: '\\mathop{\\mathrm{argmax}}\\limits',
+        argmin: '\\mathop{\\mathrm{argmin}}\\limits',
       } 
     }
   });
