@@ -29,6 +29,28 @@ $$
 が成り立つことを言う。
 $N$変数の場合は、$X_{1}, \ldots, X_{N}$が$Z$の下条件付き独立であるとは、
 
+$$
+    \forall n = 2, \ldots, N,
+    \quad
+    0 \le \forall i_{1} \le \ldots \le \forall i_{n} \le N,
+    \quad
+    P(X_{i_{1}} \cap \cdots \cap X_{i_{n}} \mid Z)
+    =
+    P(X_{i_{1}} \mid Z) \cdots P(X_{i_{n}} \mid Z)
+$$
+
+を満たすことを言う。
+たまに、
+
+$$
+    P(X_{1} \cap \cdots \cap X_{N} \mid Z)
+    =
+    P(X_{1} \mid Z) \cdots P(X_{N} \mid Z)
+$$
+
+という文献もある。
+どっちが正しい？
+Bayes推定の議論が成り立つのはどっちだろ？
 
 ### By Probability density function
 確率密度関数を使って以下のようにできる。
