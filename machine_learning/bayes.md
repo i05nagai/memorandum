@@ -27,7 +27,7 @@ $X_{1}, \ldots, X_{N}$が$\Theta$の上の$X$のi.i.d.であるとは、
 
 ### Remark
 $X_{1}, \ldots, X_{N}$が$\Theta$について条件付き独立であることは、$X_{1}, \ldots, X_{N}, \Theta$が独立であることより弱い。
-条件付き独立性はBayseでは勝手に仮定されていることが多い。
+条件付き独立性はBayesでは勝手に仮定されていることが多い。
 
 
 ## Bayesian Framework
@@ -51,7 +51,7 @@ $$
         = \frac{
             p_{X | \Theta} p_{\Theta}
         }{
-            p_{X, \Theta}
+            p_{X}
         }
 $$
 
@@ -66,6 +66,8 @@ $$
 * $p_{\Theta}$
     * $\Theta$の事前分布
     * パラメータの周辺分布
+* $p_{X}$
+    * $X$の事前分布
 * $p_{X, \Theta}$
     * 同時分布
     * 一般的な用語
@@ -80,8 +82,9 @@ $$
             \frac{
                 p_{(X_{1}, \ldots, X_{N}) | \Theta} p_{\Theta}
             }{
-                p_{X_{1}, \ldots, X_{N}, \Theta}
+                p_{X_{1}, \ldots, X_{N}}
             }
+        \nonumber
         \\
         & = &
             \left(
@@ -90,21 +93,24 @@ $$
             \frac{
                 p_{\Theta}
             }{
-                p_{X_{1}, \ldots, X_{N}, \Theta}
+                p_{X_{1}, \ldots, X_{N}}
             }
+        \nonumber
         \\
         & = &
             (p_{X | \Theta})^{N}
             \frac{
                 p_{\Theta}
             }{
-                p_{X_{1}, \ldots, X_{N}, \Theta}
+                p_{X_{1}, \ldots, X_{N}}
             }
+        \nonumber
 \end{eqnarray}
 $$
 
 
 ## Maximum A Posteriori estimation
+MAP推定。
 
 ### Determination of $\theta$
 MAP推定では、各サンプル$X_{1}, \ldots, X_{N}$から$\theta$を事後分布を最大にする$\theta^{*}$として求める。
@@ -127,42 +133,61 @@ $$
         \frac{
             p_{\Theta}(\theta)
         }{
-            p_{X_{1}, \ldots, X_{N}, \Theta}(x_{1}, \ldots, x_{N}, \theta)
+            p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
+        }
+    \nonumber
+    \\
+    & = &
+        \argmax_{\theta}
+        \left(
+            \prod_{i=1}^{N} p_{X | \Theta}(x_{i} | \theta)
+        \right)
+        \frac{
+            p_{\Theta}(\theta)
+        }{
+            \int 
+                p_{X_{1}, \ldots, X_{N} \mid \Theta}(x_{1}, \ldots, x_{N} \mid \theta) 
+                    p_{\Theta}(\theta) 
+            \ d \theta
         }
     \nonumber
 \end{eqnarray}
 $$
 
-右辺の$x_{1}, \ldots, x_{N}$は観測値として与えられているので、$\theta$の関数として最大化問題をとけば良い。
+$x_{1}, \ldots, x_{N}$は観測値として与えられていることを踏まえれば、$\theta$の関数として最大化問題をとけば良い。
 
 ### Prediction
 
 一度$\theta^{*}$が求まれば、 $$p_{X_{N+1} \mid \Theta}(x_{N+1} \mid \theta^{*})$$ を用いて予測を行う。
 
-
-## Baysian Estimation
+## Bayesian Estimation
+ベイズ推定では、予測に使う分布を先に考える。（下記Prediction）
+具体的な$\theta$の値が必要な場合は、予測分布の
 
 ### Determination of $\theta$
-Bayse推定では、予測に用いる分布に$\theta$を含めない。
+Bayes推定では、予測に用いる分布に$\theta$を含めない。
 よって、$\Theta$は直接求めることはせず、事後分布$p_{\Theta | X_{1}, \ldots, X_{N}}$のみ考える。
 具体的な$\Theta$の値が必要な場合は、以下の期待値を用いることが多い。
 
 $$
-    \theta^{\mathrm{Bayse}} 
-        := \int_{A_{\theta}}
-            \theta_{\Theta | X_{1}, \ldots, X_{N}}(\theta | x_{1}, \ldots, x_{N})
-        \ d\theta
+    \theta^{\mathrm{Bayes}} 
+    :=
+    \int_{A_{\theta}}
+        \theta
+            p_{\Theta | X_{1}, \ldots, X_{N}}(\theta | x_{1}, \ldots, x_{N})
+    \ d\theta
 $$
 
 ### Prediction
 Bayes推定では、予測の分布として$p_{X_{N+1} | X_{1}, \ldots, X_{N}}(x_{N+1} | x_{1}, \ldots, x_{N})$を考える。
-この分布をBayseの予測分布(predictive distribution)という。
+この分布をBayexの予測分布(predictive distribution)という。
 bayesの予測分布は、サンプルの確率変数$X_{1}, \ldots, X_{N+1}$が$\theta$について条件付き独立であることを仮定すれば積分によって表現できる。
 つまり、以下を仮定する。
 
 $$
-    p_{X_{1} | \Theta} \cdots p_{X_{N+1} | \Theta} 
-        = p_{X_{1}, \ldots, X_{N+1} | \Theta},
+    p_{X_{1} | \Theta} \times \cdots \times p_{X_{N+1} | \Theta} 
+    =
+    p_{X_{1}, \ldots, X_{N+1} | \Theta},
 $$
 
 このとき、$A_{\Theta}$が$\Theta$の値域全体とすると以下が成り立つ。
@@ -170,10 +195,12 @@ $$
 $$
 \begin{eqnarray}
     p_{X_{N+1} | X_{1}, \ldots, X_{N}}(x | x_{1}, \ldots, x_{N})
-        & = &
+    & = &
         \int_{A_{\Theta}}
-            p_{X_{N+1} | \Theta}(x | \theta) p_{\Theta | X_{1}, \ldots, X_{N}}(\theta | x_{1}, \ldots, x_{N})
+            p_{X_{N+1} | \Theta}(x | \theta)
+                p_{\Theta | X_{1}, \ldots, X_{N}}(\theta | x_{1}, \ldots, x_{N})
         \ d\theta
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -185,53 +212,54 @@ $$
         p_{X_{N+1} | \Theta}(x_{N+1} | \theta) 
         p_{\Theta | X_{1}, \ldots, X_{N}}(\theta | x_{1}, \ldots, x_{N})
     \ d\theta
-        & = &
-    \int_{A_{\Theta}}
-        p_{X_{N+1} | \Theta}(x_{N+1} | \theta) 
-        \frac{
-            p_{\Theta, X_{1}, \ldots, X_{N}}(\theta, x_{1}, \ldots, x_{N})
-        }{
-            p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
-        }
-    \ d\theta
+    & = &
+        \int_{A_{\Theta}}
+            p_{X_{N+1} | \Theta}(x_{N+1} | \theta) 
+            \frac{
+                p_{\Theta, X_{1}, \ldots, X_{N}}(\theta, x_{1}, \ldots, x_{N})
+            }{
+                p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
+            }
+        \ d\theta
+    \nonumber
     \\
-        & = &
+    & = &
         \frac{
             1
         }{
             p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
         }
-    \int_{A_{\Theta}}
-        p_{X_{N+1} | \Theta}(x_{N+1} | \theta) 
-        p_{X_{1}, \ldots, X_{N} | \Theta}(x_{1}, \ldots, x_{N} | \theta)
-        p_{\Theta}(\theta)
-    \ d\theta
+        \int_{A_{\Theta}}
+            p_{X_{N+1} | \Theta}(x_{N+1} | \theta) 
+            p_{X_{1}, \ldots, X_{N} | \Theta}(x_{1}, \ldots, x_{N} | \theta)
+            p_{\Theta}(\theta)
+        \ d\theta
     \nonumber
     \\
-        & = &
+    & = &
         \frac{
             1
         }{
             p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
         }
-    \int_{A_{\Theta}}
-        p_{X_{1}, \ldots, X_{N}, X_{N+1} | \Theta}(x_{1}, \ldots, x_{N}, x_{N+1} | \theta)
-        p_{\Theta}(\theta)
-    \ d\theta
+        \int_{A_{\Theta}}
+            p_{X_{1}, \ldots, X_{N}, X_{N+1} | \Theta}(x_{1}, \ldots, x_{N}, x_{N+1} | \theta)
+            p_{\Theta}(\theta)
+        \ d\theta
     \nonumber
     \\
-        & = &
+    & = &
         \frac{
             1
         }{
             p_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
         }
-    \int_{A_{\Theta}}
-        p_{X_{1}, \ldots, X_{N}, X_{N+1}, \Theta}(x_{1}, \ldots, x_{N}, x_{N+1}, \theta)
-    \ d\theta
+        \int_{A_{\Theta}}
+            p_{X_{1}, \ldots, X_{N}, X_{N+1}, \Theta}(x_{1}, \ldots, x_{N}, x_{N+1}, \theta)
+        \ d\theta
     \nonumber
     \\
-        & = &
+    & = &
         \frac{
             1
         }{
@@ -243,8 +271,7 @@ $$
 $$
 
 となり、左辺に等しい。
-
-
+ここで、2つめの等号から3つ目の等号で、条件付き独立性を使っていることに注意する。
 
 ## Example of Bayesian Framework
 bayesを利用した機械学習の例を示す。
@@ -261,7 +288,7 @@ $(Y, Z)$が2次元の確率変数とし、$Y$を独立変数とし、従属変�
 
 ここで、尤度関数が$$p_{(Y, Z) \mid \Theta}$$で
 
-## Baysian optimization
+## Bayesian optimization
 $B \subset \mathbb{R}^{d}$とし、$d \in \mathbb{N}$とする。
 ベイズ最適化とは、未知の関数$f: B \rightarrow \mathbb{R}$を与えられた$N$個のデータの組$(a_{i}, f(a_{i}))_{i=1,\ldots, N}$から$f$の$A$上の最大値を探す方法の1つである。
 つまり、$f$を未知の関数として、以下を求める。
