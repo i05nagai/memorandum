@@ -1,0 +1,12 @@
+# Pricing with a Smile
+
+## 
+
+## A DIFFUSION FROM PRICES
+
+## A NEW WAY TO COMPUTE PRICE
+
+## HEDGING
+
+## CONCLUSION
+
