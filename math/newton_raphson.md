@@ -3,17 +3,21 @@ title: Newton-Raphson Method
 ---
 
 
-# Newton-Raphson method
+## Newton-Raphson method
 
-## definition
-* $N \in mathbb{N}$
+## Good
+
+## Bad
+
+## Definition
+* $N \in \mathbb{N}$
 * $f:\mathbb{R}^{N} \rightarrow \mathbb{R}^{N}$
 
-## problem
-$f(x) = 0$を満たす$x^{*}$を見つける。
+## Problem
+$f(x) = 0$を満たす$x \in \mathbb{R}^{N}$を見つける。
 
-## algorithms
-$f$の$\bar{x}$テーラー展開を考える。
+## Algorithms
+$f$の$\bar{x} \in \mathbb{R}^{N}$でのテーラー展開を考える。
 
 $$
 f(x) = f(\bar{x}) + \frac{\partial f}{\partial x}(\bar{x})(x - \bar{x}) + o(x)
@@ -27,5 +31,27 @@ $$
 
 つまり、上式の$x$は点$\bar{x}$で$f$を線形に近似した時に0になる$x$ である。
 
-これを繰り返すことで収束する$f(x)=0$を満たす$x$を見つけるのがNewton-Raphson
+これを繰り返すことで収束する$f(x)=0$を満たす$x$を見つけるのがNewton-Raphson法である。
+アルゴリズムをまとめると
+
+1. パラメータ$(\lambda^{k})$を適当な方法で決める
+2. 初期値として$x^{0}$を適当に決める
+3. $k=0$とする
+4. 以下の式で計算
+
+    $$
+        x^{k+1}
+        :=
+        - 
+        \lambda^{k}
+        \left(
+           \frac{\partial f}{\partial x}(x^{k})
+        \right)^{-1}
+        f(x^{k})
+        +
+        x^{k}
+    $$
+
+5. $x^{k+1}$が収束していなければ、$k \leftarrow k + 1$としてstep 4に戻る
+6. 収束していれば、$x^{k+1}$を出力して終了
 
