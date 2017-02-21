@@ -132,7 +132,7 @@ $$
 $$
 
 Lagrangeの未定乗数法より、双対問題を考える。
-Lagrange定数を$$\lamda_{1}, \ldots, \lambda_{N}$$と置く。
+Lagrange定数を$$\lambda_{1}, \ldots, \lambda_{N}$$と置く。
 
 $$
     L(\lambda, \beta, \beta_{0})
