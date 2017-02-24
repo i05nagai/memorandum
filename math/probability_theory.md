@@ -6,34 +6,38 @@ title: Probability Theory
 
 ## Independence
 
-### Def. Independenc of $\sigma$-algebra
-$N \in \mathbb{N}$とする。
-$\mathcal{A}\_{1}, \ldots, \mathcal{A}\_{N}$が $\mathcal{F}$ 上の $\sigma$ -algebraとする。
-以下が成り立つとき、$\mathcal{A}_{1}, \ldots, \mathcal{A}\_{N}$が独立であるという。
+### Def. Independence of $\sigma$-algebra
+$$\{ \mathcal{A}_{i} \}_{i \in I}$$が $\mathcal{F}$ 上の $\sigma$ -algebraの族とする。
+以下が成り立つとき、$$\{ \mathcal{A}_{i} \}_{i \in I}$$が独立であるという。
 
 $$
-    P(A_{1} \cap \cdots \cap A_{N}) 
-        = \prod_{i=1}^{N}P(A_{i}),
+    \forall N \in \mathbb{N},
     \quad
-    \forall A_{1} \in \mathcal{A}_{1}, \ldots, \forall A_{N} \in \mathcal{A}_{N}
+    \forall i_{1}, \ldots, i_{N} \in I,
+    \quad
+    P(A_{i_{1}} \cap \cdots \cap A_{i_{N}}) 
+        = \prod_{j=1}^{N}P(A_{i_{j}}),
+    \quad
+    \forall A_{i_{1}} \in \mathcal{A}_{i_{1}}, \ldots, \forall A_{i_{N}} \in \mathcal{A}_{i_{N}}
 $$
 
 ### Def. Independence of random variables
-$N \in \mathbb{N}$とする。
-$X\_{1}, \ldots, X\_{N}$が $\mathcal{F}$ 上の確率変数とする。
-各確率変数が生成する$\sigma$-algebraが独立のとき、$X_{1}, \ldots, X\_{N}$が独立であるという。
+$$\{X_{i}\}_{i \in I}$$が $\mathcal{F}$ 上の確率変数の族とする。
+各確率変数が生成する$\sigma$-algebraが独立のとき、$$\{X_{i}\}_{i \in I}$$が独立であるという。
 つまり、
 
 $$
-    P(A_{1} \cap \cdots \cap A_{N}) 
-        = \prod_{i=1}^{N}P(A_{i}),
+    \forall N \in \mathbb{N},
     \quad
-    \forall A_{1} \in \sigma(X_{1}), \ldots, \forall A_{N} \in \sigma(X_{N}).
+    \forall i_{1}, \ldots, i_{N} \in I,
+    \quad
+    P(A_{i_{1}} \cap \cdots \cap A_{i_{N}}) 
+        = \prod_{j=1}^{N}P(A_{i_{j}}),
+    \quad
+    \forall A_{i_{1}} \in \sigma(X_{i_{1}}), \ldots, \forall A_{i_{N}} \in \sigma(X_{i_{N}}).
 $$
 
-
 ### Remark
-$\mathcal{A}\_{1}, \ldots, \mathcal{A}\_{N}$は、sub-$\sigma$-algebraとする。
 $\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_{1}, \ldots, A_{N}$が独立であるとは限らない。
 実際、
 
@@ -88,6 +92,25 @@ $\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_
 * $P(X_{1}=1)P(X_{2}=1)P(X_{3}=1) = 1/16$
 
 で$X_{1}, X_{2}, X_{3}$は独立でない。
+
+### Proposition
+$X_{1}, \ldots, X_{N}$を確率変数とする。
+$$f_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})$$を$$X_{1}, \ldots, X_{N}$$を同時密度関数とする。
+また、$$f_{X_{1}}, \ldots, f_{X_{N}}$$を確率変数の周辺密度関数とする。
+このとき以下は同値
+
+* $$X_{1}, \ldots, X_{N}$$が独立
+* 密度関数について以下が成立
+
+$$
+    \forall M \in \{1, \ldots, N\},
+    \quad
+    1 \le \forall i_{1} \le \cdots \le \forall i_{M} \le N,
+    \quad
+    f_{X_{i_{1}}, \ldots, X_{i_{M}}}(x_{i_{1}}, \ldots, x_{i_{M}})
+    =
+    f_{X_{i_{1}}}(x_{i_{1}}) \cdots, f_{X_{i_{N}}}(x_{i_{N}})
+$$
 
 ### Def. Conditional Independence
 TBD.
