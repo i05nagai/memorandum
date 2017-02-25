@@ -483,6 +483,32 @@ Private keyを追加する方法。
 * [squeezing private SSH key into .travis.yml file](https://gist.github.com/lukewpatterson/4242707)
 * [Travis-CI でコミットして GitHub にプッシュする - 公開鍵認証を利用してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/)
 
+## OSXのビルドの開始が遅い
+SXのビルドは、物理マシンを利用しているので、利用者が多い場合は開始に時間がかかる。 下記にTravis CIのビルドステータスがある。
+
+* [Travis CI Status](https://www.traviscistatus.com/)
+
+OSXでのjob数はずっと同じ値になっており、Jobがスタックしているのが分かる。
+
+### Reference
+* [OSX builds extremely slow to start · Issue #7304 · travis-ci/travis-ci](https://github.com/travis-ci/travis-ci/issues/7304)
+
+## PRのブランチは全てビルド、pushはmasterのみにする場合
+`.travis.yml`に以下を記載。
+
+```yaml
+branches:
+  only: 
+    # branchs through PR are built
+    - master
+```
+
+上記は`push`でのビルドのみに影響を与える。
+travis ciのsettingsから`Build pushs`と`Build pull requests`をONにすれば良い。
+
+pushでのビルドをオフにすると、merge後のmaster branchのビルドが行われない為、badgeが更新されない。
+PRでのビルドはOSSの場合必須なので、ビルドは抑えたい場合はこのような設定が必要。
+
 
 #### reference
 * [C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
