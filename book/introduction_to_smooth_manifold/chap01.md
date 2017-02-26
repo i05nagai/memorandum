@@ -1,0 +1,129 @@
+---
+title: Chapter1 Smooth Manifolds
+book_title: Introduction to Smooth Manifold
+book_chapter: 1
+---
+
+# Topological Manifolds
+
+## Coordinate Chrts
+
+## Examples of Topological Manifolds
+
+### Example 1.3 (Graphs of Continuous Functions)
+
+### Example 1.4 (Sphere)
+
+### Exmaple 1.5 (Projective Spaces)
+$X^{n} := \mathbb{R}^{n+1} \setminus \\{0\\}$とおく。
+$X^{n}$には、相対位相を入れる。
+特に$n=1$のとき$X$とおく。
+$X^{n}$上のequivalence $\sim$を以下で定義する。
+
+$$
+    x \sim y
+    \overset{\mathrm{def}}{\iff}
+    \exists \lambda \neq 0 \in \mathbb{R},
+        y = \lambda x
+$$
+
+$\sim$はequivalenceである。
+$\mathbb{RP}^{n} := X^{n} / \sim$をquotinent topological spaces(identification space)とする。
+$\mathbb{RP}^{n}$を$n$-dimensional real projective spaceという。
+
+$\mathbb{RP}^{n}$はTopological manifoldである。
+
+### proof.
+$\mathbb{RP}^{n}$はsecond countableである。
+$\pi:X^{n} \rightarrow \mathbb{RP}^{n}$, $\pi(x) := \\{ \lambda x \mid \lambda \in \mathbb{R} \setminus \\{0\\} \\}$, $x \in X^{n}$をquotinent mapとする。
+$\pi$はopen mapとなる。
+$U \subset X^{n}$をopen in $X^{n}$とし、$pi(U)$がopen in $\mathbb{RP}^{n}$となることを示す。
+$\forall \lambda \in \mathbb{R} \\{0\\}$, $f_{\lambda}:X^{n} \rightarrow  X^{n}$, $f_{\lambda}(x) := \lambda x$とする。
+$f_{\lambda}$はhomeomorphismである。
+$f_{\lambda}$は連続であり、$f_{\lambda}^{-1} = f_{\frac{1}{\lambda}}$より、$f_{\lambda}^{-1}$が存在し連続である。
+
+$\pi^{-1}(\pi(x)) = \\{ \lambda x \mid \lambda \in X \\} = \cup_{\lambda \in X} \\{ f_{\lambda}(x) \\}$より、
+
+$$
+    \begin{eqnarray}
+        \pi^{-1}(\pi(U)) 
+            & = &
+                \bigcup_{x \in X^{n}}
+                \bigcup_{\lambda \in X}
+                \{
+                    f_{\lambda}(x)
+                \}
+        \nonumber
+        \\
+            & = &
+                \bigcup_{\lambda \in X}
+                f_{\lambda}(U)
+    \end{eqnarray}
+$$
+
+$f_{\lambda}(U)$はopenなので、左辺は$X^{n}$のopen setである。
+よって、$\pi(U)$は$\mathbb{RP}^{n}$のopen setである。
+
+一般に、$X^{n}$がcountable basisを持ち、quotinent mapがopen mapならば、そのquantinent topological spacesもcountable basisを持つ。
+$$\{ U_{n} \}_{n \in \mathbb{N}} \subset \mathcal{O}_{X^{n}}$$をcountable basisとする。
+$O \in \mathbb{RP}^{n}$ in openとすると、$\exists A \subset \mathbb{N}$で、
+
+$$
+    \begin{eqnarray}
+        & &
+        \pi^{-1}(O)
+            = \bigcup_{a \in A} U_{a}
+        \nonumber
+    \end{eqnarray}
+$$
+
+とできる。
+よって、$\pi$が全射より、
+
+$$
+    \begin{eqnarray}
+        & &
+            \pi(\pi^{-1}(O))
+                =
+                \pi
+                \left(
+                    \bigcup_{a \in A} U_{a}
+                \right)
+        \nonumber
+        \\
+        & \Leftrightarrow  &
+            O
+                =
+                \bigcup_{a \in A} 
+                \pi(U_{a})
+        \nonumber
+    \end{eqnarray}
+$$
+
+となって、$\\{ \pi(U_{n}) \\}_{n \in \mathbb{N}}$がcountable basisとなる。
+以上より、$\mathbb{RP}^{n}$がcounntable basisを持つので、second countable spaceである。
+
+$\mathbb{RP}^{n}$はHausdorffである。
+
+一般に、位相空間$S$がHausdorffであることと$\\{ (x, x) \in S \times S \mid x \in S\\}$がclosed in $S \times S$であることは同値である。
+
+また、quotinent mapがopenであれば、商位相空間$X$がHausdorffであることと$\\{ (x, y) \in X \times X \mid x \sim y \\}$がclosed in $X \times X$であることは同値である。
+実際、
+
+### Lemma 1.35 (Smooth Manifold Chart Lemma)
+* $M$:集合
+* $$\{U_{\alpha}\}$$: $M$の部分集合の族
+* $\phi_{\alpha}:U_{\alpha} \rightarrow \mathbb{R}^{n}$
+
+以下を満たすとする。
+
+1. $\forall \alpha$について $$\phi_{\alpha}$$は$$U_{\alpha}$$から$$\phi_{\alpha}(U_{\alpha})$$への全単射
+2. $\forall \alpha, \beta$について、$\phi_{\alpha}(U_{\alpha} \cap U_{\beta})$, $\phi_{\beta}(U_{\alpha} \cap U_{\beta})$は開集合
+3. $U_{\alpha} \cap U_{\beta} \neq \emptyset$ならば、$$\phi_{\beta} \circ \phi_{\alpha}^{-1}:\phi_{\alpha}(U_{\alpha} \cap U_{\beta}) \rightarrow \phi_{\beta}(U_{\alpha} \cap U_{\beta})$$はsmooth
+4. $$\{ U_{\alpha} \}$$から可算個選ぶと$M$を被覆している
+5. $p \neq q \in M$とすると以下の一方が成立
+    * ある$U_{\alpha}$が存在して、$$p, q \in U_{\alpha}$$
+    * ある$$U_{\alpha}, U_{\beta}$$が存在して、$$U_{\alpha} \cap U_{\beta} = \emptyset$$, $$p \in U_{\alpha}$$ かつ$$q \in U_{\beta}$$
+
+このとき、$M$は$
+
