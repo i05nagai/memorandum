@@ -1,5 +1,5 @@
 ---
-title: Matrix
+title: Matrix Derivative
 ---
 
 ## matrix
