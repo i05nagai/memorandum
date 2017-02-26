@@ -1,6 +1,27 @@
-# debbugers
+---
+title: GDB
+---
+
+## Install
+
+### MacOSX
+* [OS XでGDBを使う（ためにコード署名をする） - Qiita](http://qiita.com/takahashim/items/204ffa698afe09bd4e28)
+
+```
+brew install gdb
+```
+
+## Tips
+
+### customized gdb
+* [gdbで効率的にデバッグするためのTips - Qiita](http://qiita.com/aosho235/items/e8efd18364408231062d)
+* [gdb-dashboard/.gdbinit at master · cyrus-and/gdb-dashboard · GitHub](https://github.com/cyrus-and/gdb-dashboard/blob/master/.gdbinit)
+    * こっちのほうが良い
+* [GitHub - gdbinit/Gdbinit: Gdbinit for OS X, iOS and others - x86, x86_64 and ARM](https://github.com/gdbinit/Gdbinit)
+    * `~/.gdbinit`におく。
 
 ## gdb
+
 ### front end of gdb
 [list](https://sourceware.org/gdb/wiki/GDB%20Front%20Ends)
 
