@@ -2,7 +2,11 @@
 title: cmake
 ---
 
-# cmake
+## cmake
+
+## Usage
+
+* `CMakeLists.txt`に必要な設定をかく
 
 ## variables
 
@@ -44,20 +48,215 @@ project(<PROJECT-NAME>
 
 ## debug build
 * 指定なし
-    * 初期状態で CMAKE_BUILD_TYPE シンボルを書き換えないとこの状態
-    * 一度でも他の値で書き換えるとずっと記憶するので、あらためて指定なしにしたい場合は -DCMAKE_BUILD_TYPE= とする
+    * 初期状態で `CMAKE_BUILD_TYPE` シンボルを書き換えないとこの状態
+    * 一度でも他の値で書き換えるとずっと記憶するので、あらためて指定なしにしたい場合は `-DCMAKE_BUILD_TYPE=` とする
 * Debug
-    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_DEBUG / CMAKE_CXX_FLAGS_DEBUG の値も使われる
+    * `CMAKE_C_FLAGS` / `CMAKE_CXX_FLAGS` に加えて変数 `CMAKE_C_FLAGS_DEBUG` / `CMAKE_CXX_FLAGS_DEBUG` の値も使われる
 * Release
-    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_RELEASE / CMAKE_CXX_FLAGS_RELEASE の値も使われる
+    * `CMAKE_C_FLAGS` / `CMAKE_CXX_FLAGS` に加えて変数 `CMAKE_C_FLAGS_RELEASE` / `CMAKE_CXX_FLAGS_RELEASE` の値も使われる
 * RelWithDebInfo
     * 最適化しつつデバッグ用情報も付加するためのモード
-    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_RELWITHDEBINFO / CMAKE_CXX_FLAGS_RELWITHDEBINFO の値も使われる
+    * `CMAKE_C_FLAGS` / `CMAKE_CXX_FLAGS` に加えて変数 `CMAKE_C_FLAGS_RELWITHDEBINFO` / `CMAKE_CXX_FLAGS_RELWITHDEBINFO` の値も使われる
 * MinSizeRel
     * 実行ファイルのサイズを一番小さくするためのモード
-    * CMAKE_C_FLAGS / CMAKE_CXX_FLAGS に加えて変数 CMAKE_C_FLAGS_MINSIZEREL / CMAKE_CXX_FLAGS_MINSIZEREL の値も使われる
+    * `CMAKE_C_FLAGS` / `CMAKE_CXX_FLAGS` に加えて変数 `CMAKE_C_FLAGS_MINSIZEREL` / `CMAKE_CXX_FLAGS_MINSIZEREL` の値も使われる
 
 * [CMake 簡易まとめ - Qiita](http://qiita.com/janus_wel/items/a673793d448c72cbc95e)
+
+## LDFlags
+以下の4つがある。
+
+```
+CMAKE_EXE_LINKER_FLAGS
+CMAKE_MODULE_LINKER_FLAGS
+CMAKE_SHARED_LINKER_FLAGS
+CMAKE_STATIC_LINKER_FLAGS
+```
+
+## Define preprocessor macro
+コンパイルスイッチなどに用いるマクロを定義　
+
+```
+add_definitions(-DFOO -DBAR=xyz -UHOGE)
+```
+
+* `-D`で定義
+* `-U`で未定義可
+
+### Reference
+* [gcc - CMake: How to set the LDFLAGS in CMakeLists.txt? - Stack Overflow](http://stackoverflow.com/questions/6077414/cmake-how-to-set-the-ldflags-in-cmakelists-txt)
+
+## Directories
+
+* `CMAKE_BINARY_DIR`
+
+### Reference
+* [CMake Useful Variables - KitwarePublic](https://cmake.org/Wiki/CMake_Useful_Variables)
+
+## OSで処理を分ける
+
+### for windows
+```cmake
+IF(WIN32)
+ENDIF(WIN32)
+```
+
+基本的に上でOK
+
+```cmake
+if(MSVS OR MSYS OR MINGW OR CYGWIN)
+endif()
+```
+
+### for OSX
+
+```cmake
+if(APPLE)
+endif()
+```
+
+### for Unix and Linux
+
+```cmake
+IF(UNIX AND NOT APPLE AND NOT CYGWIN)
+ENDIF(UNIX)
+```
+
+### combination
+
+```cmake
+IF(WIN32)
+	# WINDOWS
+ELSEIF(APPLE)
+	# OSX
+ELSEIF(UNIX AND NOT APPLE AND NOT CYGWIN)
+	# Unix and Linux
+ENDIF()
+```
+
+### Reference
+* [c++ - OS specific instructions in CMAKE: How to? - Stack Overflow](http://stackoverflow.com/questions/9160335/os-specific-instructions-in-cmake-how-to)
+* [c++ - OS specific instructions in CMAKE: How to? - Stack Overflow](http://stackoverflow.com/questions/9160335/os-specific-instructions-in-cmake-how-to)
+
+## if condition
+
+```cmake
+if(expression)
+elseif(expression2)
+else(expression)
+endif(expression)
+```
+
+* `else(exp)`は`exp`省略可
+* `endif(exp)`の`exp`は省略可
+
+## GNU standard installation dir
+
+```cmake
+include(GNUInstallDirs)
+```
+
+* `CMAKE_INSTALL_FULL_?`
+	* `?`には以下の文字列が使える
+
+```
+BINDIR           - user executables (bin)
+SBINDIR          - system admin executables (sbin)
+LIBEXECDIR       - program executables (libexec)
+SYSCONFDIR       - read-only single-machine data (etc)
+SHAREDSTATEDIR   - modifiable architecture-independent data (com)
+LOCALSTATEDIR    - modifiable single-machine data (var)
+LIBDIR           - object code libraries (lib or lib64 or lib/<multiarch-tuple> on Debian)
+INCLUDEDIR       - C header files (include)
+OLDINCLUDEDIR    - C header files for non-gcc (/usr/include)
+DATAROOTDIR      - read-only architecture-independent data root (share)
+DATADIR          - read-only architecture-independent data (DATAROOTDIR)
+INFODIR          - info documentation (DATAROOTDIR/info)
+LOCALEDIR        - locale-dependent data (DATAROOTDIR/locale)
+MANDIR           - man documentation (DATAROOTDIR/man)
+DOCDIR           - documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+```
+
+### Refernce
+* [GNUInstallDirs — CMake 3.0.2 Documentation](https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html) 
+
+## join two lists
+
+```cmake
+function(JOIN VALUES GLUE OUTPUT)
+  string (REGEX REPLACE "([^\\]|^);" "\\1${GLUE}" _TMP_STR "${VALUES}")
+  string (REGEX REPLACE "[\\](.)" "\\1" _TMP_STR "${_TMP_STR}") #fixes escaping
+  set (${OUTPUT} "${_TMP_STR}" PARENT_SCOPE)
+endfunction()
+
+SET( letters "" "\;a" b c "d\;d" )
+JOIN("${letters}" ":" output)
+MESSAGE("${output}") # :;a:b:c:d;d
+```
+
+## execute shell scripts in cmake test
+
+```cmake
+find_program(BASH_PROGRAM bash)
+
+if (BASH_PROGRAM)
+    add_test(mytest ${BASH_PROGRAM} ${CMAKE_CURRENT_SOURCE_DIR}/script.sh)
+endif (BASH_PROGRAM)
+```
+
+### Reference
+* [c++ - Integrate bash test scripts in cmake - Stack Overflow](http://stackoverflow.com/questions/25627336/integrate-bash-test-scripts-in-cmake)
+
+## change output directory
+
+```cmake
+#executable
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../../../libs)
+#static lib(both needed)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../../../libs)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../../libs)
+```
+
+### Reference
+* [出力ディレクトリを指定する - Faith and Brave - C++で遊ぼう](http://faithandbrave.hateblo.jp/entry/2014/05/14/162719)
+
+## Link pthread
+Ubuntuではpthreadはlinkしないと使えない。
+CMake 3.1.0+
+
+```cmake
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(my_app Threads::Threads)
+```
+
+CMake 2.8.12+
+
+```cmake
+find_package(Threads REQUIRED)
+if(THREADS_HAVE_PTHREAD_ARG)
+    target_compile_options(PUBLIC my_app "-pthread")
+endif()
+if(CMAKE_THREAD_LIBS_INIT)
+    target_link_libraries(my_app "${CMAKE_THREAD_LIBS_INIT}")
+endif()
+```
+
+Other
+
+```cmake
+find_package(Threads REQUIRED)
+if(THREADS_HAVE_PTHREAD_ARG)
+    set_property(TARGET my_app PROPERTY COMPILE_OPTIONS "-pthread")
+    set_property(TARGET my_app PROPERTY INTERFACE_COMPILE_OPTIONS "-pthread")
+endif()
+if(CMAKE_THREAD_LIBS_INIT)
+    target_link_libraries(my_app "${CMAKE_THREAD_LIBS_INIT}")
+endif()
+```
+
+### Reference
+* [pthreads - cmake and libpthread - Stack Overflow](http://stackoverflow.com/questions/1620918/cmake-and-libpthread)
 
 ## Tips
 
