@@ -97,4 +97,54 @@ $$
 \end{eqnarray}
 $$
 
+更に、
+
+$$
+\begin{eqnarray}
+    p_{X_{t}, Y_{t} \mid X_{t-1}, Y_{t-1}}(x_{t}, y_{t} \mid x_{t-1}, y_{t-1})
+    & = &
+        p_{X_{t}, Y_{t} \mid Y_{t-1}}(x_{t}, y_{t} \mid y_{t-1})
+    \nonumber
+    \\
+    & = &
+        \frac{
+            p_{X_{t}, Y_{t}, Y_{t-1}}(x_{t}, y_{t}, y_{t-1})
+        }{
+            p_{Y_{t-1}}(y_{t-1})
+        }
+    \nonumber
+    \\
+    & = &
+        p_{X_{t} \mid Y_{t}, Y_{t-1}}(x_{t} \mid y_{t}, y_{t-1})
+            \frac{
+                p_{Y_{t}, Y_{t-1}}(y_{t}, y_{t-1})
+            }{
+                p_{Y_{t-1}}(y_{t-1})
+            }
+    \nonumber
+    \\
+    & = &
+        p_{X_{t} \mid Y_{t}}(x_{t} \mid y_{t})
+        p_{Y_{t} \mid Y_{t-1}}(y_{t} \mid y_{t-1})
+\end{eqnarray}
+$$
+
+となってほしい。
+最初の等号は、$X_{t-1}$が$Y_{t-1}$で決定されるから、条件付き確率において意味をなさないから？
+最後の等号は、$Y_{t}$がマルコフなことによるから？
+以上を認めれば以下のようにかける。
+
+$$
+\begin{eqnarray}
+    p_{X_{1:T}, Y_{1:T}}(x_{1:T}, y_{1:T})
+    & = &
+        \prod_{t=1}^{T}
+            \left(
+                p_{X_{t} \mid Y_{t}}(x_{t} \mid y_{t})
+                p_{Y_{t} \mid Y_{t-1}}(y_{t} \mid y_{t-1})
+            \right)
+            p_{X_{1}, Y_{1}}(x_{1}, y_{1})
+\end{eqnarray}
+$$
+
 ここでは、潜在変数$Y_{t}$は文の$t$番目のラベル（品詞）で、$X_{t}$は文の$t$番目の単語である。
