@@ -1,4 +1,8 @@
-# zsh
+---
+title: zsh
+---
+
+## zsh
 
 ## completion
 `echo $fpath`で設定されているディレクトリにリンクをはる。
@@ -7,6 +11,14 @@
 
 
 ### zhs-completions
+
+## plugins
+* [GitHub - zsh-users/zsh-autosuggestions: Fish-like autosuggestions for zsh](https://github.com/zsh-users/zsh-autosuggestions)
+    * It suggests commands as you type, based on command history.
+* [GitHub - zsh-users/zsh-syntax-highlighting: Fish shell like syntax highlighting for Zsh.](https://github.com/zsh-users/zsh-syntax-highlighting)
+    * This package provides syntax highlighing for the shell zsh
+* [GitHub - zsh-users/antigen: A plugin manager for zsh, inspired by oh-my-zsh and vundle.](https://github.com/zsh-users/antigen)
+    * plugin manager
 
 #### reference
 * [zsh-users/zsh-completions: Additional completion definitions for Zsh.](https://github.com/zsh-users/zsh-completions)
