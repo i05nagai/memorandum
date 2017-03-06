@@ -2,9 +2,22 @@
 title: Probability Theory
 ---
 
-# Probability Theory
+## Probability Theory
 
 ## Independence
+
+### Def. Pair-wise Independence
+$$\{ \mathcal{A}_{i} \}_{i \in I}$$が $\mathcal{F}$ 上の $\sigma$ -algebraの族とする。
+以下が成り立つとき、$$\{ \mathcal{A}_{i} \}_{i \in I}$$は互いに独立(pairwise independence)であるという。
+
+$$
+    \forall i \neq j,
+    \quad
+    P(A_{i} \cap A_{j}) 
+        = P(A_{i}) P(A_{j}),
+    \quad
+    \forall A_{i} \in \mathcal{A}_{i}, \forall A_{j} \in \mathcal{A}_{j}
+$$
 
 ### Def. Independence of $\sigma$-algebra
 $$\{ \mathcal{A}_{i} \}_{i \in I}$$が $\mathcal{F}$ 上の $\sigma$ -algebraの族とする。
@@ -36,6 +49,11 @@ $$
     \quad
     \forall A_{i_{1}} \in \sigma(X_{i_{1}}), \ldots, \forall A_{i_{N}} \in \sigma(X_{i_{N}}).
 $$
+
+### Remark
+独立性は$\sigma$-algebraを通して定義される。
+よって、$\sigma$-algbera上での独立を議論すれば十分である。
+
 
 ### Remark
 $\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_{1}, \ldots, A_{N}$が独立であるとは限らない。
@@ -94,6 +112,8 @@ $\forall i \neq j$について、$A_{i}$と$A_{j}$が独立であっても、$A_
 で$X_{1}, X_{2}, X_{3}$は独立でない。
 
 ### Proposition
+確率変数が密度関数をもつ場合は密度関数によって、独立性を定義できる。
+
 $X_{1}, \ldots, X_{N}$を確率変数とする。
 $$f_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})$$を$$X_{1}, \ldots, X_{N}$$を同時密度関数とする。
 また、$$f_{X_{1}}, \ldots, f_{X_{N}}$$を確率変数の周辺密度関数とする。
@@ -111,6 +131,110 @@ $$
     =
     f_{X_{i_{1}}}(x_{i_{1}}) \cdots, f_{X_{i_{N}}}(x_{i_{N}})
 $$
+
+### proof.
+
+
+$$
+\begin{eqnarray}
+    \prod_{j=1}^{N}
+    P(X_{i_{j}} \in A_{j})
+    & = &
+        \prod_{j=1}^{N}
+        \int_{A_{j}} f_{X_{i_{j}}}(x_{j})\ d x_{j}
+    \nonumber
+    \\
+    & = &
+        \int_{A_{j}} 
+            \prod_{j=1}^{N}
+            f_{X_{i_{j}}}(x_{j})
+        \ d x_{j}
+    \nonumber
+\end{eqnarray}
+$$
+
+に注意すれば良い。
+ 
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition(Independence with p.d.f.)
+確率変数が密度関数をもつ場合は、独立性はやや簡単になる。
+次が成立する。
+
+$$X_{1}, \ldots, X_{N}$$を確率変数とし、joint p.d.f $$f_{X_{1}, \ldots, X_{N}}$$を持つとする。
+このとき、以下は同値
+
+1. $$X_{1}, \ldots, X_{N}$$が独立
+2. 以下が成立
+
+$$
+    f_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})
+    =
+    \prod_{i=1}^{N}f_{X_{i}}(x_{i})
+$$
+
+つまり、最長のjoint p.d.fについてのみ、考慮すれば良い。
+
+### proof.
+1から2は自明である。
+2から1は、marginal p.d.f. がjoint p.d.f.でかけることを利用すれば良い。
+例えば、
+
+$$
+\begin{eqnarray}
+    f_{X_{1}, \ldots, X_{N-1}}(x_{1}, \ldots, x_{N-1})
+    & = &
+        \int f_{X_{1}, \ldots, X_{N}}(x_{1}, \ldots, x_{N})\ dx_{N}
+    \nonumber
+    \\
+    & = &
+        \int
+            \prod_{i=1}^{N}
+            f_{X_{i}}(x_{i})
+        \ dx_{N}
+    \nonumber
+    \\
+    & = &
+        \prod_{i=1}^{N-1}
+        f_{X_{i}}(x_{i})
+\end{eqnarray}
+$$
+
+である。
+同様に任意の有限個の組について示すことができる。
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Theorem (Dynkin's theorem)
+Dynkin族定理。
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition
+$$\{ \mathcal{G}_{i} \}_{i \in I}$$をsub $\sigma$-algberaとする。
+$$\mathcal{C}_{i}$$を$\pi$系とし、$$\sigma(\mathcal{C}_{i}) = \mathcal{G}_{i}$$とする。
+以下は同値
+
+1. $$\{\mathcal{G}_{i}\}_{i \in I}$$が独立
+2. 以下が成立
+
+$$
+    \forall N \in \mathbb{N}
+    \quad
+    \forall A_{1} \in \mathcal{C}_{i_{1}}, \ldots, A_{N} \in \mathcal{C}_{i_{N}},
+    \quad
+    P(A_{1}) \cdots P(A_{N})
+    =
+    P(A_{1} \cap \cdots \cap A_{N})
+$$
+
+### proof.
+1から2は自明であるので、2から1を示す。
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 
 ### Def. Conditional Independence
 TBD.
