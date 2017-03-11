@@ -34,7 +34,18 @@ book_chapter: 5
 簡単のため、
 
 * $$X_{1:T} := (X_{1}, \ldots, X_{T})$$,
+    * NLPでは単語の列
+    * 確率変数
+    * $X_{t}$の値域は全て同じ
+* $D_{X}$
+    * 単語全体の集合
 * $$Y_{1:T} := (Y_{1}, \ldots, Y_{T})$$,
+    * NLPでは単語に対応するラベルの列
+    * 確率変数
+    * HMMでの隠れ変数
+    * $Y_{t}$の値域は全て同じ
+* $D_{Y}$
+    * ラベル全体の集合
 * $$x_{1:T} := (x_{1}, \ldots, x_{T})$$,
 * $$y_{1:T} := (y_{1}, \ldots, y_{T})$$,
 
@@ -70,6 +81,7 @@ $$
         p_{X_{1:T}, Y_{1:T}}(x_{1:T}, y_{1:T})
 $$
 
+と同時密度関数を最大化することを考える。
 マルコフ性より、$X$と$Y$の条件付き確率密度関数は以下のようにかける。
 
 $$
@@ -94,6 +106,7 @@ $$
     & = &
         \prod_{t=1}^{T} p_{X_{t}, Y_{t} \mid X_{t-1}, Y_{t-1}}(x_{t}, y_{t} \mid x_{t-1}, y_{t-1})
             p_{X_{1}, Y_{1}}(x_{1}, y_{1})
+    \label{HMM_joint_probability_density_function_2}
 \end{eqnarray}
 $$
 
@@ -144,14 +157,192 @@ $$
                 p_{Y_{t} \mid Y_{t-1}}(y_{t} \mid y_{t-1})
             \right)
             p_{X_{1}, Y_{1}}(x_{1}, y_{1})
+    \label{HMM_joint_probability_density_function}
 \end{eqnarray}
 $$
 
 ここでは、潜在変数$Y_{t}$は文の$t$番目のラベル（品詞）で、$X_{t}$は文の$t$番目の単語である。
 
+### 5.2.2 パラメータ推定
+HMMにおけるパラメータとは、なんだ？
+
+前述したように、パラメータは最尤推定で求める。
+よって$$\eqref{HMM_joint_probability_density_function}$$を$y$について最大化すれば良い。
+まず、$$\eqref{HMM_joint_probability_density_function}$$の対数を取ると
+
+* $N$,
+    * データの個数
+* $$(X_{1:T}^{1}, Y_{1:T}^{1}), \ldots, (X_{1:T}^{N}, Y_{1:T}^{N})$$,
+    * $$(X_{1:T}, Y_{1:T})$$のi.i.dサンプル
+* $$x_{1:T}^{i} := X_{1:T}^{i}(\omega)$$,
+    * その実現値がデータとして与えられているとする
+* $$y_{1:T}^{i} := Y_{1:T}^{i}(\omega)$$,
+    * その実現値がデータとして与えられているとする
+
+$$
+\begin{eqnarray}
+    \log p_{X_{1:T}^{1}, Y_{1:T}^{1}, \ldots, X_{1:T}^{N}, Y_{1:T}^{N}}(x_{1:T}, y_{1:T}^{1}, \ldots, x_{1:T}, y_{1:T})
+    & = &
+        \sum_{i=1}^{N}
+            \log p_{X_{1:T}^{i}, Y_{1:T}^{i}}(x_{1:T}^{i}, y_{1:T}^{i})
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{N}
+            \left[
+                \sum_{t=1}^{T} 
+                    p_{X_{t} \mid Y_{t}}(x_{t}^{i} \mid y_{t}^{i})
+                +
+                \sum_{t=1}^{T} 
+                    p_{Y_{t} \mid Y_{t-1}}(y_{t}^{i} \mid y_{t-1}^{i})
+                +
+                p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+            \right]
+    \label{HMM_joint_probability_density_function_of_sample}
+\end{eqnarray}
+$$
+
+更に、以下を仮定する。
+
+$$
+\begin{eqnarray}
+    \forall t = 2, \ldots, T,
+    & &
+        p_{X_{t} \mid Y_{t}}
+        =
+        p_{X_{t-1} \mid Y_{t-1}},
+    \label{HMM_time_inhomogenous_of_xt_yt}
+    \\
+    \forall t = 3, \ldots, T,
+    & &
+        p_{Y_{t} \mid Y_{t-1}}
+        =
+        p_{Y_{t-1} \mid Y_{t-2}},
+    \label{HMM_time_inhomogenous_of_yt_yt_1}
+\end{eqnarray}
+$$
+
+つまり、次の系列の確率が$t$に依存しないとする。
+$t$が時間の場合は、斉時性(time inhomogenous)を仮定しているのに等しい。
+$$\eqref{HMM_time_inhomogenous_of_xt_yt}$$, $$\eqref{HMM_time_inhomogenous_of_yt_yt_1}$$は$t$に依存しないので、改めて
+
+$$
+\begin{eqnarray}
+    p_{X \mid Y}
+    & := &
+        p_{X_{t} \mid Y_{t}}
+    \label{HMM_time_inhomogenous_of_x_y}
+    \\
+    p_{Y \mid Y^{\prime}}
+    & := &
+        p_{Y_{t} \mid Y_{t-1}},
+    \label{HMM_time_inhomogenous_of_y_yprime}
+\end{eqnarray}
+$$
+
+とおく。
+以上より、$$\eqref{HMM_joint_probability_density_function_of_sample}$$は以下のようにかける。
+
+$$
+\begin{eqnarray}
+    \log p_{X_{1:T}^{1}, Y_{1:T}^{1}, \ldots, X_{1:T}^{N}, Y_{1:T}^{N}}(x_{1:T}, y_{1:T}^{1}, \ldots, x_{1:T}, y_{1:T})
+    & = &
+        \sum_{i=1}^{N}
+            \left[
+                \sum_{t=1}^{T} 
+                    p_{X \mid Y}(x_{t}^{i} \mid y_{t}^{i})
+                +
+                \sum_{t=1}^{T} 
+                    p_{Y \mid Y^{\prime}}(y_{t}^{i} \mid y_{t-1}^{i})
+                +
+                p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+            \right]
+    \nonumber
+    \\
+    & = &
+        \sum_{x \in D_{X}, y \in D_{Y}}
+            n(x, y)
+                p_{X \mid Y}(x \mid y)
+        +
+        \sum_{y^{\prime} \in D_{Y}, y \in D_{Y}}
+            n(y^{\prime}, y)
+                p_{Y \mid Y^{\prime}}(y \mid y^{\prime})
+        +
+        \sum_{i=1}^{N}
+            p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+    \label{HMM_joint_probability_density_function_of_sample_num}
+\end{eqnarray}
+$$
+
+ここで、
+
+* $n(x, y)$
+    * データ中に単語$x$にラベル$y$がついた回数
+* $n(y^{\prime}, y)$
+    * データ中にラベル$y^{\prime}$の次($t+1$)にラベル$y$がついた回数
+
+である。
+後は、$$\eqref{HMM_joint_probability_density_function_of_sample_num}$$を最大化する$$\eqref{HMM_time_inhomogenous_of_x_y}$$と$$\eqref{HMM_time_inhomogenous_of_y_yprime}$$を見つければ良い。
+これは、Lagrangeの未定乗数法でとけて以下のようになる。
+
+$$
+\begin{eqnarray}
+    p_{X_{t} \mid Y_{t}}(x \mid y)
+    & := &
+        \frac{
+            n(x, y)
+        }{
+            \sum_{\bar{x} \in D_{x}} 
+                n(\bar{x}, y)
+        }
+    \\
+    p_{Y_{t} \mid Y_{t-1}}(y^{\prime} \mid y)
+    & := &
+        \frac{
+            n_{y_{t} \mid y_{t-1}}(y^{\prime}, y)
+        }{
+            \sum_{\bar{y} \in D_{Y}} 
+                n_{y^{\prime} \mid y}(y^{\prime}, y)
+        }
+\end{eqnarray}
+$$
+
+### 5.2.3 HMMの推論
+文（単語の列）$x_{1:T}$を与えた時の予測を考える。
+ここでは、同時確率を最大とするようなラベルを予測として出力する。
+つまり、
+
+$$
+\begin{equation}
+    y_{1:T}^{\max}
+    :=
+    \argmax_{y_{1:T}} p_{X_{1:T}, Y_{1:T}}(x_{1:T}, y_{1:T})
+\end{equation}
+$$
+
+とする。
+ラベルの組み合わせは、ラベル数の$T$乗に比例するので、全列挙で計算することはできない。
+よって、動的計画法を用いたViterbi algorithmを用いる。
+以降はアンダーフローを避けるために、対数をとった確率を考える。
+
+$$\eqref{HMM_joint_probability_density_function_2}$$から以下を最大化すれば良い。　
+
+
+$$
+\begin{eqnarray}
+    \log p_{X_{1:T}, Y_{1:T}}(x_{1:T}, y_{1:T})
+    & = &
+        \sum_{t=2}^{T} 
+            p_{X_{t}, Y_{t} \mid X_{t-1}, Y_{t-1}}(x_{t}, y_{t} \mid x_{t-1}, y_{t-1})
+        + 
+        p_{X_{1}, Y_{1}}(x_{1}, y_{1})
+\end{eqnarray}
+$$
+
 ## 5.4 条件付き確率場
 条件付き確率場は対数線形モデル。
 対数線形でないといけない理由はなさそうだが？
+確率を扱いたいから対数線形（ロジスティック）にしてるだけのよう。
 
 ## 5.4.1 条件付き確率場の導入
 Conditional Random Fields でCRFとも言われる。
@@ -173,14 +364,14 @@ $Y$のとる値の集合を以下のように定義しておく
 データとして$$X_{1:T}$$, $$Y_{1:T}$$の独立同分布な確率変数の実現値が与えられているとする。
 つまり、
 
-* $$(X_{1:T}^{(i)})_{i} \quad (\forall i = 1, \ldots, N)$$,
+* $$(X_{1:T}^{i})_{i} \quad (\forall i = 1, \ldots, N)$$,
     * $X$のi.i.d
-* $$(Y_{1:T}^{(i)})_{i} \quad (\forall i = 1, \ldots, N)$$,
+* $$(Y_{1:T}^{i})_{i} \quad (\forall i = 1, \ldots, N)$$,
     * $Y$のi.i.d
 
 $$
 \begin{eqnarray}
-    p_{X_{1:T} \mid Y_{1:T}}(x_{1:T}, \mid y_{1:T})
+    p_{Y_{1:T} \mid X_{1:T}}( y_{1:T} \mid x_{1:T})
     & := &
         \frac{
             \exp
@@ -207,7 +398,7 @@ $$
 ここで、$w_{1:T}$は素性に対する重みベクトルで、訓練データから学習し決定する。
 $\phi(\cdot, \cdot)$は、4章導入した単語と単語ラベルから素性を対応づける適当な関数である。
 
-$phi$を与え、$w_{1:T}$を学習すれば、CRFでの予測が可能となる。
+$\phi$を適当に与え、$w_{1:T}$を学習で求めれば、CRFでの予測が可能となる。
 CRFでは、同時確率を最大にするものを次の予測とする。
 つまり、単語列$x_{1:T}$が与えられた時、そのラベル列を
 
@@ -216,7 +407,7 @@ $$
     y_{1:T}^{*}
     & := &
         \argmax_{y_{1:T}}
-            p_{X_{1:T} \mid Y_{1:T}}(x_{1:T}, \mid y_{1:T})
+            p_{Y_{1:T} \mid X_{1:T}}( y_{1:T} \mid x_{1:T})
     \nonumber
     \\
     & = &
@@ -236,6 +427,7 @@ $$
         \argmax_{y_{1:T}}
             (w_{1:T})^{\mathrm{T}}
                 \phi(x_{1:T}, y_{1:T})
+    \label{CRF_argmax_conditional_probability}
 \end{eqnarray}
 $$
 
@@ -244,10 +436,31 @@ $y_{1:T}$は$T$次元だから$y_{t}$の取る値の数$K$だけある。
 上記の最大化は$O(K^{T})$で計算できるが、$K$はラベルの数、$T$は単語の列の長さとなって現実的でない。
 
 上記の最大化の計算のために、仮定をおく。
-仮定の置き方は色々考えられるが、ここでは$Y_{t}$がマルコフ性を持つとする。
+仮定の置き方は色々考えられるが、ここでは$$\phi(x_{1:T}, y_{1:T})$$について以下の仮定をおく。
 
-TBD
+$$
+    \phi(x_{1:T}, y_{1:T})
+    =
+    \sum_{t=2}^{T} 
+        \phi(x_{1:T}, y_{t-1}, y_{t})
+$$
 
+つまり、$$\phi$$は$$y_{1:T}$$については2変数(2である必要は必ずしもない）についてしか依存せず、その和で$$\phi(x_{1:T}, y_{1:T})$$が表現されているとする。
+以上の仮定をおけば、$$\eqref{CRF_argmax_conditional_probability}$$は
+
+$$
+\begin{eqnarray}
+    (w_{1:T})^{\mathrm{T}}
+        \phi(x_{1:T}, y_{1:T})
+    & = &
+        \sum_{t=2}^{T}
+            (w_{1:T})^{\mathrm{T}}
+                \phi(x_{1:T}, y_{t-1}, y_{t})
+\end{eqnarray}
+$$
+
+とかける。
+これはHMMのViterbiアルゴリズムと同様に動的計画法でとける。
 
 ### 5.4.2 条件付き確率場の学習
 $w$の学習方法について触れる。
@@ -258,12 +471,28 @@ $$
     L(w)
     :=
     \sum_{i=1}^{N} 
-        \log p_{Y_{1:T} \mid X_{1:T}}(y_{1:T} \mid x_{1:T})
+        \log p_{Y_{1:T} \mid X_{1:T}}(y_{1:T}^{i} \mid x_{1:T}^{i})
         -
         \lambda \|w \|_{2}^{2}
 $$
 
 を$w$について最大化する問題を解く。
 第二項は正則化項でここでは$l^{2}$正則化である。
+正則化が$l^{2}$でなければならない理由はないが、ここでは$l^{2}$とする。
+本では最急勾配法で最小化する方法が記載されているが、最急勾配法に限る必要はない。
+一般に、微分を用いる最大化方法について注意すべき点を述べる。
 
-TBD
+$$
+\begin{eqnarray}
+    \log p_{Y_{1:T} \mid X_{1:T}}(y_{1:T}^{i} \mid x_{1:T}^{i})
+    & = &
+        (w_{1:T}^{i})^{\mathrm{T}} \phi(x_{1:T}^{i}, y_{1:T}^{i})
+        -
+        Z(x_{1:T}^{i}, w_{1:T})
+    \nonumber
+\end{eqnarray}
+$$
+
+より$w$についての微分を考えると、
+
+
