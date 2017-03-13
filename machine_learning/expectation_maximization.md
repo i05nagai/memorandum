@@ -19,24 +19,24 @@ title: Expectation Maximization Algorithm
 * $X$
     * 観測できる変数の真の確率変数
     * $\mathbb{R}^{d}$値の確率変数
-* $$X_{1}, \ldots, X_{N}$$
+* $$X_{1}, \ldots, X_{N}$$,
     * $\mathbb{R}^{d}$値の確率変数
     * $X$に対して独立同分布
-* $$\bar{X}_{N} := (X_{1}, \ldots, X_{N})$$
+* $$\bar{X}_{N} := (X_{1}, \ldots, X_{N})$$,
     * 記法を簡潔するために、観測値全体を上のようにかく
 * $x_{k} := X_{1}(\omega)$
     * 確率変数の観測値
-* $$\bar{x}_{N} := (x_{1}, \ldots, x_{N})$$
+* $$\bar{x}_{N} := (x_{1}, \ldots, x_{N})$$,
     * 記法を簡潔するために、観測値全体を上のようにかく
 * $\theta \in \mathbb{R}^{d}$
     * モデルのパラメータを表す変数
-* $$Z_{1}, \ldots, Z_{N}$$
+* $$Z_{1}, \ldots, Z_{N}$$,
     * 観測されない潜在変数
-* $$\bar{Z}_{N} := (Z_{1}, \ldots, Z_{N})$$
+* $$\bar{Z}_{N} := (Z_{1}, \ldots, Z_{N})$$,
     * 記法を簡潔するために、実現値全体を上のようにかく
 * $z_{i} := Z_{i}(\omega) \quad (\forall i = 1, \ldots, N)$
     * 潜在変数の実現値
-* $$\bar{z}_{N} := (z_{1}, \ldots, z_{N})$$
+* $$\bar{z}_{N} := (z_{1}, \ldots, z_{N})$$,
     * 記法を簡潔するために、実現値全体を上のようにかく
 
 ## Algorithm
