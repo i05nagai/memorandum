@@ -168,7 +168,6 @@ HMMにおけるパラメータとは、なんだ？
 
 前述したように、パラメータは最尤推定で求める。
 よって$$\eqref{HMM_joint_probability_density_function}$$を$y$について最大化すれば良い。
-まず、$$\eqref{HMM_joint_probability_density_function}$$の対数を取ると
 
 * $N$,
     * データの個数
@@ -178,6 +177,9 @@ HMMにおけるパラメータとは、なんだ？
     * その実現値がデータとして与えられているとする
 * $$y_{1:T}^{i} := Y_{1:T}^{i}(\omega)$$,
     * その実現値がデータとして与えられているとする
+
+とおおく。
+まず、$$\eqref{HMM_joint_probability_density_function}$$の対数を取ると
 
 $$
 \begin{eqnarray}
@@ -191,12 +193,12 @@ $$
         \sum_{i=1}^{N}
             \left[
                 \sum_{t=1}^{T} 
-                    p_{X_{t} \mid Y_{t}}(x_{t}^{i} \mid y_{t}^{i})
+                    \log p_{X_{t} \mid Y_{t}}(x_{t}^{i} \mid y_{t}^{i})
                 +
                 \sum_{t=1}^{T} 
-                    p_{Y_{t} \mid Y_{t-1}}(y_{t}^{i} \mid y_{t-1}^{i})
+                    \log p_{Y_{t} \mid Y_{t-1}}(y_{t}^{i} \mid y_{t-1}^{i})
                 +
-                p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+                \log p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
             \right]
     \label{HMM_joint_probability_density_function_of_sample}
 \end{eqnarray}
@@ -211,32 +213,32 @@ $$
         p_{X_{t} \mid Y_{t}}
         =
         p_{X_{t-1} \mid Y_{t-1}},
-    \label{HMM_time_inhomogenous_of_xt_yt}
+    \label{HMM_time_homogenous_of_xt_yt}
     \\
     \forall t = 3, \ldots, T,
     & &
         p_{Y_{t} \mid Y_{t-1}}
         =
         p_{Y_{t-1} \mid Y_{t-2}},
-    \label{HMM_time_inhomogenous_of_yt_yt_1}
+    \label{HMM_time_homogenous_of_yt_yt_1}
 \end{eqnarray}
 $$
 
 つまり、次の系列の確率が$t$に依存しないとする。
-$t$が時間の場合は、斉時性(time inhomogenous)を仮定しているのに等しい。
-$$\eqref{HMM_time_inhomogenous_of_xt_yt}$$, $$\eqref{HMM_time_inhomogenous_of_yt_yt_1}$$は$t$に依存しないので、改めて
+$t$が時間の場合は、斉時性(time homogenous)を仮定しているのに等しい。
+$$\eqref{HMM_time_homogenous_of_xt_yt}$$, $$\eqref{HMM_time_homogenous_of_yt_yt_1}$$は$t$に依存しないので、改めて
 
 $$
 \begin{eqnarray}
     p_{X \mid Y}
     & := &
         p_{X_{t} \mid Y_{t}}
-    \label{HMM_time_inhomogenous_of_x_y}
+    \label{HMM_time_homogenous_of_x_y}
     \\
     p_{Y \mid Y^{\prime}}
     & := &
         p_{Y_{t} \mid Y_{t-1}},
-    \label{HMM_time_inhomogenous_of_y_yprime}
+    \label{HMM_time_homogenous_of_y_yprime}
 \end{eqnarray}
 $$
 
@@ -250,40 +252,324 @@ $$
         \sum_{i=1}^{N}
             \left[
                 \sum_{t=1}^{T} 
-                    p_{X \mid Y}(x_{t}^{i} \mid y_{t}^{i})
+                    \log p_{X \mid Y}(x_{t}^{i} \mid y_{t}^{i})
                 +
                 \sum_{t=1}^{T} 
-                    p_{Y \mid Y^{\prime}}(y_{t}^{i} \mid y_{t-1}^{i})
+                    \log p_{Y \mid Y^{\prime}}(y_{t}^{i} \mid y_{t-1}^{i})
                 +
-                p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+                \log p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
             \right]
     \nonumber
     \\
     & = &
         \sum_{x \in D_{X}, y \in D_{Y}}
             n(x, y)
-                p_{X \mid Y}(x \mid y)
+                \log p_{X \mid Y}(x \mid y)
         +
         \sum_{y^{\prime} \in D_{Y}, y \in D_{Y}}
             n(y^{\prime}, y)
-                p_{Y \mid Y^{\prime}}(y \mid y^{\prime})
+                \log p_{Y \mid Y^{\prime}}(y \mid y^{\prime})
         +
         \sum_{i=1}^{N}
-            p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+            \log p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
     \label{HMM_joint_probability_density_function_of_sample_num}
 \end{eqnarray}
 $$
 
 ここで、
 
-* $n(x, y)$
+* $$A_{i,j} := \{i, \ldots, j\}$$,
+    * $i$から$j$までの連続値
+* $$n(x, y) := \mathrm{card}(\{(i, t) \in A_{1, N} \times A_{1, T} \mid x = x_{t}^{i}, y = y_{t}^{i} \})$$,
     * データ中に単語$x$にラベル$y$がついた回数
-* $n(y^{\prime}, y)$
+* $$n(y^{\prime}, y) := \mathrm{card}(\{(i, t) \in A_{1, N} \times A_{2, T} \mid y^{\prime} = y_{t-1}^{i}, y = y_{t}^{i}\})$$,
     * データ中にラベル$y^{\prime}$の次($t+1$)にラベル$y$がついた回数
 
 である。
-後は、$$\eqref{HMM_joint_probability_density_function_of_sample_num}$$を最大化する$$\eqref{HMM_time_inhomogenous_of_x_y}$$と$$\eqref{HMM_time_inhomogenous_of_y_yprime}$$を見つければ良い。
-これは、Lagrangeの未定乗数法でとけて以下のようになる。
+後は、$$\eqref{HMM_joint_probability_density_function_of_sample_num}$$を最大化する$$\eqref{HMM_time_homogenous_of_x_y}$$と$$\eqref{HMM_time_homogenous_of_y_yprime}$$を見つければ良い。
+これは、
+
+* $$\{p_{X \mid Y}(x \mid y) \}_{x \in D_{X}, y \in D_{Y}}$$,
+    * 未知変数
+    * $$\mathrm{card}(D_{X}) \times \mathrm{card}(D_{Y})$$個
+    * 簡単のため変数を$p(x \mid y)$とかく
+* $$\{ p_{Y \mid Y^{\prime}}(y \mid y^{\prime})\}_{y \in D_{Y}, y^{\prime} \in D_{Y}} $$,
+    * 未知変数
+    * $$\mathrm{card}(D_{Y})^{2}$$個
+    * 簡単のため変数を$p(y \mid y^{\prime})$とかく
+* $$\{ p_{X_{i} \mid Y_{i}}(x_{1}^{i}, y_{1}^{i})\}_{i = 1, \ldots, N}$$,
+    * 未知変数
+    * $N$個
+    * 簡単のため変数を$p(x_{1}^{i}, y_{1}^{i})$とかく
+
+を変数とする最大化問題である。
+確率1の制約を入れて、Lagrangeの未定乗数法でとける。
+
+$$
+\begin{eqnarray}
+    \sum_{x \in D_{X}} 
+        p(x \mid y) - 1
+    & = & 
+        0
+        \quad
+        (\forall y \in D_{Y}),
+    \nonumber
+    \\
+    \sum_{x \in D_{X}, y \in D_{Y}} 
+        p(x \mid y) - 1
+    & = & 
+        0,
+    \nonumber
+    \\
+    \sum_{y \in D_{X}} 
+        p(y \mid y^{\prime}) - 1
+    & = & 
+        0
+        \quad
+        (\forall y^{\prime} \in D_{Y}),
+    \nonumber
+    \\
+    \sum_{y \in D_{Y}, y^{\prime} \in D_{Y}} 
+        p(y \mid y^{\prime}) - 1
+    & = & 
+        0,
+    \nonumber
+\end{eqnarray}
+$$
+
+より、Langrange関数は
+
+$$
+\begin{eqnarray}
+    L
+    :=
+    & &
+        \sum_{x \in D_{X}, y \in D_{Y}}
+            n(x, y)
+                \log p_{X \mid Y}(x \mid y)
+        +
+        \sum_{y^{\prime} \in D_{Y}, y \in D_{Y}}
+            n(y^{\prime}, y)
+                \log p_{Y \mid Y^{\prime}}(y \mid y^{\prime})
+        +
+        \sum_{i=1}^{N}
+            \log p_{X_{1}, Y_{1}}(x_{1}^{i}, y_{1}^{i})
+    \nonumber
+    \\
+    & - &
+        \sum_{y \in D_{Y}}
+            \lambda_{y}
+            \left(
+                \sum_{x \in D_{X}} p(x \mid y)
+                -
+                1
+            \right)
+        - \gamma_{1}
+            \left(
+                \sum_{x \in D_{X}, y \in D_{Y}} p(x \mid y)
+                -
+                1
+            \right)
+    \nonumber
+    \\
+    & - &
+        \sum_{y^{\prime} \in D_{Y}}
+            \mu_{y^{\prime}}
+            \left(
+                \sum_{y \in D_{Y}} p(y \mid y^{\prime})
+                -
+                1
+            \right)
+        - \gamma_{2}
+            \left(
+                \sum_{y \in D_{Y}, y^{\prime} \in D_{Y}} p(y \mid y^{\prime})
+                -
+                1
+            \right)
+    \nonumber
+    \\
+    & &
+\end{eqnarray}
+$$
+
+となる。
+微分を計算すると、
+
+$$
+\begin{eqnarray}
+    \frac{\partial L}{\partial p(\bar{x} \mid \bar{y})} 
+    & = &
+        \frac{
+            n(\bar{x}, \bar{y})
+        }{
+            p(\bar{x} \mid \bar{y})
+        }
+        - \lambda_{\bar{y}}
+        - \gamma_{1}
+    \\
+    \frac{\partial L}{\partial p(\bar{y} \mid \bar{y}^{\prime})} 
+    & = &
+        \frac{
+            n(\bar{y}, \bar{y}^{\prime})
+        }{
+            p(\bar{y} \mid \bar{y}^{\prime})
+        }
+        - \mu_{\bar{y}^{\prime}}
+        - \gamma_{2}
+    \\
+\end{eqnarray}
+$$
+
+である。
+KKT条件は
+
+$$
+\begin{eqnarray}
+    \frac{
+        n(x, y)
+    }{
+        p(x \mid y)
+    }
+    - \lambda_{y}
+    - \gamma_{1}
+    & = &
+        0
+    \label{HMM_KKT_derivative1}
+    \\
+    \frac{
+        n(y, y^{\prime})
+    }{
+        p(y \mid y^{\prime})
+    }
+    - \mu_{y^{\prime}}
+    - \gamma_{2}
+    \label{HMM_KKT_derivative2}
+    & = &
+        0
+    \\
+    \lambda_{y}
+    \left(
+        \sum_{x \in D_{X}}
+            p(x \mid y)
+        -
+        1
+    \right)
+    & = &
+        0
+    \label{HMM_KKT_lambda}
+    \\
+    \mu_{y^{\prime}}
+    \left(
+        \sum_{y \in D_{Y}}
+            p(y \mid y^{\prime})
+        -
+        1
+    \right)
+    & = &
+        0
+    \label{HMM_KKT_mu}
+    \\
+    \gamma_{1}
+    \left(
+        \sum_{x \in D_{X}, y \in D_{Y}}
+            p(x \mid y)
+        -
+        1
+    \right)
+    & = &
+        0
+    \label{HMM_KKT_gamma1}
+    \\        
+    \gamma_{2}
+    \left(
+        \sum_{y \in D_{Y}, y^{\prime} \in D_{Y}}
+            p(y \mid y^{\prime})
+        -
+        1
+    \right)
+    & = &
+        0
+    \label{HMM_KKT_gamma2}
+\end{eqnarray}
+$$
+
+である。
+まず、$$\eqref{HMM_KKT_derivative1}$$より
+
+$$
+\begin{eqnarray}
+    \sum_{x \in D_{X}, y \in D_{Y}}
+        n(x, y)
+    -
+    \sum_{x \in D_{X}, y \in D_{Y}}
+        \lambda_{y}
+        p(x \mid y)
+    & = &
+        \gamma_{1}
+        \sum_{x \in D_{X}, y \in D_{Y}}
+            p(x \mid y)
+\end{eqnarray}
+$$
+
+また、$$\eqref{HMM_KKT_derivative1}$$ と $$\eqref{HMM_KKT_lambda}$$より
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{x \in D_{X}}
+            n(x, y)
+        = 
+        (
+            \gamma_{1}
+            +
+            \lambda_{y}
+        )
+        \sum_{x \in D_{X}}
+            p(x \mid y)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{x \in D_{X}}
+            n(x, y)
+        = 
+        \gamma_{1}
+        \sum_{x \in D_{X}}
+            p(x \mid y)
+            +
+            \lambda_{y}
+\end{eqnarray}
+$$
+
+これを$$\eqref{HMM_KKT_gamma1}$$に代入すると
+
+$$
+\begin{eqnarray}
+    & &
+        \lambda_{y}    
+        \left(
+            \frac{
+                \sum_{x \in D_{X}}
+                    n(x, y)
+            }{
+                (\gamma_{1} + \lambda_{y})
+            }
+            -
+            1
+        \right)
+        =
+        0
+    \\
+    & \Leftrightarrow &
+        \sum_{x \in D_{X}}
+            n(x, y)
+        =
+        \lambda_{y}
+        +
+        \gamma_{1}
+\end{eqnarray}
+$$
+
+以下のようになる。
 
 $$
 \begin{eqnarray}
