@@ -27,7 +27,7 @@ $$,
     * 平均の不偏推定量
 * $$
     \displaystyle
-    V_{N}
+    V_{N}(X_{1}, \ldots, X_{N})
     := 
     \frac{
         \sum_{i=1}^{N} (X_{i} - \bar{X}_{N})^{2}
@@ -86,11 +86,13 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Theorem 19
-$X_{i} \sim \mathrm{N}(\mu, \sigma)$とする。　
+* $X \sim \mathrm{N}(\mu, \sigma)$,
+* $$X_{1}, \ldots, X_{N}$$,
+    * $X$のi. i. d
 
 $$
     \frac{
-        (N - 1)S^{2}
+        (N - 1)V_{N}(X_{1}, \ldots, X_{N})
     }{
         \sigma^{2}
     }
@@ -101,12 +103,25 @@ $$
 が成立。
 
 ### proof.
-$$\eqref{def_sample_variance}$$より、
+まず、
+
+$$
+    Z_{i}
+    :=
+    \frac{
+        X_{i} - \bar{X}_{N})
+    }{
+        \sigma
+    }
+$$
+
+とおくと、$$Z_{i} \sim \mathrm{N}(0, 1)$$で、各$Z_{i}$は独立である。
+よって、
 
 $$
 \begin{eqnarray}
     \frac{
-        (N - 1)V_{N}
+        (N - 1)V_{N}(X_{1}, \ldots, X_{N})
     }{
         \sigma^{2}
     }
@@ -140,8 +155,15 @@ $$
                     \sigma
                 }
             \right)^{2}
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{N}
+            Z_{i}^{2}
 \end{eqnarray}
 $$
+
+となって、$\chi_{N}^{2}$に従う。
 
 ### Thereom 20
 $$X_{1}, \ldots, X_{N}$$が独立な確率変数とする。
@@ -685,11 +707,458 @@ $$
 * 真の分布$Y$が正規分布に従う
 
 ### Lemma 8
+* $$X \sim \mathrm{N}(\mu, \sigma)$$,
+* $$X_{1} ,\ldots, X_{N}$$,
+    * $X$と同分布
 
+このとき、
+
+$$
+\begin{equation}
+    \mathrm{Var}
+    \left[
+        V_{N}(X_{1}, \ldots, X_{N})
+    \right]
+    =
+    \frac{
+        2 \sigma^{4}
+    }{
+        N - 1
+    }
+\end{equation}
+$$
+
+### proof.
+Theorem 19 より、
+
+$$
+\begin{equation}
+    \frac{
+        (N - 1) V_{N}(X_{1} ,\ldots, X_{N})
+    }{
+        \sigma^{2}
+    }
+    \sim
+    \chi_{N-1}^{2}
+\end{equation}
+$$
+
+である。
+よって、
+
+$$
+    \mathrm{Var}
+    \left[
+        \frac{
+            (N - 1) V_{N}(X_{1} ,\ldots, X_{N})
+        }{
+            \sigma^{2}
+        }
+    \right]
+    =
+    2 (N - 1)
+$$
+
+である。
+一方
+
+$$
+\begin{eqnarray}
+    \mathrm{Var}
+    \left[
+        \frac{
+            (N - 1) V_{N}(X_{1} ,\ldots, X_{N})
+        }{
+            \sigma^{2}
+        }
+    \right]
+    & = &
+        \frac{
+            (N - 1)^{2}
+        }{
+            \sigma^{4}
+        }
+        \mathrm{Var}
+        \left[
+            V_{N}(X_{1} ,\ldots, X_{N})
+        \right]
+\end{eqnarray}
+$$
+
+である。
+よって、
+
+$$
+\begin{eqnarray}
+    & &
+        \frac{
+            (N - 1)^{2}
+        }{
+            \sigma^{4}
+        }
+        \mathrm{Var}
+        \left[
+            V_{N}(X_{1} ,\ldots, X_{N})
+        \right]
+        =
+        2 (N - 1)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mathrm{Var}
+        \left[
+            V_{N}(X_{1} ,\ldots, X_{N})
+        \right]
+        =
+        \frac{
+            2 \sigma^{4}
+        }{
+            (N - 1)
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Theorem 23
+
+$$
+    \hat{\beta}
+    \frac{
+        \frac{
+            V_{N}(X_{1}, \ldots, X_{N})
+        }{
+            N
+        }
+        +
+        \frac{
+            V_{M}(Y_{1}, \ldots, Y_{M})
+        }{
+            M
+        }
+    }{
+        \frac{
+            \sigma^{2}_{X}
+        }{
+            N
+        }
+       +
+       \frac{
+           \sigma_{Y}^{2}
+       }{
+           M
+       }
+    }
+    \overset{\mathrm{approx}}{\sim}
+    \chi_{\hat{\beta}}^{2},
+$$
+
+ここで、
+
+$$
+\begin{equation}
+    \hat{\beta}
+    :=
+    \frac{
+        \left(
+            \frac{
+                V_{N}(X_{1}, \ldots, X_{N})
+            }{
+                N
+            }
+            +
+            \frac{
+                V_{M}(Y_{1}, \ldots, Y_{M})
+            }{
+                M
+            }
+        \right)^{2}
+    }{
+        \frac{
+            V_{N}(X_{1}, \ldots, X_{N})^{2}
+        }{
+            N(N-1)
+        }
+        +
+        \frac{
+            V_{M}(Y_{1}, \ldots, Y_{N})^{2}
+        }{
+            M(M-1)
+        }
+    }
+\end{equation}
+$$
 
 ### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorem 23
+
+### Theorem 24
+* $X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$,
+* $Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$,
+* $$X_{1}, \ldots, X_{N}$$,
+    * $X$と同分布
+* $$Y_{1}, \ldots, Y_{M}$$,
+    * $Y$と同分布
+
+このとき、
+
+$$
+    T
+    :=
+    \frac{
+        (\bar{X}_{N} - \bar{Y}_{M})
+        -
+        (\mu_{X} - \mu_{Y})
+    }{
+        \sqrt{
+            \frac{
+                V_{N}(X_{1}, \ldots, X_{N})
+            }{
+                N
+            }
+            +
+            \frac{
+                V_{M}(Y_{1}, \ldots, Y_{M})
+            }{
+                M
+            }
+        }
+    }
+    \sim
+    t(v)
+$$
+
+ここで、
+
+$$
+    v
+    :=
+    \frac{
+        \left(
+            \frac{
+                V_{N}(X_{1}, \ldots, X_{N})
+            }{
+                N
+            }
+            +
+            \frac{
+                V_{M}(Y_{1}, \ldots, Y_{M})
+            }{
+                M
+            }
+        \right)^{2}
+    }{
+        \frac{
+            V_{N}(X_{1}, \ldots, X_{N})^{2}
+        }{
+            N^{2}(N - 1)
+        }
+        +
+        \frac{
+            V_{M}(Y_{1}, \ldots, Y_{M})^{2}
+        }{
+            M^{2}(M - 1)
+        }
+    }
+$$
+
+である。
+
+### proof.
+まず、
+
+$$
+    Z
+    :=
+    \frac{
+        (\bar{X}_{N} - \bar{Y}_{M})
+        -
+        (\mu_{X} - \mu_{Y})
+    }{
+        \sqrt{
+            \frac{
+                \sigma_{X}^{2}
+            }{
+                N
+            }
+            +
+            \frac{
+                \sigma_{Y}^{2}
+            }{
+                M
+            }
+        }
+    }
+$$
+
+とおくと、$Z \sim \mathrm{N}(0, 1)$となる。
+また、前定理より、
+
+$$
+    V
+    :=
+    \hat{\beta}
+    \frac{
+        \frac{
+            V_{N}(X_{1}, \ldots, X_{N})
+        }{
+            N
+        }
+        +
+        \frac{
+            V_{M}(Y_{1}, \ldots, Y_{M})
+        }{
+            M
+        }
+    }{
+        \frac{
+            \sigma_{X}^{2}
+        }{
+            N
+        }
+        +
+        \frac{
+            \sigma_{Y}^{2}
+        }{
+            M
+        }
+    }
+$$
+
+とすると、$$V \overset{\mathrm{approx}}{\sim} \chi_{\hat{\beta}}^{2}$$である。
+以上をふまえ、
+
+$$
+\begin{eqnarray}
+    T
+    & = &
+        \frac{
+            (\bar{X}_{N} - \bar{Y}_{M})
+            -
+            (\mu_{X} - \mu_{Y})
+        }{
+            \sqrt{
+                \frac{
+                    V_{N}(X_{1}, \ldots, X_{N})
+                }{
+                    N
+                }
+                +
+                \frac{
+                    V_{M}(Y_{1}, \ldots, Y_{M})
+                }{
+                    M
+                }
+            }
+        }
+        \frac{
+            \hat{\beta}
+            \sqrt{
+                \frac{
+                    \sigma_{X}^{2}
+                }{
+                    N
+                }
+                +
+                \frac{
+                    \sigma_{Y}^{2}
+                }{
+                    M
+                }
+            }
+        }{
+            \hat{\beta}
+            \sqrt{
+                \frac{
+                    \sigma_{X}^{2}
+                }{
+                    N
+                }
+                +
+                \frac{
+                    \sigma_{Y}^{2}
+                }{
+                    M
+                }
+            }
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            (\bar{X}_{N} - \bar{Y}_{M})
+            -
+            (\mu_{X} - \mu_{Y})
+        }{
+            \sqrt{
+                \frac{
+                    \sigma_{X}^{2}
+                }{
+                    N
+                }
+                +
+                \frac{
+                    \sigma_{Y}^{2}
+                }{
+                    M
+                }
+            }
+        }
+        \left(
+            \frac{
+                \hat{\beta}
+                \sqrt{
+                    \frac{
+                        V_{N}(X_{1}, \ldots, X_{N})
+                    }{
+                        N
+                    }
+                    +
+                    \frac{
+                        V_{M}(Y_{1}, \ldots, Y_{M})
+                    }{
+                        M
+                    }
+            }
+            }{
+                \hat{\beta}
+                \sqrt{
+                    \frac{
+                        \sigma_{X}^{2}
+                    }{
+                        N
+                    }
+                    +
+                    \frac{
+                        \sigma_{Y}^{2}
+                    }{
+                        M
+                    }
+                }
+            }
+        \right)^{-1}
+    \nonumber
+    \\
+    & = &
+        \hat{\beta}
+        \frac{
+            Z
+        }{
+            \sqrt{
+                \frac{
+                    V
+                }{
+                    \hat{\beta}
+                }
+            }
+        }
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Reference
 
