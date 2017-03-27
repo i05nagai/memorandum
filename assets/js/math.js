@@ -17,6 +17,7 @@
         diag: '\\mathop{\\mathrm{diag}}\\nolimits',
         argmax: '\\mathop{\\mathrm{argmax}}\\limits',
         argmin: '\\mathop{\\mathrm{argmin}}\\limits',
+        deg: '\\mathrm{deg}',
       } 
     }
   });
