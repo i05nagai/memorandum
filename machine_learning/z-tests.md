@@ -82,10 +82,12 @@ $$
 sample sizeが増えれば標本分散は減る。
 
 ## one sample z-test for the population mean
-* 真の分布$X$が正規分布
-* $X_{1}, \ldots, X_{N}$が正規分布に従う
+正規分布に従う確率変数の平均値の検定。
 
-### Theorem 14(p40)
+* 真の分布$X \sim \mathrm{N}(\mu, \sigma)$が正規分布
+* $\sigma$の値は事前に知っている
+
+### Theorem 14
 $$X_{i} \sim \mathrm{N}(\mu, \sigma^{2})\ \forall i = 1,\ldots, N$$とする。
 このとき、
 
@@ -105,11 +107,13 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-よって、$Z$検定において
 
 ## Paired sample z-test for the population mean of paired difference
-* 真の分布$X$, $Y$が正規分布に従う
-* $X_{1}, \ldots, X_{N}$が 
+正規分布に従う確率変数の平均値の差の検定。
+
+* 真の分布$X \sim \mathrm{N}(\mu, \sigma)$が正規分布
+* 真の分布$Y \sim \mathrm{N}(\mu, \sigma)$が正規分布
+* $\sigma$の値は事前に知っている
 
 ### Theorem 15
 $X_{i} \forall i = 1, \ldots, N$, $Y_{i} \forall j = 1, \ldots, N$が正規分布に従うとする。
@@ -150,14 +154,9 @@ $$
         },
     \nonumber
     \\
-    \mu_{D} 
-    & := &
-        \mathrm{E}(D_{N}),
-    \nonumber
-    \\
     \sigma_{D}
     & := &
-        \sqrt{\mathrm{Var}(\bar{D}_{N})}
+        V_{N}(D_{1}, \ldots, D_{N})
     \nonumber
 \end{eqnarray}
 $$
@@ -171,9 +170,11 @@ $X_{i} - Y_{i}$が正規分布に従うことに注意すれば良い。
 独立性は各$i$について独立であることに注意する。
 
 ## Two sample z-test for difference of population means
-* 真の分布$X$, $Y$が正規分布に従う
-* サンプルが$X_{1}, \ldots, X_{N}$が同一の正規分布に従う
-* サンプルが$Y_{1}, \ldots, Y_{N}$が同一の正規分布に従う
+正規分布に従う確率変数の平均値の差の検定。
+
+* 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma_{X})$が正規分布
+* 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y})$が正規分布
+* $$\sigma_{X}, \sigma_{Y}$$の値は事前に知っている
 * $$\{X_{i}\}$$と$$\{Y_{i}\}$$が独立
 
 ### Lemma 4
