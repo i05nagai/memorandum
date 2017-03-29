@@ -5,8 +5,10 @@ title: F-tests
 ## F-tests
 
 ## Definition
-* $$U_{1} \sim \chi_{N}$$,
-* $$U_{2} \sim \chi_{M}$$,
+
+### F-distribution
+* $$U_{1} \sim \chi(N)$$,
+* $$U_{2} \sim \chi(M)$$,
 * $$U_{1}, U_{2}$$が独立
 
 $$
@@ -22,8 +24,13 @@ $$
 の従う分布を自由度$N, M$の$F$分布といい、$F(N, M)$とかく。
 
 ## Two sample F test for population variances
+$F$検定では、真の分布が正規分布の2つの分散が一致するか検定する。
+$F$分布は$N$及び$M$によってのみ決まる。
+つまり、正規分布の平均によらず、分散の検定ができる。
+
 * $X \sim \mathrm{N}(\mu_{X}, \sigma^{2})$,
 * $Y \sim \mathrm{N}(\mu_{Y}, \sigma^{2})$,
+* 帰無仮説は$X$と$Y$の分散が等しい
 
 ### Theorem 25
 * $X \sim \mathrm{N}(\mu_{X}, \sigma^{2})$,
