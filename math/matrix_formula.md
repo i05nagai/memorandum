@@ -96,3 +96,62 @@ $$
 右辺は各$k$について$\eqref{matrix_formula_column_multiply_transposed_column}$でかけるので、成立する。
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition
+* $B = (b_{i}^{j})_{i}^{j}$
+    * $N \times N$行列
+* $C$
+    * $N \times N$行列
+
+$C$の$i,j$成分$c_{i}^{j}$が以下でかけるとする。
+
+$$
+    c_{i}^{j}
+    =
+    (a^{i})^{\mathrm{T}}
+    B
+    a^{j}
+$$
+
+このとき、
+
+$$
+    C
+    =
+    A^{\mathrm{T}}
+    B
+    A
+$$
+
+PCAで使う。
+
+### proof.
+
+$$
+\begin{eqnarray}
+    (A^{\mathrm{T}}B)_{i}^{j}
+    & = &
+        \sum_{k=1}^{N}
+            a_{k}^{i}
+                b_{k}^{j},
+    \nonumber
+    \\
+    (A^{\mathrm{T}}BA)_{i}^{j}
+    & = &
+        \sum_{l=1}^{N}
+            \sum_{k=1}^{N}
+                a_{k}^{i}
+                    b_{k}^{l}
+                    a_{l}^{j}
+    \nonumber
+    \\
+    & = &
+        (a^{i})^{\mathrm{T}}
+        B
+        a^{j}
+    \nonumber    
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
