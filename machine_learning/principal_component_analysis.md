@@ -108,7 +108,47 @@ $$
 $$,
 
 $A := \mathrm{Cov}(X)$とおく。
-$A$は対称かつ正定値行列である。
+$A$は対称かつ半正定値行列である。
+実際、対称なのは明らかで、半正定値性はJensenの不等式より、$\forall x \in \mathbb{R}^{N}$について
+
+$$
+\begin{eqnarray}
+    x^{\mathrm{T}}Ax
+    & = &
+        \sum_{i=1}^{N}
+            \sum_{j=1}^{N}
+                x_{i}
+                x_{j}
+                \mathrm{E}
+                \left[
+                    (X^{i} - \mu^{i})
+                    (X^{j} - \mu^{j})
+                \right]
+    \nonumber
+    \\
+    & \ge &
+        \sum_{i=1}^{N}
+            \sum_{j=1}^{N}
+                x_{i}
+                x_{j}
+                \mathrm{E}
+                \left[
+                    (X^{i} - \mu^{i})
+                \right]
+                \mathrm{E}
+                \left[
+                    (X^{j} - \mu^{j})
+                \right]
+    \nonumber
+    \\
+    & = &
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+である。
+
 $A$のスペクトル分解を考え、$A = PDP^{\mathrm{T}}$とおく。
 また、$$P = (p_{1} \ldots p_{N})$$と列ベクトルでかく。
 
