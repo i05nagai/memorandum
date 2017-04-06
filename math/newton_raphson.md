@@ -8,6 +8,7 @@ title: Newton-Raphson Method
 ## Good
 
 ## Bad
+* 微分の行列が必要
 
 ## Definition
 * $N \in \mathbb{N}$
