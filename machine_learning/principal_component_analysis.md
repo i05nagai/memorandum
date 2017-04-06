@@ -3,6 +3,12 @@ title: Principal Component Analysis
 ---
 
 ## Principal Component Analysis
+PCAは教師なし学習。
+LDAは教師あり学習。
+
+TODO:
+以下の議論では、真の分布の期待値が既知であることを利用している。
+平均の推定量に置き換えた議論が必要。
 
 ### Definition(Singular Value Decomposition)
 $A$は$N \times N$行列
@@ -29,19 +35,42 @@ $$
 
 が成立する。
 
+## Definition
+* $N$
+    * データの数
+* $d$
+    * 特徴量の次元
 * $$
     X
-    :=
+    =
     \left(
         \begin{array}{c}
             X^{1} \\
             \vdots \\
-            X^{N}
+            X^{d}
         \end{array}
     \right)
 $$,
-    * $N$次元確率変数
+    * データの真の分布
+    * $d$次元
+* $$
+    X_{i}
+    :=
+    \left(
+        \begin{array}{c}
+            X_{i}^{1} \\
+            \vdots \\
+            X_{i}^{d}
+        \end{array}
+    \right)
+    \
+    \forall i = 1, \ldots, N
+$$,
+    * $d$次元確率変数
     * 二乗可積分
+    * $X$のi.i.d
+* $x_{i} := X_{i}(\omega)$
+    * $X_{i}$の実現値
 * $$
     \mu
     :=
@@ -49,7 +78,7 @@ $$,
         \begin{array}{c}
             \mu^{1} \\
             \vdots \\
-            \mu^{N}
+            \mu^{d}
         \end{array}
     \right)
     :=
@@ -57,7 +86,7 @@ $$,
         \begin{array}{c}
             \mathrm{E}(X^{1}) \\
             \vdots \\
-            \mathrm{E}(X^{N})
+            \mathrm{E}(X^{d})
         \end{array}
     \right)
 $$,
@@ -85,59 +114,77 @@ $$
                     (X^{1} - \mu^{1})^{2} 
                         & (X^{1} - \mu^{1})(X^{2} - \mu^{2})
                         & \cdots 
-                        & (X^{1} - \mu^{1})(X^{N} - \mu^{N})
+                        & (X^{1} - \mu^{1})(X^{d} - \mu^{d})
                         \\
                     (X^{1} - \mu^{1})(X^{2} - \mu^{2})
                         & (X^{2} - \mu^{2})^{2}
                         & \cdots 
-                        & (X^{2} - \mu^{2})(X^{N} - \mu^{N})
+                        & (X^{2} - \mu^{2})(X^{d} - \mu^{d})
                         \\
                     \vdots
                         & 
                         & \ddots
                         & \vdots
                         \\
-                    (X^{1} - \mu^{1})(X^{N} - \mu^{N})
-                        & (X^{1} - \mu^{1})(X^{N} - \mu^{N} )
+                    (X^{1} - \mu^{1})(X^{d} - \mu^{d})
+                        & (X^{1} - \mu^{1})(X^{d} - \mu^{d} )
                         & \cdots 
-                        & (X^{N} - \mu^{N})^{2}
+                        & (X^{d} - \mu^{d})^{2}
                 \end{array}
             \right)
         \right]
 \end{eqnarray}
 $$,
 
-$A := \mathrm{Cov}(X)$とおく。
-$A$は対称かつ半正定値行列である。
-実際、対称なのは明らかで、半正定値性はJensenの不等式より、$\forall x \in \mathbb{R}^{N}$について
+$X$と同分布の確率変数について
+
+$$
+    \mathrm{Cov}
+    \left[
+        X
+    \right]
+    =
+    \mathrm{Cov}
+    \left[
+        X_{i}
+    \right]
+    \
+    \forall i = 1, \ldots, N
+$$
+
+に注意しておく。
+また、共分散行列は対称かつ半正定値である。
+実際、対称なのは明らかで、半正定値性はJensenの不等式より、$\forall x \in \mathbb{R}^{d}$について
 
 $$
 \begin{eqnarray}
-    x^{\mathrm{T}}Ax
+    x^{\mathrm{T}}
+    \mathrm{Cov}(X)
+    x
     & = &
-        \sum_{i=1}^{N}
-            \sum_{j=1}^{N}
-                x_{i}
+        \sum_{j=1}^{d}
+            \sum_{k=1}^{d}
                 x_{j}
+                x_{k}
                 \mathrm{E}
                 \left[
-                    (X^{i} - \mu^{i})
                     (X^{j} - \mu^{j})
+                    (X^{k} - \mu^{k})
                 \right]
     \nonumber
     \\
     & \ge &
-        \sum_{i=1}^{N}
-            \sum_{j=1}^{N}
-                x_{i}
+        \sum_{j=1}^{d}
+            \sum_{k=1}^{d}
                 x_{j}
-                \mathrm{E}
-                \left[
-                    (X^{i} - \mu^{i})
-                \right]
+                x_{k}
                 \mathrm{E}
                 \left[
                     (X^{j} - \mu^{j})
+                \right]
+                \mathrm{E}
+                \left[
+                    (X^{k} - \mu^{k})
                 \right]
     \nonumber
     \\
@@ -149,8 +196,10 @@ $$
 
 である。
 
+## Theory
+$A := \mathrm{Cov}(X)$とおく。
 $A$のスペクトル分解を考え、$A = PDP^{\mathrm{T}}$とおく。
-また、$$P = (p_{1} \ldots p_{N})$$と列ベクトルでかく。
+また、$$P = (p_{1} \ldots p_{d})$$と列ベクトルでかく。
 
 $i$-th Principal Componentを以下で定義する。
 
@@ -159,11 +208,12 @@ $$
     Y
     & := &
         A^{\mathrm{T}}(X - \mu)
-    \nonumber
+    \label{def_transformed_random_variable}
     \\
-    Y^{i}
+    Y^{j}
     & := &
-        p_{i}^{\mathrm{T}}(X - \mu)
+        p_{j}^{\mathrm{T}}(X - \mu)
+    \label{def_transformed_element_of_random_variable}
 \end{eqnarray}
 $$
  
@@ -181,8 +231,8 @@ $$
     & = &
         \mu
         +
-        \sum_{i=1}^{N}
-            Y^{i}a_{i}
+        \sum_{j=1}^{d}
+            Y^{j}a_{j}
 \end{eqnarray}
 $$
 
@@ -193,10 +243,10 @@ $$
 \begin{eqnarray}
     \mathrm{E}
     \left[
-        Y^{i}
+        Y^{j}
     \right]
     & = &
-        p_{i}^{\mathrm{T}}(\mathrm{E}(X) - \mu)
+        p_{j}^{\mathrm{T}}(\mathrm{E}(X) - \mu)
     \nonumber
     \\
     & = &
@@ -219,14 +269,14 @@ $$
 \begin{eqnarray}
     \mathrm{E}
     \left[
-        Y^{i}Y^{j}
+        Y^{j}Y^{k}
     \right]
     & = &
         \mathrm{E}
         \left[
-            p_{i}^{\mathrm{T}}
+            p_{j}^{\mathrm{T}}
                 (X - \mu)
-                p_{j}^{\mathrm{T}}
+                p_{k}^{\mathrm{T}}
                 (X - \mu)
         \right]
     \nonumber
@@ -234,30 +284,30 @@ $$
     & = &
         \mathrm{E}
         \left[
-            p_{i}^{\mathrm{T}}
+            p_{j}^{\mathrm{T}}
                 (X - \mu)
                 (X - \mu)^{\mathrm{T}}
-                p_{j}
+                p_{k}
         \right]
     \nonumber
     \\
     & = &
-        p_{i}^{\mathrm{T}}
+        p_{j}^{\mathrm{T}}
             \mathrm{E}
             \left[
                 (X - \mu)
                 (X - \mu)^{\mathrm{T}}
             \right]
-            p_{j}
+            p_{k}
     \nonumber
     \\
     & = &
-        p_{i}^{\mathrm{T}}
+        p_{j}^{\mathrm{T}}
             \mathrm{Cov}
             \left[
                 X
             \right]
-            p_{j}
+            p_{k}
 \end{eqnarray}
 $$
 
@@ -276,22 +326,22 @@ $$
                 (Y^{1})^{2}
                     & Y^{1}Y^{2}
                     & \cdots
-                    & Y^{1}Y^{N}
+                    & Y^{1}Y^{d}
                 \\
                 Y^{1}Y^{2}
                     & (Y^{2})^{2}
                     & \cdots
-                    & Y^{1}Y^{N}
+                    & Y^{1}Y^{d}
                 \\
                 \vdots
                     & 
                     & \ddots
                     & \vdots
                 \\
-                Y^{1}Y^{N}
-                    & Y^{2}Y^{N}
+                Y^{1}Y^{d}
+                    & Y^{2}Y^{d}
                     & \cdots
-                    & (Y^{N})^{2}
+                    & (Y^{d})^{2}
             \end{array}
         \right)
     \nonumber
@@ -321,39 +371,39 @@ $$
 $$
     \mathrm{Var}
     \left[
-        Y^{i}
+        Y^{j}
     \right]
     =
-    \lambda_{i}
+    \lambda_{j}
 $$
 
 が$$\eqref{covariance_principal_components}$$より分かる。
-スペクトル分解の固有値を大きい順に取っていたので、$Y^{i}$は分散が大きい順に並んだ確率変数となっている。
+スペクトル分解の固有値を大きい順に取っていたので、$Y^{j}$は分散が大きい順に並んだ確率変数となっている。
 この分解をPricipal Component Analysisという。
 
 また、
 
 $$
 \begin{eqnarray}
-    \sum_{i=1}^{N}
+    \sum_{j=1}^{d}
         \mathrm{Var}
         \left[
-            X^{i}
+            X^{j}
         \right]
     & = &
         \mathrm{trace}(A)
     \nonumber
     \\
     & = &
-        \sum_{i=1}^{N}
-            \lambda_{i}
+        \sum_{j=1}^{d}
+            \lambda_{j}
     \nonumber
     \\
     & = &
-        \sum_{i=1}^{N}
+        \sum_{j=1}^{d}
             \mathrm{Var}
             \left[
-                Y^{i}
+                Y^{j}
             \right]
     \nonumber
 \end{eqnarray}
@@ -363,15 +413,36 @@ $$
 
 $$
     \frac{
-        \sum_{i=1}^{k}
-            \lambda_{i}
+        \sum_{j=1}^{k}
+            \lambda_{j}
     }{
-        \sum_{i=1}^{N}
-            \lambda_{i}
+        \sum_{j=1}^{d}
+            \lambda_{j}
     }
 $$
 
 は、pricncipal componentの最初の$k$個で表現できる$X$の分散度合いを表す。
+上記の$X$についての議論は、$X$と同分布の確率変数についても同様に成り立つ。
+よって、$X^{j}$について$$\eqref{def_transformed_random_variable}$$の変換を施すことで、新しい確率変数とその実現値を得ることができる。
+つまり、確率変数
+
+$$
+    Y_{i}^{j}
+    :=
+    p_{j}^{\mathrm{T}}
+    (X_{i} - \mu)
+$$
+
+及び実現値
+
+$$
+    y_{i}
+    :=
+    Y_{i}(\omega)
+$$
+
+を定義できる。
+これらは、$$\eqref{def_transformed_random_variable}$$と同じ性質をもつ。
 
 PCAのもう一つのformulationを考える。
 上で構成した$Y^{1}$は次の性質を満たす。
@@ -411,7 +482,7 @@ $$
 \begin{eqnarray}
     \mathrm{Var}
     \left[
-        Y^{i}
+        Y^{j}
     \right]
     & = &
         \mathrm{Var}
@@ -437,7 +508,7 @@ $$
 \end{eqnarray}
 $$
 
-$Y^{i}$の分散は、$i - 1$までの全てのベクトルと直交するものの中で最大の分散である。
+$Y^{j}$の分散は、$i - 1$までの全てのベクトルと直交するものの中で最大の分散である。
 
 ### proof.
 まず、極値を取るためには、$b$は固有ベクトルである必要があることを述べる。
@@ -447,45 +518,45 @@ $$
     \mathrm{E}
     \left[
         \left(
-            \sum_{i=1}^{N}
-                b_{i} X^{i}
+            \sum_{j=1}^{d}
+                b_{j} X^{j}
             -
-            \sum_{i=1}^{N}
-                b_{i}
-                    \mathrm{E}(X^{i})
+            \sum_{j=1}^{d}
+                b_{j}
+                    \mathrm{E}(X^{j})
         \right)^{2}
     \right]
     & = &
         \mathrm{E}
         \left[
             \left(
-                \sum_{i=1}^{N}
-                    b_{i}
+                \sum_{j=1}^{d}
+                    b_{j}
                     \left(
-                        X^{i}
+                        X^{j}
                         -
-                        \mathrm{E}(X^{i})
+                        \mathrm{E}(X^{j})
                     \right)
             \right)^{2}
         \right]
     \nonumber
     \\
     & = &
-        \sum_{i=1}^{N}
-            \sum_{j=1}^{N}
-                b_{i}
+        \sum_{j=1}^{d}
+            \sum_{k=1}^{d}
                 b_{j}
+                b_{k}
                 \mathrm{E}
                 \left[
-                    \left(
-                        X^{i}
-                        -
-                        \mu^{i}
-                    \right)
                     \left(
                         X^{j}
                         -
                         \mu^{j}
+                    \right)
+                    \left(
+                        X^{k}
+                        -
+                        \mu^{k}
                     \right)
                 \right]
     \nonumber
@@ -497,28 +568,28 @@ Lagrange乗数を$\mu$とおくとLagrange関数は、
 $$
     L(b)
     :=
-    \sum_{i=1}^{N}
-        \sum_{j=1}^{N}
-            b_{i}
+    \sum_{j=1}^{d}
+        \sum_{k=1}^{d}
             b_{j}
+            b_{k}
             \mathrm{E}
             \left[
-                \left(
-                    X^{i}
-                    -
-                    \mu^{i}
-                \right)
                 \left(
                     X^{j}
                     -
                     \mu^{j}
                 \right)
+                \left(
+                    X^{k}
+                    -
+                    \mu^{k}
+                \right)
             \right]
     -
     \mu
     \left(
-        \sum_{i=1}^{N}
-            b_{i}^{2}
+        \sum_{j=1}^{d}
+            b_{j}^{2}
         -
         1
     \right)
@@ -531,14 +602,14 @@ $$
 \begin{eqnarray}
     \frac{\partial L(b)}{\partial b_{k}} 
     & = &
-        \sum_{i=1}^{N}
-            b_{i}
+        \sum_{j=1}^{d}
+            b_{j}
             \mathrm{E}
             \left[
                 \left(
-                    X^{i}
+                    X^{j}
                     -
-                    \mu^{i}
+                    \mu^{j}
                 \right)
                 \left(
                     X^{k}
@@ -547,7 +618,7 @@ $$
                 \right)
             \right]
         +
-        \sum_{j=1}^{N}
+        \sum_{j=1}^{d}
             b_{j}
             \mathrm{E}
             \left[
@@ -570,14 +641,14 @@ $$
     \\
     & = &
         2
-        \sum_{i=1}^{N}
-            b_{i}
+        \sum_{j=1}^{d}
+            b_{j}
             \mathrm{E}
             \left[
                 \left(
-                    X^{i}
+                    X^{j}
                     -
-                    \mu^{i}
+                    \mu^{j}
                 \right)
                 \left(
                     X^{k}
@@ -601,18 +672,18 @@ $$
         =
         0
         \
-        (\forall k = 1, \ldots, N)
+        (\forall k = 1, \ldots, d)
     \nonumber
     \\
     & \Leftrightarrow &
-        \sum_{i=1}^{N}
+        \sum_{j=1}^{d}
             b_{i}
             \mathrm{E}
             \left[
                 \left(
-                    X^{i}
+                    X^{j}
                     -
-                    \mu^{i}
+                    \mu^{j}
                 \right)
                 \left(
                     X^{k}
@@ -624,7 +695,7 @@ $$
         \mu
         b_{k}
         \
-        (\forall k = 1, \ldots, N)
+        (\forall k = 1, \ldots, d)
     \nonumber
     \\
     & \Leftrightarrow &
@@ -641,15 +712,15 @@ $$
 $$
 
 となって、$b$は$\mathrm{Cov}(X)$の固有ベクトルである。
-今$ \mathrm{Cov}(X)$の固有ベクトルは$$p_{1}, \ldots, p_{N}$$であったから、
+今$ \mathrm{Cov}(X)$の固有ベクトルは$$p_{1}, \ldots, p_{d}$$であったから、
 
 $$
     \mathrm{Var}
     \left[
-        p_{i}^{\mathrm{T}}X
+        p_{j}^{\mathrm{T}}X
     \right]
     =
-    \lambda_{i}
+    \lambda_{j}
 $$
 
 である。
