@@ -189,7 +189,7 @@ $$
             + 2s_{n+1}
             - s_{n+2}
         }
-    \lable{aitken_next_point}
+    \label{aitken_next_point}
 \end{eqnarray}
 $$
 
