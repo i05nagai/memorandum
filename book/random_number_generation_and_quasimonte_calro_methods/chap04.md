@@ -374,4 +374,406 @@ $$
 ### Remark 4.31
 TBD
 
-$q$
+$q$が素数とすると、以下を同一視できる。
+
+* $F_{q}$, $$Z_{q}$$,
+* $$F_{q}$$, $$C(q)$$,
+    * $$C(q)$$は3.17で定義されている。
+
+$$
+    C
+    :=
+    \{
+        c_{j}^{(i)} \in F_{q}^{m}
+        \mid
+        1 \le i \le s,
+        \
+        1 \le j \le m
+    \}
+$$
+
+$$\eqref{chap04_4_26_c_ij_in_finte_filed}$$の定める$C$とする。
+$$\eqref{chap03_3_18}$$の式を使うと、$$H := (h_{i,j})_{i=1,\ldots,s}^{j=1,\ldots,m} \in C(q)^{s \times m}$$,
+
+$$
+\begin{eqnarray}
+    R_{q}(C)
+    & := &
+        \sum_{H}
+            W_{q}(H)
+    \nonumber
+    \\
+    \sum_{i=1}^{s}
+        \sum_{j=1}^{m}
+            h_{i,j}c_{j}^{(i)}
+    & = &
+        0
+        \in F_{q}^{m}
+    \nonumber
+\end{eqnarray}
+$$
+
+### Lemma 4.32
+$q$が素数とする。
+$R = F_{q}$とする。
+$\forall \eta_{i,j}$が恒等写像とする。
+このとき、$$\eqref{chap04_4_25_point_set}$$の点列$P$は
+
+$$
+    D_{N}^{*}(P)
+    \le
+    1
+    -
+    \left(
+        1 - \frac{1}{N}
+    \right)^{s}
+    +
+    R_{q}(C)
+    \le
+    \frac{s}{N}
+    +
+    R_{q}(C)
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+lemma 4.36によれば、$$\eqref{chap04_4_25_point_set}$$にもとづいてLow-Discrepancy sequenceを作ることができる。
+
+### Theorem 4.33
+* $q$が素数
+* $m \ge 1$
+* $s \le 1$
+
+$$
+    \mathcal{C}
+    :=
+    \left\{
+        \left\{
+            c_{j}^{(i)}
+            \mid
+            1 \le i \le s,
+            \
+            1 \le j \le m
+        \right\}
+        \mid
+        \{ c_{j}^{(i)} \}
+        \subset
+        F_{q}^{m}
+    \right\}
+$$
+
+を$C$の全ての組み合わせとする。
+
+$$
+    M_{q}(m, s)
+    :=
+    \frac{1}{\mathrm{card}(\mathcal{C})}
+    \sum_{C \in \mathcal{C}}
+        R_{q}(C)
+$$
+
+を全ての$C$についての$R_{q}(C)$の平均とする。
+このとき、
+
+$$
+\begin{eqnarray}
+    M_{q}(m, s)
+    & = &
+        \frac{1}{N}
+        \left(
+            \frac{\log N}{\log 4}
+            +
+            1
+        \right)^{s}
+        -
+        \frac{1}{N},
+    \nonumber
+    \\
+    M_{q}(m, s)
+    & = &
+        \frac{1}{N}
+        \left(
+            \frac{m}{q}
+            \sum_{h \in C^{*}(q)}
+                \csc
+                \frac{\pi |h|}{q}
+                +
+                m
+                -
+                \frac{m-1}{q}
+        \right)^{s}
+        -
+        \frac{1}{N}
+        \
+        (\text{ if } q = 2)
+    \nonumber
+    \\
+    & < &
+        \frac{1}{N}
+        \left(
+            \left(
+                \frac{2}{\pi}
+                +
+                \frac{7}{5 \log q}
+                -
+                \frac{1}{q \log q}
+            \right)
+            \log N
+            +
+            \frac{1}{q}
+        \right)^{s}
+        -
+        \frac{1}{N}
+        \
+        (\text{ if } q > 2)
+    \nonumber
+\end{eqnarray}
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+Lemma 4.32とLemma 4.33をあわせて、
+
+* $q$が素数
+* $R = F_{q}$
+* $$\eta_{i,j}$$が恒等写像
+* $m \ge 1$
+* $s \ge 1$,
+
+を満たすならば、$$\eqref{chap04_4_25_point_set}$$で定義される$P$は$$D_{N}^{*}(P) = O(N^{-1}(\log N)^{s})$$である。
+更に、Definition 4.27の $\rho(C)$と$R_{q}(C)$は以下の不等式を満たすことを示す。
+
+### Theorem 4.34
+$s \ge 2$で、$q$は素数とする。
+
+$$
+    q^{-\rho(C) - 1}
+    \le
+    R_{q}(C)
+    \le
+    \left(
+        1
+        -
+        \frac{1}{q}
+    \right)
+    k(q)^{s}
+    \left(
+        (m + 1)^{s}
+        -
+        \left(
+            \begin{array}{c}
+                \rho(C) + s \\
+                s
+            \end{array}
+        \right)
+    \right)
+    q^{-\rho(C)},
+$$
+
+ここで、
+
+$$
+    k(q)
+    :=
+    \begin{cases}	
+        1 & q = 2, \\
+        \csc(\pi / q) + 1 & q > 2, 
+    \end{cases}
+$$
+
+である。
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+$\rho(C)$が十分大きければ、$$\eqref{chap04_4_25_point_set}$$の点列はLow-Discrepancyになることがわかった。
+よって、$m \ge 1$, $s \ge 1$と有限体$F_{q}$を与えた時に$\rho(C)$の最大値を求める問題は興味深い問題である。
+この問題は、coding theoryにおける古典的な問題と関係している。
+大きい$\rho(C)$を持つ$C$の構成方法はsection 4.5で述べる。
+
+次にbase bの$(t, s)$-sequenceの構成方法について述べる。
+
+* $s \ge 1$
+* $b \ge 2$
+
+とする。
+
+$$
+    R \text{ is a commutative ring with indetity, }
+    \mathrm{card}(R) = b
+    \label{chap04_S1}
+    \tag{S1}
+$$
+
+$$
+    \phi_{r}: \mathbb{Z}_{b} \rightarrow R \text{ bijections},
+    \quad
+    r \ge 0,
+    \
+    \phi_{r}(0) = 0
+    \
+    \text{ for sufficient large } r
+    \label{chap04_S2}
+    \tag{S2}
+$$
+
+$$
+    \eta_{i,j}: R \rightarrow \mathbb{Z}_{b} \text{ bijections,}
+    \quad
+    1 \le i \le s,
+    \
+    1 \le j 
+    \label{chap04_S3}
+    \tag{S3}
+$$
+
+$$
+    c_{jr}^{(i)} \in R,
+    \quad
+    1 \le i \le s,
+    \
+    1 \le j
+    \
+    0 \le r
+    \label{chap04_S4}
+    \tag{S4}
+$$
+
+また、$n \in \mathbb{R}_{\ge 0}$について
+
+$$
+    n
+    =
+    \sum_{r=0}^{\infty}
+        a_{r}(n)b^{r}
+$$
+
+と$$r \ge 0$$, $$a_{r}(n) \in \mathbb{R}_{b}$$を用いて、$b$進数展開を定義しておく。
+但し、十分大きな$r$について、$$a_{r}(n) = 0$$とする。
+更に
+
+$$
+    x_{n}^{(i)}
+    :=
+    \sum_{j=1}^{\infty}
+        y_{n, j}^{(i)}
+        b^{-j}
+    \quad
+    n \ge 0,
+    \
+    1 \le i \le s
+$$
+
+ここで、
+
+$$
+    y_{n, j}^{(i)}
+    :=
+    \eta_{i,j}
+    \left(
+        \sum_{r=0}^{\infty}
+            c_{j, r}^{(i)}
+            \phi_{r}(a_{r}(n))
+    \right)
+    \in \mathbb{Z}_{b}
+    \quad
+    n \ge 0,
+    \
+    1 \le i \le s,
+    \
+    j \ge 1,
+$$
+
+十分大きな$r$について、$\phi_{r}(0) = 0$より、十分大きな$r$については、$a_{r}(0) = 0$である。
+以上より、sequenceの$n$番目を以下で定義する。
+
+$$
+\begin{equation}
+    x_{n}
+    :=
+    (x_{n}^{(1)}, \ldots, x_{n}^{(s)}),
+    \quad
+    n = 0, 1, \ldots,
+    \label{chap04_4_42_t_s_sequence}
+\end{equation}
+$$
+
+である。
+
+$$
+    \forall n \ge 0,
+    \
+    1 \le \forall i \le s,
+    \
+    \exists j_{0} \ge 1,
+    \text{ s.t. }
+    \
+    \forall j \ge j_{0},
+    \
+    y_{n, j}^{(i)} < b - 1
+    \tag{S5}
+    \label{chap04_S5}
+$$
+
+$$\eqref{chap04_S5}$$の十分条件として、
+
+$$
+\begin{eqnarray}
+    1 \le \forall i \le s,
+    \
+    \exists j_{0} \ge 1,
+    \text{ s.t. }
+    \
+    \forall j \ge j_{0},
+    & &
+        \
+        \eta_{i,j}(0) = 0,
+    \nonumber
+    \\
+    1 \le \forall i \le s,
+    \
+    \forall r \ge 0,
+    \exists j_{0} \ge 1,
+    \text{ s.t. }
+    \
+    \forall j \ge j_{0},
+    & &
+        \
+        c_{j, r}^{(i)} = 0
+    \tag{S6}
+    \label{chap04_S6}
+\end{eqnarray}
+$$
+
+### Theorem 4.35
+$t \in \mathbb{Z}_{\ge 0}$が以下を満たすとする。
+
+* $\forall m \in \mathbb{Z}$, $$d_{1}, \ldots, d_{s} \ge 0$$
+* $$\sum_{i=1}^{s} d_{i} = m - t$$,
+* $$1 \le j \le d_{i}, 1 \le i \le s$$, $$f_{j}^{(i)} \in R$$,
+
+$z_{0}, \ldots, z_{m-1} \in R$を未知変数について、$m - t$個の線形方程式
+
+$$
+    \sum_{r=0}^{m-1}
+        c_{j,r}^{(i)}
+        z_{r}
+    =
+    f_{j}^{(i)}
+    \quad
+    1 \le j \le d_{i},
+    \
+    1 \le i \le s,
+$$
+
+がちょうど$b^{t}$個の解があるとする。
+このとき、$$\eqref{chap04_4_42_t_s_sequence}$$は base b の$(t, s)$-sequencesになる。
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
