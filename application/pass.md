@@ -8,7 +8,38 @@ brew install pass
 echo "source /usr/local/etc/bash_completion.d/password-store" >> ~/.bashrc
 ```
 
-##
+## Usage
+
+```
+pass init gpgkey
+```
+
+* `gpgkey`にはGnuPGの公開鍵を指定
+
+```
+pass insert EC/amazon.co.jp/filename
+```
+
+```
+pass insert -m EC/amazon.co.jp/filenma2
+```
+
+複数行のデータを入力する場合は`-m`とする。
+
+```
+pass show -c EC/amazon.co.jp/filename
+```
+
+filenameに保存されている値を表示する。
+`-c`がない場合は標準出力に表示、ある場合はクリップボードにコピーされる。
+
+```
+pass git init
+```
+
+一度pass git initすれば、passwordの追加、削除時に自動でcommitされる。
+また、diffも平文でのdiffをとるように `.gitattribute`に必要な設定が記録される。
+但し、`git push`をするには`git remote add`などの設定は別途必要。
 
 ## Introducing pass
 * `gpg`で暗号化
