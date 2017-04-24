@@ -2,6 +2,10 @@
 title: Polynomial Ring
 ---
 
+## Notations
+* $R$
+    * 可換な整域とする
+
 ## Formal Polynomial Ring
 
 $$
@@ -51,6 +55,12 @@ $$
         \sum_{i=0}^{\infty}
             \sum_{j + k = i}
                 (a_{j}b_{k})x^{i}
+    \nonumber
+    \\
+    & = &
+        \sum_{i=0}^{\infty}
+            \sum_{j=0}^{i}
+                (a_{j}b_{i - j})x^{i}
     \nonumber
 \end{eqnarray}
 $$
@@ -393,6 +403,411 @@ $$
 \end{eqnarray}
 $$
 
+
+## Operations over polynomials
+環としての構造を持たない多項式の間にも、和、積、除の演算を考えることができる。
+応用上有用である場合もあるので、幾つか記しておく。
+
+$$
+\begin{eqnarray}
+	f(x)
+	& := &
+		\sum_{i=0}^{n}
+			a_{i}x^{i}
+	\nonumber
+	\\
+	g(x)
+	& := &
+		\sum_{i=0}^{m}
+			b_{i}x^{i}
+	\nonumber
+\end{eqnarray}
+$$
+
+ここで、$n < m$としておく。
+除算を以下で定義する。
+
+$$
+\begin{eqnarray}
+	\frac{
+		f(x)
+	}{
+		g(x)
+	}
+	& := &
+		h(x)
+	\nonumber
+	\\
+\end{eqnarray}
+$$
+
+ここで、$h(x)$は以下を満たす。
+
+$$
+\begin{eqnarray}
+	h(x)
+	& = &
+		\sum_{i=0}^{\infty}
+			c_{-i}x^{-i}
+	\nonumber
+	\\
+	f(x)
+	& = &
+		g(x)h(x)
+	\nonumber
+	\\
+	\sum_{i=0}^{n}
+		a_{i}x^{i}
+	& = &
+		\sum_{i=0}^{m}
+			b_{i}x^{i}
+		\sum_{i=0}^{\infty}
+			c_{-i}x^{-i}
+	\nonumber
+	\\
+	& = &
+		\sum_{i=-m}^{0}
+			\sum_{j=0}^{m + i}
+				b_{m - j} x^{m - j}
+				c_{-i - (m - j)} x^{-i - (m - j)}
+		+
+		\sum_{i=1}^{\infty}
+			\sum_{j=0}^{m}
+				b_{j} x^{j}
+				c_{-(i + j)} x^{-(i + j)}
+	\nonumber
+	\\
+	& = &
+		\sum_{i=-m}^{0}
+			\sum_{j=0}^{m + i}
+				b_{m - j}
+				c_{-i - (m - j)}
+				x^{-i}
+		+
+		\sum_{i=1}^{\infty}
+			\sum_{j=0}^{m}
+				b_{j}
+				c_{-(i + j)}
+				x^{-i}
+	\nonumber
+\end{eqnarray}
+$$
+
+両辺の係数を比較すると$n < m$より
+
+$$
+\begin{eqnarray}
+	\forall i = -m, \ldots, -(n+1),
+	\
+	0	
+	& = &
+		\sum_{j=0}^{m+i}
+			b_{m-j}c_{-i-(m-j)}
+	\nonumber
+	\\
+	\forall i = -n, \ldots, 0,
+	\
+	a_{-i}
+	& = &
+		\sum_{j=0}^{m+i}
+			b_{m-j}c_{-i-(m-j)}
+	\nonumber
+	\\
+	\forall i = 1, 2, \ldots,
+	\
+	0
+	& = &
+		\sum_{j=0}^{m}
+			b_{j}c_{-(i+j)}
+	\nonumber	
+\end{eqnarray}
+$$
+
+となる。
+順番にとくと
+
+$$
+\begin{eqnarray}
+	0	
+	& = &
+		b_{m}c_{0}
+	\nonumber
+	\\
+	0	
+	& = &
+		b_{m}c_{-1}
+		+
+		b_{m-1}c_{0}
+	\nonumber
+	\\
+	0	
+	& = &
+		b_{m}c_{-2}
+		+
+		b_{m-1}c_{-1}
+		+
+		b_{m-2}c_{0}
+	\nonumber
+	\\
+	& \vdots &
+	\nonumber
+	\\
+	0	
+	& = &
+		b_{m}c_{-m + n + 1)}
+		+
+		b_{m-1}c_{-m + n}
+		+
+		\cdots
+		+
+		b_{n+1}c_{0}
+	\nonumber	
+\end{eqnarray}
+$$
+
+より
+
+$$
+\begin{eqnarray}
+	c_{0}
+	& = &
+		0
+	\nonumber
+	\\
+	c_{-1}
+	& = &
+		0
+	\nonumber
+	\\
+	c_{-2}
+	& = &
+		0
+	\nonumber
+	\\
+	& \vdots &
+	\nonumber
+	\\
+	c_{-m + n + 1}
+	& = &
+		0
+	\nonumber	
+\end{eqnarray}
+$$
+
+となる。
+同様に
+
+$$
+\begin{eqnarray}
+	a_{n}
+	& = &
+		b_{m}c_{-m + n}
+		+
+		b_{m-1}c_{-m + n + 1}
+		+
+		\cdots
+		+
+		b_{n}c_{0}
+	\nonumber	
+	\\
+	a_{n-1}
+	& = &
+		b_{m}c_{-m + n - 1}
+		+
+		b_{m-1}c_{-m + n}
+		+
+		\cdots
+		+
+		b_{n-1}c_{0}
+	\nonumber	
+	\\
+	& \vdots &
+	\nonumber	
+	\\
+	a_{k}
+	& = &
+		b_{m}c_{-m + k}
+		+
+		b_{m-1}c_{-m + k + 1}
+		+
+		b_{m-2}c_{-m + n + 2}
+		\cdots
+		+
+		b_{k}c_{0}
+	\nonumber	
+	\\
+	& \vdots &
+	\nonumber	
+	\\
+	a_{0}
+	& = &
+		b_{m}c_{-m}
+		+
+		b_{m-1}c_{-m + 1}
+		+
+		\cdots
+		+
+		b_{0}c_{0}
+	\nonumber	
+\end{eqnarray}
+$$
+
+より
+
+$$
+\begin{eqnarray}
+	c_{-m + n}
+	& = &
+		\frac{
+			a_{n}
+		}{
+			b_{m}
+		}
+	\nonumber	
+	\\
+	c_{-m + n - 1}
+	& = &
+		\frac{1}{b_{m}}
+		\left(
+			a_{n-1}
+			-
+			b_{m-1}c_{-m + n}
+		\right)
+	\nonumber	
+	\\
+	& \vdots &
+	\nonumber	
+	\\
+	c_{-m + k}
+	& = &
+		\frac{1}{b_{m}}
+		\left(
+			a_{k}
+			-
+			b_{m-1}c_{-m + k + 1}
+			-
+			b_{m-2}c_{-m + k + 2}
+			\cdots
+			-
+			b_{k}c_{0}
+		\right)
+	\nonumber
+	\\
+	& = &
+		\frac{1}{b_{m}}
+		\left(
+			a_{k}
+			-
+			\sum_{j=1}^{m - k}
+				b_{m-j}
+				c_{-m + k + j}
+		\right)
+	\nonumber	
+	\\
+	& \vdots &
+	\nonumber	
+	\\
+	c_{-m}
+	& = &
+		\frac{1}{b_{m}}
+		\left(
+			a_{0}
+			-
+			\sum_{j=1}^{m}
+				b_{m-j}
+				c_{-m + j}
+		\right)
+	\nonumber	
+\end{eqnarray}
+$$
+
+となる。
+同様に
+
+$$
+\begin{eqnarray}
+	0
+	& = &
+		b_{m}c_{-(1 + m)}
+		+
+		b_{m-1}c_{-(1 + m - 1)}
+		+
+		b_{m-2}c_{-(1 + m - 2)}
+		+
+		\cdots
+		+
+		b_{0}c_{-1}
+	\nonumber
+	\\
+	0
+	& = &
+		b_{m}c_{-(2 + m)}
+		+
+		b_{m-1}c_{-(2 + m - 1)}
+		+
+		b_{m-2}c_{-(2 + m - 2)}
+		+
+		\cdots
+		+
+		b_{0}c_{-2}
+	\nonumber
+	\\
+	0
+	& = &
+		b_{m}c_{-(3 + m)}
+		+
+		b_{m-1}c_{-(3 + m - 1)}
+		+
+		b_{m-2}c_{-(3 + m - 2)}
+		+
+		\cdots
+		+
+		b_{0}c_{-3}
+	\nonumber
+	\\
+	& \vdots &
+	\nonumber
+\end{eqnarray}
+$$
+
+より
+
+$$
+\begin{eqnarray}
+	c_{-(1 + m)}
+	& = &
+		0
+	\nonumber
+	\\
+	c_{-(2 + m)}
+	& = &
+		0
+	\nonumber
+	\\
+	c_{-(3 + m)}
+	& = &
+		0
+	\nonumber
+	\\
+	& \vdots &
+	\nonumber
+\end{eqnarray}
+$$
+
+となる。
+まとめると
+
+$$
+\begin{eqnarray}
+	h(x)
+	=
+	\sum_{i=m-n}^{m}
+		c_{-i}x^{-i}
+	\nonumber
+\end{eqnarray}
+$$
+
+である。
 
 ## Reference
 * [Formal power series - Wikipedia](https://en.wikipedia.org/wiki/Formal_power_series)
