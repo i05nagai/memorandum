@@ -809,6 +809,48 @@ $$
 
 である。
 
+### Formulas
+
+$$
+\begin{eqnarray}
+	f(x)
+	& = &
+		\sum_{i=0}^{n}
+			a_{i}x^{i}
+	\nonumber
+	\\
+	f(x)^{2}
+	& = &
+		\sum_{i=0}^{2n}
+			\sum_{j=0}^{i}
+				a_{j}a_{i-j}
+				x^{i}
+	\nonumber
+	\\
+	f(x)^{3}
+	& = &
+		\sum_{i=0}^{3n}
+			\sum_{j=0}^{i}
+				\left(
+					\sum_{k=0}^{j}
+						a_{k}a_{j-k}
+				\right)
+				a_{i-j}
+				x^{i}
+	\nonumber
+	\\
+	& = &
+		\sum_{i=0}^{3n}
+			\sum_{j=0}^{i}
+				\left(
+					a_{i-j}
+					\sum_{k=0}^{j}
+						a_{k}a_{j-k}
+				\right)
+				x^{i}
+\end{eqnarray}
+$$
+
 ## Reference
 * [Formal power series - Wikipedia](https://en.wikipedia.org/wiki/Formal_power_series)
 
