@@ -232,7 +232,7 @@ $$
         \mid
         P_{*} \text{: prob. measure over } \mathbb{R},
         \
-        \int_{\\mathbb{R}} x^{2}\ P(dx) < \infty
+        \int_{\mathbb{R}} x^{2}\ P(dx) < \infty
     \right\}
 $$
 
@@ -759,10 +759,475 @@ $$
 \end{equation}
 $$
 
+となる。
+
+Loss functionを上のように単純にかける場合はまれである。
+多くの場合は数学的な簡単さの為に慣習的なものを使う。
+Example 1.2.1(ii)のようなPoint Estimationの問題では、二乗誤差に比例する形のものを選ぶ場合が多い。
+
+$$
+    L(\theta, d)
+    :=
+    v(\theta)
+    (d - \gamma(\theta))^{2}
+$$
+
+ここで$v$は$\theta$の適当な関数である。
+この場合$L$は二階微分可能性と正しい$\theta$を選んだ場合に$L(\theta, \gamma(\theta)) = 0$が成立する。
+
+m
+
+$$
+\begin{equation}
+    \mathrm{E}
+    \left[
+        L_{1}(\theta, \delta(X))
+    \right]
+    \le
+    \alpha,
+    \label{chap01_1_6_risk_function_inequality}
+\end{equation}
+$$
 
 ## 1.3 Randomizations: Choice of Experiment
 
+### Motivation of Randomizations
+Randomizationの一つの動機は以下の例から分かる。
+
+コイン投げの検定を考える。
+コインが確率$p$で表、$1-p$の確率で裏になると仮定しよう。
+帰無仮説を$p = 1/2$とし、対立仮説を$p > 1/2$とする。
+検定の有意水準を$\alpha = 0.05$とすれば、帰無仮説の下に20回中14回表と15回表にになる確率は
+
+$$
+\begin{eqnarray}
+    \sum_{k=14}^{20}
+        \left(
+            \begin{array}{c}
+                20 \\
+                k
+            \end{array}
+        \right)
+        \left(
+            \frac{1}{2}
+        \right)^{20}
+    & \approx &
+        0.05777
+    \nonumber
+    \\
+    \sum_{k=15}^{20}
+        \left(
+            \begin{array}{c}
+                20 \\
+                k
+            \end{array}
+        \right)
+        \left(
+            \frac{1}{2}
+        \right)^{20}
+    & \approx &
+        0.0207
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+14回の時は棄却できないが、15回では棄却されることになる。
+しかし、この2つの間には大きな開きがある。
+丁度有意水準0.05となるような表の出る回数を考えることはできるだろうか。
+その為に、14回の場合については、確率$\phi$で棄却し、確率$1-\phi$で採択するという検定を考える。
+
+$$
+\begin{eqnarray}
+    & &
+        \phi
+        \sum_{k=14}^{20}
+            \left(
+                \begin{array}{c}
+                    20 \\
+                    k
+                \end{array}
+            \right)
+            \left(
+                \frac{1}{2}
+            \right)^{20}
+        +
+        (1 - \phi)
+        \sum_{k=15}^{20}
+            \left(
+                \begin{array}{c}
+                    20 \\
+                    k
+                \end{array}
+            \right)
+            \left(
+                \frac{1}{2}
+            \right)^{20}
+        =
+        0.05
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \phi
+        \left(
+            \begin{array}{c}
+                20 \\
+                14
+            \end{array}
+        \right)
+        \left(
+            \frac{1}{2}
+        \right)^{20}
+        +
+        \sum_{k=15}^{20}
+            \left(
+                \begin{array}{c}
+                    20 \\
+                    k
+                \end{array}
+            \right)
+            \left(
+                \frac{1}{2}
+            \right)^{20}
+        =
+        0.05
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+
+検定問題も統計的決定問題と見做せることをこの例を用いて示そう。
+後で述べるが統計的決定問題としての解釈はあまり有用でない。
+まず、一般の検定問題に対する統計的決定問題としての解釈を示す。
+その後上記の例を下にどのように定式化されるかを示す。
+
+* $$(\Omega, \mathcal{F})$$,
+* $$X: \Omega \rightarrow \mathcal{X}$$,
+* $$(\mathcal{X}, \mathcal{A})$$,
+* $$\Theta$$,
+* $$\Theta_{1}, \Theta_{2}$$,
+    * $$\Theta$$の分割
+* $$\mathcal{P} := \{P_{\theta} \mid \theta \in \Theta\}$$,
+* $$D := \{ 0, 1\}$$,
+    * 0の時に帰無仮説を採択、1の時に帰無仮説を棄却する。
+* $\phi: \mathcal{X} \rightarrow [0, 1]$
+    * 可測関数
+    * test or test functionという
+
+確率的決定関数$$\delta_{\phi}: D \times \mathcal{X} \rightarrow D$$とloss functionは以下のようになる。
+
+$$
+\begin{eqnarray}
+    \delta_{\phi}(dz \mid x)
+    & := &
+        \phi(x) \epsilon_{1}(dz)
+        +
+        (1 - \phi(x)) \epsilon_{0}(dz)
+    \nonumber
+    \\
+    L(\theta, d)
+    & := &
+        \begin{cases}	
+            1_{\{1\}}(d) & (\theta \in \Theta_{0}) \\
+            1_{\{0\}}(d) & (\theta \in \Theta_{1})
+        \end{cases}
+    \nonumber
+\end{eqnarray}
+$$
+
+risk functionは
+
+$$
+\begin{eqnarray}
+    R(\theta, \delta_{\phi})
+    & := &
+        \int_{\mathcal{X}}
+            \int_{D} 
+                L(\theta, z)
+            \ \delta_{\phi}(dz \mid x)
+        \ P_{\theta}(d x)
+    \nonumber
+    \\
+    & = &
+        \int_{\mathcal{X}}
+            \int_{D} 
+                L(\theta, z)
+                \phi(x) \epsilon_{1}(dz)
+        \ P_{\theta}(d x)
+        +
+        \int_{\mathcal{X}}
+            \int_{D} 
+                L(\theta, z)
+                (1 - \phi(x)) \epsilon_{0}(dz)
+        \ P_{\theta}(d x)
+    \nonumber
+    \\
+    & = &
+        \begin{cases}	
+            \int_{\mathcal{X}}
+                \int_{D} 
+                    1_{\{1\}}(z)
+                    \phi(x) \epsilon_{1}(dz)
+            \ P_{\theta}(d x)
+            +
+            \int_{\mathcal{X}}
+                \int_{D} 
+                    1_{\{1\}}(z)
+                    (1 - \phi(x)) \epsilon_{0}(dz)
+            \ P_{\theta}(d x)
+            &
+                (\theta \in \Theta_{0})
+            \\
+            \int_{\mathcal{X}}
+                \int_{D} 
+                    1_{\{0\}}(z)
+                    \phi(x) \epsilon_{1}(dz)
+            \ P_{\theta}(d x)
+            +
+            \int_{\mathcal{X}}
+                \int_{D} 
+                    1_{\{0\}}(z)
+                    (1 - \phi(x)) \epsilon_{0}(dz)
+            \ P_{\theta}(d x)
+            &
+                (\theta \in \Theta_{1}) 
+        \end{cases}
+    \nonumber
+    \\
+    & = &
+        \begin{cases}	
+            \int_{\mathcal{X}}
+                    \phi(x)
+            \ P_{\theta}(d x)
+            &
+                (\theta \in \Theta_{0})
+            \\
+            \int_{\mathcal{X}}
+                    (1 - \phi(x))
+            \ P_{\theta}(d x)
+            &
+                (\theta \in \Theta_{1}) 
+        \end{cases}
+    \nonumber
+    \\
+    & = &
+        \begin{cases}	
+            \mathrm{E}_{\theta}
+            \left[
+                \phi
+            \right]
+            &
+                (\theta \in \Theta_{0})
+            \\
+            1
+            -
+            \mathrm{E}_{\theta}
+            \left[
+                \phi
+            \right]
+            &
+                (\theta \in \Theta_{1}) 
+        \end{cases}
+    \nonumber
+\end{eqnarray}
+$$
+
+で、ここで$$\epsilon_{a}$$は$a$に重みを持つDirac's delta measureである。
+有意水準$\alpha$の検定全体$$\phi_{\alpha}$$を
+
+$$
+    \phi_{\alpha}
+    :=
+    \{
+        \phi: \text{ test function }
+        \mid
+        \sum_{\theta \in \Theta_{0}}
+            R(\theta, \delta_{\phi})
+        \le
+        \alpha
+    \}
+$$
+
+と定義する。
+上記が一般の検定問題に対する統計的決定問題としての解釈である。
+
+この枠組みの下、先程の例を定式化する。
+
+* $$(\Omega, \mathcal{F}) := (\{\mathrm{H} , \mathrm{T}\}^{20}, 2^{\mathcal{X}})$$,
+    * Hは表、Tは裏を表す
+* $$X(\omega) := \#\{i \mid \omega_{i} = H\}$$,
+    * 表の出た回数
+* $$(\mathcal{X}, \mathcal{A}) := (\{0, \ldots, 20\}, 2^{\mathcal{X}})$$,
+* $$\Theta := [1/2, 1]$$,
+* $$\Theta_{0} := \{1/2\}, \Theta_{1} := (1/2, 1]$$,
+    * $$\Theta$$の分割
+
+$$
+\begin{eqnarray}
+    p \in \Theta,
+    \
+    y \in \mathcal{X},
+    \
+    f(y; p)
+    & := &
+        \left(
+            \begin{array}{c}
+                20 \\
+                y
+            \end{array}
+        \right)
+        p^{y}
+        (1 - p)^{20 - y}
+    \nonumber
+    \\
+    A \in \mathcal{A}
+    \
+    P_{p}(A)
+    & := &
+        \sum_{y \in A}
+            f(y; p)
+    \nonumber
+    \\
+    \mathcal{P}
+    & := &
+        \{P_{p} \mid p \in \Theta\}
+    \nonumber
+\end{eqnarray}
+$$
+
+* $$D := \{ 0, 1\}$$,
+    * 0の時に帰無仮説を採択、1の時に帰無仮説を棄却する。
+
+$\phi:\mathcal{X} \rightarrow [0, 1]$を検定関数とする。
+確率的決定関数は、
+
+$$
+    x \in \mathcal{X},
+    \
+    \delta_{\phi}(dz \mid x)
+    :=
+    \phi(y)
+    \epsilon_{1}(dz)
+    +
+    (1 - \phi(x))
+    \epsilon_{0}(dz)
+$$
+
+$$
+    L(\theta, d)
+    :=
+    \begin{cases}	
+        1_{\{1\}}(d) & (\theta \in \Theta_{0}) \\
+        1_{\{0\}}(d) & (\theta \in \Theta_{1})
+    \end{cases}
+$$
+
+$$
+    R(\theta, \delta_{\phi})
+    =
+    \begin{cases}	
+        \mathrm{E}_{\theta}
+        \left[
+            \phi
+        \right]
+        &
+            (\theta \in \Theta_{0})
+        \\
+        1
+        -
+        \mathrm{E}_{\theta}
+        \left[
+            \theta
+        \right]
+        &
+            (\theta \in \Theta_{1}) 
+    \end{cases}
+$$
+
+となる。
+有意水準$\alpha$の検定全体$$\phi_{\alpha}$$は
+
+$$
+    \phi_{\alpha}
+    :=
+    \{
+        \phi: \text{ test function }
+        \mid
+        \sum_{\theta \in \Theta_{0}}
+            R(\theta, \delta_{\phi})
+        \le
+        \alpha
+    \}
+$$
+
+となる。
+上記の定式化から明らかであるが、検定問題においては、risk functionが真のパラメータの下での実現値の発生した確率を与えている。
+
+<div class="QED" style="text-align: right">■</div>
+
+今までの議論では、決定関数は非確率的であった。
+より一般に確率的に決定する決定関数を考えることもできる。
+この確率的な決定関数の分布は、観測値$x$に依存してきまる。
+
+### Example 1.3.1
+以下の例を考える。
+パラメータ$\mu$を推定をしたい。
+
+* $$X_{1}, \ldots, X_{N}$$,
+    * $$X_{i} \sim \mathrm{N}(\mu, \sigma^{2})$$,
+
+正規分布の分散が$\sigma^{2}$が同じで、平均が$\mu_{1}, \mu_{2}$と異なっている場合は、2つの正規分布の平均の差は$$\mu_{1} - \mu_{2}$$は$\sigma$に比例して区別ができなくなることが予想される。
+その時risk functionは無限大になるだろう。
+また、逆に$sigma$が小さくなれば、2つの分布の平均の差も区別可能になることが予想される。
+その時risk functionはゼロに近づく。
+
+risk functionの値を制御するのに必要な観測値の数というのは一般には未知である。
+観測数が増えれば、上記の設定では$\sigma$に関する情報が得られ、$\sigma$を推定することができる。
+それに伴って、$\mu$を推定にするのに必要な観測値の数も決定することができるであろう。
+<div class="QED" style="text-align: right">■</div>
+
+
+### Example 1.3.2
+確率$p$で起こる事象と$1-p$で起こらない事象がある場合を考える。
+この時、$p \le 1/2$か$p > 1/2$かどうかを決定したいとする。
+
+$p$が1か0に十分近いならどちらか一方の事象しか殆ど観測されないから、勘で推定するのは簡単である。
+一方、1/2に近い場合は、大きなsample数が必要となる。
+
+<div class="QED" style="text-align: right">■</div>
+
+### Example 1.3.3
+必要なsample sizeは実際の観測値にもとづいて決めることが重要。
+例えば、$(\theta - 1/2, \theta + 1/2)$上の一様分布のparameter$\theta$を推定する問題を考える。
+例えば、2つの観測値の差の最大値$$\max_{i, j}\|x_{i} - x_{j}\|$$が1に近い時は$\theta$に近いし、$$\max_{i,j}\|x_{i} - x_{j}\}$$が0に近い時は、全て同じような値を取っており、観測値としての情報があまりない可能性がある。
+
+<div class="QED" style="text-align: right">■</div>
+
+極単純な場合を除き、適切なsample sizeの決定は、実験の設計の問題である。
+一般には、sample sizeだけでなく何を観測するかも重要な問題である。
+医療における統計においては、新しい治療方法を標準的な方法と比較する時、2つの治療方法のうちどちらを、新しく来た患者に適用するかを具体化する必要がある場合がある。
+形式的には、これらの問題は、一般的な決定問題として定式化できる。
+$X$を全ての観測可能な変数として、実験の継続のコストをloss functionに含め、実験をやめるかどうかを決定する問題として考えることができる。
+
 ## 1.4 Optimum Procedures
+Section 1.1で統計理論の目的は、decision function $\delta$をrisk functionを最小にするように決めることと述べた。
+
+$$
+\begin{equation}
+    R(\theta, \delta)
+    :=
+    \mathrm{E}_{\theta}
+    \left[
+        L(\theta, \delta(X))
+    \right].
+    \label{chap01_1_7_risk_function}
+\end{equation}
+$$
+
+$\delta$は$\theta$に依存している。
+真の$\theta$は不明である。
+
 
 ## 1.5 Invariance and Unbiasedness
 
