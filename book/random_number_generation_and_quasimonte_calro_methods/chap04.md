@@ -777,3 +777,138 @@ $$
 ### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+$q$が素数の場合、Theorem 4.28と同様の定理が$(t, s)$-sequenceについても成り立つ。
+$$\eqref{chap04_S4}$$の$$c_{j, r}^{(i)}$$のなす集合について考慮する。
+
+### Theorem 4.36
+$q$を素数とする。
+* $R = F_{q}$
+* $t \ge 0$を整数とする
+
+ここで、$\forall m > t$, $C^{(m)}$
+
+$$
+    c_{j}^{(i)}
+    =
+    (c_{j, 0}^{(i)}, \ldots, c_{j, m-1}^{(i)})
+    \in
+    F_{q}^{m}
+    \quad
+    1 \le i \le s,
+    \
+    1 \le j \le m,
+$$
+
+が$\rho(C^{(m)}) \ge m - t$を満たすとする。
+このとき、$$\eqref{chap04_4_42_t_s_sequence}$$は$(t, s)$-sequence in base qとなる。
+
+
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
+## 4.4 A special construction of nets.
+$$\eqref{chap04_N1}$$ - $$\eqref{chap04_N4}$$に基づいた一般的な構成方法について述べる。
+
+* $q$を素数とする。
+* baseを$q$とする。
+* $R = F_{q}$
+
+$$
+\begin{equation}
+    F_{q}(x^{-1})
+    :=
+    \left\{
+        \sum_{k=w}^{\infty}
+            t_{k}x^{-k}
+        \mid
+        \forall w \in \mathbb{Z},
+        \
+        t_{k} \in F_{q}
+    \right\}
+\end{equation}
+$$
+
+exponential valuation $\nu$を次で定義する。
+
+$$
+    L \in F_{q}(x^{-1}),
+    \
+    \nu(L)
+    :=
+    \begin{cases}	
+        -w & L \neq 0 \\
+        0 & L = 0 
+    \end{cases}
+$$
+
+ここで、$w$は$t_{w} \neq 0$なる最小の整数である。
+また、$$F_{q}[x] \subset F((x^{-1}))$$であり、$f \in F_{q}[x]$ならば$\nu(v) \neq \deg(f)$である。
+明らかに $$\subset F((x^{-1}))$$は$$F_{q}$$を部分体として含む。
+
+$s \ge 2$を次元とする。
+$f \in F_{q}[x]$を適当に選び、$\deg(f) = m \ge 1$とする。
+$$g_{1}, \ldots, g_{s} \in F_{q}[x]$$である。
+
+$$
+    \frac{g_{i}(x)}{f(x)}
+    =
+    \sum_{k=w_{i}}^{\infty}
+        u_{k}^{(i)}
+        x^{-1}
+    \in F_{q}^((x^{-1})),
+    \
+    1 \le i \le s,
+$$
+
+$f, g \in F_{q}[[x]]$に対して商$f/g$を以下のように定義する。
+
+$$
+\begin{eqnarray}
+    f(x)
+    & = & 
+        \sum_{i=w_{f}}^{\infty}
+            a_{i}x^{i}
+    \nonumber
+    \\
+    g(x)
+    & = &
+        \sum_{i=w_{g}}^{\infty}
+            b_{i}x^{i}
+    \nonumber
+    \\
+    \frac{g(x)}{f(x)}
+    & := &
+        h(x)
+\end{eqnarray}
+$$
+
+ここで$h \in F_{q}[[x]]$は以下を満たす。
+
+$$
+\begin{eqnarray}
+    h(x)
+    & = &
+        \sum_{i=w_{h}}^{\infty}
+            c_{i}x^{i}
+    \nonumber
+    \\
+    c_{n}
+    & = &
+        \frac{1}{b_{w_{g}}}
+        \left(
+            a_{n}
+            -
+            \sum_{j=1}^{n}
+                b_{w_{g} + j}c_{w_{h} + n - i}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+$w_{h} := w_{g} - w_{f}$である。
+
+
