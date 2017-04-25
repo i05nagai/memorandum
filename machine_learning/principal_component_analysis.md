@@ -730,5 +730,7 @@ $$
 
 上記の命題より、$$ \mathrm{Var}(b^{\mathrm{T}}X)$$を最大にする$b$をみつけることでPCAを構成する方法もある。
 
+## Kernel PCA
+
 ## Reference
 
