@@ -89,9 +89,9 @@ $$(\mathcal{X}, \mathcal{A}, \mathcal{P}, \Theta, D, \mathcal{B}, L, \Delta)$$�
 つまり関数の一点で議論するのではなく、関数全体に対してその方法の良し悪しを議論する。
 上記の観測値に基づく方法は、自然に以下の推定量を導くことができる。
 
-1. $$T_{1} := X_{1}$$,
-2. $$T_{2} := \sum_{i=1}^{n} X_{j} / n$$,
-3. $$T_{3} := X_{n}$$,
+1. $$T_{1}(\omega) := X_{1}(\omega) = \delta_{1}(x_{1}, \ldots, x_{n}) := x_{1}$$,
+2. $$T_{2}(\omega) := \sum_{i=1}^{n} X_{j}(\omega) / n = \delta_{2}(x_{1}, \ldots, x_{n}) := \sum_{i=1}^{n} x_{j} / n$$,
+3. $$T_{3}(\omega) := X_{n}(\omega) = \delta_{3}(x_{1}, \ldots, x_{n}) := x_{n}$$,
 
 i.i.d.であれば2が分散最良の推定量となることが分かるが、一般の場合には必ずしもそうではない。
 
@@ -827,7 +827,7 @@ $$
         \right)^{20}
     & \approx &
         0.0207
-    \nonumber
+    \label{chap01_randomization_example_siginificant_level_for_15}
 \end{eqnarray}
 $$
 
@@ -898,13 +898,16 @@ $$
 となる。
 
 検定問題も統計的決定問題と見做せることをこの例を用いて示そう。
-後で述べるが統計的決定問題としての解釈はあまり有用でない。
+後で述べるが統計的決定問題としての解釈はあまり有用でないが、検定においてもloss functionやrisk functionが存在しており、推定と検定は理論的に(有用であるかは別として）一貫したものであることがわかる。
 まず、一般の検定問題に対する統計的決定問題としての解釈を示す。
-その後上記の例を下にどのように定式化されるかを示す。
+その後、実際の問題に対する例として、上記の例がどのように定式化されるかを示す。
 
 * $$(\Omega, \mathcal{F})$$,
+    * 確率空間
 * $$X: \Omega \rightarrow \mathcal{X}$$,
+    * 観測している確率変数
 * $$(\mathcal{X}, \mathcal{A})$$,
+    * 確率変数が値をとる空間
 * $$\Theta$$,
 * $$\Theta_{1}, \Theta_{2}$$,
     * $$\Theta$$の分割
@@ -1146,19 +1149,133 @@ $$
 $$
 
 となる。
-有意水準$\alpha$の検定全体$$\phi_{\alpha}$$は
+まず、Randomizationのない場合の検定を考える。
+有意水準$\alpha$の検定$\phi$は
 
 $$
-    \phi_{\alpha}
-    :=
-    \{
-        \phi: \text{ test function }
-        \mid
-        \sum_{\theta \in \Theta_{0}}
-            R(\theta, \delta_{\phi})
+    \theta \in \Theta_{0},
+    \
+    E_{\theta}[\phi]
+    \le
+    \alpha
+$$
+
+となる$\phi$である。
+$$\Theta_{0} = \{1/2\}$$より、$\phi$として$$\phi(x; n) := 1_{\{n, \ldots, 20\}}(x)$$の形のものだけを考えれば、
+
+$$
+\begin{eqnarray}
+    E_{\theta}[\phi]
+    & = &
+        \int_{\mathcal{X}}
+            \phi(x)
+            f(x; 1/2)
+        \ d x
+    \nonumber
+    \\
+    & = &
+        \int_{\mathcal{X}}
+            1_{\{n, \ldots, 20\}}(x)
+            f(x; 1/2)
+        \ d x
+    \nonumber
+    \\
+    & = &
+        \int_{\{n, \ldots, 20\}}
+            f(x; 1/2)
+        \ d x
+    \nonumber
+    \\
+    & = &
+        \sum_{i=n}^{20}
+            f(i; 1/2)
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+$n$は有意水準を満たすように選ぶ。
+つまり、$\alpha = 0.05$とすれば、
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{i=n}^{20}
+            f(i; 1/2)
         \le
         \alpha
-    \}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        n = 15
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+第二式は、$$\eqref{chap01_randomization_example_siginificant_level_for_15}$$より分かる。
+
+次に、Randomizationのある場合の検定を考える。
+$n = 0, \ldots, 20$, $p \in [0, 1]$とし、$\phi$として$$\phi(x; n, p) := p1_{\{n, \ldots, 20\}}(x) +  (1-p)1_{\{n + 1, \ldots, 20\}}(x)$$の形のものだけを考えれば、上と同様に
+
+$$
+\begin{eqnarray}
+    E_{\theta}[\phi]
+    & = &
+        \int_{\mathcal{X}}
+            \phi(x)
+            f(x; 1/2)
+        \ d x
+    \nonumber
+    \\
+    & = &
+        p
+        \sum_{i=n}^{20}
+            f(i; 1/2)
+        +
+        (1-p)
+        \sum_{i=n+1}^{20}
+            f(i; 1/2)
+    \nonumber
+\end{eqnarray}
+$$
+
+$n, p$は有意水準を満たすように選ぶ。
+つまり、$\alpha = 0.05$とすれば、$p \in [0, 1]$と$$\sum_{i=n}^{20} f(i; 1/2)$$が$n$に関して単調であることから
+
+$$
+\begin{eqnarray}
+    & &
+        p
+        \sum_{i=n}^{20}
+            f(i; 1/2)
+        +
+        (1-p)
+        \sum_{i=n+1}^{20}
+            f(i; 1/2)
+        \le
+        \alpha
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        n = 14,
+        \quad
+        p
+        =
+        \frac{
+            \alpha
+            -
+            \sum_{i=n+1}^{20}
+                f(i; 1/2)
+        }{
+            \sum_{i=n}^{20}
+                f(i; 1/2)
+            -
+            \sum_{i=n+1}^{20}
+                f(i; 1/2)
+        }
+    \nonumber
+\end{eqnarray}
 $$
 
 となる。
@@ -1179,7 +1296,7 @@ $$
 
 正規分布の分散が$\sigma^{2}$が同じで、平均が$\mu_{1}, \mu_{2}$と異なっている場合は、2つの正規分布の平均の差は$$\mu_{1} - \mu_{2}$$は$\sigma$に比例して区別ができなくなることが予想される。
 その時risk functionは無限大になるだろう。
-また、逆に$sigma$が小さくなれば、2つの分布の平均の差も区別可能になることが予想される。
+また、逆に$\sigma$が小さくなれば、2つの分布の平均の差も区別可能になることが予想される。
 その時risk functionはゼロに近づく。
 
 risk functionの値を制御するのに必要な観測値の数というのは一般には未知である。
@@ -1200,7 +1317,7 @@ $p$が1か0に十分近いならどちらか一方の事象しか殆ど観測さ
 ### Example 1.3.3
 必要なsample sizeは実際の観測値にもとづいて決めることが重要。
 例えば、$(\theta - 1/2, \theta + 1/2)$上の一様分布のparameter$\theta$を推定する問題を考える。
-例えば、2つの観測値の差の最大値$$\max_{i, j}\|x_{i} - x_{j}\|$$が1に近い時は$\theta$に近いし、$$\max_{i,j}\|x_{i} - x_{j}\}$$が0に近い時は、全て同じような値を取っており、観測値としての情報があまりない可能性がある。
+例えば、2つの観測値の差の最大値$$\max_{i, j}\|x_{i} - x_{j}\|$$が1に近い時は$\theta$に近いし、$$\max_{i,j}\|x_{i} - x_{j}\|$$が0に近い時は、全て同じような値を取っており、観測値としての情報があまりない可能性がある。
 
 <div class="QED" style="text-align: right">■</div>
 
@@ -1225,11 +1342,178 @@ $$
 \end{equation}
 $$
 
-$\delta$は$\theta$に依存している。
-真の$\theta$は不明である。
+risk functionの最小化は$\theta$に依存している。
+ある$\theta_{0}$の下では$d_{0}$が正しいdecisionだとすれば、$$L(\theta_{0}, d_{0}) = 0$$とすれば良いが、ほかの$\theta$の元では$L(\theta, \delta)$の値が大きくなる場合がある。
+一般に全ての場合にうまくいく方法はないが、2つのよく使われる方法が知られている。
 
+一つの方法は$\theta$について一様にrisk functionを最小にするようなdecision functionに限定する方法である。
+これに関連して、invariance, unbiasednessの概念がある。
+これらについては次の節に譲る。
+
+もう一つの方法は、$$\delta_{1}, \delta_{2}$$の2つのdecision functionを考える。
+もし$$R(\theta, \delta_{1}) < R(\theta, \delta_{2})\ \forall \theta$$であれば、明らかに$\delta_{1}$の方が好ましい。
+このような場合は単純であるが、実際はFigure1.1.のような場合が多い。
+この場合にどちらが良いかという規準を作る必要がある。
+この方法については1.6節に譲る。
+
+<div style="text-align: center">
+    <img src="image/figure_01_01.jpg" width="500">
+    <br>
+    Figure 1.1
+</div>
+
+risk functionの最小化でdecision functionを決める方法では、上記のような仮定が必要になる。
+このような仮定は、数学の現実への応用で常に付きまとう問題である。
+現実の問題で、上記の仮定と矛盾してないかというcheckは常に必要である。
+
+risk functionの最小化で求めたdecision functionが適切なdecision functionというわけではないことを理解しておく必要がある。
+
+riskの最小性に加えて、robustnessも同様に重要であるが、robustnessを考慮する形に拡張することができる。
+
+model $\mathcal{P}$の設定方法も重要な問題で、問題ごとに適切に選ぶ必要がある。
+複雑すぎるmodelより、よりsimpleなmodelの方が良い。
+loss functionにmodelの複雑さを加えることで、この問題を考慮できる。
+これに関連した研究については、Stone (1981), de Leeuw (1992) and Rao and Wu (2001)がある。
 
 ## 1.5 Invariance and Unbiasedness
+
+
+### Example 1.5.1
+* $$X_{1,1}, \ldots, X_{1,n}$$,
+    * $$X_{1,j} \sim N(\mu_{1}, \sigma^{2})$$,
+* $$X_{2,1}, \ldots, X_{2,n}$$,
+    * $$X_{2,j} \sim N(\mu_{2}, \sigma^{2})$$,
+* $$\Delta \in \mathbb{R}_{\ge 0}$$,
+    * 平均の差
+    * given
+* $d_{0}$
+    * $$\left|
+        \mu_{2} - \mu_{1}
+    \right| \le \Delta $$,
+    * 2つの正規分布の平均の差が$\Delta$以下
+* $d_{1}$
+    * $$\mu_{2} - \mu_{1} > \Delta$$,
+    * $$\mu_{2}$$が$$\mu_{1}$$より$\Delta$大きい
+* $d_{2}$
+    * $$\mu_{1} - \mu_{2} < \Delta$$,
+    * $$\mu_{1}$$が$$\mu_{2}$$より$\Delta$大きい
+* $$\Theta := \mathbb{R}^{2}$$,
+
+loss functionは以下のように定義する。
+
+$$
+\begin{equation}
+    (\mu_{1}, \mu_{2}) \in \Theta,
+    \
+    L((\mu_{1}, \mu_{2}), d_{i})
+    :=
+    \begin{cases}	
+        \sum_{i=0}^{2}
+            w_{0, j}
+            1_{\{ d_{j} \}}(d_{i})
+        &
+            (|\mu_{2} - \mu_{1}| \le \Delta)
+        \\
+        \sum_{j=0}^{2}
+            w_{1, j}
+            1_{\{ d_{j} \}}(d_{i})
+        &
+            (\mu_{2} - \mu_{1} > \Delta)
+        \\
+        \sum_{j=0}^{2}
+            w_{2, j}
+            1_{ \{d_{j}\} }(d_{i})
+        &
+            (\mu_{1} - \mu_{2} > \Delta)
+    \end{cases}
+    \nonumber
+\end{equation}
+$$
+
+$$w_{i,j} \in \mathbb{R}_{\ge 0}$$は真のパラメータが$$d_{i}$$の条件を満たすとき、$$d_{j}$$を選択したときのlossである。
+多くの場合ある程度の対称性を仮定する。
+例えば以下のような対称性が考えられる。
+
+$$
+    \sigma \in \mathfrak{S}_{2} \times \mathfrak{S}_{n},
+    \
+    \delta(x_{1, 1}, \ldots, x_{1,n}, x_{2,1}, \ldots, x_{2,n})
+    =
+    \delta(x_{\sigma(1, 1)}, \ldots, x_{\sigma(1,n)}, x_{\sigma(2, 1)}, \ldots, x_{\sigma(2, n)})
+$$
+
+この対称性の仮定は、観測値の順番によらないということである。
+確率変数が独立であれば、このような仮定は成り立つ。
+
+<div style="text-align: right">■</div>
+
+### Example 1.5.2
+$\mu$を推定する問題を考える。
+1 feet = 12 inch に注意。
+
+* $f(x)$
+    * 密度関数の条件(積分が1とか)を満たす何らかの関数
+* $\sigma$
+    * given
+* $$X_{1}, \ldots, X_{n}$$,
+    * $$g(x) := f((x - \mu) / \sigma) / \sigma$$を密度関数にもつとする。
+    * $X_{i}$はfeetで観測されているとする
+* $\Theta := \mathbb{R}$
+* $D := \mathbb{R}$
+
+loss functionは、$\sigma$で標準化した二乗誤差とする。
+
+$$
+    \mu in \Theta,
+    \
+    d \in D,
+    \
+    L(\mu, d)
+    :=
+    \frac{
+        (d - \mu)^{2}
+    }{
+        \sigma
+    }.
+$$
+
+一方、$$X_{1}^{\prime}, \ldots, X_{n}^{\prime}$$について、$X_{i}^{\prime}$はinchで観測されているとする。
+つまり、$a=12$として、$$X_{i}^{\prime} = a X_{i}$$である。
+このとき、密度関数は$$g(x) := f((x - \mu^{\prime}) / \sigma^{\prime}) / \sigma^{\prime}$$となる。
+ここで、$\sigma^{\prime} := a \sigma$, $\mu^{\prime} := a \mu$となる。
+同様にloss functionは
+
+$$
+    \mu^{\prime}:= a\mu in \Theta,
+    \
+    d^{\prime}:= ad \in D,
+    \
+    L^{\prime}(\mu^{\prime}, d^{\prime})
+    :=
+    \frac{
+        (d^{\prime} - \mu^{\prime})^{2}
+    }{
+        \sigma^{\prime}
+    }
+    =
+    \frac{
+        (d - \mu)^{2}
+    }{
+        \sigma
+    }
+$$
+
+となる。
+よって、
+
+$$
+    \frac{1}{a}
+    \delta(ax_{1}, \ldots ax_{n})
+    =
+    \delta(x_{1}, \ldots, x_{n})
+$$
+
+<div style="text-align: right">■</div>
 
 ## 1.6 Bayes and Minimax Procedures
 
