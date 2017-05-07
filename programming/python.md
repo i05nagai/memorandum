@@ -29,7 +29,7 @@
 <!-- vim-markdown-toc -->
 
 
-# python
+## python
 
 ## set up repository
 
@@ -446,6 +446,11 @@ import下のディレクトリは、環境変数`PYTHONPATH`で指定された�
 1. カレントディレクトリ
 1. 環境変数「PYTHONPATH」に列挙したディレクトリ
 1. sys.pathに含むディレクトリ
+
+### string to date
+
+使えるディレクティブは以下。
+* [8.1. datetime — 基本的な日付型および時間型 — Python 2.7.13 ドキュメント](http://docs.python.jp/2/library/datetime.html#strftime-and-strptime-behavior)
 
 
 #### Reference
