@@ -1,4 +1,4 @@
-# GitHub
+## GitHub
 
 ## GitHub Pages with jekyll
 
@@ -84,3 +84,49 @@ git config --global credential.helper osxkeychain
 
 ### Reference
 * [Travis-CI でコミットして GitHub にプッシュする - 公開鍵認証を利用してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/)
+
+## Search in Github
+検索対象にできるのは以下。
+
+* access可能なrepositoryのissue
+* Source code
+* Commits
+* Users
+* Wikis
+
+制限は
+
+* 256文字以上のqueryは非サポート
+* 5こ以上の`AND`, `OR`, `NOT`
+
+### Qualifiers
+* `author`
+* `comitter`
+* `author-name`
+* `commiter-name`
+* `author-email`
+* `committer-email`
+* `user`
+* `repo`
+    * `repo:name/repo_name`
+* `author-date`
+    * `author-date:<2016-01-01`
+* `committer-date`
+    * `committer-date:<2016-01-01`
+* `merge`
+    * `merge:true`
+    * merge commitを含める
+* `hash`
+    * sha1 hashを指定
+* `parent`
+    * parentのsha1 hashを指定
+* `tree`
+    * treeのsha1 hashを指定
+* `is`
+    * repositoryのprivateかprivate
+    * `is:public`
+    * `is:private`
+* `feature`
+
+### Reference
+* [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
