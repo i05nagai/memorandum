@@ -100,6 +100,9 @@ git config --global credential.helper osxkeychain
 * 5こ以上の`AND`, `OR`, `NOT`
 
 ### Qualifiers
+Qualifiersの前に`-`をつけるとQualifersを満たすものを除く。
+`AND`, `NOT`, `OR`が使える。
+
 * `author`
 * `comitter`
 * `author-name`
@@ -127,6 +130,33 @@ git config --global credential.helper osxkeychain
     * `is:public`
     * `is:private`
 * `feature`
+* `hoge in:`
+    * `in:file`
+        * fileの中身にhogeを含む
+    * `in:path`
+        * path文字列にhogeを含むcode
+    * `in:file,path`
+        * fileかcode
+* `hoge language:scss`
+    * 言語の指定
+* `size`
+    * `size:100`
+        * sizeが100bytes
+    * `size:>100`
+        * sizeが100bytes以上
+* `fork`
+    * `fork:true`
+        * forkされたrepositoryも検索に含める
+* `filename`
+    * `filename:.vimrc`
+        * ファイル名が`.vimrc`を含む
+* `extension`
+    * `extension:css`
+    * 拡張子を指定
+* `stars`
+    * starの数
+* `created`
+    * 作成された日付
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
