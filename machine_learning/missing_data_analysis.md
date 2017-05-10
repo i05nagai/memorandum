@@ -264,6 +264,7 @@ ML法の議論を各々のparameterが、確率変数だと思ってベイズの
 TBD
 
 ### Example
+TBD
 
 <div class="QED" style="text-align: right">■</div>
 
