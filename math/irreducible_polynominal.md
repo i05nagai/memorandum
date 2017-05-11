@@ -150,4 +150,5 @@ $n$は自然数だからこれは高々$n$回の操作で$\mathrm{deg}f^{l} < \m
 * [Info on primitive and irreducible polynomials](http://theory.cs.uvic.ca/inf/neck/PolyInfo.html)
 * [多項式環](http://aozoragakuen.sakura.ne.jp/suuron/node51.html)
 * [一意分解整域とその商体における Eisenstein の既約判定法 - konn-san.com](http://konn-san.com/math/eisenstein-criterion.html)
-
+* [よしいずの雑記帳　GF(2)上における多項式および既約多項式のリスト](http://yoshiiz.blog129.fc2.com/blog-entry-199.html)
+* [A058943 - OEIS](https://oeis.org/A058943)

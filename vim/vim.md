@@ -54,6 +54,7 @@ eleven   twelve   thirteen                   fourteen   fifteen
 ```
 
 ## Alignで整形
+
 ### csvの整形
 ```vim
 " 「:Align」コマンドの書式
@@ -96,7 +97,6 @@ AlignCtrlで以下の設定が可能。
 ## netrw
 * ファイル作成
     * %
-
 
 ## vimfilerでファイルのbookmark
 uniteが必須。
@@ -173,6 +173,7 @@ nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 :vim hoge path/to/search/dir/**
 :vim piyo path/to/search/dir/**
 ```
+
 上記の検索は、下記で置き換え可能。
 
 ```vim
@@ -183,31 +184,43 @@ nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 :vim hoge ##
 :vim piyo ##
 ```
+
 `:ar[gs]`コマンドは、次のようにも使える。
+
 ```vim
 :ar `find . -name \\*.rb`
 ```
+
 ### 検索オプション
 g オプションをつけない場合、それぞれの行に対して一度しかマッチしません。 g オプションをつけると、すべて、マッチします。
+
 ```vim
 :vimgrep /foo/g *
 ```
+
 j オプションをつけると、マッチした場所にジャンプしません。
+
 ```vim
 :vimgrep /foo/j *
 ```
+
 大文字小文字を区別しないには、 \c を指定します。
 / を省略することもできますが、gやjのオプションを指定できなくなります。
+
 ```vim
 :vimgrep /foo\c/ *
 :vimgrep foo *
 :vimgrep foo\c *
 ```
+
 先頭に \C を入れることで大文字と小文字を区別するようになります。
+
 ```vim
 :vimgrep /\Ckeyword/ **
 ```
+
 ファイルの指定するときに ** を使うことで再帰的にファイルを検索することができます。
+
 ```vim
 :vimgrep fprintf **/*.c
 ```
@@ -226,6 +239,7 @@ j オプションをつけると、マッチした場所にジャンプしませ
 1. 貼り付け先で、`<C-R>=`とし、`=path`と入力する。
 
 ## clipboard
+
 ### mac
 vim, vim+tmuxでvimの選択範囲やファイルをクリップボードへコピーする方法は色々ある。
 vim単体の場合は、vimを`+clipboard`でbuildして、設定を加える。
@@ -234,12 +248,14 @@ tmux+vimの場合は、tmux側のコピー方法に設定を加えるなどが�
 環境依存であったり、準備が面倒なので、ちょっとしたコピーしかない場合は下記のコマンドでOK.
 
 ファイルをクリップボードへコピー
+
 ```
 :w !pbcopy
 ```
 
 選択範囲をクリップボードへコピー。
 visual modeで選択して`:w !pbcopy`と打てば下記が入力される。
+
 ```
 :'<,'>w !pbcopy
 ```

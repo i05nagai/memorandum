@@ -110,7 +110,67 @@ Memcheckはheap領域のmalloc/newなどのコマンドを追跡するため、�
 
 * 
 
-## Cachegrind
+## 5. Cachegrind: a cache and branch-prediction profiler
+
+## 5.2 Using Cachegind, cg_annotate and cg_merge
+
+### 5.2.1 Running Cachegrind
+
+```
+valgrind --tool=cachegrind prog
+```
+
+```
+==31751== I   refs:      27,742,716
+==31751== I1  misses:           276
+==31751== LLi misses:           275
+==31751== I1  miss rate:        0.0%
+==31751== LLi miss rate:        0.0%
+==31751== 
+==31751== D   refs:      15,430,290  (10,955,517 rd + 4,474,773 wr)
+==31751== D1  misses:        41,185  (    21,905 rd +    19,280 wr)
+==31751== LLd misses:        23,085  (     3,987 rd +    19,098 wr)
+==31751== D1  miss rate:        0.2% (       0.1%   +       0.4%)
+==31751== LLd miss rate:        0.1% (       0.0%   +       0.4%)
+==31751== 
+==31751== LL misses:         23,360  (     4,262 rd +    19,098 wr)
+==31751== LL miss rate:         0.0% (       0.0%   +       0.4%)
+```
+
+### 5.2.2 Output file
+上の要約に加えて、詳細な情報をファイルに出力する。
+デフォルトでは、`cachegrind.out.<pid>`である。
+
+pidがつくのは、
+
+* fileをrenameをしなくて良い
+* spawnした子プロセスも`--trace-children=yes`で計測できる
+
+### 5.2.3 Running cg_annotate
+
+```
+cg_annotate output_file
+```
+
+`output_file`はcachegrindの出力したファイルを指定する。
+
+出力のサンプルは次の節。
+
+### 5.2.4 The Output Preamble
+
+```
+--------------------------------------------------------------------------------
+I1 cache:              65536 B, 64 B, 2-way associative
+D1 cache:              65536 B, 64 B, 2-way associative
+LL cache:              262144 B, 64 B, 8-way associative
+Command:               concord vg_to_ucode.c
+Events recorded:       Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:          Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order:      Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Threshold:             99%
+Chosen for annotation:
+Auto-annotation:       off
+```
 
 ## Helgrind
 
