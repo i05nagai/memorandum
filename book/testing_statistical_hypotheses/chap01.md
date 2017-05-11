@@ -1484,7 +1484,7 @@ $$
 同様にloss functionは
 
 $$
-    \mu^{\prime}:= a\mu in \Theta,
+    \mu^{\prime}:= a\mu \in \Theta,
     \
     d^{\prime}:= ad \in D,
     \
@@ -1512,6 +1512,18 @@ $$
     =
     \delta(x_{1}, \ldots, x_{n})
 $$
+
+<div style="text-align: right">■</div>
+
+対称性は数学的には群による変換に対する不変性として定義される。
+$G$を群とする。
+次の条件をみたすとき
+
+1. $$\mathcal{P} = \{P_{\theta} \mid \theta \in \Theta \}$$について、$$\forall g \in G, \forall \theta \in \Theta$$について$gX$の分布$P^{gX}$が$\mathcal{P}$に含まれる
+    * $\theta$について見ると$\bar{g}:\Theta \rightarrow \Theta$が全単射
+2. 
+
+### Example 1.5.3
 
 <div style="text-align: right">■</div>
 
