@@ -147,11 +147,11 @@ ML法（尤度推定）とMI法（ベイズ推定）に基づく方法につい�
 まず、ML法について述べる。
 
 ### Maximum Likelihood
-* $p_{1}, p_{2} \in \mathbb{N}$
+* $$p_{1}, p_{2} \in \mathbb{N}$$,
     * parameterの次元
-    * $p_{1}$が$X$のparameter$\theta$の次元
-    * $p_{2}$が$M$のparameter$\phi$の次元
-* $(\theta, \phi) \in \Theta \subseteq \mathbb{R}^{p_{1}} \times \mathbb{R}^{p_{2}}$
+    * $$p_{1}$$が$X$のparameter$\theta$の次元
+    * $$p_{2}$$が$M$のparameter$\phi$の次元
+* $$(\theta, \phi) \in \Theta \subseteq \mathbb{R}^{p_{1}} \times \mathbb{R}^{p_{2}}$$,
     * parameterの空間
 
 $$
