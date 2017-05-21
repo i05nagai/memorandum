@@ -276,6 +276,7 @@ ENDIF()
     * `initial_value`はデフォルト値で下記の変数設定を何もしない場合にセットされる
 
 * cmakeのコマンドライン引数で-DUSE_FEATURE_X=ON/OFFをつける
+    * OFFだと定義されない
 * CMakeLists.txt中でsetコマンドを使う
 * 明示的には指定しない → 初期値またはキャッシュされた値を使う
 
