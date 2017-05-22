@@ -302,6 +302,10 @@ cmake \
 ### Reference
 * [cmake の使い方 - PukiWiki](http://www.cs.gunma-u.ac.jp/~nagai/wiki/index.php?cmake%20%A4%CE%BB%C8%A4%A4%CA%FD)
 
+## ctest
+* [ctest(1) — CMake 3.1.3 Documentation](https://cmake.org/cmake/help/v3.1/manual/ctest.1.html#manual:ctest(1))
+
+
 ## reference
 
 * [便利なコマンド](http://qiita.com/mrk_21/items/5e7ca775b463a4141a58)
