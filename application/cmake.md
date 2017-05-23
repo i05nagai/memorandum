@@ -305,6 +305,16 @@ cmake \
 ## ctest
 * [ctest(1) — CMake 3.1.3 Documentation](https://cmake.org/cmake/help/v3.1/manual/ctest.1.html#manual:ctest(1))
 
+順番が大事
+`INCLUDE(Dart)`は多分最後がよい。
+`INCLUDE(Dart)`実行時に、ctestへの設定が更新されるっぽい？ 
+
+```cmake
+SET(MEMORYCHECK_COMMAND_OPTIONS "--leak-check=full --show-leak-kinds=definite,possible --error-exitcode=1")
+SET(MEMORYCHECK_SUPPRESSIONS_FILE "${PROJECT_SOURCE_DIR}/ci/valgrind_suppression.supp" )
+FIND_PROGRAM(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
+INCLUDE(Dart)
+```
 
 ## reference
 
