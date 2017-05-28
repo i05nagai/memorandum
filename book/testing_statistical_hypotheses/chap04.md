@@ -237,7 +237,8 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-以下では、指数型分布族の中で、$m = 1$で$a_{i}$が恒等写像、$\phi \equiv 0$の場合を考える。
+以下では、指数型分布族の中で、$m = 1$で$$a_{i}$$を恒等写像で、$\phi(\theta) = -\log(C(\theta))$の場合を考える。
+また、記法を本に合わせるために、$h=g$として書く。
 つまり、
 
 $$
@@ -249,12 +250,13 @@ $$
         d \mu
     }
     =
+    C(\theta)
     \exp
     \left(
         \theta
         T(x)
     \right)
-    g(x)
+    h(x)
 $$
 
 * case1
@@ -268,5 +270,49 @@ $$
 * case3: $$\theta_{1} < \theta_{2}$$,
     * $$H: \theta_{1} \le \theta \le \theta_{2}$$,
     * $K$: $$\theta < \theta_{1}$$ or $$\theta > \theta_{2}$$,
+
+ここでは、case3の場合にUMP unbiased testがあることを示す。
+このとき、test $\phi$は
+
+$$
+\begin{equation}
+    \phi(x)
+    :=
+    \begin{cases}	
+        1
+        &
+            T(x) < C_{1} \text{ or } T(x) > C_{2}
+            \\
+        \gamma_{i}
+        &  
+            T(x) = C_{1} \text{ or } T(x) = C_{2}
+            \\
+        0
+        &  
+            C_{1} < T(x) < C_{2}
+            \\
+    \end{cases}
+    \label{chap04_04_03_test}
+\end{equation}
+$$
+
+$\gamma_{i}$と$$C_{i}$$は以下を満たすようにきめる。
+
+$$
+\begin{equation}
+    \mathrm{E}_{\theta_{1}}
+    \left[
+        \phi(X)
+    \right]
+    =
+    \mathrm{E}_{\theta_{2}}
+    \left[
+        \phi(X)
+    \right]
+    =
+    \alpha
+    \label{chap04_04_04}
+\end{equation}
+$$
 
 
