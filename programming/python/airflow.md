@@ -63,4 +63,9 @@ airflow backfill <dag_id>
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
+=======
+airflow initdb
+airflow webserver -p 8080
+```
+
 
