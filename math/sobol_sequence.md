@@ -95,7 +95,7 @@ $$
 $$
 
 と定義する。
-$i$番目の点を以下で定義する。
+$i$番目の$j$次元の点を以下で定義する。
 
 $$
 \begin{equation}
@@ -108,6 +108,8 @@ $$
     \cdots
     \oplus
     i_{K} v_{K, j}
+    \
+    (j = 1, \ldots, d)
     \label{original_sobol_sequence}
 \end{equation}
 $$
@@ -189,6 +191,79 @@ $$
 
 gray codeを使えば、一つ前の点列とのXORで計算できる。
 
+## Relation to Generalized Niederreiter Sequence
+ここで、$v_{k,j}$の2進展開を以下で定義する。
+
+$$
+    \forall k = 1, \ldots, K,
+    \
+    \forall j = 1, \ldots, d
+    \
+    v_{k,j}
+    =
+    (0.v_{k,j,1}v_{k,j,2} \cdots)_{2}
+$$
+
+sobol sequenceにおけるgeneralized niederreiter sequenceとしての生成行列は
+
+$$
+C_{j}
+:=
+\left(
+    \begin{array}{ccccc}
+        1
+        &
+            v_{2,j,1}
+        &
+            v_{3,j,1}
+        &
+            \cdots
+        &
+            v_{K,j,1}
+        \\
+        0 
+        &
+            1
+        &
+            v_{3,j,2}
+        &
+            \cdots
+        &
+            v_{K,j,2}
+        \\
+        0
+        &
+            0
+        &
+            1
+        &
+            \cdots
+        &
+            v_{K,j,3}
+        \\
+        \vdots
+        &
+            \vdots
+        &
+            \vdots
+        &
+            \ddots
+        &
+            \vdots
+        \\
+        0
+        &
+            0
+        &
+            0
+        &
+            0
+        &
+            1
+    \end{array}
+\right)
+$$
+
 
 ## Reference
-* [Sobol sequence generator](http://web.maths.unsw.edu.au/~fkuo/sobol/)
+
