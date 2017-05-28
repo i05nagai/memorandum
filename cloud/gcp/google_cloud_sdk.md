@@ -193,6 +193,14 @@ bq load dataset.new_table gs://path/to/file schema.json
 
 ### query
 
+### Tips
+
+#### Schemaを見たい
+
+```
+bq show dataset.table
+```
+
 ## gsutil
 
 * acl
