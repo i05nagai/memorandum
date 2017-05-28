@@ -49,3 +49,14 @@ brew install gdb
 [list](http://usevim.com/2014/03/05/lldb/)
 
 * [vim-lldb](Bundle "gilligan/vim-lldb")
+
+
+## Commands
+
+* `@variable`
+    * `variable`がポインタの時配列の中身の表示
+
+
+### Reference
+* [GDBでポインタを配列として表示する | Pistolfly](https://www.pistolfly.com/weblog/2012/02/gdbint.html)
+
