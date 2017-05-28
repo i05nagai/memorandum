@@ -276,6 +276,7 @@ ENDIF()
     * `initial_value`はデフォルト値で下記の変数設定を何もしない場合にセットされる
 
 * cmakeのコマンドライン引数で-DUSE_FEATURE_X=ON/OFFをつける
+    * OFFだと定義されない
 * CMakeLists.txt中でsetコマンドを使う
 * 明示的には指定しない → 初期値またはキャッシュされた値を使う
 
@@ -300,6 +301,20 @@ cmake \
 
 ### Reference
 * [cmake の使い方 - PukiWiki](http://www.cs.gunma-u.ac.jp/~nagai/wiki/index.php?cmake%20%A4%CE%BB%C8%A4%A4%CA%FD)
+
+## ctest
+* [ctest(1) — CMake 3.1.3 Documentation](https://cmake.org/cmake/help/v3.1/manual/ctest.1.html#manual:ctest(1))
+
+順番が大事
+`INCLUDE(Dart)`は多分最後がよい。
+`INCLUDE(Dart)`実行時に、ctestへの設定が更新されるっぽい？ 
+
+```cmake
+SET(MEMORYCHECK_COMMAND_OPTIONS "--leak-check=full --show-leak-kinds=definite,possible --error-exitcode=1")
+SET(MEMORYCHECK_SUPPRESSIONS_FILE "${PROJECT_SOURCE_DIR}/ci/valgrind_suppression.supp" )
+FIND_PROGRAM(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
+INCLUDE(Dart)
+```
 
 ## reference
 
