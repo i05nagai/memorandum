@@ -65,10 +65,11 @@ class内のprivateなメソッドをprivateでない形にするには以下の3
         * 例えば、具象クラスとして`TargetClass.privateMethod()`の実装しかないなど。
 
 
-
 ## 環境変数
+
 ### g++
 下記の環境変数のパスのheader fileを探す。
+
 ```shell
 CPATH
 C_INCLUDE_PATH
@@ -77,19 +78,20 @@ OBJC_INCLUDE_PATH
 ```
 
 下記の環境変数のパスのlibファイルを探す。
+
 ```shell
 LD_LIBRARY_PATH
 ```
 
 ### clang
 下記の環境変数のパスのheader fileを探す。
+
 ```shell
 CPATH
 C_INCLUDE_PATH
 CPLUS_INCLUDE_PATH
 OBJC_INCLUDE_PATH
 ```
-
 
 ```shell
 LIBRARY_PATH
@@ -161,7 +163,9 @@ int main(int argc, char const* argv[])
     return 0;
 }
 ```
+
 型推論時に型の継承関係は考慮されない。
+
 ```cpp
 template <typename E>
 class base {
@@ -200,12 +204,14 @@ int main(int argc, char const* argv[])
 
 
 ## typedef
+
 ### 配列のtypedef
 
 ```cpp
 //int[2]のtypedef
 typedef int type[2];
 ```
+
 ### typedefのprivate, public
 
 ```cpp
@@ -265,6 +271,7 @@ void main()
 
 ## Autimatic differentiation
 実装の方法は
+
 1. operator overloadingで、演算結果の変わりに演算のオブジェクトを返す
     * 演算結果からObjectを取り出す時に、値とderivativeの評価をする
     * 式のオブジェクトをクラスとして持つ為、explicit instanciationができない
@@ -278,8 +285,8 @@ void main()
 ### 2について
 
 
-
 ## tips
+
 ### case1: CRTPのインスタンス化の順序
 CRTPでtypedefするときの注意。
 下記はderivedのtypedefされる前にbaseのtypedefが評価されるが、このときderivedのtypedefは評価されていないのでエラー。
@@ -334,13 +341,16 @@ objdumpコマンドを使う。
     * オブジェクトファイル内のヘッダーのDynamicSYMBOL情報
 
 ## pre_compiled_header
+
 ### gcc
 下記で`pre_compiled_header.h`から`pre_compiled_header.h.pch`が生成される。
+
 ```shell
 g++ -I/path/to/hearder pre_compiled_header.h
 ```
 
 `pre_compiled_header.H`の中身は下記の通り。
+
 ```cpp
 #pragma once
 #include <boost/shared_ptr.hpp>
@@ -348,6 +358,7 @@ g++ -I/path/to/hearder pre_compiled_header.h
 
 ### clang
 下記で`pre_compiled_header.h`から`pre_compiled_header.h.pch`が生成される。
+
 ```shell
 clang++ -cc1 -emit-pch -o pre_compiled_header.h.gch pre_compiled_header.h
 ```
@@ -368,33 +379,47 @@ clang++ -std=c++11 -stdlib=libc++ main.cpp
 ### mac
 macでのclangのupdateはxcodeからupdateする。
 
-[](http://minus9d.hatenablog.com/entries/2013/08/06)
+[ref](http://minus9d.hatenablog.com/entries/2013/08/06)
 
 ### error
 * `-fcxx-exceptions`
+
 ```shell
 error: C++ exceptions was disabled in PCH file but is currently enabled
 ```
+
 * `-fexceptions`
+
 ```shell
 error: exception handling was disabled in PCH file but is currently enabled
 ```
+
 * `-x c++`
 * `-x c++-headers`
 * `-fblocks`
+
 ```shell
 error: blocks extension to C was disabled in PCH file but is currently enable
 ```
+
 * `-fmax-type-align=16`
     * 数字は？
+
 ```
 error: default maximum alignment for types differs in PCH file vs. current file
 ```
-*
-```shell
 
-```
 
+## Tips
+
+### size_t型 is always unsigned
+`size_t`型は常にunsignedと規格できまっている。
+但し、32bit環境と64bit環境ではサイズが異なる可能性がある。
+
+* C++ standard section 18.1で`size_t`は`<cstddef>`に、C Standardの`<stddef.h>`と同じものとして定義される。
+* C Standard Section 4.1.5で、`size_t`は非負整数という記述がある。
+
+* [c++ - is size_t always unsigned? - Stack Overflow](http://stackoverflow.com/questions/1089176/is-size-t-always-unsigned)
 
 ## 開発環境
 * [C/C++プログラマのための開発ツール](http://www.slideshare.net/herumi/cc-66035712)
@@ -414,3 +439,6 @@ error: default maximum alignment for types differs in PCH file vs. current file
 * [C++17の標準ライブラリ](http://ezoeryou.github.io/cpp17lib-slide/#/)
 * [EzoeRyou/cpp-history: Presentation slide for C++ history](https://github.com/EzoeRyou/cpp-history)
 * [EzoeRyou/boost-benkyo-18: Boost勉強会#18大阪の発表の資料](https://github.com/EzoeRyou/boost-benkyo-18)
+
+* [C++のムーブと完全転送を知る](http://proc-cpuinfo.fixstars.com/2016/03/c.html/)
+
