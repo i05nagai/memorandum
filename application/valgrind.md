@@ -1,8 +1,22 @@
 # valgrind
 
+## Install
+
+
+
 ## callgrind
 
 ## Memcheck
+
+### 2.5 Suppresssing errors
+* [Valgrind](http://valgrind.org/docs/manual/manual-core.html#manual-core.suppress)
+* [Suppress potential memory leak in Valgrind - Stack Overflow](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind)
+
+```
+valgrind --gen-suppressions=yes --suppressions=<filename>
+```
+
+suppressionファイルの書き方は、`$PREFIX/lib/valgrind/default.supp`にデフォルトで適用されるsupressionがあるので、参考になる。
 
 ### Usage
 
@@ -175,6 +189,46 @@ Auto-annotation:       off
 ## Helgrind
 
 ## DRD
+
+## Tips
+
+### Error related to 64bit system
+
+```
+2: valgrind:  Fatal error at startup: a function redirection
+2: valgrind:  which is mandatory for this platform-tool combination
+2: valgrind:  cannot be set up.  Details of the redirection are:
+2: valgrind:  
+2: valgrind:  A must-be-redirected function
+2: valgrind:  whose name matches the pattern:      strlen
+2: valgrind:  in an object with soname matching:   ld-linux-x86-64.so.2
+2: valgrind:  was not found whilst processing
+2: valgrind:  symbols from the object with soname: ld-linux-x86-64.so.2
+2: valgrind:  
+2: valgrind:  Possible fixes: (1, short term): install glibc's debuginfo
+2: valgrind:  package on this machine.  (2, longer term): ask the packagers
+2: valgrind:  for your Linux distribution to please in future ship a non-
+2: valgrind:  stripped ld.so (or whatever the dynamic linker .so is called)
+2: valgrind:  that exports the above-named function using the standard
+2: valgrind:  calling conventions for this platform.  The package you need
+2: valgrind:  to install for fix (1) is called
+2: valgrind:  
+2: valgrind:    On Debian, Ubuntu:                 libc6-dbg
+2: valgrind:    On SuSE, openSuSE, Fedora, RHEL:   glibc-debuginfo
+2: valgrind:  
+2: valgrind:  Note that if you are debugging a 32 bit process on a
+2: valgrind:  64 bit system, you will need a corresponding 32 bit debuginfo
+2: valgrind:  package (e.g. libc6-dbg:i386).
+```
+
+64bit machineで32bitファイルのdebug をしているとでるエラーっぽい。
+
+```
+sudo apt-get install libc6-dbg
+sudo apt-get install libc6-dbg:i386
+```
+
+* [12.04 - Valgrind does debug error - Ask Ubuntu](https://askubuntu.com/questions/148236/valgrind-does-debug-error)
 
 ## Reference
 * [pdf](http://www.eidos.ic.i.u-tokyo.ac.jp/~tau/lecture/programming_languages/gen/slides/07-valgrind.pdf)
