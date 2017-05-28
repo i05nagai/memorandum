@@ -280,6 +280,29 @@ $$
 \end{eqnarray}
 $$
 
+### Defintion. test
+* $\phi: \mathcal{X} \rightarrow [0, 1]$
+    * 可測
+
+以下を満たす$\phi$を、水準$\alpha$の検定$\phi$という。
+
+$$
+\begin{equation}
+    \forall
+    \theta \in \Theta_{H},
+    \
+    \mathrm{E}_{\theta}
+    \left[
+        \phi
+    \right]
+    \le
+    \alpha
+    \nonumber
+\end{equation}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 ### Remark
 以下が成り立つ。
 
