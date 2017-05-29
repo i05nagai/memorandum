@@ -1,6 +1,7 @@
-# ubuntu
+## ubuntu
 
-## tips
+## Tips
+
 ### install gcc-4.6 and g++-4.6
 `/etc/apt/sources.list`に以下を追加し、
 * `apt-get update`
@@ -76,5 +77,5 @@ sudoで求められるpasswordは、suするユーザのpasswordではなく、s
 gpasswd -a user_name sudo
 ```
 
-## reference
+## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)
