@@ -5,6 +5,10 @@ title: BigQuery
 ## BigQuery
 
 
+## 制限
+* [割り当てポリシー  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/quota-policy?hl=ja)
+
+
 ## REST API
 
 
