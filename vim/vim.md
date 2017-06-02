@@ -298,7 +298,7 @@ vimのindentの設定をするのもの。
 * [vim commands and piping](http://seejohncode.com/2014/01/27/vim-commands-piping/)
 * [Route 477](http://route477.net/w/VimMemo.html)
 
-## 挿入モードからノーマルモードへの復帰
+### 挿入モードからノーマルモードへの復帰
 | キーストローク | 結果                         |
 |----------------|------------------------------|
 | <Esc>          | ノーマルモードに切り替え     |
@@ -307,5 +307,66 @@ vimのindentの設定をするのもの。
 
 * [挿入ノーマルモード - Qiita](http://qiita.com/takasianpride/items/6900eebb7cde9fbb5298)
 
-## 挿入ノーマルモード
+### 挿入ノーマルモード
 Normal modeでのコマンドを1つ実行して、insert modeに戻る。
+
+### runtimepath
+実行時にvimが探すパス。
+runtimepathで指定されたディレクトリ以下の以下のファイル群を探す。
+
+* filetype.vim
+    * filetypes by file name |new-filetype|
+* scripts.vim
+    * filetypes by file contents |new-filetype-scripts|
+* autoload/
+    * automatically loaded scripts |autoload-functions|
+* colors/
+    * color scheme files |:colorscheme|
+* compiler/	
+    * compiler files |:compiler|
+* doc/
+    * documentation |write-local-help|
+* ftplugin/
+    * filetype plugins |write-filetype-plugin|
+* indent/
+    * indent scripts |indent-expression|
+* keymap/
+    * key mapping files |mbyte-keymap|
+* lang/
+    * menu translations |:menutrans|
+* menu.vim
+    * GUI menus |menu.vim|
+* pack/	
+    * packages |:packadd|
+* plugin/
+    * plugin scripts |write-plugin|
+* print/
+    * files for printing |postscript-print-encoding|
+* spell/
+    * spell checking files |spell|
+* syntax/
+    * syntax files |mysyntaxfile|
+* tutor/
+    * files for vimtutor |tutor|
+
+### filetype plugins
+helpは`:help ftplugin`でひける。
+fileを読み込んだときに、fileのtype(csv, cpp, java, go, python など)が決定される。
+このfiletypeごとに、設定を読み込むことができる。
+cpp用の設定などはここにかく。
+
+```
+~/.vim/ftpugin/filetype.vim
+```
+
+* `filetype.vim`
+    * cppなら`cpp.vim`などをく
+    * filetypeの名前
+
+以下を実行すると、runtimepathで指定されているパスからの相対パスとして指定されているファイルをvim-pluginとして読み込む。
+ここにftpluginをおいても良い。
+
+```vim
+runtime! userautoload/*.vim
+```
+
