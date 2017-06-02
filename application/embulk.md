@@ -25,19 +25,13 @@ brew install embulk
 liquidテンプレートが使える。
 includeで、別ファイルの設定や変数などを読み込むことができる。
 includeするファイル名は`_name_of_template.yml.liquid`とすると以下でincludeできる。
-
-```liquid
-{% include 'path/to/inc' %}
-```
-
+`{% include 'path/to/inc' %}`とかく。
 大事なのは、
 
 * file名の接頭辞は`_`
 * 拡張子は`.yml.liquid`
 * includeするときは、接頭辞と拡張子は省略
 * include字のpathはquotationで囲む
-
-
 
 ## Plugins
 
