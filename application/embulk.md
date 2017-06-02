@@ -25,7 +25,12 @@ brew install embulk
 liquidテンプレートが使える。
 includeで、別ファイルの設定や変数などを読み込むことができる。
 includeするファイル名は`_name_of_template.yml.liquid`とすると以下でincludeできる。
-`{% include 'path/to/inc' %}`とかく。
+liquid tagの中を以下のようにかく。
+
+```liquid
+{{ "{% include 'path/to/inc' " }}%}
+```
+
 大事なのは、
 
 * file名の接頭辞は`_`
@@ -176,7 +181,7 @@ out:
 
 ### JsonMappingException
 以下のエラーのときは、configで設定が必要な項目に値が設定されてない場合が多い。
-または、`{% include 'path/to/inc' %}`とpathをquotationで囲む。
+または、`{{ "{% include 'path/to/inc' " }}%}`とpathをquotationで囲む。
 
 ```
 Error: org.embulk.config.ConfigException: com.fasterxml.jackson.databind.JsonMappingException: Setting null to a task field is not allowed. Use Optional<T> (com.google.common.base.Optional) to represent null.
