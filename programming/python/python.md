@@ -325,6 +325,13 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/var/pyenv
 ```
 
+### for Linux
+Linuxの場合は、
+
+```
+git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+```
+
 ### pyenvに特定のversionのpythonをInstall
 
 以下のコマンドでインストール可能なpythonのversionが表示される。
