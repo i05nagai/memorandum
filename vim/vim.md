@@ -1,5 +1,18 @@
 # vim
 
+## Install
+
+OSX
+
+```
+brew install vim --with-lua --with-python3 --with-override-system-vi 
+```
+
+* `--with-client-server`
+    * vimの起動とともにxquartzが立ち上がるようになるので、不要であればつけない
+* `--with-luajit`
+    * JITのluaが良い場合はこっち
+
 ## vimscripts
 
 ```vim
