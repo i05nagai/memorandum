@@ -5,7 +5,7 @@ book_title: Theory and Algorithms for Bandit Problems
 
 
 # Symbols
-* $\mathcal{N}}(\mu, \sigma^{2})$
+* $\mathcal{N}(\mu, \sigma^{2})$
     * 平均ｎ$\mu$, 分散$\sigma^{2}$の正規分布
 * $\mathcal{N}^{d}(\mu, \Sigma)$
     * 平均$\mu$、共分散行列$\Sigma$の多次元正規分布
@@ -132,6 +132,7 @@ $$
 ただし、各時刻$t$でのユーザの選択は$t-1$までの選択に依存して決めて良い。
 
 報酬$X_{i}(s)$に対する仮定により問題は以下のように分類される。
+
 * 敵対的バンディット
     * 報酬$X_{i}(s)$に確率分布を仮定しない
 * 確率的バンディット
