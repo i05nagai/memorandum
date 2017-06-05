@@ -12,7 +12,7 @@ book_chapter: 10
 * 広告配信会社
     * ブロガー、webサイト運営者から広告スペースを借りる
     * 広告配信会社は、広告スペースに掲載する広告を選ぶ
-    * 広告配信会社のサイトを経由して、広告主のサイトに
+    * 広告配信会社のサイトを経由して、広告主のサイトに誘導する
 * 広告主
     * 広告配信会社に掲載する広告を提供する
     * 最近は、Pay Per Click(PPC)が多い
@@ -181,12 +181,17 @@ $$
     * 第二価格オークションでは配信の有無は掲示金額によって、決まるので$$\{b_{t, j}\}_{j=1, \ldots, K}$$で決まる
 * $$x := (x_{t, j})_{j = 1, \ldots, K, t = 1, \ldots, L}$$,
     * 配信の有無の列
+* $$P_{t, j}$$,
+    * クリックが確率的に起こるとした場合の時刻$t$で広告$j$の広告主に支払う金額
+    * 確率変数
 
-以上の記号の下、広告$j$の効用$$U_{j}$$を以下で定義する。
+以上の記号の下、広告$j$の(広告主に対する)効用$$U_{j}$$を以下で定義する。
 
 $$
 \begin{eqnarray}
-    U_{j}
+    \forall b_{i} \in \mathbb{R}_{\ge 0},
+    \
+    U_{j}(b_{1}, \ldots, b_{T})
     & := &
     \sum_{t=1}^{T}
          \left(
@@ -206,7 +211,7 @@ $$
              -
              p_{t, j}
          \right)
-    \nonumber
+    \label{def_utility}
 \end{eqnarray}
 $$
 
@@ -244,12 +249,15 @@ $$
 とする。
 真のクリック率$\rho_{j}$がわかっていたとする。
 つまり、$C_{j}$の真の分布がわかっていたとする。
-この時の$t$での第二価格オークションの期待収益は
+この時の$t$での第二価格オークションの期待収益(expected revenue)は
 
 $$
+\begin{equation}
     \rho_{j(t)}
     \mathrm{smax}_{j}
         b_{t, j}
+    \label{def_expected_revenue}
+\end{equation}
 $$
 
 である。
@@ -271,7 +279,7 @@ $$
                 \left[
                     P_{t, j}
                 \right]
-    \nonumber
+    \label{def_t_regret}
 \end{eqnarray}
 $$
 
@@ -282,22 +290,43 @@ $$
 必要な用語を定義しよう。
 
 ### Definition. truthful auction for a click event sequence $C$
-クリックの列$C$に対して正直なオークションとは、任意の$t$に対して、
+広告$j$以外の広告のbidの組全体を以下で定義する。
 
 $$
-    \forall t = 1, \ldots, T,
-    \
-    \forall j = 1, \ldots, K,
-    \quad
-    b_{t, j}
-    =
-    v_{t, j}
-    \Rightarrow
-    \forall \{b_{t, j}^{\prime}\},
-    \
-    b_{t, j}^{\prime} \in \mathbb{R}_{\ge 0}
-    \
-    U_{j}
+\begin{equation}
+    B(j)
+    :=
+    \left\{
+        (b_{1}, \ldots, b_{j-1}, b_{j+1}, \ldots, b_{t})
+        \in \mathbb{R}_{\ge 0}^{K-1}
+    \right\}
+    \nonumber
+\end{equation}
+$$
+
+クリックの列$C$に対して正直なオークションとは、全ての広告$j$について、$$v_{j} = b_{t, j}$$でbidした時に、他の広告の掲示金額がいくらであろうと、$j$の効用が最大となることをいう。
+つまり、
+
+$$
+\begin{eqnarray}
+    & &
+        \forall t = 1, \ldots, T,
+        \
+        \forall j = 1, \ldots, K,
+    \nonumber
+    \\
+    &  &
+        b_{t, j}
+        =
+        v_{t, j}
+        \Rightarrow 
+        \forall (b_{1} ,\ldots, b_{K}) \in B(j),
+        \
+        U_{j}(b_{1}, \ldots, b_{t, j}, \ldots, b_{T})
+        =
+        \max_{b_{j} \in \mathbb{R}_{\ge 0}}
+            U_{j}(b_{1}, \ldots, b_{j}, \ldots, b_{T})
+\end{eqnarray}
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
@@ -314,6 +343,52 @@ $$
 第2オークションは正直なオークションである。
 
 ### proof.
+$T=1$の時示せば十分であるから、$t$は省略する。
+$\forall j = 1, \ldots, K$とし、$$\forall b_{j} \in \mathbb{R}_{\ge 0}$$とする。
+第二オークションにおける効用は以下のようにかける。
+
+$$
+    \forall (b_{1} ,\ldots, b_{T}) \in B(j),
+    \
+    U_{j}(b_{1}, \ldots, b_{j}, \ldots, b_{T})
+    =
+    \begin{cases}	
+        v_{j}c_{j}
+        -
+        c_{j}\max_{j \neq j^{\prime} \neq}b_{j^{\prime}}
+        &
+            b_{j} > \max_{j \neq j^{\prime}}b_{j^{\prime}}
+        \\
+        0
+        &  
+            \mathrm{otherwise}
+    \end{cases}
+$$
+
+$b_{j} = v_{j}$とし、以下を示せば良い。
+
+$$
+\begin{eqnarray}
+    \forall (b_{1} ,\ldots, b_{T}) \in B(j),
+    \
+    U_{j}(b_{1}, \ldots, b_{j}, \ldots, b_{T})
+    =
+    \max_{b \in \mathbb{R}_{\ge 0}} U_{j}(b_{1}, \ldots, b, \ldots, b_{T})
+    \nonumber
+\end{eqnarray}
+$$
+
+$$\forall (b_{1} ,\ldots, b_{T}) \in B(j)$$として固定する。
+
+まず$$b_{j} > \max_{j \neq j^{\prime}}b_{j^{\prime}}$$の場合は、
+
+$$
+    c_{j}(b_{j} - \max_{j \neq j^{\prime}}b_{j^{\prime}})
+$$
+
+であり、$b$によらないので、成り立つ。
+同様に$$b_{j} \le \max_{j \neq j^{\prime}}b_{j^{\prime}}$$の場合は恒等的に0なので、これも$b$によらず成り立つ。
+$$\forall (b_{1} ,\ldots, b_{T}) \in B(j)$$であったから、主張は成り立つ。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -431,10 +506,20 @@ $$
     * $$\omega \in \Omega$$,
     * クリックの実現値
 * $$P_{j, t} := x_{j, t}C_{j, t}g(b_{1, t}, \ldots, b_{K, t})$$,
-    * $P_{j, t}$が確率的なのは、$C$が確率的だから？
+    * $P_{j, t}$が確率的なのは、$C$が確率的っぽい
 * $$p_{j, t} := x_{j, t}C_{j, t}(\omega)g(b_{1, t}, \ldots, b_{K, t})$$,
     * $$\omega \in \Omega$$,
     * $g$は第2価格オークションの場合は$\mathrm{smax}$でかける
 
 ややこしいのは、$C_{j}$はあくまで、配信された場合のクリック率であるということ。
 その為、$$c_{j, t} := C_{j, t}(\omega)$$ではない。
+
+論文と本では、$$\eqref{def_expected_revenue}$$は、クリック率がsmaxの中に入ったものを、expected revenueと定義しているが、second price auctionの場合は、クリックの有無は配信広告のクリック率で決まるので、外に出すのが妥当と思う。
+そうだとすると、論文の主張と結果も正しいかは確認が必要。
+
+## Reference
+* [Vickrey auction - Wikipedia](https://en.wikipedia.org/wiki/Vickrey_auction)
+* Devanur, N. R., & Kakade, S. M. (2009). The price of truthfulness for pay-per-click auctions. Proceedings of the Tenth ACM Conference on Electronic Commerce - EC ’09, 99. https://doi.org/10.1145/1566374.1566388
+
+## 10.3 推薦システム
+
