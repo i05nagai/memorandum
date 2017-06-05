@@ -251,6 +251,28 @@ git bisect reset
 
 * [git bisect で問題箇所を特定する - Qiita](http://qiita.com/usamik26/items/cce867b3b139ea5568a6)
 
+## git cherry-pick
+
+* [4. cherry-pick【チュートリアル3 コミットを書き換えよう！】 | サルでもわかるGit入門 〜バージョン管理を使いこなそう〜 | どこでもプロジェクト管理バックログ](http://www.backlog.jp/git-guide/stepup/stepup7_4.html)
+
+特定のcommit列をHEADに移したいときに使う。
+移行先のbranchに移動する。
+
+```git
+git checkout master
+```
+
+```git
+git cherry-pick <commit>
+```
+
+あるcommitより先のcommitすべてを移行したい場合は
+
+```git
+git cherry-pick <commit>...
+```
+
+とする。
 
 ## hooks
 
