@@ -6,6 +6,8 @@ title: Embulk
 
 ## Install
 
+For Linux,
+
 ```sh
 curl --create-dirs -o ~/.embulk/bin/embulk -L "https://dl.embulk.org/embulk-latest.jar"
 chmod +x ~/.embulk/bin/embulk
@@ -13,15 +15,17 @@ echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-For OSX
+For OSX,
 
 ```sh
 brew install embulk
 ```
 
-## config
+## configの書き方
 
-### template
+* [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
+
+### liquid template
 liquidテンプレートが使える。
 includeで、別ファイルの設定や変数などを読み込むことができる。
 includeするファイル名は`_name_of_template.yml.liquid`とすると以下でincludeできる。
@@ -40,9 +44,26 @@ liquid tagの中を以下のようにかく。
 * includeするファイルは、includeしているファイルと同じか下の階層でないとだめ
     * pathに`..` は使えない
 
-## Plugins
+## Pluginsたち
+大きく以下に分かれる。
+
+* input plugin
+* output plugin
+
+これに属さないものとして、
+
+* csv fromatter plugin
+    * 各input/output pluginが中間ファイルとしてcsvを出力することがある
+* local executor plugin
+    * embulkの実行時のthread数とか実行に関係するもの
+* guess executor
+    * 転送元の設定をguessする
+
+とかがある。
 
 ### csv formatter plugin
+configで設定するのは、主に以下。
+
 * delimiter
     * defaultは`,`
 * quote
@@ -51,11 +72,7 @@ liquid tagの中を以下のようにかく。
     * defaultはquoteと一緒
 
 ### local executor plugin
-
-pluginごとの設定に加えて、  
-
-* [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
-    * configに最大
+thread数とか決める。
 
 ```yaml
 exec:
@@ -64,6 +81,7 @@ exec:
 ```
 
 ### guess executor
+CSVの区切り文字とかguessしてくれる。
 
 ```yaml
 exec:
@@ -72,21 +90,23 @@ exec:
 ```
 
 ### embulk-input-gcs
-* service-accountではadminが必要
-
-* [GitHub - embulk/embulk-input-gcs: Embulk plugin that loads records from Google Cloud Storage](https://github.com/embulk/embulk-input-gcs)
+Installは以下でできる。
 
 ```
 embulk gem install embulk-input-gcs
 ```
+* service-accountではadminが必要
+* [GitHub - embulk/embulk-input-gcs: Embulk plugin that loads records from Google Cloud Storage](https://github.com/embulk/embulk-input-gcs)
+
 
 ### embulk-input-mysql
-* [embulk-input-jdbc/embulk-input-mysql at master · embulk/embulk-input-jdbc](https://github.com/embulk/embulk-input-jdbc/tree/master/embulk-input-mysql)
+Installは以下でできる。
 
 ```
 embulk gem install embulk-input-mysql
 ```
 
+* [embulk-input-jdbc/embulk-input-mysql at master · embulk/embulk-input-jdbc](https://github.com/embulk/embulk-input-jdbc/tree/master/embulk-input-mysql)
 * parser
     * 必須
     * columns:
@@ -110,12 +130,13 @@ columns:
 ```
 
 ### embulk-output-bigquery
-* [GitHub - embulk/embulk-output-bigquery: Embulk output plugin to load/insert data into Google BigQuery](https://github.com/embulk/embulk-output-bigquery)
+Installは以下でできる。
 
 ```
 embulk gem install embulk-output-bigquery
 ```
 
+* [GitHub - embulk/embulk-output-bigquery: Embulk output plugin to load/insert data into Google BigQuery](https://github.com/embulk/embulk-output-bigquery)
 * path_prefix
     * 内部的に使うtemp fileのpathのprefix
     * 絶対パスで指定しないならカレントディレクトリからの相対パス
@@ -159,11 +180,6 @@ embulk gem install embulk-output-bigquery
 * table
     * 必須
     * 出力先のtable名
-
-```yaml
-out:
-  dataset:
-```
 
 ### embulk-input-s3
 * bucket
