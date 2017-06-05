@@ -37,6 +37,8 @@ liquid tagの中を以下のようにかく。
 * 拡張子は`.yml.liquid`
 * includeするときは、接頭辞と拡張子は省略
 * include字のpathはquotationで囲む
+* includeするファイルは、includeしているファイルと同じか下の階層でないとだめ
+    * pathに`..` は使えない
 
 ## Plugins
 
@@ -120,7 +122,7 @@ embulk gem install embulk-output-bigquery
     * pathに含まれるdirectoryは存在している必要がある
     * `/hoge/fuga`ならhogeディレクトリにfugaという接頭辞のファイルが作られる
 * file_ext
-    * 
+    * ファイルの拡張子
 * delete_from_local_when_job_end
     * trueだと、ジョブの終了後に生成されたlocal fileを削除する
 * source_format
@@ -128,7 +130,11 @@ embulk gem install embulk-output-bigquery
     * 読み込みのファイル形式
     * 内部的には一度、ファイルに出力してファイルからimportしている
     * formatterはduprecatedになったので、指定しても無意味
-* allow_quoted_newline
+* field_delimiter
+    * CSVのdelimiter
+* encoding
+    * 転送元ファイルのencoding
+* allow_quoted_newlines
     * defaultでfalse
     * 文字列内に改行を含む場合は必要
 * send_timeout_sec
@@ -137,8 +143,6 @@ embulk gem install embulk-output-bigquery
 * read_timeout_sec
     * responceの待ち時間
     * timeout_secはdeprecatedになった
-* table
-    * table名
 * auto_create_table
     * trueでテーブルを自動で作る
 * schema_file
@@ -146,10 +150,15 @@ embulk gem install embulk-output-bigquery
 * column_options
     * 列の定義(schema)
     * `{name: date, type: STRING, timestamp_format: %Y-%m-%d, timezone: "Asia/Tokyo"}`
+* project
+    * 出力先のproject名
+    * 必須
 * dataset
+    * 出力先のdataset名
     * 必須
 * table
     * 必須
+    * 出力先のtable名
 
 ```yaml
 out:
@@ -194,6 +203,23 @@ path_prefixで指定したファイル名と一緒にこのエラーがでてい
 Error: org.jruby.exceptions.RaiseException: (Errno::ENOENT) /path/to/intermediate_file.1013.5932.csv
 ```
 
+### Error
+csvの改行系のエラーの場合が多い。
+
+* allow_quoted_newlines: true
+
+```
+Error: org.jruby.exceptions.RaiseException: (Error) failed during waiting a Load job, get_job(retty-dpi, embulk_load_job_), errors:[{:reason=>"invalid", :message=>"Too many errors encountered."}, {:reason=>"invalid", :location=>"mediaupload-snapshot", :message=>"CSV table references column position .., but line starting at position:.... contains only .. columns."}]
+```
+
+configに以下を指定すると、複数threadで動作しなくなるので、error messageとして、error positionが出る場合はエラーの場所を追いやすい。
+
+```yaml
+exec:
+  max_threads: 1
+  min_output_tasks: 1
+```
+
 ## Reference
 * [embulk/embulk-output-bigquery: Embulk output plugin to load/insert data into Google BigQuery](https://github.com/embulk/embulk-output-bigquery#mode)
-
+* [Embulk YAMLメモ(Hishidama's Embulk YAML Memo)](http://www.ne.jp/asahi/hishidama/home/tech/embulk/yaml.html)
