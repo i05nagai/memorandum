@@ -155,3 +155,79 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Proposition. Inverse formula for block symmetric matrix
+* $A$
+    * $m \times m$行列
+    * 正則
+* $B$
+    * $m \times n$行列
+* $C$
+    * $m \times n$行列
+* $D$
+    * $n \times n$行列
+
+$S$はSchur's complementで
+
+$$
+\begin{equation}
+    S
+    :=
+    C - B^{\mathrm{T}}A^{-1}B
+\end{equation}
+$$
+
+である。
+このとき、$S$が正則であれば、
+
+$$
+\begin{eqnarray}
+    \left(
+        \begin{array}{cc}
+            A & B
+            \\
+            C & D
+        \end{array}
+    \right)^{-1}
+    & = &
+        \left(
+            \begin{array}{cc}
+                A^{-1}
+                + 
+                A^{-1}BS^{-1}CA^{-1}
+                    & 
+                        -A^{-1}BS^{-1}
+                \\
+                -S^{-1}CA^{-1}
+                    &
+                        S^{-1}
+            \end{array}
+        \right)
+    \\
+    \left(
+        \begin{array}{cc}
+            D & C
+            \\
+            B & A
+        \end{array}
+    \right)^{-1}
+    & = &
+        \left(
+            \begin{array}{cc}
+                S^{-1}
+                    & 
+                    -S^{-1} C A^{-1}
+                \\
+                -A^{-1}BS^{-1}
+                    &
+                        A^{-1}
+                        + 
+                        A^{-1}BS^{-1}CA^{-1}
+            \end{array}
+        \right)
+\end{eqnarray}
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
