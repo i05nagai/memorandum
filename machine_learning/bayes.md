@@ -330,7 +330,7 @@ $$
         \sim \mathcal{N}^{M}(\mu_{M}(\mathbf{a}_{M}), \sigma_{M}(\mathbf{a}_{M}, \mathbf{a}_{M})),
 $$
 
-ここで、$\mu(a)$は平均を表す関数で$\mu_{M}:B^{M} \rightarrow \mathbb{R}^{M}$、$\sigma_{M}(\cdot, \cdot)$は共分散を表す関数$\sigma:B \times B \rightarrow \mathbb{R}_{\ge}$で、特に以下のようにかけるとする。
+ここで、$\mu(a)$は平均を表す関数で$\mu_{M}:B^{M} \rightarrow \mathbb{R}^{M}$、$\sigma_{M}(\cdot, \cdot)$は共分散を表す関数$\sigma:B \times B \rightarrow \mathbb{R}_{\ge 0}$で、特に以下のようにかけるとする。
 
 $$
 \begin{eqnarray}
