@@ -251,6 +251,17 @@ git bisect reset
 
 * [git bisect で問題箇所を特定する - Qiita](http://qiita.com/usamik26/items/cce867b3b139ea5568a6)
 
+### committerとauthorを変更
+既存の履歴のcommitterとAuthorを変更する場合は、以下のようにする。
+直前のcommitの場合は以下を実行。
+
+```
+git commit --amend --author="sea_mountain <dummy_email_address@example.com>"
+```
+
+まとめて、する場合は、filter-branchが必要。
+
+
 ## git cherry-pick
 
 * [4. cherry-pick【チュートリアル3 コミットを書き換えよう！】 | サルでもわかるGit入門 〜バージョン管理を使いこなそう〜 | どこでもプロジェクト管理バックログ](http://www.backlog.jp/git-guide/stepup/stepup7_4.html)
