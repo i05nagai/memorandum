@@ -54,8 +54,8 @@ sql_alchemy_conn = my_conn_string
 ```
 
 作成される`airflow.cfg`の中身を変更したい場合は、あらかじめ環境変数に値を設定しておく。
-formatは`AIRFLOW__{SECTION}__{KEY}`の形式である。
-上の例の場合は`AIRFLOW__CORE__SQL_ALCHEMY_CONN`に値を設定すれば良い。
+formatは`$AIRFLOW__{SECTION}__{KEY}`の形式である。
+上の例の場合は`$AIRFLOW__CORE__SQL_ALCHEMY_CONN`に値を設定すれば良い。
 `SECTION`と`KEY`の間は`_`が2つであることに注意する。
 
 * [An Effective Airflow Setup](http://the-efficient-programmer.com/programming/an-effective-airflow-setup.html)
@@ -118,9 +118,10 @@ celeryを使う場合は
 
 `celeryd_concurrency >= dag_concurrency >= max_active_runs_per_dag`の関係っぽい
 
-
+max_active_runs_per_dag
 <img src="./image/airflow_03_max_active_runs_per_dag.png"/>
 
+parallelism
 <img src="./image/airflow_04_parallelism.png"/>
 
 ### Pool
@@ -176,7 +177,6 @@ airflow test <dag_id> <task_id> <execution_date>
 airflow backfill <dag_id> -s start_date -e end_date
 ```
 
-
 ## Scheduling
 DAGごとにcronのようなscheduleを設定できる。
 scheduleを設定しない場合は、手動実行のみ可能。
@@ -202,7 +202,6 @@ scheduleは`airflow.DAG`クラスを作成時に`schedule_interval`引数で指�
 airflow.DAG(schedule_interval="0 * * * *")
 airflow.DAG(schedule_interval=@hourly)
 ```
-
 
 * [Scheduling & Triggers — Airflow Documentation](https://airflow.incubator.apache.org/scheduler.html)
 
@@ -258,9 +257,7 @@ airflow.DAG(schedule_interval=@hourly)
     * operatorのpool引数で、operatorの所属するpoolを指定する
         * 何も指定しない場合はdefault poolに入る
 
-
 ## Tips
-
 よくある落とし穴。
 見ておいた方が良い。
 
@@ -268,9 +265,6 @@ airflow.DAG(schedule_interval=@hourly)
 
 ### Timezone
 Pitfallsにも記載してあるが、UTC前提で開発されている部分があるらしいので、Airflowのarchitecture全体でUTCにしておいた方が、良いらしい。
-
-### Execution date
-Pitfallsにも記載してあるが、
 
 
 ### TemplateNotFound Error
@@ -354,7 +348,6 @@ schedularに載せるためには、`airflow resetdb`が必要。
 * CeleryExecutor
 * MesosExecutor
 
-
 ### Error ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL
 resetdbなどで以下のエラーがでる場合がある。
 
@@ -365,7 +358,6 @@ sqlalchemy.exc.ProgrammingError: (_mysql_exceptions.ProgrammingError) (1064, "Yo
 mili secondが必要なので、 MySQLのversionを5.6.4にあげる必要がある。
 
 * [AIRFLOW-748 Cannot upgradedb from airflow 1.7.0 to 1.8.0a4 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-748)
-
 
 ### Error. No such transport: sqla
 `airflow.cfg`にCeleryのbrokerのURLに`sqla+mysql`と書いていると起こる。
@@ -380,6 +372,34 @@ Web UIのTask InstanceページのTaskのLogのURIがNot Foundになる。
 
 ### DAG scriptの更新
 dagを定義したスクリプトの変更は、web serverやDBの更新なしで反映される。
+
+### Delay a start time of task
+dailyのscheduleは基本的に、各日付の`00:00:00`に開始される。
+開始時刻をずらしたい場合は、最も上流のtaskとして`TimeSensor`か`TimeDeltaSensor`をいれる。
+`TimeSensor`は、指定した時間になるまで待つ、`TimeDeltaSensor`は指定時間待つだけのoperatorである。
+UCTでやっている場合に、日本時間AM00:00まで待つには、`TimeSensor`は15時まで、`TimeDeltaSensor`は15時間待てば良い。
+ただ、15時間待っている間、DAGはRunning状態であるから、 実際にtaskが開始された時刻を通知すると便利である。
+その場合は通知用の関数`notify_to_start_dag`を作成して、operatorの`on_success_callable`に渡す。
+
+```python
+import airflow.operators.sensors as sensors
+sensors.TimeSensor(
+    task_id="time_sensor"
+    target_time=datetime.time(hour=0, minute=0, second=0)
+    dag=dag,
+    on_success_callback=notify_to_start_dag)
+sensors.TimeDeltaSensor(
+    task_id="time_delta_sensor"
+    delta=datetime.timedelta(hours=0, minutes=0, seconds=0),
+    dag=dag,
+    on_success_callback=notify_to_start_dag)
+```
+
+`TimeSensor`の15時というのは、taskが始まってから最初に訪れるUTC時間の15時までという意味になる。
+つまり、taskの開始時に15時を過ぎていたら、次の日の15時まで待つ。
+
+
+* [airflow.operators.sensors — Airflow Documentation](https://airflow.incubator.apache.org/_modules/airflow/operators/sensors.html)
 
 
 ## API Reference
