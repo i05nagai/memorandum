@@ -15,6 +15,9 @@ pass init gpgkey
 ```
 
 * `gpgkey`にはGnuPGの公開鍵を指定
+    * 16進数8桁
+* 登録したgpg key idが`~/.password-store/.gpg-id`に記録される
+* 登録したgpg keyでのみ復号化が可能
 
 ```
 pass insert EC/amazon.co.jp/filename
@@ -51,7 +54,7 @@ pass git init
 ## Setting it up
 
 ```
-zx2c4@laptop ~ $ pass init "ZX2C4 Password Storage Key"
+$ pass init "ZX2C4 Password Storage Key"
 mkdir: created directory ‘/home/zx2c4/.password-store’
 Password store initialized for ZX2C4 Password Storage Key.
 ```
@@ -60,9 +63,9 @@ Password store initialized for ZX2C4 Password Storage Key.
 * password storeをgit repositoryとして初期化
 
 ```
-zx2c4@laptop ~ $ pass git init
+$ pass git init
 Initialized empty Git repository in /home/zx2c4/.password-store/.git/
-zx2c4@laptop ~ $ pass git remote add origin kexec.com:pass-store
+$ pass git remote add origin kexec.com:pass-store
 ```
 
 
