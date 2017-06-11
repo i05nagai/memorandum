@@ -76,6 +76,8 @@ pip install airflow[celery]
 
 でOK。
 使用するDBの設定は`airlfow.cfg`の以下を変更する。
+password`;`は含まない方が良い。
+Celeryのworkerなどでエラーが出る場合もある。
 
 ```ini
 sql_alchemy_conn = mysql://[user_name]:[password]@[host]:[port]/[db_name]
@@ -176,6 +178,66 @@ airflow test <dag_id> <task_id> <execution_date>
 # airflow backfill dag -s 2016/1/1 2016/1/2
 airflow backfill <dag_id> -s start_date -e end_date
 ```
+
+## Security
+* [Security — Airflow Documentation](https://airflow.incubator.apache.org/security.html)
+
+### Web Authentification
+password 認証をつける方法。
+password subpackageをインストールする。
+
+```
+pip install airflow[password]
+```
+
+`airlfow.cfg`に以下を設定する。
+
+```ini
+[webserver]
+authenticate = True
+auth_backend = airflow.contrib.auth.backends.password_auth
+```
+
+defaultでuserは作られていないので、userを以下で追加する。
+
+```python
+$ cd ~/airflow
+$ python
+Python 2.7.9 (default, Feb 10 2015, 03:28:08)
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import airflow
+>>> from airflow import models, settings
+>>> from airflow.contrib.auth.backends.password_auth import PasswordUser
+>>> user = PasswordUser(models.User())
+>>> user.username = 'new_user_name'
+>>> user.email = 'new_user_email@example.com'
+>>> user.password = 'set_the_password'
+>>> session = settings.Session()
+>>> session.add(user)
+>>> session.commit()
+>>> session.close()
+>>> exit()
+```
+
+### SSL
+SSLを設定する場合は、証明書と公開鍵の場所を`airflow.cfg`に記載する。
+設定した場合は、URLは`https://`でアクセスする。
+
+```ini
+[webserver]
+web_server_ssl_cert = <path to cert>
+web_server_ssl_key = <path to key>
+```
+
+defaultでは、portは変わらないので、SSLのportを変更したい場合は、`airflow.cfg`に以下を変更する。
+
+```ini
+[webserver]
+web_server_port = 443
+base_url = http://<hostname or IP>:443
+```
+
+
 
 ## Scheduling
 DAGごとにcronのようなscheduleを設定できる。
@@ -397,6 +459,7 @@ sensors.TimeDeltaSensor(
 
 `TimeSensor`の15時というのは、taskが始まってから最初に訪れるUTC時間の15時までという意味になる。
 つまり、taskの開始時に15時を過ぎていたら、次の日の15時まで待つ。
+また、TimeSensorやTimeDeltaSensorで待っている間は、workerが消費され続ける。
 
 
 * [airflow.operators.sensors — Airflow Documentation](https://airflow.incubator.apache.org/_modules/airflow/operators/sensors.html)
