@@ -460,5 +460,24 @@ import下のディレクトリは、環境変数`PYTHONPATH`で指定された�
 * [8.1. datetime — 基本的な日付型および時間型 — Python 2.7.13 ドキュメント](http://docs.python.jp/2/library/datetime.html#strftime-and-strptime-behavior)
 
 
+### 
+* [install - pip error while installing Python: "Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS" - Stack Overflow](https://stackoverflow.com/questions/37723236/pip-error-while-installing-python-ignoring-ensurepip-failure-pip-8-1-1-requir/37723517)
+
+Ubuntu
+
+```
+apt-get install libssl-dev
+# or
+apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
+```
+
+CetOS
+
+```
+yum install openssl-devel
+# or
+yum install zlib-devel bzip2-devel sqlite sqlite-devel openssl-devel
+```
+
 #### Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
