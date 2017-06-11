@@ -4,6 +4,7 @@ title: Embulk
 
 ## Embulk
 
+
 ## Install
 
 For Linux,
@@ -19,6 +20,7 @@ For OSX,
 
 ```sh
 brew install embulk
+embulk selfupdate
 ```
 
 ## configの書き方
@@ -44,7 +46,11 @@ liquid tagの中を以下のようにかく。
 * includeするファイルは、includeしているファイルと同じか下の階層でないとだめ
     * pathに`..` は使えない
 
+
 ## Pluginsたち
+* [Embulk(エンバルク)プラグインのまとめ - Qiita](http://qiita.com/hiroysato/items/da45e52fb79c39547f69)
+    * 一覧
+
 大きく以下に分かれる。
 
 * input plugin
@@ -60,6 +66,17 @@ liquid tagの中を以下のようにかく。
     * 転送元の設定をguessする
 
 とかがある。
+
+Gemfileが使える。
+
+```
+bundle init
+echo "gem 'embulk-input-mysql'" >> Gemfile
+embulk bundle
+```
+
+でGemfileに記載されているpluginがembulkのplugin用のディレクトリにinstallされる。
+
 
 ### csv formatter plugin
 configで設定するのは、主に以下。
@@ -90,6 +107,7 @@ exec:
 ```
 
 ### embulk-input-gcs
+GCSからのデータの転送ができる。
 Installは以下でできる。
 
 ```
@@ -100,6 +118,7 @@ embulk gem install embulk-input-gcs
 
 
 ### embulk-input-mysql
+MySQLからのデータの転送ができる。
 Installは以下でできる。
 
 ```
@@ -130,6 +149,7 @@ columns:
 ```
 
 ### embulk-output-bigquery
+BigQueryへのデータの転送ができる。
 Installは以下でできる。
 
 ```
@@ -182,6 +202,8 @@ embulk gem install embulk-output-bigquery
     * 出力先のtable名
 
 ### embulk-input-s3
+S3からのデータの転送ができる。
+
 * bucket
     * S3のbucket名
 * path_prefix
