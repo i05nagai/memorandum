@@ -3,16 +3,232 @@
 ## インストール
 [pages](http://promamo.com/?p=2933)
 
+### For CentOS
+For 5.6
+
+* [【シンプル】CentOS6にMySQL5.6をyumで簡単にインストールする手順 | 田舎に住みたいエンジニアの日記](http://blog.ybbo.net/2014/01/22/%E3%80%90%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%80%91centos6%E3%81%ABmysql5-6%E3%82%92yum%E3%81%A7%E7%B0%A1%E5%8D%98%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/)
+
+```
+sudo yum install mysql
+sudo yum install mysql-devel
+sudo yum install mysql-server
+sudo yum install mysql-utilities
+```
+
+rootへのpassの設定は以下。
+デフォルトはpassなし。
+
+```
+/usr/libexec/mysql55/mysqladmin -u root password 'new-password'
+/usr/libexec/mysql55/mysqladmin -u root -h ip-172-19-252-55 password 'new-password'
+```
+
+bash_historyに記録されるので、mysqlに接続後に以下を実行
+
+```
+mysql> update mysql.user set password=password('root用の任意パスワード') where user = 'root';
+mysql> flush privileges; ← 変更を反映
+mysql> exit;
+```
+
+* [CentOS 6.x に MySQL 5.7をyumで簡単にインストールする - Qiita](http://qiita.com/UmedaTakefumi/items/924cdce7cfff083bf492)
+* [MySQL :: A Quick Guide to Using the MySQL Yum Repository](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
+    * Officialのyum repositoryの追加方法
+
+### For Amazon Linux
+
+For 5.7
+
+* [サーバー AmazonLinuxにMySQL5.7をインストールする - YoheiM .NET](http://www.yoheim.net/blog.php?q=20160402)
+
+以下でyum repositoryの追加
+
+```
+sudo yum -y install http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
+```
+
+追加されているかの確認。
+
+```
+yum repolist enabled | grep "mysql.*-community.*"
+```
+
+こんな感じなら良さそう。
+
+```
+mysql-connectors-community/x86_64       MySQL Connectors Community         29+7
+mysql-tools-community/x86_64            MySQL Tools Community                47
+mysql57-community/x86_64                MySQL 5.7 Community Server          183
+```
+
+また、packageの確認は以下で、version 5.7なら良い。
+
+```
+yum info mysql-community-server
+```
+
+```
+sudo yum install mysql-community-server
+```
+
+でインストールされる。
+
+起動は
+
+```
+sudo service mysqld start
+```
+
+rootの初期passwordは`/var/log/mysqld.log`に記載されている。
+接続は
+
+```
+mysql -u root -p -P 3306 -h localhost
+```
+
+で、rootの初期パスワードで接続できる。
+passwordの変更は
+
+```sql
+ALTER USER root@localhost IDENTIFIED BY 'NewPass123?&!';
+```
+
+
 ## ファイル
 * `/etc/my.cnf`に設定ファイルがある。
 
 ## grant
 [title](http://www.dbonline.jp/mysql/user/index6.html)
-```mysql
+
+```sql
 GRANT ALL PREVILEDGES ON database.table TO 'user'@'host' IDENTIFIED BY '[pass]' WITH GRANT OPTION;
 ```
 
 * [pass]つきのユーザを作成
 
 権限の種類は以下
+
 * [title](http://www.dbonline.jp/mysql/user/index5.html)
+
+## Uninstall
+
+### Amazon Linux
+* [DBの中身もろとも消したいときの、Mysql-server の完全削除 - Qiita](http://qiita.com/rojiuratech/items/80dda65d832b407322f1)
+
+```
+yum remove mysql
+yum remove mysql-utilities
+yum remove mysql-server mysql-devel
+rm -rf /var/lib/mysql
+```
+
+
+## Create database 
+
+```sql
+/* DBを作成 */
+CREATE DATABASE db_name DEFAULT CHARACTER SET utf8;
+```
+
+### Drop database
+
+```sql
+DROP DATABASE db_name;
+```
+
+### Create user
+作成直後は、権限が何もないので、GRANTで権限を付与する
+
+```sql
+CREATE USER user_name@'%' IDENTIFIED BY 'password';
+```
+
+* @の後ろは、可能な接続元hostを指定する
+* localからしかアクセスしなければ、`@localhost`にする
+* `@%`はすべての接続元OK
+
+### Delete user
+
+```sql
+DROP USER user_name@host;
+```
+
+### Change password
+
+```sql
+SET PASSWORD FOR user_name@localhost = PASSWORD('password');
+```
+
+### List user
+
+```sql
+SELECT Host, User FROM mysql.user;
+```
+
+### Grant previledges on user
+
+```sql
+GRANT ALL PRIVILEGES ON db_name.* TO username@host IDENTIFIED BY 'password';
+```
+
+* db_nameのtable全てに対して,ALLの権限を付与
+* passwordを`password`にする
+    * `IDENTIFIED BY` 以下は省略可
+
+* [権限の種類と設定されている権限の確認(SHOW GRANTS文) - ユーザーの作成 - MySQLの使い方](https://www.dbonline.jp/mysql/user/index5.html)
+
+* [MySQL :: MySQL 5.6 リファレンスマニュアル :: 6.2.4 アクセス制御、ステージ 1: 接続の検証](https://dev.mysql.com/doc/refman/5.6/ja/connection-access.html)
+    * hostの書き方
+    * subnetmask`user@'192.168.1.%'`で良い
+    * もしくは`user@'192.168.1.0/255.255.255.0'`
+
+### Revoke previledges on user
+特定のユーザから権限全部削除
+
+```sql
+REVOKE ALL PRIVILEGES ON db_name.* FROM user_name@host;
+```
+
+### Show grant
+
+```sql
+SHOW GRANTS FOR user_name@host;
+```
+
+出力のみかた
+
+* [権限の設定(GRANT文) - ユーザーの作成 - MySQLの使い方](https://www.dbonline.jp/mysql/user/index6.html)
+
+
+### List Database/Table
+Databaseの一覧
+
+```
+SHOW databases;
+```
+
+Tableの一覧
+
+```
+SHOW tables;
+```
+
+### Changes Database
+Databaseの変更
+
+```
+USE database_name;
+```
+
+### Connect to mysql
+
+```
+mysql -u username -p -P port -h hostname
+```
+
+### 5.6と5.7の違い
+* [第10回　yum, rpmインストールにおけるMySQL 5.6とMySQL 5.7の違い：MySQL道普請便り｜gihyo.jp … 技術評論社](http://gihyo.jp/dev/serial/01/mysql-road-construction-news/0010)
+
+
+## Reference
+* [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)
