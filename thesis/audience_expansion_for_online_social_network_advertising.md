@@ -25,6 +25,10 @@ Audience Expansionは以下の2つの要素からなる。
 
 $X$はentity全部で、 entityとはユーザの属性で、skill, title, description, 働いている会社、所属しているLinkedIn groupなどである。
 
+記載はないが、元々advertiserの指定した属性だけで会員に広告を出していたが、それだとメジャーなワードに一致する一部の会員が、広告の割当ができてなかったのかもしれない。
+例えば、"Data Mining"とskillにある人に集中し、"Big Data Analysis"とskillに記載している人には広告の割当ができてなかった。
+4億人の会員のimpressionの在庫を捌くことが主な目的でCTRとかは特に気にしてなさそう。
+
 
 ## Introduction
 * Users 
@@ -72,6 +76,10 @@ Advertiserの中には、自身のmarketing部門に基いて、targetingを行�
 ## 3.System
 LinkedInのAudience Exapansion systemの概観。
 
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_03_system_overview.png">
+</div>
+
 ### 3.1 Overview
 LinkedInの広告の形態。
 1ページに複数の広告枠がある。
@@ -79,12 +87,16 @@ LinkedInの広告の形態。
 * Text Ads,
     * ページの上部と横に表示される
 
-<img src="image/audience_expansion_for_online_social_network_advertising_01.png">
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_01.png">
+</div>
 
 * Sponsored Updates
     * native contentとしてuserのfeedに表示される
 
-<img src="image/audience_expansion_for_online_social_network_advertising_02_native_ad.png">
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_02_native_ad.png">
+</div>
 
 advertiserはがcampaignを作る時、広告のformatを指定する。
 また、予算を指定し、targetingを行う。
@@ -181,6 +193,10 @@ campaign-agnosticとcampaign-awareは補完的なので、組わせて使う。
         * 会社を閲覧した、働いた人、他の会社から閲覧されたかどうか
 
 Table1がLinkedInから抽出された特徴。
+
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_04_feature.png">
+</div>
 
 ### 4.1.2 The Model
 各、会社や会員をentityとして扱い、entityをmulti-fielded documentとみなして、field間の類似度をVector Space Modelで計算する。
@@ -362,7 +378,7 @@ Audience Expansionで対象となった会員に対して、元々のtarget条�
 $$
     Y
     :=
-    \log \mathrb{Bid}
+    \log \mathrm{Bid}
     =
     X\beta _ \epsilon,
     \quad
@@ -376,6 +392,9 @@ $$
 このモデルで拡張した会員のcostを算出し、上位$p$ %は対象から覗いている。
 
 ### 4.3.3 Online/Offline Sync
+campaign-awareはofflineで行われる。
+そのため、advertiserがcampaignのtargetをonlineで変更した場合に、以前のtargetに基づくAudience Expansionではadvertiserのtargetと齟齬が生じる。
+齟齬がおきないように、advertiserのcampaignの設定とAudience Expansionのoffline処理にそれぞれtimestampをつけ、campaignのtimestampの方が古いかどうかを確認している。
 
 ## 5 Experiments
 
@@ -383,11 +402,62 @@ $$
 Tabl2にあるように、Hyper parameterが多い。
 hyper parameterの決定A/B testで決めている。
 
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_05_hyper_parameter.png">
+</div>
+
 
 ### 5.2 Similar-Profiles in Campaign-Aware Expansion
 
 ### 5.3 Online A/B Test
+user idに基いて、実験対象を以下のようにわける。 
 
+* no expantion: 5%
+* campaign-agnosticのみ: 5%
+* campaign-awareのみ: 10%
+* hybrid: 70%
+* other: 10%
+    * 他の方法
+    * 論文では記載なし
+    * 成果がなかったからかかなかった？
+    * business的な理由で対象にできなかった？
+
+以下を比較
+
+* Impressions
+    * userのpage requestごとのimpression
+* Reaches
+    * ある日にadvertiser からの広告をuserが見たら1
+    * 同じ日に同じadvertiserからの広告を複数回見ても1
+* Matches
+    * 各userのpage requestに対して、掲載対象となるadvertiserの数
+* Revenue
+    * 3つの要因がある
+    * impressionが増えたことによるもの
+    * Audience expansionの拡張で、競合があまりいなかったimpressionに対して、拡張されたものが高いbidを出していた
+    * Audience Expansionで、競合が増えてことによって、advertiserが高いbidをだしたことによるもの
+        * second price auctionだが競合の数が増えて、全体のbidがあがるらしい
+* Value
+    * LinkedInではrevenueより大事
+    * social welfare, total valueともいう
+    * valueは、bidのこと
+    * 各impressionに対するbidの和がtotal value
+    * advertiserのvalueを増やすのが、Audience Expansionの最終的な目的
+* CTR
+    * impressionに対するclick
+    * CTRを増やすことが目的ではないが、減りすぎないよう見ている
+* CPC
+    * advertiserにとっては低い方が良い
+* Dwell Time
+    * 広告からLanding Pageに移動した際の、LPの滞留時間
+    * 5分を上限として、図っている
+    * Audience Expansionした対象も下のtargetと同じ滞留時間であって欲しいので、この時間が減らないか見ている
+
+Audience Expansionで、impressionが増えるのは当たり前なので、Dwell TImeやCPC, CTRが変わらずにどれだけimpressionを増やせるかが大事。
+
+<div style="text-align: center">
+    <img src="image/audience_expansion_for_online_social_network_advertising_06_experiment.png">
+</div>
 
 
 ## Reference
