@@ -38,8 +38,32 @@ $\forall p, q \in M$について、$h \in \mathcal{A}$を一様乱数で選ん�
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+### Definition. LSH scheme
+* $U$
+    * set
+* $S$
+    * set
+* $\phi: U \times U \rightarrow [0, 1]$
+* $F$
+    * $S$上の確率分布 
+* $$\mathcal{A} \subseteq \{h: U \rightarrow S\}$$,
+    * 位相空間
+* $X: \Omega \rightarrow \mathcal{A}$
+    * 確率変数で、$F$を分布としてもつ
+
+以下を満たす$(\phi, \mathcal{A}, F)$をLSH schemeという。 
+
+$$
+    \forall a, b \in U,
+    \
+    P(\{\omega \in \Omega \mid X(\omega)(a) = X(\omega)(b)\})
+    =
+    \phi(a, b)
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Locality-sensitive hashing - Wikipedia](https://en.wikipedia.org/wiki/Locality-sensitive_hashing)
 * [局所性鋭敏型ハッシュ - Wikipedia](https://ja.wikipedia.org/wiki/%E5%B1%80%E6%89%80%E6%80%A7%E9%8B%AD%E6%95%8F%E5%9E%8B%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5)
-
+* [lec9.pdf](http://sd.is.uec.ac.jp/koga/lecture/IF2/lec9.pdf)
