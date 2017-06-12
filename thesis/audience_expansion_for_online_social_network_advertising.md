@@ -4,7 +4,7 @@ title: Audience Expansion for Online Social Network Advertising
 
 ## Audience Expansion for Online Social Network Advertising
 LinkedInのAudience Expansionについて。 
-campaignは、advertiserに広告のことである。
+campaignは、advertiserの広告のことである。
 
 LikedInでは、advertiserがreachしたい属性(location, age, skill, etc)を指定して、広告を出すことができる。
 例えば、userのskillにData Miningを持つuserと指定した時には、Big DataやData Analysisなどを持つuserを対象にできると良い。
@@ -15,22 +15,24 @@ Audience Expansionは以下の2つの要素からなる。
 * campaign-agnostic expansion
     * campaignの情報を使わない
     * campaign-independent
-    * Similar-Xと呼ばれる手法を使い、似ている属性を加えるということを行う
-        * Xには、skill, companyなどが入る
+    * Similar-Xと呼ばれる手法を使い、会員の属性に似ている属性を加える
+        * Xはentityの集まりで、 entityとはユーザの属性(skill, title, description, 働いている会社、所属しているLinkedIn groupなど)である
         * 会社Aと会社Bが似ていれば、会社Aで働く人の属性に会社Bの属性も足す
         * 類似度計算はcosine類似度
+    * 会員の属性の拡張
 * campaign-aware expansion
     * campaignの情報を使う
     * campaign-dependent
-
-$X$はentity全部で、 entityとはユーザの属性で、skill, title, description, 働いている会社、所属しているLinkedIn groupなどである。
+    * advertiserが指定したtarget属性に似ている属性を計算し、似ている属性を持つ会員もtargetに含める
+    * advertiserが指定したtargetの拡張
 
 記載はないが、元々advertiserの指定した属性だけで会員に広告を出していたが、それだとメジャーなワードに一致する一部の会員が、広告の割当ができてなかったのかもしれない。
 例えば、"Data Mining"とskillにある人に集中し、"Big Data Analysis"とskillに記載している人には広告の割当ができてなかった。
 4億人の会員のimpressionの在庫を捌くことが主な目的でCTRとかは特に気にしてなさそう。
 
-
 ## Introduction
+Internet Adの3要素は以下のように関係している。
+
 * Users 
     * websiteの閲覧を通して自身の興味と関心を表現
 * Advertisers
@@ -47,7 +49,7 @@ LinkedInでは以下の2種類の広告がある
     * pageの上部、右側に表示される
 
 userの属性(title, skill、働いている企業、LinkedIn group, etc）が多すぎてadvertiserが適切にtargetingできていないので、Audience Expansionを作った。
-例えば、skilに`Online Advertising`をもつuserにtargetingした場合、自動でskillに`Interactive Marketing`と記載のあるuserにreachできるようになる。
+例えば、skillに`Online Advertising`をもつuserにtargetingした場合、自動でskillに`Interactive Marketing`と記載のあるuserにもreachできるようになる。
 
 他のadvertising platformも同様の機能をもっているが、この手法は、conversion orientedである。
 つまり、Advertiserが事前に指定したreachしたいuserを下に、そのuserのlistを拡張することができる。
@@ -71,7 +73,7 @@ Advertiserの中には、自身のmarketing部門に基いて、targetingを行�
         * 距離はSmilar-ProfilesというSimilar-Xの類似手法
 * 両方の強みをいかしたsystemを作った
 
-実際のproductionとして使っており、かなり良くなったらしい。
+実際のproductionとして使っており、かなり(impressionは)良くなったらしい。
 
 ## 3.System
 LinkedInのAudience Exapansion systemの概観。
@@ -86,6 +88,7 @@ LinkedInの広告の形態。
 
 * Text Ads,
     * ページの上部と横に表示される
+    * 論文当時と今で変更があるかも
 
 <div style="text-align: center">
     <img src="image/audience_expansion_for_online_social_network_advertising_01.png">
@@ -93,6 +96,7 @@ LinkedInの広告の形態。
 
 * Sponsored Updates
     * native contentとしてuserのfeedに表示される
+    * 論文当時と今で変更があるかも
 
 <div style="text-align: center">
     <img src="image/audience_expansion_for_online_social_network_advertising_02_native_ad.png">
@@ -100,7 +104,7 @@ LinkedInの広告の形態。
 
 advertiserはがcampaignを作る時、広告のformatを指定する。
 また、予算を指定し、targetingを行う。
-bidは、CPMかCPCである。
+bidは、CPMかCPCで行う。
 targetingは、以下が指定可能。
 また各項目は、否定も設定可能。
 
@@ -109,6 +113,7 @@ targetingは、以下が指定可能。
 * company name
 * skills
 * seniority
+* など
 
 例えば、locationがUSAかCanadaでCaliforniaでなく、ageは18-24か25-34で、seniorityがunpaid、trainingでないといった指定が可能。
 
@@ -126,9 +131,10 @@ AND
 
 targetを決めるとbidの概算がadveritiserに表示されるとともに、Audience Expansionを使うどうかのオプションが表示される。
 
-広告の掲載は、LinkdedInの会員がサイトに訪問した時に、空いていいる広告枠があれば開始される。
+広告の掲載は、LinkdedInの会員がサイトに訪問した時に、空いている広告枠があれば開始される。
+処理の大まかな流れは以下
 
-* PVにともなって、backendにad requestがいく
+* 会員のPVとともに、backendにad requestがいく
 * 会員のprofile情報が取得され、広告のtargeting条件に一致している広告が表示される
 * 該当の広告が複数ある場合は、second-price auctionによって表示する広告が蹴っていされる。
 * auctionで買った広告が、frontendに送られ、広告が表示される。
@@ -145,13 +151,12 @@ Audience Expansionは2段階ある。
 ### 3.2 Campaign-Agnositc Expansion
 campaign-agnosticは Smilar-X algorithmに基づく。
 Xは、profileの属性(company, LinkedIn Gropu, skill, job title, etc)が入る。
-例えば、smilar-Skillsの場合、Data Miningと指定したら、Big Data, Machine Learningといったものも類似のtargetとして表示される。
+例えば、similar-Skillsの場合、`Data Mining`と指定したら、`Big Data`, `Machine Learning`といったものも会員の属性として加える。
 Similar-X algorithmは後で解説するように、similarityをlogistic regreesionでscoreとして出力するmodelである。
 この手法は、精度は悪いが、会員の情報のみからできるという点で、優れている。
-次のcampaign-awareは会員の全情報を使うので、campaign-agnosticより精度が良い。
 
 ### 3.3 Campaign-Aware Expansion
-targetingを会員へのlabelとみなす。
+targetで指定された属性を会員へのlabelとみなす。
 labelとみなすことで、labelに近いもの探す分類問題として考えることができる。
 
 1. offline match
@@ -168,11 +173,6 @@ labelとみなすことで、labelに近いもの探す分類問題として考�
 
 ### 3.4 Hybrid Expansion
 campaign-agnosticとcampaign-awareは補完的なので、組わせて使う。
-
-* $$U_{p}$$,
-    * profileの属性の集合
-* $$U_{l}$$,
-    * 
 
 ## 4. Modeling
 
@@ -285,11 +285,11 @@ $$
 Company AとCompany Bがあったとする。
 AとBはSimilar-Comaniesで似ているとする。
 Bで働く会員の属性に、Aも加えられる。
-つまり、Bで働く人は、Aをtargetとして広告のtargetにもなる。
+つまり、Bで働く人は、Aをtargetとしてる広告のtargetにもなる。
 
 これは、advertiserにとってもA, Bで働く人にとってもpersonalizeされていない。
 personalizeするために、各userについてuserの好むentityと好まないentityの2値を学習する方法をとっている。
-好むentityの中で、上位$k_{x}$個取得する？
+会員が好むentityの中で、上位$k_{x}$個($x$は各属性)取得する？
 ちょっと詳細が読み取れない。
 
 companyを例にすると、userとcompanyの特徴量を4.1.1.と同様に取得し、例えば、userがcompanyをfollowしていれば好む、unfollowしていれば好まないにする。
@@ -301,7 +301,7 @@ LinkedInでは4億以上の会員に対してこれを行っている。
 問題としては、この組み合わせだから4億の2乗である。
 
 この大きなデータの中で、高いcosine類似度をもつ組を見つけるために、、Locality Sensitve Hashing (LSH) techniqueを使っている。
-全ての会員は、$n$個のclusterにmapされる。
+全ての会員は、$n$個のclusterにmapされ、そのclusterの中でのNearest Neighbor searchを行っている。
 
 ### 4.2 A Note on Implementation
 
