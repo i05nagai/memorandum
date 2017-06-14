@@ -515,9 +515,7 @@ sensors.TimeDeltaSensor(
 つまり、taskの開始時に15時を過ぎていたら、次の日の15時まで待つ。
 また、TimeSensorやTimeDeltaSensorで待っている間は、workerが消費され続ける。
 
-
 * [airflow.operators.sensors — Airflow Documentation](https://airflow.incubator.apache.org/_modules/airflow/operators/sensors.html)
-
 
 ## API Reference
 
@@ -539,6 +537,14 @@ BaseOperatorで定義されている共通の引数
     * taskの期待する実行時間をtimedeltaで指定
     * 1時間で終わってほしいときは、1hourで指定
     * 実行時間の上限、これを超えるとSLA missというlogが出力
+* trigger_rule
+    * 依存しているtaskのstateに応じて実行を制御する
+    * `{ all_success | all_failed | all_done | one_success | one_failed | dummy}`
+    * defaultはall_success
+    * all_sccess: 依存しているtaskが全てsuccess
+    * all_faild: 依存しているtaskが全てfailed
+    * one_success: 依存しているtaskが全1つでも成功
+    * one_failed: 依存しているtaskが全1つでもfailed
 
 ## Web UI
 
