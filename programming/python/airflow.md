@@ -44,8 +44,7 @@ airflow webserver -p 8080
 ```
 
 ## Configs
-`$AIRFLOW_HOME`に、`airflow.cfg`が作られる。
-defaultだと`~/airflow`が`$AIRFLOW_HOME`になっている。
+`$AIRFLOW_HOME`に、`airflow.cfg`が作られ、 defaultだと`~/airflow`が`$AIRFLOW_HOME`になっている。
 設定ファイルは以下のような`ini`形式になっている。
 
 ```ini
@@ -53,13 +52,59 @@ defaultだと`~/airflow`が`$AIRFLOW_HOME`になっている。
 sql_alchemy_conn = my_conn_string
 ```
 
-作成される`airflow.cfg`の中身を変更したい場合は、あらかじめ環境変数に値を設定しておく。
+
 formatは`$AIRFLOW__{SECTION}__{KEY}`の形式である。
 上の例の場合は`$AIRFLOW__CORE__SQL_ALCHEMY_CONN`に値を設定すれば良い。
 `SECTION`と`KEY`の間は`_`が2つであることに注意する。
 
 * [An Effective Airflow Setup](http://the-efficient-programmer.com/programming/an-effective-airflow-setup.html)
 
+設定を変更しそうな項目は、以下。
+
+```bash
+# ${AIRFLOW_HOME}は適当なpathが定義されているとする
+export AIRFLOW__CORE__AIRFLOW_HOME="${AIRFLOW_HOME}"
+export AIRFLOW__CORE__DAGS_FOLDER="${AIRFLOW_HOME}/dags"
+export AIRFLOW__CORE__BASE_LOG_FOLDER="${AIRFLOW_HOME}/logs"
+# Executer
+export AIRFLOW__CORE__EXECUTOR="CeleryExecutor"
+# defaultのexampleをいれるか
+export AIRFLOW__CORE__LOAD_EXAMPLES="False"
+# Airflowで使うDB
+export AIRFLOW__CORE__SQL_ALCHEMY_CONN="mysql://user_name:password@db_host:db_port/db_name"
+export AIRFLOW__CORE__SQL_ALCHEMY_POOL_SIZE=5
+# 並列性の設定
+export AIRFLOW__CORE__PARALLELISM=2
+export AIRFLOW__CORE__DAG_CONCURRENCY=3
+export AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG=1
+# ?
+export AIRFLOW__CORE__FERNET_KEY="cryptography_not_found_storing_passwords_in_plain_text"
+# webserverのBASEのURL
+export AIRFLOW__WEBSERVER__BASE_URL="https://0.0.0.0:8080"
+# webserverのHostとport
+export AIRFLOW__WEBSERVER__WEB_SERVER_HOST="0.0.0.0"
+export AIRFLOW__WEBSERVER__WEB_SERVER_PORT=8080
+# serverのworker
+export AIRFLOW__WEBSERVER__WORKERS=1
+# logの場所
+export AIRFLOW__WEBSERVER__ACCESS_LOGFILE="/path/to/access_log.log"
+export AIRFLOW__WEBSERVER__ERROR_LOGFILE="/path/to/error_log.log"
+# webserverにユーザ認証機能をつける場合はTrue, Backendも以下に変更が必用。
+export AIRFLOW__WEBSERVER__AUTHENTICATE="True"
+export AIRFLOW__WEBSERVER__AUTH_BACKEND="airflow.contrib.auth.backends.password_auth"
+# workerの並列性
+export AIRFLOW__CELERY__CELERYD_CONCURRENCY=3
+# worker用のDB
+export AIRFLOW__CELERY__BROKER_URL="sqla+mysql://db_user_name:password@db_host:db_port/db_name"
+export AIRFLOW__CELERY__CELERY_RESULT_BACKEND="db+mysql://db_user_name:password@db_host:db_port/db_name"
+# celeryのflowerの設定
+export AIRFLOW__CELERY__FLOWER_HOST="0.0.0.0"
+export AIRFLOW__CELERY__FLOWER_PORT=5555
+# schedulerのlogの場所
+export AIRFLOW__SCHEDULER__CHILD_PROCESS_LOG_DIRECTORY="${AIRFLOW_HOME}/logs/scheduler"
+# schedulerの並列性
+export AIRFLOW__SCHEDULER__MAX_THREADS=1
+```
 
 ### Scaling out with Celery
 taskの並列処理にはceleryが必要。
@@ -237,7 +282,7 @@ web_server_port = 443
 base_url = http://<hostname or IP>:443
 ```
 
-
+なぜかdaemon化するときは、certfileが必要(1.8.0)。
 
 ## Scheduling
 DAGごとにcronのようなscheduleを設定できる。
@@ -312,12 +357,21 @@ airflow.DAG(schedule_interval=@hourly)
     * cross communication
     * task間でのmessageや状態のやり取りができる
     * 多分使わない
+* hooks
+    * 
 * Pools
     * 並列実行するtaskをpoolすることができる
     * poolにつまれたtaskを、何個のworkerが処理するかを指定できる
     * Web UIからも設定可能
     * operatorのpool引数で、operatorの所属するpoolを指定する
         * 何も指定しない場合はdefault poolに入る
+
+## Scheduling spark jobs
+* [Scheduling Spark jobs with Airflow – Insight Data](https://blog.insightdatascience.com/scheduling-spark-jobs-with-airflow-4c66f3144660)
+* [Automated Model Building with EMR, Spark, and Airflow - Agari](https://www.agari.com/automated-model-building-emr-spark-airflow/)
+
+
+BashOperatorで`spark-submit`をする
 
 ## Tips
 よくある落とし穴。
