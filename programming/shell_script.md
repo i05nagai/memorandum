@@ -1,4 +1,4 @@
-# shell script
+## shell script
 
 ## Tips
 
@@ -7,11 +7,30 @@
 `bash`拡張のいくつかの記法が認識されていない。
 以下のように実行すれば良い。
 
-````shell
+```shell
 bash script.sh
 ```
 
-* [linux - [ :Unexpected operator in shell programming - Stack Overflow](http://stackoverflow.com/questions/3411048/unexpected-operator-in-shell-programming)
+* [linux - :Unexpected operator in shell programming - Stack Overflow](http://stackoverflow.com/questions/3411048/unexpected-operator-in-shell-programming)
+
+### 環境変数一覧
+`env`, `printenv`, `declare`, `set`のいずれかで見る
+`set`は現在実行中のshellの変数の一覧が表示される。
+
+
+### exportの有無
+* [bash 環境変数とシェル変数 webzoit.net](http://www.webzoit.net/hp/it/internet/homepage/env/cs/server/os/type/unix/linux/shell/kind/sh_bash/environment/)
+
+```
+export VAL1="hoge"
+VAL2="hoge"
+```
+
+`VAL1`は環境変数となる。
+`VAL2`はシェル変数となる。
+環境変数は、子プロセスでも有効。
+
+* [シェル変数と環境変数の違いをコマンドラインで確認する - Qiita](http://qiita.com/kure/items/f76d8242b97280a247a1)
 
 ### set -euを使う
 
@@ -28,11 +47,11 @@ ciなどで便利。
 
 `file.sh`が以下のようにかかれているとすると
 
-```shell
+```sh
 echo "hoge"
 ```
 
-```shell
+```sh
 $ sh file.sh
 hoge
 
@@ -47,7 +66,7 @@ hoge
 ## help
 shell scriptを書いたら下記のような`usage`関数を書いておく。
 
-```shell
+```sh
 function usage {
     cat <<EOF
 $(basename ${0}) is a tool for ...
@@ -64,15 +83,17 @@ EOF
 
 versionもかく。
 
-```shell
-
+```sh
 function version {
     echo "$(basename ${0}) version 0.0.1 "
 }    
 ```
+
 ## option aruguments
+
 ### single-option
-```shell
+
+```sh
 case ${1} in
 
     start)
@@ -105,7 +126,7 @@ esac
 
 ### multiple-option
 
-```shell
+```sh
 while [ $# -gt 0 ];
 do
     case ${1} in
@@ -136,3 +157,4 @@ done
 
 ### reference
 * [使いやすいシェルスクリプトを書く | SOTA](http://deeeet.com/writing/2014/05/18/shell-template/)
+* [bashのヒアドキュメントを活用する - Qiita](http://qiita.com/take4s5i/items/e207cee4fb04385a9952)
