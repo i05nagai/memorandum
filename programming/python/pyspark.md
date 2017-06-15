@@ -1,5 +1,16 @@
 ## python/pyspark
 
+## Install
+* [spark 2.0系Tips #1 Jupyterでpyspark - Qiita](http://qiita.com/takaomag/items/bff9a7df24c4fbab2785)
+
+For OSX
+
+* [MacBook に spark を入れるには、brew install apache-spark 一発でできちゃった件 - Qiita](http://qiita.com/HirofumiYashima/items/e6d2a40abc71110a7b72)
+
+```
+brew install apache-spark
+```
+
 ## Configuration
 
 ```json
@@ -87,7 +98,30 @@ aws emr get
 [--dest <value>]
 ```
 
+## API
+
+### functions
+* `lag`
+    * parititionしたものの一つ前の行の値と置き換える
+    * [pyspark.sql module — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#pyspark.sql.functions.lag)
+    * Window関数
+
+### RDD
+* `repartitionAndSortWithinPartitions`
+    * 戻り値はrdd
+    * [pyspark.RDD.repartitionAndSortWithinPartitions](http://takwatanabe.me/pyspark/generated/generated/pyspark.RDD.repartitionAndSortWithinPartitions.html)
+* `toDF`
+    * DataFrameのtoDFとはまた異なる
+    * `schema`と`sampleRation`からDataFrameを作る
+    * [spark/session.py at d935e0a9d9bb3d3c74e9529e161648caa50696b7 · apache/spark](https://github.com/apache/spark/blob/d935e0a9d9bb3d3c74e9529e161648caa50696b7/python/pyspark/sql/session.py#L43)
+    * [pyspark.sql module — PySpark 1.6.2 documentation](https://spark.apache.org/docs/1.6.2/api/python/pyspark.sql.html#pyspark.sql.DataFrame.toDF)
+
+
+### DataFrame
+* [Spark DataframeのSample Code集 - Qiita](http://qiita.com/taka4sato/items/4ab2cf9e941599f1c0ca)
+
 ## Reference
 * [Welcome to Spark Python API Docs! — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/index.html)
 * [EMR上でPython3系でpysparkする - Qiita](http://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
 * [EMRのpysparkでPython３系を使う - Qiita](http://qiita.com/azaazato/items/ae5c90c3df1616284fd0)
+
