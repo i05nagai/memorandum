@@ -51,8 +51,7 @@ docker-machine start default  # 立ち上げ
 
 
 | オプション                      | 意味                                                                          |
-|---------------------------------|-------------------------------------------------------------------------------|
-| -v `<host_path>:<container_path>` | ホストの `<host_path>` を `<container_path>` にマウントしてコンテナを起動         |
+|---------------------------------|-------------------------------------------------------------------------------| | -v `<host_path>:<container_path>` | ホストの `<host_path>` を `<container_path>` にマウントしてコンテナを起動         |
 | -v `<container_path>`             | Data Volume を作成して `<container_path>` にマウントしてコンテナを起動          |
 | --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
 
@@ -60,10 +59,27 @@ docker-machine start default  # 立ち上げ
 * `FROM ubuntu:16.10`
 * `MAINTAINER name "mail@mail"`
 * `RUN command`
-* `VOLUME `
+* `ENV variable value`
+* `EXPOSE <port> [<port>...] `
+    * portをListenすることをコンテナに伝える
+    * hostからアクセスするには、更にコンテナの起動時に`-p`でポートを公開する
+* ADD
+* COPY
+* ENTRYPOINT
+* RUN
+* CMD
+* `VOLUME ["/path/to"< ""...>]`
+    * 指定したpathを外部からマウント可能にする
+* USER
+* WORKDIR
+    * Dockerfileのコマンド実行時のcurrent directoryを指定
+* ARG
+* ONBUILD
 
 
 ## Tips
+* [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
+
 
 ### Data Volume container
 データ格納用のコンテナ。
@@ -97,4 +113,12 @@ docker run --volumes-from mysql_data --name mysql -e MYSQL_ROOT_PASSWORD=mysql -
 * `-p`
     * port
 
+### push to docker hub
+最初に、docker hubでアカウントを作る。
+`username`はdockerhubのアカウントのusernameにする。
 
+```
+docker login
+docker built -t username/image_name .
+docker push username/image_name
+```
