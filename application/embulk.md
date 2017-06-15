@@ -67,7 +67,7 @@ liquid tagの中を以下のようにかく。
 
 とかがある。
 
-Gemfileが使える。
+pluginの管理にGemfileが使える。
 
 ```
 bundle init
@@ -105,6 +105,14 @@ exec:
   guess_plugins: ['csv_all_strings']
   exclude_guess_plugins: ['csv']
 ```
+
+* guess_plugins
+    * guessで使用するplugin
+* exclude_guess_plugins
+    * guessに使用させないplugin
+
+csv_all_strings pluginは、CSVのすべてのcolumnをstringとして判定する。
+上の例では、csv guess pluginを使わないようにして、全てstringとして判定させている。
 
 ### embulk-input-gcs
 GCSからのデータの転送ができる。
@@ -241,7 +249,7 @@ path_prefixで指定したファイル名と一緒にこのエラーがでてい
 Error: org.jruby.exceptions.RaiseException: (Errno::ENOENT) /path/to/intermediate_file.1013.5932.csv
 ```
 
-### Error
+### Error: org.jruby.exceptions.RaiseException: (Error)
 csvの改行系のエラーの場合が多い。
 
 * allow_quoted_newlines: true
