@@ -1,4 +1,4 @@
-# docker
+## docker
 
 ## settings
 `~/.docker/config.json`に設定をかく。
@@ -57,10 +57,30 @@ docker-machine start default  # 立ち上げ
 | --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
 
 ## Dockerfile
-* `FROM ubuntu:16.10`
-* `MAINTAINER name "mail@mail"`
-* `RUN command`
-* `VOLUME `
+Baseとなるdocker imageの指定。
+
+```
+FROM ubuntu:16.10
+```
+
+このDockerfileのmainterを記載。
+
+```
+MAINTAINER name "mail@mail"
+```
+
+image作成のために、実行するcommand。
+`RUN yum install package`とか`RUN apt-get install`とかをよく使う。
+
+```
+RUN command
+```
+
+json配列で指定。
+
+```
+VOLUME ["/data"]
+```
 
 
 ## Tips
