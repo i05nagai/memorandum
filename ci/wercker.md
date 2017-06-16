@@ -1,7 +1,17 @@
 ## Wercker
-
 `wercker.yml`に設定を記述する。
 
+* workflows
+    * pipelinesの集まり
+    * pipelinesの実行順序や実行条件などを記載した一連の処理
+* pipelines
+    * `wercker.yml`に記載する`build`や`deploy`, `test`、`dev`といったもの
+    * pipelineは、stepsと呼ばれる処理の集まり
+* steps
+    * bashやコマンドの実行、インストールなど実際の処理
+    * stpesは自分で記載することもできるが、communityで提供されているものも使うことができる
+* box
+    * docker imageのこと
 
 ## Python
 * [Getting started with Wercker & Python](http://devcenter.wercker.com/docs/quickstarts/building/python)
@@ -35,6 +45,13 @@ dev:
 Step registoryでcommunity から提供されているstepを利用できる。
 
 * https://app.wercker.com/#explore/steps/search/
+
+よく使うstepsは
+
+* `script`
+    * bash として実行
+* `internal/watch`
+    * web serverを使う場合に使う
 
 ### Internal Steps
 
@@ -140,8 +157,139 @@ deploy:
             from-name: name
 ```
 
+## Pipelines
+* [Pipelines](http://devcenter.wercker.com/docs/pipelines)
+
+
+## Workflows
+Pipelinesの流れを記述する。
+デフォルトでは、buildのみ登録されている。
+よくある構成は
+
+1. build
+2. test
+3. deploy
+    * to staging
+    * to production
+
+である。
+repositoryを作成したら、testの作成までは行う。
+workflowに登録されているpipelineは、`wercker.yml`に必ず記載する必要がある。
+将来的なworkflowとして登録しているが、現在特に処理するものがない場合は、以下のように空のstepsをいれる。
+
+```yaml
+build:
+  steps:
+test:
+  steps:
+    - script:
+        name: execute pytest
+        code: |
+          pytest
+```
+
+<div style="text-align: center">
+    <img src="image/wercker_01_workflow_pipeline.png">
+</div>
+
+<div style="text-align: center">
+    <img src="image/wercker_02_manage_workflow.png">
+</div>
+
+<div style="text-align: center">
+    <img src="image/wercker_03_manage_workflow.png">
+</div>
+
+## Wercker.yml
+`dev`は特別なpipelineである。
+`dev`はlocalのCLIで実行されるpipelineである。
+
 ## Environment variables
 
+
+## Web Interface
+
+### Repository Access
+GitHubやBitBucketなどのrepositoryにアクセスする方法。
+publicの場合は、public repositoryの節まで読み飛ばして良い。
+
+### SSH keys
+werckerはpublic keyをrepositoryに提供し、private keyでrepositoryのソースコードにアクセスする。
+public keyを認可する方法はいくつかあるが、それぞれ良いことと悪いことがある。
+
+* Deploy keys
+    * deploy keyとしてpublic keyを登録する
+    * 
+
+## CLI
+* [The Wercker Command Line Interface (CLI)](http://devcenter.wercker.com/docs/cli)
+
+### Install
+Dockerが必要なので、適宜インストールしておく。
+
+For OSX
+
+```
+brew tap wercker/wercker
+brew install wercker-cli
+```
+
+
+## Samples
+
+```yaml
+# This references the default Python container from
+# the Docker Hub with the 2.7 tag:
+# https://registry.hub.docker.com/_/python/
+# If you want to use a slim Python container with
+# version 3.4.3 you would use: python:3.4-slim
+# If you want Google's container you would reference google/python
+# Read more about containers on our dev center
+# http://devcenter.wercker.com/docs/containers/index.html
+box: coorpacademy/docker-pyspark:latest
+# You can also use services such as databases. Read more on our dev center:
+# http://devcenter.wercker.com/docs/services/index.html
+# services:
+    # - postgres
+    # http://devcenter.wercker.com/docs/services/postgresql.html
+
+    # - mongo
+    # http://devcenter.wercker.com/docs/services/mongodb.html
+
+# This is the build pipeline. Pipelines are the core of wercker
+# Read more about pipelines on our dev center
+# http://devcenter.wercker.com/docs/pipelines/index.html
+build:
+  # The steps that will be executed on build
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # A step that sets up the python virtual environment
+    - virtualenv:
+        name: setup virtual environment
+        install_wheel: false # Enable wheel to speed up builds (experimental)
+
+    # # Use this virtualenv step for python 3.2
+    # - virtualenv
+    #     name: setup virtual environment
+    #     python_location: /usr/bin/python3.2
+
+    # A step that executes `pip install` command.
+    - pip-install
+
+    # # This pip-install clears the local wheel cache
+    # - pip-install:
+    #     clean_wheel_dir: true
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - script:
+        name: echo python information
+        code: |
+          echo "python version $(python --version) running"
+          echo "pip version $(pip --version) running"
+```
 
 
 ## reference
