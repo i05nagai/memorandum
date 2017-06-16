@@ -120,6 +120,13 @@ aws emr get
 ### DataFrame
 * [Spark DataframeのSample Code集 - Qiita](http://qiita.com/taka4sato/items/4ab2cf9e941599f1c0ca)
 
+## Docker
+* [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
+
+```
+export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
+```
+
 ## Reference
 * [Welcome to Spark Python API Docs! — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/index.html)
 * [EMR上でPython3系でpysparkする - Qiita](http://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
