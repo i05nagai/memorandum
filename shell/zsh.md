@@ -4,6 +4,33 @@ title: zsh
 
 ## zsh
 
+## keybind
+
+### Change keybind
+以下で`ctrl-h`のkeybindを変更できる。
+`kill-word`の所は、自分で関数を用意するか、デフォルトのzshの関数を指定する。
+
+```zsh
+bindkey "^H" kill-word
+```
+
+### check current keybind
+shellで`bindkey`を実行すると、現在割り当てられているkeybindが出力される。
+
+### Useless keybind
+* [zshのキーバインドで余っているキーを探す - mollifier delta blog](http://mollifier.hatenablog.com/entry/20081213/1229148947)
+
+```
+"^J" accept-line
+"^V" quoted-insert
+"^Y" yank
+"^@" set-mark-command
+"^O" accept-line-and-down-history
+"^S" history-incremental-search-forward
+"^^"
+"^]"
+```
+
 ## completion
 `echo $fpath`で設定されているディレクトリにリンクをはる。
 もしくは、下記をzshrcの上部にかく。
