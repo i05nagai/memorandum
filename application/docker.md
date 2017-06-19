@@ -93,7 +93,22 @@ VOLUME ["/data"]
 * `FROM ubuntu:16.10`
 * `MAINTAINER name "mail@mail"`
 * `RUN command`
+
+
 * `ENV variable value`
+* `ENV variable=value`
+
+```Dockerfile
+# 複数行かけない
+ENV variable value
+# 複数行かける
+ENV variable1=value1 \
+    variable2=value2
+```
+
+複数行かける場合は、valeu2の中でvariable1を使うことはできない。
+その場合はENVを分ける必要がある。
+
 * `EXPOSE <port> [<port>...] `
     * portをListenすることをコンテナに伝える
     * hostからアクセスするには、更にコンテナの起動時に`-p`でポートを公開する
