@@ -1,4 +1,15 @@
-# docker
+## docker
+
+## Install
+For OSX,
+
+```
+brew cask install docker
+```
+
+インストール後に`/Applications/Docker.app`を起動すれば、daemonが起動する。
+起動後にnetworkへのアクセスの権限を要求してくるので、OSXの管理者で承認する。
+
 
 ## settings
 `~/.docker/config.json`に設定をかく。
@@ -55,7 +66,30 @@ docker-machine start default  # 立ち上げ
 | -v `<container_path>`             | Data Volume を作成して `<container_path>` にマウントしてコンテナを起動          |
 | --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
 
-## Dockerfile
+
+```
+FROM ubuntu:16.10
+```
+
+このDockerfileのmainterを記載。
+
+```
+MAINTAINER name "mail@mail"
+```
+
+image作成のために、実行するcommand。
+`RUN yum install package`とか`RUN apt-get install`とかをよく使う。
+
+```
+RUN command
+```
+
+json配列で指定。
+
+```
+VOLUME ["/data"]
+```
+
 * `FROM ubuntu:16.10`
 * `MAINTAINER name "mail@mail"`
 * `RUN command`
@@ -90,6 +124,16 @@ ENV variable1=value1 \
     * Dockerfileのコマンド実行時のcurrent directoryを指定
 * ARG
 * ONBUILD
+
+## Commands/CLI
+
+### docker run
+* [Docker run リファレンス — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/engine/reference/run.html)
+* [docker run | Docker Documentation](https://docs.docker.com/engine/reference/commandline/run/)
+
+* `-v=[<host_directory:container_directory>]`
+    * `-v \`pwd\`:\`pwd\``
+        * で現在のディレクトリが使える。
 
 
 ## Tips

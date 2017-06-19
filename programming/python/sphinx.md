@@ -1,7 +1,7 @@
-# Sphinx
+## Sphinx
 
 ## Theme
-sphinx_rtd_doc
+* sphinx_rtd_doc
 
 ## autosummary
 
