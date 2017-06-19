@@ -37,7 +37,6 @@ defaultでインストールされるcomponentは以下。
 * gcloud
     * authentification
     * SDKの設定
-    * 
 
 使用可能なcomponentの一覧は以下で見ることができる。
 
@@ -86,6 +85,8 @@ gcloud auth activate-service-account account@hoge.gserviceaccount.com --key-file
 BigQuery用のCLI
 
 ### subcommands
+`bq init`で`~.bigqueryrc`にdefaultのproject idが記録される。
+
 
 * cancel
     * jobをcancelする
@@ -133,6 +134,7 @@ BigQuery用のCLI
 * query
     * queryを実行する
     * `bq query "select count(*) from publicdata:samples.shakespeare"`
+    * `echo file.sql | bq query --dry_run --no_use_legacy_sql`
 * rm
     * dataset、tableを削除する
     * `bq rm dataset`
