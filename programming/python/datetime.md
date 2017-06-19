@@ -25,3 +25,7 @@ date to datetime
 ```
 datetime.combine(D, time.min)
 ```
+
+
+## Reference
+* [Pythonの日付処理とTimeZone | Nekoya press](http://nekoya.github.io/blog/2013/06/21/python-datetime/)
