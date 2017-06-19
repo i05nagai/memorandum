@@ -1,5 +1,16 @@
 ## docker
 
+## Install
+For OSX,
+
+```
+brew cask install docker
+```
+
+インストール後に`/Applications/Docker.app`を起動すれば、daemonが起動する。
+起動後にnetworkへのアクセスの権限を要求してくるので、OSXの管理者で承認する。
+
+
 ## settings
 `~/.docker/config.json`に設定をかく。
 
@@ -98,6 +109,16 @@ VOLUME ["/data"]
     * Dockerfileのコマンド実行時のcurrent directoryを指定
 * ARG
 * ONBUILD
+
+## Commands/CLI
+
+### docker run
+* [Docker run リファレンス — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/engine/reference/run.html)
+* [docker run | Docker Documentation](https://docs.docker.com/engine/reference/commandline/run/)
+
+* `-v=[<host_directory:container_directory>]`
+    * `-v \`pwd\`:\`pwd\``
+        * で現在のディレクトリが使える。
 
 
 ## Tips
