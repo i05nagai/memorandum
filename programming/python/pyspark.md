@@ -99,6 +99,20 @@ aws emr get
 ```
 
 ## API
+以下が基本となる。
+
+```python
+import pyspark
+conf = pyspark.SparkConf().setMaster("local").setAppName("Example")
+sc = pyspark.SparkContext(conf=conf)
+```
+
+### SparkContext
+* `sc.parallelize([])`
+    * listをRDDとしてよみこむ
+* `sc.textFile("/path/to/textfile")`
+    * textfileをRDDとしてよみこむ
+
 
 ### functions
 * `lag`
@@ -107,6 +121,68 @@ aws emr get
     * Window関数
 
 ### RDD
+* `map`
+* `flatMap`
+* `filter(lambda x: "" in x)`
+    * RDDをfilterする
+* `distinct()`
+* `intersection(rdd2)`
+* `union(rdd2)`
+* `subtract(rdd2)`
+* `cartesian(rdd2)`
+    * tupleの集合を作る
+
+以下はaction
+* `reduce(lambda x, y: x + y)`
+* `fold(zero, func)`
+    * 最初の呼び出しで、zeroとして定義した値を渡せる
+    * 文字列を連結して返す時、0として空文字列を渡すなど
+* `aggregate(zeroValue, seqOp, combOp)`
+    * reduce, foldは同じ型を返すが、aggregateは別の型を返すことができる
+    * `seqOp = lambda acc, val: `
+    * `seqOp = lambda acc, acc2: `
+* `collect()`
+    * listを返す
+* `take(n)`
+    * n個とってlistを返す
+* `takeOrdered(num, ordering)`
+* `takeSample(withReplacement, num, [seed])`
+    * `withReplacement`がTrueだと
+* `top(n)`
+* `count()`
+* `countByValue()`
+    * 要素の出現回数を数える
+    * (要素, 回数)のtupleの集合が変える
+* `foreach(func)`
+    * 各要素に対して処理をする
+
+次はpariRDDに対するTransformation
+
+* `reduceByKey(func)`
+    * keyごとにreduceする
+* `groupByKey()`
+    * keyごとにvaluesをlistにする
+* `combineByKey(createCombiner, mergeValue, mergeCombiners, partitioner)`
+* `mapValues(func)`
+* `flatMpaValues(func)`
+    * 
+* `keys()`
+    * keyの一覧
+* `values()`
+    * 値のlist
+* `sortByKeys()`
+    * keyでsort
+* `subtractByKey(other)`
+* `join(other)`
+* `rightOuterJoin(other)`
+    * keyが同じものを、(key, (elem1, elem2))で右外結合
+* `leftOuterJoin(other)`
+    * keyが同じものを、(key, (elem1, elem2))で左外結合
+* `cogroup(other)`
+    * keyが同じものを、(key (list1, list2))でまとめる
+    * list2はotherの中でkeyのvalue
+
+
 * `repartitionAndSortWithinPartitions`
     * 戻り値はrdd
     * [pyspark.RDD.repartitionAndSortWithinPartitions](http://takwatanabe.me/pyspark/generated/generated/pyspark.RDD.repartitionAndSortWithinPartitions.html)
@@ -119,6 +195,23 @@ aws emr get
 
 ### DataFrame
 * [Spark DataframeのSample Code集 - Qiita](http://qiita.com/taka4sato/items/4ab2cf9e941599f1c0ca)
+
+## Tips
+
+### function passing to pyspark
+pysparkのAPIに関数を渡すとき、objectのメンバ関数を渡すと、オブジェクト全体をworkerに送る。
+オブジェクトが大きい場合は、これがbottleneckになる。
+また、オブジェクトがpickleできないときは、エラーとなる。
+関数のメンバ変数を使いたい場合は、以下のようにする。
+
+
+```python
+class WordFunctions(object):
+    def getMatchesNoreference(self, rdd):
+        query = self.query
+        return rdd.filter(lambda x: query in x)
+```
+
 
 ## Docker
 * [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
