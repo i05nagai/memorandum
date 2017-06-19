@@ -46,6 +46,11 @@ text-objectsを指定する。
 * -
     * `<?php ?>`
 
+## Tips
+
+### 複数行をまとめて囲む
+normalコマンドを使うと複数行にたいして、normal コマンドが使える。
+複数行を選択して `:normal yss"`とすれば良い。
 
 ## Reference
 * [surround.vimの使い方 | Memo on the Web](http://motw.mods.jp/Vim/surround.html)

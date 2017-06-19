@@ -45,18 +45,13 @@ LIMIT 2
 ### Datetime
 
 
-## Bigquery
-* [Functions & Operators  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators)
 
-### Extract
-UTC+0からJSTに変更する場合は以下で良い。
+### Tips
+* [COUNT（集計関数） - オラクル・Oracle SQL 関数リファレンス](http://www.shift-the-oracle.com/sql/aggregate-functions/count.html)
 
-```sql
-SELECT
-    EXTRACT(DATETIME FROM TIMESTAMP "2008-12-25 15:30:00" AT TIME ZONE "Asia/Tokyo")
-```
-
-`TIMESTAMP "2008-12-25 15:30:00"`の部分は、TIMESTAMP型のcolumn_nameに変更できる。
+* COUNT 関数にアスタリスク（*）を使用するとグループ内の全レコード数を戻す。
+* 式、または、列名を指定した場合、その式が NULL 値 のものをカウント数に含めない。
+* さらに DISTINCT を指定すると重複した値の行をカウントに含めない。
 
 ## Reference
 
