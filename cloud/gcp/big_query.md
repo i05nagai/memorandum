@@ -82,6 +82,110 @@ WEEB UIとAPI JSONで名前が違う。
 
 画像中の`AVG`と`MAX`は実際には表示されない。
 
+## Partitioned Table
+* [分割テーブル  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/partitioned-tables?hl=ja)
+
+Partitionは各テーブル最大2000個
+
+
+### Best Practice
+
+タイムゾーンへの問題
+
+
+`_PARTITIONTIME`への演算はさける。
+以下のSQLより2番目の方が高速な場合がある。
+
+```sql
+#standardSQL
+/* Can be slower */
+SELECT
+  field1
+FROM
+  mydataset.table1
+WHERE
+  TIMESTAMP_ADD(_PARTITIONTIME, INTERVAL 5 DAY) > TIMESTAMP("2016-04-15")
+```
+
+```sql
+#standardSQL
+/* Often performs better */
+SELECT
+  field1
+FROM
+  mydataset.table1
+WHERE
+  _PARTITIONTIME > TIMESTAMP_SUB(TIMESTAMP('2016-04-15'), INTERVAL 5 DAY)
+```
+
+
+
+## Creating and Updating Date-Partitioned Tables
+* [Creating and Updating Date-Partitioned Tables  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/creating-partitioned-tables#example)
+
+Partitioned Tableの一種で、日付でpartitionを分けたものをDate-Parittioned tableという。
+以下で作成する。
+
+```
+bq mk --time_partitioning_type=DAY --time_partitioning_expiration=259200 mydataset.table1
+```
+
+* `--time_partitioning_type=DAY`
+    * 日付でpartitionを分割
+* `--time_partitioning_expiration`
+    * paritionのデータが消えるまでの時間、秒で指定
+
+以下で既存のtableの設定を確認できる。
+
+```
+bq show --format=prettyjson mydataset.table2
+```
+
+出力は以下のようになる。
+
+```json
+{
+  ...
+  "tableReference": {
+    "datasetId": "mydataset",
+    "projectId": "myproject",
+    "tableId": "table2"
+  },
+  "timePartitioning": {
+    "expirationMs": "2592000000",
+    "type": "DAY"
+  },
+  "type": "TABLE"
+}
+```
+
+基本的にtbaleへのデータの挿入日が、partitionの日付となる。
+明示的に、paritionnの日付を指定する場合は、以下のようにpartitionの日付を明示する。
+
+```
+bq query
+    --use_legacy_sql=false \
+    --allow_large_results \
+    --replace \
+    --noflatten_results \
+    --destination_table 'mydataset.temps$20160101' \
+    'SELECT stn,temp from `bigquery-public-data.noaa_gsod.gsod2016` WHERE mo="01" AND da="01" limit 100'
+```
+
+## Querying Date Partitioned Tables
+* [Querying Date-Partitioned Tables  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
+
+
+Partitioned tableに対しては、queryが走査するpartitionを指定することができる。
+
+```sql
+SELECT
+    *
+FROM
+    
+WHERE
+  _PARTITIONTIME BETWEEN TIMESTAMP('2016-01-01') AND TIMESTAMP('2016-01-02');
+```
 
 ## Reference
 
