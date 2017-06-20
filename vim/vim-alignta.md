@@ -100,3 +100,7 @@ const double c = 2.0; // hage
 | ccccc = 100 /* C */ | ccccc = 100 /* C     */ |
 +---------------------+-------------------------+
 ```
+
+### markdown table
+* [Aligntaを使ってMarkdownのテーブルを書く](http://www.minimalab.com/blog/2014/07/13/markdown-alignta/)
+
