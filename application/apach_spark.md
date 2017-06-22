@@ -2,6 +2,8 @@
 
 ## Commands
 
+### spark-submit
+
 ```
 ${SPARK_HOME}/bin/spark-submit \
   --master <master-url> \
@@ -11,6 +13,36 @@ ${SPARK_HOME}/bin/spark-submit \
   <application-jar> \
   [application-arguments]
 ```
+
+* --master
+    * 
+* --deploy-mode
+    * client
+        * driverがlocal, workerはremote
+    * cluster
+        * driverもremote
+* --class
+    * Java or Scalaのmain class
+* --name
+    * spark's web UIのapplication name
+* --jars
+    * classpathに置かれる JAR files
+    * third partyのJARに依存する場合は追加する
+* --files
+    * working directoryにおかれるファイル
+    * workerで使うdata fileとか
+* --py-files
+    * PYTHONPATHに記載された場所に追加されるファイル
+    * zipやpyなど
+* --executor-memory
+    * executorの使用するメモリ
+    * `512m`, `15g`と指定する 
+* --driver-memory
+    * driverの使用するメモリ
+    * `512m`, `15g`と指定する 
+* --total-executors-core
+
+
 
 ## API
 
