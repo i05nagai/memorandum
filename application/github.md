@@ -100,8 +100,10 @@ git config --global credential.helper osxkeychain
 * 5こ以上の`AND`, `OR`, `NOT`
 
 ### Qualifiers
-Qualifiersの前に`-`をつけるとQualifersを満たすものを除く。
+Qualifiersの前に`-`をつけるとQualifersを満たすものを除くという条件になる。
 `AND`, `NOT`, `OR`が使える。
+
+Qualifiersの一覧は以下。
 
 * `author`
 * `comitter`
