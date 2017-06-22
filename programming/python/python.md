@@ -450,9 +450,15 @@ import下のディレクトリは、環境変数`PYTHONPATH`で指定された�
 正確には以下の順序でimport先のディレクトリが決定される。
 
 1. 実行ディレクトリと同ディレクトリ
-1. カレントディレクトリ
-1. 環境変数「PYTHONPATH」に列挙したディレクトリ
-1. sys.pathに含むディレクトリ
+2. カレントディレクトリ
+3. 環境変数「PYTHONPATH」に列挙したディレクトリ
+4. sys.pathに含むディレクトリ
+
+1. pythonコマンドで入力されたscriptのあるディレクトリ
+    * 入力されなかった場合はcurrent directory
+2. 環境変数PYTHONPATH
+3. インストールごとのデフォルトのディレクトリ
+4. sys.pathに含むディレクトリ
 
 ### string to date
 
@@ -478,6 +484,27 @@ yum install openssl-devel
 # or
 yum install zlib-devel bzip2-devel sqlite sqlite-devel openssl-devel
 ```
+
+## Inherits
+以下のclassのあるなしの違い。
+
+* [2 PEPs 252 and 253: Type and Class Changes](https://docs.python.org/release/2.2.3/whatsnew/sect-rellinks.html)
+* [Python class inherits object - Stack Overflow](https://stackoverflow.com/questions/4015417/python-class-inherits-object)
+
+
+```
+class MyClass(object):
+    pass
+
+class MyClass:
+    pass
+```
+
+`object`を継承する方法はpython2.2でclassの仕様が変わった際に導入された。
+`object`を継承することで、(classの新しい機能が使える)新しい方式でクラスを使用することを明示する。
+Python2系ではデフォルトでは古い形式なので、明示的にobjectを継承した方が良い。
+Python3では継承の有無にかかわらず新しい方式での継承になるので、つけてもつけなくても良い。
+
 
 #### Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
