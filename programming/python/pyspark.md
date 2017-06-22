@@ -113,6 +113,48 @@ sc = pyspark.SparkContext(conf=conf)
 * `sc.textFile("/path/to/textfile")`
     * textfileをRDDとしてよみこむ
 
+### Hive
+```
+import pyspark.sql as sql
+hive_context = pyspark.sql.HiveContext(sc)
+rows = hive_context.sql("SELECT * from users")
+```
+
+* `hive_context.jsonFile("path/to/json")`
+    * jsonファイルをテーブルとして読み込む
+
+### SharedVariable
+通常それぞれの nodeでプログラム中の変数は独立している。
+`accumulator`と`broadcast`変数は、例外的にnode間での変数を共有している。
+以下でflatMapの結果を収集できる。
+
+```python
+file = sc.textFile("path/to/inputfile")
+# initnialize to 0
+blankLines = sc.accumulator(0)
+
+def extractCallSigns(line):
+    global blankLines
+    if line == "":
+        blankLines += 1
+    return line.split(" ")
+
+callSigns = file.flatMap(extractCallSigns)
+print("Blank lines: {0}".format(blankLines.value))
+```
+
+### Load data
+Local pathからの読み込みは全てのノードから同じpathで見ることができる必要がある。 
+`parallelize`でworkerに送ることはできるので、遅い。
+一般に、HDFS, NFS, S3などに置くことが推奨される。
+
+* `sc.textFile("path/to/file")`
+* `sc.sequenceFile(file, "org.apache.hadoop.io.Text", "org.apache.hadoop.io.IntWritable")`
+    * hadoop sequence file
+
+### Save data
+* `rdd.saveAsTextFile(path/to/outputFile)`
+* `rdd.saveAsSequenceFile(outputFile)`
 
 ### functions
 * `lag`

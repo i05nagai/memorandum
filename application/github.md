@@ -160,5 +160,25 @@ Qualifiersの一覧は以下。
 * `created`
     * 作成された日付
 
+## Tips
+
+### Requesting organization approval
+* [Requesting organization approval for OAuth Apps - User Documentation](https://help.github.com/articles/requesting-organization-approval-for-oauth-apps/)
+
+後から、参加したorganizationにAppsの承認を出す場合は、自分の`Authorized OAuth Apps`から該当のAppsをclickしてrequestボタンを押す。
+そうすると、organizationのownerに承認要求のメールがいく。
+organiationのSettingsからThird-party accessのタブに移動し、該当のAppの承認をする。
+承認されれば、該当のAppsから要求に応じた承認される。
+OrganizationからAPpsの承認がないと、個別のrepositoryへのadmin権限があってもそのrepositoryは見ることができない。
+以下の2つが導入に必須と考えて良い。
+
+* OrgazanitonからのAppsの承認
+* repositoryへのadmin権限
+
+### Organization
+* memberのorganizationのrepositoryのアクセスは、organizationのdefaultができようされる。
+* 個別にrepositoryのアクセス権限をかえたい場合は、各repositoryのcollaboratorsとして、teamか個人を追加してもらう
+
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
