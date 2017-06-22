@@ -238,6 +238,17 @@ brew tap wercker/wercker
 brew install wercker-cli
 ```
 
+## Tips
+
+### Add organization's repository
+* [Enabling OAuth App access restrictions for your organization - User Documentation](https://help.github.com/articles/enabling-oauth-app-access-restrictions-for-your-organization/)
+* [Requesting organization approval for OAuth Apps - User Documentation](https://help.github.com/articles/requesting-organization-approval-for-oauth-apps/)
+* [How do Webhooks work?](http://devcenter.wercker.com/docs/faq/how-do-webhooks-work)
+
+後から、参加したorganizationにAppsの承認を出す場合は、自分の`Authorized OAuth Apps`から該当のAppsをclickしてrequestボタンを押す。
+承認されれば、自分のアカウントから、organizationのrepositoryが見えるようになるので、werckerでApplicationの作成をできる。
+Werckerの場合は、webhookが必要なので、repositoryへのadmin権限がある人間がwerckerでapplicationの作成した方が良い。
+
 
 ## Samples
 
