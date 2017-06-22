@@ -80,7 +80,7 @@ WEEB UIとAPI JSONで名前が違う。
 * <img src="https://cloud.google.com/bigquery/images/explain-writeRatioMax.png">
     * 各workerがwriteにかかった時間の最大
 
-画像中の`AVG`と`MAX`は実際には表示されない。
+画像中の`AVG`と`MAX`は実際には表示されないので、色で判断する。
 
 ## Partitioned Table
 * [分割テーブル  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/partitioned-tables?hl=ja)
@@ -186,6 +186,111 @@ FROM
 WHERE
   _PARTITIONTIME BETWEEN TIMESTAMP('2016-01-01') AND TIMESTAMP('2016-01-02');
 ```
+
+## UserDefineFunction
+BigQueryではUDFが使える。
+以下はstandard SQLの話。
+
+* in legacy SQL
+    * [User-Defined Functions in Legacy SQL  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/user-defined-functions)
+* in standard SQL
+    * [User-Defined Functions  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/user-defined-functions)
+
+UDFの定義は以下の形式で行う。
+
+```sql
+CREATE [TEMPORARY | TEMP] FUNCTION function_name ([named_parameter[, ...]])
+  RETURNS [data_type]
+  LANGUAGE [language]
+  AS [external_code]
+```
+
+* CREATE [TEMPORARY | TEMP ] FUNCTION
+    * TEMPORARYかTEMPが必須
+    * named_parameterはうけとるparameterと型を記載
+* RETURNS
+    * 戻り値の型を記載　
+* LANGUAGE
+    * UDFの言語を指定
+    * 対象言語は以下
+        * [User-Defined Functions  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/user-defined-functions#supported-external-udf-languages)
+        * JSのみ
+* AS [external_code]
+    * LANGUAGEで指定したコードで実際のUDFを記載　
+
+UDFの例は以下
+
+```sql
+CREATE TEMPORARY FUNCTION
+    multiplyInputs(x FLOAT64, y FLOAT64)
+RETURNS FLOAT64
+LANGUAGE js AS
+"""
+  return x*y;
+""";
+WITH numbers AS (
+SELECT
+    1 AS x
+    , 5 as y
+UNION ALL
+SELECT
+    2 AS x
+    , 10 AS y
+UNION ALL
+SELECT
+    3 AS x
+    , 15 AS y
+)
+SELECT
+    x
+    , y
+    , multiplyInputs(x, y) AS product
+FROM
+    numbers;
+```
+
+BigQueryで対応しているUDFの型の一覧
+
+* ARRAY
+* BOOL
+* BYTES
+* DATE
+* FLOAT64
+* STRING
+* STRUCT
+* TIMESTAMP
+
+JSとBigQueryの対応
+
+| BigQuery Data Type | JavaScript Data Type                                                               |
+|--------------------|------------------------------------------------------------------------------------|
+| ARRAY              | ARRAY                                                                              |
+| BOOL               | BOOLEAN                                                                            |
+| BYTES              | base64-encoded STRING                                                              |
+| FLOAT64            | NUMBER                                                                             |
+| STRING             | STRING                                                                             |
+| STRUCT             | OBJECT where each STRUCT field is a named field                                    |
+| TIMESTAMP          | DATE with a microsecond field containing the microsecond fraction of the timestamp |
+| DATE               | DATE                                                                               |
+
+JS UDFのbest practice
+
+* UDFに渡す前に、簡単に入力をフィルタできるなら、queryは早く安くなる
+* UDFの中で状態を持たない
+* memoryの使用は極力減らす
+    * UDFが使えるmemoryが限られている
+
+制限
+
+* 一行あたりのUDFの出力は5MB以下
+* 1 userあたり6 JavaScript UDF
+* JSのUDFは時間がかかりすぎるとtimeoutする
+    * 状況によるが一つの目安は5分程度
+* query jobは50のJS UDFのresourceをもつ
+* inline codeのblobは32KBまで
+* external codeは1MBまで
+* DOM objects, `Window`, `Document`, `Node`などはサポートしてない
+
 
 ## Reference
 
