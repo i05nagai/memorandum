@@ -119,6 +119,34 @@ mypkg/
         ...
 ```
 
+## Tips
+
+### Could not load conftest
+cacheにconftestが残っている場合に起こる。
+conftestのあるディレクトリなどにある`__pycache__`を消せば良い。
+
+```
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 336, in _getconftestmodules
+    return self._path2confmods[path]
+KeyError: local('/tmp/spark/tests')
+
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 367, in _importconftest
+    return self._conftestpath2mod[conftestpath]
+KeyError: local('/tmp/spark/tests/conftest.py')
+
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 373, in _importconftest
+    mod = conftestpath.pyimport()
+  File "/usr/lib/python3.4/site-packages/py/_path/local.py", line 680, in pyimport
+    raise self.ImportMismatchError(modname, modfile, self)
+py._path.local.ImportMismatchError: ('conftest', '/tmp/conftest.py', local('/tmp//conftest.py'))
+ERROR: could not load /tmp/spark/tests/conftest.py
+```
+
 ## Reference
 * [pytest fixtures: explicit, modular, scalable — pytest documentation](https://docs.pytest.org/en/latest/fixture.html?highlight=conftest)
 
