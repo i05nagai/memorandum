@@ -119,6 +119,10 @@ ports:
  - "127.0.0.1:5000-5010:5000-5010"
 ```
 
+* command
+    * defaultのコマンドの上書き
+* hostname
+    * docker runのオプションと同じ
 * volumes
     * `host_path:container_path`でhostのvolumeをcontainerのvolumeとしてマウントする
     * `host_path:container_path:rw`でアクセス権限も付与できる
