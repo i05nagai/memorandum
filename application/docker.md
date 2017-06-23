@@ -23,10 +23,20 @@ brew cask install docker
 }
 ```
 
+## docker run
+
+### multiple commands
+複数コマンドを使いたい場合は bashを使う。
+
+```
+docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
+```
+
 
 ## completion
 
 ### zsh
+
 ```shell
 curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
 ```
@@ -134,7 +144,9 @@ ENV variable1=value1 \
 * `-v=[<host_directory:container_directory>]`
     * `-v \`pwd\`:\`pwd\``
         * で現在のディレクトリが使える。
-
+* `--workdir`
+* `--env "var_name=value"`
+    * 複数の場合は複数個つける？
 
 ## Tips
 * [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
