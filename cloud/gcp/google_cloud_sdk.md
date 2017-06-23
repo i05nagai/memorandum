@@ -106,7 +106,7 @@ BigQuery用のCLI
 * insert
     * rowを挿入する
     * json format
-    * {"col_name1": val1, "col_name2": val2}
+    * `{"col_name1": val1, "col_name2": val2}`
 * load
     * sourceから指定したtableにloadする
     * datasetは存在してないとだめ
@@ -135,6 +135,10 @@ BigQuery用のCLI
     * queryを実行する
     * `bq query "select count(*) from publicdata:samples.shakespeare"`
     * `echo file.sql | bq query --dry_run --no_use_legacy_sql`
+    * 実行結果は`--format`オプションで`csv`, `json`にできる
+    * SQLの結果でテーブルを作成する場合は`--desitation_table dataset.table`で指定する
+    * 予算の上限をつける場合は
+        * byte数の上は `--maximum_bytes_billed 1000`
 * rm
     * dataset、tableを削除する
     * `bq rm dataset`
@@ -213,11 +217,16 @@ bq load dataset.new_table gs://path/to/file schema.json
 ### query
 
 ### Tips
+SQLの結果をinsertしたい
 
-#### Schemaを見たい
+```sh
+cat hoge.sql | bq query --nouse_legacy_sql --format json | bq insert dataset.table
+```
+
+Schemaを見たい
 
 ```
-bq show dataset.table
+bq show dataset.table --format prettyjson
 ```
 
 ## gsutil
