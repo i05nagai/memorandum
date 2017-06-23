@@ -3,6 +3,9 @@ title: Wercker
 ---
 
 ## Wercker
+表記について、werckerのorgazanizationとgithubのorgazanitionがあるので、これを区別する。
+Githubのrepositoryとrepositoryを対象としたwerckerのapplicationと呼ぶことにする。
+
 `wercker.yml`に設定を記述する。
 
 * workflows
@@ -133,7 +136,6 @@ build:
 ### Creating Steps
 Step registryに目的のstepがない場合は自分で定義することができる。
 
-
 ### Install Packages
 containerに必用な依存ファイルをinstallする場合は、 `install-packages` stepを使う。
 versionの指定も可能。
@@ -223,7 +225,30 @@ public keyを認可する方法はいくつかあるが、それぞれ良いこ�
 
 * Deploy keys
     * deploy keyとしてpublic keyを登録する
-    * 
+
+## Organization
+
+### Creating Orgazantion
+* organization name
+* email
+
+を記載して作成。
+
+### Transfer Ownership
+既存のwerckerのapplicationをwerckerのorgazanizationで管理するには、transfer ownershipでorgazanitzationに権限を移譲すれば良い。
+
+### Adding an application
+add applicationのときにownerを選ぶことができる。
+ownerとしてorganizationを選ぶと`owner`はwerckerのapplicationに対するadminの権限を得る。
+
+API Users
+
+werckerのapplicationは、GithubやBitBucketのrepositoryからソースをcheckoutする。
+その際に仕様するGithub/BitBucketのAPIの使用者を決めることができる。
+defaultではorganizationの中で、werkcerのapplicationを作成したuserが選ばれる。
+当然privateのrepositoryにアクセスする場合は、API userはそのrepositoryへのアクセス権限を持っている必要がある。
+
+
 
 ## CLI
 * [The Wercker Command Line Interface (CLI)](http://devcenter.wercker.com/docs/cli)
@@ -245,10 +270,9 @@ brew install wercker-cli
 * [Requesting organization approval for OAuth Apps - User Documentation](https://help.github.com/articles/requesting-organization-approval-for-oauth-apps/)
 * [How do Webhooks work?](http://devcenter.wercker.com/docs/faq/how-do-webhooks-work)
 
-後から、参加したorganizationにAppsの承認を出す場合は、自分の`Authorized OAuth Apps`から該当のAppsをclickしてrequestボタンを押す。
-承認されれば、自分のアカウントから、organizationのrepositoryが見えるようになるので、werckerでApplicationの作成をできる。
+後から参加した、githubのorganizationにAppsの承認を出す場合は、自分の`Authorized OAuth Apps`から該当のAppsをclickしてrequestボタンを押す。
+承認されれば、自分のwerckerのアカウントから、githubのorganizationのrepositoryが見えるようになるので、werckerでApplicationの作成をできる。
 Werckerの場合は、webhookが必要なので、repositoryへのadmin権限がある人間がwerckerでapplicationの作成した方が良い。
-
 
 ## Samples
 
