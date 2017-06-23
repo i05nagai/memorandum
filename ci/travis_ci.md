@@ -52,7 +52,6 @@
 
 # Travis CI
 
-
 ## Customizing the Build
 repositoryのtopにある`.travis.yml`ファイルに基づいてCIが実行される。
 `.travis.yml`の中では以下を記載する。
@@ -156,6 +155,73 @@ commit messageに`[ci skip]`, `[skip ci]`を入れてコミットするとbuild�
 
 #### Excluding Jobs
 
+
+## Using Docker in Builds
+以下が必要。
+
+```yaml
+sudo: required
+services:
+  - docker
+```
+
+Building a Docker image from a Dcokerfile
+
+Dockerfileのbuildは普通にできる。
+実行前に行いたい場合は、`before_install`などに記載すれば良い。
+
+Pushing docker image to a Registory
+
+環境変数として、`DOKCER_USERNAME`と`DOCKER_PASSWORD`を定義しておく。
+CLIであれば、以下。
+
+```
+travis env set DOCKER_USERNAME myusername
+travis env set DOCKER_PASSWORD secretsecret
+```
+
+docker loginをすればOK。
+
+```
+docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+```
+
+Using Docker Compose
+
+dockerが使えればdefaultで入っている。
+最新のversionがほしい場合は、以下のようにすれば良い。
+
+```yaml
+env:
+  - DOCKER_COMPOSE_VERSION=1.4.2
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+```
+
+Intalling a newer Docker version
+
+dockerのversionをupdateする場合は
+
+* apt.dockerproject.orgからDL
+
+```yaml
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+```
+
+* download.docker.comからDL
+
+```yaml
+before_install:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y install docker-ce
+```
 
 ## Installing Dependencies
 
