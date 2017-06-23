@@ -118,7 +118,8 @@ WHERE
   _PARTITIONTIME > TIMESTAMP_SUB(TIMESTAMP('2016-04-15'), INTERVAL 5 DAY)
 ```
 
-
+## Streaming
+* [Life of a BigQuery streaming insert | Google Cloud Big Data and Machine Learning Blog  |  Google Cloud Platform](https://cloud.google.com/blog/big-data/2017/06/life-of-a-bigquery-streaming-insert)
 
 ## Creating and Updating Date-Partitioned Tables
 * [Creating and Updating Date-Partitioned Tables  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/creating-partitioned-tables#example)
