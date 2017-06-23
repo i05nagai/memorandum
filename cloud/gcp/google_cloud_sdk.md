@@ -11,13 +11,10 @@ title: Google Cloud SDK
 ```sh
 # Create an environment variable for the correct distribution
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-
 # Add the Cloud SDK distribution URI as a package source
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
 # Import the Google Cloud Platform public key
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-
 # Update the package list and install the Cloud SDK
 sudo apt-get update && sudo apt-get install google-cloud-sdk
 ```
@@ -84,9 +81,23 @@ gcloud auth activate-service-account account@hoge.gserviceaccount.com --key-file
 ## bq
 BigQuery用のCLI
 
+### Data format
+入力のフォーマットとして以下の形式のものを受け付ける。
+
+* csv
+* [データ形式  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/data-formats?hl=ja#json_format)
+
+NEWLINE_DELIMITED_JSONはファイル内の各行がテーブルの1行に対応する。
+データ内に改行を含む場合は別途対応する必要がある。
+各行は`{"col_name1":col_value, "col_name2":col_value2}`という形式になる。
+
+```json
+{"kind": "person", "fullName": "John Doe", "age": 22, "gender": "Male", "citiesLived": [{ "place": "Seattle", "numberOfYears": 5}, {"place": "Stockholm", "numberOfYears": 6}]}
+{"kind": "person", "fullName": "Jane Austen", "age": 24, "gender": "Female", "citiesLived": [{"place": "Los Angeles", "numberOfYears": 2}, {"place": "Tokyo", "numberOfYears": 2}]}
+```
+
 ### subcommands
 `bq init`で`~.bigqueryrc`にdefaultのproject idが記録される。
-
 
 * cancel
     * jobをcancelする
@@ -104,6 +115,8 @@ BigQuery用のCLI
 * init
     * .bigqueryrcファイルの作成とAuthenticate
 * insert
+    * insertはstreaming insertになる
+    * 既存のテーブルに追加したい場合は、`bq load`で追加する
     * rowを挿入する
     * json format
     * `{"col_name1": val1, "col_name2": val2}`
@@ -139,6 +152,7 @@ BigQuery用のCLI
     * SQLの結果でテーブルを作成する場合は`--desitation_table dataset.table`で指定する
     * 予算の上限をつける場合は
         * byte数の上は `--maximum_bytes_billed 1000`
+    * `--quiet`をつけるとステータスに関する情報を出力しない、結果をpipeする場合に便利
 * rm
     * dataset、tableを削除する
     * `bq rm dataset`
@@ -172,6 +186,12 @@ BigQuery用のCLI
     * `bq wait --fail_on_error job_id 100`
         * Succeeds if job succeeds in 100 sec.
 
+SQLの結果をtableにinsertする。
+
+```
+cat select.sql | bq query --nouse_legacy_sql --format json --quiet | jq ".[0]" -c -M > insert_data.json
+bq load --source_format=NEWLINE_DELIMITED_JSON dataset.table insert_data.json table_schema.json
+```
 
 ### schema
 BiguQueryのschemaの書き方
@@ -203,7 +223,17 @@ bq --format=prettyjson show db_name.table_name > table.json
 * [Data Types  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/data-types)
 
 
-### load
+### bq load
+既存のテーブルに追加したい場合もloadを使う。
+streaming insertをしたい場合は `bq insert`を使う。
+schemaが必要。
+入力データの形式は`--source_format`で指定する。
+
+* CSV
+* NEWLINE_DELIMITED_JSON
+* DATASTORE_BACKUP
+* AVRO
+* PARQUET (experimental)
 
 ```
 bq load --source_format=NEWLINE_DELIMITED_JSON [DATASET].[TABLE_NAME] [PATH_TO_SOURCE] [SCHEMA]
@@ -212,7 +242,6 @@ bq load --source_format=NEWLINE_DELIMITED_JSON [DATASET].[TABLE_NAME] [PATH_TO_S
 ```
 bq load dataset.new_table gs://path/to/file schema.json
 ```
-
 
 ### query
 
