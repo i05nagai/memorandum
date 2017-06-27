@@ -287,7 +287,7 @@ $$
 $$
 
 として、$i$番目の$j$次元目の点列を生成する。
-さて、ここで次の写像$$\mathfrak{G}: \mathbb{Z}_{\ge} \rightarrow \mathbb{F}_{b}^{m}$$が存在するとしよう。
+さて、ここで次の写像$$\mathfrak{G}: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{F}_{b}^{m}$$が存在するとしよう。
 
 $$
 \begin{eqnarray}
@@ -295,6 +295,7 @@ $$
     & = &
         \mathfrak{G}(\gamma_{b,m}(i))
         +
+        a(i)
         \mathbf{e}_{l(i)}
     \nonumber
     \\
@@ -309,7 +310,7 @@ $$
 \end{eqnarray}
 $$
 
-ここで、$$l(i)$$は$i$に依存した添字で、$$\mathbf{e}_{l(i)}$$は単位ベクトルである。
+ここで、$$l(i)$$は$i$に依存した添字で、$$\mathbf{e}_{l(i)}$$は単位ベクトル、$$a(i) \in \mathbb{F}_{b}$$である。
 よって、
 
 $$
@@ -320,6 +321,7 @@ $$
         C_{j}
         \mathfrak{G}(\gamma_{b,m}(i))
         +
+        a(i)
         c^{(j)}_{\cdot, l(i)}
     \nonumber    
     \\
@@ -371,78 +373,87 @@ $$
 \end{eqnarray}
 $$
 
-* $$\phi: \mathbb{Z}_{b} \rightarrow \mathbb{F}_{b}$$,
+* $$\hat{\phi}: \mathbb{Z}_{b} \rightarrow \mathbb{F}_{b}$$,
 	* 全単射
+    * 整数環と有限体の対応
+    * 整数環の元を整数と見て、$p$進展開
 
 $$
-\begin{equation}
+\begin{eqnarray}
 	n
-	=
-	\sum_{k=0}^{N-1}
-		a_{k} p^{k}
-	\in \mathbb{Z}_{b},
-	\
-	\phi(n)
-	:=
-	\sum_{k=0}^{N-1}
-		a_{k}x^{k}
+	& := &
+        \sum_{k=0}^{N-1}
+            a_{k} p^{k}
+        \in \mathbb{Z}_{b},
+    \
+    (N \le m)
+    \nonumber
+    \\
+    a_{k}
+    & \in &
+        \{0, \ldots, p-1 \},
+    \nonumber
+    \\
+	\hat{\phi}(n)
+	& := &
+        \sum_{k=0}^{N-1}
+            a_{k}x^{k}
     \label{def_phi}
-\end{equation}
-$$
-
-記法を乱用して、要素ごとに$\phi$を作用させた写像、$$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}} \rightarrow \mathbb{F}_{b}$$にも同じ記号を用いる。
-明らかに、$\phi$は以下の性質を満たす。 
-
-$$
-\begin{eqnarray}
-	\phi(n_{1} + n_{2})
-	& = &
-		\phi(n_{1}) 
-		+
-		\phi(n_{2})
-	\nonumber
-	\\
-	\phi(n_{1}n_{2})
-	& = &
-		\phi(n_{1}) 
-		\phi(n_{2})
 \end{eqnarray}
 $$
 
-* $$\Phi: \mathbb{Z}_{\ge} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$,
+要素ごとに$\hat{\phi}$を作用させた写像、$$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$にも同じ記号を用いる。
+
+* $$\Phi: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
+    * 非負整数の$b$進数展開
 
 $$
-\begin{equation}
-	n := \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge},
-	\quad
+\begin{eqnarray}
+	n
+    & := &
+        \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge 0},
+    \nonumber
+    \\
+    a_{k}
+    & \in &
+        \{0, \ldots, b-1 \},
+    \nonumber
+    \\
 	\Phi(n)
-	:=
-	(a_{0}, a_{1}, \ldots, a_{N-1}, 0, \ldots)^{\mathrm{T}}
+	& := &
+        (a_{0}, a_{1}, \ldots, a_{N-1}, 0, \ldots)^{\mathrm{T}}
     \label{def_Phi}
-\end{equation}
+\end{eqnarray}
 $$
 
-明らかに、$\Phi$についても以下が成り立つ。
-
+* $$\Psi: \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow [0, 1]$$,
 
 $$
 \begin{eqnarray}
-	\Phi(n_{1} + n_{2})
-	& = &
-		\Phi(n_{1}) 
-		+
-		\Phi(n_{2})
-	\nonumber
-	\\
-	\Phi(n_{1}n_{2})
-	& = &
-		\Phi(n_{1}) 
-		\Phi(n_{2})
+    \mathbf{n}
+    & := &
+        (a_{0}, \ldots, a_{N-1}, 0, \ldots )^{\mathrm{T}}
+        \in \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}
+    \nonumber
+    \\
+    \Psi(\mathbf{n})
+    & = &
+        \frac{\hat{\phi}^{-1}(a_{0})}{b}
+        +
+        \frac{\hat{\phi}^{-1}(a_{1})}{b^{2}}
+        +
+        \frac{\hat{\phi}^{-1}(a_{2})}{b^{2}}
+        +
+        \cdots
+    \nonumber
 \end{eqnarray}
 $$
+
+これらを合わせると、$$\Psi \circ \phi \circ \Phi: \mathbb{Z}_{\ge 0} \rightarrow [0, 1]$$となる。
 
 ### Theorem
 * $$n := \sum_{i=0}^{N-1} a_{k}p^{k} \in \mathbb{Z}_{b}$$,
+    * $$a_{k} \in \{0, 1, \ldots, p -1 \}$$,
 
 ここで、係数が$p-1$でなくなる最初の添字を
 
@@ -465,9 +476,9 @@ $$
 
 $$
 \begin{eqnarray}
-	\phi(n + 1)
+	\hat{\phi}(n + 1)
 	=
-	\phi(n)
+	\hat{\phi}(n)
 	+
 	\sum_{k=0}^{\alpha(n)}
 		x^{k}
@@ -482,9 +493,9 @@ $$
 
 $$
 \begin{eqnarray}
-	\phi(n + 1)
+	\hat{\phi}(n + 1)
 	& = &
-		\phi
+		\hat{\phi}
 		\left(
 			\sum_{k=0}^{N-1}
 				a_{k}p^{k}
@@ -494,7 +505,7 @@ $$
 	\nonumber
 	\\
 	& = &
-		\phi
+		\hat{\phi}
 		\left(
 			\sum_{k=0}^{\alpha(n)-1}
 				(p - 1)p^{k}
@@ -509,7 +520,7 @@ $$
 	\nonumber
 	\\
 	& = &
-		\phi
+		\hat{\phi}
 		\left(
 			\sum_{k=0}^{\alpha(n)-1}
 				(p - 1)p^{k}
@@ -524,7 +535,7 @@ $$
 	\nonumber
 	\\
 	& = &
-		\phi
+		\hat{\phi}
 		\left(
 			p^{\alpha(n)}
 			+
@@ -536,7 +547,7 @@ $$
 	\nonumber
 	\\
 	& = &
-		\phi
+		\hat{\phi}
 		\left(
 			(a_{\alpha(n)} + 1)p^{\alpha(n)}
 			+
@@ -558,7 +569,7 @@ $$
 
 $$
 \begin{eqnarray}
-	\phi(n)
+    \hat{\phi}
 	+
 	\sum_{k=0}^{\alpha(n)}
 		x^{k}
@@ -593,14 +604,14 @@ $$
 
 
 ### Definition. Gray Code
-$$G_{b}: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$を
+$$G_{b}: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$を
 
 $$
 \begin{equation}
     \mathbf{y}
     :=
 	(y_{0}, y_{1}, \ldots)^{\mathrm{T}}
-	\in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}},
+	\in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}},
 	\
 	G_{b}(\mathbf{y})
 	:=
@@ -610,7 +621,7 @@ $$
 $$
 
 と定める。
-この時、$$v \in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$に対して、$G_{b}(v)$を基数$b$の$v$のGray codeという。
+この時、$$v \in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$に対して、$G_{b}(v)$を基数$b$の$v$のGray codeという。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -667,7 +678,8 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Theorem. Property of Gray code
-$$n := \sum_{k=0}^{N-1} a_{k}b^{k} \in \mathbb{Z}_{\ge}$$とし、
+* $$n := \sum_{k=0}^{N-1} a_{k}b^{k} \in \mathbb{Z}_{\ge 0}$$,
+    * $$a_{k} \in \{0, \ldots, b - 1\}$$,
 
 $$
 	l(n)
@@ -695,7 +707,7 @@ $$
 $$
 
 である。
-ただし、$$\mathbf{e}_{k} \in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$は$k$番目の要素が1でほかは0である。
+ただし、$$\mathbf{e}_{k} \in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$は$k$番目の要素が1でほかは0である。
 
 ### proof.
 $\forall i = 0, \ldots, l(n) - 1,\ a_{i} = b - 1$に注意する。
@@ -907,17 +919,20 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Remarks
-和が、$b - 1 = -1$となることを使っている。
+和が、$b - 1 = -1 (\mathrm{mod}\ b)$となることを使っている。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Theorem
-* $$n := \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge}$$,
-* $$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge}}$$,
+* $$n := \sum_{k=0}^{N-1}a_{k}p^{k} \in \mathbb{Z}_{\ge 0}$$,
+    * $N \le m$
+    * $$a_{k} \in \{0, \ldots, p - 1\}$$,
+    * $p$進展開
+* $$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * $$\eqref{def_phi}$$,
-* $$G: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$,
+* $$G: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * gray map
-* $$\Phi: \mathbb{Z}_{\ge} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge}}$$,
+* $$\Phi: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * $$\eqref{def_Phi}$$,
 
 $$
@@ -948,9 +963,9 @@ $$\eqref{property_of_phi}$$より、
 
 $$
 \begin{eqnarray}
-    \phi(a_{n} - a_{n + 1} + 1)
+    \hat{\phi}(a_{n} - a_{n + 1} + 1)
     & = &
-        \phi(a_{n} - a_{n + 1})
+        \hat{\phi}(a_{n} - a_{n + 1})
         +
         \sum_{k=0}^{\alpha(a_{k} - a_{k+1})}
             x^{k}
@@ -977,45 +992,81 @@ $$
     & = &
         \phi
         \left(
-            (G \circ \Phi)
-            (n)
+            (
+                (a_{0} - a_{1}),
+                \ldots,
+                (a_{l(n)-1} - a_{l(n)}),
+                (a_{l(n)} - a_{l(n) + 1}),
+                \ldots
+            )^{\mathrm{T}}
+            +
+            (
+                0,
+                \ldots,
+                0,
+                \stackrel{l(n)}{\stackrel{\vee}{1}},
+                0,
+                \ldots
+            )^{\mathrm{T}}
         \right)
-        +
+    \nonumber
+    \\
+    & = &
+        \phi
+        \left(
+            (
+                (a_{0} - a_{1}),
+                \ldots,
+                (a_{l(n)-1} - a_{l(n)})
+                +
+                1,
+                (a_{l(n)} - a_{l(n) + 1}),
+                \ldots
+            )^{\mathrm{T}}
+        \right)
+    \nonumber
+    \\
+    & = &
         (
-            0,
+            \hat{\phi}(a_{0} - a_{1}),
             \ldots,
-            0,
-            \stackrel{l(n)}{\stackrel{\vee}{\phi(1)}},
-            0,
+            \hat{\phi}
+            (
+                a_{l(n)-1} - a_{l(n)}
+                +
+                1
+            ),
+            \hat{\phi}(a_{l(n)} - a_{l(n) + 1}),
             \ldots
         )^{\mathrm{T}}
     \nonumber
     \\
     & = &
         (
-            \phi(a_{0} - a_{1}),
+            \hat{\phi}(a_{0} - a_{1}),
             \ldots,
-            \phi(a_{l(n)-1} - a_{l(n)}),
-            \phi(a_{l(n)} - a_{l(n) + 1}),
-            \ldots
-        )^{\mathrm{T}}
-        +
-        (
-            0,
-            \ldots,
-            0,
-            \stackrel{l(n)}{\stackrel{\vee}{\phi(1)}},
-            0,
+            \hat{\phi}
+            (
+                a_{l(n)-1} - a_{l(n)}
+            )
+            +
+            \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)}}
+                x^{k}
+            ,
+            \hat{\phi}(a_{l(n)} - a_{l(n) + 1}),
             \ldots
         )^{\mathrm{T}}
     \nonumber
     \\
     & = &
         (
-            \phi(a_{0} - a_{1}),
+            \hat{\phi}(a_{0} - a_{1}),
             \ldots,
-            \phi(a_{l(n)-1} - a_{l(n)}),
-            \phi(a_{l(n)} - a_{l(n) + 1}),
+            \hat{\phi}
+            (
+                a_{l(n)-1} - a_{l(n)}
+            ),
+            \hat{\phi}(a_{l(n)} - a_{l(n) + 1}),
             \ldots
         )^{\mathrm{T}}
         +
@@ -1023,12 +1074,39 @@ $$
             0,
             \ldots,
             0,
-            \stackrel{l(n)}{\stackrel{\vee}{\phi(1)}},
+            \stackrel{l(n)}{\stackrel{\vee}{
+                \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+                    x^{k}
+            }},
             0,
             \ldots
         )^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        (\phi \circ G \circ \Phi)(n)
+        +
+        (
+            0,
+            \ldots,
+            0,
+            \stackrel{l(n)}{\stackrel{\vee}{
+                \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+                    x^{k}
+            }},
+            0,
+            \ldots
+        )^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        (\phi \circ G \circ \Phi)(n)
+        +
+        \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+            x^{k}
+        \mathbf{e}_{l}
+    \nonumber
 \end{eqnarray}
-    
 $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
