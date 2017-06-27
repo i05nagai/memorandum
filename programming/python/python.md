@@ -508,3 +508,16 @@ Python3では継承の有無にかかわらず新しい方式での継承にな�
 
 #### Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
+
+## subprocess
+
+```
+import subprcess
+p = subprocess.Popen(
+    ["echo", "hoge"],
+    stdout=subprocess.PIPE,
+    stdin=subprocess.PIPE,
+    stderr=subprocess.STDOUT)
+result = p.communicate(input=input_str)[0]
+```
+
