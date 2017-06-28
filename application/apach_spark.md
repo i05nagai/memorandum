@@ -41,8 +41,19 @@ ${SPARK_HOME}/bin/spark-submit \
     * driverの使用するメモリ
     * `512m`, `15g`と指定する 
 * --total-executors-core
+* --properties-file
+    * SparkConfにで指定する設定を記載したファイル
 
+```
+spark.master    local[4]
+spark.app.name  "My Spark apps"
+spark.ui.port   36000
+```
 
+設定の優先順位は以下の順序
+
+1. SparkConf
+2. `spark-submit`のオプション
 
 ## API
 
