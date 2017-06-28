@@ -87,6 +87,13 @@ WEEB UIとAPI JSONで名前が違う。
 
 Partitionは各テーブル最大2000個
 
+## Standard SQL
+Castは以下の形式でCASTする。
+
+```sql
+CAST(expr AS typename)
+```
+
 
 ### Best Practice
 
