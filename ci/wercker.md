@@ -166,6 +166,25 @@ deploy:
 ## Pipelines
 * [Pipelines](http://devcenter.wercker.com/docs/pipelines)
 
+### Per-Pipeline Containers
+pipelineごとにboxを指定できる。
+
+```yaml
+box: busybox
+# this pipeline will use busybox
+build-base:
+  steps:
+    - script:
+      name: echo environment
+      code: env
+build:
+  # override busybox
+  box: google/golang
+  steps:
+    - script:
+        name: testing build
+        code: go version
+```
 
 ## Workflows
 Pipelinesの流れを記述する。
@@ -248,7 +267,20 @@ werckerのapplicationは、GithubやBitBucketのrepositoryからソースをchec
 defaultではorganizationの中で、werkcerのapplicationを作成したuserが選ばれる。
 当然privateのrepositoryにアクセスする場合は、API userはそのrepositoryへのアクセス権限を持っている必要がある。
 
+## Notification
 
+### Slack
+stepとしてpipelineの最後に以下を導入すればOK。
+`$SLACK_URL`はwebhook urLを追加する。
+
+```yaml
+after-steps:
+  - slack-notifier:
+    url: $SLACK_URL
+    channel: notifications
+    username: werckerbot
+    notify_on: "failed"
+```
 
 ## CLI
 * [The Wercker Command Line Interface (CLI)](http://devcenter.wercker.com/docs/cli)
@@ -273,6 +305,10 @@ brew install wercker-cli
 後から参加した、githubのorganizationにAppsの承認を出す場合は、自分の`Authorized OAuth Apps`から該当のAppsをclickしてrequestボタンを押す。
 承認されれば、自分のwerckerのアカウントから、githubのorganizationのrepositoryが見えるようになるので、werckerでApplicationの作成をできる。
 Werckerの場合は、webhookが必要なので、repositoryへのadmin権限がある人間がwerckerでapplicationの作成した方が良い。
+
+### Can I execute Docker commands inside my pipelines?
+pipelineの中で`docker`コマンドは使えない。
+stepsでいくつかのdocker commandのwrapperを使うことはできる。
 
 ## Samples
 
