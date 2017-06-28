@@ -135,6 +135,7 @@ NEWLINE_DELIMITED_JSONはファイル内の各行がテーブルの1行に対応
 * mk
     * dataset, table, viewをつくる
     * `bq mk new_dataset.new_table.`
+    * `bq mk --view "select col from dataset.table_name" dataset.view_name`
 * mkdef
     * GCSのURIにschema定義を紐付ける
     * `bq mkdef uris schema`
