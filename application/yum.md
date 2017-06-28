@@ -31,3 +31,9 @@ install可能なpackage一覧
 ```
 yum list available
 ```
+
+依存しているパッケージの一覧
+
+```
+yum deplist <package>
+```
