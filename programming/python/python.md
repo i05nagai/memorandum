@@ -466,7 +466,7 @@ import下のディレクトリは、環境変数`PYTHONPATH`で指定された�
 * [8.1. datetime — 基本的な日付型および時間型 — Python 2.7.13 ドキュメント](http://docs.python.jp/2/library/datetime.html#strftime-and-strptime-behavior)
 
 
-### 
+### pip
 * [install - pip error while installing Python: "Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS" - Stack Overflow](https://stackoverflow.com/questions/37723236/pip-error-while-installing-python-ignoring-ensurepip-failure-pip-8-1-1-requir/37723517)
 
 Ubuntu
@@ -510,8 +510,9 @@ Python3では継承の有無にかかわらず新しい方式での継承にな�
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
 
 ## subprocess
+標準入力からの入力をうけつけて、
 
-```
+```python
 import subprcess
 p = subprocess.Popen(
     ["echo", "hoge"],
@@ -521,3 +522,5 @@ p = subprocess.Popen(
 result = p.communicate(input=input_str)[0]
 ```
 
+
+## 
