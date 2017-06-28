@@ -20,9 +20,11 @@ job_name = "my_sample_job"
 query_str = "select * from table_name"
 # Instantiates a client
 client = bigquery.Client(project="project")
-query = client.run_sync_query(job_name,  query_str)
+query = client.run_sync_query(query_str)
 query.run()
 
+# list of tuples
+# tuple is values of row in table
 rows = query.rows
 token = query.page_token
 while True:

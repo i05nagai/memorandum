@@ -135,6 +135,7 @@ NEWLINE_DELIMITED_JSONはファイル内の各行がテーブルの1行に対応
 * mk
     * dataset, table, viewをつくる
     * `bq mk new_dataset.new_table.`
+    * `bq mk --view "select col from dataset.table_name" dataset.view_name`
 * mkdef
     * GCSのURIにschema定義を紐付ける
     * `bq mkdef uris schema`
@@ -318,6 +319,12 @@ bq show dataset.table --format prettyjson
 * versions        Object Versioning and Concurrency Control
 * web             Set a main page and/or error page for one or more buckets
 * wildcards       Wildcard Names
+
+
+## Docker
+* [google/cloud-sdk - Docker Hub](https://hub.docker.com/r/google/cloud-sdk/)
+
+Googleが提供しているdocker imageがある。
 
 
 ## Reference
