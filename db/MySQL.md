@@ -93,6 +93,12 @@ passwordの変更は
 ALTER USER root@localhost IDENTIFIED BY 'NewPass123?&!';
 ```
 
+serviceの停止は
+
+```
+sudo service mysqld stop
+```
+
 
 ## ファイル
 * `/etc/my.cnf`に設定ファイルがある。
