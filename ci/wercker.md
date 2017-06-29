@@ -14,11 +14,13 @@ Githubのrepositoryとrepositoryを対象としたwerckerのapplicationと呼ぶ
 * pipelines
     * `wercker.yml`に記載する`build`や`deploy`, `test`、`dev`といったもの
     * pipelineは、stepsと呼ばれる処理の集まり
+    * `report to SCM`にcheckすると、GitHunのPRなどに結果を反映できる。
 * steps
     * bashやコマンドの実行、インストールなど実際の処理
     * stpesは自分で記載することもできるが、communityで提供されているものも使うことができる
 * box
     * docker imageのこと
+    * boxはpipelineごとにも指定できる
 
 ## Python
 * [Getting started with Wercker & Python](http://devcenter.wercker.com/docs/quickstarts/building/python)
@@ -370,3 +372,4 @@ build:
 ## reference
 * [まだ CircleCI で消耗してるの？ - Qiita](http://qiita.com/KeithYokoma/items/b839ef3f5496a22f3e7a#_reference-3b29690796d83937e179)
 * [Werckerの仕組み，独自のboxとstepのつくりかた | SOTA](http://deeeet.com/writing/2014/10/16/wercker/)
+* [wercker の新機能 Wercker Workflows を試す - Qiita](http://qiita.com/dtan4/items/9bcf5dbfd3dbbd87472b)
