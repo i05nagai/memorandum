@@ -119,6 +119,54 @@ mypkg/
         ...
 ```
 
+importの追加のされかた。
+testを書いているpythonファイルからtest対象のmoduleをimportする必要がある。
+test対象のimportディレクトリは以下の規則で追加される。
+`module_dir/tests/test_module.py`というファイルをテストする場合
+
+* `basedir`の決定
+    * `module_dir/tests/test_module.py`から上のディレクトリに登っていく
+    * `__init__.py`を含まない最初のディレクトリが`bssedir`
+    * `module_dir/tests/`に`__init__.py`が含まれない場合は、`module_dir/tests/`がbase_dir
+    * `module_dir`と`module_dir/tests`が両方共`__init__.py`を含む場合は、`module_dir`の親ディレクトリが`basedir`になる
+* `basedir`を`sys.path.insert(0, basedir)`で追加
+    * 0番目に挿入される
+    * importは、test用のファイルは`basedir`からの相対パスにもとづいてimportする
+
+`test_module.py`で`module.py`をテストする場合に、`test_module.py`から`module.py`をどのようにimportするか。
+
+以下のディレクトリ構成だと、`import module`
+
+```
+module_dir/
+  module.py
+  tests/
+    __init__.py
+    test_module.py
+```
+
+以下のディレクトリ構成だと、`import module_dir.module`
+
+```
+module_dir/
+  __init__.py
+  module.py
+  tests/
+    __init__.py
+    test_module.py
+```
+
+
+以下のディレクトリ構成だと、`import module`
+
+```
+module_dir/
+  module.py
+  test_module.py
+```
+
+となる。
+
 
 ## Tips
 
