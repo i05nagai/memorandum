@@ -90,6 +90,8 @@ git config --global credential.helper osxkeychain
 
 * access可能なrepositoryのissue
 * Source code
+    * default branchのみ対象になる
+    * 普通はmaster
 * Commits
 * Users
 * Wikis
