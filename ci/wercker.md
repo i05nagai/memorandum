@@ -4,7 +4,7 @@ title: Wercker
 
 ## Wercker
 表記について、werckerのorgazanizationとgithubのorgazanitionがあるので、これを区別する。
-Githubのrepositoryとrepositoryを対象としたwerckerのapplicationと呼ぶことにする。
+Githubのrepositoryとrepositoryを対象としたwerckerのci環境をapplicationと呼ぶ。
 
 `wercker.yml`に設定を記述する。
 
@@ -14,13 +14,33 @@ Githubのrepositoryとrepositoryを対象としたwerckerのapplicationと呼ぶ
 * pipelines
     * `wercker.yml`に記載する`build`や`deploy`, `test`、`dev`といったもの
     * pipelineは、stepsと呼ばれる処理の集まり
+    * pipelineはweb uiで作成する
+    * `report to SCM`にcheckすると、GitHunのPRなどに結果を反映できる。
 * steps
+    * stepの集まり
     * bashやコマンドの実行、インストールなど実際の処理
     * stpesは自分で記載することもできるが、communityで提供されているものも使うことができる
 * box
     * docker imageのこと
+    * boxはpipelineごとにも指定できる
 
-## Python
+アカウントの作成はHPから`logi->login with githubで`OK。
+Appliationの作成は以下のようにする。
+
+<div style="text-align: center">
+    <img src="image/wercker_04_add_repository.png">
+</div>
+
+<div style="text-align: center">
+    <img src="image/wercker_05_add_repository.png">
+</div>
+
+<div style="text-align: center">
+    <img src="image/wercker_06_add_repository.png">
+</div>
+
+
+## Pythonのyamlの例
 * [Getting started with Wercker & Python](http://devcenter.wercker.com/docs/quickstarts/building/python)
 
 ```yaml
@@ -44,7 +64,7 @@ dev:
 * `dev:`
     * development pipelineのコマンドなど
     * pipelineの中はstepで構成される
-    * stepは自分で記述するか、werckerやcommunityによって提供されるbash scriptなど
+    * stepは自分で記述するか、werckerやwerckerのcommunityによって提供されるbash scriptなど
 * `pip-install`
     * dev pipelineのstep
 
@@ -142,12 +162,13 @@ versionの指定も可能。
 
 ```yaml
 - install-packages:
-        packages: apache2=2.2.20-1ubuntu1
+    packages: apache2=2.2.20-1ubuntu1
 ```
 
 
 ### After steps
 step実行後に実行する場合は、`after-steps`というstepを使う。
+piplelineの完了後のslackの通知などに使える。
 
 ```yaml
 deploy:
@@ -188,7 +209,7 @@ build:
 
 ## Workflows
 Pipelinesの流れを記述する。
-デフォルトでは、buildのみ登録されている。
+デフォルトでは、pipelienとしてbuildのみ登録されている。
 よくある構成は
 
 1. build
@@ -198,9 +219,9 @@ Pipelinesの流れを記述する。
     * to production
 
 である。
-repositoryを作成したら、testの作成までは行う。
+werckerでapplicationを作成したら、test pipelineの作成までは行った方が良い。
 workflowに登録されているpipelineは、`wercker.yml`に必ず記載する必要がある。
-将来的なworkflowとして登録しているが、現在特に処理するものがない場合は、以下のように空のstepsをいれる。
+将来的に使うpipelineとして登録しているが、現在特に処理するものがない場合は、以下のように空のstepsをいれる。
 
 ```yaml
 build:
@@ -208,9 +229,9 @@ build:
 test:
   steps:
     - script:
-        name: execute pytest
-        code: |
-          pytest
+      name: execute pytest
+      code: |
+        pytest
 ```
 
 <div style="text-align: center">
@@ -227,10 +248,14 @@ test:
 
 ## Wercker.yml
 `dev`は特別なpipelineである。
-`dev`はlocalのCLIで実行されるpipelineである。
+`dev`はlocalのCLIで実行できるpipelineである。
 
 ## Environment variables
+いくつかのlevelで環境変数を指定できる。
 
+* organization-level environment variable
+* application-level environment variable
+* pipeline-level environment variable
 
 ## Web Interface
 
@@ -239,13 +264,15 @@ GitHubやBitBucketなどのrepositoryにアクセスする方法。
 publicの場合は、public repositoryの節まで読み飛ばして良い。
 
 ### SSH keys
-werckerはpublic keyをrepositoryに提供し、private keyでrepositoryのソースコードにアクセスする。
+werckerはpublic keyをgithubのrepositoryに提供し、private keyでrepositoryのソースコードにアクセスする。
 public keyを認可する方法はいくつかあるが、それぞれ良いことと悪いことがある。
 
 * Deploy keys
     * deploy keyとしてpublic keyを登録する
 
 ## Organization
+werckerのorganizationを作成できる。
+teamで作業する場合に利用する。
 
 ### Creating Orgazantion
 * organization name
@@ -265,7 +292,7 @@ API Users
 werckerのapplicationは、GithubやBitBucketのrepositoryからソースをcheckoutする。
 その際に仕様するGithub/BitBucketのAPIの使用者を決めることができる。
 defaultではorganizationの中で、werkcerのapplicationを作成したuserが選ばれる。
-当然privateのrepositoryにアクセスする場合は、API userはそのrepositoryへのアクセス権限を持っている必要がある。
+当然privateのrepositoryにアクセスする場合は、APIの使用者はそのrepositoryへのアクセス権限を持っている必要がある。
 
 ## Notification
 
@@ -311,6 +338,7 @@ pipelineの中で`docker`コマンドは使えない。
 stepsでいくつかのdocker commandのwrapperを使うことはできる。
 
 ## Samples
+defaultで作られるyaml file
 
 ```yaml
 # This references the default Python container from
@@ -367,6 +395,7 @@ build:
 ```
 
 
-## reference
+## Reference
 * [まだ CircleCI で消耗してるの？ - Qiita](http://qiita.com/KeithYokoma/items/b839ef3f5496a22f3e7a#_reference-3b29690796d83937e179)
 * [Werckerの仕組み，独自のboxとstepのつくりかた | SOTA](http://deeeet.com/writing/2014/10/16/wercker/)
+* [wercker の新機能 Wercker Workflows を試す - Qiita](http://qiita.com/dtan4/items/9bcf5dbfd3dbbd87472b)

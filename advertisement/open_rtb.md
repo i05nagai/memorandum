@@ -53,11 +53,35 @@ title: Open RTB
     * `Content-Type: application/x-protobuf`
     * `Content-Type`がない場合は、bidderは`application/json`と仮定する
 
+
+### 2.4 Data Encoding
+* HTTP1.1ではcompressionができる
+* 多くのserverはgzipに対応しているので、gzipを使うのが理想的
+* exchangeが対応しているecondingについては、`Accept-Encoding`をつけてbidderのserverに知らせる
+
+```
+Accept-Encoding: gzip
+```
+
+* bidderのserverが対応しているcompressionであれば、bidderは`Content-Encoding`を指定して、encoding済みのresponseを返す
+
+```
+Content-Encoding: gzip
+```
+
+* HTTP1.1ではresponseに対して、 `Content-Encoding`が指定されるが、OpenRTBではrequest時に`Content-Encoding`を指定することが許容される
+* 
+
+
+
+
+
 ### Open RTB version HTTP Header
 * OpenRTBのversionをheaderに記載するo
 * `x-openrtb-version: 2.3`
 * `<majtor>.<minor>`の形式で指定する
     * minorのchangeは基本的には後方互換である
+
 
 ### 2.5 Privacy by Design
 * OpenRTBはdo-not-track, COPPA restriction signalingをsupportする
