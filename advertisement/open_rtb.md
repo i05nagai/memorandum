@@ -68,8 +68,64 @@ title: Open RTB
 ### 2.7 Customization and Extensions
 
 ## 3. Bid Request Specification
+Exchangeからbidderへのrequest
 
 ### 3.1 Object Model
+
+Object
+--|--
+BidRequest | Top level object
+Source | header biddingのようにpost auctionの決定に必要なソースの要求
+Regs | bid requestにおける全てのimpressionに対する規制の条件
+Imp | requestに対して少なくとも1つ
+Metric | impressionの定量化可能なhistrocical data
+Banner | banner imporession (in-banner videoを含む) とvieo companion adの情報
+Video | video impressionの情報
+Audio | audio impressionの情報
+Native | daynamic native adas APIに対するnative impressionの情報
+Format | bannerの許容サイズ
+Pmp | このimpressionに応用できるprivate marketplaceのdealsの集合
+Deal | sellerとbuyerの間のimpressionの関係
+Site | impressionにあったwebsiteの情報
+App | impressionのあったapplicationの情報
+Publisher |
+Content |
+Producer |
+Device |
+Geo |
+User |
+Data |
+Segment |
+
+
+### 3.2 Object Specifications
+上記のObjectの詳細
+
+* requiredがついている属性は必須
+* recommendedはbusiness的な重要性なものについている
+* default valueがついてないものを省略した場合は、unknownになる
+
+#### 3.2.1 Object:BidRequest
+一意なbid request IDかauction IDを持つ。
+
+Attributes | Type | condition | Descriptin=on
+--|--|--
+id | string | required | exchangeによって提供される一意なID
+imp | array | required | Imp objectの配列。少なくとも1つ要素がある
+site | object | recommended | publisherのwebsiteについてのSite object。impressionがwebsiteの場合に使用する
+app | object | recommended | PublisherのAppについてのApp objectの情報。impressionがappの場合に使用する
+device | object | recommended | imporessionが発生したuserのdeviceのDevice object
+user | object | recommended | deviceのuserについての情報User object
+test | integer | default 0 | requestがtestかどうかのフラグ。0はlive mode、1はtest mode
+at | integer | default 2 | AuctionTypeの略。1 = first price auction, 2 = second price plus. exchange特有のauction typeは500より大きい値を利用する
+tmax | integer | | internetのlatencyを含むexchangeがbidを待つ時間millisecondsでのmiximum time 
+wseat | string array | | このimpressionにbidできるbuyerのseat(e.g. advertisers, agencies)のwhite list。 seatのIDで指定する。 wseatとbseatと両方省略した場合は制限なし。
+bseat | string array | | buyer seat(e.g. advertiser, agencies)のblock list。seatのIDで指定する。wseatとbseatを両方省略した場合は制限なし
+allimps | integer | default 0 | exchange
+
+
+
+
 
 ### 5.2 Banner Ad Types
 
