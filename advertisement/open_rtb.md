@@ -96,8 +96,8 @@ Exchangeからbidderへのrequest
 
 ### 3.1 Object Model
 
-Object
---|--
+Object | Description
+-- | --
 BidRequest | Top level object
 Source | header biddingのようにpost auctionの決定に必要なソースの要求
 Regs | bid requestにおける全てのimpressionに対する規制の条件
@@ -112,14 +112,14 @@ Pmp | このimpressionに応用できるprivate marketplaceのdealsの集合
 Deal | sellerとbuyerの間のimpressionの関係
 Site | impressionにあったwebsiteの情報
 App | impressionのあったapplicationの情報
-Publisher |
-Content |
-Producer |
-Device |
-Geo |
-User |
-Data |
-Segment |
+Publisher | 
+Content | 
+Producer | 
+Device | 
+Geo | 
+User | 
+Data | 
+Segment | 
 
 
 ### 3.2 Object Specifications
@@ -132,7 +132,7 @@ Segment |
 #### 3.2.1 Object:BidRequest
 一意なbid request IDかauction IDを持つ。
 
-Attributes | Type | condition | Descriptin=on
+Attributes | Type | condition | Description
 --|--|--
 id | string | required | exchangeによって提供される一意なID
 imp | array | required | Imp objectの配列。少なくとも1つ要素がある
@@ -145,13 +145,230 @@ at | integer | default 2 | AuctionTypeの略。1 = first price auction, 2 = seco
 tmax | integer | | internetのlatencyを含むexchangeがbidを待つ時間millisecondsでのmiximum time 
 wseat | string array | | このimpressionにbidできるbuyerのseat(e.g. advertisers, agencies)のwhite list。 seatのIDで指定する。 wseatとbseatと両方省略した場合は制限なし。
 bseat | string array | | buyer seat(e.g. advertiser, agencies)のblock list。seatのIDで指定する。wseatとbseatを両方省略した場合は制限なし
-allimps | integer | default 0 | exchange
+allimps | integer | default 0 | road-blockingのためのflag。exchangeが(web pageの全てのimpressionや動画のpre/mid/postといった一連の広告をまとめて扱える場合は1にする。0はunkownかno。
+cur | string array | | bid可能なcurrencies。ISO-4217に従って指定する。exchangeが複数通貨を扱える場合に推奨される。
+wlang | string array | | ISO-639-1-alpha-2に従って、creativeに利用可能な言語のwhite list。何も指定しない場合は制限はなしだが、DeviceやContent objectのlanguage属性を参考にした方が良い。
+bcat | string array | | blockされた広告のcategoryをIAB content category (List 5.1)で指定する。
+badv | string array | | domainで指定するadvertiserのblock list (e.g. `food.com`)
+bapp | string array | | platformに依存したexchangeと無関係なapplicationの識別子によるapplicationのblock list。Androidの場合はbundleかpackage name (e.g. `com.foo.mygame`)で、iOSは整数値のID。
+source | object | | Source object。
+regs | object | | Regs object。
+ext | object | | extension
+
+### 3.2.2 Object: Source
+bid requestの提示元についての情報。
+post auctionやexchangeの上流で最終的な表示の決定がされる場合に利用される。
+header biddingでよく利用される。
+他の RTB exchangeや仲介業者などを通した取引の場合にも利用される。
+
+Attribute | Type | | Description
+-- | -- | -- | --
+fd | integer | recommended | 最終的なimpressionの販売の決定権をもつ機関を表すフラグ。0はexchangeで1はそれより上流。
+tid | string | recommended | bid requestのtransaction ID。参加者の間で共通
+pchain | string | recommended | TAG payment ID protocol v1.0で表現されるpyament ID chain
+ext | object | | extension
+
+### 3.2.3 Object: Regs
+legal, 政府、業界による規制の情報。
+United States Children's Online Privcy Protection Act (COPPA)に関するflagのみ存在する。
+
+Attribute | Type | | Description
+-- | -- | -- |--
+coppa | integer | | 0の場合は規制の対象にならないrequest。1の場合は規制の対象になるrequest。
+iext | object | | extension
+
+### 3.2.4 Imp
+
+Attribute | Type | | Description
+-- | -- | -- | --
+id | string | required | 1から始まるimpressionのID
+metric | object array | | Metric objectの配列
+banner | object | | Banner object。impressionがbanner adの場合に必要
+video | object | | Video object。impressionがvideo adの場合に必要。
+audio | object | | Audio object。impressionがaudio adの場合に必要。
+native | object | | Native object。impressionがnative adの場合に必要。
+pmp | object | | Pmp object。このimpressionにprivate marketplaceの
+displaymanager | string | | 実際の広告のrenderingを行う仲介業者やSDKなど(通常はvideo や mobileなど)。videoとappで推奨推奨される。
+displaymanagerver | string | | displaymanagerのversion
+instl | integer | default 0 | 1はinterstitialかfull screenで、0はinterstitialでない。
+tagid | string | | ad の場所やadを表すtagをつける。debugやbuyerの最適化で使われる
+bidfloor | float | default 0 | このimpressionに対するCPM換算でののminimum bid
+bidfloorcur | string | default "USD" | bidfloorのcurrency。ISO-4217で記述する。
+clickbrowser | integer | | creativeをclickした時に、開かれるbrowserの種類。0がembeddedで、1はnativeである。iOS9.xのSafari View Conttrollerはnativeに分類される。
+secure | integer | | creativeにHTTPS URLが必要かどうかのフラグ。0は不要。1は必要。
+iframebuster | string array | | exchangeがサポートしているiframe busterの名前の配列
+exp | integer | | 
+ext | object | | extension
+
+### 3.2.5 Metric
+impresisonに対してmetricのarrayが付随する。
+impressionに対する直近のCTRやviewablityなどの情報をbidderに提供する。
+
+Attribute | Type | | Description
+-- | -- | -- | --
+type | string | required | 
+value | float | required | metricの値
+vendor | string | recommended | valueの情報元。exchange自身が情報元の場合は`EXCHANGE`を使うことが推奨される。
+ext | object | | extension
+
+### 3.2.6 Banner
+
+Attribute | Type | | Description
+-- | -- | -- |
+format | object aray | recommended | banner sizeを表すforamt objectの配列。何も指定しない場合は、`w`, `h` objectを使うことが推奨される。
+w | integer | | deviceに依存しないpixcelサイズ。`format` objectを指定しない場合に推奨される。
+h | integer | | deviceに依存しないpixcelサイズ。`format` objectを指定しない場合に推奨される。
+wmax | integer | DEPRECATED | maximum width
+hmax | integer | DEPRECATED | maximum height
+wmin | integer | DEPRECATED | minimum width
+hmin | integer | DEPRECATED | minimum height
+btype | integer array | | banner typeでのblock list。List 5.2
+battr | integer array | | craetive attributeでのblock list。 List 5.3
+pos | integer | | スクリーン上のad position。List 5.4
+mimes | string array | | contentのMIME type。よく使われるものは"application/x-shockwave-flash", "image/jpg", "image/gif"
+topframe | integer | | bannerがtopframeにある場合。
+expdir | integer array | | bannerがexpandされる方向。List 5.5
+api | integer array | | サポートしているAPIのlist。何も指定しない場合はsupportしているAPIはなし。List 5.6
+id | string | | bannerのID。companion adを表現するために、video objectと一緒にbannerを使う場合に、推奨される。impressionの中でunique。IDは通常1から始まる
+vcm | integer | | 
+ext | object | | extension
+
+### 3.2.7 Video
+in-stream video impressionの情報。
+多くのfieldは必須ではない。
+VAST standardに従う。
+banner objectの配列によってcompanion adなどが、supportされる。
 
 
+Attribute | Type | | Description
+-- | -- | -- |
+mimes | string array | required | "video/x-ms-wmv", "video/mp4"などのMIME
+minduration | integer | recommeded | 最小のvideo ad duration in sec
+maxdurationt | integer | recommeded | 最大のvide ad duraiont in sec
+protocols | integer | recommended| supportしているvideo protocolの配列。`protocol`か`protocols`で少なくとも1つのprotocolを指定する。List 5.8.
+protocol | integer | DEPRECATED | 
+w | integer | recommended | devideに依存しないvideo playerのwidth
+h | integer | recommended | devideに依存しないvideo playerのheigth
+startdelay | integer | recommended | pre-roll, mid-roll, post-rollのstart delayをsecondで表現。List 5.12.
+placement | integer | | impressionの表示位置。List 5.9.
+linearity | integer | | impressionがlinearかnonlinearか。何も指定しない場合は全て許容。List 5.7.
+skip | integer | | videoがskip可能かどうか。0は不可、1は可能。bidderがskippableなmarkup/creativeを送った場合、bid objectは`attr`の配列に16を指定する必要がある。
+skipmin | integer | | adがskippableの場合に、この秒数より長いvideoはskip可能とする
+skipafter | integer | default 0 | adがskippableの場合に、何秒後にskip可能かを指定する。
+sequence | integer | | bid requestで複数のad impressionが提供されたとき、impressionを順序づけるための番号。
+battr | integer array | | creativeの属性のblock list。List 5.3
+maxextended | integer | | extensionが許可されていたときに、最大のextensionの時間。0か指定なしの場合は、extensionは不許可。-1はextensionが許可され、制限なし。0より大きい場合は、`maxduration`の値をこえて再生される時間の秒数。
+minbitrate | integer | | minimum bit rate in Kbps.
+maxbitrate | integer | | maximum bit rate in Kbps.
+boxingallowed | integer array | default 1 | 4:3のcontentを16:9 windowにletter boxing可能かどうか。0は不可, 1は可能
+playbackmethod | integer array | | 利用される可能性のあるplayback method。何もなければ何らかの方法が利用される。慣習的に1つのmethodのみが利用されている。将来的には1つの整数値に仕様変更される可能性がある。配列の最初の配列のみを使うことが強く推奨される。List 5.10.
+playbackend | integer | | playbackの終了となるイベント。List 5.11.
+delivery | integer array | | 動画の提供方法(e.g. streaming, progressive)何もなければ全てsupportしている。List 5.15.
+pos | integer | | screen上のAd postion. List 5.4.
+companionad | object array | | Banner objectのarray。companion adを使う場合
+api | integer array | | supportしているAPI frameworks。List 5.6. 何も指定しない場合はsupportしているAPIはなし。
+companiontype | integer array | | supportしているVAST companion ad type. List 5.14. companionad arrayが指定されている場合は推奨される。companionadのbannerが一つでもend-cardとして描画された場合、vcm属性としてbannerを指定する
+ext | object | | extension
+
+### 3.2.8 Audio
+in-stream video impressionの情報。
+多くのfieldは必須ではない。
+DAAST standardに従う。
+
+`Audio` objectは`Imp` objectに含まれる。
+publiserhの観点では、同じimpressionがbannerやvideo, nativeとしても提供される。
+
+Attribute | Type | | Description
+-- | -- | -- |
+mimes | string array | required | `audio/mp4`などのMIME
+minduration | integer | recommended | 最小のaudio ad duration in seconds
+maxduration | integer | recommended | 最大のaudio ad duration in seconds
+protocols | integer array | recommended | supportしているaudio protocolの配列.List 5.8.
+startdelay | integer | recommended | pre-roll, mid-roll, post-rollのstart delayをsecondで表現。List 5.12.
+sequence | integer | | bid requestで複数のad impressionが提供されたとき、impressionを順序づけるための番号。
+battr | integer array | | creativeの属性のblock list。List 5.3
+maxextended | integer | | extensionが許可されていたときに、最大のextensionの時間。0か指定なしの場合は、extensionは不許可。-1はextensionが許可され、制限なし。0より大きい場合は、`maxduration`の値をこえて再生される時間の秒数。
+minbitrate | integer | | minimum bit rate in Kbps.
+maxbitrate | integer | | maximum bit rate in Kbps.
+delivery | integer array | | 動画の提供方法(e.g. streaming, progressive)何もなければ全てsupportしている。List 5.15.
+companionad | object array | | Banner objectのarray。companion adを使う場合
+api | integer array | | supportしているAPI frameworks。List 5.6. 何も指定しない場合はsupportしているAPIはなし。
+companiontype | integer array | | supportしているDAAST companion ad type. List 5.14. companionad arrayが指定されている場合は推奨される。
+maxseq | integer | | 同時に再生可能なaudio adsの数
+feed | integer | | audio feedの型。List 5.16.
+stitched | integer | | adがaudio contentと同時に提供されるか、別々に提供されるか。0は別々、1は一緒。
+nvol | integer | | volume nomalization mode. List 5.17.
+ext | object | | extension
+
+### 3.2.9 Native
+周囲のcontentとseemlessに見ることができる広告(e.g. sponsored Twitter or Facebook post)。
+そのような場合、responseはpublisherが十分にコントロールできるだけの情報を含む必要がある。
+
+Dynamic Native Ads APIをよぶようにしている。
+request parametersとresponse markupの構造を定義する。
+
+Attribute | Type | | Description
+-- | -- | -- |
+request | string | required |
+ver | string | recommended | 
+api | integer array | |
+battr | integer array | |
+ext | object | | extension
+
+### 3.2.10 Format
 
 
+### 3.2.11 Pmp
 
-### 5.2 Banner Ad Types
+### 3.2.12 Deal
+
+### 3.2.13 Site
+
+### 3.2.14 App
+
+### 3.2.15 Publisher
+
+### 3.2.16 Content
+
+### 3.2.17 Producer
+
+### 3.2.18 Device
+
+### 3.2.19 Geo
+
+### 3.2.20 User
+
+### 3.2.21 Data
+
+### 3.2.22 Segment
+
+# 4. Bid Response Specification
+
+## 4.1 Object Model
+
+## 4.2 Object Specification
+
+### 4.2.1 BidResponse
+
+### 4.2.2 SeatBid
+
+### 4.2.3 Bid
+
+## 4.3 Ad Serving Options
+
+### 4.3.1 Markup Served on the Win Notice
+
+### 4.3.2 Markup Served in the Bid
+
+### 4.3.3 Comparison of Ad Serving Approaches
+
+## 4.4 Substitution Macros
+
+# 5. Enumerated Lists Specification
+
+## 5.1 Content Categories
+
+## 5.2 Banner Ad Types
 
 Value | Description
 --|--
@@ -160,14 +377,14 @@ Value | Description
 3 | JavaScript Ad; must be valid XHTML
 4 | iframe
 
-### 5.3 Creative Attributes
+## 5.3 Creative Attributes
 Creativeの分類
 
 Value | Description
 --|--
 1 | Audio Ad (Auto Play)
-1 | Audio Ad (Userが再生する)
-1 | Expandable (Automatic)
+2 | Audio Ad (Userが再生する)
+3 | Expandable (Automatic)
 4 | Expadable (Userのclick)
 5 | Expadable (Userのrollover)
 6 | In-Banner Video Ad (Autoplay)
@@ -182,7 +399,7 @@ Value | Description
 15 | AudioのOn/OFF buttonがある
 16 | 広告のskipがある (skip button on pre0roll video)
 
-### 5.4 Ad Position
+## 5.4 Ad Position
 広告の位置
 
 Vale | Description
@@ -196,10 +413,10 @@ Vale | Description
 6 | web pageのSidebar
 7 | FUll Screan
 
-### 5.5 Expandable Direction
+## 5.5 Expandable Direction
 
 
-### 5.6 API Frameworks
+## 5.6 API Frameworks
 PublisherのsupportするAPI
 
 * MRAID-1
@@ -214,7 +431,7 @@ Value |
 4 | ORMMA
 5 | MRAID-2
 
-### 5.7 Video Linearity
+## 5.7 Video Linearity
 in-stream/linear videoは、以下のvideo contentの一部として広告が表示される形式のもの
 
 * pre-roll
@@ -232,8 +449,7 @@ Value | Descaription
 1 | Linear / In-Stream
 2 | Non Linear / Overlay
 
-
-### 5.8 Vieo Bid Response Protocols
+## 5.8 Protocols
 Exchangeがsupportするbid responseのprotocol
 
 Value | Description
@@ -246,18 +462,13 @@ Value | Description
 6 | VAST 3.0 Wrapper
 
 
-### 5.9 Video Plyback Methods
-playbackの方法。
+## 5.9 Video Placement Types
 
-Value | Description
--- | --
-1 | Auto PlayでSound On
-2 | Auto PlayでSound Off
-3 | Clickで開始
-4 | Mouse-Overで開始
+## 5.10 Playback Methods
 
-### 5.10 Video Start Delay
-videoの開始位置。
+## 5.11 Playback Cessation Modes
+
+## 5.12 Start Delay
 Linear/non-linear関係なく、videoがいつ開始するか
 
 |Value | Descriptino
@@ -267,7 +478,7 @@ Linear/non-linear関係なく、videoがいつ開始するか
 |-1 | generic Mid-Roll
 |-2 | generic Post-Roll
 
-### 5.11 Video Quality
+## 5.13 Production Quality
 VideoのQuality。
 以下の用語は、IABで定義されているものに準拠。
 
@@ -277,5 +488,84 @@ Value | Description
 1 | Professionally produce
 2 | 
 3 | 
+
+
+## 5.14 Comparison Types
+
+## 5.15 Content Delivery Methods
+
+## 5.16 Feed Types
+
+## 5.17 Volume Normalization Modes
+
+## 5.18 Content Context
+
+## 5.19 IQG Media Ratings
+
+## 5.20 Location Type
+
+## 5.21 Device Type
+
+## 5.22 Connection Type
+
+## 5.23 IP Location Services
+
+## 5.24 No-Bid Reason Codes
+
+## 5.25 Loss Reason Codes
+
+## 5.9 Video Plyback Methods
+playbackの方法。
+
+Value | Description
+-- | --
+1 | Auto PlayでSound On
+2 | Auto PlayでSound Off
+3 | Clickで開始
+4 | Mouse-Overで開始
+
+# 6. Bid Request/Response Samples
+
+## 6.1 GitHub Repository
+
+## 6.2 Validator
+
+## 6.3 Bid Requests 
+
+### 6.3.1 Example 1 - Simpler Banner
+
+### 6.3.2 Example 2 - Expandable Creative
+
+### 6.3.3 Example 3 - Mobile
+
+### 6.3.4 Example 4 - Video
+
+### 6.3.5 Example 5 - PMP with Direct Deal
+
+### 6.3.6 Example 6 - Native Ad
+
+## 6.4 Bid Responses
+
+### 6.4.1 Example 1 Ad Served on Win Notice
+
+### 6.4.2 Example 2 VAST XML Document Returned inline
+
+### 6.4.3 Example 3 Direct Deal Ad Served on Win Notice
+
+### 6.4.4 Example 4 Native Markup Returned inline
+
+# 7. Implementation Notes
+
+## 7.1 No-Bid Signaling
+
+## 7.2 Impression Expiration
+
+## 7.3 PMP & Direct Deals
+
+## 7.4 Skippability
+
+## 7.5 COPPA Regulation Flag
+
+# Appendix
 
 ## Reference
