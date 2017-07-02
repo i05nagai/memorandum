@@ -28,29 +28,31 @@ title: Generalized Niederreiter Sequence
 
 $$
 \begin{equation}
-    1 \le j \le s,
+    1 \le j \le d,
     \
     1 \le i,
     \
-    0 \le k < e_{i},
+    0 \le k < e_{j},
     \
     \frac{
-        y_{j, i, k}(x)
+        y_{i, k}^{j}(x)
     }{
         p_{j}(x)^{i}
     }
     =:
     \sum_{r=0}^{\infty}
-        a^{(j)}(i, k, r)x^{-r-1}
+        a^{j}_{i, k}(r)x^{-r-1}
 \end{equation}
 $$
 
 
 $$
 \begin{eqnarray}
+    j = 1, \ldots, d,
+    \quad
     C_{j}
     & := &
-        c_{i, r}^{(j)}
+        c_{i, r}^{j}
         \quad
         i \ge 1,
         \
@@ -58,10 +60,8 @@ $$
     \nonumber
     \\
     & := &
-        a^{(j)}(Q(i,j) + 1, k(i,j), r)
+        a^{j}_{Q(i,j) + 1, k(i,j)}(r)
         \quad
-        1 \le j \le s,
-        \
         i \ge 1,
         \
         r \ge 0
@@ -569,7 +569,7 @@ $$
 
 $$
 \begin{eqnarray}
-    \hat{\phi}
+    \hat{\phi}(n)
 	+
 	\sum_{k=0}^{\alpha(n)}
 		x^{k}
@@ -1110,6 +1110,27 @@ $$
 $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## Relation to sobol sequence
+Sobol sequenceはGeneralized Niederreiter Sequenceの一種とみなすことができる。 
+
+* $m = 1$
+* $b = 2$
+* $$j \in \{2, \ldots, d\}$$,
+    * 次元
+* $p_{j}(x)$
+    * 次数の小さい方から並べたときの$(j - 1)$番目のprimitive polynomial
+    * 次数が同じ場合は、$p(2)$を整数として計算した時の値から小さい順
+        * $p(x) = x^{2} + 1$
+        * $p(2) = 4 + 1 = 5$
+* $$s_{j} = \mathrm{deg}(p_{j}(x))$$,
+    * 次元$j$の多項式の次数
+* $$y_{j, i, k} = g_{j, k}\ (0 \le k < e_{j},\ 1 \le j \le d,\ 1 \le i)$$,
+    * $$g_{j, 0}(x), \ldots, g_{j, s_{j}-1}(x)$$,
+        * $$\mathrm{deg}(g_{j, k}) = s_{j} - k + 1$$,
+        * 多項式
+    * 例えば$$g_{j, k}(x):= x^{s_{j} - k + 1} + \sum_{n=0}^{s_{j} - k} a_{n}x^{n}$$,
+        * $$a_{n} \in \mathbb{F}_{2}$$,
 
 ## Reference
 
