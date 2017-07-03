@@ -455,7 +455,13 @@ $$
 	& = &
 		g(x)h(x)
 	\nonumber
-	\\
+\end{eqnarray}
+$$
+
+両辺の係数を具体的に書き下す。
+
+$$
+\begin{eqnarray}
 	\sum_{i=0}^{n}
 		a_{i}x^{i}
 	& = &
@@ -463,6 +469,65 @@ $$
 			b_{i}x^{i}
 		\sum_{i=0}^{\infty}
 			c_{-i}x^{-i}
+	\nonumber
+	\\
+	& = &
+        b_{m} c_{0} x^{m}
+        +
+        (b_{m} c_{-1} + b_{m-1} c_{0})
+            x^{m-1}
+        +
+        (b_{m} c_{-2} + b_{m-1} c_{-1} + b_{m}c_{0})
+            x^{m-2}
+    \nonumber
+    \\
+    & &
+        +
+        \cdots
+        +
+        \sum_{j=0}^{k}
+            b_{m-j} c_{k-j}
+            x^{m-k}
+        +
+        \cdots
+        +
+        \sum_{j=0}^{m}
+            b_{m-j} c_{k-j}
+            x^{m-m}
+    \nonumber
+    \\
+    & &
+        +
+        (
+            b_{m} c_{-m-1}
+            + b_{m-1} c_{-m}
+            + b_{m-2}c_{-m+1}
+            + \cdots
+            + b_{0}c_{-1}
+        )
+            x^{-1}
+        +
+        (
+            b_{m} c_{-m-2}
+            + b_{m-1} c_{-m-1}
+            + b_{m-2}c_{-m}
+            + \cdots
+            + b_{0}c_{-2}
+        )
+            x^{-2}
+    \nonumber
+    \\
+    & &
+        +
+        \cdots
+        +
+        (
+            \sum_{j=0}^{m}
+                b_{m-j}c_{-(m-j)+k}
+        )
+            x^{-k}
+        +
+        \cdots
 	\nonumber
 	\\
 	& = &
@@ -524,7 +589,8 @@ $$
 $$
 
 となる。
-順番にとくと
+順番にとくと$x^{n+1}$から$x^{m}$までの係数は全て0である。
+よって
 
 $$
 \begin{eqnarray}
@@ -554,7 +620,7 @@ $$
 	\\
 	0	
 	& = &
-		b_{m}c_{-m + n + 1)}
+		b_{m}c_{-m + n + 1}
 		+
 		b_{m-1}c_{-m + n}
 		+
@@ -621,6 +687,19 @@ $$
 		b_{n-1}c_{0}
 	\nonumber	
 	\\
+	a_{n-2}
+	& = &
+		b_{m}c_{-m + n - 2}
+		+
+		b_{m-1}c_{-m + n - 1}
+		+
+		b_{m-2}c_{-m + n}
+        +
+		\cdots
+		+
+		b_{n-2}c_{0}
+	\nonumber	
+	\\
 	& \vdots &
 	\nonumber	
 	\\
@@ -652,7 +731,7 @@ $$
 \end{eqnarray}
 $$
 
-より
+より、
 
 $$
 \begin{eqnarray}
@@ -672,6 +751,18 @@ $$
 			a_{n-1}
 			-
 			b_{m-1}c_{-m + n}
+		\right)
+	\nonumber	
+	\\
+	c_{-m + n - 2}
+	& = &
+		\frac{1}{b_{m}}
+		\left(
+			a_{n-2}
+			-
+			b_{m-1}c_{-m + n - 1}
+            -
+			b_{m-2}c_{-m + n}
 		\right)
 	\nonumber	
 	\\
