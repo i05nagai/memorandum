@@ -294,6 +294,10 @@ werckerのapplicationは、GithubやBitBucketのrepositoryからソースをchec
 defaultではorganizationの中で、werkcerのapplicationを作成したuserが選ばれる。
 当然privateのrepositoryにアクセスする場合は、APIの使用者はそのrepositoryへのアクセス権限を持っている必要がある。
 
+### People and teams
+* [People and Teams](http://devcenter.wercker.com/docs/organizations/people-and-teams)
+
+
 ## Notification
 
 ### Slack
