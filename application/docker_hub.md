@@ -25,6 +25,19 @@ Githubのrepositoryからgit hubのpushを起点に自動ビルドできる。
     * public/private
     * 100文字の簡単な説明
 
+* [Configure automated builds on Docker Hub | Docker Documentation](https://docs.docker.com/docker-hub/builds/#limitations)
+
+automted buildでTagをつける方法。
+git tagかbranchでbuildを制御できる。
+git tag名かbranch名にdockerのtag名を付与して、build時に自動でdocker imageにtagを付与することができる。
+
+`BuildSettings`からTypeをtagにして、設定を追加すればcommitにつけたtagがdocker imageのtagになる。
+
+```
+git tag -a hoge-1.1.1
+git push hoge-1.1.1
+```
+
 
 ## Reference
 
