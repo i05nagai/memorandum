@@ -522,5 +522,24 @@ p = subprocess.Popen(
 result = p.communicate(input=input_str)[0]
 ```
 
+## paser commandline option
+* [16.4. argparse — コマンドラインオプション、引数、サブコマンドのパーサー — Python 3.6.1 ドキュメント](https://docs.python.jp/3/library/argparse.html)
 
-## 
+### add_argument
+
+```python
+parser.add_argument('bar', nargs=1)
+parser.add_argument('--foo', nargs='?', default='foo val')
+```
+
+* default
+    * コマンドライン引数がない場合は、`default`の値が利用される
+* const
+    * オプション引数が指定されたがコマンドライン引数がない場合は、`const`の値が利用される
+    * nargsが`?`の場合に使う
+* nargs
+    * 数字をかけば引数の数で、変数はlistでかえる
+    * `?`
+        * オプション引数
+    * `+`
+    * `*`
