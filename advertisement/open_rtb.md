@@ -316,31 +316,127 @@ battr | integer array | |
 ext | object | | extension
 
 ### 3.2.10 Format
+表示可能なサイズを表現。
+Flex Ad parametersでbanner impressionを表現できる。
+`w`/`h`かFlex Adの`wration`/`hration`/`wmin`の形式の指定が可能
 
+Attribute | Type | | Description
+-- | -- | -- |
+w | integer | | deviceに依存しないwitdhを pixelで
+h | integer | | heightに依存しないheightを pixelで
+wratio | integer | | 比率でのwidth
+hratio | integer | | 比率でのheight
+wmin | integer | | deviceに依存しないminimum widthをpixelで指定
+ext | object | | extension
 
 ### 3.2.11 Pmp
+buyerとsellerの間のdirect dealのためのprivate marketplace.
+実際のdealは`Deal` objectで表現。
+Seciton 7.3で詳しく述べる。
+
+Attribute | Type | | Description
+-- | -- | -- |
+private_auction | integer | default 0 | 0は全てのbidを許可、1はbidは一部のseatに制限されている
+deals | object array | `Deal` objectの配列。これで指定したdealのみ取引の対象
+ext | object | | extension
 
 ### 3.2.12 Deal
+buyerとsellerの間ので事前に成立しているdealを表す。
+`Pmp`が存在する場合は、このobjectで表現されたDealに取引が制限される。
+Seciton 7.3を見る。
+
+Attribute | Type | | Description
+-- | -- | -- |
+id | string | required | direct dealのID
+bidfloor | float | default 0 | floor priceをCPMで表現する
+bidfloorcur | string | default 0 | ISO-4217でbidfloorの通貨を指定する
+at | integer | | bid requestのauction type。1はfirst price, 2はsecond price plus, 3は`bidfloor`で取引する
+wseat | string array | | bidが許可されているbuyer seats (e.g. advertiser, agencies) のwhite list。seatのIDを記載する
+wadomain |string array | | bidが許可されるadvertiserのdomain(e.g. advertiser.com)m
+ext | object | | extension
 
 ### 3.2.13 Site
+広告の表示先がwebsiteの場合に使用する。
+`Site`か`App`の一方を指定する。
+少なくともsite IDかpage URLを指定するのが望ましいが、強く推奨されているわけではない。
+
+Attribute | Type | | Description
+-- | -- | -- |
+id | string | recommended |　exchangeが指定するsite ID
+name | string | | website name
+domain | string | | websiteのdomain (e.g. mysite.foo.com)
+cat | string array | | steのcategoryをIAB content categoryの配列として表現。List 5.1
+sectioncat | | | siteのsectionのcategoryをIAB content categoryの配列として表現
+pagecat | string array | | siteのpageのcategoryをIAB content categoryの配列として表現
+page | string | | impressionが表示されるsiteのURL
+ref | string | | impressionが発生したpageへのreferrer
+search | string | | impressionが発生したpageへの検索ワード
+mobile | integer | | mobile deviceに対してsiteが最適化されるか。0は最適化されない、1はされる。
+privacypolicy | integer | | siteがprivacypolicyがある場合は、1でない場合は0
+publisher | object | | siteの`Publisher`の詳細
+content | object | | site内のcontentの詳細
+keywords | string | | siteを表すKeywordをcomma区切りで表現
+ext | object | | extension
 
 ### 3.2.14 App
+広告の表示先がappの場合に使用する。
+`Site`か`App`の一方を指定する。
+App IDかbundleの一方を提供するのが望ましいが、強く推奨されてはいない。
+
+Attribute | Type | | Description
+-- | -- | -- |
+id | string | recommended | 
+name |string | |
+bundle | string | |
+domain | string | |
+storeurl | | |
+cat | string array | |
+sectioncat | string array | |
+pagecat | string array | |
+ver | string | |
+privacypolicy | integer | |
+paid | integer | | 
+
 
 ### 3.2.15 Publisher
 
+Attribute | Type | | Description
+-- | -- | -- |
+
 ### 3.2.16 Content
+
+Attribute | Type | | Description
+-- | -- | -- |
 
 ### 3.2.17 Producer
 
+Attribute | Type | | Description
+-- | -- | -- |
+
 ### 3.2.18 Device
+
+Attribute | Type | | Description
+-- | -- | -- |
 
 ### 3.2.19 Geo
 
+Attribute | Type | | Description
+-- | -- | -- |
+
 ### 3.2.20 User
+
+Attribute | Type | | Description
+-- | -- | -- |
 
 ### 3.2.21 Data
 
+Attribute | Type | | Description
+-- | -- | -- |
+
 ### 3.2.22 Segment
+
+Attribute | Type | | Description
+-- | -- | -- |
 
 # 4. Bid Response Specification
 
@@ -460,7 +556,6 @@ Value | Description
 4 | VAST 1.0 Wrapper
 5 | VAST 2.0 Wrapper
 6 | VAST 3.0 Wrapper
-
 
 ## 5.9 Video Placement Types
 
