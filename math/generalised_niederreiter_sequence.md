@@ -10,6 +10,8 @@ title: Generalized Niederreiter Sequence
     * 生成する点列の次元
 * $m$
     * $i$番目の点の$b$進展開した時の桁数
+    * 生成する点列の最大の数を$b$進展開したときの桁数とする
+    * 多くの場合は、32bitの整数が点の最大の数なので、$m=32, 64$となる
 * $j = 1, \ldots, d$
     * 次元を表す
 * $$i = (i_{m}, \ldots, i_{1})_{b}$$,
@@ -44,7 +46,6 @@ $$
         a^{j}_{i, k}(r)x^{-r-1}
 \end{equation}
 $$
-
 
 $$
 \begin{eqnarray}
@@ -86,7 +87,96 @@ $$
 $$
 
 が成り立つ。
-行列表現は
+$n$の$b$進数表現を$$n = (\cdots, n_{m} \cdots n_{1})_{b}$$とすれば、$n$番目の点の$j$次元目の値$$x_{n}^{(j)}$$を以下で定めたものが、Generalized Niederreiter Sequenceとなる。
+
+$$
+\begin{eqnarray}
+    \left(
+        \begin{array}{c}
+            x_{n, 1}^{(j)} \\
+            x_{n, 2}^{(j)} \\
+            \vdots
+        \end{array}
+    \right)
+    & := &
+        \left(
+            \begin{array}{cccccc}
+                c_{1, 1}^{(j)}
+                &
+                    c_{1, 2}^{(j)}
+                &
+                    \cdots
+                &
+                    c_{1, m}^{(j)}
+                &
+                    \cdots
+                \\
+                c_{2, 1}^{(j)}
+                &
+                    c_{2, 2}^{(j)}
+                &
+                    \cdots
+                &
+                    c_{2, m}^{(j)}
+                &
+                    \cdots
+                \\
+                \vdots
+                &
+
+                &
+                    \ddots
+                &
+                    \vdots
+                &
+                    \vdots
+                \\
+                c_{i, 1}^{(j)}
+                &
+                    c_{i, 2}^{(j)}
+                &
+                    \cdots
+                &
+                    c_{i, m}^{(j)}
+                &
+                    \cdots
+                \\
+                \vdots
+                &
+                    \vdots
+                &
+                    \vdots
+                &
+                    \vdots
+                &
+                    \vdots
+            \end{array}
+        \right)
+        \left(
+            \begin{array}{c}
+                n_{1} \\
+                \vdots \\
+                n_{m} \\
+                \vdots
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    x_{n}^{(j)}
+    & := &
+        \sum_{i=1}^{\infty}
+            \frac{x_{n, i}^{(j)}}{b^{i}}
+    \label{def_generalized_niederreiter_sequence_n_point_j_dim}
+\end{eqnarray}
+$$
+
+実用的には、$$c_{i, r}^{j}$$の$i, r$は$m$まで考えれば十分である。
+$r$については、$n$は32bitないし、64bitの整数として表現されるからその$b$進表現は、$b=2$で高々64で$b$が大きくなればもっと小さくなる。
+また、$i$については、多くのコンピュータで浮動小数点数は32bitないし64bitで、仮数部についてはそれぞれ24 bit, 53bitであるから$$\eqref{def_generalized_niederreiter_sequence_n_point_j_dim}$$の$i$は$b=2$で高々53で十分である。
+$i < r = m$として考えれば十分だが、計算の簡便さのため、両方$m$と同じにとり、正方行列とする場合もある。
+以下では記述の簡単さのために、正方行列として議論する。
+
+これをふまえて、$i, r$を$m$に制限すると$n$の$b$進数表現を$$n = (n_{m} \cdots n_{1})_{b} \in \mathbb{F}_{b}^{m}$$となり、行列表現は
 
 $$
     C_{j}
@@ -117,107 +207,101 @@ $$
             &
                 \vdots
             \\
-            c_{i, 1}^{(j)}
+            c_{m, 1}^{(j)}
             &
-                c_{i, 2}^{(j)}
+                c_{m, 2}^{(j)}
             &
                 \cdots
             &
-                c_{i, m}^{(j)}
-            \\
-            \vdots
-            &
-                \vdots
-            &
-                \vdots
-            &
-                \vdots
+                c_{m, m}^{(j)}
         \end{array}
     \right)
 $$
 
 である。
-$i$の$b$進数表現を$$i = (i_{m} \cdots i_{1})_{b}$$とすれば
-
-$$
-    \gamma_{b,m}(i)
-    :=
-    \left(
-        \begin{array}{c}
-            i_{1} \\
-            \vdots \\
-            i_{m}
-        \end{array}
-    \right)
-$$
 
 $$
 \begin{eqnarray}
-    x_{j}^{(i)}
-    :=
-    C_{j}
     \left(
         \begin{array}{c}
-            i_{1} \\
+            x_{n, 1}^{(j)} \\
+            x_{n, 2}^{(j)} \\
             \vdots \\
-            i_{m}
+            x_{n, m}^{(j)}
         \end{array}
     \right)
+    & := &
+        C_{j}
+        \left(
+            \begin{array}{c}
+                n_{1} \\
+                \vdots \\
+                n_{m}
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    x_{n}^{(j)}
+    & := &
+        \sum_{i=1}^{m}
+            \frac{x_{n, i}^{(j)}}{b^{i}}
 \end{eqnarray}
 $$
 
-として、$i$番目の$j$次元目の点列を生成する。
+として、$n$番目の$j$次元目の点$$x_{n}^{(j)}$$を生成する。
+
+以下の議論のために、$n$の$b$進表現を$$\mathbb{F}_{b}^{m}$$にmapする関数を$$\gamma_{b, m}$$として定義する。
 さて、ここで次の写像$$\mathfrak{G}: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{F}_{b}^{m}$$が存在するとしよう。
 
 $$
 \begin{eqnarray}
-    \mathfrak{G}(\gamma_{b,m}(i + 1))
+    \mathfrak{G}(\gamma_{b,m}(n + 1))
     & = &
-        \mathfrak{G}(\gamma_{b,m}(i))
+        \mathfrak{G}(\gamma_{b,m}(n))
         +
-        a(i)
-        \mathbf{e}_{l(i)}
+        a(n)
+        \mathbf{e}_{l(n)}
     \nonumber
     \\
     \{
-        \mathfrak{G}(\gamma_{b,m}(i))
-    \}_{i = 0, \ldots, b^{m} - 1}
+        \mathfrak{G}(\gamma_{b,m}(n))
+    \}_{n = 0, \ldots, b^{m} - 1}
     & = &
         \{
-            \gamma_{b,m}(i)
-        \}_{i = 0, \ldots, b^{m} - 1}
+            \gamma_{b,m}(n)
+        \}_{n = 0, \ldots, b^{m} - 1}
     \nonumber
 \end{eqnarray}
 $$
 
-ここで、$$l(i)$$は$i$に依存した添字で、$$\mathbf{e}_{l(i)}$$は単位ベクトル、$$a(i) \in \mathbb{F}_{b}$$である。
+ここで、$$l(n)$$は$n$に依存した添字で、$$\mathbf{e}_{l(n)}$$は単位ベクトル、$$a(n) \in \mathbb{F}_{b}$$である。
 よって、
 
 $$
 \begin{eqnarray}
     C_{j}
-    \mathfrak{G}(\gamma_{b,m}(i + 1))
+    \mathfrak{G}(\gamma_{b,m}(n + 1))
     & = &
         C_{j}
-        \mathfrak{G}(\gamma_{b,m}(i))
+        \mathfrak{G}(\gamma_{b,m}(n))
         +
-        a(i)
-        c^{(j)}_{\cdot, l(i)}
+        a(n)
+        c^{(j)}_{\cdot, l(n)}
     \nonumber    
     \\
     \{
         C_{j}
-        \mathfrak{G}(\gamma_{b,m}(i))
-    \}_{i = 0, \ldots, b^{m} - 1}
+        \mathfrak{G}(\gamma_{b,m}(n))
+    \}_{n = 0, \ldots, b^{m} - 1}
     & = &
         \{
-            x_{i}
-        \}_{i = 0, \ldots, b^{m} - 1}
+            x_{n}
+        \}_{n = 0, \ldots, b^{m} - 1}
     \nonumber
 \end{eqnarray}
 $$
 
-$$c^{(j)}_{\cdot, l(i)}$$は$C_{j}$の$l(i)$列目の列ベクトルである。
+$$c^{(j)}_{\cdot, l(n)}$$は$C_{j}$の$l(n)$列目の列ベクトルである。
 よって、$b^{m}-1$個の点を使う場合は、一つ前の点と生成行列の列ベクトルの和で計算できる。
 $b=2$の時は、Gray codeは$\mathfrak{G}$の性質を満たす。
 一般の場合は、Gray codeの性質を一般化したGray codeとして$\mathfrak{G}$をとることができる。
@@ -254,14 +338,14 @@ $$
 $$
 
 * $$\hat{\phi}: \mathbb{Z}_{b} \rightarrow \mathbb{F}_{b}$$,
-	* 全単射
+    * 全単射
     * 整数環と有限体の対応
     * 整数環の元を整数と見て、$p$進展開
 
 $$
 \begin{eqnarray}
-	n
-	& := &
+    n
+    & := &
         \sum_{k=0}^{N-1}
             a_{k} p^{k}
         \in \mathbb{Z}_{b},
@@ -274,22 +358,22 @@ $$
         \{0, \ldots, p-1 \},
     \nonumber
     \\
-	\hat{\phi}(n)
-	& := &
+    \hat{\phi}(n)
+    & := &
         \sum_{k=0}^{N-1}
             a_{k}x^{k}
     \label{def_phi}
 \end{eqnarray}
 $$
 
-要素ごとに$\hat{\phi}$を作用させた写像、$$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$にも同じ記号を用いる。
+要素ごとに$\hat{\phi}$を作用させた写像を$$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$とする。
 
 * $$\Phi: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * 非負整数の$b$進数展開
 
 $$
 \begin{eqnarray}
-	n
+    n
     & := &
         \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge 0},
     \nonumber
@@ -299,8 +383,8 @@ $$
         \{0, \ldots, b-1 \},
     \nonumber
     \\
-	\Phi(n)
-	& := &
+    \Phi(n)
+    & := &
         (a_{0}, a_{1}, \ldots, a_{N-1}, 0, \ldots)^{\mathrm{T}}
     \label{def_Phi}
 \end{eqnarray}
@@ -478,7 +562,7 @@ $$
 \end{eqnarray}
 $$
 
-よって、成り立つ。 
+よって、成り立つ。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -490,12 +574,12 @@ $$
 \begin{equation}
     \mathbf{y}
     :=
-	(y_{0}, y_{1}, \ldots)^{\mathrm{T}}
-	\in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}},
-	\
-	G_{b}(\mathbf{y})
-	:=
-	(y_{0}-y_{1}, y_{1} - y_{2}, \ldots)^{\mathrm{T}}
+    (y_{0}, y_{1}, \ldots)^{\mathrm{T}}
+    \in \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}},
+    \
+    G_{b}(\mathbf{y})
+    :=
+    (y_{0}-y_{1}, y_{1} - y_{2}, \ldots)^{\mathrm{T}}
     \label{def_gray_code}
 \end{equation}
 $$
@@ -507,27 +591,43 @@ $$
 
 ### Remarks.
 $b = 2$の時、通常の意味のGray codeに一致する。
-また、$G$は和を保存する。 
+また、$G$は和を保存する。
 
 $$
 \begin{eqnarray}
-	v_{1} + v_{2}
-	& = &
-		(y_{1,0}, y_{1,1}, \ldots)^{\mathrm{T}}
-		+
-		(y_{2,0}, y_{2,1}, \ldots)^{\mathrm{T}}
-	\nonumber
-	\\
-	& := &
-		(y_{1,0}+y_{2,0}, y_{1,1}+y_{2,1}, \ldots)^{\mathrm{T}}
-	\nonumber
-	\\
-	G(v_{1} + v_{2})
-	& = &
-		G(v_{1})
-		+
-		G(v_{2})
-	\nonumber
+    v_{1} + v_{2}
+    & = &
+        (y_{1,0}, y_{1,1}, \ldots)^{\mathrm{T}}
+        +
+        (y_{2,0}, y_{2,1}, \ldots)^{\mathrm{T}}
+    \nonumber
+    \\
+    & := &
+        (y_{1,0}+y_{2,0}, y_{1,1}+y_{2,1}, \ldots)^{\mathrm{T}}
+    \nonumber
+    \\
+    G(v_{1}) + G(v_{2})
+    & = &
+        (y_{1,0} - y_{1, 1}, y_{1,1} - y_{1, 2}, \ldots)^{\mathrm{T}}
+        +
+        (y_{2,0} - y_{2, 1}, y_{2,1} - y_{1, 2}, \ldots)^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        \left(
+            y_{1,0} + y_{2,0}
+            -
+            (y_{1, 1} + y_{2, 1}),
+            y_{1,1} + y_{2,1}
+            -
+            (y_{1, 2} + y_{1, 2}),
+            \cdots
+        \right)^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        G(v_{1} + v_{2})
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -539,21 +639,38 @@ $$
     (0, \ldots, 0, \stackrel{k}{\stackrel{\vee}{1}}, 0, \ldots)
 $$
 
-とすると、
+とすると、$-1 = b - 1 (\mathrm{mod}\ b)$より
 
 $$
-    G(e_{k})
-    =
-    (
-        0,
-        \ldots,
-        0,
-        \stackrel{k-1}{\stackrel{\vee}{-1}},
-        \stackrel{k}{\stackrel{\vee}{1}},
-        0,
-        \ldots
-    )
+\begin{eqnarray}
+    G(\mathbf{e}_{k})
+    & = &
+        (
+            0,
+            \ldots,
+            0,
+            \stackrel{k-1}{\stackrel{\vee}{-1}},
+            \stackrel{k}{\stackrel{\vee}{1}},
+            0,
+            \ldots
+        )
+    \nonumber
+    \\
+    & = &
+        (
+            0,
+            \ldots,
+            0,
+            \stackrel{k-1}{\stackrel{\vee}{b - 1}},
+            \stackrel{k}{\stackrel{\vee}{1}},
+            0,
+            \ldots
+        )
+    \nonumber
+\end{eqnarray}
 $$
+
+である。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
