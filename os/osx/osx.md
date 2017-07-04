@@ -1,5 +1,23 @@
 # osx
 
+## OS X で Shift+Space で入力ソースを切り替える方法
+* [OS X で Shift+Space で入力ソースを切り替える方法 | Carpe Diem](https://www.sssg.org/blogs/naoya/archives/2579)
+* [Defaults & symbolichotkeys in Mac OS X - krypted.com](http://krypted.com/mac-os-x/defaults-symbolichotkeys/)
+
+xcodeが必要。
+
+```
+open ~/Library/Preferences/com.apple.symbolichotkeys.plist
+```
+
+1. 61 > value > parameters > item 2 の値を 1572864 を Shift のキーコードである 131072 に変更します
+2. 60 > value > parameters > item 2 の値を 1048576 を Option-Shift キーの値である 655360 に変更します
+3. 保存して再起動する
+
+System Preferences->Keyboard->Shortcutsの一覧がこのファイルに記録されている。
+直にshort cut keyを書き換えることで、強引にショートカットとしてShiftを割り当てている。
+
+
 ## 外付けドライブへの書き込み
 ### 事前設定
 `/sbin`のMountを書き換えるので、事前にrootユーザをONにする。
