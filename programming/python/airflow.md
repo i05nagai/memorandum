@@ -365,6 +365,44 @@ airflow.DAG(schedule_interval=@hourly)
     * Web UIからも設定可能
     * operatorのpool引数で、operatorの所属するpoolを指定する
         * 何も指定しない場合はdefault poolに入る
+* schedule_interval
+    * 実行間隔
+* execution_date
+    * taskを実行した日、base_dateが`2017-07-01`でschedule_intervalが`1 day`の場合で、scheduleをONにしたのが`2017-07-05`の場合は、DAGは5回実行される。このときのexecution_dateは
+        * `2017-07-01`
+        * `2017-07-02`
+        * `2017-07-03`
+        * `2017-07-04`
+        * `2017-07-05`
+* dagのstart_dateとend_date
+    * 有効期間と考えて良い
+    * この期間　
+* Dag Runs
+    * 指定したexecution dateでdagを実行する
+    * start_dateを指定できるが
+
+DAG Runsで実験
+
+* 条件
+    * execution_date
+        * 2017-07-02
+    * start_date
+        * 2017-07-02
+    * end_date
+        * 2017-07-04
+* result
+    * 2017-07-02がexecution date
+    * 1回実行される
+* 条件
+    * execution_date
+        * blank
+    * start_date
+        * 2017-07-02
+    * end_date
+        * 2017-07-04
+* result
+    * createした日時がexecution dateになる
+    * start_date, ednd_dateの間であれば1回実行される
 
 ## Scheduling spark jobs
 * [Scheduling Spark jobs with Airflow – Insight Data](https://blog.insightdatascience.com/scheduling-spark-jobs-with-airflow-4c66f3144660)
@@ -546,11 +584,46 @@ BaseOperatorで定義されている共通の引数
     * one_success: 依存しているtaskが全1つでも成功
     * one_failed: 依存しているtaskが全1つでもfailed
 
+### Macros
+liquid templateで利用できるMacroについて。
+
+Airflowがdefaultでtaskの実行時に渡すもの。
+
+* `{{ ds }}`
+    * `YYYY-MM-DD`形式のexecution date
+
 ## Web UI
 
 <img src="./image/airflow_05_dags.png" width="50%">
 
 <img src="./image/airflow_02_tree_view.png" width="50%">
+
+## docker
+* [puckel/docker-airflow: Docker Apache Airflow](https://github.com/puckel/docker-airflow)
+
+officialではないが、docker imageが提供されている。
+
+```
+docker pull puckel/docker-airflow
+```
+
+`CeleryExecutor`で実行したい場合は、以下を実行する。
+
+```
+docker-compose -f docker-compose-CeleryExecutor.yml up -d
+```
+
+自分のdagを登録したい場合は、docker-compose fileを編集する。
+また、defaultのexampleが不要の場合は、yaml内のwebserverのevironemtにある`LOAD_EX=n`とする。
+
+```yaml
+- volume:
+  - /path/to/local/dags:/usr/local/airflow/airflow/dags
+```
+
+必要なpython packageがある場合は、`requirements.txt`に必要なpackageを記載して、docker内の`/requirements.txt`にmountすれば良い。
+docker-composeの`volumes`ではなぜかファイルがディレクトリとしてマウントされてしまう場合がある。
+その場合は、`Dockerfile`を直接編集して、`COPY requirements.txt /requirements.txt`をつけてbuildする。
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
