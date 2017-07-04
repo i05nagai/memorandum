@@ -287,3 +287,27 @@ git cherry-pick <commit>...
 
 ## hooks
 
+## git tag
+タグの一覧表示
+
+```
+git tag
+```
+
+特定のpatternのtagを見たい場合は`-l` `--list`をつける。
+
+```
+git tag -l 'v1.4.2.*'
+```
+
+タグをつける場合は、`-a`でタグの名前をつけて、`-m`でタグのメッセージをつける。
+
+```
+git tag -a v1.4 -m 'my version 1.4'
+```
+
+タグのついたコミッとを見る。
+
+```
+git show v1.4
+```
