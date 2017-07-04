@@ -69,144 +69,23 @@ $$
 \end{eqnarray}
 $$
 
-ここで、$$Q(i, j) \in \mathbb{Z}_{\ge 0}$$と$$0 \le k(i, j) < s_{j}$$は$i ,j$を決めるごとに以下を満たすように決める。
-
-$$
-\begin{eqnarray}
-    & &
-        i - 1 = Q(i, j) s_{j} + k(i, j),
-    \nonumber
-    \\
-    & \Leftrightarrow &
-        Q(i, j)
-        =
-        \frac{
-            i - 1 - k(i, j)
-        }{
-            s_{j}
-        }
-    \label{equation_of_q}
-    \\
-    & &
-        0 \le k(i, j) < s_{j}
-    \nonumber
-\end{eqnarray}
-$$
-
-具体的には、例えば
-
-* $d = 3$
-* $s_{1} = 2$
-* $s_{2} = 3$
-* $s_{3} = 4$
-
-とすれば
-
-
-$$
-\begin{array}{cccc}
-    i-1 & j & s_{j} & k(i,j) & Q(i,j)
-    \\
-    \hline
-    0   & 1 & 2     & 0      & 0
-    \\
-    0   & 2 & 3     & 0      & 0
-    \\
-    0   & 3 & 4     & 0      & 0
-    \\
-    \hline
-    1   & 1 & 2     & 1      & 0
-    \\
-    1   & 2 & 3     & 1      & 0
-    \\
-    1   & 3 & 4     & 1      & 0
-    \\
-    \hline
-    2   & 1 & 2     & 0      & 1
-    \\
-    2   & 2 & 3     & 2      & 0
-    \\
-    2   & 3 & 4     & 2      & 0
-    \\
-    \hline
-    3   & 1 & 2     & 1      & 1
-    \\
-    3   & 2 & 3     & 0      & 1
-    \\
-    3   & 3 & 4     & 3      & 0
-    \\
-    \hline
-    4   & 1 & 2     & 0      & 2
-    \\
-    4   & 2 & 3     & 1      & 1
-    \\
-    4   & 3 & 4     & 0      & 1
-    \\
-    \hline
-    5   & 1 & 2     & 0      & 2
-    \\
-    5   & 2 & 3     & 1      & 1
-    \\
-    5   & 3 & 4     & 1      & 1
-    \\
-    \hline
-    6   & 1 & 2     & 1      & 2
-    \\
-    6   & 2 & 3     & 0      & 2
-    \\
-    6   & 3 & 4     & 2      & 1
-\end{array}
-$$
-
-である。
-$i-1$以下で、$i-1$に最も近い$s_{j}$の倍数になるように、$i - 1 - k(i,j)$を定めれば良いことが分かる。
+ここで、$$Q(i, j) \in \mathbb{Z}_{\ge 0}$$は$j - 1$を$$s_{j}$$で割った商で、$$0 \le k(i, j) < s_{j}$$はその余りである。
 つまり、
 
 $$
 \begin{eqnarray}
-    e
-    & := &
-        \max
-        \left\{
-            e^{\prime} \in \mathbb{Z}_{\ge 0}
-            \mid
-            i - 1 \ge e^{\prime} s_{j},
-        \right\},
-    \nonumber
-    \\
-    k(i, j)
+    i - 1
     & = &
-        (i - 1) - e s_{j}
-    \nonumber
-    \\
-    Q(i, j)
-    & = &
-        e
+        Q(i, j)
+            s_{j}
+        +
+        k(i, j),
+    \quad
+    0 \le k(i, j) < s_{j}
 \end{eqnarray}
 $$
 
-で、$k(i, j)$を求め、$Q(i, j)$を$$\eqref{equation_of_q}$$で計算すれば良い。
-上の表現は以下と等価である。
-
-$$
-\begin{eqnarray}
-    Q(i, j)
-    & = &
-        \left\lfloor
-            \frac{
-                i - 1
-            }{
-                s_{j}
-            }
-        \right\rfloor
-    \\
-    k(i, j)
-    & = &
-        (i - 1) - Q(i, j)s_{j}
-    \nonumber
-\end{eqnarray}
-$$
-
+が成り立つ。
 行列表現は
 
 $$
@@ -257,6 +136,7 @@ $$
     \right)
 $$
 
+である。
 $i$の$b$進数表現を$$i = (i_{m} \cdots i_{1})_{b}$$とすれば
 
 $$
