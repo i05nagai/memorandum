@@ -543,3 +543,10 @@ parser.add_argument('--foo', nargs='?', default='foo val')
         * オプション引数
     * `+`
     * `*`
+
+## hash
+pythonの2.7系はid(object) / 16を返すらしい。
+idはobjectのアドレスを返す。
+
+* [hash function in python - Stack Overflow](https://stackoverflow.com/questions/17192418/hash-function-in-python)
+* [2. Built-in Functions — Python 2.7.13 documentation](https://docs.python.org/2/library/functions.html#id)
