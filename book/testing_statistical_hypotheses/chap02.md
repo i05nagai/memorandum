@@ -9,7 +9,7 @@ book_chapter: 2
 * $$(\mathcal{T}, \mathcal{B})$$,
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
     * 可測写像
-    * この本では、statisticsという
+    * この本では、statistic(統計量)という
 
 $$
 \begin{equation}
@@ -126,8 +126,6 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## 2.4 Conditional Expectation and Probability
-
-
 
 * $P$
     * probability measure over $(\mathcal{X}, \mathcal{A})$
@@ -271,6 +269,284 @@ $$
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+### Lemma 2.4.1 
+* $$T$$,
+* $f, g$
+    * integrable 
+
+このとき以下が成立.
+
+1.
+
+$$
+    \mathrm{E}
+    \left[
+        a f(X) + bg(X)
+        \mid
+        t
+    \right]
+    =
+    a
+        \mathrm{E}
+        \left[
+            f(X)
+            \mid
+            t
+        \right]
+    +
+    b
+        \mathrm{E}
+        \left[
+            g(X)
+            \mid
+            t
+        \right]
+$$
+
+2.
+
+$$
+    \mathrm{E}
+    \left[
+        h(X) f(X)
+        \mid
+        t
+    \right]
+    =
+    h(t)
+        \mathrm{E}
+        \left[
+            f(X)
+            \mid
+            t
+        \right]
+$$
+
+3.
+
+$$
+    a \le f(x) \le b
+    \Rightarrow
+    a
+        \le
+        \mathrm{E}
+        \left[
+            f(X)
+            \mid
+            t
+        \right]
+        \le
+        b
+$$
+
+4.
+
+$$
+    |f_{n}|
+    \le
+    g,
+    f_{n}(x) \rightarrow f(x)\ (n \rightarrow \infty)
+    \Rightarrow
+    \mathrm{E}
+    \left[
+        f_{n}(X)
+        \mid
+        t
+    \right]
+    \rightarrow
+    \mathrm{E}
+    \left[
+        f(X)
+        \mid
+        t
+    \right]
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+Notationについての注意。
+
+$$
+    \mathrm{E}^{P^{X}}
+    \left[
+        af + bg
+    \right]
+    =
+    \int_{\mathcal{X}}
+        af(x) + bg(x)
+    \ dP^{X}(\omega)
+$$
+
+$$
+    \mathrm{E}
+    \left[
+        af(X) + bg(X)
+    \right]
+    =
+    \int_{\Omega}
+        a f(X(\omega)) + b g(X(\omega))
+    \ dP(\omega)
+$$
+
+### Lemma 2.4.2
+$$ \mathrm{E} \left[ |f(X)| \right] < \infty $$, で$$g(t):= \mathrm{E} \left[ \left.  f(X) \right| t \right]$$とすると
+
+$$
+    \mathrm{E}
+    \left[
+        f(X)
+    \right]
+    =
+    \mathrm{E}
+    \left[
+        g(T)
+    \right]
+$$
+
+である。
+つまり、conditional expectationの期待値と一致する.
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+Notationについて、
+
+$$
+    \mathrm{E}^{P^{X}}
+    \left[
+        f
+    \right]
+    =
+    \mathrm{E}^{P^{X}}
+    \left[
+        g(T)
+    \right]
+$$
+
+である。
+
+$$
+\begin{equation}
+    P^{X}(A \mid T = t)
+    :=
+    \mathrm{E}^{P^{X}}
+    \left[
+        1_{A}(\cdot)
+        \mid
+        T = t
+    \right]
+    \label{chap02_22}
+\end{equation}
+$$
+
+
+## 2.5 Conditional Probability Distribution
+* $\mathcal{X}$
+    * Euclidian spaceとする
+* $\mathcal{A}$
+    * Borel sets 
+
+### Theorem 2.5.1
+* $\mathcal{X}$
+    * Euclidian
+
+このとき、$\forall t \in $について、$P(\cdot \mid t): \mathcal{A} \rightarrow [0,1]$が存在して、$P(\cdot \mid t)$は$$(\mathcal{X}, \mathcal{A})$$l上の確率測度になる
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Thereom 2.5.2
+* $X$
+    * vector valued random variable
+* $$\mathrm{E} \left[ f(X) \right] < \infty $$,
+
+このとき以下が成り立つ。
+
+$$
+    \mathrm{E}
+    \left[
+        f(X)
+        \mid
+        t
+    \right]
+    =
+    \int
+        f(x)
+    \ d P^{X \mid t}(x)
+    \quad
+    (\mathcal{B}, P^{T})
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Theorem 2.5.3
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Lemma 2.5.1
+* $$(\mathcal{T}, \mathcal{B})$$,
+    * Euclidian Space
+* $$(\mathcal{Y}, \mathcal{C})$$,
+    * Euclidian Space
+* $$(\mathcal{X}, \mathcal{A}) := (\mathcal{T} \times \mathcal{Y}, \mathcal{B} \times \mathcal{C})$$,
+    * prodcut measure space
+* $$P_{0}^{T, Y}$$,
+    * distribution over $$(\mathcal{X}, \mathcal{A})$$
+
+ここで$$P_{1}$$が$$(\mathcal{X}, \mathcal{A})$$の分布で
+
+$$
+    dP_{1}(t, y)
+    =
+    a(y)b(t)
+    dP_{0}(t, y)
+$$
+
+が存在するとする。
+ここで、$$\forall y, a(y) > 0$$とする。
+このとき、$$P_{1}$$のもと、$T$と、$t$を与えたもとでの、$$Y$$の条件付き分布のversionは以下で与えられる。
+
+$$
+    d P_{1}^{T}(t)
+    =
+    b(t)
+    \left[
+        \int
+            a(y)
+        \ d P_{0}^{Y \mid t}(y)
+    \right]
+    d P_{0}^{T}(t)
+$$
+
+$$
+    dP_{1}^{Y \mid t}
+    =
+    \frac{
+        a(y) dP_{0}^{Y \mid t}(y)
+    }{
+        \int
+            a(y^{\prime}) 
+        \ d P_{0}^{Y \mid t}(y^{\prime})
+    }.
+$$
+
+### proof.
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
+## 2.6 Characterization of Sufficiency
+
 
 ## 2.7 Exponential Families
 
@@ -441,7 +717,7 @@ $$
 
 ### proof.
 
-
-
 <div class="QED" style="text-align: right">$\Box$</div>
+
+
 
