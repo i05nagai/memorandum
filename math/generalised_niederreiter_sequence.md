@@ -27,7 +27,6 @@ title: Generalized Niederreiter Sequence
     * $i \ge 1$, $j = 1, \ldots, d$, $0 \le l < s_{j}$,
     * $i$番目の$j$次元の点列の生成に用いる多項式 
 
-
 $$
 \begin{equation}
     1 \le j \le d,
@@ -44,6 +43,7 @@ $$
     =:
     \sum_{r=0}^{\infty}
         a^{j}_{i, k}(r)x^{-r-1}
+    \label{def_laurent_series_dvision}
 \end{equation}
 $$
 
@@ -87,6 +87,7 @@ $$
 $$
 
 が成り立つ。
+$Q, k$は多項式$$y_{i, k}^{(j)}$$の$i, k$を決めている
 $n$の$b$進数表現を$$n = (\cdots, n_{m} \cdots n_{1})_{b}$$とすれば、$n$番目の点の$j$次元目の値$$x_{n}^{(j)}$$を以下で定めたものが、Generalized Niederreiter Sequenceとなる。
 
 $$
@@ -1128,6 +1129,23 @@ Sobol sequenceはGeneralized Niederreiter Sequenceの一種とみなすことが
         * 多項式
     * 例えば$$g_{j, k}(x):= x^{s_{j} - k + 1} + \sum_{n=0}^{s_{j} - k} a_{n}x^{n}$$,
         * $$a_{n} \in \mathbb{F}_{2}$$,
+
+## degree of $p_{j}$
+実用的には、$r$は32, 64までしか有効でない。
+よって、$$\eqref{def_laurent_series_dvision}$$の係数は32, 64までしか使われない。
+もし$r$を32, 64に制限するならば、$$\eqref{def_laurent_series_dvision}$$の係数をこの範囲に収める必要がある。
+$$n := \mathrm{deg}(y_{i,k}^{(j)})$$, $$m := \deg(p_{j}(x)^{i})$$とおき、$$n < m$$とすると$$\eqref{def_laurent_series_dvision}$$の0でない係数は、$$-m + n, \ldots, -m$$の範囲にある。
+よって、$$0 \le m - n  \le m \le 32, 64$$ととる必要がある。
+
+
+$$s_{j} = \mathrm{deg}(p_{j})$$の次数がどのようとるべきかについて考える。
+$i$の最大値は24か53であるから、この範囲において$Q, k$がどのような値になるかを考える。
+$Q, k$は多項式$$y_{i, k}^{(j)}$$の$i, k$を決めている。
+
+$$
+
+$$
+
 
 ## Reference
 
