@@ -385,53 +385,185 @@ App IDかbundleの一方を提供するのが望ましいが、強く推奨さ�
 
 Attribute | Type | | Description
 -- | -- | -- |
-id | string | recommended | 
-name |string | |
-bundle | string | |
-domain | string | |
-storeurl | | |
-cat | string array | |
-sectioncat | string array | |
-pagecat | string array | |
-ver | string | |
-privacypolicy | integer | |
-paid | integer | | 
-
+id | string | recommended | exchangeごとのApp ID
+name |string | | App name. publisherが指定した別名。
+bundle | string | | Exchangeに依存しないplatformごとのapplicationの識別子。iOSはnumeric ID. Androidはbundle or package name(e.g. com.foo.mygame)
+domain | string | | appのdomai (e.g. `mygame.foo.com`)
+storeurl | string | | installされたappのApp sotreのURL. IQG 2.1に準拠。
+cat | string array | | appのIAB content categoryによるcategoryのarray. List 5.1
+sectioncat | string array | | appの現在のsectionのIAB content categoryによるcategoryのarray. List 5.1
+pagecat | string array | | appの現在のpageのIAB content categoryによるcategoryのarray. List 5.1
+ver | string | | applicationのversion
+privacypolicy | integer | | appがprivacy policyを保つ場合は1ない場合は0
+paid | integer | | appがfreeなら0, paid versionなら1
+publisher | object | | appのpublisherの詳細
+content | object | | appのcontentの詳細
+keywords | string | | appのkeywordsのcomma separetd list
+ext | object | | extension
 
 ### 3.2.15 Publisher
+広告が表示されるmedia, siteのpublisehrの情報。
+publisherは基本的にsellerになる。
 
 Attribute | Type | | Description
 -- | -- | -- |
+id | string | | Exchangeによる publisherのID
+name | string | | publisherの名前
+cat | string array | | IAB content categoryによるpublisherのcategoryのarray. List 5.1
+domain | string | | publisherの最も上位のdomain (e.g. `publisher.com`)
+ext | object | | extension
 
 ### 3.2.16 Content
+impressionが表示されるページのcontentの情報。
+contentはsyndicated/non syndicatedの両方の可能性がある。
+このobjectはimpressionの発生したcontentがsyndicated contentの場合に便利である。
+syndication methodの場合はexchangeがpageのcontentの情報を持ってない場合がある。
+iframeでvideo contentが埋め込まれている場合は、埋め込まれた先のpageの情報がない場合がある。
 
 Attribute | Type | | Description
 -- | -- | -- |
+id | string | | contentのID
+episode | integer | | episode number
+title | string | | contentのtitle。Videoの場合。Videoの場合、`Search Committee`, `A New Hope`, `Endgame`. video以外の例、`Why an Antarctic Glacier Is Melting So Quickly`.
+series | string | | contentのseries。Videoの例、`The Office`, `Star Wars`, `Arby N The Chief`, 海外のシリーズもののドラマと映画, web movie。Video以外の例、`Ecocentric` (time magazineのblogのcategory).
+season | string | | Content season. (e.g. `Season 3`)
+artist | string | | contentにcreditされたartist
+genere | string | | contentを表すgenre (e.g. rock, pop, etc)
+album | string | | contentが所属するalbum. audioの場合に利用される。
+isrc | string | | ISO-3961のInternational Standard Recording Codeの識別子。国際標準レコーディングコード。音源の識別子。
+producer | object | | contentの`Producer`の情報
+url | string | | contentのURL. buy-sideのための情報
+cat | string array | | IAB content categoryによるcontent producerのcategoryのarray. List 5.1
+prodq | integer | |  production quality. List 5.13.
+videoquality | integer | deprecated | prodqができたのでdeprecated.
+context | integer | | contentのtype. (e.g. game, video, text, etc.). List 5.18
+contentrating | string | | content rationg (e.g. MPAA(アメリカの映画協会))
+userrating | string | | contentのuser rating. (e.g. number of stars, likes, etc.)
+qagmediarating | integer | | IQG guidelineごとのmediaのrating. List 5.19.
+keywords | string | | contentのkeywordsをcomma separatedで。
+livestream | integer | | 0=not live, 1=content is live (e.g. stream, live blog)
+sourcerelationship | integer | | 0=indirect, 1=direct. ?
+len | integer | | contentの秒数。audio, videoの場合に利用。
+language | string | | ISO-639-1-alpha-2でcontentの言語を指定。
+embeddable | integer | | contentが埋め込み可能かどうか、0は埋め込み不可、1は可能
+data | object array | | 追加のcontent data. `Data` はそれぞれ別のdata souceになる
+ext | object | | extension
 
 ### 3.2.17 Producer
+adが表示されるcontentのproducerの情報。
+syndicatedの場合に有用。
+異なるpublisherで同じcontentが配布されているときに、syndicatedかどうかを識別できる。
 
 Attribute | Type | | Description
 -- | -- | -- |
+id | string | | content producerかoriginatorのID. contentがsyndicateの場合に有用。
+name | string | | content producer or originatorの名前. (e.g. `Warner Bros`)
+cat | string array | | IAB content categoryによるcontent producerのcategoryのarray. List 5.1
+domain | string | | producerの最上位のdomain. (e.g. `producer.com`)
+ext | object | | exntension
+
+catはcontentのcatとかぶるきがするけど、どうするの？
 
 ### 3.2.18 Device
+userが仕様しているdeviceについての情報。
+hardware, platform, location, carrier dataなどの情報を含む。
+mobile handoset, desktop computer, set top box, などのdeviceを表す。
 
 Attribute | Type | | Description
 -- | -- | -- |
+ua | string | recommended | Browserのuser agent
+geo | object | recommeded | `Geo` objectでuserの現在位置についての情報を記載。
+dnt | integer | recommeded | `Do not Track` flag. userのbrwoserに指定されている場合は1, 指定がない場合は0
+lmt | integer | recommeded | `Limit Ad Tracking` iOSやAndroidに埋め込まれているsignal. 0はtrackingの制限なし、1はcomercial guidelineに従う必要がある。
+ip | string | recommeded | deviceに最も近いIPv4 address.
+ipv6 | string | | deviceに最も近いIPv6 address.
+devicetype | integer | | deviceの一般的なtype. List 5.21.
+make | string | | Deviceのmake (e.g. `Apple`)
+model | string | | Device model (e.g `iPohone`)
+os | string | | Device　operating system (e.g. `iOS`)
+osv | string | | Device operating system version (e.g `3.1.2`)
+hwv | string | | deviceのhardwareのversion (e.g. `5S` for iPhone)
+h | integer | | screenの物理的な高さをpixelで。
+w | integer | | screenの物理的な長さをpixelで。
+ppi | integer | | pixcel per inch. screen sizeをppiで指定。
+pxration | float | | deviceに依存しないpixcelでの比率。
+js | integer | | JavaScriptのsupportがあるか。0はなし、1はあり
+geofetch | integer | | bannerで実行されるときにJavascriptのgeolocation APIが使えるかどうか。0は使えない、1は使える。
+flashver | string | | browserがsupportしているflashのversion.
+language | string | | ISO-639-1-alpha-2でBrowserの言語を指定。
+carrier | string | | Carrier or ISP (e.g. `VERIZON`, ベライゾン・ワイヤレスというcarrierの会社)を指定。bidderに事前に送信される名前。
+mccmnc | string | | mobileのcarrierのMCC-MNC code (e.g. `310-005`, verizon Wireless CDMA in the USA). Mobile Country Code, Mobile Network Code. 詳細はwikipediaを見ろ。MMCとMNCの間の`-`は必須。
+connectiontype | integer | | Networkのconnection type. List 5.22
+ifa | string | | advertiserにより制限されたID. Hash化してない。?
+didsha1 | string | |  SHA1でhash化したHardware device ID. (e.g. IMEI)
+didmd5 | string | | MD5でhash化したHardware device ID.
+dpidsha1 | string | | SHA1でhash化したPlatform device ID. (e.g. Android ID)
+dpidmd5 | string | | MD5でhash化したPlatform device ID. (e.g. Android ID)
+macsha1 | string | | SHA1でhash化したMAC address.
+macmd5 | string | | MD5でhash化したMAC address
+ext | object | | extension
+
+Best Practice
+
+devicemake, model, operating system, or carriesのOpen sourceのListはない。
+exchangeは商用のlistや有料のListを利用している。
+open standardのこれらのlistが利用可能になるまで、exchangeが作成したこれらのlistをあらかじめ、閲覧できるようにしておくことが強く推奨される。
+
+mobileの適切なIPの検出は単純ではない。
+送信元のIP addressを表す`x-forwarded-for` headerを調べ carrierのprivate networks (e.g. 10.x.x.x or 192.x.x.x), carrierのIP addressの範囲を調べることなどが必要。
+ExchangeはIPをbidderに提供する場合はこれらを調べ慎重に実装する必要がある。
+
+* [XFF（ X-Forwarded-For ）とは](http://www.infraexpert.com/study/loadbalancer11.html)
+
 
 ### 3.2.19 Geo
+geographic locationの情報を表示。
+`Device` objectで利用された場合は、deviceのuserの現在位置を表す。
+`User` objectで利用された場合は、 Userの活動の拠点（現在位置でなくても良い）を表す。
+`lat/lon`は`type`属性の精度を満たす場合に指定されるべきである。
 
 Attribute | Type | | Description
 -- | -- | -- |
+lat | float | | Lantitude(緯度). -90.0から90.0. 負は南.
+lon | float | | Longtitude(経度). -180.0から180.0. 負は西.
+type | integer | | location dataの情報元。`lat/lon`を指定する場合は推奨される。List 5.20
+accuracy | integer | | locationの精度。`lat/lon`が指定される場合に推奨され、`type=1`のときは、device location serviceから取得される。deviceからreportされる. OSごとのdocumentを確認する。
+lastfix | integer | | geolationが確定するまでに計測にかかった時間を秒で指定。deviceは複数の問い合わせに対応するために、locationをcacheする場合がある。
+ipservice | integer | | IPからgeolocationを特定するために利用したproviderやservice. `type=2`の場合. List 5.23
+country | string | | ISO-3166-1-alpha-3を使ったcountry code.
+region | string | | ISO-3166-2を使ったregion code. USAの場合は2-letter state code.
+regionfips104 | string | | FIPS 10-4 notationを使ったcountryのregion. NIST(アメリカ国立標準技術研究所)は2008にFIPS 10-4を利用するのをやめた。
+metro | string | | google metro code. Nielsen DMAsと同じではないが、似たもの。AppendixにcodeへのLinkがある。
+city | string | | United Nations Code for Trade & Transport Locationsを使ったcity. appendixにcodeへのlinkがある。
+zip | string | | zip or postal code.
+utcoffset | integer | | local time. UTCからの+/-の分。
+ext | object | | extension
 
 ### 3.2.20 User
+deviceのuserについての情報。
+
 
 Attribute | Type | | Description
 -- | -- | -- |
+id | string | recommeded | exchangeごとのuserのID.
+buyeruid | string | recommeded | buyerごとのuserのID. exhcnageがbuyerのために対応させたもの。`buyeruid`か`id`の少なとも一方は指定することが推奨される。
+yob | integer | recommeded | 4-digit integerでの生まれた年
+gender | string | | `M`はmale, `F`はfemail, `O`はother. 省略は不明。
+keywords | string | | keywords, interests, or intentを表すcomma separated list.
+customdata | string | | exchangeのcookieに設定されたdata. dataは、base85 cookie safe characterで、formatは何でも良い。JSON encodingはquotationをescapeしている必要がある。
+geo | object | | `Geo` object. userの活動拠点。現在位置である必要はない。
+data | object array | | 追加のuser dataを`Data` objectで表現。異なる`Data` objectは異なるdata sourceを表す。
+ext | object | | extension
+
 
 ### 3.2.21 Data
 
 Attribute | Type | | Description
 -- | -- | -- |
+id | string | |
+name | string | |
+segment | object array | |
+ext | object | | extension
 
 ### 3.2.22 Segment
 
