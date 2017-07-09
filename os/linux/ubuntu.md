@@ -77,5 +77,12 @@ sudoで求められるpasswordは、suするユーザのpasswordではなく、s
 gpasswd -a user_name sudo
 ```
 
+## apt-get
+versionを指定してinstall
+
+```
+sudo apt-get install nginx=1.8.0-1
+```
+
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)
