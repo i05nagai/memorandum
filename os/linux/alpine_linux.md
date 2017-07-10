@@ -18,10 +18,31 @@ versionを指定する
 apk add <package_name>=1.2.2
 ```
 
+cacheなしで追加。
+`rm -rf /var/cache/apk/*`と同じ。
+
+```
+apk --no-cache add
+```
+
+別名を付与してinstall.
+`<virtual_name>`で削除できる。
+
+```
+apk add --virtual <virtual_name> <package_name>
+apk del <virtual_name>
+```
+
 packageの削除
 
 ```
 apk del <package_name>
+```
+
+関連するファイルも削除。
+
+```
+apk del --purge <package_name>
 ```
 
 updateする。
