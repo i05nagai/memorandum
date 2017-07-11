@@ -106,6 +106,11 @@ sphinx-apidoc --full -o temp --separate project
 `sphinx-quickstart`コマンドでは、対話形式で必要な変数を入力し、sphinxが自動で設定ファイルなどを作成してくれる。
 基本的には、こちらを使えば良い。
 
+```
+sphinx-quickstart [options] [projectdir]
+```
+
+projectdirはdocsを生成したい場所を指定。
 
 ```
 	% cd project_root
@@ -194,3 +199,86 @@ sphinx-apidoc --full -o temp --separate project
 
 * sourceファイルと`Makefile`を分ける場合は、`sphinx-quickstart`を使う必要がある。
 * 
+
+## sphinx-build
+```
+sphinx-build [options] <sourcedir> <outdir> [filenames ...]
+```
+
+* `<sourcedir>/conf.py`を作成してbuildする
+    
+
+## Breathe
+* [GitHub - michaeljones/breathe: ReStructuredText and Sphinx bridge to Doxygen](https://github.com/michaeljones/breathe)
+
+```
+pip install breathe
+```
+
+* documentation root path:
+    * `/home/me/docproj/`
+* breathe path:
+    * `/home/me/docproj/ext/breathe/`
+* doxygen xml output:
+    * `/home/me/docproj/doxyxml/`
+
+`conf.py`を以下のように修正する。
+breathe pathを追加
+
+```python
+sys.path.append( "/home/me/docproj/ext/breathe/" )
+```
+
+extensionとしてbreatheを指定
+
+```python
+extensions = ['sphinx.ext.pngmath', 'sphinx.ext.todo', 'breathe' ]
+```
+
+breatheにprojectの情報を伝える
+
+```python
+breathe_projects = { "myproject": "/home/me/docproj/doxyxml/" }
+```
+
+defualt projectを追加
+
+```python
+breathe_default_project = "myproject"
+```
+
+doxygenのbuildを自動で行いときは、sourceファイルの場所をbraetheに知らせる必要がある。
+以下のディレクトリ構成のとき
+
+```
+/some/long/path/to/myproject/file.c
+/some/long/path/to/myproject/subfolder/otherfile.c
+```
+
+以下のように設定する。
+
+```python
+breathe_projects_source = {
+   "myprojectsource" :
+       ( "/some/long/path/to/myproject", [ "file.c", "subfolder/otherfile.c" ] )
+   }
+```
+
+### Directive
+* [Directives & Config Variables — Breathe 'latest' documentation](http://breathe.readthedocs.io/en/latest/directives.html)
+
+使えるdirective
+
+`autodoxygenfile`はdoxygenでのhtmlの設定を自動で行ってくれる。
+source fileの場所の設定が必要？
+
+```
+autodoxygenfile
+```
+
+`autodoxygenfile`はdoxygenでのhtmlの設定を自動で行ってくれる。
+source fileの場所の設定が必要？
+
+```
+autodoxygenfile
+```
