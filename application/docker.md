@@ -10,6 +10,21 @@ brew cask install docker
 インストール後に`/Applications/Docker.app`を起動すれば、daemonが起動する。
 起動後にnetworkへのアクセスの権限を要求してくるので、OSXの管理者で承認する。
 
+## Commands
+
+### docker images
+* [docker images | Docker Documentation](https://docs.docker.com/engine/reference/commandline/images/#filtering)
+
+imageの一覧を表示する
+
+* `--filter`
+    * imageのfiltering
+    * `key=value`で指定
+    * `dangling=true`
+        * `<none>`のcontainerを表示
+* `--quiet`
+    * container IDだけ表示
+
 
 ## settings
 `~/.docker/config.json`に設定をかく。

@@ -235,6 +235,28 @@ mysql -u username -p -P port -h hostname
 ### 5.6と5.7の違い
 * [第10回　yum, rpmインストールにおけるMySQL 5.6とMySQL 5.7の違い：MySQL道普請便り｜gihyo.jp … 技術評論社](http://gihyo.jp/dev/serial/01/mysql-road-construction-news/0010)
 
+## Docker
+* [library/mysql - Docker Hub](https://hub.docker.com/_/mysql/)
+
+officialのdocker imageがある。
+versinを指定して取得可能。
+
+```
+docker pull mysql:5.7.18
+```
+
+DB serverとしてのimageもあるが、mysql clientとしても使うことができる。
+
+* `some.mysql.host`
+    * serverのhost
+* `some.mysql.user`
+    * serverのuser
+
+```
+docker run -it --rm mysql:5.7.18 mysql -hsome.mysql.host -usome-mysql-user -p
+```
+
+
 
 ## Reference
 * [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)
