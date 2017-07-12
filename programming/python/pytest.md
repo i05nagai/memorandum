@@ -119,7 +119,7 @@ mypkg/
         ...
 ```
 
-importの追加のされかた。
+pytestが自動で追加するimport元ディレクトリについて。
 testを書いているpythonファイルからtest対象のmoduleをimportする必要がある。
 test対象のimportディレクトリは以下の規則で追加される。
 `module_dir/tests/test_module.py`というファイルをテストする場合
@@ -167,6 +167,13 @@ module_dir/
 
 となる。
 
+## Fixtures
+* [Pytest API and builtin fixtures — pytest documentation](https://docs.pytest.org/en/latest/builtin.html)
+
+* class FixtureRequest
+    * addfinalizer
+        * teardown methodを定義
+        * testが全て終了したときに呼ばれる
 
 ## Tips
 

@@ -163,6 +163,8 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
     * Window関数
 
 ### RDD
+以下はtransform
+
 * `map`
 * `flatMap`
 * `filter(lambda x: "" in x)`
@@ -173,6 +175,8 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 * `subtract(rdd2)`
 * `cartesian(rdd2)`
     * tupleの集合を作る
+* `glom`
+    * RDDのpartitionの内容を配列にしたRDDを生成する
 
 以下はaction
 * `reduce(lambda x, y: x + y)`
@@ -238,6 +242,28 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 ### DataFrame
 * [Spark DataframeのSample Code集 - Qiita](http://qiita.com/taka4sato/items/4ab2cf9e941599f1c0ca)
 
+* persist()
+    * actionを何度も実行するときに利用する
+    * DISK_ONLY
+        * ディスクのみに格納
+        * シリアライズあり
+    * MEMORY_ONLY
+        * メモリのみに格納
+        * シリアライズなし
+    * MEMORY_ONLY_SER
+        * メモリのみに格納
+        * シリアライズあり
+    * MEMORY_AND_DISK
+        * メモリからあふれた分はディスクに格納
+        * シリアライズなし
+    * MEMORY_AND_DISK_SER
+        * メモリからあふれた分はディスクに格納
+        * シリアライズあり
+    * OFF_HEAP
+        * Tachyonに格納
+    * [SparkのRDDについて - TASK NOTES](http://www.task-notes.com/entry/20160112/1452525344)
+    * [spark/dataframe.py at a848d552ef6b5d0d3bb3b2da903478437a8b10aa · apache/spark](https://github.com/apache/spark/blob/a848d552ef6b5d0d3bb3b2da903478437a8b10aa/python/pyspark/sql/dataframe.py#L522)
+
 ## Tips
 
 ### function passing to pyspark
@@ -266,4 +292,4 @@ export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/pyth
 * [Welcome to Spark Python API Docs! — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/index.html)
 * [EMR上でPython3系でpysparkする - Qiita](http://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
 * [EMRのpysparkでPython３系を使う - Qiita](http://qiita.com/azaazato/items/ae5c90c3df1616284fd0)
-
+* [Databricks Spark Knowledge Base · GitBook](https://www.gitbook.com/book/databricks/databricks-spark-knowledge-base/details)
