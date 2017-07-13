@@ -10,6 +10,20 @@ brew cask install docker
 インストール後に`/Applications/Docker.app`を起動すれば、daemonが起動する。
 起動後にnetworkへのアクセスの権限を要求してくるので、OSXの管理者で承認する。
 
+For Amazon Linux
+
+```
+yum install docker
+```
+
+daemonの起動
+
+```
+sudo service docker start
+sudo chkconfig docker on
+```
+
+
 ## Commands
 
 ### docker images
