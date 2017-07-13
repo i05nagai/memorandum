@@ -61,7 +61,6 @@ imageの一覧を表示する
 docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
 ```
 
-
 ## completion
 
 ### zsh
@@ -104,7 +103,6 @@ docker-machine start default  # 立ち上げ
 |---------------------------------|-------------------------------------------------------------------------------| | -v `<host_path>:<container_path>` | ホストの `<host_path>` を `<container_path>` にマウントしてコンテナを起動         |
 | -v `<container_path>`             | Data Volume を作成して `<container_path>` にマウントしてコンテナを起動          |
 | --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
-
 
 ```
 FROM ubuntu:16.10
