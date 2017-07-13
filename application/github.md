@@ -181,6 +181,28 @@ OrganizationからAPpsの承認がないと、個別のrepositoryへのadmin権�
 * memberのorganizationのrepositoryのアクセスは、organizationのdefaultができようされる。
 * 個別にrepositoryのアクセス権限をかえたい場合は、各repositoryのcollaboratorsとして、teamか個人を追加してもらう
 
+### default labels
+* [GitHubがデフォルトで用意しているIssueラベルの意味 - Qiita](http://qiita.com/maeda_t/items/4344bdeabcc6a18a34cc)
+
+| ラベル      | 意味                                                           |
+|-------------|----------------------------------------------------------------|
+| help wanted | 助けを求める場合                                               |
+| bug         | バグの場合                                                     |
+| duplicate   | すでに内容の重複したIssueが存在する場合                        |
+| enhancement | 機能強化の場合                                                 |
+| invalid     | 間違い、勘違い、実現不可の場合。対応しない内容を書いてクローズ |
+| question    | 疑問がある場合                                                 |
+| wontfix     | 対応しないバグ等がある場合。対応しない理由を書いてクローズ     |
+
+### Templates
+IssueとPull Requestのtemplateを作ることができる。
+
+
+* [GitHub Issue and Pull Request Templates Generator](https://www.talater.com/open-source-templates/#/page/1)
+    * issueとPRのtemplateのgenerator
+    * 童話風のストーリの質問に回答していくとissueないしPRのtemplateを得ることができる
+    * Chapter1で最初に、Issueのtemplateを作るか、PRのtemplateを作るかを選択できる
+
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
