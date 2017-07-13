@@ -278,12 +278,21 @@ git cherry-pick <commit>
 ```
 
 あるcommitより先のcommitすべてを移行したい場合は
+`<commit>`は入らないことに注意。
 
 ```git
 git cherry-pick <commit>...
 ```
 
 とする。
+ある範囲のcommitを入れたい場合は
+
+```
+git cherry-pick -n <commit1>^..<commit2>
+```
+
+とする。
+`<commit1>`から`<commit2`までのcommitがcherry-pickされる。
 
 ## hooks
 
