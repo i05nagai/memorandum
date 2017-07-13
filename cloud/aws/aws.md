@@ -26,5 +26,8 @@ ssh -i key.pem username@ipaddress
 source /usr/local/bin/aws_zsh_completer.sh
 ```
 
-##
+## Reference
+* [Rubyとaws-sdkとcredentials](https://gist.github.com/y13i/bf97e86e9c05f10262cf)
+
+
 
