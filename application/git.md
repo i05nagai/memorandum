@@ -278,12 +278,21 @@ git cherry-pick <commit>
 ```
 
 あるcommitより先のcommitすべてを移行したい場合は
+`<commit>`は入らないことに注意。
 
 ```git
 git cherry-pick <commit>...
 ```
 
 とする。
+ある範囲のcommitを入れたい場合は
+
+```
+git cherry-pick -n <commit1>^..<commit2>
+```
+
+とする。
+`<commit1>`から`<commit2`までのcommitがcherry-pickされる。
 
 ## hooks
 
@@ -311,3 +320,33 @@ git tag -a v1.4 -m 'my version 1.4'
 ```
 git show v1.4
 ```
+
+### git pull origin master or git fetch & merge
+* [version control - difference between git merge origin/master and git pull - Stack Overflow](https://stackoverflow.com/questions/21756614/difference-between-git-merge-origin-master-and-git-pull)
+
+master branchは直接編集しないという条件は仮定しておく。
+
+一番良さそうなのは、
+
+```
+git fetch
+git rebase origin/master master
+```
+
+もしくは上のshort cutである以下。
+
+```
+git pull -r
+```
+
+この方法だとmasterとorigin/masterが同じcommitを指すようになる。
+つまり、`--ff`のmergeになる。
+
+```
+A-B-C-D-E'-F' < master
+           ^
+   origin/master, master on remote
+```
+
+他の２つの方法は、localのmaster branchに`--no-ff`でorigin/masterをMergeしたものとなる。
+

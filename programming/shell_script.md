@@ -32,6 +32,126 @@ VAL2="hoge"
 
 * [シェル変数と環境変数の違いをコマンドラインで確認する - Qiita](http://qiita.com/kure/items/f76d8242b97280a247a1)
 
+### test と `[` と `[[` コマンドの違い
+* https://fumiyas.github.io/2013/12/15/test.sh-advent-calendar.html
+
+bashなら`[[`で良い。
+
+* `test`と`[`の違いは名前以外ない
+* `[[`はword split, パス名展開がされない
+
+```bash
+line='foobar'
+[ $line == foobar ]; echo $?
+0
+
+# foo bar == foobarに展開される
+line='foo bar'
+[ $line == foobar ]; echo $?
+# bash: [: 引数が多すぎます
+2
+
+# file名に展開される
+line='/*'
+[ $line == foobar ]; echo $?
+# bash: [: 引数が多すぎます
+2
+
+# 1 -eq 1 -o xxx == foobarに展開され、1 -eq 1でtrueになる
+line='1 -eq 1 -o xxx'
+[ $line == foobar ]; echo $?
+0
+```
+
+`[[`はより期待される動作になる。
+
+```bash
+line='foobar'
+[[ $line == foobar ]]; echo $?
+0
+
+line='foo bar'
+[[ $line == foobar ]]; echo $?
+1
+
+line='/*'
+[[ $line == foobar ]]; echo $?
+1
+
+line='1 -eq 1 -o dummy'
+[[ $line == foobar ]]; echo $?
+1
+```
+
+`[[`は数値の比較演算子で左右の値が算術式展開される。
+`-ne`や`-eq`の比較をしたとき、評価された値を返す。
+
+```bash
+var=123
+[ "$((var))" -eq 123 ]; echo $?
+0
+
+# varが評価される
+[[ var -eq 123 ]]; echo $?
+0
+
+varname=var
+[ "$(($varname))" -eq 123 ]; echo $?
+0
+
+# 変数にしてもOK
+[[ $varname -eq 123 ]]; echo $?
+0
+```
+
+`[[`は文字列の比較演算子 == の動作が異なる。
+`[[`は右辺がquoteされてないとpattern matchになる。
+
+
+```bash
+[ /foobar == /fooba[rz] ]; echo $?
+1
+
+[ /foobar == '/fooba[rz]' ]; echo $?
+1
+
+# /foobarか/foobazでに一致
+[[ /foobar == /fooba[rz] ]]; echo $?
+0
+
+[[ /foobar == '/fooba[rz]' ]]; echo $?
+1
+
+# /fooで始まる文字列に一致
+[[ /foobar == /foo* ]]; echo $?
+0
+
+[[ /foobar == '/foo*' ]]; echo $?
+1
+```
+
+`[[`は文字列の比較演算子の種類が多い。
+以下の3つが追加で使える。
+
+* `[[ str =~ regexp ]]`
+    * strが正規表現に一致すれば真
+* `[[ str1 < str2 ]]`
+    * 現在のlocaleの辞書順でstr1がstr2より前なら真
+* `[[ str1 > str2]]`
+    * 現在のlocaleの辞書順でstr1がstr2よりなら真
+
+`[[`は論理演算子が異なる。
+以下の対応。
+
+```bash
+# -a と && が同じ結果
+[ -n "$foo" -a -n "$bar" ]; echo $?
+[[ -n $foo && -n $bar ]]; echo $?
+# -oと ||が同じ結果
+[ -n "$foo" -o -n "$bar" ]; echo $?
+[[ -n $foo || -n $bar ]]; echo $?
+```
+
 ### set -euを使う
 
 * `set -e`
