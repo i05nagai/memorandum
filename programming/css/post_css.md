@@ -78,7 +78,7 @@ gulp.task('buildcss', ["lintcss"], function() {
   return gulp.src('/path/to/scss')
     .pipe(
       gulpPostcss([
-          autoprefixer
+          autoprefixer()
       ]), {
         syntax: postcssScss
       }
@@ -92,6 +92,38 @@ gulp.task('buildcss', ["lintcss"], function() {
 });
 ```
 
+### With autoprefixer
+
+```
+npm install --save-dev gulp-postcss
+npm install --save-dev autoprefixer
+```
+
+以下が変換後に変更されていれば動いている。
+
+```css
+a {
+    display: flex;
+}
+```
+
+```javascript
+"use strict;"
+var gulp = require('gulp');
+gulp.task('buildcss', ["lintcss"], function() {
+  const gulpPostcss = require('gulp-postcss');
+  const autoprefixer = require('autoprefixer');
+  return gulp.src('/path/to/scss')
+    .pipe(
+      gulpPostcss([
+          autoprefixer()
+      ])
+    )
+    .pipe(
+    )
+    .pipe(gulp.dest('./path/to/css/'));
+});
+```
 
 ## Reference
 * [PostCSS まとめ - Qiita](http://qiita.com/morishitter/items/4a04eb144abf49f41d7d)
