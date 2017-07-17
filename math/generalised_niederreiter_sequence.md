@@ -23,9 +23,10 @@ title: Generalized Niederreiter Sequence
     * $j$番目の次元の生成に用いる原始多項式
     * $$\dim(p_{j}) =: s_{j}$$,
     * 予め生成したい次元数分用意しておく
-* $$y_{j, i, l}(x)$$,
-    * $i \ge 1$, $j = 1, \ldots, d$, $0 \le l < s_{j}$,
+* $$y_{i, k}^{j}(x)$$,
+    * $i \ge 1$, $j = 1, \ldots, d$, $0 \le k < s_{j}$,
     * $i$番目の$j$次元の点列の生成に用いる多項式 
+    * $$\{y_{i, k}^{j} \}_{k = 0, \ldots, s_{j}-1}$$は各$j, i$について、$$p_{j}$$で割った線形独立
 
 $$
 \begin{equation}
@@ -316,25 +317,25 @@ $b=2$の時は、Gray codeは$\mathfrak{G}$の性質を満たす。
 * $b := p^{m}$
 * $$\mathbb{F}_{p} := \mathbb{Z} / p \mathbb{Z}$$,
 * $$f(x) \in \mathbb{F}_{p}[x]$$,
-	* $\deg(f) = m$
-	* 既約多項式
+    * $\deg(f) = m$
+    * 既約多項式
 
 $$
 \begin{eqnarray}
-	\mathbb{Z}_{b}
-	& := &
-		\mathbb{Z} / b \mathbb{Z}
-	\nonumber
-	\\
-	& = &
-		\{0, 1, \ldots, p^{m}-1\}
-	\nonumber
-	\\
-	\mathbb{F}_{b}
-	& := &
-		\mathbb{F}_{p}[x] / (f(x))
-	\nonumber
-	\\
+    \mathbb{Z}_{b}
+    & := &
+        \mathbb{Z} / b \mathbb{Z}
+    \nonumber
+    \\
+    & = &
+        \{0, 1, \ldots, p^{m}-1\}
+    \nonumber
+    \\
+    \mathbb{F}_{b}
+    & := &
+        \mathbb{F}_{p}[x] / (f(x))
+    \nonumber
+    \\
 \end{eqnarray}
 $$
 
@@ -424,15 +425,15 @@ $$
 
 $$
 \begin{equation}
-	\alpha(n)
-	:=
-	\begin{cases}	
-		\min\{k \ge 0 \mid a_{k} \neq p - 1 \}
-			& (n \neq b - 1)
-			\\
-		N - 1
-			& (n = b - 1) 
-	\end{cases}
+    \alpha(n)
+    :=
+    \begin{cases}    
+        \min\{k \ge 0 \mid a_{k} \neq p - 1 \}
+            & (n \neq b - 1)
+            \\
+        N - 1
+            & (n = b - 1) 
+    \end{cases}
     \label{def_alpha}
 \end{equation}
 $$
@@ -441,92 +442,92 @@ $$
 
 $$
 \begin{eqnarray}
-	\hat{\phi}(n + 1)
-	=
-	\hat{\phi}(n)
-	+
-	\sum_{k=0}^{\alpha(n)}
-		x^{k}
+    \hat{\phi}(n + 1)
+    =
+    \hat{\phi}(n)
+    +
+    \sum_{k=0}^{\alpha(n)}
+        x^{k}
     \label{property_of_phi}
 \end{eqnarray}
 $$
 
 となる。
-	
+    
 ### proof.
 左辺は
 
 $$
 \begin{eqnarray}
-	\hat{\phi}(n + 1)
-	& = &
-		\hat{\phi}
-		\left(
-			\sum_{k=0}^{N-1}
-				a_{k}p^{k}
-			+
-			1
-		\right)
-	\nonumber
-	\\
-	& = &
-		\hat{\phi}
-		\left(
-			\sum_{k=0}^{\alpha(n)-1}
-				(p - 1)p^{k}
-			+
-				a_{\alpha(n)}p^{\alpha(n)}
-			+
-			\sum_{k=\alpha(n) + 1}^{N-1}
-				a_{k}p^{k}
-			+
-			1
-		\right),
-	\nonumber
-	\\
-	& = &
-		\hat{\phi}
-		\left(
-			\sum_{k=0}^{\alpha(n)-1}
-				(p - 1)p^{k}
-			+
-				a_{\alpha(n)}p^{\alpha(n)}
-			+
-			\sum_{k=\alpha(n) + 1}^{N-1}
-				a_{k}p^{k}
-			+
-			1
-		\right)
-	\nonumber
-	\\
-	& = &
-		\hat{\phi}
-		\left(
-			p^{\alpha(n)}
-			+
-				a_{\alpha(n)}p^{\alpha(n)}
-			+
-			\sum_{k=\alpha(n) + 1}^{N-1}
-				a_{k}p^{k}
-		\right)
-	\nonumber
-	\\
-	& = &
-		\hat{\phi}
-		\left(
-			(a_{\alpha(n)} + 1)p^{\alpha(n)}
-			+
-			\sum_{k=\alpha(n) + 1}^{N-1}
-				a_{k}p^{k}
-		\right)
-	\nonumber
-	\\
-	& = &
-		(a_{\alpha(n)} + 1)x^{\alpha(n)}
-		+
-		\sum_{k=\alpha(n) + 1}^{N-1}
-			a_{k}x^{k}
-	\nonumber
+    \hat{\phi}(n + 1)
+    & = &
+        \hat{\phi}
+        \left(
+            \sum_{k=0}^{N-1}
+                a_{k}p^{k}
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        \hat{\phi}
+        \left(
+            \sum_{k=0}^{\alpha(n)-1}
+                (p - 1)p^{k}
+            +
+                a_{\alpha(n)}p^{\alpha(n)}
+            +
+            \sum_{k=\alpha(n) + 1}^{N-1}
+                a_{k}p^{k}
+            +
+            1
+        \right),
+    \nonumber
+    \\
+    & = &
+        \hat{\phi}
+        \left(
+            \sum_{k=0}^{\alpha(n)-1}
+                (p - 1)p^{k}
+            +
+                a_{\alpha(n)}p^{\alpha(n)}
+            +
+            \sum_{k=\alpha(n) + 1}^{N-1}
+                a_{k}p^{k}
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        \hat{\phi}
+        \left(
+            p^{\alpha(n)}
+            +
+                a_{\alpha(n)}p^{\alpha(n)}
+            +
+            \sum_{k=\alpha(n) + 1}^{N-1}
+                a_{k}p^{k}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \hat{\phi}
+        \left(
+            (a_{\alpha(n)} + 1)p^{\alpha(n)}
+            +
+            \sum_{k=\alpha(n) + 1}^{N-1}
+                a_{k}p^{k}
+        \right)
+    \nonumber
+    \\
+    & = &
+        (a_{\alpha(n)} + 1)x^{\alpha(n)}
+        +
+        \sum_{k=\alpha(n) + 1}^{N-1}
+            a_{k}x^{k}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -535,31 +536,31 @@ $$
 $$
 \begin{eqnarray}
     \hat{\phi}(n)
-	+
-	\sum_{k=0}^{\alpha(n)}
-		x^{k}
-	& = &
-		\sum_{k=0}^{N-1}
-			a_{k}x^{k}
-		+
-		\sum_{k=0}^{\alpha(n)}
-			x^{k}
-	\nonumber
-	\\
-	& = &
-		\sum_{k=\alpha(n) + 1}^{N-1}
-			a_{k}x^{k}
-		+
-		\sum_{k=0}^{\alpha(n)}
-			(a_{k} + 1)x^{k}
-	\nonumber
-	\\
-	& = &
-		\sum_{k=\alpha(n) + 1}^{N-1}
-			a_{k}x^{k}
-		+
-		(a_{\alpha_{n}} + 1)x^{\alpha(n)}
-	\nonumber
+    +
+    \sum_{k=0}^{\alpha(n)}
+        x^{k}
+    & = &
+        \sum_{k=0}^{N-1}
+            a_{k}x^{k}
+        +
+        \sum_{k=0}^{\alpha(n)}
+            x^{k}
+    \nonumber
+    \\
+    & = &
+        \sum_{k=\alpha(n) + 1}^{N-1}
+            a_{k}x^{k}
+        +
+        \sum_{k=0}^{\alpha(n)}
+            (a_{k} + 1)x^{k}
+    \nonumber
+    \\
+    & = &
+        \sum_{k=\alpha(n) + 1}^{N-1}
+            a_{k}x^{k}
+        +
+        (a_{\alpha_{n}} + 1)x^{\alpha(n)}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -680,14 +681,14 @@ $$
     * $$a_{k} \in \{0, \ldots, b - 1\}$$,
 
 $$
-	l(n)
-	:=
-	\min
-	\left\{
-	    k \ge 0
-		\mid
-		a_{k} \neq b - 1
-	\right\}
+    l(n)
+    :=
+    \min
+    \left\{
+        k \ge 0
+        \mid
+        a_{k} \neq b - 1
+    \right\}
 $$
 
 とおく。
@@ -695,11 +696,11 @@ $$
 
 $$
 \begin{equation}
-	G(\Phi(n + 1))
-	=
-	G(\Phi(n))
-	+
-	\mathbf{e}_{l(n)}
+    G(\Phi(n + 1))
+    =
+    G(\Phi(n))
+    +
+    \mathbf{e}_{l(n)}
     \label{property_of_gray_code}
 \end{equation}
 $$
@@ -712,8 +713,8 @@ $\forall i = 0, \ldots, l(n) - 1,\ a_{i} = b - 1$に注意する。
 
 $$
 \begin{eqnarray}
-	G(\Phi(n + 1))
-	& = &
+    G(\Phi(n + 1))
+    & = &
         (
             G
             \circ
@@ -725,57 +726,57 @@ $$
             +
             1
         \right)
-	\nonumber
-	\\
-	& = &
+    \nonumber
+    \\
+    & = &
         (
             G
             \circ
             \Phi
         )
-		\left(
-			\sum_{k=0}^{l(n)-1}
-				a_{k}b^{k}
-			+	
-			\sum_{k=l(n)}^{N-1}
-				a_{k}b^{k}
-			+
-			1
-		\right)
-	\nonumber
-	\\
-	& = &
+        \left(
+            \sum_{k=0}^{l(n)-1}
+                a_{k}b^{k}
+            +    
+            \sum_{k=l(n)}^{N-1}
+                a_{k}b^{k}
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
         (
             G
             \circ
             \Phi
         )
-		\left(
-			\sum_{k=0}^{l(n)-1}
-				(b - 1)b^{k}
-			+
-			\sum_{k=l(n)}^{N-1}
-				a_{k}b^{k}
-			+
-			1
-		\right)
-	\nonumber
-	\\
-	& = &
+        \left(
+            \sum_{k=0}^{l(n)-1}
+                (b - 1)b^{k}
+            +
+            \sum_{k=l(n)}^{N-1}
+                a_{k}b^{k}
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
         (
             G
             \circ
             \Phi
         )
-		\left(
-			b^{l(n)}
-			+
-			\sum_{k=l(n)}^{N-1}
-				a_{k}b^{k}
-		\right)
-	\nonumber
-	\\
-	& = &
+        \left(
+            b^{l(n)}
+            +
+            \sum_{k=l(n)}^{N-1}
+                a_{k}b^{k}
+        \right)
+    \nonumber
+    \\
+    & = &
         (
             0,
             \ldots,
@@ -785,19 +786,19 @@ $$
             0,
             \ldots,
         )
-		+
+        +
         (
             G
             \circ
             \Phi
         )
-		\left(
-			\sum_{k=l(n)}^{N-1}
-				a_{k}b^{k}
-		\right)
-	\nonumber
-	\\
-	& = &
+        \left(
+            \sum_{k=l(n)}^{N-1}
+                a_{k}b^{k}
+        \right)
+    \nonumber
+    \\
+    & = &
         \mathbf{e}_{l(n)}
         +
         (
@@ -808,16 +809,16 @@ $$
             0,
             \ldots,
         )
-		+
+        +
         (
             G
             \circ
             \Phi
         )
-		\left(
-			\sum_{k=l(n)}^{N-1}
-				a_{k}b^{k}
-		\right)
+        \left(
+            \sum_{k=l(n)}^{N-1}
+                a_{k}b^{k}
+        \right)
 \end{eqnarray}
 $$
 
@@ -825,53 +826,53 @@ $$
 
 $$
 \begin{eqnarray}
-	G(\Phi(n))
-	& = &
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=0}^{N-1}
-					a_{k}b^{k}
-			\right)
-		\right)
-	\nonumber
-	\\
-	& = &
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=0}^{l(n) - 1}
-					a_{k}b^{k}
-				+
-				\sum_{k=l(n)}^{N-1}
-					a_{k}b^{k}
-			\right)
-		\right)
-	\nonumber
-	\\
-	& = &
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=0}^{l(n) - 1}
-					(b - 1)_{k}b^{k}
-			\right)
-		\right)
-				+
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=l(n)}^{N-1}
-					a_{k}b^{k}
-			\right)
-		\right)
-	\nonumber
-	\\
-	& = &
+    G(\Phi(n))
+    & = &
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=0}^{N-1}
+                    a_{k}b^{k}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=0}^{l(n) - 1}
+                    a_{k}b^{k}
+                +
+                \sum_{k=l(n)}^{N-1}
+                    a_{k}b^{k}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=0}^{l(n) - 1}
+                    (b - 1)_{k}b^{k}
+            \right)
+        \right)
+                +
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=l(n)}^{N-1}
+                    a_{k}b^{k}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
         (
             0,
             \ldots,
@@ -881,17 +882,17 @@ $$
             \ldots
         )
         + 
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=l(n)}^{N-1}
-					a_{k}b^{k}
-			\right)
-		\right)
-	\nonumber
-	\\
-	& = &
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=l(n)}^{N-1}
+                    a_{k}b^{k}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
         (
             0,
             \ldots,
@@ -900,15 +901,15 @@ $$
             0,
             \ldots
         )
-        + 
-		G
-		\left(
-			\Phi
-			\left(
-				\sum_{k=l(n)}^{N-1}
-					a_{k}b^{k}
-			\right)
-		\right)
+        +
+        G
+        \left(
+            \Phi
+            \left(
+                \sum_{k=l(n)}^{N-1}
+                    a_{k}b^{k}
+            \right)
+        \right)
 \end{eqnarray}
 $$
 
@@ -1123,12 +1124,94 @@ Sobol sequenceはGeneralized Niederreiter Sequenceの一種とみなすことが
         * $p(2) = 4 + 1 = 5$
 * $$s_{j} = \mathrm{deg}(p_{j}(x))$$,
     * 次元$j$の多項式の次数
-* $$y_{j, i, k} = g_{j, k}\ (0 \le k < e_{j},\ 1 \le j \le d,\ 1 \le i)$$,
-    * $$g_{j, 0}(x), \ldots, g_{j, s_{j}-1}(x)$$,
+* $$y_{i, k}^{j} = g_{k}^{j}\ (0 \le k < s_{j},\ 1 \le j \le d,\ 1 \le i)$$,
+    * $$g_{0}^{j}(x), \ldots, g_{s_{j}-1}^{j}(x)$$,
         * $$\mathrm{deg}(g_{j, k}) = s_{j} - k + 1$$,
         * 多項式
     * 例えば$$g_{j, k}(x):= x^{s_{j} - k + 1} + \sum_{n=0}^{s_{j} - k} a_{n}x^{n}$$,
         * $$a_{n} \in \mathbb{F}_{2}$$,
+
+例えば、
+
+$$
+\begin{equation}
+    \begin{array}{rclrclrclrclrcl}
+            p_{1}(x)
+        & := &
+            x + 1,
+        & &
+            g_{0}^{1}(x)
+        & := &
+            x^{2} + 1
+        & &
+        & &
+        & &
+        & &
+        \\
+            p_{2}(x)
+        & := &
+            x^{2} + x + 1,
+        & &
+            g_{0}^{2}(x)
+        & := &
+            x^{3} + 1
+        & &
+            g_{1}^{2}(x)
+        & := &
+            x^{2} + 1
+        & &
+        & &
+        \\
+            p_{3}(x)
+        & := &
+            x^{3} + x + 1
+        & &
+            g_{0}^{3}(x)
+        & := &
+            x^{4} + 1
+        & &
+            g_{1}^{3}(x)
+        & := &
+            x^{3} + 1
+        & &
+            g_{2}^{3}(x)
+        & := &
+            x^{2} + 1
+    \end{array}
+\end{equation}
+$$
+
+となる。
+$1$次元の生成行列を具体的に求める。
+
+$$
+\begin{eqnarray}
+    \frac{
+        y_{1, 0}^{1}(x)
+    }{
+        p_{1}(x)^{1}
+    }
+    & = &
+        \frac{
+            g_{0}^{1}(x)
+        }{
+            p_{1}(x)^{1}
+        }
+    \nonumber
+    \\
+    & =  &
+        \frac{
+            x^{2} + 1
+        }{
+            x + 1
+        }
+    \nonumber
+    \\
+    & = &
+        \sum_{r=0}^{\infty}
+            a_{1, 0}^{j}(r)x^{-r-1}
+\end{eqnarray}
+$$
 
 ## degree of $p_{j}$
 実用的には、$r$は32, 64までしか有効でない。
@@ -1141,11 +1224,4 @@ $$n := \mathrm{deg}(y_{i,k}^{(j)})$$, $$m := \deg(p_{j}(x)^{i})$$とおき、$$n
 $$s_{j} = \mathrm{deg}(p_{j})$$の次数がどのようとるべきかについて考える。
 $i$の最大値は24か53であるから、この範囲において$Q, k$がどのような値になるかを考える。
 $Q, k$は多項式$$y_{i, k}^{(j)}$$の$i, k$を決めている。
-
-$$
-
-$$
-
-
-## Reference
 
