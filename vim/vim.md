@@ -1,4 +1,9 @@
-# vim
+## vim
+
+## styleguide
+* [Google Vimscript Style Guide](https://google.github.io/styleguide/vimscriptguide.xml)
+    * two space for indent
+
 
 ## Install
 
