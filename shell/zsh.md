@@ -47,6 +47,38 @@ shellで`bindkey`を実行すると、現在割り当てられているkeybind�
 * [GitHub - zsh-users/antigen: A plugin manager for zsh, inspired by oh-my-zsh and vundle.](https://github.com/zsh-users/antigen)
     * plugin manager
 
-#### reference
+## Tips
+
+### Customize completion
+
+```zsh
+```
+
+```zsh
+my_function() {
+    # do something
+}
+
+_completion_function() {
+    # 補完のための便利な関数_arguments
+  _arguments \
+    # -h, --helpを入力した時にはファイル一覧の候補を表示しない
+    # 複数のオプションは{foo,bar}と書く
+    # '[description]'でオプションの説明
+    '(- *)'{-h,--help}'[show help]' \
+    -r'[recursive]' \
+    -f'[force]' \
+    -rf'[recursive && force]' \
+    # ファイル一覧を出す
+    '*: :_files'
+}
+
+compdef _completion_function my_function
+```
+
+## Reference
+* [zshでの自作関数と、それに対する補完関数を実装する - Qiita](http://qiita.com/petitviolet/items/b1e8b5139169dd530919)
+
+## Reference
 * [zsh-users/zsh-completions: Additional completion definitions for Zsh.](https://github.com/zsh-users/zsh-completions)
 * [まだ oh-my-zsh で消耗してるの？ - Qiita](http://qiita.com/b4b4r07/items/875235f6122a6d779306)
