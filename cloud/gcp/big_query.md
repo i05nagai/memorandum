@@ -169,6 +169,8 @@ bq show --format=prettyjson mydataset.table2
 
 基本的にtbaleへのデータの挿入日が、partitionの日付となる。
 明示的に、paritionnの日付を指定する場合は、以下のようにpartitionの日付を明示する。
+特定のpartitionを指定する場合は、table名の後ろに`$YYYYMMDD`をつけて指定する。
+
 
 ```
 bq query
@@ -179,6 +181,8 @@ bq query
     --destination_table 'mydataset.temps$20160101' \
     'SELECT stn,temp from `bigquery-public-data.noaa_gsod.gsod2016` WHERE mo="01" AND da="01" limit 100'
 ```
+
+
 
 ## Querying Date Partitioned Tables
 * [Querying Date-Partitioned Tables  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
