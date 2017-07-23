@@ -92,6 +92,33 @@ browserのglobal変数とbrwoser用のいくつかのruleが適用される。
 * `varsIgnorePattern`
     * 無視する変数名のpatternを記載
 
+* prefer-template
+    * [prefer-template - Rules - ESLint - Pluggable JavaScript linter](http://eslint.org/docs/rules/prefer-template)
+
+
+* no-restricted-syntax
+    * [no-restricted-syntax - Rules - ESLint - Pluggable JavaScript linter](http://eslint.org/docs/rules/no-restricted-syntax)
+    * 表記を統一させる目的などのために、構文を制限している
+    * `for in `, `for of`など制限されている
+
+* no-prototype-builtins
+    * `hasOwnProperty`などのmeta情報取得の禁止
+
+
+```
+// ✔ GOOD
+Object.hasOwnProperty.call(obj, "prop")
+// ✘ BAD
+obj.hasOwnProperty("prop")
+```
+
+* no-underscore-dangle
+    * 変数の最初に`_`をつけるな
+
+```
+/*eslint no-underscore-dangle: ["error", { "allow": ["foo_", "_bar"] }]*/
+```
+
 
 ## With gulp
 * [GitHub - adametry/gulp-eslint: A Gulp plugin for identifying and reporting on patterns found in ECMAScript/JavaScript code.](https://github.com/adametry/gulp-eslint)
