@@ -21,6 +21,9 @@
 * playback
 * playbackend
 * delivery
+* parable
+    * [Parrable: One Device, One ID](https://www.parrable.com/#)
+
 
 定義はIABのstudy guideNiyoru
 
