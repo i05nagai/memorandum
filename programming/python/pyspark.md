@@ -107,11 +107,30 @@ conf = pyspark.SparkConf().setMaster("local").setAppName("Example")
 sc = pyspark.SparkContext(conf=conf)
 ```
 
+jsonの読み込み
+
+```python
+>>> df1 = spark.read.json('python/test_support/sql/*.json.gz')
+>>> df1.dtypes
+[('age', 'bigint'), ('name', 'string')]
+```
+
 ### SparkContext
 * `sc.parallelize([])`
     * listをRDDとしてよみこむ
 * `sc.textFile("/path/to/textfile")`
     * textfileをRDDとしてよみこむ
+    * gzに圧縮されているものも読み込める
+    * file globで複数のファイルもまとめて読み込める
+
+jsonの読み込み
+
+```python
+rdd = sc.textFile('python/test_support/sql/*.json.gz')
+df2 = spark.read.json(rdd)
+df2.dtypes
+[('age', 'bigint'), ('name', 'string')]
+```
 
 ### Hive
 ```
@@ -263,6 +282,8 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
         * Tachyonに格納
     * [SparkのRDDについて - TASK NOTES](http://www.task-notes.com/entry/20160112/1452525344)
     * [spark/dataframe.py at a848d552ef6b5d0d3bb3b2da903478437a8b10aa · apache/spark](https://github.com/apache/spark/blob/a848d552ef6b5d0d3bb3b2da903478437a8b10aa/python/pyspark/sql/dataframe.py#L522)
+* df.describe()
+    * 戻り値はDataFrame
 
 ## Data Sources
 * [Spark SQL and DataFrames - Spark 2.2.0 Documentation](https://spark.apache.org/docs/latest/sql-programming-guide.html)
