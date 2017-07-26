@@ -287,6 +287,11 @@ nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 
 ## Tips
 
+### tab to space, space to tab
+`:%retab`をすると、現在のtabの設定に合わせて、space->tab, tab->spaceの変換をしてくれる。
+`:expandtab`がついてる状態で、tabのindentがあればspaceに変換される。
+
+
 ### cinkeys
 vimのindentの設定をするのもの。
 `help cinkeys-format`で設定方法が見られる。
