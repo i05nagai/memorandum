@@ -112,6 +112,67 @@ aws emr describe-step
 
 SSHのport forwardingで直接見れない場合もSSHで接続可能であれば閲覧可能。
 
+## Debug
+* [クラスタログとデバッグを構成する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-plan-debugging.html)
+
+SSHでmaster nodeに接続する。
+特に設定しなくともHadoopはデフォルトでmasterにログを残す。
+`/mnt/var/log/hadoop/`の下に、stepごと、bootstrapごとにまとまっている。
+ただし、clusterがerrorやstepの終了で、terminateになるとLogも消える。
+
+S3にlogを出力する。
+S3にlogを出力するように設定しておけば、clusterが終了しても、logがS3に出力され、参照可能になる。
+logの出力間隔は5分間隔。
+設定するには、cluster作成時にS3のpathを指定しておく必要がある。
+CLIの場合は以下のオプションをつける。
+
+```
+aws emr create-cluster --log-uri s3://mybucket/logs/
+```
+
+```
+--enable-debugging
+```
+
+## bootstrap action
+* [(Optional) Create Bootstrap Actions to Install Additional Software - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)
+
+* Hadoop userとして実行できる
+* `sudo`で実行できる
+* 16個までのbootstrap actionを追加できる
+
+`filename`には、実行ファイルを指定する。
+
+```
+aws emr create-cluster --bootstrap-action Path=s3://mybucket/filename",Args=[arg1,arg2]
+```
+
+bootstrap actionとして、defaultで提供されているものがいくつかある。
+以下は`run-if`で、masterでのみ実行されるようになっている。
+
+```
+aws emr create-cluster --bootstrap-action Path=s3://elasticmapreduce/bootstrap-actions/run-if,Args=["instance.isMaster=true","echo running on master node"]
+```
+
+jsonの形式の場合は
+
+```json
+[
+  {
+    "Path": "string",
+    "Args": ["string", ...],
+    "Name": "string"
+  },
+  {
+    "Path": "string",
+    "Args": ["string", ...],
+    "Name": "string"
+  }
+  ...
+]
+```
+
+
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
 * [（オプション）追加のソフトウェアをインストールするためのブートストラップアクションの作成 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/DeveloperGuide/emr-plan-bootstrap.html)

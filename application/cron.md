@@ -13,5 +13,11 @@ service crond status
 crontab -l
 ```
 
+## usage
+
+```
+分 時 日 月 曜日 コマンド
+```
+
 ## Reference
 

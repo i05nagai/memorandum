@@ -50,6 +50,14 @@
 * playback
 * playbackend
 * delivery
+* parable
+    * [Parrable: One Device, One ID](https://www.parrable.com/#)
+* Black Heron
+    * アドフラウドソリューション
+    * [Momentum株式会社(M0mentum)～最先端のデジタル広告～](http://www.m0mentum.co.jp/service/blackheron.html)
+* Black swan
+    * ブランドセーフティーソリューション
+
 
 定義はIABのstudy guideによる
 
