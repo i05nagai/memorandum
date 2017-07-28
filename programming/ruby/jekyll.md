@@ -1,4 +1,4 @@
-# jekyll
+## jekyll
 Jekyll（ジキル）は静的サイトの生成を行うための、RubyGemsで配布されているRuby製のツール。
 
 ## Install
@@ -162,7 +162,21 @@ jekyll用にGithubのpersonal access tokenを設定する必要がある。
 
 * [Repository metadata on GitHub Pages - User Documentation](https://help.github.com/articles/repository-metadata-on-github-pages/)
 
+### Invalid date
 
+```
+            ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ------------------------------------
+                    Invalid date '<%= Time.now.strftime('%Y-%m-%d %H:%M:%S %z') %>': Document 'vendor/bundler/ruby/2.3.0/gems/jekyll-3.4.5/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb' does not have a valid date in the YAML front matter.
+```
+
+`_config.yml`に以下を追加する。
+
+```
+exclude: [vendor]
+```
+
+* [Troubleshooting | jekyll](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
 
 ## Reference
 * [30分のチュートリアルでJekyllを理解する](http://melborne.github.io/2012/05/13/first-step-of-jekyll/)
