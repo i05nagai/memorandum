@@ -55,6 +55,17 @@ spark.app.name  "My Spark apps"
 spark.ui.port   36000
 ```
 
+pythonに引数を渡す方法。
+
+* [Can I add arguments to python code when I submit spark job? - Stack Overflow](https://stackoverflow.com/questions/32217160/can-i-add-arguments-to-python-code-when-i-submit-spark-job)
+
+以下の方法で渡ことができる。
+
+```
+spark-submit args.py a b c d e 
+# ['/spark/args.py', 'a', 'b', 'c', 'd', 'e']
+```
+
 ```
 Usage: spark-submit [options] <app jar | python file> [app arguments]
 Usage: spark-submit --kill [submission ID] --master [spark://...]
@@ -162,6 +173,10 @@ Options:
     * データのshufleするときの分割数
     * 代数が少ない時は
     * [Spark SQL Programming Guide - Spark 1.2.0 Documentation](https://spark.apache.org/docs/1.2.0/sql-programming-guide.html)
+
+## Tips
+
+### A
 
 
 ## Reference
