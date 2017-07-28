@@ -151,9 +151,62 @@ ENV variable1=value1 \
     * hostからアクセスするには、更にコンテナの起動時に`-p`でポートを公開する
 * ADD
 * COPY
+
+
 * ENTRYPOINT
-* RUN
+    * [dockerのENTRYPOINTとCMDの書き方と使い分け、さらに併用 - Qiita](http://qiita.com/hnakamur/items/afddaa3dbe48ad2b8b5c)
+    * docker imageを実行ファイルとして実行する時の振る舞いを記載
+
+書式は以下の2種類
+
+* ENTRYPOINT ["executable", "param1", "param2"]
+    * exec form
+    * 推奨される形式
+* ENTRYPOINT command param1 param2
+    * shell form
+    * `/bin/sh -c`経由で実行される
+    * CMDやrunの引数を上書きする
+
+docker runの`<iamge>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
+`ENTRYPOINT`が記載されていない場合は、引数のcommandがそのまま実行される。
+
+
+
+CMDとの併用は以下のようにする。
+併用時はJSON array formatである必要がある。
+
+```dockerfile
+ENTRYPOINT ["/usr/bin/rethinkdb"]
+CMD ["--help"]
+```
+
+```
+docker run image/name
+```
+
+で実行すると
+
+```
+/usr/bin/rethinkdb --help
+```
+
+が実行される。
+
+
 * CMD
+    * CMDはdocker imageのデフォルトのコマンドを定義する
+    * `docker run`のときに、引数を渡すとCMDの内容は上書きされる
+
+書式は以下の3種類
+
+* CMD ["executable","param1","param2"] (シェルを介さずに実行。この形式を推奨)
+* CMD ["param1","param2"] (ENTRYPOINTのデフォルト引数として利用する場合)
+* CMD command param1 param2 (シェルを介して実行)
+
+
+
+
+* RUN
 * `VOLUME ["/path/to"< ""...>]`
     * 指定したpathを外部からマウント可能にする
 * USER
@@ -220,3 +273,8 @@ docker login
 docker built -t username/image_name .
 docker push username/image_name
 ```
+
+## Reference
+* [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)
+* [Python’s super() considered super! | Deep Thoughts by Raymond Hettinger](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/)
+

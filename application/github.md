@@ -165,6 +165,7 @@ Qualifiersの一覧は以下。
 * `stars`
     * starの数
 * `created`
+    * `created:"2012-04-30 .. 2012-07-04"`
     * 作成された日付
 
 ## Tips

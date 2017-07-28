@@ -49,4 +49,12 @@ sudo chown -R username username/.ssh
 ```
 
 
+全てのimageは`/etc/image-id`をもっているので、現在のimageの情報はここから取得できる。
+
+```
+cat /etc/image-id
+```
+
+
 ## Reference
+* [Amazon Linux - Amazon Elastic Compute Cloud](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html)

@@ -1,4 +1,4 @@
-# osx
+## osx
 
 ## OS X で Shift+Space で入力ソースを切り替える方法
 * [OS X で Shift+Space で入力ソースを切り替える方法 | Carpe Diem](https://www.sssg.org/blogs/naoya/archives/2579)
@@ -19,6 +19,7 @@ System Preferences->Keyboard->Shortcutsの一覧がこのファイルに記録�
 
 
 ## 外付けドライブへの書き込み
+
 ### 事前設定
 `/sbin`のMountを書き換えるので、事前にrootユーザをONにする。
 1. Apple メニューから「システム環境設定」を選択します。
@@ -51,7 +52,6 @@ sudo port install ntfs-3g
 ```
 3. 
 
-
 ## update
 
 ### zsh
@@ -72,3 +72,7 @@ sudo vim /etc/shells
 # change default shell
 chsh -s /usr/local/bin/zsh
 ```
+
+## Reference
+* [Macのデスクトップ切り替え時のエフェクトを減らして、切り替えを多少すばやくする - Qiita](http://qiita.com/ikedakenno/items/58daf8a961f1813b3c1b)
+* [macOSでディスプレイ1枚で作業する技術 - Qiita](http://qiita.com/saboyutaka/items/d6cfd2a2b60f1a374d60)
