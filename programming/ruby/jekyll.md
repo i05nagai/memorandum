@@ -178,6 +178,10 @@ exclude: [vendor]
 
 * [Troubleshooting | jekyll](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
 
+### Generating sitemap
+* [GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site](https://github.com/jekyll/jekyll-sitemap)
+* [jekyllでサイトマップ(sitemap.xml)を生成する -- ぺけみさお](https://www.xmisao.com/2014/08/25/generate-sitemap-in-jekyll.html)
+
 ## Reference
 * [30分のチュートリアルでJekyllを理解する](http://melborne.github.io/2012/05/13/first-step-of-jekyll/)
 * [Jekyll • シンプルで、ブログのような、静的サイト](https://jekyllrb-ja.github.io/)
