@@ -408,19 +408,22 @@ $$
 環としての構造を持たない多項式の間にも、和、積、除の演算を考えることができる。
 応用上有用である場合もあるので、幾つか記しておく。
 
+### Operation 1
+係数が体だとする。
+
 $$
 \begin{eqnarray}
-	f(x)
-	& := &
-		\sum_{i=0}^{n}
-			a_{i}x^{i}
-	\nonumber
-	\\
-	g(x)
-	& := &
-		\sum_{i=0}^{m}
-			b_{i}x^{i}
-	\nonumber
+    f(x)
+    & := &
+        \sum_{i=0}^{n}
+            a_{i}x^{i}
+    \nonumber
+    \\
+    g(x)
+    & := &
+        \sum_{i=0}^{m}
+            b_{i}x^{i}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -429,15 +432,15 @@ $$
 
 $$
 \begin{eqnarray}
-	\frac{
-		f(x)
-	}{
-		g(x)
-	}
-	& := &
-		h(x)
-	\nonumber
-	\\
+    \frac{
+        f(x)
+    }{
+        g(x)
+    }
+    & := &
+        h(x)
+    \nonumber
+    \\
 \end{eqnarray}
 $$
 
@@ -445,16 +448,16 @@ $$
 
 $$
 \begin{eqnarray}
-	h(x)
-	& = &
-		\sum_{i=0}^{\infty}
-			c_{-i}x^{-i}
-	\nonumber
-	\\
-	f(x)
-	& = &
-		g(x)h(x)
-	\nonumber
+    h(x)
+    & = &
+        \sum_{i=0}^{\infty}
+            c_{-i}x^{-i}
+    \nonumber
+    \\
+    f(x)
+    & = &
+        g(x)h(x)
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -462,16 +465,16 @@ $$
 
 $$
 \begin{eqnarray}
-	\sum_{i=0}^{n}
-		a_{i}x^{i}
-	& = &
-		\sum_{i=0}^{m}
-			b_{i}x^{i}
-		\sum_{i=0}^{\infty}
-			c_{-i}x^{-i}
-	\nonumber
-	\\
-	& = &
+    \sum_{i=0}^{n}
+        a_{i}x^{i}
+    & = &
+        \sum_{i=0}^{m}
+            b_{i}x^{i}
+        \sum_{i=0}^{\infty}
+            c_{-i}x^{-i}
+    \nonumber
+    \\
+    & = &
         b_{m} c_{0} x^{m}
         +
         (b_{m} c_{-1} + b_{m-1} c_{0})
@@ -528,33 +531,33 @@ $$
             x^{-k}
         +
         \cdots
-	\nonumber
-	\\
-	& = &
-		\sum_{i=-m}^{0}
-			\sum_{j=0}^{m + i}
-				b_{m - j} x^{m - j}
-				c_{-i - (m - j)} x^{-i - (m - j)}
-		+
-		\sum_{i=1}^{\infty}
-			\sum_{j=0}^{m}
-				b_{j} x^{j}
-				c_{-(i + j)} x^{-(i + j)}
-	\nonumber
-	\\
-	& = &
-		\sum_{i=-m}^{0}
-			\sum_{j=0}^{m + i}
-				b_{m - j}
-				c_{-i - (m - j)}
-				x^{-i}
-		+
-		\sum_{i=1}^{\infty}
-			\sum_{j=0}^{m}
-				b_{j}
-				c_{-(i + j)}
-				x^{-i}
-	\nonumber
+    \nonumber
+    \\
+    & = &
+        \sum_{i=-m}^{0}
+            \sum_{j=0}^{m + i}
+                b_{m - j} x^{m - j}
+                c_{-i - (m - j)} x^{-i - (m - j)}
+        +
+        \sum_{i=1}^{\infty}
+            \sum_{j=0}^{m}
+                b_{j} x^{j}
+                c_{-(i + j)} x^{-(i + j)}
+    \nonumber
+    \\
+    & = &
+        \sum_{i=-m}^{0}
+            \sum_{j=0}^{m + i}
+                b_{m - j}
+                c_{-i - (m - j)}
+                x^{-i}
+        +
+        \sum_{i=1}^{\infty}
+            \sum_{j=0}^{m}
+                b_{j}
+                c_{-(i + j)}
+                x^{-i}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -562,29 +565,29 @@ $$
 
 $$
 \begin{eqnarray}
-	\forall i = -m, \ldots, -(n+1),
-	\
-	0	
-	& = &
-		\sum_{j=0}^{m+i}
-			b_{m-j}c_{-i-(m-j)}
-	\nonumber
-	\\
-	\forall i = -n, \ldots, 0,
-	\
-	a_{-i}
-	& = &
-		\sum_{j=0}^{m+i}
-			b_{m-j}c_{-i-(m-j)}
-	\nonumber
-	\\
-	\forall i = 1, 2, \ldots,
-	\
-	0
-	& = &
-		\sum_{j=0}^{m}
-			b_{j}c_{-(i+j)}
-	\nonumber	
+    (\forall i = -m, \ldots, -(n+1))
+    \quad
+    0
+    & = &
+        \sum_{j=0}^{m+i}
+            b_{m-j}c_{-i-(m-j)}
+    \label{operation01_solution_first_part}
+    \\
+    (\forall i = -n, \ldots, 0)
+    \quad
+    a_{-i}
+    & = &
+        \sum_{j=0}^{m+i}
+            b_{m-j}c_{-i-(m-j)}
+    \label{operation01_solution_second_part}
+    \\
+    (\forall i = 1, 2, \ldots)
+    \quad
+    0
+    & = &
+        \sum_{j=0}^{m}
+            b_{j}c_{-(i+j)}
+    \label{operation01_solution_last_part}
 \end{eqnarray}
 $$
 
@@ -594,40 +597,40 @@ $$
 
 $$
 \begin{eqnarray}
-	0	
-	& = &
-		b_{m}c_{0}
-	\nonumber
-	\\
-	0	
-	& = &
-		b_{m}c_{-1}
-		+
-		b_{m-1}c_{0}
-	\nonumber
-	\\
-	0	
-	& = &
-		b_{m}c_{-2}
-		+
-		b_{m-1}c_{-1}
-		+
-		b_{m-2}c_{0}
-	\nonumber
-	\\
-	& \vdots &
-	\nonumber
-	\\
-	0	
-	& = &
-		b_{m}c_{-m + n + 1}
-		+
-		b_{m-1}c_{-m + n}
-		+
-		\cdots
-		+
-		b_{n+1}c_{0}
-	\nonumber	
+    0
+    & = &
+        b_{m}c_{0}
+    \nonumber
+    \\
+    0
+    & = &
+        b_{m}c_{-1}
+        +
+        b_{m-1}c_{0}
+    \nonumber
+    \\
+    0
+    & = &
+        b_{m}c_{-2}
+        +
+        b_{m-1}c_{-1}
+        +
+        b_{m-2}c_{0}
+    \nonumber
+    \\
+    & \vdots &
+    \nonumber
+    \\
+    0   
+    & = &
+        b_{m}c_{-m + n + 1}
+        +
+        b_{m-1}c_{-m + n}
+        +
+        \cdots
+        +
+        b_{n+1}c_{0}
+    \nonumber   
 \end{eqnarray}
 $$
 
@@ -635,28 +638,28 @@ $$
 
 $$
 \begin{eqnarray}
-	c_{0}
-	& = &
-		0
-	\nonumber
-	\\
-	c_{-1}
-	& = &
-		0
-	\nonumber
-	\\
-	c_{-2}
-	& = &
-		0
-	\nonumber
-	\\
-	& \vdots &
-	\nonumber
-	\\
-	c_{-m + n + 1}
-	& = &
-		0
-	\nonumber	
+    c_{0}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-1}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-2}
+    & = &
+        0
+    \nonumber
+    \\
+    & \vdots &
+    \nonumber
+    \\
+    c_{-m + n + 1}
+    & = &
+        0
+    \nonumber   
 \end{eqnarray}
 $$
 
@@ -665,69 +668,69 @@ $$
 
 $$
 \begin{eqnarray}
-	a_{n}
-	& = &
-		b_{m}c_{-m + n}
-		+
-		b_{m-1}c_{-m + n + 1}
-		+
-		\cdots
-		+
-		b_{n}c_{0}
-	\nonumber	
-	\\
-	a_{n-1}
-	& = &
-		b_{m}c_{-m + n - 1}
-		+
-		b_{m-1}c_{-m + n}
-		+
-		\cdots
-		+
-		b_{n-1}c_{0}
-	\nonumber	
-	\\
-	a_{n-2}
-	& = &
-		b_{m}c_{-m + n - 2}
-		+
-		b_{m-1}c_{-m + n - 1}
-		+
-		b_{m-2}c_{-m + n}
+    a_{n}
+    & = &
+        b_{m}c_{-m + n}
         +
-		\cdots
-		+
-		b_{n-2}c_{0}
-	\nonumber	
-	\\
-	& \vdots &
-	\nonumber	
-	\\
-	a_{k}
-	& = &
-		b_{m}c_{-m + k}
-		+
-		b_{m-1}c_{-m + k + 1}
-		+
-		b_{m-2}c_{-m + n + 2}
-		\cdots
-		+
-		b_{k}c_{0}
-	\nonumber	
-	\\
-	& \vdots &
-	\nonumber	
-	\\
-	a_{0}
-	& = &
-		b_{m}c_{-m}
-		+
-		b_{m-1}c_{-m + 1}
-		+
-		\cdots
-		+
-		b_{0}c_{0}
-	\nonumber	
+        b_{m-1}c_{-m + n + 1}
+        +
+        \cdots
+        +
+        b_{n}c_{0}
+    \nonumber   
+    \\
+    a_{n-1}
+    & = &
+        b_{m}c_{-m + n - 1}
+        +
+        b_{m-1}c_{-m + n}
+        +
+        \cdots
+        +
+        b_{n-1}c_{0}
+    \nonumber   
+    \\
+    a_{n-2}
+    & = &
+        b_{m}c_{-m + n - 2}
+        +
+        b_{m-1}c_{-m + n - 1}
+        +
+        b_{m-2}c_{-m + n}
+        +
+        \cdots
+        +
+        b_{n-2}c_{0}
+    \nonumber   
+    \\
+    & \vdots &
+    \nonumber   
+    \\
+    a_{k}
+    & = &
+        b_{m}c_{-m + k}
+        +
+        b_{m-1}c_{-m + k + 1}
+        +
+        b_{m-2}c_{-m + n + 2}
+        \cdots
+        +
+        b_{k}c_{0}
+    \nonumber   
+    \\
+    & \vdots &
+    \nonumber   
+    \\
+    a_{0}
+    & = &
+        b_{m}c_{-m}
+        +
+        b_{m-1}c_{-m + 1}
+        +
+        \cdots
+        +
+        b_{0}c_{0}
+    \nonumber   
 \end{eqnarray}
 $$
 
@@ -735,80 +738,80 @@ $$
 
 $$
 \begin{eqnarray}
-	c_{-m + n}
-	& = &
-		\frac{
-			a_{n}
-		}{
-			b_{m}
-		}
-	\nonumber	
-	\\
-	c_{-m + n - 1}
-	& = &
-		\frac{1}{b_{m}}
-		\left(
-			a_{n-1}
-			-
-			b_{m-1}c_{-m + n}
-		\right)
-	\nonumber	
-	\\
-	c_{-m + n - 2}
-	& = &
-		\frac{1}{b_{m}}
-		\left(
-			a_{n-2}
-			-
-			b_{m-1}c_{-m + n - 1}
+    c_{-m + n}
+    & = &
+        \frac{
+            a_{n}
+        }{
+            b_{m}
+        }
+    \nonumber   
+    \\
+    c_{-m + n - 1}
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{n-1}
             -
-			b_{m-2}c_{-m + n}
-		\right)
-	\nonumber	
-	\\
-	& \vdots &
-	\nonumber	
-	\\
-	c_{-m + k}
-	& = &
-		\frac{1}{b_{m}}
-		\left(
-			a_{k}
-			-
-			b_{m-1}c_{-m + k + 1}
-			-
-			b_{m-2}c_{-m + k + 2}
-			\cdots
-			-
-			b_{k}c_{0}
-		\right)
-	\nonumber
-	\\
-	& = &
-		\frac{1}{b_{m}}
-		\left(
-			a_{k}
-			-
-			\sum_{j=1}^{m - k}
-				b_{m-j}
-				c_{-m + k + j}
-		\right)
-	\nonumber	
-	\\
-	& \vdots &
-	\nonumber	
-	\\
-	c_{-m}
-	& = &
-		\frac{1}{b_{m}}
-		\left(
-			a_{0}
-			-
-			\sum_{j=1}^{m}
-				b_{m-j}
-				c_{-m + j}
-		\right)
-	\nonumber	
+            b_{m-1}c_{-m + n}
+        \right)
+    \nonumber   
+    \\
+    c_{-m + n - 2}
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{n-2}
+            -
+            b_{m-1}c_{-m + n - 1}
+            -
+            b_{m-2}c_{-m + n}
+        \right)
+    \nonumber   
+    \\
+    & \vdots &
+    \nonumber   
+    \\
+    c_{-m + k}
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{k}
+            -
+            b_{m-1}c_{-m + k + 1}
+            -
+            b_{m-2}c_{-m + k + 2}
+            \cdots
+            -
+            b_{k}c_{0}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{k}
+            -
+            \sum_{j=1}^{m - k}
+                b_{m-j}
+                c_{-m + k + j}
+        \right)
+    \nonumber   
+    \\
+    & \vdots &
+    \nonumber   
+    \\
+    c_{-m}
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{0}
+            -
+            \sum_{j=1}^{m}
+                b_{m-j}
+                c_{-m + j}
+        \right)
+    \nonumber   
 \end{eqnarray}
 $$
 
@@ -817,47 +820,47 @@ $$
 
 $$
 \begin{eqnarray}
-	0
-	& = &
-		b_{m}c_{-(1 + m)}
-		+
-		b_{m-1}c_{-(1 + m - 1)}
-		+
-		b_{m-2}c_{-(1 + m - 2)}
-		+
-		\cdots
-		+
-		b_{0}c_{-1}
-	\nonumber
-	\\
-	0
-	& = &
-		b_{m}c_{-(2 + m)}
-		+
-		b_{m-1}c_{-(2 + m - 1)}
-		+
-		b_{m-2}c_{-(2 + m - 2)}
-		+
-		\cdots
-		+
-		b_{0}c_{-2}
-	\nonumber
-	\\
-	0
-	& = &
-		b_{m}c_{-(3 + m)}
-		+
-		b_{m-1}c_{-(3 + m - 1)}
-		+
-		b_{m-2}c_{-(3 + m - 2)}
-		+
-		\cdots
-		+
-		b_{0}c_{-3}
-	\nonumber
-	\\
-	& \vdots &
-	\nonumber
+    0
+    & = &
+        b_{m}c_{-(1 + m)}
+        +
+        b_{m-1}c_{-(1 + m - 1)}
+        +
+        b_{m-2}c_{-(1 + m - 2)}
+        +
+        \cdots
+        +
+        b_{0}c_{-1}
+    \nonumber
+    \\
+    0
+    & = &
+        b_{m}c_{-(2 + m)}
+        +
+        b_{m-1}c_{-(2 + m - 1)}
+        +
+        b_{m-2}c_{-(2 + m - 2)}
+        +
+        \cdots
+        +
+        b_{0}c_{-2}
+    \nonumber
+    \\
+    0
+    & = &
+        b_{m}c_{-(3 + m)}
+        +
+        b_{m-1}c_{-(3 + m - 1)}
+        +
+        b_{m-2}c_{-(3 + m - 2)}
+        +
+        \cdots
+        +
+        b_{0}c_{-3}
+    \nonumber
+    \\
+    & \vdots &
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -865,23 +868,23 @@ $$
 
 $$
 \begin{eqnarray}
-	c_{-(1 + m)}
-	& = &
-		0
-	\nonumber
-	\\
-	c_{-(2 + m)}
-	& = &
-		0
-	\nonumber
-	\\
-	c_{-(3 + m)}
-	& = &
-		0
-	\nonumber
-	\\
-	& \vdots &
-	\nonumber
+    c_{-(1 + m)}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-(2 + m)}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-(3 + m)}
+    & = &
+        0
+    \nonumber
+    \\
+    & \vdots &
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -890,55 +893,516 @@ $$
 
 $$
 \begin{eqnarray}
-	h(x)
-	=
-	\sum_{i=m-n}^{m}
-		c_{-i}x^{-i}
-	\nonumber
+    h(x)
+    =
+    \sum_{i=m-n}^{m}
+        c_{-i}x^{-i}
+    \nonumber
 \end{eqnarray}
 $$
 
 である。
 
+#### Example 1
+具体的な計算例として以下の計算をする。
+
+* $R := \mathbb{F}_{2}$
+* $f(x) := 1$
+    * $$a_{0} = 1$$,
+* $n = 0$
+* $g(x) := x + 1$
+    * $$b_{1} = b_{0} = 1$$,
+* $m = 1$
+
+$$
+    \frac{
+        1
+    }{
+        x + 1
+    }
+    =
+    h(x)
+$$
+
+を計算する。
+順番に解くと、$$\eqref{operation01_solution_first_part}$$から$ i = -1$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+       \sum_{j=0}^{m+i}
+          b_{m-j}c_{-i-(m-j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+       \sum_{j=0}^{1-1}
+          b_{1-j}c_{1-(1-j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+       \sum_{j=0}^{0}
+          b_{1-j}c_{j}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{1}c_{0}
+        =
+        0
+\end{eqnarray}
+$$
+
+となって、$c_{0} = 0$である。
+$$\eqref{operation01_solution_second_part}$$から$i=0$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{m+i}
+            b_{m-j}c_{-i-(m-j)}
+        =
+        a_{-i}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{1+0}
+            b_{1-j}c_{-0-(1-j)}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{1}
+            b_{1-j}c_{-1+j}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{1}c_{-1}
+        +
+        b_{0}c_{0}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-1}
+        +
+        c_{0}
+        =
+        1
+\end{eqnarray}
+$$
+
+より、$c_{-1} = 1$となる。
+$$\eqref{operation01_solution_last_part}$$から$i=1$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{m}
+            b_{j}c_{-(i+j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{1}
+            b_{j}c_{-(i+j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{0}c_{-i}
+        +
+        b_{1}c_{-i-1}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-i}
+        +
+        c_{-i-1}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-1}
+        +
+        c_{-2}
+        =
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+となって、$c_{-2} = 1$である。
+$i > 1$については、上の式より、
+
+$$
+    c_{-i}
+    +
+    c_{-i-1}
+    =
+    0
+$$
+
+であることが分かるので、$i=1$から順番に説いていけば、$c_{-i} = 1$であることがわかる。
+以上を合わせると
+
+$$
+    h(x)
+    =
+    \sum_{i=1}^{\infty}
+        x^{-i}
+$$
+
+である。
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example 2
+また、別の例として、
+
+* $R := \mathbb{F}_{2}$
+* $f(x) := x$
+    * $$a_{0} = 0, a_{1} = 1$$,
+* $n = 1$
+* $g(x) := x^{2} + x + 1$
+    * $$b_{2} = b_{1} = b_{0} = 1$$,
+* $m = 2$
+
+$$
+    \frac{
+        x
+    }{
+        x^{2} + x + 1
+    }
+    =
+    h(x)
+$$
+
+の$h$を計算する。
+順番に解くと、$$\eqref{operation01_solution_first_part}$$から$ i = -2$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+       \sum_{j=0}^{m+i}
+          b_{m-j}c_{-i-(m-j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+       \sum_{j=0}^{2-2}
+          b_{2-j}c_{2-(2-j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+       \sum_{j=0}^{0}
+          b_{2-j}c_{j}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{2}c_{0}
+        =
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+より、$c_{0} = 0$となる。
+$$\eqref{operation01_solution_second_part}$$から
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{m+i}
+            b_{m-j}c_{-i-(m-j)}
+        =
+        a_{-i}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{2+i}
+            b_{2-j}c_{-i-(2-j)}
+        =
+        a_{-i}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{2+i}
+            b_{2-j}c_{-i-2+j}
+        =
+        a_{-i}
+    \nonumber
+\end{eqnarray}
+$$
+
+$i=-1$とすれば、
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{2-1}
+            b_{2-j}c_{1-2+j}
+        =
+        a_{1}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{1}
+            b_{2-j}c_{-1+j}
+        =
+        a_{1}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{2}c_{-1}
+        +
+        b_{1}c_{0}
+        =
+        a_{1}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-1}
+        =
+        a_{1}
+    \nonumber
+\end{eqnarray}
+$$
+
+となって、$c_{-1} = 1$である。
+$i = 0$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{2-0}
+            b_{2-j}c_{0-2+j}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{2}
+            b_{2-j}c_{-2+j}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{2}c_{-2}
+        +
+        b_{1}c_{-1}
+        +
+        b_{0}c_{0}
+        =
+        a_{0}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-2}
+        +
+        1
+        +
+        0
+        =
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+より、$c_{-2} = 1$である。
+$$\eqref{operation01_solution_last_part}$$から
+
+$$
+\begin{eqnarray}
+    & &
+        \sum_{j=0}^{m}
+            b_{j}c_{-(i+j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{j=0}^{2}
+            b_{j}c_{-(i+j)}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        b_{0}c_{-i-0}
+        +
+        b_{1}c_{-i-1}
+        +
+        b_{2}c_{-i-2}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c_{-i}
+        +
+        c_{-i-1}
+        +
+        c_{-i-2}
+        =
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+で、$i=1$のとき、
+
+$$
+\begin{eqnarray}
+    & &
+        c_{-1}
+        +
+        c_{-2}
+        +
+        c_{-3}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        1
+        +
+        1
+        +
+        c_{-3}
+        =
+        0
+\end{eqnarray}
+$$
+
+となって、$c_{-3} = 0$となる。
+$i=2$のときは、
+
+$$
+\begin{eqnarray}
+    & &
+        c_{-2}
+        +
+        c_{-3}
+        +
+        c_{-4}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        1
+        +
+        0
+        +
+        c_{-4}
+        =
+        0
+\end{eqnarray}
+$$
+
+で、$c_{-4} = 1$となる。
+$i=3$のときは、
+
+$$
+\begin{eqnarray}
+    & &
+        c_{-3}
+        +
+        c_{-4}
+        +
+        c_{-5}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        0
+        +
+        1
+        +
+        c_{-5}
+        =
+        0
+\end{eqnarray}
+$$
+
+で、$c_{-5} = 1$となる。
+以上より、$$c_{-3k} = 0, c_{-3k -1} = 1, c_{-3k-2} = 1$$となることがわかる。
+
+$$
+    h(x)
+    =
+    \sum_{k=0}^{\infty}
+        \left(
+            x^{-3k-1}
+            +
+            x^{-3k-2}
+        \right)
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+### Operations 2
+?
+
 ### Formulas
 
 $$
 \begin{eqnarray}
-	f(x)
-	& = &
-		\sum_{i=0}^{n}
-			a_{i}x^{i}
-	\nonumber
-	\\
-	f(x)^{2}
-	& = &
-		\sum_{i=0}^{2n}
-			\sum_{j=0}^{i}
-				a_{j}a_{i-j}
-				x^{i}
-	\nonumber
-	\\
-	f(x)^{3}
-	& = &
-		\sum_{i=0}^{3n}
-			\sum_{j=0}^{i}
-				\left(
-					\sum_{k=0}^{j}
-						a_{k}a_{j-k}
-				\right)
-				a_{i-j}
-				x^{i}
-	\nonumber
-	\\
-	& = &
-		\sum_{i=0}^{3n}
-			\sum_{j=0}^{i}
-				\left(
-					a_{i-j}
-					\sum_{k=0}^{j}
-						a_{k}a_{j-k}
-				\right)
-				x^{i}
+    f(x)
+    & = &
+        \sum_{i=0}^{n}
+            a_{i}x^{i}
+    \nonumber
+    \\
+    f(x)^{2}
+    & = &
+        \sum_{i=0}^{2n}
+            \sum_{j=0}^{i}
+                a_{j}a_{i-j}
+                x^{i}
+    \nonumber
+    \\
+    f(x)^{3}
+    & = &
+        \sum_{i=0}^{3n}
+            \sum_{j=0}^{i}
+                \left(
+                    \sum_{k=0}^{j}
+                        a_{k}a_{j-k}
+                \right)
+                a_{i-j}
+                x^{i}
+    \nonumber
+    \\
+    & = &
+        \sum_{i=0}^{3n}
+            \sum_{j=0}^{i}
+                \left(
+                    a_{i-j}
+                    \sum_{k=0}^{j}
+                        a_{k}a_{j-k}
+                \right)
+                x^{i}
 \end{eqnarray}
 $$
 
