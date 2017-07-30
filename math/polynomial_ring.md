@@ -820,82 +820,42 @@ $$
 
 $$
 \begin{eqnarray}
-    0
-    & = &
-        b_{m}c_{-(1 + m)}
-        +
-        b_{m-1}c_{-(1 + m - 1)}
-        +
-        b_{m-2}c_{-(1 + m - 2)}
-        +
-        \cdots
-        +
-        b_{0}c_{-1}
-    \nonumber
-    \\
-    0
-    & = &
-        b_{m}c_{-(2 + m)}
-        +
-        b_{m-1}c_{-(2 + m - 1)}
-        +
-        b_{m-2}c_{-(2 + m - 2)}
-        +
-        \cdots
-        +
-        b_{0}c_{-2}
-    \nonumber
-    \\
-    0
-    & = &
-        b_{m}c_{-(3 + m)}
-        +
-        b_{m-1}c_{-(3 + m - 1)}
-        +
-        b_{m-2}c_{-(3 + m - 2)}
-        +
-        \cdots
-        +
-        b_{0}c_{-3}
-    \nonumber
-    \\
-    & \vdots &
-    \nonumber
-\end{eqnarray}
-$$
-
-より
-
-$$
-\begin{eqnarray}
-    c_{-(1 + m)}
-    & = &
+    & &
         0
+        =
+        \sum_{j=0}^{m}
+            b_{j}c_{-(i+j)}
     \nonumber
     \\
-    c_{-(2 + m)}
-    & = &
+    & \Leftrightarrow &
         0
+        =
+        b_{m}c_{-(i+m)}
+        +
+        \sum_{j=0}^{m-1}
+            b_{j}c_{-(i+j)}
     \nonumber
     \\
-    c_{-(3 + m)}
-    & = &
-        0
-    \nonumber
-    \\
-    & \vdots &
-    \nonumber
+    & \Leftrightarrow &
+        c_{-(i+m)}
+        =
+        \frac{-1}{b_{m}}
+        \left(
+            \sum_{j=0}^{m-1}
+                b_{j}c_{-(i+j)}
+        \right)
 \end{eqnarray}
 $$
 
 となる。
+これは$i=1$から順にとける。
 まとめると
 
 $$
 \begin{eqnarray}
     h(x)
     =
-    \sum_{i=m-n}^{m}
+    \sum_{i=m-n}^{\infty}
         c_{-i}x^{-i}
     \nonumber
 \end{eqnarray}
@@ -1358,6 +1318,124 @@ $$
             x^{-3k-2}
         \right)
 $$
+
+直接解く場合は、
+
+$$
+\begin{eqnarray}
+    c_{0}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-1}
+    & = &
+        \frac{a_{1}}{b_{2}}
+        =
+        \frac{1}{1}
+    \nonumber
+    \\
+    c_{-2}
+    & = &
+        \frac{1}{b_{2}}
+        \left(
+            a_{0}
+            -
+            b_{1}c_{-1}
+        \right)
+        =
+        \frac{1}{1}
+        (0 - 1)
+        =
+        1
+    \nonumber
+    \\
+    c_{-3}
+    & = &
+        \frac{-1}{b_{2}}
+        \left(
+            \sum_{j=0}^{2-1}
+                b_{j}c_{-(i+j)}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{-1}{1}
+        \left(
+            \sum_{j=0}^{1}
+                b_{j}c_{-(i+j)}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            b_{0}c_{-i}
+            +
+            b_{1}c_{-i-1}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            c_{-i}
+            +
+            c_{-i-1}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            c_{-1}
+            +
+            c_{-2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            1
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-4}
+    & = &
+        -1
+        \left(
+            c_{-2}
+            +
+            c_{-3}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            1
+            +
+            0
+        \right)
+    \nonumber
+    \\
+    & = &
+        1
+    \nonumber
+    \\
+        \vdots
+    \nonumber
+\end{eqnarray}
+$$
+
+として解ける。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
