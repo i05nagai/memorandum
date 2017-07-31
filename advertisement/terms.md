@@ -57,6 +57,18 @@
     * [Momentum株式会社(M0mentum)～最先端のデジタル広告～](http://www.m0mentum.co.jp/service/blackheron.html)
 * Black swan
     * ブランドセーフティーソリューション
+* incremental reach
+    * [動画広告が勃興するいま、見落としてはいけない3つの視点 | DIGIDAY［日本版］](http://digiday.jp/brands/suvt-3-point-of-view/)
+    * TV CMのreachの不足分をmobileの動画広告などで補った分
+* brand lift
+    * 
+* VPAID
+    * IABが規定している動画広告format
+    * VPAIDの方がrich
+    * 広告効果の測定もしやすい
+* VAST
+    * IABが規定している動画広告format
+
 
 
 定義はIABのstudy guideによる
