@@ -792,7 +792,7 @@ $$
         \left(
             a_{k}
             -
-            \sum_{j=1}^{m - k}
+            \sum_{j=1}^{n - k}
                 b_{m-j}
                 c_{-m + k + j}
         \right)
@@ -807,7 +807,7 @@ $$
         \left(
             a_{0}
             -
-            \sum_{j=1}^{m}
+            \sum_{j=1}^{n}
                 b_{m-j}
                 c_{-m + j}
         \right)
@@ -1436,6 +1436,257 @@ $$
 $$
 
 として解ける。
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example 3
+また、別の例として、
+
+* $R := \mathbb{F}_{2}$
+* $f(x) := x$
+    * $$a_{0} = 0, a_{1} = 1$$,
+* $n = 1$
+* $g(x) := x^{3} + x + 1$
+    * $$b_{3} = 1, b_{2} = 0, b_{1} = b_{0} = 1$$,
+* $m = 3$
+
+$$
+    \frac{
+        x
+    }{
+        x^{2} + x + 1
+    }
+    =
+    h(x)
+$$
+
+の$h$を計算する。
+直接解く。
+まず、$i=0$から$i = -m + n + 1 = -3 + 1 + 1 = -1$までは
+
+$$
+\begin{eqnarray}
+    c_{0}
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-1}
+    & = &
+        0
+\end{eqnarray}
+$$
+
+である。
+$$c_{i}$$について、$i = -m + n = -3 + 1 = -2$から$i=-m$までは、
+
+$$
+\begin{eqnarray}
+    c_{-m+k}
+    & = &
+        \frac{1}{b_{m}}
+        \left(
+            a_{k}
+            -
+            \sum_{j=1}^{n-k}
+                b_{m-j}c_{-m+k+j}
+        \right)
+\end{eqnarray}
+$$
+
+を解けば良いから、
+
+$$
+\begin{eqnarray}
+    c_{-2}
+    & = &
+        \frac{1}{b_{3}}
+        \left(
+            a_{1}
+        \right)
+    \nonumber
+    \\
+    & = &
+        1
+    \nonumber
+    \\
+    c_{-3}
+    & = &
+        \frac{1}{b_{3}}
+        \left(
+            a_{0}
+            -
+            b_{3-1}c_{-3+0+1}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{1}{b_{3}}
+        \left(
+            a_{0}
+            -
+            b_{2}c_{-2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            0
+            -
+            0
+        \right)
+    \nonumber
+    \\
+    & = &
+        0
+\end{eqnarray}
+$$
+
+となる。
+$$c_{i}$$の$i > -m$について、　
+
+$$
+\begin{eqnarray}
+    c_{-(k+m)}
+    & = &
+        \frac{-1}{b_{m}}
+        \left(
+            \sum_{j=0}^{m-1}
+                b_{j}c_{-(k+j)}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{-1}{b_{3}}
+        \left(
+            \sum_{j=0}^{2}
+                b_{j}c_{-(k+j)}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{-1}{1}
+        \left(
+            b_{0}c_{-k}
+            +
+            b_{1}c_{-k-1}
+            +
+            b_{2}c_{-k-2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            c_{-k}
+            +
+            c_{-k-1}
+        \right)
+\end{eqnarray}
+$$
+
+を解けば良いから
+
+$$
+\begin{eqnarray}
+    c_{-4}
+    & = &
+        -1
+        \left(
+            c_{-1}
+            +
+            c_{-2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            0
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        1
+    \nonumber
+    \\
+    c_{-5}
+    & = &
+        -1
+        \left(
+            c_{-2}
+            +
+            c_{-3}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            1
+            +
+            0
+        \right)
+    \nonumber
+    \\
+    & = &
+        1
+    \nonumber
+    \\
+    c_{-6}
+    & = &
+        -1
+        \left(
+            c_{-3}
+            +
+            c_{-4}
+        \right)
+    \nonumber
+    \\
+    & = &
+        -1
+        \left(
+            0
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        1
+    \nonumber
+    \\
+    c_{-7}
+    & = &
+        -1
+        \left(
+            c_{-4}
+            +
+            c_{-5}
+        \right)
+    \nonumber
+    \\
+    & = &
+        0
+    \nonumber
+    \\
+    c_{-8}
+    & = &
+        -1
+        \left(
+            c_{-5}
+            +
+            c_{-6}
+        \right)
+    \nonumber
+    \\
+    & = &
+        0
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
