@@ -1,7 +1,11 @@
-#for jekyll
+# for ruby and jekyll
 /Gemfile.lock
 /_site
 /.rbenv-*
+/.bundle
+/.jekyll-metadata
+/vendor
+
 
 # OSX
 .DS_Store

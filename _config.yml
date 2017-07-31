@@ -36,6 +36,7 @@ defaults:
     values:
       layout: slate_page
 
+exclude: [vendor]
 # following items are set by Gihutb io. We cannot override.
 lsi: false
 safe: true

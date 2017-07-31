@@ -6,6 +6,11 @@ GitHub pagesでjekyllによるサイトの自動生成を使う場合は、`_con
 `Settings->GitHub Pages->Theme Chooser`でThemeを一度選択すれば、勝手に生成され、repositoryにコミットされる。
 `index.md`がない場合は`README.md`が`index.html`の生成のために利用される。
 
+Githubが利用しているjekyllのversionは以下にある。
+
+* [Dependency versions | GitHub Pages](https://pages.github.com/versions/)
+
+
 ## Private Access Token
 tokenの認証情報をURLに入れる場合は以下のフォーマットで指定する。
 

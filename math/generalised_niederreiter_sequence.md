@@ -1131,18 +1131,27 @@ Sobol sequenceはGeneralized Niederreiter Sequenceの一種とみなすことが
     * 例えば$$g_{j, k}(x):= x^{s_{j} - k + 1} + \sum_{n=0}^{s_{j} - k} a_{n}x^{n}$$,
         * $$a_{n} \in \mathbb{F}_{2}$$,
 
-例えば、
+ここで、
+
+$$
+    \{ y_{i, k}^{j} \ (\mathrm{mod}\ p_{i}) \}_{0 \le k < s_{j}}
+    =
+    \{ g_{k}^{j} \ (\mathrm{mod}\ p_{i}) \}_{0 \le k < s_{j}}
+$$
+
+が一次独立である必要がある。
+例えば、classical niederreiter sequenceでは$$a_{s_{j} - k} = 0 \ (k = 0, \ldots, s_{j})$$とし、
 
 $$
 \begin{equation}
     \begin{array}{rclrclrclrclrcl}
             p_{1}(x)
         & := &
-            x + 1,
+            x,
         & &
             g_{0}^{1}(x)
         & := &
-            x^{2} + 1
+            1
         & &
         & &
         & &
@@ -1150,33 +1159,45 @@ $$
         \\
             p_{2}(x)
         & := &
-            x^{2} + x + 1,
+            x + 1,
         & &
             g_{0}^{2}(x)
         & := &
-            x^{3} + 1
+            1
         & &
-            g_{1}^{2}(x)
-        & := &
-            x^{2} + 1
+        & &
         & &
         & &
         \\
             p_{3}(x)
         & := &
-            x^{3} + x + 1
+            x^{2} + x + 1,
         & &
             g_{0}^{3}(x)
         & := &
-            x^{4} + 1
+            1
         & &
             g_{1}^{3}(x)
         & := &
-            x^{3} + 1
+            x
         & &
-            g_{2}^{3}(x)
+        & &
+        \\
+            p_{4}(x)
         & := &
-            x^{2} + 1
+            x^{3} + x + 1
+        & &
+            g_{0}^{4}(x)
+        & := &
+            1
+        & &
+            g_{1}^{4}(x)
+        & := &
+            x
+        & &
+            g_{2}^{4}(x)
+        & := &
+            x^{2}
     \end{array}
 \end{equation}
 $$
@@ -1201,15 +1222,84 @@ $$
     \\
     & =  &
         \frac{
-            x^{2} + 1
+            1
+        }{
+            x
+        }
+    \nonumber
+    \\
+    & = &
+        x^{-1}
+\end{eqnarray}
+$$
+
+
+$$
+\begin{eqnarray}
+    \frac{
+        y_{1, 0}^{2}(x)
+    }{
+        p_{2}(x)^{1}
+    }
+    & = &
+        \frac{
+            g_{0}^{2}(x)
+        }{
+            p_{2}(x)^{1}
+        }
+    \nonumber
+    \\
+    & =  &
+        \frac{
+            1
         }{
             x + 1
         }
     \nonumber
     \\
     & = &
-        \sum_{r=0}^{\infty}
-            a_{1, 0}^{j}(r)x^{-r-1}
+        x^{-1}
+        1 + x^{-1}
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{
+        g_{0}^{1}(x)
+    }{
+        p_{2}(x)^{2}
+    }
+    & =  &
+        \frac{
+            x^{2} + 1
+        }{
+            x^{2} + 1
+        }
+    \nonumber
+    \\
+    & = &
+        1
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{
+        g_{0}^{1}(x)
+    }{
+        p_{2}(x)^{3}
+    }
+    & =  &
+        \frac{
+            x^{2} + 1
+        }{
+            x^{3} + x
+        }
+    \nonumber
+    \\
+    & = &
+        1
 \end{eqnarray}
 $$
 

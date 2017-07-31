@@ -49,7 +49,7 @@ gemの環境を分ける場合は、
 
 ```
 brew install rbenv-gemset
-``
+```
 
 ### Usage
 
@@ -86,7 +86,10 @@ rbenv gemset init [gemset]
 ## gemの作り方 with bundler
 
 ### プロジェクトを作成
-`bundler gem project_name`
+
+```
+bundler gem project_name
+```
 
 ###
 

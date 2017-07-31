@@ -1,5 +1,5 @@
 ---
-title boto3
+title: boto3
 ---
 
 ## boto3

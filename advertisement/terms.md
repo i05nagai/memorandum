@@ -1,16 +1,45 @@
 ## Terms
 
 * remnant
-* AdExchange
-* SSP
-* dynamic allocation
+* media
+    * 広告枠をもっているweb site
+* advertiser
+    * 広告を出したい広告主
 * creative
     * 広告に表示される画像や動画、音楽など
+* AdExchange
+* Suppply Side Platform
+    * media側が広告枠を売るために利用するplatform
+    * 流れ
+        1. mediaでimpressionが発生する
+        2. mediaがimpressionの情報とaudienceの情報をSSPに渡す
+        3. SSPは受け取った情報をもとに、各DSPにbidを要求する
+            * Open RTBのBid Request
+        4. 各DSPはbidと掲載したい広告の情報とbidをSSPに返す
+            * Open RTBのBid Response
+        5. SSPは得られたBidと広告の組の中から、最良のものを選ぶ
+        6. SSPは選んだ広告をmediaに渡す
+* Demand Side Platform
+    * advertiserが広告枠を買うために利用するplatform
+    * audienceの情報は、SSPから渡されることもあれば、DSPやadveritser, 第三者のDMPを利用する場合がある
+* Data Mnagement Platform
+    * access logとの違いは、自社サイトのアクセスだけではなく、他社から提供される情報ももつ
+    * それらの情報を紐付けaudienceの情報を特定する
+    * 例えば
+        * 自社のweb siteの訪問履歴
+        * 他社のweb siteの訪問履歴
+        * demographic情報
+        * 検索Keyword
+        * EC siteなどでの購買履歴
+        * smartphoneの位置情報
+    * DMP専門の会社は、色々なmediaから情報を取得し、SSPやDSPに提供する場合もある
+* dynamic allocation
 * companion ad
     * pre/in/postなどのように1つのpage viewに対してimpressionを
 * road blocking
     * [ロードブロッキングについて - DoubleClick for Publishers ヘルプ](https://support.google.com/dfp_premium/answer/177277?hl=ja)
     * 1つのweb page内の複数の広告枠を、1つのbid responseに含まれる複数のクリエイティブで埋める
+    * 同じweb pageの複数広告枠の同時買い付け
 * ad mobile
     * [What is Mobile Ad Mediation and How Does it Work?](http://www.adotas.com/2014/07/what-is-mobile-ad-mediation-and-how-does-it-work/)
 * iframe buster
@@ -42,7 +71,7 @@
 
 
 
-定義はIABのstudy guideNiyoru
+定義はIABのstudy guideによる
 
 * CPM
     * Cost Per Mille
