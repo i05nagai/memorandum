@@ -202,6 +202,7 @@ OrganizationからAPpsの承認がないと、個別のrepositoryへのadmin権�
 
 ### Templates
 IssueとPull Requestのtemplateを作ることができる。
+templateは`.github/`の下か`docs/`の下におく。
 
 
 * [GitHub Issue and Pull Request Templates Generator](https://www.talater.com/open-source-templates/#/page/1)
@@ -209,6 +210,21 @@ IssueとPull Requestのtemplateを作ることができる。
     * 童話風のストーリの質問に回答していくとissueないしPRのtemplateを得ることができる
     * Chapter1で最初に、Issueのtemplateを作るか、PRのtemplateを作るかを選択できる
 
+* `PULL_REQUEST_TEMPLATE.md`
+* `ISSUE_TEMPLATE.md`
+* `CONTIRUBUTING.md`
+* `SUPPORT.md`
+    * [SUPPORT file support](https://github.com/blog/2400-support-file-support)
+
+### keywords
+* [Manage issues and pull requests with keyword updates](https://github.com/blog/2398-manage-issues-and-pull-requests-with-keyword-updates)
+
+IssueやPRのkeywordとして使えるもの。
+
+* close/fix/resolve
+    * `close #issuenum`で`#issuenum`の課題をclose
+* duplicate
+    * `duplicate of #issuenum`で`#issuenum`のduplicateとしている課題とする
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
