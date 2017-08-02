@@ -432,6 +432,22 @@ noseの命名規則
 
 ## Tips
 
+### pretty print
+* [8.18. pprint — Data pretty printer — Python 2.7.13 documentation](https://docs.python.org/2/library/pprint.html)
+
+辞書や、listをpretty printしたい場合に利用する。
+
+
+```python
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+data_dict = {
+    'hoge1': 'hohoho',
+    'hoge2': 'Hohoho',
+}
+pp(data_dict)
+```
+
 ### assert
 pythonのassertは以下と等価。
 
@@ -550,3 +566,29 @@ idはobjectのアドレスを返す。
 
 * [hash function in python - Stack Overflow](https://stackoverflow.com/questions/17192418/hash-function-in-python)
 * [2. Built-in Functions — Python 2.7.13 documentation](https://docs.python.org/2/library/functions.html#id)
+
+
+###  creating directory
+* [python - How can I create a directory if it does not exist? - Stack Overflow](https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist)
+
+以下で作成可能だが、ifの判定の後にdirectoryが作られると`OSError`で落ちる。
+
+```python
+if not os.path.exists(directory):
+    os.makedirs(directory)
+```
+
+以下は改良版。
+directoryが存在することによるerrorは無視している。
+例外を握りつぶしているのが問題。
+
+```python
+import os
+import errno
+
+try:
+    os.makedirs(directory)
+except OSError as e:
+    if e.errno != errno.EEXIST:
+        raise
+```
