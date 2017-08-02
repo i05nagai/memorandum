@@ -11,6 +11,36 @@ For OSX
 brew install apache-spark
 ```
 
+## API
+
+pyspark.sql.DataFrame
+
+* `df.withColumn(colName, col)`
+    * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumn)
+    * 新しいcolumnを追加する
+    * `colName`が名前
+    * 戻り値はDataFrame
+
+```python
+>>> df.withColumn('age2', df.age + 2).collect()
+[Row(age=2, name=u'Alice', age2=4), Row(age=5, name=u'Bob', age2=7)]
+```
+
+pyspark.sql.functions
+
+* `regexp_extract(str, patttern, idx)`
+    * strのcolumnでpatternにmatchするものだけを
+    * 戻り値はColumn型
+    * str
+        * column name
+    * pattern
+        * javaの正規表現
+        * groupを指定
+    * idx
+        * 正規表現のmatchしたgroupのindex
+        * `(\d+)(aaa)`なら`idx=1`で数字、`idx=2`で`aaa`がかえる
+
+
 ## Configuration
 
 ```json
