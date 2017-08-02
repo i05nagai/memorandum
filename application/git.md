@@ -350,3 +350,28 @@ A-B-C-D-E'-F' < master
 
 他の２つの方法は、localのmaster branchに`--no-ff`でorigin/masterをMergeしたものとなる。
 
+
+### comment in git commit message
+* [Start a git commit message with a hashmark (#) - Stack Overflow](https://stackoverflow.com/questions/2788092/start-a-git-commit-message-with-a-hashmark)
+
+
+`core.commentChar`でcommit message時作成時のcomment用の記号を選べるようになっている。
+defalutは`#`になっている
+git 2.0.x/2.1から`core.commentChar = auto`にもできる。
+`auto`の場合は、gitがcustom templateに含まれている文字から使われている文字を除き、コメント用の文字を決定する。
+ただし、そんなに賢くないのでcustom templateが複雑だと予期せぬ動作をする可能性がある。
+文字の優先順位は以下のようになっている。
+
+```
+# ; @ ! $ % ^ & | :
+```
+
+autoの場合は、
+
+```
+git commit -m '#1 Commit message'
+```
+
+とすればgitが`;`をcommit charとして選んでくれる。
+
+
