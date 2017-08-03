@@ -5,6 +5,7 @@ title: faker
 ## faker
 dummy data作成用のpython package.
 pythonのmoduleとしても利用できるが、CLIからのdataの作成も可能。
+以下でinstallできる。
 
 ```
 pip install faker
@@ -16,7 +17,7 @@ data作成用のobjectの作成
 
 ```
 from faker import Faker
-fake = Faker()
+fake = Factory.create()
 ```
 
 dummy dataの作成。
@@ -26,13 +27,16 @@ dummy dataの作成。
 seedを固定したい場合は、`fake.seed()`で設定する。
 
 ```
+# set seed
 fake.seed(4321)
+# use dummy data
 fake.name()
 fake.address()
 fake.text()
 ```
 
-Providerの追加
+Providerの追加。
+自分でproviderを作成する場合は以下のようにする。
 
 ```
 # first, import a similar Provider or use the default one
@@ -51,7 +55,7 @@ fake.foo()
 ```
 
 言語の変更。
-defaultでは、英語である。
+defaultは、英語である。
 日本語などのdataもある。
 
 * [Welcome to Faker’s documentation! — Faker 0.7.18 documentation](https://faker.readthedocs.io/en/latest/#localization)
@@ -84,6 +88,9 @@ fake = Factory.create('jp_JP')
 * faker.providers.python
 * faker.providers.ssn
 * faker.providers.user_agent
+
+## List of dummy data
+全て網羅していないが、利用可能なdata
 
 ```python
 # lorem
@@ -168,7 +175,7 @@ fakerという名前の引数をtest用の関数に指定しておけばfake mod
 
 ```python
 def test_faker(faker):
-    faker.name() != faker.address()
+    assert faker.name() != faker.address()
 ```
 
 
