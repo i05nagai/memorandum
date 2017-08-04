@@ -1,3 +1,7 @@
+---
+title: EMR
+---
+
 ## EMR
 Elastic Map Reduce
 
@@ -95,6 +99,9 @@ aws emr describe-step
 ## Web UI
 * [Amazon EMR クラスターでホストされているウェブサイトの表示 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-web-interfaces.html)
 
+Security上の理由で、これらはmaster node上のlocalhost上でのみ閲覧可能。
+外部から見るためには、sshのport forwardingが必要。
+
 
 | インターフェイスの名前 | URI                                    |
 |------------------------|----------------------------------------|
@@ -109,8 +116,91 @@ aws emr describe-step
 | HBase UI               | http://master-public-dns-name:16010/   |
 
 * [オプション 1: ローカルポートフォワーディングを使用してマスターノードへの SSH トンネルをセットアップする - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-ssh-tunnel-local.html)
+* [Option 2, Part 2: Configure Proxy Settings to View Websites Hosted on the Master Node - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-connect-master-node-proxy.html)
 
 SSHのport forwardingで直接見れない場合もSSHで接続可能であれば閲覧可能。
+
+1. Open a terminal window. On Mac OS X, choose `Applications > Utilities > Terminal`. On other Linux distributions, terminal is typically found at `Applications > Accessories > Terminal`.
+2. To establish an SSH tunnel with the master node using dynamic port forwarding, type the following command. Replace ~/dpi_rsa.pem with the location and filename of the private key file (.pem) used to launch the cluster.
+    * Note: Port `port_num` used in the command is a randomly selected, unused local port.
+
+```
+ssh -i ~/key -ND port_num hadoop@hostname
+```
+
+4. Type yes to dismiss the security warning.
+
+
+### Option1. local port forwarding
+`YARN ResourceManager`にaccessしたい場合
+
+```
+ssh -i ~/mykeypair.pem -N -L 8157:ec2-###-##-##-###.compute-1.amazonaws.com:8088 hadoop@ec2-###-##-##-###.compute-1.amazonaws.com
+```
+
+* `mykeypari.pem`
+    * masterに設定されているkeypair
+* `8157`
+    * local側のport
+* `ec2-###-##-##-###.compute-1.amazonaws.com`
+    * 接続先からアクセスするhost
+* `hadoop@ec2-###-##-##-###.compute-1.amazonaws.com`
+    * 接続先のuser`haddop`
+    * 接続先`ec2-###-##-##-###.compute-1.amazonaws.com`
+* `8088`
+    * 接続先からアクセスするport番号
+
+以上の設定で、`http://localhost:8157`にアクセスすると`http://ec2-###-##-##-###.compute-1.amazonaws.com`にアクセスできる。
+接続先のportごとにlocalのportが必要。
+
+
+### Option2. dynamic port forwarding
+aws-cliでもできる。
+
+```
+ssh -i ~/mykeypair.pem -N -D 8157 hadoop@ec2-###-##-##-###.compute-1.amazonaws.com
+```
+
+* `mykeypari.pem`
+    * masterに設定されているkeypair
+* `8157`
+    * local側のport
+* `hadoop@ec2-###-##-##-###.compute-1.amazonaws.com`
+    * 接続先のuser`haddop`
+    * 接続先`ec2-###-##-##-###.compute-1.amazonaws.com`
+
+以上の接続をした後に、browserのsocksの設定をする。
+
+* [オプション 2、パート 2: マスターノードでホストされるウェブサイトを表示するようにプロキシを設定する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-connect-master-node-proxy.html)
+
+For Chrome
+
+* [Chrome Web Store - foxy proxy](https://chrome.google.com/webstore/search/foxy%20proxy)
+    * Foxy Proxy Standardをinstallする
+* 以下のxmlを`foxyproxy-settings.xml`という名前で保存
+* Chrome ExtensionのFoxyProxyのoptionから`Import/Export`を選ぶ
+* importで`foxyproxy-settings.xml`を指定する。
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<foxyproxy>
+   <proxies>
+      <proxy name="emr-socks-proxy" id="2322596116" notes="" fromSubscription="false" enabled="true" mode="manual" selectedTabIndex="2" lastresort="false" animatedIcons="true" includeInCycle="true" color="#0055E5" proxyDNS="true" noInternalIPs="false" autoconfMode="pac" clearCacheBeforeUse="false" disableCache="false" clearCookiesBeforeUse="false" rejectCookies="false">
+         <matches>
+            <match enabled="true" name="*ec2*.amazonaws.com*" pattern="*ec2*.amazonaws.com*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" />
+            <match enabled="true" name="*ec2*.compute*" pattern="*ec2*.compute*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" />
+            <match enabled="true" name="10.*" pattern="http://10.*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" />
+            <match enabled="true" name="*10*.amazonaws.com*" pattern="*10*.amazonaws.com*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" />
+            <match enabled="true" name="*10*.compute*" pattern="*10*.compute*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" /> 
+            <match enabled="true" name="*.compute.internal*" pattern="*.compute.internal*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false"/>
+            <match enabled="true" name="*.ec2.internal* " pattern="*.ec2.internal*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false"/>	  
+	   </matches>
+         <manualconf host="localhost" port="8157" socksversion="5" isSocks="true" username="" password="" domain="" />
+      </proxy>
+   </proxies>
+</foxyproxy>
+```
 
 ## Debug
 * [クラスタログとデバッグを構成する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-plan-debugging.html)
