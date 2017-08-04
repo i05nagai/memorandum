@@ -26,6 +26,13 @@ pyspark.sql.DataFrame
 [Row(age=2, name=u'Alice', age2=4), Row(age=5, name=u'Bob', age2=7)]
 ```
 
+* `df.colname`
+    * [spark/dataframe.py at master · apache/spark](https://github.com/apache/spark/blob/master/python/pyspark/sql/dataframe.py#L1024)
+    * `colname`はDataFrameで定義されているcolumnの名前
+    * DataFrameは`__getattr__` methodがoverrideされているのでcolnameをinstance変数として扱える
+    * 戻り値はColumn型
+
+
 pyspark.sql.functions
 
 * `regexp_extract(str, patttern, idx)`
