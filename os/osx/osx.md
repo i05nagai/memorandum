@@ -73,6 +73,10 @@ sudo vim /etc/shells
 chsh -s /usr/local/bin/zsh
 ```
 
+## Socks
+* [ssh経由のSOCKSプロキシを通じてMac上のGoogle Chromeでブラウジング](http://blog.wktk.co.jp/ja/entry/2014/03/11/ssh-socks-proxy-mac-chrome)
+
+
 ## Reference
 * [Macのデスクトップ切り替え時のエフェクトを減らして、切り替えを多少すばやくする - Qiita](http://qiita.com/ikedakenno/items/58daf8a961f1813b3c1b)
 * [macOSでディスプレイ1枚で作業する技術 - Qiita](http://qiita.com/saboyutaka/items/d6cfd2a2b60f1a374d60)
