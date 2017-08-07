@@ -202,6 +202,9 @@ For Chrome
 </foxyproxy>
 ```
 
+FoxyProxyのproxyの設定をUse `emr-socks-proxy` をONにする。
+ブラウザで`http://ec2-###-##-##-###.compute-1.amazonaws.com/ganlgia`や `http://ec2-###-##-##-###.compute-1.amazonaws.com:8088/`
+
 ## Debug
 * [クラスタログとデバッグを構成する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-plan-debugging.html)
 
@@ -261,6 +264,30 @@ jsonの形式の場合は
   ...
 ]
 ```
+
+## ganglia
+wgetが使える。
+
+以下にgangliaのwebのcodeがある。
+
+```
+/usr/share/ganglia
+```
+
+
+```
+/var/lib/ganglia
+```
+
+にgangliaのrddなどが保存されている。
+
+## logs
+EMRのmaster nodeでspark-submitすると結果が以下のようにでる。
+`tracking URL`に実行Logが記録される。
+stdoutなども記録されている。
+
+
+* [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
 
 
 ## Reference
