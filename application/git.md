@@ -375,3 +375,11 @@ git commit -m '#1 Commit message'
 とすればgitが`;`をcommit charとして選んでくれる。
 
 
+## git stash
+git stash applyとgit stash popの違い。
+
+* applyはstashしているものを削除しない
+* popもconflictした場合はstashしているものを削除しない
+    * その場合はgit stash dropを使う必要がある
+* popはapplyしてdropしているのと似ている
+
