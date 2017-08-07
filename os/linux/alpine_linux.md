@@ -4,6 +4,13 @@
 * [Alpine packages](https://pkgs.alpinelinux.org/packages)
     * packageの一覧
 
+psコマンドでエラー。
+ps commandはbusyboxコマンドなので、通常のpsとは違う。
+通常のpsで使えるオプションなどを使いたい場合は以下をインストールする。
+
+```
+apk --no-cache add procps
+```
 
 ## apk
 * [Alpine Linux package management - Alpine Linux](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management)
