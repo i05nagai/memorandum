@@ -176,7 +176,9 @@ Options:
 
 ## Tips
 
-### A
+### Spark History Server
+* [Monitoring and Instrumentation - Spark 2.2.0 Documentation](https://spark.apache.org/docs/latest/monitoring.html)
+
 
 
 ## Reference
