@@ -660,7 +660,7 @@ $$
         }{
             \frac{2}{G}
             \sum_{i=1}^{k}
-                \\gamma_{k}
+                \gamma_{k}
         }
     \nonumber
 \end{eqnarray}
