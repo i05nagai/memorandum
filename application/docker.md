@@ -160,14 +160,14 @@ ENV variable1=value1 \
 書式は以下の2種類
 
 * ENTRYPOINT ["executable", "param1", "param2"]
-    * exec form
+    * exec form/json array format
     * 推奨される形式
 * ENTRYPOINT command param1 param2
     * shell form
     * `/bin/sh -c`経由で実行される
     * CMDやrunの引数を上書きする
 
-docker runの`<iamge>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
+docker runの`<image>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
 `ENTRYPOINT`が記載されていない場合は、引数のcommandがそのまま実行される。
 
 
@@ -230,7 +230,7 @@ docker run image/name
 
 ## Tips
 * [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
-
+* [Docker container will automatically stop after "docker run -d" - Stack Overflow](https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d)
 
 ### Data Volume container
 データ格納用のコンテナ。
