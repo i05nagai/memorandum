@@ -13,7 +13,19 @@ brew install apache-spark
 
 ## API
 
-pyspark.sql.DataFrame
+### pyspark.sql
+
+pyspark.sql.types
+
+* `IntegerType()`
+* `StringType()`
+
+* `StructType`
+    * `StructType([StructField('col_name', IntegerType(), True)])`
+* `StructField(name, dataType, nullable=True, metadata=None)`
+    * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=structtype#pyspark.sql.types.StructField)
+
+### pyspark.sql.DataFrame
 
 * `df.withColumn(colName, col)`
     * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumn)
@@ -32,8 +44,34 @@ pyspark.sql.DataFrame
     * DataFrameは`__getattr__` methodがoverrideされているのでcolnameをinstance変数として扱える
     * 戻り値はColumn型
 
+* `df.explan()`
+    * 標準出力にexplainを出力する
+    * 内部的には`df._jdf.queryExecution().toString()`を`print`している
+    * 標準出力以外に出す場合は`print`の出力先を奪うか、外側で`df._jdf.queryExecution().toString()`を直接呼ぶ
+* `df.distinct()`
+    * 同じ行を削除
 
-pyspark.sql.functions
+
+* `Column(jc)`
+    * jcはjavaのColumn型？
+* `Column.alias()`
+    * 戻り値はColumn型
+* `Column.cast()`
+    * 戻り値はColumn型
+
+
+* `pyspark.sql.Window`
+    * DataFrameのWindowを定義するためのutility
+
+```python
+>>> # ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+>>> window = Window.orderBy("date").rowsBetween(Window.unboundedPreceding, Window.currentRow)
+>>> # PARTITION BY country ORDER BY date RANGE BETWEEN 3 PRECEDING AND 3 FOLLOWING
+>>> window = Window.orderBy("date").partitionBy("country").rangeBetween(-3, 3)
+```
+
+
+### pyspark.sql.functions
 
 * `regexp_extract(str, patttern, idx)`
     * strのcolumnでpatternにmatchするものだけを
@@ -46,6 +84,38 @@ pyspark.sql.functions
     * idx
         * 正規表現のmatchしたgroupのindex
         * `(\d+)(aaa)`なら`idx=1`で数字、`idx=2`で`aaa`がかえる
+* `lag`
+    * parititionしたものの一つ前の行の値と置き換える
+    * [pyspark.sql module — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#pyspark.sql.functions.lag)
+    * Window関数
+* `udf(f=None, returnType=StringType)`
+    * methodからsqlのudf functionを生成する
+    * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=structtype#pyspark.sql.functions.udf)
+    * udfに渡すfunctionはudfと同じscopeにいないとだめ？
+
+```
+def samp():
+
+```
+
+
+### pyspark.SparkContext
+
+* `sc.parallelize(c, numSlices=None)`
+    * [pyspark package — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=parallelize#pyspark.SparkContext.parallelize)
+    * pythonのcollectionをnumSlices個のListに分割
+    * 順序は適当?
+
+
+```python
+>>> rdd = spark_context.parallelize([(0, 5), (3, 8), (2, 6), (0, 8), (3, 8), (1, 3)])
+# rdd[0]: (0, 5)
+# rdd[1]: (3, 8)
+>>> sc.parallelize([0, 2, 3, 4, 6], 5).glom().collect()
+[[0], [2], [3], [4], [6]]
+>>> sc.parallelize(xrange(0, 6, 2), 5).glom().collect()
+[[], [0], [], [2], [4]]
+```
 
 
 ## Configuration
@@ -212,13 +282,7 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 * `rdd.saveAsTextFile(path/to/outputFile)`
 * `rdd.saveAsSequenceFile(outputFile)`
 
-### functions
-* `lag`
-    * parititionしたものの一つ前の行の値と置き換える
-    * [pyspark.sql module — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#pyspark.sql.functions.lag)
-    * Window関数
-
-### RDD
+### pyspark.RDD
 以下はtransform
 
 * `map`
@@ -283,15 +347,55 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 * `cogroup(other)`
     * keyが同じものを、(key (list1, list2))でまとめる
     * list2はotherの中でkeyのvalue
+* `rdd.partitionBy(numPartitions, partitionFunc=portable_hash)`
+    * 
+* `rdd.mapPartitions(f, preservesPartitioning=False)`
+    * 下記の例だと`[1, 2]`が一つのpartition
+    * `f(iterator)`
+        * fの引数はpartitionのiterator
+        * 戻り値はparititionのiteratorである必要がある
+
+```python
+# [[1, 2], [3, 4]]
+rdd = sc.parallelize([1, 2, 3, 4], 2)
+# iterator = [1, 2] or [3, 4]
+def f(iterator): yield sum(iterator)
+rdd.mapPartitions(f).collect()
+# [3, 7]
+```
 
 
-* `repartitionAndSortWithinPartitions`
+* `rdd.repartitionAndSortWithinPartitions(numPartitions=None, partitionFunc=<function portable_hash at 0x7f51f1ac0668>, ascending=True, keyfunc=<function <lambda> at 0x7f51f1ab3ed8)`
     * 戻り値はrdd
     * [pyspark.RDD.repartitionAndSortWithinPartitions](http://takwatanabe.me/pyspark/generated/generated/pyspark.RDD.repartitionAndSortWithinPartitions.html)
-* `toDF`
+    * documentにあやまりがある
+    * [pyspark package — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=mappartition#pyspark.RDD.repartitionAndSortWithinPartitions)
+    * keyFuncは行をうけとり、sortのkeyを返す関数
+    * 下の例ではlambda functionでnumPartitions=2個に分けている
+    * 各行は(key, value)である必用がある
+        * 下の例では(key=0, value=5)
+        * valueが複数ある場合は片方はtuple(0, (5, 0, 5))
+
+
+```python
+rdd = sc.parallelize([(0, 5), (3, 8), (2, 6), (0, 8), (3, 8), (1, 3)])
+rdd2 = rdd.repartitionAndSortWithinPartitions(2, lambda x: x % 2, True)
+rdd2.glom().collect()
+# [[(0, 5), (0, 8), (2, 6)], [(1, 3), (3, 8), (3, 8)]]
+rdd = sc.parallelize([(0, 5), (3, 8), (2, 6), (0, 8), (3, 8), (1, 3)])
+rdd2 = rdd.repartitionAndSortWithinPartitions(2, lambda x: x % 2, 2)
+rdd2.glom().collect()
+# [[(0, 5), (0, 8), (2, 6)], [(1, 3), (3, 8), (3, 8)]]
+```
+
+* `rdd.toDF`
     * DataFrameのtoDFとはまた異なる
-    * `schema`と`sampleRation`からDataFrameを作る
-    * [spark/session.py at d935e0a9d9bb3d3c74e9529e161648caa50696b7 · apache/spark](https://github.com/apache/spark/blob/d935e0a9d9bb3d3c74e9529e161648caa50696b7/python/pyspark/sql/session.py#L43)
+    * `schema`と`sampleRatio`からDataFrameを作る
+    * sample rationはDataFrameの型の推定などに利用するsampleの割合を指定する
+    * 内部的には、SparkSessionのcreateDataFrameを呼んでいる
+    * `createDataFrame`の引数は`samplingRatio`だが、toDFは`sampleRation`
+    * `sampleRatio`は[0, 1]で指定
+    * [spark/session.py at d492cc5a21cd67b3999b85d97f5c41c3734b1ba3 · apache/spark](https://github.com/apache/spark/blob/d492cc5a21cd67b3999b85d97f5c41c3734b1ba3/python/pyspark/sql/session.py#L43)
     * [pyspark.sql module — PySpark 1.6.2 documentation](https://spark.apache.org/docs/1.6.2/api/python/pyspark.sql.html#pyspark.sql.DataFrame.toDF)
 
 
@@ -371,3 +475,4 @@ export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/pyth
 * [EMR上でPython3系でpysparkする - Qiita](http://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
 * [EMRのpysparkでPython３系を使う - Qiita](http://qiita.com/azaazato/items/ae5c90c3df1616284fd0)
 * [Databricks Spark Knowledge Base · GitBook](https://www.gitbook.com/book/databricks/databricks-spark-knowledge-base/details)
+* [msukmanowsky/pyspark-testing: Unit and integration testing with PySpark can be tough to figure out, let's make that easier.](https://github.com/msukmanowsky/pyspark-testing)
