@@ -82,3 +82,11 @@ SQLContext
 
 ## Java
 DataFrameはDataSet[Row]と等価
+
+* [spark/Dataset.scala at ee1304199bcd9c1d5fc94f5b06fdd5f6fe7336a1 · apache/spark](https://github.com/apache/spark/blob/ee1304199bcd9c1d5fc94f5b06fdd5f6fe7336a1/sql/core/src/main/scala/org/apache/spark/sql/Dataset.scala)
+
+* [spark/CacheManager.scala at c05baabf10dd4c808929b4ae7a6d118aba6dd665 · apache/spark](https://github.com/apache/spark/blob/c05baabf10dd4c808929b4ae7a6d118aba6dd665/sql/core/src/main/scala/org/apache/spark/sql/execution/CacheManager.scala)
+    * cacheQuery
+* [spark/InMemoryRelation.scala at 5ad1796b9fd6bce31bbc1cdc2f607115d2dd0e7d · apache/spark](https://github.com/apache/spark/blob/5ad1796b9fd6bce31bbc1cdc2f607115d2dd0e7d/sql/core/src/main/scala/org/apache/spark/sql/execution/columnar/InMemoryRelation.scala)
+    * InMemoryRelation
+
