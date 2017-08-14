@@ -1,5 +1,16 @@
 ## Apach Spark
 
+## spark standalone mode
+* [Spark Standalone Mode - Spark 2.2.0 Documentation](https://spark.apache.org/docs/latest/spark-standalone.html)
+
+```
+./sbin/start-master.sh
+```
+
+```
+http://localhost:8080
+```
+
 ## Commands
 
 ### spark-submit
@@ -179,10 +190,90 @@ Options:
 ### Spark History Server
 * [Monitoring and Instrumentation - Spark 2.2.0 Documentation](https://spark.apache.org/docs/latest/monitoring.html)
 
+hisotry serverの設定は以下の環境変数で変更可能。
 
+```
+export SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.ui.port=900
+```
+
+### nohup can't execute '--': No such file or directory
+alpine linuxで以下のようなerrorがでる。
+
+```
+nohup: can't execute '--': No such file or directory
+```
+
+* [docker - CrashLoopBackOff in spark cluster in kubernetes: nohup: can't execute '--': No such file or directory - Stack Overflow](https://stackoverflow.com/questions/44661274/crashloopbackoff-in-spark-cluster-in-kubernetes-nohup-cant-execute-no-s)
+
+この場合は
+
+```
+apk --update add coreutils
+```
+
+か、起動用のscriptを以下のように書き換える。
+
+```
+/usr/spark/bin/spark-submit --class org.apache.spark.deploy.master.Master $SPARK_MASTER_INSTANCE --port $SPARK_MASTER_PORT --webui-port $SPARK_WEBUI_PORT
+```
+
+## Configs
+* Node = Worker
+    * nodeは複数のexecutorをもつ
+* Executor
+    * executorは複数のtaskをもつ
+* task
+* driver
+* cluster manager
+
+* --num-executors
+    * `spark.executor.instances`
+    * executorの総数
+* --executor-cores
+    * 各executorの使うcpu core
+* --executor-memory
+    * 各executorの使うmemory
+* --driver-memory
+* spark.executor.cores
+    * 各executorの利用するcpu core
+* spark.executor.memory
+    * 各executorの利用するmemory
+
+## Tuning
+* [How-to: Tune Your Apache Spark Jobs (Part 2) – Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)
+* [Spark num-executors setting - Hortonworks](https://community.hortonworks.com/questions/56240/spark-num-executors-setting.html)
+
+
+* 6 node
+* 各nodeに16 cores, 64GB memory
+* `yarn.nodemanager.resource.memory-mb`は64 * 1024 = 64512 MB
+* `yarn.nodemanager.resource.cpu-vcores`は15
+
+この状況でmemoryとCPUの割り振りを考えるが、Hadoop DaemonとOS用のResourceは残す必用がある。
+
+案として`--num-executors 6 --executor-cores 15 --executor-memory 63G`は良くない。
+
+* 各executorが1つのnodeにいる
+* 各executorが15のcpu coreとmemory 63GBを使う
+
+`--num-executors 17 --executor-cores 5 --executor-memory 19G`の方が良い。
+
+* 3 executorがAMを除く(AMは2 executors)全てのnodeに割り振られる
+* memoryは63 / 3 = 21から21 * 0.93でだいたい19
+    * 0.93はOSとかHadoop Daemonを考慮しての掛け目
+
+### Reason: Container killed by YARN for exceeding memory limits.
+
+
+### Skipped Stage
+* [What does "Stage Skipped" mean in Apache Spark web UI? - Stack Overflow](https://stackoverflow.com/questions/34580662/what-does-stage-skipped-mean-in-apache-spark-web-ui)
+
+Cacheのdataを利用可能で、stageを実行する必要がない場合にskipされる。
+また、shufflingは多くのfileを生成するがこれらは、RDDが不要になるまで削除されるずに残る。
+これらのfileが利用可能な場合もまた、stageがskipされる要因になる。
 
 ## Reference
 * [Submitting Applications - Spark 1.6.0 Documentation](https://spark.apache.org/docs/1.6.0/submitting-applications.html)
 * [Sparkアプリケーションの実行方法（spark-submit） - TASK NOTES](http://www.task-notes.com/entry/20160103/1451810637)
 * [Deep Dive into Spark SQL's Catalyst Optimizer - The Databricks Blog](https://databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html)
-* 
+* [How-to: Tune Your Apache Spark Jobs (Part 2) – Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)* 
