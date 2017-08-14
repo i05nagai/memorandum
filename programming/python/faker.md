@@ -122,6 +122,76 @@ fake.locale()
 fake.language_code()
 fake.uuid4()
 fake.password()
+# internet
+email()
+safe_email()
+free_email()
+company_email()
+free_email_domain()
+user_name()
+domain_name()
+domain_word()
+url()
+ipv4()
+ipv6()
+uri_page()
+uri_path()
+uri_extension()
+image_url()
+# python
+pybool()
+pystr()
+pyfloat()
+pyint()
+pydecimal()
+pytuple()
+pyset()
+pylist()
+pyiterable()
+pydict()
+pystruct()
+# date_time
+# この戻り値はpythonのdatetime.datetimeやddatetime.date型などを継承して作られている
+# pythonのdatetime.datetime型として欲しい場合は自分で変換が必用
+def _to_datetime(faker_datetime):
+    return datetime.datetime(
+        faker_datetime.year,
+        faker_datetime.month,
+        faker_datetime.day,
+        faker_datetime.hour,
+        faker_datetime.minute,
+        faker_datetime.second)
+unix_time()
+time_delta()
+date_time()
+date_time_ad()
+iso8601()
+date()
+date_object()
+time()
+time_object()
+date_time_between(start_date='-30y', end_date='now')
+future_datetime(end_date='+30d')
+future_date(end_date='+30d')
+past_datetime(start_date='-30d')
+past_date(start_date='-30d')
+date_time_between_dates(datetime_start=None, datetime_end=None)
+date_time_this_century()
+date_time_this_decade(before_now=True, after_now=False)
+date_time_this_year(before_now=True, after_now=False)
+date_time_this_month(before_now=True, after_now=False)
+am_pm()
+day_of_week()
+month()
+month_name()
+year()
+century()
+timezone()
+# file
+file_path()
+file_extension()
+file_name()
+mime_type()
 ```
 
 ```python
