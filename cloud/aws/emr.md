@@ -289,6 +289,17 @@ stdoutなども記録されている。
 
 * [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
 
+sparkのlog dirは`/usr/lib/spark/conf/`の中で`/var/log/spark`として指定されている。
+
+
+## Spark History Server
+EMRのspark history serverは以下の形式で実行されている。
+
+```
+/usr/lib/jvm/java-openjdk/bin/java -cp /usr/lib/spark/conf/:/usr/lib/spark/jars/*:/etc/hadoop/conf/ -XX:OnOutOfMemoryError=kill -9 %p -Xmx1g org.apache.spark.deploy.history.HistoryServer
+```
+
+`/usr/lib/spark/conf/spark-defaults.sh`の中で、history logの場所が`hdfs:///var/log/spark/apps`として保存されている。
 
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
