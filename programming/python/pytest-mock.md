@@ -16,6 +16,9 @@ def test_unix_fs(mocker):
     os.remove.assert_called_once_with('file')
 ```
 
+* `mocker`
+    * `pytest_mock.MockFixture`型だが、`unittest.mock`と大体同じ？
+
 * `UnixFS.rm`テストしたいmethod
 * `mocker.patch`でmockにするmoduleを指定
 * `mocker.patch`で指定したmoduleはmockになっているので、呼び出し回数などの指定をする
