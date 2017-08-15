@@ -43,5 +43,62 @@ include_directories(
 )
 ```
 
+## Predicate Assertions for Better Error Messages
+error messageを自前のものに変更する場合に使用する。
+
+
+```cpp
+::testing::AssertionResult IsEven(int n) {
+  if ((n % 2) == 0)
+    return ::testing::AssertionSuccess();
+  else
+    return ::testing::AssertionFailure() << n << " is odd";
+}
+EXPECT_TRUE(IsEven(Fib(4)))
+```
+
+で以下のmessageがでる。
+
+```
+Value of: IsEven(Fib(4))
+Actual: false (*3 is odd*)
+Expected: true
+```
+
+vectorを比較する場合
+
+```cpp
+template <typename T1, typename T2>
+::testing::AssertionResult
+IsElementEqual(const std::vector<T1>& v1, const std::vector<T2>& v2)
+{
+  if (v1.size() != v2.size()) {
+    return ::testing::AssertionFailure() << "size of vector is not same";
+  }
+  for (size_t i = 0; i < v1.size(); ++i) {
+    if (v1[i] != v2[i]) {
+      return ::testing::AssertionFailure()
+        << i << " th element is different. "
+        << " expect: " << v1[i] << ", "
+        << " actual: " << v2[i];
+    }
+  }
+  return ::testing::AssertionSuccess();
+}
+
+std::vector<int> a(2);
+std::vector<int> b(2);
+EXPECT_TRUE(IsElementEqual(a, b));
+```
+
+とする。
+
+
+## API
+
+* `RUN_ALL_TESTS()`
+    * 全てのtestがpassしたら0
+    * 上記以外は1を返す
+
 ## Reference
 * [GitHub - google/googletest: Google Test](https://github.com/google/googletest)
