@@ -383,3 +383,17 @@ git stash applyとgit stash popの違い。
     * その場合はgit stash dropを使う必要がある
 * popはapplyしてdropしているのと似ている
 
+
+## git alias
+
+### with arguments
+* [gitのaliasコマンドに引数を渡す方法 - Qiita](http://qiita.com/yatemmma/items/22aa62e232776f4f330b)
+
+以下の二通りの方法がある。
+
+```gitconfig
+[alias]
+        command1 = "!sh -c 'echo $1 $2' -"
+        command2 = "!f(){ echo $1 $2;};f"
+```
+
