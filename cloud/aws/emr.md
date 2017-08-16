@@ -265,6 +265,17 @@ jsonの形式の場合は
 ]
 ```
 
+### Shutdown action
+* [(Optional) Create Bootstrap Actions to Install Additional Software - Amazon EMR](http://docs.aws.amazon.com/emr/latest/DeveloperGuide/emr-plan-bootstrap.html#bootstrap_Shutown)
+
+* `/mnt/var/lib/instance-controller/public/shutdown-actions/`にclusterの終了時に実行したいscriptsをおく
+* cluster終了時に上記foluderのscriptが並列に全て実行される
+* scriptsは60sec以内終わる必用がある
+* `/mnt/var/lib/instance-controller/public/shutdown-actions/`はdefaultでは作成されないので、自分で作成する必要がある
+
+    
+
+
 ## ganglia
 wgetが使える。
 
