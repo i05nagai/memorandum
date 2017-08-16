@@ -26,6 +26,7 @@ pyspark.sql.types
     * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=structtype#pyspark.sql.types.StructField)
 
 ### pyspark.sql.DataFrame
+pyspark.sql.DataFrame
 
 * `df.withColumn(colName, col)`
     * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumn)
@@ -72,6 +73,7 @@ pyspark.sql.types
 
 
 ### pyspark.sql.functions
+pyspark.sql.functions
 
 * `regexp_extract(str, patttern, idx)`
     * strのcolumnでpatternにmatchするものだけを
@@ -283,6 +285,14 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 * `rdd.saveAsSequenceFile(outputFile)`
 
 ### pyspark.RDD
+
+### functions
+* `lag`
+    * parititionしたものの一つ前の行の値と置き換える
+    * [pyspark.sql module — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#pyspark.sql.functions.lag)
+    * Window関数
+
+### RDD
 以下はtransform
 
 * `map`
@@ -396,6 +406,15 @@ rdd2.glom().collect()
     * `createDataFrame`の引数は`samplingRatio`だが、toDFは`sampleRation`
     * `sampleRatio`は[0, 1]で指定
     * [spark/session.py at d492cc5a21cd67b3999b85d97f5c41c3734b1ba3 · apache/spark](https://github.com/apache/spark/blob/d492cc5a21cd67b3999b85d97f5c41c3734b1ba3/python/pyspark/sql/session.py#L43)
+
+
+* `repartitionAndSortWithinPartitions`
+    * 戻り値はrdd
+    * [pyspark.RDD.repartitionAndSortWithinPartitions](http://takwatanabe.me/pyspark/generated/generated/pyspark.RDD.repartitionAndSortWithinPartitions.html)
+* `toDF`
+    * DataFrameのtoDFとはまた異なる
+    * `schema`と`sampleRation`からDataFrameを作る
+    * [spark/session.py at d935e0a9d9bb3d3c74e9529e161648caa50696b7 · apache/spark](https://github.com/apache/spark/blob/d935e0a9d9bb3d3c74e9529e161648caa50696b7/python/pyspark/sql/session.py#L43)
     * [pyspark.sql module — PySpark 1.6.2 documentation](https://spark.apache.org/docs/1.6.2/api/python/pyspark.sql.html#pyspark.sql.DataFrame.toDF)
 
 

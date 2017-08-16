@@ -167,9 +167,8 @@ ENV variable1=value1 \
     * `/bin/sh -c`経由で実行される
     * CMDやrunの引数を上書きする
 
-docker runの`<image>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
+docker runの`<iamge>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
 `ENTRYPOINT`が記載されていない場合は、引数のcommandがそのまま実行される。
-
 
 
 CMDとの併用は以下のようにする。

@@ -118,6 +118,36 @@ csv_all_strings pluginは、CSVのすべてのcolumnをstringとして判定す�
 GCSからのデータの転送ができる。
 Installは以下でできる。
 
+## Plugins
+
+### local executor plugin
+
+pluginごとの設定に加えて、  
+
+* [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
+    * configに最大
+
+```yaml
+exec:
+  max_threads: 8         # run at most 8 tasks concurrently
+  min_output_tasks: 1    # disable page scattering
+```
+
+### guess executor
+
+```yaml
+exec:
+  guess_plugins: ['csv_all_strings']
+  exclude_guess_plugins: ['csv']
+```
+
+### embulk-input-gcs
+GCSからのデータの転送ができる。
+Installは以下でできる。
+* service-accountではadminが必要
+
+* [GitHub - embulk/embulk-input-gcs: Embulk plugin that loads records from Google Cloud Storage](https://github.com/embulk/embulk-input-gcs)
+
 ```
 embulk gem install embulk-input-gcs
 ```
@@ -134,6 +164,28 @@ embulk gem install embulk-input-mysql
 ```
 
 * [embulk-input-jdbc/embulk-input-mysql at master · embulk/embulk-input-jdbc](https://github.com/embulk/embulk-input-jdbc/tree/master/embulk-input-mysql)
+* parser
+    * 必須
+    * columns:
+        * 必須
+        * 列の定義を与える
+* auth_method
+    * defaultだとprivate_key
+    * json_keyも選べる
+    * json_keyはservice-accountでDLできるjsonファイルなどが指定できる
+
+
+columnsには以下が指定できる。
+
+```yaml
+columns:
+    - {name: id, type: long}
+    - {name: account, type: long}
+    - {name: time, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
+    - {name: purchase, type: timestamp, format: '%Y%m%d'}
+    - {name: comment, type: string}
+```
+
 * parser
     * 必須
     * columns:
@@ -208,6 +260,11 @@ embulk gem install embulk-output-bigquery
 * table
     * 必須
     * 出力先のtable名
+
+```yaml
+out:
+  dataset:
+```
 
 ### embulk-input-s3
 S3からのデータの転送ができる。

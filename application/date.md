@@ -21,7 +21,6 @@ date --date '1 day ago' +%Y%m%d
 date --date '1 day ago' +%Y-%m-%d
 ```
 
-
 For OSX
 
 unixtime to date

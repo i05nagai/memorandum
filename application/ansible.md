@@ -183,7 +183,6 @@ inventoryで指定された`gropu_name`にpingできる。
 ansible group_name -m ping
 ```
 
-
 ### Directory Structure
 * [AnsibleをBest Practicesのディレクトリ構成にする - Qiita](http://qiita.com/yuki-k/items/5609f7a23abbafa4ea08)
 
@@ -235,13 +234,14 @@ documentは、`ansible-doc module_name`で見ることができる。
 * `shell`
 * `command`
 
+## module
+documentは、`ansible-doc module_name`で見ることができる。
+
 ### docker
 `docker run`などのかわり。
 
 ### docker_images
 `docker build`のかわり。
-
-
 
 
 ## Become

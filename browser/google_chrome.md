@@ -19,7 +19,5 @@ For OSX
 ## Developer tools
 
 
-
-
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
