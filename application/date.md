@@ -41,7 +41,7 @@ date -u -r 1282368345
 ### Unixtime
 Posix timeともいう。
 UTCでの1970/1/1 00:00:00からの経過時間を表す。
-
+UTC/JSTなどの設定に依存せずに時刻に変換できる。
 
 
 ## Reference
