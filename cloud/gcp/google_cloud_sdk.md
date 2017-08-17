@@ -209,6 +209,8 @@ bq --format=prettyjson show db_name.table_name > table.json
 ```json
 [
     {
+        "description": "description",
+        "mode": "NULLABLE",,
         "name": "filed_name",
         "type": "type"
     },
@@ -262,20 +264,20 @@ bq show dataset.table --format prettyjson
 ## gsutil
 
 * acl
-	* Get, set, or change bucket and/or object ACLs
+    * Get, set, or change bucket and/or object ACLs
 * acls            Working With Access Control Lists
 * anon            Accessing Public Data Without Credentials
 * apis            Cloud Storage APIs
 * cat
-	* Concatenate object content to stdout
+    * Concatenate object content to stdout
 * compose         Concatenate a sequence of objects into a new composite object.
 * config          Obtain credentials and create configuration file
 * cors            Get or set a CORS JSON document for one or more buckets
 * cp
-	* localのファイルも指定できる
-	* `-m`
-		* parallel
-	* `gsutil cp [OPTION]... src_url dst_url`
+    * localのファイルも指定できる
+    * `-m`
+        * parallel
+    * `gsutil cp [OPTION]... src_url dst_url`
 * crc32c          CRC32C and Installing crcmod
 * creds           Credential Types Supporting Various Use Cases
 * csek            Supplying Your Own Encryption Keys
