@@ -6,7 +6,23 @@ title: Ansible
 For OSX
 
 ```
-pip install ansible
+ansible-playbook -i test-inventory -l test-server --start-at='target task name' --step test.yml
+```
+
+* -i
+    * inventory
+* -l
+    * host-patter
+* --start-at
+    * 指定したtaskから実行
+* --step
+    * taskごとに実行
+
+## Commands
+* [ansibleで特定のtaskを特定のhostに実行する - Qiita](http://qiita.com/346@github/items/00122556cb2bd6f57998)
+
+```
+ansible-playbook 
 ```
 
 ## Playbook
