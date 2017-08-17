@@ -23,6 +23,23 @@ brew install embulk
 embulk selfupdate
 ```
 
+## Commands
+
+
+```
+embulk run config.yml
+```
+
+```
+embulk mkbundle /path/to/bundle_dir
+```
+
+で`bundle_dir`が作成され、Gemifileなどが作られる。
+Gemfileでinstallする場合は
+
+
+
+
 ## configの書き方
 
 * [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
@@ -68,6 +85,8 @@ liquid tagの中を以下のようにかく。
 とかがある。
 
 pluginの管理にGemfileが使える。
+defualtのinstall先は`/home/shiro/.embulk/jruby/1.9`の下になる。
+install先を変更する場合は`embulk bundle --path /path/to/install_dir`とする。
 
 ```
 bundle init
@@ -76,7 +95,14 @@ embulk bundle
 ```
 
 でGemfileに記載されているpluginがembulkのplugin用のディレクトリにinstallされる。
+`embulk mkbundle /path/to/bundle_dir`をすると`/path/to/bundle_dir`に雛形が作られるので、それを利用しても良い。
+`mkbundle`自体は雛形を作るだけで、特にinstallなどは関係ない。
+`mkbundle` 実行後は bundle_dirに移動して`embulk budnle install`を実行する。
+必要であれば、`--path`をつける。
 
+```
+embulk run -b /path/to/bundle_dir /path/to/conf.yml
+```
 
 ### csv formatter plugin
 configで設定するのは、主に以下。
@@ -173,7 +199,23 @@ embulk gem install embulk-input-mysql
     * defaultだとprivate_key
     * json_keyも選べる
     * json_keyはservice-accountでDLできるjsonファイルなどが指定できる
+* incremental
+    * 差分転送するか
+    * defalut false
+* incremental_columns
+    * [embulk-input-jdbc/embulk-input-mysql at master · embulk/embulk-input-jdbc](https://github.com/embulk/embulk-input-jdbc/tree/master/embulk-input-mysql#incremental-loading)
+    * default primary keys
+    * 差分転送に利用するcolumn name
+    * 指定したKeyを元に以下のようなqueryが実行され、差分だけ転送される
+    * column nameで指定するcolumnの組は、indexがないとfull table scanになる
+    * [Embulk 0.8.3で導入された-cオプションはLiquidを使った設定ファイルとの連携に便利 - Qiita](http://qiita.com/hiroysato/items/3552366ddf7d29bf7829)
 
+```
+SELECT * FROM (
+  ...original query is here...
+)
+ORDER BY updated_at, id
+```
 
 columnsには以下が指定できる。
 
@@ -322,6 +364,17 @@ exec:
   max_threads: 1
   min_output_tasks: 1
 ```
+
+### Bad character (ASCII 0)
+`compress`がついている場合は除く。
+Threadごとに処理しているFileがlogの最初に表示されるので、どのthreadで落ちているかを確認して、処理しているfileを確認。
+拡張子前の4桁の数字は、再実行しても不変なので、どのfileで落ちるかはわかる。
+落ちたbyte数が表示されるので、該当の場所に移動する。
+
+```
+2017-08-17 04:03:36.460 +0000 [ERROR] (Ruby-0-Thread-4: /path/to/plugin.  ): embulk-output-bigquery: failed during waiting a Load job, get_job(xxx, xxxx), errors:[{:reason=>"invalid", :location=>"file-00000000", :message=>"CSV table encountered too many errors, giving up. Rows: 48441; errors: 1."}, {:reason=>"invalid", :location=>"file-00000000", :message=> "Error detected while parsing row starting at position: 23984771. Error: Bad character (ASCII 0) encountered."}]
+```
+
 
 ## Reference
 * [embulk/embulk-output-bigquery: Embulk output plugin to load/insert data into Google BigQuery](https://github.com/embulk/embulk-output-bigquery#mode)
