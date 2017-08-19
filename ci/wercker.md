@@ -328,6 +328,12 @@ brew install wercker-cli
 
 ## Tips
 
+### Change repository name/ change url of repository
+* [How can I update a repository URL?](http://devcenter.wercker.com/docs/faq/how-can-i-update-a-repo-url)
+
+GitHubのrepositoryの名前の変更やrepositoryのURLの変更はUIからはできないので、supportにメール。
+
+
 ### Add organization's repository
 * [Enabling OAuth App access restrictions for your organization - User Documentation](https://help.github.com/articles/enabling-oauth-app-access-restrictions-for-your-organization/)
 * [Requesting organization approval for OAuth Apps - User Documentation](https://help.github.com/articles/requesting-organization-approval-for-oauth-apps/)

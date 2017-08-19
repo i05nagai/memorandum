@@ -114,6 +114,10 @@ exec:
 csv_all_strings pluginは、CSVのすべてのcolumnをstringとして判定する。
 上の例では、csv guess pluginを使わないようにして、全てstringとして判定させている。
 
+### embulk-input-gcs
+GCSからのデータの転送ができる。
+Installは以下でできる。
+
 ## Plugins
 
 ### local executor plugin

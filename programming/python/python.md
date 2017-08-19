@@ -592,3 +592,45 @@ except OSError as e:
     if e.errno != errno.EEXIST:
         raise
 ```
+
+## variable scope
+* [変数のスコープ - Qiita](http://qiita.com/yoichi22/items/8ae2ca180407a5ad5a6d)
+
+* 関数定義はscopeを作る
+* for文はscopeを作らない
+* python2ではlist 内包表記の変数は外へもれる
+    * `[i for i in range(3)]`
+* set内包表記は外へもれない
+    * `{i for i in range(3)}`
+
+下記では、ll == 1がgeneratorの最初で実行されるようにすれば、errorにならない
+
+```python
+def set_visit_id(lll):
+    for ll in lll:
+        if ll == 1:
+            seq = 0
+            print(seq)
+        else:
+            seq = seq + 1
+            print(seq)
+        yield ll
+
+
+lll = [1, 0, 0, 0]
+a = set_visit_id(lll)
+print(a)
+next(a)
+next(a)
+next(a)
+# no error
+# 0, 1, 2, 3, 4
+lll = [0, 1, 0, 0]
+a = set_visit_id(lll)
+print(a)
+next(a)
+next(a)
+next(a)
+# error
+# un initialized variable: seq
+```

@@ -38,6 +38,10 @@ git tag -a hoge-1.1.1
 git push hoge-1.1.1
 ```
 
+## Collaborator
+defaultでは、repositoryの作成者にしか権限がない？
+Collaboratorの所から必要なteamをaddする必要がある。
+
 
 ## Reference
 
