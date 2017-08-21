@@ -261,6 +261,8 @@ endif()
 ## Tips
 
 ### ビルドのオプション/条件分岐
+* [CMakeを使ってみた (4) ビルドオプション - wagavulin's blog](http://blog.wagavulin.jp/entry/2011/11/27/222650)
+
 `OPTION`コマンドを使う
 
 ```cmake
@@ -277,8 +279,13 @@ ENDIF()
 
 * cmakeのコマンドライン引数で-DUSE_FEATURE_X=ON/OFFをつける
     * OFFだと定義されない
-* CMakeLists.txt中でsetコマンドを使う
+* CMakeLists.txt中でoptionコマンドを使う
 * 明示的には指定しない → 初期値またはキャッシュされた値を使う
+
+例えば、利用しているlibararyの`CMakeLists.txt`の中で、libraryのtestのON/OFFの設定にoptionを使っているとする。
+libraryを利用する側としては、Library自体のtestは不要である場合が多い。
+この場合は、自身のlibraryで`option`を使ってON/OFFの設定をすることをできる。
+
 
 ### Reference
 * [CMakeを使ってみた (4) ビルドオプション - wagavulin's blog](http://blog.wagavulin.jp/entry/2011/11/27/222650)

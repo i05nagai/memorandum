@@ -83,11 +83,31 @@ $$
 $$ n \ge m$$とする。
 
 $$
+\begin{eqnarray}
     f(x)g(x)
-    := 
-    \sum_{i = 0}^{n}
-    \sum_{j = 0}^{m}
-        a_{i}b_{j} x^{i+j}
+    & := & 
+        \sum_{i = 0}^{n}
+        \sum_{j = 0}^{m}
+            a_{i}b_{j} x^{i+j}
+    \nonumber
+    \\
+    & = &
+        \sum_{i = 0}^{n + m}
+            \left(
+                \sum_{j + l = i}
+                    a_{j}b_{l}
+            \right)
+            x^{i}
+    \nonumber
+    \\
+    & = &
+        \sum_{i = 0}^{n + m}
+            \left(
+                \sum_{j = 0}^{i}
+                    a_{j}b_{i - j}
+            \right)
+            x^{i}
+\end{eqnarray}
 $$
 
 ## Theory

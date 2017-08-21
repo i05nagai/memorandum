@@ -239,10 +239,32 @@ $$
 ### Def. Conditional Independence
 TBD.
 
+
 ## Conditional Probability Density Function
 条件付き確率密度関数について考える。
 
 ### Gaussian Distribution
+
+## Proposition
+* $$(\Omega, \mathcal{F}, P)$$,
+* $$X: \Omega \rightarrow \mathbb{R}$$,
+    * r.v.
+    * 分布関数が連続
+
+このとき、$\forall x \in \mathbb{R}$, $P(\{X = x\}) = 0$である。
+
+## proof.
+$\exists x \in \mathbb{R}$, $c := P(\{X = x\}) > 0$とする。
+$c > \epsilon > 0$について、$\forall 1 > \delta > 0$
+
+$$
+    |F(x) - F(x - \delta)|
+    =
+    |PX^{-1}((-\infty, x]) - PX^{-1}((-\infty, x - \delta])|
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 
 # Reference
 * [Multivariate normal distribution - Wikipedia](https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Conditional_distributions)

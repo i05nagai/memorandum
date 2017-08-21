@@ -232,18 +232,32 @@ $$
 
 ### Example 2.4.1 (Order statics)
 * $$X_{1}, \ldots, X_{n}$$,
+    * $$X:\Omega \rightarrow \mathbb{R}$$,
     * i.i.dの$\mathbb{R}$値の確率変数
-    * 分布は連続
+    * 分布関数は連続
+* $$F^{X}$$
+    * $X$の分布関数
 * $T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$
 
 $$
-    T(x_{1}, \ldots, x_{n})
+    T(X_{1}, \ldots, X_{n})
     =:
-    (x_{(1)}, \ldots, x_{(n)})
+    (X_{(1)}, \ldots, X_{(n)})
 $$
 
-ここで、$$x_{(1)} \le \cdots \le x_{(n)}$$である。
-分布が連続だから、確率1で$$x_{(1)} < \cdots < x_{(n)}$$である。
+ここで、$$X_{(1)} \le \cdots \le X_{(n)}$$である。
+分布が連続だから、確率1で$$X_{(1)} < \cdots < X_{(n)}$$である。
+実際、$$c := P(\{\omega \mid X_{(1)}(\omega) = X_{2}(\omega)\}) > 0$$とすると
+
+$$
+    PX^{-1}((-\infty, y])
+    =
+    P(\{\omega \mid X(\omega) \in (-\infty, y]\})
+   c > \epsilon > 0,
+   1 > \forall \delta  > 0,
+   F(x) - F(x = \epsilon)
+$$
+
 $\mathcal{A}_{0} := T^{-1}(\mathcal{B})$とおくと、
 
 ここで、任意の可積分関数$f$について、
@@ -447,50 +461,419 @@ $$
 ## 2.5 Conditional Probability Distribution
 * $\mathcal{X}$
     * Euclidian spaceとする
+    * i.e. $\mathcal{X} \subseteq \mathbb{R}^{n}$ for some $n$
 * $\mathcal{A}$
-    * Borel sets 
+    * Borel sets of $\mathcal{X}$
 
 ### Theorem 2.5.1
 * $\mathcal{X}$
     * Euclidian
 
-このとき、$\forall t \in $について、$P(\cdot \mid t): \mathcal{A} \rightarrow [0,1]$が存在して、$P(\cdot \mid t)$は$$(\mathcal{X}, \mathcal{A})$$l上の確率測度になる
+このとき、$\forall t \in $について、$P(\cdot \mid T = t): \mathcal{A} \rightarrow [0,1]$が存在して、$P(\cdot \mid T = t)$は$$(\mathcal{X}, \mathcal{A})$$上の確率測度になる
 
 ### proof.
+一般性をかかず、$$\mathcal{X} = \mathbb{R}^{n}$$とする。
+実際、$$\mathcal{X} \neq \mathbb{R}^{n}$$とし、$$\mathbb{R}^{n}$$上$P$が定理の主張を満たすmeasureとする。
+このとき、$$Q(A) := P(A \cap \mathcal{X})\ (A \in \mathcal{B}(\mathbb{R}^{n}))$$とおけば$Q$はmeasureなので$Q(\cdot \mid T = t)$が存在する。
+$$P(A \mid T = t) := Q(A \cap \mathcal{X}$$とおけば、定理の条件を満たす。
+
+簡単のため、$n = 1$とおく。
+$x \in \mathcal{X}$について、
+
+$$
+    F(x, t)
+    :=
+    P((-\infty, x] \mid T = t)
+    \
+    t\text{-a.e.}
+$$
+
+とおく。
+このとき、右辺は$x$に依存したnull set$N_{x}$をもつ。
+$$\mathbb{Q} = (r_{i})_{i \in \mathbb{N}}$$として $$A_{i} := (-\infty, r_{i}]$$とおけば以下が成り立つ。
+$P^{T}$上のあるnull set$N$が存在して、$\forall t \in N$について、
+
+$$
+\begin{eqnarray}
+    & &
+        0 \le P(A_{i} \mid T = t) \le 1
+        \quad
+        (\forall i)
+    \\
+    & &
+        (A_{i_{k}})_{k}: \mathrm{disjoint}
+        \Rightarrow
+        P(\sum_{k} A_{i_{k}} \mid T = t)
+        =
+        \sum_{k}P(A_{i_{k}} \mid T = t)
+    \\
+    & &
+        A_{i} \subseteq A_{j}
+        \Rightarrow
+        P(A_{i} \mid T = t)
+        \le
+        P(A_{j} \mid T = t)
+\end{eqnarray}
+$$
+
+実際、$$N := \bigcup_{k \in \mathbb{N}} N_{r_{k}}$$とおけば良い。
+また、以下が成り立つ。
+あるnull set$N$が存在して、$\forall \in N^{c}$について、
+
+$$
+\begin{eqnarray}
+    & &
+        r_{i} \le v_{j}
+        \Rightarrow
+        F(r_{i}, t)
+        \le
+        F(v_{j}, t)
+    \\
+    & &
+        r \in \mathbb{Q}
+        \
+        (s_{n})_{n \in \mathbb{N}} \subset \mathbb{Q},
+        \
+        s_{n} \searrow r,
+        \
+        \Rightarrow
+        F(s_{n}, t) = F(r, t)
+\end{eqnarray}
+$$
+
+実際、
+
+$$
+\begin{eqnarray}
+    0
+    & \le &
+        \lim_{n \rightarrow \infty} F(s_{n}, t) - F(r, t)
+    \nonumber
+    \\
+    & = &
+        \lim_{n \rightarrow \infty} P((r, s_{n}])
+    \nonumber
+    \\
+    & \le &
+        P(\lim \sup (r, s_{n}]))
+    \nonumber
+    \\
+    & = &
+        P(\emptyset) = 0
+\end{eqnarray}
+$$
+
+となる。
+上記により、$t \notin N$について$F(\cdot, t)$は$\mathbb{Q}$上右連続、非単調減少である。
+$\forall t \notin N$について、$F(\cdot, t)$を$\mathbb{R}$上に拡張できる。
+
+$$
+    F^{*}(x, t)
+    :=
+    \lim_{r \searrow x, r \in \mathbb{Q}} F(r, t)
+    \
+    (x \in \mathbb{R})
+$$
+
+この$$F^{*}$$についても、$t \notin N$について
+
+$$
+\begin{eqnarray}
+    & &
+        x \le y
+        \Rightarrow
+        F^{*}(x, t)
+        \le
+        F^{*}(y, t)
+    \\
+    & &
+        \lim_{x \rightarrow a} F^{*}(x, t)
+        =
+        F^{*}(a, t)
+    \\
+    & &
+        \lim_{x \rightarrow -\infty} F^{*}(x, t)
+        =
+        0,
+        \
+        \lim_{x \rightarrow \infty} F^{*}(x, t)
+        =
+        1,
+\end{eqnarray}
+$$
+
+が成立する。
+実際、$\epsilon > 0$とすると、
+
+$$
+    \exists \delta > 0,
+    \
+    \forall r \in \mathbb{Q},
+    \
+    \mathrm{s.t. }
+    a \le r < a + \delta
+    \Rightarrow
+    | F^{*}(a, t) - F(r, t) |
+    \le
+    \epsilon
+$$
+
+である。
+ここで、$x \in \mathbb{R}$,$a < x < a + \delta$とすれば
+$\exists l \in \mathbb{Q}$ s.t. $x < l < a + \delta$が存在するから、
+
+$$
+    l \in \mathbb{Q}
+    \mathrm{ s.t. }
+    | F^{*}(x, t) - F(l, t) |
+    \le
+    \epsilon
+$$
+
+とおけば、
+
+$$
+\begin{eqnarray}
+    |F^{*}(a, t) - F^{*}(x,t)|
+    & = &
+        |F^{*}(a, t) - F(l,t) +  F(l, t) - F^{*}(x,t)|
+    \nonumber
+    \\
+    & \le &
+
+        2\epsilon
+\end{eqnarray}
+$$
+
+上の3条件から$$F^{*}$$は分布関数になる。
+よって、一意な確率測度$$P^{*}(\cdot \mid T=t)$$が存在して$$F^{*}(\cdot, t)$$が分布関数となる。
+後は以下を示す。
+
+$$
+    P^{*}(\cdot \mid T = t)
+    =
+    P(\cdot \mid T = t)
+    \
+    t\text{-a.e.}
+$$
+
+これを示すには、一致の定理より$t$-a.e.でいかが成り立つことを示せば良い。
+
+$$
+\begin{eqnarray}
+    & \Leftrightarrow &
+        P^{*}((-\infty, a] \mid T = t)
+        =
+        P((-\infty, a] \mid T = t)
+        \
+        \forall a \in \mathbb{R}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        F^{*}(a, t)
+        =
+        F(a, t)
+        \
+        \forall a \in \mathbb{R}
+\end{eqnarray}
+$$
+
+これは$\mathbb{Q}$上では明らかに成り立つ。
+$a \notin \mathbb{Q}$については$a_{n} \searrow a$なる$a_{n} \in \mathbb{Q}$の列をとれば、$F$の右連続性より成り立つ。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+Notationとして以下を定義する。
+
+* $X:\Omega \rightarrow \mathcal{X}$
+    * vector-valued r.v.
+* $T:\mathcal{X} \rightarrow \mathcal{T}$
+    * statistics
+* $P^{X}:\mathcal{A} \rightarrow [0, 1]$
+    * $X$の分布
+
+$P^{X \mid T = t}: \mathcal{A} \rightarrow [0, 1]$を$P^{X}$の$T=t$での条件付き確率とする。
+
+$$
+    P^{X \mid T = t}(\cdot)
+    =
+    P^{X}(\cdot \mid T = t)
+$$
+
 ### Thereom 2.5.2
-* $X$
+* $X: \Omega \rightarrow \mathcal{X}$
     * vector valued random variable
-* $$\mathrm{E} \left[ f(X) \right] < \infty $$,
+* $$\mathrm{E}^{P^{X}} \left[ f \right] < \infty $$,
 
 このとき以下が成り立つ。
 
 $$
-    \mathrm{E}
+    \mathrm{E}^{P^{X}}
     \left[
-        f(X)
+        f
         \mid
-        t
+        T = t
     \right]
     =
     \int
         f(x)
-    \ d P^{X \mid t}(x)
+    \ d P^{X \mid T = t}(x)
     \quad
+    t \text{-a.e.}
+    \
     (\mathcal{B}, P^{T})
 $$
 
 ### proof.
+$f$が定義関数のときは、Theorem 2.5.2による。
+$f$を階段関数で近似すれば、期待値の線形性とMonotone convergence theoremより成り立つ。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Theorem 2.5.3
+* $T$
+    * statistacs
+
+nullset $\exists N$が存在して、$\forall t \notin N$, $\exists P^{X \mid T =t}$: conditional probabiilty measureで以下を満たす。
+$\forall t \notin N$について、
+
+$$
+\begin{eqnarray}
+    \mathrm{E}^{P^{X}}
+    \left[
+    \left.
+        f
+    \right|
+        T = t
+    \right]
+    & = &
+        \int
+            f(x)
+        \ d P^{X \mid T = t}(x)
+    \nonumber
+    \\
+    \mathrm{E}^{P^{X}}
+    \left[
+    \left.
+        h \circ T
+        f
+    \right|
+        T = t
+    \right]
+    & = &
+        h(t)
+        \mathrm{E}^{P^{X}}
+        \left[
+        \left.
+            f
+        \right|
+            T = t
+        \right]
+\end{eqnarray}
+$$
 
 ### proof.
+W.l.o.g. we assume $\mathcal{T} \subseteq \mathbb{R}$, therefore to the previous theorem we attain $P^{X \mid T = t}$ in the bi.
+Let $B \in \mathcal{B}$ then it holds that
+
+$$
+    \{ T \in B\}
+    \in
+    \sigma[T]
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{E}^{P^{X}}
+    \left[
+    \left.
+        1_{T \in B}
+    \right|
+        T = t
+    \right]
+    & = &
+        1_{B}(t)
+    \nonumber
+    \\
+    P^{X \mid T = t}(T^{-1}(B))
+    =
+    1_{B}(t)
+    \
+    t \text{-a.e.}
+\end{eqnarray}
+$$
+
+
+$$
+    \mathcal{C}
+    :=
+    \{
+        (a, b]
+        \mid
+        a, b \in \mathbb{Q}
+    \}
+$$
+
+Since $$\# \mathcal{C} = \# \mathbb{N}$$, we can constract such a null set $N$ that for $\forall t \notin N$,
+
+$$
+    P^{X \mid T = t}(T^{-1}(B))
+    =
+    1_{B}(t)
+    \
+    (\forall B \in \mathcal{B})
+$$
+
+Since both sides can be regarded as mean w.r.t. $B \in \mathcal{B}$.
+We obtain
+
+$$
+    P^{X \mid T = t}(T = t)
+    =
+    P^{X \mid T = t}(T^{-1}(\{ t\}))
+    =
+    1_{\{t\}}(t)
+    =
+    1
+$$
+
+Consequentlly, we have obtained
+
+$$
+    \mathrm{E}^{P^{X \mid T = t}}
+    \left[
+    \left.
+        h(T)
+    \right|
+        T = t
+    \right]
+    =
+    \int 
+        h(T(x))
+        f(x)
+    \ d P^{X \mid T = t}(dx)
+    =
+    \int_{\{T = t\}}
+        h(T(x))
+        f(x)
+    \ d P^{X \mid T =t}(x)
+    =
+    h(t)
+    \int_{\{T = t\}}
+        f
+    \ d P^{X \mid t}(x)
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+In 1.9, the cond. prob. dist's are defined over $$\{T = t \}$$ rather than the entire sp. $\mathcal{X}$ and in this sense $P^{X \mid T = t}$, defined perivously, differs from them.
+Howerver  sincd
+
+$$
+    P^{X \mid T = t}(A)
+    =
+    P^{X \mid T = t}(A \cap \{T = t\})
+$$
 
 ### Lemma 2.5.1
 * $$(\mathcal{T}, \mathcal{B})$$,
@@ -547,6 +930,55 @@ $$
 
 ## 2.6 Characterization of Sufficiency
 
+* $$\mathcal{P} := \{P_{\theta}\}_{\theta \in \Theta}\}$$,
+    * sample sp. $$(\mathcal{X}, \mathcal{A})$$上の確率測度の族
+* $T: \mathcal{X} \rightarrow \mathcal{T}$
+    * 統計量
+
+
+### Definition. sufficient
+$T$がsufficientであるとは、$\forall A \in \mathcal{A}$について、ある$\mathcal{B}$可測関数$q(A \mid t)$が存在して、
+
+$$
+    \forall B \in \mathcal{B},
+    \
+    \theta \in \Theta,
+    \
+    \int_{B}
+        q(A \mid t)
+    \ d P_{\theta}^{T}(dt)
+    =
+    P_{\theta}(A \cap T^{-1}(B))
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+統計量が十分とは、分布族を$\theta$に依存しない可測関数で表現できるということである。
+つまり、統計量$T$が$\theta$を特定するのに十分な情報を持っているということ。
+
+Example 2.4.1からorder statisticsはsufficient statisticである。
+
+### Theorem 2.6.1
+* $\mathcal{X}$
+    * Euclidian sp.
+* $T$が$\mathcal{P}$について、十分とする
+
+このとき、$\theta$に依存しない可測関数$$g:\mathcal{T} \rightarrow [0, 1]$$が存在して、
+
+$$
+    g(t)
+    =
+    P_{\theta}(A \mid T = t)
+$$
+
+となる。
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+この定理はもう少し一般的な形で成り立つ。
+詳細は数理統計学の命題3.3.をみる。
 
 ## 2.7 Exponential Families
 

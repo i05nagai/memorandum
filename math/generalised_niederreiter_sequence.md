@@ -71,7 +71,7 @@ $$
 \end{eqnarray}
 $$
 
-ここで、$$Q(i, j) \in \mathbb{Z}_{\ge 0}$$は$j - 1$を$$s_{j}$$で割った商で、$$0 \le k(i, j) < s_{j}$$はその余りである。
+ここで、$$Q(i, j) \in \mathbb{Z}_{\ge 0}$$は$i - 1$を$$s_{j}$$で割った商で、$$0 \le k(i, j) < s_{j}$$はその余りである。
 つまり、
 
 $$
@@ -1203,7 +1203,8 @@ $$
 $$
 
 となる。
-$1$次元の生成行列を具体的に求める。
+生成行列を具体的に求める。
+$j=1$次元目は
 
 $$
 \begin{eqnarray}
@@ -1233,6 +1234,7 @@ $$
 \end{eqnarray}
 $$
 
+$j=2$次元目は
 
 $$
 \begin{eqnarray}
@@ -1258,8 +1260,30 @@ $$
     \nonumber
     \\
     & = &
-        x^{-1}
-        1 + x^{-1}
+        \sum_{i=1}^{\infty}
+            x^{-1}
+\end{eqnarray}
+$$
+
+$j=3$次元目は
+
+$$
+\begin{eqnarray}
+    \frac{
+        g_{0}^{1}(x)
+    }{
+        p_{3}(x)^{1}
+    }
+    & =  &
+        \frac{
+            1
+        }{
+            x^{2} + x + 1
+        }
+    \nonumber
+    \\
+    & = &
+        ?
 \end{eqnarray}
 $$
 
@@ -1268,18 +1292,45 @@ $$
     \frac{
         g_{0}^{1}(x)
     }{
-        p_{2}(x)^{2}
+        p_{3}(x)^{2}
     }
     & =  &
         \frac{
-            x^{2} + 1
+            x
         }{
-            x^{2} + 1
+            x^{2} + x + 1
         }
     \nonumber
     \\
     & = &
-        1
+        \sum_{k=0}^{\infty}
+            (
+                x^{-3k+1}
+                +
+                x^{-3k+2}
+            )
+\end{eqnarray}
+$$
+
+$j=4$次元目は
+
+$$
+\begin{eqnarray}
+    \frac{
+        g_{0}^{1}(x)
+    }{
+        p_{4}(x)^{1}
+    }
+    & =  &
+        \frac{
+            1
+        }{
+            x^{3} + x + 1
+        }
+    \nonumber
+    \\
+    & = &
+       ?
 \end{eqnarray}
 $$
 
@@ -1288,18 +1339,38 @@ $$
     \frac{
         g_{0}^{1}(x)
     }{
-        p_{2}(x)^{3}
+        p_{4}(x)^{1}
     }
     & =  &
         \frac{
-            x^{2} + 1
+            x
         }{
-            x^{3} + x
+            x^{3} + x + 1
         }
     \nonumber
     \\
     & = &
-        1
+        ?
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{
+        g_{0}^{1}(x)
+    }{
+        p_{4}(x)^{1}
+    }
+    & =  &
+        \frac{
+            x^{2}
+        }{
+            x^{3} + x + 1
+        }
+    \nonumber
+    \\
+    & = &
+       ?
 \end{eqnarray}
 $$
 

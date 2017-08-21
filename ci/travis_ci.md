@@ -437,6 +437,20 @@ notifications:
 brew install gcc48
 ```
 
+### Environment Variables
+* [Environment Variables - Travis CI](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
+
+Defining Variables in Repository Settings
+
+Default Environment Variables
+
+Travisで利用可能な環境変数の一覧
+
+* TRAVIS_BUILD_DIR
+    * Travis CIにcopyされたrepositoryのtop directory
+
+
+
 ## Encrypting Files and Data
 
 ### Usages
