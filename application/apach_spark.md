@@ -13,6 +13,17 @@ http://localhost:8080
 
 ## Commands
 
+### spark-shell
+以下でscalaのshellがたちがる。
+`SparkContext`が`sc`で、`SparkSession`が`spark`で参照できる。
+
+```
+spark-shell
+```
+
+EMRの場合は`pyspark` commandeでpythonのshellが立ちあがる。
+
+
 ### spark-submit
 
 ```
@@ -271,6 +282,13 @@ apk --update add coreutils
 Cacheのdataを利用可能で、stageを実行する必要がない場合にskipされる。
 また、shufflingは多くのfileを生成するがこれらは、RDDが不要になるまで削除されるずに残る。
 これらのfileが利用可能な場合もまた、stageがskipされる要因になる。
+
+### File does not exist
+* [hadoop - Spark Python submission error : File does not exist: pyspark.zip - Stack Overflow](https://stackoverflow.com/questions/34632617/spark-python-submission-error-file-does-not-exist-pyspark-zip)
+
+
+### deploy mode
+* [Deploy Mode · Mastering Apache Spark 2 (Spark 2.2+)](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-deploy-mode.html)
 
 ## Reference
 * [Submitting Applications - Spark 1.6.0 Documentation](https://spark.apache.org/docs/1.6.0/submitting-applications.html)
