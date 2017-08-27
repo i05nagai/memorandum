@@ -3,10 +3,15 @@ title: Subgradient Methods
 ---
 
 ## Subgradient Methods
+凸関数に対するgradient descent method.
+
 * $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$
     * convex function
 * $$\partial_{x}f$$,
     * $x$における$f$のsubdifferential
+
+Algoritmは以下のようになる。
+step幅の取り方によって、幾つか種類があるが step幅$$\alpha_{k}$$の与え方については、後述する。
 
 * Step1. $x^{(0)}$を適当な初期値とする。
 * Step2. $k = 0$とする
@@ -115,10 +120,11 @@ $$
     & \le &
         \|x^{(k)} - x^{*} \|_{2}^{2}
         -
-        2 \alpha_{k} (g^{(k)})^{\mathrm{T}}
+        2 \alpha_{k}
         (f(x^{(k)}) - f(x^{*}))
         +
         \alpha_{k}^{2}\|g^{(k)} \|
+    \label{inequality_basic_subgradient}
 \end{eqnarray}
 $$
 
@@ -132,12 +138,13 @@ $$
         -
         2
         \sum_{i=1}^{k}
-            \alpha_{i} (g^{(i)})^{\mathrm{T}}
+            \alpha_{i}
             (f(x^{(i)}) - f(x^{*}))
         +
         \sum_{i=1}^{k}
             \alpha_{i}^{2}
             \|g^{(i)}\|_{2}^{2}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -198,7 +205,7 @@ $$
         -
         2
         \sum_{i=1}^{k}
-            \alpha_{i} (g^{(i)})^{\mathrm{T}}
+            \alpha_{i}
             (f(x^{(i)}) - f(x^{*}))
         +
         \sum_{i=1}^{k}
@@ -211,7 +218,7 @@ $$
         -
         2
         \sum_{i=1}^{k}
-            \alpha_{i} (g^{(i)})^{\mathrm{T}}
+            \alpha_{i}
             (f(x^{(i)}) - f(x^{*}))
         +
         \sum_{i=1}^{k}
@@ -233,9 +240,9 @@ $$
     & \ge  &
         2
         \sum_{i=1}^{k}
-            \alpha_{i} (g^{(i)})^{\mathrm{T}}
+            \alpha_{i}
             (f(x^{(i)}) - f(x^{*}))
-    \nonumber
+    \label{01_inequality_strict_lower_bound}
     \\
     & \ge &
         2
@@ -671,6 +678,334 @@ $$
 
 ### 3.3. A bound on the suboptimality bound
 次に、$$f_{\mathrm{best}} - f(x^{*})$$の上界を考える。
+前節の議論、特に$$\eqref{inequality_basic_subgradient_method}$$によって、
+
+$$
+    f_{\mathrm{best}} - f(x^{*})
+    \le
+    \frac{
+        R^{2}
+        +
+        G^{2}
+        \sum_{i=1}^{k}
+            \alpha_{i}^{2}
+    }{
+        2
+        \left(
+            \sum_{i=1}^{k}
+                \alpha_{i}
+        \right)
+    }
+    =:
+    h(\alpha_{1}, \ldots, \alpha_{k})
+$$
+
+である。
+この時、右辺を最小にするようなstep幅を考える。
+上式の右辺は、$$\alpha_{1}, \ldots, \alpha_{k}$$について、convexかつsymmetric(i.e. $$\sigma \in \mathfrak{S}_{k}, h(\alpha_{\sigma(1)}, \ldots, \alpha_{\sigma(k)}) = h(\alpha_{1}, \ldots, \alpha_{k}))$$なので、step幅を等長(e.g. $\alpha$)として取れば良い。
+実際、convexityは以下から分かる。
+
+$$
+
+$$
+
+convexityから極小値が最小値となるが、最小値の一意性とsymmetricであることより、解は等長でなければならない。
+よって、極小値では、$$\alpha_{i} = \alpha_{j}\ (i \neq j)$$である。
+極小値では一階微分はゼロであるから、一階微分を考えると、
+
+$$
+\begin{eqnarray}
+    & &
+        \frac{\partial h}{\partial \alpha_{j}}  = 0
+    \\
+    & \Leftrightarrow &
+        \frac{
+            G^{2} 2\alpha_{j}
+            \left(
+                \sum_{i=1}^{k}
+                    \alpha_{i}
+            \right)
+            -
+            \left(
+                R^{2} + G^{2} 
+                    \sum_{i=1}^{k}
+                        \alpha_{i}^{2}
+            \right)
+        }{
+            2
+            \left(
+                \sum_{i=1}^{k}
+                    \alpha_{i}
+            \right)^{2}
+        }
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        G^{2} 2\alpha_{j}
+        \left(
+            \sum_{i=1}^{k}
+                \alpha_{i}
+        \right)
+        -
+        \left(
+            R^{2} + G^{2} 
+                \sum_{i=1}^{k}
+                    \alpha_{i}^{2}
+        \right)
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        2\alpha_{j}
+        \left(
+            \sum_{i=1}^{k}
+                \alpha_{i}
+        \right)
+        -
+        \sum_{i=1}^{k}
+            \alpha_{i}^{2}
+        =
+        \frac{R^{2}}{G^{2}}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        2k\alpha^{2}
+        -
+        k
+        \alpha^{2}
+        =
+        \frac{R^{2}}{G^{2}}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        k\alpha^{2}
+        =
+        \frac{R^{2}}{G^{2}}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \alpha
+        =
+        \frac{
+            R
+        }{
+            G \sqrt{k}
+        }
+\end{eqnarray}
+$$
+
+このとき、不等式$$\eqref{inequality_basic_subgradient_method}$$は以下となる。
+
+$$
+\begin{eqnarray}
+    f_{\mathrm{best}} - f(x^{*})
+    & \le &
+        \frac{
+            R^{2}
+            +
+            G^{2}
+            \sum_{i=1}^{k}
+                \alpha_{i}^{2}
+        }{
+            2
+            \left(
+                \sum_{i=1}^{k}
+                    \alpha_{k}
+            \right)
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            R^{2}
+            +
+            G^{2} k \alpha^{2}
+        }{
+            2k \alpha
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            R^{2}
+            +
+            R^{2}
+        }{
+            2\sqrt{k}R/G
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            GR
+        }{
+            \sqrt{k}
+        }
+\end{eqnarray}
+$$
+
+### 3.4 A stopping criterion
+algorithmのstopping criterionについて考える。
+$$\eqref{01_inequality_strict_lower_bound}$$は$$\eqref{inequality_basic_subgradient_method}$$及び$$\eqref{inequality_general_basic_subgradient_method}$$よりstrictなlower boundを与える。
+$$\eqref{01_inequality_strict_lower_bound}$$から、
+
+$$
+    f^{*}
+    \ge
+    l_{k}
+    :=
+    \frac{
+        2 \sum_{i=1}^{k}\alpha_{i}f(x^{(i)})
+        - R^{2}
+        - \sum_{i=1}^{k}
+            \alpha_{i}^{2} \|g^{(i)}\|_{2}^{2}
+    }{
+        2
+        \sum_{i=1}^{k}
+            \alpha_{i}
+    }
+$$
+
+$$l_{k}$$は減少する可能性もあるから、
+
+$$
+    l_{\mathrm{best}}^{(k)}
+    :+
+    \max\{l_{1}, \ldots, l_{k}\}
+$$
+
+をlower boundとする。
+最適解のlower boundとの差$$f_{\mathrm{best}}^{(k)}  f_{\mathrm{best}}^{(k)}$$がthresholdを超えたらalgorithmを終了する。
+
+これは、$G$に依存してい点で$$$$\eqref{inequality_general_basic_subgradient_method}$$より良いが、一般にこの差は0に収束するのに非常に多くのstepを要する。
+そのため、このstopping criterionが使われることは殆どない。
+
+### 3.5 Numerical example
+
+
+
+
+## 4 Polyak's step length
+
+### 4.1 Optimal step size choice when $$f^{*}$$ is known
+Polyakは$$f^{*}$$が既知の場合のstep sizeの決め方について提案している。
+$$f^{*}$$が既知であることはないように思えるが、これについては後で述べる。
+step sizeとして、
+
+$$
+\begin{eqnarray}
+    \alpha_{k}
+    :=
+    \frac{
+        f(x^{(k)}) - f^{*}
+    }{
+        \|g^{(k)}\|_{2}^{2}
+    }
+    \label{05_step_size_polyak}
+\end{eqnarray}
+$$
+
+このstep sizeの動機としては、$f$の$x^{(k)}$の周りでの1次のtaylor approximationを考え
+
+$$
+    f(x^{(k)} - \alpha g^{(k)})
+    \approx
+    f(x^{(k)})
+    +
+    (g^{(k)})^{\mathrm{T}}
+    (x^{(k)} - \alpha g^{(k)} - x^{(k)})
+    =
+    f(x^{(k)})
+    -
+    \alpha (g^{(k)})^{\mathrm{T}} g^{(k)}
+$$
+
+この左辺を$$f^{*}$$として、$\alpha$について解けば得られる。
+$\alpha$が十分小さければ良い近似を与えるから、$$f^{*}$$に近い所では良い収束を示すことが期待できる。
+
+また、別の解釈として$$\eqref{05_step_size_polyak}$$は、$$\eqref{inequality_basic_subgradient}$$の右辺を最小にするstep sizeである。
+実際
+
+$$
+    \|x^{(k+1)} - x^{*}\|_{2}^{2}
+    \le
+    \|x^{(k)} - x^{*}\|_{2}^{2}
+    -
+    2\alpha_{k} (f(x^{(k)}) - f^{*})
+    +
+    \alpha_{k}^{2}\| g^{(k)}\|_{2}^{2}
+$$
+
+から右辺の１階微分が0となる$$\alpha_{k}$$を考えれば良い。
+
+収束については、$$\eqref{05_step_size_polyak}$$を$$\eqref{01_inequality_strict_lower_bound}$$に代入すると、
+
+$$
+\begin{eqnarray}
+    & &
+        R^{2}
+        +
+        \sum_{i=1}^{k}
+            \alpha_{i}^{2}
+            \|g^{(i)}\|_{2}^{2}
+        \ge
+        2
+        \sum_{i=1}^{k}
+            \alpha_{i}
+            (f(x^{(i)}) - f(x^{*}))
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2}
+        +
+        \sum_{i=1}^{k}
+            \frac{
+                (f(x^{(i)}) - f^{*})^{2}
+            }{
+                \|g^{(i)}\|_{2}^{2}
+            }
+        \ge
+        2
+        \sum_{i=1}^{k}
+            \frac{
+                (f(x^{(i)}) - f^{*})^{2}
+            }{
+                \|g^{(i)}\|_{2}^{2}
+            }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2}
+        \ge
+        \sum_{i=1}^{k}
+            \frac{
+                (f(x^{(i)}) - f^{*})^{2}
+            }{
+                \|g^{(i)}\|_{2}^{2}
+            }
+    \nonumber
+\end{eqnarray}
+$$
+
+ここで、$$\eqref{inequality_subgradient_bound}$$より、
+
+$$
+    R^{2}
+    G^{2}
+    \ge
+    \sum_{i=1}^{k}
+        (f(x^{(i)}) - f^{*})^{2}
+$$
+
+となる。
+よって、右辺のsummationは収束する必要があるから、$$f(x^{(k)}) \rightarrow f^{*}$$を得る。
+
+### 4.2 Plyak step size choice with estimated $$f^{*}$$,
+$$f^{*}$$のestimationを考える。
+$$f_{\mathrm{best}} - \gamma^{k}$$, $$\gamma^{k} > 0$$, $$\gamma^{k} \rightarrow 0$$
 
 
 ## Reference
