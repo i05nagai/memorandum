@@ -555,6 +555,12 @@ sensors.TimeDeltaSensor(
 
 * [airflow.operators.sensors — Airflow Documentation](https://airflow.incubator.apache.org/_modules/airflow/operators/sensors.html)
 
+### re run failed dags
+* [python - How to restart a failed task on Airflow - Stack Overflow](https://stackoverflow.com/questions/43270820/how-to-restart-a-failed-task-on-airflow)
+
+taskがfailした場合は、failしたtaskをWebUIでClearすれば、failしたtaskから再実行される。
+failしたtaskに依存しているdownstream taskの状態(upstream  failed)も合わせてclearされる。
+
 ## API Reference
 
 ### operators

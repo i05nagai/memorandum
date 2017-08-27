@@ -384,6 +384,16 @@ git stash applyとgit stash popの違い。
 * popはapplyしてdropしているのと似ている
 
 
+## git diff
+
+```
+git diff [--options] [--] [<path>...]
+```
+
+* indexとの差分を見る
+* indexに何が追加されるかを確認する
+
+
 ## git alias
 
 ### with arguments

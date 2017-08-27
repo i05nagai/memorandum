@@ -305,4 +305,4 @@ JS UDFのbest practice
 
 
 ## Reference
-
+* [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
