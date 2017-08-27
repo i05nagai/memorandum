@@ -102,3 +102,4 @@ EXPECT_TRUE(IsElementEqual(a, b));
 
 ## Reference
 * [GitHub - google/googletest: Google Test](https://github.com/google/googletest)
+* [ブログズミ: Google Test を使ってみる - その３（テストケース）](http://srz-zumix.blogspot.jp/2012/01/google-test.html)
