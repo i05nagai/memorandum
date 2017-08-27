@@ -6,6 +6,8 @@ title: Irreducible Polynominal
 既約多項式について。
 
 ## Definition
+* $K$
+    * field
 
 ### Definition. 
 $f(x), g(x) \in K[x]$とする。
