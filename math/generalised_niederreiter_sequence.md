@@ -923,22 +923,16 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Theorem
-* $$n := \sum_{k=0}^{N-1}a_{k}p^{k} \in \mathbb{Z}_{\ge 0}$$,
+* $$n := \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge 0}$$,
     * $N \le m$
-    * $$a_{k} \in \{0, \ldots, p - 1\}$$,
-    * $p$進展開
+    * $$a_{k} \in \{0, \ldots, b - 1\}$$,
+    * $b$進展開
 * $$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * $$\eqref{def_phi}$$,
 * $$G: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * gray map
 * $$\Phi: \mathbb{Z}_{\ge 0} \rightarrow \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}}$$,
     * $$\eqref{def_Phi}$$,
-
-$$
-    \beta(n)
-    :=
-    \alpha(a_{l(n)} - a_{l(n) + 1})
-$$
 
 とおくと、
 
@@ -949,12 +943,12 @@ $$
     (\phi \circ G \circ \Phi)
     (n)
     +
-    \beta(n)
+    \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1}}
+        x^{k}
     \mathbf{e}_{l(n)}
 $$
 
 である。
-特に$b$が素数であれば、$\beta(n) \equiv 1$である。
 
 ### proof.
 $$\eqref{property_of_phi}$$より、
@@ -1016,10 +1010,10 @@ $$
             (
                 (a_{0} - a_{1}),
                 \ldots,
-                (a_{l(n)-1} - a_{l(n)})
+                (a_{l(n)-1} - a_{l(n)}),
+                (a_{l(n)} - a_{l(n) + 1})
                 +
                 1,
-                (a_{l(n)} - a_{l(n) + 1}),
                 \ldots
             )^{\mathrm{T}}
         \right)
@@ -1029,13 +1023,14 @@ $$
         (
             \hat{\phi}(a_{0} - a_{1}),
             \ldots,
+            \hat{\phi}(a_{l(n)-1} - a_{l(n)}),
             \hat{\phi}
             (
-                a_{l(n)-1} - a_{l(n)}
+                a_{l(n)} - a_{l(n) + 1}
                 +
                 1
             ),
-            \hat{\phi}(a_{l(n)} - a_{l(n) + 1}),
+            \hat{\phi}(a_{l(n) + 1} - a_{l(n) + 2}),
             \ldots
         )^{\mathrm{T}}
     \nonumber
@@ -1044,15 +1039,16 @@ $$
         (
             \hat{\phi}(a_{0} - a_{1}),
             \ldots,
+            \hat{\phi}(a_{l(n) - 1} - a_{l(n)}),
             \hat{\phi}
             (
-                a_{l(n)-1} - a_{l(n)}
+                a_{l(n)} - a_{l(n) + 1}
             )
             +
-            \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)}}
+            \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1})}
                 x^{k}
             ,
-            \hat{\phi}(a_{l(n)} - a_{l(n) + 1}),
+            \hat{\phi}(a_{l(n) + 1} - a_{l(n) + 2}),
             \ldots
         )^{\mathrm{T}}
     \nonumber
@@ -1074,7 +1070,7 @@ $$
             \ldots,
             0,
             \stackrel{l(n)}{\stackrel{\vee}{
-                \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+                \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1})}
                     x^{k}
             }},
             0,
@@ -1090,7 +1086,7 @@ $$
             \ldots,
             0,
             \stackrel{l(n)}{\stackrel{\vee}{
-                \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+                \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1})}
                     x^{k}
             }},
             0,
@@ -1101,14 +1097,44 @@ $$
     & = &
         (\phi \circ G \circ \Phi)(n)
         +
-        \sum_{k=0}^{\alpha(a_{l(n)-1} - a_{l(n)})}
+        \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1})}
             x^{k}
         \mathbf{e}_{l}
     \nonumber
 \end{eqnarray}
 $$
 
+定理の前半は証明された。
+
 <div class="QED" style="text-align: right">$\Box$</div>
+
+### Remark
+$$\mathbb{F}_{b} = \mathbb{F}_{p}[x] / (f(x))$$より、$p=2$, $b=4$, $f(x) = x^{2} + x + 1$とすると、
+$$a_{l(n)}, a_{l(n)+1} \in \{0, \ldots, b-1\}$$について、$$a := a_{l(n)} - a_{l(n)+1} \ (\mathrm{mod}\ p)$$とおいて
+
+* $p = 2$
+* $m = 2$
+* $b = p^{2} = 4$
+* $n = 19 = 3 \cdot 4^{0} + 0 \cdot 4 + 1 \cdot 4^{2}$
+    * $$a_{0} = 3, a_{1} = 0, a_{2} = 1$$,
+    * $$ l(n) = 1$$,
+    * $$a_{1} - a_{2} = -1 = 4 - 1 = 3 (\mathrm{mod}\ b)$$,
+    * $$ 3 = 1 \cdot 2^{0} + 1 \cdot 2^{1}$$,
+    * $$\alpha(a_{l(n)} - a_{l(n) + 1}) = 1$$,
+    * $$(1 + x) = 3 \in \mathbb{F}_{4}$$,
+* $n = 101 = 1 \cdot 4^{0} + 1 \cdot 4 + 3 \cdot 4^{2} + 1 \cdot 4^{3} = 1 + 4 + 32 + 64$
+    * $$a_{0} = 1, a_{1} = 1, a_{2} = 2, a_{3} = 1$$,
+    * $l(n) = 0$
+    * $$a_{0} - a_{1} = 0$$,
+    * $$0$$,
+    * $$\alpha(a_{l(n)} - a_{l(n)+1}) = 0$$,
+    * $$1 \in \mathbb{F}_{4}$$,
+
+* $n = 1011 \mid 1101 \mid 1110 \mid 1111$
+    * $l(n) = 1$
+    * $1101 ^ 1110$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Relation to sobol sequence
 Sobol sequenceはGeneralized Niederreiter Sequenceの一種とみなすことができる。 
