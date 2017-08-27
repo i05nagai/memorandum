@@ -326,8 +326,381 @@ $$
 
 
 ## Example of convex functions
+* $f: \mathbb{R}^{N} \rightarrow \mathbb{R}$
+    * $C^{2}$ function
+* $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$
+    * $C^{2}$ function
 
+$h := f / g$とする。
+$h$の二階微分を考えると,
 
+$$
+\begin{eqnarray}
+    \frac{\partial h}{\partial x_{i}} 
+    =
+    \frac{
+        \frac{\partial f}{\partial x_{i}} g
+        -
+        f \frac{\partial g}{\partial x_{i}}
+    }{
+        g^{2}
+    }
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2} h}{\partial x_{i}^{2}} 
+    & = &
+        \frac{
+            \left(
+                \frac{\partial }{\partial x_{i}}
+                    \left(
+                        \frac{\partial f}{\partial x_{i}} g
+                        -
+                        f \frac{\partial g}{\partial x_{i}}
+                    \right)
+            \right)
+                g^{2}
+            -
+            \left(
+                \frac{\partial f}{\partial x_{i}} g
+                -
+                f \frac{\partial g}{\partial x_{i}}
+            \right)
+                2g
+                \frac{\partial g}{\partial x_{i}} 
+        }{
+            g^{4}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \left(
+                \left(
+                    \frac{\partial^{2} f}{\partial x_{i}^{2}} g
+                    +
+                    \frac{\partial f}{\partial x_{i}}
+                        \frac{\partial g}{\partial x_{i}}
+                    -
+                    \frac{\partial f}{\partial x_{i}}
+                        \frac{\partial g}{\partial x_{i}}
+                    -
+                    f
+                        \frac{\partial^{2} g}{\partial x_{i}^{2}}
+                \right)
+            \right)
+                g
+            -
+            \left(
+                2
+                \frac{\partial f}{\partial x_{i}} g
+                \frac{\partial g}{\partial x_{i}} 
+                -
+                2
+                f
+                \left(
+                    \frac{\partial g}{\partial x_{i}}
+                \right)^{2}
+            \right)
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \frac{\partial^{2} f}{\partial x_{i}^{2}} g^{2}
+            -
+            fg
+                \frac{\partial^{2} g}{\partial x_{i}^{2}}
+            -
+            2
+            \frac{\partial f}{\partial x_{i}} g
+            \frac{\partial g}{\partial x_{i}} 
+            +
+            2 f
+            \left(
+                \frac{\partial g}{\partial x_{i}}
+            \right)^{2}
+        }{
+            g^{3}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2} h}{\partial x_{i} \partial x_{j}} 
+    & = &
+        \frac{
+            \left(
+                \frac{\partial^{2} f}{\partial x_{i} \partial x_{j}} g
+                +
+                \frac{\partial f}{\partial x_{i}}
+                    \frac{\partial g}{\partial x_{j}}
+                -
+                \frac{\partial f}{\partial x_{j}}
+                    \frac{\partial g}{\partial x_{i}}
+                -
+                f
+                    \frac{\partial^{2} g}{\partial x_{i} \partial x_{j}}
+            \right)
+                g
+            -
+            \left(
+                2 g
+                \frac{\partial f}{\partial x_{i}}
+                \frac{\partial g}{\partial x_{j}}
+                -
+                2 f
+                    \frac{\partial g}{\partial x_{i}}
+                    \frac{\partial g}{\partial x_{j}}
+            \right)
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \frac{\partial^{2} f}{\partial x_{i} \partial x_{j}} g^{2}
+            +
+            \frac{\partial f}{\partial x_{i}}
+                \frac{\partial g}{\partial x_{j}}
+                g
+            -
+            \frac{\partial f}{\partial x_{j}}
+                \frac{\partial g}{\partial x_{i}}
+                g
+            -
+            f g
+                \frac{\partial^{2} g}{\partial x_{i} \partial x_{j}}
+            -
+            2 g
+            \frac{\partial f}{\partial x_{i}}
+            \frac{\partial g}{\partial x_{j}}
+            +
+            2 f
+                \frac{\partial g}{\partial x_{i}}
+                \frac{\partial g}{\partial x_{j}}
+        }{
+            g^{3}
+        }
+\end{eqnarray}
+$$
+
+$$f(x):= \sum_{i=1}^{N}$$, $$g(x) := \sum_{i=1}^{N} x$$,とすると、
+
+$$
+\begin{eqnarray}
+    \frac{\partial f}{\partial x_{i}}
+    & = &
+        2x_{i}
+    \nonumber
+    \\
+    \frac{\partial^{2} f}{\partial x_{i}^{2}}
+    & = &
+        2
+    \nonumber
+    \\
+    \frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}
+    & = &
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{\partial g}{\partial x_{i}}
+    & = &
+        1
+    \nonumber
+    \\
+    \frac{\partial^{2} g}{\partial x_{i}^{2}}
+    & = &
+        0
+    \nonumber
+    \\
+    \frac{\partial^{2} g}{\partial x_{i} \partial x_{j}}
+    & = &
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+より、
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2} h}{\partial x_{i}^{2}}
+    & = &
+        \frac{
+            \frac{\partial^{2} f}{\partial x_{i}^{2}} g^{2}
+            -
+            fg
+                \frac{\partial^{2} g}{\partial x_{i}^{2}}
+            -
+            2
+            \frac{\partial f}{\partial x_{i}} g
+            \frac{\partial g}{\partial x_{i}} 
+            +
+            2 f
+            \left(
+                \frac{\partial g}{\partial x_{i}}
+            \right)^{2}
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            2 g^{2}
+            -
+            0
+            -
+            2x_{i}g
+            +
+            2f
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            2 g^{2}
+            -
+            2x_{i}g
+            +
+            2f
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            2
+        }{
+            g^{3}
+        }
+        \left(
+            g (g - x_{i})
+            +
+            f
+        \right)
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{\partial^{2} h}{\partial x_{i} \partial x_{j}}
+    & = &
+        \frac{
+            \frac{\partial^{2} f}{\partial x_{i} \partial x_{j}} g^{2}
+            +
+            \frac{\partial f}{\partial x_{i}}
+                \frac{\partial g}{\partial x_{j}}
+                g
+            -
+            \frac{\partial f}{\partial x_{j}}
+                \frac{\partial g}{\partial x_{i}}
+                g
+            -
+            f g
+                \frac{\partial^{2} g}{\partial x_{i} \partial x_{j}}
+            -
+            2 g
+            \frac{\partial f}{\partial x_{i}}
+            \frac{\partial g}{\partial x_{j}}
+            +
+            2 f
+                \frac{\partial g}{\partial x_{i}}
+                \frac{\partial g}{\partial x_{j}}
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            0
+            +
+            2x_{i}g
+            -
+            2x_{j}g
+            -
+            0
+            -
+            2gx_{i}
+            +
+            2f
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            2x_{i}g
+            -
+            2x_{j}g
+            -
+            2gx_{i}
+            +
+            2f
+        }{
+            g^{3}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            2
+        }{
+            g^{3}
+        }
+        \left(
+            -
+            x_{j}g
+            +
+            f
+        \right)
+\end{eqnarray}
+$$
+
+$$x \ge 0$$,
+
+$$
+\begin{eqnarray}
+    \sum_{i=1}^{N}
+        \sum_{j=1}^{N}
+            x_{i}
+            \frac{\partial^{2} h}{\partial x_{i} \partial x_{j}}
+            x_{j}
+    & = &
+        \frac{2}{g^{3}}
+        \left(
+            \sum_{i=1}^{N}
+                x_{i}^{2}
+                ((g - x_{i})g + f)
+            +
+            \sum_{i=1}^{N}
+                \sum_{i=j+1}^{N}
+                2
+                \left(
+                    x_{i}
+                    x_{j}
+                    (f - x_{j}g)
+                \right)
+        \right)
+\end{eqnarray}
+$$
 
 ## Reference
 * [凸関数 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%87%B8%E9%96%A2%E6%95%B0)
