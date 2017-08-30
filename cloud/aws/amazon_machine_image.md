@@ -54,7 +54,24 @@ From command line
 aws ec2 create-iamge --instance-id i-1234567890abcdef0 --name "My server" --description "An AMI for my server"
 ```
 
+### Creating a Linux AMI from an Instance
+* [Creating an Amazon EBS-Backed Linux AMI - Amazon Elastic Compute Cloud](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html)
+    * ConsoleからActions->Image->Create Image
+        * 上記がDisableの場合は、instanceは`Amazon EBS-backed instance`でない
+    * by defaultでは、instanceをとめてsnapshotをとって、instanceを再起動する
+    * No rebootを選択すると、rebootなしでImageを作成できる
+        * No rebootの場合は作成してAMI imageのfile system integrityは保証できない
 
+### Deleting AMI
+AMIのderegisteringが削除にあたる。
+AMIのderegisteringをしても、既に起動しているEC2 instanceには影響はない。
+
+* Amazon EBS-Backed AMIのclearnup
+    * AMIのIDをめも
+    * Actions -> Deregister->Continueを選択
+        * 数分まって、unavailableになるのを確認する
+    * Snapshotに移動し、メモしたAMI IDで検索
+    * 見つかったsnap shotをDelete snapshotで削除
 
 ## Reference
 * [Amazon Machine Images (AMI) - Amazon Elastic Compute Cloud](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)
