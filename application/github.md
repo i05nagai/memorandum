@@ -10,6 +10,18 @@ Githubが利用しているjekyllのversionは以下にある。
 
 * [Dependency versions | GitHub Pages](https://pages.github.com/versions/)
 
+### disable jekyll
+GitHub ioで静的web siteを公開する際にはdefaultではjekyllがONになっており、GitHubにpushした後jekyllによってcodeが処理される。
+この時、jekyllのmeta directory `_`で始まるfolderなどが存在すると、除外されるなど、既にrepository内に静的HTMLを追加している場合は、jekyllの機能は邪魔になる。
+jekyllを無効にする場合は、`.nojekyll`というfileをrepositoryに於けば良いが、置く場所はGitHub ioの設定によって変わる。
+
+* master branch
+    * repositoryのroot
+* `/docs` folder
+    * /docs/.nojekyll として置く
+* gh-pages branch
+    * repositoryのroot
+
 
 ## Private Access Token
 tokenの認証情報をURLに入れる場合は以下のフォーマットで指定する。
