@@ -21,7 +21,7 @@ gpg --list-secret-keys
 gpg --list-keys
 ```
 
-相手に渡す公開鍵の作成
+binary形式で相手に渡す公開鍵の作成(export)
 
 * `-o`
     * 出力ファイル名
@@ -32,7 +32,7 @@ gpg --list-keys
 gpg -o ./my.pub --export key_user_id
 ```
 
-秘密鍵の作成
+binary形式で秘密鍵の作成(export)
 
 * `-o`
     * 出力ファイル名
@@ -68,3 +68,4 @@ gpg [-o ファイル名] [-r 鍵ユーザID] 暗号化ファイル
 * [gnupg](http://www.math.s.chiba-u.ac.jp/~matsu/gpg/)
 * [GnuPG で遊ぶ - 暗号化してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2013/07/31/gpg/)
 * [GnuPrivacyGuardHowto - Community Help Wiki](https://help.ubuntu.com/community/GnuPrivacyGuardHowto)
+* [GnuPGのコマンド](http://www.nina.jp/server/windows/gpg/commands.html)

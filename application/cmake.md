@@ -3,6 +3,8 @@ title: cmake
 ---
 
 ## cmake
+* [Policies/CMake Coding Style - KDE Community Wiki](https://community.kde.org/Policies/CMake_Coding_Style)
+    * style guide
 
 ## Usage
 

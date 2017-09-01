@@ -52,6 +52,10 @@
 
 # Travis CI
 
+* `dist:trusty`
+   . * g++-4.8.4がdefautlで使える
+* `g++-4.6`
+
 ## Customizing the Build
 repositoryのtopにある`.travis.yml`ファイルに基づいてCIが実行される。
 `.travis.yml`の中では以下を記載する。
