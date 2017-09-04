@@ -156,16 +156,17 @@ $$
     i_{\mathrm{best}}^{(k)}
     & := &
         \arg \min_{i = 1, \ldots, k}
-            (f(x^{(i)}) - f(x^{*}))
+            f(x^{(i)})
     \nonumber
     \\
     f_{\mathrm{best}}^{(k)}
     & := &
         f(x^{(i_{\mathrm{best}}^{(k)})})
+    \label{current_best_object_function}
 \end{eqnarray}
 $$
 
-とおくと、
+とおくと、$$f^{*}$$が最小値であることより、
 
 $$
 \begin{eqnarray}
@@ -177,7 +178,7 @@ $$
     \nonumber
     \\
     & \ge &
-        \min_{i=1,\ldots,k} \{ (f(x^{(i)} - f(x^{*})) \}
+        \min_{i=1,\ldots,k} \{ (f(x^{(i)}) - f(x^{*})) \}
         \left(
             \sum_{i=1}^{k}
                 \alpha_{k}
@@ -880,13 +881,10 @@ $$
 をlower boundとする。
 最適解のlower boundとの差$$f_{\mathrm{best}}^{(k)}  f_{\mathrm{best}}^{(k)}$$がthresholdを超えたらalgorithmを終了する。
 
-これは、$G$に依存してい点で$$$$\eqref{inequality_general_basic_subgradient_method}$$より良いが、一般にこの差は0に収束するのに非常に多くのstepを要する。
+これは、$G$に依存してい点で$$\eqref{inequality_general_basic_subgradient_method}$$より良いが、一般にこの差は0に収束するのに非常に多くのstepを要する。
 そのため、このstopping criterionが使われることは殆どない。
 
 ### 3.5 Numerical example
-
-
-
 
 ## 4 Polyak's step length
 
@@ -1003,9 +1001,245 @@ $$
 となる。
 よって、右辺のsummationは収束する必要があるから、$$f(x^{(k)}) \rightarrow f^{*}$$を得る。
 
-### 4.2 Plyak step size choice with estimated $$f^{*}$$,
+### 4.2 Polyak step size choice with estimated $$f^{*}$$,
 $$f^{*}$$のestimationを考える。
-$$f_{\mathrm{best}} - \gamma^{k}$$, $$\gamma^{k} > 0$$, $$\gamma^{k} \rightarrow 0$$
+$$f^{*}$$の推定として、 $$f_{\mathrm{best}} - \gamma^{k}$$とすることを考え、$$\eqref{05_step_size_polyak}$$の代わりに以下のようにとる。
+
+$$
+\begin{equation}
+    \alpha_{k}
+    :=
+    \frac{
+        f(x^{(k)}) - f_{\mathrm{best}}^{(k)} + \gamma_{k}
+    }{
+        \| g^{(k)} \|_{2}^{2}
+    }
+    \label{step_size_polyak_estimated}
+\end{equation}
+$$
+
+ここで、$$\gamma_{k} \ge 0$$は以下を満たすようにとる。
+
+$$
+\begin{eqnarray}
+    \gamma^{k}
+    & > &
+        0
+    \nonumber
+    \\
+    \gamma^{k}
+    & \rightarrow &
+        0
+    \nonumber
+    \\
+    \sum_{k=1}^{\infty} \gamma_{k}
+    & = &
+        \infty
+    \label{step_size_polyak_estimated_gamma_condition}
+\end{eqnarray}
+$$
+
+$$\gamma_{k}$$は現在までの最良の推定$$f_{\mathrm{best}}^{(k)}$$と最適値$$f^{*}$$との差と解釈できる。
+
+step sizeを$$\eqref{step_size_polyak_estimated}$$とした場合の収束性を示す。
+まず、$$\eqref{step_size_polyak_estimated}$$を$$\eqref{01_inequality_strict_lower_bound}$$に代入すると
+
+$$
+\begin{eqnarray}
+    R^{2}
+    & \ge &
+        \sum_{i=1}^{k}
+            \left(
+                2\alpha_{i}
+                (f(x^{(i)}) - f^{*})
+                -
+                \alpha_{i}^{2}
+                \| g^{(i)} \|_{2}^{2}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{k}
+            \alpha_{i}
+            \left(
+                2
+                (f(x^{(i)}) - f^{*})
+                -
+                (f(x^{(i)}) - f_{\mathrm{best}}^{(i)} + \gamma_{k})
+            \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{k}
+            \alpha_{i}
+            \left(
+                (f(x^{(i)}) - f^{*})
+                -
+                (f_{\mathrm{best}}^{(i)} - f^{*} - \gamma_{k})
+            \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{k}
+            \alpha_{i}
+            \left(
+                (f(x^{(i)}) - f^{*})
+                -
+                (f_{\mathrm{best}}^{(i)} - f^{*} - \gamma_{k})
+            \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+を得る。
+$\forall k \in \mathbb{N}$とし、 $$\epsilon > 0$$とする。
+$$f_{\mathrm{best}}^{(k)} - f^{*} \ge \epsilon$$と仮定する。
+$$f(x^{(i)}) - f^{*} \ge \epsilon $$である。
+$$\eqref{step_size_polyak_estimated_gamma_condition}$$より、$\exists N \in \mathbb{N}$, $$\gamma_{i} \le \epsilon \ (\forall i \ge N)$$とできる。
+よって、
+
+$$
+\begin{eqnarray}
+    \forall i \ge N,
+    \quad
+    (f(x^{(i)}) - f^{*})
+    +
+    (f_{\mathrm{best}}^{(i)} - f^{*})
+    -
+    \gamma_{i}
+    & \ge &
+        2\epsilon
+        -
+        \gamma_{i}
+    \nonumber
+    \\
+    & \ge &
+        \epsilon
+    \nonumber
+\end{eqnarray}
+$$
+
+を得る。
+
+$$
+\begin{equation}
+    S(N-1)
+    :=
+    \sum_{i=1}^{N-1}
+        \alpha_{i}
+        \left(
+            (f(x^{(i)}) - f^{*})
+            +
+            (f_{\mathrm{best}}^{(i)} - f^{*})
+            -
+            \gamma_{i}
+        \right)
+\end{equation}
+$$
+
+とおくと、
+
+$$
+\begin{eqnarray}
+    & &
+        R^{2}
+        \ge
+        \sum_{i=1}^{k}
+            \alpha_{i}
+            \left(
+                (f(x^{(i)}) - f^{*})
+                -
+                (f_{\mathrm{best}}^{(i)} - f^{*} - \gamma_{k})
+            \right)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2} - S(N - 1)
+        \ge
+        \sum_{i=N}^{k}
+            \alpha_{i}
+            \left(
+                (f(x^{(i)}) - f^{*})
+                -
+                (f_{\mathrm{best}}^{(i)} - f^{*} - \gamma_{k})
+            \right)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2} - S(N - 1)
+        \ge
+        \sum_{i=N}^{k}
+            \alpha_{i}
+            \epsilon
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2} - S(N - 1)
+        \ge
+        \epsilon
+        \sum_{i=N}^{k}
+            \frac{
+                f(x^{(k)}) - f_{\mathrm{best}}^{(k)} + \gamma_{k}
+            }{
+                \| g^{(k)} \|_{2}^{2}
+            }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        R^{2} - S(N - 1)
+        \ge
+        \epsilon
+        \sum_{i=N}^{k}
+            \frac{
+                \gamma_{k}
+            }{
+                G^{2}
+            }
+\end{eqnarray}
+$$
+
+$k$は任意であったから、$k \rightarrow \infty$で右辺は、$\infty$に収束するが、これは左辺に矛盾する。
+よって、ある$k$が存在して、$$f_{\mathrm{best}}^{(k)} - f^{*} < \epsilon$$となる。
+$\epsilon$は任意であったら、収束性が示された。
+
+
+## 5. Alternating projections
+良く知られている、convex setに対するAlternating projection methodはPolyak spte lengthの応用とみなすことができる。
+ここでは、Alternating projection methodとsubgradient methodの関係について見る。
+
+### 5.1 Finding a point in the intersection of convex sets
+* $$m, n \in \mathbb{N}$$,
+* $$C_{i} \subeq \mathbb{R}^{n} \ i = 1, \ldots, m$$,
+    * convex and close set
+* $$C := C_{1} \cap \cdots \cap C_{m}$$,
+    * nonemptyと仮定する
+
+$$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$を以下のように定義する。
+
+$$
+    f(x)
+    :=
+    \max
+    \{
+        \mathrm{dist}(x, C_{1}),
+        \ldots,
+        \mathrm{dist}(x, C_{m}),
+    \}.
+$$
+
+$f$はconvexである。
+これを確かめるには、$$\mathrm{dist}(x, C_{1})$$がconvex funcであることを示せば良い。
+
+$$
+    \mathrm{dist}(x, C_{1})
+    =
+    \inf
+    \{
+        \|x - y\|
+        \mid
+        y \in C_{1}
+    \}
+$$
 
 
 ## Reference
