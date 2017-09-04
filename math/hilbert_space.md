@@ -216,20 +216,121 @@ $$
 ### Theorems
 * $X$
     * Hilbert sp.
-* $L$
+* $K$
     * closed convex set.
 
-Then $\forall x \in X$, $$\exists ! (y, z)$$, s.t. $$y \in L$$, $$z \in L^{\perp}$$,
+Then $\forall x \in X$, $$\exists ! y \in K$$, s.t.
 
 $$
 \begin{equation}
-    x = y + z
+    \|x - y\|
+    =
+    \min_{h \in K}
+    \|x - h\|.
+    \label{projection_to_closed_convex_set}
+\end{equation}
+$$
+
+Moreover, it is equivalent to existence of $y \in K$ satisfying
+
+$$
+\begin{equation}
+    \forall v \in K,
+    \
+    \mathrm{Re}(x - y, v - y)
+    \le
+    0
+    \label{projection_to_closed_convex_set_equivalent_condition}
 \end{equation}
 $$
 
 ### proof.
-Proof is as same as above.
+To prove existence of $y$ satisfying $$\eqref{projection_to_closed_convex_set}$$, we only need to replace $L$ with $K$ in the above proof.
+
+Now we prove $$\eqref{projection_to_closed_convex_set} \Leftrightarrow \eqref{projection_to_closed_convex_set_equivalent_condition}$$.
+
+($\Rightarrow$)
+
+Suppose $v \in K$ and $$0 \le \theta \le 1$$,
+
+$$
+    y + \theta(v - y)
+    =
+    (1 - \theta)y
+    +
+    \theta v
+    \in
+    K.
+$$
+
+Hence by taking $h := v - y$ we can define
+
+$$
+    \eta(\theta)
+    :=
+    \|x - y - \theta h\|^{2}
+    =
+    \|x - (y + \theta h)\|^{2}.
+$$
+
+$\eta$ takes the minimum value when $\theta = 0$.
+
+$$
+    \eta(\theta)
+    =
+    \|x - y\|^{2}
+    +
+    2 \theta \mathrm{Re}(x - y, h)
+    +
+    \theta^{2} \|h\|^{2}.
+$$
+
+$$
+\begin{eqnarray}
+    & &
+        \eta^{\prime}(0) = 0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mathrm{Re}(x - y, h) = 0.
+    \nonumber
+\end{eqnarray}
+$$
+
+($$\Leftarrow$$)
+
+Suppose $$y_{1}, y_{2} \in K$$ satisfying $$\eqref{projection_to_closed_convex_set_equivalent_condition}$$.
+Then
+
+$$
+\begin{eqnarray}
+    \mathrm{Re}(x - y_{1}, y_{2} - y_{1})
+    & \le &
+        0,
+    \nonumber
+    \\
+    \mathrm{Re}(x - y_{2}, y_{1} - y_{2})
+    & \le &
+        0.
+    \nonumber
+\end{eqnarray}
+$$
+
+By adding equations,
+
+$$
+    \mathrm{Re}(y_{2} - y_{1}, y_{2} - y_{1})
+    =
+    \| y_{2} - y_{1} \|^{2}
+    \le
+    0.
+$$
+
+Therefore $$y_{1} = y_{2}$$.
+
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+
 
 ## Reference
