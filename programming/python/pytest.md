@@ -203,7 +203,6 @@ py._path.local.ImportMismatchError: ('conftest', '/tmp/conftest.py', local('/tmp
 ERROR: could not load /tmp/spark/tests/conftest.py
 ```
 
-
-
 ## Reference
 * [pytest fixtures: explicit, modular, scalable — pytest documentation](https://docs.pytest.org/en/latest/fixture.html?highlight=conftest)
+* [pytest fixtures nuts and bolts - Python Testing](http://pythontesting.net/framework/pytest/pytest-fixtures-nuts-bolts/)
