@@ -4,6 +4,79 @@ title: Hilbert Space
 
 ## Hilbert Space
 
+
+### Proposition
+* $H$
+    * hilbert space
+* $$\alpha_{1}, \alpha_{2}, \beta_{1}, \beta_{2} \in H$$,
+
+$$
+    \langle
+        \alpha_{1},
+        \beta_{1}
+    \rangle
+    \pm
+    \langle
+        \alpha_{2},
+        \beta_{2}
+    \rangle
+    =
+    \langle
+        \alpha_{1},
+        \beta_{1} \pm \beta_{2}
+    \rangle
+    \pm
+    \langle
+        \alpha_{2} - \alpha_{1},
+        \beta_{2}
+    \rangle
+$$
+
+### proof.
+
+$$
+\begin{eqnarray}
+    \langle
+        \alpha_{1},
+        \beta_{1}
+    \rangle
+    \pm
+    \langle
+        \alpha_{2},
+        \beta_{2}
+    \rangle
+    & = &
+        \langle
+            \alpha_{1},
+            \beta_{1}
+        \rangle
+        \pm
+        \langle
+            \alpha_{1}
+            -
+            \alpha_{1}
+            +
+            \alpha_{2},
+            \beta_{2}
+        \rangle
+    \nonumber
+    \\
+    & = &
+        \langle
+            \alpha_{1},
+            \beta_{1} \pm \beta_{2}
+        \rangle
+        \pm
+        \langle
+            \alpha_{2} - \alpha_{1},
+            \beta_{2}
+        \rangle
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ### Theorems
 * $X$
     * Hilbert sp.
