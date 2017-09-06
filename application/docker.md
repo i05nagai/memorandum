@@ -61,6 +61,24 @@ imageの一覧を表示する
 docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
 ```
 
+### docker exec
+container上でcommandを実行。
+
+```
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+
+```
+docker run --name ubuntu_bash --rm -i -t ubuntu bash
+```
+
+```
+docker exec -d ubuntu_bash touch /tmp/execWorks
+```
+
+* `--detach, -d`
+    * backgroundで実行
+
 ## completion
 
 ### zsh
