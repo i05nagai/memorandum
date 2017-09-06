@@ -42,6 +42,42 @@ git push hoge-1.1.1
 defaultでは、repositoryの作成者にしか権限がない？
 Collaboratorの所から必要なteamをaddする必要がある。
 
+## Delete account/organization
+* [How do I delete a Docker Hub or Docker Cloud account? - Docker, Inc.](https://success.docker.com/Cloud/Solve/How_do_I_delete_a_Docker_Hub_or_Docker_Cloud_account%3F)
+
+supportに削除依頼する前に以下を実施する。
+
+* accountのpublic repositroyとprivate repositoryを削除
+* subscription planは全てcancelしてfree planにする
+* organizationに属している場合は、organizationから抜ける
+* organizationの唯一のownerの場合は、別のownerをつけて自分は抜けるo
+    * それかorganizationも合わせて削除申請する
+    * organiztionを削除する場合は、owenerは自分だけにする
+* liscence keyが必要な場合は削除前にDLしておく
+* GitHubとBitbucketをunlinkする
+
+全部終わったら[Technical Support - Docker, Inc.](https://success.docker.com/Support)の下部にあるcustomer serviceからrequestを送る。
+emailは自分のaccoutのemailと同じものにする。
+
+```
+Delete an organization in docker hub
+
+Dear customer supports,
+
+I would like to delete an organization, 'xxxxx', which we don't use anymore.
+Could you delete 'xxxxx' organization?
+Here is my account information.
+
+* account name: uuuuuu
+* account URL: https://hub.docker.com/u/uuuuuu/
+* xxxxx organization which I want to delete: https://hub.docker.com/u/xxxxx/dashboard/
+
+Thank you in advance.
+
+Best reagards,
+Name
+```
+
 
 ## Reference
 
