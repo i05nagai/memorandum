@@ -87,6 +87,29 @@ WEEB UIとAPI JSONで名前が違う。
 
 Partitionは各テーブル最大2000個
 
+* Delete partition
+    * partitionの削除はtable名の後に`$yyyymmdd`でpartitionを指定して削除できる
+
+```
+bq rm 'mydataset.table$20160301'
+```
+
+partitionの設定の確認は以下を実行してschemaを見る。
+
+```
+bq show --format=prettyjson mydataset.table2
+```
+
+以下のように設定がある。
+
+```json
+  "timePartitioning": {
+    "expirationMs": "2592000000",
+    "type": "DAY"
+  },
+```
+
+
 ## Standard SQL
 Castは以下の形式でCASTする。
 
