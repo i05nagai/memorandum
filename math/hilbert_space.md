@@ -5,7 +5,7 @@ title: Hilbert Space
 ## Hilbert Space
 
 
-### Proposition
+### Proposition 1
 * $H$
     * hilbert space
 * $$\alpha_{1}, \alpha_{2}, \beta_{1}, \beta_{2} \in H$$,
@@ -77,7 +77,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorems
+### Theorem 2
 * $X$
     * Hilbert sp.
 * $L$
@@ -286,7 +286,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorems
+### Theorem 3
 * $X$
     * Hilbert sp.
 * $K$
