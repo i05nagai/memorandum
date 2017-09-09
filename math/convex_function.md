@@ -406,7 +406,7 @@ $$
 ### Remark
 closed convex への射影がconvex functionになるということを延べている。
 命題の中で、infがminになることの証明は与えていないが、これば$\mathbb{R}$上のHilbert空間一般に成り立つ性質である。
-この証明は、別に与える。
+この証明は <a href="{{ site.baseurl }}/math/hilbert_space.html#theorem-3">ここ</a>に譲る。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
