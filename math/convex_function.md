@@ -320,6 +320,69 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Proposition
+* $$C \subseteq \mathbb{R}^{n}$$,
+    * closed convex set
+
+$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$を以下のように定義すると、$f$はconvex functionである。
+
+$$
+    f(x)
+    :=
+    \mathrm{dist}(x, C)
+    :=
+    \inf
+    \{
+        \|x - y\|
+        \mid
+        y \in C
+    \}
+    =
+    \min
+    \{
+        \|x - y\|
+        \mid
+        y \in C
+    \}
+$$
+
+### proof.
+$$x_{1}, x_{2} \in \mathbb{R}^{n}$$, $\lambda \in (0, 1)$とする。
+$\forall y \in C$について、$$y_{1}, y_{2} \in C$$が存在して$$y = \lambda y_{1} + (1 - \lambda) y_{2}$$とできる。
+
+$$
+\begin{eqnarray}
+    \|\lambda x_{1} + (1 - \lambda) x_{2} - y\|
+    & = &
+        \|\lambda x_{1} + (1 - \lambda) x_{2} - (\lambda y_{1} + (1 - \lambda) y_{2})\|
+    \nonumber
+    \\
+    & \le &
+        \lambda \|x_{1} - y_{1} \|
+        +
+        (1 - \lambda) \| x_{2} - y_{2} \|
+\end{eqnarray}
+$$
+
+ここで、右辺のinfをとると、
+
+$$
+\begin{eqnarray}
+    f(\lambda x_{1} + (1 - \lambda) x_{2})
+    & = &
+        \min
+        \{
+            \|\lambda x_{1} + (1 - \lambda) x_{2} - y\|
+            \mid
+            y \in C
+        \}
+    \nonumber
+\end{eqnarray}
+$$
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ### Optimum
 * 凸関数の極小値は最小値
 * 狭義凸関数は最小値を取る点が存在するならば、1点である

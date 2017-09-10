@@ -257,16 +257,16 @@ $$
 
 $$
 \begin{eqnarray}
-    \mathfrak{G}(\gamma_{b,m}(n + 1))
+    \mathfrak{G}(n + 1)
     & = &
-        \mathfrak{G}(\gamma_{b,m}(n))
+        \mathfrak{G}(n)
         +
         a(n)
         \mathbf{e}_{l(n)}
     \nonumber
     \\
     \{
-        \mathfrak{G}(\gamma_{b,m}(n))
+        \mathfrak{G}(n)
     \}_{n = 0, \ldots, b^{m} - 1}
     & = &
         \{
@@ -282,10 +282,10 @@ $$
 $$
 \begin{eqnarray}
     C_{j}
-    \mathfrak{G}(\gamma_{b,m}(n + 1))
+    \mathfrak{G}(n + 1)
     & = &
         C_{j}
-        \mathfrak{G}(\gamma_{b,m}(n))
+        \mathfrak{G}(n)
         +
         a(n)
         c^{(j)}_{\cdot, l(n)}
@@ -293,7 +293,7 @@ $$
     \\
     \{
         C_{j}
-        \mathfrak{G}(\gamma_{b,m}(n))
+        \mathfrak{G}(n)
     \}_{n = 0, \ldots, b^{m} - 1}
     & = &
         \{
@@ -305,8 +305,8 @@ $$
 
 $$c^{(j)}_{\cdot, l(n)}$$は$C_{j}$の$l(n)$列目の列ベクトルである。
 よって、$b^{m}-1$個の点を使う場合は、一つ前の点と生成行列の列ベクトルの和で計算できる。
-$b=2$の時は、Gray codeは$\mathfrak{G}$の性質を満たす。
-一般の場合は、Gray codeの性質を一般化したGray codeとして$\mathfrak{G}$をとることができる。
+$b=2$の時は、Gray codeを用いれば上の性質を満たす$\mathfrak{G}$を構成できる。
+一般の場合は、Gray codeの性質を一般化したGray codeを用いて$\mathfrak{G}$を構成できる。
 
 ## Gray map and Gray code
 ここでは、基数$b$のGray codeを定義する。
@@ -453,7 +453,7 @@ $$
 $$
 
 となる。
-    
+
 ### proof.
 左辺は
 
@@ -551,7 +551,10 @@ $$
         \sum_{k=\alpha(n) + 1}^{N-1}
             a_{k}x^{k}
         +
-        \sum_{k=0}^{\alpha(n)}
+        (a_{\alpha(n)} + 1)
+            x^{\alpha(n)}
+        +
+        \sum_{k=0}^{\alpha(n) - 1}
             (a_{k} + 1)x^{k}
     \nonumber
     \\
@@ -559,7 +562,18 @@ $$
         \sum_{k=\alpha(n) + 1}^{N-1}
             a_{k}x^{k}
         +
-        (a_{\alpha_{n}} + 1)x^{\alpha(n)}
+        (a_{\alpha(n)} + 1)
+            x^{\alpha(n)}
+        +
+        \sum_{k=0}^{\alpha(n) - 1}
+            (p - 1 + 1)x^{k}
+    \nonumber
+    \\
+    & = &
+        \sum_{k=\alpha(n) + 1}^{N-1}
+            a_{k}x^{k}
+        +
+        (a_{\alpha(n)} + 1)x^{\alpha(n)}
     \nonumber
 \end{eqnarray}
 $$
@@ -858,7 +872,7 @@ $$
             \Phi
             \left(
                 \sum_{k=0}^{l(n) - 1}
-                    (b - 1)_{k}b^{k}
+                    (b - 1)b^{k}
             \right)
         \right)
                 +
@@ -891,25 +905,6 @@ $$
             \right)
         \right)
     \nonumber
-    \\
-    & = &
-        (
-            0,
-            \ldots,
-            0,
-            \stackrel{l(n)-1}{\stackrel{\vee}{b - 1}},
-            0,
-            \ldots
-        )
-        +
-        G
-        \left(
-            \Phi
-            \left(
-                \sum_{k=l(n)}^{N-1}
-                    a_{k}b^{k}
-            \right)
-        \right)
 \end{eqnarray}
 $$
 
@@ -924,7 +919,6 @@ $$
 
 ### Theorem
 * $$n := \sum_{k=0}^{N-1}a_{k}b^{k} \in \mathbb{Z}_{\ge 0}$$,
-    * $N \le m$
     * $$a_{k} \in \{0, \ldots, b - 1\}$$,
     * $b$進展開
 * $$\phi: \mathbb{Z}_{b}^{\mathbb{Z}_{\ge 0}} \rightarrow \mathbb{F}_{b}^{\mathbb{Z}_{\ge 0}}$$,
@@ -943,24 +937,36 @@ $$
     (\phi \circ G \circ \Phi)
     (n)
     +
-    \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1}}
+    \sum_{k=0}^{\alpha(a_{l(n)} - a_{l(n) + 1})}
         x^{k}
     \mathbf{e}_{l(n)}
 $$
 
 である。
+また、$b = p$のときは
+
+$$
+    (\phi \circ G \circ \Phi)
+    (n+1)
+    =
+    (\phi \circ G \circ \Phi)
+    (n)
+    +
+    \mathbf{e}_{l(n)}
+$$
+
+となる。
 
 ### proof.
 $$\eqref{property_of_phi}$$より、
 
-
 $$
 \begin{eqnarray}
-    \hat{\phi}(a_{n} - a_{n + 1} + 1)
+    \hat{\phi}(a_{k^{\prime}} - a_{k^{\prime} + 1} + 1)
     & = &
-        \hat{\phi}(a_{n} - a_{n + 1})
+        \hat{\phi}(a_{k^{\prime}} - a_{k^{\prime} + 1})
         +
-        \sum_{k=0}^{\alpha(a_{k} - a_{k+1})}
+        \sum_{k=0}^{\alpha(a_{k^{\prime}} - a_{k^{\prime} + 1})}
             x^{k}
     \nonumber
 \end{eqnarray}
@@ -1105,6 +1111,9 @@ $$
 $$
 
 定理の前半は証明された。
+定理の後半は、$b = p$であれば、$$a_{k} \in \mathbb{Z}_{p}$$なので、$$a_{k} - a_{k} \in \mathbb{Z}_{p}$$である。
+これと、$$\forall a \in \{0, \ldots, p - 1\}\ \alpha(a) = 0$$より、$$\alpha(a_{l(n)} - a_{l(n) + 1}) = 0$$である。
+
 
 <div class="QED" style="text-align: right">$\Box$</div>
 

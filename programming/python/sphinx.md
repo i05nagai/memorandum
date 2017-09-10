@@ -224,27 +224,26 @@ pip install breathe
 
 `conf.py`を以下のように修正する。
 breathe pathを追加
-
-```python
-sys.path.append( "/home/me/docproj/ext/breathe/" )
-```
-
 extensionとしてbreatheを指定
-
-```python
-extensions = ['sphinx.ext.pngmath', 'sphinx.ext.todo', 'breathe' ]
-```
-
-breatheにprojectの情報を伝える
-
-```python
-breathe_projects = { "myproject": "/home/me/docproj/doxyxml/" }
-```
-
 defualt projectを追加
 
 ```python
-breathe_default_project = "myproject"
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+path_to_breathe = '/usr/local/lib/python3.6/site-packages/breathe/'
+path_to_this_dir = os.path.abspath(os.path.dirname(__file__))
+path_to_xml = os.path.join(path_to_this_dir, "../xml")
+sys.path.insert(0, os.path.abspath(path_to_breathe))
+
+# breatheにprojectの情報を伝える
+breathe_default_project = "docker-sphinx-quickstart"
+breathe_projects = {
+    "docker-sphinx-quickstart": os.path.abspath(path_to_xml)
+}
+sys.path.append( "/home/me/docproj/ext/breathe/" )
+
+extensions = ['sphinx.ext.pngmath', 'sphinx.ext.todo', 'breathe' ]
 ```
 
 doxygenのbuildを自動で行いときは、sourceファイルの場所をbraetheに知らせる必要がある。
