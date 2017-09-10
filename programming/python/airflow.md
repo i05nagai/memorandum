@@ -224,6 +224,12 @@ airflow test <dag_id> <task_id> <execution_date>
 airflow backfill <dag_id> -s start_date -e end_date
 ```
 
+## Configuration
+
+### integration with upstart
+* [Configuration — Airflow Documentation](https://airflow.incubator.apache.org/configuration.html#integration-with-upstart)
+* [incubator-airflow/scripts/upstart at master · apache/incubator-airflow](https://github.com/apache/incubator-airflow/tree/master/scripts/upstart)
+
 ## Security
 * [Security — Airflow Documentation](https://airflow.incubator.apache.org/security.html)
 
