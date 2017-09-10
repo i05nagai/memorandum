@@ -273,16 +273,47 @@ Resource
         * logとstate fileに記録される可能性がある
     * `username`
         * master DB userのusername
+    * `skip_final_snapshot`
+        * RDS terminate時にDBのsnapshotを保存するかを指定
+        * defaultはfalse
+        * falseの場合は`final_snapshot_identifier`を指定する必要がある
+    * `final_snapshot_identifier`
+        * `final_snapshot`時のsnapshotの名前
 * `aws_eip`
     * [AWS: aws_eip - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/r/eip.html)
+    * Elastic IPを作成する
     * `vpc`
         * EIPがVPCの中ならtrue
     * `instance`
         * EIPを割り当てるEC2 instance ID
+
+```
+$ terraform import aws_eip.bar eipalloc-00a10e96
+```
+
 * `aws_eip_association`
     * [AWS: aws_eip_association - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/r/eip_association.html)
+    * 取得したElasticp IPをEC2 instanceと割り当てるときに使う
+    * `aws_eip` resourceと一緒に使うことが多い
     * `instance_id`
     * `allocation_id`
+
+## State
+terraformが実際のinfrastructureとresourceとの対応をとるためのmeta dataのこと。
+terraform applyを一度実行すると、state 管理用のファイルが作られる。
+defaultでは`terraform.tfstate`がlocalに作られる。
+state fileはただのJson file.
+backupの作成を自動で行う。
+localの場合はplain textで保存されるので、passwordなどは暗号化されていない。
+
+Remote State
+
+
+Sensitive data
+
+State fileにはpasswordなどのsensitive dataが保存される可能性がある。
+remote stateの場合はmemoryにのみstateが保存される。
+
 
 
 ## Provisioner
@@ -353,6 +384,38 @@ file、directoryをcopyする。
 
 ### null Provisoner
 特定のresourceに紐付かないが、triggerに応じてProvisonを実行する。
+
+## Workspace
+* [State: Workspaces - Terraform by HashiCorp](https://www.terraform.io/docs/state/workspaces.html)
+
+0.10から追加された機能で、異なるstateを保持できる。
+production, staging, development環境で異なるinfrastructureの管理をする場合などに利用する。
+
+```
+terraform workspace new name_of_workspace
+```
+
+workspaceの名前は以下から取得できる。
+
+```
+resource "aws_instance" "example" {
+  tags {
+    Name = "web - ${terraform.workspace}"
+  }
+
+  # ... other arguments
+}
+```
+
+workspace名に応じてifなどで条件をつけることもできる。
+
+```
+resource "aws_instance" "example" {
+  count = "${terraform.workspace == "default" ? 5 : 1}"
+
+  # ... other arguments
+}
+```
 
 
 ## Reference
