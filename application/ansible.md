@@ -3,7 +3,7 @@ title: Ansible
 ---
 
 ## Ansible
-For OSX
+* [Getting Started — Ansible Documentation](http://docs.ansible.com/ansible/latest/intro_getting_started.html)
 
 ```
 ansible-playbook -i test-inventory -l test-server --start-at='target task name' --step test.yml
@@ -17,6 +17,10 @@ ansible-playbook -i test-inventory -l test-server --start-at='target task name' 
     * 指定したtaskから実行
 * --step
     * taskごとに実行
+* `-u`
+    * sshで接続するときのremote user名
+* `-m`
+    * コマンドを実行するときに指定する
 
 ## Commands
 * [ansibleで特定のtaskを特定のhostに実行する - Qiita](http://qiita.com/346@github/items/00122556cb2bd6f57998)
@@ -24,6 +28,15 @@ ansible-playbook -i test-inventory -l test-server --start-at='target task name' 
 ```
 ansible-playbook 
 ```
+
+## Conditionals
+* [Conditionals — Ansible Documentation](http://docs.ansible.com/ansible/latest/playbooks_conditionals.html)
+
+* `when:`
+* `register: var_name`
+    * commandの結果を保存できる
+    * 保存した結果は、templates, action line, when statementで使える
+
 
 ## Playbook
 
@@ -74,6 +87,8 @@ roles/
 * meta
     * defines some meta data for this role. See below for more details.
 
+tasks, templates, tasksのfileを指定するときは、直接file名の指定で利用できる。
+
 
 Roleを使うときは、`role:`以下にrole名を記載
 
@@ -83,6 +98,15 @@ Roleを使うときは、`role:`以下にrole名を記載
   roles:
      - common
      - webservers
+```
+
+`{{ role_path }}`でroleへのpathを参照できる。
+`files`においているfileについては、直接参照できる。
+
+```yaml
+- copy:
+    src: "{{ role_path }}/files/foo.conf"
+    dest: /etc/foo.conf
 ```
 
 
@@ -189,6 +213,10 @@ ansible-playbook release.yml --extra-vars '{"pacman":"mrs","ghosts":["inky","pin
 
 ## BestPractices
 
+### Vault and variables
+* [Best Practices — Ansible Documentation](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#best-practices-for-variables-and-vaults)
+
+
 
 ## tips
 ansibleを実行する時は、同じディレクトリの`ansible.cfg`ファイルを読んでいる
@@ -247,8 +275,74 @@ documentは、`ansible-doc module_name`で見ることができる。
         * present, installed, latest がinstall
         * absent, removedが削除
 * `file`
+* `script`
+    * [script - Runs a local script on a remote node after transferring it — Ansible Documentation](http://docs.ansible.com/ansible/latest/script_module.html)
+    * localのscriptをremoteで実行する
 * `shell`
+    * [shell - Execute commands in nodes. — Ansible Documentation](http://docs.ansible.com/ansible/latest/shell_module.html#shell)
+    * remote node 上で`/bin/sh`を介して実行する
+    * option
+        * chdir
+        * creates
+        * executable
+        * free_form
+        * removes
 * `command`
+    * [command - Executes a command on a remote node — Ansible Documentation](http://docs.ansible.com/ansible/latest/command_module.html)
+    * shellを解さずコマンドを実行するので、環境変数などが必要であれば`shell`  moduleを使う
+    * remote nodeでcommandを実行する
+    * option
+        * chdir
+        * creates
+        * executable
+        * free_form
+        * removes
+* `get_url`
+    * [get_url - Downloads files from HTTP, HTTPS, or FTP to node — Ansible Documentation](http://docs.ansible.com/ansible/latest/get_url_module.html)
+* `template`
+    * src
+    * dest
+* `mysql_user`
+    * [mysql_user - Adds or removes a user from a MySQL database. — Ansible Documentation](http://docs.ansible.com/ansible/latest/mysql_user_module.html)
+    * name
+        * user name
+    * password
+        * password
+    * host
+        * MySQL usernameのhostの部分
+        * login先ではない
+    * login_host
+        * login先のDBのhost
+    * login_port
+    * login_user
+    * login_password
+    * prvi
+* `git`
+    * clone
+        * defaultはyes
+        * cloneしないならno
+    * dest
+        * clone先
+    * key_file
+        * private key
+        * deploy keyを登録している場合は使う
+    * repo
+        * repositoryのURL
+        * git, ssh, httpsのどれか
+    * accept_hostkey
+        * hostのprivate keyを使うかどうか
+        * defaultはno
+
+private repositoryをcloneする場合は、deploy keyをgithubに登録する。
+
+```
+- name: Clone git repository
+  git:
+    repo: "ssh://git@github.com/user/repository.git"
+    dest: "/path/to/remote"
+    key_file: "/path/to/remote/.ssh/private_rsa_key"
+    accept_hostkey: yes
+```
 
 ## module
 documentは、`ansible-doc module_name`で見ることができる。
@@ -289,6 +383,33 @@ diffが大量にでる場合があるので、その場合はdiffをhostに限�
 ```
 ansible-playbook foo.yml --check --diff --limit foo.example.com
 ```
+
+## Configuration fiele
+* [Configuration file — Ansible Documentation](http://docs.ansible.com/ansible/latest/intro_configuration.html)
+
+* `{{ ansible_managed }}`
+    * ansibleが自動で設定していることを明示するために、config fileのcommenなどに書かれる
+
+## Using Vault in playbooks
+playbookやplaybook内の文字列をencyrptする機能としてVaultがある。
+file全体のencryptはv1.5から、文字列のencryptはv2.3から導入されている。
+
+```
+ansible-vault
+```
+
+```yaml
+notsecret: myvalue
+mysecret: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66386439653236336462626566653063336164663966303231363934653561363964363833313662
+          6431626536303530376336343832656537303632313433360a626438346336353331386135323734
+          62656361653630373231613662633962316233633936396165386439616533353965373339616234
+          3430613539666330390a313736323265656432366236633330313963326365653937323833366536
+          34623731376664623134383463316265643436343438623266623965636363326136
+other_plain_text: othervalue
+```
+
 
 ## reference
 * [Ansible コーディング規約 (の例) — そこはかとなく書くよん。](http://tdoc.info/blog/2014/10/09/ansible_coding.html)

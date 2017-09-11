@@ -224,6 +224,12 @@ airflow test <dag_id> <task_id> <execution_date>
 airflow backfill <dag_id> -s start_date -e end_date
 ```
 
+## Configuration
+
+### integration with upstart
+* [Configuration — Airflow Documentation](https://airflow.incubator.apache.org/configuration.html#integration-with-upstart)
+* [incubator-airflow/scripts/upstart at master · apache/incubator-airflow](https://github.com/apache/incubator-airflow/tree/master/scripts/upstart)
+
 ## Security
 * [Security — Airflow Documentation](https://airflow.incubator.apache.org/security.html)
 
@@ -368,15 +374,19 @@ airflow.DAG(schedule_interval=@hourly)
 * schedule_interval
     * 実行間隔
 * execution_date
-    * taskを実行した日、base_dateが`2017-07-01`でschedule_intervalが`1 day`の場合で、scheduleをONにしたのが`2017-07-05`の場合は、DAGは5回実行される。このときのexecution_dateは
+    * taskがschedulingされている日で実行された日とは異なる
+    * base_dateが`2017-07-01`でschedule_intervalが`1 day`の場合で、scheduleをONにしたのが`2017-07-05`の場合は、DAGは5回実行される。このときのexecution_dateは
         * `2017-07-01`
         * `2017-07-02`
         * `2017-07-03`
         * `2017-07-04`
         * `2017-07-05`
+* running date
+    * taskが実行された日
+    * 上記の例ではrunning dateは全てのtaskで同じ
 * dagのstart_dateとend_date
     * 有効期間と考えて良い
-    * この期間　
+    * この期間
 * Dag Runs
     * 指定したexecution dateでdagを実行する
     * start_dateを指定できるが
@@ -453,14 +463,23 @@ airflow webserver --debug
 DAGを削除するには以下のテーブルからレコードを削除する必要がある。
 
 ```sql
-DELETE FROM xcom WHERE dag_id=''
-DELETE FROM task_instance WHERE dag_id=''
-DELETE FROM sla_miss WHERE dag_id=''
-DELETE FROM log WHERE dag_id=''
-DELETE FROM job WHERE dag_id=''
-DELETE FROM dag_run WHERE dag_id=''
-DELETE FROM dag WHERE dag_id=''
+DELETE FROM xcom WHERE dag_id='';
+DELETE FROM task_instance WHERE dag_id='';
+DELETE FROM sla_miss WHERE dag_id='';
+DELETE FROM log WHERE dag_id='';
+DELETE FROM job WHERE dag_id='';
+DELETE FROM dag_run WHERE dag_id='';
+DELETE FROM dag WHERE dag_id='';
 ```
+
+DELETE FROM xcom WHERE dag_id='ETL_TEST';
+DELETE FROM task_instance WHERE dag_id='ETL_TEST';
+DELETE FROM sla_miss WHERE dag_id='ETL_TEST';
+DELETE FROM log WHERE dag_id='ETL_TEST';
+DELETE FROM job WHERE dag_id='ETL_TEST';
+DELETE FROM dag_run WHERE dag_id='ETL_TEST';
+DELETE FROM dag WHERE dag_id='ETL_TEST';
+
 
 もしくは、`$AIRFLOW_HOME/dags`から該当のscriptを削除して、`airflow resetdb`でDBをresetする。
 
@@ -480,13 +499,25 @@ Warningがでる。
   .format(x=modname), ExtDeprecationWarning
 ```
 
+### Restart scheduler/worker/webserver
+prcessをkillして再起動する。
+
+```
+cat $AIRFLOW_HOME/airflow-webserver.pid | xargs kill -9 && rm $AIRFLOW_HOME/airflow-webserver.pid
+cat $AIRFLOW_HOME/airflow-scheduler.pid | xargs kill -9 && rm $AIRFLOW_HOME/airflow-scheduler.pid
+cat $AIRFLOW_HOME/airflow-worker.pid | xargs kill -9 && rm $AIRFLOW_HOME/airflow-worker.pid
+```
+
+再起動は起動時と同じコマンドを使う必要がある。
+
 ### log rotation
 log rotate機能は現在ないっぽい。
 
 ### DAGの追加
-DAGを追加する場合は、`airflow resetdb`した方が良い。
-dag pathにDAG用のpython fileをおいた時点で、schedular以外では使えるようになる。
-schedularに載せるためには、`airflow resetdb`が必要。
+* 要確認
+    * DAGを追加する場合は、`airflow resetdb`した方が良い。
+    * dag pathにDAG用のpython fileをおいた時点で、schedular以外では使えるようになる。
+    * schedularに載せるためには、`airflow resetdb`が必要。
 
 ### Executors
 * [API Reference — Airflow Documentation](https://airflow.incubator.apache.org/code.html?highlight=localexecutor#executors)
@@ -561,6 +592,30 @@ sensors.TimeDeltaSensor(
 taskがfailした場合は、failしたtaskをWebUIでClearすれば、failしたtaskから再実行される。
 failしたtaskに依存しているdownstream taskの状態(upstream  failed)も合わせてclearされる。
 
+### Ad hoc query
+Web UIでAdhoc queryをAirflowのserverに対して実行できる。
+接続の設定が必要。
+`Admin->Connections`から`mysql_default`をEditで接続に必要な情報を入力する。
+
+* Host
+* Login
+    * login user
+* Password
+* port
+* Schema
+    * DB name
+
+`mysql default`でなくても新しく作成しても良い。
+passwordなどはdefaultでは、plain textでDBに保存されるので、必要であれば、pythonの`cryptography`をinstallしておく。
+
+* [FAQ — Airflow Documentation](https://airflow.incubator.apache.org/faq.html#why-are-connection-passwords-still-not-encrypted-in-the-metadata-db-after-i-installed-airflow-crypto)
+
+```
+pip install apache-airflow[crypto]
+```
+
+でできる。
+
 ## API Reference
 
 ### operators
@@ -591,12 +646,26 @@ BaseOperatorで定義されている共通の引数
     * one_failed: 依存しているtaskが全1つでもfailed
 
 ### Macros
-liquid templateで利用できるMacroについて。
-
-Airflowがdefaultでtaskの実行時に渡すもの。
+bashOperatorのcommandの中で`'{{ ds }}'`  とした場合は、`{{ }}`の中身が評価された結果で実行される。
+Macroとして利用できるものとして以下がある。
+基本的にはoperatorは、execution dateを受け取ってその日付に対する処理をするようにした方が良い。
+failした場合の再実行の際には、日付を気にする必要がなくなる。
 
 * `{{ ds }}`
     * `YYYY-MM-DD`形式のexecution date
+* `{{ ds_nodash }}`
+* `{{ yesterday_ds }}`
+    * `YYYY-MM-DD`形式のexecution date - 1
+* `{{ tomorrow_ds }}`
+    * `YYYY-MM-DD`形式のexecution date + 1
+
+任意形式の日付が欲しい場合は `macros.ds_format`を使う。
+
+```
+yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'
+today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'
+```
+
 
 ## Web UI
 
@@ -636,3 +705,5 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 * [Airflowによるデータパイプラインのスケジュールとモニタリング - Speee DEVELOPER BLOG](http://tech.speee.jp/entry/2016/07/07/050000)
 * [Airflow: a workflow management platform – Airbnb Engineering & Data Science – Medium](https://medium.com/airbnb-engineering/airflow-a-workflow-management-platform-46318b977fd8)
 * [Airflow - データパイプラインのスケジュールと監視をプログラムしてみた - Qiita](http://qiita.com/haminiku/items/b431e9cd1cf4e300f8f0)
+* [Airflow: When Your DAG is Far Behind The Schedule](http://hafizbadrie.com/airflow/2016/12/12/airflow-when-your-dag-is-far-behind-the-schedule.html)
+* [ETL example — ETL Best Practices with Airflow v1.8](https://gtoonstra.github.io/etl-with-airflow/etlexample.html)

@@ -1,4 +1,8 @@
-## docker
+---
+title: Docker
+---
+
+## Docker
 
 ## Install
 For OSX,
@@ -60,6 +64,24 @@ imageの一覧を表示する
 ```
 docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
 ```
+
+### docker exec
+container上でcommandを実行。
+
+```
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+
+```
+docker run --name ubuntu_bash --rm -i -t ubuntu bash
+```
+
+```
+docker exec -d ubuntu_bash touch /tmp/execWorks
+```
+
+* `--detach, -d`
+    * backgroundで実行
 
 ## completion
 
@@ -272,6 +294,12 @@ docker login
 docker built -t username/image_name .
 docker push username/image_name
 ```
+
+## Multi state build
+* [Use multi-stage builds | Docker Documentation](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)
+
+
+
 
 ## Reference
 * [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)

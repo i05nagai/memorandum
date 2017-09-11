@@ -13,6 +13,13 @@ brew install apache-spark
 
 ## API
 
+### SparkSession
+
+* `spark_session.read.json()`
+    * readには、pathかpathのlistが渡せる
+    * pathは`*`, `[]`が使える
+
+
 ### pyspark.sql
 
 pyspark.sql.types
@@ -51,6 +58,8 @@ pyspark.sql.DataFrame
     * 標準出力以外に出す場合は`print`の出力先を奪うか、外側で`df._jdf.queryExecution().toString()`を直接呼ぶ
 * `df.distinct()`
     * 同じ行を削除
+* `df.write.format("com.databricks.spark.csv").save("/data/home.csv")`
+    * save as csv
 
 
 * `Column(jc)`
@@ -95,13 +104,18 @@ pyspark.sql.functions
     * [pyspark.sql module — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=structtype#pyspark.sql.functions.udf)
     * udfに渡すfunctionはudfと同じscopeにいないとだめ？
 
-```
-def samp():
-
-```
-
 
 ### pyspark.SparkContext
+
+```python
+conf = pyspark.SparkConf(
+).setMaster(
+    "local"
+).setAppName(
+    "pytest-pyspark-local-testing"
+)
+sc = pyspark.SparkContext.getOrCreate(conf=conf)
+```
 
 * `sc.parallelize(c, numSlices=None)`
     * [pyspark package — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=parallelize#pyspark.SparkContext.parallelize)
@@ -217,6 +231,7 @@ sc = pyspark.SparkContext(conf=conf)
 ```
 
 jsonの読み込み
+directoryを読み込む場合は`/path/to/*`とする必要がある。
 
 ```python
 >>> df1 = spark.read.json('python/test_support/sql/*.json.gz')
@@ -486,6 +501,27 @@ class WordFunctions(object):
 
 ```
 export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
+```
+
+## Tips
+
+### Error: No module named ...
+* [Running Spark Python Applications](https://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_python.html)
+
+java/scalaはpackageを1つのjarにまとめることができるので、packageの依存関係の解決は容易。
+しかし、pysparkを使う場合はpythonのpackageの問題がある。
+`spark-submit`で`--py-files`optionを利用して、依存しているpackageを渡す。
+もしくは、program内の`SparkContext`で`addPyFile()`で必要なFileを追加する。
+
+pytestでこのErrorがでる場合は、spark_contextに以下を追加すると良い。
+
+```python
+import some_module_to_be_tested
+
+# Here spark_context is fixture of pytest. 
+# spark_context is pyspark.SparkContext class
+def test_func(spark_context):
+    spark_context.addPyFile(some_module_to_be_tested.__file__)
 ```
 
 

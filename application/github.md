@@ -69,6 +69,11 @@ git config --global credential.helper osxkeychain
 
 ## Managing Deploy Keys
 
+```
+git clone git@github.com:{user}/{repo}.git
+```
+
+
 ### Reference
 * [Managing deploy keys | GitHub Developer Guide](https://developer.github.com/guides/managing-deploy-keys/)
 
