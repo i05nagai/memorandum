@@ -5,6 +5,14 @@ title: Hyper Estraier
 ## Hyper Estraier
 全文検索system.
 
+For Ubuntu
+
+```
+sudo apt-get install hyperestraier
+```
+
+install先は`/usr/lib/estraier`
+
 ## Attribute
 body textに対してattributeを付与できる。
 systemで予約されているattributeは`@`で始まる。
@@ -84,17 +92,26 @@ NUMD : descending by number or date
 
 ## CLI
 
+Indexを作る
+
 ```
 estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db
 ```
+
+document draftをindexに登録する。
+fileがdocument draft
 
 ```
 estcmd put [-tr] [-cl] [-ws] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] db [file]
 ```
 
+indexからDocumentの情報を削除
+
 ```
 estcmd out [-cl] [-pc enc] db expr
 ```
+
+indexのattributeを編集
 
 ```
 estcmd edit [-pc enc] db expr name [value]
@@ -112,5 +129,81 @@ estcmd list [-nl|-nb] [-lp] db
 estcmd uriid [-pidx path] [-nl|-nb] [-pc enc] db expr
 ```
 
+indexの最適化する。
+使い続けているとindexが肥大化する。
+
+```
+estcmd optimize [-onp] [-ond] db
+```
+
+localのfileを検索して、indexに登録する。
+
+* [file|dir]
+    * fileの場合はdocumentのpathのlist
+    * `-`の場合は標準入力
+    * dirの場合はdir以下
+
+```
+estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]
+```
+
+## config
+
+### estseek.conf
+`/usr/local/share/hyperestraier/`か`/usr/share/hyperestraier`にconfのsampleがある。
+
+* `indexname`
+    * indexへのpath
+
+```
+indexname: /home/www/casket
+replace: file:///home/www/public_html/{{!}}http://www.estraier.ad.jp/
+```
+
+### estproxy.conf
+`/usr/lib/estraier`
+
+* `replace`
+    * documentのURLを置換方法をregular expressionで記載
+    * `from_regular_expression{{!}}to_expression`の形式で指定
+    * `\1`, `\2`で置換前の文字を参照できる
+* `allowrx`
+    * validなURLの形式をregular expressionで指定
+* denyrx 
+    * invalidなURLの形式をregular expressionで指定
+* passaddr
+    * remote serverにclientのIP addressを渡すかどうか
+    * 0:no, 1:yes
+* limitsize
+    * mega byteでdownload可能なdataの最大sizeを指定
+* urlrule
+    * URL ruleをregular expressionとmedia typeで指定
+* typerule
+    * media typeのruleを指定
+* language
+    * (0:English, 1:Japanese, 2:Chinese, 3:Korean, 4:misc).
+* shownavi
+    * navigation barを表示するか
+    * 0:no, 1:yes
+
+```
+#replace: ^http://localhost/{{!}}file:///home/mikio/public_html/
+allowrx: ^http://
+#allowrx: ^file://
+denyrx: /\.
+passaddr: 1
+limitsize: 32
+urlrule: \.est${{!}}text/x-estraier-draft
+urlrule: \.(eml|mime|mht|mhtml)${{!}}message/rfc822
+typerule: ^text/x-estraier-draft${{!}}[DRAFT]
+typerule: ^text/plain${{!}}[TEXT]
+typerule: ^(text/html|application/xhtml+xml)${{!}}[HTML]
+typerule: ^message/rfc822${{!}}[MIME]
+language: 0
+shownavi: 1
+```
+
 ## Reference
 * [Hyper Estraier: a full-text search system for communities](http://fallabs.com/hyperestraier/)
+* [Ubuntu 10.04 LTSにHyperEstraierをインストールしてみる – BTY備忘録](http://bty.sakura.ne.jp/wp/archives/88)
+
