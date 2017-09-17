@@ -638,7 +638,7 @@ BaseOperatorで定義されている共通の引数
     * 実行時間の上限、これを超えるとSLA missというlogが出力
 * trigger_rule
     * 依存しているtaskのstateに応じて実行を制御する
-    * `{ all_success | all_failed | all_done | one_success | one_failed | dummy}`
+    * ` all_success | all_failed | all_done | one_success | one_failed | dummy`
     * defaultはall_success
     * all_sccess: 依存しているtaskが全てsuccess
     * all_faild: 依存しているtaskが全てfailed
