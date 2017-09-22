@@ -63,7 +63,6 @@ class WorkerSample(threading.Thread):
 
     def __init__(self, name):
         super(WorkerSample, self).__init__()
-        self.daemon = True
         self.name = name
         logging.basicConfig(filename='example.log', level=logging.DEBUG)
 
