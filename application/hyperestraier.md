@@ -83,9 +83,35 @@ NUMD : descending by number or date
 ```
 
 ## CLI
+indexを作る
+
+* `-attr name type`
+    * attribute indexの対象のattiribution nameとtypeを指定
+    * 複数指定可能
+* `db`
+    * indexのdb
 
 ```
 estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db
+```
+
+filesystemを探索して、indexに登録する。
+
+* `-tr`
+    * 既に文書のindexがある場合もindexを生成する
+* `-cl`
+    * 上書きされた文書の整理
+* `-sd`
+    * ファイルの更新日時を文書の属性として追加
+* `-cm`
+    * 文書の属性の更新日時がファイルの更新日時より古い場合にのみindexを作成
+* `file`
+    * fileを文書として登録
+* `dir`
+    * dir以下の文書を検索して登録
+
+```
+estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]
 ```
 
 ```
@@ -112,5 +138,21 @@ estcmd list [-nl|-nb] [-lp] db
 estcmd uriid [-pidx path] [-nl|-nb] [-pc enc] db expr
 ```
 
+index内の文書のkeywordを抽出したdatabaseを作る。
+
+* `-um`
+    * keywordの抽出に形態素解析をする
+
+```
+estcmd extkeys [-no] [-fc] [-dfdb file] [-ncm] [-ni] [-kn num] [-um] [-attr expr] db [prefix]
+```
+
+## Tips
+
+属性検索は遅い。
+属性にもindexをはれるが、通常の検索より遅くCPU resourceが必要。
+属性にindexをはるとindexの作成が遅くなる。
+
 ## Reference
 * [Hyper Estraier: a full-text search system for communities](http://fallabs.com/hyperestraier/)
+* [unoh.github.com by unoh](https://unoh.github.io/2008/10/10/tips_for_hyperestraier.html)
