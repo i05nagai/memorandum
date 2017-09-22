@@ -115,8 +115,8 @@ Web UIからTaskの手動実行する場合もCeleryが必要。
 Installは、
 
 ```
-pip install airflow[mysql]
-pip install airflow[celery]
+pip install apache-airflow[mysql]
+pip install apache-airflow[celery]
 ```
 
 でOK。
