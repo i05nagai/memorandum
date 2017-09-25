@@ -68,7 +68,6 @@ $$
     & = &
         (a_{j_{1}}^{\mathrm{T}}a_{j_{2}})_{j_{1},j_{2}=1,\ldots, n}
 \end{eqnarray}
-
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
