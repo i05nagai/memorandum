@@ -646,7 +646,7 @@ BaseOperatorで定義されている共通の引数
     * one_failed: 依存しているtaskが全1つでもfailed
 
 ### Macros
-bashOperatorのcommandの中で`'{{ ds }}'`  とした場合は、`{{ }}`の中身が評価された結果で実行される。
+bashOperatorのcommandの中で`{{ ds }}` とした場合は、`{{ somechar }}`で囲まれた中身が評価された結果で実行される。
 Macroとして利用できるものとして以下がある。
 基本的にはoperatorは、execution dateを受け取ってその日付に対する処理をするようにした方が良い。
 failした場合の再実行の際には、日付を気にする必要がなくなる。
@@ -661,7 +661,7 @@ failした場合の再実行の際には、日付を気にする必要がなく�
 
 任意形式の日付が欲しい場合は `macros.ds_format`を使う。
 
-```
+```python
 yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'
 today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'
 ```
