@@ -5,7 +5,7 @@ title: Hilbert Space
 ## Hilbert Space
 
 
-### Proposition
+### Proposition 1
 * $H$
     * hilbert space
 * $$\alpha_{1}, \alpha_{2}, \beta_{1}, \beta_{2} \in H$$,
@@ -77,7 +77,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorems
+### Theorem 2
 * $X$
     * Hilbert sp.
 * $L$
@@ -286,7 +286,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorems
+### Theorem 3
 * $X$
     * Hilbert sp.
 * $K$
@@ -404,6 +404,234 @@ Therefore $$y_{1} = y_{2}$$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Definition.
+* $H$
+    * hilbert space over $\mathbb{R}$
+* $a, c \in H$
 
+$$\mathcal{H}_{a, c}$$ is called halfspace iff
+
+$$
+    \mathcal{H}_{a, c}
+    :=
+    \{x \in H \mid \langle a, x \rangle \le c\}
+$$
+
+$$P_{\mathcal{H}_{a, c}}$$ defined as below is said to be a projection onto hyperplane $$\mathcal{H}_{a, c}$$.
+
+$$
+    x \in H,
+    \
+    P_{\mathcal{H}_{a, c}}(x)
+    :=
+    \arg \inf\{\|x - y \| \mid y \in \mathcal{H}_{a, c}\}
+    \in
+    H
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+### Remark
+$$\mathcal{H}_{a, c}$$ is a convex set so that the definition of a projection on to hyperplane is well-defined.
+(i.e. The point which minimizes $$\|x - y\|$$ is unique).
+
+If $$x \in \mathcal{H}_{a, c}$$, $$P_{\mathcal{H}_{a, c}}(x) = x$$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+### Theorem 4
+* $H$
+    * hilbert space over $\mathbb{R}$
+
+$$
+    \forall x \notin \mathcal{H}_{a, c},
+    \
+    P_{\mathcal{H}_{a,c}}(x)
+    =
+    \begin{cases}	
+        x
+        -
+        \frac{
+            \langle a, x \rangle - c
+        }{
+            \| a \|^{2}
+        }
+        a
+        &
+            (x \notin \mathcal{H}_{a, c})
+        \\
+        x
+        &
+            (x \in \mathcal{H}_{a, c})
+    \end{cases}
+$$
+
+### proof.
+For simplicity, we define $$\mathcal{H} := \mathcal{H}_{a, c}$$.
+Suppose $v \in \mathcal{H}$ and $$x \notin \mathcal{H}$$,
+
+$$
+    \langle a, x \rangle
+    -
+    c
+    >
+    0,
+    \
+    \langle a, v \rangle
+    -
+    c
+    \le
+    0.
+$$
+
+Then
+
+$$
+\begin{eqnarray}
+    \forall v \in \mathcal{H},
+    \
+    \left\langle
+        x
+        -
+        \left(
+            x
+            -
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+        \right)
+        ,
+        v
+        -
+        \left(
+            x
+            -
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+        \right)
+    \right\rangle
+    & = &
+        \left\langle
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+            ,
+            (v - x)
+            +
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+        \right\rangle
+    \nonumber
+    \\
+    & = &
+        \left\langle
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+            ,
+            (v - x)
+        \right\rangle
+            +
+        \left\langle
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+            ,
+            \frac{
+                \langle a, x \rangle - c
+            }{
+                \| a \|^{2}
+            }
+                a
+        \right\rangle
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \langle a, x \rangle - c
+        }{
+            \| a \|^{2}
+        }
+        \left\langle
+            a, (v - x)
+        \right\rangle
+        +
+        \frac{
+            (\langle a, x \rangle - c)^{2}
+        }{
+            \| a \|^{2}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \langle a, x \rangle - c
+        }{
+            \| a \|^{2}
+        }
+        \left(
+            \left\langle
+                a, (v - x)
+            \right\rangle
+            +
+            \langle a, x \rangle - c
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \langle a, x \rangle - c
+        }{
+            \| a \|^{2}
+        }
+        \left(
+            \left\langle
+                a, v
+            \right\rangle
+            - c
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \langle a, x \rangle - c
+        }{
+            \| a \|^{2}
+        }
+        \left(
+            \left\langle
+                a, v
+            \right\rangle
+            - c
+        \right)
+        \le
+        0.
+\end{eqnarray}
+$$
+
+By <a href="{{ site.baseurl }}/math/hilbert_space.html#theorem-3">the theorem of projection on to closed convex set</a>, the statement holds.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference

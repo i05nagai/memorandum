@@ -21,5 +21,11 @@ brew cask install calibre
 chmod -x /Applications/Kindle.app/Contents/MacOS/renderer-test
 ```
 
+kindle本は,Kindle->Preferenceで登録されているdirectoryに保存されている。
+defaultでは、`/Library/Application Supports/Kindle/My Kindle Content/`
+これでkindleからpdfに変換ができるようになるが、DRMがついているものについては変換できない。
+多くの本にはDRMがついているので、変換はきたいしない方が良い。
+
+
 ## Reference
 * [calibre - Download for OS X](https://calibre-ebook.com/download_osx)

@@ -55,5 +55,5 @@ cython -a file_name.pyx
 * `Cannot read reduction variable in loop body`
 
 
-
 ## Reference
+* [Cython ドキュメント（和訳） — Cython 0.17.1 documentation](http://omake.accense.com/static/doc-ja/cython/index.html)

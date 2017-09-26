@@ -230,4 +230,3 @@ $$
 ### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
-

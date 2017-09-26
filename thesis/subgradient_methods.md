@@ -1209,7 +1209,7 @@ $\epsilon$は任意であったら、収束性が示された。
 
 ### 5.1 Finding a point in the intersection of convex sets
 * $$m, n \in \mathbb{N}$$,
-* $$C_{i} \subeq \mathbb{R}^{n} \ i = 1, \ldots, m$$,
+* $$C_{i} \subseteq \mathbb{R}^{n} \ i = 1, \ldots, m$$,
     * convex and close set
 * $$C := C_{1} \cap \cdots \cap C_{m}$$,
     * nonemptyと仮定する
@@ -1233,13 +1233,218 @@ $f$はconvexである。
 $$
     \mathrm{dist}(x, C_{1})
     =
-    \inf
+    \min
     \{
         \|x - y\|
         \mid
         y \in C_{1}
     \}
 $$
+
+実際convex functionのmaxはまたconvexであり、closed convex setへの射影がconvexになることも簡単に分かる。
+証明はそれぞれ以下に讓る。
+
+* <a href="{{ site.baseurl }}/math/convex_function.html#proposition-3">property of convex function</a>.
+* <a href="{{ site.baseurl }}/math/convex_function.html#proposition-7">projection to closed convex set</a>.
+
+$C \neq \emptyset $で$f \le 0$より、$f$の最小値は0である。
+
+$f$のsubgradientについて考える。
+closed convex set上の射影を与える関数を
+
+$$
+\begin{equation}
+    \Pi_{C_{j}}(x)
+    :=
+    \arg \min_{y \in C_{j}}\|x - y\|
+\end{equation}
+$$
+
+と定義しておく。
+$x \in \mathbb{R}$について、$$j(x) \in \{1, \ldots, m\} \}$$が存在して、$$f(x) = \mathrm{dist}(x, C_{j(x)})$$となるから$x$におけるsubgradient $g_{x}$は
+
+$$
+\begin{eqnarray}
+    g_{x}
+    & = &
+        \nabla
+        \mathrm{dist}(x, C_{j(x)})
+    \nonumber
+    \\
+    & = &
+        \nabla
+        \sqrt{
+            \sum_{i=1}^{n}
+               (x^{i} - (\Pi_{C_{j(x)}}(x))^{i})^{2}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            x - \Pi_{C_{j(x)}}(x)
+        }{
+            \|x - \Pi_{C_{j(x)}}(x)\|_{2}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+$$\| g_{x} \|_{2}=1$$であるから$G=1$としてとれる。
+具体的に、step sizeが$$\eqref{05_step_size_polyak}$$の場合のsubgradient methodの更新式を書き下すと
+
+$$
+    \alpha_{k}
+    =
+    f(x^{(k)})
+$$
+
+に注意すれば
+
+$$
+\begin{eqnarray}
+    x^{(k+1)}
+    & = &
+        x^{(k)} - \alpha_{k}g^{(k)}
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        f(x^{(k)})
+        \frac{
+            x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})
+        }{
+            \|x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})\|
+        }
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        \|x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)}) \|_{2}
+        \frac{
+            x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})
+        }{
+            \|x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})\|
+        }
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        (x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)}))
+    \nonumber
+    \\
+    & = &
+        \Pi_{C_{j(x^{(k)})}}(x^{(k)})
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+algorithとしては、最も遠いconvex set $$C_{j(x^{(k)})}$$への射影を次の点として行けば良い。
+これは$m=2$の時にalternating projection algorithとして知られているものである。
+
+Alternating projectionは集合への射影が簡単に計算できるときに利用される。
+そのような集合としては
+
+* Affine set
+* Nonegative orthant
+* A halfspace or slab
+* A box (i.e. ball in $$l_{\infty}$$)
+* unit simplex
+* A euclidian ball
+* An ellipsoid
+    * closed formで書けないが計算は早い
+* A second-order cone
+* Cone of positive semidefinite matricies
+* Spectral norm matrix ball
+
+Quadratic Problemを解く場合もAlternating projectionoが利用される場合がある。
+
+### 5.2 Solving convex inequalities
+* $$f_{i}\ (i = 1, \ldots, m)$$,
+
+に対して、$$f_{i}(x) \le 0 \ (i = 1, \ldots, m)$$を満たす点を探す問題を考える。
+これを解くには
+
+* $$f:= \max_{i} f_{i}$$,
+
+とおいて、$f$の最小化を考えれば良い。
+$$f_{i} \le 0$$を満たす点が存在すれば、$f$の最小値は負となる。
+$f$の最小値を見つけるにあたって、$f$の各点でsubgradientが計算できれば良いが、これは
+
+* $$f_{i}\ (i = 1, \ldots, m)$$,
+    * convex function
+
+であれば十分である。
+
+$$
+    j(x)
+    :=
+    \arg \max_{i} f_{i}(x)
+$$
+
+とおく。
+$$x^{*}$$が$$f(x^{*}) \le 0$$を満たすとすると、$$\forall g_{x} \in \partial f_{i}(x)$$について
+
+$$
+    0
+    \ge
+    f_{j(x^{*})}(x^{*})
+    \ge
+    f_{j(x^{*})}(x) + g_{x}^{\mathrm{T}}(x^{*} - x)
+$$
+
+$$
+\begin{eqnarray}
+    x^{(k+1)}
+    & = &
+        x^{(k)} - \alpha_{k}g^{(k)}
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        \frac{
+            f(x^{(k)})
+        }{
+            \| g_{x}\|_{2}^{2}
+        }
+        g_{k}
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        \|x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)}) \|_{2}
+        \frac{
+            x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})
+        }{
+            \|x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)})\|
+        }
+    \nonumber
+    \\
+    & = &
+        x^{(k)}
+        -
+        (x^{(k)} - \Pi_{C_{j(x^{(k)})}}(x^{(k)}))
+    \nonumber
+    \\
+    & = &
+        \Pi_{C_{j(x^{(k)})}}(x^{(k)})
+\end{eqnarray}
+$$
+
+$$
+    \mathcal{H}_{x}
+    :=
+    \{ z \mid 0 \ge f_{j(x)}(x) + g_{x}^{\mathrm{T}}(z - x)\}
+    =
+    \{ z \mid - f_{j(x)}(x) \ge \langle g_{x}, (z - x) \rangle \}
+$$
+
 
 
 ## Reference

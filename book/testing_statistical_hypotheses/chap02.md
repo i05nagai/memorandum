@@ -944,6 +944,8 @@ $$
     \
     \theta \in \Theta,
     \
+    \text{ s.t. }
+    \
     \int_{B}
         q(A \mid t)
     \ d P_{\theta}^{T}(dt)
@@ -955,8 +957,221 @@ $$
 
 統計量が十分とは、分布族を$\theta$に依存しない可測関数で表現できるということである。
 つまり、統計量$T$が$\theta$を特定するのに十分な情報を持っているということ。
+これは以下と同値である。
+
+$$
+    \forall A \in \mathcal{A},
+    \
+    \exists q(A \mid \cdot): \mathcal{T} \rightarrow \mathbb{R},
+    \
+    q(A \mid t)
+    =
+    P_{\theta}(A \mid T = t)
+    \
+    t \text{-a.e.}
+$$
 
 Example 2.4.1からorder statisticsはsufficient statisticである。
+
+### Example. Bernoulli trial
+* $$\mathcal{X} := \{0, 1\}^{n}$$,
+* $$\mathcal{A} := 2^{\mathcal{X}}$$,
+* $$\Theta := [0, 1]$$,
+* $$\mathcal{T} := \{0, 1, \ldots, n\}$$,
+* $$\mathcal{B} := 2^{\mathcal{T}}$$,
+
+We define p.d.f. of this trials as follows.
+
+$$
+    \theta \in \Theta,
+    \
+    x \in \mathcal{X},
+    \
+    p_{\theta}(x)
+    :=
+    \theta^{\sum_{i=1}^{n} x_{i}}
+    (1 - \theta)^{n - \sum_{i=1}^{n} x_{i}},
+$$
+
+Corresponding probability measure is
+
+$$
+    A \in \mathcal{A}
+    \
+    P_{\theta}(A)
+    :=
+    \sum_{x \in A}
+        p_{\theta}(x).
+$$
+
+We show that statistic
+
+$$
+    T(x)
+    :=
+    \sum_{i=1}^{n}
+        x_{i}
+$$
+
+is sufficient.
+To show that, we need to confirm the equation of definition of sufficiency.
+It is easy to see that
+
+$$
+\begin{eqnarray}
+    P_{\theta}(\{x\} \cap T^{-1}(\{t\})
+    =
+    \begin{cases}
+        \theta^{t}(1 - \theta)^{n - t}
+        &
+            x \in T^{-1}(\{t\})
+            \\
+        0
+        &
+            x \notin T^{-1}(\{t\})
+    \end{cases}.
+    \label{example_sufficiency_lhs}
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    \forall A \in \mathcal{A},
+    \
+    P_{\theta}(A \cap T^{-1}(\{t\})
+    & = &
+        P_{\theta}(A \cap T^{-1}(\{t\}))
+    \nonumber
+    \\
+    & = &
+        \sum_{x \in A}
+            P_{\theta}(\{x\} \cap T^{-1}(\{t\}))
+    \nonumber
+    \\
+    & = &
+        |A \cap T^{-1}(\{t\}) |
+            \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+\end{eqnarray}
+$$
+
+In particular, if we take $A$ as $\mathcal{X}$, we have
+
+$$
+\begin{eqnarray}
+    P_{\theta}(T^{-1}(\{t\})
+    & = &
+        |T^{-1}(\{t\}) |
+            \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+    \\
+    & = &
+        |\{x \in \mathcal{X} \mid \sum_{i=1}^{n} x_{i} = t \} |
+            \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{c}
+                n \\
+                t
+            \end{array}
+        \right)
+            \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    r(x, t)
+    :=
+    \begin{cases}
+        \left(
+            \begin{array}{c}
+                n \\
+                t
+            \end{array}
+        \right)^{-1}
+        &
+            (T(x) = t)
+        \\
+        0
+        &
+            \text{otherwise}
+    \end{cases}
+\end{eqnarray}
+$$
+
+$$
+    q_{A}(t)
+    :=
+    \sum_{x \in A}
+        r(x, t)
+    =
+    |A \cap T^{-1}(\{t\})|
+        \left(
+            \begin{array}{c}
+                n \\
+                t
+            \end{array}
+        \right)^{-1}
+$$
+
+LHS of definition of sufficiency is
+
+$$
+\begin{eqnarray}
+    \int_{B}
+        q_{A}(t)
+    P_{\theta}^{T}(dt)
+    & = &
+        \sum_{t \in B}
+            q_{A}(t)
+            P_{\theta}^{T}(\{t\})
+    \nonumber
+    \\
+    & = &
+        \sum_{t \in B}
+            q_{A}(t)
+            \left(
+                \begin{array}{c}
+                    n \\
+                    t
+                \end{array}
+            \right)
+                \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+    \\
+    & = &
+        \sum_{t \in B}
+            |A \cap T^{-1}(\{t\})|
+            \theta^{t}(1 - \theta)^{n - t}.
+    \nonumber
+\end{eqnarray}
+$$
+
+RHS of definition of sufficiency is
+
+$$
+\begin{eqnarray}
+    P_{\theta}(A \cap T^{-1}(B))
+    & = &
+        \sum_{t \in B}
+            P_{\theta}(A \cap T^{-1}(\{t\}))
+    \nonumber
+    \\
+    & = &
+        \sum_{t \in B}
+            |A \cap T^{-1}(\{t\}) |
+                \theta^{t}(1 - \theta)^{n - t}.
+\end{eqnarray}
+$$
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ### Theorem 2.6.1
 * $\mathcal{X}$

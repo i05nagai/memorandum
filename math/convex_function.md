@@ -320,7 +320,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Proposition
+### Proposition 7
 * $$C \subseteq \mathbb{R}^{n}$$,
     * closed convex set
 
@@ -347,14 +347,14 @@ $$
 $$
 
 ### proof.
-$$x_{1}, x_{2} \in \mathbb{R}^{n}$$, $\lambda \in (0, 1)$とする。
-$\forall y \in C$について、$$y_{1}, y_{2} \in C$$が存在して$$y = \lambda y_{1} + (1 - \lambda) y_{2}$$とできる。
+$$x_{1}, x_{2} \in \mathbb{R}^{n}$$, $\lambda \in [0, 1]$とする。
+$\forall y \in C$について、
 
 $$
 \begin{eqnarray}
     \|\lambda x_{1} + (1 - \lambda) x_{2} - y\|
     & = &
-        \|\lambda x_{1} + (1 - \lambda) x_{2} - (\lambda y_{1} + (1 - \lambda) y_{2})\|
+        \|\lambda x_{1} + (1 - \lambda) x_{2} - (\lambda y + (1 - \lambda)y )\|
     \nonumber
     \\
     & \le &
@@ -364,24 +364,51 @@ $$
 \end{eqnarray}
 $$
 
-ここで、右辺のinfをとると、
+となる。
+ここで、左辺のinfをとれば
 
 $$
 \begin{eqnarray}
     f(\lambda x_{1} + (1 - \lambda) x_{2})
-    & = &
-        \min
-        \{
-            \|\lambda x_{1} + (1 - \lambda) x_{2} - y\|
-            \mid
-            y \in C
-        \}
+    & \le &
+        \lambda \|x_{1} - y_{1} \|
+        +
+        (1 - \lambda) \| x_{2} - y_{2} \|
     \nonumber
 \end{eqnarray}
 $$
 
+となる。
+左辺は$y$に依存しないから右辺の第一項の$y$についてinfをとれば、
+
+$$
+    f(\lambda x_{1} + (1 - \lambda) x_{2})
+    \le
+        \lambda f(x_{1})
+        +
+        (1 - \lambda) \| x_{2} - y_{2} \|
+$$
+
+であり、 同様に
+
+$$
+    f(\lambda x_{1} + (1 - \lambda) x_{2})
+    \le
+        \lambda f(x_{1})
+        +
+        (1 - \lambda) f(x_{2})
+$$
+
+を得る。
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+### Remark
+closed convex への射影がconvex functionになるということを延べている。
+命題の中で、infがminになることの証明は与えていないが、これば$\mathbb{R}$上のHilbert空間一般に成り立つ性質である。
+この証明は <a href="{{ site.baseurl }}/math/hilbert_space.html#theorem-3">ここ</a>に譲る。
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ### Optimum
 * 凸関数の極小値は最小値
