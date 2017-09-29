@@ -384,13 +384,15 @@ diffが大量にでる場合があるので、その場合はdiffをhostに限�
 ansible-playbook foo.yml --check --diff --limit foo.example.com
 ```
 
-## Configuration fiele
+## Configuration file
 * [Configuration file — Ansible Documentation](http://docs.ansible.com/ansible/latest/intro_configuration.html)
 
 * `{{ ansible_managed }}`
     * ansibleが自動で設定していることを明示するために、config fileのcommenなどに書かれる
 
 ## Using Vault in playbooks
+* [Ansible Vaultを利用して秘密情報を暗号化する ｜ Developers.IO](http://dev.classmethod.jp/server-side/ansible/ansible-vault-introduction/)
+
 playbookやplaybook内の文字列をencyrptする機能としてVaultがある。
 file全体のencryptはv1.5から、文字列のencryptはv2.3から導入されている。
 
