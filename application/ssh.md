@@ -15,6 +15,8 @@ sh-keygen -t rsa
     * file permissionは`chmod 600 authorized_keys`
     * userとgroupはログインするユーザ(`ssh-user`)のもの
         * `chown ssh-user:ssh-user authorized_keys`
+* [今まで知らずに損してたauthorized_keysの書き方 - Qiita](https://qiita.com/ryounagaoka/items/0a706a0734664f3c35e0)
+
 
 ## client
 * sshでの接続時のPassは、キー作成時のpass phraseでlogin userのpasswordではない。
