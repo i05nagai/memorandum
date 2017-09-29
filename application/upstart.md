@@ -6,6 +6,8 @@ title: Upstart
 scriptをdaemon化できる。
 `/sbin/init` daemon (例えばSysVinit)を置き換えるもの。
 
+`/etc/init`にdefaultのscriptが配置してある。
+
 
 ## Configuration
 
@@ -116,13 +118,17 @@ sudo initctl reload-configuration
 設定されているinitの一覧
 
 ```
- sudo initctl list
+sudo initctl list
 ```
 
 `[name]`の起動。
 
 ```
 sudo initctl start [name]
+```
+
+```
+sudo initctl stop [name]
 ```
 
 
