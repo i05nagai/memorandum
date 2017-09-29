@@ -141,6 +141,14 @@ volumes:
   - datavolume:/var/lib/mysql
 ```
 
+## CLI
+
+* up
+    * build, create, start and attach
+* `docker-compose run web bash`
+    * bashはコマンド
+
+
 ## Reference
 * [Docker Compose — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/compose/toc.html)
 * [docker-composeを使うと複数コンテナの管理が便利に - Qiita](http://qiita.com/y_hokkey/items/d51e69c6ff4015e85fce)
