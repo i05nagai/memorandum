@@ -46,8 +46,6 @@ embulk bundle
 bundle_dir内にのjruby directoryにgemが保存される。
 
 
-
-
 ## configの書き方
 
 * [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
