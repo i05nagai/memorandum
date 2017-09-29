@@ -1,4 +1,24 @@
-# autotools
+---
+title: autotools
+---
+
+## autotools
+
+overview
+
+1. Makefile.amの作成
+2. autoscan実行
+    * configure.scan生成
+3. configure.scanの修正してconfigure.acを作成
+4. aclocal実行
+5. automake -a実行
+    *  Makefile.in生成
+6. autoheader実行
+    * config.h.in生成
+7. autoconf実行
+    * configure生成
+8. ./configure実行
+    * Makefile生成
 
 ## Makefile.am
 ファイル名のワイルドカードは使えない。
@@ -86,6 +106,20 @@ UNIXの場合は不要。
 ```autoconf
 AC_PROG_
 ```
+
+## Macros
+
+* AM_INIT_AUTOMAKE
+    * [automake: Public Macros](https://www.gnu.org/software/automake/manual/html_node/Public-Macros.html)
+    * [automake: List of Automake options](https://www.gnu.org/software/automake/manual/html_node/List-of-Automake-options.html#List-of-Automake-options)
+* AC_SUBST()
+    * [Setting Output Variables - Autoconf](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Setting-Output-Variables.html)
+    * shell variableから`@variable@`の変数を作成する
+* AC_ARG_VAR(variable, description)
+* AS_IF(test1, [run-if-true1], test2, ..., [run-if-false])
+    * [Common Shell Constructs - Autoconf](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Common-Shell-Constructs.html)
+    * test1を実行してexit 0なら、true1を実行,そうでなければtest2を実行を繰り返す
+
 
 
 ## 参考
