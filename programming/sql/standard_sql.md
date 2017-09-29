@@ -71,4 +71,39 @@ SCOTT      19-APR-87       3000       5000       1100
 ADAMS      23-MAY-87       1100       5000
 ```
 
+## Function
+* [Functions & Operators  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#supported-format-elements-for-date)
+* [Functions & Operators  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#supported-format-elements-for-datetime)
 
+```sql
+FORMAT_DATE('%U', DATE '2013-12-25')
+FORMAT_DATETIME("%c", DATETIME "2008-12-25 15:30:00")
+FORMAT_DATETIME('%Y-%m-%d', DATETIME "2008-12-25 15:30:00")
+FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP "2008-12-25 15:30:00")
+```
+
+* `%U`
+    * week number of the year 0-53
+* `%a`
+    * abbreviated weekday name
+* `%u`
+    * weekday number 1-7
+* `%D`
+    * `%m/%d/%y`
+* `%m`
+    * 
+* `%d`
+    * 日
+* `%Y`
+* `%H`
+    * hours
+    * 00-23
+* `%M`
+    * minutes
+    * 00-59
+* `%S`
+    * second
+    * 00-59
+* `%T`
+    * `%H:%M:%S`
+* `%`
