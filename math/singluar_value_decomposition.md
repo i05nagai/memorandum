@@ -251,7 +251,11 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+## Theorem2. Existence of singular values
 
+## proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
 * [lecture3.pdf](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-fall-2004/lecture-notes/lecture3.pdf)
