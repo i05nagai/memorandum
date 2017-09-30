@@ -49,5 +49,26 @@ Cpu(s): 77.1%us,  8.4%sy,  0.0%ni,  0.1%id, 14.3%wa,  0.0%hi,  0.2%si,  0.0%st
     * 実行時間
 
 
+## Commands
+top実行中
+
+
+* `h`
+    * helpを表示
+* `H`
+    * 全thread表示/非表示
+* `V`
+    * tree形式でProcessの関係を表示
+* `E`
+    * summaryのMemory scaleを変更
+* `e`
+    * processのMemoryの単位を変更
+* `F`
+    * fieldを選択できる
+    * sortするfieldの選択もできる
+    * 矢印キーでソートしたいfieldを選択して、`s`を
+
+
+
 ## Reference
 * [topコマンドの使い方 - Qiita](http://qiita.com/k0kubun/items/7368c323d90f24a00c2f)

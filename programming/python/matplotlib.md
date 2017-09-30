@@ -30,7 +30,7 @@ $python -c "import matplotlib;print(matplotlib.matplotlib_fname())"
 ```
 
 * 行列のマス目で描画
-	* [pyplot — Matplotlib 2.0.0 documentation](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow)
+    * [pyplot — Matplotlib 2.0.0 documentation](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.matshow)
 
 ```python
 mat = [[]]

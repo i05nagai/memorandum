@@ -37,7 +37,13 @@ embulk mkbundle /path/to/bundle_dir
 で`bundle_dir`が作成され、Gemifileなどが作られる。
 Gemfileでinstallする場合は
 
+```
+cd /path/to/bundle_dir
+embulk bundle
+```
 
+でOK。
+bundle_dir内にのjruby directoryにgemが保存される。
 
 
 ## configの書き方

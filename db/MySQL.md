@@ -256,7 +256,10 @@ DB serverとしてのimageもあるが、mysql clientとしても使うことが
 docker run -it --rm mysql:5.7.18 mysql -hsome.mysql.host -usome-mysql-user -p
 ```
 
+## CLI
 
+* `--skip-column-names, -N`
+    * columun nameを出力しない
 
 ## Reference
 * [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)

@@ -91,6 +91,13 @@ NUMD : descending by number or date
 ```
 
 ## CLI
+indexを作る
+
+* `-attr name type`
+    * attribute indexの対象のattiribution nameとtypeを指定
+    * 複数指定可能
+* `db`
+    * indexのdb
 
 Indexを作る
 
@@ -98,24 +105,72 @@ Indexを作る
 estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db
 ```
 
-document draftをindexに登録する。
+
+```
+estcmd optimize [-onp] [-ond] db
+```
+
+indexの最適化する。
+使い続けているとindexが肥大化する。
+
+```
+estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]
+```
+
+localのfileを検索して、indexに登録する。
 fileがdocument draft
+
+* [file|dir]
+    * fileの場合はdocumentのpathのlist
+    * `-`の場合は標準入力
+    * dirの場合はdir以下
+* `-il ja`
+    * 文字コードの判定で優先される言語
+* `-xs`
+    * 50000件未満の文書を登録することを想定してインデックスを作成
+* `-xl`
+    * 300000件以上の文書を登録することを想定してインデックスを作成
+* `-xh`
+    * 1000000件以上の文書を登録することを想定してインデックスを作成
+* `-xh2`
+    * 5000000件以上の文書を登録することを想定してインデックスを作成
+* `-xh3`
+    * 10000000件以上の文書を登録することを想定してインデックスを作成
+* `-cs`
+    * cache memoryのsizeをMBで指定
+    * defaultは64MB
+* `-tr`
+    * 既に文書のindexがある場合もindexを生成する
+* `-cl`
+    * 上書きされた文書の整理
+* `-sd`
+    * ファイルの更新日時を文書の属性として追加
+* `-cm`
+    * 文書の属性の更新日時がファイルの更新日時より古い場合にのみindexを作成
+* `file`
+    * fileを文書として登録
+* `dir`
+    * dir以下の文書を検索して登録
+
 
 ```
 estcmd put [-tr] [-cl] [-ws] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] db [file]
 ```
 
-indexからDocumentの情報を削除
+filesystemを探索して、indexに登録する。
+document draftをindexに登録する。
 
 ```
 estcmd out [-cl] [-pc enc] db expr
 ```
 
-indexのattributeを編集
+indexからDocumentの情報を削除
 
 ```
 estcmd edit [-pc enc] db expr name [value]
 ```
+
+indexのattributeを編集
 
 ```
 estcmd get [-nl|-nb] [-pidx path] [-pc enc] db expr [attr]
@@ -129,23 +184,40 @@ estcmd list [-nl|-nb] [-lp] db
 estcmd uriid [-pidx path] [-nl|-nb] [-pc enc] db expr
 ```
 
-indexの最適化する。
-使い続けているとindexが肥大化する。
-
 ```
-estcmd optimize [-onp] [-ond] db
+estcmd extkeys [-no] [-fc] [-dfdb file] [-ncm] [-ni] [-kn num] [-um] [-attr expr] db [prefix]
 ```
 
-localのfileを検索して、indexに登録する。
+index内の文書のkeywordを抽出したdatabaseを作る。
 
-* [file|dir]
-    * fileの場合はdocumentのpathのlist
-    * `-`の場合は標準入力
-    * dirの場合はdir以下
+* `-um`
+    * keywordの抽出に形態素解析をする
 
 ```
-estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]
+estcmd search [-nl|-nb] [-pidx path] [-ic enc] [-vu|-va|-vf|-vs|-vh|-vx|-dd] [-sn wnum hnum anum] [-kn num] [-ec rn] [-gs|-gf|-ga] [-cd] [-ni] [-sf|-sfr|-sfu|-sfi] [-hs] [-attr expr] [-ord expr] [-max num] [-sk num] [-aux num] [-dis name] [-sim id] db [phrase]
 ```
+
+* indexを検索する
+* `-nl`
+    * file lockなしでindexを開く
+* `-nb`
+    * blockなしでfile lock
+* `-vu`
+    * IDとURIをタブ区切りで表示
+* `-va`
+    * 属性情報こみで表示
+* `-vf`
+    * draft形式で表示
+
+## Tips
+
+属性検索は遅い。
+属性にもindexをはれるが、通常の検索より遅くCPU resourceが必要。
+属性にindexをはるとindexの作成が遅くなる。
+
+## Reference
+* [Hyper Estraier: a full-text search system for communities](http://fallabs.com/hyperestraier/)
+* [unoh.github.com by unoh](https://unoh.github.io/2008/10/10/tips_for_hyperestraier.html)
 
 ## config
 

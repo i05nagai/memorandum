@@ -326,6 +326,17 @@ JS UDFのbest practice
 * external codeは1MBまで
 * DOM objects, `Window`, `Document`, `Node`などはサポートしてない
 
+## Tips
+
+### Add new columns
+* [BigQuery で既存のテーブルにカラムを追加する - Qiita](https://qiita.com/m_doi/items/b367d38bac5565f42c76)
+
+bq commandで行う場合は、既存のschemaに新しいcolumnのschemaを追加したものを用意して、bq updateで更新すれば良い。
+追加したcolumnはnullで追加される。
+
+```
+bq update project_name:dataset_name.table_name table.json
+```
 
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)

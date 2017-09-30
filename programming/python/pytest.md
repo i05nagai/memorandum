@@ -203,6 +203,128 @@ py._path.local.ImportMismatchError: ('conftest', '/tmp/conftest.py', local('/tmp
 ERROR: could not load /tmp/spark/tests/conftest.py
 ```
 
+## ignore eggs files
+
+```
+```
+
+## Template for setup.py
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from distutils.core import setup
+from setuptools.command.test import test as TestCommand
+import sys
+
+
+NAME = ''
+MAINTAINER = ''
+MAINTAINER_EMAIL = ''
+DESCRIPTION = """ """
+with open("README.md") as f:
+    LONG_DESCRIPTION = f.read()
+LICENSE = ''
+URL = ''
+VERSION = '0.0.1'
+DOWNLOAD_URL = ''
+CLASSIFIERS = """ \
+Development Status :: 1 - Planning
+Intended Audience :: Science/Research
+Intended Audience :: Developers
+Programming Language :: Python
+Programming Language :: Python :: 3.5
+Topic :: Software Development
+Operating System :: Unix
+Operating System :: MacOS
+"""
+INSTALL_REQUIRES = [
+]
+TESTS_REQUIRE = [
+]
+
+
+class PyTest(TestCommand):
+    """
+    """
+    user_options = [
+        ('cov=', '-', "coverage target."),
+        ('pdb', '-', "start the interactive Python debugger on errors."),
+        ('pudb', '-', "start the PuDB debugger on errors."),
+        ('quiet', 'q', "decrease verbosity."),
+        ('verbose', 'v', "increase verbosity."),
+        # collection:
+        ('doctest-modules', '-', "run doctests in all .py modules"),
+    ]
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        self.cov = ''
+        self.pdb = ''
+        self.pudb = ''
+        self.quiet = ''
+        self.verbose = ''
+        # collection:
+        self.doctest_modules = ''
+        self.test_args = [""]
+        self.test_suite = True
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+
+    def run_tests(self):
+        import pytest
+        # if cov option is specified, option is replaced.
+        if self.cov:
+            self.test_args += ["--cov={0}".format(self.cov)]
+        else:
+            self.test_args += ["--cov=."]
+        if self.pdb:
+            self.test_args += ["--pdb"]
+        if self.pudb:
+            self.test_args += ["--pudb"]
+        if self.quiet:
+            self.test_args += ["--quiet"]
+        if self.verbose:
+            self.test_args += ["--verbose"]
+        if self.doctest_modules:
+            self.test_args += ["--doctest-modules"]
+
+        print("executing 'pytest {0}'".format(" ".join(self.test_args)))
+        errno = pytest.main(self.test_args)
+        sys.exit(errno)
+
+
+def main():
+    cmdclass = {
+        'test': PyTest,
+    }
+    metadata = dict(
+        name=NAME,
+        packages=[NAME],
+        package_dir={NAME: '../'},
+        version=VERSION,
+        description=DESCRIPTION,
+        maintainer=MAINTAINER,
+        maintainer_email=MAINTAINER_EMAIL,
+        url=URL,
+        download_url=DOWNLOAD_URL,
+        license=LICENSE,
+        classifiers=[_f for _f in CLASSIFIERS.split('\n') if _f],
+        long_description=LONG_DESCRIPTION,
+        install_requires=INSTALL_REQUIRES,
+        tests_require=TESTS_REQUIRE,
+        cmdclass=cmdclass,
+    )
+
+    setup(**metadata)
+
+
+if __name__ == '__main__':
+    main()
+```
+
 ## Reference
 * [pytest fixtures: explicit, modular, scalable — pytest documentation](https://docs.pytest.org/en/latest/fixture.html?highlight=conftest)
 * [pytest fixtures nuts and bolts - Python Testing](http://pythontesting.net/framework/pytest/pytest-fixtures-nuts-bolts/)

@@ -23,8 +23,16 @@ title: datasets
 * [SUN Database](http://groups.csail.mit.edu/vision/SUN/)
     * Scene recoginitionのdataset
 * [MIT Places Database for Scene Recognition](http://places.csail.mit.edu/)
+    * Creative Commons
+        * Places2とLicenseの文章が異なる
     * Scene recognitionのdatasetで大規模な者
     * [Places Database](http://places.csail.mit.edu/user/leaderboard.php)
+* [Places2: A Large-Scale Database for Scene Understanding](http://places2.csail.mit.edu/download.html)
+    * Creative Commons
+        * PlacesとLicenseの文章が異なる
+    * scene recognition
+    * Placesの改良版
+    * 10 million dataset
 
 ### Food
 * [im2recipe](http://im2recipe.csail.mit.edu/dataset/login/)

@@ -120,6 +120,19 @@ df[true_false_list]
 * [ゆるふわPandasチートシート - Qiita](http://qiita.com/tanemaki/items/2ed05e258ef4c9e6caac)
 
 
+## API
+* `pandas.read_gbq(query, project_id=None, index_col=None, col_order=None, reauth=False, verbose=True, private_key=None, dialect='legacy', **kwargs)`
+    * Google bigqueryから読み込む
+    * dialectは`standard`か'legacy'
+    * index_col
+        * 結果のcolumnのDataFrame名
+    * private_key
+        * jupyter notebookを別serverで動かしている場合に有用
+
+```
+pip install pandas-gbq
+```
+
 ## Reference
 * [Python Pandasでのデータ操作の初歩まとめ − 前半：データ作成＆操作編 - Qiita](http://qiita.com/hik0107/items/d991cc44c2d1778bb82e)
 * [Python pandas データ選択処理をちょっと詳しく <後編> - StatsFragments](http://sinhrks.hatenablog.com/entry/2014/11/18/003204)
