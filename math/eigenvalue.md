@@ -245,4 +245,45 @@ By combining corollary4 and theorem5.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+## Thereom7.
+* $$A \in \mathbb{C}^{n \times n}$$,
+
+Then
+
+* There exists a nonsingular matrix $$Q := (q_{1} \ldots q_{n})$$ and $$D := \mathrm{diag}(d_{1}, \ldots, d_{n})$$ such that
+    * $$Q^{-1}AQ = D$$,
+* $\mathrm{rank}(A)$ equals the number of nonzero diagonal elements of $D$
+* $$\mathrm{det}(A) = d_{1} \cdots d_{n}$$,
+* $$\mathrm{tr}(A) = d_{1} + \cdots + d_{n}$$,
+* The characteristic polynomial of $A$ is
+
+$$
+    p(\lambda)
+    =
+    (-1)^{n}
+        (\lambda - d_{1})
+        \cdots
+        (\lambda - d_{n})
+$$
+
+## proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Theorem 8. Orthogonal diagonalization
+* $A \in \mathbb{C}^{n \times n}$
+    * symmetric matrix
+
+$A$ is orthogonally idagonalizable.
+
+## proof.
+
+$$
+    A^{\mathrm{T}}
+    =
+    (
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## Reference
