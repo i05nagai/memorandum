@@ -192,9 +192,32 @@ $u \le F(y)$ implies $$J_{n}(y) \in \mathcal{A}$$. That is $$F^{-1}(u) \subseteq
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Theorem4. Inversion Method
+Let $U$ be uniformly distributed random variable on $(0,1)$ (i.e. $$U:\Omega \rightarrow (0,1)$$).
+Then $$F^{-1}(U)$$ is a random variable with distribution $F$.
 
 ### proof.
+Let $X := F^{-1}(U)$.
+Then by proposition3,
+
+$$
+\begin{eqnarray}
+    P(X^{-1}(J_{n}(x)))
+    & = &
+        P(\{\omega \mid F^{-1}(U(\omega)) \subseteq J_{n}(x) \})
+    \nonumber
+    \\
+    & = &
+        P(\{\omega \mid U(\omega) \le F(x) \})
+    \nonumber
+    \\
+    & = &
+        F(x)
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+
 
 ## Reference
