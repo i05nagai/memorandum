@@ -3,7 +3,7 @@ title: datasets
 ---
 
 ## Lists of Datasets
-* [DATASET | Create with AI](http://createwith.ai/dataset)
+* [DATASET  Create with AI](http://createwith.ai/dataset)
 * [画像・動画データセットリスト - Qiita](http://qiita.com/hiso-as/items/1d616adfb7560ff5b11a)
 * [arXivTimes/datasets at master · arXivTimes/arXivTimes · GitHub](https://github.com/arXivTimes/arXivTimes/tree/master/datasets)
 
@@ -13,7 +13,7 @@ title: datasets
 * [UCI Machine Learning Repository: Amazon Access Samples Data Set](http://archive.ics.uci.edu/ml/datasets/Amazon+Access+Samples)
 * [Publicly available access.log datasets · GitHub](https://gist.github.com/rm-hull/bd60aed44024e9986e3c)
 * [Common Crawl](http://commoncrawl.org/)
-* [ICWSM || Weblog Dataset](http://www.icwsm.org/data.html)
+* [ICWSM  Weblog Dataset](http://www.icwsm.org/data.html)
 
 
 ## Images
@@ -41,7 +41,7 @@ title: datasets
     * 配布は基本的に禁止、同僚に研究目的で配布する場合はTerms and conditionに同意が必要
     * emailはorganizationのものしか利用できない
 * [Food-101 -- Mining Discriminative Components with Random Forests](https://www.vision.ee.ethz.ch/datasets_extra/food-101/)
-* [Food Image Dataset | MMSPG](http://mmspg.epfl.ch/food-image-datasets)
+* [Food Image Dataset MMSPG](http://mmspg.epfl.ch/food-image-datasets)
 
 
 ## Reference
