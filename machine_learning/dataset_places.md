@@ -25,8 +25,12 @@ The collected annotation can be used under the Creative Common License (Attribut
 ```
 
 ## Labels
+
+### Places 205
 Places 205のlabelの一覧。
 `/`はdataset中のdirectoryの区切り。
+
+* http://data.csail.mit.edu/places/places205/trainvalsplit_places205.tar.gz
 
 205 scene category
 
