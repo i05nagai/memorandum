@@ -4,9 +4,27 @@ title: Places A 10 million Image Database for Scene Recognition
 
 ## Places A 10 million Image Database for Scene Recognition
 
-* 2012年のPlaces dataseの改良版
+* 2012年のPlaces dataseの改良版のdataset
 * Scene recognitionに対する10 millionのdatasetを作成した
 * object detectionで使われているgooglenet, VGG16, alexnetなどの手法を今回のdatasetで学習させて、testを行った
+
+datsetは以下のTerms of useの下公開されている。
+
+* [Places2: A Large-Scale Database for Scene Understanding](http://places2.csail.mit.edu/download.html)
+
+```
+Terms of use: by downloading the image data you agree to the following terms:
+
+You will use the data only for non-commercial research and educational purposes.
+You will NOT distribute the above images.
+Massachusetts Institute of Technology makes no representations or warranties regarding the data, including but not limited to warranties of non-infringement or fitness for a particular purpose.
+You accept full responsibility for your use of the data and shall defend and indemnify Massachusetts Institute of Technology, including its employees, officers and agents, against any and all claims arising from your use of the data, including but not limited to your use of any copies of copyrighted images that you may create from the data.
+```
+
+またこのdatasetのweb demoが下記で公開されている。
+
+* [Places2: A Large-Scale Database for Scene Understanding](http://places2.csail.mit.edu/demo.html)
+
 
 ## 1. Introduction
 
@@ -15,11 +33,16 @@ Supervised learningで重要なこと
 
 * algorithmが問題に適していること
 * training dataが問題の答えを適当に網羅しており、十分なdata量があること
-    * class分類の場合は
+    * 画像のclass分類の場合は、各classごとに十分な種類の画像があり、画像数が多いこと
+
+適当なdatasetはsupervised learningにおいて重要である。
+本論文のdatasetはscene recognitionのdatasetに焦点をあてて作られている。
 
 ## 1.2 Scene-centric Datasets
-既存のscene recognitionのdatasetsたち。
-Deep learningによるobject detectionで使われるImageNetのような大規模datasetと呼ばれるものはない。
+既存のscene recognitionのdatasetsについて簡単に述べる。
+Deep learningによるobject detectionで使われるImageNetのような大規模datasetに相当するものは、scene recognitionにおいてはない。
+
+Scene recognitionに関連したdatasetとして有名なものは以下
 
 * Scene15 database
     * 15 scene categories
@@ -30,7 +53,7 @@ Deep learningによるobject detectionで使われるImageNetのような大規�
     * 397 categoreis
     * 130, 519 images
 
-scene recognitionに限らないdataset
+scene recognitionに限らない画像のdatasetとして有名なものは以下
 
 * Pascal VOC dataset
     * segmentationとobject detection用の情報が付与されたdataset
@@ -43,36 +66,41 @@ scene recognitionに限らないdataset
     * scene, object, objectの部分などに対する情報が付与されている
 
 ## 2 Places Database
+本研究で作成したdatasetとその前身となるPlaces datasetについて述べる。
 
 ## 2.1 Coverage of the categorical space
-Places datasetでは人間が訪れることができる場所に限り、categoryを作成している。
-SUN datasetは最初にscene categoryを表現するwordについてまとめたdatasetである。
-SUN datasetでは以下のようにしてcategoryを作成した
+まず、scene categoryの作成方法について述べる。
+Places datasetでは、SUN datasetを参考にscene categoryを作成しており、Places datasetでは人間が訪れることができる場所に限定して、scene categoryを作成している。
 
-* WordNetを利用してSUN database teamは70,000 workdsとscene, 場所, 環境を表現するwordを選んだ
+SUN datasetは最初にscene categoryを表現するwordについてまとめたdatasetで、 SUN datasetでは以下のようにしてscene categoryを作成している。
+
+* WordNetという単語のdatasetを利用してscene, 場所, 環境を表現する70,000 wordを選んだ
     * 具体的には`I am in a 'place'`, `let's go to the/a 'place'`などのphraseに利用できる単語を選んでいる
-* synonymで表現されているclassをまとめ同じ語で表現されているclassを分け(churchesをinside churchesとoutside churchesに分けるなど)、900 の異なるschene categoryを作成した
+* synonymで表現されているclassたり、同じ語だが異なる画像を持つclassを分け(churchesをinside churchesとoutside churchesに分けるなど)、900 の異なるschene categoryを作成した
 
 Places datasetではSUN datasetのscene categoryを踏襲し、幾つかの変更を加えて利用している
-変更については、2.2.4で述べる。
+変更については、2.2で述べる。
 
 ## 2.2. Construction of the database
+Places datasetの作り方について述べる。
 Places databsaeは4つのstepを通して、作成された。
 
-* Step1. scene categoryのimageをinternetからDLする
-* Step2. DLしたimageをscene categoryごとにlabel付けを行う
+* Step1. scene categoryのimageをscene categoryを検索語としてinternetからDLする
+    * このとき、DLしたimageにscene categoryのlabelをつける
+* Step2. DLしたimageがscene categoryの画像かどうかを判定して、正しければscene categoryの画像として分類する
+* Step3. classifierを利用して、Step2で分類できなかった画像をscene categoryごとに分類しなおし、labelをつける
+    * step1でDLした画像が他のscene categoryに属している場合がある
+* Step4. scene categoryの中で、似ているscene categoryを統合したり、境界が曖昧なscene categoryをまとめる
 
-ImageNetやCOCO datasetも似たような方法で作成されている。
-ImageNetについては
+他の画像系のimage setの作成方法としては、 ImageNetの場合
 
-* ImageNetやCOCO datasetなどと同じ方法で収集
-* ImageNetのcategoryは、Wordnetにもとづいている
+* ImageNetのcategoryは、Wordnetにもとづいて作成されている
 * WordNetのsynonimを利用していくつかのsearch engineで候補の画像を取得
-* AMTでcategoryに属すか属さないかの分類を行う
-* Quality controlのために、複数のuserに同じ画像をlabel付させる
-* 500-1200 のgrouop-truth imageがsynonymごとに得られる
+* AMTでcategoryに属すか属さないかの分類を行って判定している
+* Quality controlのために、複数のuserに同じ画像を判定させている
+* 500-1200 のgrouop-truth imageがsynonymごとに得られている
 
-COCO datasetについては
+COCO datasetの場合は
 
 * 画像内のobject instanceに焦点をあててannotationを行っている
 * iconっぽい画像を減らすために、画像の候補はFlickrから取得してる
@@ -82,11 +110,13 @@ COCO datasetについては
     * instanceのsegmentaiton
 * COCOでは80 objectのcategoryと 2 million のobject instanceのdataがある
 
-Placesでのdatasetの作成について述べる。
+Placesでのdatasetの各stepについて詳しく述べる。
 
 ### 2.2.1 Step1: Downloading images using scene category and attributes
+Places datasetは以下の方法で、画像の収集を行った。
+
 * google images, bing images, flickrを利用して、画像を集める
-    * query wordはSUN datasetのscene classを利用する
+    * query wordはSUN datasetのscene categoryを利用する
     * 見た目のdiversityのために、それぞれのsceneで696のcommon English adjective(messy, spaare, sunny, desolateなど)を使って検索した画像を利用する
 * 少なくとも200x200のsizeのcolor画像を60 million収集し、URLでidをつける
 * SUN datasetと異なるように、PCAで画像の類似度を調べ、SUN datasetと同じものを取り除いている
@@ -94,37 +124,37 @@ Placesでのdatasetの作成について述べる。
 <div style="text-align: center">
     <img src="image/places_a_10_million_image_database_for_scene_recognition_figure01.png">
     <br>
-    Figure1
+    Figure1. adjectiveごとの画像の例
 </div>
 
 ### 2.2.2 Step2: Labeling images with ground truth category
-step1で収集した画像をAmazon Mechanical Truc(AMT)にcloud sourcingする。
-このstepでAMTのworkerによって、分類が明らかにできる画像のlabelづけを行う。
+step1で収集した画像をAmazon Mechanical Turc(AMT)にcloud sourcingする。
+このstepでAMTのworkerで、分類可能なものを判別する。
 
-* category (e.g. cliff)に属するimageであれば、YES、属さなければNOをつけてもらう
-
-画像の例
+* scene category (e.g. cliff)に属するimageであれば、YES、属さなければNOをつけてもらう
+    * scene categoryはstep1のquery wordを利用する
 
 <div style="text-align: center">
     <img src="image/places_a_10_million_image_database_for_scene_recognition_figure03.png">
     <br>
-    Figure3
+    Figure3.  画像の例
 </div>
 
-AMTの画面の例
 
 <div style="text-align: center">
     <img src="image/places_a_10_million_image_database_for_scene_recognition_figure04.png">
     <br>
-    Figure4
+    Figure4. AMTの画面の例
 </div>
+
+AMTによる画像のscene categoryの判別は、2度に分けて行われる。
 
 * 1回目のAMT
     * SUN datasetの収集時の知見から、onlineで集めた画像の50%はcategoryに適した画像ではないため、AMTの画面はdefaultでNOにする
     * AMTのworkerは、画像がcategoryに属さなければspace keyで次の画像のcheckに進む
-        * 赤の囲み線
+        * 赤の囲み線がNO
     * 画像がcategoryに属せば、特定のkeyをおしてYESをsetして次の画像のcheckに進む
-        * 緑の囲み線
+        * 緑の囲み線がYES
     * AMTの各workerはこれを750 imagesに対して行う
     * quality controlの指標として、各workerのtaskの画像の中に、SUN datasetからYESの画像とNOの画像を30枚ずつ加えておく
         * workerのtaskはこのquality controlの画像が90%の精度で分類できている場合のみ利用する
@@ -133,51 +163,53 @@ AMTの画面の例
     * このとき、defaultの回答はYESにする
     * このtaskで25.4%の画像がNOと回答された
 
-3度目のAMTではNOと回答されるimageの数が有意な数に満たなかったので、考慮していない
+3度目のAMTではNOと回答されるimageの数が有意な数に満たなかったので、判別には用いていない。
 
 上記の2度のclearningで、7,076,580 の画像と476 scene categoryが得られた。
 その中で、413 scene categoryは、少なくとも1,000あり、98 sceneについては20,000以上ある。
 
 ### 2.2.3 Step3: scaling up the dataset using a classifier
-Spte2では、人手で明らかにcategoryに属するものを判別した。
-ここでは、 classifierによって、 476 scene categoryに分類されなかった53 millionの画像を再度label付することを行う。
-例えば、living-roomのqueryでbedroomの画像がDLされた場合は、living-roomとしてNOという回答がworkerによってされている場合がある。
-Step3では、画像にcategoryをつけなおし、再度annotationを行う。
+Spte2では、scene categoryを検索後として集めた画像がscene categoryに属するものかどうかを判別した。
+Step3では、 classifierによって、NOと判別された53 millionの画像を再度476 scene categoryのいずれかに分け直すという作業を行う。
+例えば、living-roomのqueryでbedroomの画像がDLされた場合は、living-roomかどうかという問に対してworkerはNOという回答をしている場合がある。
+この画像については、bedroomというscene categoryを付与すれば、正しい分類になる可能性がある。
+このように画像にscene categoryをつけなおし、再度AMTで判別を行う。
 
-ここでは、AlexNetを使って53 millionの画像を再度分類を行う。
+ここでは、AlexNetを使って53 millionの画像を再度分類する。
+classifierの作成と分類は以下の方法で行う。
 
 * それぞれのscene categoryから1000の画像をrandomに選び、traning setとする
 * 同様にscene categoryから50の画像をrandomに選び、validation setとする
 * AlexNetでは32%の精度でvalidation setの分類ができた
 * この学習済みのAlexNetで、53 millionの画像について、各classに属するか否かを判定する[0, 1]のscoreを出力する
-* Step2で画像が少なかった各categoryで、scoreが0.8以上の画像についてFiguire 4よ同様の手順でAMTでの分類を行う
+* Step2で画像が少なかったcategoryに対して、scoreが0.8以上の画像を集め、step2と同様の手順でAMTでの分類を行う
 
 最終的に、401のcategoryが5,000 imagesをもち、240 scene categoryが20,000以上の画像をもった。
 このstepで3 millionの画像が新たに追加された。
 
 ### 2.2.4 Step 4: Improving the separation of similar classes
 SUN datasetはWordNetを用いてsynonymをまとめていたが、依然として幾つかの似たようなcategory名が存在した。
-例えば、ski lodgeとski resortやgarbage dumpとlandfillなどである。
+例えば、`ski lodge`と`ski resort`や`garbage dump`と`landfill`などである。
 これらを手で、46のsynonymのpairにまとめて、1つのcategoryに統合した。
 
-更に、いくつかのscene categoryは協会が曖昧なものがあることを発見した。
+更に、いくつかのscene categoryは境界が曖昧なものがあることを発見した。
 
 <div style="text-align: center">
     <img src="image/places_a_10_million_image_database_for_scene_recognition_figure05.png">
     <br>
-    Figure5
+    Figure5. 境界が曖昧なscene category
 </div>
 
 これらのcategoryでは、`Does image belongs to A?`などの一方に属する設問には回答しづらく、 `Does image I belongs to class A or B?`のような設問であれば回答しやすくなる。
-Step3までのannotationの結果をみて、幾つかのscene categoryのpairでworkerが回答を混乱していることが判明した。
-例えば、canyonとmountain, butteとmountainなどである。
+Step3までのannotationの結果をみて、幾つかのscene categoryのpairでworkerが上記のような混乱していることが判明した。
+例えば、`canyon`と`mountain`, `butte`と`mountain`などである。
 また、`jacuzzi`と`swimming pool indoor`, `pond`と`lake`, `volcano`と`mountain`, `runway`と`highway`と`road`, `operating room`と`hospital room`などである。
 53の曖昧なcategoryを区別し、新しいAMTのinterfaceで再度workerに分類を依頼した。
 
 <div style="text-align: center">
     <img src="image/places_a_10_million_image_database_for_scene_recognition_figure06.png">
     <br>
-    Figure6
+    Figure6. 境界が曖昧な画像に対するAMTの画面の例
 </div>
 
 最終的に、10,624,928 imagesと434のplaces categoryを得た。
