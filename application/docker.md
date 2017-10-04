@@ -253,6 +253,28 @@ docker run image/name
 * [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
 * [Docker container will automatically stop after "docker run -d" - Stack Overflow](https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d)
 
+### expose ans publish
+* [Difference between "expose" and "publish" in docker - Stack Overflow](https://stackoverflow.com/questions/22111060/difference-between-expose-and-publish-in-docker)
+
+exposeとpublishのちがい
+
+* exposeはdocker container同士の通信には使える
+* exposeかつpublishでdocker外からaccess可能
+
+### No space left on device error
+* [No space left on device error - Docker for Mac - Docker Forums](https://forums.docker.com/t/no-space-left-on-device-error/10894/44)
+
+以下でdocker imageやcontainerなどを全て削除できる。
+これで改善する可能性がある。
+
+```
+docker system prune -a
+```
+
+```
+ls -lah ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
+```
+
 ### Data Volume container
 データ格納用のコンテナ。
 
