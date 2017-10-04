@@ -275,6 +275,12 @@ language: 0
 shownavi: 1
 ```
 
+## ruby binding
+
+```
+apt-get install ruby-hyperestraier
+```
+
 ## Reference
 * [Hyper Estraier: a full-text search system for communities](http://fallabs.com/hyperestraier/)
 * [Ubuntu 10.04 LTSにHyperEstraierをインストールしてみる – BTY備忘録](http://bty.sakura.ne.jp/wp/archives/88)
