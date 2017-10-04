@@ -12,11 +12,48 @@ title: Vue.js
 
 ## directive
 
-* `v-on`
-* `v-bind:something=""`
-    * 省略記法は`:something=""`
+* `v-on:something`
+    * 省略記法は`@something=""`
+* `v-bind:attribute=""`
+    * [Vue.js](https://vuejs.org/v2/api/#v-bind)
+    * 省略記法は`:attribute=""`
+    * attributeにの値を評価する時にjavascript式として評価する
+    * vueのjavascriptの変数などが利用できる
+* `v-bind:class`
+    * 省略記法は`:class=""`
+    * `v-bind:class`と`class`attributeは上書きではなく追加
+
+以下のように書くと、`class`をisActiveがtrueのとき、activeを適用し、hasErrorがtrueのときtext-dangerを適用する。
+
+```
+<div class="static"
+     v-bind:class="{ active: isActive, 'text-danger': hasError }">
+</div>
+```
+
 * `v-model`
 * `v-for="item in items"`
+    * [List Rendering — Vue.js](https://vuejs.org/v2/guide/list.html)
+    * with component
+        * [List Rendering — Vue.js](https://vuejs.org/v2/guide/list.html#v-for-with-a-Component)
+    * itemが動的に変更される可能性がある場合
+        * iterateする要素に更新があった時にVueはviewを再描画する必要がある
+        * viewの更新時のlistのreorderingなどに備えて一意なKeyを指定する必要がある
+
+```
+<div v-for="item in items" :key="item.id">
+  <!-- content -->
+</div>
+```
+
+## Tips
+
+### did you register the component correctly? For recursive components, make sure to provide the "name" option.
+* [Components — Vue.js](https://vuejs.org/v2/guide/components.html)
+
+## vue devtools
+* [Vue.js Devtoolsの導入方法と機能まとめ。Vue.jsを用いた開発を効率化させよう！ - Qiita](https://qiita.com/hashimoto-1202/items/c81f5d4c271eef16d957)
+
 
 ## vuex
 

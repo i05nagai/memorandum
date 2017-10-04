@@ -116,6 +116,7 @@ AC_PROG_
     * [Setting Output Variables - Autoconf](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Setting-Output-Variables.html)
     * shell variableから`@variable@`の変数を作成する
 * AC_ARG_VAR(variable, description)
+    * 
 * AS_IF(test1, [run-if-true1], test2, ..., [run-if-false])
     * [Common Shell Constructs - Autoconf](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Common-Shell-Constructs.html)
     * test1を実行してexit 0なら、true1を実行,そうでなければtest2を実行を繰り返す

@@ -36,7 +36,6 @@ npm init
 ```
 
 
-
 ## package.json
 packageを管理するファイル。
 `scripts`にコマンド名とコマンドを記載すると、npm commandでscriptを実行できる。

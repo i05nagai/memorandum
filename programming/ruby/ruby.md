@@ -185,6 +185,16 @@ Chocolatelyでrubyをいれた場合は、rubyのパスが通されているの�
 
 ## tips
 
+### can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+`ruby-devel`などにheader fileが入っている場合があるのでinstallする
+
+```
+apt-get install ruby-devel
+# or
+apt-get install ruby-dev
+```
+
+
 ### ファイル読み込み1
 ```ruby
 File.open("filename") do |file|
