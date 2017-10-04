@@ -39,6 +39,23 @@ new Vue({
 });
 ```
 
+## Single file component
+
+```
+<template>
+  <div>This will be pre-compiled</div>
+</template>
+<script src="./my-component.js"></script>
+<style src="./my-component.css"></style>
+```
+
+
+## Template
+* [7 Ways To Define A Component Template in VueJS – Vue.js Developers – Medium](https://medium.com/js-dojo/7-ways-to-define-a-component-template-in-vuejs-c04e0c72900d)
+
+## Component
+
+
 
 ## vue-cli
 Install
