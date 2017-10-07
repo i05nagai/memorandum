@@ -220,7 +220,7 @@ $$
     .
 $$
 
-Substitutiong the above into equality into the equation, we find that
+Substitutiong the above equality into the equation, we find that
 
 $$
     \sum_{j=1}^{m_{s+1}}
@@ -270,19 +270,336 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem 8. Orthogonal diagonalization
+## Theorem8.
 * $A \in \mathbb{C}^{n \times n}$
-    * symmetric matrix
 
-$A$ is orthogonally idagonalizable.
+Then $$\exists x_{1}, x_{2}$$ such that
+
+$$
+\begin{eqnarray}
+    & &
+        x_{1}
+        \neq
+        0
+        ,
+        \
+        x_{2}
+        \neq
+        0
+    \nonumber
+    \\
+    \forall x \in \mathbb{R}^{n},
+    \
+    x \neq 0,
+    \
+    & &
+        \lambda(x_{1}, A)
+        :=
+        \frac{
+            x_{1}^{\mathrm{T}}Ax_{1}
+        }{
+            x_{1}^{\mathrm{T}}x_{1}
+        }
+        \le
+        \frac{
+            x^{\mathrm{T}}Ax
+        }{
+            x^{\mathrm{T}}x
+        }
+        \le
+        \frac{
+            x_{2}^{\mathrm{T}}Ax_{2}
+        }{
+            x_{2}^{\mathrm{T}}x_{2}
+        }
+        =:
+        \lambda(x_{2}, A)
+\end{eqnarray}
+$$
+
+Moreover, if $A$ is symmetric, $$\lambda(x_{1}, A)$$ and $$\lambda(x_{2}, A)$$ is smallest and largest eigenvalus of $A$ respectively.
+$$x_{1}$$ and $$x_{2}$$ are eigenvectors corresponding to the eigenvalues.
 
 ## proof.
 
 $$
-    A^{\mathrm{T}}
-    =
-    (
+
 $$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Theorem9. Existence of eigenvalue
+* $A \in \mathbb{C}^{n \times n}$
+    * symmetric matrix
+
+Then $A$ has an eigenvalue.
+
+## proof.
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Theorem10. Orthogonal diagonalization
+* $A \in \mathbb{C}^{n \times n}$
+    * symmetric matrix
+
+$A$ is orthogonally dagonalizable.
+
+## proof.
+We prove this by mathematical induction.
+Every $1 \times 1$ matrix is orthogonaly diagonalizable.
+Suppose that $(n-1) \times (n-1)$ symmetric matrix is orthogonally diagonalizable where $n \ge 2$.
+Let $A$ be $n \times n$ symmetric matrix.
+Let $\lambda$, $u$ be eigenvalue of $A$ and eigenvector of norm 1 corresponding to $\lambda$.
+By gram schmidt orthogonalization, there is a matrix $$V := (v_{i})_{i=2, \ldots, n} \in \mathbb{C}^{n \times (n - 1)}$$ which is orthogonal to $u$.
+Since
+
+$$
+    u^{\mathrm{T}}V
+    =
+    0 \in \mathbb{C}^{1 \times (n - 1)}
+    ,
+$$
+
+then
+
+$$
+\begin{eqnarray}
+    (u, V)^{\mathrm{T}}A(u, V)
+    & = &
+        (u, V)^{\mathrm{T}}(Au, AV)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                u^{\mathrm{T}}Au
+                &
+                    u^{\mathrm{T}}AV
+                \\
+                V^{\mathrm{T}}Au
+                &
+                    V^{\mathrm{T}}AV
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                u^{\mathrm{T}}\lambda u
+                &
+                    (\lambda u)^{\mathrm{T}}V
+                \\
+                V^{\mathrm{T}}\lambda u
+                &
+                    V^{\mathrm{T}}AV
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                \lambda
+                &
+                    0
+                \\
+                    0
+                &
+                    V^{\mathrm{T}}AV
+            \end{array}
+        \right)
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Since $V^{\mathrm{T}}AV$ is $(n -1) \times (n -1)$ symmetric matrix so that by assumption there exists orthogonal matrix $R \in \mathbb{C}^{(n - 1) \times (n - 1)}$ such that $$R^{\mathrm{T}}(V^{\mathrm{T}}V)R = \mathrm{diag}(d_{2}, \ldots, d_{n})$$.
+Define
+
+$$
+\begin{eqnarray}
+    S
+    & := &
+        \left(
+            \begin{array}{cc}
+                1
+                &
+                    0
+                \\
+                0
+                &
+                    R
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    P
+    & := &
+        (u, V)S
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Then,
+
+$$
+\begin{eqnarray}
+    S^{\mathrm{T}}S
+    & = &
+        \left(
+            \begin{array}{cc}
+                1
+                &
+                    0
+                \\
+                0
+                &
+                    R^{\mathrm{T}}R
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                1
+                &
+                    0
+                \\
+                0
+                &
+                    I_{n-1}
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        I_{n}
+\end{eqnarray}
+$$
+
+so that $S$ is orthogonal.
+Moreover $P$ is orthogonal since $(u, V)$ is orthogonal, that is,
+
+$$
+\begin{eqnarray}
+    P^{\mathrm{T}}P
+    & = &
+        S^{\mathrm{T}}(u, V)^{\mathrm{T}}(u, V)S
+    \nonumber
+    \\
+    & = &
+        S^{\mathrm{T}}I_{n}S
+    \nonumber
+    \\
+    & = &
+        I_{n}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Further,
+
+$$
+\begin{eqnarray}
+    P^{\mathrm{T}}AP
+    & = &
+        S^{\mathrm{T}}(u, V)^{\mathrm{T}}A(u, V)S
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                1
+                &
+                    0
+                \\
+                0
+                &
+                    R
+            \end{array}
+        \right)
+        ^{\mathrm{T}}
+        \left(
+            \begin{array}{cc}
+                \lambda
+                &
+                    0
+                \\
+                0
+                &
+                    V^{\mathrm{T}}AV
+            \end{array}
+        \right)
+        \left(
+            \begin{array}{cc}
+                1
+                &
+                    0
+                \\
+                0
+                &
+                    R
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                \lambda
+                &
+                    0
+                \\
+                0
+                &
+                    R^{\mathrm{T}}V^{\mathrm{T}}AVR
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{cc}
+                \lambda
+                &
+                    0
+                \\
+                0
+                &
+                    \mathrm{diag}(d_{2}, \ldots, d_{n})
+            \end{array}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+so that $P^{\mathrm{T}}AP$ euqals a diagonal matrix.
+Therefore $A$ is orthogonally diagonalizable.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Corollary11
+* $A$
+    * $n \times n$ symmetric matrix
+* $$d_{1}, \ldots, d_{n}$$,
+    * not necessarily distinct eigenvalues of $A$
+
+Then there are exists $n \times n$ orthogonal matrix $Q$ such that
+
+$$
+    Q^{\mathrm{T}}AQ
+    =
+    \mathrm{diag}(d_{1}, \ldots, d_{n})
+$$
+
+## proof.
+Accoding to <a href="#theorem10-orthogonal-diagonalization">theorem10</a>,
+
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
