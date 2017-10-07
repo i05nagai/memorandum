@@ -252,10 +252,44 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Theorem2. Existence of singular values
+* $$A \in \mathbb{C}^{m \times n}$$,
+    * rank $r$
+
+Then there are
+* $$Q_{1} \in \mathbb{C}^{n \times r}$$,
+* $$Q_{2} \in \mathbb{C}^{n \times (n - r)}$$,
+* $$Q := (Q_{1}, Q_{2}) \in \mathbb{C}^{n \times n}$$,
+    * orthogonal matrix
+
+$$
+    
+$$
 
 ## proof.
+Existence of $Q$ is direct consequence from eigenvalue decomposition.
+Since $A^{\mathrm{T}}A$ is $n \times n$ symmetric matrix, we can diagonalize $A^{\mathrm{T}}A$ by <a href="{{ site.baseurl }}/math/eigenvalue.html">threorem</a>.
+There are diagonal matrix $Q$ such that $Q^{\mathrm{T}}A^{\mathrm{T}}AQ$.
+
+Let $$s_{1}, \ldots, s_{r}$$ be the square roots of the the positive eigenvalues of $$A^{\mathrm{T}}A$$.
+$$D_{1} := \mathrm{diag}(s_{1}, \ldots, s_{r})$$,
+
+$$
+    \mathrm{rank}(A^{\mathrm{T}}A)
+    =
+    \mathrm{rank}(A)
+    =
+    r
+$$
+
+$A^{\mathrm{T}}A$ has $r$ nonzero not necessarily distinct eigenvalus.
+Those eigenvalues are positive.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## Theorem
+* $A^{\mathrm{T}}A$
+    * 
+
 
 ## Reference
 * [lecture3.pdf](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-fall-2004/lecture-notes/lecture3.pdf)
