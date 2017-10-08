@@ -6,7 +6,9 @@ book_chapter: 2
 
 ## 2.3 Statistics and Subfields
 * $$(\mathcal{X}, \mathcal{A})$$,
+    * measurable sp.
 * $$(\mathcal{T}, \mathcal{B})$$,
+    * measurable sp.
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
     * 可測写像
     * この本では、statistic(統計量)という
@@ -55,21 +57,25 @@ $\mathcal{T}^{\prime} := T(\mathcal{X}) \subsetneq \mathcal{B}$とおくと、
 
 ### Lemma 2.3.1
 * $$(\mathcal{X}, \mathcal{A})$$,
+    * measurable sp.
 * $$(\mathcal{T}, \mathcal{B})$$,
+    * measurable sp.
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
+    * $\mathcal{B}$ measurable
 * $$T^{-1}(\mathcal{B}) =: \mathcal{A}_{0}$$,
 * $f: \mathcal{A} \rightarrow \mathbb{R}$
     * $\mathcal{A}$ measurable function
 
-このとき、$f$が$\mathcal{A}_{0}$ measurable であることと、ある$\mathcal{B}$ measurable function $g$が存在して、
+このとき、以下は同値
+
+* (1). $f$が$\mathcal{A}_{0}$ measurable
+* (2). ある$\mathcal{B}$ measurable function $g$が存在して、
 
 $$
     \forall x \in \mathcal{X},
     \
     f(x) = g(T(x))
 $$
-
-となることは同値。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -80,10 +86,11 @@ $$
 
 ### Lemma 2.3.2
 * $$(\mathcal{X}, \mathcal{A})$$,
-    * 可測空間
+    * measurable sp.
 * $$(\mathcal{T}, \mathcal{B})$$,
-    * 可測空間
+    * measurable sp.
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
+    * $\mathcal{B}$ measurable
 * $\mu$
     * $\sigma$ finite measure over $(\mathcal{X}, \mathcal{A})$
 * $\mu^{\*}$
@@ -130,6 +137,7 @@ $$
 * $P$
     * probability measure over $(\mathcal{X}, \mathcal{A})$
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
+    * $\mathcal{B}$ measurable
 * $\mathcal{A}_{0}$
     * $T$から誘導されるsigma algebra
 * $$f: \mathcal{X} \rightarrow \mathbb{R}_{\ge 0}$$,
@@ -235,7 +243,7 @@ $$
     * $$X:\Omega \rightarrow \mathbb{R}$$,
     * i.i.dの$\mathbb{R}$値の確率変数
     * 分布関数は連続
-* $$F^{X}$$
+* $$F^{X}$$,
     * $X$の分布関数
 * $T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$
 
@@ -285,9 +293,10 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Lemma 2.4.1 
-* $$T$$,
+* $$T: \mathcal{X} \rightarrow \mathcal{T}$$,
+    * $\mathcal{B}$ measurable
 * $f, g$
-    * integrable 
+    * integrable
 
 このとき以下が成立.
 
@@ -734,8 +743,7 @@ $f$を階段関数で近似すれば、期待値の線形性とMonotone converge
 * $T$
     * statistacs
 
-nullset $\exists N$が存在して、$\forall t \notin N$, $\exists P^{X \mid T =t}$: conditional probabiilty measureで以下を満たす。
-$\forall t \notin N$について、
+Then $\exists N$: null set such that $\forall t \notin N$, $\exists P^{X \mid T =t}$: conditional probabiilty measure which satisfies
 
 $$
 \begin{eqnarray}
@@ -930,21 +938,25 @@ $$
 
 ## 2.6 Characterization of Sufficiency
 
-* $$\mathcal{P} := \{P_{\theta}\}_{\theta \in \Theta}\}$$,
+* $$\mathcal{P} := \{P_{\theta}\}_{\theta \in \Theta}$$,
     * sample sp. $$(\mathcal{X}, \mathcal{A})$$上の確率測度の族
 * $T: \mathcal{X} \rightarrow \mathcal{T}$
     * 統計量
 
 
 ### Definition. sufficient
-$T$がsufficientであるとは、$\forall A \in \mathcal{A}$について、ある$\mathcal{B}$可測関数$q(A \mid t)$が存在して、
+$T$がsufficientであるとは、
 
 $$
+    \forall A \in \mathcal{A},
+    \
+    \exists q(A \mid t):\mathcal{T} \rightarrow \mathbb{R}: \mathcal{B} \text{-measurable }
+    \
+    \text{ s.t. }
+    \
     \forall B \in \mathcal{B},
     \
     \theta \in \Theta,
-    \
-    \text{ s.t. }
     \
     \int_{B}
         q(A \mid t)
@@ -953,16 +965,20 @@ $$
     P_{\theta}(A \cap T^{-1}(B))
 $$
 
+がなりたつことを言う。
+
 <div class="end-of-statement" style="text-align: right">■</div>
 
 統計量が十分とは、分布族を$\theta$に依存しない可測関数で表現できるということである。
 つまり、統計量$T$が$\theta$を特定するのに十分な情報を持っているということ。
-これは以下と同値である。
+上の定義は以下と同値である。
 
 $$
     \forall A \in \mathcal{A},
     \
-    \exists q(A \mid \cdot): \mathcal{T} \rightarrow \mathbb{R},
+    \exists q(A \mid \cdot): \mathcal{T} \rightarrow \mathbb{R}: \mathcal{B} \text{-measurable },
+    \
+    \text{ s.t. }
     \
     q(A \mid t)
     =
@@ -1084,6 +1100,8 @@ $$
 \end{eqnarray}
 $$
 
+For evey $A$  we define $\mathcal{B}$ measurable function $$q_{A}$$ by
+
 $$
 \begin{eqnarray}
     r(x, t)
@@ -1102,6 +1120,7 @@ $$
         &
             \text{otherwise}
     \end{cases}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -1120,7 +1139,8 @@ $$
         \right)^{-1}
 $$
 
-LHS of definition of sufficiency is
+Now we show that $$q_{A}$$ satisfies the equality of the definition of sufficiency.
+LHS of the equality is
 
 $$
 \begin{eqnarray}
@@ -1153,7 +1173,7 @@ $$
 \end{eqnarray}
 $$
 
-RHS of definition of sufficiency is
+RHS of the equality is
 
 $$
 \begin{eqnarray}
@@ -1194,6 +1214,60 @@ $$
 
 この定理はもう少し一般的な形で成り立つ。
 詳細は数理統計学の命題3.3.をみる。
+
+### Definition. domination, absolutely continuous
+* $$(\Omega, \mathcal{F}, P)$$,
+* $$(\mathcal{X}, \mathcal{A})$$,
+    * measurable sp.
+* $$\mathcal{P} := \{P_{\theta} \mid \theta \in \Theta\}$$,
+* $\mu: \mathcal{A} \rightarrow [0, \infty)$,
+    * $\sigma$-finite measure over $$(\mathcal{X}, \mathcal{A})$$,
+
+$$P_{\theta}$$ is dominated by $\mu$ if
+
+$$
+    \forall A \in \mathcal{A},
+    \
+    \mu(A) = 0
+    \Rightarrow
+    P_{\theta}(A) = 0
+    .
+$$
+
+$$\mathcal{P}$$ is dominated if there exists $\sigma$ finite measure $\lambda: \mathcal{A} \rightarrow [0, \infty)$ such that
+
+$$
+    \forall \theta \in \Theta,
+    \
+    \lambda(A)
+    \Rightarrow
+    P_{\theta}(A) = 0
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+### Thereom 2.6.2. Equivalent condition of sufficiency
+* $$\mathcal{P} := \{P_{\theta} \mid \theta \in \Theta$$,
+* $$\lambda $$,
+
+Then the following statemets are equivalent:
+
+* $T:\mathcal{X} \rightarrow \mathcal{T}$ is sufficient for $\mathcal{P}$
+* there exists $$g_{\theta}$$ nonnegative $\mathcal{B}$- measurable function such that
+
+$$
+    \forall \theta \in \Theta,
+    \
+    dP_{\theta}(x)
+    =
+    g_{\theta}(T(x))
+        d\lambda(x)
+$$
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## 2.7 Exponential Families
 
