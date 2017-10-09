@@ -1,4 +1,8 @@
-## vim
+---
+title: Vim
+---
+
+## Vim
 
 ## styleguide
 * [Google Vimscript Style Guide](https://google.github.io/styleguide/vimscriptguide.xml)
@@ -10,9 +14,12 @@
 OSX
 
 ```
-brew install vim --with-lua --with-python3 --with-override-system-vi 
+brew install vim --with-lua --with-python3 --with-override-system-vi
 ```
 
+* `--with-python3`
+    * python2ではなくpython3を使うようにする
+    * pyenvを使っている場合は`pyenv global`のversionをあわせる
 * `--with-client-server`
     * vimの起動とともにxquartzが立ち上がるようになるので、不要であればつけない
 * `--with-luajit`
