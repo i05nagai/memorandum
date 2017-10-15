@@ -4,6 +4,31 @@ title: Keras
 
 ## Keras
 
+### Directory
+* [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
+
+```
+data/
+    train/
+        dogs/
+            dog001.jpg
+            dog002.jpg
+            ...
+        cats/
+            cat001.jpg
+            cat002.jpg
+            ...
+    validation/
+        dogs/
+            dog001.jpg
+            dog002.jpg
+            ...
+        cats/
+            cat001.jpg
+            cat002.jpg
+            ...
+```
+
 ## Fin
 
 ## API
@@ -29,6 +54,11 @@ model = Sequential([
     * simplewise_center
     * featurewise_std_normalization
     * simplewise_std_normalization
+    * rescale
+        * 他のtransformationをする前にdataにかけるfactor
+    * preprocessing_function
+        * 他のtransformationを実行する前に適用する関数
+        * 引数は3dim numpy array
 
 ```python
 keras.preprocessing.image.ImageDataGenerator(
@@ -135,7 +165,62 @@ from keras.datasets import imdb
 
 ## Data Augmentation
 
+## Fine tuning
+* [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
+
+## Layer
+* Dense(units, activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
+    * 以下の計算をするlayer
+    * unitsは出力のvectorの次元
+    * activationを指定しない場合は、恒等関数
+    * `output = activation(dot(input, kernel) + bias)`
+        * kernelはweight matrix
+        * biasのvector
+
+* Flattern()
+
+```python
+model = Sequential()
+model.add(Conv2D(64, 3, 3,
+         border_mode='same',
+         input_shape=(3, 32, 32)))
+# now: model.output_shape == (None, 64, 32, 32)
+model.add(Flatten())
+# now: model.output_shape == (None, 65536)
+```
+
+* `Conv2D(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, dilation_rate=(1, 1), activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)`
+
+
+## one-hot vector
+整数でclass表現したものを、0, 1のvectorに変更する。
+kerasではto_categoricalで整数でcategory付したものを0, 1のvector表現に変更できる。
+
+```python
+from keras.utils.np_utils import to_categorical
+labels = []
+for i in range(3):
+    labels += [i] * 2
+# [0, 0, 1, 1, 2, 2]
+# [
+#     [1, 0, 0],
+#     [1, 0, 0],
+#     [0, 1, 0],
+#     [0, 1, 0],
+#     [0, 0, 1],
+#     [0, 0, 1],
+# ]
+labels = to_categorical(labels)
+```
+
+```
+ValueError: You are passing a target array of shape (1536, 1) while using as loss `categorical_crossentropy`. `categorical_crossentropy` expects targets to be binary matrices (1s and 0s) of shape
+(samples, classes). If your targets are integer classes, you can convert them to the expected format via:
+from keras.utils.np_utils import to_categorical
+y_binary = to_categorical(y_int)
+```
 
 ## Reference
 * [Keras Documentation](https://keras.io/ja/)
-* 
+* [Codes of Interest: Using Bottleneck Features for Multi-Class Classification in Keras and TensorFlow](http://www.codesofinterest.com/2017/08/bottleneck-features-multi-class-classification-keras.html)
+
