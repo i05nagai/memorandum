@@ -73,6 +73,11 @@ ssh hoge
 * `ForwardAgent yes`
     * [ssh-agentの基本 - Qiita](http://qiita.com/yudoufu/items/82f752807893c63f06db)
     * `-A` optionと同じ
+* `AddKeysToAgent`
+    * ssh-agentが起動していれば、ssh-agentにssh-addでkeyを追加してくれる
+* `UseKeychain`
+    * yesにするとkey chainにpassphraseをcheckしにいき存在すればpassphraseの入力を省略できる
+    * defaultはno
 
 * [楽しいトンネルの掘り方(オプション: -L, -R, -f, -N -g) — 京大マイコンクラブ (KMC)](https://www.kmc.gr.jp/advent-calendar/ssh/2013/12/09/tunnel2.html)
 
