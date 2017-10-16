@@ -28,6 +28,19 @@ title: Apache2
 </Directory>
 ```
 
+* Files
+    * filenameに言っつする全てのファイルに適用する
+    * FilesとDirectoryの組み合わせも可能
+
+```
+<Directory /var/web/dir1>
+    <Files private.html>
+    Order allow,deny
+    Deny from all
+    </Files>
+</Directory>
+```
+
 * Location
     * directieをgroup化して指定したURL以下にのみ適用する
 
@@ -70,6 +83,10 @@ title: Apache2
 * [mod_alias - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/current/mod/mod_alias.html)
     * URLとfilesystemのpathをmapする
     * 同じaliasが複数定義された場合は、ある順序に従って優先順位がきまる
+    * AliasとRedirectはRedirectが先に適用される
+    * RedirectにMatchする場合は、Aliasは評価されない
+    * その他順番は、configファイルで先に現れた方が適用される
+    * なので、subdirectoryを含む設定は、含まない設定より前に現れる必要がある
 
 
 * `Alias`
@@ -99,6 +116,34 @@ Alias "/cgi-bin/" "/web/cgi-bin/"
 
 * ScriptAliasMatch
 
+### mod_wsgi
+* https://qiita.com/arc279/items/df28bd100cc2f72fad3c
+
+```
+WSGIScriptAlias /wsgi-scripts/ /web/wsgi-scripts/
+```
+
+は以下と等価。
+Aliasのmerge ruleとWSGIScriptAliasのMerge ruleは異なるので、他のaliasがある場合はAliasを使って、`Location`や`Directive`で指定した方が良い。
+
+```
+Alias /wsgi-scripts/ /web/wsgi-scripts/
+<Location /wsgi-scripts>
+SetHandler wsgi-script
+Options +ExecCGI
+</Location>
+```
+
+例えば、
+
+```
+Alias /image /srv/retty2/tech/roogle/search/image/roogle_image.wsgi
+<Directory "/srv/retty2/tech/roogle/search/image">
+    SetHandler wsgi-script
+    Options +ExecCGI
+    Require all granted
+</Directory>
+```
 
 ## CLI
 a2ensite
