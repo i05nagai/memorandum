@@ -46,6 +46,81 @@ title: Vue.js
 </div>
 ```
 
+```html
+<div id="counter-event-example">
+  <p>{{ total }}</p>
+  <button-counter :eventname="parentMethodName"></button-counter>
+</div>
+```
+
+```javascript
+Vue.component('button-counter', {
+  template: '<button :click="childMethodName">{{ childVar }}</button>',
+  data() {
+    return {
+      childVar: 0
+    }
+  },
+  methods: {
+    childMethodName() {
+      this.childVar += 1
+      this.$emit('eventname')
+    }
+  },
+});
+new Vue({
+  el: '#counter-event-example',
+  data: {
+    parentVar: 0
+  },
+  methods: {
+    parentMethodName() {
+      this.parentVar += 1
+    }
+  }
+});
+```
+
+* <comp :child-prop.sync="parent-var"></comp>
+    * `this.$emit('update:foo', newValue)`をchild component
+
+
+```html
+<div id="counter-event-example">
+  <p>{{ total }}</p>
+  <button-counter :parentVar.sync="propName"></button-counter>
+</div>
+```
+
+```javascript
+Vue.component('button-counter', {
+  template: '<button :click="childMethodName">{{ childVar }}</button>',
+  data() {
+    return {
+      childVar: 0
+    }
+  },
+  methods: {
+    childMethodName() {
+      this.childVar += 1
+      this.$emit('eventname')
+    }
+  },
+});
+new Vue({
+  el: '#counter-event-example',
+  data: {
+    parentVar: 0
+  },
+  methods: {
+    parentMethodName() {
+      this.parentVar += 1
+    }
+  }
+});
+```
+
+
 ## Tips
 
 ### did you register the component correctly? For recursive components, make sure to provide the "name" option.
