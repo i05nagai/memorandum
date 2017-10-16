@@ -281,6 +281,22 @@ shownavi: 1
 apt-get install ruby-hyperestraier
 ```
 
+### API
+* [estraier](http://fallabs.com/hyperestraier/rubynativeapi/)
+
+* Database::new
+* Database::search(condition)
+    * return Result object
+* Database::get_doc(id, options)
+    * return Document object
+* Condition::new
+* Result::get_doc_id(index_num)
+    * return document id
+* Document::attr(name)
+    * return value of attribute
+* Document::attr_names()
+    * return list of attributes
+
 ## Reference
 * [Hyper Estraier: a full-text search system for communities](http://fallabs.com/hyperestraier/)
 * [Ubuntu 10.04 LTSにHyperEstraierをインストールしてみる – BTY備忘録](http://bty.sakura.ne.jp/wp/archives/88)
