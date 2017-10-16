@@ -29,7 +29,7 @@ gcloud auth GROUP | COMMAND [GCLOUD_WIDE_FLAG …]
     * active-service-account
     * list
     * login
-    * revokE
+    * revoke
 
 ```
 gcloud config set account <service-account@gmail.com> 
@@ -45,6 +45,11 @@ gcloud auth login
 ログインすると、`~/.config/gcloud/credentials`にアクセスに必要なcredentialが書き込まれる。
 gcloudはこのcredentialを使ってアクセスする。
 中身は、アクセス用のjsonファイル。
+gcloud auth loginはbrowserが起動するが、CLIでcredentialの生成もできる。
+
+```
+gcloud auth activate-service-account service_account_email --key-file /path/to/key_file.json
+```
 
 
 ## Reference
