@@ -167,6 +167,10 @@ from keras.datasets import imdb
 
 ## Fine tuning
 * [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
+* [Fine-tuning a Keras model. Updated to the Keras 2.0 API. · GitHub](https://gist.github.com/fchollet/7eb39b44eb9e16e59632d25fb3119975)
+* [Updated to the Keras 2.0 API. · GitHub](https://gist.github.com/fchollet/f35fbc80e066a49d65f1688a7e99f069)
+
+
 
 ## Layer
 * Dense(units, activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
