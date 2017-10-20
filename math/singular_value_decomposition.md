@@ -85,16 +85,20 @@ $$
                 0
         \end{array}
     \right).
-    \label{singular_value_decomposition_condition}
+    \label{singular_value_decomposition_condition_01}
 \end{equation}
 $$
 
 If there is $$P_{2}$$ such that
 
 $$
+\begin{equation}
     P_{1}^{\mathrm{T}}P_{2}
     =
-    0.
+    0
+    .
+    \label{singular_value_decomposition_condition_02}
+\end{equation}
 $$
 
 Then
@@ -252,10 +256,89 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Theorem2. Existence of singular values
+* $$A \in \mathbb{C}^{m \times n}$$,
+    * rank $r$
+
+Then there are $$Q_{1}$$, $$D_{1}$$ and $$P_{2}$$ such that
+
+* $$Q_{1} \in \mathbb{C}^{n \times r}$$,
+* $$Q_{2} \in \mathbb{C}^{n \times (n - r)}$$,
+* $$Q := (Q_{1}, Q_{2}) \in \mathbb{C}^{n \times n}$$,
+    * orthogonal matrix
+* $$P_{1} := AQ_{1}D_{1}^{-1} \in \mathbb{C}^{m \times r}$$,
+* $$P_{2} \in \mathbb{C}^{m \times (m - r)}$$,
+
+and satisfy $$\eqref{singular_value_decomposition_condition_01}$$ and $$\eqref{singular_value_decomposition_condition_02}$$.
+.
 
 ## proof.
+Existence of $Q$ is direct consequence from eigenvalue decomposition.
+Since $A^{\mathrm{T}}A$ is $n \times n$ symmetric matrix, we can diagonalize $A^{\mathrm{T}}A$ by <a href="{{ site.baseurl }}/math/eigenvalue.html">threorem</a>.
+Thus there are diagonal matrix $D^{\prime}$ and orthogonal matrix $Q$ such that $Q^{\mathrm{T}}A^{\mathrm{T}}AQ = D^{\prime}$.
+$$A^{\mathrm{T}}A$$ is nonnegative definite since
+
+$$
+\begin{eqnarray}
+    x^{\mathrm{T}}A^{\mathrm{T}}Ax
+    & = &
+        (Ax)^{\mathrm{T}}Ax
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{n}
+            b_{i}^{2}
+        \ge 0
+    \nonumber
+\end{eqnarray}
+$$
+
+where $$b^{i} := \sum_{j=1}^{n}a_{j}^{i}x^{j}$$.
+Then all eigenvalues are nonnegative, that is, $$D^{\prime} = \mathrm{diag}(d_{1}, \ldots, d_{r}, 0, \ldots, 0)$$ where $$d_{1}, \ldots, d_{r} \ge 0$$.
+Let $$s_{i} := \sqrt{d_{i}}$$ and $$D_{1} := \mathrm{diag}(s_{1}, \ldots, s_{r})$$.
+We have
+
+$$
+    Q^{\mathrm{T}}A^{\mathrm{T}}AQ
+    =
+    \left(
+        \begin{array}{cc}
+            D_{1}^{2}
+            &
+                0
+            \\
+            0
+            &
+                0
+        \end{array}
+    \right)
+    .
+$$
+
+The existence of $$P_{2}$$ is easy to obtain by defining $$P_{1} := AQ_{1}D_{1}^{-1}$$ and $$P_{2} := AQ_{1}D_{1}^{-1}$$.
+We obtain
+
+$$
+    P_{1}^{\mathrm{T}}P_{2}
+    =
+    D_{1}^{-1}Q_{1}^{\mathrm{T}}A^{\mathrm{T}}
+    AQ_{1}D_{1}^{-1}
+    =
+    D_{1}^{-1}
+    (D_{1})^{2}
+    D_{1}^{-1}
+    =
+    I_{n}
+    .
+$$
+
+Hence by the theorem. singular value decomposition of $A$ exists.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## Theorem
+* $A^{\mathrm{T}}A$
+    * 
+
 
 ## Reference
 * [lecture3.pdf](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-fall-2004/lecture-notes/lecture3.pdf)

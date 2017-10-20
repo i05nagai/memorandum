@@ -4,6 +4,7 @@ title: Keras
 
 ## Keras
 
+## Fin
 
 ## API
 
@@ -18,6 +19,38 @@ model = Sequential([
     Activation('softmax'),
 ])
 ```
+
+
+* 
+* ImageDataGenerator
+    * http://aidiary.hatenablog.com/entry/20161212/1481549365
+    * https://keras.io/preprocessing/image/
+    * featurewise_center
+    * simplewise_center
+    * featurewise_std_normalization
+    * simplewise_std_normalization
+
+```python
+keras.preprocessing.image.ImageDataGenerator(
+    featurewise_center=False,
+    samplewise_center=False,
+    featurewise_std_normalization=False,
+    samplewise_std_normalization=False,
+    zca_whitening=False,
+    rotation_range=0.,
+    width_shift_range=0.,
+    height_shift_range=0.,
+    shear_range=0.,
+    zoom_range=0.,
+    channel_shift_range=0.,
+    fill_mode='nearest',
+    cval=0.,
+    horizontal_flip=False,
+    vertical_flip=False,
+    rescale=None,
+    dim_ordering=K.image_dim_ordering())
+```
+
 
 ## Dataset
 * [Datasets - Keras Documentation](https://keras.io/datasets/)
@@ -100,5 +133,9 @@ from keras.datasets import imdb
 
 ### Boston housing price regression dataset
 
+## Data Augmentation
+
+
 ## Reference
 * [Keras Documentation](https://keras.io/ja/)
+* 

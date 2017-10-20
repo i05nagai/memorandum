@@ -25,6 +25,15 @@ paths = hv.Points((xs, ys))
 ```
 
 
+## image
+* http://holoviews.org/reference/elements/bokeh/Image.html
+
+## RGB
+* http://holoviews.org/reference/elements/bokeh/RGB.html
+
+```
+hv.RGB.load_image('../assets/penguins.png')
+```
 
 ## Reference
 * [HoloViews — HoloViews](http://holoviews.org/)
