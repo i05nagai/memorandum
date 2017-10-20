@@ -34,6 +34,15 @@ app.run(host='0.0.0.0', port=500)
 
 ## With wsgi and apache222
 
+## Get query
+
+```
+# http://example.com/path?body=hoge&attrs[]=fuga&attrs[]=hage
+# get parameter
+body = request.args.get('body')
+# get list
+attrs = request.args.getlist('attrs[]')
+```
 
 
 
