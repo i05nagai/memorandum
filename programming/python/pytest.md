@@ -19,6 +19,19 @@ pytest --cov=module_name .
 pytest --cov=module_name --cov-report .
 ```
 
+余分なファイルをcoverageの計測から省く場合は、`.coveragerc`に以下のような設定をかく。
+細かい設定については、Coverage.pyの設定をみる。
+
+* [Configuration files — Coverage.py 4.4.1 documentation](http://coverage.readthedocs.io/en/latest/config.html)
+
+```
+[run]
+omit =
+    test_*.py
+    .eggs/*
+    setup.py
+```
+
 ## check PEP8
 
 ```
