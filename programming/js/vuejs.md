@@ -39,9 +39,16 @@ title: Vue.js
     * itemが動的に変更される可能性がある場合
         * iterateする要素に更新があった時にVueはviewを再描画する必要がある
         * viewの更新時のlistのreorderingなどに備えて一意なKeyを指定する必要がある
+    * `v-for`は第二引数にindexをsupportしているので、idはindexでも良い
 
 ```
 <div v-for="item in items" :key="item.id">
+  <!-- content -->
+</div>
+```
+
+```
+<div v-for="(item, index) in items" :key="index">
   <!-- content -->
 </div>
 ```
@@ -199,6 +206,31 @@ vue init <template-name> [project-name]
 ★  webpack - A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction.
 ★  webpack-simple - A simple Webpack + vue-loader setup for quick prototyping.
 ```
+
+## Directive
+* [Custom Directives — Vue.js](https://vuejs.org/v2/guide/custom-directive.html)
+* [ElemeFE/vue-infinite-scroll: An infinite scroll directive for vue.js.](https://github.com/ElemeFE/vue-infinite-scroll)
+
+viewの再利用の基本的な方針はcomponent化だが、いくつかの場合にlow levelのDOMへのアクセスが必要な場合がある。
+それを実現するためにvue jsではcustom directiveを提供している。
+
+```
+// Register a global custom directive called v-focus
+Vue.directive('focus', {
+  // When the bound element is inserted into the DOM...
+  inserted: function (el) {
+    // Focus the element
+    el.focus()
+  }
+})
+```
+
+のように定義すれば以下のように使える。
+
+```
+<input v-focus>
+```
+
 
 ## Reference
 * [はじめに - Vue.js](https://jp.vuejs.org/v2/guide/)
