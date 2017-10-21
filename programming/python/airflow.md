@@ -661,10 +661,8 @@ failした場合の再実行の際には、日付を気にする必要がなく�
 
 任意形式の日付が欲しい場合は `macros.ds_format`を使う。
 
-```python
-yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'
-today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'
-```
+* `yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
+* `today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
 
 
 ## Web UI
