@@ -371,6 +371,28 @@ java.nio.file.AccessDeniedException: /mnt1
 	at java.lang.Thread.run(Thread.java:748)
 ```
 
+### Add tags to EC2 instance
+EC2 instanceにtagをつけたい場合は、add-tagsを使う
+cluster内の全てのinstanceにtagを付与できる。
+
+```
+aws emr add-tags --resource-id j-xxxxxxx --tags name="John Doe"
+```
+
+### Add environment variables to spark/pyspark
+configurationに以下を設定する。
+
+
+```json
+{
+  "Classification": "spark-defaults",
+  "Properties": {
+    "spark.yarn.appMasterEnv.RETTY_DWH_ENVIRONMENT_NAME": "${RETTY_DWH_ENVIRONMENT_NAME}",
+    "spark.yarn.executorEnv.RETTY_DWH_ENVIRONMENT_NAME": "${RETTY_DWH_ENVIRONMENT_NAME}"
+  }
+}
+```
+
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
 * [（オプション）追加のソフトウェアをインストールするためのブートストラップアクションの作成 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/DeveloperGuide/emr-plan-bootstrap.html)

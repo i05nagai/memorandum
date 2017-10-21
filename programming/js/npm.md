@@ -10,7 +10,7 @@ Nodejsに付属する。
 update npm
 
 ```
-npm update -g npm
+npm update -g npm@latest
 ```
 
 ## comamds

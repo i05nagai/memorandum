@@ -125,6 +125,11 @@ gulp.task('buildcss', ["lintcss"], function() {
 });
 ```
 
+### Error: Previous source map found, but options.sourceMap isn't set
+* [postcss/postcss-loader: PostCSS loader for webpack](https://github.com/postcss/postcss-loader#sourcemap)
+    * webpackで上のwarningがでる場合に loarderの順番を以下のようにする
+        * style, css, postcss, sass
+
 ## Reference
 * [PostCSS まとめ - Qiita](http://qiita.com/morishitter/items/4a04eb144abf49f41d7d)
 * [GitHub - postcss/postcss: Transforming styles with JS plugins](https://github.com/postcss/postcss)

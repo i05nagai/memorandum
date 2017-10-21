@@ -432,6 +432,11 @@ noseの命名規則
 
 ## Tips
 
+### 'module' object has no attribute '_strptime' with several threads Python
+* [multithreading - 'module' object has no attribute '_strptime' with several threads Python - Stack Overflow](https://stackoverflow.com/questions/32245560/module-object-has-no-attribute-strptime-with-several-threads-python)
+
+
+
 ### pretty print
 * [8.18. pprint — Data pretty printer — Python 2.7.13 documentation](https://docs.python.org/2/library/pprint.html)
 

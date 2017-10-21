@@ -544,6 +544,10 @@ mili secondが必要なので、 MySQLのversionを5.6.4にあげる必要があ
 
 * [AIRFLOW-748 Cannot upgradedb from airflow 1.7.0 to 1.8.0a4 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-748)
 
+### Error: SMTP Error
+`airflow.cfg`内の`[smtp] smtp_starttls = False`にする
+
+
 ### Error. No such transport: sqla
 `airflow.cfg`にCeleryのbrokerのURLに`sqla+mysql`と書いていると起こる。
 Celeryの依存パッケージである `kombu`の問題らしい。

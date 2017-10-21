@@ -11,6 +11,12 @@ title: Apache HTTP
 モジュールはデフォルトで利用可能なものもある。
 公式ドキュメントのステータスが
 
+Install mod_wsgi
+
+```
+apt-get install libapache2-mod-wsgi
+```
+
 ### log_config
 * [mod_log_config - Apache HTTP サーバ バージョン 2.4](https://httpd.apache.org/docs/current/ja/mod/mod_log_config.html)
 

@@ -321,6 +321,27 @@ docker push username/image_name
 * [Use multi-stage builds | Docker Documentation](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)
 
 
+### docker without sudo
+* [Post-installation steps for Linux | Docker Documentation](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
+
+Linux環境で、sudoが要求される場合がある。
+dockerを使うuserを`docker` groupに追加すれば、良い。
+`docker` groupが作成されていなければ、作成する。
+
+```
+sudo groupadd docker
+```
+
+```
+sudo usermod -aG docker $USER
+```
+
+logoutして再度loginする。
+以下のコマンドが実行できれば良い。
+
+```
+docker images
+```
 
 
 ## Reference

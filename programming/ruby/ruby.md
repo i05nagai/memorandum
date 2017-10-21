@@ -185,6 +185,13 @@ Chocolatelyでrubyをいれた場合は、rubyのパスが通されているの�
 
 ## tips
 
+### undefined conversion from ASCII-8BIT to UTF-8
+* [Handling bad UTF-8 from json,in ruby - Stack Overflow](https://stackoverflow.com/questions/11091879/handling-bad-utf-8-from-json-in-ruby)
+
+```
+text.force_encoding('utf-8')
+```
+
 ### can't find header files for ruby at /usr/lib/ruby/include/ruby.h
 `ruby-devel`などにheader fileが入っている場合があるのでinstallする
 
