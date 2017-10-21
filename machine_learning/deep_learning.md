@@ -28,4 +28,4 @@ ImageNetの場合は、最終層は1000 categoryである。
 
 
 ## Reference
-
+* [CNN による画像分類で使われる前処理・テスト時処理まとめ - (iwi) 備忘録](http://iwiwi.hatenadiary.jp/entry/2016/12/31/162059)
