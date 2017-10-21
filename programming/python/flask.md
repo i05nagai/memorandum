@@ -18,10 +18,7 @@ url_for('static', filename='style.css')
 ```
 
 template内でも利用できる。
-
-```html
-<a href="{{ url_for('static', filename='hoge.css')"></a>
-```
+`<a href="{{ url_for('static', filename='hoge.css') }}"></a>`
 
 ## Externally visible server
 * [Quickstart — Flask Documentation (0.12)](http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application)
