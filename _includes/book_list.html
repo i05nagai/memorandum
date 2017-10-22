@@ -14,7 +14,7 @@
       <li>
         {{ book_group.name }}
         <ul>
-        {% for book_page in book_group.items | sort:"book_chapter" %}
+        {% for book_page in book_group.items | sort:"book_chapter,book_section" %}
           <li>
             <a href="{{ site.url }}{{ book_page.url | relative_url }}">
               {% if book_page.book_chapter %}
