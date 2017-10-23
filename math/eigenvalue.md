@@ -43,7 +43,8 @@ So we can take linearly independent eigenvectors corresponding to eigenvalue $\l
 * $$x_{1}, \ldots, x_{m} \in \mathbb{C}^{n}$$,
 * $$X := (x_{1}, \ldots, x_{m})$$,
 
-$$x_{1}, \ldots, x_{m}$$ are eigenvectors are there exsists a diagonal matrix $$D := \mathrm{diag}(d_{1}, \ldots, d_{m})$$ such that
+$$x_{1}, \ldots, x_{m}$$ are eigenvectors.
+There exsists a diagonal matrix $$D := \mathrm{diag}(d_{1}, \ldots, d_{m})$$ such that
 
 $$
     AX
@@ -267,6 +268,9 @@ $$
 $$
 
 ## proof.
+From THereom 21.5.1 in Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
+
+
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -321,6 +325,7 @@ Moreover, if $A$ is symmetric, $$\lambda(x_{1}, A)$$ and $$\lambda(x_{2}, A)$$ i
 $$x_{1}$$ and $$x_{2}$$ are eigenvectors corresponding to the eigenvalues.
 
 ## proof.
+From Theorem 21.5.6 in Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 $$
 
@@ -335,6 +340,7 @@ $$
 Then $A$ has an eigenvalue.
 
 ## proof.
+From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
@@ -346,6 +352,8 @@ Then $A$ has an eigenvalue.
 $A$ is orthogonally dagonalizable.
 
 ## proof.
+From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
+
 We prove this by mathematical induction.
 Every $1 \times 1$ matrix is orthogonaly diagonalizable.
 Suppose that $(n-1) \times (n-1)$ symmetric matrix is orthogonally diagonalizable where $n \ge 2$.
@@ -589,7 +597,7 @@ Therefore $A$ is orthogonally diagonalizable.
 * $$d_{1}, \ldots, d_{n}$$,
     * not necessarily distinct eigenvalues of $A$
 
-Then there are exists $n \times n$ orthogonal matrix $Q$ such that
+Then there exists $n \times n$ orthogonal matrix $Q$ such that
 
 $$
     Q^{\mathrm{T}}AQ
@@ -598,9 +606,13 @@ $$
 $$
 
 ## proof.
+From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
+
 Accoding to <a href="#theorem10-orthogonal-diagonalization">theorem10</a>,
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
+* Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
+
