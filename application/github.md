@@ -243,5 +243,27 @@ IssueやPRのkeywordとして使えるもの。
 * duplicate
     * `duplicate of #issuenum`で`#issuenum`のduplicateとしている課題とする
 
+### Best practice for labeling
+* [How We Organize GitHub Issues - A Styleguide For Tagging](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/)
+* [GitHub labels for better workflows • Yoast](https://yoast.com/dev-blog/github-labels/)
+* [Sane GitHub Labels – Dave Lunny – Medium](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63)
+    * Status
+        * In progress
+        * Pending
+        * Blocked
+        * Completed
+        * On Hold
+    * Type
+        * Bug
+        * Enhancement
+        * Maitenance
+        * Question
+    * Priority
+        * Critical
+        * High
+        * Low
+        * Medium
+
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
