@@ -393,6 +393,12 @@ git diff [--options] [--] [<path>...]
 * indexとの差分を見る
 * indexに何が追加されるかを確認する
 
+## git config
+* `core.attributesfile = 'path/to/attributes'`
+    * pathを指定すると、指定したpathの.gitattributesを参照するようになる。
+* `core.excludesfile = 'path/to/gitignore'`
+    * pathを指定すると、指定したpathの.gitignoreを参照するようになる。
+
 
 ## git alias
 
