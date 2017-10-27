@@ -269,7 +269,6 @@ Then there are $$Q_{1}$$, $$D_{1}$$ and $$P_{2}$$ such that
 * $$P_{2} \in \mathbb{C}^{m \times (m - r)}$$,
 
 and satisfy $$\eqref{singular_value_decomposition_condition_01}$$ and $$\eqref{singular_value_decomposition_condition_02}$$.
-.
 
 ## proof.
 Existence of $Q$ is direct consequence from eigenvalue decomposition.

@@ -34,6 +34,11 @@ title: datasets
     * Placesの改良版
     * 10 million dataset
 
+Annotation tool
+
+* [List of manual image annotation tools - Wikipedia](https://en.wikipedia.org/wiki/List_of_manual_image_annotation_tools)
+
+
 ### Food
 * [im2recipe](http://im2recipe.csail.mit.edu/dataset/login/)
     * 登録が必要

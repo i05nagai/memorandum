@@ -32,6 +32,12 @@ defaultは0なので、comment outされた行をcommetinしておく。
 scrapy genspider spider_name domain
 ```
 
+途中から再開できるようにしてcrawl開始
+
+```
+crapy crawl somespider --set JOBDIR=crawl1
+```
+
 
 ## Spider
 * [Spiders — Scrapy 1.4.0 documentation](https://doc.scrapy.org/en/latest/topics/spiders.html)
