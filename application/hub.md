@@ -22,6 +22,18 @@ eval "$(hub alias -s)"
 
 ### hub pull-request
 
+Reviewをつける
+
+```
+hub pull-request -r PERSON1,PERSON2
+```
+
+`https://github.com/OWNER/REPO/pull/123` pull requestのbranchをchecokut
+
+```
+hub pr checkout 123
+```
+
 ### hub browse
 githubをブラウザで開いてリポジトリを参照するコマンド
 
