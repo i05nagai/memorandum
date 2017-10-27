@@ -5,7 +5,6 @@ title: Terraform
 ## Terraform
 Terraformの設定ファイルはHCLで記述する。
 
-
 ```
 brew install terraform
 ```
@@ -425,6 +424,12 @@ resource "aws_instance" "example" {
   # ... other arguments
 }
 ```
+
+## Interpolation syntax
+* [Interpolation Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/interpolation.html)
+
+`${var.foo}`で変数や関数を参照でき、Resource内で使える。
+
 
 
 ## Reference
