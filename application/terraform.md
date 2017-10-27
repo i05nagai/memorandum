@@ -259,6 +259,10 @@ Resource
     * `volume_tags`
     * `root_block_device`
     * `ebs_block_device`
+    * `tags`
+        * tagつける
+    * `volume_tags`
+        * volumeにtagをつける
 * `aws_db_instance`
     * `identifier`
     * `allocated_storage`
@@ -279,6 +283,11 @@ Resource
         * falseの場合は`final_snapshot_identifier`を指定する必要がある
     * `final_snapshot_identifier`
         * `final_snapshot`時のsnapshotの名前
+    * `tags`
+        * tagを記載
+    * `copy_tags_to_snapshot`
+        * snapshotにtagをcopy
+        * `final_snapshot_identifier`を指定している必要がある
 * `aws_eip`
     * [AWS: aws_eip - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/r/eip.html)
     * Elastic IPを作成する
