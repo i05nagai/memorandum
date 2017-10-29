@@ -163,7 +163,37 @@ gulp.task('lint', () => {
 });
 ```
 
+## Rules
+airbnb-base
 
+```
+npm install --save-dev eslint-config-airbnb-base
+```
+
+`.eslintrc`に設定を記載しておく。
+
+```json
+{
+    "extends": "airbnb-base"
+}
+```
+
+airbnb
+
+baseとの違いは、React, JSXなどのfrontend用のruleも読み込まれる。
+Server sideで使う場合は不要な場合が多いので、その場合はbaseを使う。
+
+```
+npm install --save-dev eslint-config-airbnb
+```
+
+`.eslintrc`に設定を記載しておく。
+
+```json
+{
+    "extends": "airbnb"
+}
+```
 
 ## Reference
 * [ESLint 最初の一歩 - Qiita](http://qiita.com/mysticatea/items/f523dab04a25f617c87d)
