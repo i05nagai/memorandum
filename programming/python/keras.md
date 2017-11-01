@@ -258,6 +258,24 @@ from keras.utils.np_utils import to_categorical
 y_binary = to_categorical(y_int)
 ```
 
+### from Caffe to Keras
+* [Converting a Deep learning model from Caffe to Keras - Nicolò Valigi](http://nicolovaligi.com/converting-deep-learning-model-caffe-keras.html)
+* [GitHub - ethereon/caffe-tensorflow: Caffe models in TensorFlow](https://github.com/ethereon/caffe-tensorflow)
+
+```
+docker run -ti --rm bvlc/caffe:cpu caffe --version
+```
+
+```
+git clone https://github.com/ethereon/caffe-tensorflow.git
+cd caffe-tensorflow
+python convert.py \
+  --caffemodel=/path/to/caffeweight.caffemodel \
+  --code-output-path=./pascal_voc_tf/keras.py \
+  --data-output-path=./pascal_voc_tf/ \
+  /path/to/caffelayer.prototxt
+```
+
 ## Reference
 * [Keras Documentation](https://keras.io/ja/)
 * [Codes of Interest: Using Bottleneck Features for Multi-Class Classification in Keras and TensorFlow](http://www.codesofinterest.com/2017/08/bottleneck-features-multi-class-classification-keras.html)
