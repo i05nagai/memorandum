@@ -368,7 +368,21 @@ location / {
     * http, server context
     * 有効にするとserver側で設定した暗号化suiteの利用が優先される
 * `ssl_dhparam dhparam_file_path`
-    *
+
+
+TLS sessionとOCSP staplingの確認は以下のコマンドでｄきる。
+
+```
+openssl s_client -connect www.example.com:443 -tls1 -status < /dev/null
+```
+
+Session cacheの確認は以下から可能
+
+* [GitHub - vincentbernat/rfc5077: Various tools for testing RFC 5077](https://github.com/vincentbernat/rfc5077)
+
+```
+./rfc5077-client -4 www.example.com
+```
 
 
 ### HTTPS fundamental configuration
