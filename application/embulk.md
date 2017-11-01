@@ -51,6 +51,8 @@ bundle_dir内にのjruby directoryにgemが保存される。
 * [Configuration — Embulk 0.8 documentation](http://www.embulk.org/docs/built-in.html)
 
 ### liquid template
+* [大量データの転送にEmbulkを使ってみたら本当に楽だった - VOYAGE GROUP techlog](http://techlog.voyagegroup.com/entry/2017/07/31/173839)
+
 liquidテンプレートが使える。
 includeで、別ファイルの設定や変数などを読み込むことができる。
 includeするファイル名は`_name_of_template.yml.liquid`とすると以下でincludeできる。
@@ -68,6 +70,16 @@ liquid tagの中を以下のようにかく。
 * include字のpathはquotationで囲む
 * includeするファイルは、includeしているファイルと同じか下の階層でないとだめ
     * pathに`..` は使えない
+* `in`や`out`の設定をincludeする場合は、`in`や`out`の下でincludeする
+
+```yaml
+in:
+  {% include 'common/conf_mysql_include' %}
+  table: user
+out:
+  {% include 'common/conf_bigquery_include' %}
+  table: user
+```
 
 
 ## Pluginsたち

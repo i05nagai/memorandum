@@ -217,6 +217,9 @@ ansible-playbook release.yml --extra-vars '{"pacman":"mrs","ghosts":["inky","pin
 * [Best Practices — Ansible Documentation](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#best-practices-for-variables-and-vaults)
 
 
+## Multi environment
+* [How to Manage Multistage Environments with Ansible | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-manage-multistage-environments-with-ansible)
+
 
 ## tips
 ansibleを実行する時は、同じディレクトリの`ansible.cfg`ファイルを読んでいる
@@ -255,6 +258,8 @@ documentは、`ansible-doc module_name`で見ることができる。
         * 必須ではないのは、代わりに`content`を使う場合があるから
     * `content`
         * contentに記載した内容をもつfileをdestにcopy
+    * remote_src: yes
+        * remoteからremoteのcopy
 * `fetch`
     * remoteからlocalへのcopy
 * `template`
@@ -299,6 +304,10 @@ documentは、`ansible-doc module_name`で見ることができる。
         * removes
 * `get_url`
     * [get_url - Downloads files from HTTP, HTTPS, or FTP to node — Ansible Documentation](http://docs.ansible.com/ansible/latest/get_url_module.html)
+    * `checksum`
+        * `algorith:hash`で渡すとchecksumを確認して、不一致であればDL
+    * `force`
+        * trueでファイルがDLされていても、再度DLする
 * `template`
     * src
     * dest
@@ -412,6 +421,6 @@ mysecret: !vault |
 other_plain_text: othervalue
 ```
 
-
 ## reference
 * [Ansible コーディング規約 (の例) — そこはかとなく書くよん。](http://tdoc.info/blog/2014/10/09/ansible_coding.html)
+* [Ansibleのインベントリファイルでステージを切り替える - Qiita](https://qiita.com/NewGyu/items/5de31d76d2488ab27ed6)

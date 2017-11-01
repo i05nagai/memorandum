@@ -51,6 +51,29 @@ gcloud auth loginはbrowserが起動するが、CLIでcredentialの生成もで�
 gcloud auth activate-service-account service_account_email --key-file /path/to/key_file.json
 ```
 
+## Tips
+
+### Warning googleapiclient.discovery_cache
+以下のようなwarningがでる。
+
+```
+googleapiclient.discovery_cache init.py:autodetect:44 | file_cache is unavailable when using oauth2client >= 4.0.0
+```
+
+以下でlogを抑制できる
+
+```
+import logging
+logging.getLogger('google.auth._default').setLevel(logging.ERROR)
+```
+
+### Warning
+
+```
+import logging
+logging.getLogger('googleapiclient.discovery_cache').setLevel(logging.ERROR)
+```
+
 
 ## Reference
 * [gcloud  |  Cloud SDK  |  Google Cloud Platform](https://cloud.google.com/sdk/gcloud/reference/)

@@ -472,15 +472,6 @@ DELETE FROM dag_run WHERE dag_id='';
 DELETE FROM dag WHERE dag_id='';
 ```
 
-DELETE FROM xcom WHERE dag_id='ETL_TEST';
-DELETE FROM task_instance WHERE dag_id='ETL_TEST';
-DELETE FROM sla_miss WHERE dag_id='ETL_TEST';
-DELETE FROM log WHERE dag_id='ETL_TEST';
-DELETE FROM job WHERE dag_id='ETL_TEST';
-DELETE FROM dag_run WHERE dag_id='ETL_TEST';
-DELETE FROM dag WHERE dag_id='ETL_TEST';
-
-
 もしくは、`$AIRFLOW_HOME/dags`から該当のscriptを削除して、`airflow resetdb`でDBをresetする。
 
 ### Delete Default DAG
@@ -709,3 +700,4 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 * [Airflow - データパイプラインのスケジュールと監視をプログラムしてみた - Qiita](http://qiita.com/haminiku/items/b431e9cd1cf4e300f8f0)
 * [Airflow: When Your DAG is Far Behind The Schedule](http://hafizbadrie.com/airflow/2016/12/12/airflow-when-your-dag-is-far-behind-the-schedule.html)
 * [ETL example — ETL Best Practices with Airflow v1.8](https://gtoonstra.github.io/etl-with-airflow/etlexample.html)
+* [Advanced Airflow (Lesson 1) : TriggerDagRunOperator | Sid Anand | Pulse | LinkedIn](https://www.linkedin.com/pulse/airflow-lesson-1-triggerdagrunoperator-siddharth-anand)
