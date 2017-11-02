@@ -312,6 +312,60 @@ response = client.add_job_flow_steps(
 }
 ```
 
+## API
+* [Actions - Amazon Elastic MapReduce](https://docs.aws.amazon.com/emr/latest/APIReference/API_Operations.html)
+    * WebAPIのeference
+    * parameterの設定値など参考になる
+
+* SupportedProducts
+    * Applicationsを使う
+* NewSupportedProducts
+* Applicaitons
+    * "Hadoop", "Hive", "Mahout", "Pig", and "Spark.
+* Configurations
+* JobFlowRole
+    * defualtは`EMR_EC2_DefaultRole`
+* `ServiceRole`
+    `EMR_DefaultRole`
+* ScaleDownBehavior
+    * 'TERMINATE_AT_INSTANCE_HOUR' | 'TERMINATE_AT_TASK_COMPLETION',
+* CustomAmiId
+    * EMR_5.7.0以降
+* RepoUpgradeOnBoot
+    * CustomAmiIdがONのときのみ
+* Steps
+    * [StepConfig - Amazon Elastic MapReduce](https://docs.aws.amazon.com/emr/latest/APIReference/API_StepConfig.html)
+    * [HadoopStepConfig - Amazon Elastic MapReduce](https://docs.aws.amazon.com/emr/latest/APIReference/API_HadoopStepConfig.html)
+
+Stepsのsample
+
+```json
+    {
+        "Args": [
+            "spark-submit",
+            "--deploy-mode",
+            "cluster",
+            "--executor-cores",
+            "2",
+            "--executor-memory",
+            "4G",
+            "--num-executors",
+            "12",
+            "--py-files",
+            "path_to_python1,path_to_python2",
+            "--conf",
+            "spark.yarn.executor.memoryOverhead=1G",
+            "path_to_executed_python.py",
+            "argument"
+        ],
+        "Type": "CUSTOM_JAR",
+        "ActionOnFailure": "CANCEL_AND_WAIT",
+        "Jar": "command-runner.jar",
+        "Properties": "",
+        "Name": "Name of steps"
+    },
+```
+
 ## Reference
 * [Boto3でEMR - /var/log/laughingman7743.log](http://laughingman7743.hatenablog.com/entry/2016/02/11/185319)
 * [EMR — Boto 3 Docs 1.4.4 documentation](https://boto3.readthedocs.io/en/latest/reference/services/emr.html)
