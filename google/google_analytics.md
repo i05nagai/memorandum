@@ -4,6 +4,51 @@ title: Google Analytics
 ## Google Analytics
 分析をしたいsiteごとにproperty `UA-xxxx`を作成する。
 
+## Term
+* Exit rate
+    * Pageごとに測る
+    * PageのExit rateとは、visitの最後のpageが該当pageのvisitの数の割合
+    * visitの最後が / PageのPV数
+    * 離脱率
+* Bounce rate
+    * Pageごとに測る
+    * PageのBounce rateとは、visitのfirst pageviewが該当pageのvisitで、pvが1のもの
+    * 直帰率
+    * 1 pageviewのvisitの数 / first pageviewが該当pageのvisitの数
+    * [Exit Rate vs. Bounce Rate - Analytics Help](https://support.google.com/analytics/answer/2525491?hl=en)
+
+* visit log
+    * B -> A -> C -> exit
+    * B -> exit
+    * A -> C -> B -> exit
+    * C -> exit
+    * B -> C -> A -> exit
+* Bounce rate
+    * AのBounce rateは、0%
+    * BのBounce rateは 33.3%
+    * CのBounce rateは 100%
+* Exit rate
+    * AのExit rateは、33.3%
+    * BのExit rateは、50%
+    * CのExit rateは、50%
+
+
+* Hit
+* Pageview
+* Visit
+* Visitors
+* Time on page
+* Time on site
+* New visitor
+* Returning visitor
+* Dollar index
+* Pages/visit
+* Direct Traffic
+* Referring sites
+* Search engine trafic
+* Event tracking
+*
+
 
 ## How a web session is defined in Analytics
 sessionを決める基本的なルールは以下の2つ
