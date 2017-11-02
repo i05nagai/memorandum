@@ -6,6 +6,7 @@ title: SQLAlchemy
 
 
 ## sqlite
+
 ```
 sqlite:///:memory: (or, sqlite://)
 sqlite:///relative/path/to/file.db
@@ -30,6 +31,20 @@ sqlite:////absolute/path/to/file.db
 * [Using the Session — SQLAlchemy 1.2 Documentation](http://docs.sqlalchemy.org/en/latest/orm/session.html)
 
 ## Tips
+
+### Alias
+`Table`でTableを作成した場合は、`alias()` instance methodが使える。
+
+```
+table = Table(...)
+ri = table.alias()
+```
+
+`declative_base`でmodelを作った場合は、`sqlalchemy.orm.aliased()`を使う。
+
+```
+sqlalchemy.orm.aliased(Model, name='')
+```
 
 ## fetch as list of dict
 
@@ -147,3 +162,5 @@ q = (tn1
 * [SQLAlchemy - The Database Toolkit for Python](http://www.sqlalchemy.org/)
 * [SQLAlchemy Documentation — SQLAlchemy 1.2 Documentation](http://docs.sqlalchemy.org/en/latest/)
 * [Python SQLAlchemy Cheatsheet — pysheeet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
+* [オブジェクトリレーショナルマッパ　チュートリアル — SQLAlchemy 0.6.5 ドキュメント (和訳)](http://omake.accense.com/static/doc-ja/sqlalchemy/ormtutorial.html)
+
