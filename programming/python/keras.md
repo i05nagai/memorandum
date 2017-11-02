@@ -7,27 +7,6 @@ title: Keras
 ### Directory
 * [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 
-```
-data/
-    train/
-        dogs/
-            dog001.jpg
-            dog002.jpg
-            ...
-        cats/
-            cat001.jpg
-            cat002.jpg
-            ...
-    validation/
-        dogs/
-            dog001.jpg
-            dog002.jpg
-            ...
-        cats/
-            cat001.jpg
-            cat002.jpg
-            ...
-```
 
 ## Fin
 
@@ -44,7 +23,6 @@ model = Sequential([
     Activation('softmax'),
 ])
 ```
-
 
 * 
 * ImageDataGenerator
@@ -81,6 +59,62 @@ keras.preprocessing.image.ImageDataGenerator(
     dim_ordering=K.image_dim_ordering())
 ```
 
+```
+data/
+    train/
+        dogs/
+            dog001.jpg
+            dog002.jpg
+            ...
+        cats/
+            cat001.jpg
+            cat002.jpg
+            ...
+    validation/
+        dogs/
+            dog001.jpg
+            dog002.jpg
+            ...
+        cats/
+            cat001.jpg
+            cat002.jpg
+            ...
+```
+
+* ImageDataGenerator.flow_from_directory
+    * derectory名を辞書順にsortして、順にfileを読んでいく
+    * 上の例では、1 epochの順で以下の順で読み込まれ、読み込む際にaugumentationの設定に基いて画像を変換する
+        * dogs/dog001.jpg
+        * dogs/dog002.jpg
+        * cats/cat001.jpg
+        * cats/cat002.jpg
+
+
+* `from keras.utils.np_utils import to_categorical`
+    * 一次元の整数labelのarryaから2次元の0-1のvectorに変換する
+
+```
+# from
+[0, 1, 2, 1]
+# to
+[
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+    [0, 1, 9],
+]
+```
+
+* fit_generator
+    * `steps_per_epoch`
+        * number of unique samples / batch_size
+    * validation_data
+        * generator for validation data
+        * tuple (inputs, labels)
+        * tuple (inputs, labels, sample_weights)
+    * `validation_steps`
+        * `validation_data` がgeneratorのときに必要
+        * number of unique validation data / batch_size
 
 ## Dataset
 * [Datasets - Keras Documentation](https://keras.io/datasets/)
@@ -233,7 +267,25 @@ session = tf.Session(config=config)
 K.set_session(session)
 ```
 
+### from Caffe to Keras
+* [Converting a Deep learning model from Caffe to Keras - Nicolò Valigi](http://nicolovaligi.com/converting-deep-learning-model-caffe-keras.html)
+* [GitHub - ethereon/caffe-tensorflow: Caffe models in TensorFlow](https://github.com/ethereon/caffe-tensorflow)
+
+```
+docker run -ti --rm bvlc/caffe:cpu caffe --version
+```
+
+```
+git clone https://github.com/ethereon/caffe-tensorflow.git
+cd caffe-tensorflow
+python convert.py \
+  --caffemodel=/path/to/caffeweight.caffemodel \
+  --code-output-path=./pascal_voc_tf/keras.py \
+  --data-output-path=./pascal_voc_tf/ \
+  /path/to/caffelayer.prototxt
+```
+
 ## Reference
 * [Keras Documentation](https://keras.io/ja/)
 * [Codes of Interest: Using Bottleneck Features for Multi-Class Classification in Keras and TensorFlow](http://www.codesofinterest.com/2017/08/bottleneck-features-multi-class-classification-keras.html)
-
+* [Useful Keras features – Towards Data Science – Medium](https://medium.com/towards-data-science/https-medium-com-manishchablani-useful-keras-features-4bac0724734c)

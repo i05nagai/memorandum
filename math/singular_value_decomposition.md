@@ -334,11 +334,6 @@ Hence by the theorem. singular value decomposition of $A$ exists.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem
-* $A^{\mathrm{T}}A$
-    * 
-
-
 ## Reference
 * [lecture3.pdf](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-fall-2004/lecture-notes/lecture3.pdf)
-
+* Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.

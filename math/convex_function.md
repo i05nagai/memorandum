@@ -410,6 +410,419 @@ closed convex への射影がconvex functionになるということを延べて
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+### Proposition8
+* $$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
+    * convex function
+* $$g: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
+    * convex function
+* $c \in \mathbb{R}$,
+
+$$
+\begin{eqnarray}
+    \forall x \in \mathbb{R}^{n},
+    \
+    f(x)
+    & \le &
+        c
+    \nonumber
+    \\
+    g(x)
+    & \le &
+        c
+    \nonumber
+\end{eqnarray}
+$$
+
+Then
+
+$$
+    \forall \lambda \in [0, 1]
+    \
+    \lambda f(x)
+    +
+    (1 - \lambda) g(x)
+    \le
+    c
+    .
+$$
+
+### proof.
+It is easy to see that
+
+$$
+\begin{eqnarray}
+    \lambda f(x)
+    +
+    (1 - \lambda) g(x)
+    & \le &
+        \lambda c
+        +
+        (1 - \lambda) c
+    \nonumber
+    \\
+    & = &
+        c
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition9
+* $A \subseteq \mathbb{R}^{n}$
+    * convex set
+* $B \subseteq \mathbb{R}^{n}$
+    * convex set
+
+Then
+
+* (i) $-A$ is convex
+* (ii) $A + B$ is convex
+* (iii) closure $\bar{A}$ is convex
+
+### proof.
+(i)
+
+$$
+    -A
+    =
+    \{
+        -x
+        \mid
+        x \in A
+    \}
+$$
+
+Since
+
+$$
+    \forall x^{\prime}, y^{\prime} \in (-A)
+    \
+    \exists x, y \in A,
+    \
+    \text{ s.t. }
+    \
+    x^{\prime} = -x,
+    \
+    y^{\prime} = -y,
+$$
+
+and $$\forall \lambda \in [0, 1]$$, $$\lambda x + (1 - \lambda) y \in A$$, we have
+
+$$
+    \forall \lambda \in [0, 1],
+    \
+    \lambda(-x)
+    +
+    (1 - \lambda)(-y)
+    =
+    -
+    \left(
+        \lambda x
+        +
+        (1 - \lambda) y
+    \right)
+    \in (-A)
+    .
+$$
+
+(ii)
+Since
+
+$$
+    \forall x^{\prime}, x^{\prime\prime} \in (A + B)
+    \
+    \exists u^{\prime}, u^{\prime\prime} \in A,
+    \
+    \exists v^{\prime}, v^{\prime\prime} \in B,
+    \
+    \text{ s.t. }
+    \
+    x^{\prime} = u^{\prime} + v^{\prime}
+    \
+    x^{\prime\prime} = u^{\prime\prime} + v^{\prime\prime}
+$$
+
+and $$\forall \lambda \in [0, 1]$$,
+
+$$
+\begin{eqnarray}
+    \lambda u^{\prime}
+    +
+    (1 - \lambda) v^{\prime}
+    & \in &
+        A
+    \nonumber
+    \\
+    \lambda u^{\prime\prime}
+    +
+    (1 - \lambda) v^{\prime\prime}
+    & \in &
+        B
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+We have $\forall \lambda \in [0, 1]$,
+
+$$
+    \lambda x^{\prime}
+    +
+    (1 - \lambda) x^{\prime\prime}
+    =
+    (
+        \lambda u^{\prime}
+        +
+        (1 - \lambda) v^{\prime}
+    )
+    +
+    (
+        \lambda u^{\prime\prime}
+        +
+        (1 - \lambda) v^{\prime\prime}
+    )
+    \in
+    A + B
+    .
+$$
+
+(iii)
+
+$$
+    \forall x, y \in \bar{A}
+    \
+    \exists (x_{i})_{i \in \mathbb{N}},
+        (y_{i})_{i \in \mathbb{N}} \in A,
+    \
+    \text{ s.t. }
+    \
+    x_{i} \rightarrow x,
+    \
+    y_{i} \rightarrow y,
+$$
+
+Since
+
+$$
+\begin{eqnarray}
+    \forall \lambda \in [0, 1]
+    \
+    \forall i \in \mathbb{N},
+    \
+    \lambda x_{i}
+    +
+    (1 - \lambda) y_{i}
+    \in
+    A
+    \subseteq
+    \bar{A}
+    ,
+\end{eqnarray}
+$$
+
+by taking the limit we obtain
+
+$$
+    \forall \lambda \in [0, 1]
+    \
+    \lambda x
+    +
+    (1 - \lambda) y
+    \in
+    \bar{A}
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Thereom10 Separation theorem
+* $A \subseteq \mathbb{R}^{n}$
+    * convex set
+* $B \subseteq \mathbb{R}^{n}$
+    * convex set
+
+Then
+
+$$
+    \exists v \in \mathbb{R}^{n},
+    \
+    \exists c \in \mathbb{R},
+    \
+    \text{ s.t. }
+    \
+    \forall x \in A,
+    \
+    \forall y \in B,
+    \
+    \langle
+        x,
+        v
+    \rangle
+    \ge
+    c
+    \ge
+    \langle
+        v,
+        y
+    \rangle
+$$
+
+### proof.
+Let
+
+$$
+\begin{eqnarray}
+    K
+    & := &
+        A + (-B)
+    \nonumber
+    \\
+    & = &
+        \{
+            x - y
+            \mid
+            x \in A,
+            \
+            y \in B
+        \}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $A$ and $B$ is convex, $K$ is convex.
+Moreover closure of $K$, $\bar{K}$, is convex.
+By <a href="{{ site.baseurl }}/math/hilbert_space.html#theorem-3">projection theorem</a>, there exists $v \in \bar{K}$ such that
+
+$$
+    \|v\|
+    =
+    \min_{u \in K}
+    \|u\|
+    .
+$$
+
+Since $\bar{K}$ is convex, we have
+
+$$
+    \forall x \in \bar{K},
+    \
+    \forall t \in [0, 1],
+    \
+    v + t(x - v) \in \bar{K}
+    .
+$$
+
+Then For $t \in (0, 1]$,
+
+$$
+\begin{eqnarray}
+    & &
+        \|v\|^{2}
+        \le
+        \|v + t(x - v)\|^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \|v\|^{2}
+        \le
+        \|v\|^{2}
+        +
+        2t\langle v, (x - v) \rangle
+        +
+        t^{2} \|x - v\|^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        0
+        \le
+        2t\langle v, x \rangle
+        -
+        2t\langle v, v \rangle
+        +
+        t^{2} \|x - v\|^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        0
+        \le
+        2\langle v, x \rangle
+        -
+        2\|v\|^{2}
+        +
+        t \|x - v\|^{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+Letting $$t \rightarrow 0$$, we obtain
+
+$$
+\begin{eqnarray}
+    & &
+        0
+        \le
+        2 \langle v, x \rangle
+        -
+        2\| v\|^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \| v\|^{2}
+        \le
+        \langle v, x \rangle
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence $$\forall y \in A, \forall z \in B$$,
+
+$$
+\begin{eqnarray}
+    & &
+        \| v\|^{2}
+        \le
+        \langle y - z, v \rangle
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \| v\|^{2}
+        \le
+        \langle y, v \rangle
+        -
+        \langle z, v \rangle
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \langle z, v \rangle
+        +
+        \| v\|^{2}
+        \le
+        \langle y, v \rangle
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus, we take $$c := \|v\|^{2} + \sup_{y \in B}\langle y, v \rangle$$,
+
+$$
+    \forall y \in A,
+    \
+    \forall z \in B,
+    \
+    \langle z, v \rangle
+    \le
+    c
+    \le
+    \langle y, v \rangle
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
 ### Optimum
 * 凸関数の極小値は最小値
 * 狭義凸関数は最小値を取る点が存在するならば、1点である
@@ -795,4 +1208,5 @@ $$
 ## Reference
 * [凸関数 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%87%B8%E9%96%A2%E6%95%B0)
 * [Convex function - Wikipedia](https://en.wikipedia.org/wiki/Convex_function)
+* [Hyperplane separation theorem - Wikipedia](https://en.wikipedia.org/wiki/Hyperplane_separation_theorem)
 

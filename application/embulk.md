@@ -74,10 +74,10 @@ liquid tagの中を以下のようにかく。
 
 ```yaml
 in:
-  {% include 'common/conf_mysql_include' %}
+  {{% include 'common_input_mysql' %}}
   table: user
 out:
-  {% include 'common/conf_bigquery_include' %}
+  {{% include 'common_output_mysql' %}}
   table: user
 ```
 
