@@ -107,3 +107,68 @@ FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP "2008-12-25 15:30:00")
 * `%T`
     * `%H:%M:%S`
 * `%`
+
+## UDF
+standard SQLとlegacy SQLで定義方法や扱いが異なる。
+
+### Standard SQL
+* [User-Defined Functions  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/user-defined-functions)
+
+standard SQLで外部JSのUDFは利用できない。
+standard SQLでUDFを使う場合は以下の形式で使う。
+
+```sql
+CREATE TEMPORARY FUNCTION nullToZero(x Integer)
+RETURNS FLOAT64
+LANGUAGE js AS """
+  if (x === null) {
+    return 0;
+  }
+  return x;
+"""
+;
+```
+
+languageはSQLも使える。
+
+```sql
+#standardSQL
+-- Computes the harmonic mean of the elements in 'arr'.
+-- The harmonic mean of x_1, x_2, ..., x_n can be expressed as:
+--   n / ((1 / x_1) + (1 / x_2) + ... + (1 / x_n))
+CREATE TEMPORARY FUNCTION HarmonicMean(arr ARRAY<FLOAT64>) AS
+(
+  ARRAY_LENGTH(arr) / (SELECT SUM(1 / x) FROM UNNEST(arr) AS x)
+);
+
+WITH T AS (
+  SELECT GENERATE_ARRAY(1.0, x * 4, x) AS arr
+  FROM UNNEST([1, 2, 3, 4, 5]) AS x
+)
+SELECT arr, HarmonicMean(arr) AS h_mean
+FROM T;
+```
+
+optionsで外部のUDFを読み込めるがJSのUDFのみ。
+
+```sql
+OPTIONS (
+  library="gs://my-bucket/path/to/lib1.js",
+  library=["gs://my-bucket/path/to/lib2.js", "gs://my-bucket/path/to/lib3.js"]
+);
+```
+
+javascript UDFのBest Practice
+
+* JSのUDFに渡す前に、SQLで入力をfilterした方が安く早い
+    * JSのUDFは遅い
+* JSのUDFにstateを持たせない
+* JSのUDFが利用できるmemoryは限られているので、UDF内のmemory使用には気をつける
+
+## Types
+* [Data Types  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types)
+
+* INT64
+* FLOAT64
+* BOOL
+* STRING
