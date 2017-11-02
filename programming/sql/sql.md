@@ -53,5 +53,11 @@ LIMIT 2
 * 式、または、列名を指定した場合、その式が NULL 値 のものをカウント数に含めない。
 * さらに DISTINCT を指定すると重複した値の行をカウントに含めない。
 
+## Styleguide
+* [SQL style guide by Simon Holywell](http://www.sqlstyle.guide/)
+* [Kickstarter SQL Style Guide](https://gist.github.com/fredbenenson/7bb92718e19138c20591)
+* [分析SQLのコーディングスタイル - クックパッド開発者ブログ](http://techlife.cookpad.com/entry/2016/11/09/000033)
+
+
 ## Reference
 
