@@ -224,6 +224,15 @@ from keras.utils.np_utils import to_categorical
 y_binary = to_categorical(y_int)
 ```
 
+### Change the number of CPU core
+
+```python
+config = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1, \
+                        allow_soft_placement=True, device_count = {'CPU': 1})
+session = tf.Session(config=config)
+K.set_session(session)
+```
+
 ## Reference
 * [Keras Documentation](https://keras.io/ja/)
 * [Codes of Interest: Using Bottleneck Features for Multi-Class Classification in Keras and TensorFlow](http://www.codesofinterest.com/2017/08/bottleneck-features-multi-class-classification-keras.html)
