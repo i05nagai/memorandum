@@ -101,6 +101,8 @@ $$
 * $$g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$$,
     * $$g(x) = (g^{1}(x), \ldots, g^{m}(x))$$,
     * $$g^{i}$$ is a convex function
+* $c \in \mathbb{R}$,
+    * constant
 
 If there exist nonnegative $$\lambda_{1}, \ldots, \lambda_{m}$$ such that the inequality
 
@@ -244,15 +246,17 @@ $$
 
 Then the following are equivalent:
 
-* (a) $$\eqref{proposition_dual_problem}$$ is solvable,
-* (b) $$\eqref{proposition_primal_problem}$$ is unsolvable.
+* (a) $$\eqref{proposition_primal_problem}$$ is solvable.
+* (b) $$\eqref{proposition_dual_problem}$$ is unsolvable,
 
 ## proof.
 (a) $\Rightarrow$ (b)
-By proposition.
+By the proposition above.
 
 (a) $\Leftarrow$ (b)
-Suppose $$\eqref{proposition_dual_problem}$$ has no solution.
+Suppose $$\eqref{proposition_primal_problem}$$ has no solution.
+We show that $$\eqref{proposition_dual_problem}$$ has solution.
+
 Let
 
 $$
@@ -301,6 +305,7 @@ $$
             \
             u^{m} \le 0
         \}
+    .
     \nonumber
 \end{eqnarray}
 $$
@@ -308,10 +313,11 @@ $$
 We claim that
 
 * (i) $S$ and $T$ are nonempty convex sets,
-* (ii) $S$ and $T$ do not intersect.
+* (ii) $S \cap T = \emptyset$.
 
 We first prove (i).
-$c \in \mathbb{R}$ so that $T$ is not emptyset.
+$c \in \mathbb{R}$ so that $T$ is not empty set.
+Additionally,
 
 $$
 \begin{eqnarray}
@@ -336,6 +342,7 @@ $$
 $$
 
 Hence $T$ is convex set.
+For $S$, we have
 
 $$
 \begin{eqnarray}
@@ -375,7 +382,7 @@ $$
     g^{i}(x) \le u^{i} \le 0
 $$
 
-This is contradiction that $$\eqref{proposition_dual_problem}$$ has no solution.
+This is contradiction that primal problem $$\eqref{proposition_primal_problem}$$ has no solution.
 
 Since $S$ and $T$ is convex and nonempty, according to <a href="{{ site.baseurl }}/math/convex_function.html#thereom10-separation-theorem">separation theorem on convex sets</a>, there exists $a := (a^{0}, \ldots, a^{m}) \neq 0$ such that
 
@@ -390,13 +397,29 @@ $$
 \end{equation}
 $$
 
-We claim that
+Now We claim that
 
 * (iii) $a \ge 0$,
 * (iV) $a^{0} > 0$.
 
 We first prove (iii).
-From $$\eqref{convex_theorem_on_alternative_separation_theorem}$$,
+Suppose that $\exists j = 0, \ldots, m$ such that  $a^{j} < 0$.
+The RHS of equation $$\eqref{convex_theorem_on_alternative_separation_theorem}$$ attains $+\infty$ since we can take a sequence $$(u_{i})_{i \in \mathbb{N}} \in T$$ such that
+
+$$
+    \forall i \in \mathbb{N},
+    \
+    u_{i}^{j} < 0,
+    \
+    u_{i}^{k} = 0 \ (k \neq j),
+    \
+    u_{i}^{j} \rightarrow -\infty \ (i \rightarrow \infty)
+$$
+
+But $S$ is not empty set so that the LHS of $$\eqref{convex_theorem_on_alternative_separation_theorem}$$ is finite.
+Thus $a \ge 0$.
+
+From $$\eqref{convex_theorem_on_alternative_separation_theorem}$$ and the definition of $T$,
 
 $$
 \begin{eqnarray}
@@ -409,14 +432,16 @@ $$
     \nonumber
     \\
     & = &
-        \sup_{u^{0} < c, u^{1}, \ldots, u^{m} \ge 0}
+        \sup_{u^{0} < c, u^{1}, \ldots, u^{m} \le 0}
             \sum_{j=0}^{m}
                 a^{j} u^{j}
     \nonumber
     \\
     & = &
-        \sup_{u^{0} < c, u^{1}, \ldots, u^{m} \ge 0}
+        \sup_{u^{0} < c, u^{1}, \ldots, u^{m} \le 0}
             a^{0}u^{0}
+        \quad
+        (\because a \ge 0)
     \nonumber
     \\
     & = &
@@ -424,80 +449,33 @@ $$
 \end{eqnarray}
 $$
 
-The LHS of $$\eqref{convex_theorem_on_alternative_separation_theorem}$$
-
-$$
-    \inf_{u \in S}
-        \langle a, u \rangle
-    \ge
-    \inf_{x \in X}
-        \left(
-            a^{0}f(x)
-            +
-            \sum_{j=1}^{m}
-                a^{j}g^{j}(x)
-        \right)
-$$
-
-Indeed, suppose that
-
-$$
-    \inf_{u \in S}
-        \langle a, u \rangle
-    <
-    \inf_{x \in X}
-        \left(
-            a^{0}f(x)
-            +
-            \sum_{j=1}^{m}
-                a^{j}g^{j}(x)
-        \right)
-    .
-$$
-
-We take a sequence $$\{ \langle a, u_{i} \rangle \}_{i \in \mathbb{N}}$$ such that
-
-$$
-    \exists n \in \mathbb{N},
-    \
-    \forall i \ge n,
-    \
-    \inf_{u \in S}
-        \langle a, u \rangle
-    <
-    \langle a, u_{i} \rangle
-    <
-    \inf_{x \in X}
-        \left(
-            a^{0}f(x)
-            +
-            \sum_{j=1}^{m}
-                a^{j}g^{j}(x)
-        \right)
-    .
-$$
-
-This is contradiction since there exists $x \in \mathbb{R}^{m + 1}$ such that
+The LHS of $$\eqref{convex_theorem_on_alternative_separation_theorem}$$ is not less than the LHS of dual problem $$\eqref{proposition_dual_problem}$$, that is,
 
 $$
 \begin{eqnarray}
-    \langle a, u_{i} \rangle
+    \inf_{x \in X}
+        \left(
+            a^{0}f(x)
+            +
+            \sum_{j=1}^{m}
+                a^{j}g^{j}(x)
+        \right)
     & = &
-        \sum_{j=0}^{m}
-            a^{i} u_{i}^{j}
+    \inf_{x \in X}
+        \langle a, F(x) \rangle
     \nonumber
     \\
     & \ge &
-        a^{0} f(x)
-        +
-        \sum_{j=1}^{m}
-            a^{i} g^{j}(x)
-    \nonumber
-    .
+        \inf_{u \in S}
+            \langle a, u \rangle
+    \label{convex_theorem_on_alternative_upper_bound_of_sepration}
 \end{eqnarray}
 $$
 
-Moreover,
+Indeed, it is easy to check that $$\forall x \in X$$, $F(x) \in S$ since $$F(x) \le F(x)$$.
+Hence by definition of infimum, the inequality holds.
+
+Then $$\eqref{convex_theorem_on_alternative_upper_bound_of_sepration}$$ implies that
 
 $$
 \begin{equation}
@@ -510,66 +488,53 @@ $$
         \right)
     \ge
     a^{0}c
+    \label{convex_theorem_on_alternative_lower_bound_of_sepration}
 \end{equation}
 $$
 
-Indeed, suppose that
+Now let us proove that $$a^{0} > 0$$.
+By slater condition, we can take $\bar{x} \in X$ such that
 
 $$
-    \inf_{x \in X}
-        \left(
-            a^{0}f(x)
-            +
-            \sum_{j=1}^{m}
-                a^{j}g^{j}(x)
-        \right)
-    <
+    \forall i = 1, \ldots, m,
+    \
+    g^{i}(x) < 0
+    .
+$$
+
+From $$\eqref{convex_theorem_on_alternative_lower_bound_of_sepration}$$, we have
+
+$$
+    a^{0}f(\bar{x})
+    +
+    \sum_{j=1}^{m}
+        a^{j}g^{j}(\bar{x})
+    \ge
     a^{0}c
     .
 $$
 
-We take a sequence $$\{ a^{0}f(x_{i}) + \sum_{j=1}^{m} a^{j}g^{j}(x_{i}) \}_{i \in \mathbb{N}}$$ such that
+If $a^{0} = 0$, RHS of the above equation 0 but the LHS could be less than 0 by taking $$a^{j} > 0$$.
+Hence $a^{0} > 0$.
+
+Finally, since $a^{0} > 0$, we can define $$\lambda_{j} := a^{j} / a^{0} > 0$$.
+Then
 
 $$
-    \exists n \in \mathbb{N},
-    \
-    \forall i \ge n,
-    \
     \inf_{x \in X}
         \left(
-            a^{0}f(x)
+            f(x)
             +
             \sum_{j=1}^{m}
-                a^{j}g^{j}(x)
+                \lambda_{j}
+                g^{j}(x)
         \right)
-    <
-    a^{0}f(x_{i})
-    +
-    \sum_{j=1}^{m}
-        a^{j}g^{j}(x_{i})
-    <
-    a^{0}c
+    \ge
+    c
+    .
 $$
 
-On the other hand, $$a \ge 0$$ implies that
-
-$$
-\begin{eqnarray}
-    F(x_{i})
-    \le
-    \left(
-        \begin{array}{c}
-            c
-            \\
-            0
-            \\
-            \vdots
-            \\
-            0
-        \end{array}
-    \right)
-\end{eqnarray}
-$$
+This is a solution of $$\eqref{proposition_dual_problem}$$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
