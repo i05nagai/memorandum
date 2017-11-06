@@ -49,6 +49,18 @@ sqlparse.split(sql, )
     * If given the output is additionally formatted to be used as a variable in a programming language.
     * Allowed values are `python` and `php`.
 
+## Source code
+* ttype
+    * `tokens._TokenType`
+    * `sqlparse.tokens`で定義されている
+* `tlist`
+    * TokenList
+* `sql.Statement`
+    * TokenListのsubclass
+* `token`
+    * `token.ttype`
+
+
 ## Reference
 * [python-sqlparse — python-sqlparse 0.2.5.dev0 documentation](https://sqlparse.readthedocs.io/en/latest/)
 * [andialbrecht/sqlparse: A non-validating SQL parser module for Python](https://github.com/andialbrecht/sqlparse)
