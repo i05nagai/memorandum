@@ -31,7 +31,7 @@ cashflowをdiscountし、 倒産時の支払いを足せば良い。
 CVAは基は以下のような形で表現されていた。(Appendix 14A)
 
 $$
-\mathrm{Risky\ value} = \mathrm{Risk\ free\ value} - CVA
+    \mathrm{Risky\ value} = \mathrm{Risk\ free\ value} - \mathrm{CVA}
 $$
 
 * 価値の評価とcounterparty riskの計算が分かれているのが良い。
@@ -49,17 +49,21 @@ CVAはこれらを考慮して計算する必要がある。
 典型的なCVAの要因として次の公式がある。
 
 $$
-\mathrm{CVA} = -\mathrm{LGD} \sum\_{i=1}^{m} \mathrm{EE}(t\_{i}) \times \mathrm{PD}(t\_{i-1}, t\_{i})
+    \mathrm{CVA}
+    =
+    -\mathrm{LGD}
+        \sum_{i=1}^{m}
+            \mathrm{EE}(t_{i}) \times \mathrm{PD}(t_{i-1}, t_{i})
 $$
 
 * Loss given default(LGD)
     * LGD = 100% - Recovery-rate
 * Expected Exposure(EE)
-    * \\( t_{i} \\) でdisocuntされたExpected Exposure(EE). 
+    * $$t_{i}$$ でdisocuntされたExpected Exposure(EE). 
     EEはChap10で扱った。
     risk-freeでdiscountするのが良い。
 * Default Probability(PD)
-    * \\( t\_{i-1}, t\_{i} \\) の倒産確率。倒産確率の推定はChap12で扱った。
+    * $$t_{i-1}, t_{i}$$ の倒産確率。倒産確率の推定はChap12で扱った。
 
 上式について
 
@@ -75,7 +79,7 @@ CVA formulaをforward contract typeのexposureを例に適用する。
 Section7.3.2の式7.3より以下が成り立つ。
 
 $$
-\mathrm{EE} \propto \sqrt{t}
+    \mathrm{EE} \propto \sqrt{t}
 $$
 
 また、式12.1のrisk-neutral PDを使用する。
@@ -93,19 +97,23 @@ CVAは0.2%で、Notionalに対する割合で表現される。(EEが%で表現�
 EEやPDの分割を細かくすれば精度はあがるが、次のようにすると同じ分割でも精度があがり0.192%となる。
 
 $$
-\mathrm{EE}(t\_{i}) \rightarrow \[ \mathrm{EE}(t\_{i}) + \mathrm{EE}(t\_{i-1}) \] / 2
+    \mathrm{EE}(t_{i})
+    \rightarrow
+    \mathrm{EE}(t_{i}) + \mathrm{EE}(t_{i-1}) / 2
 $$
 
 ### 14.2.5 CVA as a spread
 CVAを値としてではなく、年率のcredit chargeとして表現したい場合もある。
 Appendix14Bの単純化した公式でrisky annuityは4.42と計算できる。
 risky annuityからCVAをspreadとして次のように計算できる。
-\\( -0.2\% / 4.42 * 10000 = -4.62 \\)bps(per annum)
+$$ -0.2\% / 4.42 * 10000 = -4.62 $$bps(per annum)
 
 Appendix14Cより上記の式は、より単純で役にたつ次の近似式としても表現できる。
 
 $$
-CVA \approx -EPE \times \mathrm{Spread}
+    \mathrm{CVA}
+    \approx
+    -EPE \times \mathrm{Spread}
 $$
 
 EPEは式7.2.6より求まる。
@@ -153,10 +161,12 @@ nettingやcollateralは考慮できないが、いくかの商品ではCVAの公
 upfrontにpremiumを貰うlong optionのように、正の価格しかとらない商品の場合(Appendix14D)
 
 $$
-CVA \approx -LGD \times PD(0, T) \times V
+    CVA
+    \approx
+    -LGD \times PD(0, T) \times V
 $$
 
-ここで、\\(T\\)は満期で\\(V\\)は商品の現在価値である。
+ここで、$T$は満期で$V$は商品の現在価値である。
 
 他のより高度な方法は、Sorensen-Bollierのsemi-analytical formulaである(Section10.2.2)。
 式14.4のEEをEuropean swaptionの価値として表現する。
@@ -180,7 +190,7 @@ spread(bps)が150から10000まで変化した時のCVAの変化がTable14.1で�
 次に、credit curveの変化の影響を見る。
 Section12.2.4で考えた5年が300bpsのupwards-sloping, flat, downwards-slopingのcredis curveに、CVAの影響を見る。
 Table14.2がそれぞれのcurveの5年と10年のCVAである。
-downwards < flat < upwardsの順で影響が大きくなっている。
+downwards < flat < upwards の順で影響が大きくなっている。
 10年の場合は5年のspreadを補外してだしており、curveの差が非常に大きい。
 
 ### 14.3.2 Recovery impact
@@ -188,12 +198,33 @@ Chap12の図12.5で倒産時のsettled recoveryについて議論した。
 式14.2に式12.1のPDの式を代入すると
 
 $$
-CVA = -\mathrm{LGD}\_{actual} \sum\_{i=1}^{m}\mathrm{EE}(t\_{i}) \times \left[ \exp \left( - \frac{s\_{t\_{i-1}}t\_{i-1}}{\mathrm{LGD}\_{settled}}\right) - \exp\left( - \frac{s\_{t\_{i}}t\_{i}}{\mathrm{LGD}\_{settled}}\right) \right]
+    CVA
+    =
+    -\mathrm{LGD}_{actual}
+        \sum_{i=1}^{m}
+        \mathrm{EE}(t_{i})
+        \times
+        \left[
+            \exp
+            \left(
+                - \frac{
+                    s_{t_{i-1}}t_{i-1}
+                }{
+                    \mathrm{LGD}_{settled}
+                }
+            \right)
+            -
+            \exp
+            \left(
+                - \frac{
+                s_{t_{i}}t_{i}}{\mathrm{LGD}_{settled}}
+            \right)
+        \right]
 $$
 
 概念としては、settledとactualは異なる。
-もしderivativeの請求権がCDSで参照されているものと同じseniorityならば、LGD_{actual}=LGD_{settled}を仮定する必要がある。
-式より、LGD_{actual}=LGD_{settled}であればLGDの1次の項は消えるので、2次の影響しか出ない。
+もしderivativeの請求権がCDSで参照されているものと同じseniorityならば、$$LGD_{actual}=LGD_{settled}$$ を仮定する必要がある。
+式より、$$LGD_{actual}=LGD_{settled}$$ であればLGDの1次の項は消えるので、2次の影響しか出ない。
 
 Table14.3は、actualとsettledを同じ値にして変化させた場合とactualとsettledを別の値にして計算した例となる。
 
@@ -205,16 +236,21 @@ nettingする場合、CVAの計算負荷が増えるので、数値計算を工�
 nettingするとCVAは減る。
 
 $$
-\mathrm{CVA}\_{NS} \ge \sum\_{i=1}^{n}\mathrm{CVA}\_{i}
+    \mathrm{CVA}_{NS}
+    \ge
+    \sum_{i=1}^{n}
+        \mathrm{CVA}_{i}
 $$
 
-\\(\mathrm{CVA}\_{NS}\\)はnetting setの取引のCVAの合計。
-\\(\mathrm{CVA}\_{i}\\)は取引iのCVA。
+$$\mathrm{CVA}_{NS}$$ はnetting setの取引のCVAの合計。
+$$\mathrm{CVA}_{i}$$ は取引iのCVA。
 nettingによって、CVAは減るがこのCVAのbenefitを個々の取引どう割り当てるかという問題がある。
 incremental CVAはSection10.7.2のincremental EEのanalogyでbenefitを割り当てる。
 
 $$
-\mathrm{CVA}\_{i}^{incemental} = \mathrm{CVA}\_{NS+i} - \mathrm{CVA}\_{NS}
+    \mathrm{CVA}_{i}^{incemental}
+    =
+    \mathrm{CVA}_{NS+i} - \mathrm{CVA}_{NS}
 $$
 
 取引iをNSに加えた時のCVAの変化分がincremental CVA。
@@ -222,10 +258,13 @@ $$
 Appendix14Eより、incremental CVAについて次の公式が得られる。
 
 $$
-CVA\_{i}^{incremental} = -\mathrm{LGD} \sum\_{i=1}^{m}\mathrm{EE}\_{i}^{incremental}(t\_{i}) \times PD(t\_{i-1},t\_{i})
+    CVA_{i}^{incremental}
+    =
+    -\mathrm{LGD} \sum_{i=1}^{m}
+    \mathrm{EE}_{i}^{incremental}(t_{i}) \times PD(t_{i-1}, t_{i})
 $$
 
-式14.2と同じ形だが\\( \mathrm{EE}\_{i} \\)が\\(\mathrm{EE}\_{i}^{incremental}\\)になっている。
+式14.2と同じ形だが$$\mathrm{EE}_{i}$$ が $$\mathrm{EE}_{i}^{incremental}$$ になっている。
 CVAはEEの線形和で、nettingはexposureにしか影響を与えない。
 Incremental EEは負になりうるので、その場合はCVA benefitとなる。
 
@@ -264,7 +303,7 @@ netting setは、1つのtrading deskもしくはsalespersonが特定の顧客の
 Marginal CVAはfairである一方、新しい取引のmarginal CVAがどうなるか予想しづらい。
 
 ### 14.4.4 CVA as a spread
-他の問題として、CVAをufrontに受け取った時に、spread CVAの変換が難しいという問題がある。
+他の問題として、CVAをupfrontに受け取った時に、spread CVAの変換が難しいという問題がある。
 例えば、upfront CVAを受け取っているswapのrateにspreadとして調整することで、chargeが容易になる。
 1つの解決策はSection14.2.5のようにrisky durationでCVAを割る。
 
@@ -287,7 +326,7 @@ incremental CVAでは、新しい取引のサイズによってincremental CVA�
 * 並列化
 * pathwise/direct simulation
     * pathwiseはPFEの計算をする場合は必要だが、CVAの場合はそうではない。
- 
+
 図14.5は5年のIRSに対するdirect/pathwise simulationの比較である。
 pathwiseは10000パスで、time gridが183である。
 direct simulationはtime gridなしでdefault時点をrandomに取り、default時点のexposureのみを10000*183回計算している。
@@ -297,10 +336,12 @@ simulation回数の平方根で収束するので、9.7 * 9.7= 94倍早い?
 Amadahls' law(Amdahl 1967)より計算速度向上を簡単な式で見積もることができ、
 
 $$
-\mathrm{improvement} = ((1-P) + P/S)^{-1}
+    \mathrm{improvement}
+    =
+    ((1-P) + P/S)^{-1}
 $$
 
-\(P\)は改善可能な計算の割合で、\(S\)は計算時間の改善である。
+$P$は改善可能な計算の割合で、$S$は計算時間の改善である。
 例えば、P=0.9だとするとS=94から、totalの改善は9.1である。
 但し、direct simulationはpath dependentな担保付のものやexoticsには向かない。
 
@@ -312,7 +353,7 @@ expotic商品でAmerican-typeのものに対して、Section10.3.3で議論し�
     * 近似を用いる
 2. grids
     * あらかじめ決めたgridで、underlyingの変数として将来価値を計算する方法
-	* 次元が低い場合に有効
+    * 次元が低い場合に有効
 3. American monte carlo Methods
     * xVAでよく使われるようになっている
 
@@ -385,15 +426,25 @@ BCVAは、自身とcounterpartyが同様にdefaultすることを考える。
 Appendix14FでBCVAの公式を導出している。
 
 $$
-    BCVA = CVA + DVA
+    BCVA
+    =
+    CVA + DVA
 $$
 
 $$
-    CVA = -\mathrm{LGD}\_{C}\sum\_{i=1}^{m}\mathrm{EE}(t\_{i}) \times PD\_{C}(t\_{i-1}, t\_{i})
+    CVA
+    =
+    -\mathrm{LGD}_{C}
+        \sum_{i=1}^{m}
+        \mathrm{EE}(t_{i}) \times PD\_{C}(t_{i-1}, t_{i})
 $$
 
 $$
-    DVA = -\mathrm{LGD}\_{P}\sum\_{i=1}^{m}NEE(t\_{i}) \times PD\_{P}(t\_{i-1}, t\_{i})
+    DVA
+    =
+    -\mathrm{LGD}_{P}
+        \sum_{i=1}^{m}
+            NEE(t_{i}) \times PD_{P}(t_{i-1}, t_{i})
 $$
 
 添え字のPとCはpartyとcounterpartyである。
@@ -403,24 +454,27 @@ DVAはEEがNEEになっただけである。
 式14.4の拡張として
 
 $$
-    BCVA = -EPE \times \mathrm{Spread}\_{C} - ENE \times \mathrm{Spread}\_{P}
+    BCVA
+    =
+    -EPE \times \mathrm{Spread}_{C}
+    - ENE \times \mathrm{Spread}_{P}
 $$
 
-EPE = -ENEを仮定するならば、\\(BCVA = -EPE \times (\mathrm{Spread}\_{C}-\mathrm{Spread}\_{P}) \\)となる。
+EPE = -ENEを仮定するならば、$$BCVA = -EPE \times (\mathrm{Spread}_{C}-\mathrm{Spread}_{P})$$となる。
 
 ### 14.6.5 Close-out and default correlation
 BCVAはいかの3つの要素を無視している。
 
 * Survival
     * partyかcounterpartyの一方がデフォルトしたら取引は終わる。
-	よって、一方がデフォルトしたらもう一方はその後の損失を考慮する必要はない。
+    よって、一方がデフォルトしたらもう一方はその後の損失を考慮する必要はない。
 * Default correlation
     * 二者間の相関は考慮していない。
-    correlationが0でないなら正ならDVAとCVAに影響を与えるｌ。
+    correlationが0でないなら正ならDVAとCVAに影響を与える。
 * Close-out
     * Seciton7.1.3で議論したように、EEやNEEは実際のclose-outの仮定を考慮していない。
-	仮定として、デフォルト時のMTMで取引が終了することを仮定している。
-	close-outの仮定は、生き残ったpartyがrisk-freeではないとしているので、考慮する必要がある。
+    仮定として、デフォルト時のMTMで取引が終了することを仮定している。
+    close-outの仮定は、生き残ったpartyがrisk-freeではないとしているので、考慮する必要がある。
 
 上記に関連した研究として
 
