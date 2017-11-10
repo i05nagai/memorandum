@@ -18,6 +18,30 @@ Default output format [None]: json
 ```
 
 
+## Tips
+
+### Named profile
+* [Terraform で AWS環境を実運用する上で困ったことと、その対処 - Qiita](https://qiita.com/takumiabe/items/07943f23436aa983f397)
+
+AWSの認証情報に名前をつけてlocalで管理できる。
+
+```
+$ aws configure --profile my-profile-name
+AWS Access Key ID [None]: xxxxxxxxxx
+AWS Secret Access Key [None]: xxxxxxxxxx
+Default region name [None]: ap-northeast-1
+Default output format [None]: 
+```
+
+terraformで利用する場合は以下のようにprofileを指定できる。
+
+```
+provider "aws" {
+  profile = "my-profile-name"
+}
+```
+
+
 ## Reference
 * [aws — AWS CLI 1.11.96 Command Reference](http://docs.aws.amazon.com/cli/latest/reference/)
 
