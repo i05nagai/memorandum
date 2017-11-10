@@ -149,6 +149,34 @@ volumes:
     * bashはコマンド
 
 
+### compose file
+compose file内で実行環境の環境変数が使える。
+
+```
+web:
+  image: "webapp:${TAG}"
+```
+
+* `env_file`
+    * compose-fileからの相対pathでenvironment variableを指定できる
+    * [Declare default environment variables in file | Docker Documentation](https://docs.docker.com/compose/env-file/)
+```yaml
+env_file: .env
+
+env_file:
+  - ./common.env
+  - ./apps/web.env
+  - /opt/secrets.env
+```
+
+env_fileの中身は次のようになる。
+
+```
+# Set Rails/Rack environment
+RACK_ENV=development
+```
+
+
 ## Reference
 * [Docker Compose — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/compose/toc.html)
 * [docker-composeを使うと複数コンテナの管理が便利に - Qiita](http://qiita.com/y_hokkey/items/d51e69c6ff4015e85fce)
