@@ -277,7 +277,8 @@ ls -lah ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linu
 
 ### Data Volume container
 データ格納用のコンテナ。
-
+`mysql_data` containerの`/var/lib/mysql`いかがData volumeになる。
+このdata volumeは`--volume-from` commandでほかのcontainerから参照できる。
 
 ```Dockerfile
 # 永続化のためのデータ領域を作成
