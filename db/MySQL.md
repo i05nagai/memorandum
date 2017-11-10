@@ -256,6 +256,17 @@ DB serverとしてのimageもあるが、mysql clientとしても使うことが
 docker run -it --rm mysql:5.7.18 mysql -hsome.mysql.host -usome-mysql-user -p
 ```
 
+docker imageの設定に用いる環境変数
+
+* MYSQL_ROOT_PASSWORD='pass'
+
+```
+MYSQL_DATABASE
+MYSQL_USER
+MYSQL_PASSWORD
+```
+
+
 ## CLI
 
 * `--skip-column-names, -N`
