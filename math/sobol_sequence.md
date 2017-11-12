@@ -588,7 +588,7 @@ $$
             * (1(2-adic expansion of a with size s-2)1) is coefficient of polynomial
             * e.g. If a is 14 and s is 8, (1(001110)1) = (10011101), that is, $$0 + 0 + 1x^{4} + 1x^{3} + 1x^{2} + 0 + 1$$.
         * m is initial direction number
-            * $m$の初期値
+            * initial value of $m$
 
 
 ## Reference
