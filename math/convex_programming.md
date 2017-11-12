@@ -952,12 +952,168 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Theorem12 Karush-Kuhn-Tucker Optimality Conditions in Convex case
-
-
-## proof.
+## Remark12
+* The equation $$\eqref{theorem_complementary_slackness}$$ is known as complementary slackness.
+* Theorem11 (1) holds for an arbitrary inequality constrained optimization program, not necessarily convex.
+* Theorem11 does not give us how to verify whether $$(x^{*}, \lambda^{*})$$ is saddle point of lagrange function or not.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Reference
+## Definition13 restricted Slater assumption
+* $$X$$,
+* $$f, g^{1}, \ldots, g^{m}$$,
 
+An inequality constrained problem $$\eqref{convex_programming_problem_primal_problem}$$ is said to satisfy restricted Slater assumption if
+
+$$
+\begin{eqnarray}
+    \exists x \in X
+    \
+    \text{ s.t. }
+    \
+    & &
+        g^{j}: \text{ nonlinear}
+        \Rightarrow
+        g^{j}(x) \ge 0
+    \\
+    & &
+        g^{j}: \text{ linear}
+        \Rightarrow
+        g^{j}(x) \le 0
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+## Theorem12 Karush-Kuhn-Tucker Optimality Conditions in Convex case
+* $$x^{*} \in \mathrm{int}(X)$$,
+    * interior feasible solution to $$\eqref{convex_programming_problem_primal_problem}$$,
+* $$f, g^{1}, \ldots, g^{m}$$,
+    * differentiable at $$x^{*}$$
+* $$\eqref{convex_programming_problem_primal_problem}$$ is convex programming problem.
+
+
+* (i)
+
+$$
+\begin{eqnarray}
+    \exists \lambda^{*} \in \mathbb{R}_{\ge 0}^{m},
+    \
+    \text{ s.t. }
+    \
+    & &
+        \forall j = 1, \ldots, m,
+        \
+        \lambda_{j}^{*}g^{j}(x^{*}) = 0,
+    \\
+    & &
+        \nabla f(x^{*})
+        +
+        \sum_{j=1}^{m}
+            \lambda_{j}^{*}
+            \nabla g^{j}(x^{*})
+        =
+        0
+\end{eqnarray}
+$$
+
+* (ii) $$x^{*}$$ to be optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$.
+
+Then
+
+* (1) Sufficiency for an optimal value: (i) $\Rightarrow$ (ii),
+* (2) Necessity and sufficiency for an optimal value: Under restricted Slater condition, (i) $$\Leftrightarrow$$ (ii).
+
+## proof.
+(i) $\Rightarrow$ (ii)
+
+$$
+\begin{eqnarray}
+    X^{\prime\prime}
+    & := &
+        \{
+            x \in X
+            \mid
+            g^{i + m}(x)
+            =
+            a_{i}^{\mathrm{T}}x - b_{i}
+            \le
+            0,
+            \
+            i = 1, \ldots, M
+        \}
+    \nonumber
+    \\
+    X
+    & := &
+        X^{\prime} \cap X^{\prime\prime}
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+To show that $$x^{*}$$ is an optimal solution, $$\exists \lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that
+
+$$
+\begin{eqnarray}
+    \lambda_{j}^{*}
+    g^{j}(x^{*})
+    & = &
+        0,
+        \quad
+        j = 1, \ldots, m,
+    \nonumber
+    \\
+    x^{*}
+    & \in &
+        \arg \min_{x \in X}
+            \left(
+                f(x)
+                +
+                \sum_{j=1}^{m}
+                    \lambda_{j}^{*}g^{j}(x)
+            \right)
+    \nonumber
+    \\
+    & = &
+        \arg \min_{x \in X}
+            L(x, \lambda^{*})
+\end{eqnarray}
+$$
+
+Here we claim that following statements are equivalent:
+
+* (iii) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $X$,
+* (iV) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $$X^{\prime\prime}$$,
+
+(iii) $\Rightarrow$ (iV)
+
+Since $$x^{*} \in \mathrm{int}(X)$$, $$x^{*}$$ is local minimizer of $f$ on $X$.
+It follows that $$x^{*}$$ is also local minimizer of $$X^{\prime\prime}$$.
+$$L(x, \lambda^{*})$$ is convex with respect to $x$ so that $$x^{*}$$ is also global minimizer of $$X^{\prime\prime}$$ by <a href="{{ site.baseurl }}/math/convex_function.html#theorem11">theorem</a>.
+
+(iV) $\Rightarrow$ (iii)
+
+Since $$X \subseteq X^{\prime\prime}$$, a minimizer on $$X^{\prime\prime}$$ is also a minimizer on $X$.
+
+Therefore, our claim is verified.
+The claim says that if the minimizer exists, $$x^{*} \in X^{\prime\prime}$$.
+Diffierentiable convex function $$L(x, x^{*\prime})$$ attains at $$x^{*}$$ its minimum on $$X^{\prime\prime}$$ if and only if
+
+$$
+    \nabla_{x} L(x^{*}, \lambda^{*})
+    +
+    \sum_{i \in I}
+        \mu_{i}^{*}a_{i}
+    =
+    0
+$$
+
+where $$\mu_{i}^{*} \ge 0$$ and
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+
+## Reference
+* [Anatoli Iouditski](https://ljk.imag.fr/membres/Anatoli.Iouditski/optimisation-convexe.htm)
