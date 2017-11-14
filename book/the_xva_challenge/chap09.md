@@ -185,11 +185,11 @@ monolineは、格付けの引き下げで、担保を差し入れるような条
 Figure9.3は、MBIAとAMBACの株価の下落を表している。
 
 多くの銀行は、銀行が購入したprotectionの価値の増加の為、monolineに対してriskをもっていることを認識した。
-例えば、2008/6に、UBSは$6.4 bllionがmonoline保険会社に対するriskに曝されていると見積もった。
-また、CitigroupとMerrill Lynchは、$4.8 billionと$3 billionとそれぞれ見積もった。(Financial Times, 2008)
+例えば、2008/6に、UBSは＄6.4 bllionがmonoline保険会社に対するriskに曝されていると見積もった。
+また、CitigroupとMerrill Lynchは、＄4.8 billionと＄3 billionとそれぞれ見積もった。(Financial Times, 2008)
 AIGの状況は大体これと同じ状況で、格付けの低下とAIGのポジションの急速な変化の結果として、大量の担保の差し入れが必要となった。
 これによりAIGは大量の損失を蒙り、AIGの倒産によって多くのcounterpartyが損失を受けることになった。
-しかし、AIGがUS政府によって$182 billionの資金を投入し救済されたので、counterpartyが損失を受けることはなかった。
+しかし、AIGがUS政府によって＄182 billionの資金を投入し救済されたので、counterpartyが損失を受けることはなかった。
 AIGは救済され、monoline保険会社は救済されなかったのか。
 
 CDPCはmonolineのように、レバレッジがかけられており、担保を差し入れていない。

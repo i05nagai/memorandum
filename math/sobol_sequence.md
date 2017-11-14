@@ -7,9 +7,9 @@ title: Sobol Sequence
 ## Definition
 $d$次元のsobol列を作る方法を述べる。
 
-* $d$
+* $d \in \mathbb{N}$
     * 生成する点列の次元
-* $K$
+* $K \in \mathbb{N}$
     * 生成する点のbit数
     * 32bitの点を生成する場合は$K=32$
     * 64bitの点を生成する場合は$K=64$
@@ -18,14 +18,14 @@ $d$次元のsobol列を作る方法を述べる。
 * $$i = (i_{K}, \ldots, i_{1})_{2}$$,
     * $i$番目の点とその2進数表現
     * $$i_{k} \in \{0, 1\}$$,
-* $$x_{i} := (x_{i, 1}, \ldots, x_{i, d})$$,
+* $$x_{i} := (x_{i, 1}, \ldots, x_{i, d}) \in [0, 1]^{d}$$,
     * $i$番目の点を表す
-* $p_{j}$
+* $p_{j} \in \mathbb{F}_{2}[x]$
     * $j$番目の次元の生成に用いる原始多項式
     * $$\dim(p_{j}) =: s_{j}$$,
     * 予め生成したい次元数分用意しておく
-    * 動的に原始多項式を見つける方法もあるが、余分な時間がかかる
-* $$m_{1, j}, \ldots, m_{s_{j}, j}\ (\forall j = 1, \ldots, d)$$,
+    * 動的に原始多項式を見つけることもできるが、余分な時間がかかる
+* $$m_{1, j}, \ldots, m_{s_{j}, j} \in \mathbb{N} \ (\forall j = 1, \ldots, d)$$,
     * $s_{j}$まではあらかじめきめる
     * $s_{j}$以降は以前の$s_{j}$個を使って再帰的に決める
 * $v_{1 ,j}, \ldots, v_{K, j}$
@@ -33,45 +33,59 @@ $d$次元のsobol列を作る方法を述べる。
 
 ## Algorithm
 sobol sequenceは各次元ごとに独立に生成できるので、$j = 1, \ldots, d$を一つ固定し、 $j$次元目の点の生成方法について述べる。
-まず、次数$s_{j}$の原始多項式$p_{j}$をとる。
+まず、次数$s_{j}$の既約多項式$p_{j}$をとる。
 
 $$
 \begin{equation}
-    p_{j}
+    p_{j}(x)
     :=
+    a_{s_{j}}
     x^{s_{j}}
     +
-    a_{1, j} x^{s_{j} - 1}
+    a_{s_{j} - 1, j} x^{s_{j} - 1}
     +
-    a_{2, j} x^{s_{j} - 2}
+    a_{s_{j} - 2, j} x^{s_{j} - 2}
     +
     \cdots
     +
-    a_{s_{j} -1, j}
+    a_{1, j}
     x
     +
-    1
+    a_{0, j}
 \end{equation}
 $$
 
-ここで、$$a_{1, j}, \ldots, a_{s_{j}, j} \in \{0, 1\}$$である。
+ここで、$$a_{0, j}, a_{1, j}, \ldots, a_{s_{j}, j} \in \{0, 1\}$$である。
+初期値$$1 \le m_{1, j}, \ldots, m_{s_{j}, j}$$を$$m_{k, j} < 2^{k}\ (\forall k = 1, \ldots, s_{j})$$を満たす奇数としてとる。
 正の定数$$m_{s_{j}+1, j}, m_{s_{j}+2, j}, \ldots, m_{K, j}$$を、前$s_{j}$個を使って次のように再帰的に定義する。
-$$\forall k = s_{j} + 1, s_{j} + 2, \ldots, K$$について、
 
 $$
 \begin{eqnarray}
+    k = s_{j} + 1, s_{j} + 2, \ldots, s_{j} + 1 + K,
+    \quad
     m_{k, j}
-    :=
-    & &
-        2 a_{1, j} m_{k-1, j}
+    & := &
+        2
+            a_{s_{j} - 1, j} m_{k-1, j}
         \oplus
-        2^{2} a_{2, j} m_{k-2, j}
+        2^{2}
+            a_{s_{j} - 2, j} m_{k-2, j}
         \oplus
         \cdots
         \oplus
-        2^{s_{j}-1} a_{s_{j}-1, j} m_{k-s_{j}, j}
+        2^{s_{j}-1}
+            a_{1, j} m_{k - s_{j}, j}
         \oplus
         2^{s_{j}} m_{k-s_{j}, j}
+        \oplus
+        m_{k-s_{j}, j},
+    \nonumber
+    \\
+    & := &
+        \left(
+            \bigoplus_{i=1}^{s_{j}}
+                2^{i}a_{s_{j} - i, j} m_{k-i, j}
+        \right)
         \oplus
         m_{k-s_{j}, j},
 \end{eqnarray}
@@ -80,10 +94,11 @@ $$
 $\oplus$はbitごとのXORである。
 また、$a_{s, j} m_{k, j}$は通常の積である。
 上で定義した$m_{k,j}$を用いて、direction numberを次で定義する。
-$$\forall k = 1, 2, \ldots, K$$について
 
 $$
 \begin{equation}
+    k = 1, 2, \ldots, K,
+    \
     v_{k, j}
     :=
     \frac{
@@ -108,32 +123,330 @@ $$
     \cdots
     \oplus
     i_{K} v_{K, j}
-    \
-    (j = 1, \ldots, d)
     \label{original_sobol_sequence}
 \end{equation}
 $$
 
 ここで、$i_{k}$は$i$の$k$bit目の2進表現で、 $$i = (i_{K}, \ldots, i_{3}, i_{2}, i_{1})_{2}$$である。
 
+## Example
+* $d := 3$,
+* $K := 3$,
+* $$p_{1}(x) := x$$,
+    * $$a_{1} := 1$$,
+    * $$a_{0} := 0$$,
+* $$s_{1} := \mathrm{deg}(p_{1}) = 1$$,
+* $$p_{2}(x) := x + 1$$,
+    * $$a_{1} := 1$$,
+    * $$a_{0} := 1$$,
+* $$s_{2} := \mathrm{deg}(p_{2}) = 1$$,
+* $$p_{3}(x) := x^{2} + x + 1$$,
+    * $$a_{2} := 1$$,
+    * $$a_{1} := 1$$,
+    * $$a_{0} := 1$$,
+* $$s_{3} := \mathrm{deg}(p_{3}) = 2$$,
+* $$m_{k, 1}$$,
+    * $$m_{1, 1} := 1$$,
+* $$m_{k, 2}$$,
+    * $$m_{1, 2} := 1$$,
+* $$m_{k, 3}$$,
+    * $$m_{1, 2} := 1$$,
+    * $$m_{1, 2} := 3$$,
+
+$$
+\begin{eqnarray}
+    m_{2, 1}
+    & := &
+        2 a_{1 - 1} m_{2 - 1, 1}
+        \oplus
+         m_{2 - 1, 1}
+    \nonumber
+    \\
+    & = &
+         1
+    \nonumber
+    \\
+    m_{3, 1}
+    & := &
+        2 a_{1 - 1} m_{3 - 1, 1}
+        \oplus
+         m_{3 - 1, 1}
+    \nonumber
+    \\
+    & = &
+         1
+    \nonumber
+    \\
+    m_{4, 1}
+    & := &
+        2 a_{1 - 1} m_{4 - 1, 1}
+        \oplus
+         m_{4 - 1, 1}
+    \nonumber
+    \\
+    & = &
+         1
+    \nonumber
+\end{eqnarray}
+$$
+
+Direction numberは
+
+$$
+\begin{eqnarray}
+    v_{1, 1}
+    & := &
+        \frac{1}{2}
+    \nonumber
+    \\
+    v_{2, 1}
+    & := &
+        \frac{1}{4}
+    \nonumber
+    \\
+    v_{3, 1}
+    & := &
+        \frac{1}{8}
+    \nonumber
+    \\
+    v_{4, 1}
+    & := &
+        \frac{1}{16}
+    \nonumber
+\end{eqnarray}
+$$
+
+また、$j=2$次元は
+
+$$
+\begin{eqnarray}
+    m_{2, 2}
+    & := &
+        2 a_{1 - 1} m_{2 - 1, 2}
+        \oplus
+         m_{2 - 1, 2}
+    \nonumber
+    \\
+    & = &
+        (2 \times 1 \times 1)
+        \oplus
+        1
+    \nonumber
+    \\
+    & = &
+        3
+    \nonumber
+    \\
+    m_{3, 2}
+    & := &
+        2 a_{1 - 1} m_{3 - 1, 2}
+        \oplus
+        m_{3 - 1, 2}
+    \nonumber
+    \\
+    & = &
+        (2  \times 1 \times 3)
+        \oplus
+        3
+    \nonumber
+    \\
+    & = &
+        5
+    \nonumber
+    \\
+    m_{4, 2}
+    & := &
+        2 a_{1 - 1} m_{4 - 1, 1}
+        \oplus
+        m_{4 - 1, 1}
+    \nonumber
+    \\
+    & = &
+         (2 \times 5)
+         \oplus
+         5
+    \nonumber
+    \\
+    & = &
+         (1010)_{2}
+         \oplus
+         (0101)_{2}
+    \nonumber
+    \\
+    & = &
+        15
+    \nonumber
+\end{eqnarray}
+$$
+
+Direction numberは
+
+$$
+\begin{eqnarray}
+    v_{1, 2}
+    & := &
+        \frac{1}{2}
+    \nonumber
+    \\
+    v_{2, 2}
+    & := &
+        \frac{3}{4}
+    \nonumber
+    \\
+    v_{3, 2}
+    & := &
+        \frac{5}{8}
+    \nonumber
+    \\
+    v_{3, 2}
+    & := &
+        \frac{15}{16}
+    \nonumber
+\end{eqnarray}
+$$
+
+また、
+
+$$
+\begin{eqnarray}
+    m_{3, 3}
+    & := &
+        2 a_{2 - 1} m_{3 - 1, 3}
+        \oplus
+        2^{2} a_{2 - 2} m_{3 - 2, 3}
+        \oplus
+         m_{3 - 2, 3}
+    \nonumber
+    \\
+    & = &
+         (2 \times 3)
+         \oplus
+         (2^{2} \times 1)
+         \oplus
+         1
+    \nonumber
+    \\
+    & = &
+         (110)_{2}
+         \oplus
+         (100)_{2}
+         \oplus
+         (001)_{2}
+    \nonumber
+    \\
+    & = &
+        3
+    \nonumber
+    \\
+    m_{4, 3}
+    & := &
+        2 a_{2 - 1} m_{4 - 1, 3}
+        \oplus
+        2^{2} a_{2 - 2} m_{4 - 2, 3}
+        \oplus
+        m_{4 - 2, 3}
+    \nonumber
+    \\
+    & = &
+        (2 \times 3)
+        \oplus
+        (4 \times 3)
+        \oplus
+        3
+    \nonumber
+    \\
+    & = &
+        (0110)_{2}
+        \oplus
+        (1100)_{2}
+        \oplus
+        (0011)_{2}
+    \nonumber
+    \\
+    & = &
+        9
+    \nonumber
+    \\
+    m_{5, 3}
+    & := &
+        2 a_{2 - 1} m_{5 - 1, 3}
+        \oplus
+        2^{2} a_{2 - 2} m_{5 - 2, 3}
+        \oplus
+        m_{4 - 2, 3}
+    \nonumber
+    \\
+    & = &
+         (2 \times 9)
+         \oplus
+         (4 \times 3)
+         \oplus
+         (3)
+    \nonumber
+    \\
+    & = &
+        (10010)_{2}
+        \oplus
+        (01010)_{2}
+        \oplus
+        (00011)_{2}
+    \nonumber
+    \\
+    & = &
+        27
+    \nonumber
+\end{eqnarray}
+$$
+
+Direction numberは
+
+$$
+\begin{eqnarray}
+    v_{1, 3}
+    & := &
+        \frac{1}{2}
+    \nonumber
+    \\
+    v_{2, 3}
+    & := &
+        \frac{3}{4}
+    \nonumber
+    \\
+    v_{3, 3}
+    & := &
+        \frac{3}{8}
+    \nonumber
+    \\
+    v_{4, 3}
+    & := &
+        \frac{9}{16}
+    \nonumber
+    \\
+    v_{5, 3}
+    & := &
+        \frac{27}{32}
+    \nonumber
+\end{eqnarray}
+$$
+
 ## Algorithm with Gray code
 Gray codeを用いた高速なsobol sequenceの生成方法。
 $i$番目のgray codeは以下で定義される。
 
 $$
-\begin{equation}
+\begin{eqnarray}
     \mathrm{gray}(i)
-    :=
-    i
-    \oplus
-    \lfloor
-        x
-    \rfloor
-    =
-    (\ldots i_{3} i_{2} i_{1})_{2}
-    \oplus
-    (\ldots i_{4} i_{3} i_{2})_{2}
-\end{equation}
+    & := &
+        i
+        \oplus
+        (i 2^{-1})
+    \nonumber
+    \\
+    & = &
+        (\ldots i_{3} i_{2} i_{1})_{2}
+        \oplus
+        (\ldots i_{4} i_{3} i_{2})_{2}
+\end{eqnarray}
 $$
 
 つまりbit shiftし、bit wiseのXORをとれば良い。
@@ -263,6 +576,19 @@ C_{j}
     \end{array}
 \right)
 $$
+
+
+## Available Direction numbers
+* [Sobol sequence generator](http://web.maths.unsw.edu.au/~fkuo/sobol/)
+    * [web.maths.unsw.edu.au/~fkuo/sobol/new-joe-kuo-6.21201?_ga=2.243612677.1214514715.1509895936-1594151385.1508165568](http://web.maths.unsw.edu.au/~fkuo/sobol/new-joe-kuo-6.21201?_ga=2.243612677.1214514715.1509895936-1594151385.1508165568)
+        * up to 21201
+        * d is dimension
+        * s is degree of irreducible polyonmial
+        * a is coefficient of irreducible polyonmial
+            * (1(2-adic expansion of a with size s-2)1) is coefficient of polynomial
+            * e.g. If a is 14 and s is 8, (1(001110)1) = (10011101), that is, $$0 + 0 + 1x^{4} + 1x^{3} + 1x^{2} + 0 + 1$$.
+        * m is initial direction number
+            * initial value of $m$
 
 
 ## Reference

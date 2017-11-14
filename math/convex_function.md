@@ -3,7 +3,7 @@ title: Convex function
 ---
 
 ## Convex Function
-凸関数
+Properties of convex function.
 
 ## Definition
 * $f: \mathbb{R}^{N}\rightarrow \mathbb{R}$
@@ -229,13 +229,32 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-### Proposition. 5
-$f:\mathbb{R}^{N} \rightarrow \mathbb{R}$を凸関数とする。
-$a \in \mathbb{R}$とする。
+### Proposition5
+* $f:\mathbb{R}^{N} \rightarrow \mathbb{R}$
+    * convex set
+* $a \in \mathbb{R}$
 
-レベル集合$$\{x \in \mathbb{R}^{N} \mid f(x) < a \}$$及び$$\{x \in \mathbb{R}^{N} \mid f(x) \ge a\}$$は凸集合である。
+$$
+    \mathrm{level}_{a}(f)
+    :=
+    \{
+        x \in \mathbb{R}^{N}
+        \mid
+        f(x) \le a
+    \}
+$$
+
+* (1) level set $$\mathrm{level}_{a}(f)$$ is convex
+* (2) $$\{x \in \mathbb{R}^{N} \mid f(x) < a \}$$ is convex,
+* (3) $$\{x \in \mathbb{R}^{N} \mid f(x) \ge a\}$$ is convex
 
 ### proof.
+(1)
+By <a href="#proposition8">proposition</a>, level set is convex.
+
+(2)
+
+(3)
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -822,9 +841,191 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Theorem11
+* $M \subseteq \mathbb{R}^{n}$,
+    * convex set
+* $f: M \rightarrow \mathbb{R}$,
+    * convex function
+* $x^{*} \in \mathbb{R}^{n}$,
+
+Then
+
+* (1) If $$x^{*}$$ is local minimizer of $f$ on $M$, then $$x^{*}$$ is global minimizer of $f$ on $M$.
+* (2) Set of global minimizer, $$\arg\min_{x \in M}f(x)$$, is convex.
+
+$$
+    \arg\min_{x \in M}f(x)
+    :=
+    \{
+        y \in \mathbb{R}^{n}
+        \mid
+        \min f(x)
+        =
+        y
+    \}
+$$
+
+* (3) If $f$ is strictly convex, $$\mathrm{card}(\arg\min_{x \in M}f(x)) = 0, 1$$.
+
+### proof.
+(1)
+Let $$B_{\epsilon}(x)$$ be $\epsilon$ oepn ball at $x$:
+
+$$
+    x \in \mathbb{R}^{n},
+    \
+    \epsilon > 0
+    \quad
+    B_{\epsilon}(x)
+    :=
+    \{
+        y \in \mathbb{R}^{n}
+        \mid
+        |x - y| < \epsilon
+    \}
+$$
+
+Since $$x^{*}$$ is a localm minimizer, we have
+
+$$
+    \exists \epsilon > 0,
+    \
+    \text{ s.t. }
+    \
+    \forall y \in B_{\epsilon}(x^{*})
+    \
+    \Rightarrow
+    \
+    f(y)
+    \ge
+    f(x^{*})
+    .
+$$
+
+Let $y \in M$ be fixed.
+Since $M$ is convex, it is easy to see
+
+$$
+\begin{eqnarray}
+    \forall t \in (0, 1),
+    \quad
+    x_{t}
+    & := &
+        t y + (1 - t) x^{*}
+        \in M
+    \nonumber
+\end{eqnarray}
+$$
+
+We take arbitrary constant $\delta > 0$ such that
+
+$$
+    \delta
+    <
+    \min
+    \left\{
+        1/2,
+        \frac{
+            \epsilon
+        }{
+            |x^{*} - y|
+        }
+    \right\}
+    .
+$$
+
+Then
+
+$$
+    \forall t \in (0, \delta),
+    \quad
+    x_{t} \in B_{\epsilon}
+    .
+$$
+
+Indeed,
+
+$$
+\begin{eqnarray}
+    |x_{t} - x^{*}|
+    & = &
+        |ty - tx^{*}|
+    \nonumber
+    \\
+    & = &
+        |t|
+        |y - x^{*}|
+    \nonumber
+    & < &
+        \epsilon
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    \forall t \in (0, \delta)
+    \quad
+    f(x_{t}) - f(x^{*})
+    & \le &
+            tf(y) + (1-t)f(x^{*}) - f(x^{*})
+    \nonumber
+    \\
+    & \le &
+            tf(y) - tf(x^{*})
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+The LHS of the above equation is nonnegative since $$x_{t} \in B_{\epsilon}(x^{*})$$.
+Therefore,
+
+$$
+    \forall t \in (0, \delta),
+    \quad
+    0
+    \le
+    tf(y) - tf(x^{*})
+    \
+    \Rightarrow
+    \
+    0
+    \le
+    f(y) - f(x^{*})
+    .
+$$
+
+(2)
+Let $$c := \min_{x \in M} f(x)$$.
+
+$$
+\begin{eqnarray}
+    \arg \min_{x \in M}
+        f(x)
+    & = &
+        \mathrm{level}_{c}(f)
+    \nonumber
+    \\
+    & = &
+        \{
+            y \in \mathbb{R}^{n}
+            \mid
+            y \le c
+        \}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+By <a href="#proposition5">proposition</a>, level set is convex so that $$\arg \min_{x \in M}f(x)$$ is convex.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ### Optimum
-* 凸関数の極小値は最小値
 * 狭義凸関数は最小値を取る点が存在するならば、1点である
 
 
@@ -1209,4 +1410,4 @@ $$
 * [凸関数 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%87%B8%E9%96%A2%E6%95%B0)
 * [Convex function - Wikipedia](https://en.wikipedia.org/wiki/Convex_function)
 * [Hyperplane separation theorem - Wikipedia](https://en.wikipedia.org/wiki/Hyperplane_separation_theorem)
-
+* [chapitre_3.pdf](https://ljk.imag.fr/membres/Anatoli.Iouditski/cours/convex/chapitre_3.pdf)
