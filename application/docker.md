@@ -344,6 +344,76 @@ logoutして再度loginする。
 docker images
 ```
 
+### Volume
+* [Docker glossary | Docker Documentation](https://docs.docker.com/glossary/?term=volume)
+* [Manage data in Docker | Docker Documentation](https://docs.docker.com/engine/admin/volumes/)
+* [Top 5 Docker Logging Methods to Fit Your Container Deployment Strategy](https://www.loggly.com/blog/top-5-docker-logging-methods-to-fit-your-container-deployment-strategy/)
+
+docker内のdataはcontainerのremoveにあわせて削除される。
+volumeはcontainerのlifecycleとは、異なる領域を作成し、container間でのvolumeの共有とdataの保持を行う。
+以下の3種類のvolumeがある。
+
+* host volume
+    * hostのfilesystemをcontainerからaccessできるようにしたもの
+* named volume
+    * 
+* anonymous volume
+
+Mountの種類
+
+* Volume
+    * `docker volume create`で明示的に作成する
+    * hostのdirectoryで中身が管理される
+    * volumeは複数のcontainerに同時にmountできる
+    * mountしているcontainerがなくても削除されない
+    * 使用していないvolumeの削除は`docker volume prune`
+    * `named`と`unnamed`があるが、違いは最初のMount時に明示的に名前を与えたかどうか
+    * volume driverをsupportしているので、remoteやcloudも指定可能
+* Bind mounts
+    * bind mountはperformanceが良い
+    * host machineのfileやdirectory
+* tmpfs mounts
+    * diskではなくmemoryに保存されるので、消えることがある
+    * swarmはsensitiveな情報
+
+Bind mountsとVolumeはどちらも`-v`でmountできる。
+tmpfs mountsは`--tmpfs`を使用できるが、Docker 17.06以降では、全て`--mount`を使うことが推奨されている。
+
+**Good use case for volumes**
+
+* 複数のcontainerでのdataのshare
+* remoteやcloudにdataを保存したいとき
+* back upが欲しいとき、volumeのdirectory`/var/lib/docker/volumes/<volume-name>`をcopyする
+
+**Good use case for bind mounts**
+
+* source codeやbuild artifactsを取得するとき、
+* 
+
+**Good use cases for tmpfs mounts**
+
+* 
+
+
+```
+docker volume create my-vol
+```
+
+```
+docker volume ls
+```
+
+```
+docker volume inspect my-vol
+```
+
+```
+docker run -d \
+  -it \
+  --name devtest \
+  --mount source=myvol2,target=/app \
+  nginx:latest
+```
 
 ## Reference
 * [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)
