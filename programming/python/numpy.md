@@ -14,6 +14,9 @@ title: numpy
 * `newaxis`
     * 配列に新しい次元を挿入したいときに利用。
     * `[:, np.newaxis]`で1次元配列が2次元配列になる
+* `np.squeeze(x, axis=0)`
+    * axisで指定した次元を減らす
+* `np.expand_dims(x, axis=0)`
 
 ## operators
 * 配列に対して、条件比較ができる
