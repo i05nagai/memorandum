@@ -427,6 +427,21 @@ BashOperatorで`spark-submit`をする
 
 * [Common Pitfalls - Airflow - Apache Software Foundation](https://cwiki.apache.org/confluence/display/AIRFLOW/Common+Pitfalls)
 
+### With postgres
+postgresを使う場合は`psycopg2`と合わせて使うことが推奨されている。
+
+
+```cfg
+[core]
+sql_alchemy_conn = "postgresql+psycopg2://scott:tiger@localhost/mydatabase"
+```
+
+### With redis broker
+
+```
+broker_url = redis://:password@hostname:port/db_number
+```
+
 ### Timezone
 Pitfallsにも記載してあるが、UTC前提で開発されている部分があるらしいので、Airflowのarchitecture全体でUTCにしておいた方が、良いらしい。
 
