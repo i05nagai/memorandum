@@ -19,6 +19,7 @@ buildと並列に使えるオプションは以下。
 * dependes_on
     * `docker-compose up`のときに、依存関係の順番に従って起動する
     * `docker-compose up service_name`で依存しているものを起動してくれる
+    * version3ではk`condition`をつけることができない
 
 ```yaml
 version: '2'
@@ -26,7 +27,7 @@ services:
   web:
     build: .
     depends_on:
-      - db
+      - db:
       - redis
   redis:
     image: redis
@@ -119,7 +120,10 @@ ports:
  - "127.0.0.1:5000-5010:5000-5010"
 ```
 
+* entrypoint
+    * defaultで実行されるcommand
 * command
+    * entrypointの引数になる
     * defaultのコマンドの上書き
 * hostname
     * docker runのオプションと同じ
@@ -139,6 +143,19 @@ volumes:
   - ~/configs:/etc/configs/:ro
   # 名前付きボリューム（Named volume）
   - datavolume:/var/lib/mysql
+```
+
+* healthcheck
+    * test
+        * listの場合は最初は`NONE`, `CMD`, `CMD-SHELL`の何れか
+        * `CMD-SHELL`はtestの引数を文字列で渡すのと同じ
+
+```yaml
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost"]
+  interval: 1m30s
+  timeout: 10s
+  retries: 3
 ```
 
 ## CLI
@@ -174,6 +191,28 @@ env_fileの中身は次のようになる。
 ```
 # Set Rails/Rack environment
 RACK_ENV=development
+```
+
+### Control startup
+* [Control startup order in Compose | Docker Documentation](https://docs.docker.com/compose/startup-order/)
+
+imageの起動の順序やserviceの起動を待つ方法
+shell scriptを各しかない。
+
+* [vishnubob/wait-for-it: Pure bash script to test and wait on the availability of a TCP host and port](https://github.com/vishnubob/wait-for-it)
+
+```yaml
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"
+    depends_on:
+      - "db"
+    command: ["./wait-for-it.sh", "db:5432", "--", "python", "app.py"]
+  db:
+    image: postgres
 ```
 
 
