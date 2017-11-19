@@ -72,6 +72,22 @@ ADAMS      23-MAY-87       1100       5000
 ```
 
 ## Function
+* `APPROX_QUANTILES([DISTINCT] expression, number [{IGNORE|RESPECT} NULLS])`
+    * expressionが集計対象
+    * numberはnumber of quantiles, 分位点
+    * `APPROX_QUANTILES(x, 2)`で[最小値、 中央値、 最大値]の配列
+* `PERCENTILE_CONT (value_expression, percentile [{RESPECT | IGNORE} NULLS])`
+    * 線形補間つきのpercenttile点をだす
+    * `PERCENTILE_CONT(x, 0)`
+        * だとxのNULLを無視する
+    * `PERCENTILE_CONT(x, 0 RESPECT NULLS)`
+        * NULLを考慮する
+        * NULLは最小値扱い
+* `PERCENTILE_DISC (value_expression, percentile [{RESPECT | IGNORE} NULLS])`
+    * 補間なしのpercentile点
+    * APPROX_QUANTILESの挙動と同じ
+    * `PERCENTILE_DISC(x, 0.5) OVER()`
+        * でtable `x`の中央値を全ての行に付与する
 * [Functions & Operators  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#supported-format-elements-for-date)
 * [Functions & Operators  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#supported-format-elements-for-datetime)
 
@@ -107,6 +123,46 @@ FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP "2008-12-25 15:30:00")
 * `%T`
     * `%H:%M:%S`
 * `%`
+
+### Array function
+* array_expression[OFFSET(zero_based_offset)]
+    * 配列の参照
+    * 添字が0から始まる
+    * out of rangeのときerorr
+* array_expression[ORDINAL(one_based_offset)]
+    * 配列の参照
+    * 添字が1から始まる
+    * out of rangeのときerorr
+* array_expression[SAFE_OFFSET(zero_based_offset)]
+    * 配列の参照
+    * 添字が0から始まる
+    * out of rangeのときNULL
+* array_expression[SAFE_ORDINAL(one_based_offset)]
+    * 配列の参照
+    * 添字が1から始まる
+    * out of rangeのときNULL
+* ARRAY_REVERSE(array_expression)
+    * 反転
+* GENERATE_ARRAY(start_expression, end_expression[, step_expression])
+    * 数字の配列をつくる
+    * FLOAT64かINT64
+* ARRAY_LENGTH(array_expression)
+    * 配列のサイズ
+    * 空のときは0
+    * array_expressionがNULLのときNULL
+* ARRAY_CONCAT(array_expression_1 [, array_expression_n])
+
+### JSON function
+JSON pathは以下のような形式
+
+```json
+{"class" : {"students" : [{"name" : "Jane"}]}}
+```
+
+* `$.class.students`
+
+* JSON_EXTRACT(json_string_expr, json_path_string_literal)
+* JSON_EXTRACT_SCALAR(json_string_expr, json_path_string_literal)
 
 ## UDF
 standard SQLとlegacy SQLで定義方法や扱いが異なる。

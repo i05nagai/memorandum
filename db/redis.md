@@ -63,6 +63,11 @@ command lineで設定を渡すこともできる。
 ## on Docker
 * [library/redis - Docker Hub](https://hub.docker.com/_/redis/)
 
+Dockerの中でredis CLIが使える。
+
+```
+redis-cli -h redis -p 6379
+```
 
 ## Reference
 * [Command reference – Redis](https://redis.io/commands)

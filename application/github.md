@@ -264,6 +264,13 @@ IssueやPRのkeywordとして使えるもの。
         * Low
         * Medium
 
+### ipython
+GitHubでjupyter-notbook形式のfileを表示可能。
+Localで表示を確認するには、以下のcommandでhtmlに変換する。
+
+```
+jupyter nbconvert --to html NOTEBOOK-NAME.ipynb
+```
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
