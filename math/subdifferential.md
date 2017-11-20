@@ -258,6 +258,8 @@ By theorem, $$x^{*}$$ is minimizer of $f$ on I if and only if $$\nabla f(x^{*}) 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Example8 Polyhedral set
+We show equivalent condition being minimizer of $f$ when $I$ is polyhedral set.
+Let $I$ be arbitrary polyhedral set, that is,
 
 $$
 \begin{eqnarray}
