@@ -780,7 +780,7 @@ If (1) holds, the optimal values in $$\eqref{convex_programming_problem_primal_p
 ## Theorem11 Saddle point formulation of Optimality Conditions in Convex Programming
 * $$x^{*} \in X$$,
 
-Then
+Statements:
 
 * (i) There exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that $$(x^{*}, \lambda^{*})$$ is asaddle point of the Lagrange function $$L(x, \lambda)$$ i.e.
 
@@ -801,15 +801,16 @@ $$
 
 * (ii) $x^{*}$ is a optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$
 
+Then
 
 (1) If (i) holds, then (ii) holds.
 
-(2) Moreover, if the problem $$\eqref{convex_programming_problem_primal_problem}$$
+(2) Moreover, Assuming that the problem $$\eqref{convex_programming_problem_primal_problem}$$
 
 * is convex
-* and satisfies the Slater condition
+* and satisfies the Slater condition,
 
-then (ii) implies that (i) holds
+if (ii) holds, then (i) holds
 
 ## proof.
 (1)
@@ -960,7 +961,7 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ## Definition13 restricted Slater assumption
-* $$X$$,
+* $$X \subseteq \mathbb{R}^{n}$$,
 * $$f, g^{1}, \ldots, g^{m}$$,
 
 An inequality constrained problem $$\eqref{convex_programming_problem_primal_problem}$$ is said to satisfy restricted Slater assumption if
@@ -985,13 +986,20 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Theorem12 Karush-Kuhn-Tucker Optimality Conditions in Convex case
+Duality theorem does not tell us how we find the optimal condition of primal problem.
+Karush-Kuhn-Tucker condition give us the way tofind value.
+
+## Theorem14 Karush-Kuhn-Tucker Optimality Conditions in Convex case
 * $$x^{*} \in \mathrm{int}(X)$$,
     * interior feasible solution to $$\eqref{convex_programming_problem_primal_problem}$$,
-* $$f, g^{1}, \ldots, g^{m}$$,
+* $$f, g^{1}, \ldots,g^{M}, \ldots,  g^{m}$$,
+    * $$g^{1}, \ldots, g^{M}$$ are convex function
+    * $$g^{M+1}, \ldots, g^{m}$$ are linear constrains
+        * i.e. $$g^{i}(x) := a_{i}^{\mathrm{T}}x - b_{i}$$ where $$a_{i}, b_{i} \in \mathbb{R}^{n}$$.
     * differentiable at $$x^{*}$$
 * $$\eqref{convex_programming_problem_primal_problem}$$ is convex programming problem.
 
+Statements:
 
 * (i)
 
@@ -1017,7 +1025,7 @@ $$
 \end{eqnarray}
 $$
 
-* (ii) $$x^{*}$$ to be optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$.
+* (ii) $$x^{*}$$ is optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$.
 
 Then
 
@@ -1025,28 +1033,33 @@ Then
 * (2) Necessity and sufficiency for an optimal value: Under restricted Slater condition, (i) $$\Leftrightarrow$$ (ii).
 
 ## proof.
-(i) $\Rightarrow$ (ii)
+(i) $\Leftarrow$ (ii)
+
+Assuming $$x^{*}$$ is a optimal solution of $$\eqref{convex_programming_problem_primal_problem}$$ on $X$.
+Let
 
 $$
 \begin{eqnarray}
     X^{\prime\prime}
     & := &
         \{
-            x \in X
+            x \in \mathbb{R}^{n}
             \mid
-            g^{i + m}(x)
+            g^{i + M}(x)
             =
             a_{i}^{\mathrm{T}}x - b_{i}
             \le
             0,
             \
-            i = 1, \ldots, M
+            i = 1, \ldots, m - M
         \}
+        ,
     \nonumber
     \\
-    X
+    X^{\prime}
     & := &
-        X^{\prime} \cap X^{\prime\prime}
+        X \cap X^{\prime\prime}
+        ,
     \nonumber
 \end{eqnarray}
     .
@@ -1083,7 +1096,7 @@ $$
 
 Here we claim that following statements are equivalent:
 
-* (iii) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $X$,
+* (iii) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $X^{\prime}$,
 * (iV) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $$X^{\prime\prime}$$,
 
 (iii) $\Rightarrow$ (iV)
@@ -1094,11 +1107,13 @@ $$L(x, \lambda^{*})$$ is convex with respect to $x$ so that $$x^{*}$$ is also gl
 
 (iV) $\Rightarrow$ (iii)
 
-Since $$X \subseteq X^{\prime\prime}$$, a minimizer on $$X^{\prime\prime}$$ is also a minimizer on $X$.
+Since $$X^{\prime} \subseteq X^{\prime\prime}$$ and $$x^{*} \in X$$, a minimizer on $$X^{\prime\prime}$$ is also a minimizer on $X$.
 
 Therefore, our claim is verified.
-The claim says that if the minimizer exists, $$x^{*} \in X^{\prime\prime}$$.
-Diffierentiable convex function $$L(x, x^{*\prime})$$ attains at $$x^{*}$$ its minimum on $$X^{\prime\prime}$$ if and only if
+
+The claim says that if the minimizer exists, then $$x^{*} \in X^{\prime\prime}$$.
+It is easy to check $$L(\cdot, \lambda^{*})$$ is convex function with respect to $x$.
+$$X^{\prime\prime}$$ is polyhedral set so that from <a href="{{ site.baseurl }}/math/subdifferential.html#example8-polyhedral-set">example</a> diffierentiable convex function $$L(x, x^{*\prime})$$ attains at $$x^{*}$$ its minimum on $$X^{\prime\prime}$$ if and only if
 
 $$
     \nabla_{x} L(x^{*}, \lambda^{*})
@@ -1110,6 +1125,68 @@ $$
 $$
 
 where $$\mu_{i}^{*} \ge 0$$ and
+
+$$
+    I
+    :=
+    \{
+        i \in \{1, \ldots, m- M\}
+        \mid
+        a_{i}^{\mathrm{T}} - b_{i}
+        =
+        0
+    \}
+    .
+$$
+
+Now let us set
+
+$$
+\begin{eqnarray}
+    \lambda_{M + i}^{*}
+    & := &
+        \begin{cases}
+            0
+            &
+            i \notin I
+            \\
+            \mu_{i}^{*}
+            &
+            i \in I
+        \end{cases}
+    \nonumber
+\end{eqnarray}
+$$
+
+With this notation, we have
+
+$$
+\begin{eqnarray}
+    \lambda_{j}^{*}
+    \ge
+    0
+    ,
+    \
+    \lambda_{j}^{*}
+    g^{j}(x^{*})
+    =
+    0,
+    \
+    j = 1, \ldots, m
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \nabla f(x^{*})
+    +
+    \sum_{j=1}^{m}
+        \lambda_{j}^{*}
+        \nabla g^{j}(x^{*})
+    =
+    0
+\end{eqnarray}
+$$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
