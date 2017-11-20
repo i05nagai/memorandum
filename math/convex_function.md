@@ -69,7 +69,7 @@ $f$が$C^{2}$級とすると、以下は同値。
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-### Proposition. 1
+### Proposition 1
 * $f:\mathbb{R}^{N} \rightarrow \mathbb{R}$, $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$を凸関数とする。
 * $a, b \in \mathbb{R}_{\ge 0}$とする。
 
@@ -98,7 +98,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Proposition. 2
+### Proposition 2
 * $$I := \{1, \ldots, m\}$$,
 * $$I_{i} := I \setminus \{i\}$$,
 * $h:\mathbb{R}^{m} \rightarrow \mathbb{R}$,
@@ -174,7 +174,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Proposition. 3
+### Proposition 3
 * $f: \mathbb{R}^{N} \rightarrow \mathbb{R}$,
     * convex
 * $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$,
@@ -258,7 +258,7 @@ By <a href="#proposition8">proposition</a>, level set is convex.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Proposition. 6
+### Proposition 6
 * $f: \mathbb{R}^{N} \rightarrow \mathbb{R}$
     * convex function
 * $$i \in \{1, \ldots, N\}$$,
@@ -346,23 +346,30 @@ $$
 $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$を以下のように定義すると、$f$はconvex functionである。
 
 $$
+\begin{eqnarray}
     f(x)
-    :=
-    \mathrm{dist}(x, C)
-    :=
-    \inf
-    \{
-        \|x - y\|
-        \mid
-        y \in C
-    \}
-    =
-    \min
-    \{
-        \|x - y\|
-        \mid
-        y \in C
-    \}
+    & := &
+        \mathrm{dist}(x, C)
+    \nonumber
+    \\
+    & := &
+        \inf
+        \{
+            \|x - y\|
+            \mid
+            y \in C
+        \}
+    \nonumber
+    \\
+    & = &
+        \min
+        \{
+            \|x - y\|
+            \mid
+            y \in C
+        \}
+    \nonumber
+\end{eqnarray}
 $$
 
 ### proof.
@@ -865,7 +872,7 @@ $$
     \}
 $$
 
-* (3) If $f$ is strictly convex, $$\mathrm{card}(\arg\min_{x \in M}f(x)) = 0, 1$$.
+* (3) If $f$ is strictly convex, $$\mathrm{card}(\arg\min_{x \in M}f(x)) \in \{0, 1\}$$.
 
 ### proof.
 (1)
@@ -1022,6 +1029,190 @@ $$
 $$
 
 By <a href="#proposition5">proposition</a>, level set is convex so that $$\arg \min_{x \in M}f(x)$$ is convex.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Theorem12 Separation theorem between a point and a set
+* $S \subseteq \mathbb{R}^{n}$
+    * closed convex
+* $y \notin S, y \in \mathbb{R}^{n}$,
+
+There exist $$a \in \mathbb{R}^{n}$$, $$c \in \mathbb{R}$$ such that
+
+$$
+\begin{eqnarray}
+    \langle a, y \rangle
+    & > &
+        c
+    \nonumber
+    \\
+    \forall x \in S,
+    \
+    \langle a, x \rangle
+    & \le &
+        c
+    \nonumber
+\end{eqnarray}
+$$
+
+### proof.
+Let $x \in S$ be fixed.
+By <a href="{{ site.baseurl }}/math/hilbert_space.html#theorem-3">projection onto closed convex set over hilbert space</a>, there exists $$x_{0} \in S$$ such that
+
+$$
+\begin{eqnarray}
+    \| x - x_{0}\|
+    & = &
+        \inf_{y \in S} \|x - y\|
+    \nonumber
+    \\
+    \forall y \in S,
+    \
+    \langle x - x_{0}, x_{0} - y \rangle
+    & \ge &
+        0
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+It follows that
+
+$$
+\begin{eqnarray}
+    0
+    & \le &
+        \langle x - x_{0}, x_{0} - y \rangle
+    \nonumber
+    \\
+    & = &
+        \langle x, x_{0} - y \rangle
+        -
+        \langle x_{0}, x_{0} - y \rangle
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    \langle x_{0}, x_{0} - y \rangle
+    \le
+    \langle x, x_{0} - y \rangle
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+On the other hand, $$y \notin S$$,
+
+$$
+\begin{eqnarray}
+    0
+    & < &
+        \|y - x_{0} \|^{2}
+    \nonumber
+    \\
+    & = &
+        \langle y - x_{0}, y - x_{0} \rangle
+    \nonumber
+    \\
+    & = &
+        \langle y, y - x_{0} \rangle
+        -
+        \langle x_{0}, y - x_{0} \rangle
+    \nonumber
+    \\
+    & = &
+        \langle y, y - x_{0} \rangle
+        +
+        \langle x_{0}, x_{0} - y \rangle
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    \|y - x_{0}\|^{2}
+    & \le &
+        \langle y, y - x_{0} \rangle
+        +
+        \langle x, x_{0} - y \rangle
+    \nonumber
+    \\
+    & = &
+        \langle y - x, y - x_{0} \rangle
+    \nonumber
+    \\
+    & = &
+        \langle y - x_{0}, y - x \rangle
+    \nonumber
+\end{eqnarray}
+$$
+
+Now we take $$a := y - x_{0} \in \mathbb{R}^{n}$$.
+Then
+
+$$
+\begin{eqnarray}
+    \|a\|^{2}
+    & \le &
+        \langle a, y - x \rangle
+    \nonumber
+    & = &
+        \langle a, y \rangle
+        -
+        \langle a, x \rangle
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence we have
+
+$$
+    \forall x \in S,
+    \quad
+    \langle a, y \rangle
+    \ge
+    \|a\|^{2}
+    +
+    \langle a, x \rangle
+    .
+$$
+
+Let $$c := \sup_{x \in S}\langle a, x \rangle$$.
+By the above equation, $$c < \infty$$.
+Moreover, since $$\|a\|^{2}$$,
+
+$$
+\begin{eqnarray}
+    \langle a, y \rangle
+    & \ge &
+        \|a\|^{2}
+        +
+        c
+    \nonumber
+    \\
+    & > &
+        c
+    .
+\end{eqnarray}
+$$
+
+By definition  of $c$,
+
+$$
+    \forall x \in S,
+    \quad
+    \langle a, x \rangle
+    \ge
+    c
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
