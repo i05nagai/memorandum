@@ -124,37 +124,21 @@ $$
     \{
         h \in \mathbb{R}^{n}
         \mid
+        \exists \delta > 0,
+        \
+        \text{ s.t. }
+        \
         x^{*}
         +
         th
         \in I,
-        \forall t > 0
+        \
+        \delta > \forall t > 0
     \}
 $$
 
 is said to be tangent cone of $I$.
 
-$$
-\begin{eqnarray}
-    I
-    & := &
-        \{
-            x \in \mathbb{R}^{n}
-            \mid
-            Ax \le b
-        \}
-    \nonumber
-    \\
-    & = &
-        \{
-            x \in \mathbb{R}^{n}
-            \mid
-            a_{i}^{\mathrm{T}}x \le b_{i},
-            \quad
-            i = 1, \ldots, m
-        \}
-\end{eqnarray}
-$$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -271,8 +255,268 @@ is said to be normal cone.
 ### Remark7
 By theorem, $$x^{*}$$ is minimizer of $f$ on I if and only if $$\nabla f(x^{*}) \in N_{I}(x^{*})$$.
 
-<div class="QED" style="text-align: right">$\Box$</div>
+<div class="end-of-statement" style="text-align: right">■</div>
 
+### Example8 Polyhedral set
+We show equivalent condition being minimizer of $f$ when $I$ is polyhedral set.
+Let $I$ be arbitrary polyhedral set, that is,
+
+$$
+\begin{eqnarray}
+    I
+    & := &
+        \{
+            x \in \mathbb{R}^{n}
+            \mid
+            Ax \le b
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            x \in \mathbb{R}^{n}
+            \mid
+            a_{i}^{\mathrm{T}}x \le b_{i},
+            \quad
+            i = 1, \ldots, m
+        \}
+\end{eqnarray}
+$$
+
+Corresponding tangent cone is polyhedral cone
+
+$$
+\begin{eqnarray}
+    T_{I}(x^{*})
+    & = &
+        \{
+            h \in \mathbb{R}^{n}
+            \mid
+            \exists \delta > 0
+            \
+            \text{ s.t. }
+            \
+            \delta > \forall t > 0,
+            \
+            x^{*} + t h \in I,
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            h \in \mathbb{R}^{n}
+            \mid
+            \exists \delta > 0
+            \
+            \text{ s.t. }
+            \
+            \delta > \forall t > 0,
+            \
+            a_{i}^{\mathrm{T}}x^{*}
+            +
+            ta_{i}^{\mathrm{T}} h
+            \le
+            b_{i},
+            \
+            i = 1, \ldots, m,
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            h \in \mathbb{R}^{n}
+            \mid
+            \forall i = 1, \ldots, m,
+            \
+            a_{i}^{\mathrm{T}}x^{*}
+            =
+            b_{i}
+            \Rightarrow
+            a_{i}^{\mathrm{T}} h
+            \le
+            0
+        \}
+        \label{tangent_cone_polyhedral_cone_case_equivalent_transformation}
+    \\
+    & = &
+        \{
+            h \in \mathbb{R}^{n}
+            \mid
+            a_{i}^{\mathrm{T}}h \le 0,
+            \quad
+            \forall i \in J(x^{*})
+        \}
+    \nonumber
+    \\
+    J(x^{*})
+    & := &
+        \{
+            i \in \{1, \ldots, m\}
+            \mid
+            a_{i}^{\mathrm{T}}x^{*}
+            =
+            b_{i}
+        \}
+    \nonumber
+\end{eqnarray}
+$$
+
+Indeed, it is obvious except for the equation $$\eqref{tangent_cone_polyhedral_cone_case_equivalent_transformation}$$.
+So we only show that the equation $$\eqref{tangent_cone_polyhedral_cone_case_equivalent_transformation}$$.
+
+($\subseteq$)
+
+Suppose that $$a_{i}^{\mathrm{T}}x^{*} = b_{i}$$
+
+$$
+   \delta > \forall t > 0,
+   \
+   t a_{i} h \le 0
+$$
+
+Then $$a_{i}^{\mathrm{T}}h \le 0$$.
+
+($\supseteq$)
+
+Since $$x^{*} \in I$$, so that $$a_{i}^{\mathrm{T}}x^{*} \le b_{i}$$.
+If $$a_{i}^{\mathrm{T}}x^{*} = b_{i}$$, then assumption says $$a_{i}^{\mathrm{T}} h \le 0$$.
+
+On the other hand, we suppose $$a_{i}^{\mathrm{T}}x^{*} < b_{i}$$.
+It is easy to check $$a_{i}^{\mathrm{T}}x^{*} + ta_{i}^{\mathrm{T}}h \le b_{i}$$ $$(\forall i)$$ holds if $$a_{i}^{\mathrm{T}}x^{*} = 0$$ $$(\forall i)$$.
+Thus, we assume that there exists $$j = 1, \ldots, m$$ such that $$a_{i}^{\mathrm{T}}h \neq 0$$.
+Then
+
+$$
+    \delta
+    :=
+    \frac{
+        \min
+        \{
+            b_{j} - a_{j}^{\mathrm{T}}x^{*}
+            \mid
+            i = 1, \ldots, m,
+            \
+            b_{j} \neq a_{j}^{\mathrm{T}}x^{*}
+        \}
+    }{
+        \max
+        \{
+            a_{j}^{\mathrm{T}}h
+            \mid
+            j = 1, \ldots, m,
+            \
+            a_{j}^{\mathrm{T}}h \neq 0
+        \}
+    }
+$$
+
+Hence $$\delta > \forall t > 0$$,
+
+$$
+\begin{eqnarray}
+    a_{i}^{\mathrm{T}}x^{*}
+    +
+    ta_{i}^{\mathrm{T}}h
+    & < &
+        a_{i}^{\mathrm{T}}x^{*}
+        +
+        \min
+        \{
+            b_{j} - a_{j}^{\mathrm{T}}x^{*}
+            \mid
+            i = 1, \ldots, m,
+            \
+            b_{j} \neq a_{j}^{\mathrm{T}}x^{*}
+        \}
+    \nonumber
+    \\
+    & \le &
+        b_{j}
+    \nonumber
+\end{eqnarray}
+$$
+
+Therefore the equation $$\eqref{tangent_cone_polyhedral_cone_case_equivalent_transformation}$$ holds.
+
+Corresponding normal cone is
+
+$$
+\begin{eqnarray}
+    N_{I}(x^{*})
+    & = &
+        \{
+            x \in \mathbb{R}_{\ge 0}^{n}
+            \mid
+            \forall h \in T_{I}(x^{*}),
+            \quad
+            h^{\mathrm{T}}x \ge 0
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            x \in \mathbb{R}_{\ge 0}^{n}
+            \mid
+            \forall h \in \mathbb{R}^{n},
+            \
+            \forall i \in J(x^{*}),
+            \
+            a_{i}^{\mathrm{T}}h \le 0
+            \
+            \Rightarrow
+            \
+            h^{\mathrm{T}}x \ge 0
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            x \in \mathbb{R}_{\ge 0}^{n}
+            \mid
+            \forall i \in J(x^{*}),
+            \quad
+            h^{\mathrm{T}}a_{i} \le 0
+            \
+            \Rightarrow
+            \
+            h^{\mathrm{T}}x \ge 0
+        \}
+    \nonumber
+    \\
+    & = &
+        \{
+            x \in \mathbb{R}_{\ge 0}^{n}
+            \mid
+            \lambda \in \mathbb{R}_{\ge 0}^{m},
+            \quad
+            x
+            =
+            \sum_{i \in J(x^{*})}
+                \lambda_{i}(-a_{i})
+        \}
+        \quad
+        (\because \text{homogeneous farkas's lemma})
+\end{eqnarray}
+$$
+
+See <a href="{{ site.baseurl }}/math/linear_programming.html#lemma2-homogeneous-farkas-lemma">farkas's lemma</a>.
+
+By <a href="#remark7">remark</a>, $$x^{*}$$ is minimizer of $f$ if and only if
+
+$$
+    \exists \lambda \in \mathbb{R}_{\ge 0}^{m},
+    \
+    \text{ s.t. }
+    \
+    \nabla f(x^{*})
+    =
+    -
+    \sum_{i \in J(x^{*})}
+        \lambda_{i}^{*}
+        a_{i}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Subderivative - Wikipedia](https://en.wikipedia.org/wiki/Subderivative)
