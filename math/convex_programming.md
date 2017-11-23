@@ -1279,7 +1279,7 @@ $$
 $$
 
 Since $$N \subset X^{\prime}$$ is open subset of $$X^{\prime}$$, $$x^{*}$$ is a local minimizer of the function on $$X^{\prime}$$.
-The function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ is convex function so that by proposition local minimizer is global minimizer.
+The function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ is convex function so that by <a href="{{ site.baseurl }}/math/convex_function.html#theorem11">theorem</a> local minimizer is global minimizer.
 Conversely, if $$x^{*}$$ is a minimizer of $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $$X^{\prime}$$, it is obvious that $$x^{*}$$ is a minimizer of the function on $$X^{\prime\prime}$$ since $$X^{\prime\prime} \subseteq X^{\prime}$$.
 
 Therefore, $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on polyhedral set $$X^{\prime}$$.
