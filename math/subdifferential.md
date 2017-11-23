@@ -66,6 +66,8 @@ closeなのは、明らか。
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Theorem3 Necessary and sufficient condition of optimality for convex function
+* $I \subseteq \mathbb{R}^{n}$
+    * open subset
 * $f: I \rightarrow \mathbb{R}$
     * convex function
 * $$x^{*} \in I$$,
@@ -115,7 +117,8 @@ Hence $$0 \in \partial_{x^{*}}f$$.
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Definiton4
-* $I$,
+* $I \subseteq \mathbb{R}^{n}$
+    * open subset
 * $x^{*} \in I$,
 
 $$
@@ -143,10 +146,11 @@ is said to be tangent cone of $I$.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Proposition5
-* $I$
-    * convex
+* $I \subseteq \mathbb{R}^{n}$
+    * open subset
 * $$x^{*} \in I$$,
-* $f$
+* $f: I \rightarrow \mathbb{R}$
+    * convex function
     * differentiable at $$x^{*}$$
 
 Then following statements are equivalent
