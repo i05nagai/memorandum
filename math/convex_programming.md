@@ -800,18 +800,97 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ## Remark9
-Primal problem of optimization problem and its dual problem 
+The optimal values of primal problem and dual problem are equal to each other if primal problem is convex and satisfiesthe Slater condition.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ## Proposition10
+Following statement are equivalent:
 
-* (1) $$(x^{*}, \lambda^{*})$$ is a saddle point of the Lagrange function $L$
-* (2) $$x^{*}$$ is an optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$ and $$\lambda^{*}$$ is an optimal solution to $$\eqref{convex_programming_problem_dual_problem}$$.
+* (i) $$(x^{*}, \lambda^{*})$$ is a saddle point of the Lagrange function $L$, that is,
 
-If (1) holds, the optimal values in $$\eqref{convex_programming_problem_primal_problem}$$ and in $$\eqref{convex_programming_problem_dual_problem}$$ are equal to each other.
+$$
+    \forall x \in X,
+    \
+    \lambda \ge 0,
+    \
+    L(x, \lambda^{*})
+    \ge
+    L(x^{*}, \lambda^{*})
+    \ge
+    L(x^{*}, \lambda)
+    .
+$$
+
+* (ii)
+    * $$x^{*}$$ is an optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$,
+    * $$\lambda^{*}$$ is an optimal solution to $$\eqref{convex_programming_problem_dual_problem}$$,
+    * optimal values of $$\eqref{convex_programming_problem_primal_problem}$$ and $$\eqref{convex_programming_problem_dual_problem}$$ are equal to each other.
 
 ## proof.
+proof of (i) $$\Rightarrow$$ (ii)
+
+This is <a href="#theorem11-saddle-point-formulation-of-optimality-conditions-in-convex-programming">theorem</a>.
+
+proof of (i) $$\Leftarrow$$ (ii)
+
+$$
+\begin{eqnarray}
+    \forall x \in X,
+    \
+    \lambda \in \mathbb{R}_{\ge 0}^{n},
+    \
+    L(x, \lambda^{*})
+    & \ge &
+        \inf_{x \in X} L(x, \lambda^{*})
+    \nonumber
+    \\
+    & = &
+        \sup_{\lambda \in \mathbb{R}_{\ge 0}^{n}}L(x^{*}, \lambda)
+        \quad
+        (\because \text{ by assumption})
+    \nonumber
+    \\
+    & \ge &
+        L(x^{*},\lambda)
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+    \forall x \in X,
+    \
+    \lambda \ge 0,
+    \
+    L(x, \lambda^{*})
+    \ge
+    L(x^{*}, \lambda)
+    .
+$$
+
+By substituting $$\lambda = \lambda^{*}$$ into RHS, we have
+
+$$
+    \forall x \in X,
+    \
+    L(x, \lambda^{*})
+    \ge
+    L(x^{*}, \lambda^{*})
+    .
+$$
+
+By substituting $$\x = \x^{*}$$ into LHS, we have
+
+$$
+    \lambda \in \mathbb{R}_{\ge 0}^{n},
+    \
+    L(x^{*}, \lambda^{*})
+    \ge
+    L(x^{*}, \lambda)
+    .
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -1119,7 +1198,7 @@ By <a href="#theorem11">theorem</a>, $$x^{*}$$ is optimal solution to $$\eqref{c
 proof of (i) $\Leftarrow$ (ii)
 
 We denote mathematical programming problem as triplet $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$.
-With this notation, our claim is if he optimal solution $$x^{*}$$ of $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$, statement (i) is satisfied.
+With this notation, our claim is if he optimal solution $$x^{*}$$ of $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$, then statement (i) holds.
 Let
 
 $$
@@ -1201,8 +1280,8 @@ $$
 
 Now mathematical programming problem $$(f, X^{\prime\prime}, \{g^{i}\}_{i=1,\ldots,M})$$
 
-* is slater condition,
-* and  satisfiesconvex programming problem.
+* satisfies slater condition,
+* and is convex programming problem.
 
 By <a href="#theorem11">theorem</a>, there exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{n}$$ such that
 
@@ -1262,11 +1341,12 @@ $$
     .
 $$
 
+$$N_{x^{*}} \cap X^{\prime}$$ is open in $$X^{\prime\prime}$$.
 It follows that $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $X^{\prime\prime}$ if and only if $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $X^{\prime}$.
-Indeed, if $$x^{*}$$ is a global minimizer of $$X^{\prime\prime}$$, there exists open set $$N \subset X^{\prime\prime}$$ such that 
+Indeed, if $$x^{*}$$ is a global minimizer of $$X^{\prime\prime}$$, then
 
 $$
-    \forall x \in N,
+    \forall x \in N_{x^{*}} \cap X^{\prime},
     \
     f(x^{*})
     +
@@ -1278,7 +1358,7 @@ $$
     .
 $$
 
-Since $$N \subset X^{\prime}$$ is open subset of $$X^{\prime}$$, $$x^{*}$$ is a local minimizer of the function on $$X^{\prime}$$.
+Since $$N_{x^{*}} \cap X^{\prime}$$ is open subset of $$X^{\prime\prime}$$, $$x^{*}$$ is a local minimizer of the function on $$X^{\prime}$$.
 The function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ is convex function so that by <a href="{{ site.baseurl }}/math/convex_function.html#theorem11">theorem</a> local minimizer is global minimizer.
 Conversely, if $$x^{*}$$ is a minimizer of $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $$X^{\prime}$$, it is obvious that $$x^{*}$$ is a minimizer of the function on $$X^{\prime\prime}$$ since $$X^{\prime\prime} \subseteq X^{\prime}$$.
 
