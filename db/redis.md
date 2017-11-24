@@ -5,6 +5,36 @@ title: Redis
 ## Redis
 in memory KVS.
 
+## DataType
+
+* string
+* hash
+* set
+* sorted set
+* lists
+
+
+## CLI
+以下で指定したhostのredisにcommandを送る。
+
+* https://www.cheatography.com/tasjaevan/cheat-sheets/redis/
+
+```
+redis-cli -h hostname -p port_num command
+```
+
+* `-n <db>`
+    * specify database number
+
+```
+help @[category]
+```
+
+* `KEYS pattern`
+    * `keys *`
+        * 保存されているkey一覧
+* `TYPE keys
+
 
 ## Pipeline
 * [Using pipelining to speedup Redis queries – Redis](https://redis.io/topics/pipelining)
@@ -24,7 +54,6 @@ Serverへの負荷という意味では小さいが、commandの送信はSocket 
 * Use hashes when possible
     * hashは小さくなるようにencodeされるので、最初はhashとして表現できるかを考えるべき
 * Using hashes to abstract a very memory efficient plain key-value store on top of Redis
-    * 
 
 ## Redis Modules
 

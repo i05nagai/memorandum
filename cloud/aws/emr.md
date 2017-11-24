@@ -8,7 +8,28 @@ Elastic Map Reduce
 * Hadoop
 * Spark
 
-両方使えるらしい。
+## custom jar file
+EMRでdefaultで提供されいてるjarファイルがある。
+
+* script-runner.jar
+    * cluster内でscriptを実行する
+    * `s3://region.elasticmapreduce/libs/script-runner/script-runner.jar`
+        * reagionはEMRのregion
+
+
+```sh
+aws emr add-steps \
+    --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://mybucket/script-path/my_script.sh","--option","args"]
+```
+
+
+* command-runner.jar
+    * [Command Runner - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ReleaseGuide/emr-commandrunner.html)
+    * 以下のcommandを実行する場合はこちらを使う
+        * spark-submit
+        * s3-dist-cp
+
+
 
 ## Steps
 Clusterでの処理は、stepという形で追加する。
@@ -33,6 +54,23 @@ Client modeでは、ローカルのファイルを利用できる。
 * Args
     * 必要な引数
     * 配列として渡す
+
+Spark programm
+
+
+```sh
+aws emr add-steps \
+    --cluster-id j-2AXXXXXXGAPLF \
+    --steps Type=CUSTOM_JAR,Name="Spark Program",Jar="command-runner.jar",ActionOnFailure=CONTINUE,Args=[spark-example,SparkPi,10]
+```
+
+
+```sh
+aws emr add-steps \
+    --cluster-id j-2AXXXXXXGAPLF \
+    --steps Name="Command Runner",Jar="command-runner.jar",Args=["spark-submit","Args..."]
+```
+
 
 ### Spark
 * [Spark ステップの追加 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ReleaseGuide/emr-spark-submit-step.html)
@@ -69,13 +107,35 @@ aws emr create-cluster \
 --use-default-roles
 ```
 
-作成済みのクラスタにstepを追加
+作成済みのクラスタにstepを追加(shorthand)
 
 ```sh
 aws emr add-steps
     --cluster-id j-2AXXXXXXGAPLF
     --steps Type=Spark,Name="Spark Program",ActionOnFailure=CONTINUE,Args=[--class,org.apache.spark.examples.SparkPi,/usr/lib/spark/lib/spark-examples.jar,10]
 ```
+
+作成済みのクラスタにstepを追加(json file)
+
+```sh
+aws emr add-steps
+    --cluster-id j-2AXXXXXXGAPLF
+    --steps path_to_json
+```
+
+```json
+[
+  {
+    "Name": "string",
+    "Args": ["string", ...],
+    "Jar": "string",
+    "ActionOnFailure": "TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE",
+    "MainClass": "string",
+    "Type": "CUSTOM_JAR"|"STREAMING"|"HIVE"|"PIG"|"IMPALA",
+    "Properties": "string"
+  }
+]
+````
 
 stepの情報を取得
 
@@ -195,7 +255,7 @@ For Chrome
             <match enabled="true" name="*10*.compute*" pattern="*10*.compute*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false" /> 
             <match enabled="true" name="*.compute.internal*" pattern="*.compute.internal*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false"/>
             <match enabled="true" name="*.ec2.internal* " pattern="*.ec2.internal*" isRegEx="false" isBlackList="false" isMultiLine="false" caseSensitive="false" fromSubscription="false"/>	  
-	   </matches>
+       </matches>
          <manualconf host="localhost" port="8157" socksversion="5" isSocks="true" username="" password="" domain="" />
       </proxy>
    </proxies>
@@ -392,6 +452,112 @@ configurationに以下を設定する。
   }
 }
 ```
+
+## Run jupyter notebook and jupyter hub on Amazon EMR
+* [Run Jupyter Notebook and JupyterHub on Amazon EMR | AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/running-jupyter-notebook-and-jupyterhub-on-amazon-emr/)
+
+以下にEMRのsetup用のscriptが追いてある。
+
+```sh
+s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh
+```
+
+以下のbootstrap commandで起動時にsetup可能。
+
+```sh
+aws emr create-cluster \
+    --release-label emr-5.8.0 \
+  --name 'emr-5.8.0 jupyter/ cli example' \
+  --applications Name=Hadoop Name=Hive Name=Spark Name=Pig Name=Tez Name=Ganglia Name=Presto \
+  --ec2-attributes KeyName=<your-ec2-key>,InstanceProfile=EMR_EC2_DefaultRole \
+  --service-role EMR_DefaultRole \  
+  --instance-groups \
+    InstanceGroupType=MASTER,InstanceCount=1,InstanceType=c3.4xlarge \
+    InstanceGroupType=CORE,InstanceCount=4,InstanceType=c3.4xlarge \
+  --region us-east-1 \
+  --log-uri s3://<your-s3-bucket>/emr-logs/ \
+  --bootstrap-actions \
+    Name='Install Jupyter notebook',Path="s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh",Args=[--r,--julia,--toree,--torch,--ruby,--ds-packages,--ml-packages,--python-packages,'ggplot nilearn',--port,8880,--password,jupyter,--jupyterhub,--jupyterhub-port,8001,--cached-install,--notebook-dir,s3://<your-s3-bucket>/notebooks/,--copy-samples]
+```
+
+Stepでついっかする場合は、以下のstepを追加する。
+
+```sh
+aws emr add-steps
+    --cluster-id j-2AXXXXXXGAPLF
+    --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh","--toree","--ds-packages","--python-packages","'ggplot nilearn'","--ml-packages","--cached-install","--notebook-dir","s3://retty-dpi/work_nagai/jupyter_notebook/","--port","8080","--jupyterhub","--jupyterhub-port","8001","--copy-samples"]
+```
+
+```json
+[
+  {
+    "Name": "Install jupyter notebook",
+    "Args": ["string", ...],
+    "Jar": "CUSTOM_JAR",
+    "ActionOnFailure": "TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE",
+    "MainClass": "string",
+    "Type": "CUSTOM_JAR"|"STREAMING"|"HIVE"|"PIG"|"IMPALA",
+    "Properties": "string"
+  }
+]
+````
+
+* --r
+    * Install the IRKernel for R.
+* --toree
+    * sparkを使う場合は必要
+    * Install the Apache Toree kernel that supports Scala, PySpark, SQL, SparkR for Apache Spark.
+* --julia
+    * Install the IJulia kernel for Julia.
+* --torch
+    * Install the iTorch kernel for Torch (machine learning and visualization).
+* --ruby
+    * Install the iRuby kernel for Ruby.
+* --ds-packages
+    * Install the Python data science-related packages (scikit-learn pandas statsmodels).
+* --ml-packages
+    * Install the Python machine learning-related packages (theano keras tensorflow).
+* --bigdl
+    * Install Intel’s BigDL deep learning libraries.
+* `--python-packages 'package1,package2'`
+    * Install specific Python packages (for example, ggplot and nilearn).
+* --port
+    * Set the port for Jupyter notebook. The default is 8888.
+* --user
+    * Set the default user for JupyterHub, default is jupyter
+* `--password string`
+    * Set the password for the Jupyter notebook.
+* --localhost-only
+    * Restrict Jupyter to listen on localhost only. The default is to listen on all IP addresses.
+* --jupyterhub
+    * Install JupyterHub.
+* --jupyterhub-port
+    * Set the port for JuputerHub. The default is 8000.
+* --notebook-dir
+    * S3にjupyter notbookを保存できる
+    * localも指定可能
+    * Specify the notebook folder. This could be a local directory or an S3 bucket.
+* --cached-install
+    * Use some cached dependency artifacts on S3 to speed up installation.
+* --ssl
+    * Enable SSL. For production, make sure to use your own certificate and key files.
+* --copy-samples
+    * Copy sample notebooks to the notebook folder.
+* --spark-opts
+    * User-supplied Spark options to override the default values.
+* --python3
+    * Packages and apps installed for Python 3 instead of Python 2.
+* --s3fs
+    * Use s3fs instead of the default, s3contents for storing notebooks on Amazon S3. This argument can cause slowness if the S3 bucket has lots of files.
+
+
+default
+
+* paswordなし port `8888`
+* JupyterHub
+    * port: 8000
+
+
 
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
