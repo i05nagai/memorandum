@@ -881,7 +881,7 @@ $$
     .
 $$
 
-By substituting $$\x = \x^{*}$$ into LHS, we have
+By substituting $$x = x^{*}$$ into LHS, we have
 
 $$
     \lambda \in \mathbb{R}_{\ge 0}^{n},
