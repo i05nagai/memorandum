@@ -105,6 +105,12 @@ data/
 ]
 ```
 
+
+* fit
+    * `x`
+        * numpy array
+        * 入力のlayerが複数あるときはlist of numpy array、多次元であってもlayerが1つならnumpy array
+
 * fit_generator
     * `steps_per_epoch`
         * number of unique samples / batch_size
