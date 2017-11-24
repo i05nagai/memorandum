@@ -37,6 +37,63 @@ $$
 \end{equation}
 $$
 
+We denote mathmatical programming by $$(f, X, g, h)$$.
+
+Mathematical programming is said to be feasible if 
+
+$$
+    \{
+        x \in X
+        \mid
+        i= 1, \ldots, m,
+        \
+        g^{i}(x)
+        \le
+        0,
+        \quad
+        j = 1, \ldots, k,
+        \
+        h^{j}(x) = 0
+    \}
+    \neq
+    \emptyset
+    .
+$$
+
+The set above is called feasible solution to $$\eqref{mathematical_programming_problem}$$.
+The value
+
+$$
+    c^{*}
+    :=
+    \inf
+    \{
+        f(x)
+        \mid
+        x \in X
+        \quad
+        i = 1, \ldots, m,
+        \
+        g^{i}(x) \le 0,
+        \quad
+        j = 1, \ldots, k,
+        \
+        h^{j}(x) = 0,
+    \}
+$$
+
+is said to be optimal value of the problem.
+
+$$x^{*} \in X$$ is said to be optimal solution to $$\eqref{mathematical_programming_problem}$$ if
+
+$$
+    f(x^{*})
+    =
+    c^{*}
+    .
+$$
+
+
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Definition2 Convex programming problem
@@ -71,23 +128,6 @@ $$
     .
     \label{convex_programming_problem}
 \end{equation}
-$$
-
-We denote
-
-$$
-    \mathcal{A}(f, X, g)
-    :=
-    \left\{
-        f(x)
-        \mid
-        x \in X,
-        \
-        i = 1, \ldots, m,
-        \
-        g^{i}(x) \le 0,
-    \right\}
-    .
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
@@ -586,9 +626,8 @@ $$
 
 ## Theorem7 Convex programming duality theorem
 * $$n, m, k \in \mathbb{N}$$,
-* $$X \subset \mathbb{R}^{n}$$,
-    * convex
-* $$f_{0}: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
+* $$X \subseteq \mathbb{R}^{n}$$,
+* $$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
 * $$g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$$,
     * $$g(x) = (g^{1}(x), \ldots, g^{m}(x))$$,
 
@@ -785,18 +824,26 @@ Statements:
 * (i) There exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that $$(x^{*}, \lambda^{*})$$ is asaddle point of the Lagrange function $$L(x, \lambda)$$ i.e.
 
 $$
-\begin{equation}
+\begin{eqnarray}
     \forall x \in X,
     \
     \lambda \in \mathbb{R}_{\ge 0}^{m},
     \quad
-    L(x, \lambda^{*})
-    \ge
-    L(x^{*}, \lambda^{*})
-    \ge
-    L(x^{*}, \lambda),
-    \label{theorem_saddle_point_of_lagrange_function}
-\end{equation}
+    & &
+        L(x, \lambda^{*})
+        \ge
+        L(x^{*}, \lambda^{*})
+        \ge
+        L(x^{*}, \lambda),
+        \label{theorem_saddle_point_of_lagrange_function}
+    \\
+    \forall i = 1, \ldots, m,
+    & &
+        \lambda^{*}g^{i}(x^{*})
+        =
+        0
+    \nonumber
+\end{eqnarray}
 $$
 
 * (ii) $x^{*}$ is a optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$
@@ -815,7 +862,7 @@ if (ii) holds, then (i) holds
 ## proof.
 (1)
 Suppose that there exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that $$\eqref{theorem_saddle_point_of_lagrange_function}$$ is satisfied.
-First of all, $$x^{*}$$ is feasible to $$\eqref{convex_programming_problem_primal_problem}$$.
+We first show that $$x^{*}$$ is feasible to $$\eqref{convex_programming_problem_primal_problem}$$.
 Indeed, if $$g^{j}(x^{*}) > 0$$, then
 
 $$
@@ -826,7 +873,7 @@ $$
     .
 $$
 
-But this is forbidden by the second inequality in $$\eqref{theorem_saddle_point_of_lagrange_function}$$.
+However this is forbidden by the second inequality in $$\eqref{theorem_saddle_point_of_lagrange_function}$$.
 
 Since $x^{*}$ is feasible, $$g^{j}(x^{*}) \le 0 \ (\forall j)$$.
 Hence $$\sup_{\lambda \in \mathbb{R}_{\ge 0}^{m}}L(x^{*}, \lambda) = f(x^{*})$$.
@@ -975,7 +1022,7 @@ $$
     & &
         g^{j}: \text{ nonlinear}
         \Rightarrow
-        g^{j}(x) \ge 0
+        g^{j}(x) < 0
     \\
     & &
         g^{j}: \text{ linear}
@@ -1022,6 +1069,7 @@ $$
             \nabla g^{j}(x^{*})
         =
         0
+        \label{theorem_derivative_of_lagrange_dual_function}
 \end{eqnarray}
 $$
 
@@ -1033,159 +1081,292 @@ Then
 * (2) Necessity and sufficiency for an optimal value: Under restricted Slater condition, (i) $$\Leftrightarrow$$ (ii).
 
 ## proof.
-(i) $\Leftarrow$ (ii)
+proof of (i) $\Rightarrow$ (ii)
 
-Assuming $$x^{*}$$ is a optimal solution of $$\eqref{convex_programming_problem_primal_problem}$$ on $X$.
+Let $L(x, \lambda)$ be lagurange dual function of $$\eqref{convex_programming_problem_primal_problem}$$.
+By $$\eqref{theorem_derivative_of_lagrange_dual_function}$$,
+
+$$
+\begin{eqnarray}
+    \nabla_{x} L(x^{*}, \lambda^{*})
+    =
+    0
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $$L(x, \lambda)$$ is convex with respect to $x$, $$x^{*}$$ is global minimizer of $$L(x, \lambda^{*})$$ on $X$.
+By assumption,
+
+$$
+\begin{eqnarray}
+    \forall \lambda \in \mathbb{R}_{\ge 0}^{n},
+    \
+    & &
+        L(x^{*}, \lambda^{*})
+        =
+        f(x^{*})
+        \ge
+        L(x^{*}, \lambda)
+    .
+\end{eqnarray}
+$$
+
+Hence $$L(x^{*}, \lambda^{*})$$ satisfies equation $$\eqref{theorem_saddle_point_of_lagrange_function}$$.
+By <a href="#theorem11">theorem</a>, $$x^{*}$$ is optimal solution to $$\eqref{convex_programming_problem_primal_problem}$$.
+
+proof of (i) $\Leftarrow$ (ii)
+
+We denote mathematical programming problem as triplet $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$.
+With this notation, our claim is if he optimal solution $$x^{*}$$ of $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$, statement (i) is satisfied.
 Let
 
 $$
 \begin{eqnarray}
-    X^{\prime\prime}
+    X^{\prime}
     & := &
         \{
             x \in \mathbb{R}^{n}
             \mid
-            g^{i + M}(x)
-            =
-            a_{i}^{\mathrm{T}}x - b_{i}
+            g^{i}(x)
             \le
             0,
             \
-            i = 1, \ldots, m - M
+            i = 1, \ldots, M
         \}
         ,
     \nonumber
     \\
-    X^{\prime}
+    X^{\prime\prime}
     & := &
-        X \cap X^{\prime\prime}
+        X \cap X^{\prime}
         ,
     \nonumber
 \end{eqnarray}
-    .
 $$
 
-To show that $$x^{*}$$ is an optimal solution, $$\exists \lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that
+We show that $$x^{*}$$ is optimal solution to $$(f, X, \{g^{i}\}_{i=1,\ldots,m})$$ if and only if  $$x^{*}$$ is optimal solution to $$(f, X^{\prime\prime}, \{g^{i}\}_{i=1,\ldots,M})$$.
+Indeed,
 
 $$
 \begin{eqnarray}
-    \lambda_{j}^{*}
-    g^{j}(x^{*})
+    \{
+        f(x)
+        \mid
+        x \in X,
+        \
+        i = 1, \ldots, m,
+        \
+        g^{i}(x)
+        \le
+        0
+    \}
     & = &
-        0,
-        \quad
-        j = 1, \ldots, m,
+        \{
+            f(x)
+            \mid
+            x \in X,
+            \
+            i = M+1, \ldots, m,
+            \
+            g^{i}(x)
+            \le
+            0
+            \
+            i = 1, \ldots, M,
+            \
+            g^{i}(x)
+            \le
+            0
+        \}
     \nonumber
     \\
-    x^{*}
-    & \in &
-        \arg \min_{x \in X}
-            \left(
-                f(x)
-                +
-                \sum_{j=1}^{m}
-                    \lambda_{j}^{*}g^{j}(x)
-            \right)
-    \nonumber
-    \\
     & = &
-        \arg \min_{x \in X}
-            L(x, \lambda^{*})
+        \{
+            f(x)
+            \mid
+            x \in X \cap X^{\prime},
+            \
+            i = 1, \ldots, M,
+            \
+            g^{i}(x)
+            \le
+            0
+        \}
+    \nonumber
+    .
 \end{eqnarray}
 $$
 
-Here we claim that following statements are equivalent:
+Now mathematical programming problem $$(f, X^{\prime\prime}, \{g^{i}\}_{i=1,\ldots,M})$$
 
-* (iii) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $X^{\prime}$,
-* (iV) $$x^{*}$$ is a minimizer of $$L(x, \lambda^{*})$$ on $$X^{\prime\prime}$$,
+* is slater condition,
+* and  satisfiesconvex programming problem.
 
-(iii) $\Rightarrow$ (iV)
-
-Since $$x^{*} \in \mathrm{int}(X)$$, $$x^{*}$$ is local minimizer of $f$ on $X$.
-It follows that $$x^{*}$$ is also local minimizer of $$X^{\prime\prime}$$.
-$$L(x, \lambda^{*})$$ is convex with respect to $x$ so that $$x^{*}$$ is also global minimizer of $$X^{\prime\prime}$$ by <a href="{{ site.baseurl }}/math/convex_function.html#theorem11">theorem</a>.
-
-(iV) $\Rightarrow$ (iii)
-
-Since $$X^{\prime} \subseteq X^{\prime\prime}$$ and $$x^{*} \in X$$, a minimizer on $$X^{\prime\prime}$$ is also a minimizer on $X$.
-
-Therefore, our claim is verified.
-
-The claim says that if the minimizer exists, then $$x^{*} \in X^{\prime\prime}$$.
-It is easy to check $$L(\cdot, \lambda^{*})$$ is convex function with respect to $x$.
-$$X^{\prime\prime}$$ is polyhedral set so that from <a href="{{ site.baseurl }}/math/subdifferential.html#example8-polyhedral-set">example</a> diffierentiable convex function $$L(x, x^{*\prime})$$ attains at $$x^{*}$$ its minimum on $$X^{\prime\prime}$$ if and only if
+By <a href="#theorem11">theorem</a>, there exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{n}$$ such that
 
 $$
-    \nabla_{x} L(x^{*}, \lambda^{*})
+\begin{eqnarray}
+    i = 1, \ldots, M,
+    \
+    & &
+        \lambda^{*}g^{i}(x^{*}) = 0
+        \label{theorem_kkt_complementary_slackness}
+    \\
+    \forall x \in X,
+    \
+    \forall \lambda \in \mathbb{R}_{\ge 0}^{n},
+    \
+    & &
+        f(x)
+        +
+        \sum_{j=1}^{M}
+            \lambda_{j}^{*}g^{j}(x)
+        \ge
+        f(x^{*})
+        \ge
+        f(x^{*})
+        +
+        \sum_{j=1}^{M}
+            \lambda_{j}g^{j}(x^{*})
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+This implies
+
+$$
+    x^{*}
+    \in
+    \arg \min_{x \in X^{\prime\prime}}
+        \left\{
+            f(x)
+            +
+            \sum_{j=1}^{M}
+                \lambda_{j}^{*}g^{j}(x)
+        \right\}
+    .
+$$
+
+$$f(x) + \sum_{j=1}^{M} \lambda^{*}g^{j}(x)$$ is convex function with respect to $x$.
+Since $$x^{*} \in \mathrm{int}(X)$$,
+
+$$
+    \exists N_{x^{*}} \subset X: \text{open}
+    \
+    \text{ s.t. }
+    \
+    x^{*} \in N_{x^{*}}
+    .
+$$
+
+It follows that $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $X^{\prime\prime}$ if and only if $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $X^{\prime}$.
+Indeed, if $$x^{*}$$ is a global minimizer of $$X^{\prime\prime}$$, there exists open set $$N \subset X^{\prime\prime}$$ such that 
+
+$$
+    \forall x \in N,
+    \
+    f(x^{*})
     +
-    \sum_{i \in I}
-        \mu_{i}^{*}a_{i}
+    \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x^{*})
+    \le
+    f(x)
+    +
+    \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)
+    .
+$$
+
+Since $$N \subset X^{\prime}$$ is open subset of $$X^{\prime}$$, $$x^{*}$$ is a local minimizer of the function on $$X^{\prime}$$.
+The function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ is convex function so that by proposition local minimizer is global minimizer.
+Conversely, if $$x^{*}$$ is a minimizer of $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on $$X^{\prime}$$, it is obvious that $$x^{*}$$ is a minimizer of the function on $$X^{\prime\prime}$$ since $$X^{\prime\prime} \subseteq X^{\prime}$$.
+
+Therefore, $$x^{*}$$ is a minimizer of the function $$f(x) + \sum_{j=1}^{M}\lambda_{j}^{*}g^{j}(x)$$ on polyhedral set $$X^{\prime}$$.
+By <a href="{{ site.baseurl }}/math/subdifferential.html#example8-polyhedral-set">example</a>, that is equivalent to
+
+$$
+\begin{equation}
+    \nabla f(x)
+    +
+    \sum_{j=1}^{M}
+        \lambda_{j}^{*}
+        \nabla g^{j}(x)
+    +
+    \sum_{i \in J(x^{*})}
+        \mu_{i}^{*}
+        a_{i}
     =
     0
+    \label{theorem_kkt_polyhedral_set_equivalent_condition}
+\end{equation}
 $$
 
-where $$\mu_{i}^{*} \ge 0$$ and
+where $$\mu_{i}^{*} \ge 0$$ and 
 
 $$
-    I
+    J(x^{*})
     :=
     \{
-        i \in \{1, \ldots, m- M\}
+        i \in \{M+1, \ldots, m\}
         \mid
-        a_{i}^{\mathrm{T}} - b_{i}
+        a_{i}^{\mathrm{T}}x^{*}
         =
-        0
+        b_{i}
     \}
     .
 $$
 
-Now let us set
+Now let 
 
 $$
 \begin{eqnarray}
-    \lambda_{M + i}^{*}
-    & := &
-        \begin{cases}
-            0
-            &
-            i \notin I
-            \\
-            \mu_{i}^{*}
-            &
+    i = M + 1, \ldots, m,
+    \
+    \lambda_{i}^{*}
+    :=
+    \begin{cases}
+        \mu_{i}^{*}
+        &
             i \in I
-        \end{cases}
-    \nonumber
+        \\
+        0
+        &
+            i \notin I
+    \end{cases}
 \end{eqnarray}
 $$
 
-With this notation, we have
+By combining equation $$\eqref{theorem_kkt_complementary_slackness}$$, we have
 
 $$
 \begin{eqnarray}
-    \lambda_{j}^{*}
-    \ge
-    0
-    ,
+    \forall j = 1, \ldots, m,
+    \
+    \lambda_{j}^{*} \ge 0,
     \
     \lambda_{j}^{*}
     g^{j}(x^{*})
     =
-    0,
-    \
-    j = 1, \ldots, m
+    0
+    .
+    \nonumber
 \end{eqnarray}
 $$
 
+Moreover, $$\eqref{theorem_kkt_polyhedral_set_equivalent_condition}$$ says that
+
 $$
-\begin{eqnarray}
-    \nabla f(x^{*})
+\begin{equation}
+    \nabla f(x)
     +
     \sum_{j=1}^{m}
         \lambda_{j}^{*}
-        \nabla g^{j}(x^{*})
+        \nabla g^{j}(x)
     =
     0
-\end{eqnarray}
+    .
+\end{equation}
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
