@@ -427,9 +427,14 @@ BashOperatorで`spark-submit`をする
 
 * [Common Pitfalls - Airflow - Apache Software Foundation](https://cwiki.apache.org/confluence/display/AIRFLOW/Common+Pitfalls)
 
+### worker and Scheduler need to access dag folder
+schedulerとworkerからdagsのfolderは見えている必要がある。
+webserverも見えている必要がある。
+
+workerやschedulerをremoteやdockerで扱う場合は注意が必要。
+
 ### With postgres
 postgresを使う場合は`psycopg2`と合わせて使うことが推奨されている。
-
 
 ```cfg
 [core]
