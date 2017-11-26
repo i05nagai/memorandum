@@ -713,6 +713,10 @@ docker-compose -f docker-compose-CeleryExecutor.yml up -d
 docker-composeの`volumes`ではなぜかファイルがディレクトリとしてマウントされてしまう場合がある。
 その場合は、`Dockerfile`を直接編集して、`COPY requirements.txt /requirements.txt`をつけてbuildする。
 
+## Multinode
+* http://site.clairvoyantsoft.com/setting-apache-airflow-cluster/
+
+
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
 * [Airflowによるデータパイプラインのスケジュールとモニタリング - Speee DEVELOPER BLOG](http://tech.speee.jp/entry/2016/07/07/050000)
