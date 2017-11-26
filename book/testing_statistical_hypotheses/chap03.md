@@ -9,7 +9,12 @@ book_chapter: 3
 ここでは、仮説を採択するか棄却するかの2-side decision prolblemを扱う。
 このような決定問題を 仮説のtest（検定） という。
 
-* $X$
+* $$(\Omega, \mathcal{F}, P)$$,
+    * probability sp.
+* $$(\mathcal{X}, \mathcal{A})$$,
+    * measurable sp.
+* $X: \Omega \rightarrow \mathcal{X}$
+    * r.v.
 * $$\mathcal{P} := \{P_{\theta} \mid \theta \in \Theta\}$$,
 * $H, K \subset \mathcal{P}$
     * $\mathcal{P}$の分割
@@ -18,15 +23,16 @@ book_chapter: 3
 * $$\Theta_{H}, \Theta_{K}$$,
     * $H, K$に対応するパラメータの分割
     * $$\Theta_{H} \cup \Theta_{K} = \Theta$$,
-* $$d_{0}, d_{1}$$,
+* $$D := \{d_{0}, d_{1}\}$$,
+    * decision space
     * $$d_{0}$$は、仮説を採択するという決定
     * $$d_{1}$$は、仮説を棄却するという決定
-* $$S_{0}, S_{1}$$,
+* $$\delta_{i}: \mathcal{X} \rightarrow D$$,
+* $$S_{i} := \{X(\omega) \in \mathcal{X} \mid \omega \in \Omega,\ \delta(X(\omega)) = d_{i} \} \ (i = 0, 1)$$,
     * $X$の値域の分割
     * $$S_{0}$$の時採択となるようにとる
     * $$S_{1}$$の時棄却となるようにとる
-    * $$S_{1}$$はcritical regionともいわれる。
-    * $$S_{i} := \{X(\omega) \mid \omega \in \Omega,\ \delta(X(\omega)) = d_{i} \}$$,
+    * $$S_{1}$$はcritical regionともいわれる
 
 検定の2つのえらー。
 
@@ -64,7 +70,7 @@ $$
 \end{equation}
 $$
 
-仮説が正しい（つまり、parameterが$\theta \in \Theta{H}$)の時の、棄却するという決定$d_{1}$を取る確率が$\alpha$以下であるとする。
+仮説が正しい（つまり、parameterが$\theta \in \Theta_{H}$)の時の、棄却するという決定$d_{1}$を取る確率が$\alpha$以下であるとする。
 この条件のもと、仮説が間違っている（つまり、parameterが$\theta \in \Theta_{K}$)ときの、採択する確率を最小にするようにする。
 つまり、以下の最適化問題を解く。
 
@@ -126,6 +132,8 @@ $$\eqref{chap03_3_3_size}$$の左辺は、size of the testと呼ばれるもの�
 
 $$
 \begin{equation}
+    \theta \in \Theta_{K},
+    \
     P_{\theta}(\delta(X) = d_{1})
     =
     P_{\theta}(X \in S_{1})
@@ -133,18 +141,15 @@ $$
 \end{equation}
 $$
 
-また、Error of the second kindを$\Theta$全体で定義された関数とみなした$\beta: \Theta \rightarrow [0, 1]$をpower function of the testという。
+また、Error of the second kindを$\Theta_{K}$で定義された関数とみなした$\beta: \Theta_{K} \rightarrow [0, 1]$をpower function of the testという。
 
 $$
-    \theta \in \Theta,
+    \theta \in \Theta_{K},
     \
     \beta(\theta)
     :=
     P_{\theta}(\delta(X) = d_{1})
 $$
-
-* $\alpha$はError of the first kindの上限
-* Error of the second kindは最小化
 
 Error of the first kindの値については問題ごとに設定するしかない。
 $\alpha$の値は0.05や0.01が使われることが多い。
@@ -160,10 +165,13 @@ powerと両立した$\alpha$の選び方については、Lehmann (1958), Arrow(
 仮定が成り立つとかんがえられる時は、十分significance levelを小さくする。
 
 次に、randomized testについて述べる。
-* $0 \le \phi(x) \le 1$をcritical functionという
 
-* $X$
+* $0 \le \phi(x) \le 1$
+    * critical function
+* $X: \Omega \rightarrow \mathcal{X}$
+    * r.v.
 * $P_{\theta}$
+    * prob. measure on $$(\mathcal{X}, \mathcal{A})$$,
 
 randomized testのrejectionの確率は
 
@@ -172,7 +180,7 @@ $$
     :=
     E_{\theta}
     \left[
-        \phi(X)
+        \phi
     \right]
     =
     \int
@@ -181,15 +189,12 @@ $$
 $$
 
 で定義する。
-また、powerは
 
 $$
-    \forall \theta \in \Theta_{K},
-    \
-    \beta_{\phi}(\theta)
+    \beta_{\phi}: \Theta_{K} \rightarrow [0, 1]
 $$
 
-で定義する。
+is said to be power.
 $\phi$は、Error of the first kindとError of the second kindを減らすように選ぶべきである。
 よって、
 
@@ -208,7 +213,7 @@ $$
 \begin{equation}
     \theta \in \Theta_{H},
     \
-    \mathrm{E}_{\theta}(\phi(X))
+    \mathrm{E}_{\theta}(\phi)
     \le
     \alpha,
     \label{chap03_3_5}
@@ -227,7 +232,7 @@ $$
     \\
     \mathrm{subject\ to}
     & & &
-        \mathrm{E}_{\theta}(\phi(X))
+        \mathrm{E}_{\theta}(\phi)
         \le
         \alpha,
         \
@@ -280,23 +285,71 @@ $$
 \end{eqnarray}
 $$
 
-### Defintion. test
+### Defintion test
 * $\phi: \mathcal{X} \rightarrow [0, 1]$
-    * 可測
+    * mesurable
+* $\alpha \in [0, 1]$,
 
-以下を満たす$\phi$を、水準$\alpha$の検定$\phi$という。
+$\phi$ is said to be test at level $\alpha$ if
 
 $$
 \begin{equation}
-    \forall
-    \theta \in \Theta_{H},
+    \sup_{\theta \in \Theta_{H}}
+        \mathrm{E}_{\theta}
+        \left[
+            \phi
+        \right]
+    \le
+    \alpha
+    .
+    \nonumber
+\end{equation}
+$$
+
+We denote by $\Phi_{\alpha}$ a set of test at level $\alpha$, that is,
+
+$$
+    \Phi_{\alpha}
+    :=
+    \{
+        \phi: \text{test}
+        \mid
+        \theta \in \Theta_{H},
+        \
+        \mathrm{E}_{\theta}
+        \left[
+            \phi
+        \right]
+        \le
+        \alpha
+    \}
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+### Defintion most poweful test
+* $\alpha \in [0, 1]$,
+* $\phi: \mathcal{X} \rightarrow [0, 1]$
+    * test at level $\alpha$
+
+$\phi$ is said to be most poweful test at level $\alpha$ if
+
+$$
+\begin{equation}
+    \forall \phi_{0} \in \Phi_{\alpha},
     \
+    \forall \theta \in \Theta_{K},
+    \
+    \mathrm{E}_{\theta}
+    \left[
+        \phi_{0}
+    \right]
+    \ge
     \mathrm{E}_{\theta}
     \left[
         \phi
     \right]
-    \le
-    \alpha
     \nonumber
 \end{equation}
 $$
@@ -339,134 +392,3 @@ $$
 $$
 
 <div style="text-align: right">■</div>
-
-## 3.2 THe Neyman-Pearson Fundamental Lemma
-分布の族が、simpleとは族がただ1つからなる場合を指す。
-そうでない場合をcompositeと呼ぶ。
-
-$H, K$がsimpleの場合を考える。
-対応する分布をそれぞれ、$$P_{0}, P_{1}$$とする。
-$X$は離散値とする。
-Criticial Reagionが$S$とすると、$$P(X \in S) = \sum_{x \in S}P(X = x)$$より、 最適化問題は以下のようにかける。
-
-$$
-\begin{align}
-    \min
-    & & &
-        \sum_{x \notin S}
-            P_{1}(X = x)
-    \nonumber
-    \\
-    \mathrm{subject\ to}
-    & & &
-        \sum_{x \in S}
-            P_{0}(X = x)
-        \le
-        \alpha,
-        \label{chap03_3_6}
-\end{align}
-$$
-
-$$
-    r(x)
-    :=
-    \frac{
-        P_{0}(X = x)
-    }{
-        P_{1}(X = x)
-    }
-$$
-
-$$
-    P_{0}(X \in S)
-    =
-    \sum_{x:r(x) > c}
-        P(X = x)
-    = \alpha
-$$
-
-### Theorem 3.2.1
-* $P_{0}, P_{1}$
-    * $X$の分布
-* $p_{0}, p_{1}$
-    * $P_{i}$の$\mu$に対する密度関数
-* $\mu$
-    * measure
-
-このとき、hypothesis $$H = {P_{0}}$$, alternatives $K = {P_{0}}$とすると、$\exists k, r \in \mathbb{R}$
-
-$$
-\begin{equation}
-    \mathrm{E}_{0}
-    \left[
-        \phi(X)
-    \right]
-    =
-    \alpha
-\end{equation}
-$$
-
-$$
-\begin{equation}
-    \phi(x)
-    =
-    \begin{cases}	
-        1
-            &
-            p_{1}(x) > kp_{0}(x)
-            \\
-        0
-            & 
-            p_{1}(x) < kp_{0}(x)
-            \\
-        r
-            & 
-            p_{1}(x) = kp_{0}(x)
-    \end{cases}
-\end{equation}
-$$
-
-### proof.
-
-$$
-\begin{eqnarray}
-    \alpha(c)
-    & := &
-        P_{0}(p_{1}(X) > c p_{0}(X))
-    \nonumber
-    \\
-    & = &
-        P_{0}
-        \left(
-            \frac{
-                p_{1}(X)
-            }{
-                p_{0}(X)
-            }
-            >
-            c
-        \right)
-    \nonumber
-\end{eqnarray}
-$$
-
-とすると、$F(c) := 1 - \alpha(c)$は$p_{1}(X)/p_{0}(X)$の分布関数となる。
-$F(c)$が単調増加で、右連続である。
-よって、$\alpha(c)$は右連続で、単調減少である。
-
-$$
-    r
-    :=
-    \frac{
-        \alpha - \alpha(c_{0})
-    }{
-        \alpha(c_{0} - 0) - \alpha(c_{0})
-    }
-$$
-
-
-<div class="QED" style="text-align: right">$\Box$</div>
-
-## 3.3. $p$-values
-
-
