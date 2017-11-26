@@ -91,9 +91,6 @@ EC2の`Advanced detail`->` user data`に以下のscriptを設定する。
 echo ECS_CLUSTER=your_cluster_name >> /etc/ecs/ecs.config
 ```
 
-
-
-
 ```
 aws ecs list-container-instances --cluster default
 ```
