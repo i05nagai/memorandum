@@ -18,6 +18,9 @@ title: scikit-image
     * color imageの場合はRGB->HSVに変換して、VをequalizeしてRGBに戻す
 * skimage.exposure.equalize_hist(image[, …])
 * skimage.exposure.histogram(image[, nbins])
+    * return:
+        * hist: array
+        * bin_centers: array
 
 * skimage.transpose.resize(image, output_shape, order=1, mode=None, cval=0, clip=True, preserve_range=False)
     * 画像のresize
