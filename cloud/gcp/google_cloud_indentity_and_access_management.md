@@ -13,6 +13,7 @@ title: Google Cloud Identity and Access Management
 </div>
 
 * IAM
+    * Policy/Role/Permission/Identites/Service accountなどを提供するserviceの総称
 * Policy
     * Roles + Identites
     * RoleとIdentitiesの対応の集まり
@@ -223,7 +224,6 @@ serviceと対応していないものとして、以下のような項目があ�
 
 ### service accountの作成/編集/閲覧
 
-
 * `Service Account Actor`
     * ?
 * `Service Account Admin`
@@ -234,7 +234,6 @@ serviceと対応していないものとして、以下のような項目があ�
     * ?
 * `Service Account User`
     * ?
-
 
 
 ### Billing account
@@ -274,7 +273,6 @@ service accountの作成時は、以下を確認する。
 * サービス アカウントに最小限の権限を付与する
 * サービス アカウント キーの管理
 * service accountの命名規則を決める
-
 
 ## Reference
 * [Using Resource Hierarchy for Access Control  |  Cloud Identity and Access Management Documentation  |  Google Cloud Platform](https://cloud.google.com/iam/docs/resource-hierarchy-access-control)
