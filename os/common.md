@@ -74,5 +74,34 @@ cat /proc/drivers/nvidia/gpus/.../information
 * `/opt vs /usr/local`
     * Use /usr/local for things that would normally go into /usr, or are overriding things that are already in /usr. Use /opt for things that install all in one directory, or are otherwise special.
 
+## Performance analysis
+
+uptime
+
+```
+uptime
+ 12:17:50 up  6:12,  1 user,  load average: 0.58, 0.85, 0.94
+```
+
+* The current time
+* how long the system has been running
+* how many users are currently logged on,
+* the system load averages for the past 1 minute
+* the system load averages for the past 5 minute
+* the system load averages for the past 15 minute
+
+```
+dmesg | tail
+```
+vmstat 1
+mpstat -P ALL 1
+pidstat 1
+iostat -xz 1
+free -m
+sar -n DEV 1
+sar -n TCP,ETCP 1
+top
+
 
 ## Reference
+* [Linux Performance Analysis in 60,000 Milliseconds – Netflix TechBlog – Medium](https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)
