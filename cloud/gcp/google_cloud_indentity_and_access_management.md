@@ -222,10 +222,19 @@ serviceと対応していないものとして、以下のような項目があ�
     * 閲覧/編集/作成
 
 ### service accountの作成/編集/閲覧
-* `Role Viewer`
-    * 閲覧のみ
-* `Role Administrator`
-    * 閲覧/編集/作成
+
+
+* `Service Account Actor`
+    * ?
+* `Service Account Admin`
+    * ?
+* `Service Account Key Admin`
+    * ?
+* `Service Account Token Creator`
+    * ?
+* `Service Account User`
+    * ?
+
 
 
 ### Billing account
@@ -246,6 +255,26 @@ Dialogが出ている場合は、`Go to Billint account`にする。
 <div style="text-align: center">
     <img src="image/gcp_billing_account_role_03.png">
 </div>
+
+## Best Prctice
+
+### Service Accounts
+service accountの作成時は、以下を確認する。
+
+* サービス アカウントでアクセス可能なリソース
+* サービス アカウントに必要な権限
+* サービス アカウントの ID を持つコードが実行される場所（Google Cloud Platform またはオンプレミスのどちらか）
+
+
+<div style="text-align: center">
+    <img src="https://cloud.google.com/iam/img/sa-flowchart.png?hl=ja">
+</div>
+
+* Service accountは`display name`を設定する
+* サービス アカウントに最小限の権限を付与する
+* サービス アカウント キーの管理
+* service accountの命名規則を決める
+
 
 ## Reference
 * [Using Resource Hierarchy for Access Control  |  Cloud Identity and Access Management Documentation  |  Google Cloud Platform](https://cloud.google.com/iam/docs/resource-hierarchy-access-control)
