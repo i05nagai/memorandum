@@ -16,5 +16,6 @@ title: Google Cloud Platform
 * 暗号通貨のMiningはできない
 
 
+
 ## Reference
 
