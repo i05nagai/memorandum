@@ -79,6 +79,14 @@ Darken Only
 
 Lighten Only
 
+## Alpha channel
+* [Alpha compositing - Wikipedia](https://en.wikipedia.org/wiki/Alpha_compositing)
+* [アルファチャンネル - Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)
+
+
+$$
+
+$$
 
 ## Reference
 * https://dunnbypaul.net/blends/
