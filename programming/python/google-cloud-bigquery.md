@@ -34,6 +34,21 @@ while True:
     rows, total_count, token = query.fetch_data(page_token=token)
 ```
 
+* `bigquery._helper.Row`
+
+```python
+result = 
+print(result[0].field_to_index)
+```
+
+
+## Environment
+* [Google Application Default Credentials  |  Google Identity Platform  |  Google Developers](https://developers.google.com/identity/protocols/application-default-credentials)
+
+
+* `GOOGLE_APPLICATION_CREDENTIALS`
+    * path to credential file
+
 
 ## Reference
 * [API Client Library for Python  |  Google Developers](https://developers.google.com/api-client-library/python/?hl=ja)
