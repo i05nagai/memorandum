@@ -102,6 +102,10 @@ sar -n DEV 1
 sar -n TCP,ETCP 1
 top
 
+## useradd
+Error: `useradd: cannot create directory /opt/...`.
+You need to create directory before execution `useradd`.
+
 
 ## Reference
 * [Linux Performance Analysis in 60,000 Milliseconds – Netflix TechBlog – Medium](https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)
