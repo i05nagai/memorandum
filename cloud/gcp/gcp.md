@@ -16,6 +16,12 @@ title: Google Cloud Platform
 * 暗号通貨のMiningはできない
 
 
+## Service account
+
+* GCP-managed keys
+    * このキーはAppEngineやComputeEngineなどのサービスで使用されるキーであり、ダウンロードはできない。Googleが鍵を管理し、自動的にそれらを毎日ローテーションする
+* User-managed keys
+    * このキーはユーザが作成、ダウンロードが可能で、ユーザが管理する
 
 ## Reference
-
+* [GCP Service Accountを理解する - Qiita](https://qiita.com/t-yotsu/items/5d3d36847fbc71b72b76)
