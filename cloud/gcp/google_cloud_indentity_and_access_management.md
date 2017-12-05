@@ -224,16 +224,51 @@ serviceと対応していないものとして、以下のような項目があ�
 
 ### service accountの作成/編集/閲覧
 
+* `Project IAM Admin`
+    * resourcemanager.projects.get
+    * resourcemanager.projects.getIamPolicy
+    * resourcemanager.projects.setIamPolicy
 * `Service Account Actor`
-    * ?
+    * iam.serviceAccounts.actAs
+    * iam.serviceAccounts.get
+    * iam.serviceAccounts.getAccessToken
+    * iam.serviceAccounts.list
+    * iam.serviceAccounts.signBlob
+    * iam.serviceAccounts.signJwt
+    * resourcemanager.projects.get
 * `Service Account Admin`
-    * ?
+    * iam.serviceAccounts.create
+    * iam.serviceAccounts.delete
+    * iam.serviceAccounts.get
+    * iam.serviceAccounts.getIamPolicy
+    * iam.serviceAccounts.list
+    * iam.serviceAccounts.setIamPolicy
+    * iam.serviceAccounts.update
+    * resourcemanager.projects.get
+    * resourcemanager.projects.list
 * `Service Account Key Admin`
-    * ?
+    * iam.serviceAccountKeys.create
+    * iam.serviceAccountKeys.delete
+    * iam.serviceAccountKeys.get
+    * iam.serviceAccountKeys.list
+    * iam.serviceAccounts.get
+    * iam.serviceAccounts.list
+    * resourcemanager.projects.get
+    * resourcemanager.projects.list
 * `Service Account Token Creator`
-    * ?
+    * iam.serviceAccounts.get
+    * iam.serviceAccounts.getAccessToken
+    * iam.serviceAccounts.list
+    * iam.serviceAccounts.signBlob
+    * iam.serviceAccounts.signJwt
+    * resourcemanager.projects.get
+    * resourcemanager.projects.list
 * `Service Account User`
-    * ?
+    * iam.serviceAccounts.actAs
+    * iam.serviceAccounts.get
+    * iam.serviceAccounts.list
+    * resourcemanager.projects.get
+    * resourcemanager.projects.list
 
 
 ### Billing account
