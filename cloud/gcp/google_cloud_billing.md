@@ -22,6 +22,72 @@ title: Google Cloud Billing
     * self service
     * Invoiced
 
+## Visualization
+* [Visualize Spend Over Time with Data Studio  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/visualize-data)
+
+BigQueryとGoogle Data Studioを使うと以下のような可視化が簡単にできる。
+
+<div style="text-align: center">
+    <img src="https://cloud.google.com/billing/docs/images/visual-dash-2.png">
+</div>
+
+<div style="text-align: center">
+    <img src="https://cloud.google.com/billing/docs/images/visual-resource.png">
+</div>
+
+Billing Dataのexportをする。
+`Billing`の画面に移動。
+
+`Export blling data`
+
+Export先のproject idとBigQueryのdataset名を入力する。
+GCPがofficialで提供しているDashboardを開いて、copyする。
+
+https://datastudio.google.com/reporting/0B7GT7ZlyzUmCZHFhNDlKVENHYmc/page/dizD
+
+<div style="text-align: center">
+    <img src="image/gcp_billing_account_export_billing_03.png">
+</div>
+
+Data sourceの選択画面がでるので、`新しいデータソースを作成する`を選択。
+
+<div style="text-align: center">
+    <img src="image/gcp_billing_account_export_billing_04.png">
+</div>
+
+Billing dataのexportに指定したdatasetに`gcp_billing_export_....`という名前のtableが作成されているので、選択して、接続する。
+`...`の部分はbilling accoutnによって変わる。
+
+<div style="text-align: center">
+    <img src="image/gcp_billing_account_export_billing_05.png">
+</div>
+
+`新しいデータソース`に`gcp_billing_export_....`を指定する。
+
+<div style="text-align: center">
+    <img src="image/gcp_billing_account_export_billing_06.png">
+</div>
+
+Dashboardの作成は完了。
+上記の`新しいデータソース`の3つの内、2つは本来は別のdatasourceを指定するもので、正しく作成すると以下の2つが可能になるが省略している。
+
+* 線形回帰で翌月のcostを予測する
+    * Dashboardの`Spending Trends` Page
+* BigQueryの ueryごとのQuery, processed byte, cost, userを可視化できる
+    * Dashboardの`BigQuery` Page
+
+### Supplements
+BigQueryのExport先は一箇所しか選べないが、tableの転送は難しくないので、あまり気にしなくてよい。
+Billing dataはexportを有効にしないと、出力されないので、projectを作ったらなるべく早めに有効にした方が良い。
+
+## Access control
+* [Overview of Billing Access Control  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/billing-access)
+
+https://cloud.google.com/billing/docs/images/access-control-org.png
+
+組織体系に応じてどのようなAccess controlにすべきかの例が記載されている。
+
+
 
 ## Reference
 * [Google Cloud Billing のドキュメント  |  Google Cloud Billing  |  Google Cloud Platform](https://cloud.google.com/billing/docs/?hl=ja)

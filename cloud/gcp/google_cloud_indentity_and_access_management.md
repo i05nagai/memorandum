@@ -3,53 +3,82 @@ title: Google Cloud Identity and Access Management
 ---
 
 ## Google Cloud Identity and Access Management
-
+Google Cloud IAM.
 
 ## Concepts
 * [Overview  |  Cloud Identity and Access Management Documentation  |  Google Cloud Platform](https://cloud.google.com/iam/docs/overview)
 
+Role/Identity/Permissionの関係は以下のofficialの図がわかりやすい。
+
 <div style="text-align: center">
-    <img src="https://cloud.google.com/iam/img/policy-hierarchy.png">
+    <img src="https://cloud.google.com/iam/img/iam-overview-basics.png">
 </div>
 
 * IAM
-    * Policy/Role/Permission/Identites/Service accountなどを提供するserviceの総称
+    * (Policy)/Role/Permission/Identites/Service accountなどを提供するserviceの総称
+* Permissions(権限)
+    * permission名は`<service>.<resource>.<verb>`
+        * 例えば、`pubsub.subscriptions.consume`
+    * 基本的に、permissionと各serviceのREST APIが対応しており、REST APIで可能な操作の権限を許可/不許可する
+    * Permissionは直接Identityには付与できず、PermissionはRoleを通してIdentityに付与される
+* Roles(役割)
+    * permissionsの集まり
+    * IDに対してRoleを付与できる
+    * Roleは大きく3種類ある
+        1. Primitive roles
+            * Projectで予め定義されているRoleで、粗い権限、以下の3つ
+            * `Viewer`
+                * 読み取り専用の権限
+            * `Editor`
+                * `Viewer`の権限 + 状態を変更するアクションに必要な権限。
+            * `Owner`
+                * `Editor`の権限 + projectのAccess managementの権限 + projectのbillingの設定の権限
+        2. Predefined role
+            * Primitive rolesより細かく、resourceやserviceの用途などに合わせて作られたrole
+            * serviceごとに提供されている
+        3. Custom roles
+            * userが自分で定義するrole
+            * Beta test中で対応していないserviceもある
+* Identities
+    * ID, アカウント
+    * GCPでアカウントとして扱われるのは大きく以下の5つ
+        * google account(gmailのaccount)
+            * 基本的に人間が使う
+        * google service account
+            * service用のアカウント
+            * service accountについては以下の記事が比較的わかりやすい
+            * [GCP Service Accountを理解する - Qiita](https://qiita.com/t-yotsu/items/5d3d36847fbc71b72b76)
+        * google group
+            * Google accountsとService accountsの集まり
+            * Groupに属すuserに対して一括してRole/Policyの付与ができる
+        * G Suite domain
+        * Cloud Identity domain
+
+Identitiesに対して、個別にRoleを付与するのは、現実的ではないので、Policyという機能がある。
+
+Policy/Organization/Folder/Projectの関係は以下のofficialの図がわかりやすい。
+
+<div style="text-align: center">
+    <img src="https://cloud.google.com/iam/img/iam-overview-policy.png">
+</div>
+
+* Organization
+    * 会社の組織など
+* Folder
+    * 1つのOrganizationに属す
+* Project
+    * 1つのFolderに属す
 * Policy
     * Roles + Identites
     * RoleとIdentitiesの対応の集まり
-    * Policyはinheritされる
-* Roles
-    * collection of permissions
-    * Primitive roles
-        * 以下の3種類
-        * Owner
-            * 状態を保持する読み取り専用アクションに必要な権限。
-        * Editor
-            * すべての閲覧者権限、および状態を変更するアクションに必要な権限。
-        * Viewer
-            * 状態を保持する読み取り専用アクションに必要な権限。
-    * Predefined role
-        * Primitive rolesより細かく、resourceやserviceの用途などに合わせて作られたrole
-        * serviceごとに提供されている
-    * Custom roles
-        * userが自分で定義するrole
-* Permission
-    * `<service>.<resource>.<verb>`
-    * `pubsub.subscriptions.consume`
-    * compute.instanceAdmin
-    * storage.objectAdmin
-* Identities
-    * google account
-    * google service account
-    * google group
-    * G Suite domain
-    * google apps domain
+    * Policyは継承される、つまりOrganizationに付与したPolicyはOrganizationのFolder, Folderに属すProjectに継承される
+
 
 ## Service Accounts
 * [GCP Service Accountを理解する - Qiita](https://qiita.com/t-yotsu/items/5d3d36847fbc71b72b76)
 
 Service AccountsはIdentiteisの一つだが、Google accountのように特定の個人に結びつかない。
-Service accountsに対して、roleを付与することができる。
+Service accountsに対して、Google accountと同じようにroleを付与することができる。
 
 Service accountの種類
 
@@ -64,7 +93,8 @@ Service accountの種類
 ## List of roles
 `IAM & admin` -> `Roles`で利用可能なroleの一覧を見ることができる。
 
-以下がdefaultで利用可能なroleの一覧
+以下がdefaultで利用可能なroleの一覧。
+Beta版のものを含むので、頻繁に変わる可能性がある。
 
 | Name                                    | Used in                |
 +=========================================|========================+
@@ -195,27 +225,37 @@ Roleについている`Owner`, `Admin`などの権限の強さはだいたい以
 2. Administorator ≒ Admin > Editor
 3. Viewer ≒ Reader ≒ Browser
 
-`Used in`は使われるserviceを指していることが多いので、必要なroleにあたりをつける。
-serviceと対応していないものとして、以下のような項目がある。
+`Used in`は使われるGCPのserviceを指していることが多いので、必要なroleの目星をつけるのに役立つ。
+`Used in`の項目が、GCPのserviceと対応していないものとして、以下のような項目がある。
 
 * project
-    * projct全体に対するrole
+    * projct全体に対するRole
 * IAM
-    * security reviewerのみ
+    * `security reviewer`Roleしか存在しないが、`Security Reviewer`は全serviceの参照権限を持ち、編集権限は持たない
 * Roles
-    * IAMのRoleの作成や閲覧に関する権限
+    * IAMのRoleの作成や閲覧に関するRole
 * Service Accounts
-    * Serivce accountの作成と閲覧/編集の権限
+    * Serivce accountの作成と閲覧/編集のRole
 
 ## Use cases
 
+### BigQueryでTableの閲覧とQueryの実行権限が欲しい
+以下のRoleを付与する。
+
+* `BigQuery User`
+
+### BigQueryでTable/datasetの作成と削除の権限が欲しい
+以下のRoleを付与する。
+
+* `BigQuery DataOwner`
+
 ### IAMのRoleの一覧を見たい
-以下のRole
+以下のRoleを付与する。
 
 * `Role viewer`
 
 ### IAMのRoleの作成/編集/閲覧
-以下のRole
+以下のRoleを付与する。
 
 * `Role Viewer`
     * 閲覧のみ
@@ -223,6 +263,8 @@ serviceと対応していないものとして、以下のような項目があ�
     * 閲覧/編集/作成
 
 ### service accountの作成/編集/閲覧
+以下のRoleを全て付与すれば、Service accoutとKeyの作成はできるが、Service AccountにRoleは付与できない。
+Service AccoiuntへのRoleの付与は、`Project Editor`のRoleであればできた。
 
 * `Project IAM Admin`
     * resourcemanager.projects.get
@@ -271,10 +313,10 @@ serviceと対応していないものとして、以下のような項目があ�
     * resourcemanager.projects.list
 
 
-### Billing account
+### Billing accountに対するRole
 今の所、Billing accountに関するRoleはIAMの画面からは付与できない。
-Billing accountは、複数のprojectに結びつくので、特定のprojectのIAMの画面から変更できないようになっているのだと思う。
-Billing accountのRoleが必要な場合は、Billing accountのお支払画面から、付与できる。
+Billing accountは、複数のprojectに結びつくので、特定のprojectのIAMの画面から変更できないようになっている。
+Billing accountのRoleが必要な場合は、Billing accountのお支払(Billing)画面から、付与できる。
 
 <div style="text-align: center">
     <img src="image/gcp_billing_account_role_01.png">
