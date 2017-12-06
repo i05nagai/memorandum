@@ -8,8 +8,19 @@ title: Google Data Studio
 ## Pricing
 Google Data Studio is free of charge for Google Cloud Platform customers.
 
+* Google Data Studio自体の利用は無料
+* Google Data Studioが参照さいている先の利用料金はかかる
+    * 例えば、Dashboardで参照しているBigQueryの利用料金
+    * Google Storageの読み出しと保存の料金
 
-## Stackdriver
+
+## Visualize billing information
+* [Visualize Spend Over Time with Data Studio  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/visualize-data)
+
+
+
+### BigQuery
+Stackdriver
 
 ```sql
 SELECT
@@ -75,8 +86,7 @@ WHERE
   AND protopayload_auditlog.servicedata_v1_bigquery.jobCompletedEvent.eventName = 'query_job_completed'
 ```
 
-
-## cachsing 
+## cachsing
 * [How Data Studio caches data - Data Studio (Beta) Help](https://support.google.com/datastudio/answer/7020039?hl=en&ref_topic=7441387)
 
 以下の2種類ある。
