@@ -7,67 +7,180 @@ book_chapter: 7
 # Chapter 7. 線形モデル上のバンディット問題
 
 ## Symbols
-* $i^{*} := \arg \max_{i} \theta^{\mathrm{T}} a_{i}$
-* $a^{*} := \arg \max_{i} \theta^{\mathrm{T}} a_{i}$
+* $K \in \mathbb{N}$,
+    * 選択肢(slot)の数
+* $T \in \mathbb{N}$
+    * 選択肢を選ぶ回数
+* $i^{*} := \arg \max_{i = 1, \ldots, K} \theta^{\mathrm{T}} a_{i}$
+* $a^{*} := \arg \max_{i = 1, \ldots, K} \theta^{\mathrm{T}} a_{i}$
 
 ## 7.1 線形バンディット
+線形バンディット問題を定式化する。
+$t$回目の選択で$i$通り目の選択肢の組み合わせを選んだ場合の報酬/損失を以下で定義する。
 
 $$
-    X_{i}(t) := \theta ^{\mathrm{T}} a_{i} + \epsilon(t) 
+    X_{i}(t)
+    :=
+    \theta ^{\mathrm{T}} a_{i} + \epsilon(t) 
     \quad
-    (\forall i = 1, \ldots, K)
+    (i = 1, \ldots, K, t = 1, \ldots, T)
 $$
 
-$a_{i} = (a_{i,1}, \ldots, a_{i,d})^{\mathrm{T}} \in \\{0, 1\\}^{d}$で、$\theta = (\theta_{1}, \ldots, \theta_{d})^{\mathrm{T}} \in \mathbb{R}^{d}$、$\epsilon(t)$は$t$での誤差項で、期待値0のある確率分布に従うとする。
+ここで、
 
-* $a_{i} (i = 1, \ldots K)$はスロットに対応するプレイヤーの選択肢で、特に行動(action)と呼ぶ
+* $d \in \mathbb{N}$,
+    * 選択肢の数
+* $\epsilon(t) \in \mathbb{R}$
+    * r.v.
+    * $t$回目の選択での誤差項で、期待値0のある確率分布に従う
+* $$a_{i} = (a_{i,1}, \ldots, a_{i,d})^{\mathrm{T}} \in \{0, 1\}^{d} (i = 1, \ldots K, t= 1, \ldots, T) \in $$,
+    * $t$回目の選択で$i$番目の選択肢で、特に行動(action)と呼ぶ
     * $a_{i}$は既知
-* $\theta$は選択肢$a_{i}$を選んだときの報酬ないし、損失である
+* $$i(t) \in \{1, \ldots, K\}$$,
+    * $t$回目の選択でplayerが選んだ選択肢
+* $\theta = (\theta_{1}, \ldots, \theta_{d})^{\mathrm{T}} \in \mathbb{R}^{d}$,
+    * 選択肢$a_{i}$を選んだときの報酬ないし、損失である
     * $\theta$は未知
-* $X_{i}(t)$は行動$a_{i}$を選んだときの観測された報酬ないし、損失である
+
+である。
+以上の記号の下playerが$T$回の選択で得る報酬の合計は
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        X_{i(t)}(t)
+    & = &
+        \sum_{t=1}^{T}
+            \left(
+                \theta^{\mathrm{T}}
+                a_{i(t)}
+                +
+                \epsilon(t)
+            \right)
+\end{eqnarray}
+$$
 
 前章までのバンディット問題は
 
 $$
-    A^{\mathrm{T}} := (a_{1}, \ldots, a_{K})^{\mathrm{T}} 
-        = 
-       \left(
-           \begin{array}{ccccc}
-               a_{1,1}   & a_{2,1} & \cdots & a_{d-1,1}  & a_{K, 1} \\
-               a_{1,2}   &         &        & \cdots     & \vdots \\
-               \vdots    &         &        & \ddots     & a_{K, d-2} \\
-               a_{1,d-1} & \vdots  & \ddots & \ddots     & a_{K, d-1} \\
-               a_{1,d}   & \cdots  &        & a_{K-1, d} & a_{K, d}
-           \end{array}
-       \right)^{\mathrm{T}}
-       = 
-       \left(
-           \begin{array}{ccccc}
-               a_{1,1}   & a_{1,2} & \cdots & a_{1,d-1}  & a_{1, d} \\
-               a_{2,2}   &         &        & \cdots     & \vdots \\
-               \vdots    &         &        & \ddots     & a_{K-2, d} \\
-               a_{K-1,1} & \vdots  & \ddots & \ddots     & a_{K-1, d} \\
-               a_{K,1}   & \cdots  &        & a_{K, d-1} & a_{K, d}
-           \end{array}
-       \right)
+\begin{eqnarray}
+    A^{\mathrm{T}}
+    & := &
+        (a_{1}, \ldots, a_{K})^{\mathrm{T}} 
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{c}
+                a_{1}^{\mathrm{T}}
+                \\
+                \vdots 
+                \\
+                a_{K}^{\mathrm{T}}
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                a_{1,1}   & a_{2,1} & \cdots & a_{d-1,1}  & a_{K, 1} \\
+                a_{1,2}   &         &        & \cdots     & \vdots \\
+                \vdots    &         &        & \ddots     & a_{K, d-2} \\
+                a_{1,d-1} & \vdots  & \ddots & \ddots     & a_{K, d-1} \\
+                a_{1,d}   & \cdots  &        & a_{K-1, d} & a_{K, d}
+            \end{array}
+        \right)^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                a_{1,1}   & a_{1,2} & \cdots & a_{1,d-1}  & a_{1, d} \\
+                a_{2,2}   &         &        & \cdots     & \vdots \\
+                \vdots    &         &        & \ddots     & a_{K-2, d} \\
+                a_{K-1,1} & \vdots  & \ddots & \ddots     & a_{K-1, d} \\
+                a_{K,1}   & \cdots  &        & a_{K, d-1} & a_{K, d}
+            \end{array}
+        \right)
+    \nonumber
+\end{eqnarray}
 $$
 
 が単位行列の場合に相当する。
+$A$を使えば、は以下のようにかける。
 
 $$
-    i^{*}(t) = \arg\max_{i} \{a_{i, t}^{\mathrm{T}} \theta + \epsilon(t) \mid i = 1, \ldots, K\}
+\begin{eqnarray}
+    \left(
+        \begin{array}{c}
+            X_{1}(t)
+            \\
+            \vdots 
+            \\
+            X_{K}(t)
+        \end{array}
+    \right)
+    & = &
+        \left(
+            \begin{array}{c}
+                a_{1}^{\mathrm{T}}
+                \\
+                \vdots 
+                \\
+                a_{K}^{\mathrm{T}}
+            \end{array}
+        \right)
+        \theta
+        +
+        \left(
+            \begin{array}{c}
+                \epsilon(t)
+                \\
+                \vdots 
+                \\
+                \epsilon(t)
+            \end{array}
+        \right)
+\end{eqnarray}
 $$
 
-$$
-    \max_{\theta} \sum_{s=0}^{T} a_{i^{*}(s), s}^{\mathrm{T}} \theta + \epsilon(s)
-$$
-
-問題設定としては、指定された組み合わせについてはスロットを同時に引けるとした場合の報酬最大化を目指す問題となる。
+$t$回目の選択における最良の選択肢を以下で定義する。
 
 $$
+\begin{eqnarray}
+    i^{*}(t)
+    :=
+    \arg\max_{i = 1, \ldots, K}
+    \{
+        a_{i}^{\mathrm{T}} \theta
+        +
+        \epsilon(t)
+    \}
+\end{eqnarray}
+$$
+
+問題設定としては、前章までは$t$回目の選択で選べる選択肢は1つだったが、Linear banditでは選択肢の組を選ぶことができる。
+選択肢の組に対する報酬最大化を目指す問題となる。
+前章までと同様にRegretを最良の選択した場合との差として定義する。
+
+$$
+\begin{eqnarray}
     \mathrm{regret}(T)
-        := \sum_{t=1}^{T} (\theta^{\mathrm{T}}a_{i^{*}} - \theta^{\mathrm{T}}a_{i(t)})
-        = \sum_{t=1}^{T} \theta^{\mathrm{T}}(a_{i^{*}} - a_{i(t)})
+    & := &
+        \sum_{t=1}^{T}
+            (X_{i^{*}(t)}(t) - X_{i(t)}(t))
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            (\theta^{\mathrm{T}}a_{i^{*}(t)} - \theta^{\mathrm{T}}a_{i(t)})
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+             \theta^{\mathrm{T}}(a_{i^{*}(t)} - a_{i(t)})
+\end{eqnarray}
 $$
 
 ### 例7.1 ウェブサイト最適化
@@ -100,31 +213,47 @@ $$
 $$
 
 ### 補足7.1 誤差項の分布
-* $\epsilon(t)$は正規分布でなくとも良い。
-* 例7.1ではクリックの有無なので、誤差はX
+* $\epsilon(t)$は正規分布でなくとも良い
+* 例7.1ではクリックの有無なので、誤差は離散分布
 * $\epsilon(t)$ には劣ガウス性(sub-Gaussian)を仮定することが多い
 
 
-### def 劣ガウス
-平均0の確率変数$Z$が$R$-劣ガウス的であるとは、$Z$の積率母関数$M_{Z}(\lambda):=\mathrm{E}[e^{\lambda Z}]$が平均0, 分散$R^{2}$の正規分布の積率母関数で上から抑えられること
-平均0,分散$R^{2}$の正規分布の積率母関数を$M_{X}(\lambda) := \exp(\frac{\lambda^{2}R^{2}}{2}$とすると
+### Definition sub-gaussian
+* $Z$
+    * r.v.
+    * 平均0
+* $R \in \mathbb{R}$
+* $Z$
+    * r.v.
+$Z$が$R$-劣ガウス的であるとは、$Z$の積率母関数$M_{Z}(\lambda):=\mathrm{E}[e^{\lambda Z}]$が平均0, 分散$R^{2}$の正規分布の積率母関数で上から抑えられることである。
+つまり、平均0,分散$R^{2}$の正規分布の積率母関数を$M(\lambda) := \exp(\frac{\lambda^{2}R^{2}}{2})$とすると、
 
 $$
-    M_{Z}(\lambda) \leq M_{X}(\lambda),
+    M_{Z}(\lambda)
+    \leq
+    M(\lambda),
     \quad
     \forall \lambda \in \mathbb{R}
 $$
 
+が成り立つことである。
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 ### Remark
 平均0の確率変数$Z$が確率1で$[-R, R]$上有界であれば、$R$-劣ガウス的である。
 
+<div class="end-of-statement" style="text-align: right">■</div>
 
-## 7.2 文脈つきバンディット
+
+## 7.2 Contexual Bandit
 $a_{i,t}$と行動が時間$t$に依存するものを文脈付きバンディットと呼ぶ。
 つまり、時刻$t$の行動$i$の報酬が
 
 $$
-    X_{i}(t) := \theta^{\mathrm{T}}a_{i,t}
+    X_{i}(t)
+    :
+    =\theta^{\mathrm{T}}a_{i,t}
 $$
 
 である。
