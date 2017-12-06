@@ -34,6 +34,21 @@ gsutil cp arcanine.png gs://hoge/sinmetal.png
 gsutil acl ch -u AllUsers:R gs://hoge/sinmetal.png
 ```
 
+## Log
+* [Access Logs & Storage Logs  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/access-logs)
+
+
+## CLI
+
+
+```
+gsutil mb gs://example-logs-bucket
+```
+
+* `mb`
+    * make bucket
+* 
+
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
 
