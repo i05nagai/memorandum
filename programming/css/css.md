@@ -11,6 +11,29 @@ title: CSS
 
 line-heightを指定しないとたてのalignはできない？
 
+## Property
+
+### Filter
+* https://www.w3schools.com/cssref/css3_pr_filter.asp
+
+```
+filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();
+```
+
+spaceで区切れば複数のfilterを指定できる。
+`url`はSVGのfilterを指定できる。
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <filter id="filter-blur">
+  <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+ </filter>
+</svg>
+<img src="" style="filter: url('#filter-blur')">
+```
+
+
+
 ## Pseau
 
 ## Coding Style guide
