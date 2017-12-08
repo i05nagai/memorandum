@@ -59,4 +59,5 @@ title: Cloud Functions
 
 ## Reference
 * [Google Cloud Functions Documentation  |  Cloud Functions  |  Google Cloud Platform](https://cloud.google.com/functions/docs/)
+* [GCP: 今月のGCP課金額をslackに自動的に書き込む | エクスチュア株式会社ブログ](http://ex-ture.com/blog/2017/11/06/gcp-billing-to-slack/)
 
