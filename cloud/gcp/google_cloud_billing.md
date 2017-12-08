@@ -88,6 +88,5 @@ https://cloud.google.com/billing/docs/images/access-control-org.png
 組織体系に応じてどのようなAccess controlにすべきかの例が記載されている。
 
 
-
 ## Reference
 * [Google Cloud Billing のドキュメント  |  Google Cloud Billing  |  Google Cloud Platform](https://cloud.google.com/billing/docs/?hl=ja)
