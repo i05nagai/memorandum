@@ -431,6 +431,6 @@ resource "aws_instance" "example" {
 `${var.foo}`で変数や関数を参照でき、Resource内で使える。
 
 
-
 ## Reference
 * [Configuration Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/syntax.html)
+* [Terraform職人入門: 日々の運用で学んだ知見を淡々とまとめる - Qiita](https://qiita.com/minamijoyo/items/1f57c62bed781ab8f4d7)
