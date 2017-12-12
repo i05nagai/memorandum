@@ -36,6 +36,7 @@ gsutil acl ch -u AllUsers:R gs://hoge/sinmetal.png
 
 ## Log
 * [Access Logs & Storage Logs  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/access-logs)
+* [Cloud Audit Logging with Cloud Storage  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/audit-logs)
 
 
 ## CLI
