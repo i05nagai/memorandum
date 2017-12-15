@@ -186,7 +186,8 @@ $$
 
 $$\beta_{k}$$ is obtained from $$\eqref{chap01_01_04}$$ and $$\eqref{chap01_01_05}$$.
 
-* $w_{k}$,
+* $w_{k}: \Lambda \rightarrow \mathbb{R}$,
+    * 
 
 
 ## Reference
