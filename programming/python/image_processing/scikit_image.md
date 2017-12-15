@@ -4,6 +4,17 @@ title: scikit-image
 
 ## scikit-image
 
+## array
+画像のRGBはnumpy.arrayのshpaeが`(height, width, channel)`の3-rank tensorになる。
+
+## intensity
+
+```python
+import numpy as np
+b = np.array([1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0])
+np.tensordot(image, b, 1)
+```
+
 ## API
 
 * skimage.io.imread

@@ -361,8 +361,8 @@ airflow.DAG(schedule_interval=@hourly)
     * 例えば、特定のoperatorはあるqueueにいれるなど
 * XComs
     * cross communication
-    * task間でのmessageや状態のやり取りができる
-    * 多分使わない
+    * task間でのやり取りをするための、key, value store
+    * `python operator`内で、実行結果などを保存でき、他の`python operator`から取り出すことができる。
 * hooks
     * 
 * Pools
