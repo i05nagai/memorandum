@@ -87,6 +87,7 @@ xcrun simctl list
 ```
 
 ### Add images
+simulatorに画像を追加位
 
 ```
 xcrun simctl addmedia booted ./MyFile.jpg
@@ -363,6 +364,177 @@ Time collectionView 1: 0.0103849768638611 seconds
 Time collectionView 2: 0.00894105434417725 seconds
 Time collectionView 3: 0.00812500715255737 seconds
 ```
+
+```swift
+    static func applyTestFilter(ciImage: CIImage) -> CIImage? {
+        let width = ciImage.extent.width
+        let height = ciImage.extent.height
+        let centerWidth = width / 2.0
+        let centerHeight = height / 2.0
+        let length0 = min(width / 4.0, height / 4.0, 10)
+        let length1 = min(width / 3.0, height / 3.0, 50)
+        print(width, height, centerWidth, centerHeight, length0, length1)
+        let color0 = self.getColor(red: 0, green: 0, blue: 0, alpha: 100)
+        let color1 = self.getColor(red: 255, green: 255, blue: 255, alpha: 100)
+        let filter1 = CIFilter(
+            name: "CILinearGradient", withInputParameters: [
+                "inputPoint0": CIVector(x: length0, y:centerHeight),
+                "inputPoint1": CIVector(x: length1, y:centerHeight),
+                "inputColor0": color0,
+                "inputColor1": color1,
+                ])!
+            .outputImage!
+            .cropped(to: ciImage.extent)
+        let filter2 = CIFilter(
+            name: "CILinearGradient", withInputParameters: [
+                "inputPoint0": CIVector(x: centerWidth, y:length1),
+                "inputPoint1": CIVector(x: centerWidth, y:length0),
+                "inputColor0": color0,
+                "inputColor1": color1,
+                ])!
+            .outputImage!
+            .cropped(to: ciImage.extent)
+        return ciImage
+            .applyingFilter("CIMultiplyBlendMode", parameters: [
+                "inputBackgroundImage": filter1,
+                ])
+            .applyingFilter("CIAdditionCompositing", parameters: [
+                "inputBackgroundImage": filter2,
+                ])
+    }
+```
+
+```
+    static func applyHudsonFilter(ciImage: CIImage) -> CIImage? {
+        let width = ciImage.extent.width
+        let height = ciImage.extent.height
+        let centerWidth = width / 2.0
+        let centerHeight = height / 2.0
+        let radius0 = min(width / 4.0, height / 4.0)
+        let radius1 = min(width / 1.5, height / 1.5)
+        
+        let color0 = self.getColor(red: 166, green: 177, blue: 255, alpha: 255)
+        let color1 = self.getColor(red: 52, green: 33, blue: 52, alpha: 255)
+        let circle = CIFilter(name: "CIRadialGradient", withInputParameters: [
+            "inputCenter": CIVector(x: centerWidth, y: centerHeight),
+            "inputRadius0": radius0,
+            "inputRadius1": radius1,
+            "inputColor0": color0,
+            "inputColor1": color1,
+            ])?.outputImage?.cropped(to: ciImage.extent)
+        return ciImage
+            .applyingFilter("CIColorControls", parameters: [
+                "inputSaturation": 1.1,
+                "inputBrightness": 0.2,
+                "inputContrast": 0.95,
+                ])
+            .applyingFilter("CIMultiplyCompositing", parameters: [
+                "inputBackgroundImage": circle!,
+                ])
+            .settingAlphaOne(in: ciImage.extent)
+            .applyingFilter("CIColorClamp", parameters: [
+                "inputMinComponents": CIVector(x: 0, y: 0, z: 0, w: 0),
+                "inputMaxComponents": CIVector(x: 1, y: 1, z: 1, w: 0.5),
+                ])
+    }
+```
+
+CollectionViewのthumbnailのfilterの処理時間
+3回の平均
+
+| filter      | device (sec) | simulator (sec) |
++=============|==============|=================+
+| 1977        | 0.0121       | 1.4867          |
+| Chrome      | 0.0150       | 0.6211          |
+| Clarendon   | 0.0094       | 1.2565          |
+| Fade        | 0.0097       | 0.3077          |
+| HazeRemoval | 0.0130       | 0.6795          |
+| Instant     | 0.0094       | 0.1236          |
+| Linear      | 0.0062       | 0.0006          |
+| Mono        | 0.0087       | 0.0222          |
+| Nashville   | 0.0330       | 1.6097          |
+| Noir        | 0.0087       | 0.0212          |
+| Process     | 0.0091       | 0.0236          |
+| Toaster     | 0.0147       | 0.8657          |
+| Tonal       | 0.0083       | 0.1920          |
+| Tone        | 0.0061       | 0.3095          |
+| Transfer    | 0.0095       | 0.0238          |
+
+Collection viewとviewDidloadの時間
+3回の平均
+
+| object      | device (sec)     | simulator (sec)   |
++=============|==================|===================+
+| 1st cell    | 0.0121466517448  | 0.00180900096893  |
+| 2nd cell    | 0.0022016565005  | 0.00115235646566  |
+| 3rd cell    | 0.00155603885651 | 0.000826338926951 |
+| 4th cell    | 0.00167268514633 | 0.000815014044444 |
+| viewDidload | 0.17617102464    | 7.54655232032     |
+
+simulatorの1回目のfilter処理と2回目のfilter処理の時間
+3回の平均
+
+| filter      | 1st simulator (sec) | 2nd simulator (sec) |
++=============|=====================|=====================+
+| 1977        | 2.0348              | 1.3711              |
+| Chrome      | 0.6523              | 0.2420              |
+| Clarendon   | 1.0200              | 0.6433              |
+| Fade        | 0.6509              | 0.0414              |
+| HazeRemoval | 0.7720              | 0.4865              |
+| Instant     | 0.4845              | 0.2717              |
+| Linear      | 0.3063              | 0.1394              |
+| Mono        | 0.4311              | 0.2414              |
+| Nashville   | 1.9360              | 0.2677              |
+| Noir        | 0.2444              | 0.0456              |
+| Process     | 0.2538              | 0.4670              |
+| Toaster     | 1.0061              | 0.4198              |
+| Tonal       | 0.2417              | 0.2498              |
+| Tone        | 0.2053              | 0.1266              |
+| Transfer    | 0.2363              | 0.0418              |
+
+実機の1回目のfilter処理と2回目のfilter処理の時間
+3回の平均
+
+| filter      | 1st device (sec) | 2nd device (sec) |
++=============|==================|==================+
+| 1977        | 0.0180           | 0.0180           |
+| Chrome      | 0.0159           | 0.0169           |
+| Clarendon   | 0.0159           | 0.0175           |
+| Fade        | 0.0159           | 0.0165           |
+| HazeRemoval | 0.0181           | 0.0174           |
+| Instant     | 0.0172           | 0.0159           |
+| Linear      | 0.0146           | 0.0152           |
+| Mono        | 0.0160           | 0.0164           |
+| Nashville   | 0.0206           | 0.0180           |
+| Noir        | 0.0153           | 0.0164           |
+| Process     | 0.0162           | 0.0160           |
+| Toaster     | 0.0177           | 0.0169           |
+| Tonal       | 0.0162           | 0.0169           |
+| Tone        | 0.0151           | 0.0146           |
+| Transfer    | 0.0164           | 0.0154           |
+
+simulatorと実機の1回目のfilter処理の差
+3回の平均
+
+| filter      | 1st device (sec) | 1st simulator (sec) |
++=============|==================|=====================+
+| 1977        | 0.0180           | 2.0348              |
+| Chrome      | 0.0159           | 0.6523              |
+| Clarendon   | 0.0159           | 1.0200              |
+| Fade        | 0.0159           | 0.6509              |
+| HazeRemoval | 0.0181           | 0.7720              |
+| Instant     | 0.0172           | 0.4845              |
+| Linear      | 0.0146           | 0.3063              |
+| Mono        | 0.0160           | 0.4311              |
+| Nashville   | 0.0206           | 1.9360              |
+| Noir        | 0.0153           | 0.2444              |
+| Process     | 0.0162           | 0.2538              |
+| Toaster     | 0.0177           | 1.0061              |
+| Tonal       | 0.0162           | 0.2417              |
+| Tone        | 0.0151           | 0.2053              |
+| Transfer    | 0.0164           | 0.2363              |
+
+
 
 ## CIImage
 * [iphone - Using a CIImage from CIColor in a CIFilter: getting empty image - Stack Overflow](https://stackoverflow.com/questions/10903066/using-a-ciimage-from-cicolor-in-a-cifilter-getting-empty-image)
