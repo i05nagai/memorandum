@@ -8,8 +8,6 @@ title: Keras
 * [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 
 
-## Fin
-
 ## API
 
 * keras.models.Sequential
@@ -24,7 +22,6 @@ model = Sequential([
 ])
 ```
 
-* 
 * ImageDataGenerator
     * http://aidiary.hatenablog.com/entry/20161212/1481549365
     * https://keras.io/preprocessing/image/
@@ -105,22 +102,48 @@ data/
 ]
 ```
 
-
-* fit
+* `fit`
     * `x`
         * numpy array
         * 入力のlayerが複数あるときはlist of numpy array、多次元であってもlayerが1つならnumpy array
+    * `batch_size`
+        * Integer/None
+        * defaultは32
+    * `epochs`
+        * Integer
+        * 1 epochで全て`(x, y)`のdataを1度学習に使う
+    * `steps_per_epoch`
+        * interger/None
+        * number of unique samples / batch_size
+        * `None`だと,sampleをbatch sizeで割ったもの
+    * `validation_split`
+        * [0, 1]で指定
+        * `x`の一部を`validation_data`にする
+    * `validation_data`
+        * generator for validation data
+        * tuple `(inputs, labels)` or
+        * tuple `(inputs, labels, sample_weights)`
+        * modelの学習には使われない
+    * `validation_steps`
+        * `steps_per_epoch`が指定された場合のみ意味をもつ
+        * batchを適用する回数
+    * `shuffle`
+        * `True`の場合は、epochの前にtraining dataをshuffleする
+        * `'batch'`を指定した場合は、batchごとにshuffleする
 
-* fit_generator
+* `fit_generator(self, generator, steps_per_epoch=None, epochs=1, verbose=1, callbacks=None, validation_data=None, validation_steps=None, class_weight=None, max_queue_size=10, workers=1, use_multiprocessing=False, shuffle=True, initial_epoch=0)`
+    * `generator`
     * `steps_per_epoch`
         * number of unique samples / batch_size
-    * validation_data
+        * `None`にはできない
+    * `validation_data`
         * generator for validation data
         * tuple (inputs, labels)
         * tuple (inputs, labels, sample_weights)
     * `validation_steps`
-        * `validation_data` がgeneratorのときに必要
-        * number of unique validation data / batch_size
+        * `validation_data`が`generator`の場合のみ意味をもつ
+        * epochの終了時にvalidationに使うvalidationの数
+        * 通常validtion dataのsample数と同じ
 
 ## Dataset
 * [Datasets - Keras Documentation](https://keras.io/datasets/)
@@ -165,6 +188,7 @@ from keras.datasets import imdb
                                                       oov_char=2,
                                                       index_from=3)
 ```
+
 * x_train, x_test
     * list of sequences, which are lists of indexes (integers).
     * If the num_words argument was specific, the maximum possible index value is num_words-1. If the maxlen argument was specified, the largest possible sequence length is maxlen.
@@ -209,8 +233,6 @@ from keras.datasets import imdb
 * [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)
 * [Fine-tuning a Keras model. Updated to the Keras 2.0 API. · GitHub](https://gist.github.com/fchollet/7eb39b44eb9e16e59632d25fb3119975)
 * [Updated to the Keras 2.0 API. · GitHub](https://gist.github.com/fchollet/f35fbc80e066a49d65f1688a7e99f069)
-
-
 
 ## Layer
 * Dense(units, activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
@@ -267,8 +289,11 @@ y_binary = to_categorical(y_int)
 ### Change the number of CPU core
 
 ```python
-config = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1, \
-                        allow_soft_placement=True, device_count = {'CPU': 1})
+config = tf.ConfigProto(
+    intra_op_parallelism_threads=1,
+    inter_op_parallelism_threads=1,
+    allow_soft_placement=True,
+    device_count = {'CPU': 1})
 session = tf.Session(config=config)
 K.set_session(session)
 ```
@@ -295,3 +320,4 @@ python convert.py \
 * [Keras Documentation](https://keras.io/ja/)
 * [Codes of Interest: Using Bottleneck Features for Multi-Class Classification in Keras and TensorFlow](http://www.codesofinterest.com/2017/08/bottleneck-features-multi-class-classification-keras.html)
 * [Useful Keras features – Towards Data Science – Medium](https://medium.com/towards-data-science/https-medium-com-manishchablani-useful-keras-features-4bac0724734c)
+
