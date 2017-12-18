@@ -27,3 +27,4 @@ def vec2(x: T, y: T) -> List[T]:
 
 
 ## Reference
+* [Sphinx に mypy の type annotation を導入した話 - Hack like a rolling stone](http://tk0miya.hatenablog.com/entry/2016/12/25/195745)
