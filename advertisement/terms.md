@@ -72,6 +72,10 @@
     * 意図しないサイト・コンテンツの脇に広告表示される
 * ad fraud
     * 広告が人ではなく、機械によってクリックされるリスク
+* bid pooling
+    * 1番高い入札価格以外の入札価格も保持しておき、browserがrereshなどされた場合に、もう一度bid requestを出さずに、2番目に高かったbid requestを使う
+* publisher = media
+    * web siteを持っていて広告を掲載する側
 
 
 定義はIABのstudy guideによる
