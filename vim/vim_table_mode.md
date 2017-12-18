@@ -8,6 +8,10 @@ title: vim-table-mode
 NeoBundle 'dhruvasagar/vim-table-mode'
 ```
 
+Demo
+
+https://www.youtube.com/watch?v=9lVQ0VJY3ps
+
 ## Usage
 `<Leader>tm`か以下のコマンドでtable modeになる。
 
