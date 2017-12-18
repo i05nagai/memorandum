@@ -8,6 +8,7 @@ title: Google Stackdriver
 ## Analyze billing
 
 
+
 ## Pricing
 2017 年 12 月 1 日から50GBの無料制限を超えて受信したlogに対する課金が始まる。
 Defaultで有効になっている監査logは常に無料で、超過計算の対象にならない。
@@ -67,6 +68,51 @@ defaultで有効になっているlogは
 
 1. Create export
 2. 
+
+### Concigure data access log
+* [Configuring Data Access Logs  |  Stackdriver Logging  |  Google Cloud Platform](https://cloud.google.com/logging/docs/audit/configure-data-access)
+
+
+
+
+1. Read the current policy using one of the getIamPolicy methods. Save the policy to a temporary file.
+1. Edit the policy in the temporary file. Change (or add) only the auditConfigs section.
+1. Write the edited policy in the temporary file, using one of the setIamPolicy methods.
+
+```
+gcloud projects get-iam-policy [PROJECT_ID] > /tmp/policy.yaml
+```
+
+以下のauditConfigsを追加する。
+
+```yaml
+auditConfigs:
+- auditLogConfigs:
+  - logType: DATA_WRITE
+  service: cloudsql.googleapis.com
+bindings:
+- members:
+  - user:colleague@example.com
+  role: roles/editor
+- members:
+  - user:myself@example.com
+  role: roles/owner
+etag: BwVM-FDzeYM=
+version: 1
+```
+
+変更したyamlを反映する。
+
+```
+gcloud projects set-iam-policy [PROJECT_ID] /tmp/policy.yaml
+```
+
+* service
+    * 利用可能なserviceの一覧
+        * [Monitored Resources and Services  |  Stackdriver Logging  |  Google Cloud Platform](https://cloud.google.com/logging/docs/api/v2/resource-list#service-names)
+        * [Cloud Audit Logging  |  Stackdriver Logging  |  Google Cloud Platform](https://cloud.google.com/logging/docs/audit/#services)
+    * `allServices`
+
 
 ## Export logs
 
