@@ -179,6 +179,7 @@ from keras.datasets import cifar100
 
 ```python
 from keras.datasets import imdb
+
 (x_train, y_train), (x_test, y_test) = imdb.load_data(path="imdb.npz",
                                                       num_words=None,
                                                       skip_top=0,
@@ -314,6 +315,45 @@ python convert.py \
   --code-output-path=./pascal_voc_tf/keras.py \
   --data-output-path=./pascal_voc_tf/ \
   /path/to/caffelayer.prototxt
+```
+
+### Memory usage
+* [Keras shoot-out, part 2: a deeper look at memory usage](https://medium.com/@julsimon/keras-shoot-out-part-2-a-deeper-look-at-memory-usage-8a2dd997de81)
+* [TensorflowでGPUを制限・無効化する - Qiita](https://qiita.com/kikusumk3/items/907565559739376076b9)
+* [Python: Keras/TensorFlow で GPU のメモリを必要な分だけ確保する - CUBE SUGAR CONTAINER](http://blog.amedama.jp/entry/2017/06/07/220723)
+* [EMR上でPython3系でpysparkする - Qiita](https://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
+* [memory leak when using tensorflow · Issue #2102 · keras-team/keras](https://github.com/keras-team/keras/issues/2102)
+
+backendごとに設定する。
+
+```python
+from keras.models import load_model
+from keras.backend import backend
+
+def set_tensorflow_config(
+        allow_growth=True,
+        num_gpu=1,
+        per_process_gpu_memory_fraction=1.0):
+        import tensorflow as tf
+        from keras.backend.tensorflow_backend import set_session
+
+        gpu_options = tf.GPUOptions(allow_growth=allow_growth)
+        gpu_options.per_process_gpu_memory_fraction = per_process_gpu_memory_fraction
+        visible_device_list = ",".join(str(i) for i in range(num_gpu))
+        gpu_options.visible_device_list = visible_device_list
+
+        config = tf.ConfigProto(gpu_options=gpu_options)
+        session = tf.Session(config=config)
+        set_session(session)
+```
+
+sessionのclearをする。
+backendのmemoryが開放されるかは、backendによるので明示的にmemoryを開放するには、`K.clear_session()`をする。
+
+```python
+import keras.backend as K
+
+K.clear_session()
 ```
 
 ## Reference
