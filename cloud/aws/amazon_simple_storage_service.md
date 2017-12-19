@@ -1,4 +1,8 @@
-## s3
+---
+title: Amazon Simple Storage Service
+---
+
+## Amazon Simple Storage Service
 
 ## Commands
 基本的には、linuxのCLIのcp, ls, mvなどが使える。
@@ -81,6 +85,12 @@ AmazonのGet requestは300 reuqest/sec, PUT/LIST/DELETE は100 request/sec が�
 * User policies
     * IAMでuser/group/roleに対して権限を付与する
     * user based
+
+### Routing
+* [(Optional) Configuring a Webpage Redirect - Amazon Simple Storage Service](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html)
+
+* `x-amz-website-redirect-location` propertyでredirectできる
+* redirectは301
 
 
 ## Reference
