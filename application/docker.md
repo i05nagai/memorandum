@@ -27,6 +27,15 @@ sudo service docker start
 sudo chkconfig docker on
 ```
 
+For Ubuntu,
+
+Officialのguideに従っても、`docker-ce`をInstallできない場合がある。
+その場合は、Ubuntuが提供している`docker.io`をinstallする。
+
+```
+apt-get install docker.io
+```
+
 
 ## Commands
 
@@ -477,6 +486,9 @@ docker run \
 このとき、`image1-container`を立ち上げた時に、data volumeが作らており、mountされている。
 `docker inspect image1-contianer`の`Mount`の場所を見るとdata volumeが`/image1-volume`にmountされていることが分かる。
 なので、VOLUME commandは、`docker run`の前にdata volumeを作って、`docker run`時にmountするのと同じだが、docker build時に存在したfileがdata volumeにcopyされる。
+
+
+### Docker in docker
 
 
 ## Reference
