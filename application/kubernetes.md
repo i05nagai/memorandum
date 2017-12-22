@@ -120,48 +120,63 @@ spec:
         * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podspec-v1-core)
         * PodSpecの引数をみる
         * `containers`
-            * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
-            * `Container`を見る
-                * `args`
-                    * argument to the entrypoint
-                    * `$(VAR_NAME)`はcontainerの環境で評価される
-                * `command`
-                * `env`
-                * `envFrom`
-                * `image`
-                * `imagePullPolicy`
-                * `lifecycle`
-                * `livenessProbe`
-                * `name`
-                * `volumeMounts`
-                    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volumemount-v1-core)
-                    * `mountPath`
-                        * container内のpath
-                        * `:`は含めない
-                    * `mountPropagation`
-                        * 将来的には消える
-                    * `name`
-                        * volumeの名前に一致
-
-
+            * `Container`
+* `Container`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
+    * `args`
+        * argument to the entrypoint
+        * `$(VAR_NAME)`はcontainerの環境で評価される
+    * `command`
+    * `env`
+    * `envFrom`
+    * `image`
+    * `imagePullPolicy`
+    * `lifecycle`
+    * `livenessProbe`
+    * `name`
+    * `volumeMounts`
+        * array of `VolumeMount`
+* `VolumeMount`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volumemount-v1-core)
+    * `mountPath`
+        * container内のpath
+        * `:`は含めない
+    * `mountPropagation`
+        * 将来的には消える
+    * `name`
+        * volumeの名前に一致
+* `ObjectMeta`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#objectmeta-v1-meta)
+    * `name`
+        * namespace内でunique
+    * `namespace`
+        * emptyは`default`
+* `PodSpec`
+    * `volumes`
+        * Volume Array
+* `PodTemplateSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podtemplatespec-v1-core)
+    * `metadata `
+    * `spec`
+        * `PodSpec`
 * `Deployment`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#deployment-v1-apps)
     * `apiVersion`
     * `kind`
         * Deployment
     * `metadata`
     * `spec`
-        * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#deploymentspec-v1-apps)
+        * `DeploymentSpec`
+    * `satus`
+        * `DeploymentStatus`
+* `DeploymentSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#deploymentspec-v1-apps)
+    * `replicas`
+        * number of pods
+        * defaultは1
     * `template`
-        * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podtemplatespec-v1-core)
-        * `metadata `
-        * `spec`
-            * `PodSpec`
-
-
-* `PodSpec`
-    * `volumes`
-        * Volume Array
-
+        * `PodTemplateSpec`
+* `DeploymentStatus`
 * `Volume`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volume-v1-core)
     * `hostPath`
@@ -169,8 +184,6 @@ spec:
         * 多くのcontainerで不要
     * `name`
         * Pod内でunique, `DNS_LABEL`
-
-
 * `Service`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#service-v1-core)
     * `apiVersion `
@@ -179,12 +192,10 @@ spec:
     * `spec`
         * `ServiceSpec`
     * `status`
-
 * `ServiceSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#servicespec-v1-core)
     * ports
         * ServicePort
-
 * `ServicePort`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#serviceport-v1-core)
     * `name`
@@ -192,6 +203,29 @@ spec:
     * `port`
     * `protocol`
     * `targetPort`
+* `ReplicaSet`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicaset-v1-apps)
+    * `apiVersion`
+    * `kind`
+        * `ReplicaSet`
+    * metadata
+    * `spec`
+        * `ReplicaSetSpec`
+    * `status`
+        * `ReplicaSetStatus`
+* `ReplicaSetSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicasetspec-v1-apps)
+    * `minReadySeconds `
+    * `replicas`
+    * `selector`
+        * `LabelSelector`
+    * `template`
+        * `PodTemplateSpec`
+* `ReplicaSetStatus`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicasetstatus-v1-apps)
+    * `availableReplicas`
+* `LabelSelector`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#labelselector-v1-meta)
 
 
 ## Reference
