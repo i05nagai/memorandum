@@ -18,6 +18,12 @@ For OSX
 
 ## Developer tools
 
+## Addon
+* [Chromeをvimライクに使えるようにするvimium - Qiita](https://qiita.com/satoshi03/items/9fdfcd0e46e095ec68c1)
+* [Vimium - the hacker's browser](http://vimium.github.io/)
+
+
+
 
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
