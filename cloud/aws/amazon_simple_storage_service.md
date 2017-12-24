@@ -1,4 +1,8 @@
-## s3
+---
+title: Amazon Simple Storage Service
+---
+
+## Amazon Simple Storage Service
 
 ## Commands
 基本的には、linuxのCLIのcp, ls, mvなどが使える。
@@ -81,6 +85,72 @@ AmazonのGet requestは300 reuqest/sec, PUT/LIST/DELETE は100 request/sec が�
 * User policies
     * IAMでuser/group/roleに対して権限を付与する
     * user based
+
+### Routing
+* [(Optional) Configuring a Webpage Redirect - Amazon Simple Storage Service](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html)
+
+* `x-amz-website-redirect-location` propertyでredirectできる
+* redirectは301
+
+
+**Example1**
+
+以下のobjectがある。
+
+* index.html
+* docs/article1.html
+* docs/article2.html
+
+`docs`へのaccessを`documents`にredicrectしたい。
+
+```xml
+<RoutingRules>
+    <RoutingRule>
+        <Condition>
+          <KeyPrefixEquals>docs/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+          <ReplaceKeyPrefixWith>documents/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+</RoutingRules>
+```
+
+**Example 2: Redirect requests for a deleted folder to a page**
+
+`images` foldeを削除。
+`images`へのaccessを全て`folderdeleted.html`へredirect
+
+```xml
+<RoutingRules>
+<RoutingRule>
+<Condition>
+   <KeyPrefixEquals>images/</KeyPrefixEquals>
+</Condition>
+<Redirect>
+  <ReplaceKeyWith>folderdeleted.html</ReplaceKeyWith>
+</Redirect>
+</RoutingRule>
+</RoutingRules>
+```
+
+**Example 3: Redirect for an HTTP error**
+
+404の場合にredirectする。
+
+```xml
+<RoutingRules>
+  <RoutingRule>
+    <Condition>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
+    </Condition>
+    <Redirect>
+      <HostName>ec2-11-22-333-44.compute-1.amazonaws.com</HostName>
+      <ReplaceKeyPrefixWith>report-404/</ReplaceKeyPrefixWith>
+    </Redirect>
+  </RoutingRule>
+</RoutingRules>
+```
 
 
 ## Reference

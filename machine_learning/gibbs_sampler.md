@@ -26,7 +26,7 @@ Notationとして、$X$がp.d.f.$$f_{X}$$を持つとき$$X \sim f_{X}$$とか�
 
 ### Algorithm
 $$y_{0}$$を$$Y$$の値域の中から適当に選ぶ。
-以下がgivenとなる。
+以下をgivenとする。
 
 * $$f_{X, Y}$$,
 * $$f_{X \mid Y}$$,
@@ -702,7 +702,7 @@ $$
 
 ## Reference
 * George, C., & Edward, I. G. (n.d.). Explaining the Gibbs Sampler
-    * 概要を理解するのに良い
+    * 概要を理解するのに良く、以下が明確に記載されている
         * 条件つき分布で周辺分布を求める方法であること
         * 積分方程式の解として求まること
 * Tanner, M. A., & Wong, W. H. (1987). The Calculation of Posterior Distributions by Data Augmentation. Source Journal of the American Statistical Association, 82(398), 528–540. Retrieved from http://www.jstor.org/stable/2289457

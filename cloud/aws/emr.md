@@ -556,11 +556,16 @@ default
 * paswordなし port `8888`
 * JupyterHub
     * port: 8000
-
+## With jupyter
+* [spark-emr-jupyter/emr_bootstrap.sh at master · mikestaszel/spark-emr-jupyter](https://github.com/mikestaszel/spark-emr-jupyter/blob/master/emr_bootstrap.sh)
+* [ETL Offload with Spark and Amazon EMR - Part 2 - Code development with Notebooks and Docker](https://www.rittmanmead.com/blog/2016/12/etl-offload-with-spark-and-amazon-emr-part-2-code-development-with-notebooks-and-docker/)
+* [SilviaTerra/docker-emr-poc](https://github.com/SilviaTerra/docker-emr-poc)
+* [AWS EMR+ Jupyter + spark 2.x – Mudit – Medium](https://medium.com/@muppal/aws-emr-jupyter-spark-2-x-7da54dc4bfc8)
+* [Jupyter Notebooks with PySpark on AWS EMR | Mike Staszel](http://mikestaszel.com/2017/10/16/jupyter-notebooks-with-pyspark-on-aws-emr/)
+* [EMR上でPython3系でpysparkする - Qiita](https://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
 
 
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
 * [（オプション）追加のソフトウェアをインストールするためのブートストラップアクションの作成 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/DeveloperGuide/emr-plan-bootstrap.html)
-* * [Configuring Applications - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)
-
+* [Configuring Applications - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)

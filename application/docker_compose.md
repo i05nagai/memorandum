@@ -158,8 +158,10 @@ healthcheck:
   retries: 3
 ```
 
-## CLI
+* configs
+    * serviceごとのconfig fileをcontianerにどのように配置するかを設定できる
 
+## CLI
 * up
     * build, create, start and attach
 * `docker-compose run web bash`
@@ -215,6 +217,12 @@ services:
     image: postgres
 ```
 
+### could not change group /var/run/docker.sock to docker: group docker not found
+docker-composeでhostの`/var/run/docker.sock`を`docker:dind`imageにmountすると上記のmessageがでる。
+
+```
+RUN addgroup -g 2999 docker
+```
 
 ## Reference
 * [Docker Compose — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/compose/toc.html)

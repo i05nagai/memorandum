@@ -27,6 +27,15 @@ sudo service docker start
 sudo chkconfig docker on
 ```
 
+For Ubuntu,
+
+Officialのguideに従っても、`docker-ce`をInstallできない場合がある。
+その場合は、Ubuntuが提供している`docker.io`をinstallする。
+
+```
+apt-get install docker.io
+```
+
 
 ## Commands
 
@@ -348,6 +357,7 @@ docker images
 * [Docker glossary | Docker Documentation](https://docs.docker.com/glossary/?term=volume)
 * [Manage data in Docker | Docker Documentation](https://docs.docker.com/engine/admin/volumes/)
 * [Top 5 Docker Logging Methods to Fit Your Container Deployment Strategy](https://www.loggly.com/blog/top-5-docker-logging-methods-to-fit-your-container-deployment-strategy/)
+* [How To Share Data between Docker Containers | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers)
 
 docker内のdataはcontainerのremoveにあわせて削除される。
 volumeはcontainerのlifecycleとは、異なる領域を作成し、container間でのvolumeの共有とdataの保持を行う。
@@ -392,8 +402,6 @@ tmpfs mountsは`--tmpfs`を使用できるが、Docker 17.06以降では、全�
 
 **Good use cases for tmpfs mounts**
 
-* 
-
 
 ```
 docker volume create my-vol
@@ -415,7 +423,76 @@ docker run -d \
   nginx:latest
 ```
 
+
+Containerの実行時にDataVolumeを作成すると、containerのimageのpathのファイルがdata volumeにcopyされる。
+この場合、`/var`内のfileが`DataVolume3`にcopyされる。
+
+```
+docker run -ti --rm -v DataVolume3:/var ubuntu
+```
+
+
+### As Daemon
+`tail -f /dev/null`で良い。
+
+```
+docker run -d -it --rm \
+    image-name \
+    tail -f /dev/null
+```
+
+### VOLUME command in Dockerfile
+
+image1
+
+```
+FROM ubuntu:17.10
+
+COPY /opt/hoge
+VOLUME ["/image1-volume"]
+```
+
+image2
+
+```
+FROM ubuntu:17.10
+
+COPY /opt/hoge
+```
+
+以下のようにimage1のcontainerを立ち上げておく。
+
+```
+docker run \
+    -it \
+    --rm \
+    --name image1-container \
+    image1:latest \
+    /bin/bash
+```
+
+以下のcommandを実行すると、`image1-container`の`/image1-volume`を`image2-container`が参照することができる。
+
+```
+docker run \
+    -it \
+    --rm \
+    --volumes-from image1-container \
+    --name image2-container \
+    image1:latest \
+    /bin/bash
+```
+
+このとき、`image1-container`を立ち上げた時に、data volumeが作らており、mountされている。
+`docker inspect image1-contianer`の`Mount`の場所を見るとdata volumeが`/image1-volume`にmountされていることが分かる。
+なので、VOLUME commandは、`docker run`の前にdata volumeを作って、`docker run`時にmountするのと同じだが、docker build時に存在したfileがdata volumeにcopyされる。
+
+
+### Docker in docker
+
+
 ## Reference
 * [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)
 * [Python’s super() considered super! | Deep Thoughts by Raymond Hettinger](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/)
 * [Container Performance Analysis at DockerCon 2017](http://www.brendangregg.com/blog/2017-05-15/container-performance-analysis-dockercon-2017.html)
+* [4.8 Creating and Using Data Volume Containers](https://docs.oracle.com/cd/E37670_01/E75728/html/section_ffp_yt4_gp.html)
