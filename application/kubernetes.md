@@ -194,14 +194,24 @@ spec:
     * `status`
 * `ServiceSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#servicespec-v1-core)
-    * ports
+    * `ports`
         * ServicePort
+    * `selector`
+    * `type`
+        * `ExternalName`
+        * `ClusterIP`
+        * `NodePort`
+        * `LoadBalancer`
 * `ServicePort`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#serviceport-v1-core)
     * `name`
+        * DNS_LABEL
     * `nodePort`
     * `port`
+        * serviceがexposeするport
     * `protocol`
+        * TCP/UDP
+        * defaultはTCP
     * `targetPort`
 * `ReplicaSet`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicaset-v1-apps)
