@@ -779,6 +779,12 @@ TypeError: b'3fd29c1aa98364b053ef0c6bd53479276d6956e4' is not JSON serializable
 ## Multinode
 * http://site.clairvoyantsoft.com/setting-apache-airflow-cluster/
 
+## Source code
+
+* dag fileを読み込んで、DBへの反映などをしている
+    * https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1709
+    * [incubator-airflow/jobs.py](https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1355)
+
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
