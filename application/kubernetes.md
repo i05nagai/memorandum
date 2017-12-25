@@ -28,8 +28,8 @@ title: Kubernetes
             * 複数のserviceをmonitoringする際にadapter containerがoutputのwrapをする
     * [Kubernetes: Container Design Patterns](http://blog.kubernetes.io/2016/06/container-design-patterns.html)
     * NodeでschedulingされているPodがfailした場合Podはdeleteされる
-
 * Namespace
+
 
 ### Nodes
 
@@ -452,6 +452,8 @@ spec:
     * `envFrom`
     * `image`
     * `imagePullPolicy`
+        * `IfNotPresent`
+        * `Always`
     * `lifecycle`
     * `livenessProbe`
     * `name`
@@ -592,6 +594,53 @@ spec:
 * Using kubectl
     * `kubectl create -f <dir>`は`dir`の`.yaml`, `.yml`, `.json`に対して`kubectl-create`
     * `kubectl-stop`より`kubectl-delete`を使うstopはdeprecated
+
+
+### Expose Pod Information to Containers Through Environment Variables
+* [Expose Pod Information to Containers Through Environment Variables | Kubernetes](https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/)
+
+以下のように`fieldRef`と`fieldPath`でyamlの設定値を参照できる。
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dapi-envars-fieldref
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "sh", "-c"]
+      args:
+      - while true; do
+          echo -en '\n';
+          printenv MY_NODE_NAME MY_POD_NAME MY_POD_NAMESPACE;
+          printenv MY_POD_IP MY_POD_SERVICE_ACCOUNT;
+          sleep 10;
+        done;
+      env:
+        - name: MY_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: MY_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: MY_POD_SERVICE_ACCOUNT
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.serviceAccountName
+  restartPolicy: Never
+```
 
 
 ## Examples
