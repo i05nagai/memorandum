@@ -326,6 +326,21 @@ JS UDFのbest practice
 * external codeは1MBまで
 * DOM objects, `Window`, `Document`, `Node`などはサポートしてない
 
+### Authorized view
+Rowやcolumn単位で権限を付与したviewを作れる。
+もとのviewにaccess権がなくても可能
+
+```sql
+#standardSQL
+SELECT c.customer, c.id
+FROM `private.customers` c
+INNER JOIN (
+    SELECT group
+    FROM `private.access_control`
+    WHERE SESSION_USER() = user_name) g
+ON c.allowed_group = g.group
+```
+
 ## Tips
 
 ### Add new columns
@@ -337,6 +352,11 @@ bq commandで行う場合は、既存のschemaに新しいcolumnのschemaを追�
 ```
 bq update project_name:dataset_name.table_name table.json
 ```
+
+### BigQuery for Datawarehouse practitioner
+* [BigQuery for Data Warehouse Practitioners  |  Solutions  |  Google Cloud Platform](https://cloud.google.com/solutions/bigquery-data-warehouse)
+
+
 
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
