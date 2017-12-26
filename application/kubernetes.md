@@ -34,6 +34,30 @@ title: Kubernetes
 ### Nodes
 
 
+### Namespace
+* [Namespaces | Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+
+
+* default
+    * The default namespace for objects with no other namespace
+* kube-system
+    * The namespace for objects created by the Kubernetes system
+* kube-public
+    * The namespace is created automatically and readable by all users (including those not authenticated).
+    * This namespace is mostly reserved for cluster usage, in case that some resources should be visible and readable publicly throughout the whole cluster. The public aspect of this namespace is only a convention, not a requirement.
+* 全てのobjectがnamespaceに属するわけではない
+    * Node, persistentVolumeなどは属さない
+    * Eventは種類によって属すものと属さないものがある
+
+
+Namespaceを指定してcommandを実行する
+
+```
+kubectl --namespace=<insert-namespace-name-here> get pods
+```
+
+
+
 ### Service
 
 
@@ -46,6 +70,26 @@ title: Kubernetes
     * cloudのload balancerと体付ける
 * ExternalName
     * serviceとCNAMEの値(e.g. `foo.bar.example.com`)を対応づける
+
+**Discovering services**
+
+serviceに関する情報は、以下の環境変数として他のPodから参照できる。
+
+* `{SVCNAME}_SERVICE_HOST`
+    * underscore delimited upper caseに変換される
+    * `hoge-fuga` -> `HOGE_FUGA`
+* `{SVCNAME}_SERVICE_PORT`
+
+
+```yaml
+REDIS_MASTER_SERVICE_HOST=10.0.0.11
+REDIS_MASTER_SERVICE_PORT=6379
+REDIS_MASTER_PORT=tcp://10.0.0.11:6379
+REDIS_MASTER_PORT_6379_TCP=tcp://10.0.0.11:6379
+REDIS_MASTER_PORT_6379_TCP_PROTO=tcp
+REDIS_MASTER_PORT_6379_TCP_PORT=6379
+REDIS_MASTER_PORT_6379_TCP_ADDR=10.0.0.11
+```
 
 
 ### Labels and Selectors
@@ -291,9 +335,41 @@ spec:
 
 **Use case: Pod with ssh-key**
 
+```
+kubectl create secret generic ssh-key-secret --from-file=ssh-privatekey=/path/to/.ssh/id_rsa --from-file=ssh-publickey=/path/to/.ssh/id_rsa.pub
+```
+
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: secret-test-pod
+  labels:
+    name: secret-test
+spec:
+  volumes:
+  - name: secret-volume
+    secret:
+      secretName: ssh-key-secret
+  containers:
+  - name: ssh-test-container
+    image: mySshImage
+    volumeMounts:
+    - name: secret-volume
+      readOnly: true
+      mountPath: "/etc/secret-volume"
+```
+
 **Use-Case: Pods with prod / test credentials**
 
 **Use-case: Dotfiles in secret volume**
+
+### Service Account
+* [Configure Service Accounts for Pods | Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+
+* 何も指定しないとPodは同じNameSpaceの`default` SAを使う
+* 
+
 
 ### Encrypt secret data
 
@@ -324,6 +400,8 @@ Dockerのvolumeと違い、透過的に色々なdeviceをvolumeとして扱え�
     * 事前にgcloudでPersistent Diskを作っておく必要がある
     * `gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk`
 * gitRepo
+    * credeintialsがいる場合はgit-syncを検討する
+        * [kubernetes/git-sync: A sidecar app which clones a git repo and keeps it in sync with the upstream.](https://github.com/kubernetes/git-sync)
 
 ```yaml
 apiVersion: v1
@@ -360,6 +438,11 @@ spec:
 * secret
 * storageos
 * vsphereVolume
+
+### CondigMap
+* [Configure Containers Using a ConfigMap | Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configmap/)
+
+* configmapはLinuxの`/etc`におかれるfileのようなもの
 
 
 ## CLI
@@ -649,3 +732,4 @@ spec:
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
 * [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
+* [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
