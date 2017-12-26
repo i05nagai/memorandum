@@ -5,6 +5,12 @@ title: Redis
 ## Redis
 in memory KVS.
 
+## Install
+
+```
+sudo apt-get install redis-tools
+```
+
 ## DataType
 
 * string
@@ -26,6 +32,14 @@ redis-cli -h hostname -p port_num command
 * `-n <db>`
     * specify database number
 
+以下でinteractive modeになる。
+
+```
+redis-cli -h hostname -p port_num
+```
+
+
+
 ```
 help @[category]
 ```
@@ -33,7 +47,7 @@ help @[category]
 * `KEYS pattern`
     * `keys *`
         * 保存されているkey一覧
-* `TYPE keys
+* `TYPE keys`
 
 
 ## Pipeline
