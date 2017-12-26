@@ -44,6 +44,27 @@ minikube start --vm-driver=xxx
 minikube dashboard
 ```
 
+Localのdocker imageをpullできるようにする。
+事前に以下を実行
+
+```
+minikube start
+eval $(minikube docker-env)
+```
+
+minikubeのdocker daemonが見えるようになる。
+
+```
+docker images
+```
+
+この状態でdocker-buildすれば良い。
+Podの`container`は`IfNotPresent`にする。
+
+
+```
+        imagePullPolicy: IfNotPresent
+```
 
 
 ## Reference
