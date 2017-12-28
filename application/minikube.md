@@ -44,6 +44,7 @@ minikube start --vm-driver=xxx
 minikube dashboard
 ```
 
+### Pull local docker images
 Localのdocker imageをpullできるようにする。
 事前に以下を実行
 
@@ -66,6 +67,24 @@ Podの`container`は`IfNotPresent`にする。
         imagePullPolicy: IfNotPresent
 ```
 
+Mount host directoryでできる？
+ただOSXの場合はk、mountせずともhostの`/Users`がVMの`/Users`にMountされている。
+
+```
+mkdir ~/mount-dir
+minikube mount ~/mount-dir:/mount-9p
+```
+
+## Tips
+
+### Mount
+Mountは以下の9pを使って行われる。
+
+```
+sudo mkdir -p /opt/local/airflow/aa || true;
+sudo mount -t 9p -o trans=tcp,port=51249,dfltuid=1001,dfltgid=1001,version=9p2000.u,msize=262144 192.168.99.1 /opt/local/airflow/aa;
+sudo chmod 775 /opt/local/airflow/aa;
+```
 
 ## Reference
 * [kubernetes/minikube: Run Kubernetes locally](https://github.com/kubernetes/minikube)
