@@ -4,6 +4,25 @@ title: Kubernetes
 
 ## Kubernetes
 
+
+
+<div style="text-align: center">
+    <img src="http://30ux233xk6rt3h0hse1xnq9f-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/harry-image.jpg">
+</div>
+
+* kube-apiserver
+    * Kubernete's REST API entry point that processes operations on Kubernetes objects, i.e. Pods, Deployments, Stateful Sets, Persistent Volume Claims, Secrets, etc. An operation mutates (create / update / delete) or reads a spec describing the REST API object(s)
+* Etcd
+    * A highly available key-value store for kube-apiserver
+* kube-controller-manager
+    * Runs control loops that manage objects from kube-apiserver and perform actions to make sure these objects maintain the states described by their specs
+* kube-scheduler
+    * Gets pending Pods from kube-apiserver, assigns a minion to the Pod on which it should run, and writes the assignments back to API server. kube-scheduler assigns minions based on available resources, QoS, data locality and other policies described in its driving algorithm
+* kubelet
+    * A Kubernetes worker that runs on each minion. It watches Pods via kube-apiserver and looks for Pods that are assigned to itself. It then syncs these Pods if possible. The procedure of Syncing Pods requires resource provisioning (i.e. mount volume), talking with container runtime to manage Pod life cycle (i.e. pull images, run containers, check container health, delete containers and garbage collect containers)
+* kube-proxy
+    * A network proxy that reflects Service (defined in Kubernetes REST API) that runs on each node. Watches Service and Endpoint objects from kube-apiserver and modifies the underlying kernel iptable for routing and redirection.
+
 ## Concepts
 
 * Pod
@@ -422,6 +441,37 @@ spec:
       revision: "22f1d8406d464b0c0874075539c1f2e96c253775"
 ```
 
+git-syncを使う。
+
+```yaml
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: git-sync
+        image: k8s.gcr.io/git-sync:v2.0.4
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: git-secret
+          mountPath: /etc/git-secret
+        env:
+        - name: GIT_SYNC_REPO
+          value: "git@github.com:kubernetes/kubernetes.git"
+        - name: GIT_SYNC_DEST
+          value: "git"
+        - name: GIT_SYNC_SSH
+          value: "true"
+      - name: redis
+        image: redis
+        ports:
+        - name: management
+          containerPort: 16379
+        - name: node
+          containerPort: 6379
+        env:
+        - name: REDIS_PASSWORD
+          value: "airflow"
+```
+
 * glusterfs
 * hostPath
     * NodeのPathをmountする
@@ -488,160 +538,6 @@ minikube service <service-name>
 ```
 
 
-## API
-* [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#-strong-api-overview-strong-)
-
-APIの引数をyamlで記載する。
-以下のyamlの場合。
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: memory-demo
-spec:
-  containers:
-  - name: memory-demo-ctr
-    image: vish/stress
-    resources:
-      limits:
-        memory: "200Mi"
-      requests:
-        memory: "100Mi"
-    args:
-    - -mem-total
-    - 150Mi
-    - -mem-alloc-size
-    - 10Mi
-    - -mem-alloc-sleep
-    - 1s
-```
-
-
-* [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#pod-v1-core)に引数の仕様がのっている
-    * `Pod`に対するAPIの`v1`で、`metadata`の引数が`name=memory-demo`になっている
-    * `spec`
-        * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podspec-v1-core)
-        * PodSpecの引数をみる
-        * `containers`
-            * `Container`
-* `Container`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
-    * `args`
-        * argument to the entrypoint
-        * `$(VAR_NAME)`はcontainerの環境で評価される
-    * `command`
-    * `env`
-    * `envFrom`
-    * `image`
-    * `imagePullPolicy`
-        * `IfNotPresent`
-        * `Always`
-    * `lifecycle`
-    * `livenessProbe`
-    * `name`
-    * `volumeMounts`
-        * array of `VolumeMount`
-* `VolumeMount`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volumemount-v1-core)
-    * `mountPath`
-        * container内のpath
-        * `:`は含めない
-    * `mountPropagation`
-        * 将来的には消える
-    * `name`
-        * volumeの名前に一致
-* `ObjectMeta`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#objectmeta-v1-meta)
-    * `name`
-        * namespace内でunique
-    * `namespace`
-        * emptyは`default`
-* `PodSpec`
-    * `volumes`
-        * Volume Array
-* `PodTemplateSpec`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podtemplatespec-v1-core)
-    * `metadata `
-    * `spec`
-        * `PodSpec`
-* `Deployment`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#deployment-v1-apps)
-    * `apiVersion`
-    * `kind`
-        * Deployment
-    * `metadata`
-    * `spec`
-        * `DeploymentSpec`
-    * `satus`
-        * `DeploymentStatus`
-* `DeploymentSpec`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#deploymentspec-v1-apps)
-    * `replicas`
-        * number of pods
-        * defaultは1
-    * `template`
-        * `PodTemplateSpec`
-* `DeploymentStatus`
-* `Volume`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volume-v1-core)
-    * `hostPath`
-        * host machineのfile/directory
-        * 多くのcontainerで不要
-    * `name`
-        * Pod内でunique, `DNS_LABEL`
-* `Service`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#service-v1-core)
-    * `apiVersion `
-    * `kind`
-    * `metadata`
-    * `spec`
-        * `ServiceSpec`
-    * `status`
-* `ServiceSpec`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#servicespec-v1-core)
-    * `ports`
-        * ServicePort
-    * `selector`
-    * `type`
-        * `ExternalName`
-        * `ClusterIP`
-        * `NodePort`
-        * `LoadBalancer`
-* `ServicePort`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#serviceport-v1-core)
-    * `name`
-        * DNS_LABEL
-    * `nodePort`
-    * `port`
-        * serviceがexposeするport
-    * `protocol`
-        * TCP/UDP
-        * defaultはTCP
-    * `targetPort`
-* `ReplicaSet`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicaset-v1-apps)
-    * `apiVersion`
-    * `kind`
-        * `ReplicaSet`
-    * metadata
-    * `spec`
-        * `ReplicaSetSpec`
-    * `status`
-        * `ReplicaSetStatus`
-* `ReplicaSetSpec`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicasetspec-v1-apps)
-    * `minReadySeconds `
-    * `replicas`
-    * `selector`
-        * `LabelSelector`
-    * `template`
-        * `PodTemplateSpec`
-* `ReplicaSetStatus`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicasetstatus-v1-apps)
-    * `availableReplicas`
-* `LabelSelector`
-    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#labelselector-v1-meta)
 
 ### Best Practice
 * [Configuration Best Practices | Kubernetes](https://kubernetes.io/docs/concepts/configuration/overview/)
@@ -725,6 +621,11 @@ spec:
   restartPolicy: Never
 ```
 
+### Use environment variable in yaml
+* [Using environment variables in Kubernetes deployment spec - Server Fault](https://serverfault.com/questions/791715/using-environment-variables-in-kubernetes-deployment-spec)
+
+yaml fileの中でshellの環境変数は現状利用できない。
+`envsubst`を使って、実行時に置き換えるか、`API`をprogramから呼び出す。
 
 ## Examples
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
@@ -733,3 +634,4 @@ spec:
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
 * [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
 * [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
+* [Making Kubernetes Production Ready – Part 2 - Applatix](https://applatix.com/making-kubernetes-production-ready-part-2/)
