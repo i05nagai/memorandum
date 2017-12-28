@@ -32,7 +32,24 @@ git cofing --gloabl alias.st st
 	l = log --abbrev-commit --date=iso --graph --pretty=format:'%C(red)%h %C(yellow)%d%C(green)%cd %C(blue)%cn\n%C(reset)%s\n'
 ```
 
+## Could not resolve host: github.com in OSX
+xcodeを9.2にupdateしたら`git-push`で以下のerrorがでるようになった。
+
+```
+fatal: unable to access 'https://github.com/username/repository.git/': Could not resolve host: github.com
+```
+
+xcodeのcommand line toolsが消えていたようで、command line toolsをinstallしたらでなくなった。
+terminalから以下のコマンドでinstallできる。
+
+```
+xcode-select --install
+```
+
+直接の原因は不明
+
 ## windowsでのpushエラー
+
 ### 症状
 使用しているgitは以下。
 ```shell
@@ -55,7 +72,7 @@ git push origin master
 
 上記はvimshellでのエラーだが、cmdから直接実行しても同様のエラーがでる。
 
-###対処法?
+### 対処法?
 1. 以下の方法によるが、試してない。
 [https://github.com/atom/atom/issues/8984:title]
 以下のURLをremote repositoryのURLとして設定する。
