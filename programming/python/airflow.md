@@ -433,6 +433,9 @@ webserverも見えている必要がある。
 
 workerやschedulerをremoteやdockerで扱う場合は注意が必要。
 
+### Ignore dag file
+DAG folderに`.airflowignore`fileをおくと、fileに記載されているfileは無視される。
+
 ### With postgres
 postgresを使う場合は`psycopg2`と合わせて使うことが推奨されている。
 
