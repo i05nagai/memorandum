@@ -4,8 +4,6 @@ title: Kubernetes
 
 ## Kubernetes
 
-
-
 <div style="text-align: center">
     <img src="http://30ux233xk6rt3h0hse1xnq9f-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/harry-image.jpg">
 </div>
@@ -779,6 +777,10 @@ spec:
 
 yaml fileの中でshellの環境変数は現状利用できない。
 `envsubst`を使って、実行時に置き換えるか、`API`をprogramから呼び出す。
+
+### Error
+
+
 
 ## Examples
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
