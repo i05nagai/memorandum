@@ -49,6 +49,8 @@ spec:
         * array of `Container`
     * `volumes`
         * array of `Volume`
+    * `securityContext`
+        * `PodSecurityContext`
 * `Volume`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volume-v1-core)
     * dockerのvolume containerやvolume driverに近い
@@ -80,6 +82,10 @@ spec:
     * `volumeMounts`
         * array of `VolumeMount`
 * `SecurityContext`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#securitycontext-v1-core)
+    * `privileged`
+        * docker runのprivileged option
+* `PodSecurityContext`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#securitycontext-v1-core)
     * `runAsUser`
         * containerのprcess実行時のUID
@@ -148,12 +154,15 @@ spec:
     * `name`
         * DNS_LABEL
     * `nodePort`
+        * serviceが使うnodeのport
     * `port`
         * serviceがexposeするport
     * `protocol`
         * TCP/UDP
         * defaultはTCP
     * `targetPort`
+        * 数字がport名
+        * stringの場合はpodのcontainer port名を調べる
 * `ReplicaSet`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#replicaset-v1-apps)
     * `apiVersion`
