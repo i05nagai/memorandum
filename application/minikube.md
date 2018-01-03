@@ -92,5 +92,18 @@ sudo mount -t 9p -o trans=tcp,port=51249,dfltuid=1001,dfltgid=1001,version=9p200
 sudo chmod 775 /opt/local/airflow/aa;
 ```
 
+### Error: Temporary Error: Could not find an IP address for
+* [New cluster w/ HyperKit driver fails to start · Issue #1926 · kubernetes/minikube · GitHub](https://github.com/kubernetes/minikube/issues/1926)
+
+一度deleteすると、修正される場合がある。
+
+```
+minikube delete
+```
+
+```
+minikube start --loglevel 0
+```
+
 ## Reference
 * [kubernetes/minikube: Run Kubernetes locally](https://github.com/kubernetes/minikube)
