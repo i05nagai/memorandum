@@ -196,6 +196,13 @@ debugの最も効率的な方法の1つは、sshでCI端末にアクセスし、
 * [SSH access to builds - CircleCI](https://circleci.com/docs/ssh-build/)
 
 
+## For kubernetes
+* [circleci/docker-hello-google](https://github.com/circleci/docker-hello-google)
+* [contrib/continuousdelivery at master · kubernetes/contrib](https://github.com/kubernetes/contrib/tree/master/continuousdelivery)
+
+
+
+
 ## Circle CIのenvironment variableに登録できるサイズの上限
 約130KB。
 環境変数の数にもよる。
