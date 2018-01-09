@@ -47,10 +47,21 @@ spec:
 * `PodSpec`
     * `containers`
         * array of `Container`
+    * `dnsPolicy`
+        * default value `ClusterFirst`
+        * `ClusterFirstWithHostNet`
+        * `ClusterFirst`
+        * `Default`
+        * `None`
+    * `dnsConfig`
     * `volumes`
         * array of `Volume`
     * `securityContext`
         * `PodSecurityContext`
+    * `terminationGracePeriodSeconds`
+        * podがgracefullyにterminateする時間
+        * 0はすぐ削除
+        * defaultは`30`
 * `Volume`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#volume-v1-core)
     * dockerのvolume containerやvolume driverに近い
@@ -58,10 +69,15 @@ spec:
     * `name`
         * `volumeMount`などでreferするvolumeの名前
     * `secret`
+    * `configMap`
+        * ConfigMapVolumeSource
     * `gitRepo`
     * `hostPath`
         * Nodeのpath
-        * developでhostのfileをMountする場合に釣っ買う
+        * developでhostのfileをMountする場合に使う
+* `ConfigMapVolumeSource`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#configmapvolumesource-v1-core)
+    * `name`
 * `Container`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
     * `args`
@@ -149,6 +165,8 @@ spec:
         * `ClusterIP`
         * `NodePort`
         * `LoadBalancer`
+* `NodePort`
+    * 30000-32767の範囲
 * `ServicePort`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#serviceport-v1-core)
     * `name`
@@ -186,6 +204,20 @@ spec:
     * `availableReplicas`
 * `LabelSelector`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#labelselector-v1-meta)
+* `Job`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#job-v1-batch)
+    * `spec`
+    * `status`
+* `JobSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#jobspec-v1-batch)
+    * `template`
+        * `PodTemplateSpec`
+    * `parallelism`
+    * `backoffLimit`
+        * number of retry
+        * default 6
+* `JobStatus`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#jobstatus-v1-batch)
 
 ## Reference
 
