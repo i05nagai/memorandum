@@ -52,6 +52,35 @@ Audito logと`access & storage log`の使い分け
     * You want to track the amount of data stored in your buckets.
 
 
+```
+gsutil mb gs://bucket-to-store-log
+# give write permission to GCS
+gsutil acl ch -g cloud-storage-analytics@google.com:W gs://bucket-to-store-log
+gsutil defacl set project-private gs://bucket-to-store-log
+gsutil logging set on -b gs://bucket-to-store-log [-o log_object_prefix ] gs://bucket-to-be-logged
+```
+
+* `log_object_prefix`
+    * logのprefix
+
+```bash
+#!/bin/bash
+
+################################################################################
+# Requirements:
+#   gcloud
+################################################################################
+
+bucket_to_store_log="gs://bucket_to_store_log"
+
+for bucket_url in $(gsutil ls | grep -v ${bucket_to_store_log} ); do
+  log_prefix=$(echo $bucket_url | sed 's/gs:\/\///')
+  echo "gsutil logging set on -b ${bucket_to_store_log} -o ${log_prefix} ${bucket_url}"
+  gsutil logging set on -b ${bucket_to_store_log} -o ${log_prefix} ${bucket_url}
+done
+```
+
+
 ## CLI
 
 
