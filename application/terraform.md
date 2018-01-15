@@ -5,6 +5,13 @@ title: Terraform
 ## Terraform
 Terraformの設定ファイルはHCLで記述する。
 
+* `.tf`, `.tf.json`
+* fileはdirectoryごとにalphabetic orderで読まれる
+* variableの宣言順序は関係ない
+
+## Install
+For OSX
+
 ```
 brew install terraform
 ```
@@ -52,10 +59,10 @@ variable = [{
 ```
 
 ```
-resource "aws_instance" "web" {
-  ami               = "${var.ami}"
-  count             = 2
-  source_dest_check = false
+resource "resource_type" "resource_name" {
+  attribute1 = "${var.ami}"
+  attribute2 = 2
+  attribute3 = false
 
   connection {
     user = "root"
@@ -73,7 +80,7 @@ resource = [{
           count             = 2
           source_dest_check = false
 
-          connection {
+          connection: {
             user = "root"
           }
         }
@@ -103,7 +110,6 @@ resource = [{
 resourceの中に記載するのは`TYPE`にmatchするproviderの設定である。
 `NAME`はわかりやすい名前ならなんでも良い。
 
-
 ```
 resource TYPE NAME {
     CONFIG ...
@@ -125,6 +131,11 @@ Resourceごとにexportされる外部から参照できる属性がある。
 
 data sourceは例えば、既存のinstanceの情報を取得してterraformに提供する。
 
+
+```
+data "data_type" "data_name" {
+}
+```
 
 
 ### Provider Configuration
@@ -193,6 +204,12 @@ variable NAME {
     * `-var 'foo=bar'`
         * 実行時に変数の定義ができる
         * credentialの設定などに便利
+* `terraform fmt`
+    * formatter
+
+```
+terraform fmt -diff -write=true -list=true .
+```
 
 ## Tips
 
@@ -233,78 +250,31 @@ output "ip" {
 }
 ```
 
+## DataSource
+* `data`ではじまる
+
+
+```
+data "template_file" "example" {
+  template = "$${hello} $${world}!"
+  vars {
+    hello = "goodnight"
+    world = "moon"
+  }
+}
+```
+
+* `template_file`
+    * 内部的に文字列を描画してfileに持つ
+
 ## Providers
 Provicerごとにそれぞれ、DataSourceとResoruceを提供している。
 
-### AWS
-* [Provider: AWS - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/index.html)
+Providerは
 
-
-Resource
-
-* `aws_instance`
-    * `ami`
-    * `availability_zone`
-    * `disable_api_termination`
-        * trueだとEC2 Instance Termination Protectionをenableにする
-        * trueだとprotectionをつける
-    * `instance_type`
-    * `key_name`
-    * `vpc_security_group_ids`
-    * `subnet_id`
-    * `associate_public_ip_address`
-        * trueだとPublic IPに関連付ける
-    * `tags`
-    * `volume_tags`
-    * `root_block_device`
-    * `ebs_block_device`
-    * `tags`
-        * tagつける
-    * `volume_tags`
-        * volumeにtagをつける
-* `aws_db_instance`
-    * `identifier`
-    * `allocated_storage`
-        * storageの容量をGBで指定
-    * `storage_type`
-    * `engine`
-    * `engine_version`
-    * `name`
-        * DB名、省略するとDBを作らない
-    * `password`
-        * master DB userのpassword
-        * logとstate fileに記録される可能性がある
-    * `username`
-        * master DB userのusername
-    * `skip_final_snapshot`
-        * RDS terminate時にDBのsnapshotを保存するかを指定
-        * defaultはfalse
-        * falseの場合は`final_snapshot_identifier`を指定する必要がある
-    * `final_snapshot_identifier`
-        * `final_snapshot`時のsnapshotの名前
-    * `tags`
-        * tagを記載
-    * `copy_tags_to_snapshot`
-        * snapshotにtagをcopy
-        * `final_snapshot_identifier`を指定している必要がある
-* `aws_eip`
-    * [AWS: aws_eip - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/r/eip.html)
-    * Elastic IPを作成する
-    * `vpc`
-        * EIPがVPCの中ならtrue
-    * `instance`
-        * EIPを割り当てるEC2 instance ID
-
-```
-$ terraform import aws_eip.bar eipalloc-00a10e96
-```
-
-* `aws_eip_association`
-    * [AWS: aws_eip_association - Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/r/eip_association.html)
-    * 取得したElasticp IPをEC2 instanceと割り当てるときに使う
-    * `aws_eip` resourceと一緒に使うことが多い
-    * `instance_id`
-    * `allocation_id`
+* GCP
+* AWS
+* など
 
 ## State
 terraformが実際のinfrastructureとresourceとの対応をとるためのmeta dataのこと。
@@ -314,10 +284,47 @@ state fileはただのJson file.
 backupの作成を自動で行う。
 localの場合はplain textで保存されるので、passwordなどは暗号化されていない。
 
-Remote State
+**Remote State**
+
+* backendとして以下が使える
+    * [Backend: Supported Backend Types - Terraform by HashiCorp](https://www.terraform.io/docs/backends/types/index.html)
+    * artifactory
+    * azurerm
+    * consul
+    * etcd
+    * gcs
+    * http
+    * manta
+    * s3
+    * swift
+    * terraform enterprise
+* backendのblockの中に書く項目はbackendごとに異なる
+
+```
+terraform {
+  backend "consul" {
+    address = "demo.consul.io"
+    path    = "example_app/terraform_state"
+  }
+}
+```
+
+以下のように設定を空欄にしておけば実行時にconfigを指定可能。
+
+```
+terraform {
+  backend "consul" {}
+}
+```
+
+```
+$ terraform init \
+    -backend-config="address=demo.consul.io" \
+    -backend-config="path=example_app/terraform_state"
+```
 
 
-Sensitive data
+**Sensitive data**
 
 State fileにはpasswordなどのsensitive dataが保存される可能性がある。
 remote stateの場合はmemoryにのみstateが保存される。
@@ -425,10 +432,114 @@ resource "aws_instance" "example" {
 }
 ```
 
+## Modules
+以下のmoduleのsourceとして利用できる
+    * [Module Sources - Terraform by HashiCorp](https://www.terraform.io/docs/modules/sources.html)
+    * [Terraform Module Registry](https://registry.terraform.io/?_ga=2.60555309.1863698067.1515572881-174552816.1502194891)に登録されているmodule
+    * local file
+        * `source = './path/to/module'`
+    * GitHub
+    * BitBucket
+    * Git, Mercurial
+    * HTTP URL
+    * S3 bucket
+
+
+```
+module "consul" {
+  source  = "hashicorp/consul/aws"
+  version = "0.0.5"
+  name = "module_name"
+
+  # input
+  servers = 3
+}
+```
+
+最小のstandard module structure
+
+* `main.tf`
+    * moduleのentrypoint
+    * simpleな構成の場合は、すべてのresource定義が含まれる
+
+```
+.
+├── README.md
+├── main.tf
+├── variables.tf
+├── outputs.tf
+```
+
+より複雑な場合
+
+```
+├── README.md
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── ...
+├── modules/
+│   ├── nestedA/
+│   │   ├── README.md
+│   │   ├── variables.tf
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   ├── nestedB/
+│   ├── .../
+├── examples/
+│   ├── exampleA/
+│   │   ├── main.tf
+│   ├── exampleB/
+│   ├── .../
+```
+
+## Environment Variablaeso
+
+Terraformのvairableをenvironment varibleから読み込める。
+`TF_VAR_<variable name>`
+
+```
+export TF_VAR_region=us-west-1
+export TF_VAR_ami=ami-049d8641
+export TF_VAR_alist='[1,2,3]'
+export TF_VAR_amap='{ foo = "bar", baz = "qux" }'
+```
+
+## Error
+
+### netrpc
+以下のようなerrorが出たらterraformのversionをあげる。
+providerが古いterraformに対応していない可能生がある。
+それかproviderのversionを指定する。
+
+```
+provider.terraform: dial unix ....|netrpc: connect: no such file or directory
+```
+
+
 ## Interpolation syntax
 * [Interpolation Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/interpolation.html)
 
 `${var.foo}`で変数や関数を参照でき、Resource内で使える。
+
+* `${var.foo}`
+    * `foo`という名前のstring variableのreference
+* `${var.foo["hoge"]}`
+    * `foo`という名前のmap variableの`hoge` key の値
+* `${var.foo[idx]}`
+    * `foo`という名前のlist variableの`idx` 番目の値
+* `${self.foo}`
+    * 同じresource内の`foo`というstring variableの値
+* `${resource_type.resource_name.attribute}`
+    * resourceの`resource_type` typeの`resource_name`という名前がついたresourceの`attribute`の値
+* `${data.data_type.data_name.attribute}.`
+    * `resource`の
+* `${data.data_type.data_name.0.attribute}.`
+* `"${var.env == "production" ? var.prod_subnet : var.dev_subnet}"`
+
+* `lookup(map, key [, default])`
+    * keyがあればkeyの値を出力、なければdefault
+    * defaultが省略されていれば、keyがないときerror
 
 
 ## Reference
