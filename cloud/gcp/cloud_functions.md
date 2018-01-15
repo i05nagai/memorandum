@@ -3,6 +3,13 @@ title: Cloud Functions
 ---
 
 ## Cloud Functions
+Beta
+
+* Node.js
+    * v6.11.5
+* docker image
+    * gcr.io/google-appengine/nodejs
+    * https://github.com/GoogleCloudPlatform/nodejs-docker
 
 ## Pricing
 料金は、Innvocations, Network, Comute timeについて課金される。
