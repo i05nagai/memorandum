@@ -55,5 +55,11 @@ Take a screenshot.
 chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.chromestatus.com/
 ```
 
+## CLI
+* [List of Chromium Command Line Switches « Peter Beverloo](https://peter.sh/experiments/chromium-command-line-switches/)
+    * list of opitons
+
+* `--allow-file-access-from-files`
+
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
