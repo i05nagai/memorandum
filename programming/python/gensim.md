@@ -36,7 +36,6 @@ pip install gensim
     * iter
         * num of iteration
 
-
 ## Tips
 
 ### Show 
@@ -56,9 +55,6 @@ doc2vec.train(
 
 ### Optimizing word2vec
 * [Word2vec in Python, Part Two: Optimizing | RaRe Technologies](https://rare-technologies.com/word2vec-in-python-part-two-optimizing/)
-
-
-
 
 ## Reference
 * [gensim: Topic modelling for humans](https://radimrehurek.com/gensim/)
