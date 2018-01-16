@@ -50,7 +50,8 @@ doc2vec.build_vocab(documents, trim_rule=trim_rule)
 doc2vec.train(
     documents,
     total_examples=doc2vec.corpus_count,
-    epochs=num_iter)
+    epochs=num_iter,
+    compute_loss=True)
 ```
 
 ### Optimizing word2vec
