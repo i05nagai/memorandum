@@ -6,6 +6,16 @@ title: Concourse
 OSSのCI/CD Tool.
 Post Jenkinsとして作られた。
 
+## Concepts
+* pipeliens
+    * jobsとresourceのconnectionをつけたもの
+* tasks
+    * 単一のscriptの実行
+    * `0` exitでsuccess
+    * job/CLIから実行できる
+* jobs
+* resources
+
 ## Configuraring pipelins
 
 ```yaml
@@ -74,6 +84,47 @@ resource_types:
     * serial_groups: [string]
         * tagsを指定
         * 指定したtagのjobは同時に実行されない
+    * plan
+        * required
+        * Build planを記載
+
+```yaml
+name: banana-unit
+plan:
+- get: banana
+  trigger: true
+- task: unit
+  file: banana/task.yml
+```
+
+```yaml
+plan:
+- aggregate:
+  - get: component-a
+  - get: component-b
+  - get: integration-suite
+```
+
+* plan
+    * [Build Plans](https://concourse.ci/build-plans.html)
+    * 実行stepのlist
+    * `banana` resourceをget
+    * `banana` resourceが更新されるたびに`task` stepを実行する
+    * `get`
+        * fetch resource
+    * `put`
+        * resourceへのpush
+    * `task`
+        * inlineで定義されたtaskか外部ファイルに定義されたtaskを実行
+    * `aggregate`
+        * aggregateのtask/stepを並列に実行する
+        * resourceの並列取得
+
+
+* task
+    * [Tasks](https://concourse.ci/running-tasks.html#platform)
+    * taskは純粋な関数で、`inputs`を入力に`outputs`を出力する
+    * taskは一度設定すれば、Jobで再利用できる
 * groups
 
 
@@ -85,6 +136,45 @@ fly commandを使う。
 Downloadからbinaryをdowloadする。
 pathの通っている場所に配置する。
 
+```
+fly --target name login --concourse-url /url/to/concourse --team-name main
+```
+
+* `--target`
+    * login先のaliasとして記録される
+* `--team-name`
+    * defaultは`main`
+* `--concourse-url`
+    * concourseのURL
+
+
+login先の一覧
+
+```
+fly targets
+```
+
+Taskの実行
+
+```
+fly --target target_name execute --config build.yaml
+```
+
+`build.yaml`の中身
+
+```yaml
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: busybox}
+
+inputs:
+- name: flight-school
+
+run:
+  path: ./flight-school/ci/test.sh
+```
 
 
 ## Reference
