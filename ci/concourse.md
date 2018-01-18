@@ -3,18 +3,37 @@ title: Concourse
 ---
 
 ## Concourse
-OSSのCI/CD Tool.
-Post Jenkinsとして作られた。
+OSSのCI/CD Tool。 Post Jenkinsとして作られた。
+`Wercker`のように、Pipelineを作って各stepはcontainer内で実行する。
+stepの生成物を、他のstepに受け渡すことができ、stepの挙動を環境変数を指定して挙動を変更できる。
+
+officialのCIの画面
+https://ci.concourse.ci/
 
 ## Concepts
 * pipeliens
-    * jobsとresourceのconnectionをつけたもの
+    * `.travis.yml`や`.circle.yml`にあたる
+    * resources/resource_types/jobs/groups/の関係性を記述したもの
+    * resources
+        * gitのrepositoryやgithubのPRなどがresourceとして参照できる
+        * githubのrepositoryをresourceとして`get`できる
+        * slackのwebhookに対して`put`で通知できるなど
+    * resource_types
+        * [Resource Types](http://concourse.ci/resource-types.html)
+        * resourceの設定
+    * jobs
+        * pipelineで実行する処理がjob
+        * jobは複数のtaskから成る
 * tasks
-    * 単一のscriptの実行
+    * container内で実行される単一のscript
+    * pipelineでJobとして利用できる
+    * 他のtaskの生成物などをinputとして受け取ることができ、
     * `0` exitでsuccess
     * job/CLIから実行できる
-* jobs
-* resources
+
+1. pipelineで全体の流れを記述しする
+2. stepをtaskとしてtask fileに分ける
+    * 再利用できる
 
 ## Configuraring pipelins
 
@@ -121,10 +140,50 @@ plan:
         * resourceの並列取得
 
 
-* task
-    * [Tasks](https://concourse.ci/running-tasks.html#platform)
-    * taskは純粋な関数で、`inputs`を入力に`outputs`を出力する
-    * taskは一度設定すれば、Jobで再利用できる
+### task
+* [Tasks](https://concourse.ci/running-tasks.html#platform)
+* taskは純粋な関数で、`inputs`を入力に`outputs`を出力する
+* taskは一度設定すれば、Jobで再利用できる
+
+
+```yaml
+---
+platform: linux
+
+# taskの動作するcontainer
+image_resource:
+  type: docker-image
+  source:
+    repository: golang
+    tag: '1.6'
+
+# 環境変数として利用できる
+params:
+  SOME_PARAM: some-default-value
+
+# getで指定したものか、 outputsで出力されたものが指定できる
+# pathを省略するとnameのfolderに配置される
+inputs:
+- name: some-input
+- name: some-input-with-custom-path
+  path: some/custom/path
+
+# outputとして、指定したディレクトリに出力したものは、他のtaskのinputとして利用できる
+outputs:
+- name: some-output
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    whoami
+    env
+    go version
+    find .
+    touch some-output/my-built-artifact
+```
+
 * groups
 
 
@@ -176,6 +235,59 @@ run:
   path: ./flight-school/ci/test.sh
 ```
 
+teamを作る
+teamの認証は、
+
+* Authなし
+* Basic Auth
+* Genric OAuth
+* Github Auth
+* Gitlab Auth
+* UAA Auth
+* BitBucket Cloud Auth
+* BitBucket Server Auth
+
+```
+fly --target target_name set-team -n team_name \
+    --basic-auth-username=... \
+    --basic-auth-password=...
+```
+
+pipeplineを登録
+登録したpipelieneはdefaultではpauseになっている。
+
+```
+fly --target target_name set-pipeline -p pipeline_name \
+    --var "private-repo=$(cat /path/to/ssh/key)"
+```
+
+unpause pipeliene
+
+```
+fly -t target_name unpause-pipeline -p pipeline_name
+```
+
+## Resources
+* git
+    * disable_ci_skip
+        * defaultでは`[skip ci]`, `[ci skip]`があるとresourceはこの更新を無視する
+
+* [Implementing a Resource](http://concourse.ci/implementing-resources.html#resource-metadata)
+
+
+## Tips
+
+### Error
+* [Concourse Pipeline has failed to fetch digest: 401 Unauthorized](http://www.starkandwayne.com/blog/concourse-pipeline-has-failed-to-fetch-digest-401-unauthorized/)
+
+以下のようなerrorがでたら、`resource`のimage名が間違っていないか調べる。
+
+```
+resource script '/opt/resource/check []' failed: exit status 1
+
+stderr:  
+failed to fetch digest: 401 Unauthorized  
+```
 
 ## Reference
 * [Hello, world!](https://concourse.ci/hello-world.html)
