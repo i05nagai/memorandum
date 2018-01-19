@@ -52,6 +52,11 @@ $(subst a,b,${x})
 * [A reusable Makefile to build and release Docker images](https://binx.io/blog/2017/10/07/makefile-for-docker-images/)
 
 
+## Show the commands
+* [makefile - How do I force make/gcc to show me the commands? - Stack Overflow](https://stackoverflow.com/questions/5820303/how-do-i-force-make-gcc-to-show-me-the-commands)
+* [[Make] make実行時の詳細表示有効化メモ - Qiita](https://qiita.com/koara-local/items/4e047e47b8cde52919a6)
+
+
 ## Reference
 * [GNU make: Rules](https://www.gnu.org/software/make/manual/html_node/Rules.html)
 * [Makefiles - Best practices and suggestions - Mozilla | MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefiles_-_Best_practices_and_suggestions)
