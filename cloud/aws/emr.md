@@ -447,8 +447,8 @@ configurationに以下を設定する。
 {
   "Classification": "spark-defaults",
   "Properties": {
-    "spark.yarn.appMasterEnv.RETTY_DWH_ENVIRONMENT_NAME": "${RETTY_DWH_ENVIRONMENT_NAME}",
-    "spark.yarn.executorEnv.RETTY_DWH_ENVIRONMENT_NAME": "${RETTY_DWH_ENVIRONMENT_NAME}"
+    "spark.yarn.appMasterEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}",
+    "spark.yarn.executorEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}"
   }
 }
 ```
@@ -480,12 +480,12 @@ aws emr create-cluster \
     Name='Install Jupyter notebook',Path="s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh",Args=[--r,--julia,--toree,--torch,--ruby,--ds-packages,--ml-packages,--python-packages,'ggplot nilearn',--port,8880,--password,jupyter,--jupyterhub,--jupyterhub-port,8001,--cached-install,--notebook-dir,s3://<your-s3-bucket>/notebooks/,--copy-samples]
 ```
 
-Stepでついっかする場合は、以下のstepを追加する。
+Stepで追加する場合は、以下のstepを追加する。
 
 ```sh
 aws emr add-steps
     --cluster-id j-2AXXXXXXGAPLF
-    --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh","--toree","--ds-packages","--python-packages","'ggplot nilearn'","--ml-packages","--cached-install","--notebook-dir","s3://retty-dpi/work_nagai/jupyter_notebook/","--port","8080","--jupyterhub","--jupyterhub-port","8001","--copy-samples"]
+    --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh","--toree","--ds-packages","--python-packages","'ggplot nilearn'","--ml-packages","--cached-install","--notebook-dir","s3://path/to/jupyter-notebook/","--port","8080","--jupyterhub","--jupyterhub-port","8001","--copy-samples"]
 ```
 
 ```json
