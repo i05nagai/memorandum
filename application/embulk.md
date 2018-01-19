@@ -372,7 +372,7 @@ csvの改行系のエラーの場合が多い。
 * allow_quoted_newlines: true
 
 ```
-Error: org.jruby.exceptions.RaiseException: (Error) failed during waiting a Load job, get_job(retty-dpi, embulk_load_job_), errors:[{:reason=>"invalid", :message=>"Too many errors encountered."}, {:reason=>"invalid", :location=>"mediaupload-snapshot", :message=>"CSV table references column position .., but line starting at position:.... contains only .. columns."}]
+Error: org.jruby.exceptions.RaiseException: (Error) failed during waiting a Load job, get_job(), errors:[{:reason=>"invalid", :message=>"Too many errors encountered."}, {:reason=>"invalid", :location=>"mediaupload-snapshot", :message=>"CSV table references column position .., but line starting at position:.... contains only .. columns."}]
 ```
 
 configに以下を指定すると、複数threadで動作しなくなるので、error messageとして、error positionが出る場合はエラーの場所を追いやすい。
