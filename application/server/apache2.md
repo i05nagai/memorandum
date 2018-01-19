@@ -137,8 +137,8 @@ Options +ExecCGI
 例えば、
 
 ```
-Alias /image /srv/retty2/tech/roogle/search/image/roogle_image.wsgi
-<Directory "/srv/retty2/tech/roogle/search/image">
+Alias /image /path/to/hoge/hoge.wsgi
+<Directory "/path/to/hoge">
     SetHandler wsgi-script
     Options +ExecCGI
     Require all granted
