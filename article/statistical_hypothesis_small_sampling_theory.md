@@ -11,7 +11,7 @@ title: Statistical Hypothesis Small Sampling Theory
     * measurable space
 * $\Theta \subseteq \mathbb{R}^{p}$,
     * parameters
-* $$\{P\}_{\theta \in \Theta}$$,
+* $\{P\}_{\theta \in \Theta}$,
     * probability measure over $(\mathcal{X},\mathcal{A})$,
 * $\alpha \in [0, 1]$,
     * constant
