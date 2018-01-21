@@ -1,4 +1,20 @@
 ## Statistical Hypothesis Small Sampling Theory
+現代の統計は、以下の３つのtopicに分類できる。
+
+1. Small sampling theory
+    * 正規分布に対する統計
+    * 2,3 の議論の基礎
+    * 実務でも使う
+2. Large sampling theory
+    * 非正規分布に対する統計
+    * 実務でも割りと使う
+3. High order approximation/Asymptotic expansion
+    * 2の議論の精緻化
+    * 実務で使えている会社は世界に数社くらい
+
+以下ではsmall sampling theoryに対するhypothesis testingについてまとめている。
+small sampling theoryにおけるhypothesis testingにおいて重要な結果の1つは、正規分布に対するunbiased UMP testの構成である。
+ここでは、やや一般的にExponential familyに対するunbiased UMP testの構成を行う。
 
 ## Formulation of hypothesis testing
 Here we formulate statistical hypothesis testing and define related terminologies.
