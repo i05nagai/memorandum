@@ -12,7 +12,7 @@
     * 2の議論の精緻化
     * 実務で使えている会社は世界に数社くらい
 
-以下ではsmall sampling theoryに対するhypothesis testingについてまとめている。
+以下では[E.L.Lehmann]Testing Statistical Hypothesesと[吉田]数理統計学に基いて、small sampling theoryに対するhypothesis testingについてまとめている。
 small sampling theoryにおけるhypothesis testingにおいて重要な結果の1つは、正規分布に対するunbiased UMP testの構成である。
 ここでは、やや一般的にExponential familyに対するunbiased UMP testの構成を行う。
 
