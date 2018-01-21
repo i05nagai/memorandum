@@ -33,10 +33,6 @@ apt-get clean
 apt-get install -y software-properties-common
 ```
 
-```
-
-```
-
 ## Reference
 * [NetWalker覚書～へなちょこおたくメモ～: apt-get autocleanやapt-get cleanで不要なキャッシュを削除する](http://toshi-netwalker.blogspot.jp/2010/02/apt-get-autocleanapt-get-clean.html)
 * [[Ubuntu] apt-get まとめ - Qiita](http://qiita.com/white_aspara25/items/723ae4ebf0bfefe2115c)

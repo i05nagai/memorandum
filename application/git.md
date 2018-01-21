@@ -430,3 +430,20 @@ git diff [--options] [--] [<path>...]
         command2 = "!f(){ echo $1 $2;};f"
 ```
 
+
+## 現在のcommitのtagを取得
+
+```shell
+git_tag=$(git rev-parse HEAD | xargs git tag --contains)
+```
+
+tagがなければ代替文字を代入
+
+```
+#!/bin/bash
+set -eu
+
+git_tag=$(git rev-parse HEAD | xargs git tag --contains)
+: ${git_tag:="aieuo"}
+echo $git_tag
+```

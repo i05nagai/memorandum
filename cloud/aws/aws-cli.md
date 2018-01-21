@@ -41,6 +41,16 @@ provider "aws" {
 }
 ```
 
+### Error
+[InvalidSignatureException: Signature expired · Issue #527 · aws/aws-sdk-js](https://github.com/aws/aws-sdk-js/issues/527)
+
+DockerなどでVMを使っている場合はVMの時間がずれている。
+VMの再起動で治る。
+
+```
+InvalidSignatureException: Signature expired
+```
+
 
 ## Reference
 * [aws — AWS CLI 1.11.96 Command Reference](http://docs.aws.amazon.com/cli/latest/reference/)

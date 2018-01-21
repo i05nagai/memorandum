@@ -3,6 +3,13 @@ title: Cloud Functions
 ---
 
 ## Cloud Functions
+Beta
+
+* Node.js
+    * v6.11.5
+* docker image
+    * gcr.io/google-appengine/nodejs
+    * https://github.com/GoogleCloudPlatform/nodejs-docker
 
 ## Pricing
 料金は、Innvocations, Network, Comute timeについて課金される。
@@ -56,6 +63,10 @@ title: Cloud Functions
     * 5GB of Internet egress traffic per month
 
 
+## Accessing to other GCP service
+Nodejs用のGCP用のAPI libraryを利用する。
+
+* [googleapis/nodejs-bigquery: Node.js client for Google Cloud BigQuery: A fast, economical and fully-managed enterprise data warehouse for large-scale data analytics.](https://github.com/googleapis/nodejs-bigquery#samples)
 
 ## Reference
 * [Google Cloud Functions Documentation  |  Cloud Functions  |  Google Cloud Platform](https://cloud.google.com/functions/docs/)

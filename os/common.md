@@ -107,5 +107,8 @@ Error: `useradd: cannot create directory /opt/...`.
 You need to create directory before execution `useradd`.
 
 
+## LANG environment variables
+* [Linuxのローカライゼーション系LANG変数：langについて](https://eng-entrance.com/linux-localization-lang)
+
 ## Reference
 * [Linux Performance Analysis in 60,000 Milliseconds – Netflix TechBlog – Medium](https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)

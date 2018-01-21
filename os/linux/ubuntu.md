@@ -1,3 +1,7 @@
+---
+title: ubuntu
+---
+
 ## ubuntu
 
 ## Tips
@@ -83,6 +87,11 @@ versionを指定してinstall
 ```
 sudo apt-get install nginx=1.8.0-1
 ```
+
+## ubuntu in Dockerで日本語表示
+* [Docker＋Ubuntuで日本語入力できないのを解決した](http://blog.nocorica.jp/2017/01/docker-ubuntu-japanese-input/)
+
+
 
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)

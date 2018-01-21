@@ -14,6 +14,12 @@ webkitに移動している。
 git clone https://chromium.googlesource.com/chromium/src
 ```
 
+## Build
+* [Checking out and building Chromium on Linux](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md)
+
+```
+```
+
 
 ## Reference
 * https://www.chromium.org/blink

@@ -45,8 +45,6 @@ title: Kubernetes
             * 複数のserviceをmonitoringする際にadapter containerがoutputのwrapをする
     * [Kubernetes: Container Design Patterns](http://blog.kubernetes.io/2016/06/container-design-patterns.html)
     * NodeでschedulingされているPodがfailした場合Podはdeleteされる
-* Namespace
-
 
 ### Nodes
 
@@ -54,7 +52,9 @@ title: Kubernetes
 ### Namespace
 * [Namespaces | Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
-
+* Namespaceをいつ使うべきか?
+    * userが10人程度であればnamespaceを使う必要はない
+    * clusterのresourceをuserで分ける場合に使う
 * default
     * The default namespace for objects with no other namespace
 * kube-system
@@ -66,6 +66,11 @@ title: Kubernetes
     * Node, persistentVolumeなどは属さない
     * Eventは種類によって属すものと属さないものがある
 
+defaultのnamespaceを設定する。
+
+```
+kubectl config set-context $(kubectl config current-context) --namespace=<insert-namespace-name-here>
+```
 
 Namespaceを指定してcommandを実行する
 
@@ -564,8 +569,14 @@ Dockerのvolumeと違い、透過的に色々なdeviceをvolumeとして扱え�
     * Use case
         * disk based merge sort
         * checkpoint
-        *
 * fc (fibre channel)
+* nfs
+    * Podがremoteされても、unmountされるだけで中身は消えない
+    * 複数のPodにmountして使うことができる
+    * Mount前にdataが保持できる
+    * NFS serverが必要
+* persistentVolumeClaim
+    * PersistentVolumeをmountするのに必要
 * flocker
 * gcePersistentDisk
     * GCEのpersistent disk
@@ -641,6 +652,10 @@ git-syncを使う。
 * secret
 * storageos
 * vsphereVolume
+
+
+### PersistentVolume
+
 
 ### CondigMap
 * [Configure Containers Using a ConfigMap | Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configmap/)
@@ -790,3 +805,4 @@ yaml fileの中でshellの環境変数は現状利用できない。
 * [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
 * [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
 * [Making Kubernetes Production Ready – Part 2 - Applatix](https://applatix.com/making-kubernetes-production-ready-part-2/)
+* [Storage Considerations for Docker-in-Docker on Kubernetes](https://blog.argoproj.io/storage-considerations-for-docker-in-docker-on-kubernetes-ed928a83331c)
