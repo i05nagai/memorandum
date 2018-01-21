@@ -11,11 +11,11 @@ title: Probability Theory Integration by substitution
     * injection
     * $C^{1}$
     * Jacobian $J_{T}(x) \neq 0 \ (x \in A)$
-* $Y:\Omega rightarrow \mathbb{R}^{d}$,
+* $Y:\Omega \rightarrow \mathbb{R}^{d}$,
     * r.v.
 * $p_{Y}$,
     * p.d.f of $Y$
-* $X:\Omega rightarrow \mathbb{R}^{d}$,
+* $X:\Omega \rightarrow \mathbb{R}^{d}$,
     * r.v.
 * $p_{X}$,
     * p.d.f of $Y$
