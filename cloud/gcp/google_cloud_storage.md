@@ -97,7 +97,22 @@ version: 1
 $ gcloud projects set-iam-policy [PROJECT_ID] /tmp/policy.yaml
 ```
 
-### access & storage logs
+### usage & storage logs
+
+* usage log
+    * 1時間ごとに生成される
+    * accessがなかった場合は生成されない
+    * 15分後に前の1時間のlogが生成される
+        * 15分より遅くなる場合もある
+    * 1時間に1 log objectとは限らない
+    * recordの重複は起こりうる
+        * `s_request_id`で判別できる
+    * `gs://<bucket_name>/<object_prefix>_usage_<timestamp>_<id>_v0`
+    * `gs://example-logs-bucket/example-bucket_usage_2013_06_18_14_00_00_1702e6_v0`
+* storage log
+    * 1日一回10:00 am PST前に前日分のstorage logが生成される
+    * `gs://<bucket_name>/<object_prefix>_storage_<timestamp>_<id>_v0`
+    * `gs://example-logs-bucket/example-bucket_storage_2013_06_18_07_00_00_1702e6_v0`
 
 ```
 gsutil mb gs://bucket-to-store-log
@@ -147,6 +162,88 @@ $ bq load --skip_leading_rows=1 dataset.table_usage \
 $ bq load --skip_leading_rows=1 dataset.table_storage \
       gs://example-logs-bucket/example-bucket_storage_2014_* \
       ./cloud_storage_storage_schema_v0.json
+```
+
+**Usage log format**
+
+* time_micros
+    * integer
+    * he time that the request was completed, in microseconds since the Unix epoch.
+* c_ip
+    * string
+    * The IP address from which the request was made. The "c" prefix indicates that this is information about the client.
+* c_ip_type
+    * integer
+    * The type of IP in the c_ip field:
+        * A value of 1 indicates an IPV4 address.
+        * A value of 2 indicates an IPV6 address.
+* c_ip_region
+    * string
+    * Reserved for future use.
+* cs_method
+    * string
+    * The HTTP method of this request. The "cs" prefix indicates that this information was sent from the client to the server.
+* cs_uri
+    * string
+    * The URI of the request.
+* sc_status
+    * integer
+    * The HTTP status code the server sent in response. The "sc" prefix indicates that this information was sent from the server to the client.
+* cs_bytes
+    * integer
+    * The number of bytes sent in the request.
+* sc_bytes
+    * integer
+    * The number of bytes sent in the response.
+* time_taken_micros
+    * integer
+    * The time it took to serve the request in microseconds, measured from when the first byte is received to when the response is sent. Note that for resumable uploads, the ending point is determined by the response to the final upload request that was part of the resumable upload.
+* cs_host
+    * string
+    * The host in the original request.
+* cs_referer
+    * string
+    * The HTTP referrer for the request.
+* cs_user_agent
+    * string
+    * The User-Agent of the request. The value is GCS Lifecycle Management for requests made by lifecycle management.
+* s_request_id
+    * string
+    * The request identifier.
+* cs_operation
+    * string
+    * The Cloud Storage operation e.g. GET_Object.
+* cs_bucket
+    * string
+    * The bucket specified in the request. If this is a list buckets request, this can be null.
+* cs_object
+    * string
+    * The object specified in this request. This can be null.
+
+usage log用view
+
+```sql
+SELECT
+  time_micros
+  , TIMESTAMP_MICROS(time_micros) AS time_timestamp
+  , c_ip AS ip
+  , c_ip_type AS ipv4_or_ipv6
+  , c_ip_region AS ip_region
+  , cs_method AS http_method
+  , cs_uri AS uri
+  , sc_status AS http_status
+  , cs_bytes AS bytes_request
+  , sc_bytes AS bytes_response
+  , time_taken_micros
+  , cs_host AS host_request
+  , cs_referer AS referer
+  , cs_user_agent AS user_agent
+  , s_request_id AS request_id
+  , cs_operation AS operation
+  , cs_bucket AS bucket
+  , cs_object AS object
+FROM
+  usage
 ```
 
 ## CLI
