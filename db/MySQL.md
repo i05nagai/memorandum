@@ -136,6 +136,7 @@ rm -rf /var/lib/mysql
 CREATE DATABASE db_name DEFAULT CHARACTER SET utf8;
 ```
 
+
 ### Drop database
 
 ```sql
@@ -266,11 +267,40 @@ MYSQL_USER
 MYSQL_PASSWORD
 ```
 
+sql fileやshellを実行したい場合は`/docker-entrypoint-initdb.d`にMountする。
+serverのconfを変更したい場合は、`/etc/mysql/conf.d`にMountする。
+`/etc/mysql/my.cnf`は`/etc/mysql/conf.d`以下の`.cnf`fileをincludeする。
+
+```
+docker run -it --rm -v /my/custom:/etc/mysql/conf.d mysql:5.7.18 mysql -hsome.mysql.host -usome-mysql-user -p
+```
+
+## SQL
+* https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_no_zero_date
+
+
+## sqlmode
+* `NO_ZERO_DATE`
+    * `0000-00-00 00:00:00`がだめ
+* `NO_ZERO_IN_DATE`
+    * 年月日にzeroを含むとだめ
+    * `1990-00-01 11:11:11`はだめ
 
 ## CLI
 
 * `--skip-column-names, -N`
     * columun nameを出力しない
+
+## Error
+
+### Invalid default value for datetime
+```
+Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for
+```
+
+* https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_no_zero_date
+    * sql_modeの`NO_ZERO_DATE`外す
+
 
 ## Reference
 * [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)
