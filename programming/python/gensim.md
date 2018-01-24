@@ -8,6 +8,24 @@ title: Gensim
 pip install gensim
 ```
 
+## Computing loss
+* gensimのword2vecはloss functionは下記issueで実装されている
+    * https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/models/word2vec.py#L440 で`compute_loss=True`を指定する
+    * [gensim issue](https://github.com/RaRe-Technologies/gensim/issues/999)
+    * [gensim issue](https://github.com/RaRe-Technologies/gensim/pull/1201)
+* gensimのdoc2vecはloss functionの表示に対応していない
+    * 以下の計算部分でのlossの計算が実装されていない
+      * https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/models/doc2vec.py#L81
+    * word2vec側は実装されている
+      * https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/models/word2vec.py#L147
+
+## logigng
+以下でlogggingがonになる。
+
+```
+import logging
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+```
 
 ## API
 * [gensim: API Reference](https://radimrehurek.com/gensim/apiref.html)
