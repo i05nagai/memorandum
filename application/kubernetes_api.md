@@ -218,6 +218,40 @@ spec:
         * default 6
 * `JobStatus`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#jobstatus-v1-batch)
+* `Ingress`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/api-reference/v1.9/#ingress-v1beta1-extensions)
+    * spec
+        * IngresSpec
+    * status
+        * IngressStatus
+* `IngressSpec`
+    * `backend`
+        * IngressBackend
+    * `rules`
+        * array of IngressRule
+    * `tls`
+        * IngressTLS
+* `IngressBackend`
+    * serviceName
+        * forwardするservice名
+    * servicePort
+* `IngressRule`
+    * host
+        * FQDN of network host
+    * http
+        * HTTPIngressValue
+* `HTTPIngressValue`
+    * paths
+        * array of HTTPIngressPath
+* `HTTPIngressPath`
+    * backend
+        * IngressBackend
+    * path
+        * /から始まるpath
+* `IngressTLS`
+    * hosts
+    * serviceName
+
 
 ## Reference
 
