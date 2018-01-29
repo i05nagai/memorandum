@@ -12,12 +12,18 @@ sudo apt-get install redis-tools
 ```
 
 ## DataType
-
 * string
 * hash
 * set
 * sorted set
 * lists
+
+
+## Configuration
+`redis.conf`をする。
+versionごとのconfigurationのsampleがある。
+
+[Redis configuration – Redis](https://redis.io/topics/config)
 
 
 ## CLI
@@ -37,8 +43,6 @@ redis-cli -h hostname -p port_num command
 ```
 redis-cli -h hostname -p port_num
 ```
-
-
 
 ```
 help @[category]
@@ -103,13 +107,22 @@ keyword argument1 argument2 ... argumentN
 
 command lineで設定を渡すこともできる。
 
-## on Docker
+## in Docker
 * [library/redis - Docker Hub](https://hub.docker.com/_/redis/)
 
 Dockerの中でredis CLIが使える。
 
 ```
 redis-cli -h redis -p 6379
+```
+
+redisの設定を変更する。
+docker run時に`/usr/local/etc/redis/redis.conf`をvolumeとしてつけるか、Dockerfileを作って以下のようにする。
+
+```
+FROM redis
+COPY redis.conf /usr/local/etc/redis/redis.conf
+CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
 ```
 
 ## Reference
