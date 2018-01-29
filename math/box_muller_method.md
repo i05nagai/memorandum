@@ -18,6 +18,7 @@ $$
     & := &
         \sqrt{-2 \ln(U_{1})}\cos (2 \pi U_{2})
     \nonumber
+    \\
     X_{2}
     & := &
         \sqrt{-2 \ln(U_{1})}\sin (2 \pi U_{2})
@@ -28,6 +29,7 @@ $$
 Then $$X_{1}$$, $$X_{2}$$ are independent one-dimentional normal distribution.
 
 ## proof.
+We show that the characteristic function of $X_{1}$ is equal to a normal distribution.
 
 $$
 \begin{eqnarray}
