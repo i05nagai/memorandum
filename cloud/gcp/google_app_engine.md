@@ -110,12 +110,42 @@ automatic_scaling:
     * max_concurrent_requests
         * default 8, maximum 80
     * max_pending_latency
-        * 
 
 
 ## Cron jobs
 * [Scheduling Tasks With Cron for Python  |  App Engine standard environment for Python  |  Google Cloud Platform](https://cloud.google.com/appengine/docs/standard/python/config/cron)
 * [cron.yaml Reference  |  App Engine standard environment for Python  |  Google Cloud Platform](https://cloud.google.com/appengine/docs/standard/python/config/cronref)
+
+```yaml
+cron:
+- description: "daily summary job"
+  url: /tasks/summary
+  schedule: every 24 hours
+- description: "monday morning mailout"
+  url: /mail/weekly
+  schedule: every monday 09:00
+  timezone: Australia/NSW
+- description: "new daily summary job"
+  url: /tasks/summary
+  schedule: every 24 hours
+  target: beta
+```
+
+* description 
+* retry_parameters
+    * retryする回数
+    * default 0
+* schedule
+    * format
+        * [cron.yaml Reference  |  App Engine standard environment for Python  |  Google Cloud Platform](https://cloud.google.com/appengine/docs/standard/python/config/cronref#schedule_format)
+* target
+    * service名
+* url
+    * requestを送るurl
+* timezone
+    * TZの値が使える
+        * [List of tz database time zones - Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+    * default UTC
 
 ## Pricing
 * [App Engine Pricing  |  App Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/appengine/pricing)
