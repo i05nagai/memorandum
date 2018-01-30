@@ -228,3 +228,48 @@ javascript UDFのBest Practice
 * FLOAT64
 * BOOL
 * STRING
+
+## Repeated Records or ARRAY of STRUCT
+* standard SQLだとARRAY of STRUCT
+* [Migrating to Standard SQL  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql#removing_repetition_with_flatten)
+
+* arrayがある場合は、FROMでcolumnを`UNNEST`する必要がある
+* repeated recordがnestしている場合は、`UNNEST`したものを`UNNEST`する必要がある
+
+```sql
+#standardSQL
+SELECT
+  repository.url,
+  page.page_name
+FROM
+  `bigquery-public-data.samples.github_nested`,
+  UNNEST(payload.pages) AS page
+LIMIT 5;
+```
+
+Arrayの比較はsubqueryで行うのが良さそう。
+subqueryをnestしていけばarrayのnestを同じ構造で扱える。
+
+[sql - How do I find elements in an array in BigQuery - Stack Overflow](https://stackoverflow.com/questions/42989922/how-do-i-find-elements-in-an-array-in-bigquery)
+
+```sql
+#standardSQL
+WITH yourTable AS (
+  SELECT'192.168.1.1' AS ip,
+  [('apple', 'red'), ('orange', 'orange'), ('grape', 'purple')] AS cookie
+  UNION ALL
+  SELECT '192.168.1.2', [('abc', 'xyz')]
+)
+SELECT ip
+FROM yourTable
+WHERE (
+  SELECT COUNT(1)
+  FROM UNNEST(cookie) AS pair
+  WHERE pair IN (('grape', 'purple'),  ('orange', 'orange'))
+) = 2
+```
+
+## subquery
+* [sql - How do I find elements in an array in BigQuery - Stack Overflow](https://stackoverflow.com/questions/42989922/how-do-i-find-elements-in-an-array-in-bigquery)
+
+
