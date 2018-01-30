@@ -111,7 +111,30 @@ Prefetch cacheのon/off
 * Select the File > Report settings menu.
 * In the Report Settings panel on the right, check or uncheck the Enable cache checkbox.
 
+## Multiple table
+* [Querying Multiple Tables Using a Wildcard Table  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)
+    * `_TABLE_SUFFIX`でできる
+
+```sql
+#standardSQL
+SELECT
+  max,
+  ROUND((max-32)*5/9,1) celsius,
+  mo,
+  da,
+  year
+FROM
+  `bigquery-public-data.noaa_gsod.gsod19*`
+WHERE
+  max != 9999.9 # code for missing data
+  AND _TABLE_SUFFIX BETWEEN '29'
+  AND '40'
+ORDER BY
+  max DESC
+```
+
 ## Reference
 * [Data Studio - Beautiful Data Visualization  |  Google Cloud Platform](https://cloud.google.com/data-studio/)
 * [Visualize Spend Over Time with Data Studio  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/visualize-data)
 * [BigQueryにエクスポートしたGCPの課金データを可視化してみる - Qiita](https://qiita.com/tora470/items/0a3879426d6acc9f0d14)
+* [Visualizing BigQuery Data Using Google Data Studio  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/visualize-data-studio)
