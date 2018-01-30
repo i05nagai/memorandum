@@ -47,4 +47,28 @@ brew cask install intellij-idea
 * AceJump
     * `Ctrl+;`
         * 入力した文字のある場所に移動できる
+* IDEA Jetty Runner
+    * Installすると、`Run->Edit Configuration`からDebugできるようになる
+* Spek
+    * [raniejade/spek-idea-plugin](https://github.com/raniejade/spek-idea-plugin)
+    * Run specs directly from IDEA.
+    * Choose a specific group/test to run within a spec.
+    * 再起動すると、project windowからfileを右clickでfile内のunit testをrunできる
+    * Tool barのRunからも同様
+    * 各testのdescribeの行にRun mark[▶]が表示される
+
+## Snippets
+* [Live templates, code snippets](https://www.jetbrains.com/help/idea/2016.3/live-templates.html)
+* path
+    * OSX: `~/Library/Preferences/IdeaIC2017.3/templates`
+
+
+
+
+## Tests
+* [Creating Run/Debug Configuration for Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-run-debug-configuration-for-tests.html)
+
+
+
+
 ## Reference
