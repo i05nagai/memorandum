@@ -6,7 +6,6 @@ title: Kotlin
 
 
 ## Visibility Modifiers
-
 * packages
     * package内のclass/functinoのvisibility
     * private
@@ -24,6 +23,7 @@ title: Kotlin
     * internal
     * protected
 * constructors
+
 
 ## Reference
 * [Outdated Kotlin Runtime | Smartphone-Zine](http://www.smartphone-zine.com/android/outdated-kotlin-runtime)
