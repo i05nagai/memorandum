@@ -111,27 +111,15 @@ Prefetch cacheのon/off
 * Select the File > Report settings menu.
 * In the Report Settings panel on the right, check or uncheck the Enable cache checkbox.
 
-## Multiple table
-* [Querying Multiple Tables Using a Wildcard Table  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)
-    * `_TABLE_SUFFIX`でできる
+## Custom query
+Viewのかわりにcustom queryが使える。
 
-```sql
-#standardSQL
-SELECT
-  max,
-  ROUND((max-32)*5/9,1) celsius,
-  mo,
-  da,
-  year
-FROM
-  `bigquery-public-data.noaa_gsod.gsod19*`
-WHERE
-  max != 9999.9 # code for missing data
-  AND _TABLE_SUFFIX BETWEEN '29'
-  AND '40'
-ORDER BY
-  max DESC
-```
+* Resoruce -> 追加済みのResource -> Custom query
+    * 使えるqueryはviewと同程度のもの？
+
+## Tips
+viewやcustomqueryでpartition tableやwildcard tableでscan料を減らしたい場合は、selectのcolumn部分に集計処理を書いて、`FROM`句などはsimpleにする。
+
 
 ## Reference
 * [Data Studio - Beautiful Data Visualization  |  Google Cloud Platform](https://cloud.google.com/data-studio/)
