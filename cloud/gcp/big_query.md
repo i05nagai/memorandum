@@ -357,6 +357,27 @@ bq update project_name:dataset_name.table_name table.json
 * [BigQuery for Data Warehouse Practitioners  |  Solutions  |  Google Cloud Platform](https://cloud.google.com/solutions/bigquery-data-warehouse)
 
 
+### Multiple tablea using a wildcard table
+* [Querying Multiple Tables Using a Wildcard Table  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)
+    * `_TABLE_SUFFIX`でできる
+
+```sql
+#standardSQL
+SELECT
+  max,
+  ROUND((max-32)*5/9,1) celsius,
+  mo,
+  da,
+  year
+FROM
+  `bigquery-public-data.noaa_gsod.gsod19*`
+WHERE
+  max != 9999.9 # code for missing data
+  AND _TABLE_SUFFIX BETWEEN '29'
+  AND '40'
+ORDER BY
+  max DESC
+```
 
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
