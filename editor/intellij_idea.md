@@ -62,8 +62,21 @@ brew cask install intellij-idea
 * path
     * OSX: `~/Library/Preferences/IdeaIC2017.3/templates`
 
+## Add doc comment
+* [Creating Documentation Comments - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-documentation-comments.html)
+    * kotlinでは動かない
+
+1. Place the caret before the declaration.
+2. Type the opening block comment `/**`, and press Enter.
+3. Add meaningful description of parameters and return values.
 
 
+### Surrounding word
+* [HOW-TO: Surround text with quote in IntelliJ ~ Codeleak.pl](http://blog.codeleak.pl/2014/06/how-to-surround-text-with-quote-in.html)
+
+Editor -> LiveTemplate -> surrounded
+
+でsurrounded用のLive templateがあるので追加する。
 
 ## Tests
 * [Creating Run/Debug Configuration for Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-run-debug-configuration-for-tests.html)
