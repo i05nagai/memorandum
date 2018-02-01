@@ -25,5 +25,19 @@ blob2 = bucket.blob('remote/path/storage.txt')
 blob2.upload_from_filename(filename='/local/path.txt')
 ```
 
+* blob
+    * path
+        * `/b/bucket/o/path%2Fto%2Fobject`
+        * objectのslashは`%2F`に変換される
+    * self_link
+        * `https://www.googleapis.com/storage/v1/b/bucket/o/path%2Fto%2Fobject`
+        * objectのslashは`%2F`に変換される
+    * id
+        * `bucket/path/to/object/version_info`
+        * `version_info`
+            * 時間が数値で記録されている
+    * media_link
+        * `https://www.googleapis.com/download/storage/v1/b/bucket/o/path%2Fto%2Fobject?generation=<generated_time_mnicros&alt=media`
+
 ## Reference
 * [Storage — google-cloud 62972c4 documentation](https://googlecloudplatform.github.io/google-cloud-python/latest/storage/client.html)
