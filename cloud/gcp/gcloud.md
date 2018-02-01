@@ -46,6 +46,7 @@ gcloud auth login
 gcloudはこのcredentialを使ってアクセスする。
 中身は、アクセス用のjsonファイル。
 gcloud auth loginはbrowserが起動するが、CLIでcredentialの生成もできる。
+service accountを使う場合は以下のcommandでkey fileを指定すれば良い。
 
 ```
 gcloud auth activate-service-account service_account_email --key-file /path/to/key_file.json
