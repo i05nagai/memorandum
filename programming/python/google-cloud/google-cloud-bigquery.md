@@ -19,6 +19,23 @@ pip install --upgrade google-cloud-bigquery
 
 
 ## API
+* [Jobs  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs)
+
+
+* JobConfig
+    * create_dsiposition
+        * `CREATE_IF_NEEDED`
+            * default
+        * `CREATE_NEVER`
+            * 存在しなかったらerror
+    * write_disposition
+        * `WRITE_TRUNCATE`
+            * tableが存在したら、上書き
+        * `WRITE_APPEND`
+            * tableが存在したら追記する
+        * `WRITE_EMPTY`
+            * default
+            * tableが存在してnot emptyならerror
 
 
 ## Refrence
