@@ -78,6 +78,13 @@ Editor -> LiveTemplate -> surrounded
 
 でsurrounded用のLive templateがあるので追加する。
 
+### Standard library
+* [apply - Kotlin Programming Language](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/apply.html)
+
+```kotlin
+inline fun <T> T.apply(block: T.() -> Unit): T (source)
+```
+
 ## Tests
 * [Creating Run/Debug Configuration for Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-run-debug-configuration-for-tests.html)
 
