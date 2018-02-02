@@ -60,6 +60,8 @@ expect(listOf(1, 2, 3)).to.have.all.elements(1, 2, 3)
 expect(mapOf("foo" to "bar", "bar" to "foo")).to.contain("foo" to "bar")
 ```
 
+exeptionのcheckはできなさそう。
+
 
 ## Reference
 * [winterbe/expekt: BDD assertion library for Kotlin](https://github.com/winterbe/expekt)
