@@ -490,6 +490,17 @@ docker run \
 
 ### Docker in docker
 
+### Docker config
+* `$HOME/.docker/config.json`
+* `$HOME/.dockercfg`
+* [Advanced Authentication Methods  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/advanced-authentication)
+
+Login to GCP
+
+```
+docker login -u oauth2accesstoken -p "$(gcloud auth application-default print-access-token)" https://gcr.io
+```
+
 
 ## Reference
 * [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)
