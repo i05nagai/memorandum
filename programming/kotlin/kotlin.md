@@ -49,5 +49,33 @@ class Example(@field:Ann val foo,    // annotate Java field
     * protected
 * constructors
 
+## Operators
+* elvis operator
+* `!!` operator
+
+```kotlin
+// if b is null, this returns null
+val l = b?.length ?: -1
+// if b is null, this throws null-execption
+val l = b!!.length
+```
+
+## Equality
+* [Equality - Kotlin Programming Language](https://kotlinlang.org/docs/reference/equality.html)
+
+* equals
+    * [equals - Kotlin Programming Language](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/equals.html)
+
+```
+// structual equality
+a == b
+// a == b is equvalent to
+a?.equals(b) ?: (b === null)
+
+// reference equality
+a === b
+```
+
+
 ## Reference
 * [Outdated Kotlin Runtime | Smartphone-Zine](http://www.smartphone-zine.com/android/outdated-kotlin-runtime)
