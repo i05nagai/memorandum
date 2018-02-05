@@ -52,6 +52,14 @@ service accountを使う場合は以下のcommandでkey fileを指定すれば�
 gcloud auth activate-service-account service_account_email --key-file /path/to/key_file.json
 ```
 
+## CLi
+
+Update gcloud
+
+```
+gcloud components update
+```
+
 ## Tips
 
 ### Warning googleapiclient.discovery_cache
