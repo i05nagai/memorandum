@@ -37,3 +37,5 @@ export GOPATH="/opt/local/go"
 * [7 Frameworks To Build A REST API In Go | Nordic APIs |](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/)
 
 ## Reference
+* [Documentation - The Go Programming Language](https://golang.org/doc/)
+* [Effective Go - The Go Programming Language](https://golang.org/doc/effective_go.html)
