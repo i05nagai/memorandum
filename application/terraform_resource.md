@@ -121,16 +121,17 @@ maintenance_policy {
 }
 ```
 
-    * `master_auth`
-        * kubernetes masterへの認証情報
-        * `username=?`
-        * `password=?`
-    * `network`
-        * clusterが接続する`self_link`
-    * `network_policy`
-    * `node_config`
-    * `node_pool`
-        * `google_container_node_pool`を指定
+* `master_auth`
+    * kubernetes masterへの認証情報
+    * `username=?`
+    * `password=?`
+* `network`
+    * clusterが接続する`self_link`
+* `network_policy`
+* `node_config`
+* `node_pool`
+    * `google_container_node_pool`を指定
+    * [REST Resource: projects.locations.clusters.nodePools  |  Kubernetes Engine  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools#NodePool)
 
 
 ```
@@ -188,6 +189,27 @@ resource "google_bigquery_dataset" "default" {
     * `default_table_expiration_ms`
         * tableが削除される時間
         * minimum value が`3600000` msで1hour
+
+
+```
+resource "google_compute_disk" "default" {
+  name  = "test-disk"
+  type  = "pd-ssd"
+  zone  = "us-central1-a"
+  image = "debian-8-jessie-v20170523"
+  labels {
+    environment = "dev"
+  }
+}
+```
+
+* google_compute_disk
+    * [Storage Options  |  Compute Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/compute/docs/disks/)
+    * type
+        * pd-standard
+        * pd-ssd
+
+
 
 ## Terraform
 * `backend`
