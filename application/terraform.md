@@ -412,7 +412,7 @@ terraform workspace new name_of_workspace
 
 workspaceの名前は以下から取得できる。
 
-```
+```tf
 resource "aws_instance" "example" {
   tags {
     Name = "web - ${terraform.workspace}"
@@ -424,7 +424,7 @@ resource "aws_instance" "example" {
 
 workspace名に応じてifなどで条件をつけることもできる。
 
-```
+```tf
 resource "aws_instance" "example" {
   count = "${terraform.workspace == "default" ? 5 : 1}"
 
@@ -444,15 +444,23 @@ resource "aws_instance" "example" {
     * HTTP URL
     * S3 bucket
 
+moduleの呼び出し。
 
-```
-module "consul" {
+
+```tf
+module "module_name" {
+  # source of module
   source  = "hashicorp/consul/aws"
   version = "0.0.5"
   name = "module_name"
 
-  # input
+  # input variable for module
   servers = 3
+}
+
+output "output_name" {
+  # module_output_name is output name defined in the module
+  value = "${module.moduel_name.module_output_name}"
 }
 ```
 
