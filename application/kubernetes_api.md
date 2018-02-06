@@ -36,9 +36,6 @@ spec:
     * `spec`
         * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podspec-v1-core)
         * PodSpecの引数をみる
-
-
-
 * `PodTemplateSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podtemplatespec-v1-core)
     * `metadata `
@@ -372,6 +369,4 @@ spec:
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressstatus-v1beta1-extensions)
 
 
-
 ## Reference
-
