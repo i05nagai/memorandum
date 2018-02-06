@@ -655,6 +655,64 @@ git-syncを使う。
 
 
 ### PersistentVolume
+* [Persistent Volumes | Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity)
+
+DBなどのStatufulなapplicationを使う場合に利用する。
+`PersistenVolume`で利用するvolumeを確保して、`PersistentVolumeClaim`で利用する分を確保する。
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0003
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /tmp
+    server: 172.17.0.2
+```
+
+```yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: slow
+  selector:
+    matchLabels:
+      release: "stable"
+    matchExpressions:
+      - {key: environment, operator: In, values: [dev]}
+```
+
+* Acccess mode
+    * ReadWriteOnce
+        * single nodeでR/W
+    * ReadOnlyMany
+        * multi nodeでR
+    * ReadWriteMany
+        * multi nodeでR/W
+
+
+```
+gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk
+```
 
 
 ### CondigMap
@@ -692,7 +750,6 @@ kubectl describe pods --selector key=value
 ```
 
 ### minikube
-
 dashboard
 
 ```
@@ -704,6 +761,7 @@ minikube dashboard
 ```
 minikube service <service-name>
 ```
+
 
 ### Best Practice
 * [Configuration Best Practices | Kubernetes](https://kubernetes.io/docs/concepts/configuration/overview/)
@@ -793,8 +851,78 @@ spec:
 yaml fileの中でshellの環境変数は現状利用できない。
 `envsubst`を使って、実行時に置き換えるか、`API`をprogramから呼び出す。
 
+### Configuring Nodes to Authenticate to a Private Repository
+* [Pull an Image from a Private Registry | Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
+    * GKEを使う場合は、GCRのcredentialの設定は`.dockercfg`に記載されている
+    * [Using Google Container Registry (GCR) with Minikube · Ryan Eschinger Consulting](https://ryaneschinger.com/blog/using-google-container-registry-gcr-with-minikube/)
+    * OSXの場合は`Security store docker logins in macOS keychain`をoffにしないと、`.docker/config.json`にcredentialは保存されない
+
+* docker login
+* `.config/config.json`
+
+`docker create secret docker-registry`を
+
+```
+kubectl create secret docker-registry regsecret --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+```
+
+For GCP
+
+```
+kubectl create secret docker-registry <secret-name> \
+    --docker-server=https://gcr.io \
+    --docker-username=oauth2accesstoken \
+    --docker-password="$(gcloud auth print-access-token)" \
+    --docker-email=<your-email@here>
+```
+
+上記の設定のもと
+
+```yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: some-name
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: some-app
+    spec:
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: <secret-name>
+      containers:
+      - name: container-name
+        image: gcr.io/project-id/name:tag
+        imagePullPolicy: Always
+```
+
+kubectl create secret docker-registry retty-dwh-gcr-asia \
+    --docker-server=https://asia.gcr.io \
+    --docker-username=oauth2accesstoken \
+    --docker-password="$(gcloud auth print-access-token)" \
+    --docker-email="makoto-nagai@retty.me"
+
+```yaml
+imagePullSecrets:
+- name: gcr-json-key
+```
+
+* docker clinetのupdate
+* minikbeのupdate
+
+
 ### Error
 
+
+### Tips
+* [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
+
+```
+kubectl describe pod <pod-id>
+```
 
 
 ## Examples
@@ -802,7 +930,6 @@ yaml fileの中でshellの環境変数は現状利用できない。
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
-* [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
 * [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
 * [Making Kubernetes Production Ready – Part 2 - Applatix](https://applatix.com/making-kubernetes-production-ready-part-2/)
 * [Storage Considerations for Docker-in-Docker on Kubernetes](https://blog.argoproj.io/storage-considerations-for-docker-in-docker-on-kubernetes-ed928a83331c)
