@@ -205,6 +205,11 @@ spec:
 ## Zone
 * [Regions and Zones  |  Compute Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/compute/docs/regions-zones/#available)
 
+## Disk
+GKEでPDを作ると、GCEにDiskが作成される。
+GKEでPDEを作っても、GCEにDiskが作成される。
+cluster作成のさいのdiskは各Nodeの持つdisk sizeを決める
+
 
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
