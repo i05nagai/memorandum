@@ -268,6 +268,15 @@ REDIS_MASTER_PORT_6379_TCP_PORT=6379
 REDIS_MASTER_PORT_6379_TCP_ADDR=10.0.0.11
 ```
 
+### annotation
+[Annotations | Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+annotationに書かれる内容
+
+* annotationに設定値を書く
+* release ID, git branch, pr number, image hash, registry address
+* client library, tool informatin for debugging, 
+
 
 ### Labels and Selectors
 * [Labels and Selectors | Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
@@ -276,7 +285,7 @@ REDIS_MASTER_PORT_6379_TCP_ADDR=10.0.0.11
     * key/value pair
     * Podなどのobjectに付与される
     * Labelやmaintenanceや効率的なquery/watchのために必要
-    * Labelをつけない場合は、annotationを使う　
+    * Labelをつけない場合は、annotationを使う
 
 Labelの定義は、`PodTemplate`などにmetadataとして記載する。
 
