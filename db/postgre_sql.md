@@ -24,6 +24,17 @@ psql --user name
 * `\dt`
     * tables
 
+## docker
+[library/postgres - Docker Hub](https://hub.docker.com/_/postgres/)
+
+* environment variabless
+    * POSTGRES_PASSWORD
+    * POSTGRES_USER
+    * PGDATA
+        * `/var/lib/postgresql/data`
+    * POSTGRES_DB
+    * POSTGRES_INITDB_ARGS
+    * POSTGRES_INITDB_WALDIR
 
 ## Reference
 
