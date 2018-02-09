@@ -14,16 +14,17 @@ title: Levenberg-Marquardt method
     * $\theta \in \mathbb{R}^{K}$をパラメータとする$N$変数$M$次元ベクトル値関数
 
 ## Problem
-以下の問題を考える。
+以下で定義される$S(x)$が$S(x) = 0$となる$x$を見つける問題を考える。
 
 $$
 \begin{equation}
-    S(x) := \sum_{i=1}^{M} \left( y^{i} - f^{i}(x) \right)^{2} \in \mathbb{R}
+    S(x)
+    :=
+    \sum_{i=1}^{M} \left( y^{i} - f^{i}(x) \right)^{2}  \in \mathbb{R}
 \end{equation}
 $$
 
 ここで、$y = (y^{1}, \ldots, y^{M}) \in \mathbb{R}^{M}$である。
-
 またベクトル表記で
 
 $$
@@ -35,7 +36,7 @@ $$
 
 ## Theory
 Levenberg-Marquardt法は、関数$f$とある真値のベクトル$y$との2乗誤差を最小にする問題に対する効率的なNewton法である。
-Gauss-Newton法と同様の議論により以下の式を得る。
+<a href="{{ site.baseurl }}/math/gauss_newton">Gauss-Newton法</a>と同様の議論により以下の式を得る。
 
 $$
 \begin{eqnarray}
