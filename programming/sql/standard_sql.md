@@ -273,3 +273,57 @@ WHERE (
 * [sql - How do I find elements in an array in BigQuery - Stack Overflow](https://stackoverflow.com/questions/42989922/how-do-i-find-elements-in-an-array-in-bigquery)
 
 
+## Array UNNEST
+arrayの部分の値を持つ行をarray以外の部分にjoinする。
+arrayが2つの値を持つことをcheckする必要がある場合は、下記のようなunnestをするとcheckが難しくなる。
+
+```sql
+WITH
+  sample AS (
+  SELECT
+    1 AS col1
+    , [
+      5,
+      6,
+      7,
+      8
+    ] AS col2
+)
+SELECT
+  *
+FROM
+  sample
+  , UNNEST(col2)
+```
+
+この場合は、subqueryでcheckする。
+
+```sql
+WITH
+  sample AS (
+  SELECT
+    1 AS col1
+    , [
+      5,
+      6,
+      7,
+      8
+    ] AS col2
+)
+SELECT
+  *
+FROM
+  sample
+WHERE
+  # arrayに5と7を含むかのcheck
+  (
+    SELECT
+      COUNT()
+    FROM
+      UNNEST(sample.col2) AS col2col
+    WHERE
+      5 = col2col
+      OR
+      7 = col2col
+  ) = 2
+```
