@@ -111,7 +111,18 @@ Prefetch cacheのon/off
 * Select the File > Report settings menu.
 * In the Report Settings panel on the right, check or uncheck the Enable cache checkbox.
 
+## Custom query
+Viewのかわりにcustom queryが使える。
+
+* Resoruce -> 追加済みのResource -> Custom query
+    * 使えるqueryはviewと同程度のもの？
+
+## Tips
+viewやcustomqueryでpartition tableやwildcard tableでscan料を減らしたい場合は、selectのcolumn部分に集計処理を書いて、`FROM`句などはsimpleにする。
+
+
 ## Reference
 * [Data Studio - Beautiful Data Visualization  |  Google Cloud Platform](https://cloud.google.com/data-studio/)
 * [Visualize Spend Over Time with Data Studio  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/visualize-data)
 * [BigQueryにエクスポートしたGCPの課金データを可視化してみる - Qiita](https://qiita.com/tora470/items/0a3879426d6acc9f0d14)
+* [Visualizing BigQuery Data Using Google Data Studio  |  BigQuery  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/visualize-data-studio)

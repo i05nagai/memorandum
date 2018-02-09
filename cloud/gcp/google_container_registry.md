@@ -4,6 +4,76 @@ title: Google Container Registry
 
 ## Google Container Registry
 
+docker imageの名前は以下のようにする。
+
+```
+[HOSTNAME]/[PROJECT-ID]/[IMAGE]
+```
+
+* `HOSTNAME`
+    * [Pushing and Pulling Images  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/pushing-and-pulling)
+    * gcr.io
+        * without a prefix hosts your images in the United States, but this behavior may change in a future release
+    * us.gcr.io
+        * hosts your images in the United States
+    * eu.gcr.io
+        * hosts your images in the European Union
+    * asia.gcr.io
+        * hosts your images in Asia
+* `PROJECT-ID`
+    * project id of gcp
+* `image`
+    * image name
+
+## CLI
+push image
+
+```
+gcloud docker -- push gcr.io/my-project/quickstart-image
+```
+
+pull image
+
+```
+gcloud docker -- pull [HOSTNAME]/[PROJECT-ID]/[IMAGE]
+```
+
+delete image in registry
+
+```
+gcloud container images delete [HOSTNAME]/[PROJECT-ID]/[IMAGE]
+```
+
+*Managing image*
+
+[Managing Images  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/managing)
+
+Listing image in registry
+
+```
+gcloud container images list --repository=[HOSTNAME]/[PROJECT-ID]
+```
+
+List image of tags
+
+```
+gcloud container images list-tags [HOSTNAME]/[PROJECT-ID]/[IMAGE]
+```
+
+Tagging image in registry
+
+```
+gcloud container images add-tag [HOSTNAME]/[PROJECT-ID]/[IMAGE]:latest [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]
+```
+
+Untag
+
+```
+gcloud container images untag [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]
+```
+
+## Access control
+* [Configuring Access Control  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/access-control)
 
 ## Pricing
 * [Pricing  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/pricing)

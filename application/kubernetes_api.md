@@ -36,9 +36,6 @@ spec:
     * `spec`
         * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podspec-v1-core)
         * PodSpecの引数をみる
-
-
-
 * `PodTemplateSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#podtemplatespec-v1-core)
     * `metadata `
@@ -218,40 +215,167 @@ spec:
         * default 6
 * `JobStatus`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#jobstatus-v1-batch)
+* `PersistentVolume`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolume-v1-core)
+    * persistent volumeはvolumeの確保だけ、利用する場合は PersistentVolumeClaimを津アク
+    * `kind`
+        * PersistentVolume
+    * `metadata`
+    * `spec`
+        * `PersistentVolumeSpec`
+    * `status`
+* `PersistentVolumeSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumespec-v1-core)
+    * `accessModes`
+    * `capacity`
+        * object
+        * [Persistent Volumes | Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity)
+    * `gcePersistentDisk`
+        * GCEPersistentDiskVolumeSource
+    * `storageClassName`
+* `PersistentVolumeStatus`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumestatus-v1-core)
+* `GCEPersistentDiskVolumeSource`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#gcepersistentdiskvolumesource-v1-core)
+    * pdName
+        * string
+        * GCEのdisk
+    * fsType
+        * string
+        * "ext4", "xfs", "ntfs".
+    * readOnly
+        * true/false
+* `PersistentVolumeClaim`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumeclaim-v1-core)
+    * kind
+    * metadata
+    * spec
+        * `PersistentVolumeClaimSpec`
+    * status
+* `PersistentVolumeClaimSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumeclaimspec-v1-core)
+    * accessModes
+        * 以下のいずれか
+        * ReadWriteOnce
+        * ReadOnlyMany
+        * ReadWriteMany
+    * volumeMode
+    * resources
+    * storageClassName
+    * selector
+* `PersistentVolumeClaimStatus`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumeclaimspec-v1-core)
+    * accessModes
+    * resources
+        * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#resourcerequirements-v1-core)
+    * selector
+    * storageClassName
+    * volumeMode
+    * volumeName
+* `NetworkPolicy`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicy-v1-networking)
+    * spec
+        * NetworkSpec
+* `NetworkSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicyspec-v1-networking)
+    * `egress`
+        * array of NetworkPolicyEgressRule
+    * `ingress`
+        * array of NetworkPolicyIngessRule
+    * podSelector
+        * LabelSelector
+    * policyTypes
+        * array of string
+        * Ingress, Egress, Ingress and Egress
+* `NetworkPolicyEgressRule`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicyegressrule-v1-networking)
+    * `ports`
+        * array of NetworkPolicyPort
+    * `to`
+        * array of NetworkPolicyPeer
+* `NetworkPolicyIngressRule`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicyingressrule-v1-networking)
+    * `from`
+        * array of NetworkPolicyPeer
+    * `ports`
+        * array of NetworkPolicyPort
+* `NetworkPolicyPeer`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicypeer-v1-networking)
+    * `ipBlock`
+        * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ipblock-v1-networking)
+    * `namespaceSelector`
+        * LabelSelector
+    * `podSelector`
+        * LabelSelector
+* `IPBlock`
+    * cidr
+        * string
+        * `"192.168.1.1/24"`
+    * except
+        * array of string
+        * `"192.168.1.1/24"`
+* `NetworkPolicyPort`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#networkpolicyport-v1-networking)
+    * port
+        * named port/ port number
+    * protocol
+        * TCP/UDP
 * `Ingress`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/api-reference/v1.9/#ingress-v1beta1-extensions)
-    * spec
-        * IngresSpec
-    * status
+    * `spec`
+        * IngressSpec
+    * `status`
         * IngressStatus
 * `IngressSpec`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressspec-v1beta1-extensions)
     * `backend`
+        * defaultのbackend
         * IngressBackend
+        * ruleにmatchしないものはここにroutingされる
     * `rules`
         * array of IngressRule
     * `tls`
         * IngressTLS
 * `IngressBackend`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressbackend-v1beta1-extensions)
     * serviceName
+        * string
         * forwardするservice名
     * servicePort
+        * serviceのport
+    * serviceName
 * `IngressRule`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressrule-v1beta1-extensions)
     * host
         * FQDN of network host
+        * RFC 3986におけるhost
+        * IPはだめ
+        * `:`を含んではだめ、portはhostではない
+        * hostを省略すると全てのrequestに対してroutingする
     * http
-        * HTTPIngressValue
+        * `HTTPIngressRuleValue`
+* `HTTPIngressRuleValue`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#httpingressrulevalue-v1beta1-extensions)
+    * paths
+        * array of HTTPIngressPath
+        * `http://<host>/<path>?<searchpart>`
+            * `<path>`の部分を記述する
 * `HTTPIngressValue`
     * paths
         * array of HTTPIngressPath
 * `HTTPIngressPath`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#httpingresspath-v1beta1-extensions)
     * backend
         * IngressBackend
     * path
         * /から始まるpath
 * `IngressTLS`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingresstls-v1beta1-extensions)
     * hosts
-    * serviceName
-
+        * array of string
+    * secretName
+        * string
+* `IngressStatus`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressstatus-v1beta1-extensions)
 
 ## Reference
-

@@ -373,7 +373,6 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
     * keyが同じものを、(key (list1, list2))でまとめる
     * list2はotherの中でkeyのvalue
 * `rdd.partitionBy(numPartitions, partitionFunc=portable_hash)`
-    * 
 * `rdd.mapPartitions(f, preservesPartitioning=False)`
     * 下記の例だと`[1, 2]`が一つのpartition
     * `f(iterator)`

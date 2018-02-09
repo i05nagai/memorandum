@@ -47,4 +47,48 @@ brew cask install intellij-idea
 * AceJump
     * `Ctrl+;`
         * 入力した文字のある場所に移動できる
+* IDEA Jetty Runner
+    * Installすると、`Run->Edit Configuration`からDebugできるようになる
+* Spek
+    * [raniejade/spek-idea-plugin](https://github.com/raniejade/spek-idea-plugin)
+    * Run specs directly from IDEA.
+    * Choose a specific group/test to run within a spec.
+    * 再起動すると、project windowからfileを右clickでfile内のunit testをrunできる
+    * Tool barのRunからも同様
+    * 各testのdescribeの行にRun mark[▶]が表示される
+
+## Snippets
+* [Live templates, code snippets](https://www.jetbrains.com/help/idea/2016.3/live-templates.html)
+* path
+    * OSX: `~/Library/Preferences/IdeaIC2017.3/templates`
+
+## Add doc comment
+* [Creating Documentation Comments - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-documentation-comments.html)
+    * kotlinでは動かない
+
+1. Place the caret before the declaration.
+2. Type the opening block comment `/**`, and press Enter.
+3. Add meaningful description of parameters and return values.
+
+
+### Surrounding word
+* [HOW-TO: Surround text with quote in IntelliJ ~ Codeleak.pl](http://blog.codeleak.pl/2014/06/how-to-surround-text-with-quote-in.html)
+
+Editor -> LiveTemplate -> surrounded
+
+でsurrounded用のLive templateがあるので追加する。
+
+### Standard library
+* [apply - Kotlin Programming Language](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/apply.html)
+
+```kotlin
+inline fun <T> T.apply(block: T.() -> Unit): T (source)
+```
+
+## Tests
+* [Creating Run/Debug Configuration for Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-run-debug-configuration-for-tests.html)
+
+
+
+
 ## Reference
