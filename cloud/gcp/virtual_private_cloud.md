@@ -9,5 +9,4 @@ title: Virtual Private Cloud
 * [Firewall Rules Overview  |  VPC  |  Google Cloud Platform](https://cloud.google.com/vpc/docs/firewalls)
 
 
-
 ## Reference
