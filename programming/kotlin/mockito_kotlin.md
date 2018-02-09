@@ -6,7 +6,10 @@ title: Mockito-Kotlin
 
 
 ## Usage
+* [Mockito (Mockito 2.9.0 API)](https://static.javadoc.io/org.mockito/mockito-core/2.9.0/org/mockito/Mockito.html)
+    * 基本的な使い方はjavaのdocumentを見る
 * [Mocking and verifying · nhaarman/mockito-kotlin Wiki](https://github.com/nhaarman/mockito-kotlin/wiki/Mocking-and-verifying)
+    * javaとの差分が載っている
 
 Creating mock
 
@@ -22,7 +25,6 @@ myClass.test(mock())
 
 `Mockito`の`when`のかわりに`whenever`が使える。
 kotlinで`when`は予約語。
-が呼ばれた
 
 ```kotlin
 // If mock.stringValue() is called, mock returns `test`
