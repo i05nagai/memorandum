@@ -321,27 +321,33 @@ spec:
     * protocol
         * TCP/UDP
 * `Ingress`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/api-reference/v1.9/#ingress-v1beta1-extensions)
     * `spec`
         * IngressSpec
     * `status`
         * IngressStatus
 * `IngressSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressspec-v1beta1-extensions)
-    * backend
+    * `backend`
         * defaultのbackend
+        * IngressBackend
         * ruleにmatchしないものはここにroutingされる
-    * rules
+    * `rules`
         * array of IngressRule
-    * tls
+    * `tls`
+        * IngressTLS
 * `IngressBackend`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressbackend-v1beta1-extensions)
     * serviceName
         * string
+        * forwardするservice名
     * servicePort
         * serviceのport
+    * serviceName
 * `IngressRule`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressrule-v1beta1-extensions)
     * host
+        * FQDN of network host
         * RFC 3986におけるhost
         * IPはだめ
         * `:`を含んではだめ、portはhostではない
@@ -354,11 +360,15 @@ spec:
         * array of HTTPIngressPath
         * `http://<host>/<path>?<searchpart>`
             * `<path>`の部分を記述する
+* `HTTPIngressValue`
+    * paths
+        * array of HTTPIngressPath
 * `HTTPIngressPath`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#httpingresspath-v1beta1-extensions)
     * backend
         * IngressBackend
     * path
+        * /から始まるpath
 * `IngressTLS`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingresstls-v1beta1-extensions)
     * hosts
@@ -367,6 +377,5 @@ spec:
         * string
 * `IngressStatus`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressstatus-v1beta1-extensions)
-
 
 ## Reference
