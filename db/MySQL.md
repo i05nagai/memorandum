@@ -275,6 +275,18 @@ serverのconfを変更したい場合は、`/etc/mysql/conf.d`にMountする。
 docker run -it --rm -v /my/custom:/etc/mysql/conf.d mysql:5.7.18 mysql -hsome.mysql.host -usome-mysql-user -p
 ```
 
+DBのdataをmountする場合は、`/var/lib/mysql`にMountする。
+mountするvolumeが空でないと以下のerrrorがでる。
+
+```
+[ERROR] --initialize specified but the data directory exists. Aborting.
+```
+
+以下のsiteを見て適宜修正する。
+
+[MySQL 5.7のmysqld --initializeと鶏卵問題 - (ひ)メモ](http://d.hatena.ne.jp/hirose31/20161004/1475582156)
+
+
 ## SQL
 * https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_no_zero_date
 
