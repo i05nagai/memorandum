@@ -5,17 +5,36 @@ title: Spek
 ## Spek
 kotlin用のBDD。RSpecを参考にしている。
 
+## Examples
+* [spek/samples/src/test/kotlin/org/spekframework/spek2/samples at 2.x · spekframework/spek](https://github.com/spekframework/spek/tree/2.x/samples/src/test/kotlin/org/spekframework/spek2/samples)
+
+
+
 ## Usage
 testは`org.jetbrains.spek.api.Spek` classを継承して作る。
 
 ```kotlin
 import org.jetbrains.spek.api.Spek
 object NameSpec: Spek({
+    beforeEachTest {
+        //
+    }
+    afterEachTest {
+        //
+    }
     // write test
+    describe('methodName') {
+        it ('should be okay') {
+            // do test
+        }
+    }
+
+    // skip if suffix is x
+    xit("should not return 11") {
+        // Waiting for next release
+    }
 })
 ```
-
-
 
 以下の二通りの書き方ができる。
 
