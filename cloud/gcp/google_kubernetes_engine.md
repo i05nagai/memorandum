@@ -94,15 +94,17 @@ kubectl proxy
 
 
 
-## expose cluster in GKE
+## Setting up HTTP Load Balancing with Ingress
 * [Setting up HTTP Load Balancing with Ingress  |  Kubernetes Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
     * TCP load balancerは`type: LoadBalancer`
     * HTTP(S) load balancerは`Ingress`
     * Ingressはephemeral external IP addressをdefaultで割り振る
     * static IP addressにしたい場合は２つの方法がある
     * [Global ingress in practice on Google Container Engine — Part 1: Discussion](https://medium.com/google-cloud/global-ingress-in-practice-on-google-container-engine-part-1-discussion-ccc1e5b27bd0)
+* [kubernetes/ingress-gce: Ingress controller for Google Cloud](https://github.com/kubernetes/ingress-gce)
+* [ingress-gce/examples/static-ip at master · kubernetes/ingress-gce](https://github.com/kubernetes/ingress-gce/tree/master/examples/static-ip)
 
-外部にserviceを公開するには、ingressが必要。
+外部にserviceを公開するには、ingress/Load balancerが必要。
 GKEではingressはCloud Load Balancingで実装されている。
 
 
@@ -123,7 +125,7 @@ Global IPを使う場合は事前にIPを作成する。
 gcloud compute addresses create <ip_name> --global
 ```
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -148,6 +150,8 @@ spec:
           servicePort: 80
 ```
 
+ingressを作成しても、つながらない場合は、GCPのnetwork consoleに残っている`k8s-*`のPrefixのついたnetworkの設定を削除する。
+https://github.com/kubernetes/kubernetes/issues/45438
 
 
 
@@ -207,9 +211,74 @@ spec:
 
 ## Disk
 GKEでPDを作ると、GCEにDiskが作成される。
-GKEでPDEを作っても、GCEにDiskが作成される。
-cluster作成のさいのdiskは各Nodeの持つdisk sizeを決める
+GKEでPVCを作っても、GCEにDiskが作成される。
+cluster作成のさいのdiskは各Nodeの持つdisk sizeを決める。
+
+GKEでGCEのvolumeを使う方法は
+
+* PVCで作成する
+    * GCEのdiskが自動で作成される
+* GCEのdiskを作成後、Podに直接mountする
+    * PVもPVCも使わない
+
+GCEのpersistent diskを作成するにはあらかじめ、GCEのdiskを作成しておく必要がある。
+
+```
+gcloud compute disks create --size 200GB mysql-disk
+gcloud compute disks create --size 200GB wordpress-disk
+```
+
+disk名でvolumeをmountできる。
+
+```yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - image: mysql:5.6
+          name: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: password
+          ports:
+            - containerPort: 3306
+              name: mysql
+          volumeMounts:
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-persistent-storage
+          gcePersistentDisk:
+            pdName: mysql-disk
+            fsType: ext4
+```
+
+## Container cluster architecture
+* [Container Cluster Architecture  |  Kubernetes Engine  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture)
+
+利用可能なkubernetesのversion
+
+```
+gcloud container get-server-config
+```
 
 
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
+* [GKEのRegional Clusters(Beta)を試してみた - nFact](http://nokok.hatenablog.com/entry/2017/12/20/000043)
