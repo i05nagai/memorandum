@@ -18,7 +18,7 @@ title: Gauss-Newton Method
 
 $$
 \begin{equation}
-    S(x) 
+    S(x)
         := \sum_{i=1}^{M} r^{i}(x)^{2}
         := \sum_{i=1}^{M} \left( y^{i} - f^{i}(x) \right)^{2}  \in \mathbb{R}
 \end{equation}
