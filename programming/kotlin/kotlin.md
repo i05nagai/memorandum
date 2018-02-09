@@ -79,3 +79,4 @@ a === b
 
 ## Reference
 * [Outdated Kotlin Runtime | Smartphone-Zine](http://www.smartphone-zine.com/android/outdated-kotlin-runtime)
+* [kotlin-web-site/coding-conventions.md at yole/styleguide · JetBrains/kotlin-web-site](https://github.com/JetBrains/kotlin-web-site/blob/yole/styleguide/pages/docs/reference/coding-conventions.md)
