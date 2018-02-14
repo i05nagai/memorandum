@@ -1,5 +1,10 @@
-# Gnu Global
+---
+title: Gnu Global
+---
+
+## Gnu Global
 etagsやctagsのような
+
 
 ## feature
 pygmentsを使うと対応言語を増やせる。
@@ -38,11 +43,12 @@ pygmentsを使うと対応言語を増やせる。
 
 
 ## Install
+
 ### Mac
 pygments optionをつけておけば、defaultのparserで対応していない言語まで対応可能。
 
-```shell
-brew install global --with-pygments
+```
+brew install global --with-ctags --with-pygments
 ```
 
 ## Usage
@@ -71,3 +77,5 @@ globalのインストール先に、vim scriptがインストールされるの�
 ## Reference
 * [ソースコードを快適に読むための GNU GLOBAL 入門 (前編) - まちゅダイアリー(2009-03-07)](http://www.machu.jp/diary/20090307.html#p01)
 * [GNU GLOBAL source code tag system](https://www.gnu.org/software/global/manual/global.html)
+* [GNU GLOBALへのPygmentsパーサー取り込みでソースコード読みが信じられないくらいに捗るはず - Qiita](https://qiita.com/5t111111/items/c14ac68f762ce71a7760)
+* [Go, Ruby, PythonでGNU GLOBAL(gtags)+α - Qiita](https://qiita.com/sonatard/items/672df1259a76f082ce42)
