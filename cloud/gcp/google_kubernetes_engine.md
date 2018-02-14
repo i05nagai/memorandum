@@ -98,10 +98,15 @@ kubectl proxy
 * [Setting up HTTP Load Balancing with Ingress  |  Kubernetes Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
     * TCP load balancerは`type: LoadBalancer`
     * HTTP(S) load balancerは`Ingress`
+        * [GKEだとデフォルトでIngress Controller(=GLBC)がいる - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/04/22/023142)
+        * GKEではcluster作成時にmaster nodeにload balancerを作成するoptionがあるので、これをONにする
+        * GKEでingressを作成したのに、ずっと`Creating Ingress`になっている場合は、clusterのload balancer optionがoffになっている
+        * ingressのfirewallは別途あける必要がある
     * Ingressはephemeral external IP addressをdefaultで割り振る
     * static IP addressにしたい場合は２つの方法がある
     * [Global ingress in practice on Google Container Engine — Part 1: Discussion](https://medium.com/google-cloud/global-ingress-in-practice-on-google-container-engine-part-1-discussion-ccc1e5b27bd0)
 * [kubernetes/ingress-gce: Ingress controller for Google Cloud](https://github.com/kubernetes/ingress-gce)
+* [ingress-gce/gce.md at master · kubernetes/ingress-gce](https://github.com/kubernetes/ingress-gce/blob/master/docs/faq/gce.md#how-do-i-deploy-an-ingress-controller)
 * [ingress-gce/examples/static-ip at master · kubernetes/ingress-gce](https://github.com/kubernetes/ingress-gce/tree/master/examples/static-ip)
 
 外部にserviceを公開するには、ingress/Load balancerが必要。
@@ -277,6 +282,9 @@ spec:
 ```
 gcloud container get-server-config
 ```
+
+## 監視
+* [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
 
 
 ## Reference
