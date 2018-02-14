@@ -71,5 +71,29 @@ logger = logging.getLogger(__name__)
     * logging.exception()
     * logging.critical()
 
+## Configuration
+* [15.8. logging.config — Logging configuration — Python 2.7.14 documentation](https://docs.python.org/2/library/logging.config.html)
+
+dict形式でconfigurationできる。
+
+https://docs.python.org/2/library/logging.config.html#logging-config-dictschema
+
+```
+handlers:
+  console:
+    class : logging.StreamHandler
+    formatter: brief
+    level   : INFO
+    filters: [allow_foo]
+    stream  : ext://sys.stdout
+  file:
+    class : logging.handlers.RotatingFileHandler
+    formatter: precise
+    filename: logconfig.log
+    maxBytes: 1024
+    backupCount: 3
+```
+
+
 ## Reference
 * [15.7. logging — Logging facility for Python — Python 2.7.14 documentation](https://docs.python.org/2/library/logging.html)
