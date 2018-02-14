@@ -933,6 +933,10 @@ kubectl describe pod <pod-id>
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
 
 ## Ingress
+* health check
+    * [contrib/ingress/controllers/gce/examples/health_checks at master · kubernetes/contrib](https://github.com/kubernetes/contrib/tree/master/ingress/controllers/gce/examples/health_checks)
+    * health checkをpassするには以下のいずれかを満たす
+        * `/` で200を返す
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
