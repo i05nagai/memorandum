@@ -20,5 +20,11 @@ task_log_reader = file.task
 
 ## Connection to GCP
 * [Apache Airflow: How to add a connection to Google Cloud with CLI](https://medium.com/google-cloud/apache-airflow-how-to-add-a-connection-to-google-cloud-with-cli-af2cc8df138d)
+* [google cloud storage - Airflow Remote logging not working - Stack Overflow](https://stackoverflow.com/questions/46293020/airflow-remote-logging-not-working)
+    * `googleapis.com/auth/devstorage.full_control `
+    * `airflow[gcp_api]`のinstallが必要
+        * ` gcloud SDK`が必要
+* [How to aggregate data for BigQuery using Apache Airflow | Google Cloud Big Data and Machine Learning Blog  |  Google Cloud Platform](https://cloud.google.com/blog/big-data/2017/07/how-to-aggregate-data-for-bigquery-using-apache-airflow)
+
 
 ## Reference
