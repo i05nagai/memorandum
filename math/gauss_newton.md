@@ -18,7 +18,7 @@ title: Gauss-Newton Method
 
 $$
 \begin{equation}
-    S(x) 
+    S(x)
         := \sum_{i=1}^{M} r^{i}(x)^{2}
         := \sum_{i=1}^{M} \left( y^{i} - f^{i}(x) \right)^{2}  \in \mathbb{R}
 \end{equation}
@@ -30,7 +30,7 @@ $r(x) = (r^{1}(x), \ldots, r^{M}(x))$は残差を表し、$r^{i}(x) = y^{i} - f^
 
 $$
 \begin{equation}
-S(x) 
+    S(x)
     = \left\| r(x) \right\|^{2}
     = \left\| y - f(x) \right\|^{2}
 \end{equation}
@@ -52,23 +52,30 @@ $$
 $S(x)$に$f$の線形近似を代入すると
 
 $$
-S(x + \delta) 
+    S(x + \delta)
     = \left\|y - f(x + \delta) \right\|^{2}
     \approx \sum_{i=1}^{M} \left( y_{i} - f^{i}(x) - J^{i}(x)\delta \right)^{2}
     =: \tilde{S}(x, \delta)
 $$
 
 となる。
-上式を展開すると
+右辺を展開すると
 
 $$
 \begin{eqnarray*}
-\tilde{S}(x, \delta) 
-    \approx \left\|y - f(x) - J(x)\delta \right\|^{2} 
-    & = & \left(y - f(x) - J(x)\delta \right)^{T}\left(y - f(x) - J(x)\delta \right) \\
-    & = & \|y - f(x)\|^{2} - (y - f(x))^{T}J(x)\delta
-        - \delta^{T}J^{T}(x)(y - f(x)) + \delta^{T}J^{T}(x)J(x)\delta \\
-    & = & \|y - f(x)\|^{2} - 2(y - f(x))^{T}J(x)\delta + \delta^{T}J^{T}(x)J(x)\delta
+    \tilde{S}(x, \delta)
+    & = &
+        \left\|y - f(x) - J(x)\delta \right\|^{2}
+    \\
+    & = &
+        \left(y - f(x) - J(x)\delta \right)^{T}\left(y - f(x) - J(x)\delta \right)
+    \\
+    & = &
+        \|y - f(x)\|^{2} - (y - f(x))^{T}J(x)\delta
+        - \delta^{T}J^{T}(x)(y - f(x)) + \delta^{T}J^{T}(x)J(x)\delta
+    \\
+    & = &
+        \|y - f(x)\|^{2} - 2(y - f(x))^{T}J(x)\delta + \delta^{T}J^{T}(x)J(x)\delta
 \end{eqnarray*}
 $$
 
