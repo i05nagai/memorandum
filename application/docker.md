@@ -502,6 +502,12 @@ docker login -u oauth2accesstoken -p "$(gcloud auth application-default print-ac
 ```
 
 
+## Layer
+* [Explaining Docker Image IDs](https://windsock.io/explaining-docker-image-ids/)
+* [Odd Bits - Unpacking Docker images with Undocker](http://blog.oddbit.com/2015/02/13/unpacking-docker-images/)
+* [Digging into Docker layers – Jessica G – Medium](https://medium.com/@jessgreb01/digging-into-docker-layers-c22f948ed612)
+
+
 ## Reference
 * [Dockerfile Best Practices](http://crosbymichael.com/dockerfile-best-practices.html)
 * [Python’s super() considered super! | Deep Thoughts by Raymond Hettinger](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/)
