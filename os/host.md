@@ -44,3 +44,4 @@ host hostname localhost
 
 ## Reference
 * [Linuxコマンド【 host 】DNSを使ってホスト名を検索 - Linux入門 - Webkaru](https://webkaru.net/linux/host-command/)
+
