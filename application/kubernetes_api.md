@@ -89,11 +89,30 @@ spec:
         * `Always`
     * `lifecycle`
     * `livenessProbe`
+    * `readinessProbe`
+        * `Probe`
+        * readiness用のurlを設定
     * `name`
     * `securityContext`
         * `SecurityContext`
     * `volumeMounts`
         * array of `VolumeMount`
+* `Probe`
+    * `httpGet`
+    * `periodSeconds`
+        * default to 10 sec
+    * `timeoutSeconds`
+        * default to 1 sec
+    * `successThreshold`
+        * default to 1
+        * failした後に何度連続してsuccessになる必要があるか
+    * `failureThreshold`
+* `HTTPGetAction`
+    * `host`
+    * `httpHeaders `
+    * `path`
+    * `port`
+    * `scheme`
 * `SecurityContext`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#securitycontext-v1-core)
     * `privileged`
