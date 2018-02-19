@@ -128,6 +128,27 @@ $$
 $$
 
 ここで、$i_{k}$は$i$の$k$bit目の2進表現で、 $$i = (i_{K}, \ldots, i_{3}, i_{2}, i_{1})_{2}$$である。
+実用上は、$m_{k, j}$の計算の後direction numberの計算はせずに以下のように計算した方が良い。
+
+$$
+\begin{eqnarray}
+    x_{i, j}^{\prime}
+    & := &
+        \bigoplus_{k=1}^{K}
+            i_{k}
+            (m_{k,j})_{2}
+    \nonumber
+    \\
+    x_{i, j}
+    & := &
+        \frac{
+            x_{i, j}^{\prime}
+        }{
+            2^{K}
+        }
+    \nonumber
+\end{eqnarray}
+$$
 
 ## Example
 * $d := 3$,
@@ -197,22 +218,79 @@ $$
     v_{1, 1}
     & := &
         \frac{1}{2}
+        =
+        (0.1)_{2}
     \nonumber
     \\
     v_{2, 1}
     & := &
         \frac{1}{4}
+        =
+        (0.01)_{2}
     \nonumber
     \\
     v_{3, 1}
     & := &
         \frac{1}{8}
+        =
+        (0.001)_{2}
     \nonumber
     \\
     v_{4, 1}
     & := &
         \frac{1}{16}
+        =
+        (0.0001)_{2}
     \nonumber
+\end{eqnarray}
+$$
+
+となる。
+このとき、 $i = 11 = (1011)_{2}$であれば
+
+$$
+\begin{eqnarray}
+    x_{11, 1}
+    & = &
+        1
+        (0.1)_{2}
+        \oplus
+        1
+        (0.01)_{2}
+        \oplus
+        0
+        (0.001)_{2}
+        \oplus
+        1
+        (0.001)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.1)_{2}
+        \oplus
+        (0.01)_{2}
+        \oplus
+        (0.001)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.111)_{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
+別の方法として、
+
+$$
+\begin{eqnarray}
+    x_{11, 1}^{\prime}
+    & := &
+        (1)_{2}
+        \oplus
+        (11)_{2}
+        \oplus
+        (11)_{2}
 \end{eqnarray}
 $$
 
@@ -286,21 +364,63 @@ $$
     v_{1, 2}
     & := &
         \frac{1}{2}
+        =
+        (0.1)_{2}
     \nonumber
     \\
     v_{2, 2}
     & := &
         \frac{3}{4}
+        =
+        (0.11)_{2}
     \nonumber
     \\
     v_{3, 2}
     & := &
         \frac{5}{8}
+        =
+        (0.101)_{2}
     \nonumber
     \\
     v_{3, 2}
     & := &
         \frac{15}{16}
+        =
+        (0.1111)_{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+である。
+このとき、$i = 11 = (01011)_{2}$のとき、
+
+$$
+\begin{eqnarray}
+    x_{11,2}
+    & := &
+        1
+        (0.1)_{2}
+        \oplus
+        1
+        (0.11)_{2}
+        \oplus
+        0
+        (0.101)_{2}
+        \oplus
+        1
+        (0.1111)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.1)_{2}
+        \oplus
+        (0.11)_{2}
+        \oplus
+        (0.1111)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.1011)_{2}
     \nonumber
 \end{eqnarray}
 $$
@@ -405,29 +525,78 @@ $$
     v_{1, 3}
     & := &
         \frac{1}{2}
+        =
+        (0.1)_{2}
     \nonumber
     \\
     v_{2, 3}
     & := &
         \frac{3}{4}
+        =
+        (0.11)_{2}
     \nonumber
     \\
     v_{3, 3}
     & := &
         \frac{3}{8}
+        =
+        (0.011)_{2}
     \nonumber
     \\
     v_{4, 3}
     & := &
         \frac{9}{16}
+        =
+        (0.1001)_{2}
     \nonumber
     \\
     v_{5, 3}
     & := &
         \frac{27}{32}
+        =
+        (0.11011)_{2}
     \nonumber
 \end{eqnarray}
 $$
+
+となる。
+このとき、例えば$i = 11 = (01011)_{2}$のとき、
+
+$$
+\begin{eqnarray}
+    x_{11, 3}
+    & := &
+        1
+        (0.1)_{2}
+        \oplus
+        1
+        (0.11)_{2}
+        \oplus
+        0
+        (0.011)_{2}
+        \oplus
+        1
+        (0.1001)_{2}
+        \oplus
+        0
+        (0.11011)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.1)_{2}
+        \oplus
+        (0.11)_{2}
+        \oplus
+        (0.1001)_{2}
+    \nonumber
+    \\
+    & = &
+        (0.1101)_{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+となる。
 
 ## Algorithm with Gray code
 Gray codeを用いた高速なsobol sequenceの生成方法。
