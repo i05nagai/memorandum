@@ -8,8 +8,33 @@ title: BIND 9
 apt-get -y install bind9 bind9utils
 ```
 
-## named
+## CLI
+Run nameserver.
+nameserverのerrorは`syslog` daemonに送られるので、`syslog` daemonがが起動していることを確認する。
+syslogのdaemon facilityにlogが出力される。
 
+```
+named
+```
+
+name daemonのreload
+
+```
+ndc reload
+```
+
+`rndc.conf`の雛形作成
+
+```
+rndc-confgen > /etc/rndc.conf
+```
+
+```
+rndc [-b address] [-c config] [-s server] [-p port] [-k key-file ] [-y key] [-V] command
+```
+
+* server
+    * nameserver
 
 ## Configuration
 
@@ -204,7 +229,32 @@ named-checkconf
 name-checkzone zonename filename
 ```
 
+## resolver
+`/etc/resolve.conf`でresolverの設定ができる。
 
+[Man page of RESOLV.CONF](http://linuxjm.osdn.jp/html/LDP_man-pages/man5/resolv.conf.5.html)
+
+
+```
+nameserver ip_address
+```
+
+nameerverがloaclで動いていないときは、問い合わせるDNSの設定が必要なので、ここで設定できる。
+listされた順に問い合わせをする。
+nameserverが設定されていない場合は、localmachineのnameserverに問い合わせる。
+
+```
+domain local_domain_name
+```
+
+local domain nameはroot domainを省略した場合のdefault domainとして利用される。
+
+```
+search domain1 domain2 domain3
+```
+
+CLIなどでroot domain `.`を省略した場合に補完するdomainのlist
+defaultではlocal domainが使われる。
 
 
 ## Reference
