@@ -12,13 +12,22 @@ title: Natural Language Processing
 
 ### stop-word removal
 * `and, is, has`などを削除
+* [簡易的な日本語ストップワードの取得メソッド - test.py](http://testpy.hatenablog.com/entry/2016/10/05/004949)
+
+http://svn.sourceforge.jp/svnroot/slothlib/CSharp/Version1/SlothLib/NLP/Filter/StopWord/word/Japanese.txt
 
 ### TF-IDF
 * TFはdoumentに現れる単語の頻度
 * IDFは全部のdocumentに単語が現れた比率の逆数
 * 多くの文書に出てる単語は重要でない
 
-### 
+## Preprocessing
+
+### Best practice
+* [Data preparation for doc2vec - Google Groups](https://groups.google.com/forum/#!topic/gensim/17Knu4Xoe9U)
+* [自然言語処理における前処理の種類とその威力 - Qiita](https://qiita.com/Hironsan/items/2466fe0f344115aff177)
+* [Python3×日本語：自然言語処理の前処理まとめ - Qiita](https://qiita.com/chamao/items/7edaba62b120a660657e)
+
 
 ## Reference
 * [詳解 LOUDS (12) trie として使う - アスペ日記](http://d.hatena.ne.jp/takeda25/20120421/1335017170)
