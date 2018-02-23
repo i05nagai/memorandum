@@ -22,9 +22,17 @@ $ ./bin/install-mecab-ipadic-neologd -n
 * `--forceyes`, `-y`
     * testの結果にかかわらずinstall
 * `--asuser`, `-u`
+* `--create_user_dic`
+    * user辞書としてinstall
 
 ```
 $ echo `mecab-config --dicdir`"/mecab-ipadic-neologd"
+```
+
+Usage
+
+```
+mecab --dicdir=`mecab-config --dicdir`"/mecab-ipadic-neologd"
 ```
 
 
