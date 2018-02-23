@@ -56,6 +56,15 @@ $(subst a,b,${x})
 * [makefile - How do I force make/gcc to show me the commands? - Stack Overflow](https://stackoverflow.com/questions/5820303/how-do-i-force-make-gcc-to-show-me-the-commands)
 * [[Make] make実行時の詳細表示有効化メモ - Qiita](https://qiita.com/koara-local/items/4e047e47b8cde52919a6)
 
+## Double colon
+* [Makefiles - Make and the Double colon](http://owen.sj.ca.us/~rk/howto/slides/make/slides/makecolon.html)
+
+```
+libxxx.a :: sub1.o
+	ar rv libxxx.a sub1.o
+libxxx.a :: sub2.o
+	ar rv libxxx.a sub2.o
+```
 
 ## Reference
 * [GNU make: Rules](https://www.gnu.org/software/make/manual/html_node/Rules.html)
