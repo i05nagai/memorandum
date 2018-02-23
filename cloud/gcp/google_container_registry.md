@@ -72,6 +72,15 @@ Untag
 gcloud container images untag [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]
 ```
 
+dockerでLogin
+
+```
+# with auth token
+docker login -u oauth2accesstoken -p "$(gcloud auth application-default print-access-token)" https://gcr.io
+# with json key
+docker login -u _json_key -p "$(cat keyfile.json)" https://gcr.io
+```
+
 ## Access control
 * [Configuring Access Control  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/access-control)
 
