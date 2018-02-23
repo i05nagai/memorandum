@@ -400,6 +400,8 @@ DaemonSetと代替可能なもの
 
 ### Secrets
 * [Secrets | Kubernetes](https://kubernetes.io/docs/concepts/configuration/secret/)
+    * 作成したseceretはPodにfileとしてvolumeに付与できる
+    * enviroment variableとして付与できる
 
 Password, OAuth token, ssh keysなどを保持する。
 pod definitionやdocker imageに書くより柔軟に利用できる。
@@ -652,6 +654,8 @@ git-syncを使う。
 * iscsi
 * local
 * nfs
+    * [examples/staging/volumes/nfs at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/staging/volumes/nfs)
+    * [external-storage/nfs at master · kubernetes-incubator/external-storage](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs)
 * persistentVolumeClaim
 * projected
 * portworxVolume
@@ -916,6 +920,42 @@ imagePullSecrets:
 * docker clinetのupdate
 * minikbeのupdate
 
+## DNS
+[DNS for Services and Pods | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+
+Serviceに対するA record
+
+serviceのhostnmaeは以下の規則で付与される。
+namespaceをまたいで、accessすることも可能。
+
+```
+<service-name>.<namespace>.svc.cluster.local
+```
+
+* PodのDNS Policy
+    * `dnsPolicy:`
+        * `Default`
+            * 
+        * `ClusterFirst`
+            * clusterのdomain nameにmatchしないものは、nodeから受け継いだupstream DNSにforwardする
+        * `ClusterFirstWithHostNet`
+            * hostnetworkで動くPodの場合は設定が必要
+        * `None`
+            * Kubernetes 1.9から
+            * kkubernetesのDNSの設定を無視する
+            * `dnsConfig`で設定する
+* PodのDNSの設定
+    * `nameservers:`
+        * DNS serverのIP address
+        * 多くとも3つ
+        * dnsPolich: Noneのときは最低1ついる
+    * `searches:`
+        * Podのhostname lookupで探すDomain
+    * `options:`
+        * DNS policyにoptionを渡せる
+
+
+[Customizing DNS Service | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#inheriting-dns-from-the-node)
 
 
 ### Error
@@ -928,7 +968,6 @@ imagePullSecrets:
 kubectl describe pod <pod-id>
 ```
 
-
 ## Examples
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
 
@@ -937,6 +976,19 @@ kubectl describe pod <pod-id>
     * [contrib/ingress/controllers/gce/examples/health_checks at master · kubernetes/contrib](https://github.com/kubernetes/contrib/tree/master/ingress/controllers/gce/examples/health_checks)
     * health checkをpassするには以下のいずれかを満たす
         * `/` で200を返す
+
+## Node selector
+* [Assigning Pods to Nodes | Kubernetes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
+    * nodeを指定して、Podに割当ができる
+    * ndoeにlabelをつけられるので、labelで選択する
+
+## Monitoring and Logging
+* [Core metrics pipeline | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
+
+* [Logging Using Stackdriver | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-stackdriver/)
+    * stackdriverでのlogは、standard output, standard errorのlogだけ
+    * fileに出力されるlogなどが必要な場合は sidecarを使う
+
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
