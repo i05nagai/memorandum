@@ -61,5 +61,20 @@ chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.c
 
 * `--allow-file-access-from-files`
 
+## Release channel
+* https://www.chromium.org/getting-involved/dev-channel
+
+* stable
+* beta
+    * minimal riskで新しい機能を試せる
+* dev channel
+* canary
+    * buildごとに作成されたrelease
+
+```
+rew tap caskroom/versions
+brew cask install google-chrome-canary
+```
+
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
