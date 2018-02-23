@@ -87,8 +87,15 @@ inline fun <T> T.apply(block: T.() -> Unit): T (source)
 
 ## Tests
 * [Creating Run/Debug Configuration for Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-run-debug-configuration-for-tests.html)
+* [Creating Tests - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-tests.html)
 
+testを追加するdirectoryをtest directoryとしてmarkできる。
+markしたdirectoryはtestの自動生成の際にtestの保存先として指定できる。
+Project windowから`右クリック->Mark Directory as->Test Resources Root`でtest directoryになる。
 
+Testの自動追加は、classを選択して、`option + Enter`で`Create test`を選択する。
+diaglogに必要な設定を記述した後、OKを押せば、Test fileの保存先が指定できる。
 
+Test classで`Cmd + N`でtest methodの生成ができる。
 
 ## Reference
