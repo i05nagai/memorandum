@@ -35,7 +35,7 @@ d = m.parseToNode('')
 # 表層形
 d.surface
 # 品詞,品詞細分類1,品詞細分類2,品詞細分類3,活用型,活用形,原形,読み,発音
-
+d.feature
 ```
 
 `/usr/local/lib/mecab/ipadic/dicrc`に出力形式が記載されている。
