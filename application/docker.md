@@ -489,6 +489,10 @@ docker run \
 
 
 ### Docker in docker
+* [library/docker - Docker Hub](https://hub.docker.com/_/docker/)
+
+`privileged` が必要。
+
 
 ### Docker config
 * `$HOME/.docker/config.json`
