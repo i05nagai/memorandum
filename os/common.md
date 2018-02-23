@@ -5,6 +5,10 @@ title: Common
 ## Common
 
 
+## /etc/resolv.conf
+* [resolv.conf - ArchWiki](https://wiki.archlinux.org/index.php/resolv.conf)
+
+
 ## /etc/fstab
 * [/etc/fstabについて その1 - Linux初心者の基礎知識](http://www.linux-beginner.com/linux_kihon64.html)
 
