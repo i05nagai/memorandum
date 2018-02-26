@@ -9,6 +9,10 @@ title: Apache Hadoop
 
 ### CLI
 
+```
+hdfs [--config confdir] [--loglevel loglevel] COMMAND
+```
+
 * dfs
     * `-appendToFile`
     * `-copyFromLocal from to`
