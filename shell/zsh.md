@@ -82,3 +82,4 @@ compdef _completion_function my_function
 ## Reference
 * [zsh-users/zsh-completions: Additional completion definitions for Zsh.](https://github.com/zsh-users/zsh-completions)
 * [まだ oh-my-zsh で消耗してるの？ - Qiita](http://qiita.com/b4b4r07/items/875235f6122a6d779306)
+* [widgets can only be called when ZLE is active とは何だったのか - Qiita](https://qiita.com/udzura/items/3f120b5e4733fe85078d)
