@@ -727,6 +727,17 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
     * [incubator-airflow/jobs.py](https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1355)
 * web uiでworkerのlogをみる
     * https://github.com/apache/incubator-airflow/blob/15b8a36b9011166b06f176f684b71703a4aebddd/airflow/www/views.py#L725
+        o
+
+## Connection
+* [pre-configured airflow "Connections" · Issue #75 · puckel/docker-airflow](https://github.com/puckel/docker-airflow/issues/75)
+    * CLIからのconnectionの追加
+* [Apache Airflow: How to add a connection to Google Cloud with CLI](https://medium.com/google-cloud/apache-airflow-how-to-add-a-connection-to-google-cloud-with-cli-af2cc8df138d)
+    * dagでのconnectionの追加
+
+```
+airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn_extra='{ "extra__google_cloud_platform__key_path":"/usr/local/airflow/secrets/gcp_key.json", "extra__google_cloud_platform__project": "gcp-project", "extra__google_cloud_platform__scope": "https://www.googleapis.com/auth/cloud-platform"}'
+```
 
 
 ## Reference
