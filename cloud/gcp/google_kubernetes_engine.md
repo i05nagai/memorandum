@@ -91,7 +91,9 @@ kubectl proxy
 ### Configuring Cluster networking
 * [Internal Load Balancing  |  Kubernetes Engine  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/how-to/internal-load-balancing)
 * [Network Policies | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
+    * Kubernetesのnetworkの仕組み
+* [GKE/Kubernetes の Service はどう動いているのか // Speaker Deck](https://speakerdeck.com/apstndb/kubernetes-false-service-hatoudong-iteirufalseka)
 
 
 ## Setting up HTTP Load Balancing with Ingress
@@ -290,3 +292,4 @@ gcloud container get-server-config
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
 * [GKEのRegional Clusters(Beta)を試してみた - nFact](http://nokok.hatenablog.com/entry/2017/12/20/000043)
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
