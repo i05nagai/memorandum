@@ -3,6 +3,23 @@ title: Make
 ---
 
 ## Make
+makefileは以下の５つで構成される。
+
+* implicit rule
+* explicit rule
+    * prerequisite に依存関係を記述する
+* comment
+* variable definition
+* directive
+    * `include`
+
+## Recipes
+
+Overriding recipes
+
+
+
+## Directive
 
 ## Automatic variables
 * [GNU make: Automatic Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables)
@@ -66,6 +83,16 @@ libxxx.a :: sub2.o
 	ar rv libxxx.a sub2.o
 ```
 
+### How to get a Makefile directory path
+* [How to get a Makefile directory path « timmurphy.org](http://timmurphy.org/2015/09/27/how-to-get-a-makefile-directory-path/)
+* [Re: How to get the absolute path of a makefile?](https://lists.gnu.org/archive/html/help-make/2009-05/msg00009.html)
+
+
+```
+$(realpath $(lastword $(MAKEFILE_LIST)))
+```
+
 ## Reference
 * [GNU make: Rules](https://www.gnu.org/software/make/manual/html_node/Rules.html)
 * [Makefiles - Best practices and suggestions - Mozilla | MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works/Makefiles_-_Best_practices_and_suggestions)
+
