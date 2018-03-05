@@ -70,7 +70,6 @@ Host *
     GSSAPIAuthentication yes
 ```
 
-
 ## CLI
 
 ### sshd
