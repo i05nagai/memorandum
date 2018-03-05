@@ -3,6 +3,8 @@ title: Network File System
 ---
 
 ## Network File System
+* [SettingUpNFSHowTo - Community Help Wiki](https://help.ubuntu.com/community/SettingUpNFSHowTo)
+    * NFSv3はrpcbind
 
 ## Client
 Client
