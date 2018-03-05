@@ -272,5 +272,12 @@ Localで表示を確認するには、以下のcommandでhtmlに変換する。
 jupyter nbconvert --to html NOTEBOOK-NAME.ipynb
 ```
 
+## ssh keys
+以下のURLで公開鍵が取得できる。
+
+```
+https://github.com/<user-name>.keys
+```
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
