@@ -23,8 +23,8 @@ title: Spreadsheet
 
 ```
 =QUERY(A2:F24, "SELECT AVG(E) GROUP BY A PIVOT F", 1)
-# OK
-=QUERY(IMPORTRANGE("spreadsheet_url", ""), "SELECT AVG(Col5) GROUP BY Col1 PIVOT Col6", 1)
+# Pivot table
+=QUERY(IMPORTRANGE("spreadsheet_url", ""), "SELECT Col1, AVG(Col5) GROUP BY Col1 PIVOT Col6 LABEL Col1 'label'", 1)
 ```
 
 
