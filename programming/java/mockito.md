@@ -75,6 +75,15 @@ inOrder.verify(firstMock).add("was called first");
 inOrder.verify(secondMock).add("was called second");
 ```
 
+### Mock static methods
+`doReturn`を使う。
+
+```
+Mockito
+  .doReturn(data)
+  .when(SomeClass).doSomething(any()));
+```
+
 ## Injecting Mock
 * [Auto inject dependencies in JUnit using Mockito - JDriven](https://blog.jdriven.com/2013/01/auto-inject-dependencies-in-junit-using-mockito/)
 * [Unit tests with Mockito - Tutorial](http://www.vogella.com/tutorials/Mockito/article.html)
@@ -87,3 +96,4 @@ inOrder.verify(secondMock).add("was called second");
 * [Mockito framework site](http://site.mockito.org/)
 * [mockito/mockito: Most popular Mocking framework for unit tests written in Java](https://github.com/mockito/mockito)
 * [Mockito 初めの一歩 - Qiita](https://qiita.com/mstssk/items/98e597c13f12746c907d)
+* [JUnit・JMockitチートシート - Qiita](https://qiita.com/disc99/items/4dc78f9a96aa0a9aeb47#_reference-f869d5544b0f1f431513)
