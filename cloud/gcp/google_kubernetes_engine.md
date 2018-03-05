@@ -103,7 +103,6 @@ kubectl proxy
         * [GKEだとデフォルトでIngress Controller(=GLBC)がいる - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/04/22/023142)
         * GKEではcluster作成時にmaster nodeにload balancerを作成するoptionがあるので、これをONにする
         * GKEでingressを作成したのに、ずっと`Creating Ingress`になっている場合は、clusterのload balancer optionがoffになっている
-        * ingressのfirewallは別途あける必要がある
     * Ingressはephemeral external IP addressをdefaultで割り振る
     * static IP addressにしたい場合は２つの方法がある
     * [Global ingress in practice on Google Container Engine — Part 1: Discussion](https://medium.com/google-cloud/global-ingress-in-practice-on-google-container-engine-part-1-discussion-ccc1e5b27bd0)
@@ -287,6 +286,13 @@ gcloud container get-server-config
 
 ## 監視
 * [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
+
+
+## NGINX Ingress on GKE
+* [Ingress with NGINX controller on Google Kubernetes Engine | Ingress with NGINX controller on Google Kubernetes Engine  |  Google Cloud Platform Community  |  Google Cloud Platform](https://cloud.google.com/community/tutorials/nginx-ingress-gke)
+* [ingress-nginx/deploy at master · kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx/tree/master/deploy#installation-guide) 
+* [external-dns/nginx-ingress.md at master · kubernetes-incubator/external-dns](https://github.com/kubernetes-incubator/external-dns/blob/master/docs/tutorials/nginx-ingress.md)
+
 
 
 ## Reference
