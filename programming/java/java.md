@@ -4,8 +4,10 @@ title: java
 
 ## java
 
+## final
+* referenceに対しては参照先の変更は可能
 
-## Dipendecy injection
+## Dependecy injection
 * [Using dependency injection in Java - Introduction - Tutorial](http://www.vogella.com/tutorials/DependencyInjection/article.html)
 * [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html)
 * [javax.inject (Java EE 6 )](https://docs.oracle.com/javaee/6/api/javax/inject/package-summary.html)
@@ -31,6 +33,11 @@ object Obj {
     fun bar() {}
 }
 ```
+
+## final variables
+* [Chapter 4. Types, Values, and Variables](https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.12.4)
+* [coding standards - Excessive use "final" keyword in Java - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/98691/excessive-use-final-keyword-in-java)
+
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
