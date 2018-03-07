@@ -66,8 +66,19 @@ Host 任意の接続名(hoge)
     TCPKeepAlive yes
 ```
 
+local forwarding
+
 ```
-ssh hoge
+Host name
+    HostName host/ip
+    IdentityFile    /path/to/key
+    User            user
+    LocalForward    port    127.0.0.1:port
+    ForwardAgent    yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ServerAliveInterval 300
+    TCPKeepAlive yes
 ```
 
 * `ForwardAgent yes`
