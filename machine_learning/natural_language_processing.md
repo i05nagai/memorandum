@@ -27,6 +27,12 @@ http://svn.sourceforge.jp/svnroot/slothlib/CSharp/Version1/SlothLib/NLP/Filter/S
 * [Data preparation for doc2vec - Google Groups](https://groups.google.com/forum/#!topic/gensim/17Knu4Xoe9U)
 * [自然言語処理における前処理の種類とその威力 - Qiita](https://qiita.com/Hironsan/items/2466fe0f344115aff177)
 * [Python3×日本語：自然言語処理の前処理まとめ - Qiita](https://qiita.com/chamao/items/7edaba62b120a660657e)
+* [Regexp.ja · neologd/mecab-ipadic-neologd Wiki](https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja)
+* [sentencepiece/normalization.md at master · google/sentencepiece](https://github.com/google/sentencepiece/blob/master/doc/normalization.md)
+
+
+### emoticon
+* [Emoji Sentiment Ranking v1.0](http://kt.ijs.si/data/Emoji_sentiment_ranking/)
 
 
 ## Reference
