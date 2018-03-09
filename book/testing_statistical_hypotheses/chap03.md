@@ -30,9 +30,10 @@ book_chapter: 3
 * $$\delta_{i}: \mathcal{X} \rightarrow D$$,
 * $$S_{i} := \{X(\omega) \in \mathcal{X} \mid \omega \in \Omega,\ \delta(X(\omega)) = d_{i} \} \ (i = 0, 1)$$,
     * $X$の値域の分割
-    * $$S_{0}$$の時採択となるようにとる
-    * $$S_{1}$$の時棄却となるようにとる
-    * $$S_{1}$$はcritical regionともいわれる
+    * $S_{0}$の時採択となるようにとる
+    * $S_{0}$ is called acceptance region
+    * $S_{1}$の時棄却となるようにとる
+    * $S_{1}$ is called critical region
 
 検定の2つのえらー。
 
@@ -285,6 +286,39 @@ $$
 \end{eqnarray}
 $$
 
+### Remark
+* $S_{0} \subseteq \mathcal{X}$,
+    * given
+    * acceptance region
+* $S_{1} \subseteq \mathcal{X}$,
+    * given
+    * critical region
+
+Then we can construct decision function.
+
+$$
+\begin{eqnarray}
+    \delta(x)
+    :=
+    1_{S_{1}}(x)
+    .
+\end{eqnarray}
+$$
+
+$$
+    x \in \mathcal{X},
+    \
+    \delta_{\phi}(dz \mid x)
+    :=
+    \phi(x)
+    \epsilon_{1}(dz)
+    +
+    (1 - \phi(x))
+    \epsilon_{0}(dz)
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 ### Defintion test
 * $\phi: \mathcal{X} \rightarrow [0, 1]$
     * mesurable
@@ -333,6 +367,18 @@ $$
 * $\phi: \mathcal{X} \rightarrow [0, 1]$
     * test at level $\alpha$
 
+We define power function $\beta_{\phi}: \Theta \rightarrow [0, 1]$ of test $\phi$ by
+
+$$
+    \beta_{\phi}(\theta)
+    :=
+    \mathrm{E}_{\theta}
+    \left[
+        \phi
+    \right]
+    .
+$$
+
 $\phi$ is said to be most poweful test at level $\alpha$ if
 
 $$
@@ -341,15 +387,9 @@ $$
     \
     \forall \theta \in \Theta_{K},
     \
-    \mathrm{E}_{\theta}
-    \left[
-        \phi_{0}
-    \right]
+    \beta_{\phi}(\theta)
     \ge
-    \mathrm{E}_{\theta}
-    \left[
-        \phi
-    \right]
+    \beta_{\phi}(\theta^{\prime})
     \nonumber
 \end{equation}
 $$
@@ -357,7 +397,7 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Remark
-以下が成り立つ。
+The following equation holds;
 
 $$
     \arg\inf_{\theta \in \Theta_{K}}
@@ -367,7 +407,7 @@ $$
         P(X \in S_{1})
 $$
 
-実際
+Indeed,
 
 $$
 \begin{eqnarray}
@@ -388,6 +428,31 @@ $$
         -
         \sup_{\theta \in \Theta_{K}}P_{\theta}(X \in S_{1})
     \nonumber
+\end{eqnarray}
+$$
+
+In particular, $$\Theta_{H} := \{\theta_{0}\}$$, then we have
+
+$$
+\begin{eqnarray}
+    \inf_{\theta \in \Theta_{H}}
+        P_{\theta}(X \in S_{0})
+    & = &
+        \inf_{\theta \in \Theta_{H}}
+            (P_{\theta}(X \in (S_{0} \cup S_{1})) - P_{\theta}(X \in S_{1}))
+    \nonumber
+    \\
+    & = &
+        1
+        -
+        \sup_{\theta \in \Theta_{H}}
+             P_{\theta}(X \in S_{1})
+    \nonumber
+    \\
+    & \ge &
+        1
+        -
+        \alpha
 \end{eqnarray}
 $$
 
