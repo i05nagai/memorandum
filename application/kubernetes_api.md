@@ -92,6 +92,7 @@ spec:
     * `readinessProbe`
         * `Probe`
         * readiness用のurlを設定
+        * commandが0ならhealthy, 1ならunhealty
     * `name`
     * `securityContext`
         * `SecurityContext`
@@ -252,6 +253,21 @@ spec:
     * `gcePersistentDisk`
         * GCEPersistentDiskVolumeSource
     * `storageClassName`
+    * `nfs`
+        * `NFSVolumeSource`
+
+```
+  capacity:
+    storage: 5Gi
+```
+
+* `NFSVolumeSource`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#nfsvolumesource-v1-core)
+    * `path`
+        * nfs serverのexportするdirのpath
+    * `readOnly`
+    * `server`
+        * hostname, ip address
 * `PersistentVolumeStatus`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumestatus-v1-core)
 * `GCEPersistentDiskVolumeSource`
