@@ -78,7 +78,13 @@ sudo exportfs-ra
         * 全てのclientのuid/gidをanonymousにMapする
 
 
+## docker
+* [ErezHorev/dockerized_nfs_server: Dockerized NFS server - NFS server as a docker container](https://github.com/ErezHorev/dockerized_nfs_server)
+
 
 ## Reference
 * [Network File System (NFS)](https://help.ubuntu.com/lts/serverguide/network-file-system.html)
 * [Ubuntu Manpage: rpc.mountd - NFS mount daemon](http://manpages.ubuntu.com/manpages/xenial/man8/mountd.8.html)
+* [linux - mount.nfs: access denied by server while mounting on Ubuntu machines? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/106122/mount-nfs-access-denied-by-server-while-mounting-on-ubuntu-machines)
+* [SettingUpNFSHowTo - Community Help Wiki](https://help.ubuntu.com/community/SettingUpNFSHowTo#NFS_Server)
+
