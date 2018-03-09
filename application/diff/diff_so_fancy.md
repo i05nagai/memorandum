@@ -8,6 +8,7 @@ diff-so-fancy strives to make your diff's human readable instead of machine read
 ```
 curl -L -O https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
 chmod 755 diff-so-fancy
+Usage git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
 
 ## Reference
