@@ -84,13 +84,21 @@ Mockito
   .when(SomeClass).doSomething(any()));
 ```
 
+### Partially mock
+* [java - Use Mockito to mock some methods but not others - Stack Overflow](https://stackoverflow.com/questions/14970516/use-mockito-to-mock-some-methods-but-not-others)
+
+```java
+Stock stock = mock(Stock.class);
+when(stock.getPrice()).thenReturn(100.00);    // Mock implementation
+when(stock.getQuantity()).thenReturn(200);    // Mock implementation
+when(stock.getValue()).thenCallRealMethod();  // Real implementation
+```
+
 ## Injecting Mock
 * [Auto inject dependencies in JUnit using Mockito - JDriven](https://blog.jdriven.com/2013/01/auto-inject-dependencies-in-junit-using-mockito/)
 * [Unit tests with Mockito - Tutorial](http://www.vogella.com/tutorials/Mockito/article.html)
 * [Mockito: Why You Should Not Use InjectMocks Annotation to Autowire Fields – Ted Vinke's Blog](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/)
 * [Use Mockito to mock autowired fields - Lubos Krnac's blog](https://lkrnac.net/blog/2014/01/mock-autowired-fields/)
-
-
 
 ## Reference
 * [Mockito framework site](http://site.mockito.org/)
