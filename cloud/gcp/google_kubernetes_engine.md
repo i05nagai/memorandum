@@ -284,8 +284,10 @@ spec:
 gcloud container get-server-config
 ```
 
-## 監視
+## Monitoring
 * [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
+* [Monitoring containers on GKE using Google Stackdriver](https://container-solutions.com/monitoring-containers-on-gke-with-google-stackdriver/)
+
 
 
 ## NGINX Ingress on GKE
