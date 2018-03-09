@@ -94,6 +94,11 @@ import logging
 logging.getLogger('googleapiclient.discovery_cache').setLevel(logging.ERROR)
 ```
 
+## Docker
+* [google/cloud-sdk - Docker Hub](https://hub.docker.com/r/google/cloud-sdk/)
+* `~/.config`がvolumeになっているので、一度認証すれば二回目移行は認証不要
+
+
 
 ## Reference
 * [gcloud  |  Cloud SDK  |  Google Cloud Platform](https://cloud.google.com/sdk/gcloud/reference/)
