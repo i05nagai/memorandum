@@ -236,6 +236,8 @@ serviceをclusterの内外に公開したい時 `ServiceType`を以下から選�
     * clusterの中からのみaccess可能
 * `NodePort`
 * `LoadBalancer`
+    * [Configure Your Cloud Provider’s Firewalls | Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/)
+    * accessするIP rangeを指定できる
 * `ExternalName`
 
 * ClusterIP
@@ -989,6 +991,11 @@ kubectl describe pod <pod-id>
     * stackdriverでのlogは、standard output, standard errorのlogだけ
     * fileに出力されるlogなどが必要な場合は sidecarを使う
 
+## NFS
+* [examples/staging/volumes/nfs at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/staging/volumes/nfs)
+* [How to create an kubernetes NFS volume on Google Container Engine - Stack Overflow](https://stackoverflow.com/questions/43358955/how-to-create-an-kubernetes-nfs-volume-on-google-container-engine)
+* [Using NFS - Configuring Persistent Storage | Installation and Configuration | OpenShift Origin Latest](https://docs.openshift.org/latest/install_config/persistent_storage/persistent_storage_nfs.html)
+* [How to create a kubernetes NFS volume on Google Container Engine · Issue #44377 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44377)
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)

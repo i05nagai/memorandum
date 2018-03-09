@@ -171,7 +171,26 @@ www         IN CNAME    moon
     * canonical name records
     * CNAME recordsを見つけた場合は、CNAMEの名前に置き換えてqueryの検索を続ける
     * `www         IN CNAME    moon`
+* SRV records
+    * service: the symbolic name of the desired service.
+    * proto: the transport protocol of the desired service; this is usually either TCP or UDP.
+    * name: the domain name for which this record is valid, ending in a dot.
+    * TTL: standard DNS time to live field.
+    * class: standard DNS class field (this is always IN).
+    * priority: the priority of the target host, lower value means more preferred.
+    * weight: A relative weight for records with the same priority, higher value means more preferred.
+    * port: the TCP or UDP port on which the service is to be found.
+    * target: the canonical hostname of the machine providing the service, ending in a dot.
 
+```
+_service._proto.name. TTL class SRV priority weight port target.
+```
+
+example
+
+```
+_sip._tcp.example.com. 86400 IN SRV 0 5 5060 sipserver.example.com.
+```
 
 ```
 $TTL 2D

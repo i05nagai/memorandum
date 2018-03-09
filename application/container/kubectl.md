@@ -25,6 +25,33 @@ kubectl patch (-f filename.yml|resource) -p json_string
 * `-p`でpatchの内容を記述する
     * jsonでしかかけない
 
+## get
+
+* `-o`
+    * 出力形式
+    * `jsonpath`
+    * `json`
+    * `yaml`
+
+```
+kubectl get <resource-type> <resource-name>
+```
+
+serviceのcluster IPのみ取得
+
+```
+kubectl get svc service_name -o jsonpath='{.spec.clusterIP}' | pbcopy
+```
+
+## describe
+podのdebugなどで使う。
+humanreadableな形式で出力。
+Resourceの情報が欲しい場合は、`get`を使う
+
+```
+kubectl describe <resource> <resource-name>
+```
+
 ## Cheatsheet
 * [kubectl Cheat Sheet | Kubernetes](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 

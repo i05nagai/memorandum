@@ -11,6 +11,10 @@ install [OPTION]... -t DIRECTORY SOURCE
 install [OPTION]... -d DIRECTORY
 ```
 
+* `-m 755`
+    * permission
+* `-o UID`
+* `-g GID`
 * `-d`
     * 引数を全てdirectory名として解釈
     * directoryを作成する

@@ -85,6 +85,17 @@ iptables -t raw -I PREROUTING -p udp --dport 53 -j NOTRACK
 iptables -t raw -I OUTPUT -p udp --dport 53 -j NOTRACK
 ```
 
+## Rules
+* [IptablesHowTo - Community Help Wiki](https://help.ubuntu.com/community/IptablesHowTo)
+
+```
+sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     all  --  anywhere             anywhere            state RELATED,ESTABLISHED
+ACCEPT     tcp  --  anywhere             anywhere            tcp dpt:ssh
+```
+
 
 ## Configuration
 `/etc/sysconfig/iptables`にある。
@@ -116,3 +127,4 @@ COMMIT
 
 ## Reference
 * [コピペから脱出！iptablesの仕組みを理解して環境に合わせた設定をしよう | OXY NOTES](http://oxynotes.com/?p=6361)
+* [netfilterを利用したDSP監視](https://www.slideshare.net/kazuhitoohkawa/netfilter

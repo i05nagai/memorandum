@@ -71,7 +71,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   gcePersistentDisk:
-    pdName: pd-retty-dwh-airflow
+    pdName: pd-name
     fsType: ext4
 ```
 
@@ -91,7 +91,9 @@ kubectl proxy
 ### Configuring Cluster networking
 * [Internal Load Balancing  |  Kubernetes Engine  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/how-to/internal-load-balancing)
 * [Network Policies | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
+    * Kubernetesのnetworkの仕組み
+* [GKE/Kubernetes の Service はどう動いているのか // Speaker Deck](https://speakerdeck.com/apstndb/kubernetes-false-service-hatoudong-iteirufalseka)
 
 
 ## Setting up HTTP Load Balancing with Ingress
@@ -283,10 +285,19 @@ spec:
 gcloud container get-server-config
 ```
 
-## 監視
+## Monitoring
 * [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
+* [Monitoring containers on GKE using Google Stackdriver](https://container-solutions.com/monitoring-containers-on-gke-with-google-stackdriver/)
+
+
+
+## NGINX Ingress on GKE
+* [Ingress with NGINX controller on Google Kubernetes Engine | Ingress with NGINX controller on Google Kubernetes Engine  |  Google Cloud Platform Community  |  Google Cloud Platform](https://cloud.google.com/community/tutorials/nginx-ingress-gke)
+* [ingress-nginx/deploy at master · kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx/tree/master/deploy#installation-guide) 
+* [external-dns/nginx-ingress.md at master · kubernetes-incubator/external-dns](https://github.com/kubernetes-incubator/external-dns/blob/master/docs/tutorials/nginx-ingress.md)
 
 
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
 * [GKEのRegional Clusters(Beta)を試してみた - nFact](http://nokok.hatenablog.com/entry/2017/12/20/000043)
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)

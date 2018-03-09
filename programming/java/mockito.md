@@ -81,9 +81,27 @@ inOrder.verify(secondMock).add("was called second");
 * [Mockito: Why You Should Not Use InjectMocks Annotation to Autowire Fields – Ted Vinke's Blog](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/)
 * [Use Mockito to mock autowired fields - Lubos Krnac's blog](https://lkrnac.net/blog/2014/01/mock-autowired-fields/)
 
+### Mock static methods
+`doReturn`を使う。
 
+```
+Mockito
+  .doReturn(data)
+  .when(SomeClass).doSomething(any()));
+```
+
+### Partially mock
+* [java - Use Mockito to mock some methods but not others - Stack Overflow](https://stackoverflow.com/questions/14970516/use-mockito-to-mock-some-methods-but-not-others)
+
+```java
+Stock stock = mock(Stock.class);
+when(stock.getPrice()).thenReturn(100.00);    // Mock implementation
+when(stock.getQuantity()).thenReturn(200);    // Mock implementation
+when(stock.getValue()).thenCallRealMethod();  // Real implementation
+```
 
 ## Reference
 * [Mockito framework site](http://site.mockito.org/)
 * [mockito/mockito: Most popular Mocking framework for unit tests written in Java](https://github.com/mockito/mockito)
 * [Mockito 初めの一歩 - Qiita](https://qiita.com/mstssk/items/98e597c13f12746c907d)
+* [JUnit・JMockitチートシート - Qiita](https://qiita.com/disc99/items/4dc78f9a96aa0a9aeb47#_reference-f869d5544b0f1f431513)

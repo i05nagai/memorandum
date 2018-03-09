@@ -13,43 +13,62 @@ title: gcloud
     * compute
 
 ## gcloud auth
-oauth2のcredintialを扱う。
+
+利用中のaccountの一覧
 
 ```
-gcloud auth GROUP | COMMAND [GCLOUD_WIDE_FLAG …]
+gcloud auth list
 ```
 
+user accountでaccountを認証.
+browserが立ち上がるので`your@email`のccountでgoogleにloginする。
 
-* Google Cloud SDKに対するauthorizationを行う
+```
+gcloud auth login your@email
+```
 
-* GROUP
-    * application-default
+service accountの認証。
+key-fileは必須。
 
-* Commands
-    * active-service-account
-    * list
-    * login
-    * revoke
+```
+gcloud auth activate-service-account your_service_account@email --key-file=/path/to/keyfile.json
+```
+
+認証したアカウントの認証を取り消す
+
+```
+gcloud auth revoke your@email
+```
+
+emailを省略した場合のaccountを指定する。
 
 ```
 gcloud config set account <service-account@gmail.com> 
 ```
 
-で設定したアカウントに
-
-```
-gcloud auth login
-```
-
-でログインできる。
 ログインすると、`~/.config/gcloud/credentials`にアクセスに必要なcredentialが書き込まれる。
 gcloudはこのcredentialを使ってアクセスする。
 中身は、アクセス用のjsonファイル。
 gcloud auth loginはbrowserが起動するが、CLIでcredentialの生成もできる。
 service accountを使う場合は以下のcommandでkey fileを指定すれば良い。
+`service_account@email`はkeyfileのaccountを指定する。
 
 ```
-gcloud auth activate-service-account service_account_email --key-file /path/to/key_file.json
+gcloud auth activate-service-account service_account@email --key-file /path/to/key_file.json
+```
+
+service accountのaccess tokenを取得する。
+
+```
+echo $(gcloud auth activate-service-account service_account@email --key-file /path/to/key_file.json; gcloud auth print-access-token)
+```
+
+## CLi
+
+Update gcloud
+
+```
+gcloud components update
 ```
 
 ## CLi
@@ -82,6 +101,11 @@ logging.getLogger('google.auth._default').setLevel(logging.ERROR)
 import logging
 logging.getLogger('googleapiclient.discovery_cache').setLevel(logging.ERROR)
 ```
+
+## Docker
+* [google/cloud-sdk - Docker Hub](https://hub.docker.com/r/google/cloud-sdk/)
+* `~/.config`がvolumeになっているので、一度認証すれば二回目移行は認証不要
+
 
 
 ## Reference

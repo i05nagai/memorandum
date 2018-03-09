@@ -92,6 +92,10 @@ spec:
     * `readinessProbe`
         * `Probe`
         * readiness用のurlを設定
+<<<<<<< HEAD
+=======
+        * commandが0ならhealthy, 1ならunhealty
+>>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
     * `name`
     * `securityContext`
         * `SecurityContext`
@@ -252,6 +256,21 @@ spec:
     * `gcePersistentDisk`
         * GCEPersistentDiskVolumeSource
     * `storageClassName`
+    * `nfs`
+        * `NFSVolumeSource`
+
+```
+  capacity:
+    storage: 5Gi
+```
+
+* `NFSVolumeSource`
+    * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#nfsvolumesource-v1-core)
+    * `path`
+        * nfs serverのexportするdirのpath
+    * `readOnly`
+    * `server`
+        * hostname, ip address
 * `PersistentVolumeStatus`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#persistentvolumestatus-v1-core)
 * `GCEPersistentDiskVolumeSource`
@@ -347,13 +366,25 @@ spec:
         * IngressStatus
 * `IngressSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressspec-v1beta1-extensions)
+<<<<<<< HEAD
+=======
+    * backend
+>>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
     * `backend`
         * defaultのbackend
         * IngressBackend
         * ruleにmatchしないものはここにroutingされる
+<<<<<<< HEAD
     * `rules`
         * array of IngressRule
     * `tls`
+=======
+        * IngressBackend
+    * `rules`
+        * array of IngressRule
+    * `tls`
+        * array of IngressRule
+>>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
         * IngressTLS
 * `IngressBackend`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressbackend-v1beta1-extensions)

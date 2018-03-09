@@ -92,3 +92,4 @@ Type switch
 ## Reference
 * [Documentation - The Go Programming Language](https://golang.org/doc/)
 * [Effective Go - The Go Programming Language](https://golang.org/doc/effective_go.html)
+* [Essential Go - a free Go programming book](http://www.programming-books.io/essential/go/)

@@ -76,6 +76,11 @@ a?.equals(b) ?: (b === null)
 a === b
 ```
 
+## Any == Object?
+* AnyはObjectではない
+* Anyは `toString(), hashCode(),equals()`のmehthodしか持たない
+* javaのObjectはkotlinではAnyとして扱われるが、Objectの他のmethodは直接呼べない
+* extensionとして実装する必要がある
 
 ## Reference
 * [Outdated Kotlin Runtime | Smartphone-Zine](http://www.smartphone-zine.com/android/outdated-kotlin-runtime)

@@ -4,6 +4,29 @@ title: Common
 
 ## Common
 
+## /etc/sudoers
+* [How To Edit the Sudoers File on Ubuntu and CentOS | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
+
+```
+root ALL=(ALL:ALL) ALL
+```
+
+* `root`
+    * username
+* `<host>=(as_user:as_group) command`
+    * as_user
+
+## /etc/skel
+* [/etc/skel creates standard files for new users](http://www.linfo.org/etc_skel.html)
+* [/etc/skelでユーザーディレクトリの雛型設定 - Artsnet](https://artsnet.jp/archives/482/)
+
+`/etc/skel`以下においたfileをuser作成時にuserのhome directoryにcopyできる。
+permissionなども保持される。
+`.bash_profile`などを作成しておくと、良い。
+
+## /etc/resolv.conf
+* [resolv.conf - ArchWiki](https://wiki.archlinux.org/index.php/resolv.conf)
+
 
 ## /etc/resolv.conf
 * [resolv.conf - ArchWiki](https://wiki.archlinux.org/index.php/resolv.conf)
@@ -17,6 +40,19 @@ title: Common
 ```
 cat /proc/cpuinfo
 ```
+
+## adduser
+
+`/etc/adduser.conf`でconfigurationできる。
+
+```
+adduser [options] [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID] [--firstuid ID] [--lastuid ID] [--ingroup GROUP | --gid ID] [--disabled-password] [--disabled-login] [--gecos GECOS] [--add_extra_groups] user
+```
+
+* firstuid
+    * uidのrangeの始まり
+* lastuid
+    * uidのrangeの終わり
 
 
 ## GPU information
@@ -110,6 +146,9 @@ top
 Error: `useradd: cannot create directory /opt/...`.
 You need to create directory before execution `useradd`.
 
+
+## nohup
+* [Unix Nohup: Run a Command or Shell-Script Even after You Logout](https://linux.101hacks.com/unix/nohup-command/)
 
 ## LANG environment variables
 * [Linuxのローカライゼーション系LANG変数：langについて](https://eng-entrance.com/linux-localization-lang)

@@ -19,7 +19,7 @@ pip install gensim
     * word2vec側は実装されている
       * https://github.com/RaRe-Technologies/gensim/blob/develop/gensim/models/word2vec.py#L147
 
-## logigng
+## logging
 以下でlogggingがonになる。
 
 ```

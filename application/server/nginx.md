@@ -387,6 +387,7 @@ Session cacheの確認は以下から可能
 
 ### HTTPS fundamental configuration
 * [Security/Server Side TLS - MozillaWiki](https://wiki.mozilla.org/Security/Server_Side_TLS)
+* [Configuring HTTPS servers](http://nginx.org/en/docs/http/configuring_https_servers.html)
 
 基本的な設定
 
@@ -406,6 +407,10 @@ server {
 * 暗号化suiteを明示的に指定
 * DH parameter fileを指定
 * SHA-2(SHA-256) server証明書を利用
+
+
+## Docker
+* [library/nginx - Docker Hub](https://hub.docker.com/_/nginx/)
 
 
 
