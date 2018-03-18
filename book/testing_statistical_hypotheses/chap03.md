@@ -306,6 +306,15 @@ $$
 $$
 
 $$
+  \phi(x)
+  :=
+  \gamma
+  1_{S_{1}}(x)
+  +
+  1_{S_{1}}
+$$
+
+$$
     x \in \mathcal{X},
     \
     \delta_{\phi}(dz \mid x)
@@ -316,6 +325,7 @@ $$
     (1 - \phi(x))
     \epsilon_{0}(dz)
 $$
+
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
