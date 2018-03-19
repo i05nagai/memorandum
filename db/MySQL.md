@@ -313,6 +313,16 @@ Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid defaul
 * https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_no_zero_date
     * sql_modeの`NO_ZERO_DATE`外す
 
+### Invalid GIS data provided to function st_astext.
+* [MySQL: Invalid GIS data provided to function st_geometryfromtext - Stack Overflow](https://stackoverflow.com/questions/34524031/mysql-invalid-gis-data-provided-to-function-st-geometryfromtext)
+* [MySQL spatial geometry validate wkt - Stack Overflow](https://stackoverflow.com/questions/39285560/mysql-spatial-geometry-validate-wkt)
+    * The query changed to invalid query in MySQL 5.7?
+
+`ST_isValid(col)`でGeometry型がvalidかどうか判定できるので、invalidならNULLにするなどの対応で回避はできる。
+
+```
+IF(ST_isValid(col) = 1, ASTEXT(col), NULL)
+```
 
 ## Reference
 * [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)
