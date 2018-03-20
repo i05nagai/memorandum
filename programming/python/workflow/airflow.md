@@ -6,6 +6,7 @@ title: airflow
 
 
 ## Install
+
 ```
 pip install airflow
 ```
@@ -739,6 +740,24 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn_extra='{ "extra__google_cloud_platform__key_path":"/usr/local/airflow/secrets/gcp_key.json", "extra__google_cloud_platform__project": "gcp-project", "extra__google_cloud_platform__scope": "https://www.googleapis.com/auth/cloud-platform"}'
 ```
 
+## Docker operator with xcom pull and xcom push
+* [Programming soup: Airflow Docker with Xcom push and pull](http://szborows.blogspot.jp/2017/12/airflow-docker-with-xcom-push-and-pull.html)
+
+```
+dag = DAG('docker', default_args=default_args, schedule_interval=timedelta(1))
+
+t1 = DockerOperator(task_id='docker_1', dag=dag, image='docker_1', xcom_push=True)
+
+t2 = DockerOperator(task_id='docker_2', dag=dag, image='docker_2', command='{{ ti.xcom_pull(task_ids="docker_1") }}')
+
+t2.set_upstream(t1)
+```
+
+## Airflow with supervisord
+* [Re: airflow supervisord scripts do not work](http://mail-archives.apache.org/mod_mbox/airflow-dev/201608.mbox/%3CCAK+2U_2BqDEfyvf2xa=RaGuDA6Fusmqx+HyyHX0DxE9ti=K5Xw@mail.gmail.com%3E)
+* [Supervisordの練習(Airflow)](https://blog.masu-mi.me/post/2017/04/12/start_supervisord/)
+
+
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
@@ -748,3 +767,4 @@ airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn
 * [Airflow: When Your DAG is Far Behind The Schedule](http://hafizbadrie.com/airflow/2016/12/12/airflow-when-your-dag-is-far-behind-the-schedule.html)
 * [ETL example — ETL Best Practices with Airflow v1.8](https://gtoonstra.github.io/etl-with-airflow/etlexample.html)
 * [Advanced Airflow (Lesson 1) : TriggerDagRunOperator | Sid Anand | Pulse | LinkedIn](https://www.linkedin.com/pulse/airflow-lesson-1-triggerdagrunoperator-siddharth-anand)
+* [Bytepawn – Luigi vs Airflow vs Pinball](http://bytepawn.com/luigi-airflow-pinball.html)
