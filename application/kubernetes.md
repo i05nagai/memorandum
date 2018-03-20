@@ -872,13 +872,17 @@ yaml fileの中でshellの環境変数は現状利用できない。
     * [Using Google Container Registry (GCR) with Minikube · Ryan Eschinger Consulting](https://ryaneschinger.com/blog/using-google-container-registry-gcr-with-minikube/)
     * OSXの場合は`Security store docker logins in macOS keychain`をoffにしないと、`.docker/config.json`にcredentialは保存されない
 
-* docker login
-* `.config/config.json`
+`docker login`を実行すれば、`.config/config.json`にcredentialが生成されるので、これをsecretとしてexportすれば良い。
+kubectlでは上記を行うcomandが用意されている。
 
-`docker create secret docker-registry`を
+`docker create secret docker-registry`を実行する。
 
 ```
-kubectl create secret docker-registry regsecret --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+kubectl create secret docker-registry \
+    regsecret --docker-server=<your-registry-server> \
+    --docker-username=<your-name> \
+    --docker-password=<your-pword> \
+    --docker-email=<your-email>
 ```
 
 For GCP
@@ -914,13 +918,35 @@ spec:
         imagePullPolicy: Always
 ```
 
-```yaml
-imagePullSecrets:
-- name: gcr-json-key
-```
+もしくは、container内でdocker pull を行いたい場合は、以下のようにする。
+`subPath`でfile名を指定できる。
 
-* docker clinetのupdate
-* minikbeのupdate
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: secret-test-pod
+  labels:
+    name: secret-test
+spec:
+  containers:
+  - name: ssh-test-container
+    image: mySshImage
+    volumeMounts:
+    - name: volume-name
+      readOnly: true
+      mountPath: "/home/root/.docker"
+  volumes:
+  - name: volume-name
+    projected:
+      sources:
+      - secret:
+          name: <secret-name>
+          items:
+           - key: .dcokerconfigjson
+             path: config.json
+             mode: 400
+```
 
 ## DNS
 [DNS for Services and Pods | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
