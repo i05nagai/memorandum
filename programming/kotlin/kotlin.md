@@ -82,6 +82,13 @@ a === b
 * javaのObjectはkotlinではAnyとして扱われるが、Objectの他のmethodは直接呼べない
 * extensionとして実装する必要がある
 
+### Companion object/object/static method
+* [What is the advantage of "companion object" vs static keyword - Language Design - Kotlin Discussions](https://discuss.kotlinlang.org/t/what-is-the-advantage-of-companion-object-vs-static-keyword/4034/21)
+
+kotlinのobjectはsingletonを与える。
+companion objectはclassのInstance内でのstatic methodを与える。
+
+
 
 ## Reference
 * [Outdated Kotlin Runtime | Smartphone-Zine](http://www.smartphone-zine.com/android/outdated-kotlin-runtime)
