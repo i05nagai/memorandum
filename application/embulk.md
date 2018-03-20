@@ -164,6 +164,24 @@ Installは以下でできる。
 
 ## Plugins
 
+### file
+
+```
+out:
+  type: file
+  path_prefix: /path/to/output/sample_
+  file_ext: csv
+  formatter:
+    type: csv
+```
+
+### stdout
+
+```
+out:
+  type: stdout
+```
+
 ### local executor plugin
 
 pluginごとの設定に加えて、  
