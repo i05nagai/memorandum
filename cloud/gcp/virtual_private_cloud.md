@@ -62,8 +62,30 @@ gcloud compute firewall-rules create vm1-allow-ingress-tcp-port80-from-subnet1 \
 Mode
 
 * auto mode
-    * 
 * custom mode
+
+
+## firewall
+
+* default and implied rules
+    * 全てのVPCがもつfirewall
+    * 削除できない
+    * `implied allow egress rule`
+        * 全てのinstanceがdefaultでinternetにaccessできる
+        * priority `65535`
+        * egress
+        * destination `0.0.0.0`
+    * `implied deny ingress rul`
+        * 全てのinstanceへのaccessを無効
+        * priority `65535`
+        * ingress
+        * source `0.0.0.0`
+* additional rules
+    * `default`のVPCが持つrule
+* target
+    * All instances in the network
+    * Specific instances by target tag
+    * Specific instances by service account
 
 
 ## Reference
