@@ -31,5 +31,9 @@ title: Spreadsheet
 * Importage
     * https://support.google.com/docs/answer/3093340?visit_id=1-636549486149332271-747246594&rd=1
 
+```
+=IMPORTRANGE("spradsheetURL", "sheet!A1:B2")
+```
+
 ## Reference
 
