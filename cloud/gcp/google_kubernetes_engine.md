@@ -295,6 +295,37 @@ gcloud container get-server-config
 * [ingress-nginx/deploy at master · kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx/tree/master/deploy#installation-guide) 
 * [external-dns/nginx-ingress.md at master · kubernetes-incubator/external-dns](https://github.com/kubernetes-incubator/external-dns/blob/master/docs/tutorials/nginx-ingress.md)
 
+## List of OAuth scopes
+* [OAuth 2.0 Scopes for Google APIs  |  Google Identity Platform  |  Google Developers](https://developers.google.com/identity/protocols/googlescopes)
+
+## Cluasterのmaster
+clusterのmasterはWebUIから見えない?
+
+## Error
+
+### Error from server: No SSH tunnels currently open
+* [docker - kubectl: Error from server: No SSH tunnels currently open - Stack Overflow](https://stackoverflow.com/questions/36375030/kubectl-error-from-server-no-ssh-tunnels-currently-open)
+* [Proxy (ssh-tunnel) errors are not helpful when we have 0 tunnels. · Issue #12167 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/12167)
+
+clusterを作ると、projectのmetadataとして以下が登録される。
+
+* networkの情報
+    * key: gke-<cluster-name>-....-cidr
+    * value: `<network>:<cidr>`
+* SSH key
+    * key: sshKeys
+    * value: `gke-...`
+
+
+errorの原因として考えられるもの。
+
+* Project level metadata is full, GKE cannot add its SSH key. GCE has a 32 KB limit on metadata values.
+* Node(s) with instance-level SSH keys set. GCE allows instance-level SSH keys to override project-level keys. In this case gcloud compute ssh will also fail.
+* SSH is firewalled. By default, GKE creates a firewall rule to give the master SSH access to the nodes, but it is possible to delete that rule.
+    * Re-add a firewall rule that allows tcp:22 from the GKE master's IP.
+* routingの設定
+    * masterはexternal IPなので、default gatewayへの設定が正しくされてないとだめ
+
 
 
 ## Reference
