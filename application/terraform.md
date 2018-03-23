@@ -179,8 +179,19 @@ resource "aws_instance" "foo" {
 }
 ```
 
+### Local values
+* [Configuring Local Values - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/locals.html)
+* [Variable cannot contain interpolation? · Issue #14343 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/14343)
+
+variables blockの中でvarは利用できないので、 変数を使って値を生成する際などに利用する。
+varに書いている定数はだいたい置き換えが可能
+
+
+
 ### Variables
 * [Configuring Variables - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/variables.html)
+    * variablesの中でvarのinterpolationは使えない
+    * local valueを使う
 
 ```
 variable NAME {
@@ -193,6 +204,17 @@ variable NAME {
 * `type`
     * string, map, list
 * `default`はNAMEで参照した場合に利用される値
+
+## Debug
+CLIの実行時に環境変数を設定することで、実行することで、logの出力を変更できる
+
+* `TF_LOG`
+    * TRACE, DEBUG, INFO, WARN or ERROR
+    * defualt: INFO
+    * TRACE is the most verbose
+* `TF_LOG_PATH`
+    * logの出力先
+    * `/dev/stdout`
 
 ## CLI
 
@@ -244,6 +266,9 @@ countを使っている場合は番号がつく。
 
 * [Part 3.2: From Semi-Automation to Infrastructure as Code - Terraform Recommended Practices - Terraform by HashiCorp](https://www.terraform.io/docs/enterprise/guides/recommended-practices/part3.2.html#3-create-your-first-module)
     * いつmoduleを使うべきか
+
+### Locals
+
 
 ### Input Variables
 * [Input Variables - Terraform by HashiCorp](https://www.terraform.io/intro/getting-started/variables.html)
