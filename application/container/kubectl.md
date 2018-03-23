@@ -52,9 +52,23 @@ Resourceの情報が欲しい場合は、`get`を使う
 kubectl describe <resource> <resource-name>
 ```
 
+## exec
+
+* `--v=6`
+    * verbose mode
+
+```
+kubectl exec --v=6
+```
+
+
 ## Cheatsheet
 * [kubectl Cheat Sheet | Kubernetes](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
+###
+* [docker - kubectl: Error from server: No SSH tunnels currently open - Stack Overflow](https://stackoverflow.com/questions/36375030/kubectl-error-from-server-no-ssh-tunnels-currently-open)
+
+* cluster do
 
 ## Reference
 * [kubectl | Kubernetes](https://kubernetes.io/docs/reference/generated/kubectl/kubectl/)
