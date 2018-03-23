@@ -152,14 +152,21 @@ varname=var
 [[ -n $foo || -n $bar ]]; echo $?
 ```
 
-### set -euを使う
+### set option
+* [set man page](http://linuxcommand.org/lc3_man_pages/seth.html)
 
 * `set -e`
+    * `set -o errexit`
     * errorがあればそこで処理を終了する
+    * -e は command1 || command2 みたいなことが出来なくなる
 * `set -u`
+    * `set -o nounset`
     * 未定義の変数があれば処理を終了する
+    * -uは付けといて良い
+* `set -o pipefail`
+    * pipelineのいずれかのcommandがfailしたらpipeline全体をfailにする
+* `set -x`
 
--e は command1 || command2 みたいなことが出来なくなるの使うことないな。-uは付けといて良いが。
 
 ### `-x`
 `sh -x`やshebangの`#!/bin/bash -x`などとつけると、shell scriptの中のコマンドが出力される。
