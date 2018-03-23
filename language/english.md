@@ -38,16 +38,9 @@
 * [意外な数学英語](http://math-eng.blogspot.jp/)
 * [英語の文章表現](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main018.html)
 
+
+* Edge case/Corner case
+    * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
+
 # Others
 * Kick the tires
-
-
-Hi,
-
-I attach the bill for water and electricity to this reply.
-My address is on the upper left of the bill but only name of apartment and room number is written.
-Is it enough to provide a proof of address?
-I will verify my paypal account as soon as possible.
-
-Thank you in adnvace.
-
