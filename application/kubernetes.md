@@ -1023,6 +1023,11 @@ kubectl describe pod <pod-id>
 * [Using NFS - Configuring Persistent Storage | Installation and Configuration | OpenShift Origin Latest](https://docs.openshift.org/latest/install_config/persistent_storage/persistent_storage_nfs.html)
 * [How to create a kubernetes NFS volume on Google Container Engine · Issue #44377 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44377)
 
+## Network
+* [GKE/Kubernetes でなぜ Pod と通信できるのか - Qiita](https://qiita.com/apstndb/items/9d13230c666db80e74d0)
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
+
+
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
