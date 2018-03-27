@@ -5,6 +5,10 @@ title: traceroute
 ## traceroute
 
 ```
+apt-get install inetutils-traceroute
+```
+
+```
 traceroute [OPTION...] HOST
 ```
 
