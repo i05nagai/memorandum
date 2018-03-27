@@ -62,7 +62,37 @@ gcloud compute firewall-rules create vm1-allow-ingress-tcp-port80-from-subnet1 \
 Mode
 
 * auto mode
+    * 新しいregionができた時、自動でsubnetworkが作られる
+    * `10.128.0.0/9`の中でregionごとにsubnetmaskが決まっている
 * custom mode
+    * 自分で全部定義する
+
+Reserved IP
+
+| Reserved Address           | Description                                                   | Example                   |
+|----------------------------|---------------------------------------------------------------|---------------------------|
+| Network                    | First address in the primary IP range for the subnet          | 10.1.2.0 in 10.1.2.0/24   |
+| Default Gateway            | Second address in the primary IP range for the subnet         | 10.1.2.1 in 10.1.2.0/24   |
+| Second-to-last Reservation | Second-to-last address in the primary IP range for the subnet | 10.1.2.254 in 10.1.2.0/24 |
+| Broadcast                  | Last address in the primary IP range for the subnet           | 10.1.2.255 in 10.1.2.0/24 |
+
+## Routes
+VMIをでた後以下の順序でrouteを決定する。
+
+1. より詳細なroutingがあればそちらを選ぶ、例えば
+    * `destinationIP`
+        * `10.240.1.1`
+    * `routing`
+        * `10.240.1.0/24`へのrouting
+        * `10.240.0.0/16`へのrouting
+    * 選ばれるroute
+        * `10.240.1.0/24`
+2. 同じprefix lengthで複数のrouteがある場合は、priorityが最も小さいものを選ぶ
+3. ?
+4. forward先が見つからないときは、packetをdropしてICMP destination/network unreachable errorを返す
+
+GCPはnext hopを決める時distnanceを考えない。
+Routingがあっても、firewallが空いていなければpacketは到達しない。
 
 
 ## firewall
