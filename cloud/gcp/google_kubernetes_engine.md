@@ -301,6 +301,9 @@ gcloud container get-server-config
 ## Cluasterのmaster
 clusterのmasterはWebUIから見えない?
 
+### Container CIDR
+clusterのCONTAINERにCIDRを指定できるが、`/9`-`/19`の間に収める必要がある。
+
 ## Error
 
 ### Error from server: No SSH tunnels currently open
@@ -327,6 +330,12 @@ errorの原因として考えられるもの。
     * masterはexternal IPなので、default gatewayへの設定が正しくされてないとだめ
 
 
+## Docker images
+docker image 
+
+* kube-dns
+    * gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.5
+    * [kubernetes/dns: Kubernetes DNS service](https://github.com/kubernetes/dns)
 
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
