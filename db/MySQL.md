@@ -3,6 +3,13 @@
 ## インストール
 [pages](http://promamo.com/?p=2933)
 
+For alpine linux
+
+```
+apk add mysql
+apk add mysql-client
+```
+
 ### For CentOS
 For 5.6
 
