@@ -45,6 +45,14 @@ title: Kubernetes
             * 複数のserviceをmonitoringする際にadapter containerがoutputのwrapをする
     * [Kubernetes: Container Design Patterns](http://blog.kubernetes.io/2016/06/container-design-patterns.html)
     * NodeでschedulingされているPodがfailした場合Podはdeleteされる
+    * PodsはGrace periodでKillされる
+        * defaultではgrace periodは30s
+        * `kubectl delete --grace-period=<seconds>` で指定できる
+        * 0secは force deleteだが、`--force` flagもつける必要がある
+
+```
+kubectl delete pods
+```
 
 ### Nodes
 
