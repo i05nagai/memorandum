@@ -102,6 +102,9 @@ object Obj {
 * [Chapter 4. Types, Values, and Variables](https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.12.4)
 * [coding standards - Excessive use "final" keyword in Java - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/98691/excessive-use-final-keyword-in-java)
 
+## Date
+* [Javaで日時を扱う（Java8） - kurukuru-papaのブログ](http://kurukurupapa.hatenablog.com/entry/2016/05/22/213011)
+
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
