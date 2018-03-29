@@ -215,6 +215,8 @@ CLIの実行時に環境変数を設定することで、実行することで�
 * `TF_LOG_PATH`
     * logの出力先
     * `/dev/stdout`
+* `[apply|plan] -parallelism=0`
+    * 出力が見づらくなるsync
 
 ## CLI
 
