@@ -4,6 +4,51 @@ title: Airflow Error Tips
 
 ## Airflow Error Tips
 
+### Error ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL
+resetdbなどで以下のエラーがでる場合がある。
+
+```
+sqlalchemy.exc.ProgrammingError: (_mysql_exceptions.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(6) NULL' at line 1") [SQL: u'ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL']
+```
+
+mili secondが必要なので、 MySQLのversionを5.6.4にあげる必要がある。
+
+* [AIRFLOW-748 Cannot upgradedb from airflow 1.7.0 to 1.8.0a4 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-748)
+
+### Error with --debug
+debugで立ち上げるとエラーになる。
+
+```
+airflow webserver --debug
+```
+
+とすると、エラーがでる。
+2017/5/2にmasterで修正済みらしい。
+
+* [AIRFLOW-1165 airflow webservice crashes on ubuntu16 - python3 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-1165)
+
+### TemplateNotFound Error
+TemplateNotFoundというエラーがでる場合、bashcommandの引数の最後にスペースがあるか確認する。
+Bash scriptを直接呼ぶ場合は、最後にスペースが必要。
+そうでない場合は、引数はJinja templateとして扱われるので、`BashOperator`classの引数`template`に空でも値を渡す必要がある。。
+
+* [python - TemplateNotFound error when running simple Airflow BashOperator - Stack Overflow](https://stackoverflow.com/questions/42147514/templatenotfound-error-when-running-simple-airflow-bashoperator)
+
+### Error: SMTP Error
+`airflow.cfg`内の`[smtp] smtp_starttls = False`にする
+
+
+### Error. No such transport: sqla
+`airflow.cfg`にCeleryのbrokerのURLに`sqla+mysql`と書いていると起こる。
+Celeryの依存パッケージである `kombu`の問題らしい。
+最新の`kombu`では解決しているので、updateする。
+
+* [AIRFLOW-797 CLONE - No such transport: sqla when using CeleryExecutor - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-797)
+
+### Log page is not found in task instances page
+Web UIのTask InstanceページのTaskのLogのURIがNot Foundになる。
+`airflow.cfg`のweb serverのURLをserverのURLに変更する。
+
 ### TypeError: b'' is not JSON serializable
 * [TypeError: b'' is not JSON serializable · Issue #279 · lepture/flask-wtf](https://github.com/lepture/flask-wtf/issues/279)
 
