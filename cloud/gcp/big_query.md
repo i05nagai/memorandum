@@ -84,6 +84,25 @@ WEEB UIとAPI JSONで名前が違う。
 
 ## Partitioned Table
 * [分割テーブル  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/partitioned-tables?hl=ja)
+* [Introduction to Partitioned Tables  |  BigQuery  |  Google Cloud](https://cloud.google.com/bigquery/docs/partitioned-tables)
+
+Partitioned ttableは2種類ある
+
+* Tables partitioned by ingestion time
+    * load時やstreamingの場合はinsert時の時間でpartition
+    * `_PARTITIONTIME`のpeseudo columnが使われる
+* Partitioned tables
+    * tableのoclumnでpartition
+    * `_PARTITIONTIME`はなくても良い
+    * `NULL` partitionはpartitionのcolumnにした値がnullのものに対するpartition
+        *  parititionのcolumnはNULLABLEでも良い
+    * `UNPARTITIONED` allowed range of dataから外れたものの
+        * `1960-01-01 and later than 2159-12-31`
+    * tableのdetailに、どのcolumnがどう指定されているのか記載される
+* shardingとの違い
+    * `[TABLE_NAME]_yyyymmdd`でtableを分ける方法をdate-shardingとう
+    * partition tableの方がperformanceが良い
+    * best practiceはparittioned table
 
 Partitionは各テーブル最大2000個
 
