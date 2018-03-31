@@ -37,6 +37,10 @@ Bash scriptを直接呼ぶ場合は、最後にスペースが必要。
 ### Error: SMTP Error
 `airflow.cfg`内の`[smtp] smtp_starttls = False`にする
 
+```
+WARNING - section/key [smtp/smtp_user] not found in config
+```
+
 
 ### Error. No such transport: sqla
 `airflow.cfg`にCeleryのbrokerのURLに`sqla+mysql`と書いていると起こる。
