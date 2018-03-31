@@ -131,6 +131,8 @@ uptime
  12:17:50 up  6:12,  1 user,  load average: 0.58, 0.85, 0.94
 ```
 
+左から順に
+
 * The current time
 * how long the system has been running
 * how many users are currently logged on,
