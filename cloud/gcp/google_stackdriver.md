@@ -4,9 +4,7 @@ title: Google Stackdriver
 
 ## Google Stackdriver
 
-
 ## Analyze billing
-
 
 
 ## Pricing
