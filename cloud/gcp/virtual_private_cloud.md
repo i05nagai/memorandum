@@ -118,4 +118,14 @@ Routingがあっても、firewallが空いていなければpacketは到達し�
     * Specific instances by service account
 
 
+
+## Shared VPC
+
+
+```
+compute.subnetworks.getIamPolicy for host project host-procjet-id
+resourcemanager.projects.getIamPolicy for host project host-procjet-id
+```
+
+
 ## Reference
