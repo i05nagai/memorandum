@@ -7,6 +7,12 @@ virtual memory statistics.
 vmstat は libkstat ライブラリを使用している。
 `/usr/src/cmd/stat/vmstat/vmstat.c`
 
+For alpine linux,
+
+```
+apk upate
+apk add --update procps
+```
 
 ## Usage
 
@@ -47,6 +53,11 @@ options
     * show timestamp
 
 
+```
+vmstat 2 -S m
+```
+
+
 ## Outpout format
 ```
 $ vmstat
@@ -76,8 +87,66 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 * swpd/swap
     * 利用可能なswap領域のsize KB
     * disk上のswap領域とmemory上のsawp領域をあわせたもの
-    * g
-
+* free
+    * memory size KB
+    * 小さくなったらメモリが圧迫されている状態
+* re
+    * page reclaim
+    * free listにいれられた後pageが参照され復帰したもの
+* mf
+    * minor fault
+* pi
+    * page in されたmemory size KB
+* po
+    * page outされたmemory size KB
+* fr
+    * freeされたmemory size KB
+* de
+    * deficit
+    * 多くのmemory requestがある場合にvirtual memoryが確保するbuffer size
+* sr
+    * page out scanerによってscanされたmemory pageの数
+    * page scanが多発している場合はmemory不足
+* disk
+    * number of I/O
+    * iostat
+* in
+    * number of interupt
+    * Use mpstat, intrstat
+* sy (faults)
+    * number of system call
+* cs
+    * the number of CPU context switches
+    * 多い場合はreduce threads/
+* CPU
+    * us
+        * CPU時間の割合 in user mode
+    * sy (CPU)
+        * CPU時間の割合(e.g. kernel service/system call) in system mode
+    * id
+        * CPU idle
+        * CPUが使用されていなかった時間の割合
+    * wa
+        * Time spent waiting for IO. Prior to Linux 2.5.41, included in idle.
+    * st
+        * Time stolen from a virtual machine. Prior to Linux 2.6.11, unknown.
+* epi
+    * executable page-ins
+    * execution file/libraryがpage in した量(KB)
+        * VVMEXEC flagがtrueのもの
+* epo
+    * executable page-out
+    * execution file/libraryがpage out した量(KB)
+        * VVMEXEC flagがtrueのもの
+* epf
+    * executable page-out
+    * execution file/libraryがpage out した量(KB)
+        * VVMEXEC flagがtrueのもの
+* IO
+    * bo
+        * Blocks sent to a block device (blocks/s)
+    * bi
+        * Blocks received from a block device (blocks/s).
 
 
 
@@ -85,3 +154,4 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 * [vmstat - Wikipedia](https://en.wikipedia.org/wiki/Vmstat)
 * [Use vmstat to Monitor System Performance](https://linode.com/docs/uptime/monitoring/use-vmstat-to-monitor-system-performance/)
 * [vmstat コマンドの読み方 | Oracle やっぱり Sun がスキ！ Blog](https://blogs.oracle.com/yappri/vmstat)
+* [Linux Performance Measurements using vmstat - Thomas-Krenn-Wiki](https://www.thomas-krenn.com/en/wiki/Linux_Performance_Measurements_using_vmstat)
