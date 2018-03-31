@@ -95,7 +95,6 @@ kubectl proxy
     * Kubernetesのnetworkの仕組み
 * [GKE/Kubernetes の Service はどう動いているのか // Speaker Deck](https://speakerdeck.com/apstndb/kubernetes-false-service-hatoudong-iteirufalseka)
 
-
 ## Setting up HTTP Load Balancing with Ingress
 * [Setting up HTTP Load Balancing with Ingress  |  Kubernetes Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer)
     * TCP load balancerは`type: LoadBalancer`
@@ -158,8 +157,6 @@ spec:
 
 ingressを作成しても、つながらない場合は、GCPのnetwork consoleに残っている`k8s-*`のPrefixのついたnetworkの設定を削除する。
 https://github.com/kubernetes/kubernetes/issues/45438
-
-
 
 ## Configuring Network Policies for Applications
 * [Configuring Network Policies for Applications  |  Kubernetes Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/network-policy)
@@ -287,8 +284,28 @@ gcloud container get-server-config
 ## Monitoring
 * [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
 * [Monitoring containers on GKE using Google Stackdriver](https://container-solutions.com/monitoring-containers-on-gke-with-google-stackdriver/)
+    * [Sidecar pattern | Microsoft Docs](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar)
+* [ContainerSolutions/stackdriver-gke-custom-metrics: Example python code sending custom container metrics to Stackdriver Monitoring](https://github.com/ContainerSolutions/stackdriver-gke-custom-metrics)
+* [Customizing Stackdriver Logs for Kubernetes Engine with Fluentd  |  Solutions  |  Google Cloud](https://cloud.google.com/solutions/customizing-stackdriver-logs-fluentd)
 
+**Best Practice**
 
+* Structured logging
+    * Single-line JSON objects written to standard output or standard error will be read into Stackdriver as structured log entries. You can use advanced logs filters to filter logs based on their fields.
+* Severities
+    * By default, logs written to the standard output are on the INFO level and logs written to the standard error are on the ERROR level. Structured logs can include a severity field, which defines the log's severity. glog-formatted logs' severity is set automatically.
+* Exporting to BigQuery
+    * You can export logs to external services, such as BigQuery or Pub/Sub, for additional analysis. Logs exported to BigQuery retain their format and structure.
+* Alerting
+    * You can use logs-based metrics to set up altering policies when Stackdriver Logging logs unexpected behavior.
+* Error Reporting
+    * You can use Stackdriver Error Reporting to collect errors produced in your clusters.
+
+## Logging
+fluentdが入っている。
+
+* [Customizing Stackdriver Logs for Kubernetes Engine with Fluentd  |  Solutions  |  Google Cloud](https://cloud.google.com/solutions/customizing-stackdriver-logs-fluentd)
+* [GoogleCloudPlatform/container-engine-customize-fluentd](https://github.com/GoogleCloudPlatform/container-engine-customize-fluentd)
 
 ## NGINX Ingress on GKE
 * [Ingress with NGINX controller on Google Kubernetes Engine | Ingress with NGINX controller on Google Kubernetes Engine  |  Google Cloud Platform Community  |  Google Cloud Platform](https://cloud.google.com/community/tutorials/nginx-ingress-gke)
@@ -329,6 +346,35 @@ errorの原因として考えられるもの。
 * routingの設定
     * masterはexternal IPなので、default gatewayへの設定が正しくされてないとだめ
 
+## Node Pool
+* [Node Pools  |  Kubernetes Engine  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools)
+
+* 1つのclusterにNode poolを複数指定できる
+* Node poolのinstanceは
+
+
+### Access to node
+In cloud shell
+
+```
+gcloud compute ssh <node_instance_name> --zone=<instance_zone>
+```
+
+Note `node_instance_name` is not IP addresss.
+
+## Assign Pod to Node
+GKEではNodeに対して自動でいくつかlabelが付与される
+
+```
+kubectl get nodes --show-labels
+```
+
+* `cloud.google.com/gke-nodepool=<node-pool-name>`
+    * Node poolごとにNode pool名がNodeのlabelとして付与される。
+* `kubernetes.io/hostname=gke-<cluster-name>-<node-pool-name>-<id>`
+    * nodeごとに一意なidが付与される
+* `beta.kubernetes.io/instance-type=n1-standard-1`
+    * nodeのinstance typeが付与される
 
 ## Docker images
 docker image 
