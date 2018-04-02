@@ -44,3 +44,8 @@
 
 # Others
 * Kick the tires
+* grace period
+    * provision in most loan and insurance contracts that allows payment to be received for a certain period of time after the actual due date
+* order of magnitude
+    * 桁, 倍
+    * e.g. 3 orders of magnitude = 3 倍の
