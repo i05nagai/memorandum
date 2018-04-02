@@ -35,4 +35,16 @@ imageの各layerの容量などを表示する。
 docker history <image-name>
 ```
 
+## docker system
+get disk udage of docker.
+
+```
+$ docker system df
+TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
+Images              29                  9                   3.349 GB            1.507 GB (45%)
+Containers          20                  18                  18.64 MB            74.39 kB (0%)
+Local Volumes       1                   1                   69.65 MB            0 B (0%)
+```
+
+
 ## Reference

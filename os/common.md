@@ -69,6 +69,18 @@ nvidia-smi
 cat /proc/drivers/nvidia/gpus/.../information
 ```
 
+## Memory
+* [The Linux kernel: Memory](https://www.win.tue.nl/~aeb/linux/lk/lk-9.html)
+
+* page
+    * basic unit of the memory
+    * architecture dependentだが typcally PAGE_SIZE = 4096
+        * PAGE_SIZE equals `1 << PAGE_SHIFT`, and PAGE_SHIFT is 12, 13, 14, 15, 16 on the various architecture
+    * page size is determined by the hardware
+    * virtual memory addressはpage単位で管理されている
+    * virtual memory addressとphsical addressの対応はpage_tablesで行う
+    * virtual memory のpageにphysical addressが対応されていない時に、pageへのaccessが起こるとにpage fault
+
 
 ## directory name convention
 * [linux - Meaning of directories on Unix and Unix like systems - Server Fault](https://serverfault.com/questions/24523/meaning-of-directories-on-unix-and-unix-like-systems)
@@ -122,6 +134,8 @@ uptime
 uptime
  12:17:50 up  6:12,  1 user,  load average: 0.58, 0.85, 0.94
 ```
+
+左から順に
 
 * The current time
 * how long the system has been running

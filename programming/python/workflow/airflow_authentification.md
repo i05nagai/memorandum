@@ -8,6 +8,10 @@ title: Airflow Authentification
 ## Google authentification
 * [Security — Airflow Documentation](https://airflow.apache.org/security.html#google-authentication)
 
+```
+pip install Flask-OAuthlib
+```
+
 ```cfg
 [webserver]
 authenticate = True

@@ -45,8 +45,120 @@ title: Kubernetes
             * 複数のserviceをmonitoringする際にadapter containerがoutputのwrapをする
     * [Kubernetes: Container Design Patterns](http://blog.kubernetes.io/2016/06/container-design-patterns.html)
     * NodeでschedulingされているPodがfailした場合Podはdeleteされる
+    * PodsはGrace periodでKillされる
+        * defaultではgrace periodは30s
+        * `kubectl delete --grace-period=<seconds>` で指定できる
+        * 0secは force deleteだが、`--force` flagもつける必要がある
+
+```
+kubectl delete pods
+```
 
 ### Nodes
+* [Assigning Pods to Nodes | Kubernetes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
+    * nodeの指定は3種類
+    * node selector
+    * node affinity
+    * inter-pod affinity
+
+kubernetes 1.4からNodeに自動で以下のlabelが付与される。
+値はprovider specific.
+
+* kubernetes.io/hostname
+* failure-domain.beta.kubernetes.io/zone
+* failure-domain.beta.kubernetes.io/region
+* beta.kubernetes.io/instance-type
+* beta.kubernetes.io/os
+* beta.kubernetes.io/arch
+
+
+**Node selector**
+
+* nodeを指定して、Podに割当ができる
+* ndoeにlabelをつけられるので、labelで選択する
+* PodsSpecにNodeのlabelを指定する。
+
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    disktype: ssd
+```
+
+
+**Node Affinity**
+
+nodeSelectorに似ているが、nodeSelectorより柔軟な表現でNodeの割当ができる。
+
+* `requiredDuringSchedulingIgnoredDuringExecution`
+    * hard
+    * 割り当てられたNodeに必ずscheduleされる必要がある
+    * 実行中の場合は無視する
+* `preferredDuringSchedulingIgnoredDuringExecution`
+    * soft
+    * 割り当てられたNodeがなければ他のnodeで動く
+
+PodSpecに記載する。
+
+* available operator
+    *  In, NotIn, Exists, DoesNotExist, Gt, Lt
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-node-affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/e2e-az-name
+            operator: In
+            values:
+            - e2e-az1
+            - e2e-az2
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: another-node-label-key
+            operator: In
+            values:
+            - another-node-label-value
+  containers:
+  - name: with-node-affinity
+    image: k8s.gcr.io/pause:2.0
+```
+
+**inter-pod affinity and anti-affinity**
+
+以下の形式でPodのscheduleのruleをかける。
+
+This pod should (or, in the case of anti-affinity, should not) run in an X if that X is already running one or more pods that meet rule Y”
+
+* Y
+    * Label selectorで表現
+    * namespaceも指定する
+* X
+    * topology domain like node, rack, cloud provider
+    * `topologyKey` で指定
+* affinityの計算は軽くないので、schedulerの負荷になるので、数百node程度までで使う
+* use cases
+    * 全てのpodsを同じnodeに置きたい
+    * 全てのpodsを別のnodeに置きたい
 
 
 ### Namespace
@@ -575,13 +687,18 @@ Dockerのvolumeと違い、透過的に色々なdeviceをvolumeとして扱え�
 * cephfs
 * csi
 * downwardAPI
+    * pods/containerのlabelなどの情報をvolumeとしてmountできる
 * emptyDir
     * NodeにPodが作られたとき作られる
     * PodがNodeから削除されると消える
     * containerがcrashしても消えない
+    * defaultでnodeのvolumeに記録されている
+        * `emptyDir.medium: memory` でnodeのtmpfsにもできるが、nodeのrebootとmemory limitによる制約をうける
     * Use case
         * disk based merge sort
         * checkpoint
+        * podのcontainer間での読み書き可能なshared volume
+            * git-sync sidecar
 * fc (fibre channel)
 * nfs
     * Podがremoteされても、unmountされるだけで中身は消えない
@@ -872,13 +989,17 @@ yaml fileの中でshellの環境変数は現状利用できない。
     * [Using Google Container Registry (GCR) with Minikube · Ryan Eschinger Consulting](https://ryaneschinger.com/blog/using-google-container-registry-gcr-with-minikube/)
     * OSXの場合は`Security store docker logins in macOS keychain`をoffにしないと、`.docker/config.json`にcredentialは保存されない
 
-* docker login
-* `.config/config.json`
+`docker login`を実行すれば、`.config/config.json`にcredentialが生成されるので、これをsecretとしてexportすれば良い。
+kubectlでは上記を行うcomandが用意されている。
 
-`docker create secret docker-registry`を
+`docker create secret docker-registry`を実行する。
 
 ```
-kubectl create secret docker-registry regsecret --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+kubectl create secret docker-registry \
+    regsecret --docker-server=<your-registry-server> \
+    --docker-username=<your-name> \
+    --docker-password=<your-pword> \
+    --docker-email=<your-email>
 ```
 
 For GCP
@@ -914,13 +1035,35 @@ spec:
         imagePullPolicy: Always
 ```
 
-```yaml
-imagePullSecrets:
-- name: gcr-json-key
-```
+もしくは、container内でdocker pull を行いたい場合は、以下のようにする。
+`subPath`でfile名を指定できる。
 
-* docker clinetのupdate
-* minikbeのupdate
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: secret-test-pod
+  labels:
+    name: secret-test
+spec:
+  containers:
+  - name: ssh-test-container
+    image: mySshImage
+    volumeMounts:
+    - name: volume-name
+      readOnly: true
+      mountPath: "/home/root/.docker"
+  volumes:
+  - name: volume-name
+    projected:
+      sources:
+      - secret:
+          name: <secret-name>
+          items:
+           - key: .dcokerconfigjson
+             path: config.json
+             mode: 400
+```
 
 ## DNS
 [DNS for Services and Pods | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
@@ -979,11 +1122,6 @@ kubectl describe pod <pod-id>
     * health checkをpassするには以下のいずれかを満たす
         * `/` で200を返す
 
-## Node selector
-* [Assigning Pods to Nodes | Kubernetes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
-    * nodeを指定して、Podに割当ができる
-    * ndoeにlabelをつけられるので、labelで選択する
-
 ## Monitoring and Logging
 * [Core metrics pipeline | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
 
@@ -996,6 +1134,91 @@ kubectl describe pod <pod-id>
 * [How to create an kubernetes NFS volume on Google Container Engine - Stack Overflow](https://stackoverflow.com/questions/43358955/how-to-create-an-kubernetes-nfs-volume-on-google-container-engine)
 * [Using NFS - Configuring Persistent Storage | Installation and Configuration | OpenShift Origin Latest](https://docs.openshift.org/latest/install_config/persistent_storage/persistent_storage_nfs.html)
 * [How to create a kubernetes NFS volume on Google Container Engine · Issue #44377 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44377)
+
+## Network
+* [GKE/Kubernetes でなぜ Pod と通信できるのか - Qiita](https://qiita.com/apstndb/items/9d13230c666db80e74d0)
+* [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
+
+
+## Evicted pods
+* [Configure Out Of Resource Handling | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
+
+
+```
+The node was low on resource: nodefs.
+```
+
+## Horizontal Autoscaler
+* [Horizontal Pod Autoscaler | Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
+
+cpu負荷などに応じてreplica数を増減させる。
+custom metricsにも対応している。
+cluster autoscalerはresource limitに応じてpods用のnodeを確保する。
+
+* `--horizontal-pod-autoscaler-sync-period` がcpu loadを計算するperiod
+    * default 30 sec
+* each podにresource request API経由でCPUなどの情報を取得し、
+* Horizontal AUtoscalerは以下の2つの方法でmetricsにaccessする
+    * Heapster
+        * Heapsterにproxyを通してaccess
+        * Heapseterがkube-systemにdeployされている必要がある
+    * REST API
+        * custom metrics用のAPIがある
+        * [community/custom-metrics-api.md at master · kubernetes/community](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/custom-metrics-api.md)
+* `--horizontal-pod-autoscaler-downscale-delay`
+    * downscaleまでのdelay
+    * default 5m
+* `--horizontal-pod-autoscaler-upscale-delay`
+    * upscaleまでのdelay
+    * default 3m
+
+
+kubectlでHorizontal Autoscalerの設定できる。
+
+
+
+## Cluster Autoscale
+* [autoscaler/FAQ.md at master · kubernetes/autoscaler](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md)
+* [Advanced Scheduling and Pod Affinity/Anti-affinity - Scheduling | Cluster Administration | OpenShift Origin Latest](https://docs.openshift.org/latest/admin_guide/scheduling/pod_affinity.html)
+
+* When does Cluster Autoscaler change the size of a cluster?
+    * increasing
+        * there are pods that failed to schedule on any of the current nodes due to insufficient resources.
+        * adding a node similar to the nodes currently present in the cluster would help.
+    * decreasing
+        * some nodes are consistently unneeded for a significant amount of time.
+        * A node is unneeded when it has low utilization and all of its important pods can be moved elsewhere.
+* What types of pods can prevent CA from removing a node?
+    * `PodDisruptionBudget`のあるpods
+    * `kube-system`のpodで、`"cluster-autoscaler.kubernetes.io/safe-to-evict": "true"`が指定されていない
+        * are not run on the node by default
+        * don't have PDB or their PDB is too restrictive
+    * deployment/replicasetなどcontroller objectに作られてないpods
+    * Pods with local storage
+        * `"cluster-autoscaler.kubernetes.io/safe-to-evict": "true"`が指定されてない
+    * node selectorやpod affinityの制約で動かせない
+* What are the Service Level Objectives for Cluster Autoscaler?
+    * pending podsをdeployできるnodeを自動で生成することが目的
+    * SLOはpodがunschedulableになってから、CAがscale outの命令をnodeに送るまでのlatencyでみることができる
+    * latencyはmax20secを目標としているが、実際のtestでは
+        * No more than 30 sec latency on small clusters (less than 100 nodes with up to 30 pods each), with the average latency of about 5 sec.
+        * No more than 60 sec latency on big clusters (100 to 1000 nodes), with average latency of about 15 sec.
+        * またpod affinityがある環境では、上記の3倍以上の時間がかかる
+* Autoscaleを使うにはkubernetesのmanifestでcontainerのresourcesを指定しておく必要がある
+* Cluster AutoscaleはCPU usage based autoscalerとは違う
+    * cluster autoscalerはresourceのrequestに応じてpodsを割り当てるためのnodeを作るのみ
+
+特定のnodeのscale downを防ぐ場合は、nodeにannotationに以下をつける。
+
+```
+"cluster-autoscaler.kubernetes.io/scale-down-disabled": "true"
+```
+
+既存のnodeにつける場合は以下のようにする。
+
+```
+kubectl annotate node <nodename> cluster-autoscaler.kubernetes.io/scale-down-disabled=true
+```
 
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)

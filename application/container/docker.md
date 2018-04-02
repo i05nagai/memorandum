@@ -496,6 +496,9 @@ docker run \
 
 ### Docker config
 * `$HOME/.docker/config.json`
+    * docker loginするとcredentialが書き込まれる
+    * credentialsは`username:password`の形式をbase64でencodeしたもの
+    * GCRの場合は、`_json_key`でloginした場合も`oauth2accesstoken`とtokenが記録される
 * `$HOME/.dockercfg`
 * [Advanced Authentication Methods  |  Container Registry  |  Google Cloud Platform](https://cloud.google.com/container-registry/docs/advanced-authentication)
 

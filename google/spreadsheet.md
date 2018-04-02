@@ -9,8 +9,6 @@ title: Spreadsheet
 
 * Query
     * https://support.google.com/docs/answer/3093343?visit_id=1-636549486149332271-747246594&rd=1
-* Importage
-    * https://support.google.com/docs/answer/3093340?visit_id=1-636549486149332271-747246594&rd=1
 
 
 * column nameは列番号で指定する
@@ -24,6 +22,13 @@ title: Spreadsheet
 =QUERY(A2:F24, "SELECT AVG(E) GROUP BY A PIVOT F", 1)
 # Pivot table
 =QUERY(IMPORTRANGE("spreadsheet_url", ""), "SELECT Col1, AVG(Col5) GROUP BY Col1 PIVOT Col6 LABEL Col1 'label'", 1)
+```
+
+* importrange
+    * https://support.google.com/docs/answer/3093340?visit_id=1-636549486149332271-747246594&rd=1
+
+```
+=IMPORTRANGE("spradsheetURL", "sheet!A1:B2")
 ```
 
 ## Reference

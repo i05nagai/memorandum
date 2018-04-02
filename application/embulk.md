@@ -25,7 +25,8 @@ embulk selfupdate
 
 ## Commands
 
-
+* `--log-level [LEVEL]`
+    * error, warn, info, debug or trace
 ```
 embulk run config.yml
 ```
@@ -163,6 +164,24 @@ GCSからのデータの転送ができる。
 Installは以下でできる。
 
 ## Plugins
+
+### file
+
+```
+out:
+  type: file
+  path_prefix: /path/to/output/sample_
+  file_ext: csv
+  formatter:
+    type: csv
+```
+
+### stdout
+
+```
+out:
+  type: stdout
+```
 
 ### local executor plugin
 
@@ -350,6 +369,10 @@ S3からのデータの転送ができる。
     * default
 
 ## Tips
+
+### Expected object to load ConfigSource but got null
+Configurationが正しくない。
+例えば、include用の`*.yml.liquid`などをrunした時などに表示される。
 
 ### JsonMappingException
 以下のエラーのときは、configで設定が必要な項目に値が設定されてない場合が多い。

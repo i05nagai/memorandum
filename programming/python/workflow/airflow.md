@@ -6,6 +6,7 @@ title: airflow
 
 
 ## Install
+
 ```
 pip install airflow
 ```
@@ -454,13 +455,6 @@ broker_url = redis://:password@hostname:port/db_number
 Pitfallsにも記載してあるが、UTC前提で開発されている部分があるらしいので、Airflowのarchitecture全体でUTCにしておいた方が、良いらしい。
 
 
-### TemplateNotFound Error
-TemplateNotFoundというエラーがでる場合、bashcommandの引数の最後にスペースがあるか確認する。
-Bash scriptを直接呼ぶ場合は、最後にスペースが必要。
-そうでない場合は、引数はJinja templateとして扱われるので、`BashOperator`classの引数`template`に空でも値を渡す必要がある。。
-
-* [python - TemplateNotFound error when running simple Airflow BashOperator - Stack Overflow](https://stackoverflow.com/questions/42147514/templatenotfound-error-when-running-simple-airflow-bashoperator)
-
 
 ### Webserver
 Gunicornはport 80での起動は推奨されていない。
@@ -469,18 +463,6 @@ airflowのwebserverも80での起動はできない場合があるっぽい。
 
 * [python - Can't run gunicorn on port 80 while deploying django app on AWS EC2 - Stack Overflow](https://stackoverflow.com/questions/32298481/cant-run-gunicorn-on-port-80-while-deploying-django-app-on-aws-ec2)
 
-
-### Error with --debug
-debugで立ち上げるとエラーになる。
-
-```
-airflow webserver --debug
-```
-
-とすると、エラーがでる。
-2017/5/2にmasterで修正済みらしい。
-
-* [AIRFLOW-1165 airflow webservice crashes on ubuntu16 - python3 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-1165)
 
 ### Delete DAG
 DAGを削除するには以下のテーブルからレコードを削除する必要がある。
@@ -547,32 +529,6 @@ log rotate機能は現在ないっぽい。
 * CeleryExecutor
 * MesosExecutor
 
-### Error ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL
-resetdbなどで以下のエラーがでる場合がある。
-
-```
-sqlalchemy.exc.ProgrammingError: (_mysql_exceptions.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(6) NULL' at line 1") [SQL: u'ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL']
-```
-
-mili secondが必要なので、 MySQLのversionを5.6.4にあげる必要がある。
-
-* [AIRFLOW-748 Cannot upgradedb from airflow 1.7.0 to 1.8.0a4 - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-748)
-
-### Error: SMTP Error
-`airflow.cfg`内の`[smtp] smtp_starttls = False`にする
-
-
-### Error. No such transport: sqla
-`airflow.cfg`にCeleryのbrokerのURLに`sqla+mysql`と書いていると起こる。
-Celeryの依存パッケージである `kombu`の問題らしい。
-最新の`kombu`では解決しているので、updateする。
-
-* [AIRFLOW-797 CLONE - No such transport: sqla when using CeleryExecutor - ASF JIRA](https://issues.apache.org/jira/browse/AIRFLOW-797)
-
-### Log page is not found in task instances page
-Web UIのTask InstanceページのTaskのLogのURIがNot Foundになる。
-`airflow.cfg`のweb serverのURLをserverのURLに変更する。
-
 ### DAG scriptの更新
 dagを定義したスクリプトの変更は、web serverやDBの更新なしで反映される。
 
@@ -636,53 +592,6 @@ pip install apache-airflow[crypto]
 
 ## API Reference
 
-### operators
-BaseOperatorで定義されている共通の引数
-
-* start_date
-    * 最初のexecution_dateになる
-    * dailyのtaskの開始は`00:00:00`
-    * houlyのtaskの開始は`00:00`
-    * 開始をずらしたい場合は、TimeDeltaSensor, TimeSensor
-* depends_on_past
-    * trueにすると、上流のtaskのsucceedをまつ
-* wait_for_downstream
-* pool
-    * 使用するpool名を記載
-    * Noneの場合は、defaultのpoolに入る
-* sla
-    * taskの期待する実行時間をtimedeltaで指定
-    * 1時間で終わってほしいときは、1hourで指定
-    * 実行時間の上限、これを超えるとSLA missというlogが出力
-* trigger_rule
-    * 依存しているtaskのstateに応じて実行を制御する
-    * ` all_success | all_failed | all_done | one_success | one_failed | dummy`
-    * defaultはall_success
-    * all_sccess: 依存しているtaskが全てsuccess
-    * all_faild: 依存しているtaskが全てfailed
-    * one_success: 依存しているtaskが全1つでも成功
-    * one_failed: 依存しているtaskが全1つでもfailed
-
-### Macros
-bashOperatorのcommandの中で`{{ ds }}` とした場合は、`{{ somechar }}`で囲まれた中身が評価された結果で実行される。
-Macroとして利用できるものとして以下がある。
-基本的にはoperatorは、execution dateを受け取ってその日付に対する処理をするようにした方が良い。
-failした場合の再実行の際には、日付を気にする必要がなくなる。
-
-* `{{ ds }}`
-    * `YYYY-MM-DD`形式のexecution date
-* `{{ ds_nodash }}`
-* `{{ yesterday_ds }}`
-    * `YYYY-MM-DD`形式のexecution date - 1
-* `{{ tomorrow_ds }}`
-    * `YYYY-MM-DD`形式のexecution date + 1
-
-任意形式の日付が欲しい場合は `macros.ds_format`を使う。
-
-* `yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
-* `today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
-
-
 ## Web UI
 
 <img src="./image/airflow_05_dags.png" width="50%">
@@ -738,6 +647,10 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn_extra='{ "extra__google_cloud_platform__key_path":"/usr/local/airflow/secrets/gcp_key.json", "extra__google_cloud_platform__project": "gcp-project", "extra__google_cloud_platform__scope": "https://www.googleapis.com/auth/cloud-platform"}'
 ```
 
+## Airflow with supervisord
+* [Re: airflow supervisord scripts do not work](http://mail-archives.apache.org/mod_mbox/airflow-dev/201608.mbox/%3CCAK+2U_2BqDEfyvf2xa=RaGuDA6Fusmqx+HyyHX0DxE9ti=K5Xw@mail.gmail.com%3E)
+* [Supervisordの練習(Airflow)](https://blog.masu-mi.me/post/2017/04/12/start_supervisord/)
+
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
@@ -747,3 +660,4 @@ airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn
 * [Airflow: When Your DAG is Far Behind The Schedule](http://hafizbadrie.com/airflow/2016/12/12/airflow-when-your-dag-is-far-behind-the-schedule.html)
 * [ETL example — ETL Best Practices with Airflow v1.8](https://gtoonstra.github.io/etl-with-airflow/etlexample.html)
 * [Advanced Airflow (Lesson 1) : TriggerDagRunOperator | Sid Anand | Pulse | LinkedIn](https://www.linkedin.com/pulse/airflow-lesson-1-triggerdagrunoperator-siddharth-anand)
+* [Bytepawn – Luigi vs Airflow vs Pinball](http://bytepawn.com/luigi-airflow-pinball.html)

@@ -22,5 +22,11 @@ classは以下の3種類
     * idle
     * idle時のみ
 
+idle
+
+```
+ionice -c 3 command
+```
+
 ## Reference
 * https://linux.die.net/man/1/ionice

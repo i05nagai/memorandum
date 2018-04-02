@@ -179,8 +179,19 @@ resource "aws_instance" "foo" {
 }
 ```
 
+### Local values
+* [Configuring Local Values - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/locals.html)
+* [Variable cannot contain interpolation? · Issue #14343 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/14343)
+
+variables blockの中でvarは利用できないので、 変数を使って値を生成する際などに利用する。
+varに書いている定数はだいたい置き換えが可能
+
+
+
 ### Variables
 * [Configuring Variables - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/variables.html)
+    * variablesの中でvarのinterpolationは使えない
+    * local valueを使う
 
 ```
 variable NAME {
@@ -194,16 +205,35 @@ variable NAME {
     * string, map, list
 * `default`はNAMEで参照した場合に利用される値
 
+## Debug
+CLIの実行時に環境変数を設定することで、実行することで、logの出力を変更できる
+
+* `TF_LOG`
+    * TRACE, DEBUG, INFO, WARN or ERROR
+    * defualt: INFO
+    * TRACE is the most verbose
+* `TF_LOG_PATH`
+    * logの出力先
+    * `/dev/stdout`
+* `[apply|plan] -parallelism=0`
+    * 出力が見づらくなるsync
+
 ## CLI
 
 * `terraform init`
     * directoryの初期化
     * 他のコマンドと違って、何回実行しても結果は同じ
+    * `-input=false`
+        * inputのpromptをださないようにする
 * terraform apply
     * terraformの設定を適用する
     * `-var 'foo=bar'`
         * 実行時に変数の定義ができる
         * credentialの設定などに便利
+    * `-out=path`
+        * binary形式で実行計画が出力される
+    * `-state=statefile`
+        * default は `terraform.tfstate`
 * `terraform fmt`
     * formatter
 
@@ -211,7 +241,36 @@ variable NAME {
 terraform fmt -diff -write=true -list=true .
 ```
 
+* `terraform validate [dir]`
+    * dirctoryのtf fileをcheck
+
+stateをimportできる。
+対応するconfig fileが存在する必要がある。
+resource addressとIDを指定する。
+idに何を指定するかはresourceによる。
+
+```
+terraform import <resource-address> <reousrce-id>
+terraform import aws_instance.example i-abcd1234
+```
+
+## Resroucde Addressing
+* [Internals: Resource Address - Terraform by HashiCorp](https://www.terraform.io/docs/internals/resource-addressing.html)
+
+moduleを使っている場合は、moduleで使っているresourceもaddressを持つ
+countを使っている場合は番号がつく。
+
+
 ## Tips
+
+### Automation
+* [Running Terraform in Automation - Guides - Terraform by HashiCorp](https://www.terraform.io/guides/running-terraform-in-automation.html)
+
+* [Part 3.2: From Semi-Automation to Infrastructure as Code - Terraform Recommended Practices - Terraform by HashiCorp](https://www.terraform.io/docs/enterprise/guides/recommended-practices/part3.2.html#3-create-your-first-module)
+    * いつmoduleを使うべきか
+
+### Locals
+
 
 ### Input Variables
 * [Input Variables - Terraform by HashiCorp](https://www.terraform.io/intro/getting-started/variables.html)
@@ -549,7 +608,11 @@ provider.terraform: dial unix ....|netrpc: connect: no such file or directory
     * keyがあればkeyの値を出力、なければdefault
     * defaultが省略されていれば、keyがないときerror
 
+## count
+* [Terraform tips & tricks: loops, if-statements, and gotchas](https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9)
 
 ## Reference
 * [Configuration Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/syntax.html)
 * [Terraform職人入門: 日々の運用で学んだ知見を淡々とまとめる - Qiita](https://qiita.com/minamijoyo/items/1f57c62bed781ab8f4d7)
+* [chroju - Qiita](https://qiita.com/chroju)
+* [Terraform moduleは何が嬉しいのか · the world as code](https://chroju.github.io/blog/2017/12/27/how_to_use_terraform_modules/)

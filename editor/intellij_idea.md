@@ -40,6 +40,11 @@ brew cask install intellij-idea
 * `Cmd+F4`
     * close tab
 * `Ctlr+arrow`
+* `Cmd+option+LeftArrow`
+    * back to previous location
+* `Cmd+E`
+    * 直近で開いてたfile
+    * jump先から戻れる
 
 ## Plugins
 * [既に最強なIntelliJ IDEAを更にパワーアップさせられる10個のプラグイン - Qiita](https://qiita.com/konohiroaki/items/b9a810702d87a0b6bb53)

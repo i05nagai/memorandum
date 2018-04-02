@@ -18,7 +18,9 @@ $ gcloud compute firewall-rules create allow-130-211-0-0-22 \
 
 現状firewallは適用できない。
 
-[google cloud platform - Apply firewall rules to an HTTP load balancer - Server Fault](https://serverfault.com/questions/810506/apply-firewall-rules-to-an-http-load-balancer)
+* [google cloud platform - Apply firewall rules to an HTTP load balancer - Server Fault](https://serverfault.com/questions/810506/apply-firewall-rules-to-an-http-load-balancer)
+* https://issuetracker.google.com/issues/35904903
+    * feature request
 
 
 ## Reference

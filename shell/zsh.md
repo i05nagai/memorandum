@@ -5,6 +5,15 @@ title: zsh
 ## zsh
 
 ## keybind
+* `^J`: ctrl+j
+* `^[j` Esc+j
+
+### word jump
+単語の区切りを下記で指定できる。
+
+```
+export WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
+```
 
 ### Change keybind
 以下で`ctrl-h`のkeybindを変更できる。
@@ -77,9 +86,9 @@ compdef _completion_function my_function
 ```
 
 ## Reference
+* [ZSH Documentation (framed)](http://zsh.sourceforge.net/Doc/Release/index-frame.html)
 * [zshでの自作関数と、それに対する補完関数を実装する - Qiita](http://qiita.com/petitviolet/items/b1e8b5139169dd530919)
-
-## Reference
 * [zsh-users/zsh-completions: Additional completion definitions for Zsh.](https://github.com/zsh-users/zsh-completions)
 * [まだ oh-my-zsh で消耗してるの？ - Qiita](http://qiita.com/b4b4r07/items/875235f6122a6d779306)
 * [widgets can only be called when ZLE is active とは何だったのか - Qiita](https://qiita.com/udzura/items/3f120b5e4733fe85078d)
+* [zle:bindkeys [ZshWiki]](http://zshwiki.org/home/zle/bindkeys)
