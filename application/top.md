@@ -5,6 +5,11 @@ title: top
 ## top
 top command
 
+* VIRTはmalloc()しただけで増える。RESは増えない
+* PR（優先度）とNI（nice値）は低いほど優先される
+* swappingとはプロセス丸ごとディスクに追い出すこと
+* pagingとはpage単位で二次記憶に追い出すこと
+
 ## key
 * shift+o
     * 表示された特定のキーを押してEnterすると任意の列でソートできる
