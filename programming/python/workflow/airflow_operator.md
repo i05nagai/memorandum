@@ -53,7 +53,16 @@ failした場合の再実行の際には、日付を気にする必要がなく�
 * `today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
 
 
-## Docker operator with xcom pull and xcom push
+## Docker operator
+
+### macros in Docker operator
+* `command` argumentのみでmacrosが使える
+
+```python
+t2 = DockerOperator(task_id='docker_2', dag=dag, image='docker_2', command='{{ ds }}')
+```
+
+### Docker operator with xcom pull and xcom push
 * [Programming soup: Airflow Docker with Xcom push and pull](http://szborows.blogspot.jp/2017/12/airflow-docker-with-xcom-push-and-pull.html)
     * `xcom_push=True`stdoutの結果をxcomにpushするo
     * `xcom_all=True`で全てのstdoutの結果をpush, `False`でlast lineのみ
