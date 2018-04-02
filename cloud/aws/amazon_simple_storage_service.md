@@ -74,6 +74,11 @@ AmazonのGet requestは300 reuqest/sec, PUT/LIST/DELETE は100 request/sec が�
 * [Managing Access Permissions to Your Amazon S3 Resources - Amazon Simple Storage Service](http://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html)
 
 
+* canned ACL
+    * [Access Control List (ACL) Overview - Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl)
+    * あらかじめ定義された権限
+    * private
+        * Owenerのみfull access control
 * ACL
     * XML形式でS3/S#のObjectに付与する
     * resource based
