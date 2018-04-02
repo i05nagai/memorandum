@@ -8,7 +8,7 @@ title: df
 
 
 ```
-df -h
+df -Th
 ```
 
 * `-h, --human-readable`
@@ -41,6 +41,8 @@ df -h
     * limit listing to file systems not of type TYPE
 * `-v`
     * (ignored)
+
+
 
 
 ## Reference
