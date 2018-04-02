@@ -4,6 +4,11 @@ title: linux/common
 
 ## linux/common
 
+## /dev/sda
+
+* `/sda`はdisk名で、`a`からalphabet順で名前がつく
+* `/sda1` disk名の数字の後ろはpartition number
+
 ## /etc/group
 
 ```
