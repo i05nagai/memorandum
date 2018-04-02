@@ -939,6 +939,9 @@ $$
 \end{eqnarray}
 $$
 
+となる。
+$\phi$はdecision functionの確率を与えていることがわかる。
+つまり、0を採択、1を棄却として、$\phi$の値は棄却の確率である。
 risk functionは
 
 $$
@@ -1110,12 +1113,13 @@ $$
     \
     \delta_{\phi}(dz \mid x)
     :=
-    \phi(y)
+    \phi(x)
     \epsilon_{1}(dz)
     +
     (1 - \phi(x))
     \epsilon_{0}(dz)
 $$
+
 
 $$
     L(\theta, d)

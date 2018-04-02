@@ -71,6 +71,14 @@ Update gcloud
 gcloud components update
 ```
 
+## CLi
+
+Update gcloud
+
+```
+gcloud components update
+```
+
 ## Tips
 
 ### Warning googleapiclient.discovery_cache

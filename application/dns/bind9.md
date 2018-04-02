@@ -192,7 +192,6 @@ example
 _sip._tcp.example.com. 86400 IN SRV 0 5 5060 sipserver.example.com.
 ```
 
-
 ```
 $TTL 2D
 1.168.192.in-addr.arpa. IN SOA gateway.world.cosmos. root.world.cosmos. (

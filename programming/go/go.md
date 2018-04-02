@@ -36,6 +36,59 @@ export GOPATH="/opt/local/go"
 ## API server
 * [7 Frameworks To Build A REST API In Go | Nordic APIs |](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/)
 
+## Naming convention
+* package name
+    * lower case
+    * `src/encoding/base64`
+    * `encoding/base64`
+
+## Method
+* recieverを定義できるのは`type`で定義した型だけ
+* 同じpackage内で宣言されている必要がある
+* recieverがpointer typeの場合はrecieverの値を買い換えることができる
+
+```go
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+```
+
+Type assert
+
+* interfaceが(string)型をもっていればcastできる
+* interfaceが(string)型をもっていればcastできなければ、panic
+* second return valueをつけた場合はpanicにはならない
+
+```go
+	var i interface{} = "hello"
+
+	s := i.(string)
+	fmt.Println(s)
+
+	s, ok := i.(string)
+	fmt.Println(s, ok)
+```
+Type switch
+
+```go
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Twice %v is %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q is %v bytes long\n", v, len(v))
+	default:
+		fmt.Printf("I don't know about type %T!\n", v)
+	}
+```
+
+
 ## Reference
 * [Documentation - The Go Programming Language](https://golang.org/doc/)
 * [Effective Go - The Go Programming Language](https://golang.org/doc/effective_go.html)

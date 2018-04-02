@@ -106,5 +106,17 @@ object Obj {
 * [Javaで日時を扱う（Java8） - kurukuru-papaのブログ](http://kurukurupapa.hatenablog.com/entry/2016/05/22/213011)
 
 
+## Call kotlin code
+[Calling Kotlin from Java - Kotlin Programming Language](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
+
+呼び出したいobjectのmethodには、`@JvmStatic`をつける。
+
+```kotlin
+object Obj {
+    @JvmStatic fun foo() {}
+    fun bar() {}
+}
+```
+
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
