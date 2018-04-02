@@ -120,7 +120,7 @@ Routingがあっても、firewallが空いていなければpacketは到達し�
 
 
 ## Shared VPC
-
+host projectの以下の権限が必要。
 
 ```
 compute.subnetworks.getIamPolicy for host project host-procjet-id
