@@ -592,53 +592,6 @@ pip install apache-airflow[crypto]
 
 ## API Reference
 
-### operators
-BaseOperatorで定義されている共通の引数
-
-* start_date
-    * 最初のexecution_dateになる
-    * dailyのtaskの開始は`00:00:00`
-    * houlyのtaskの開始は`00:00`
-    * 開始をずらしたい場合は、TimeDeltaSensor, TimeSensor
-* depends_on_past
-    * trueにすると、上流のtaskのsucceedをまつ
-* wait_for_downstream
-* pool
-    * 使用するpool名を記載
-    * Noneの場合は、defaultのpoolに入る
-* sla
-    * taskの期待する実行時間をtimedeltaで指定
-    * 1時間で終わってほしいときは、1hourで指定
-    * 実行時間の上限、これを超えるとSLA missというlogが出力
-* trigger_rule
-    * 依存しているtaskのstateに応じて実行を制御する
-    * ` all_success | all_failed | all_done | one_success | one_failed | dummy`
-    * defaultはall_success
-    * all_sccess: 依存しているtaskが全てsuccess
-    * all_faild: 依存しているtaskが全てfailed
-    * one_success: 依存しているtaskが全1つでも成功
-    * one_failed: 依存しているtaskが全1つでもfailed
-
-### Macros
-bashOperatorのcommandの中で`{{ ds }}` とした場合は、`{{ somechar }}`で囲まれた中身が評価された結果で実行される。
-Macroとして利用できるものとして以下がある。
-基本的にはoperatorは、execution dateを受け取ってその日付に対する処理をするようにした方が良い。
-failした場合の再実行の際には、日付を気にする必要がなくなる。
-
-* `{{ ds }}`
-    * `YYYY-MM-DD`形式のexecution date
-* `{{ ds_nodash }}`
-* `{{ yesterday_ds }}`
-    * `YYYY-MM-DD`形式のexecution date - 1
-* `{{ tomorrow_ds }}`
-    * `YYYY-MM-DD`形式のexecution date + 1
-
-任意形式の日付が欲しい場合は `macros.ds_format`を使う。
-
-* `yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
-* `today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
-
-
 ## Web UI
 
 <img src="./image/airflow_05_dags.png" width="50%">
@@ -683,7 +636,6 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
     * [incubator-airflow/jobs.py](https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1355)
 * web uiでworkerのlogをみる
     * https://github.com/apache/incubator-airflow/blob/15b8a36b9011166b06f176f684b71703a4aebddd/airflow/www/views.py#L725
-        o
 
 ## Connection
 * [pre-configured airflow "Connections" · Issue #75 · puckel/docker-airflow](https://github.com/puckel/docker-airflow/issues/75)
@@ -695,23 +647,9 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn_extra='{ "extra__google_cloud_platform__key_path":"/usr/local/airflow/secrets/gcp_key.json", "extra__google_cloud_platform__project": "gcp-project", "extra__google_cloud_platform__scope": "https://www.googleapis.com/auth/cloud-platform"}'
 ```
 
-## Docker operator with xcom pull and xcom push
-* [Programming soup: Airflow Docker with Xcom push and pull](http://szborows.blogspot.jp/2017/12/airflow-docker-with-xcom-push-and-pull.html)
-
-```
-dag = DAG('docker', default_args=default_args, schedule_interval=timedelta(1))
-
-t1 = DockerOperator(task_id='docker_1', dag=dag, image='docker_1', xcom_push=True)
-
-t2 = DockerOperator(task_id='docker_2', dag=dag, image='docker_2', command='{{ ti.xcom_pull(task_ids="docker_1") }}')
-
-t2.set_upstream(t1)
-```
-
 ## Airflow with supervisord
 * [Re: airflow supervisord scripts do not work](http://mail-archives.apache.org/mod_mbox/airflow-dev/201608.mbox/%3CCAK+2U_2BqDEfyvf2xa=RaGuDA6Fusmqx+HyyHX0DxE9ti=K5Xw@mail.gmail.com%3E)
 * [Supervisordの練習(Airflow)](https://blog.masu-mi.me/post/2017/04/12/start_supervisord/)
-
 
 
 ## Reference
