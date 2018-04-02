@@ -1,3 +1,29 @@
+## English
+* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
+    * There are still
+        * normal
+    * There still are
+        * strong
+
+
+* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
+I cross the customer's name off the reservation list.
+I cross off the customer's name from the reservation list.
+
+
+
+* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
+    * they decided not to stay ...
+        * `they decide` is important
+    * the decided to not stay ...
+        * they decided to stay another night before but now `they will not stay`
+    * I asked her quietly to leave
+        * `quietly` is unclear
+    * I asked her to quietly leave
+        * `quietly` is clear
+
+
+## Math
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
 
 * A follow B
@@ -39,9 +65,6 @@
 * [英語の文章表現](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main018.html)
 
 
-* Edge case/Corner case
-    * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
-
 # Others
 * Kick the tires
 * grace period
@@ -49,3 +72,17 @@
 * order of magnitude
     * 桁, 倍
     * e.g. 3 orders of magnitude = 3 倍の
+
+## Computer
+
+* on the website / in the website
+    * on the website is correct
+
+* on the internet / in the internet
+    * on the internet is correct
+    * [word choice - "In the Internet" vs. "on the Internet" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/4419/in-the-internet-vs-on-the-internet/4433)
+
+* Edge case/Corner case
+    * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
+
+## Reference
