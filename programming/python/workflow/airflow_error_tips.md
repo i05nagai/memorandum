@@ -4,6 +4,17 @@ title: Airflow Error Tips
 
 ## Airflow Error Tips
 
+### EOF read where object expected airflow
+Workerのようになっている場合は、workerのMemroyなどのresourceが足りていない
+
+```
+WorkerLostError: Worker exited prematurely: signal 9 (SIGKILL).
+```
+
+### airflow smtp error Connection refused
+slaでmailを送ろうとしたが、smtpに接続できない。
+slaをoffにする。
+
 ### Error ALTER TABLE dag MODIFY last_scheduler_run DATETIME(6) NULL
 resetdbなどで以下のエラーがでる場合がある。
 
