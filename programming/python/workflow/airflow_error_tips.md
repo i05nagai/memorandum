@@ -4,6 +4,21 @@ title: Airflow Error Tips
 
 ## Airflow Error Tips
 
+### invalid reference format
+docker-pyのerror.
+
+tagかimage名の指定が間違っている。
+
+### "AttributeError: can't set attribute"
+* [Airflow authentication setups fails with "AttributeError: can't set attribute" - Stack Overflow](https://stackoverflow.com/questions/48075826/airflow-authentication-setups-fails-with-attributeerror-cant-set-attribute)
+
+password_authで上記のerrorの場合は、以下のように修正する。
+
+```python
+# Instead of user.password = 'password'
+user._set_password = 'password'
+```
+
 ### EOF read where object expected airflow
 Workerのようになっている場合は、workerのMemroyなどのresourceが足りていない
 
