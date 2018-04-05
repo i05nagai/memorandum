@@ -22,6 +22,9 @@ I cross off the customer's name from the reservation list.
     * I asked her to quietly leave
         * `quietly` is clear
 
+* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
+    * month-on-motth, month-over-month
+    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
 
 ## Math
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
@@ -86,3 +89,4 @@ I cross off the customer's name from the reservation list.
     * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
 
 ## Reference
+
