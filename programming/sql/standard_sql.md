@@ -1,3 +1,7 @@
+---
+title: Standard SQL
+---
+
 ## standards SQL
 
 ## Bigquery
@@ -296,7 +300,7 @@ FROM
   , UNNEST(col2)
 ```
 
-この場合は、subqueryでcheckする。
+この場合は、subqueryでcheckするか
 
 ```sql
 WITH
@@ -326,4 +330,31 @@ WHERE
       OR
       7 = col2col
   ) = 2
+```
+
+もしくはselectでflattenにする。
+この場合はarrayの中をwhereで一意に特定できない場合はqueryがfailする。
+つまり、`[5,6,7,8,8]`は下記ではerror.
+
+```sql
+#standardSQL
+WITH
+  sample AS (
+  SELECT
+    1 AS col1
+    , [
+      5,
+      6,
+      7,
+      8
+    ] AS col2
+)
+SELECT
+  col1
+  , (SELECT x FROM UNNEST(col2) AS x WHERE x=5) AS col25
+  , (SELECT x FROM UNNEST(col2) AS x WHERE x=6) AS col26
+  , (SELECT x FROM UNNEST(col2) AS x WHERE x=8) AS col27
+  , (SELECT x FROM UNNEST(col2) AS x WHERE x=9) AS col28
+FROM
+  sample
 ```
