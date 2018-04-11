@@ -3,6 +3,17 @@ title: tcpdump
 ---
 
 ## tcpdump
+For ubuntu
+
+```
+apt-get install tcpdump
+```
+
+## CLI
+
+```
+tcpdump
+```
 
 
 * `-n`
