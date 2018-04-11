@@ -5,7 +5,23 @@ title: Go
 ## Go
 
 ## Install
-to OSX
+For ubuntu
+* [Ubuntu · golang/go Wiki](https://github.com/golang/go/wiki/Ubuntu)
+
+```
+sudo apt-get install golang-go
+```
+
+or
+
+```
+$ sudo add-apt-repository ppa:gophers/archive
+$ sudo apt-get update
+$ sudo apt-get install golang-1.10-go
+```
+
+
+For OSX
 
 ```
 brew install go
