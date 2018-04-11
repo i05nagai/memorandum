@@ -62,6 +62,13 @@ Resource
         * EIPがVPCの中ならtrue
     * `instance`
         * EIPを割り当てるEC2 instance ID
+* `aws_route53_zone`
+    * `terraform import RESOURCE_ADDR Z4KAPRWWNC7JR`
+        * `ZONEID`
+* `aws_route53_route`
+    * `terraform import RESOURCE_ADDR Z4KAPRWWNC7JR_dev.example.com_NS_dev`
+        * `ZONEID_RECORDNAME_TYPE_SET-IDENTIFIER`
+            * SET-IDENTIFIERはない場合は省略可能
 
 ```
 $ terraform import aws_eip.bar eipalloc-00a10e96
@@ -93,6 +100,12 @@ $ terraform import aws_eip.bar eipalloc-00a10e96
             * defaultは`disabled = true`
         * `kubernetes_dashboard`
             * defaultは`disabled = true`
+    * `description`
+        * clusterの説明
+    * `logging_service`
+        * noneか`logging.googleapis.com`
+        * defaultは`logging.googleapis.com`
+    * `maintenance_policy `
 
 ```
 addons_config {
@@ -104,14 +117,6 @@ addons_config {
   }
 }
 ```
-
-
-    * `description`
-        * clusterの説明
-    * `logging_service`
-        * noneか`logging.googleapis.com`
-        * defaultは`logging.googleapis.com`
-    * `maintenance_policy `
 
 ```
 maintenance_policy {
