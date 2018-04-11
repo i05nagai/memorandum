@@ -24,4 +24,14 @@ Preemption process
     * [Advanced Configuration and Power Interface - Wikipedia](https://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface#Power_states)
 3. TERMINATED stateに移行する
 
+## Quotas
+* [Regions and Zones  |  Compute Engine Documentation  |  Google Cloud](https://cloud.google.com/compute/docs/regions-zones/#quotas)
+* [Resource Quotas  |  Compute Engine Documentation  |  Google Cloud](https://cloud.google.com/compute/quotas)
+
+
+* region, globalごとの使えるCPUやmemoryの数に制限がある。
+* GCPのQuotasのpageで確認可能。
+* Quotasは変更可能だが、 `Owner, Editor, and Quota Administrator`のRoleがついている必要がある。
+    * permissionとしては、 `serviceusage.quotas.update`
+
 ## Reference
