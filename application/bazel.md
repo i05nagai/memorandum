@@ -97,6 +97,8 @@ cc_binary(
 ### Docker
 * [bitnami/bazel_containers: poc of bazel bitnami containers](https://github.com/bitnami/bazel_containers)
 * [Building deterministic Docker images with Bazel - Bazel](https://blog.bazel.build/2015/07/28/docker_build.html)
+* [base-images-docker/dockerfile_build at master · GoogleCloudPlatform/base-images-docker](https://github.com/GoogleCloudPlatform/base-images-docker/tree/master/dockerfile_build)
+    * dockerfileのbuildのsample
 
 Dockerfileを使ったbuildはgenruleを使う必要がある。
 
@@ -105,3 +107,4 @@ Dockerfileを使ったbuildはgenruleを使う必要がある。
 * [bazelbuild/bazel: a fast, scalable, multi-language and extensible build system](https://github.com/bazelbuild/bazel)
 * [Bazel - a fast, scalable, multi-language and extensible build system" - Bazel](https://bazel.build/)
 * [Benchmarking the Bazel build system on real-life C++ - Nicolò Valigi](https://nicolovaligi.com/benchmark-bazel-build-cpp.html)
+
