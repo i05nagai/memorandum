@@ -254,6 +254,19 @@ terraform import <resource-address> <reousrce-id>
 terraform import aws_instance.example i-abcd1234
 ```
 
+管理しているresourceの状態の一覧
+
+```
+terraform state list
+```
+
+stateのIdやparameterなどを見る。
+idが見れるので、別のworkspaceで同じstateをimportする際に便利。
+
+```
+terraform state show <resource-address>
+```
+
 ## Resroucde Addressing
 * [Internals: Resource Address - Terraform by HashiCorp](https://www.terraform.io/docs/internals/resource-addressing.html)
 
@@ -262,6 +275,20 @@ countを使っている場合は番号がつく。
 
 
 ## Tips
+
+### Rename workspace / move state to another workspace
+* [[Improvement] Command: terraform workspace rename · Issue #16072 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/16072)
+
+```sh
+# pull and export current state in workspace
+terraform state pull > remote_state.tfstate
+# create new workspace with exported state
+terraform workspace new -state= remote_state.tfstate <new_workspace_name>
+# show state
+terraform state list
+# delete old workspace if you want
+terraform workspace delete <old_workspace_name>
+```
 
 ### Automation
 * [Running Terraform in Automation - Guides - Terraform by HashiCorp](https://www.terraform.io/guides/running-terraform-in-automation.html)
@@ -583,7 +610,6 @@ providerが古いterraformに対応していない可能生がある。
 provider.terraform: dial unix ....|netrpc: connect: no such file or directory
 ```
 
-
 ## Interpolation syntax
 * [Interpolation Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/interpolation.html)
 
@@ -610,6 +636,130 @@ provider.terraform: dial unix ....|netrpc: connect: no such file or directory
 
 ## count
 * [Terraform tips & tricks: loops, if-statements, and gotchas](https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9)
+
+```terraform
+resource "resource_type" "resource_name" {
+    count = 3
+}
+```
+
+countをifの用に使う
+
+```terrafomr
+# if var.create_eip = true => count is 0 => does not create
+# if var.create_eip = false => count is 1 => create
+resource "aws_route53_record" "example" {
+  count = "${1 - var.create_eip}"
+  zone_id = "A1B2CDEF3GH4IJ"
+  name = "foo.example.com"
+  type = "A"
+  ttl = 300
+  records = ["${aws_instance.example.public_ip}"]
+}
+```
+
+`data "template_file"`でstringのifができる。
+
+```terraform
+data "template_file" "user_data_shell" {
+  count = "${var.use_shell_script_user_data}"
+  template = <<-EOF
+              #!/bin/bash
+              run-microservice.sh
+              EOF
+}
+data "template_file" "user_data_cloud" {
+  count = "${1 - var.use_shell_script_user_data}"
+  template = <<-EOF
+              #cloud-config
+              runcmd:
+                - run-microservice.sh
+              EOF
+}
+
+# if var.use_shell_script_user_data = true => user_data_cloud = empty
+# if var.use_shell_script_user_data = false => user_data_shell = etpty
+resource "aws_instance" "example" {
+  ami = "${var.ami}"
+  instance_type = "${var.instance_type}"
+  user_data = "${element(concat(data.template_file.user_data_shell.*.rendered, data.template_file.user_data_cloud.*.rendered), 0)}"
+  
+  tags {
+    Name = "${var.service_name}"
+  }
+}
+```
+
+null_data_soruceを使う
+
+```
+# map[string]
+data "null_data_source" "values" {
+    count = 1
+    inputs = {
+        key = ""
+    }
+}
+# ${data.null_data_soruce.values.*.outputs}
+
+```
+
+### design
+
+workspaces
+
+* `dev`
+* `prod`
+* `stg`
+
+directory
+
+* `variables.tf`
+    * workspaceごとの値を定義
+* `locals.tf`
+    * workspaceごとの差異を吸収して、必要な変数を定義
+* `main.tf`
+    * modulesの呼び出し
+    * resourceは定義しない
+* `script/`
+    * `terraform/`
+        * `import.sh`
+            * 全てのworkspaceで共通で使われるresourceをimportするscript
+        * `import/`
+            * import用のfile
+* `core/`
+    * 全てのserviceでshareするresource
+    * `aws/`
+        * service内で`terraform.workspace`は使わない。変数としてうけとる。環境を変数として受けて、環境にあわせたresourceを返す
+        * `variables.tf`
+    * `gcp/`
+* `<service1>/`
+    * `aws/`
+    * `gcp/`
+* `<service2>/`
+    * `aws/`
+    * `gcp/`
+* `immutables/`
+    * 参照するが殆ど変更しないもの
+    * `data` resourceが使えるものは使うが、何らかの理由で変更する可能性がある
+    * `<serviceA>/`
+        * `aws/`
+        * `gcp/`
+
+``` sh
+$ terraform worksapce select dev
+# imoprt resources shared with all worksapce
+$ import.sh
+$ terraform plan
+```
+
+* `import.sh`を使わない場合は、workspaceで共有するresouce用のworkspace `core`, `common`を作る方法がある。
+    * この場合は、`prod`, `dev`などで`core`のresourceを参照できなくなる。
+    * 実際参照するためには、stateのimportが必要になるので、`import.sh`を使う方法と同じになる。
+    * `dev`をuserごとに作る場合は、`dev<username>`のworkspaceを作っても良いが、一部resourceしか使わず殆どのresourceを共有する場合は、fileに`<workspace><username>`のresourceを追加してtask runnerでtargetを制御する方法で良い。
+* task runnerでのtargetの制御はある程度は必須。
+* workspacesをdev/stg/prodなどで分ける場合は、どのresourceをどのworkspaceで使うかどうかはあらかじめ設計しておく必要がある
+
 
 ## Reference
 * [Configuration Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/syntax.html)
