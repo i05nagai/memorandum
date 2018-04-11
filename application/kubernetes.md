@@ -23,6 +23,23 @@ title: Kubernetes
 
 ## Concepts
 
+* deployment
+    * `.spec.strategy.type==Recreat`
+        * 新しいpodを作る前にexisting podsが全てKillされる
+    * `.spec.strategy.type==RollingUpdate`
+    * `minReadySeconds`
+        * podがreadyになった後どのくらい待つか
+        * defaultは0で、ready状態になったらavailable扱い
+        * readyになるかどうかは Probeできめる
+    * `.spec.strategy.rollingUpdate.maxUnavailable `
+        * updateの間にunavalableにできるpodの最大数
+        * default valueは25%
+        * 25%の場合は、25%までpodの数を減らし、あたらしいpodをdeployし、新しいpodがavailableになればその割合に応じて古いpodを更にunavalableにする
+    * `.spec.strategy.rollingUpdate.maxSurge`
+        * desired podの数を超えて作られるpodの数
+        * percentageがpodの数で指定
+        * `MaxUnavailable`が0だと0にできない
+        * default avlueは25%
 * Pod
     * Podはclusterで動いているprocessの表現
     * 1つ以上のcontainerで構成される
@@ -1117,10 +1134,21 @@ kubectl describe pod <pod-id>
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
 
 ## Ingress
-* health check
-    * [contrib/ingress/controllers/gce/examples/health_checks at master · kubernetes/contrib](https://github.com/kubernetes/contrib/tree/master/ingress/controllers/gce/examples/health_checks)
-    * health checkをpassするには以下のいずれかを満たす
-        * `/` で200を返す
+readinessProbeの設定をかえた場合は
+
+**health check**
+
+* [ingress-gce/examples/health-checks at master · kubernetes/ingress-gce](https://github.com/kubernetes/ingress-gce/tree/master/examples/health-checks)
+* [メルカリ社内ドキュメントツールの Crowi を Kubernetes に載せ替えました - Mercari Engineering Blog](http://tech.mercari.com/entry/2017/09/11/150000)
+* health checkをpassするには以下のいずれかを満たす
+    * status code: 200を`/`で返すか`readiness`のURLをserviceでexposeする
+    * `/` で200を返す
+* ingressのhealth checkの条件はingress controllerの実装による
+    * [google compute engine - How to get a custom healthcheck path in a GCE L7 balancer serving a Kubernetes Ingress? - Stack Overflow](https://stackoverflow.com/questions/44584270/how-to-get-a-custom-healthcheck-path-in-a-gce-l7-balancer-serving-a-kubernetes-i)
+    * GCE
+        * https://github.com/kubernetes/ingress-gce/blob/master/README.md#health-checks
+
+
 
 ## Monitoring and Logging
 * [Core metrics pipeline | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
@@ -1207,6 +1235,8 @@ kubectlでHorizontal Autoscalerの設定できる。
 * Autoscaleを使うにはkubernetesのmanifestでcontainerのresourcesを指定しておく必要がある
 * Cluster AutoscaleはCPU usage based autoscalerとは違う
     * cluster autoscalerはresourceのrequestに応じてpodsを割り当てるためのnodeを作るのみ
+* What are the key best practices for running Cluster Autoscaler?
+    * k
 
 特定のnodeのscale downを防ぐ場合は、nodeにannotationに以下をつける。
 
@@ -1218,6 +1248,33 @@ kubectlでHorizontal Autoscalerの設定できる。
 
 ```
 kubectl annotate node <nodename> cluster-autoscaler.kubernetes.io/scale-down-disabled=true
+```
+
+### Debugging Tips
+* podが落ちていたら取り敢えず `kubectl describe`
+* ちょっと、Kubernetesのpod/networkで何かを実行したい場合
+    * 以下のpodをcreate
+
+```
+kubectl create -f pod.yaml
+kubectl exec -it clinet -- get -T 2 -q nginx  -O -
+```
+
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+  name: client
+  namespace: policy-demo
+  labels:
+    run: client
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - sleep
+    - "10000"
 ```
 
 ## Reference
