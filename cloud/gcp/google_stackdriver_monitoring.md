@@ -67,6 +67,43 @@ curl -sS https://dl.google.com/cloudagents/install-logging-agent.sh | sudo bash
 * metric typeを`volume usage`で調べる
 * diskのmetricはdisk write/readしかない
 
+## Monitoring Kubernetes
+* [Google StackdriverでKubernetesのモニタリングに挑戦してみよう (1/3)：CodeZine（コードジン）](https://codezine.jp/article/detail/10644)
+* [GKEでは StackDriver Loggingに どうやってログを送っているか // Speaker Deck](https://speakerdeck.com/ytakky2014/gkedeha-stackdriver-loggingni-douyatuteroguwosong-tuteiruka)
+
+* GKEのコンテナの指標
+    * CPU使用率
+    * ディスク使用率
+    * ページフォールト（メジャー）
+    * ページフォールト（マイナー）
+    * メモリー消費量
+    * ノード（GCEのVM）のメトリクス
+* CPU使用率
+    * ディスク読み込みI/O
+    * ディスク書き込みI/O
+    * ネットワーク インバウンド トラフィック
+    * ネットワーク アウトバウンド トラフィック
+
+
+* Disk capacity
+    * `device_name` でattachしているvolumeの使用量がとれる
+    * aggregation
+        * sum
+    * group by
+        * device_name
+    * filter
+        * device_name: `Volume: volume-name-`
+        * device_name: `cluster-name: cluster-name-`
+* Disk usage
+    * `device_name` でattachしているvolumeの使用量がとれる
+    * aggregation
+        * sum
+    * group by
+        * device_name
+    * filter
+        * device_name: `Volume: volume-name-`
+        * device_name: `cluster-name: cluster-name-`
+
 
 ## Reference
 * [Stackdriver Monitoring Documentation  |  Stackdriver Monitoring  |  Google Cloud Platform](https://cloud.google.com/monitoring/docs/)
