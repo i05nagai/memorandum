@@ -40,8 +40,10 @@ configurationのtemplateを作成する
 echo_supervisord_conf > /etc/supervisord.conf
 ```
 
+Run supervisord
+
 ```
-supervisor 
+/usr/bin/supervisord
 ```
 
 ## Running supervisord
@@ -52,8 +54,6 @@ supervisor
     * distribution-packaged version of Supervisorをいれた場合は組み込まれている。
     * initscript
         * [Supervisor/initscripts: User-contributed OS init scripts for Supervisor](https://github.com/Supervisor/initscripts)
-
-
 
 
 ## Configuration files
