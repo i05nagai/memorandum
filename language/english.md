@@ -25,6 +25,11 @@ I cross off the customer's name from the reservation list.
 * [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
     * month-on-motth, month-over-month
     * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
+* there you go
+    * [「There you go」の5つの用法 | 英語学習サイト：Hapa 英会話](https://hapaeikaiwa.com/2017/01/12/%E3%80%8Cthere-you-go%E3%80%8D%E3%81%AE5%E3%81%A4%E3%81%AE%E7%94%A8%E6%B3%95/)
+* you beat
+    * [ネイティブがよく口にする「Beat」を使った５つの表現 | 英語学習サイト：Hapa 英会話](https://hapaeikaiwa.com/2015/03/05/%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%8C%E3%82%88%E3%81%8F%E5%8F%A3%E3%81%AB%E3%81%99%E3%82%8B%E3%80%8Cbeat%E3%80%8D%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%EF%BC%95%E3%81%A4%E3%81%AE/)
+* nature to nurture
 
 ## Math
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
@@ -77,7 +82,8 @@ I cross off the customer's name from the reservation list.
     * e.g. 3 orders of magnitude = 3 倍の
 
 ## Computer
-
+* headroom
+    * [Engineering tolerance - Wikipedia](https://en.wikipedia.org/wiki/Engineering_tolerance)
 * on the website / in the website
     * on the website is correct
 
