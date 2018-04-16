@@ -10,4 +10,8 @@ title: Container-Optimized OS
 
 ない。使えない。
 
+### Where are Docker and Kubelet logs?
+systemd-jounaldを使っているので、`/var/log/journal`に出力される。
+閲覧は`jounalctl` commandを使う
+
 ## Reference
