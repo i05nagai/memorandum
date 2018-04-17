@@ -4,6 +4,27 @@ title: DataDog
 
 ## DataDog
 
+## Pricing
+* [Datadog | Pricing](https://www.datadoghq.com/pricing/)
+
+* Free
+    * 1day
+    * up to 5 host
+* Pro
+    * 15USD per host per month billed annually 
+    * 18USD per host per month billed monthly
+    * dataの保存期間15 month
+    * container monitoring: 10 per host
+    * custom metrics: 100 per host
+* Enterprise
+    * 23USD per host per month billed annually 
+    * 27USD per host per month billed monthly
+    * container monitoring: 20 per host
+        * customize可能
+    * custom metrics: 200 per host
+        * customize可能
+    * dataの保存期間15 month
+
 ## Docker image
 * [datadog-agent/Dockerfiles/agent at master · DataDog/datadog-agent](https://github.com/DataDog/datadog-agent/tree/master/Dockerfiles/agent)
 * [datadog/docker-dd-agent - Docker Hub](https://hub.docker.com/r/datadog/docker-dd-agent/)
