@@ -3,6 +3,8 @@ title: syslog
 ---
 
 ## syslog
+logの受信application
+logrotationは自分で設定する。
 
 defaultで存在するlog file
 
@@ -42,8 +44,31 @@ cron.* /var/log/cron
 
 * facility
     * `cron`
-* priority
+    * kern
+    * user
+    * mail
+    * daemon
+    * auth
+    * syslog
+    * lpr
+    * news
+    * uucp
+    * atuthpriv
+    * ftp
+* priority (severity)
     * `*`
+    * emerg(panic)
+        * systemが利用できない
+    * alert
+        * 即座に対応が必要
+    * crit
+        * critial
+    * err (error)
+    * warning (warn)
+    * notice
+        * 重要な情報
+    * info
+    * debug
     * `none`
         * facilityを無効にする
 * output
@@ -127,5 +152,12 @@ moduleの読み込みは以下のようにする。
 $ModLoad imjournal
 ```
 
+## Configuration
+`/etc/syslogd.conf`
+
+
+
 ## Reference
 * [【初心者でもすぐわかる】syslogとは？とsyslogの設定方法](https://eng-entrance.com/linux-log-syslog)
+* [必読！ログファイルとディレクトリ | Think IT（シンクイット）](https://thinkit.co.jp/article/711/1)
+* [syslogを押さえよう！ | Think IT（シンクイット）](https://thinkit.co.jp/article/724/1)
