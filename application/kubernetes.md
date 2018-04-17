@@ -71,6 +71,11 @@ title: Kubernetes
 kubectl delete pods
 ```
 
+### RBAC Authorization
+* [Using RBAC Authorization | Kubernetes](https://kubernetes.io/docs/admin/authorization/rbac/)
+
+
+
 ### Nodes
 * [Assigning Pods to Nodes | Kubernetes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
     * nodeの指定は3種類
@@ -1147,15 +1152,6 @@ readinessProbeの設定をかえた場合は
     * [google compute engine - How to get a custom healthcheck path in a GCE L7 balancer serving a Kubernetes Ingress? - Stack Overflow](https://stackoverflow.com/questions/44584270/how-to-get-a-custom-healthcheck-path-in-a-gce-l7-balancer-serving-a-kubernetes-i)
     * GCE
         * https://github.com/kubernetes/ingress-gce/blob/master/README.md#health-checks
-
-
-
-## Monitoring and Logging
-* [Core metrics pipeline | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/)
-
-* [Logging Using Stackdriver | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-stackdriver/)
-    * stackdriverでのlogは、standard output, standard errorのlogだけ
-    * fileに出力されるlogなどが必要な場合は sidecarを使う
 
 ## NFS
 * [examples/staging/volumes/nfs at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/staging/volumes/nfs)
