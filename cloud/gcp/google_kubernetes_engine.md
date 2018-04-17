@@ -159,9 +159,20 @@ spec:
 ingressを作成しても、つながらない場合は、GCPのnetwork consoleに残っている`k8s-*`のPrefixのついたnetworkの設定を削除する。
 https://github.com/kubernetes/kubernetes/issues/45438
 
+
+Ingressの名前は以下の形式で作られるようなので、clusterの違いは判別できない？
+更に63文字までにきりつめられる。
+
+```
+k8s-um-<namespace>-<ingress-name>-ingress-0
+```
+
+
 ## Configuring Network Policies for Applications
 * [Configuring Network Policies for Applications  |  Kubernetes Engine Documentation  |  Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/network-policy)
     * Pod内のnetwork policyの設定方法。
+    * network policyをenabledにすると、`ip-masq-agent`がdaemonsetで動く
+    * `ip-masq-agent`が動いているとclusterの外との通信時にsource addressがPodsのIPのままになる。
 
 Podへのincomming trafficの制限。
 以下は、`app=hello`のlabelをもつPodへのaccessは`app=foo`というlabelを持つPodからだけ許可する。
@@ -282,32 +293,6 @@ spec:
 gcloud container get-server-config
 ```
 
-## Monitoring
-* [Google Container Engine(kubernetes)の監視環境の動向 - まーぽんって誰がつけたの？](http://www.mpon.me/entry/2017/11/09/011423)
-* [Monitoring containers on GKE using Google Stackdriver](https://container-solutions.com/monitoring-containers-on-gke-with-google-stackdriver/)
-    * [Sidecar pattern | Microsoft Docs](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar)
-* [ContainerSolutions/stackdriver-gke-custom-metrics: Example python code sending custom container metrics to Stackdriver Monitoring](https://github.com/ContainerSolutions/stackdriver-gke-custom-metrics)
-* [Customizing Stackdriver Logs for Kubernetes Engine with Fluentd  |  Solutions  |  Google Cloud](https://cloud.google.com/solutions/customizing-stackdriver-logs-fluentd)
-
-**Best Practice**
-
-* Structured logging
-    * Single-line JSON objects written to standard output or standard error will be read into Stackdriver as structured log entries. You can use advanced logs filters to filter logs based on their fields.
-* Severities
-    * By default, logs written to the standard output are on the INFO level and logs written to the standard error are on the ERROR level. Structured logs can include a severity field, which defines the log's severity. glog-formatted logs' severity is set automatically.
-* Exporting to BigQuery
-    * You can export logs to external services, such as BigQuery or Pub/Sub, for additional analysis. Logs exported to BigQuery retain their format and structure.
-* Alerting
-    * You can use logs-based metrics to set up altering policies when Stackdriver Logging logs unexpected behavior.
-* Error Reporting
-    * You can use Stackdriver Error Reporting to collect errors produced in your clusters.
-
-## Logging
-fluentdが入っている。
-
-* [Customizing Stackdriver Logs for Kubernetes Engine with Fluentd  |  Solutions  |  Google Cloud](https://cloud.google.com/solutions/customizing-stackdriver-logs-fluentd)
-* [GoogleCloudPlatform/container-engine-customize-fluentd](https://github.com/GoogleCloudPlatform/container-engine-customize-fluentd)
-
 ## NGINX Ingress on GKE
 * [Ingress with NGINX controller on Google Kubernetes Engine | Ingress with NGINX controller on Google Kubernetes Engine  |  Google Cloud Platform Community  |  Google Cloud Platform](https://cloud.google.com/community/tutorials/nginx-ingress-gke)
 * [ingress-nginx/deploy at master · kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx/tree/master/deploy#installation-guide) 
@@ -319,8 +304,54 @@ fluentdが入っている。
 ## Cluasterのmaster
 clusterのmasterはWebUIから見えない?
 
-### Container CIDR
-clusterのCONTAINERにCIDRを指定できるが、`/9`-`/19`の間に収める必要がある。
+## Setting up IP aliasing
+* [IP Aliases  |  Kubernetes Engine  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases#considerations_for_cluster_sizing)
+
+Advantages
+
+* 他のComputer resourceとのIPの競合を防ぐ
+* 任意のsourceからEgress traficに送られないようにanti-spoofingができる
+* firewalll ruleをhost nodeとは別にpodに適用できる
+* Podから直にserviceにaccessできる
+* Aliased IPはBGPを通して、
+The networking layer can perform anti-spoofing checks to ensure that egress traffic is not sent with arbitrary source IPs.
+Pod IPs are natively routable within the Google Cloud Platform network (including via VPC Network Peering), so clusters can scale to larger sizes faster without using up route quota.
+Aliased IPs can be announced through BGP by the cloud-router, enabling better support for connecting to on-premises networks.
+Firewall controls for Pods can be applied separately from their hosting node.
+IP aliases allow Pods to directly access hosted services without using a NAT gateway.
+
+* Node IP
+    * between `/19` and `/28`
+    * between 8192 and 16
+    * Each node requires `/24` block
+* Pod IP
+    * between `/9` and `/28`
+    * between 8,192 and 2,097,152
+    * clusterのCONTAINERにCIDRを指定できるが、`/9`-`/19`の間に収める必要がある。
+* Service IP
+    * between `/18` and `/22`
+    * between 1,024 and 16,384 
+
+## IP Masquerade Agent
+* [IP Masquerade Agent  |  Kubernetes Engine  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent)
+
+* 以下の条件で動作
+    * from Kubernetes 1.7
+    * network policyがenabledかcluster CIDRが`10.0.0.0/8`以外
+* `ip-masq-agent` がdaemonで動いて、iptablesを設定する
+* defaultで`/etc/config/ip-masq-agent`の設定を60secでreaload
+* ConfigMapで設定を変更できる
+
+```
+# iptables -t nat -L IP-MASQ-AGENT -v -n
+Chain IP-MASQ-AGENT (1 references)
+ pkts bytes target     prot opt in     out     source               destination
+   13   828 RETURN     all  --  *      *       0.0.0.0/0            169.254.0.0/16       /* ip-masq-agent: local traffic is not subject to MASQUERADE */
+    0     0 RETURN     all  --  *      *       0.0.0.0/0            10.0.0.0/8           /* ip-masq-agent: local traffic is not subject to MASQUERADE */
+    0     0 RETURN     all  --  *      *       0.0.0.0/0            172.16.0.0/12        /* ip-masq-agent: local traffic is not subject to MASQUERADE */
+    0     0 RETURN     all  --  *      *       0.0.0.0/0            192.168.0.0/16       /* ip-masq-agent: local traffic is not subject to MASQUERADE */
+    0     0 MASQUERADE  all  --  *      *       0.0.0.0/0            0.0.0.0/0            /* ip-masq-agent: outbound traffic is subject to MASQUERADE (must be last in chain) */
+```
 
 ## Error
 
