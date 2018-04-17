@@ -5,6 +5,10 @@ title: Google Kubernetes Engine Logging
 ## Google Kubernetes Engine Logging
 Collecting Docker Log Files with Fluentd and sending to GCP.
 
+* kubernetesの基本的なLoggingは同じ
+    * heapster->kubelet->cadvisor
+* fluentdでjournaldからcontainerのlogを送っている
+
 
 ## fluentd
 * [Logging Using Stackdriver | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-stackdriver/)
@@ -35,6 +39,24 @@ Collecting Docker Log Files with Fluentd and sending to GCP.
 ```
 $ kubectl get configmap --namespace kube-system
 $ kubectl get configmap fluentd-gcp-config-v?.?.? -o yaml > fluentd-gcp-config.yml
+```
+
+Loggingの処理のながれはcommentに詳しく書かれている
+[container-engine-customize-fluentd/fluentd-configmap.yaml at master · GoogleCloudPlatform/container-engine-customize-fluentd](https://github.com/GoogleCloudPlatform/container-engine-customize-fluentd/blob/master/kubernetes/fluentd-configmap.yaml)
+
+* hostの`/var/lib/docker/containers/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b-json.log`にlogに出力される
+    * filenameがdocker ID
+* kubernetesはこのlog fileへのsymbolic linkを`/var/log/containers`にpodとcontainerの名前とともにはる
+    * `/var/log/containers/synthetic-logger-0.25lps-pod_default-synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log`
+    * -> `/var/lib/docker/containers/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b/997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b-json.log`
+* fluentdは`/var/log`をmountしているので、このlog fileからtagを以下のように作る
+    * `var.log.containers.synthetic-logger-0.25lps-pod_default-synth-lgr-997599971ee6366d4a5920d25b79286ad45ff37a74494f262e3bc98d909d0a7b.log`
+* record reformerが`var.log.containers`を消す
+* `kubernetes.synthetic-logger-0.25lps-pod_default-synth-lgr`をtagにprefixとしてつける
+
+
+```
+<pod-name>_<namespace>_<container-name>-<container-id>.log
 ```
 
 ## prometheus-to-sd
