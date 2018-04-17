@@ -227,6 +227,8 @@ templateは`.github/`の下か`docs/`の下におく。
     * issueとPRのtemplateのgenerator
     * 童話風のストーリの質問に回答していくとissueないしPRのtemplateを得ることができる
     * Chapter1で最初に、Issueのtemplateを作るか、PRのtemplateを作るかを選択できる
+* [devspace/awesome-github-templates: Curated list of GitHub Issues and Pull Requests templates](https://github.com/devspace/awesome-github-templates)
+* [stevemao/github-issue-templates: A collection of GitHub issue and pull request templates](https://github.com/stevemao/github-issue-templates)
 
 * `PULL_REQUEST_TEMPLATE.md`
 * `ISSUE_TEMPLATE.md`
