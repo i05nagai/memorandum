@@ -16,26 +16,54 @@ For OSX
 brew install terraform
 ```
 
-## Use on docker
-* [hashicorp/terraform - Docker Hub](https://hub.docker.com/r/hashicorp/terraform/)
-
-Hashicorpが提供しているdocker imageがある。。
+to use mulptile version of terraforms
 
 ```
-docker run -i -t hashicorp/terraform:light plan main.tf
+$ brew install tfenv
 ```
 
-fullはrepositoryのsource code全て含まれている。
-developmentとdebugはこちらが役にたつ。
-
-```
-docker run -i -t hashicorp/terraform:full plan main.tf
-```
+## Concepts
+* workspace
+    * dev/stg/prodなどの環境の切り替えに使われる
+    * [State: Workspaces - Terraform by HashiCorp](https://www.terraform.io/docs/state/workspaces.html)
+* state
+    * [State - Terraform by HashiCorp](https://www.terraform.io/docs/state/purpose.html)
+    * 作成したresourceが持つstate
+    * stateのimportもできる
+        * [Import: Usage - Terraform by HashiCorp](https://www.terraform.io/docs/import/usage.html)
+* remote state
+    * stateをGCSなどのremoteにもてる
+    * teamで共有したり、CIで利用する
+    * [State: Remote Storage - Terraform by HashiCorp](https://www.terraform.io/docs/state/remote.html)
+* locals
+    * [Configuring Local Values - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/locals.html)
+    * [Variable cannot contain interpolation? · Issue #14343 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/14343)
+    * variables blockの中でvarは利用できないので、 変数を使って値を生成する際などに利用する。
+    * varに書いている定数はだいたい置き換えが可能
+* variables
+    * resource定義の変数として使う
+* outputs
+    * resourceの出力結果
+* modules
+    * 設定fileをmoduleとして共通化できる
+* resources
+    * terraformが扱うinfrastructure
+* resroucde addressing
+    * [Internals: Resource Address - Terraform by HashiCorp](https://www.terraform.io/docs/internals/resource-addressing.html)
+    * resourceはそれぞれaddressをもつ
+        * `[module path][resource spec]`
+    * moduleを使っている場合は、moduleで使っているresourceもaddressを持つ
+        * `module.A.module.B.module.C...`
+    * countを使っている場合は番号がつく。
+* data sources
+    * resourceを作成も管理しないが、参照だけしたい場合に使う
+    * 作成はしないが管理したい場合は、state importを使う
 
 ## Syntax
 基本はHCLで記述する。
 
 * true/false
+    * boolean
 * `${var.foo}` で変数参照
 * commentは`#`
 * 数字は10進数、`0x`をつけると16進数
@@ -88,20 +116,105 @@ resource = [{
 }]
 ```
 
-### Available Variables
-* `${}`
-* `${var.amis["us-east-1"]}`
-* `${var.subnets}`
+### Interpolation syntax
+* [Interpolation Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/interpolation.html)
+
+`${}`で変数や関数を参照でき、Resource内で使える。
+
+* `"${var.subnets}"`
     * subnetsがlistの場合、listとして変数を参照
-* `${var.subnets[idx]}`
-    * listのidx番目
-* `${self.private_ip_address}`
-    * selfをつけるとresourceの変数
+* `"${var.foo}"`
+    * `foo`という名前のstring variableのreference
+* `"${var.foo["hoge"]}"`
+    * `foo`という名前のmap variableの`hoge` key の値
+* `"${var.foo[idx]}"`
+    * `foo`という名前のlist variableの`idx` 番目の値
+* `"${self.foo}"`
+    * 同じresource内の`foo`というvariableの値
+* `"${resource_type.resource_name.attribute}"`
+    * resourceの`resource_type` typeの`resource_name`という名前がついたresourceの`attribute`の値
+* `"${data.data_type.data_name.attribute}"`
+    * dataの`data_type` typeの`data_name`という名前がついたdataの`attribute`の値
+* `"${data.data_type.data_name.0.attribute}"`
+* `"${var.env == "production" ? var.prod_subnet : var.dev_subnet}"`
+    * if文
+* `"${lookup(map, key [, default])}"`
+    * keyがあればkeyの値を出力、なければdefault
+    * defaultが省略されているか、keyがないときerror
 
-### override
-* `_override`で終わる`.tf`か`override.tf`のファイルで設定の上書きができる。
+### count
+* [Terraform tips & tricks: loops, if-statements, and gotchas](https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9)
 
-### Resource
+terraformにおけるfor文
+
+```terraform
+resource "resource_type" "resource_name" {
+    count = 3
+}
+```
+
+countをifの用に使う
+
+```terrafomr
+# if var.create_eip = true => count is 0 => does not create
+# if var.create_eip = false => count is 1 => create
+resource "aws_route53_record" "example" {
+  count = "${1 - var.create_eip}"
+  zone_id = "A1B2CDEF3GH4IJ"
+  name = "foo.example.com"
+  type = "A"
+  ttl = 300
+  records = ["${aws_instance.example.public_ip}"]
+}
+```
+
+`data "template_file"`でstringのifができる。
+
+```terraform
+data "template_file" "user_data_shell" {
+  count = "${var.use_shell_script_user_data}"
+  template = <<-EOF
+              #!/bin/bash
+              run-microservice.sh
+              EOF
+}
+data "template_file" "user_data_cloud" {
+  count = "${1 - var.use_shell_script_user_data}"
+  template = <<-EOF
+              #cloud-config
+              runcmd:
+                - run-microservice.sh
+              EOF
+}
+
+# if var.use_shell_script_user_data = true => user_data_cloud = empty
+# if var.use_shell_script_user_data = false => user_data_shell = etpty
+resource "aws_instance" "example" {
+  ami = "${var.ami}"
+  instance_type = "${var.instance_type}"
+  user_data = "${element(concat(data.template_file.user_data_shell.*.rendered, data.template_file.user_data_cloud.*.rendered), 0)}"
+  
+  tags {
+    Name = "${var.service_name}"
+  }
+}
+```
+
+null_data_soruceを使う
+
+```
+# map[string]
+data "null_data_source" "values" {
+    count = 1
+    inputs = {
+        key = ""
+    }
+}
+# ${data.null_data_soruce.values.*.outputs}
+
+```
+
+## Resource
 * [Configuring Resources - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/resources.html)
 
 `TYPE`, `NAME`の組で記載する。
@@ -126,17 +239,15 @@ resource TYPE NAME {
 
 Resourceごとにexportされる外部から参照できる属性がある。
 
-### DataSource
+## DataSource
 * [Configuring Data Sources - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/data-sources.html)
 
 data sourceは例えば、既存のinstanceの情報を取得してterraformに提供する。
-
 
 ```
 data "data_type" "data_name" {
 }
 ```
-
 
 ### Provider Configuration
 * [Configuring Providers - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/providers.html)
@@ -179,15 +290,6 @@ resource "aws_instance" "foo" {
 }
 ```
 
-### Local values
-* [Configuring Local Values - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/locals.html)
-* [Variable cannot contain interpolation? · Issue #14343 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/14343)
-
-variables blockの中でvarは利用できないので、 変数を使って値を生成する際などに利用する。
-varに書いている定数はだいたい置き換えが可能
-
-
-
 ### Variables
 * [Configuring Variables - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/variables.html)
     * variablesの中でvarのinterpolationは使えない
@@ -205,18 +307,6 @@ variable NAME {
     * string, map, list
 * `default`はNAMEで参照した場合に利用される値
 
-## Debug
-CLIの実行時に環境変数を設定することで、実行することで、logの出力を変更できる
-
-* `TF_LOG`
-    * TRACE, DEBUG, INFO, WARN or ERROR
-    * defualt: INFO
-    * TRACE is the most verbose
-* `TF_LOG_PATH`
-    * logの出力先
-    * `/dev/stdout`
-* `[apply|plan] -parallelism=0`
-    * 出力が見づらくなるsync
 
 ## CLI
 
@@ -225,8 +315,11 @@ CLIの実行時に環境変数を設定することで、実行することで�
     * 他のコマンドと違って、何回実行しても結果は同じ
     * `-input=false`
         * inputのpromptをださないようにする
-* terraform apply
+* `terraform plan`
+* `terraform apply`
     * terraformの設定を適用する
+    * resourceの作成
+    * `terraform plan`+実行
     * `-var 'foo=bar'`
         * 実行時に変数の定義ができる
         * credentialの設定などに便利
@@ -234,8 +327,13 @@ CLIの実行時に環境変数を設定することで、実行することで�
         * binary形式で実行計画が出力される
     * `-state=statefile`
         * default は `terraform.tfstate`
+* `terraform destroy`
+    * resourceの停止
+* `terraform workspace`
+    * workspaceの切り替え管理
 * `terraform fmt`
     * formatter
+    * go fmtと同じようなもの
 
 ```
 terraform fmt -diff -write=true -list=true .
@@ -243,6 +341,7 @@ terraform fmt -diff -write=true -list=true .
 
 * `terraform validate [dir]`
     * dirctoryのtf fileをcheck
+* terraform import
 
 stateをimportできる。
 対応するconfig fileが存在する必要がある。
@@ -260,21 +359,38 @@ terraform import aws_instance.example i-abcd1234
 terraform state list
 ```
 
-stateのIdやparameterなどを見る。
+stateのidやparameterなどを見る。
 idが見れるので、別のworkspaceで同じstateをimportする際に便利。
 
 ```
 terraform state show <resource-address>
 ```
 
-## Resroucde Addressing
-* [Internals: Resource Address - Terraform by HashiCorp](https://www.terraform.io/docs/internals/resource-addressing.html)
-
-moduleを使っている場合は、moduleで使っているresourceもaddressを持つ
-countを使っている場合は番号がつく。
-
-
 ## Tips
+
+### Rename resource with state
+以下のcommandでstateのrenameができる。
+configurationを書き換えて、stateをrenameすればOK
+
+```
+terraform state mv SOURCE DESTINATION
+```
+
+### Debug
+CLIの実行時に環境変数を設定することで、実行することで、logの出力を変更できる
+
+* `TF_LOG`
+    * TRACE, DEBUG, INFO, WARN or ERROR
+    * defualt: INFO
+    * TRACE is the most verbose
+* `TF_LOG_PATH`
+    * logの出力先
+    * `/dev/stdout`
+* `[apply|plan] -parallelism=0`
+    * 出力が見づらくなるsync
+
+## override
+* `_override`で終わる`.tf`か`override.tf`のファイルで設定の上書きができる。
 
 ### Rename workspace / move state to another workspace
 * [[Improvement] Command: terraform workspace rename · Issue #16072 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/16072)
@@ -292,12 +408,6 @@ terraform workspace delete <old_workspace_name>
 
 ### Automation
 * [Running Terraform in Automation - Guides - Terraform by HashiCorp](https://www.terraform.io/guides/running-terraform-in-automation.html)
-
-* [Part 3.2: From Semi-Automation to Infrastructure as Code - Terraform Recommended Practices - Terraform by HashiCorp](https://www.terraform.io/docs/enterprise/guides/recommended-practices/part3.2.html#3-create-your-first-module)
-    * いつmoduleを使うべきか
-
-### Locals
-
 
 ### Input Variables
 * [Input Variables - Terraform by HashiCorp](https://www.terraform.io/intro/getting-started/variables.html)
@@ -413,81 +523,12 @@ $ terraform init \
 **Sensitive data**
 
 State fileにはpasswordなどのsensitive dataが保存される可能性がある。
-remote stateの場合はmemoryにのみstateが保存される。
-
-
-
-## Provisioner
-* [Provisioners - Terraform by HashiCorp](https://www.terraform.io/docs/provisioners/index.html)
-
-instanceなどを立ち上げた後に、設定をする際に用いる。
-provisonerのblockは複数記述できる。
-
-* Creation time provisoner
-    * resourceの作成時に一度だけ実行される
-    * resourceのupdateでは実行されない
-    * creation time provionerでfailすると状態は`tainted`になる
-* Destroy time provisioner
-    * provisonerのblockで`when = destory`を指定するとdestory time provionerになる
-
-### chef
-
-### local-exec
-terraformが動いているmachineで、コマンドを実行する。
-terraformの変数が使えるので、結果の出力などに使える？
-
-```
-resource "aws_instance" "web" {
-  # ...
-
-  provisioner "local-exec" {
-    command = "echo ${self.private_ip_address} > file.txt"
-  }
-
-  provisioner "local-exec" {
-    command = "echo ${self.private_ip_address} > file.txt"
-    when = destroy
-    on_failure = ["continue"|"fail"]
-  }
-}
-```
-
-### remote-exec
-各resourceでcommandを実行する。
-file provisionerでfileをcopyしてresource上でfileを実行するなどに使える。
-commandのListを渡すのが`local-exec`との違い。
-
-```
-resource "aws_instance" "web" {
-  # ...
-
-  provisioner "remote-exec" {
-    inline = [
-      "puppet apply",
-      "consul join ${aws_instance.web.private_ip}",
-    ]
-  }
-}
-```
-
-* `inline`
-* `script`
-    * terraformが実行されているmachineのFileをcopyして、実行する
-    * fileは実行後には削除される
-* `scripts`
-    * terraformが実行されているmachineのFileをcopyして、実行する
-    * fileは上から順番に実行される
-    * fileは実行後には削除される
-
-
-### File Provisoner
-file、directoryをcopyする。
-
-### null Provisoner
-特定のresourceに紐付かないが、triggerに応じてProvisonを実行する。
+remote stateの場合はbackendのfile上にsensitiveなdataが保存される。
 
 ## Workspace
 * [State: Workspaces - Terraform by HashiCorp](https://www.terraform.io/docs/state/workspaces.html)
+* [Naming - Workspaces - Terraform Enterprise - Terraform by HashiCorp](https://www.terraform.io/docs/enterprise/workspaces/naming.html)
+    * enterpriseで例としてあがっているnaming
 
 0.10から追加された機能で、異なるstateを保持できる。
 production, staging, development環境で異なるinfrastructureの管理をする場合などに利用する。
@@ -520,17 +561,18 @@ resource "aws_instance" "example" {
 
 ## Modules
 以下のmoduleのsourceとして利用できる
-    * [Module Sources - Terraform by HashiCorp](https://www.terraform.io/docs/modules/sources.html)
-    * [Terraform Module Registry](https://registry.terraform.io/?_ga=2.60555309.1863698067.1515572881-174552816.1502194891)に登録されているmodule
-    * local file
-        * `source = './path/to/module'`
-    * GitHub
-    * BitBucket
-    * Git, Mercurial
-    * HTTP URL
-    * S3 bucket
 
-moduleの呼び出し。
+* [Module Sources - Terraform by HashiCorp](https://www.terraform.io/docs/modules/sources.html)
+* [Terraform Module Registry](https://registry.terraform.io/?_ga=2.60555309.1863698067.1515572881-174552816.1502194891)に登録されているmodule
+* local file
+    * `source = './path/to/module'`
+* GitHub
+* BitBucket
+* Git, Mercurial
+* HTTP URL
+* S3 bucket
+
+moduleの呼び出し方
 
 
 ```tf
@@ -550,11 +592,19 @@ output "output_name" {
 }
 ```
 
+**Moduleの作り方**
+
+* [Creating Modules - Terraform by HashiCorp](https://www.terraform.io/docs/modules/create.html)
+
 最小のstandard module structure
 
 * `main.tf`
     * moduleのentrypoint
     * simpleな構成の場合は、すべてのresource定義が含まれる
+* `variables.tf`
+    * moduleのvariable定義
+* `outputs.tf`
+    * moduleのoutputs定義
 
 ```
 .
@@ -564,7 +614,7 @@ output "output_name" {
 ├── outputs.tf
 ```
 
-より複雑な場合
+より複雑な場合、moduleはNestできる。
 
 ```
 ├── README.md
@@ -587,7 +637,12 @@ output "output_name" {
 │   ├── .../
 ```
 
-## Environment Variablaeso
+いつmoduleを使うべきか
+
+* [Part 3.2: From Semi-Automation to Infrastructure as Code - Terraform Recommended Practices - Terraform by HashiCorp](https://www.terraform.io/docs/enterprise/guides/recommended-practices/part3.2.html#3-create-your-first-module)
+
+
+## Environment Variables
 
 Terraformのvairableをenvironment varibleから読み込める。
 `TF_VAR_<variable name>`
@@ -610,99 +665,6 @@ providerが古いterraformに対応していない可能生がある。
 provider.terraform: dial unix ....|netrpc: connect: no such file or directory
 ```
 
-## Interpolation syntax
-* [Interpolation Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/interpolation.html)
-
-`${var.foo}`で変数や関数を参照でき、Resource内で使える。
-
-* `${var.foo}`
-    * `foo`という名前のstring variableのreference
-* `${var.foo["hoge"]}`
-    * `foo`という名前のmap variableの`hoge` key の値
-* `${var.foo[idx]}`
-    * `foo`という名前のlist variableの`idx` 番目の値
-* `${self.foo}`
-    * 同じresource内の`foo`というstring variableの値
-* `${resource_type.resource_name.attribute}`
-    * resourceの`resource_type` typeの`resource_name`という名前がついたresourceの`attribute`の値
-* `${data.data_type.data_name.attribute}.`
-    * `resource`の
-* `${data.data_type.data_name.0.attribute}.`
-* `"${var.env == "production" ? var.prod_subnet : var.dev_subnet}"`
-
-* `lookup(map, key [, default])`
-    * keyがあればkeyの値を出力、なければdefault
-    * defaultが省略されていれば、keyがないときerror
-
-## count
-* [Terraform tips & tricks: loops, if-statements, and gotchas](https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9)
-
-```terraform
-resource "resource_type" "resource_name" {
-    count = 3
-}
-```
-
-countをifの用に使う
-
-```terrafomr
-# if var.create_eip = true => count is 0 => does not create
-# if var.create_eip = false => count is 1 => create
-resource "aws_route53_record" "example" {
-  count = "${1 - var.create_eip}"
-  zone_id = "A1B2CDEF3GH4IJ"
-  name = "foo.example.com"
-  type = "A"
-  ttl = 300
-  records = ["${aws_instance.example.public_ip}"]
-}
-```
-
-`data "template_file"`でstringのifができる。
-
-```terraform
-data "template_file" "user_data_shell" {
-  count = "${var.use_shell_script_user_data}"
-  template = <<-EOF
-              #!/bin/bash
-              run-microservice.sh
-              EOF
-}
-data "template_file" "user_data_cloud" {
-  count = "${1 - var.use_shell_script_user_data}"
-  template = <<-EOF
-              #cloud-config
-              runcmd:
-                - run-microservice.sh
-              EOF
-}
-
-# if var.use_shell_script_user_data = true => user_data_cloud = empty
-# if var.use_shell_script_user_data = false => user_data_shell = etpty
-resource "aws_instance" "example" {
-  ami = "${var.ami}"
-  instance_type = "${var.instance_type}"
-  user_data = "${element(concat(data.template_file.user_data_shell.*.rendered, data.template_file.user_data_cloud.*.rendered), 0)}"
-  
-  tags {
-    Name = "${var.service_name}"
-  }
-}
-```
-
-null_data_soruceを使う
-
-```
-# map[string]
-data "null_data_source" "values" {
-    count = 1
-    inputs = {
-        key = ""
-    }
-}
-# ${data.null_data_soruce.values.*.outputs}
-
-```
 
 ### design
 
@@ -760,6 +722,30 @@ $ terraform plan
 * task runnerでのtargetの制御はある程度は必須。
 * workspacesをdev/stg/prodなどで分ける場合は、どのresourceをどのworkspaceで使うかどうかはあらかじめ設計しておく必要がある
 
+## Best practices
+* [Terraform職人入門: 日々の運用で学んだ知見を淡々とまとめる - Qiita](https://qiita.com/minamijoyo/items/1f57c62bed781ab8f4d7)
+    * よくまとまっている
+* [Terraform Best Practices in 2017 - Qiita](https://qiita.com/shogomuranushi/items/e2f3ff3cfdcacdd17f99)
+    * directory設計のpractice
+* [best-practices/terraform at master · hashicorp/best-practices](https://github.com/hashicorp/best-practices/tree/master/terraform)
+    * officialのbest practice
+    * workspaceなどの導入により、deprecatedになっている
+
+## Use on docker
+* [hashicorp/terraform - Docker Hub](https://hub.docker.com/r/hashicorp/terraform/)
+
+Hashicorpが提供しているdocker imageがある。。
+
+```
+docker run -i -t hashicorp/terraform:light plan main.tf
+```
+
+fullはrepositoryのsource code全て含まれている。
+developmentとdebugはこちらが役にたつ。
+
+```
+docker run -i -t hashicorp/terraform:full plan main.tf
+```
 
 ## Reference
 * [Configuration Syntax - Terraform by HashiCorp](https://www.terraform.io/docs/configuration/syntax.html)
