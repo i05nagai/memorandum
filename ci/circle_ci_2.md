@@ -4,6 +4,15 @@ title: Circle CI 2.0
 
 ## Circle CI 2.0
 
+## Environment variableso
+* built-in environment variables
+    * [Using Environment Variables - CircleCI](https://circleci.com/docs/2.0/env-vars/#circleci-built-in-environment-variables)
+    * `CIRCLE_SHA1`
+        * buildしているgit commitのSHA1
+    * `CIRCLE_TAG`
+        * gittag
+    * `CIRCLE_WORKING_DIRECTORY`
+
 ## Configuration
 * [Configuration Reference - CircleCI](https://circleci.com/docs/2.0/configuration-reference/)
 `.circleci/config.yml`
