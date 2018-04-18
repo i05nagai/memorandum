@@ -96,6 +96,8 @@ I cross off the customer's name from the reservation list.
     * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
 * code/codes
     * [grammatical number - Is it wrong to use the word "codes" in a programming context? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/20455/is-it-wrong-to-use-the-word-codes-in-a-programming-context)
+* maintenace cost
+    * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
 
 ## Reference
 
