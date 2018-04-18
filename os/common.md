@@ -147,6 +147,7 @@ uptime
 ```
 dmesg | tail
 ```
+
 vmstat 1
 mpstat -P ALL 1
 pidstat 1
