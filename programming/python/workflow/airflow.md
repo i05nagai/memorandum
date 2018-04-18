@@ -651,6 +651,9 @@ airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn
 * [Re: airflow supervisord scripts do not work](http://mail-archives.apache.org/mod_mbox/airflow-dev/201608.mbox/%3CCAK+2U_2BqDEfyvf2xa=RaGuDA6Fusmqx+HyyHX0DxE9ti=K5Xw@mail.gmail.com%3E)
 * [Supervisordの練習(Airflow)](https://blog.masu-mi.me/post/2017/04/12/start_supervisord/)
 
+### Health check
+`/health` がhealthcheck用のpass
+
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)

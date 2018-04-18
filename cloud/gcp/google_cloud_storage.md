@@ -279,5 +279,3 @@ gsutil logging get gs://bucket
 
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
-
-

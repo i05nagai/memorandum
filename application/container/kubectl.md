@@ -3,16 +3,33 @@ title: kubectl
 ---
 
 ## kubectl
+
+## config
+
 設定の一覧を見る
 
 ```
-kubectl config view 
+kubectl config view
 ```
 
 defaultのnamespaceを設定する。
 
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=<insert-namespace-name-here>
+```
+
+Show cluster which you are managin
+
+```
+$ kubectl config current-context
+```
+
+Change cluster.
+
+```
+$ kubectl config set-cluster <cluster-name>
+# for GKE
+$ gcloud container clusters get-credentials <cluster-name>
 ```
 
 ## Patch

@@ -73,6 +73,14 @@ taskの一覧
 ./gradlew properties
 ```
 
+`JavaCompile`のtaskk時にoptionを付与できる。
+
+```
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ["-Xdoclint:none", "-Xlint:none", "-nowarn"]
+}
+```
+
 ## Build scripts
 * `allprojects { }`
     * Configures this project and each of its sub-projects.
@@ -143,6 +151,16 @@ buildscript {
 }
 ```
 
+## CLI
+
+```
+gradle [options]
+```
+
+* `--profiler`
+    * build時のprofiling
+* `--scan`
+    * build時のprofiling
 
 
 ## Reference

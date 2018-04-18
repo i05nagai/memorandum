@@ -57,6 +57,14 @@ print(client.images())
     * `login`
 
 
+## Tips
+
+### remove container
+docker runのoption `--rm`
+
+```
+client.remove_container(container_id)
+```
 
 ## Reference
 * [docker/docker-py: A Python library for the Docker Engine API](https://github.com/docker/docker-py)

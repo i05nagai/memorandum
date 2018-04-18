@@ -227,6 +227,8 @@ templateは`.github/`の下か`docs/`の下におく。
     * issueとPRのtemplateのgenerator
     * 童話風のストーリの質問に回答していくとissueないしPRのtemplateを得ることができる
     * Chapter1で最初に、Issueのtemplateを作るか、PRのtemplateを作るかを選択できる
+* [devspace/awesome-github-templates: Curated list of GitHub Issues and Pull Requests templates](https://github.com/devspace/awesome-github-templates)
+* [stevemao/github-issue-templates: A collection of GitHub issue and pull request templates](https://github.com/stevemao/github-issue-templates)
 
 * `PULL_REQUEST_TEMPLATE.md`
 * `ISSUE_TEMPLATE.md`
@@ -279,6 +281,15 @@ jupyter nbconvert --to html NOTEBOOK-NAME.ipynb
 ```
 https://github.com/<user-name>.keys
 ```
+
+## Code Review
+* [Best Practices for Code Review | Learn Code Review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)
+* [コードレビューのベストプラクティス【和訳】 - Qiita](https://qiita.com/terra_yucco/items/d101a57566a5e9b3a076)
+* [About pull request reviews - User Documentation](https://help.github.com/articles/about-pull-request-reviews/)
+* [guides/code-review at master · thoughtbot/guides](https://github.com/thoughtbot/guides/tree/master/code-review)
+* [andela/code-review-guidelines: Code Review Guidelines for Andela](https://github.com/andela/code-review-guidelines)
+* [How to write the perfect pull request | The GitHub Blog](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/)
+* [GitHub「完璧なプルリクの書き方を教えるぜ」 - Qiita](https://qiita.com/umanoda/items/93aec41213f8e3ce14c8)
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)

@@ -398,5 +398,12 @@ ORDER BY
   max DESC
 ```
 
+### pricing of failed query
+* https://cloud.google.com/bigquery/docs/best-practices-costs#limit_query_costs_by_restricting_the_number_of_bytes_billed
+
+* maximum bytes billed でfailした場合は料金はかからない
+* You aren't charged for queries that return an error, or for queries that retrieve results from the cache.
+* [Pricing  |  BigQuery  |  Google Cloud](https://cloud.google.com/bigquery/pricing#on_demand_pricing)
+
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)

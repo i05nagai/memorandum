@@ -1,3 +1,7 @@
+---
+title: pytest-mock
+---
+
 ## pytest mock
 `pytest-mock`は `mock`packageをpytestのfixtureとして使えるようにしたもの。
 `mock` packkageは現在、`unittest` moduleに統合されている。
@@ -72,11 +76,22 @@ def test_pytest(mocker):
 ```python
 import some_module as target
 
-def test_
 mocker.patch.object(target, "function_name")
 target.function_name.return_value = expect
 actual = target.(dataset_name, table_name, path_to_schema)
 target.function_name.assert_called_once_with(command)
+```
+
+### Return multiple values
+* [Practical Unit Testing with Mocks in Python3](https://www.phizzle.space/python/2017/03/31/practical-unit-testing-mocks-python-3.html)
+
+```python
+mock_object = MagicMock()
+mock_object.method_to_mock.side_effect = [
+    5,
+    4,
+    10
+]
 ```
 
 ## Reference

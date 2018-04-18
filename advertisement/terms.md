@@ -44,7 +44,6 @@
     * [What is Mobile Ad Mediation and How Does it Work?](http://www.adotas.com/2014/07/what-is-mobile-ad-mediation-and-how-does-it-work/)
 * iframe buster
 * linear
-    * 
 * letter boxing
     * 映像技術におけるレターボックス（英語：Letter box）とは、映像メディアの表示画面において他の画面サイズ規格でつぶれて表示されないよう、表示互換性をとるために、本来および横長比率の映像の撮影された映像部分の上限部に黒帯を追加した状態のものを呼ぶ。
 * playback
@@ -76,6 +75,12 @@
     * 1番高い入札価格以外の入札価格も保持しておき、browserがrereshなどされた場合に、もう一度bid requestを出さずに、2番目に高かったbid requestを使う
 * publisher = media
     * web siteを持っていて広告を掲載する側
+* viewablity
+    * 定義は一つに定まってない
+        * 実際に広告が見られたかどうか
+        * 閲覧可能な広告枠か、非表示広告枠でないかなど
+    * [Viewability Rate Definition | The Online Advertising Guide](https://theonlineadvertisingguide.com/glossary/viewability-rate/)
+    * pageの下部にある広告は、page下部がin viewになった時に広告requestを投げればviewablity rateをあげられる
 
 
 定義はIABのstudy guideによる

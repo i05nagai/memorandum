@@ -66,6 +66,9 @@ brew cask install intellij-idea
 * [Live templates, code snippets](https://www.jetbrains.com/help/idea/2016.3/live-templates.html)
 * path
     * OSX: `~/Library/Preferences/IdeaIC2017.3/templates`
+* snippetの追加
+    * [Creating and Editing Live Templates](https://www.jetbrains.com/help/idea/2016.3/creating-and-editing-live-templates.html)
+    * `$<variable name>$`でvariables
 
 ## Add doc comment
 * [Creating Documentation Comments - Help | IntelliJ IDEA](https://www.jetbrains.com/help/idea/creating-documentation-comments.html)
@@ -102,5 +105,11 @@ Testの自動追加は、classを選択して、`option + Enter`で`Create test`
 diaglogに必要な設定を記述した後、OKを押せば、Test fileの保存先が指定できる。
 
 Test classで`Cmd + N`でtest methodの生成ができる。
+
+### Never use wildcard imports
+* [settings - IntelliJ: Never use wildcard imports - Stack Overflow](https://stackoverflow.com/questions/3348816/intellij-never-use-wildcard-imports)
+
+Editor -> CodeStyle -> Kotlin -> Package to use codestyle
+
 
 ## Reference

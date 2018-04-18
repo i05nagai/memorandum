@@ -54,6 +54,7 @@ failした場合の再実行の際には、日付を気にする必要がなく�
 
 
 ## Docker operator
+commandに複数の引数を渡す場合は`'["bash", "echo", "{{ ds }}"]'`で文字列で渡せばtemplateを展開する。
 
 ### macros in Docker operator
 * `command` argumentのみでmacrosが使える

@@ -38,5 +38,13 @@ Private zoneとPublic zoneがoverlapしているとき、
 * matchしないものは全てpublic DNS resolverでかいけつ
 * private zoneのDNSで一致するrecordがない場合は、public DNSへforwardingされずに `NXDOMAIN` recordがかえる
 
+## Public host zone
+
+* defaultで4つのNS serverが各host zoneに割り当てられる
+
+
 ## Reference
 * [What Is Amazon Route 53? - Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)
+* [DNSとかネームサーバとかRoute53とかAレコードとかCNAMEとかがわからない人のためのまとめ - ふじいけ技術メモ](http://fujiike.hateblo.jp/entry/2015/09/14/191934)
+* [AWS再入門2018 Amazon Route 53（DNS）編 ｜ Developers.IO](https://dev.classmethod.jp/cloud/aws/2018-aws-re-entering-route53/)
+* [Managed Cloud DNS - Domain Name System - Amazon Route 53 | AWS](https://aws.amazon.com/route53/)

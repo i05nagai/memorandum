@@ -128,4 +128,59 @@ resourcemanager.projects.getIamPolicy for host project host-procjet-id
 ```
 
 
+## VPN aws-gcp
+* (1) GCPのVPNでcloud routerを作る
+* (2) AWSの`Customer gateway`を作る
+    * 1のIPを指定する
+* (3) AWSの`Virtual Private Gateway`がなければ作る
+* (4) AWSの`VPN connection`作る
+* (5) VPNのConfigurationをDLする
+* (6) GCPのVPNを作成する
+
+AWSのVPN connectionを作ると以下の設定fileがDLできる。
+
+* `Download Configuration`
+* 以下にしてDL
+    * Vendor: `Generic`
+    * Platform: `Generic`
+    * Sowftware: `Vendor Agnostic`
+
+```
+Outside IP Addresses:
+  - Customer Gateway 		        : outside.customer.gateway.ip
+  - Virtual Private Gateway	        : outside.private.gateway.ip
+		
+Inside IP Addresses
+  - Customer Gateway         		: inside.customer.gateway.ip/30
+  - Virtual Private Gateway             : inside.private.gateway.ip/30
+
+
+BGP Configuration Options:
+  - Customer Gateway ASN	          : customer.gateway.asn
+  - Virtual Private  Gateway ASN          : private.gateway.asn
+  - Neighbor IP Address     		  : neighbor.ip
+  - Neighbor Hold Time       : ...
+```
+
+neighbor.ip = inside.private.gateway.ip
+
+
+* forwarding rules
+    * ip address
+        * statci.ip attached to router
+* vpn-tunnle-interface
+    * ip range
+        * inside.customer.gateway.ip/30
+* vpn-tunnel 
+    * (remote_peer_gateway) peer_ip
+        * outside.private.gateway.ip
+* Google cloud gateway
+    * ip address
+        * outside.customer.gateway.ip
+* bgp
+    * peer_ip_address
+        * Neighbor IP Address
+        * 
+
+
 ## Reference

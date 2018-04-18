@@ -4,6 +4,77 @@ title: Fluentd
 
 ## Fluentd
 
+
+## CLi
+
+```
+fluend [Options]
+    -s, --setup [DIR=/etc/fluent]    install sample configuration file to the directory
+    -c, --config PATH                config file path (default: /etc/fluent/fluent.conf)
+        --dry-run                    Check fluentd setup is correct or not
+        --show-plugin-config=PLUGIN  Show PLUGIN configuration and exit(ex: input:dummy)
+    -p, --plugin DIR                 add plugin directory
+    -I PATH                          add library path
+    -r NAME                          load library
+    -d, --daemon PIDFILE             daemonize fluent process
+        --no-supervisor              run without fluent supervisor
+        --user USER                  change user
+        --group GROUP                change group
+    -o, --log PATH                   log file path
+    -i CONFIG_STRING,                inline config which is appended to the config file on-fly
+        --inline-config
+        --emit-error-log-interval SECONDS
+                                     suppress interval seconds of emit error logs
+        --suppress-repeated-stacktrace [VALUE]
+                                     suppress repeated stacktrace
+        --without-source             invoke a fluentd without input plugins
+        --use-v1-config              Use v1 configuration format (default)
+        --use-v0-config              Use v0 configuration format
+    -v, --verbose                    increase verbose level (-v: debug, -vv: trace)
+    -q, --quiet                      decrease verbose level (-q: warn, -qq: error)
+        --suppress-config-dump       suppress config dumping when fluentd starts
+    -g, --gemfile GEMFILE            Gemfile path
+    -G, --gem-path GEM_INSTALL_PATH  Gemfile install path (default: $(dirname $gemfile)/vendor/bundle)
+```
+
+## Preinstallation
+* [Before Installing Fluentd | Fluentd](https://docs.fluentd.org/v0.12/articles/before-install)
+
+
+* Set up NTP
+    * 重要
+    * AWSでは、AWS (Amazon Web Services) users we recommend to use Amazon Time Sync Serviceを使う
+* Increase Max number of File Descriptors
+    * `ulimit -n`
+        * file descriptorの上限
+        * `1024`であれば、insufficient
+        * `65536`くらいであれば、large deploymentでも安全o
+    * 具体的には以下の設定値を参考にして消えmる
+    * `in_tail`
+        * The number of watching files
+    * `in_forward`
+        * The number of incoming access
+    * `buf_file`
+        * The number of buffer chunks. It is configured via buffer parameters
+    * `output`
+        * The used file descriptors are less than others. Temporary file for upload, connection pooling in the client library, etc
+* Optimize Network Kernel Parameters
+    * `/etc/sysctl.conf`
+
+```conf
+net.core.somaxconn = 1024
+net.core.netdev_max_backlog = 5000
+net.core.rmem_max = 16777216
+net.core.wmem_max = 16777216
+net.ipv4.tcp_wmem = 4096 12582912 16777216
+net.ipv4.tcp_rmem = 4096 12582912 16777216
+net.ipv4.tcp_max_syn_backlog = 8096
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.ip_local_port_range = 10240 65535
+```
+
+
 ## Config
 
 ### source
@@ -74,203 +145,20 @@ typeでoutput pluginを指定。
 ## Plugins
 sourceでinput pluginを指定する。
 matchでoutput pluiginを指定する。
+以下のpluginがある。
 
-### in_http
+* input
+* output
+* filter
+* formatter
+* buffer
+    * output pluginsで使われる
 
-### in_forward
-
-### in_td_monitor_agent
-* [treasure-data/fluent-plugin-td-monitoring: Fluentd Plugin for Treasure Agent Monitoring Service](https://github.com/treasure-data/fluent-plugin-td-monitoring)
-
-TD monitoring serviceにnodeとbufferの情報をおくる。
-
-* `api_key`
-    * Treasure dataのAPI key
-* `instance_id`
-    * fluentdのnode間のID
-    * 指定しないとconfigへのpathが使われる
-
-```
-<source>
-  type td_monitor_agent
-  apikey YOUR_TREASURE_DATA_APIKEY
-  instance_id aggregator1
-</source>
-```
-
-### in_monitor_agent
-* [td-agent(fluentd) の monitor_agent で取得出来る情報を Graphite + Grafana で見る試み - ようへいの日々精進XP](http://inokara.hateblo.jp/entry/2014/05/31/081249)
-
-以下の設定をすると、httpアクセスでpluginなどの情報がとれる。
-
-```
-<source>
-  type monitor_agent
-  bind 0.0.0.0
-  port 24220
-</source>
-```
-
-```
-curl -s http://${TD_AGENT_HOST}:24220/api/plugins.json | jq .
-```
-
-### tail
-* [fluentd tailプラグインの仕様について - oranie's blog](http://oranie.hatenablog.com/entry/20121006/1349509523)
-
-tailプラグインはLinuxコマンドで言う「tail -F」と同じような挙動を取る事により、ファイルに追記された情報をfluentd内に取り込む事が出来ます。追記されたかどうかはIOイベントを読み取って動作します。
-
-* `path`
-    * 対象のファイルパスを指定
-* `tag`
-    * tailしたデータのtag
-* `format`
-    * tailするデータの形式
-    * template名か正規表現
-* `pos_file`
-    * tailしているファイルのどこまでをtailしたかを記録するファイルのパス
-
-### out_copy
-store句に複数のコピー先をかける。
-
-### out_forward
-別のfluentd nodeにデータをforwardする。
-replicationには`out_copy`を使う
-
-```config
-<match pattern>
-  @type forward
-  send_timeout 60s
-  recover_wait 10s
-  heartbeat_interval 1s
-  phi_threshold 16
-  hard_timeout 60s
-
-  <server>
-    name myserver1
-    host 192.168.1.3
-    port 24224
-    weight 60
-  </server>
-  <server>
-    name myserver2
-    host 192.168.1.4
-    port 24224
-    weight 60
-  </server>
-  <secondary>
-    @type file
-    path /var/log/fluent/forward-failed
-  </secondary>
-</match>
-```
-
-* `heartbeat_type`
-    * defaultはudp
-    * tcp, noneも可能
-* `flush_interval`
-    * defaultは60s
-    * bufferのflushの間隔？
-    * bufferの内容を書き出す間隔?
-* `buffer_type`
-    * defaultはmemory
-    * fileも可
-    * fileの場合は`buffer_path`が必要
-
-### out_kinesis_stream
-* [awslabs/aws-fluent-plugin-kinesis: Fluent Plugin for Amazon Kinesis](https://github.com/awslabs/aws-fluent-plugin-kinesis#configuration-kinesis_streams)
-
-以前は`kinesis` pluginだったがdeprecatedになっていくつかのpluginにわかれた`kinesis_stream`になった。
-
-```
-<match your_tag>
-  @type kinesis_streams
-  region us-east-1
-  stream_name your_stream
-  partition_key key  # Otherwise, use random partition key
-</match>
-```
-
-* `stream_name`
-    * kinesisのstreamの名前
-* `region`
-    * AWSのkinesiのreagionを文字列で指定
-* `partition_key`
-    * JSON objectが分割用のkeyを指定をする
-    * defaultはnilでnilだとrandomなKeyを割り当てて分割する
-    * このkeyのMD5 hashもとにshardに分散する
-
-
-### out_kinesis_producer
-* [awslabs/aws-fluent-plugin-kinesis: Fluent Plugin for Amazon Kinesis](https://github.com/awslabs/aws-fluent-plugin-kinesis)
-
-
-### kinesis_firehose
-* [awslabs/aws-fluent-plugin-kinesis: Fluent Plugin for Amazon Kinesis](https://github.com/awslabs/aws-fluent-plugin-kinesis)
-
-```
-<match your_tag>
-  @type kinesis_firehose
-  region us-east-1
-  delivery_stream_name your_stream
-</match>
-```
-
-* `delivery_stream_name`
-    * 
-* `region`
-
-
-throughputをあげるための設定の例。
-
-```
-  flush_interval 1
-  buffer_chunk_limit 1m
-  try_flush_interval 0.1
-  queued_chunk_flush_interval 0.01
-  num_threads 15
-```
-
-### out_rewrite_tag_filter
-* [fluent/fluent-plugin-rewrite-tag-filter: Fluentd Output filter plugin to rewrite tags that matches specified attribute.](https://github.com/fluent/fluent-plugin-rewrite-tag-filter)
-
-Apache httpの`mode_rewrite`のようにURLの下記かえを行う
-
-```
-<match td.apache.access>
-  @type rewrite_tag_filter
-  capitalize_regex_backreference yes
-  rewriterule1 path   \.(gif|jpe?g|png|pdf|zip)$  clear
-  rewriterule2 status !^200$                      clear
-  rewriterule3 domain !^.+\.com$                  clear
-  rewriterule4 domain ^maps\.example\.com$        site.ExampleMaps
-  rewriterule5 domain ^news\.example\.com$        site.ExampleNews
-  rewriterule6 domain ^(mail)\.(example)\.com$    site.$2$1
-  rewriterule7 domain .+                          site.unmatched
-</match>
-```
-
-書き換えのルール定義は以下。
-
-```
-rewriterule<num> <attribute> <regex_pattern> <new_tag>
-```
-
-* `<num>`
-    * ruleの番号
-* `<attribute>`
-    * path
-        * URLのhost以降のpathの部分の書き換え
-    * domain
-        * URLのdomain部分の書き換え
-    * status
-        * http statusの書き換え
-* `<regex_pattern>`
-    * 書き換え対象の正規表現
-* `<new_tag>`
-    * 書き換え後の文字列
-    * マクロみたいなものも一部使える
+### GCP
+* [GoogleCloudPlatform/fluentd-catch-all-config: Collection of configuration files for the Fluentd log collection agent. Intended to enable the automagic collection of most logs generated by many of the most popular applications run in the cloud.](https://github.com/GoogleCloudPlatform/fluentd-catch-all-config)
+* [GoogleCloudPlatform/google-fluentd: Packaging scripts for google-fluentd](https://github.com/GoogleCloudPlatform/google-fluentd)
 
 
 ## Reference
 * [Configuration File Syntax | Fluentd](http://docs.fluentd.org/v0.12/articles/config-file#1-ldquosourcerdquo-where-all-the-data-come-from)
+
