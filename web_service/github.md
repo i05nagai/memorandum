@@ -282,5 +282,14 @@ jupyter nbconvert --to html NOTEBOOK-NAME.ipynb
 https://github.com/<user-name>.keys
 ```
 
+## Code Review
+* [Best Practices for Code Review | Learn Code Review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)
+* [コードレビューのベストプラクティス【和訳】 - Qiita](https://qiita.com/terra_yucco/items/d101a57566a5e9b3a076)
+* [About pull request reviews - User Documentation](https://help.github.com/articles/about-pull-request-reviews/)
+* [guides/code-review at master · thoughtbot/guides](https://github.com/thoughtbot/guides/tree/master/code-review)
+* [andela/code-review-guidelines: Code Review Guidelines for Andela](https://github.com/andela/code-review-guidelines)
+* [How to write the perfect pull request | The GitHub Blog](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/)
+* [GitHub「完璧なプルリクの書き方を教えるぜ」 - Qiita](https://qiita.com/umanoda/items/93aec41213f8e3ce14c8)
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
