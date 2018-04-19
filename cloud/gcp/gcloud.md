@@ -40,11 +40,6 @@ gcloud auth activate-service-account your_service_account@email --key-file=/path
 gcloud auth revoke your@email
 ```
 
-emailを省略した場合のaccountを指定する。
-
-```
-gcloud config set account <service-account@gmail.com> 
-```
 
 ログインすると、`~/.config/gcloud/credentials`にアクセスに必要なcredentialが書き込まれる。
 gcloudはこのcredentialを使ってアクセスする。
@@ -63,15 +58,25 @@ service accountのaccess tokenを取得する。
 echo $(gcloud auth activate-service-account service_account@email --key-file /path/to/key_file.json; gcloud auth print-access-token)
 ```
 
-## CLi
+## config
 
-Update gcloud
+### set
+* [gcloud config set  |  Cloud SDK  |  Google Cloud](https://cloud.google.com/sdk/gcloud/reference/config/set)
+    * set可能なpropertyの一覧
+
+以下の形式で指定する。
 
 ```
-gcloud components update
+gcloud config set <section>/<property> VALUE
 ```
 
-## CLi
+emailを省略した場合のaccountを指定する。
+
+```
+gcloud config set account <service-account@gmail.com> 
+```
+
+## components
 
 Update gcloud
 
