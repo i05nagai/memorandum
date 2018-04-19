@@ -44,3 +44,6 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 ```
+
+
+## Reference
