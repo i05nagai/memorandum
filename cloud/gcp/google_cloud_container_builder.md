@@ -53,6 +53,7 @@ docker imageのbuildも可能。
 * [Build Configuration Overview  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/build-config)
 
 YAML/JSONでかく。
+`cloudbuild.yaml`という名前でつくる。
 全体のformatは以下のようになる。
 
 ```yaml
