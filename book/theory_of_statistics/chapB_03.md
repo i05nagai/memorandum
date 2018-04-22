@@ -7,6 +7,24 @@ book_section: 3
 
 ## B.3 Conditioning
 
+## B.3.3
+
+### Corollary B.55
+* $(S, \mathcal{A}, \mu)$,
+    * probability sp.
+* $(\mathcal{Y}, \mathcal{B}_{2})$,
+  * $$\forall x \in \mathcal{X}, \{x\} \in \mathcal{B}_{2}$$,
+* $(\mathcal{X}, \mathcal{B})$,
+
+
+$$
+  
+$$
+
+### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## B.3.4 Conditional Independence
 
 ### Definition B.57
@@ -82,8 +100,8 @@ $$,
 ### Theorem B.73
 * $(\mathcal{S}, \mathcal{A}, \mu)$,
   * probability sp.
-* $\mathcal{B} \subseteq \mathcal{A}$,
-* $\mathcal{C}  \subseteq \mathcal{B}$,
+* $\mathcal{C} \subseteq \mathcal{B} \subseteq \mathcal{A}$,
+  * $\mathcal{C}, \mathcal{B}$ are sub $\sigma$-algebra
 * $Z: S \rightarrow \mathbb{R}$,
   * measurable
   * 
@@ -108,7 +126,8 @@ $$
 
 ### proof
 (i) $\Rightarrow$ (ii)
-Suppose that $W$ is a version of $$\mathrm{E}[Z \mid \mathcal{B}]$$ is $\mathcal{C}$ measurable.
+Suppose that $W$ is a version of $$\mathrm{E}[Z \mid \mathcal{B}]$$ which is $\mathcal{C}$ measurable.
+We have
 
 $$
   \mathrm{E}[Z \mid \mathcal{B}]
@@ -117,6 +136,8 @@ $$
   \
   \mu \text{-a.s.}
 $$
+
+Then
 
 $$
   C \in \mathcal{C},
