@@ -14,9 +14,9 @@ book_section: 3
     * inde set
 * $Y$
     * r.v.
-* $$\{X_{i}\}_{i \in I$$,
+* $$\{X_{i}\}_{i \in I}$$,
     * r.v.
-* $\mathcal{A}_{i} := \sigma(X_{i})$
+* $$\mathcal{A}_{i} := \sigma(X_{i})$$,
 
 $$\{X_{i}\}$$ are said to be conditionally independent given $Y$ if
 
@@ -35,7 +35,7 @@ $$
       Y
   \right)
   =
-  \Prod_{j=1}^{n}
+  \prod_{j=1}^{n}
   \mu
   \left(
       A_{j}
@@ -56,7 +56,12 @@ If $Y$ is constant almost surely, we say $$\{X_{i}\}$$ are independent.
   * probability sp.
 * $Z$
   * r.v.
-  * $\mathrm{E}[|Z|] < \infty$,
+  * 
+$$
+  \mathrm{E}[
+    |Z|
+  ] < \infty
+$$,
 
 ### proof
 
@@ -81,11 +86,16 @@ If $Y$ is constant almost surely, we say $$\{X_{i}\}$$ are independent.
 * $\mathcal{C}  \subseteq \mathcal{B}$,
 * $Z: S \rightarrow \mathbb{R}$,
   * measurable
-  * $\mathrm{E}[|Z|] < \infty$
+  * 
+$$
+  \mathrm{E}[
+    |Z|
+  ] < \infty
+$$,
 
 Then following statements are equivalent;
 
-* (i) there exits a version of $$\mathrm{E}[Z \md \mathcal{B}]$$ $\mathcal{C}$ measurable
+* (i) there exists a version of $$\mathrm{E}[Z \mid \mathcal{B}]$$ which is $\mathcal{C}$ measurable
 * (ii)
 
 $$
