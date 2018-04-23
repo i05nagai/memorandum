@@ -39,14 +39,14 @@ docker imageのbuildも可能。
 
 ## Automating build
 * [Automating Builds using Build Triggers  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/running-builds/automate-builds)
+    * GitHub, Bitbucketの連携はOwner levelの権限が必要
 
 * You need source code in `Cloud Source Repository`, `GitHub`, or `Bitbucket`
 * build triggerの設定は、 Container Reigstryのpageから行う
 * Trigger type
     * 特定のbranchのcommit, 
     * 特定のtagのcommit,
-    * 
-* GitHub, Bitbucketを使うときは、projectにowener level permissionが必要
+* GitHub, Bitbucketを使うときは、projectにowner level permissionが必要
 * `[ci skip]`, `[skip ci]`でtriggerをskipできる
 
 ## Configuration
@@ -204,7 +204,6 @@ source codeのclone
 
 ### Accessing private GitHub repository
 * [Accessing Private GitHub Repositories  |  Cloud Container Builder Documentation  |  Google Cloud](https://cloud.google.com/container-builder/docs/access-private-github-repos)
-
 
 
 ## Reference
