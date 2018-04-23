@@ -95,4 +95,9 @@ docker exec -d ubuntu_bash touch /tmp/execWorks
 * `--detach, -d`
     * backgroundで実行
 
+## docker tag
+* [docker tag | Docker Documentation](https://docs.docker.com/engine/reference/commandline/tag/#extended-description)
+
+tagの最大長は128char
+
 ## Reference
