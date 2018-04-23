@@ -19,6 +19,10 @@ tmux用のkeybindに行こうするためのコマンド。
 keybindの一覧はprefixのあとに`:list-keys`でOK。
 もしくは、`prefix ?`
 
+* `w`
+    * windowの選択
+
+
 ### rename
 sessionのリネームは`prefix $`
 
@@ -44,6 +48,9 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 ```
+
+## Configurations
+* [tmux の status line の設定方法 - Qiita](https://qiita.com/nojima/items/9bc576c922da3604a72b)
 
 
 ## Reference
