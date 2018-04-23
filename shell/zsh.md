@@ -88,6 +88,10 @@ compdef _completion_function my_function
 ## prompt
 * [13 Prompt Expansion (zsh)](http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html)
 
+## Performance
+* [zshの起動が遅いのでなんとかしたい - Qiita](https://qiita.com/vintersnow/items/7343b9bf60ea468a4180)
+    * profileがとれる
+
 ## Reference
 * [ZSH Documentation (framed)](http://zsh.sourceforge.net/Doc/Release/index-frame.html)
 * [zshでの自作関数と、それに対する補完関数を実装する - Qiita](http://qiita.com/petitviolet/items/b1e8b5139169dd530919)
