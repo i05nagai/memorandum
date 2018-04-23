@@ -46,5 +46,53 @@ Containers          20                  18                  18.64 MB            
 Local Volumes       1                   1                   69.65 MB            0 B (0%)
 ```
 
+## docker images
+* [docker images | Docker Documentation](https://docs.docker.com/engine/reference/commandline/images/#filtering)
+
+imageの一覧を表示する
+
+* `--filter`
+    * imageのfiltering
+    * `key=value`で指定
+    * `dangling=true`
+        * `<none>`のcontainerを表示
+* `--quiet`
+    * container IDだけ表示
+
+
+## docker run
+* [Docker run リファレンス — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/engine/reference/run.html)
+* [docker run | Docker Documentation](https://docs.docker.com/engine/reference/commandline/run/)
+
+複数コマンドを使いたい場合は bashを使う。
+
+```
+docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
+```
+
+* `-v=[<host_directory:container_directory>]`
+    * `-v \`pwd\`:\`pwd\``
+        * で現在のディレクトリが使える。
+* `--workdir`
+* `--env "var_name=value"`
+    * 複数の場合は複数個つける？
+
+## docker exec
+container上でcommandを実行。
+
+```
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+
+```
+docker run --name ubuntu_bash --rm -i -t ubuntu bash
+```
+
+```
+docker exec -d ubuntu_bash touch /tmp/execWorks
+```
+
+* `--detach, -d`
+    * backgroundで実行
 
 ## Reference
