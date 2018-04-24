@@ -6,6 +6,13 @@ title: Google Cloud Container Builder
 docker imageで、Buildを実行する。
 docker imageのbuildも可能。
 
+## Build manualy
+以下を実行すると、localのfileをtar ballにまとめて、GCSにuploadされる。
+GCSからbuildが実行される。
+
+```
+gcloud container builds submit --config cloudbuild.yaml .
+```
 
 ## Image
 * [GoogleCloudPlatform/cloud-builders: Supported builder images for Google Cloud Container Builder](https://github.com/GoogleCloudPlatform/cloud-builders)
@@ -40,6 +47,8 @@ docker imageのbuildも可能。
 ## Automating build
 * [Automating Builds using Build Triggers  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/running-builds/automate-builds)
     * GitHub, Bitbucketの連携はOwner levelの権限が必要
+    * GitHub, BitBucket連携すると、buildの最初にsource codeをcheckoutが実行されるので、自分でchceckoutを記載する必要はない
+        * `/workspace`にrepositoryの中身が展開されている
 
 * You need source code in `Cloud Source Repository`, `GitHub`, or `Bitbucket`
 * build triggerの設定は、 Container Reigstryのpageから行う
@@ -81,7 +90,7 @@ options:
  substitutionOption: enum(SubstitutionOption)
  logStreamingOption: enum(LogStreamingOption)
 substitutions: map (key: string, value: string)
-tags: string
+tags: [string, ]
 secrets: object(Secret)
 images: [string, string, ...]
 ```
@@ -124,12 +133,17 @@ stespの例
     * [REST Resource: projects.builds  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/api/reference/rest/v1/projects.builds#Build.BuildOptions)
     * buildのoption
     * machine_typeのdefaultは1 cpu
+        * `'N1_HIGHCPU_8'`, `N1_HIGHCPU_32`, `N1_`
+    * diskSizeGB
+        * string
     * substitution_option
-        * [Substituting Variable Values  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/configuring-builds/substitute-variable-values)
 * images
     * containerにBuilderにpushするimageの名前
     * build stepsで作成したbuild imageの名前を指定する
 * secrets
+* tags
+    * buildにtagをつける
+    * commit sha1 hashなどをつける
 
 ```yaml
 steps:
@@ -139,14 +153,18 @@ steps:
   volumes:
   - name: 'vol1'
     path: '/persistent_volume'
+- name: gcr.io/cloud-builders/docker
+  args: ['build', '-t', 'gcr.io/my-project-id/myimage', '.']
 options:
   sourceProvenanceHash: ['SHA256']
   machineType: 'N1_HIGHCPU_8'
-  diskSizeGB: 200
+  diskSizeGB: '200'
   logStreamingOption: STREAM_ON
   substitution_option: 'ALLOW_LOOSE'
-- name: gcr.io/cloud-builders/docker
-  args: ['build', '-t', 'gcr.io/my-project-id/myimage', '.']
+tags:
+- '$COMMIT_SHA'
+- '$BRANCH_NAME'
+- '$REPO_NAME'
 ```
 
 
@@ -197,6 +215,38 @@ source codeのclone
 * `$REVISION_ID`
     * build.SourceProvenance.ResolvedRepoSource.Revision.CommitSha (only available for triggered builds)
 
+## SubstitutionOption
+* [Substituting Variable Values  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/configuring-builds/substitute-variable-values)
+
+user-defined variables
+
+* regexで`_[A-Z0-9_]+`
+    * `_`から始まる
+    * only upper-case letters
+* 定義した変数はyaml内で参照する必要がある
+* `${_VAR}`で参照できる
+* The number of parameters is limited to 100 parameters
+* The length of a parameter key and the length of a parameter value are limited to 100 characters.
+
+
+## Pricing
+* [Pricing  |  Cloud Container Builder Documentation  |  Google Cloud](https://cloud.google.com/container-builder/pricing)
+
+machine_typeごとのpricing
+
+* n1-standard-1
+    * 0.003USD / build-minute.
+    * First 120 builds-minutes per day are free.
+* n1-highcpu-8
+    * 0.016USD / build-minute
+* n1-highcpu-32
+    * 0.064USD / build-minute
+
+`diskSizeGb` option
+
+* default 100GM
+* 100GBを超えた文はGCEのdisk使用量に基づいて課金される
+
 ## Tips
 
 ### Speeding up builds
@@ -204,6 +254,43 @@ source codeのclone
 
 ### Accessing private GitHub repository
 * [Accessing Private GitHub Repositories  |  Cloud Container Builder Documentation  |  Google Cloud](https://cloud.google.com/container-builder/docs/access-private-github-repos)
+
+GitHub連携している場合は不要。
+
+```yaml
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    chmod 600
+    mv id_rsa /root/.ssh/id_rsa
+    cat <<EOF >/root/.ssh/config
+    Hostname github.com
+    IdentityFile /root/.ssh/id_rsa
+    EOF
+    ssh-keyscan -t rsa github.com > known_hosts
+    mv known_hosts /root/.ssh/known_hosts
+  volumes:
+  - name: 'ssh'
+    path: /root/.ssh
+- name: 'gcr.io/cloud-builders/git'
+  args:
+  - clone
+  - git@github.com:RettyInc/retty_dwh.git
+  - /workspace/retty_dwh
+  volumes:
+  - name: 'ssh'
+    path: /root/.ssh
+```
+
+### Speeding up builds
+* [Speeding up your Builds  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/speeding-up-builds)
+
+
+* Using a cached Docker image
+    * docker build時に`--cache-from`でregistryのdocker imageを指定する
 
 
 ## Reference
