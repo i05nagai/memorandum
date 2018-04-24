@@ -56,6 +56,7 @@ shellで`bindkey`を実行すると、現在割り当てられているkeybind�
 * [GitHub - zsh-users/antigen: A plugin manager for zsh, inspired by oh-my-zsh and vundle.](https://github.com/zsh-users/antigen)
     * plugin manager
 
+
 ## Tips
 
 ### Customize completion
@@ -91,6 +92,13 @@ compdef _completion_function my_function
 ## Performance
 * [zshの起動が遅いのでなんとかしたい - Qiita](https://qiita.com/vintersnow/items/7343b9bf60ea468a4180)
     * profileがとれる
+
+### function lists defined in zsh
+https://superuser.com/questions/681575/any-way-to-get-list-of-functions-defined-in-zsh-like-alias-command-for-aliases
+
+```
+print -l ${(ok)functions}
+```
 
 ## Reference
 * [ZSH Documentation (framed)](http://zsh.sourceforge.net/Doc/Release/index-frame.html)
