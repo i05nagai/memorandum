@@ -104,6 +104,24 @@ curl -sS https://dl.google.com/cloudagents/install-logging-agent.sh | sudo bash
         * device_name: `Volume: volume-name-`
         * device_name: `cluster-name: cluster-name-`
 
+## Pricing
+June 30, 2018以降の料金
+premium tierでなくてもalert,notificationが使えるようになる。
+
+* Stackdriver Monitoring data
+    * free
+        * All GCP metrics
+        * Non-GCP metrics `< 150MB`
+    * price
+        * Non-GCP metrics
+            * 0.2580USD/MB: 150-100,000MB
+            * 0.1510USD/MB: 100,000-250,000MB
+            * 0.0610USD/MB: >250,000 MB
+* Stackdriver Monitoring API calls
+    * free
+        * First 1 million API calls
+    * price
+        * 0.01USD/1,000 API calls
 
 ## Reference
 * [Stackdriver Monitoring Documentation  |  Stackdriver Monitoring  |  Google Cloud Platform](https://cloud.google.com/monitoring/docs/)
