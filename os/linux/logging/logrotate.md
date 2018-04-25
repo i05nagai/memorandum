@@ -124,7 +124,7 @@ endscript
 ### logrorate open files
 * [linux - Logrotate and Open Files - Server Fault](https://serverfault.com/questions/55610/logrotate-and-open-files)
 
-開いているFileをlogrotateする場合はo
+開いているFileをlogrotateする場合は
 
 * copytruncateを使う
 * postrotate sattementをつかく
