@@ -31,6 +31,7 @@ $ brew install tfenv
     * 作成したresourceが持つstate
     * stateのimportもできる
         * [Import: Usage - Terraform by HashiCorp](https://www.terraform.io/docs/import/usage.html)
+    * terraformのversion
 * remote state
     * stateをGCSなどのremoteにもてる
     * teamで共有したり、CIで利用する
@@ -121,6 +122,12 @@ resource = [{
 
 `${}`で変数や関数を参照でき、Resource内で使える。
 
+* `"${path.module}"`
+    * module path
+* `"${path.cwd}"`
+    * working dir
+* `"${path.root}"`
+    * root module dir
 * `"${var.subnets}"`
     * subnetsがlistの場合、listとして変数を参照
 * `"${var.foo}"`
@@ -489,12 +496,15 @@ localの場合はplain textで保存されるので、passwordなどは暗号化
     * consul
     * etcd
     * gcs
+        * `GOOGLE_CREDENTIALS`でcredentialsを設定できる
     * http
     * manta
     * s3
     * swift
     * terraform enterprise
 * backendのblockの中に書く項目はbackendごとに異なる
+* backendの設定でinterpolationは使えない
+* terraform init時の`-backend-config=""` で設定する
 
 ```
 terraform {

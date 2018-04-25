@@ -21,7 +21,18 @@ apt-get clean
     * インストールされてるパッケージの一覧
 * dpkg -L
     * インストールした時のファイルの一覧
-* apt-cache search 
+
+Search package
+
+```
+apt-cache search <package>
+```
+
+Show all version of `<packages>`
+
+```
+apt-cache madison <package>
+```
 
 
 ## Add repository

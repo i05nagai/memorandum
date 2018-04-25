@@ -4,6 +4,10 @@ title: Natural Language Processing
 
 ## Natural Language Processing
 
+* BLEU point
+    * BiLingual Evaluation Understudy
+    * [BLEU - Wikipedia](https://en.wikipedia.org/wiki/BLEU)
+    * Machine translationの論文で性能指標としてよく使われる
 
 ### Stemming
 * runningなどの品詞をrunなどになおす

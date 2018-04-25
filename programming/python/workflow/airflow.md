@@ -479,12 +479,13 @@ DELETE FROM dag WHERE dag_id='';
 
 もしくは、`$AIRFLOW_HOME/dags`から該当のscriptを削除して、`airflow resetdb`でDBをresetする。
 
+
 ### Delete Default DAG
 `airflow initdb`するとdbにexampleのDAGが登録される。
 exampleのDAGが不要な場合は、`airflow.cfg`で`load_examples = False`を指定する。
 
-
 * [Airflow: how to delete a DAG? - Stack Overflow](https://stackoverflow.com/questions/40651783/airflow-how-to-delete-a-dag)
+
 
 ### Warning: ExtDeprecatonWarning
 Warningがでる。
@@ -508,6 +509,9 @@ cat $AIRFLOW_HOME/airflow-worker.pid | xargs kill -9 && rm $AIRFLOW_HOME/airflow
 
 ### log rotation
 log rotate機能は現在ないっぽい。
+jobのlogは日付ごとに出力されるので、logrotateされているといえる。
+webserver, worker, schedulerのprocessのlog, stdout, stderrはlogrotateされない。
+
 
 ### DAGの追加
 * 要確認

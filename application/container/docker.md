@@ -11,6 +11,10 @@ For OSX,
 brew cask install docker
 ```
 
+```
+sudo port install docker
+```
+
 インストール後に`/Applications/Docker.app`を起動すれば、daemonが起動する。
 起動後にnetworkへのアクセスの権限を要求してくるので、OSXの管理者で承認する。
 
@@ -36,23 +40,6 @@ Officialのguideに従っても、`docker-ce`をInstallできない場合があ�
 apt-get install docker.io
 ```
 
-
-## Commands
-
-### docker images
-* [docker images | Docker Documentation](https://docs.docker.com/engine/reference/commandline/images/#filtering)
-
-imageの一覧を表示する
-
-* `--filter`
-    * imageのfiltering
-    * `key=value`で指定
-    * `dangling=true`
-        * `<none>`のcontainerを表示
-* `--quiet`
-    * container IDだけ表示
-
-
 ## settings
 `~/.docker/config.json`に設定をかく。
 
@@ -65,53 +52,6 @@ imageの一覧を表示する
 }
 ```
 
-## docker run
-
-### multiple commands
-複数コマンドを使いたい場合は bashを使う。
-
-```
-docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
-```
-
-### docker exec
-container上でcommandを実行。
-
-```
-docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-```
-
-```
-docker run --name ubuntu_bash --rm -i -t ubuntu bash
-```
-
-```
-docker exec -d ubuntu_bash touch /tmp/execWorks
-```
-
-* `--detach, -d`
-    * backgroundで実行
-
-## completion
-
-### zsh
-
-```shell
-curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
-```
-
-### reference
-* [コマンドライン補完 — Docker-docs-ja 1.12.RC ドキュメント](http://docs.docker.jp/compose/completion.html)
-
-## mac
-
-```shell
-sudo port install docker
-```
-
-```
-brew cask install docker
-```
 
 ### error
 
@@ -121,148 +61,23 @@ brew cask install docker
 docker-machine start default  # 立ち上げ
 ```
 
-## reference
-* [Dockerfile のベストプラクティス — Docker-docs-ja 1.9.0b ドキュメント](http://docs.docker.jp/engine/articles/dockerfile_best-practice.html)
-
 ## docker imagesの名前変更
-
 * [Dockerイメージの名前を変更する - Qiita](http://qiita.com/hirocueki/items/4f077795ac8d94c6ad8f)
-* [Docker の Data Volume まわりを整理する - Qiita](http://qiita.com/lciel/items/e21a4ede3bac7fb3ec5a)
-
-
-| オプション                      | 意味                                                                          |
-|---------------------------------|-------------------------------------------------------------------------------| | -v `<host_path>:<container_path>` | ホストの `<host_path>` を `<container_path>` にマウントしてコンテナを起動         |
-| -v `<container_path>`             | Data Volume を作成して `<container_path>` にマウントしてコンテナを起動          |
-| --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
-
-```
-FROM ubuntu:16.10
-```
-
-このDockerfileのmainterを記載。
-
-```
-MAINTAINER name "mail@mail"
-```
-
-image作成のために、実行するcommand。
-`RUN yum install package`とか`RUN apt-get install`とかをよく使う。
-
-```
-RUN command
-```
-
-json配列で指定。
-
-```
-VOLUME ["/data"]
-```
-
-* `FROM ubuntu:16.10`
-* `MAINTAINER name "mail@mail"`
-* `RUN command`
-
-
-* `ENV variable value`
-* `ENV variable=value`
-
-```Dockerfile
-# 複数行かけない
-ENV variable value
-# 複数行かける
-ENV variable1=value1 \
-    variable2=value2
-```
-
-複数行かける場合は、valeu2の中でvariable1を使うことはできない。
-その場合はENVを分ける必要がある。
-
-* `EXPOSE <port> [<port>...] `
-    * portをListenすることをコンテナに伝える
-    * hostからアクセスするには、更にコンテナの起動時に`-p`でポートを公開する
-* ADD
-* COPY
-
-
-* ENTRYPOINT
-    * [dockerのENTRYPOINTとCMDの書き方と使い分け、さらに併用 - Qiita](http://qiita.com/hnakamur/items/afddaa3dbe48ad2b8b5c)
-    * docker imageを実行ファイルとして実行する時の振る舞いを記載
-
-書式は以下の2種類
-
-* ENTRYPOINT ["executable", "param1", "param2"]
-    * exec form/json array format
-    * 推奨される形式
-* ENTRYPOINT command param1 param2
-    * shell form
-    * `/bin/sh -c`経由で実行される
-    * CMDやrunの引数を上書きする
-
-docker runの`<iamge>`の後に引数は、exec formの`ENTRYPOINT`にそのまま渡される。
-`ENTRYPOINT`が記載されていない場合は、引数のcommandがそのまま実行される。
-
-
-CMDとの併用は以下のようにする。
-併用時はJSON array formatである必要がある。
-
-```dockerfile
-ENTRYPOINT ["/usr/bin/rethinkdb"]
-CMD ["--help"]
-```
-
-```
-docker run image/name
-```
-
-で実行すると
-
-```
-/usr/bin/rethinkdb --help
-```
-
-が実行される。
-
-
-* CMD
-    * CMDはdocker imageのデフォルトのコマンドを定義する
-    * `docker run`のときに、引数を渡すとCMDの内容は上書きされる
-
-書式は以下の3種類
-
-* CMD ["executable","param1","param2"] (シェルを介さずに実行。この形式を推奨)
-* CMD ["param1","param2"] (ENTRYPOINTのデフォルト引数として利用する場合)
-* CMD command param1 param2 (シェルを介して実行)
-
-
-
-
-* RUN
-* `VOLUME ["/path/to"< ""...>]`
-    * 指定したpathを外部からマウント可能にする
-* USER
-* WORKDIR
-    * Dockerfileのコマンド実行時のcurrent directoryを指定
-* ARG
-* ONBUILD
-
-## Commands/CLI
-
-### docker run
-* [Docker run リファレンス — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/engine/reference/run.html)
-* [docker run | Docker Documentation](https://docs.docker.com/engine/reference/commandline/run/)
-
-* `-v=[<host_directory:container_directory>]`
-    * `-v \`pwd\`:\`pwd\``
-        * で現在のディレクトリが使える。
-* `--workdir`
-* `--env "var_name=value"`
-    * 複数の場合は複数個つける？
 
 ## Tips
 * [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
 * [Docker container will automatically stop after "docker run -d" - Stack Overflow](https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d)
 
-### expose ans publish
+### completion
+* [コマンドライン補完 — Docker-docs-ja 1.12.RC ドキュメント](http://docs.docker.jp/compose/completion.html)
+
+zsh
+
+```shell
+curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+```
+
+### expose and publish
 * [Difference between "expose" and "publish" in docker - Stack Overflow](https://stackoverflow.com/questions/22111060/difference-between-expose-and-publish-in-docker)
 
 exposeとpublishのちがい
@@ -285,6 +100,15 @@ ls -lah ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linu
 ```
 
 ### Data Volume container
+* [Docker の Data Volume まわりを整理する - Qiita](http://qiita.com/lciel/items/e21a4ede3bac7fb3ec5a)
+
+
+| オプション                      | 意味                                                                          |
+|---------------------------------|-------------------------------------------------------------------------------|
+| -v `<host_path>:<container_path>` | ホストの `<host_path>` を `<container_path>` にマウントしてコンテナを起動         |
+| -v `<container_path>`             | Data Volume を作成して `<container_path>` にマウントしてコンテナを起動          |
+| --volumes-from `<container>`      | `<container>` で指定したコンテナの Data Volume を全部マウントしてコンテナを起動 |
+
 データ格納用のコンテナ。
 `mysql_data` containerの`/var/lib/mysql`いかがData volumeになる。
 このdata volumeは`--volume-from` commandでほかのcontainerから参照できる。
@@ -327,9 +151,8 @@ docker built -t username/image_name .
 docker push username/image_name
 ```
 
-## Multi state build
+### Multi state build
 * [Use multi-stage builds | Docker Documentation](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)
-
 
 ### docker without sudo
 * [Post-installation steps for Linux | Docker Documentation](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
@@ -440,53 +263,6 @@ docker run -d -it --rm \
     image-name \
     tail -f /dev/null
 ```
-
-### VOLUME command in Dockerfile
-
-image1
-
-```
-FROM ubuntu:17.10
-
-COPY /opt/hoge
-VOLUME ["/image1-volume"]
-```
-
-image2
-
-```
-FROM ubuntu:17.10
-
-COPY /opt/hoge
-```
-
-以下のようにimage1のcontainerを立ち上げておく。
-
-```
-docker run \
-    -it \
-    --rm \
-    --name image1-container \
-    image1:latest \
-    /bin/bash
-```
-
-以下のcommandを実行すると、`image1-container`の`/image1-volume`を`image2-container`が参照することができる。
-
-```
-docker run \
-    -it \
-    --rm \
-    --volumes-from image1-container \
-    --name image2-container \
-    image1:latest \
-    /bin/bash
-```
-
-このとき、`image1-container`を立ち上げた時に、data volumeが作らており、mountされている。
-`docker inspect image1-contianer`の`Mount`の場所を見るとdata volumeが`/image1-volume`にmountされていることが分かる。
-なので、VOLUME commandは、`docker run`の前にdata volumeを作って、`docker run`時にmountするのと同じだが、docker build時に存在したfileがdata volumeにcopyされる。
-
 
 ### Docker in docker
 * [library/docker - Docker Hub](https://hub.docker.com/_/docker/)
