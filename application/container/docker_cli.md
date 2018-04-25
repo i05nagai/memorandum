@@ -7,6 +7,8 @@ docker clinet.
 
 
 ## docker build
+* [docker build | Docker Documentation](https://docs.docker.com/engine/reference/commandline/build/#tarball-contexts)
+
 buildのterminalのlogは`/root/build.log`に記録される。
 標準error出力に出力すれば、docker-buildの画面にも表示される。
 pythonのloggingなどは、stderrに出力するので、python scriptの経過を表示したい場合は、loggingで良い。
@@ -27,6 +29,9 @@ docker build --squash -t <image>:latest-postsquash /path/to/Dockerfile
 2回目のsquashつきのbuildはcacheがあるので、一瞬で終わる。
 最初に作ったもののhistoryはsquashされない。
 release時にだけsquashをつけるようにしても良い。
+
+* `--cache-from <registory-image-uri>`
+    * cacheのimageとして利用する
 
 ## docker hisotry
 imageの各layerの容量などを表示する。
