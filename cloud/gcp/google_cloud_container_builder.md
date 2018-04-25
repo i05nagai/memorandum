@@ -112,7 +112,8 @@ stespの例
         * e.g. `'examples/hello_world'`
     * absolute pathを指定したら、`<dir>`がworking directoryになるが、buildの生成物は他のstepで参照できない
         * e.g. `'/examples/hello_world'`
-* timeout: 500s
+* timeout
+    * default 500s
 * id
     * build stepにidをふれる
     * `waitFor`でidを指定するxo
@@ -137,6 +138,8 @@ stespの例
     * diskSizeGB
         * string
     * substitution_option
+        * `'ALLOW_LOOSE'`
+            * substitution variableが見つからなくてもerrorにしない
 * images
     * containerにBuilderにpushするimageの名前
     * build stepsで作成したbuild imageの名前を指定する
@@ -288,10 +291,43 @@ steps:
 ### Speeding up builds
 * [Speeding up your Builds  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/speeding-up-builds)
 
-
 * Using a cached Docker image
     * docker build時に`--cache-from`でregistryのdocker imageを指定する
+
+## Examples
+* [wildfish/google-cloud-container-builder-example](https://github.com/wildfish/google-cloud-container-builder-example)
+
+## Using Cloud KMS
+* [Using Encrypted Resources  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/securing-builds/use-encrypted-secrets-credentials)
+
+IAM policyの付与が必要。
+Container builderのservice accountはIAMの画面で確認できる。
+
+
+```
+gcloud kms keys add-iam-policy-binding [KEY-NAME] \
+    --location=global \
+    --keyring=[KEYRING-NAME] \
+    --member=serviceAccount:[SERVICE-ACCOUNT]@cloudbuild.gserviceaccount.com \
+    --role=roles/cloudkms.cryptoKeyEncrypterDecrypter
+```
+
+
+## Run local
+* https://github.com/GoogleCloudPlatform/container-builder-local
+
+一応localでbuildできるが、完全に互換性があるわけではない。
+
+```
+$ gcloud components install container-builder-local
+$ container-builder-local --help
+```
+
+```
+$ container-builder-local --config=cloudbuild.yaml [--substitutions=_FOO=bar] [--dryrun=true/false] [--push=true/false] source
+```
 
 
 ## Reference
 * [Google Cloud Container Builder Documentation  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/?hl=en_US&_ga=2.110153093.-1205531873.1513079066)
+* [Taming Google Container Builder – Daisuke Maki – Medium](https://medium.com/@lestrrat/taming-google-container-builder-22a6dded155c)
