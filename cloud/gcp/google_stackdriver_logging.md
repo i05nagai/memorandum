@@ -11,5 +11,14 @@ loggingはfluentdが使われている。
 `/etc/google-fluentd/config.d/`にfluentdのconfigがある。
 `/var/log/google-fluentd/google-fluentd.log`にfluetndのLogがはかれる。
 
+## Pricing
+Start at June 30, 2018
+
+* Stackdriver Logging
+    * free
+        * First 50 GB/project
+    * price
+        * 0.50USD/GB
+
 ## Reference
 
