@@ -284,6 +284,20 @@ Login to GCP
 docker login -u oauth2accesstoken -p "$(gcloud auth application-default print-access-token)" https://gcr.io
 ```
 
+### Content digest
+* [HTTP API V2 | Docker Documentation](https://docs.docker.com/registry/spec/api/#content-digests)
+
+* `digest`
+    * digetstの構成は `algorithm ":" hex`
+    * e.g. `sha256:6c3c624b58dbbcd3c0dd82b4c53f04194d1247c6eebdaab7c610cf7d66709b3b`
+* `algorithm`
+    * `/[A-Fa-f0-9_+.-]+/`
+* `hex`
+    * `/[A-Fa-f0-9]+/`
+
+* DIGEST HEADER
+    * docker daemonのresponseは全て1`Docker-Content-Digest` HEADERを含んでいる
+
 
 ## Layer
 * [Explaining Docker Image IDs](https://windsock.io/explaining-docker-image-ids/)
