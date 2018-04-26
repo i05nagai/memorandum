@@ -13,7 +13,7 @@ title: ubuntu
 * sudo apt-get install g++-4.6`
 
 ```shell
-deb     http://archive.ubuntu.com/ubuntu/ trusty universe  
+deb     http://archive.ubuntu.com/ubuntu/ trusty universe
 deb-src http://archive.ubuntu.com/ubuntu/ trusty universe
 ```
 
