@@ -1,5 +1,9 @@
 # Git
 
+## Install
+https://launchpad.net/~git-core/+archive/ubuntu/ppa
+
+
 ## Gitの内部動作
 
 ### command
