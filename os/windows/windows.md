@@ -124,4 +124,3 @@ xwin-close.exe -close
     * Ricty-Bold.ttf
     * RictyDiscord-Regular.ttf
     * RictyDiscord-Bold.ttf
-

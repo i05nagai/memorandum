@@ -1,4 +1,5 @@
 ## English
+* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
 * [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
     * There are still
         * normal
@@ -33,6 +34,7 @@ I cross off the customer's name from the reservation list.
     * [What is the better way to say 'a reasonable reason'? - Quora](https://www.quora.com/What-is-the-better-way-to-say-a-reasonable-reason)
 * make sense to you/
     * [word choice - "Does it make sense?" or "Do you understand me?"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/22294/does-it-make-sense-or-do-you-understand-me)
+
 
 ## Math
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
