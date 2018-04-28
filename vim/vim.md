@@ -11,7 +11,7 @@ title: Vim
 
 ## Install
 
-OSX
+### OSX
 
 ```
 brew install vim --with-lua --with-python3 --with-override-system-vi
@@ -24,6 +24,29 @@ brew install vim --with-lua --with-python3 --with-override-system-vi
     * vimの起動とともにxquartzが立ち上がるようになるので、不要であればつけない
 * `--with-luajit`
     * JITのluaが良い場合はこっち
+
+### For ubuntu, 
+* [installing \- How can I get a newer version of Vim on Ubuntu? \- Vi and Vim Stack Exchange](https://vi.stackexchange.com/questions/10817/how-can-i-get-a-newer-version-of-vim-on-ubuntu)
+
+```
+# you can copy text to clipboard with :y+
+sudo apt-get install vim-gnome
+```
+
+if you want latest one
+
+```
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get update
+sudo apt-get install vim-gnome=<version>
+```
+
+where `version` is shown by
+
+```
+sudo apt show vim-gnome -a
+```
+
 
 ## vimscripts
 
