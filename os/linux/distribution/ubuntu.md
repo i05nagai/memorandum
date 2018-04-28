@@ -184,6 +184,29 @@ delete `fstab`
 
 sudoなしの`chsh`を実行すれば良い。
 
+### Use japanese input method
+* [Ubuntu 16\.10でibus\-mozcを使用する \- Sickly Life Blog](https://sicklylife.hatenablog.com/entry/2016/11/22/192850)
+
+For Ubuntu 16.04,
+
+fcitx+mozcの組み合わせで良い。
+設定の方法は、 `Settings`->`Text Entry`->`input method`->`fcitx`を選択。
+keyboard iconを右clickすると`fcitx`のconfigurationが開く。
+`Global config`のtabで`Trigger input method`があるので、これを`Shift+space`などに割り当てる。
+
+`xmodmap`の設定が反映されない場合があるが、window managerをi3に変更したら修正された。
+fcitxのofficial documentによれば、`4.9.2`からは`$HOME/.Xmodmap`が存在すればその設定を反映させるらしい。
+keyboard周りは設定の反映にlogoutなどが必要な場合もあるので、window managerに変更する過程のlogoutで適用されたかもしれない。
+
+### shutdown/logout is very slow
+[Slow shutdown on Ubuntu 16\.04 LTS \(Stopping thermal daemon/running fit make remote CUPS printers\) \- Ask Ubuntu](https://askubuntu.com/questions/760952/slow-shutdown-on-ubuntu-16-04-lts-stopping-thermal-daemon-running-fit-make-remo)
+
+```
+systemctl disable cups-browsed.service
+```
+
+### Delete amazon
+* [How to Remove the Amazon Application from Ubuntu](https://www.lifewire.com/remove-amazon-application-from-ubuntu-4134329)
 
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)
