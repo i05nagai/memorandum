@@ -89,5 +89,10 @@ rew tap caskroom/versions
 brew cask install google-chrome-canary
 ```
 
+## Configuration
+
+* `chrome://flags/#overscroll-history-navigation `
+    * overscrollでforward/back
+
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
