@@ -164,5 +164,26 @@ Optional partitions
 * /media
     * do not partition
 
+## Swap
+* https://help.ubuntu.com/community/SwapFaq
+
+Disable swap
+
+https://askubuntu.com/questions/214805/how-do-i-disable-swap
+
+```
+sudo swapoff -a
+```
+
+delete `fstab`
+
+## Tips
+
+### Change shell
+* https://superuser.com/questions/119179/how-can-i-change-shell-in-ubuntu
+
+sudoなしの`chsh`を実行すれば良い。
+
+
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)
