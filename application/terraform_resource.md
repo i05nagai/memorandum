@@ -213,6 +213,10 @@ resource "google_compute_disk" "default" {
     * type
         * pd-standard
         * pd-ssd
+* google_storage_bucket_object
+    * GCSにfile uploadできる
+    * [Google: google_storage_bucket_object - Terraform by HashiCorp](https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html)
+
 
 
 
