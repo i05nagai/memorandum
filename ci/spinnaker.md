@@ -94,8 +94,47 @@ GCPで使う場合は、 Cloud lancher にSpinnakerが登録してある。
 * [viglesiasce/continuous-delivery-spinnaker-gke: Tutorial for deploying, configuring and running Spinnaker on GKE for continuous delivery](https://github.com/viglesiasce/continuous-delivery-spinnaker-gke)
 
 * [GKE のアプリデプロイは Spinnaker に任せて！](https://www.slideshare.net/HammoudiSamir/gke-spinnaker)
+
+
+## Parametrize
+* [Pipeline Expressions Guide - Spinnaker](https://www.spinnaker.io/guides/user/pipeline-expressions/)
+
 ## Kubernetes
-[lwander/spin-kub-demo: Spinnaker code to prod demo for Kubernetes](https://github.com/lwander/spin-kub-demo)
+* [lwander/spin-kub-demo: Spinnaker code to prod demo for Kubernetes](https://github.com/lwander/spin-kub-demo)
+* [Parameterize Kubernetes Manifests - Spinnaker](https://www.spinnaker.io/guides/user/kubernetes-v2/parameterize-manifests/)
+* `?:`
+
+With manifests
+
+以下のようなに`namespace`というparameterを定義して、manifest内で参照できる
+条件
+
+```
+metadata:
+  namespace: '${ parameters.namespace }'
+```
+
+## Best practices
+* [Best Practices for the Kubernetes Provider V2 - Spinnaker](https://www.spinnaker.io/guides/user/kubernetes-v2/best-practices/)
+
+For Kubernetes
+
+* docker imageのtagはdocker digestを使う
+* clusterの変更状況を把握するため、spinnakerがaudit logを出力するようにするよう推奨
+    * [Spinnaker/Echo + Google Cloud Functions + Stackdriver Logging == Spinnaker Audit Log](https://blog.spinnaker.io/spinnaker-echo-google-cloud-functions-stackdriver-logging-spinnaker-audit-log-81139f084db9)
+* config mapとsecretのversionningをする
+    * You want to slowly roll out a configuration change
+        * configmapが更新されるとconfig mapを参照している全てのpodsが更新される
+        * 更新はdeploymentのrolling updateを設定していても全てのpodsが対象となる
+        * configmapをversioningしていれば、新しくdeploymentするものについてはconfigmapのversionを変更したものをdeployするようにすれば良い
+    * You need to roll back a broken configuration change
+        * configmapをversioningしていない場合は、deplooymentやstatefulsetsなどにconfigmapの変更は表示されない
+        * configmapをrollbackkする場合は、古い設定のconfigmapの値に roll forwardする必要がある
+            * configmapを参照している全てのpodsが、必要なくともroll forwardされる
+            * 
+* Ad-hoc edit featureは極力使わない
+
+
 
 ## Reference
 * [spinnaker/spinnaker: Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.](https://github.com/spinnaker/spinnaker)

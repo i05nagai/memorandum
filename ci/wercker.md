@@ -251,6 +251,8 @@ test:
 `dev`はlocalのCLIで実行できるpipelineである。
 
 ## Environment variables
+* [Available Environment Variables](http://devcenter.wercker.com/docs/environment-variables/available-env-vars)
+
 いくつかのlevelで環境変数を指定できる。
 
 * organization-level environment variable

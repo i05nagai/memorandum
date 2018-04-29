@@ -17,6 +17,23 @@ provisonerのblockは複数記述できる。
 
 ### chef
 
+### file
+terraformのmachineにあるfile/directoryをresourceにuploadする。
+
+```tf
+resource "aws_instance" "web" {
+  # Copies all files and folders in apps/app1 to D:/IIS/webapp1
+  provisioner "file" {
+    source      = "apps/app1/"
+    destination = "D:/IIS/webapp1"
+  }
+}
+```
+
+### habitat
+Habitat supervisorをresourceにinstallする。
+
+
 ### local-exec
 terraformが動いているmachineで、コマンドを実行する。
 terraformの変数が使えるので、結果の出力などに使える？
