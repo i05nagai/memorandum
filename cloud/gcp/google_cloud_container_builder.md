@@ -331,3 +331,4 @@ $ container-builder-local --config=cloudbuild.yaml [--substitutions=_FOO=bar] [-
 ## Reference
 * [Google Cloud Container Builder Documentation  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/?hl=en_US&_ga=2.110153093.-1205531873.1513079066)
 * [Taming Google Container Builder – Daisuke Maki – Medium](https://medium.com/@lestrrat/taming-google-container-builder-22a6dded155c)
+* [Container builderでコンテナイメージをBuildしてSlackで結果を受け取る開発スタイルが捗る | 株式会社カブク](https://www.kabuku.co.jp/developers/cb-20180330)
