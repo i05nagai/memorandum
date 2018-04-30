@@ -84,6 +84,17 @@ git clone git@github.com:{user}/{repo}.git
 
 ### Check that you are connecting to the correct server
 
+## git clone with ssh
+* settingsでpublic keyを登録しておく
+    * repositroy単位user単位で登録できる
+
+Before executing `git-clone`, you need to register your private keys through `ssh-add`
+
+```
+ssh-add /path/to/prviate_key
+```
+
+Be sure to use SSH url for `git-clone`.
 
 ## Generating a new SSH key and adding it to the ssh-agent - User Documentation
 * [Using SSH Agent Forwarding | GitHub Developer Guide](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
