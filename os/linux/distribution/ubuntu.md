@@ -13,6 +13,9 @@ title: ubuntu
 
 ## Tips
 
+### location of .desktop
+* `/usr/share/applications`
+
 ### install gcc-4.6 and g++-4.6
 `/etc/apt/sources.list`に以下を追加し、
 * `apt-get update`
