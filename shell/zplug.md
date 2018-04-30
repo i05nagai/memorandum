@@ -16,6 +16,19 @@ antigenとの比較は以下の記事を見れば良い。
 curl -fLo ~/.zplug/zplug --create-dirs git.io/zplug
 ```
 
+For OSX
+
+```
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+```
+
+上記でいれた場合`$HOME/.zplug`にinstallされる。
+
+```
+$ export ZPLUG_HOME=/path/to/.zplug
+$ git clone https://github.com/zplug/zplug $ZPLUG_HOME
+```
+
 ### OSX
 
 OSXの場合は`brew`で入る。

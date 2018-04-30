@@ -8,6 +8,18 @@ brew install pass
 echo "source /usr/local/etc/bash_completion.d/password-store" >> ~/.bashrc
 ```
 
+for ubuntu,
+
+```
+sudo apt-get install pass
+```
+
+## CLI
+
+```
+pass git <gitsubcommad>
+```
+
 ## Usage
 
 ```
@@ -90,6 +102,39 @@ Phone Support PIN #: 84719
     * `Amazon/bookreader/password`にpassword
     * `Amazon/bookreader/secretquestion1`に秘密の質問
     * `Amazon/bookreader/sensitivecode`
+
+## Tips
+
+### set up from existing password-store
+すでに存在するpassword-storeからpassの設定をする。
+gpgにprivate key/public keyを登録して、
+private keyをimportすればpublic keyもimportされる。
+
+```
+$ gpg --import /path/to/private.key
+$ gpg --edit-key <KEY-ID>
+...
+...
+# run trust command
+# and choose trust ultimately
+gpg> trust
+...
+...
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+
+gpg> quit
+```
+
 
 ## Reference
 * [Pass: The Standard Unix Password Manager](https://www.passwordstore.org/)

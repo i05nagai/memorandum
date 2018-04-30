@@ -5,6 +5,7 @@
 /.bundle
 /.jekyll-metadata
 /vendor
+/.ruby-version
 
 
 # OSX

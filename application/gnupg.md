@@ -7,15 +7,17 @@ title: GnuPG
 秘密鍵の出力は、出力用のコマンドがある。
 また出力した秘密鍵のgpgへの登録も同様のコマンドがある。
 
+## CLi
 
-## Commands
-秘密鍵の確認
+
+## Usage
+登録されている秘密鍵の確認
 
 ```
 gpg --list-secret-keys
 ```
 
-公開鍵の確認
+登録されている公開鍵の確認
 
 ```
 gpg --list-keys
@@ -62,6 +64,40 @@ gpg> trust
 gpg [-o ファイル名] [-r 鍵ユーザID] 暗号化ファイル
 ```
 
+default keyの設定
+
+```
+gpg --default-key <user-id>
+```
+
+import my key in another host.
+importした後信用する必要がある
+
+```
+$ gpg --import /path/to/private.key
+$ gpg --edit-key <KEY-ID>
+...
+...
+# run trust command
+# and choose trust ultimately
+gpg> trust
+...
+...
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+
+gpg> quit
+```
+
 
 ## Reference
 * [gpgでのファイルの暗号化基礎 - akihiro_obの日記](http://d.hatena.ne.jp/akihiro_ob/20120131/1328031230)
@@ -69,3 +105,5 @@ gpg [-o ファイル名] [-r 鍵ユーザID] 暗号化ファイル
 * [GnuPG で遊ぶ - 暗号化してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2013/07/31/gpg/)
 * [GnuPrivacyGuardHowto - Community Help Wiki](https://help.ubuntu.com/community/GnuPrivacyGuardHowto)
 * [GnuPGのコマンド](http://www.nina.jp/server/windows/gpg/commands.html)
+* [GPG Cheat Sheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
+* [14\. 別のホストPCでGnuk Tokenを使う設定 — Gnuk handbook 1\.1 documentation](http://no-passwd.net/fst-01-gnuk-handbook/using-gnuk-token-with-another-computer.html)
