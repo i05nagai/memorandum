@@ -3,6 +3,21 @@ title: openssl
 ---
 ## openssl
 
+## Install
+
+For ubuntu 16.04, install v1.1.0
+
+```
+cd /tmp
+VERSION="openssl-1.1.0h"
+wget https://www.openssl.org/source/${VERSION}.tar.gz
+tar xzvf ${VERSION}.tar.gz
+cd ${VERSION}
+./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)'
+make
+sudo make install
+```
+
 
 ## self signed certification
 以下で、10年間有効な自己署名証明書が作れる。
