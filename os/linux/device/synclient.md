@@ -15,11 +15,12 @@ synclient <option> [KEY=VALUE]
 
 ## Configuration
 * `/etc/X11/xorg.conf.d/`
-* `/etc/X11/Xsession.d/`
+* `/usr/share/X11/xorg.conf.d/`
+    * `70-synaptics.conf`
     * ubuntu
 
-```
-
+```xf86conf
+# 
 Section "InputClass"
     Identifier "touchpad"
     Driver "synaptics"
@@ -93,9 +94,17 @@ synclient HorizTwoFingerScroll=1
 Palm detectionの例
 
 ```
+synclient PalmDetect=1
 synclient PalmMinWidth=5
 synclient PalmMinZ=10
 ```
 
+Use 3 finger as middle clik
+
+```
+synclient TapButton2=3 TapButton3=2
+```
+
 ## Reference
 * [Touchpad Synaptics \- ArchWiki](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
+* [Looking for a way to improve synaptic/touchpad palm detection \- Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/28306/looking-for-a-way-to-improve-synaptic-touchpad-palm-detection)
