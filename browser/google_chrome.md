@@ -94,5 +94,36 @@ brew cask install google-chrome-canary
 * `chrome://flags/#overscroll-history-navigation `
     * overscrollでforward/back
 
+## Tips
+
+### google account require login each time in ubuntu
+* [linux \- Chrome doesn't remember browser sessions after restart \- Super User](https://superuser.com/questions/1130862/chrome-doesnt-remember-browser-sessions-after-restart)
+
+google accountに毎回loginを要求される。
+
+* `Online account` -> `Google account`を追加
+* Google ChromeのSettingsからbackgroundで動く設定をdisableにする
+    * settingsからsearchでbackgroundといれれば出る
+
+
+Solution
+To fix this issue you need to unlock your keyring before launching chrome.
+
+* Disconnect your Google account; go to chrome://settings click Disconnect your Google Account... check the box to clear local Chrome data, sign out and then close Chrome.
+* Launch seahorse by typing seahorse into the terminal or open it from Menu>Passwords and Keys.
+* In Default keyring delete Chrome Safe Storage and any accounts.google.com enteries.
+* Unlock the Default Keyring and Login by right clicking and clicking Unlock
+* Launch Chrome, go to chrome://settings and click Sign in to Chrome
+* Hopefully this fixes your problem, I recently installed Linux Mint and this worked for me, I don't fully understand why but it seems Chrome does not wait for the keyring to unlock and this results in chrome not being signed in.
+
+Reproduce This Issue
+Steps to reproduce this issue:
+
+Install Linux (mint or otherwise) with cinnamon (on a VM or otherwise)
+Install Chrome and sign in
+Reboot
+Ensure Keyrings are locked - go to Passwords and Keys and lock all Keyrings
+Open chrome - you will be prompted to unlock the Keyring and sign in will fail
+
 ## Reference
 * [Chrome keyboard shortcuts - Google Chrome Help](https://support.google.com/chrome/answer/157179?hl=en)
