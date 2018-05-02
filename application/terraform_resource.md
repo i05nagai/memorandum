@@ -217,8 +217,81 @@ resource "google_compute_disk" "default" {
     * GCSにfile uploadできる
     * [Google: google_storage_bucket_object - Terraform by HashiCorp](https://www.terraform.io/docs/providers/google/r/storage_bucket_object.html)
 
-
-
+* google_sql_database_instance
+    * second generation/first generationがあるがsecondだけ使っていればOK
+    * `replica_configuration`
+        * `connect_retry_interval`
+            * default 60
+            * seconds
+        * `dump_file_path`
+            * e.g. `gs://bucket/filename`
+            * Path to a SQL file in GCS from which slave instances are created.
+        * `master_heartbeat_period`
+            * ms
+        * `password`
+        * `username`
+        * `verify_server_certificate`
+    * `settings`
+        * `tier`
+        * `activation_policy`
+        * `crash_safe_replication `
+        * `disk_autoresize`
+        * `disk_size`
+            * default 10GB
+            * GB unit
+            * Size of a running instance cannot be reduced but can be increased.
+        * `disk_type `
+            * default PD_SSD
+            * PD_HDD, PD_SSD
+        * `pricing_plan`
+            * PER_USE, PACKAGE
+        * `replication_type `
+            * ASYNCHRONOUS
+            * SYNCHRONOUS
+    * `settings.database_flags[]`
+        * `name`
+            * name of flags
+        * `value`
+            * value of flags
+    * `settings.maintenance_window `
+        * UTC time
+        * 1 hour maintenance window to update instance if needed.
+        * `day`
+            * 1-7
+            * 1: monday, 7:sunday
+            * day of week
+        * `hour`
+            * 00-23
+        * `udpate_track`
+            * canary, stable
+    * `settings.location_preference`
+        * `follow_gae_application`
+        * `zone`
+            * preferred compute engine zone
+    * `settings.ip_configuration.authorized_networks[]`
+        * `expiration_time `
+            * whitelists expiration time
+        * `name`
+            * name of this whitelist
+        * `value`
+            * CIDR for IPv4 or IPv6 address
+    * `settings.backup_configuration`
+        * `binary_log_enabled`
+            * True/False
+        * `enabled`
+            * True/False
+            * backup configuration enabled or not
+        * `start_time`
+            * HH:MM format time
+            * backup configuration start time
+    * `settings.database_flags`
+    * `settings.ip_configuration`
+        * `ipv4_enabled`
+            * true/false
+            * for second generation this must be true
+        * `require_ssl`
+            * true -> mysqld default to` REQUIRE X509`
+        
 
 ## Terraform
 * `backend`
