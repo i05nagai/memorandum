@@ -23,6 +23,12 @@ login shellとして起動されるか、interactive shellかどうかなどで�
 * [【シェル芸人への道】Bashの変数展開と真摯に向き合う - Qiita](https://qiita.com/t_nakayama0714/items/80b4c94de43643f4be51)
 
 
+## Precedence
+* [bash - Precedence of the shell logical operators &&, || - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/88850/precedence-of-the-shell-logical-operators)
+
+* &&, ||
+    * same precedence
+    * left associative
 
 ## Reference
 
