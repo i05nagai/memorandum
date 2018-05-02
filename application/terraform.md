@@ -741,6 +741,35 @@ $ terraform plan
     * officialのbest practice
     * workspaceなどの導入により、deprecatedになっている
 
+
+```
+- core/
+-- gcp/
+-- aws/
+- service1/
+-- gcp/
+-- aws/
+- serivce2/
+-- gcp/
+-- aws/
+- main.tf
+- provider.tf
+- backend.tf
+- variables.tf
+- locals.tf
+```
+
+* dev/stg/prodで共通のresourceを使う場合
+    * 
+* dev/stg/prodで異なるresourceを使う場合
+    * workspaceで分けていればprefixをid(name)に含めてworkspaceごとに管理すればOK
+* serviceで異なるresourceを使う場合
+    * serviceの各directoryに
+* serviceで共通のresourceを使う場合
+    * core/commonという名前のdirectory(service)を使う
+    * networkと
+
+
 ## Use on docker
 * [hashicorp/terraform - Docker Hub](https://hub.docker.com/r/hashicorp/terraform/)
 
