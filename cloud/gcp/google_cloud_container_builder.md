@@ -293,6 +293,8 @@ steps:
 
 * Using a cached Docker image
     * docker build時に`--cache-from`でregistryのdocker imageを指定する
+    * cache-fromはきかない？
+        * [--cache-from and Multi Stage: Pre-Stages are not cached · Issue #34715 · moby/moby](https://github.com/moby/moby/issues/34715)
 
 ## Examples
 * [wildfish/google-cloud-container-builder-example](https://github.com/wildfish/google-cloud-container-builder-example)
