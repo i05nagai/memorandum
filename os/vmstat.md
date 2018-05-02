@@ -52,7 +52,6 @@ options
 * `-t, --timestamp`
     * show timestamp
 
-
 ```
 vmstat 2 -S m
 ```
