@@ -66,28 +66,54 @@ $$
     m_{k, j}
     & := &
         2
-            a_{s_{j} - 1, j} m_{k-1, j}
+            a_{1, j} m_{k-1, j}
         \oplus
         2^{2}
-            a_{s_{j} - 2, j} m_{k-2, j}
+            a_{2, j} m_{k-2, j}
         \oplus
         \cdots
         \oplus
         2^{s_{j}-1}
-            a_{1, j} m_{k - s_{j}, j}
+            a_{s_{j} - 1, j}
+            m_{k - s_{j} + 1, j}
         \oplus
-        2^{s_{j}} m_{k-s_{j}, j}
+        2^{s_{j}}
+        a_{s_{j}, j}
+        m_{k-s_{j}, j}
         \oplus
         m_{k-s_{j}, j},
+    \nonumber
+    \\
+    & = &
+        2
+            a_{1, j}
+            m_{k-1, j}
+        \oplus
+        2^{2}
+            a_{2, j} m_{k-2, j}
+        \oplus
+        \cdots
+        \oplus
+        2^{s_{j}-1}
+            a_{s_{j} - 1, j}
+            m_{k - s_{j} + 1, j}
+        \oplus
+        2^{s_{j}}
+            m_{k-s_{j}, j}
+        \oplus
+        m_{k-s_{j}, j},
+        \quad
+        (\because a_{s_{j}} = 1)
     \nonumber
     \\
     & := &
         \left(
             \bigoplus_{i=1}^{s_{j}}
-                2^{i}a_{s_{j} - i, j} m_{k-i, j}
+                2^{i}a_{i, j} m_{k-i, j}
         \right)
         \oplus
         m_{k-s_{j}, j},
+    \label{sobol_sequence_def_initial_number}
 \end{eqnarray}
 $$
 
@@ -106,6 +132,7 @@ $$
     }{
         2^{k}
     }
+    \label{sobol_sequence_def_direction_number}
 \end{equation}
 $$
 
@@ -128,27 +155,151 @@ $$
 $$
 
 ここで、$i_{k}$は$i$の$k$bit目の2進表現で、 $$i = (i_{K}, \ldots, i_{3}, i_{2}, i_{1})_{2}$$である。
-実用上は、$m_{k, j}$の計算の後direction numberの計算はせずに以下のように計算した方が良い。
+
+### Note
+$$\eqref{sobol_sequence_def_initial_number}$$ and $$\eqref{sobol_sequence_def_direction_number}$$ also can be written for $j = 1, \ldots, d$,
 
 $$
 \begin{eqnarray}
-    x_{i, j}^{\prime}
+    k = 1, \ldots, s_{j},
+    \quad
+    m_{k, j}^{\mathrm{new}}
+    & := &
+        2^{K-k}
+        m_{k, j},
+    \nonumber
+    \\
+    k = s_{j} + 1, s_{j} + 2, \ldots, s_{j} + 1 + K,
+    \quad
+    m_{k, j}^{\mathrm{new}}
+    & := &
+        2^{K-k}
+        m_{k, j}
+    \nonumber
+    \\
+    & = &
+        2^{K-k}
+        \left[
+            \left(
+                \bigoplus_{i=1}^{s_{j}}
+                    2^{i}
+                    2^{k-i-K}
+                    2^{K-(k-i)}
+                    a_{i, j}
+                    m_{k-i, j}
+            \right)
+            \oplus
+            2^{k-s_{j}-K}
+            2^{K-(k-s_{j})}
+            m_{k-s_{j}, j}
+        \right]
+    \nonumber
+    \\
+    & = &
+        2^{K-k}
+        \left[
+            \left(
+                \bigoplus_{i=1}^{s_{j}}
+                    2^{i}
+                    2^{k-i-K}
+                    a_{i, j}
+                    m_{k-i, j}^{\mathrm{new}}
+            \right)
+            \oplus
+            2^{k-s_{j}-K}
+            m_{k-s_{j}, j}^{\mathrm{new}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        2^{K-k}
+        \left[
+            \left(
+                \bigoplus_{i=1}^{s_{j}}
+                    2^{k-K}
+                    a_{i, j}
+                    m_{k-i, j}^{\mathrm{new}}
+            \right)
+            \oplus
+            2^{k-s_{j}-K}
+            m_{k-s_{j}, j}^{\mathrm{new}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \left(
+            \bigoplus_{i=1}^{s_{j}}
+                a_{i, j}
+                m_{k-i, j}^{\mathrm{new}}
+        \right)
+        \oplus
+        2^{-s_{j}}
+        m_{k-s_{j}, j}^{\mathrm{new}}
+\end{eqnarray}
+$$
+
+For each $j$, direction numbers hold following relation,
+
+$$
+\begin{eqnarray}
+    k = 1, \ldots, K,
+    \quad
+    & &
+        v_{k, j}
+    & = &
+        2^{-K}
+        m_{k, j}^{\mathrm{new}}
+        .
+    \nonumber
+    \\
+\end{eqnarray}
+$$
+
+With $m_{k,j}^{\mathrm{new}}$, we denote new integer by
+
+$$
+\begin{eqnarray}
+    k = 1, \ldots, K,
+    \quad
+    x_{i, j}^{\mathrm{new}}
     & := &
         \bigoplus_{k=1}^{K}
             i_{k}
-            (m_{k,j})_{2}
-    \nonumber
-    \\
-    x_{i, j}
-    & := &
-        \frac{
-            x_{i, j}^{\prime}
-        }{
-            2^{K}
-        }
+            m_{k, j}^{\mathrm{new}}
+    .
     \nonumber
 \end{eqnarray}
 $$
+
+Then we have
+
+$$
+\begin{eqnarray}
+    k = 1, \ldots, K,
+    \quad
+    x_{i, j}
+    & = &
+        2^{-K}
+        x_{i, j}^{\mathrm{new}}
+    \nonumber
+    \\
+    & = &
+        2^{-K}
+        \bigoplus_{k=1}^{K}
+            i_{k}
+            v_{k, j}^{\mathrm{new}}
+        \nonumber
+    \nonumber
+    \\
+    & = &
+        \bigoplus_{k=1}^{K}
+            i_{k}
+            v_{k, j}
+        \nonumber
+\end{eqnarray}
+$$
+
+In most programming languages, there is no bit wise XOR for floating point values. Because $$m_{k, j}^{\mathrm{new}}$$ are integers, we only need to calculate bit wise XOR for integer values.
 
 ## Example
 * $d := 3$,
