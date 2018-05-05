@@ -211,5 +211,22 @@ systemctl disable cups-browsed.service
 ### Delete amazon
 * [How to Remove the Amazon Application from Ubuntu](https://www.lifewire.com/remove-amazon-application-from-ubuntu-4134329)
 
+### Change keybindings like Emacs
+* [gtk \- How do I change my gnome Ubuntu key\-binding work as emacs? \- Super User](https://superuser.com/questions/345452/how-do-i-change-my-gnome-ubuntu-key-binding-work-as-emacs)
+* [Ubuntu で key\-theme を emacs にしたときにテキストを全選択する方法 \- Qiita](https://qiita.com/ledmonster/items/f37c86a1b9fc408f0b9b)
+
+Keybinds are defined in `/usr/share/theme/Emacs/gtk-3.0`
+
+```
+gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
+```
+
+You can change to default keybinds by
+
+```
+gsettings set org.gnome.desktop.interface gtk-key-theme "Default"
+```
+
+
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)

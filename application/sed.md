@@ -83,5 +83,21 @@ Basic Regular Expression (BRE)と Extended Regular Expression (ERE)がある。
 
 * `s///[we] (substitute with e or w flags)`
 
+## Usage
+Replace text
+
+```
+echo 'hoge' | sed -e 's/replacee/replacer/g'
+```
+
+Replace text with group
+
+```
+echo 'hoge' | sed -e 's/\(regexp\)/\1/g'
+```
+
+* escape needed char
+    * `+`
+
 ## Reference
 * [sed コマンド | コマンドの使い方(Linux) | hydroculのメモ](https://hydrocul.github.io/wiki/commands/sed.html)
