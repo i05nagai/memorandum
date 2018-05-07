@@ -1,3 +1,6 @@
+---
+title: tmux
+---
 # tmux
 
 ## Tips
@@ -47,6 +50,13 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 # Update default binding of `Enter` to also use copy-pipe
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+```
+
+## CLI
+現在の設定値を表示
+
+```
+tmux show-options -g
 ```
 
 ## Configurations
