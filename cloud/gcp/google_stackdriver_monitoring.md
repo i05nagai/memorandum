@@ -51,7 +51,19 @@ title: Google Stackdriver Monitoring
     * `projects/my-project-id/metricDescriptors/custom.googleapis.com/cpu_utilization`
     * REST APIで使う場合は `projects/my-project-id/metricDescriptors/custom.googleapis.com%2Fcpu_utilization`
     * `name`としてlabelされている
-        
+
+## Group
+以下の項目でGroupを作れる。
+Group内にsubgroupも作ることができる。
+
+* Name
+* Tag
+    * label?
+* Security Group
+* Cloud Account/Project
+* Region
+* GAE App
+* GAE Service
 
 
 ## Tutorial
@@ -105,6 +117,15 @@ curl -sS https://dl.google.com/cloudagents/install-logging-agent.sh | sudo bash
         * device_name: `cluster-name: cluster-name-`
 
 ## Alert policy
+Resourceのtarget
+
+* Group
+    * Groupで作ったresource群、Groupのsubgroupを指定できる
+    * 条件は以下を指定できる
+        * group内のいずれかのresource
+        * group内の一定割合のresource
+        * group内の一定個数のresource
+* Single
 
 * Metric Threshold
     * metricが一定期間threashold 以上、以下の場合alert
