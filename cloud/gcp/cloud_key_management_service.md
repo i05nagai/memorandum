@@ -89,6 +89,29 @@ gcloud kms decrypt \
     * old keyをdisableにする
     * old keyでencryptしていたものnew keyでencryptする
 
+## Destroying and restoring key versions
+* [Destroying and restoring key versions  |  Cloud KMS Documentation  |  Google Cloud](https://cloud.google.com/kms/docs/destroy-restore)
+
+* key version
+    * key versionはdelete, disableがありそれぞれ権限がある
+    * deleteは24hour後に削除される
+        * 取り消しは可能
+        * disableにschedulingされる
+    * 削除されたversionで暗号化されたものは復元不能
+    * 削除されたversionは再利用されない
+* key
+    * [Object hierarchy  |  Cloud KMS Documentation  |  Google Cloud](https://cloud.google.com/kms/docs/object-hierarchy#lifetime)
+    * 名前の再利用をさけるため、削除できない
+* keyring
+    * [Object hierarchy  |  Cloud KMS Documentation  |  Google Cloud](https://cloud.google.com/kms/docs/object-hierarchy#lifetime)
+    * 名前の再利用をさけるため、削除できない
+
+
+key version削除できる権限は限られている
+
+* `role/cloudkms.admin` or `role/owner`
+    * key versionを削除できる
+
 ## Pricing
 * [Cloud KMS Pricing  |  Cloud KMS Documentation  |  Google Cloud](https://cloud.google.com/kms/pricing)
 
