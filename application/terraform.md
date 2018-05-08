@@ -375,6 +375,46 @@ terraform state show <resource-address>
 
 ## Tips
 
+### General needs
+terraform周りでよくあるやりたいこと
+
+* dev/stg/prodでresourceを分けて管理
+    * workspaceを使う
+* dev/stg/prodでresourceを作る作らないを選択
+    * countを使う
+* dev/stg/prodで共通のresourceを選択
+    * commonというworkspaceを作る
+* serviceごとでresourceの作成を選択
+    * serviceごとのresourceをdirectory/moduleに分ける
+* serviceごとで共通のresourceを作成する
+    * coreというdirectory/moduleに作成する
+
+### to create resource if only specified environment
+environmentごとにresourceの作成/不作成を決める。
+
+```tf
+locals {
+    flag = {
+        # important that the value is exclusive
+        env_dev = "${var.env == "dev" ? 1 : 0}"
+        env_stg = "${var.env == "stg" ? 1 : 0}"
+        env_prod = "${var.env == "prod" ? 1 : 0}"
+    }
+}
+
+# only created if env is dev
+resource "google_kms_key_ring_iam_binding" "container_builder" {
+  count = "${local.flag["env_dev"]}"
+  ...
+}
+# if env is dev or stg
+resource "google_kms_key_ring_iam_binding" "container_builder" {
+  # must be 0 <= local.flag["env_dev"] + local.flag["env_stg"] <= 1
+  count = "${local.flag["env_dev"] + local.flag["env_stg"] }"
+  ...
+}
+```
+
 ### Rename resource with state
 以下のcommandでstateのrenameができる。
 configurationを書き換えて、stateをrenameすればOK
