@@ -291,7 +291,15 @@ resource "google_compute_disk" "default" {
             * for second generation this must be true
         * `require_ssl`
             * true -> mysqld default to` REQUIRE X509`
-        
+* `google_kms_key_ring`
+    * KMSのkeyring
+* `google_kms_crypto_key`
+    * KMSのkeyを作成
+* `google_kms_crypto_key_iam_binding`
+    * keyに対してIAMを付与
+    * `crypto_key_id`
+    * `members`
+    * `role`
 
 ## Terraform
 * `backend`
