@@ -11,6 +11,48 @@ Beta
     * gcr.io/google-appengine/nodejs
     * https://github.com/GoogleCloudPlatform/nodejs-docker
 
+## Source code
+* Inline editor
+    * Web UI in GCP
+* Zip upload
+* Zip from GCS
+* Cloud Source repository
+    * 以下を指定できる
+        * repository
+        * branch/tag
+        * branch name
+        * path to source code
+        * function name in the source code
+
+## Events
+Cloud functionsの起動event
+
+* HTTP—invoke functions directly via HTTP requests
+* Cloud Storage
+* Cloud Pub/Sub
+* Firebase (DB, Storage, Analytics, Auth)
+
+
+cloud functionsのevent parameter
+
+* data
+    * eventに関するdata
+    * 起動eventごとに異なる
+* context
+    * The context object for the event
+* context.eventId
+    * A unique ID for the event.
+* context.timestamp
+    * The date/time this event was created.
+* context.eventType
+    * The type of the event.
+* context.resource
+    * The resource that emitted the event.
+
+
+## Pub/Sub
+
+
 ## Pricing
 料金は、Innvocations, Network, Comute timeについて課金される。
 
@@ -67,6 +109,75 @@ Beta
 Nodejs用のGCP用のAPI libraryを利用する。
 
 * [googleapis/nodejs-bigquery: Node.js client for Google Cloud BigQuery: A fast, economical and fully-managed enterprise data warehouse for large-scale data analytics.](https://github.com/googleapis/nodejs-bigquery#samples)
+
+## Tips and Tricks
+* Write idempotent functions
+* Always call the callback
+* Do not start background activities
+* Always delete temporary files
+* Error reporting
+    * `console.error(new Error('message'))`でStackderiverにerror通知できる
+    * uncautght exceptionはだめ
+
+
+Performance
+
+* Minimize dependencies
+* Use global variables to reuse objects in future invocations
+    * cloud functionがexecution environmentをrecycleする場合がある
+    * その場合は、global scopeの変数は再計算されないのでcacheとして使える
+* Do lazy initialization of global variables
+    * 
+
+
+## Monitoring Cloud Functions
+* [Monitoring Cloud Functions  |  Cloud Functions Documentation  |  Google Cloud](https://cloud.google.com/functions/docs/monitoring/)
+
+
+Writing logs
+
+* `console.log()`
+    * info level log
+* `console.info(new Error('message'));`
+    * info level logなので、stackdriver error reportingには通知されない
+* `console.error()`
+    * error level log
+* internal system message
+    * debug level log
+* `throw 1;`
+    * stackdriver error reporingに通知されない
+* `console.error(new Error('message'));`
+    * stackdriver error reporingに通知
+* `callback('message');`
+    * HTTP status codeの500を返す場合もstackdriver error reporingに通知されない
+
+Viewing logs
+
+Stackdriver loggingからでも見られる。
+
+```
+gcloud beta functions logs read
+gcloud beta functions logs read <FUNCTION_NAME> --execution-id d3w-fPZQp9KC-0
+```
+
+## Testing and CI/CD
+* [Testing and CI/CD  |  Cloud Functions Documentation  |  Google Cloud](https://cloud.google.com/functions/docs/bestpractices/testing)
+    * testの一般論と、cloud functionでどうsystem testsまでするかが書いてある
+
+Unit tests
+
+* GCP componentsはSinon.JSのようなmockを使う
+* test frameworkはAVAがreferされている
+
+integration tests
+
+* cloud functio emulator
+    * localでPub/SubやGCSのnotificationをmockしてくれる
+    * alpha feature
+
+
+## Local emulator
+* [Cloud Functions Local Emulator  |  Cloud Functions Documentation  |  Google Cloud](https://cloud.google.com/functions/docs/emulator)
 
 ## Reference
 * [Google Cloud Functions Documentation  |  Cloud Functions  |  Google Cloud Platform](https://cloud.google.com/functions/docs/)
