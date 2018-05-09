@@ -1,8 +1,8 @@
 ---
-title: Hyper 2.0
+title: Hyper
 ---
 
-## Hyper 2.0
+## Hyper
 Hyper is an HTML, CSS, and JavaScript-based terminal emulator that’s built with Electron. 
 
 ## Reference
