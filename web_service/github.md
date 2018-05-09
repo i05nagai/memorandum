@@ -1,3 +1,7 @@
+---
+title: GitHub
+---
+
 ## GitHub
 
 ## GitHub Pages with jekyll
