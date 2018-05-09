@@ -34,6 +34,10 @@ I cross off the customer's name from the reservation list.
     * [What is the better way to say 'a reasonable reason'? - Quora](https://www.quora.com/What-is-the-better-way-to-say-a-reasonable-reason)
 * make sense to you/
     * [word choice - "Does it make sense?" or "Do you understand me?"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/22294/does-it-make-sense-or-do-you-understand-me)
+* et voila
+    * there you go
+* integrate into/integrate with
+    * [integrate to // integrate into | WordReference Forums](https://forum.wordreference.com/threads/integrate-to-integrate-into.2306216/)
 
 
 ## Math
@@ -91,6 +95,9 @@ I cross off the customer's name from the reservation list.
     * [Engineering tolerance - Wikipedia](https://en.wikipedia.org/wiki/Engineering_tolerance)
 * on the website / in the website
     * on the website is correct
+* nit
+    * [code review - What does "nit" mean in hacker-speak? - Stack Overflow](https://stackoverflow.com/questions/27810522/what-does-nit-mean-in-hacker-speak)
+    * short for `nitpicking`
 
 * on the internet / in the internet
     * on the internet is correct

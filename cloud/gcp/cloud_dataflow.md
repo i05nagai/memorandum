@@ -33,3 +33,4 @@ lowaのPricing
 
 
 ## Reference
+* [Google Cloud Dataflow で Google BigQuery へストリーミング ETL するの巻 - おくみん公式ブログ](http://blog.okumin.com/entry/2017/08/20/201901)

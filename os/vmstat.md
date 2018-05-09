@@ -14,7 +14,7 @@ apk upate
 apk add --update procps
 ```
 
-## Usage
+## CLI
 
 ```
 vmstat [options] [delay [count]
@@ -52,11 +52,24 @@ options
 * `-t, --timestamp`
     * show timestamp
 
-
 ```
 vmstat 2 -S m
 ```
 
+## Usage
+
+For 1 week
+
+```
+vmstatm -n -S m 10 604879 | tee vmstat.log
+```
+
+with timestamp
+
+```
+vmstat 1 | awk '{print strftime("%y/%m/%d %H:%M:%S"), $0}'
+vmstat 1 | awk '{print strftime("%y/%m/%d %H:%M:%S"), $0} {fflush() }'
+```
 
 ## Outpout format
 ```
@@ -155,3 +168,4 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 * [Use vmstat to Monitor System Performance](https://linode.com/docs/uptime/monitoring/use-vmstat-to-monitor-system-performance/)
 * [vmstat コマンドの読み方 | Oracle やっぱり Sun がスキ！ Blog](https://blogs.oracle.com/yappri/vmstat)
 * [Linux Performance Measurements using vmstat - Thomas-Krenn-Wiki](https://www.thomas-krenn.com/en/wiki/Linux_Performance_Measurements_using_vmstat)
+* [Linuxでvmstatの結果に時刻表示（タイムスタンプ）を付けて出力 | トミリュウ・コム](http://www.tomiryu.com/others/vmstat_timestamp/)

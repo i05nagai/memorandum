@@ -32,6 +32,11 @@ release時にだけsquashをつけるようにしても良い。
 
 * `--cache-from <registory-image-uri>`
     * cacheのimageとして利用する
+    * remote repositoryを指定しても自動でPullはしてくれないので、一度pullしてからcahce-fromに指定する
+    * [Docker "--cache-from" flag not working - CircleCI 2.0 / 2.0 Support - CircleCI Community Discussion](https://discuss.circleci.com/t/docker-cache-from-flag-not-working/11525)
+    * multi state buildの場合最初のlayerのcacheはきかない
+        * [--cache-from and Multi Stage: Pre-Stages are not cached · Issue #34715 · moby/moby](https://github.com/moby/moby/issues/34715)
+
 
 ## docker hisotry
 imageの各layerの容量などを表示する。

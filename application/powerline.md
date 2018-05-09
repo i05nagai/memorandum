@@ -12,6 +12,8 @@ pip install --user powerline-status
 
 ## tmux
 * [Add power to your terminal with powerline - Fedora Magazine](https://fedoramagazine.org/add-power-terminal-powerline/)
+* 既存のtmuxの設定は上書きされるので、powerlineの設定を読み込んだ後に必要な設定は上書きする
+    
 
 * powerlineのinstall場所を調べる
     * [Installation — Powerline beta documentation](https://powerline.readthedocs.io/en/latest/installation.html#repository-root)
@@ -27,6 +29,8 @@ source "${repository_root}/powerline/bindings/tmux/powerline.conf"
 
 `$POWERLINE_CONFIG_COMMAND`が設定されている必要がある。
 `powerline-config` commandが使える必要がある。
+
+
 
 ## Configurations
 * [Configuration and customization — Powerline beta documentation](https://powerline.readthedocs.io/en/latest/configuration.html)

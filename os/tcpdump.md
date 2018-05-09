@@ -12,9 +12,8 @@ apt-get install tcpdump
 ## CLI
 
 ```
-tcpdump
+tcpdump expression
 ```
-
 
 * `-n`
     * addressを名前に変換しない
@@ -29,6 +28,24 @@ tcpdump
     * stdoutではなくfileに書き込む
 * `-t`
     * human readable output
+
+## expression
+* `and`, `&&`
+* `or`, `||`
+* `not`, `!`
+
+```
+tcpdump src IP and dst
+```
+
+* `src IP`
+* `dst IP`
+* `port NUM`
+
+```
+tcpdump dst 192.168.0.2 and src net and not icmp
+```
+
 
 ## Usage
 

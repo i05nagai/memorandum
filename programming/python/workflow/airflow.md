@@ -292,6 +292,8 @@ base_url = http://<hostname or IP>:443
 なぜかdaemon化するときは、certfileが必要(1.8.0)。
 
 ## Scheduling
+* [Scheduling & Triggers — Airflow Documentation](https://airflow.incubator.apache.org/scheduler.html)
+
 DAGごとにcronのようなscheduleを設定できる。
 scheduleを設定しない場合は、手動実行のみ可能。
 scheduleは`airflow.DAG`クラスを作成時に`schedule_interval`引数で指定する。
@@ -317,7 +319,7 @@ airflow.DAG(schedule_interval="0 * * * *")
 airflow.DAG(schedule_interval=@hourly)
 ```
 
-* [Scheduling & Triggers — Airflow Documentation](https://airflow.incubator.apache.org/scheduler.html)
+
 
 ### Term/Conecepts
 用語と概念
@@ -382,6 +384,8 @@ airflow.DAG(schedule_interval=@hourly)
         * `2017-07-03`
         * `2017-07-04`
         * `2017-07-05`
+    * schedule_intervalが`1 day`でJSTの場合、`2017-07-05 09:00:00+9:00`=`2017-07-05 00:00:00+0:00`にexecution date`2017-07-04 00:00:00`のDagRunが実行される
+        * schedule_interval分前のexecution_dateになる
 * running date
     * taskが実行された日
     * 上記の例ではrunning dateは全てのtaskで同じ

@@ -293,6 +293,8 @@ steps:
 
 * Using a cached Docker image
     * docker build時に`--cache-from`でregistryのdocker imageを指定する
+    * cache-fromはきかない？
+        * [--cache-from and Multi Stage: Pre-Stages are not cached · Issue #34715 · moby/moby](https://github.com/moby/moby/issues/34715)
 
 ## Examples
 * [wildfish/google-cloud-container-builder-example](https://github.com/wildfish/google-cloud-container-builder-example)
@@ -327,6 +329,30 @@ $ container-builder-local --help
 $ container-builder-local --config=cloudbuild.yaml [--substitutions=_FOO=bar] [--dryrun=true/false] [--push=true/false] source
 ```
 
+### Use environment variables in args
+Substitutionにない変数を`${VAR}`でreferするとerrorになる。
+以下を指定すれば、errorにならなくなるが、効かない場合もある？
+
+```
+options:
+  substitutionOption: 'ALLOW_LOOSE'
+```
+
+その場合は環境変数の`$${VAR}`で参照する。
+
+```yaml
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    $${VAR}
+```
+
+## container builder
+container builderのmachineにはdefaultでdocker imageが含まれている。
+documentなどには記載されてないので`docker images`などで出力する必要があるが、 pullの時間を節約になる。
 
 ## Reference
 * [Google Cloud Container Builder Documentation  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/?hl=en_US&_ga=2.110153093.-1205531873.1513079066)

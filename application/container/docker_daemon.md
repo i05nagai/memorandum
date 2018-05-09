@@ -237,5 +237,13 @@ restartなしで変更可能なoption
 * insecure-registrie
 * registry-mirrors
 
+## Tips
+
+### configuration
+[Control Docker with systemd | Docker Documentation](https://docs.docker.com/config/daemon/systemd/#start-automatically-at-system-boot)
+
+systemdやserviceでdocker daemonを動かす場合、dockerdのconfigは`/etc/docker/daemon.json`
+
+
 ## Reference
 * [dockerd | Docker Documentation](https://docs.docker.com/engine/reference/commandline/dockerd/)

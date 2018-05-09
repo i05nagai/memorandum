@@ -90,6 +90,39 @@ docker-machine start default  # 立ち上げ
 * [Dockerfile ベストプラクティス (仮) - Qoosky](https://www.qoosky.io/techs/f38c112ca9)
 * [Docker container will automatically stop after "docker run -d" - Stack Overflow](https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d)
 
+### docker command in docker build
+docker build時にdocker commmandを使う。
+`docker build`のoptionに`--network`が指定できるので、dindのImageをdockerのnetworkにつなげてnetworkを通してdockerを使う。
+例えば以下のようにする。
+
+```sh
+if [ -z `docker volume ls --filter name=docker --quiet` ]; then
+    docker volume create docker
+fi
+if [ -z `docker network ls --filter name=docker_network --quiet` ]; then
+    docker network create docker_network
+fi
+docker run \
+    --rm -it \
+    --privileged \
+    --name docker \
+    --network docker_network \
+    --volume docker:/var/lib/docker \
+    -d \
+    docker:dind
+docker build --network docker_network -t <image>:<tag> .
+docker kill docker
+docker volume rm docker
+```
+
+dockerfileは以下のようにする。
+
+```Dockerfile
+
+RUN \
+    DOCKER_HOST=tcp://docker:2375 docker images
+```
+
 ### completion
 * [コマンドライン補完 — Docker-docs-ja 1.12.RC ドキュメント](http://docs.docker.jp/compose/completion.html)
 

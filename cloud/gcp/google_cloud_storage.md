@@ -277,5 +277,85 @@ bucketのloggingが設定されているか。
 gsutil logging get gs://bucket
 ```
 
+## Pricing
+* free usage
+    * regional stroage
+        * 5GB/motnh
+    * class A operation
+        * 5,000
+    * class B operation
+        * 50,000
+    * network egress
+        * 1GB from North America to each GCP region
+
+For Asia,
+
+* data storage
+    * multi regional stroage
+        * 0.026USD GB/Month
+    * nearline storage
+        * 0.007 USD GB /month
+    * coldline storage
+        * 0.01 USD GB /month
+* Free network usage
+    * same multi regional/ regional location
+    * from narrower region to larger multi-region
+        * e.g. `us-east1` to `us`
+* Bucket-to-bucket network usage
+    * 0-1TB
+        * within the same location
+            * free
+        * different part of multi region
+            * 0.01 USD GB/month
+        * between worldwide loccaiton
+            * 0.12 USD/GB
+    * 1-10TB
+        * within the same location
+            * free
+        * different part of multi region
+            * 0.01 USD GB/month
+        * between worldwide loccaiton
+            * 0.11 USD/GB
+    * 10+TB
+        * within the same location
+            * free
+        * different part of multi region
+            * 0.01 USD GB/month
+        * between worldwide loccaiton
+            * 0.08 USD/GB
+
+For Asia,
+
+* General network usage
+    * 0-1 TB
+        * Egress to Worldwide Destinations 
+            * 0.12 USD GB/month
+        * Egress to Asia Destinations
+            * 0.12 USD GB/month
+        * Egress to China Destinations 
+            * 0.23 USD GB/month
+        * Egress to Australia Destinations 
+            * 0.19 USD GB/month
+        * Ingress
+            * free
+    * 1-10TB
+    * 10+TB
+
+For Asia, Additional cost.
+a minimum storage.
+
+* Retrieval and early deletion
+    * nearline storage
+        * retrieval cost
+            * 0.01 USD GB/month
+        * minimum storage duration
+            * 30 days
+    * coldline storage
+        * retrieval cost
+            * 0.01 USD GB/month
+        * minimum storage duration
+            * 90 days
+
+
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
