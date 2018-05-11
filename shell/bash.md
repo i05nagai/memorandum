@@ -30,5 +30,16 @@ login shellとして起動されるか、interactive shellかどうかなどで�
     * same precedence
     * left associative
 
-## Reference
+## Bash variablaes
+* [Bash Reference Manual: Bash Variables](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html)
 
+
+* BASH_SOURCE
+    * array
+    * source filename `${FUNCNAME[$i]}`
+    * corresponding shell function name in FUNCNAME array
+    * `${FUNCNAME[$i]}` is defined in `${BASH_SOURCE[$i]}`
+    * `${FUNCNAME[$i]}` is called from `${BASH_SOURCE[$i+1]}`
+    * `$0`は`source`で変更されないが、`BASH_SOURCE`はsourceされるとsource先が0番目にpushされる
+
+## Reference
