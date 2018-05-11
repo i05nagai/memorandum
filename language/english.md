@@ -38,6 +38,21 @@ I cross off the customer's name from the reservation list.
     * there you go
 * integrate into/integrate with
     * [integrate to // integrate into | WordReference Forums](https://forum.wordreference.com/threads/integrate-to-integrate-into.2306216/)
+* hoodie
+    * sweatt
+* furrow
+* nemesis
+* shroud
+* profusely
+* frantically
+* partake
+* outage
+* partake
+    * join in
+    * eat or drink something
+* for long/for a long time
+    * [What is the difference between 'for long' and 'for a long time'? - Quora](https://www.quora.com/What-is-the-difference-between-for-long-and-for-a-long-time)
+
 
 
 ## Math
@@ -109,6 +124,8 @@ I cross off the customer's name from the reservation list.
     * [grammatical number - Is it wrong to use the word "codes" in a programming context? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/20455/is-it-wrong-to-use-the-word-codes-in-a-programming-context)
 * maintenace cost
     * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
+* on-call
+    * pagedutyなどの障害の電話通知
 
 ## Reference
 
