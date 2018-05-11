@@ -80,6 +80,16 @@ gcloud kms decrypt \
     --plaintext-file=YOUR_FILEPATH_AND_FILENAME_TO_DECRYPT.dec
 ```
 
+## Permissions and Roles
+* Roleはkeyring, keyごとに、accountを指定して付与できる
+    * keyring Aについて、account Bにrole Cを付与
+    * key Aについて、account Bにrole Cを付与
+
+* `roles/cloudkms.cryptoKeyDecrypter`
+    * decryptできる
+* `roles/cloudkms.cryptoKeyEncrypter`
+    * encryptできる
+
 ## Rotations
 * rotateしてもold keyはdisableにはならない
 * old keyがenabledの間はold keyでenryptされたものは、decryptできる
