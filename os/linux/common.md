@@ -58,6 +58,14 @@ complete -F _known_hosts xvncviewer
 * `xvncviewer`
     * commandの実行時
 
+## Tips
+* [How To Become A Linux Guru](https://www.lifewire.com/learn-linux-4107524)
+
+### Linux and GNU/Linux
+* [The Difference Between Linux and GNU/Linux](https://www.lifewire.com/what-is-linux-2201940)
+
+GNU/LinuxはLinux kernelとのやりとりはGNUのtoolで行っているもの。
+BashもGNUなので、Bashを使っているものは大体そう。
 
 ## Reference
 * [Linux グループ一覧の確認と/etc/group ファイル](http://kazmax.zpp.jp/linux_beginner/etc_group.html)
