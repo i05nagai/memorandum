@@ -1,3 +1,6 @@
+---
+title: MySQL
+---
 # MySQL
 
 ## インストール
