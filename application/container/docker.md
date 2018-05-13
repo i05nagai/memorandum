@@ -40,6 +40,12 @@ Officialのguideに従っても、`docker-ce`をInstallできない場合があ�
 apt-get install docker.io
 ```
 
+もしくはsnapcraftでinstallする
+
+```
+sudo snap install docker
+```
+
 ```
 sudo apt-get install \
   apt-transport-https \
