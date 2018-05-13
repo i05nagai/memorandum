@@ -2,6 +2,8 @@
 title: GDB
 ---
 
+## gdb
+
 ## Install
 
 ### MacOSX
@@ -19,8 +21,6 @@ brew install gdb
     * こっちのほうが良い
 * [GitHub - gdbinit/Gdbinit: Gdbinit for OS X, iOS and others - x86, x86_64 and ARM](https://github.com/gdbinit/Gdbinit)
     * `~/.gdbinit`におく。
-
-## gdb
 
 ### front end of gdb
 [list](https://sourceware.org/gdb/wiki/GDB%20Front%20Ends)

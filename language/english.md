@@ -38,6 +38,16 @@ I cross off the customer's name from the reservation list.
     * there you go
 * integrate into/integrate with
     * [integrate to // integrate into | WordReference Forums](https://forum.wordreference.com/threads/integrate-to-integrate-into.2306216/)
+* put a burr under the saddle
+    * irritated by something
+* have a burr under the saddle
+    * [Have a burr under saddle \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/have+a+burr+under+saddle)
+    * irritated by something
+* bareback
+    * on an unsaddled horse
+* with a grain of salt
+    * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
+* judge and jury
 
 
 ## Math
