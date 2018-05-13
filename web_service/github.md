@@ -218,6 +218,7 @@ OrganizationからAPpsの承認がないと、個別のrepositoryへのadmin権�
 
 ### default labels
 * [GitHubがデフォルトで用意しているIssueラベルの意味 - Qiita](http://qiita.com/maeda_t/items/4344bdeabcc6a18a34cc)
+* [About labels \- User Documentation](https://help.github.com/articles/about-labels/)
 
 | ラベル      | 意味                                                           |
 |-------------|----------------------------------------------------------------|
