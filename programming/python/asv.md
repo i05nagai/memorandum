@@ -1,4 +1,8 @@
-# airspeed velocity
+---
+title: asv
+---
+
+## airspeed velocity
 
 numpy, scipyで使われているbenchmark用のpython library
 
@@ -15,6 +19,8 @@ pip install asv
 
 ### `virtualenv`を入れる
 * [Virtualenv — virtualenv 15.1.0 documentation](http://virtualenv.pypa.io/en/stable/)
+
+confを`env_type`が`virtualenv`の場合に必要。
 
 ```python
 pip install virtualenv
@@ -46,6 +52,9 @@ Edit asv.conf.json to get started.
 
 カレントディレクトリがprojectのrootであれば、`y`と回答すれば良い。
 必要に応じて生成された`asv.conf.json`の中身を編集する。
+
+## Configuration
+
 `asv.conf.json`のreferenceに詳細がある。
 [asv.conf.json reference — airspeed velocity 0.3.dev1071+390145a5 documentation](http://asv.readthedocs.io/en/latest/asv.conf.json.html).
 
@@ -68,6 +77,16 @@ Edit asv.conf.json to get started.
 * `environment_type`
     * benchmark実行用の仮想環境の生成方法を指定する
     * `conda`もしくは`virutalenv`を指定
+
+
+指定したcommitからのbenchmarkを計測する。
+
+```json
+    "regressions_first_commits": {
+       "some_benchmark": "352cdf",  // Consider regressions only after this commit
+       "another_benchmark": null,   // Skip regression detection altogether
+    }
+```
 
 
 ### Running benchmarks
@@ -105,6 +124,8 @@ asv run v0.1..master
 asv run ALL
 ```
 
+他のmachineで実行されたbenchmarkでこのmachineで実行されてないものを実行する。
+
 ```
 asv run EXISTING
 ```
@@ -122,9 +143,18 @@ asv run NEW
 asv run --skip-existing-commits ALL
 ```
 
+## Tips
 
+### ValueError: Using the currently installed project version: operations requiring repository are not possible
+以下のmessageがでている場合は、`pip install virtualenv`でvirtualenvをいれる。
+
+```
+virtualenv package not installed
+```
+
+###  Can not determine what kind of DVCS to use for URL '..'
+`dvcs`が`.git`だと発生する。
 
 ## Reference
-* 
 * [GitHub - spacetelescope/asv: Airspeed Velocity: A simple Python benchmarking tool with web-based reporting](https://github.com/spacetelescope/asv)
 * [airspeed velocity — airspeed velocity 0.3.dev1064+aa11c73c documentation](http://asv.readthedocs.io/en/latest/)
