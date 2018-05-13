@@ -34,6 +34,16 @@ I cross off the customer's name from the reservation list.
     * [What is the better way to say 'a reasonable reason'? - Quora](https://www.quora.com/What-is-the-better-way-to-say-a-reasonable-reason)
 * make sense to you/
     * [word choice - "Does it make sense?" or "Do you understand me?"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/22294/does-it-make-sense-or-do-you-understand-me)
+* put a burr under the saddle
+    * irritated by something
+* have a burr under the saddle
+    * [Have a burr under saddle \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/have+a+burr+under+saddle)
+    * irritated by something
+* bareback
+    * on an unsaddled horse
+* with a grain of salt
+    * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
+* judge and jury
 
 
 ## Math
