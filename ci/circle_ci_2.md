@@ -3,6 +3,27 @@ title: Circle CI 2.0
 ---
 
 ## Circle CI 2.0
+* `branches` はjobsにかくとworkflowがつかえない
+    * `workflow`の`filters.branches`を使う
+
+## Validator
+
+For ubuntu,
+
+```
+# with snap
+sudo snap install docker
+sudo snap install circleci
+sudo snap connect circleci:docker docker
+# or
+curl -o /usr/local/bin/circleci https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci && chmod +x /usr/local/bin/circleci
+```
+
+circleciはdockerを使うので、dockerが動く環境である必要がある。
+
+```
+circleci config validate -c .circleci/config.yml
+```
 
 ## Environment variableso
 * built-in environment variables
@@ -24,6 +45,11 @@ title: Circle CI 2.0
 * `steps`
     * actions in job
     * collections of executable commands
+* `branches`
+    * `only`
+        * acceptable branch name
+    * `ignore`
+        * ignored branch name
 
 ```yaml
 version: 2
@@ -71,6 +97,11 @@ workflows:
 ## Steps
 * `checkout`
     * source codeのcheckout
+    * `working_directory`にcheckoutする
+        * defaultは`/root`なら`/root/project`にcheckoutする
+* `working_directory`
+    * dockerの場合はcontainerのworking directory
+        * だいたい`/root`
 * `run:`
     * execute commands
 
@@ -137,6 +168,8 @@ workflows:
 
 jobのつながりを記述する。
 `triggers`で日付で実行を制御できる。
+triggersを指定しない場合はgitへのpushに応じて動作する。
+branchやgit tagなどでfilterも可能。
 
 
 ```yaml
