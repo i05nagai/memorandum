@@ -17,6 +17,37 @@ First Generation, Second Generationがあるが、Secondを使えば良い
 
 ### Restoring an Instance
 
+## Connection
+* Authorized netowrks
+    * Cloud SQL Proxyを使わない場合はCIDRで接続可能なIP addressを指定する必要がある
+
+## Cloud SQL Proxy
+* [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy)
+
+Authorized netowkrsやSSLの設定なしでsecureに接続する方法
+Second generationのみ。
+
+
+* Secure connections
+    * TLS 1.2 with a 128-bit AES cipher
+* Easier connection management
+    * 
+
+How the Cloud SQL Proxy works
+
+* proxy serverがinstanceの前にたち、clientはproxy clientにlocalでつなげる
+* proxy clinetとproxy serverがdataのやりとり
+* `clinet <-> proxy client <--over network-> proxy server <-> instance`
+
+Installng the Cloud SQL Proxy
+
+For Linux
+
+```
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
+chmod +x cloud_sql_proxy
+```
+
 ## Concepts
 
 ### Backup

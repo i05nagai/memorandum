@@ -17,3 +17,6 @@
     * samplingがいる
 * 200GBのstorageがあるとは思って良い
 * memoryは8GB以下くらいを想定する
+
+## Papers
+* [Research – Google AI](https://ai.google/research/)

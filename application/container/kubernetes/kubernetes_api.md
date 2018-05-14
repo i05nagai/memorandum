@@ -66,12 +66,27 @@ spec:
     * `name`
         * `volumeMount`などでreferするvolumeの名前
     * `secret`
+        * `SecretVolumeSource`
     * `configMap`
         * ConfigMapVolumeSource
     * `gitRepo`
     * `hostPath`
         * Nodeのpath
         * developでhostのfileをMountする場合に使う
+* `SecretVolumeSource`
+    * `secretName`
+    * `items`
+        * array of `KeyToPath`
+        * 未指定だと、secretのKeyをfile名にvalueをfile contentとしてvolumeを作る
+    * `defaultMode`
+        * default `0644`
+* `KeyToPath`
+    * `key`
+    * `mode`
+        * default: volume default mode
+    * `path`
+        * `..`はだめ
+        * relative/absolute path
 * `ConfigMapVolumeSource`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#configmapvolumesource-v1-core)
     * `name`

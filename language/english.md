@@ -48,6 +48,21 @@ I cross off the customer's name from the reservation list.
 * with a grain of salt
     * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
 * judge and jury
+* hoodie
+    * sweatt
+* furrow
+* nemesis
+* shroud
+* profusely
+* frantically
+* partake
+* outage
+* partake
+    * join in
+    * eat or drink something
+* for long/for a long time
+    * [What is the difference between 'for long' and 'for a long time'? - Quora](https://www.quora.com/What-is-the-difference-between-for-long-and-for-a-long-time)
+
 
 
 ## Math
@@ -119,6 +134,8 @@ I cross off the customer's name from the reservation list.
     * [grammatical number - Is it wrong to use the word "codes" in a programming context? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/20455/is-it-wrong-to-use-the-word-codes-in-a-programming-context)
 * maintenace cost
     * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
+* on-call
+    * pagedutyなどの障害の電話通知
 
 ## Reference
 
