@@ -52,6 +52,37 @@ failした場合の再実行の際には、日付を気にする必要がなく�
 * `yesterday = '{{ macros.ds_format(yesterday_ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
 * `today = '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'`
 
+## Scheduling operators
+以下はcodeに基づく仕様ではなく、経験に基づく挙動の原則。
+Airflowのscheudulerの挙動は仕様としてはまとめられていないので、細かい挙動はsource codeを読む必要がある。
+
+* queueにあるtask instanceはworkerによって順次実行される
+* schedulerはtask instanceのstateが以外で、task instanceのexecution dateが1 schedule interval前であれば、task instanceをqueueにつむ
+
+
+## SubDag operator
+* `dag1`
+    * `sub_dag1` (dag11)
+    * `sub_dag2` (dag12)
+* `dag11`
+    * `operator111`
+* `dag12`
+    * `operator121`
+
+2018/2/02 00:00:00+00:00
+
+* `dag1` DagRun
+    * `sub_dag1`
+        * dagid=`dag1`, taskid=`sub_dag1` task instance (execution date: 2018/02/01 00:00:00+00:00)
+        * dagid=`dag1.sub_dag1` DagRun (execution date: 2018/02/01 00:00:00+00:00)
+    * `sub_dag2`
+        * taskid=`sub_dag2` task instance (execution date: 2018/02/01 00:00:00+00:00)
+        * dagid=`dag1.sub_dag2` DagRun (execution date: 2018/02/01 00:00:00+00:00)
+* `sub_dag1`
+    * dagid=`dag1.sub_dag1`, taskid=`operator111`
+* `sub_dag2`
+    * dagid=`dag2.sub_dag1`, taskid=`operator121`
+
 
 ## Docker operator
 commandに複数の引数を渡す場合は`'["bash", "echo", "{{ ds }}"]'`で文字列で渡せばtemplateを展開する。
