@@ -1227,6 +1227,11 @@ spec:
     - "10000"
 ```
 
+### Shared volumes in a Kubernetes Pod
+* `emptyDir`を使えば同じpodの中でvolumeをshareできる
+
+
+
 ## Reference
 * [What is the correct pronunciation of Kubernetes in English? · Issue #44308 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/44308)
 * [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
