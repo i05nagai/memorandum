@@ -68,7 +68,7 @@ spec:
     * `secret`
         * `SecretVolumeSource`
     * `configMap`
-        * ConfigMapVolumeSource
+        * `ConfigMapVolumeSource`
     * `gitRepo`
     * `hostPath`
         * Nodeのpath
@@ -89,13 +89,25 @@ spec:
         * relative/absolute path
 * `ConfigMapVolumeSource`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#configmapvolumesource-v1-core)
+    * `defaultMode`
+        * default `0644`
     * `name`
+    * `items`
+        * array of `KeyToPath`
+        * 未指定だと、secretのKeyをfile名にvalueをfile contentとしてvolumeを作る
+    * `optional`
 * `Container`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
     * `args`
         * argument to the entrypoint
         * `$(VAR_NAME)`はcontainerの環境で評価される
+            * refering environment variables
+            * parenthesis
     * `command`
+        * dockerのentrypoint
+        * `$(VAR_NAME)`はcontainerの環境で評価される
+            * refering environment variables
+            * parenthesis
     * `env`
     * `envFrom`
     * `image`
@@ -107,10 +119,7 @@ spec:
     * `readinessProbe`
         * `Probe`
         * readiness用のurlを設定
-<<<<<<< HEAD
-=======
         * commandが0ならhealthy, 1ならunhealty
->>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
     * `name`
     * `securityContext`
         * `SecurityContext`
@@ -381,25 +390,14 @@ spec:
         * IngressStatus
 * `IngressSpec`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressspec-v1beta1-extensions)
-<<<<<<< HEAD
-=======
-    * backend
->>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
     * `backend`
         * defaultのbackend
         * IngressBackend
         * ruleにmatchしないものはここにroutingされる
-<<<<<<< HEAD
-    * `rules`
-        * array of IngressRule
-    * `tls`
-=======
-        * IngressBackend
     * `rules`
         * array of IngressRule
     * `tls`
         * array of IngressRule
->>>>>>> e5f9db292afefff5f3c2b69e7ce0ccd068b83502
         * IngressTLS
 * `IngressBackend`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#ingressbackend-v1beta1-extensions)

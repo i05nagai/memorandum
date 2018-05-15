@@ -215,7 +215,13 @@ resource "google_compute_disk" "default" {
             * for second generation this must be true
         * `require_ssl`
             * true -> mysqld default to` REQUIRE X509`
-
+* `google_sql_user` 
+    * `name`
+        * usernmae
+    * `host`
+        * 可能なaccess元
+        * `%` anyhost
+        * documentにsecond generationは指定するなと記載があるが、多分問題ない
 
 * `google_kms_key_ring`
     * KMSのkeyring

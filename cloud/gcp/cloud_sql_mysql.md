@@ -6,9 +6,6 @@ title: Cloud SQL MySQL
 MySQL5.6, MySQL5.7にのみ対応している。
 First Generation, Second Generationがあるが、Secondを使えば良い
 
-
-`'root'@'%'`
-
 ## Connecting from GKE
 
 ## Replication and Manging instance
@@ -19,7 +16,18 @@ First Generation, Second Generationがあるが、Secondを使えば良い
 
 ## Connection
 * Authorized netowrks
-    * Cloud SQL Proxyを使わない場合はCIDRで接続可能なIP addressを指定する必要がある
+    * Cloud SQL Proxyを使わない場合はCIDRで接続可能なIP addressを指定する
+* Cloud SQL Proxy
+    * [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy)
+    * Porxy client/server経由で通信する
+    * Cloud SQL Proxyを使う場合は、SSLの設定は不要
+    * javaのexecutableをinstallする
+    * client側にproxy clientを動かし続けておく必要がある
+        * docker imageがある`gcr.io/cloudsql-docker/gce-proxy:1.11`
+        * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/blob/master/cloudsql/mysql_wordpress_deployment.yaml
+* SSL
+    * [Configuring SSL for Instances  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/configure-ssl-instance)
+    * ssl key pairの管理が必要
 
 ## Cloud SQL Proxy
 * [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy)
@@ -27,11 +35,9 @@ First Generation, Second Generationがあるが、Secondを使えば良い
 Authorized netowkrsやSSLの設定なしでsecureに接続する方法
 Second generationのみ。
 
-
 * Secure connections
     * TLS 1.2 with a 128-bit AES cipher
 * Easier connection management
-    * 
 
 How the Cloud SQL Proxy works
 
@@ -47,6 +53,18 @@ For Linux
 wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 chmod +x cloud_sql_proxy
 ```
+
+* service accountの情報
+    * `Cloud SQL Client` の Roleが必要
+* proxy user account/password
+
+
+In production
+
+* Reducing Cloud SQL Proxy output
+    * `-verbose=false`
+* How failover affects the Cloud SQL Proxy
+
 
 ## Concepts
 
@@ -101,7 +119,6 @@ operational logs
 ## Pricing
 For lowa
 
-
 * instance
     * depends on instance type
 * storage
@@ -119,5 +136,24 @@ For lowa
             * intra continental: free
             * inter continental: 0.12USD/GB
     * IPv4 address: 0.01USD/hour while idle
+
+## Cloud SQL Proxy CLI
+* [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy#flags)
+
+localhostからしかaccessできない。
+
+```
+docker run --rm -it gcr.io/cloudsql-docker/gce-proxy:1.11 /cloud_sql_proxy --help
+```
+
+* `-max_connections`
+    * default 0
+    * 0 means no limit
+* `-credential_file`
+* `-check_region`
+* `-instances=my-project:my-region:my-instance=tcp:3306`
+    * `-instances=<connection-name>=<port>`
+    * `<port>` はproxy serverのlisten port
+
 ## Reference
 * [Cloud SQL for MySQL Documentation  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/)

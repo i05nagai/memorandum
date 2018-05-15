@@ -252,6 +252,11 @@ machine_typeごとのpricing
 
 ## Tips
 
+### filter branch
+yaml fileでbranchのfilterはできないので、build triggerでfilterする。
+filterしたbranchごとにyaml fileを作る必要がある。
+
+
 ### Speeding up builds
 * [Speeding up your Builds  |  Cloud Container Builder  |  Google Cloud](https://cloud.google.com/container-builder/docs/speeding-up-builds#using_custom_virtual_machine_sizes)
 
