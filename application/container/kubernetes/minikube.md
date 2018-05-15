@@ -46,8 +46,16 @@ minikube start --vm-driver=xxx
 * xhyve (driver installation)
 * hyperkit
 
+dashboard
+
 ```
 minikube dashboard
+```
+
+`service-name`のserviceのURLを開く
+
+```
+minikube service <service-name>
 ```
 
 ### Pull local docker images
