@@ -68,7 +68,7 @@ spec:
     * `secret`
         * `SecretVolumeSource`
     * `configMap`
-        * ConfigMapVolumeSource
+        * `ConfigMapVolumeSource`
     * `gitRepo`
     * `hostPath`
         * Nodeのpath
@@ -89,13 +89,25 @@ spec:
         * relative/absolute path
 * `ConfigMapVolumeSource`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#configmapvolumesource-v1-core)
+    * `defaultMode`
+        * default `0644`
     * `name`
+    * `items`
+        * array of `KeyToPath`
+        * 未指定だと、secretのKeyをfile名にvalueをfile contentとしてvolumeを作る
+    * `optional`
 * `Container`
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#container-v1-core)
     * `args`
         * argument to the entrypoint
         * `$(VAR_NAME)`はcontainerの環境で評価される
+            * refering environment variables
+            * parenthesis
     * `command`
+        * dockerのentrypoint
+        * `$(VAR_NAME)`はcontainerの環境で評価される
+            * refering environment variables
+            * parenthesis
     * `env`
     * `envFrom`
     * `image`
