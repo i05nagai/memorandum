@@ -4,6 +4,20 @@ title: kubectl
 
 ## kubectl
 
+## create
+Create resource from file
+
+```
+kubectl create -f filename
+```
+
+## run
+Run particular image on the cluster
+
+```
+kubectl run image
+```
+
 ## config
 
 設定の一覧を見る
@@ -93,6 +107,12 @@ Resourceの情報が欲しい場合は、`get`を使う
 
 ```
 kubectl describe <resource> <resource-name>
+```
+
+Label selectorでlabelを指定してdescribe
+
+```
+kubectl describe pods --selector key=value
 ```
 
 ## exec
