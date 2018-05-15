@@ -424,12 +424,13 @@ annotationに書かれる内容
     * Labelをつけない場合は、annotationを使う
 
 Labelの定義は、`PodTemplate`などにmetadataとして記載する。
+`metadata.labels`, `spec.metadata.labels`
 
 ```yaml
-    metadata:
-      labels:
-        app: airflow
-        tier: worker
+  metadata:
+    labels:
+      app: airflow
+      tier: worker
 ```
 
 Labelの例
@@ -489,7 +490,6 @@ Controllerの1つ。
 `ReplicationController`をおきかえるもの。
 今のところ`ReplicationController`との違いは、label selectorの有無。
 
-
 ### StatefulSet
 以下の1つ以上が必要な場合に役に立つ。
 
@@ -510,8 +510,6 @@ Rolling updateをする場合は、`Deployment`を使う。
 Deploymentが作成する、`ReplicaSet`は直接変更しない。
 
 **Writing Pod template**
-
-
 
 ### DaemonSet
 Controllerの1つ。
@@ -692,7 +690,6 @@ spec:
 * [Configure Service Accounts for Pods | Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
 * 何も指定しないとPodは同じNameSpaceの`default` SAを使う
-* 
 
 
 ### Encrypt secret data
@@ -875,51 +872,8 @@ gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk
 * configmapはLinuxの`/etc`におかれるfileのようなもの
 
 
-## CLI
-
-### kubectl
-
-Create resource from file
-
-```
-kubectl create -f filename
-```
-
-Run particular image on the cluster
-
-```
-kubectl run image
-```
-
-作成されたPods resourceの一覧
-
-```
-kubectl get pods
-```
-
-Label selectorでlabelを指定してdescribe
-
-```
-kubectl describe pods --selector key=value
-```
-
-### minikube
-dashboard
-
-```
-minikube dashboard
-```
-
-`service-name`のserviceのURLを開く
-
-```
-minikube service <service-name>
-```
-
-
 ### Best Practice
 * [Configuration Best Practices | Kubernetes](https://kubernetes.io/docs/concepts/configuration/overview/)
-
 
 * General Config Tips
     * specify the latest stable API version (currently v1)
