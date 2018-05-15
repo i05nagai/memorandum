@@ -55,16 +55,29 @@ title: Google Stackdriver Monitoring
 ## Group
 以下の項目でGroupを作れる。
 Group内にsubgroupも作ることができる。
+`Resources`から各resourceについている`Name`や`Tag`を確認できる。
+Alert policyはGroup単位でしかmetricsのgroupingはできないので、groupingできるようにnameやTagづけを行う。
+
+Grupingに利用可能な指標
 
 * Name
+    * GKE containerの場合はcontainer Name
 * Tag
-    * label?
+    * GKE containerの場合は、containerのlabelがTagになる
 * Security Group
 * Cloud Account/Project
 * Region
 * GAE App
 * GAE Service
 
+Alerting policyの設定までの手順
+
+* Dashboardでmonitoringしたいmetricsを作る
+* Groupingをしている場合は、groupingしているresourceのdetailsを見る
+* Name/TagでGroupingする方法を決める
+* Name/Tagを設定する
+* Groupを作る
+* Alert policyを設定する
 
 ## Tutorial
 * [Using Stackdriver's monitoring and logging to get better visibility into your application's health](https://codelabs.developers.google.com/codelabs/cloud-stackdriver-getting-started/index.html?index=..%2F..%2Findex#0)
