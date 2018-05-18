@@ -140,8 +140,6 @@ For lowa
 ## Cloud SQL Proxy CLI
 * [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy#flags)
 
-localhostからしかaccessできない。
-
 ```
 docker run --rm -it gcr.io/cloudsql-docker/gce-proxy:1.11 /cloud_sql_proxy --help
 ```
@@ -154,6 +152,23 @@ docker run --rm -it gcr.io/cloudsql-docker/gce-proxy:1.11 /cloud_sql_proxy --hel
 * `-instances=my-project:my-region:my-instance=tcp:3306`
     * `-instances=<connection-name>=<port>`
     * `<port>` はproxy serverのlisten port
+    * `-instances=my-project:my-region:my-instance=tcp:0.0.0.0:3306`
+        * proxyをhostする場合は
+
+Usage
+
+```
+docker run --rm -it \
+    gcr.io/cloudsql-docker/gce-proxy:1.11 \
+    /cloud_sql_proxy \
+    -credential_file=/path/to/credential.json \
+    -instances=my-project:my-region:my-instance=tcp:0.0.0.0:3306
+```
+
+
+## Importing data
+* [Importing Data into Cloud SQL  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/import-export/importing)
+
 
 ## Reference
 * [Cloud SQL for MySQL Documentation  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/)
