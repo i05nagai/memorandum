@@ -5,6 +5,11 @@ title: stress
 ## stress
 
 ## Install
+For ubuntu,
+
+```
+apt-get install stress
+```
 
 ## CLI
 
