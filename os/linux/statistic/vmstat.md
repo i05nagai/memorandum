@@ -3,7 +3,7 @@ title: vmstat
 ---
 
 ## vmstat
-virtual memory statistics.
+Report virtual memory statistics
 vmstat は libkstat ライブラリを使用している。
 `/usr/src/cmd/stat/vmstat/vmstat.c`
 
