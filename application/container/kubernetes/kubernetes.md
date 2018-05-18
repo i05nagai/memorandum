@@ -1230,6 +1230,25 @@ spec:
 ### Shared volumes in a Kubernetes Pod
 * `emptyDir`を使えば同じpodの中でvolumeをshareできる
 
+### Pause container
+* [The Almighty Pause Container - Ian Lewis](https://www.ianlewis.org/en/almighty-pause-container)
+* [What is the role of 'pause' container? - Google Groups](https://groups.google.com/forum/#!topic/kubernetes-users/jVjv0QK4b_o)
+
+### Naming convention
+* `<prefix>`
+* namespace
+    * `<prefix>-<service-name>`
+    * namespace for each service
+* container name
+    * `<prefix>-<service-name>-<tier>`
+* labels
+    * app
+        * `<prefix>-<service-name>`
+    * service
+    * tier
+        * a component of a service
+    * environment
+        * dev/stg/prod
 
 
 ## Reference
