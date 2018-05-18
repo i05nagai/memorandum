@@ -129,6 +129,17 @@ curl -sS https://dl.google.com/cloudagents/install-logging-agent.sh | sudo bash
         * device_name: `Volume: volume-name-`
         * device_name: `cluster-name: cluster-name-`
 
+ContainerとInstanceのmonitoringを分ける。
+Containerは、各containerにlabelをつける。
+
+* `app: <prefix>-<service-name>-<tier>`
+    * container一意なlabel
+* `service: <service-name>`
+* `tier: <tier>`
+    * a component of service
+* `environment: <environment-name>`
+    * dev/stg/prod
+
 ## Alert policy
 Resourceのtarget
 
