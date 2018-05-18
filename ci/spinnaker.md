@@ -134,8 +134,7 @@ For Kubernetes
             * 
 * Ad-hoc edit featureは極力使わない
 
-
-
 ## Reference
 * [spinnaker/spinnaker: Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.](https://github.com/spinnaker/spinnaker)
 * [Can I push that? Building safer, low-risk deployments with Spinnaker](https://blog.spinnaker.io/can-i-push-that-building-safer-low-risk-deployments-with-spinnaker-a27290847ac4)
+* [Multi-Cloud Continuous Delivery with Spinnaker report now available.](https://medium.com/netflix-techblog/multi-cloud-continuous-delivery-with-spinnaker-report-now-available-6040ba83b765)

@@ -53,6 +53,4 @@ key performance metrics for monitoring
     * cAdviserがcontainer, cAdviser自身とdocker daemonのCPU, memory, file system, networkを計測している
     * ![aaa](https://datadog-prod.imgix.net/img/blog/how-to-collect-and-graph-kubernetes-metrics/kubernetes-heapster.png?fit=max)
 
-
-
 ## Reference
