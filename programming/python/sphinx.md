@@ -1,4 +1,115 @@
+---
+title: Sphinx
+---
+
 ## Sphinx
+
+## Tutorial
+1. githubに新しくrepositoryで`repository_docs`という名前でrepositoryを作っておく。
+1. `sphinx`を使用するので、`pip`でいれる。
+
+```shell
+pip install sphinx
+```
+
+1. `hoge`にディレクトリ`docs`を作成し、sphinxの雛形を作成する。
+
+```shell
+# rootに移動
+cd repository
+# docsを作る
+mkdir docs
+cd docs
+# sphinxの雛形生成
+sphinx-quickstart
+```
+
+1. custom themeでRead the Docsをpipでいれる。
+
+```shell
+pip install sphinx_rtd_theme
+```
+
+1. ついでに`docs/requirements.txt`を作成し、以下を記載する。
+
+```
+sphinx=1.49
+sphinx_rtd_theme==0.19
+```
+
+1. custom themeを使用するため`docs/sources/conf.py`に以下を挿入する
+
+```python
+import sphinx_rtd_theme
+
+html_theme = "sphinx_rtd_theme"
+
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+```
+
+1. `docs/build`以下はsphinxが生成したhtmlが格納される。こちらは別repositoryのgith pagesでhostingするので、最初に作成したgithubのrepositoryに一旦pushしておく。
+
+```shell
+cd docs/build
+git init
+# initial commit
+git commit --allow-empty -m "Initial commit"
+git remote add origin https://github.com/i05nagai/mafipy_docs.git
+git push origin master
+```
+
+1. `hoge_docs`にgithub pagesのhosting用の設定とREADMEなどの設定をする
+    * githubのsettingsを開く
+        * Gihub Pagesの項目へ移動
+        * SourceでNoneからmaster branchに変更する
+    * `.nojekyll`を`repository_docs`のtopにおく
+       * [Sphinx でドキュメントを作成して GitHub Pages で公開するまで - Qiita](http://qiita.com/key-amb/items/4f799fed51734987f3c5) 
+       * GitHub Pages で使われている Jekyll の仕様で _static/ 配下の画像やCSSが読み込まれない
+
+```shell
+cd hoge/build
+touch README.md
+touch .nojekyll
+git add README.md
+git add .nojekyll
+git add html
+git add doctree
+git commit -m "Set up for hosting by github pages"
+git push origin master
+```
+
+1. 最後に`docs/build`を`hoge`のgit submoduleとして追加する。
+
+```shell
+cd hoge
+git submodule add https://github.com/i05nagai/mafipy_docs.git docs/build
+git commit -m "Add docs as git submodule"
+```
+
+## Tutorial2
+directory構造が以下のとき。
+
+```
+- project # Pythonプロジェクト
+   |
+   |- src # APIドキュメントを自動生成したいPythonコードのディレクトリ
+   |   |- __init__.pyとか
+   |   |- hoge # サブモジュールとか
+   |
+   |- docs # Sphinxプロジェクトのディレクトリ
+```
+
+```python
+cd project
+sphinx-apidoc -F -o docs/ src/
+```
+
+* `-F`
+	* full project
+* `-o dir`
+	* doucment生成用の設定ファイルの置き場所
+* `sphinx-apidoc dir`
+	* プロジェクトファイルのdirectory
 
 ## Theme
 * sphinx_rtd_doc
@@ -281,3 +392,8 @@ source fileの場所の設定が必要？
 ```
 autodoxygenfile
 ```
+
+## Reference
+* [Sphinx でPythonのAPIドキュメントを自動作成 - Qiita](http://qiita.com/some-nyan/items/1980198a05c12d90e5c3) 
+* [Sphinxドメイン — Sphinx 1.4.4 ドキュメント](http://docs.sphinx-users.jp/domains.html#directive-py:function)
+    * autodocの書き方など
