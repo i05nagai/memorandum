@@ -48,6 +48,27 @@ I cross off the customer's name from the reservation list.
 * with a grain of salt
     * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
 * judge and jury
+* put someone on
+    * to tease or joke with someone
+    * [Put someone on \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/put+someone+on)
+* fugue
+    * フーガ
+* get back on one's feet with
+    * to have enough money again, or to be successful again after having problems
+* Back off!
+    * leave me alone
+    * [Urban Dictionary: Back off](https://www.urbandictionary.com/define.php?term=Back%20off)
+* con him into
+    * persuade (someone) to do or believe something by lying to them.
+* in the lap of luxury
+    * in condition of great confort and wealth
+* in the lap of the gods
+* strait arrow
+* break a leg
+    * good luck
+* graffitti
+* footage
+    * 映像
 
 
 ## Math
