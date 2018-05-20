@@ -113,7 +113,63 @@ $$
 
 * 真の分布$X \sim \mathrm{N}(\mu, \sigma)$が正規分布
 * 真の分布$Y \sim \mathrm{N}(\mu, \sigma)$が正規分布
-* $\sigma$の値は事前に知っている
+* $\sigma$ is known.
+* two sample are the same sample size
+* two samples are dependent
+    * two similar subjects are mathed or paired
+    * subjects come form the same source
+    * 2 obvervations are made on the same subject such as pre and post tests
+
+## Example
+* $D \in \mathbb{R}$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $Y_{1}, \ldots, Y_{n}$,
+    * i.i.d. of $Y$
+* $D_{1} := X_{1} - Y_{1}, \ldots, D_{n} := X_{n} - Y_{n}$,
+    * i.i.d. of $D := X - Y$,
+* $\sigma_{d}$,
+    * standard deviation of $D$
+* $\alpha \in (0, 1)$,
+    * significance level
+
+Then
+
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:\mu_{D} = D $
+    * alternative hypothesis
+        * (a) $H_{0}:\mu_{D} \neq D $
+        * (b) $H_{0}:\mu_{D} > D $
+        * (c) $H_{0}:\mu_{D} < D $
+* (2) compute the test statistic
+
+$$
+\begin{eqnarray}
+    z
+    =
+    \frac{
+        \bar{d}
+        -
+        D
+    }{
+        \frac{\sigma_{d}}{\sqrt{n}}
+    }
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $Z \sim \mathrm{N}(0, \sigma_{d})$,
+    * (a) $$
+    p := P(Z \le |z| \cup Z \ge |z|)$$
+    * (b) $p := P(Z > z)$
+    * (c) $p := P(Z < z)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
 
 ### Theorem 15
 $X_{i} \forall i = 1, \ldots, N$, $Y_{i} \forall j = 1, \ldots, N$が正規分布に従うとする。
@@ -253,5 +309,155 @@ $$
 この場合も、各々の標準偏差が既知であれば、$\mu_{X} - \mu_{Y}$の確率を計算できる。
 
 ## one sample z-test for the population propotion
+* $X \sim \mathrm{B}(p)$,
+    * binomial
+    * $$X \in \{0, 1\}$$,
+* two samples are independent
+* the sample size is large
+    * the number of expected succeses $np_{0} \ge 10$,
+    * the number of expected failure $n(1 - p_{0}) \ge 10$,
+
+## Example
+* $p_{0} \in \mathbb{R}$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size for $X$
+* $\bar{p} := \bar{X}_{n}(\omega)$,
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $\sigma_{d}$,
+    * standard deviation of $D$
+* $\alpha \in (0, 1)$,
+    * significance level
+
+
+Then
+
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:p = p_{0} $
+    * alternative hypothesis
+        * (a) $H_{A}:p \neq D $
+        * (b) $H_{A}:p > p_{0} $
+        * (c) $H_{A}:p < p_{0} $
+* (2) compute the test statistic
+
+$$
+\begin{eqnarray}
+    z
+    =
+    \frac{
+        (\bar{p} - p_{0})
+        -
+        D
+    }{
+        \sqrt{
+            \frac{
+                p_{0}(1 - p_{0})
+            }{
+                n
+            }
+        }
+    }
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $Z \sim \mathrm{N}(0, 1)$,
+    * (a) $$
+    p := P(Z \le |z| \cup Z \ge |z|)$$
+    * (b) $p := P(Z > z)$
+    * (c) $p := P(Z < z)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
+
 
 ## two sample z-test for population propotion
+* $X \sim \mathrm{B}(p)$,
+    * binomial
+    * $$X \in \{0, 1\}$$,
+* $Y \sim \mathrm{B}(p)$,
+    * binomial
+    * $$Y \in \{0, 1\}$$,
+* $n \in \mathbb{N}$,
+    * the sample size of $X$,
+* $m \in \mathbb{N}$,
+    * the sample size of $Y$,
+* both sample size is large
+    * the number of succeses $\ge 5$,
+    * the number of failure $\ge 5$,
+
+## Example
+* $p_{0} \in (0, 1)$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size for $X$
+* $$\bar{p}_{x} := \bar{X}_{n}(\omega)$$,
+    * the probability of success
+* $$\bar{p}_{y} := \bar{Y}_{n}(\omega)$$,
+    * the probability of success
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $$\bar{x}_{n} := \bar{X}_{n}(\omega)$$,
+    * the number of success
+* $$\bar{y}_{m} := \bar{Y}_{m}(\omega)$$,
+    * the number of success
+* $\alpha \in (0, 1)$,
+    * significance level
+
+
+Then
+
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:p = p_{0} $
+    * alternative hypothesis
+        * (a) $H_{A}:p \neq D $
+        * (b) $H_{A}:p > p_{0} $
+        * (c) $H_{A}:p < p_{0} $
+* (2) compute the test statistic
+
+$$
+\begin{eqnarray}
+    z
+    & = &
+        \frac{
+            (\bar{p}_{x} - \bar{p}_{y})
+            -
+            D
+        }{
+            \sqrt{
+                \hat{p}
+                (1 - \hat{p})
+                \left(
+                    \frac{1}{n}
+                    +
+                    \frac{1}{m}
+                \right)
+            }
+        }
+    \nonumber
+    \\
+    \hat{p}
+    & := &
+        \frac{
+            \bar{x}_{n}
+            +
+            \bar{x}_{m}
+        }{
+            n + m
+        }
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $Z \sim \mathrm{N}(0, 1)$,
+    * (a) $$
+    p := P(Z \le |z| \cup Z \ge |z|)$$
+    * (b) $p := P(Z > z)$
+    * (c) $p := P(Z < z)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
+
