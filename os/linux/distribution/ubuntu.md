@@ -215,7 +215,14 @@ systemctl disable cups-browsed.service
 * [gtk \- How do I change my gnome Ubuntu key\-binding work as emacs? \- Super User](https://superuser.com/questions/345452/how-do-i-change-my-gnome-ubuntu-key-binding-work-as-emacs)
 * [Ubuntu で key\-theme を emacs にしたときにテキストを全選択する方法 \- Qiita](https://qiita.com/ledmonster/items/f37c86a1b9fc408f0b9b)
 
-Keybinds are defined in `/usr/share/theme/Emacs/gtk-3.0`
+Keybinds are defined in `/usr/share/themes/Emacs/gtk-3.0` or `/usr/share/themes/Emacs/gtk-2.0-key/gtkrc`
+Get current key theme.
+
+```
+gsettings get org.gnome.desktop.interface gtk-key-theme "Emacs"
+```
+
+Set current theme to Emacs
 
 ```
 gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
