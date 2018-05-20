@@ -3,7 +3,7 @@ title: Continuous Distributions
 ---
 
 ## Continuous Distributions
-連続分布の一覧
+The list of continuous distributions.
 
 1. Uniform distribution(一様分布)
 2. Gamma distribution(Gamma分布)
@@ -174,6 +174,79 @@ $$
 特に$\delta = 0$のとくt分布といい$t(n)$とかく。
 
 p.d.f of t distribution.
+
+$$
+\begin{eqnarray}
+    t(n; \delta)(x)
+    & := &
+        \frac{
+            1
+        }{
+            \sqrt{\pi n}
+        }
+        e^{-\frac{\delta^{2}}{2}}
+        \sum_{r=0}^{\infty}
+            \frac{
+                2^{r/2}
+            }{
+                r!
+            }
+            \frac{
+                \Gamma((n + r + 1) / 2)
+            }{
+                \Gamma(n/2)
+            }
+            \left(
+                \frac{
+                    \delta x
+                }{
+                    \sqrt{n}
+                }
+            \right)^{r}
+            \left(
+                1
+                +
+                \frac{
+                    x^{2}
+                }{
+                    n
+                }
+            \right)^{
+                -(n + r + 1)/2
+            }
+    \nonumber
+    \\
+    t(n)(x)
+    & := &
+        t(n; 0)(x)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            \sqrt{\pi n}
+        }
+        \frac{
+            \Gamma((n + 1) / 2)
+        }{
+            \Gamma(n/2)
+        }
+        \left(
+            1
+            +
+            \frac{
+                x^{2}
+            }{
+                n
+            }
+        \right)^{
+            -(n + 1)/2
+        }
+    \nonumber
+\end{eqnarray}
+
+$$
 
 ## 11. F distribution $F(m, n, \delta)$
 $Y_{1}$が$\chi^{2}(m, \delta)$に$$Y_{2}$$が$$\chi^{2}(n)$$に従い、$$Y_{1}, Y_{2}$$が独立であるとする。

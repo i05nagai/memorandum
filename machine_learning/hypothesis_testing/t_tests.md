@@ -3,6 +3,11 @@ title: t tests
 ---
 
 ## t-tests
+* the population is normally distributed
+* the sample size is large enogh (e.g. $n \le 15$),
+* do not use this test if there are outlier or the population is very skewed
+    * skewness can be ignored if $n \le 40$
+* the population standard deviation $\sigma$ is unkown
 
 ## Definition
 推定量といった場合は確率変数。
@@ -73,10 +78,75 @@ $$
 sample sizeが増えれば標本分散は減る。
 
 ## one sample t-tests for population mean
-正規分布に従う確率変数差の平均値の検定。
+正規分布に従う確率変数の平均値の検定。
 
 * 真の分布$X \sim \mathrm{N}(\mu, \sigma)$
 * $\sigma$の値は不明だが、一致していることは事前に知っている
+* the sample size s large enough that the mean is normally distributed
+    * $n \ge 15$,
+* skew can be ignored if $n \ge 40$,
+* the population standard deviation $\sigma$ is unkown
+* If $n \ge 30$, $t$ distribution can be approximated with the normal distribution
+* In practice, $\sigma$ is rarely known
+
+### Example
+* $\mu_{0} \in \mathbb{R}$
+    * mean for null hypothesis
+* $n \in \mathbb{N}$,
+    * sample size
+* $x_{i} := X_{i}(\omega)$,
+* $\alpha \in (0, 1)$,
+    * significance level
+    * 0.05, 0.01 are commonly used
+
+$$
+\begin{eqnarray}
+    \bar{x}
+    & := &
+        \bar{X}_{n}(\omega)
+    \nonumber
+    \\
+    s
+    & := &
+        \sqrt{V_{n}(X_{1}, \ldots, X_{n})(\omega)}
+    \nonumber
+\end{eqnarray}
+$$
+
+* (1) State the hypotheses:
+    * null hypothesis
+        * $H_{0}$: $\mu = \mu_{0}$,
+    * alternative hypothesis
+        * (a) $H_{A}$: $\mu \neq \mu_{0}$,
+        * (b) $H_{A}$: $\mu > \mu_{0}$,
+        * (c) $H_{A}$: $\mu < \mu_{0}$,
+* (2) Compute the test statistics
+    * $\bar{x}$
+        * the sample mean
+    * $s$
+        * the sample standard deviation
+
+$$
+\begin{eqnarray}
+    t
+    & = &
+        \frac{
+            \bar{x} - \mu_{0}
+        }{
+            \frac{s}{\sqrt{n}}
+        }
+\end{eqnarray}
+$$
+
+* (3) Compute the $p$ value
+    * $T$ t distribution with $n - 1$ degree of freedom
+    * (a) $$
+p := P(T \le - |t| \cup T \ge - |t|)$$,
+    * (b) $p := P(T > t)$,
+    * (c) $p := P(T < t)$,
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
 
 ### Lemma 5
 
@@ -489,8 +559,61 @@ $$
 
 * 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma)$
 * 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma)$
+* two samples are dependent
 * $\sigma$の値は不明だが、一致していることは事前に知っている
+* both normal distribution
+* both simze sizes are large enough
+    * $n \ge 15$,
 
+
+## Example
+* $D \in \mathbb{R}$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $Y_{1}, \ldots, Y_{n}$,
+    * i.i.d. of $Y$
+* $D_{1} := X_{1} - Y_{1}, \ldots, D_{n} := X_{n} - Y_{n}$,
+    * i.i.d. of $D := X - Y$,
+* $s_{d} := \mathrm{Var}_{n}(D_{1}, \ldots, D_{N})(\omega)$,
+    * sample standard deviation of $D$
+* $\alpha \in (0, 1)$,
+    * significance level
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:\mu_{D} = D $
+    * alternative hypothesis
+        * (a) $H_{0}:\mu_{D} \neq D $
+        * (b) $H_{0}:\mu_{D} > D $
+        * (c) $H_{0}:\mu_{D} < D $
+* (2) compute the test statistic
+
+
+$$
+\begin{eqnarray}
+    t
+    =
+    \frac{
+        \bar{d}
+        -
+        D
+    }{
+        \frac{s_{d}}{\sqrt{n}}
+    }
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $T \sim \mathrm{t}(n-1)$,
+    * (a) $$
+    p := P(T \le |t| \cup T \ge |t|)$$
+    * (b) $p := P(T > t)$
+    * (c) $p := P(T < t)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
 
 ### Theorem21
 $$X_{1}, \ldots, X_{N}$$, $$Y_{1}, \ldots, Y_{N}$$が正規分布に従っているとする。
@@ -543,7 +666,77 @@ $D_{i}$は正規分布に従うから、前定理の結果をそのままあて�
 
 * 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma)$が正規分布に従う
 * 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma)$が$X$と分散の等しい正規分布に従う
-* $\sigma$の値は不明だが、一致していることは事前に知っている必要がある
+* $\sigma$ are unkown but euqal to the other
+    * weired situation
+
+## Example
+* $D \in \mathbb{R}$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $Y_{1}, \ldots, Y_{n}$,
+    * i.i.d. of $Y$
+* $D_{1} := X_{1} - Y_{1}, \ldots, D_{n} := X_{n} - Y_{n}$,
+    * i.i.d. of $D := X - Y$,
+* $s_{d} := \mathrm{Var}_{n}(D_{1}, \ldots, D_{N})(\omega)$,
+    * sample standard deviation of $D$
+* $\alpha \in (0, 1)$,
+    * significance level
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:\mu_{D} = D $
+    * alternative hypothesis
+        * (a) $H_{A}:\mu_{D} \neq D $
+        * (b) $H_{A}:\mu_{D} > D $
+        * (c) $H_{A}:\mu_{D} < D $
+* (2) compute the test statistic
+
+
+$$
+\begin{eqnarray}
+    t
+    & = &
+    \frac{
+        (\bar{x} - \bar{y})
+        -
+        D
+    }{
+        \sqrt{
+            s_{P}^{2}
+            \left(
+                \frac{1}{n}
+                +
+                \frac{1}{m}
+            \right)
+        }
+    }
+    \nonumber
+    \\
+    s_{P}
+    & := &
+        \frac{
+            (n - 1)^{2}s_{X}^{2}
+            +
+            (m - 1)^{2}s_{Y}^{2}
+            
+        }{
+            n + m - 2
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $T \sim \mathrm{t}(n m - 2)$,
+    * (a) $$
+    p := P(T \le |t| \cup T \ge |t|)$$
+    * (b) $p := P(T > t)$
+    * (c) $p := P(T < t)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
 
 ### Lemma 6
 $$\{ X_{i} \}_{i=1}^{N}$$と$$\{ Y_{i}\}_{i=1}^{M}$$が独立とする。
@@ -882,8 +1075,87 @@ $$
 
 * 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$が正規分布に従う
 * 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$が正規分布に従う
-* $\sigma$の値は不明だが、一致していないことは事前に知っている必要がある
-* $\mu_{X} \neq \mu_{Y}$が帰無仮説
+* $\sigma_{X}$ and $\sigma_{Y}$ are unkown but are not equal.
+* $\mu_{X} - \mu_{Y} = D$ is null hypothesis 
+
+## Example
+* $D \in \mathbb{R}$,
+    * the difference mean
+* $n \in \mathbb{N}$,
+    * the sample size of $X$,
+* $m \in \mathbb{N}$,
+    * the sample size of $Y$,
+* $X_{1}, \ldots, X_{n}$,
+    * i.i.d. of $X$
+* $Y_{1}, \ldots, Y_{n}$,
+    * i.i.d. of $Y$
+* $s_{x} := \mathrm{Var}_{n}(X_{1}, \ldots, X_{n})(\omega)$,
+    * sample standard deviation of $X$
+* $s_{y} := \mathrm{Var}_{m}(Y_{1}, \ldots, Y_{m})(\omega)$,
+    * sample standard deviation of $Y$
+* $\alpha \in (0, 1)$,
+    * significance level
+* (1) State the hypothesis
+    * null hypothesis
+        * $H_{0}:\mu_{D} = D $
+    * alternative hypothesis
+        * (a) $H_{A}:\mu_{D} \neq D $
+        * (b) $H_{A}:\mu_{D} > D $
+        * (c) $H_{A}:\mu_{D} < D $
+* (2) compute the test statistic
+
+
+$$
+\begin{eqnarray}
+    t
+    & = &
+        \frac{
+            (\bar{x} - \bar{y})
+            -
+            D
+        }{
+            \sqrt{
+                \frac{s_{x}^{2}}{n}
+                +
+                \frac{s_{y}^{2}}{m}
+            }
+        }
+    \nonumber
+    \\
+    df
+    & := &
+        \frac{
+            \left(
+                \frac{s_{x}^{2}}{n}
+                +
+                \frac{s_{y}^{2}}{m}
+            \right)^{2}
+        }{
+            \frac{
+                s_{x}^{4}
+            }{
+                n^{2}(n - 1)
+            }
+            +
+            \frac{
+                s_{y}^{4}
+            }{
+                m^{2}(m - 1)
+            }
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+* (3) Compute $p$ value
+    * $T \sim \mathrm{t}(df)$,
+    * (a) $$
+    p := P(T \le |t| \cup T \ge |t|)$$
+    * (b) $p := P(T > t)$
+    * (c) $p := P(T < t)$
+* (4)
+    * If $p < \alpha$, reject $H_{0}$,
+    * otherwise, fail to reject $H_{0}$,
 
 ### Lemma 8
 * $$X \sim \mathrm{N}(\mu, \sigma)$$,
