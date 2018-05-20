@@ -3,6 +3,7 @@ title: synclinet
 ---
 
 ## synclinet
+touchpad configuration.
 
 ## CLI
 
@@ -14,6 +15,8 @@ synclient <option> [KEY=VALUE]
     * 現在の設定値を表示
 
 ## Configuration
+One of the following directories
+
 * `/etc/X11/xorg.conf.d/`
 * `/usr/share/X11/xorg.conf.d/`
     * `70-synaptics.conf`
