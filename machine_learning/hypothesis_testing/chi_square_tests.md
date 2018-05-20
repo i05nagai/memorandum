@@ -4,6 +4,9 @@ title: Chi-square tests
 
 ## Chi-square tests
 
+
+## Chi-Square test for the Population Variance
+
 ## Chi-square test for goodness of fit
 
 * 真の分布は正規分布
