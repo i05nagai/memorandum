@@ -65,7 +65,7 @@ aws emr add-steps
     "Properties": "string"
   }
 ]
-````
+```
 
 stepの情報を取得
 
@@ -81,15 +81,27 @@ aws emr describe-step
 EMRのspark history serverは以下の形式で実行されている。
 
 ```
-/usr/lib/jvm/java-openjdk/bin/java -cp /usr/lib/spark/conf/:/usr/lib/spark/jars/*:/etc/hadoop/conf/ -XX:OnOutOfMemoryError=kill -9 %p -Xmx1g org.apache.spark.deploy.history.HistoryServer
+/usr/lib/jvm/java-openjdk/bin/java \
+    -cp /usr/lib/spark/conf/:/usr/lib/spark/jars/*:/etc/hadoop/conf/ \
+    -XX:OnOutOfMemoryError=kill -9 %p -Xmx1g org.apache.spark.deploy.history.HistoryServer
 ```
 
 `/usr/lib/spark/conf/spark-defaults.sh`の中で、history logの場所が`hdfs:///var/log/spark/apps`として保存されている。
 
-## Logging
-* [Configure Cluster Logging and Debugging - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
+
+## logging
+* [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
+* [View Log Files - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html#emr-manage-view-web-log-files-debug)
+
+EMRのmaster nodeでspark-submitすると結果が以下のようにでる。
+`tracking URL`に実行Logが記録される。
+stdoutなども記録されている。
+sparkのlog dirは`/usr/lib/spark/conf/`の中で`/var/log/spark`として指定されている。
 
 
+
+* [View Application History - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-cluster-application-history.html)
+    * `EMR 5.8`からWeb UIでSpark Applicationのjobのlogがみれる
 
 ## Tips
 
@@ -151,7 +163,6 @@ java.nio.file.AccessDeniedException: /mnt1
 ### Add environment variables to spark/pyspark
 configurationに以下を設定する。
 
-
 ```json
 {
   "Classification": "spark-defaults",
@@ -160,6 +171,24 @@ configurationに以下を設定する。
     "spark.yarn.executorEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}"
   }
 }
+```
+
+```json
+[
+    {
+        "Classification": "spark-env",
+        "Properties": {},
+        "Configurations": [
+            {
+                "Classification": "export",
+                "Properties": {
+                    "PYSPARK_PYTHON": "python34"
+                },
+                "Configurations": []
+            }
+        ]
+    }
+]
 ```
 
 ## Reference
