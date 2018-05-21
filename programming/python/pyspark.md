@@ -1,4 +1,8 @@
-## python/pyspark
+---
+title: PySpark
+---
+
+## PySpark
 
 ## Install
 * [spark 2.0系Tips #1 Jupyterでpyspark - Qiita](http://qiita.com/takaomag/items/bff9a7df24c4fbab2785)
@@ -14,6 +18,8 @@ brew install apache-spark
 ## API
 
 ### SparkSession
+`pyspark.sql.SparkSession`.
+`pyspark.sql`の下にいる。
 
 * `spark_session.read.json()`
     * readには、pathかpathのlistが渡せる
@@ -21,7 +27,6 @@ brew install apache-spark
 
 
 ### pyspark.sql
-
 pyspark.sql.types
 
 * `IntegerType()`
@@ -106,6 +111,7 @@ pyspark.sql.functions
 
 
 ### pyspark.SparkContext
+`pyspark.SparkContext`.
 
 ```python
 conf = pyspark.SparkConf(
@@ -131,94 +137,6 @@ sc = pyspark.SparkContext.getOrCreate(conf=conf)
 [[0], [2], [3], [4], [6]]
 >>> sc.parallelize(xrange(0, 6, 2), 5).glom().collect()
 [[], [0], [], [2], [4]]
-```
-
-
-## Configuration
-
-```json
-[
-    {
-        "Classification": "spark-env",
-        "Properties": {},
-        "Configurations": [
-            {
-                "Classification": "export",
-                "Properties": {
-                    "PYSPARK_PYTHON": "python34"
-                },
-                "Configurations": []
-            }
-        ]
-    }
-]
-```
-
-## Pricing
-* [料金 - Amazon EMR | AWS](https://aws.amazon.com/jp/emr/pricing/)
-
-EC2のinstanceを借りるより安い。
-1時間単位で課金されるので、一旦起動したら一時間使った方が良い。
-起動した時点で課金が開始される。
-
-## SSH
-To Master Node
-
-アカウント名は、haddoopで、keyはcluster作成時に指定したkey pairである。
-
-```
-ssh hadoop@ec2-###-##-##-###.compute-1.amazonaws.com -i ~/mykeypair.pem
-```
-
-## Commands
-Cluster IDを以下でえる。 
-
-```
-aws emr list-clusters
-```
-
-cluster IDを指定すると、より詳細な情報が得られる。
-Public DNS名などもえることができる。
-
-```
-aws emr list-instances --cluster-id j-2AL4XXXXXX5T9
-```
-
-master nodeにファイルをおく。
-
-* `--key-pair-file`
-    * cluster作成時に指定したkey pair
-    * aws CLIで設定することもできる
-* `--src`
-    * 転送するfile path
-* `--dest`
-    * 転送先のfile path
-    * 
-
-```
-aws emr put
---cluster-id <value>
---key-pair-file <value>
---src <value>
-[--dest <value>]
-```
-
-master nodeにファイルからファイルを取得
-
-* `--key-pair-file`
-    * cluster作成時に指定したkey pair
-    * aws CLIで設定することもできる
-* `--src`
-    * 取得するmaster nodeのfile path
-* `--dest`
-    * 取得したファイルをおくfile path
-
-```
-aws emr get
---cluster-id <value>
---key-pair-file <value>
---src <value>
-[--dest <value>]
 ```
 
 ## API
@@ -298,8 +216,6 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 ### Save data
 * `rdd.saveAsTextFile(path/to/outputFile)`
 * `rdd.saveAsSequenceFile(outputFile)`
-
-### pyspark.RDD
 
 ### functions
 * `lag`
@@ -387,7 +303,6 @@ def f(iterator): yield sum(iterator)
 rdd.mapPartitions(f).collect()
 # [3, 7]
 ```
-
 
 * `rdd.repartitionAndSortWithinPartitions(numPartitions=None, partitionFunc=<function portable_hash at 0x7f51f1ac0668>, ascending=True, keyfunc=<function <lambda> at 0x7f51f1ab3ed8)`
     * 戻り値はrdd
@@ -522,7 +437,6 @@ import some_module_to_be_tested
 def test_func(spark_context):
     spark_context.addPyFile(some_module_to_be_tested.__file__)
 ```
-
 
 ## Reference
 * [Welcome to Spark Python API Docs! — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/index.html)
