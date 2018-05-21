@@ -17,17 +17,14 @@ brew install apache-spark
 
 ## API
 
-### SparkSession
-`pyspark.sql.SparkSession`.
-`pyspark.sql`の下にいる。
+### pyspark.sql.SparkSession
+In usual, `SparkSession` is denoted by `spark`.
 
 * `spark_session.read.json()`
     * readには、pathかpathのlistが渡せる
     * pathは`*`, `[]`が使える
 
-
-### pyspark.sql
-pyspark.sql.types
+### pyspark.sql.types
 
 * `IntegerType()`
 * `StringType()`
@@ -111,7 +108,7 @@ pyspark.sql.functions
 
 
 ### pyspark.SparkContext
-`pyspark.SparkContext`.
+In usual, `SparkContext` is denoted by `sc`.
 
 ```python
 conf = pyspark.SparkConf(
@@ -125,8 +122,13 @@ sc = pyspark.SparkContext.getOrCreate(conf=conf)
 
 * `sc.parallelize(c, numSlices=None)`
     * [pyspark package — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=parallelize#pyspark.SparkContext.parallelize)
+    * listをRDDとしてよみこむ
     * pythonのcollectionをnumSlices個のListに分割
     * 順序は適当?
+* `sc.textFile("/path/to/textfile")`
+    * textfileをRDDとしてよみこむ
+    * gzに圧縮されているものも読み込める
+    * file globで複数のファイルもまとめて読み込める
 
 
 ```python
@@ -137,6 +139,15 @@ sc = pyspark.SparkContext.getOrCreate(conf=conf)
 [[0], [2], [3], [4], [6]]
 >>> sc.parallelize(xrange(0, 6, 2), 5).glom().collect()
 [[], [0], [], [2], [4]]
+```
+
+jsonの読み込み
+
+```python
+rdd = sc.textFile('python/test_support/sql/*.json.gz')
+df2 = spark.read.json(rdd)
+df2.dtypes
+[('age', 'bigint'), ('name', 'string')]
 ```
 
 ## API
@@ -154,23 +165,6 @@ directoryを読み込む場合は`/path/to/*`とする必要がある。
 ```python
 >>> df1 = spark.read.json('python/test_support/sql/*.json.gz')
 >>> df1.dtypes
-[('age', 'bigint'), ('name', 'string')]
-```
-
-### SparkContext
-* `sc.parallelize([])`
-    * listをRDDとしてよみこむ
-* `sc.textFile("/path/to/textfile")`
-    * textfileをRDDとしてよみこむ
-    * gzに圧縮されているものも読み込める
-    * file globで複数のファイルもまとめて読み込める
-
-jsonの読み込み
-
-```python
-rdd = sc.textFile('python/test_support/sql/*.json.gz')
-df2 = spark.read.json(rdd)
-df2.dtypes
 [('age', 'bigint'), ('name', 'string')]
 ```
 
@@ -315,7 +309,6 @@ rdd.mapPartitions(f).collect()
         * 下の例では(key=0, value=5)
         * valueが複数ある場合は片方はtuple(0, (5, 0, 5))
 
-
 ```python
 rdd = sc.parallelize([(0, 5), (3, 8), (2, 6), (0, 8), (3, 8), (1, 3)])
 rdd2 = rdd.repartitionAndSortWithinPartitions(2, lambda x: x % 2, True)
@@ -393,6 +386,13 @@ val sqlDF = spark.sql("SELECT * FROM parquet.`examples/src/main/resources/users.
     * data sourceに保存するときに、上書きで保存
 * ignore
 
+## Docker
+* [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
+
+```
+export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
+```
+
 ## Tips
 
 ### function passing to pyspark
@@ -409,15 +409,6 @@ class WordFunctions(object):
         return rdd.filter(lambda x: query in x)
 ```
 
-
-## Docker
-* [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
-
-```
-export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
-```
-
-## Tips
 
 ### Error: No module named ...
 * [Running Spark Python Applications](https://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_python.html)
