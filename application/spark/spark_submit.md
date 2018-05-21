@@ -131,6 +131,17 @@ ${SPARK_HOME}/bin/spark-submit \
   [application-arguments]
 ```
 
+Run PySpark script
+
+```
+${SPARK_HOME}/bin/spark-submit \
+  --master spark://192.168.10.1:7077 \
+  --files /host/data/data.csv \
+  --files /host/data/data.json \
+  /path/to/pyspark_script.py \
+  <arg1>
+```
+
 
 ## Tips
 
