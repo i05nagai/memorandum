@@ -24,8 +24,6 @@ http://localhost:8080
 * driver
 * cluster manager
 
-
-
 ## Configuration
 * [Configuration - Spark 2.3.0 Documentation](https://spark.apache.org/docs/latest/configuration.html)
 
@@ -97,52 +95,6 @@ apk --update add coreutils
 /usr/spark/bin/spark-submit --class org.apache.spark.deploy.master.Master $SPARK_MASTER_INSTANCE --port $SPARK_MASTER_PORT --webui-port $SPARK_WEBUI_PORT
 ```
 
-### Tuning
-* [Understanding your Apache Spark Application Through Visualization - The Databricks Blog](https://databricks.com/blog/2015/06/22/understanding-your-spark-application-through-visualization.html)
-* [How-to: Tune Your Apache Spark Jobs (Part 2) – Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)
-* [Spark num-executors setting - Hortonworks](https://community.hortonworks.com/questions/56240/spark-num-executors-setting.html)
-
-* spark.executor.cores
-    * 各executorの利用するcpu core
-* spark.executor.memory
-    * 各executorの利用するmemory
-
-memoryの構成は以下。
-
-* yarn.nodemanager.resource.memory-mb
-    * Executro container
-        * spark.yarn.executor.memoryOverhead
-            * executroが使用するmememoryの超過可能分
-            * このoverheadの分はmemoryが利用可能
-            * defaultは`max(384, .07 * spark.executor.memory)`
-        * spark.executor.memory
-            * executorのheap size
-            * JVMはこのheap 領域は使わない？
-            * spark.shuffle.memoryFraction
-                * defaultで0.2
-            * spark.storage.memoryFraction
-
-<div style="text-align: center">
-<img src="http://blog.cloudera.com/wp-content/uploads/2015/03/spark-tuning2-f1.png">
-</div>
-
-* 6 node
-* 各nodeに16 cores, 64GB memory
-* `yarn.nodemanager.resource.memory-mb`は64 * 1024 = 64512 MB
-* `yarn.nodemanager.resource.cpu-vcores`は15
-
-この状況でmemoryとCPUの割り振りを考えるが、Hadoop DaemonとOS用のResourceは残す必用がある。
-
-案として`--num-executors 6 --executor-cores 15 --executor-memory 63G`は良くない。
-
-* 各executorが1つのnodeにいる
-* 各executorが15のcpu coreとmemory 63GBを使う
-
-`--num-executors 17 --executor-cores 5 --executor-memory 19G`の方が良い。
-
-* 3 executorがAMを除く(AMは2 executors)全てのnodeに割り振られる
-* memoryは63 / 3 = 21から21 * 0.93でだいたい19
-    * 0.93はOSとかHadoop Daemonを考慮しての掛け目
 
 ### Reason: Container killed by YARN for exceeding memory limits.
 * [apache spark - "Container killed by YARN for exceeding memory limits. 10.4 GB of 10.4 GB physical memory used" on an EMR cluster with 75GB of memory - Stack Overflow](https://stackoverflow.com/questions/40781354/container-killed-by-yarn-for-exceeding-memory-limits-10-4-gb-of-10-4-gb-physic)
