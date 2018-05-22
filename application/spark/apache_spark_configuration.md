@@ -71,7 +71,6 @@ Spark UI
 ### Master URL
 * [Submitting Applications - Spark 2.3.0 Documentation](https://spark.apache.org/docs/latest/submitting-applications.html)
 
-
 * `local`
     * Run Spark locally with one worker thread
 * `local[K]`
