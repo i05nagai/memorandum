@@ -74,6 +74,13 @@ I cross off the customer's name from the reservation list.
     * S V when doing -> S is doing
 * off-topic
     * OT
+* with O + V-ing/V-ed/adjective/adverb/prepositional phrase
+    * [grammar - How do you explain the usage of "with"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/322781/how-do-you-explain-the-usage-of-with)
+    * known as attendant fact or attendant circumstances
+    * The attendant circumstance means an accompanying circumstance
+* prepositional phrase
+    * 前置詞句
+* spin off
 
 
 
