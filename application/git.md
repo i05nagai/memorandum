@@ -1,4 +1,8 @@
-# Git
+---
+title: Git
+---
+
+## Git
 
 ## Install
 https://launchpad.net/~git-core/+archive/ubuntu/ppa
@@ -20,15 +24,17 @@ Gitの内部動作を知る上では、Plumbingコマンドが重要となる。
 * `git commit-tree`
 
 
-## 設定
+## Configuration
 `git config --global`でアカウント共通設定が可能。
 * windowsは、`~/.gitconfig`
 
 ### alias
 下記のようにaliasを設定可能。
-```git
+
+```
 git cofing --gloabl alias.st st
 ```
+
 ただ、一度にaliasを追加する場合やまとめて編集する場合は、`.gitconfig`ファイルを開いて編集した方が楽。
 フォーマットは下記の通り。
 ```
@@ -36,7 +42,7 @@ git cofing --gloabl alias.st st
 	l = log --abbrev-commit --date=iso --graph --pretty=format:'%C(red)%h %C(yellow)%d%C(green)%cd %C(blue)%cn\n%C(reset)%s\n'
 ```
 
-## Could not resolve host: github.com in OSX
+### Could not resolve host: github.com in OSX
 xcodeを9.2にupdateしたら`git-push`で以下のerrorがでるようになった。
 
 ```
@@ -52,21 +58,25 @@ xcode-select --install
 
 直接の原因は不明
 
-## windowsでのpushエラー
+### windowsでのpushエラー
 
-### 症状
+#### 症状
 使用しているgitは以下。
-```shell
+
+```
 $ git version
 git version 2.6.3.windows.1
 ```
 
 次のコマンドを実行すると、
-```shell
+
+```
 git remote add origin https://hogehoge.gihttps://github.com/user_id/hogehoge.git
 git push origin master
 ```
+
 下記のエラーがでる。
+
 ```
 !!!bash: /dev/tty: No such device or address!!!
 !!!error: failed to execute prompt script (exit code 1)!!!
@@ -76,7 +86,7 @@ git push origin master
 
 上記はvimshellでのエラーだが、cmdから直接実行しても同様のエラーがでる。
 
-### 対処法?
+#### 対処法?
 1. 以下の方法によるが、試してない。
 [https://github.com/atom/atom/issues/8984:title]
 以下のURLをremote repositoryのURLとして設定する。
@@ -84,10 +94,13 @@ git push origin master
 ```
 https://<username>:<password>@github.com/<username>/<repo_name>.git
 ```
+
 * username:hoge
 * password:fuga
 * repo_name:hage
+
 の場合
+
 ```
 git remote add origin https://hoge:fuga@github.com/hage/hage.git
 ```
@@ -97,58 +110,12 @@ git remote add origin https://hoge:fuga@github.com/hage/hage.git
 ```
 https://hoge@github.com/hage/hage.git
 ```
+
 とするとパスワードが求められるので、入力する。
 
-## Commit message
-一応古典的には下記が原則
-1. タイトルの後は1行空けて本文を書く
-1. タイトルを50字以内におさめる
-1. タイトルの文頭を大文字にする
-1. タイトルの文末にピリオドを付けない
-1. タイトルは命令形で記述する
-1. 本文は1行あたり72字以内におさめる
-1. 本文ではどのようにではなく何をとなぜを説明する
-
-```
-Summarize changes in around 50 characters or less
- 
-More detailed explanatory text, if necessary. Wrap it to about 72
-characters or so. In some contexts, the first line is treated as the
-subject of the commit and the rest of the text as the body. The
-blank line separating the summary from the body is critical (unless
-you omit the body entirely); various tools like `log`, `shortlog`
-and `rebase` can get confused if you run the two together.
- 
-Explain the problem that this commit is solving. Focus on why you
-are making this change as opposed to how (the code explains that).
-Are there side effects or other unintuitive consequenses of this
-change? Here's the place to explain them.
- 
-Further paragraphs come after blank lines.
- 
- - Bullet points are okay, too
- 
- - Typically a hyphen or asterisk is used for the bullet, preceded
-   by a single space, with blank lines in between, but conventions
-   vary here
- 
-If you use an issue tracker, put references to them at the bottom,
-like this:
- 
-Resolves: #123
-See also: #456, #789
-```
-
-チケット番号を要約に含める場合もある。
-
-### reference
-* [Gitのコミットメッセージの書き方 | プログラミング | POSTD](http://postd.cc/how-to-write-a-git-commit-message/)
-* [spring-framework/CONTRIBUTING.md at 30bce7fa169df320bbff8e56efe9610449a9d60b · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/30bce7fa169df320bbff8e56efe9610449a9d60b/CONTRIBUTING.md)
-* [tbaggery - A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-
-
-## windowsでのlocale error
+### windowsでのlocale error
 Windowsのgitで`git add -p`をすると以下のエラーがでた。
+
 ```
 !!!perl: warning: Setting locale failed.!!!
 !!!perl: warning: Please check that your locale settings:!!!
@@ -157,27 +124,32 @@ Windowsのgitで`git add -p`をすると以下のエラーがでた。
 !!!    are supported and installed on your system.!!!
 !!!perl: warning: Falling back to the standard locale ("C").!!!
 ```
+
 gitは中でperlを呼んでいるが、localeが設定されていないので起こられている。
 よってlocaleの設定をしてあげればOK。
 Linuxなどの場合は設定方法が色々調べれば出るので、扱わない。
 以下ではWindowsでのlocaleの設定方法について述べる。
 
-### 方法1 cmdで設定
+#### 方法1 cmdで設定
 cmd上でgitを利用している場合はcmdの環境変数として`LC_ALL`と`LANG`を設定する。
-```cmd
+
+```
 set LC_ALL=ja_JP.UTF-8
 set LANG=ja_JP.UTF-8
 ```
 
-### 方法2 環境変数を設定
+#### 方法2 環境変数を設定
 vimshellなどから使う場合は、環境変数として設定する。
 コントロールパネル->システム->詳細タブ->環境変数から以下のように設定する。
+
 * 変数:LC_ALL
 * 値:ja_JP.UTF-8
 * 変数:LANG
 * 値:ja_JP.UTF-8
 
-## patch
+## Tips
+
+### patch
 gitでpatchを作る場合は以下のようにする。
 `--no-prefix`をつけないと、`a/file_name`, `b/file_name`などのファイル名で差分が生成される。
 
@@ -190,13 +162,12 @@ patchの適用は`patch`コマンドを使う。
 patch -p0 < diff.patch
 ```
 
-## tips
 
 ### Gitの最初のコミットは空コミット
 [Gitの最初のコミットは空コミットにしよう](http://qiita.com/NorsteinBekkler/items/b2418cd5e14a52189d19)
 最初のコミットは`git rebase -i`できないので、
 
-```shell
+```
 # リポジトリ作成
 git init
 # 最初のコミット
@@ -224,53 +195,11 @@ git commit --allow-empty -m "first commit"
 Git2.7から。
 
 
-### `git commit --fixup`
-
 ### `--`の意味
 `--`は、オプションの引数とコマンドの引数を区別する為に用いる。
 `--`以降の引数はファイルとして扱われる。
+git にかぎらずshellで一般的に使われる。
 
-
-### `git log -S/-G`
-
-#### `git log -S`
-```
--S<string>
-   Look for differences that change the number of occurrences of the specified string (i.e. addition/deletion) in a file. Intended for the scripter's use.
-
-   It is useful when you're looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the
-   feature iteratively to feed the interesting block in the preimage back into -S, and keep going until you get the very first version of the block.
-```
-
-#### `git log -G`
-
-```
--G<regex>
-   Look for differences whose patch text contains added/removed lines that match <regex>.
-
-   To illustrate the difference between -S<regex> --pickaxe-regex and -G<regex>, consider a commit with the following diff in the same file:
-
-       +    return !regexec(regexp, two->ptr, 1, &regmatch, 0);
-       ...
-       -    hit = !regexec(regexp, mf2.ptr, 1, &regmatch, 0);
-
-   While git log -G"regexec\(regexp" will show this commit, git log -S"regexec\(regexp" --pickaxe-regex will not (because the number of occurrences of that string did
-   not change).
-
-   See the pickaxe entry in gitdiffcore(7) for more information.
-```
-
-### git bisect
-
-```shell
-git bisect start <bad-commit> <good-commit>
-git bisect run <テストスクリプトのファイル名>
-git bisect view
-git bisect log
-git bisect reset
-```
-
-* [git bisect で問題箇所を特定する - Qiita](http://qiita.com/usamik26/items/cce867b3b139ea5568a6)
 
 ### committerとauthorを変更
 既存の履歴のcommitterとAuthorを変更する場合は、以下のようにする。
@@ -283,64 +212,6 @@ git commit --amend --author="sea_mountain <dummy_email_address@example.com>"
 まとめて、する場合は、filter-branchが必要。
 
 
-## git cherry-pick
-
-* [4. cherry-pick【チュートリアル3 コミットを書き換えよう！】 | サルでもわかるGit入門 〜バージョン管理を使いこなそう〜 | どこでもプロジェクト管理バックログ](http://www.backlog.jp/git-guide/stepup/stepup7_4.html)
-
-特定のcommit列をHEADに移したいときに使う。
-移行先のbranchに移動する。
-
-```git
-git checkout master
-```
-
-```git
-git cherry-pick <commit>
-```
-
-あるcommitより先のcommitすべてを移行したい場合は
-`<commit>`は入らないことに注意。
-
-```git
-git cherry-pick <commit>...
-```
-
-とする。
-ある範囲のcommitを入れたい場合は
-
-```
-git cherry-pick -n <commit1>^..<commit2>
-```
-
-とする。
-`<commit1>`から`<commit2`までのcommitがcherry-pickされる。
-
-## hooks
-
-## git tag
-タグの一覧表示
-
-```
-git tag
-```
-
-特定のpatternのtagを見たい場合は`-l` `--list`をつける。
-
-```
-git tag -l 'v1.4.2.*'
-```
-
-タグをつける場合は、`-a`でタグの名前をつけて、`-m`でタグのメッセージをつける。
-
-```
-git tag -a v1.4 -m 'my version 1.4'
-```
-
-タグのついたコミッとを見る。
-
-```
-git show v1.4
-```
 
 ### git pull origin master or git fetch & merge
 * [version control - difference between git merge origin/master and git pull - Stack Overflow](https://stackoverflow.com/questions/21756614/difference-between-git-merge-origin-master-and-git-pull)
@@ -396,31 +267,6 @@ git commit -m '#1 Commit message'
 とすればgitが`;`をcommit charとして選んでくれる。
 
 
-## git stash
-git stash applyとgit stash popの違い。
-
-* applyはstashしているものを削除しない
-* popもconflictした場合はstashしているものを削除しない
-    * その場合はgit stash dropを使う必要がある
-* popはapplyしてdropしているのと似ている
-
-
-## git diff
-
-```
-git diff [--options] [--] [<path>...]
-```
-
-* indexとの差分を見る
-* indexに何が追加されるかを確認する
-
-## git config
-* `core.attributesfile = 'path/to/attributes'`
-    * pathを指定すると、指定したpathの.gitattributesを参照するようになる。
-* `core.excludesfile = 'path/to/gitignore'`
-    * pathを指定すると、指定したpathの.gitignoreを参照するようになる。
-
-
 ## git alias
 
 ### with arguments
@@ -452,8 +298,11 @@ git_tag=$(git rev-parse HEAD | xargs git tag --contains)
 echo $git_tag
 ```
 
-### Commit message
+## Commit message
 * [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+* [Gitのコミットメッセージの書き方 | プログラミング | POSTD](http://postd.cc/how-to-write-a-git-commit-message/)
+* [spring-framework/CONTRIBUTING.md at 30bce7fa169df320bbff8e56efe9610449a9d60b · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/30bce7fa169df320bbff8e56efe9610449a9d60b/CONTRIBUTING.md)
+* [tbaggery - A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 1. Separate subject from body with a blank line
 1. Limit the subject line to 50 characters
@@ -462,5 +311,48 @@ echo $git_tag
 1. Use the imperative mood in the subject line
 1. Wrap the body at 72 characters
 1. Use the body to explain what and why vs. how
+
+
+一応古典的には下記が原則
+1. タイトルの後は1行空けて本文を書く
+1. タイトルを50字以内におさめる
+1. タイトルの文頭を大文字にする
+1. タイトルの文末にピリオドを付けない
+1. タイトルは命令形で記述する
+1. 本文は1行あたり72字以内におさめる
+1. 本文ではどのようにではなく何をとなぜを説明する
+
+```
+Summarize changes in around 50 characters or less
+ 
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like `log`, `shortlog`
+and `rebase` can get confused if you run the two together.
+ 
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequenses of this
+change? Here's the place to explain them.
+ 
+Further paragraphs come after blank lines.
+ 
+ - Bullet points are okay, too
+ 
+ - Typically a hyphen or asterisk is used for the bullet, preceded
+   by a single space, with blank lines in between, but conventions
+   vary here
+ 
+If you use an issue tracker, put references to them at the bottom,
+like this:
+ 
+Resolves: #123
+See also: #456, #789
+```
+
+チケット番号を要約に含める場合もある。
+
 
 ## Reference
