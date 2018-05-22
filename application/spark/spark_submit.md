@@ -14,7 +14,10 @@ spark-submit run-example [options] example-class [example args]
 ```
 
 * --master MASTER_URL
-    * spark://host:port, mesos://host:port, yarn, or local.
+    * `spark://host:port`
+    * `mesos://host:port`
+    * `yarn`
+    * `local`
 * --deploy-mode DEPLOY_MODE
     * Whether to launch the driver program locally ("client") or on one of the worker machines inside the cluster ("cluster") (Default: client).
     * client
@@ -32,7 +35,9 @@ spark-submit run-example [options] example-class [example args]
     * classpathに置かれる JAR files
     * third partyのJARに依存する場合は追加する
 * --packages
-    * Comma-separated list of maven coordinates of jars to include on the driver and executor classpaths. Will search the local maven repo, then maven central and any additional remote repositories given by --repositories. The format for the coordinates should be groupId:artifactId:version.
+    * Comma-separated list of maven coordinates of jars to include on the driver and executor classpaths.
+    * Will search the local maven repo, then maven central and any additional remote repositories given by --repositories.
+    * The format for the coordinates should be groupId:artifactId:version.
 * --exclude-packages
     * Comma-separated list of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
 * --repositories 
@@ -73,11 +78,13 @@ spark-submit run-example [options] example-class [example args]
     * `512m`, `15g`と指定する 
 * --proxy-user NAME
     * User to impersonate when submitting the application.  This argument does not work with --principal / --keytab.
-* --verbose, -v               Print additional debug output.
+* --verbose, -v
+    * Print additional debug output.
 
 Spark standalone with cluster deploy mode only:
 
-* --driver-cores NUM          Cores for driver (Default: 1).
+* --driver-cores NUM
+    * Cores for driver (Default: 1).
 
 Spark standalone or Mesos with cluster deploy mode only:
 
@@ -141,7 +148,6 @@ ${SPARK_HOME}/bin/spark-submit \
   /path/to/pyspark_script.py \
   <arg1>
 ```
-
 
 ## Tips
 
