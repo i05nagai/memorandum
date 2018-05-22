@@ -45,10 +45,20 @@ hdfs [--config confdir] [--loglevel loglevel] COMMAND
 ### dfs
 Hadoop fs command.
 
+* `-ls <path>`
+    * 
 * `-appendToFile`
 * `-copyFromLocal from to`
 * `-cp from to`
 * `-copyToLocal from to`
+
+
+## Usage
+
+```
+hdfs -ls hdfs:///var/log/
+```
+
 
 
 ## Reference
