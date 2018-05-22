@@ -6,6 +6,31 @@ title: Git CLI
 
 ## CLI
 
+### git status
+
+* `-s`
+    * short status
+    * output format
+        * `XY PATH`
+    * `XY`
+        * `??`
+            * untracked files
+        * `X` is status for index
+        * `Y` is status for worktree
+    * statuses
+        * `M`
+            * modified
+        * `A`
+            * added
+        * `D`
+            * deleted
+        * `R`
+            * renamed
+        * `C`
+            * copied
+        * `U`
+            * updated but unmerged
+
 ### git commit
 
 * `--fixup <commit>`
