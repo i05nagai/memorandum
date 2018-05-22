@@ -12,11 +12,14 @@ EMR supports many cluster software including:
 
 ## custom jar file
 EMRでdefaultで提供されいてるjarファイルがある。
+stepで処理を実行する際に利用する。
 
-* script-runner.jar
-    * cluster内でscriptを実行する
-    * `s3://region.elasticmapreduce/libs/script-runner/script-runner.jar`
-        * reagionはEMRのregion
+`script-runner.jar`
+
+* cluster内でscriptを実行する
+* S3にuploadしているshell scriptなどを実行できる
+* `s3://region.elasticmapreduce/libs/script-runner/script-runner.jar`
+    * reagionはEMRのregion
 
 
 ```sh
@@ -24,18 +27,21 @@ aws emr add-steps \
     --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://mybucket/script-path/my_script.sh","--option","args"]
 ```
 
+`command-runner.jar`
 
-* command-runner.jar
-    * [Command Runner - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ReleaseGuide/emr-commandrunner.html)
-    * 以下のcommandを実行する場合はこちらを使う
-        * spark-submit
-        * s3-dist-cp
+* [Command Runner - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-commandrunner.html)
+* 以下のcommandを実行する場合はこちらを使う
+    * spark-submit
+    * s3-dist-cp
 
 ## Steps
+* [hadoop - How to execute a shell script on all nodes of an EMR cluster? - Stack Overflow](https://stackoverflow.com/questions/36102316/how-to-execute-a-shell-script-on-all-nodes-of-an-emr-cluster)
+    * stepはmaster nodeのみで実行される
+
 Clusterでの処理は、stepという形で追加する。
 Cluster modeでは、S3に作業用のファイルなどをおく必要がある。
-Client modeでは、ローカルのファイルを利用できる。
-クラスタ作成時に、stepを指定おく方法と、作成後に`aws emr add-steps`などでstepを追加する方法がある。
+Client modeでは、localのfileを利用できる。
+cluster作成時に、stepを指定おく方法と、作成後に`aws emr add-steps`などでstepを追加する方法がある。
 
 * Type
     * typeごとに実行されるコマンドが決まっている
@@ -47,16 +53,17 @@ Client modeでは、ローカルのファイルを利用できる。
     * CONTINUE
         * failしたときにINSTANCEを終了しない
     * TERMINATE_CLUSTER
-        * テップが失敗した場合、クラスターを停止します。クラスターの停止保護が有効で、自動終了が無効な場合は、クラスターは停止されません。
+        * stepが失敗した場合、クラスターを停止します。クラスターの停止保護が有効で、自動終了が無効な場合は、クラスターは停止されません。
     * CANCEL_AND_WAIT
-        * ステップが失敗した場合、残りのステップをキャンセルします。
+        * stepが失敗した場合、残りのステップをキャンセルします。
         * `--no-auto-terminate`がある場合は、全てのstepが終了しても終了しない
 * Args
     * 必要な引数
     * 配列として渡す
+* Jar
+    * 実行jar
 
 Spark programm
-
 
 ```sh
 aws emr add-steps \
