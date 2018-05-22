@@ -89,9 +89,11 @@ EMRのspark history serverは以下の形式で実行されている。
 `/usr/lib/spark/conf/spark-defaults.sh`の中で、history logの場所が`hdfs:///var/log/spark/apps`として保存されている。
 
 
-## logging
+## Logging
 * [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
 * [View Log Files - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html#emr-manage-view-web-log-files-debug)
+* [View Application History - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-cluster-application-history.html)
+    * `EMR 5.8`からWeb UIでSpark Applicationのjobのlogがみれる
 
 EMRのmaster nodeでspark-submitすると結果が以下のようにでる。
 `tracking URL`に実行Logが記録される。
@@ -99,11 +101,81 @@ stdoutなども記録されている。
 sparkのlog dirは`/usr/lib/spark/conf/`の中で`/var/log/spark`として指定されている。
 
 
+log4jのloggingは、`containers/<container-id>`に出力される。
 
-* [View Application History - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-cluster-application-history.html)
-    * `EMR 5.8`からWeb UIでSpark Applicationのjobのlogがみれる
+## Configuration
+* spark.history.fs.logDirectory
+    * hdfs:///var/log/spark/apps
+* spark.eventLog.dir
+    * hdfs:///var/log/spark/apps
+
+`/usr/lib/spark` is SPARK_HOME.
+__main__: Read event logs from s3://retty-dpi/Logs/retty/retty-event/2018/05/17/14
+18/05/22 02:20:11 INFO 
+
+```
+yarn logs -applicationId <application-id> -containerId <container-id>
+```
+
 
 ## Tips
+
+### spark-submit fiels
+spark submitの引数にS3のfileを指定できる。
+EMRの場合はS3に必要なscriptなどをuploadして、利用することになる。
+
+```
+spark-submit \
+        --deploy-mode cluster \
+        --executor-cores 2 \
+        --executor-memory 4G \
+        --num-executors 12 \
+        --py-files s3://path/to/python_lib.py,s3://path/to/settings.py \
+        s3://path/to/script.py <arg1> <arg2>
+```
+
+### steps
+EMRを起動する時に、`command-runner.jar`に`spark-submit`を指定できるが、`spark-submit`を直接実行するのではなくて、`s3://`にuploadしたshell scriptを実行するようにした方が良いを実行するようにした方が良い。
+開発のdebugの際などに、EMRのstepから実行commandをcopyする必要がでてくる。
+
+```json
+  {
+    "Args": [
+      "spark-submit",
+      "--deploy-mode",
+      "cluster",
+      "--executor-cores",
+      "4",
+      "--executor-memory",
+      "8G",
+      "--num-executors",
+      "4",
+      "--files",
+      "${path_to_s3_spark}/file.txt",
+      "${path_to_s3_spark}/file.py"
+    ],
+    "Type": "CUSTOM_JAR",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "Jar": "command-runner.jar",
+    "Properties": "=",
+    "Name": "Step1"
+  },
+```
+
+以下のような形にする。
+
+```json
+  {
+    "Args": [
+      "${path_to_s3_spark}/run_step1.sh"
+    ],
+    "Type": "CUSTOM_JAR",
+    "ActionOnFailure": "CANCEL_AND_WAIT",
+    "Jar": "script-runner.jar",
+    "Properties": "=",
+    "Name": "Step1"
+  },
+```
 
 ### Error
 * [amazon web services - Cannot create temp dir with proper permission: /mnt1/s3 - Stack Overflow](https://stackoverflow.com/questions/41221821/cannot-create-temp-dir-with-proper-permission-mnt1-s3)
