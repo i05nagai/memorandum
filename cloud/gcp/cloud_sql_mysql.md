@@ -168,7 +168,74 @@ docker run --rm -it \
 
 ## Importing data
 * [Importing Data into Cloud SQL  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/import-export/importing)
+* [Exporting Data for Import into Cloud SQL  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/import-export/creating-sqldump-csv#sqldump)
+    * You need GCS to import data
 
+
+
+Export data from existing MySQL.
+
+* `--ignore-table [VIEW1] [VIEW2]`
+    * VIEW must be ignored
+* `--set-gtid-purged=OFF`
+* `--skip-triggers`
+* `--hex-blob`
+
+```
+mysqldump \
+    --databases [DATABASE_NAME] \
+    -h [INSTANCE_IP] \
+    -u [USERNAME] \
+    -p \
+    --skip-triggers \
+    --set-gtid-purged=OFF \
+    --hex-blob --default-character-set=utf8 > data.sql
+
+# if you want to rename databases name before importing
+cat data.sql | sed -e 's/[DATABASE_NAME]/[NEW_DATABSE_NAME]/' > data.sql
+```
+
+Import dumped data
+
+
+```
+gsutil mb gs://<bucket-name>/
+
+# upload dumped data
+gsutil cp data.sql gs://<bucket-name>/data.sql
+
+# get service account for Cloud SQL instance
+gcloud sql instances describe <instance-name> | grep serviceAccountEmailAddress | cut -f 2 -d ' '
+
+# add permissions
+gsutil acl ch -u <service-account>:W gs://<bucket-name>/
+gsutil acl ch -u <service-account>:R gs://<bucket-name>/data.sql
+
+# --database=<databse-name> option may not work
+# you need to check dumped sql file
+gcloud sql import sql \
+    <instance-name> \
+    gs://<bucket-name>/data.sql \
+    --database=<databse-name>
+
+gsutil rb -f gs://<bucket-name>/
+```
+
+If you see following error, you need to check
+
+* permissions is added properly,
+* or the file exists in GCS
+
+```
+Do you want to continue (Y/n)?  y
+
+Importing data into Cloud SQL instance...failed.
+ERROR: (gcloud.sql.import.sql) ERROR_RDBMS
+```
+
+
+## Import/Export best branctice
+* [Best Practices for Importing and Exporting Data  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/import-export/)
 
 ## Reference
 * [Cloud SQL for MySQL Documentation  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/)
