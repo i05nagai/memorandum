@@ -83,6 +83,25 @@ I cross off the customer's name from the reservation list.
 * graffitti
 * footage
     * 映像
+* while doing
+    * [grammar - "do .. while doing" or "do while do" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/239061/do-while-doing-or-do-while-do)
+    * S V while doing -> S is doing
+    * V and doing are exchangeable.
+        * Bob changes the syntax of software while maintaining semantic equivalence.
+        * Bob maintains semantic equivalence while changing the syntax of software.
+        * Xxx changes the syntax of software and he/she/it keeps the semantic equivalence.
+* when doing
+    * [grammar - Usage of "When doing something" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/16972/usage-of-when-doing-something)
+    * S V when doing -> S is doing
+* off-topic
+    * OT
+* with O + V-ing/V-ed/adjective/adverb/prepositional phrase
+    * [grammar - How do you explain the usage of "with"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/322781/how-do-you-explain-the-usage-of-with)
+    * known as attendant fact or attendant circumstances
+    * The attendant circumstance means an accompanying circumstance
+* prepositional phrase
+    * 前置詞句
+* spin off
 
 
 ## Math

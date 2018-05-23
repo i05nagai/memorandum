@@ -1,4 +1,8 @@
-## python/pyspark
+---
+title: PySpark
+---
+
+## PySpark
 
 ## Install
 * [spark 2.0系Tips #1 Jupyterでpyspark - Qiita](http://qiita.com/takaomag/items/bff9a7df24c4fbab2785)
@@ -13,16 +17,14 @@ brew install apache-spark
 
 ## API
 
-### SparkSession
+### pyspark.sql.SparkSession
+In usual, `SparkSession` is denoted by `spark`.
 
 * `spark_session.read.json()`
     * readには、pathかpathのlistが渡せる
     * pathは`*`, `[]`が使える
 
-
-### pyspark.sql
-
-pyspark.sql.types
+### pyspark.sql.types
 
 * `IntegerType()`
 * `StringType()`
@@ -106,6 +108,7 @@ pyspark.sql.functions
 
 
 ### pyspark.SparkContext
+In usual, `SparkContext` is denoted by `sc`.
 
 ```python
 conf = pyspark.SparkConf(
@@ -119,8 +122,13 @@ sc = pyspark.SparkContext.getOrCreate(conf=conf)
 
 * `sc.parallelize(c, numSlices=None)`
     * [pyspark package — PySpark 2.2.0 documentation](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=parallelize#pyspark.SparkContext.parallelize)
+    * listをRDDとしてよみこむ
     * pythonのcollectionをnumSlices個のListに分割
     * 順序は適当?
+* `sc.textFile("/path/to/textfile")`
+    * textfileをRDDとしてよみこむ
+    * gzに圧縮されているものも読み込める
+    * file globで複数のファイルもまとめて読み込める
 
 
 ```python
@@ -133,92 +141,13 @@ sc = pyspark.SparkContext.getOrCreate(conf=conf)
 [[], [0], [], [2], [4]]
 ```
 
+jsonの読み込み
 
-## Configuration
-
-```json
-[
-    {
-        "Classification": "spark-env",
-        "Properties": {},
-        "Configurations": [
-            {
-                "Classification": "export",
-                "Properties": {
-                    "PYSPARK_PYTHON": "python34"
-                },
-                "Configurations": []
-            }
-        ]
-    }
-]
-```
-
-## Pricing
-* [料金 - Amazon EMR | AWS](https://aws.amazon.com/jp/emr/pricing/)
-
-EC2のinstanceを借りるより安い。
-1時間単位で課金されるので、一旦起動したら一時間使った方が良い。
-起動した時点で課金が開始される。
-
-## SSH
-To Master Node
-
-アカウント名は、haddoopで、keyはcluster作成時に指定したkey pairである。
-
-```
-ssh hadoop@ec2-###-##-##-###.compute-1.amazonaws.com -i ~/mykeypair.pem
-```
-
-## Commands
-Cluster IDを以下でえる。 
-
-```
-aws emr list-clusters
-```
-
-cluster IDを指定すると、より詳細な情報が得られる。
-Public DNS名などもえることができる。
-
-```
-aws emr list-instances --cluster-id j-2AL4XXXXXX5T9
-```
-
-master nodeにファイルをおく。
-
-* `--key-pair-file`
-    * cluster作成時に指定したkey pair
-    * aws CLIで設定することもできる
-* `--src`
-    * 転送するfile path
-* `--dest`
-    * 転送先のfile path
-    * 
-
-```
-aws emr put
---cluster-id <value>
---key-pair-file <value>
---src <value>
-[--dest <value>]
-```
-
-master nodeにファイルからファイルを取得
-
-* `--key-pair-file`
-    * cluster作成時に指定したkey pair
-    * aws CLIで設定することもできる
-* `--src`
-    * 取得するmaster nodeのfile path
-* `--dest`
-    * 取得したファイルをおくfile path
-
-```
-aws emr get
---cluster-id <value>
---key-pair-file <value>
---src <value>
-[--dest <value>]
+```python
+rdd = sc.textFile('python/test_support/sql/*.json.gz')
+df2 = spark.read.json(rdd)
+df2.dtypes
+[('age', 'bigint'), ('name', 'string')]
 ```
 
 ## API
@@ -236,23 +165,6 @@ directoryを読み込む場合は`/path/to/*`とする必要がある。
 ```python
 >>> df1 = spark.read.json('python/test_support/sql/*.json.gz')
 >>> df1.dtypes
-[('age', 'bigint'), ('name', 'string')]
-```
-
-### SparkContext
-* `sc.parallelize([])`
-    * listをRDDとしてよみこむ
-* `sc.textFile("/path/to/textfile")`
-    * textfileをRDDとしてよみこむ
-    * gzに圧縮されているものも読み込める
-    * file globで複数のファイルもまとめて読み込める
-
-jsonの読み込み
-
-```python
-rdd = sc.textFile('python/test_support/sql/*.json.gz')
-df2 = spark.read.json(rdd)
-df2.dtypes
 [('age', 'bigint'), ('name', 'string')]
 ```
 
@@ -298,8 +210,6 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 ### Save data
 * `rdd.saveAsTextFile(path/to/outputFile)`
 * `rdd.saveAsSequenceFile(outputFile)`
-
-### pyspark.RDD
 
 ### functions
 * `lag`
@@ -388,7 +298,6 @@ rdd.mapPartitions(f).collect()
 # [3, 7]
 ```
 
-
 * `rdd.repartitionAndSortWithinPartitions(numPartitions=None, partitionFunc=<function portable_hash at 0x7f51f1ac0668>, ascending=True, keyfunc=<function <lambda> at 0x7f51f1ab3ed8)`
     * 戻り値はrdd
     * [pyspark.RDD.repartitionAndSortWithinPartitions](http://takwatanabe.me/pyspark/generated/generated/pyspark.RDD.repartitionAndSortWithinPartitions.html)
@@ -399,7 +308,6 @@ rdd.mapPartitions(f).collect()
     * 各行は(key, value)である必用がある
         * 下の例では(key=0, value=5)
         * valueが複数ある場合は片方はtuple(0, (5, 0, 5))
-
 
 ```python
 rdd = sc.parallelize([(0, 5), (3, 8), (2, 6), (0, 8), (3, 8), (1, 3)])
@@ -478,6 +386,13 @@ val sqlDF = spark.sql("SELECT * FROM parquet.`examples/src/main/resources/users.
     * data sourceに保存するときに、上書きで保存
 * ignore
 
+## Docker
+* [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
+
+```
+export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
+```
+
 ## Tips
 
 ### function passing to pyspark
@@ -494,15 +409,6 @@ class WordFunctions(object):
         return rdd.filter(lambda x: query in x)
 ```
 
-
-## Docker
-* [CoorpAcademy/docker-pyspark: Docker image of Apache Spark with its Python interface, pyspark.](https://github.com/CoorpAcademy/docker-pyspark)
-
-```
-export PYTHONPATH=/usr/bin/python3:$SPARK_HOME/python:$(ls -a ${SPARK_HOME}/python/lib/py4j-*-src.zip)
-```
-
-## Tips
 
 ### Error: No module named ...
 * [Running Spark Python Applications](https://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_python.html)
@@ -522,7 +428,6 @@ import some_module_to_be_tested
 def test_func(spark_context):
     spark_context.addPyFile(some_module_to_be_tested.__file__)
 ```
-
 
 ## Reference
 * [Welcome to Spark Python API Docs! — PySpark 2.1.0 documentation](http://spark.apache.org/docs/2.1.0/api/python/index.html)

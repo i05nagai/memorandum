@@ -1,3 +1,7 @@
+---
+title: Code Climate
+---
+
 # code climate
 コードの品質をはかる。
 coverallsは、coverageのみだが、code climateはコードの品質という点でcoverageや
@@ -5,13 +9,13 @@ coverallsは、coverageのみだが、code climateはコードの品質という
 ## codeclimate cli
 dockerで提供されているが別途packageも入手可能。
 
-```shell
+```
 docker pull codeclimate/codeclimate
 ```
 
 ### OSX
 
-```shell
+```
 brew tap codeclimate/formulae
 brew install codeclimate
 ```
@@ -39,21 +43,21 @@ CI環境などで以下を行うようにする。
 	* `coverage.py`
 3. 生成された`.coverage`を`codeclimate-test-reporter`でcodeclimateへ送る
 
-```shell
+```
 export CODECLIMATE_REPO_TOKEN=<token>
 codeclimate-test-reporter 
 ```
 
 もしくは、
 
-```shell
+```
 codeclimate-test-reporter --token <token>
 ```
 
 ### Reference
 * [Code Climate](https://codeclimate.com/repos/583d8d021ddf8a227f000437/coverage_setup)
 * [Setting Up Test Coverage](https://docs.codeclimate.com/docs/setting-up-test-coverage#section-how-to)
-* [codeclimate/python-test-reporter: Uploads Python test coverage data to Code Climate https://codeclimate.com](https://github.com/codeclimate/python-test-reporter)
+* [codeclimate/python-test-reporter: Uploads Python test coverage data to Code Climate](https://github.com/codeclimate/python-test-reporter)
 
 ## Analysis Configuration
 
@@ -106,4 +110,4 @@ pull-requestでmasterにmergeした場合は、masterへのBuildが行われな�
 ## Reference
 * [Code Climate](https://docs.codeclimate.com/)
 * [Code ClimateをPythonリポジトリに適用する - Qiita](http://qiita.com/vmmhypervisor/items/b642b22f6a78f1f8668d)
-
+* https://codeclimate.com

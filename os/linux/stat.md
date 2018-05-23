@@ -4,6 +4,7 @@ title: stat
 
 ## stat
 file/filesystemの情報を取得
+Displays the detailed status of a particular file or a file system.
 
 ## Usage
 

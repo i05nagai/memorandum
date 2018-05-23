@@ -1,20 +1,25 @@
 ---
-title: EMR
+title: Amazon EMR
 ---
 
-## EMR
-Elastic Map Reduce
+## Amazon EMR
+Elastic Map Reduce.
+EMR supports many cluster software including:
 
 * Hadoop
 * Spark
+* ganglia
 
 ## custom jar file
 EMRでdefaultで提供されいてるjarファイルがある。
+stepで処理を実行する際に利用する。
 
-* script-runner.jar
-    * cluster内でscriptを実行する
-    * `s3://region.elasticmapreduce/libs/script-runner/script-runner.jar`
-        * reagionはEMRのregion
+`script-runner.jar`
+
+* cluster内でscriptを実行する
+* S3にuploadしているshell scriptなどを実行できる
+* `s3://region.elasticmapreduce/libs/script-runner/script-runner.jar`
+    * reagionはEMRのregion
 
 
 ```sh
@@ -22,20 +27,21 @@ aws emr add-steps \
     --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://mybucket/script-path/my_script.sh","--option","args"]
 ```
 
+`command-runner.jar`
 
-* command-runner.jar
-    * [Command Runner - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ReleaseGuide/emr-commandrunner.html)
-    * 以下のcommandを実行する場合はこちらを使う
-        * spark-submit
-        * s3-dist-cp
-
-
+* [Command Runner - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-commandrunner.html)
+* 以下のcommandを実行する場合はこちらを使う
+    * spark-submit
+    * s3-dist-cp
 
 ## Steps
+* [hadoop - How to execute a shell script on all nodes of an EMR cluster? - Stack Overflow](https://stackoverflow.com/questions/36102316/how-to-execute-a-shell-script-on-all-nodes-of-an-emr-cluster)
+    * stepはmaster nodeのみで実行される
+
 Clusterでの処理は、stepという形で追加する。
 Cluster modeでは、S3に作業用のファイルなどをおく必要がある。
-Client modeでは、ローカルのファイルを利用できる。
-クラスタ作成時に、stepを指定おく方法と、作成後に`aws emr add-steps`などでstepを追加する方法がある。
+Client modeでは、localのfileを利用できる。
+cluster作成時に、stepを指定おく方法と、作成後に`aws emr add-steps`などでstepを追加する方法がある。
 
 * Type
     * typeごとに実行されるコマンドが決まっている
@@ -47,16 +53,17 @@ Client modeでは、ローカルのファイルを利用できる。
     * CONTINUE
         * failしたときにINSTANCEを終了しない
     * TERMINATE_CLUSTER
-        * テップが失敗した場合、クラスターを停止します。クラスターの停止保護が有効で、自動終了が無効な場合は、クラスターは停止されません。
+        * stepが失敗した場合、クラスターを停止します。クラスターの停止保護が有効で、自動終了が無効な場合は、クラスターは停止されません。
     * CANCEL_AND_WAIT
-        * ステップが失敗した場合、残りのステップをキャンセルします。
+        * stepが失敗した場合、残りのステップをキャンセルします。
         * `--no-auto-terminate`がある場合は、全てのstepが終了しても終了しない
 * Args
     * 必要な引数
     * 配列として渡す
+* Jar
+    * 実行jar
 
 Spark programm
-
 
 ```sh
 aws emr add-steps \
@@ -71,83 +78,12 @@ aws emr add-steps \
     --steps Name="Command Runner",Jar="command-runner.jar",Args=["spark-submit","Args..."]
 ```
 
+## Pricing
+* [料金 - Amazon EMR | AWS](https://aws.amazon.com/jp/emr/pricing/)
 
-### Spark
-* [Spark ステップの追加 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ReleaseGuide/emr-spark-submit-step.html)
-* [Submitting Applications - Spark 2.1.1 Documentation](https://spark.apache.org/docs/latest/submitting-applications.html)
-
-sparkの場合は、`spark-submit`コマンドが実行されるので、引数`Args`には、`spark-submit`に渡すものをわたす。
-
-
-クラスタ作成時にstepを指定
-
-```sh
-aws emr create-cluster \
---name "Add Spark Step Cluster" \
---release-label emr-5.4.0 \
---applications Name=Spark \
---ec2-attributes KeyName=myKey\
---instance-type m3.xlarge
---instance-count 3 \
---steps Type=Spark,Name="Spark Program",ActionOnFailure=CONTINUE,Args=[--class,org.apache.spark.examples.SparkPi,/usr/lib/spark/lib/spark-examples.jar,10]
---use-default-roles
-```
-
-クラスタ作成時にstepを指定 with `command-runner.jar`
-
-```sh
-aws emr create-cluster \
---name "Add Spark Step Cluster" \
---release-label emr-5.4.0 \
---applications Name=Spark
---ec2-attributes KeyName=myKey
---instance-type m3.xlarge
---instance-count 3 \
---steps Type=CUSTOM_JAR,Name="Spark Program",Jar="command-runner.jar",ActionOnFailure=CONTINUE,Args=[spark-example,SparkPi,10]
---use-default-roles
-```
-
-作成済みのクラスタにstepを追加(shorthand)
-
-```sh
-aws emr add-steps
-    --cluster-id j-2AXXXXXXGAPLF
-    --steps Type=Spark,Name="Spark Program",ActionOnFailure=CONTINUE,Args=[--class,org.apache.spark.examples.SparkPi,/usr/lib/spark/lib/spark-examples.jar,10]
-```
-
-作成済みのクラスタにstepを追加(json file)
-
-```sh
-aws emr add-steps
-    --cluster-id j-2AXXXXXXGAPLF
-    --steps path_to_json
-```
-
-```json
-[
-  {
-    "Name": "string",
-    "Args": ["string", ...],
-    "Jar": "string",
-    "ActionOnFailure": "TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE",
-    "MainClass": "string",
-    "Type": "CUSTOM_JAR"|"STREAMING"|"HIVE"|"PIG"|"IMPALA",
-    "Properties": "string"
-  }
-]
-````
-
-stepの情報を取得
-
-```
-aws emr describe-step
-    --cluster-id <value>
-    --step-id <value>
-    [--cli-input-json <value>]
-    [--generate-cli-skeleton <value>]
-```
-
-## Billing
+EC2のinstanceを借りるより安い。
+1時間単位で課金されるので、一旦起動したら一時間使った方が良い。
+起動した時点で課金が開始される。
 
 * nomarlized instance hours
     * [AWS | Amazon EMR | FAQs](https://aws.amazon.com/emr/faqs/)
@@ -155,13 +91,20 @@ aws emr describe-step
     * smallが1で大きくなるごとに倍率が増えて、最大で64
     * m1.smallを1時間使って1 hourになる
 
+## SSH
+To Master Node
+
+アカウント名は、haddoopで、keyはcluster作成時に指定したkey pairである。
+
+```
+ssh hadoop@ec2-###-##-##-###.compute-1.amazonaws.com -i ~/mykeypair.pem
+```
 
 ## Web UI
 * [Amazon EMR クラスターでホストされているウェブサイトの表示 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-web-interfaces.html)
 
 Security上の理由で、これらはmaster node上のlocalhost上でのみ閲覧可能。
 外部から見るためには、sshのport forwardingが必要。
-
 
 | インターフェイスの名前 | URI                                    |
 |------------------------|----------------------------------------|
@@ -180,8 +123,10 @@ Security上の理由で、これらはmaster node上のlocalhost上でのみ閲�
 
 SSHのport forwardingで直接見れない場合もSSHで接続可能であれば閲覧可能。
 
-1. Open a terminal window. On Mac OS X, choose `Applications > Utilities > Terminal`. On other Linux distributions, terminal is typically found at `Applications > Accessories > Terminal`.
-2. To establish an SSH tunnel with the master node using dynamic port forwarding, type the following command. Replace ~/dpi_rsa.pem with the location and filename of the private key file (.pem) used to launch the cluster.
+1. Open a terminal window. On Mac OS X, choose `Applications > Utilities > Terminal`.
+On other Linux distributions, terminal is typically found at `Applications > Accessories > Terminal`.
+2. To establish an SSH tunnel with the master node using dynamic port forwarding, type the following command.
+Replace ~/key.pem with the location and filename of the private key file (.pem) used to launch the cluster.
     * Note: Port `port_num` used in the command is a randomly selected, unused local port.
 
 ```
@@ -212,7 +157,6 @@ ssh -i ~/mykeypair.pem -N -L 8157:ec2-###-##-##-###.compute-1.amazonaws.com:8088
 
 以上の設定で、`http://localhost:8157`にアクセスすると`http://ec2-###-##-##-###.compute-1.amazonaws.com`にアクセスできる。
 接続先のportごとにlocalのportが必要。
-
 
 ### Option2. dynamic port forwarding
 aws-cliでもできる。
@@ -333,103 +277,89 @@ jsonの形式の場合は
 * scriptsは60sec以内終わる必用がある
 * `/mnt/var/lib/instance-controller/public/shutdown-actions/`はdefaultでは作成されないので、自分で作成する必要がある
 
-    
 
+## Logging
+* [Configure Cluster Logging and Debugging - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
 
-## ganglia
-wgetが使える。
+default logfiles
 
-以下にgangliaのwebのcodeがある。
+* by default, each cluster write log files in `/mnt/var/log/ ` on the master node
+* step logs
+    * generated by the Amazon EMR service
+    * `/mnt/var/log/hadoop/steps/` on the master node
+    * `/mnt/var/log/hadoop/steps/s-stepId1/` for the first step
+* Hadoop and YARN component logs
+    * stored in separate folders in`/mnt/var/log`
+    * directories for Hadoop component
+        * `hadoop-hdfs/`
+        * `hadoop-mapreduce/`
+        * `hadoop-httpfs/`
+        * `hadoop-yarn/`
+        * `hadoop-state-pusher/`
+            * is for the output of the Hadoop state pusher process.
+* Bootstrap action logs
+    * stored in `/mnt/var/log/bootstrap-actions/` on the master node
+    * `/mnt/var/log/bootstrap-actions/1/ ` for first bootstrap action
+* Instance state logs
+    * sotred in `/mnt/var/log/instance-state/` on the master node
+    * information about CPU, memory state, garbage collector threads of the node
+
+Archive Log Files to Amazon S3
+
+* you need to enable this feature
+* from CLI, you need to specify `--log-uri`
+* you can use `lifecycle` settings in `S3` to automatically delete archived logs
+
 
 ```
-/usr/share/ganglia
+aws emr create-cluster \
+    --name "Test cluster" \
+    --release-label emr-4.0.0 \
+    --log-uri s3://mybucket/logs/ \
+    --applications Name=Hadoop Name=Hive Name=Pig \
+    --use-default-roles \
+    --ec2-attributes KeyName=myKey \
+    --instance-type m4.large \
+    --instance-count 3
 ```
 
+## View log files
+* [View Log Files - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html#emr-manage-view-web-log-files-debug)
 
-```
-/var/lib/ganglia
-```
+View Log Files on the Master Node
 
-にgangliaのrddなどが保存されている。
+* `/mnt/var/log/application`
+    * log specific to application such as `Spark`, Hadoop, Hive
+* `/mnt/var/log/hadoop/steps/N`
+    * `N` is step id.
+    * `controller`
+        * Information about the processing of the step.
+        * If your step fails while loading, you can find the stack trace in this log.
+    * `syslog`
+        * Describes the execution of Hadoop jobs in the step.
+    * `stderr`
+        * The standard error channel of Hadoop while it processes the step.
+    * `stdout`
+        * The standard output channel of Hadoop while it processes the step.
 
-## logs
-EMRのmaster nodeでspark-submitすると結果が以下のようにでる。
-`tracking URL`に実行Logが記録される。
-stdoutなども記録されている。
+View Log Files Archived to Amazon S3
 
 
-* [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
-
-sparkのlog dirは`/usr/lib/spark/conf/`の中で`/var/log/spark`として指定されている。
-
-
-## Spark History Server
-EMRのspark history serverは以下の形式で実行されている。
-
-```
-/usr/lib/jvm/java-openjdk/bin/java -cp /usr/lib/spark/conf/:/usr/lib/spark/jars/*:/etc/hadoop/conf/ -XX:OnOutOfMemoryError=kill -9 %p -Xmx1g org.apache.spark.deploy.history.HistoryServer
-```
-
-`/usr/lib/spark/conf/spark-defaults.sh`の中で、history logの場所が`hdfs:///var/log/spark/apps`として保存されている。
+* `/JobFlowId/node/`
+    * bootstrap action
+    * instance state
+    * application logs for the node
+    * The logs for each node are stored in a folder labeled with the identifier of the EC2 instance of that node.
+* `/JobFlowId/node/instanceId/application`
+    * log specific to application such as `Spark`, Hadoop, Hive
+    * e.g. `JobFlowId/node/instanceId/hive/hive-server.log`
+* `/JobFlowId/steps/N/`
+    * `/mnt/var/log/hadoop/steps/N`
+* `/JobFlowId/containers`
+    * The logs for each YARN application are stored in these locations.
 
 
 ## Tips
-
-### Error
-
-* [amazon web services - Cannot create temp dir with proper permission: /mnt1/s3 - Stack Overflow](https://stackoverflow.com/questions/41221821/cannot-create-temp-dir-with-proper-permission-mnt1-s3)
-
-* 以下のerror
-    * S3上のfile作成でerror
-    * この場合はfolder名と同じfileを作成しているとerrorになった
-
-```
-17/08/29 07:15:46 INFO GPLNativeCodeLoader: Loaded native gpl library
-17/08/29 07:15:46 INFO LzoCodec: Successfully loaded & initialized native-lzo library 
-17/08/29 07:15:46 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
-17/08/29 07:15:46 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
-17/08/29 07:15:46 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
-17/08/29 07:15:46 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
-17/08/29 07:15:46 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
-17/08/29 07:15:47 WARN ConfigurationUtils: Cannot create temp dir with proper permission: /mnt1/s3
-java.nio.file.AccessDeniedException: /mnt1
-	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:84)
-	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
-	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
-	at sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:384)
-	at java.nio.file.Files.createDirectory(Files.java:674)
-	at java.nio.file.Files.createAndCheckIsDirectory(Files.java:781)
-	at java.nio.file.Files.createDirectories(Files.java:767)
-	at com.amazon.ws.emr.hadoop.fs.util.ConfigurationUtils.getTestedTempPaths(ConfigurationUtils.java:244)
-	at com.amazon.ws.emr.hadoop.fs.s3n.S3NativeFileSystem.initialize(S3NativeFileSystem.java:440)
-	at com.amazon.ws.emr.hadoop.fs.EmrFileSystem.initialize(EmrFileSystem.java:109)
-	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:2717)
-	at org.apache.hadoop.fs.FileSystem.access$200(FileSystem.java:93)
-	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:2751)
-	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:2733)
-	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:377)
-	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:295)
-	at org.apache.hadoop.mapred.LineRecordReader.<init>(LineRecordReader.java:108)
-	at org.apache.hadoop.mapred.TextInputFormat.getRecordReader(TextInputFormat.java:67)
-	at org.apache.spark.rdd.HadoopRDD$$anon$1.liftedTree1$1(HadoopRDD.scala:252)
-	at org.apache.spark.rdd.HadoopRDD$$anon$1.<init>(HadoopRDD.scala:251)
-	at org.apache.spark.rdd.HadoopRDD.compute(HadoopRDD.scala:211)
-	at org.apache.spark.rdd.HadoopRDD.compute(HadoopRDD.scala:102)
-	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
-	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
-	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
-	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
-	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
-	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
-	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
-	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
-	at org.apache.spark.scheduler.Task.run(Task.scala:99)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-```
 
 ### Add tags to EC2 instance
 EC2 instanceにtagをつけたい場合は、add-tagsを使う
@@ -437,20 +367,6 @@ cluster内の全てのinstanceにtagを付与できる。
 
 ```
 aws emr add-tags --resource-id j-xxxxxxx --tags name="John Doe"
-```
-
-### Add environment variables to spark/pyspark
-configurationに以下を設定する。
-
-
-```json
-{
-  "Classification": "spark-defaults",
-  "Properties": {
-    "spark.yarn.appMasterEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}",
-    "spark.yarn.executorEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}"
-  }
-}
 ```
 
 ## Run jupyter notebook and jupyter hub on Amazon EMR
@@ -549,7 +465,6 @@ aws emr add-steps
     * Packages and apps installed for Python 3 instead of Python 2.
 * --s3fs
     * Use s3fs instead of the default, s3contents for storing notebooks on Amazon S3. This argument can cause slowness if the S3 bucket has lots of files.
-
 
 default
 
