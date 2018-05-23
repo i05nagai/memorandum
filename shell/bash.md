@@ -42,4 +42,13 @@ login shellとして起動されるか、interactive shellかどうかなどで�
     * `${FUNCNAME[$i]}` is called from `${BASH_SOURCE[$i+1]}`
     * `$0`は`source`で変更されないが、`BASH_SOURCE`はsourceされるとsource先が0番目にpushされる
 
+## Conditoinal expressions
+
+* `[[ expression ]]`
+    * `=`, `==` は同じいみ
+    * `==`, `!=`
+        * 右辺を [Pattern-maching](https://tiswww.case.edu/php/chet/bash/bashref.html#Pattern-Matching)として評価
+    * `=~`を含むかどうか
+        * 右辺をregex3で評価
+
 ## Reference
