@@ -102,6 +102,7 @@ I cross off the customer's name from the reservation list.
 * prepositional phrase
     * 前置詞句
 * spin off
+* nomenclature
 
 
 ## Math
