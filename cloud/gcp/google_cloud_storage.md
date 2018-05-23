@@ -22,22 +22,9 @@ google-cloud-sdkをインストールするとインストールされる`gsutil
         * accessが殆どないもの
         * 年に1回くらい
 
-## Upload
-
-```
-gsutil cp arcanine.png gs://hoge/sinmetal.png
-```
-
-## Change ACL
-
-```
-gsutil acl ch -u AllUsers:R gs://hoge/sinmetal.png
-```
-
 ## Log
 * [Access Logs & Storage Logs  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/access-logs)
 * [Cloud Audit Logging with Cloud Storage  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/audit-logs)
-
 
 Audito logと`access & storage log`の使い分け
 
@@ -53,7 +40,7 @@ Audito logと`access & storage log`の使い分け
     * You want to track the amount of data stored in your buckets.
 
 
-### Audit logso
+### Audit logs
 * Admin activity logs
     * admin activity logs are recorded by default
     * free
@@ -62,7 +49,7 @@ Audito logと`access & storage log`の使い分け
     * Stacdriverのlogの合計使用量が50GB/mounthを超えると利用料金が発生する
 
 
-```bash
+```
 $ gcloud projects get-iam-policy [PROJECT_ID] > /tmp/policy.yaml
 $ cat /tmp/policy.yaml
 bindings:
@@ -244,37 +231,6 @@ SELECT
   , cs_object AS object
 FROM
   usage
-```
-
-## CLI
-
-
-```
-gsutil mb gs://example-logs-bucket
-```
-
-* `mb`
-    * make bucket
-
-Get list of buckets
-
-```
-gsutil ls
-```
-
-Show objects in buckets
-
-```
-gsutil ls gs://bucket
-```
-
-* `-r`
-    * recursive
-
-bucketのloggingが設定されているか。
-
-```
-gsutil logging get gs://bucket
 ```
 
 ## Pricing
