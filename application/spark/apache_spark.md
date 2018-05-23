@@ -24,6 +24,7 @@ http://localhost:8080
 * driver
 * cluster manager
 
+
 ## Configuration
 * [Configuration - Spark 2.3.0 Documentation](https://spark.apache.org/docs/latest/configuration.html)
 
@@ -109,7 +110,6 @@ Cacheのdataを利用可能で、stageを実行する必要がない場合にski
 
 ### File does not exist
 * [hadoop - Spark Python submission error : File does not exist: pyspark.zip - Stack Overflow](https://stackoverflow.com/questions/34632617/spark-python-submission-error-file-does-not-exist-pyspark-zip)
-
 
 ### deploy mode
 * [Deploy Mode · Mastering Apache Spark 2 (Spark 2.2+)](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-deploy-mode.html)
