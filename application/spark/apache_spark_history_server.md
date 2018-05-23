@@ -51,5 +51,15 @@ History serverで見られるlogはMetricsのDropwizard Metricsのlibraryで取�
 `$SPARK_HOME/conf/metrics.properties.`にconfigurationをおく。
 fileの場所は`spark.metrics.conf`で変更できる。
 
+## Tips
+
+### Skipped tasks
+* [rdd - What does "Stage Skipped" mean in Apache Spark web UI? - Stack Overflow](https://stackoverflow.com/questions/34580662/what-does-stage-skipped-mean-in-apache-spark-web-ui)
+
+* typically, data has been fetched from cache and there was no need to re-execute given stage
+* e.g. shuffling creates cache
+    * Shuffle generates a large number of intermediate files on disk.
+    * [RDD Programming Guide - Spark 2.3.0 Documentation](https://spark.apache.org/docs/2.3.0/rdd-programming-guide.html#shuffle-operations)
+
 ## Reference
 * [Monitoring and Instrumentation - Spark 2.3.0 Documentation](https://spark.apache.org/docs/latest/monitoring.html)
