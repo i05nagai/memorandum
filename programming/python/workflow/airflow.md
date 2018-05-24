@@ -85,51 +85,6 @@ Celeryの依存ライブラリである、kombuはGitHubの最新版をbuildし�
     * slot数はpool内のtaskの同時実行数
 * poolを作成すると、airflowのpython script内でoperatorを作る際にpool名を指定できる
 
-## Commands/CLI
-実行日`execution_date`でdagのtaskを実行
-
-```
-airflow run <dag_id> <task_id> <execution_date>
-```
-
-DAGの一覧を表示
-
-```
-airflow list_dags
-```
-
-`<dag>`のtaskの一覧を表示
-
-* `--tree`
-    * taskの一覧をtree形式で表示
-
-```
-airflow list_tasks <dag> [--tree]
-```
-
-実行日`execution_date`でtaskをtest実行する。
-
-```
-airflow test <dag_id> <task_id> <execution_date>
-```
-
-`start_date`から`end_date`の期間だとして、`dag_id`のdagをスケジュール実行する。
-下記の設定では、dagを2回実行する。
-
-* dag
-    * start_date: 2016/1/1
-    * end_date: 2016/1/2
-    * schedule_interval: @daily
-* backfill
-    * `airflow backfill dag -s 2016/1/1 2016/1/3`
-    * start_date: 2016/1/1
-    * end_date: 2016/1/3
-
-```
-# airflow backfill dag -s 2016/1/1 2016/1/2
-airflow backfill <dag_id> -s start_date -e end_date
-```
-
 ## Security
 * [Security — Airflow Documentation](https://airflow.incubator.apache.org/security.html)
 
@@ -305,11 +260,11 @@ broker_url = redis://:password@hostname:port/db_number
 Pitfallsにも記載してあるが、UTC前提で開発されている部分があるらしいので、Airflowのarchitecture全体でUTCにしておいた方が、良いらしい。
 
 ### Webserver
+* [python - Can't run gunicorn on port 80 while deploying django app on AWS EC2 - Stack Overflow](https://stackoverflow.com/questions/32298481/cant-run-gunicorn-on-port-80-while-deploying-django-app-on-aws-ec2)
+
 Gunicornはport 80での起動は推奨されていない。
 airflowのwebserverも80での起動はできない場合があるっぽい。
-1024より上にするのが良いっぽい。
-
-* [python - Can't run gunicorn on port 80 while deploying django app on AWS EC2 - Stack Overflow](https://stackoverflow.com/questions/32298481/cant-run-gunicorn-on-port-80-while-deploying-django-app-on-aws-ec2)
+1024より上にするのが良い。
 
 ### Delete DAG
 DAGを削除するには以下のテーブルからレコードを削除する必要がある。
@@ -325,13 +280,6 @@ DELETE FROM dag WHERE dag_id='';
 ```
 
 もしくは、`$AIRFLOW_HOME/dags`から該当のscriptを削除して、`airflow resetdb`でDBをresetする。
-
-
-### Delete Default DAG
-`airflow initdb`するとdbにexampleのDAGが登録される。
-exampleのDAGが不要な場合は、`airflow.cfg`で`load_examples = False`を指定する。
-
-* [Airflow: how to delete a DAG? - Stack Overflow](https://stackoverflow.com/questions/40651783/airflow-how-to-delete-a-dag)
 
 
 ### Warning: ExtDeprecatonWarning
@@ -355,13 +303,13 @@ cat $AIRFLOW_HOME/airflow-worker.pid | xargs kill -9 && rm $AIRFLOW_HOME/airflow
 再起動は起動時と同じコマンドを使う必要がある。
 
 ### log rotation
-log rotate機能は現在ないっぽい。
+log rotate機能はない。
 jobのlogは日付ごとに出力されるので、logrotateされているといえる。
 webserver, worker, schedulerのprocessのlog, stdout, stderrはlogrotateされない。
 
 ### DAGの追加
 * 要確認
-    * DAGを追加する場合は、`airflow resetdb`した方が良い。
+    * DAGを追加する場合は、`airflow resetdb`した方が良いが、DBが初期化される
     * dag pathにDAG用のpython fileをおいた時点で、schedular以外では使えるようになる。
     * schedularに載せるためには、`airflow upgradedb`が必要。
 
@@ -440,8 +388,6 @@ pip install apache-airflow[crypto]
 
 でできる。
 
-## API Reference
-
 ## Web UI
 
 <img src="./image/airflow_05_dags.png" width="50%">
@@ -478,14 +424,6 @@ docker-composeの`volumes`ではなぜかファイルがディレクトリとし
 ## Multinode
 * http://site.clairvoyantsoft.com/setting-apache-airflow-cluster/
 
-## Source code
-
-* dag fileを読み込んで、DBへの反映などをしている
-    * https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1709
-    * [incubator-airflow/jobs.py](https://github.com/apache/incubator-airflow/blob/master/airflow/jobs.py#L1355)
-* web uiでworkerのlogをみる
-    * https://github.com/apache/incubator-airflow/blob/15b8a36b9011166b06f176f684b71703a4aebddd/airflow/www/views.py#L725
-
 ## Connection
 * [pre-configured airflow "Connections" · Issue #75 · puckel/docker-airflow](https://github.com/puckel/docker-airflow/issues/75)
     * CLIからのconnectionの追加
@@ -501,7 +439,7 @@ airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn
 * [Supervisordの練習(Airflow)](https://blog.masu-mi.me/post/2017/04/12/start_supervisord/)
 
 ### Health check
-`/health` がhealthcheck用のpass
+`/health` がhealthcheck用のWeb UI URL
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
