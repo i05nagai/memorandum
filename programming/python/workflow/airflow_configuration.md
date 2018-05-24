@@ -180,5 +180,10 @@ parallelism
 * [Configuration — Airflow Documentation](https://airflow.incubator.apache.org/configuration.html#integration-with-upstart)
 * [incubator-airflow/scripts/upstart at master · apache/incubator-airflow](https://github.com/apache/incubator-airflow/tree/master/scripts/upstart)
 
+### Delete Default DAG
+`airflow initdb`するとdbにexampleのDAGが登録される。
+exampleのDAGが不要な場合は、`airflow.cfg`で`load_examples = False`を指定する。
+
+* [Airflow: how to delete a DAG? - Stack Overflow](https://stackoverflow.com/questions/40651783/airflow-how-to-delete-a-dag)
 
 ## Reference
