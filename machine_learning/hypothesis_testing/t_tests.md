@@ -155,7 +155,7 @@ $$
 $$
 
 ### proof.
-計算すればよい。
+Easy to check.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -566,7 +566,7 @@ $$
     * $n \ge 15$,
 
 
-## Example
+### Example
 * $D \in \mathbb{R}$,
     * the difference mean
 * $n \in \mathbb{N}$,
@@ -581,6 +581,9 @@ $$
     * sample standard deviation of $D$
 * $\alpha \in (0, 1)$,
     * significance level
+
+
+
 * (1) State the hypothesis
     * null hypothesis
         * $H_{0}:\mu_{D} = D $
