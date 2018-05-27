@@ -75,10 +75,21 @@ call vimfiler#set_execute_file('txt', 'notepad')
 | \     | ルートディレクトリに移動                                                     |
 | ~     | ホームディレクトリに移動する                                                 |
 | L     | ドライブに移動                                                               |
-| $     | ゴミ箱に移動                                                                 |
+| \$     | ゴミ箱に移動                                                                 |
 | Enter | カーソル下のディレクトリへ移動（ファイルの場合は vimfiler の関連付けを実行） |
 | J     | ディレクトリを指定して移動                                                   |
 
-### シェル
+### shell
 
+## vimfilerでファイルのbookmark
+uniteが必須。
+1. vimfilerで適当なディレクトリを開く
+2. bookmarkに追加したディレクトリにカーソルを置き、`a`を押しアクションを起動後、`bookmark`を選択
+3. `Please input bookmark file name`と聞かれる。カーソルに選択しているディレクトリがデフォルトのinput file/directoryになるので、EnterでOK
+4. `Please input bookmark entry name`と聞かれる。bookmarkの別名を聞かれているので、わかりやすい名前をつける。
+5. `:Unite bookmark`でbookmarkの一覧が表示できる。
+    * bookmarkの削除は、`d`で行える。
+    * bookmarkを開く場合は、`Enter`でUnite上でディレクトリが開かれる。
+    * `t`や`e`でファイルを開いたりできる。
 
+## Reference
