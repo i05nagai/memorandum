@@ -1,8 +1,6 @@
 ## pyspark code reading
 
 ## sql
-* SparkSession
-    * [spark/SparkSession.scala at 40c7add3a4c811202d1fa2be9606aca08df81266 · apache/spark](https://github.com/apache/spark/blob/40c7add3a4c811202d1fa2be9606aca08df81266/sql/core/src/main/scala/org/apache/spark/sql/SparkSession.scala)
 
 
 SparkContext
@@ -20,6 +18,8 @@ SparkContext
 
 
 SparkSession classについて。
+
+* [spark/SparkSession.scala at 40c7add3a4c811202d1fa2be9606aca08df81266 · apache/spark](https://github.com/apache/spark/blob/40c7add3a4c811202d1fa2be9606aca08df81266/sql/core/src/main/scala/org/apache/spark/sql/SparkSession.scala)
 
 
 * `_sc`
@@ -79,6 +79,22 @@ DataFrameWriter
 SQLContext
 
 * 
+
+## gateway
+
+
+```python
+from py4j.java_gateway import java_import
+jvm = sc._jvm
+java_import(jvm, "org.apache.spark.SparkConf")
+```
+
+```python
+from py4j.java_gateway import java_import
+java_import(sc._jvm, "java.net.URI")
+url = sc._jvm.java.net.URI('s3://retty-dwh/')
+java_import(sc._jvm, "org.apache.hadoop.fs.FileSystem")
+```
 
 ## Java
 DataFrameはDataSet[Row]と等価
