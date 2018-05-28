@@ -152,5 +152,9 @@ Downgrade to
 * `kombu==4.1.0`
 
 
+### Dependency <Task(SubDagOperator): task_id>, task_id already registered
+you set dependecy twice in dag file.
+
+
 ## Reference
 
