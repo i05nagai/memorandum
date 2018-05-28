@@ -18,3 +18,4 @@ readinessProbeの設定をかえた場合は
         * https://github.com/kubernetes/ingress-gce/blob/master/README.md#health-checks
 
 ## Reference
+* [[Kubernetes] オンプレでも GKE Like な Ingress を使うために 自作 Ingress Controller を実装してみた | Tech Blog](https://adtech.cyberagent.io/techblog/archives/3758)
