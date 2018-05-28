@@ -9,22 +9,54 @@ Tips for operators.
 ## API
 BaseOperatorで定義されている共通の引数
 
-* start_date
+* `owner='Airflow'`
+* `email=None`
+* `email_on_retry=True`
+* `email_on_failure=True`
+* `retries=0`
+* `retry_delay=datetime.timedelta(0, 300)`
+    * 5 min
+* `retry_exponential_backoff=False`
+* `max_retry_delay=None`
+* `start_date=None`
     * 最初のexecution_dateになる
     * dailyのtaskの開始は`00:00:00`
     * houlyのtaskの開始は`00:00`
     * 開始をずらしたい場合は、TimeDeltaSensor, TimeSensor
-* depends_on_past
-    * trueにすると、上流のtaskのsucceedをまつ
-* wait_for_downstream
-* pool
+* `end_date=None`
+* `schedule_interval=None`
+* `depends_on_past=False`
+    * 実行するtaskidの過去のtask instanceがfaildであれば、実行しない
+    * operatorの過去のtask instancesがsuccessでないと実行できない
+    * wait for previous task instance
+    * 2017/01/01: OPX -> OPY -> OPZ
+    * 2017/01/02: OPX -> OPY -> OPZ
+        * 2017/01/02 OPX wait for OPX in 2017/01/01
+* `wait_for_downstream=False`
+    * 実行するtaskidの過去のtask instanceのdownstreamが全てsuccessでなければ実行しない
+    * `wait_for_downstream=True`なら`depends_on_past=True`
+    * wait for downstream of previous task instance
+    * 2017/01/01: OPX -> OPY -> OPZ
+    * 2017/01/02: OPX -> OPY -> OPZ
+        * 2017/01/02 OPX wait for OPY and OPZ in 2017/01/01
+* `dag=None`
+* `params=None`
+* `default_args=None`
+* `adhoc=False`
+* `priority_weight=1`
+* `queue='default'`
+* `pool=None`
     * 使用するpool名を記載
     * Noneの場合は、defaultのpoolに入る
-* sla
+* `sla=None`
     * taskの期待する実行時間をtimedeltaで指定
     * 1時間で終わってほしいときは、1hourで指定
     * 実行時間の上限、これを超えるとSLA missというlogが出力
-* trigger_rule
+* `execution_timeout=None`
+* `on_failure_callback=None`
+* `on_success_callback=None`
+* `on_retry_callback=None`
+* `trigger_rule=u'all_success'`
     * 依存しているtaskのstateに応じて実行を制御する
     * ` all_success | all_failed | all_done | one_success | one_failed | dummy`
     * defaultはall_success
@@ -32,6 +64,37 @@ BaseOperatorで定義されている共通の引数
     * all_faild: 依存しているtaskが全てfailed
     * one_success: 依存しているtaskが全1つでも成功
     * one_failed: 依存しているtaskが全1つでもfailed
+* `resources=None`
+* `run_as_user=None`
+* `task_concurrency=None`
+
+DAG
+
+* `description`
+* `schedule_interval=datetime.timedelta(1)`
+* `start_date`
+* `end_date`
+* `full_filepath`
+* `template_searchpath`
+* `user_defined_macros`
+* `user_defined_filters`
+* `default_args`
+    * default arguments for operators
+* `concurrency=16`
+    * configure in `airflow.cfg`
+* `max_active_runs=16`
+    * configure in `airflow.cfg`
+* `dagrun_timeout`
+* `sla_miss_callback`
+* `default_view`
+    * configure in `airflow.cfg`
+* `orientation='LR'`
+    * configure in `airflow.cfg`
+* `catchup=True`
+    * Perform scheduler catchup (or only run latest)?
+* `params`
+
+
 
 ## Macros
 bashOperatorのcommandの中で`{{ ds }}` とした場合は、`{{ somechar }}`で囲まれた中身が評価された結果で実行される。
@@ -154,5 +217,28 @@ def operator2(dag):
         dag=dag)
     return operator
 ```
+
+## slack_operator
+* [slack_operator — Airflow Documentation](https://airflow.apache.org/_modules/slack_operator.html)
+* [Slack Web API | Slack](https://api.slack.com/web)
+
+You cannot use `webhook`. need API token.
+
+Templates are available in files ('username', 'text', 'attachments', 'channel').
+
+* SlackAPIPostOperator
+    * Inherits SlackAPIOperator
+    * `channel='#general'`
+    * `username='Airflow'`
+    * `text=''`
+    * `icon_url='https://raw.githubusercontent.com/airbnb/airflow/master/airflow/www/static/pin_100.png'`
+    * `attachments=None`
+    * `token`
+        * AIP token
+* SlackAPIOperator
+    * `token='unset'`
+    * `method='unset'`
+    * `api_params=None`
+
 
 ## Reference
