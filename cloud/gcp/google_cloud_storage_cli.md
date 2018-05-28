@@ -46,5 +46,17 @@ bucketのloggingが設定されているか。
 gsutil logging get gs://bucket
 ```
 
+Delete all bucket objects
+
+```
+gsutil rm -r gs://bucket
+```
+
+Delete bucket.
+The bucket need to be empty
+
+```
+gsutil rb gs://bucket
+```
 
 ## Reference
