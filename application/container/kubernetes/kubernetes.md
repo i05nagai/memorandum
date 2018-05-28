@@ -71,10 +71,6 @@ title: Kubernetes
 kubectl delete pods
 ```
 
-### RBAC Authorization
-* [Using RBAC Authorization | Kubernetes](https://kubernetes.io/docs/admin/authorization/rbac/)
-
-
 ### Namespace
 * [Namespaces | Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
@@ -705,4 +701,3 @@ spec:
 * [Kubernetes: Using Kubernetes Namespaces to Manage Environments](http://blog.kubernetes.io/2015/08/using-kubernetes-namespaces-to-manage.html)
 * [Making Kubernetes Production Ready – Part 2 - Applatix](https://applatix.com/making-kubernetes-production-ready-part-2/)
 * [Storage Considerations for Docker-in-Docker on Kubernetes](https://blog.argoproj.io/storage-considerations-for-docker-in-docker-on-kubernetes-ed928a83331c)
-* [[Kubernetes] オンプレでも GKE Like な Ingress を使うために 自作 Ingress Controller を実装してみた | Tech Blog](https://adtech.cyberagent.io/techblog/archives/3758)
