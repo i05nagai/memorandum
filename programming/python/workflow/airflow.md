@@ -214,13 +214,6 @@ DAG Runsで実験
     * createした日時がexecution dateになる
     * start_date, ednd_dateの間であれば1回実行される
 
-## Dag
-* `depends_on_past`
-    * 実行するtaskidの過去のtask instanceがfaildであれば、実行しない
-* `wait_for_downstream`
-    * 実行するtaskidの過去のtask instanceのdownstreamが全てsuccessでなければ実行しない
-    * `wait_for_downstream=True`なら`depends_on_past=True`
-
 ## Scheduling spark jobs
 * [Scheduling Spark jobs with Airflow – Insight Data](https://blog.insightdatascience.com/scheduling-spark-jobs-with-airflow-4c66f3144660)
 * [Automated Model Building with EMR, Spark, and Airflow - Agari](https://www.agari.com/automated-model-building-emr-spark-airflow/)
@@ -440,6 +433,87 @@ airflow connections --add --conn_id=gcp --conn_type=google_cloud_platform --conn
 
 ### Health check
 `/health` がhealthcheck用のWeb UI URL
+
+### Notification
+DAGの開始時に通知をしたい
+
+Operatorの一番最初に`slack_operator`をいれる。
+`TimeSensor`にしておけば、時間をずらしたい時にそのまま利用できるので、`TimeSensor`で良い。
+
+DAGの開始時に通知をしたい
+
+一番最後に実行されるoperatorにのsuccessをつける
+
+
+各operatorの開始時に通知をしたい
+
+?
+
+各operatorのsuccess/fail/retry時に通知
+
+DAGの`default_args`に`callback_on_success`の設定をする。
+
+
+* `context`
+    * dict
+    * 'next_execution_date'
+        * datetime.datetime(2018, 5, 23, 0, 0)
+    * 'dag_run'
+        * <DagRun dag_id @ 2018-05-22 00:00:00: scheduled__2018-05-22T00:00:00, externally triggered: False>
+    * 'tomorrow_ds_nodash'
+        * str
+        * '20180523'
+    * 'run_id', 'scheduled__2018-05-22T00:00:00'
+    * 'test_mode'
+        * False
+    * 'prev_execution_date'
+        * datetime.datetime(2018, 5, 21, 0, 0)
+    * 'conf'
+        * <module 'airflow.configuration' from '/usr/local/lib/python2.7/dist-packages/airflow/configuration.pyc'>
+    * 'tables'
+        * None
+    * 'task_instance_key_str'
+        * str
+        * 'etl__start_dag__20180522'
+    * 'END_DATE'
+        * str
+        * '2018-05-22'
+    * 'execution_date'
+        * datetime.datetime(2018, 5, 22, 0, 0)
+    * 'ts'
+        * str
+        * '2018-05-22T00:00:00'
+    * 'macros'
+        * <module 'airflow.macros' from '/usr/local/lib/python2.7/dist-packages/airflow/macros/__init__.pyc'>
+    * 'params'
+        * dict
+        * {}
+    * 'ti'
+        * <TaskInstance: dag_id.task_id 2018-05-22 00:00:00 [success]>
+    * 'var'
+        * {u'json': None, u'value': None}
+    * 'ds_nodash'
+        * u'20180522'
+    * 'dag'
+        * <DAG: etl>
+    * 'end_date'
+        * '2018-05-22'
+    * 'latest_date'
+        * '2018-05-22'
+    * 'ds'
+        * '2018-05-22'
+    * 'task_instance'
+        * <TaskInstance: dag_id.task_id 2018-05-22 00:00:00 [success]>
+    * 'yesterday_ds_nodash'
+        * u'20180521'
+    * 'task'
+        * <Task(DummyOperator): start_dag>
+    * 'yesterday_ds'
+        * '2018-05-21'
+    * 'ts_nodash'
+        * u'20180522T000000'
+    * 'tomorrow_ds'
+        * '2018-05-23'
 
 ## Reference
 * [Apache Airflow (incubating) Documentation — Airflow Documentation](https://airflow.incubator.apache.org/)
