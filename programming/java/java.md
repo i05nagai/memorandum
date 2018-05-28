@@ -127,3 +127,4 @@ object Obj {
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
+* [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)
