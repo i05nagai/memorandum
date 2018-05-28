@@ -27,4 +27,7 @@ rules:
     * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#apigrouplist-v1-meta)
 * `apiGroups`
 
+### RBAC Authorization
+* [Using RBAC Authorization | Kubernetes](https://kubernetes.io/docs/admin/authorization/rbac/)
+
 ## Reference
