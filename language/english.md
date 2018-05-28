@@ -103,6 +103,18 @@ I cross off the customer's name from the reservation list.
     * 前置詞句
 * spin off
 * nomenclature
+* moonbat
+* nip
+    * v,n
+* procrastinate
+    * v
+* ledge
+    * n
+* brimstone
+    * n
+* sulphur/sulfur
+    * n
+* trafficking
 
 
 ## Math
