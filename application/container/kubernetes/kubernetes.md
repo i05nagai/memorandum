@@ -164,6 +164,9 @@ LabelはIDやnameのようにuniqueではない。
 Label selectorで指定したlabelをもつobjectを扱える。
 Selectorがemtpyの場合は全てのcollection
 null label selectorは何も変更しない。
+seelctorの指定は全てANDで考慮される。
+selectorは、一意に指定できるように条件をつける。
+labelの変更前後でselectorの一意性が崩れる場合がある。
 
 **API**
 
@@ -187,17 +190,6 @@ Controllerの1つ。
 `ReplicationController`をおきかえるもの。
 今のところ`ReplicationController`との違いは、label selectorの有無。
 ReplicaSetを直接使う場合は殆どない。Deploymentを使う。
-
-### StatefulSet
-以下の1つ以上が必要な場合に役に立つ。
-
-* Stable, unique network identifiers.
-* Stable, persistent storage.
-* Ordered, graceful deployment and scaling.
-* Ordered, graceful deletion and termination.
-* Ordered, automated rolling updates.
-
-StableはPod schedulingによる一貫性と同じ意味。
 
 
 ### Service Account
