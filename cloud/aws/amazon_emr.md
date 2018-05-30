@@ -233,6 +233,7 @@ aws emr create-cluster --log-uri s3://mybucket/logs/
 
 ## bootstrap action
 * [(Optional) Create Bootstrap Actions to Install Additional Software - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)
+* [aws-samples/emr-bootstrap-actions: This repository hold the Amazon Elastic MapReduce sample bootstrap actions](https://github.com/aws-samples/emr-bootstrap-actions)
 
 * Hadoop userとして実行できる
 * `sudo`で実行できる
@@ -246,6 +247,8 @@ aws emr create-cluster --bootstrap-action Path=s3://mybucket/filename",Args=[arg
 
 bootstrap actionとして、defaultで提供されているものがいくつかある。
 以下は`run-if`で、masterでのみ実行されるようになっている。
+`run-if`で2つめの引数に`s3://`のpathを指定すれば、s3からdlして実行されるが、`emr`のversionによってはerrorになる。
+https://forums.aws.amazon.com/thread.jspa?threadID=222418
 
 ```
 aws emr create-cluster --bootstrap-action Path=s3://elasticmapreduce/bootstrap-actions/run-if,Args=["instance.isMaster=true","echo running on master node"]
@@ -261,13 +264,17 @@ jsonの形式の場合は
     "Name": "string"
   },
   {
-    "Path": "string",
-    "Args": ["string", ...],
-    "Name": "string"
+    "Path":"s3://ap-northeast-1.elasticmapreduce/bootstrap-actions/run-if",
+    "Args": [
+        "instance.isMaster=true",
+        "s3://path/to/file"
+    ],
+    "Name":"comment"
   }
   ...
 ]
 ```
+
 
 ### Shutdown action
 * [(Optional) Create Bootstrap Actions to Install Additional Software - Amazon EMR](http://docs.aws.amazon.com/emr/latest/DeveloperGuide/emr-plan-bootstrap.html#bootstrap_Shutown)
