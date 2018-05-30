@@ -213,9 +213,8 @@ bq show --format=prettyjson mydataset.table2
 明示的に、paritionnの日付を指定する場合は、以下のようにpartitionの日付を明示する。
 特定のpartitionを指定する場合は、table名の後ろに`$YYYYMMDD`をつけて指定する。
 
-
 ```
-bq query
+bq query \
     --use_legacy_sql=false \
     --allow_large_results \
     --replace \
@@ -223,7 +222,6 @@ bq query
     --destination_table 'mydataset.temps$20160101' \
     'SELECT stn,temp from `bigquery-public-data.noaa_gsod.gsod2016` WHERE mo="01" AND da="01" limit 100'
 ```
-
 
 
 ## Querying Date Partitioned Tables
@@ -359,6 +357,7 @@ INNER JOIN (
     WHERE SESSION_USER() = user_name) g
 ON c.allowed_group = g.group
 ```
+
 
 ## Tips
 
