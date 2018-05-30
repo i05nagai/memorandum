@@ -4,7 +4,13 @@ title: Apache Hadoop
 
 ## Apache Hadoop
 
+master
+24CPU core, 64GB, 2TB(raid10)
+6 node
 
+Slave
+56CPU core, 256GB, 6TB x 12 disk
+48node
 
 
 ## CLI
