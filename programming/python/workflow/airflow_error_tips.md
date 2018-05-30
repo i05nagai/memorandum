@@ -4,6 +4,10 @@ title: Airflow Error Tips
 
 ## Airflow Error Tips
 
+### failed DagRun or Task does not scheduled
+If you want to manually create DagRun or TaskInstance but you want to schedule them, you can turn state of DagRun to `failed`.
+`failed` DagRun Does not schedule TaskInstances.
+
 ### invalid reference format
 docker-pyのerror.
 

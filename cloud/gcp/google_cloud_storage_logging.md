@@ -120,5 +120,30 @@ for uri in $(gsutil ls "gs://${BUCKET_NAME_FOR_LOG}"); do
 done
 ```
 
+View for usage logs
+
+```sql
+SELECT
+  TIMESTAMP_SECONDS(time_micros) AS timestamp
+  , c_ip AS ip
+  , c_ip_type AS ipv4_or_ipv6
+  , c_ip_region AS ip_region
+  , cs_method AS http_method
+  , cs_uri AS uri
+  , sc_status AS http_status
+  , cs_bytes AS bytes_request
+  , sc_bytes AS bytes_response
+  , time_taken_micros
+  , cs_host AS host_request
+  , cs_referer AS referer
+  , cs_user_agent AS user_agent
+  , s_request_id AS request_id
+  , cs_operation AS operation
+  , cs_bucket AS bucket
+  , cs_object AS object
+FROM
+  usage
+```
+
 ## Reference
 
