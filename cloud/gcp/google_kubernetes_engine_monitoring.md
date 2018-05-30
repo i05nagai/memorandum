@@ -64,6 +64,8 @@ Then labels are
 * `environment=dev`
 * `service=core`
 * `tier=default`
+* `instance-type=`
+    * group by memory and
 
 
 ## DataDog
