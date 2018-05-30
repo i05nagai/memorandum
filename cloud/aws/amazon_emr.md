@@ -276,6 +276,12 @@ jsonの形式の場合は
 * cluster終了時に上記foluderのscriptが並列に全て実行される
 * scriptsは60sec以内終わる必用がある
 * `/mnt/var/lib/instance-controller/public/shutdown-actions/`はdefaultでは作成されないので、自分で作成する必要がある
+* shutdown-actionsのlogは、`node`の以下の対応するnodeのstdoutに出力される。
+
+
+## Environment variables
+* [amazon web services - How to set a custom environment variable in EMR to be available for a spark Application - Stack Overflow](https://stackoverflow.com/questions/42395020/how-to-set-a-custom-environment-variable-in-emr-to-be-available-for-a-spark-appl)
+
 
 
 ## Logging
