@@ -12,6 +12,12 @@ Demo
 
 https://www.youtube.com/watch?v=9lVQ0VJY3ps
 
+Help
+
+```
+:help table-mode
+```
+
 ## Usage
 `<Leader>tm`か以下のコマンドでtable modeになる。
 

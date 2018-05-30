@@ -142,5 +142,19 @@ Traceback (most recent call last):
 TypeError: b'3fd29c1aa98364b053ef0c6bd53479276d6956e4' is not JSON serializable
 ```
 
+### AttributeError: async
+* [python - Celery AttributeError: async error - Stack Overflow](https://stackoverflow.com/questions/50444988/celery-attributeerror-async-error)
+
+kombu==4.1.1
+
+Downgrade to
+
+* `kombu==4.1.0`
+
+
+### Dependency <Task(SubDagOperator): task_id>, task_id already registered
+you set dependecy twice in dag file.
+
+
 ## Reference
 

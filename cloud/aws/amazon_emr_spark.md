@@ -233,6 +233,9 @@ java.nio.file.AccessDeniedException: /mnt1
 ```
 
 ### Add environment variables to spark/pyspark
+* ${RETTY_DWH_ENVIRONMENT_NAME}
+* [Configuring Applications - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)
+
 configurationに以下を設定する。
 
 ```json

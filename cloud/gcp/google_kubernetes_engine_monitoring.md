@@ -25,6 +25,47 @@ DataDogはがGKEに対応している。
 * Error Reporting
     * You can use Stackdriver Error Reporting to collect errors produced in your clusters.
 
+
+## With stackdriver
+
+### Container
+contianerのmetricsを計測するには、labelをつける
+
+### Instance
+instanceのgroupingをする場合は、以下のcommandでclusterにlabelをつける。
+
+```
+gcloud beta container clusters update example-cluster --update-labels env=dev,release=stable
+```
+
+* clusterにlabelをつけると、clusterに属するnode_poolのInstanceにlabelが追加される
+    * default node_poolのinstance
+* default以外のnode_poolにinstanceをつける場合は
+
+
+Stackdriverのinstanceに`Tag`がつくので、Tagを使ってGroupingができる。
+clusterのInstanceにはdefaultで`goog-gke-node`というlabelがついているので、これを使ってInstanceにgroupingできる。
+
+naming
+
+* cluster-name: `<prefix>-<env>-<service>-<tier>`
+* `<prefix>`
+* `<env>`
+    * dev/stg/prod/common
+* `<service>`
+    * core/workflow
+        * core is shared with other sevices
+* `<tier>`
+    * tier is a component or a part of a service
+    * e.g. default
+
+Then labels are
+
+* `environment=dev`
+* `service=core`
+* `tier=default`
+
+
 ## DataDog
 
 ## Reference

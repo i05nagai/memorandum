@@ -102,6 +102,23 @@ I cross off the customer's name from the reservation list.
 * prepositional phrase
     * 前置詞句
 * spin off
+* nomenclature
+* moonbat
+* nip
+    * v,n
+* procrastinate
+    * v
+* ledge
+    * n
+* brimstone
+    * n
+* sulphur/sulfur
+    * n
+* trafficking
+* the number of decimal places
+* the number of digit after the decimal point
+* n decimal places
+    * 小数点以下n桁
 
 
 ## Math
