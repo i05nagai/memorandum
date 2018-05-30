@@ -115,6 +115,10 @@ I cross off the customer's name from the reservation list.
 * sulphur/sulfur
     * n
 * trafficking
+* the number of decimal places
+* the number of digit after the decimal point
+* n decimal places
+    * 小数点以下n桁
 
 
 ## Math
