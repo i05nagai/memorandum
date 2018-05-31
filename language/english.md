@@ -119,6 +119,9 @@ I cross off the customer's name from the reservation list.
 * the number of digit after the decimal point
 * n decimal places
     * 小数点以下n桁
+* accusation
+* green with envy
+    * [Green with envy - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/green+with+envy)
 
 
 ## Math
