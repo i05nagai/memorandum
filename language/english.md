@@ -48,6 +48,46 @@ I cross off the customer's name from the reservation list.
 * with a grain of salt
     * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
 * judge and jury
+* deadly
+    * very good, excellent
+* humane
+* mark my words
+* okey dokey
+* vet
+    * veteran
+    * veterinarion
+* bait
+* baked
+    * you are baked
+* counterfeit
+* fraudulently
+* bust
+    * NA raid/search
+* subconscious
+* gill
+* gladly
+* coincidence
+* marijuana
+* cannabis
+* take pot
+    * [What does take pot mean? - Quora](https://www.quora.com/What-does-take-pot-mean)
+    * smoke marijuana
+* coroner
+* autopsy
+* jurisdiction
+* skeptical
+* relative pronoun
+* duplicitous
+* deceitful
+* plea
+* make a plea for help
+* au revoir
+* burst into song/tears/laughter
+    * suddenly begin to sing/cry/laugh
+
+
+* thorazine
+* chlorpromazine
 
 
 ## Math
