@@ -9,6 +9,8 @@ title: Cython Syntax
 
 * `DEF FavouriteFood = u"spam"`
     * compile time constant
+    * RHS can be python expression
+        * list is not available
 * `cdef int`
 * `cdef double`
 * `cdef float`
@@ -110,11 +112,86 @@ Automatic type
 
 
 ## Class
+* [Special Methods of Extension Types — Cython 0.28.2 documentation](http://docs.cython.org/en/latest/src/userguide/special_methods.html)
+
+* normal Python classes are supported
+* extension types aka `cdef classes`
+    * they are restricted compared to Python class
+    * but more memory efficient and faster
+* `cdef classes` stores their field as C struct
+    * C level access
 
 ```
 cdef class SinOfSquareFunction(Function):
     cpdef double evaluate(self, double x) except *:
         return sin(x**2)
+```
+
+Attributes of cdef classes
+
+* all attributes must be pre0declared at compile-time
+* attributes are by default only accecibile from cython
+    * `cdef public double attr1`
+* property can be declared to expose dynamic attributes to Python-space
+
+Initalisation methods
+
+* `__cinit__()`
+    * c level initilization
+    * for allocating c data
+    * you cannot explicitly call the inherited `__cinit__()` method.
+    * don't modify python objects in this method
+* `__init__()`
+
+FIniliztino method
+
+* `__dealloc__()`
+    * The counterpart to the `__cinit__()` method
+    * you explicitly allocated (e.g. via malloc) in your `__cinit__()` method should be freed in your `__dealloc__()` method.
+
+## Memory allocation
+* [Memory Allocation — Cython 0.28.2 documentation](http://docs.cython.org/en/latest/src/tutorial/memory_allocation.html)
+
+
+`malloc` is imported to `libc.stdlib`.
+
+```
+from libc.stdlib cimport malloc, free
+```
+
+C-API functions
+
+* C-API functions for allocating memory on the Python heap are generally preferred over the low-level C functions above
+
+```
+from cpython.mem cimport PyMem_Malloc, PyMem_Realloc, PyMem_Free
+```
+
+
+```python
+cdef class SomeMemory:
+
+    cdef double* data
+
+    def __cinit__(self, size_t number):
+        # allocate some memory (uninitialised, may contain arbitrary data)
+        self.data = <double*> PyMem_Malloc(number * sizeof(double))
+        if not self.data:
+            raise MemoryError()
+
+    def resize(self, size_t new_number):
+        # Allocates new_number * sizeof(double) bytes,
+        # preserving the current content and making a best-effort to
+        # re-use the original data location.
+        mem = <double*> PyMem_Realloc(self.data, new_number * sizeof(double))
+        if not mem:
+            raise MemoryError()
+        # Only overwrite the pointer if the memory was really reallocated.
+        # On error (mem is NULL), the originally memory has not been freed.
+        self.data = mem
+
+    def __dealloc__(self):
+        PyMem_Free(self.data)     # no-op if self.data is NULL
 ```
 
 ## Reference
