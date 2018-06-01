@@ -15,10 +15,12 @@ plugins:
 - jekyll-seo-tag
 ```
 
-Add the following right before </head> in your site's template(s):
+Add the following right before `</head>` in your site's template(s):
 
 ```
+{% raw  %}
 {% seo %}
+{% endraw %}
 ```
 
 ## Configuration
