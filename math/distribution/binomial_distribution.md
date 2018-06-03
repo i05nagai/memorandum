@@ -9,7 +9,7 @@ title: Binomial distribution
     * given
     * probability
 * $$X_{i} \in \{0, 1\} \ (i = 1, \ldots, N)$$,
-    * i.i.d sequence
+    * i.i.d sequence of Bernoulli r.v.
     * $P(X_{i} = 0) = p \ (1, \ldots, N)$,
 
 $\mathrm{Bi}(x_{1}, \ldots, x_{N}; p)$ is a p.d.f. of binomial distribution given $p$ and $N$ defined by
