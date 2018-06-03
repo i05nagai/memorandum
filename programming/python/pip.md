@@ -4,7 +4,25 @@ title: pip
 
 ## pip
 
-## install
+## Install
+* [install - pip error while installing Python: "Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS" - Stack Overflow](https://stackoverflow.com/questions/37723236/pip-error-while-installing-python-ignoring-ensurepip-failure-pip-8-1-1-requir/37723517)
+
+Ubuntu
+
+```
+apt-get install libssl-dev
+# or
+apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
+```
+
+CetOS
+
+```
+yum install openssl-devel
+# or
+yum install zlib-devel bzip2-devel sqlite sqlite-devel openssl-devel
+```
+
 `get-pip.py`はpipと同じversionが使える。
 
 ```
@@ -35,5 +53,8 @@ python3 get-pip.py --user pip==9.0.1
 
 * `--user`
     * userのHOME directoyrにinstallする
+
+## Tips
+
 
 ## Reference

@@ -130,6 +130,51 @@ I cross off the customer's name from the reservation list.
 * innoculate
 * vaccinate
 * with a placebo
+* deadly
+    * very good, excellent
+* humane
+* mark my words
+* okey dokey
+* vet
+    * veteran
+    * veterinarion
+* bait
+* baked
+    * you are baked
+* counterfeit
+* fraudulently
+* bust
+    * NA raid/search
+* subconscious
+* gill
+* gladly
+* coincidence
+* marijuana
+* cannabis
+* take pot
+    * [What does take pot mean? - Quora](https://www.quora.com/What-does-take-pot-mean)
+    * smoke marijuana
+* coroner
+* autopsy
+* jurisdiction
+* skeptical
+* relative pronoun
+* duplicitous
+* deceitful
+* plea
+* make a plea for help
+* au revoir
+* burst into song/tears/laughter
+    * suddenly begin to sing/cry/laugh
+* point of presence
+* good call/bad call
+* demarcation
+* give a deposition
+
+
+
+* thorazine
+* chlorpromazine
 
 
 ## Math
