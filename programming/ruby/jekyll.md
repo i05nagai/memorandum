@@ -1,9 +1,13 @@
+---
+title: jekyll
+---
+
 ## jekyll
 Jekyll（ジキル）は静的サイトの生成を行うための、RubyGemsで配布されているRuby製のツール。
 
 ## Install
 
-```shell
+```
 gem install jekyll
 ```
 
@@ -15,7 +19,7 @@ gem install jekyll
 
 ## Basic Usage
 
-```shell
+```
 $ jekyll build
 # => カレントフォルダが ./_site の下に生成されます
 
@@ -57,19 +61,19 @@ $ jekyll build --watch
 * `_layouts/post.html`
 
 ### syntax hight
-
 jekyll3.0からは`rouge`がデフォルト
 
 ## Theme
 Bundlerを使う。
 Bundlerが入っていない場合は、インストールする。
-```shell
+
+```
 gem install bundler
 ```
 
 rootで下記を実行し`Gemfile`を作成する。
 
-```shell
+```
 bundle init
 ```
 
@@ -79,90 +83,22 @@ bundle init
 gem "minima"
 ```
 
-## Github.io連携
-Github pagesではgemは利用できない。
-gemを利用したい場合は、ローカルで生成してpushするしか今のところない。
+## Plugins
+* [Plugins \| Jekyll • Simple, blog\-aware, static sites](https://jekyllrb.com/docs/plugins/)
+
+You have 3 options for installing plugins:
+
+* `/_plugins` directory
+* `_config.yml`
+    * Then install your plugins using `gem install` command
 
 
-### Table of Contetns
-
-* [dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jeklyll pages](https://github.com/dafi/jekyll-toc-generator)
-* [dafi/tocmd-generator: Table of Contents Generator for Markdown pages](https://github.com/dafi/tocmd-generator)
-
-### Github向け導入
-必要なもの
-* `_layouts/math.html`
-* `_layouts/default.html`
-* `index.html`
-
-### config
-Githubがdefaultで設定する項目。
-`_config.yml`で上書き可能。
-```yml
-github: [metadata]
-kramdown:
-  input: GFM
-  hard_wrap: false
-gems:
-  - jekyll-coffeescript
-  - jekyll-paginate
-```
-
-上書きできない項目は以下。
-```yml
-lsi: false
-safe: true
-source: [your repo's top level directory]
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-```
-
-Githubが設定するメタデータは下記にまとまっている。
-[Repository metadata on GitHub Pages - User Documentation](https://help.github.com/articles/repository-metadata-on-github-pages/)
-
-
-### markdonw
-Githubのmarkdownのパーサーは`kramdown`
-`kramdown`
-
-### theme
-Githubがsupportしているthemaは今の所下記のみ
-* [Supported themes - GitHub Pages](https://pages.github.com/themes/)
-
-### Relateive URL
-github.ioで、rootのURLは`http://user_name.github.io/repository_name`となっている。
-この状態で、`<a href="/js/main.js">`とすると`http://user_name.github.io/js/main.js`と解釈される。
-解決策としては、 `_config.yml`に`site.baseurl`を設定し、`<a href="{{ site.baseurl }}/js/main.js">`とする。
-
-```yml
-baseurl: /repository_name
-```
-
-github上でURLが`/repository_name/js/main.js`と解釈される。
-また、ローカルでも`jekyll s`とすると、URLが`http://127.0.0.1:4000/repository_name/`で立ち上がる為整合的となる。
-
-#### reference
-* [baseurl / base-url: GitHub Pages Project Pages - Relative Links Fail · Issue #332 · jekyll/jekyll](https://github.com/jekyll/jekyll/issues/332)
-* [Using Jekyll as a static site generator with GitHub Pages - User Documentation](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
+## Configuration
 
 ## Tips
 
-### GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data
-jekyll用にGithubのpersonal access tokenを設定する必要がある。
-
-1. GitHubの`Settings`->`personal access token` -> `Generate new token`
-2. `public_repo`にcheckをいれてtokenを作成
-3. 作成したtokenを`export JEKYLL_GITHUB_TOKEN=<token>`で環境変数に設定する。
-
-### Github Pagesで使えるMetadata一覧
-
-* [Repository metadata on GitHub Pages - User Documentation](https://help.github.com/articles/repository-metadata-on-github-pages/)
-
 ### Invalid date
+* [Troubleshooting | jekyll](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
 
 ```
             ERROR: YOUR SITE COULD NOT BE BUILT:
@@ -176,11 +112,14 @@ jekyll用にGithubのpersonal access tokenを設定する必要がある。
 exclude: [vendor]
 ```
 
-* [Troubleshooting | jekyll](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
-
 ### Generating sitemap
 * [GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site](https://github.com/jekyll/jekyll-sitemap)
 * [jekyllでサイトマップ(sitemap.xml)を生成する -- ぺけみさお](https://www.xmisao.com/2014/08/25/generate-sitemap-in-jekyll.html)
+
+
+### Table of Contetns
+* [dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jeklyll pages](https://github.com/dafi/jekyll-toc-generator)
+* [dafi/tocmd-generator: Table of Contents Generator for Markdown pages](https://github.com/dafi/tocmd-generator)
 
 ## Reference
 * [30分のチュートリアルでJekyllを理解する](http://melborne.github.io/2012/05/13/first-step-of-jekyll/)

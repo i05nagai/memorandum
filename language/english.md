@@ -122,6 +122,14 @@ I cross off the customer's name from the reservation list.
 * accusation
 * green with envy
     * [Green with envy - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/green+with+envy)
+* recombinant
+* esoteric
+* bitterly
+* notwithstanding
+    * nevertheless
+* innoculate
+* vaccinate
+* with a placebo
 
 
 ## Math
