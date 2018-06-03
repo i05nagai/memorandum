@@ -3,95 +3,79 @@ title: Fisher Exact Test
 ---
 
 ## Fisher Exact Test
-Fisher exact model
+Fisher exact model.
 
-* $X_{i}^{c}$,
-    * i.i.d. of bernoulli r.v with probability $p_{c}$.
-    * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$X_{i}^{c}(\omega) = x_{i}^{c} \ (i = 1, \ldots, N)$$,
-* $X_{i}^{t}$,
-    * i.i.d. of bernoulli r.v.with probability $p_{t}$
-    * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$X_{i}^{t}(\omega) = x_{i}^{t} \ (i = 1, \ldots, N)$$,
-* $\Theta := [0, 1] \times [0, 1] $,
+We consider following 2x2 contingency table:
 
-We assume $$\{X_{i}^{c}\}$$ and $$\{X_{i}^{t}\}$$ are independent.
-The probability of r.v.s are given by
+* $N$,
+    * the number of total groups
+* $K$,
+    * the number of people in YES condition
+* $n$,
+    * the number of people in treatment group
+
+| Condition | treatment group | control group   | total   |
+|-----------|-----------------|-----------------|---------|
+| YES       | $k$             | $K − k$         | $K$     |
+| NO        | $n − k$         | $N + k − n − K$ | $N − K$ |
+|-----------|-----------------|-----------------|---------|
+| total     | $n$             | $N − n$         | $N$     |
+
+In Fisher exact model, we interpret $k$ is a observed value of r.v. $X^{t}$ which follows hypergeometric distribution with parameters $N$, $K$, $n$.
+The p.d.f. and c.d.f. of $X^{t}$ is given by
 
 $$
 \begin{eqnarray}
-    f(x_{1}^{c}, \ldots, x_{n}^{c}, x_{1}^{t}, \ldots, x_{N}^{t}; p_{c}, p_{t})
-    & := &
+    \mathrm{Hyper}(k; N, K, n)
+    & = &
         P
         \left(
-            \left(
-                \bigcap_{i}
-                \{X_{i}^{c} = x_{i}^{c}\}
-            \right)
-            \bigcap
-            \left(
-                \bigcap_{i}
-                \{X_{i}^{t} = x_{i}^{t}\}
-            \right)
+            X^{t}
+            =
+            k
         \right)
     \nonumber
     \\
+    F_{\mathrm{Hyper}}(k; N, K, n)
     & = &
-        \mathrm{Bi}(x_{1}^{c}, \ldots, x_{n}^{c}; p_{c})
-        \mathrm{Bi}(x_{1}^{t}, \ldots, x_{n}^{t}; p_{t})
+        \sum_{i=0}^{k}
+            P
+            \left(
+                X^{t}
+                =
+                k
+            \right)
+    .
     \nonumber
-    \\
-    & = &
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{c}
-            \end{array}
-        \right)
-        p_{c}^{x_{c}}
-        (1 - p_{c})^{N - x_{c}}
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{t}
-            \end{array}
-        \right)
-        p_{t}^{x_{t}}
-        (1 - p_{t})^{N - x_{t}}
-\end{eqnarray}
-$$
-
-In Fisher's exact model, for given $(p, p) \in \Theta$, null hypothesis is $$H_{0} := \{(p , p) \in \Theta \mid p \in [0, 1]\}$$.
-
-$$
-\begin{eqnarray}
-    f(x_{1}^{c}, \ldots, x_{n}^{c}, x_{1}^{t}, \ldots, x_{N}^{t}; p, p)
-    & = &
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{c}
-            \end{array}
-        \right)
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{t}
-            \end{array}
-        \right)
-        p^{x_{c} + x_{t}}
-        (1 - p)^{N - x_{c} - x_{t}}
 \end{eqnarray}
 $$
 
 Let $\alpha \in [0, 1]$ be significance level.
+Then p-value $p_{\alpha}$ is calculated by
 
 $$
-    \alpha
+\begin{eqnarray}
+    k_{\alpha}
+    & := &
+        \inf
+        \{
+            k
+            \mid
+            F_{\mathrm{Hyper}}(x^{t}; N, K, n)
+            \le
+            \alpha
+        \}
+    \\
+    p_{\alpha}
+    & := &
+        F_{\mathrm{Hyper}}(k_{\alpha}; N, K, n)
+\end{eqnarray}
 $$
 
 ## Example
-* $N = 15$,
+* $N = 30$,
+* $K = 19$,
+* $n = 15$,
 * $$x_{i}^{c} \in \{0, 1\}$$,
     * 1 means that $i$-th person became infected with influenza
     * people innoculated with a recombinant DNA influenza vaccine
@@ -100,9 +84,9 @@ $$
     * 1 means that $i$-th person became infected with influenza
     * people innoculated with a placebo
     * treatment group
-* $x^{c} := \sum_{i=1}^{N} x_{i}^{c}$,
+* $x^{c} := \sum_{i=1}^{n} x_{i}^{c}$,
     * the number of infected people in the control group
-* $x^{t} := \sum_{i=1}^{N} x_{i}^{t}$,
+* $x^{t} := \sum_{i=1}^{n} x_{i}^{t}$,
     * the number of infected people in the treatment group
 
 
@@ -116,71 +100,26 @@ $$
 
 Fisher exact model
 
-* $X_{i}^{c}$,
-    * i.i.d. of bernoulli r.v with probability $p_{c}$.
-    * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$X_{i}^{c}(\omega) = x_{i}^{c} \ (i = 1, \ldots, N)$$,
-* $X_{i}^{t}$,
-    * i.i.d. of bernoulli r.v.with probability $p_{t}$
-    * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$X_{i}^{t}(\omega) = x_{i}^{t} \ (i = 1, \ldots, N)$$,
+* $X^{t}$,
+    * hypergemetric distribution with $N := 30$, $K := 19$, $n := 15$.
+* $$X^{t}(\omega) = x^{t}$$,
 * $\Theta := [0, 1]$,
 
+One-side test
 
 $$
 \begin{eqnarray}
-    P
-    \left(
-        \left(
-            \bigcap_{i}
-            \{X_{i}^{c} = x_{i}^{c}\}
-        \right)
-        \bigcap
-        \left(
-            \bigcap_{i}
-            \{X_{i}^{t} = x_{i}^{t}\}
-        \right)
-    \right)
+    F_{\mathrm{Hyper}}(x^{t}; N, K, n)
     & = &
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{c}
-            \end{array}
-        \right)
-        p^{x_{c} + x_{t}}
-        (1 - p)^{N - x_{c} - x_{t}}
-        \left(
-            \begin{array}{c}
-                N \\
-                x_{t}
-            \end{array}
-        \right)
+        \sum_{k = 0}^{x^{t}}
+            \mathrm{Hyper}(k; N, K, n)
     \nonumber
     \\
-    & = &
-        \left(
-            \begin{array}{c}
-                15 \\
-                12
-            \end{array}
-        \right)
-        p^{19}
-        (1 - p)^{-4}
-        \left(
-            \begin{array}{c}
-                15 \\
-                7
-            \end{array}
-        \right)
-    \nonumber
-    \\
-    & = &
-        455
-        p^{19}
-        (1 - p)^{-4}
-        6435
+    & \approx &
+        0.0640679660169915
 \end{eqnarray}
 $$
 
+
 ## Reference
+* [Contingency Tables](http://www.stat.wisc.edu/~st571-1/06-tables-4.pdf)
