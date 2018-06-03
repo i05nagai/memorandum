@@ -18,11 +18,12 @@ title: ubuntu
 
 ### install gcc-4.6 and g++-4.6
 `/etc/apt/sources.list`に以下を追加し、
-* `apt-get update`
-* sudo apt-get install gcc-4.6`
-* sudo apt-get install g++-4.6`
 
-```shell
+* `apt-get update`
+* sudo apt-get install gcc-4.6
+* sudo apt-get install g++-4.6
+
+```
 deb     http://archive.ubuntu.com/ubuntu/ trusty universe
 deb-src http://archive.ubuntu.com/ubuntu/ trusty universe
 ```
@@ -43,7 +44,7 @@ PermitRootLogin no
 ログインするユーザのディレクトリに`authorized_keys`を追加する。
 `id_rsa.pub`を公開鍵とする。
 
-```ssh
+```
 cat id_rsa.pub >> /path/to/user/home/.ssh/authorized_keys
 ```
 
@@ -55,7 +56,7 @@ cat id_rsa.pub >> /path/to/user/home/.ssh/authorized_keys
 ## Managing user
 
 ### Add user
-```shell
+```
 sudo adduser USER
 ```
 
@@ -63,7 +64,7 @@ sudo adduser USER
 
 useraddの場合は
 
-```shell
+```
 useradd user_name -m -d /home/user_name -p encripted_password
 ```
 
@@ -73,13 +74,13 @@ useradd user_name -m -d /home/user_name -p encripted_password
 
 ### Delete user
 
-```shell
+```
 sudo userdel -r USER
 ```
 
 ### show users
 
-```shell
+```
 ls /etc/passwd
 ```
 
@@ -87,7 +88,7 @@ ls /etc/passwd
 `user_name`に`sudo`権限をつける。
 sudoで求められるpasswordは、suするユーザのpasswordではなく、sudoを実行したユーザのpasswordである。
 
-```shell
+```
 gpasswd -a user_name sudo
 ```
 
