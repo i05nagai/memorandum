@@ -84,6 +84,11 @@ I cross off the customer's name from the reservation list.
 * au revoir
 * burst into song/tears/laughter
     * suddenly begin to sing/cry/laugh
+* point of presence
+* good call/bad call
+* demarcation
+* give a deposition
+
 
 
 * thorazine
