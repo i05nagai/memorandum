@@ -1,4 +1,8 @@
-# riv
+---
+title: riv
+---
+
+## riv
 
 ## Install
 
@@ -7,20 +11,39 @@ NeoBundle `Rykka/riv.vim`
 ```
 
 ## Settings
+* [1. Instruction · gu-fan/riv.vim Wiki · GitHub](https://github.com/gu-fan/riv.vim/wiki/1.-Instruction#folding)
 
 ```vim
 let g:riv_fold_level = 1
+" 
+le g:riv_fold_auto_update = 0
+"
+" let g:riv_auto_fold_force = 0
+" disable folding
+let g:riv_disable_folding = 1
+```
+
+```
 "let g:riv_web_browser = '/path/to/broweser'
 let g:riv_temp_path = 0
 let g:riv_html_code_hl_style = "friendly"
 ```
 
 ## Usage
-
 * htmlでのpreview
 
 ```vim
 :Riv2HtmlAndBrowse
+```
+
+## Tips
+
+### disable foldings
+* [Can't disable folding · Issue #39 · gu-fan/riv.vim · GitHub](https://github.com/gu-fan/riv.vim/issues/39)
+
+```vim
+" disable folding
+let g:riv_disable_folding = 1
 ```
 
 ## Reference
