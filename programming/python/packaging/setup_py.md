@@ -1,4 +1,8 @@
-# setup.py
+---
+title: setup.py
+---
+
+## setup.py
 `setup.py`の書き方など。
 
 ## setup.py sdist
@@ -17,5 +21,4 @@ python setup.py --formats=gztar,zip
 
 
 # Reference
-
 * [4. ソースコード配布物を作成する — Python 2.7.x ドキュメント](http://docs.python.jp/2/distutils/sourcedist.html)
