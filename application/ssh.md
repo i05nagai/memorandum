@@ -1,33 +1,13 @@
-# open-ssh
+---
+title: ssh
+---
 
-## keyを作る
+## ssh
+ssh command.
 
-```shell
-sh-keygen -t rsa
+## CLI
 
-```
-
-## server
-ログインしたいuserを`ssh-user`とする。
-* loginするuserのhome directoryの下(`~/.ssh/`)に設定ファイルを。
-* `~/.ssh/authorized_keys`にログインするユーザの公開鍵をいれる
-    * `cat id_rsa.pub >> ~/.ssh/authorized_keys`
-    * file permissionは`chmod 600 authorized_keys`
-    * userとgroupはログインするユーザ(`ssh-user`)のもの
-        * `chown ssh-user:ssh-user authorized_keys`
-* [今まで知らずに損してたauthorized_keysの書き方 - Qiita](https://qiita.com/ryounagaoka/items/0a706a0734664f3c35e0)
-
-
-## client
-* sshでの接続時のPassは、キー作成時のpass phraseでlogin userのpasswordではない。
-* sshでアクセスする時、pass phraseを設定してないのにpassが求められるとき
-    * identity fileが読み込めてない
-
-## debug
-client側のdebugは`-v`
-server側のdebugは`-d`
-
-## Options
+Options
 
 `-D`と`-L`のportfowarding
 
@@ -37,12 +17,14 @@ server側のdebugは`-d`
     * port forwarding するときに使う
 * `-L`
     * port forwarding するときに使う
+* client側のdebugは`-v`
+* server側のdebugは`-d`
 
 ```
 ssh -fNL 8080:kmc.gr.jp:80 hogehoge@forward.kuins.kyoto-u.ac.jp
 ```
 
-## config
+## Configuration
 * [~/.ssh/configについて - Qiita](http://qiita.com/passol78/items/2ad123e39efeb1a5286b)
 * [`Include`キーワードで`ssh_config`を分割できるようになった件 - Qiita](http://qiita.com/masa0x80/items/ecb692ad93f7d06a07b0)
 
@@ -98,4 +80,22 @@ Host name
     * 何もしない
 
 
+## Tips
 
+### server
+* [今まで知らずに損してたauthorized_keysの書き方 - Qiita](https://qiita.com/ryounagaoka/items/0a706a0734664f3c35e0)
+
+ログインしたいuserを`ssh-user`とする。
+* loginするuserのhome directoryの下(`~/.ssh/`)に設定ファイルを。
+* `~/.ssh/authorized_keys`にログインするユーザの公開鍵をいれる
+    * `cat id_rsa.pub >> ~/.ssh/authorized_keys`
+    * file permissionは`chmod 600 authorized_keys`
+    * userとgroupはログインするユーザ(`ssh-user`)のもの
+        * `chown ssh-user:ssh-user authorized_keys`
+
+### client
+* sshでの接続時のPassは、キー作成時のpass phraseでlogin userのpasswordではない。
+* sshでアクセスする時、pass phraseを設定してないのにpassが求められるとき
+    * identity fileが読み込めてない
+
+## Rereference
