@@ -307,5 +307,10 @@ https://github.com/<user-name>.keys
 * [How to write the perfect pull request | The GitHub Blog](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/)
 * [GitHub「完璧なプルリクの書き方を教えるぜ」 - Qiita](https://qiita.com/umanoda/items/93aec41213f8e3ce14c8)
 
+## Release
+* When you create a release
+    * it will add automatically source codes as zip and tar.gz files as release assets.
+    * it will add git-tag to the refered commit/branch.
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
