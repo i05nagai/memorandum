@@ -16,23 +16,21 @@ brew install pyenv-virtualenv
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
 
-### 環境作成
-
+### Create virtualenv
 以下で現在pyenvに設定されているpython環境が`env_name`という名前で作成される。
 
 ```
 pyenv virtualenv env_name
 ```
 
-### 環境をactiveにする
-
+### Activate virtualenv environment
 以下で、作成した`env_name`に入ることができる。
 
 ```
 pyenv activate env_name
 ```
 
-### 環境をdeactiveにする
+### Deactivate virtualenv environment
 
 ```
 pyenv deactivate
