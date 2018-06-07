@@ -1,8 +1,17 @@
-
+---
+title: ssh-keygen
+---
 ## ssh-keygen
+ssh-keygen command.
 
 
 ## Tips
+
+### Generate ssh key
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 ### Has passphrase or not
 * [public key infrastructure - How to check if an SSH private key has passphrase or not? - Information Security Stack Exchange](https://security.stackexchange.com/questions/129724/how-to-check-if-an-ssh-private-key-has-passphrase-or-not)
@@ -25,4 +34,3 @@ ssh-keygen -yf path_to_key
 ```
 
 ## Reference
-* 
