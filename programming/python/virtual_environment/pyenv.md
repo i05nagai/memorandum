@@ -7,13 +7,13 @@ pythonの仮想環境作成する。
 `python`コマンドのversionは変わらない。
 `python`コマンドのversionを変更する場合は、`pyenv-virtualenv`をいれる。
 
-```shell
+```
 brew install pyenv
 ```
 
 `bash_profile`などに以下を追加する。
 
-```shell
+```
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/var/pyenv
 ```
@@ -29,13 +29,13 @@ git clone git://github.com/yyuu/pyenv.git ~/.pyenv
 
 以下のコマンドでインストール可能なpythonのversionが表示される。
 
-```shell
+```
 pyenv install -l
 ```
 
 例えば、2.7.9のpythonをインストールしたければ以下のようにかく。
 
-```shell
+```
 pyenv install 2.7.9
 ```
 
