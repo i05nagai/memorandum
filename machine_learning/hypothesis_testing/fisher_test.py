@@ -3,6 +3,7 @@ import scipy as sp
 import scipy.special as special
 import scipy.stats as stats
 import pandas as pd
+import holoviews as hv
 
 
 def fisher_exact_test(df, label, col_c, col_t):
@@ -185,6 +186,12 @@ def barnard_test(df, label, col_c, col_t, pi):
     return summand
 
 
+def draw_barnard_test(df, label, col_c, col_t):
+    xs = [0.1 * x for x in range(10)]
+    ys = [barnard_test(df, 'infection', columns[0], columns[1], x) for x in xs]
+    return hv.Curve((xs, ys), label='label')
+
+
 df = gen_data()
 columns = ['control', 'treatment']
 wald_statistics(df, 'infection', columns[0], columns[1])
@@ -195,3 +202,4 @@ fisher_exact_test_scipy_mine(df, 'infection', columns[0], columns[1])
 fisher_exact_test_k_alpha(df, 'infection', columns[0], columns[1], 0.05)
 barnard_test(df, 'infection', columns[0], columns[1], 0.3365)
 barnard_test(df, 'infection', columns[0], columns[1], 0.5)
+draw_barnard_test(df, 'infection', columns[0], columns[1])
