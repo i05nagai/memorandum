@@ -25,7 +25,9 @@ circleciはdockerを使うので、dockerが動く環境である必要がある
 circleci config validate -c .circleci/config.yml
 ```
 
-## Environment variableso
+## Environment variables
+* [Using Environment Variables - CircleCI](https://circleci.com/docs/2.0/env-vars/)
+
 * built-in environment variables
     * [Using Environment Variables - CircleCI](https://circleci.com/docs/2.0/env-vars/#circleci-built-in-environment-variables)
     * `CIRCLE_SHA1`
@@ -33,6 +35,13 @@ circleci config validate -c .circleci/config.yml
     * `CIRCLE_TAG`
         * gittag
     * `CIRCLE_WORKING_DIRECTORY`
+* Setting an Environment Variable in a Step
+* Setting an Environment Variable in a Job
+* Setting an Environment Variable in a Container
+* Setting an Environment Variable in a Context
+    * in a workflow
+* Setting an Environment Variable in a Project
+
 
 ## Configuration
 * [Configuration Reference - CircleCI](https://circleci.com/docs/2.0/configuration-reference/)
@@ -104,6 +113,52 @@ workflows:
         * だいたい`/root`
 * `run:`
     * execute commands
+* `persist_to_workspace`
+* `attach_workspace`
+    * attach persisted workspace
+* `add_ssh_keys:`
+    * add ssh key to ssh-agent
+* `store_artifacts`
+    * [Storing and Accessing Build Artifacts - CircleCI](https://circleci.com/docs/2.0/artifacts/)
+    * `path`
+        * path to artifacts that will be uploaded
+        * file/directory
+    * `destination`
+        * optional
+        * path to uploaded artificat
+
+
+```yaml
+jobs:
+  job1:
+    steps:
+      - checkout
+      - run:
+          command: |
+              pwd
+      # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job. 
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is taken to be the root directory of the workspace.
+          root: /root
+          # Must be relative path from root
+          paths:
+            - project
+  job2:
+    steps:
+      - attach_workspace:
+          at: /root
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FI:NG:ER:PR:IN:T"
+      - run:
+          command: |
+              pwd
+  version: 2
+  default:
+    jobs:
+      - job1
+      - job2
+```
 
 ```yaml
     steps:
@@ -241,7 +296,7 @@ jobs:
       # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job. 
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
-	  # taken to be the root directory of the workspace.
+          # taken to be the root directory of the workspace.
           root: workspace
           # Must be relative path from root
           paths:
@@ -272,6 +327,24 @@ workflows:
             - flow
 ```
 
+### Push to files to GitHub
+* [GitHub and Bitbucket Integration - CircleCI](https://circleci.com/docs/2.0/gh-bb-integration/#deployment-keys-and-user-keys)
+* [Set up GitHub push with SSH keys](https://gist.github.com/developius/c81f021eb5c5916013dc)
+
+Add the following configuration to `~/.ssh/config`
+
+```
+Host github.com
+  IdentitiesOnly yes
+  IdentityFile /root/.ssh/id_rsa_<md5>
+```
+
+You need to follow `git-push` with SSH keys.
+
+```
+git remote set-url origin git@github.com:username/your-repository.git
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push origin master
+```
 
 ## Reference
 * [2.0 Docs - CircleCI](https://circleci.com/docs/2.0/)

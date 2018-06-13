@@ -1,6 +1,21 @@
-
+---
+title: ssh-keygen
+---
 ## ssh-keygen
+ssh-keygen command.
 
+## CLI
+
+```
+ssh-keygen
+```
+
+## Usage
+Generate ssh key
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 ## Tips
 
@@ -25,4 +40,3 @@ ssh-keygen -yf path_to_key
 ```
 
 ## Reference
-* 

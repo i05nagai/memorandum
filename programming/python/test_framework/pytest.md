@@ -1,48 +1,8 @@
+---
+title: pytest
+---
+
 ## pytest
-
-## coverage
-coverage用のpluginをいれる
-
-```
-pip install pytest-cov
-```
-
-pytest 実行時に`--cov=module_name`オプションをつける
-
-```
-pytest --cov=module_name . 
-```
-
-更に、`--cov-report`でHTMLのreportを出力してくれる
-
-```
-pytest --cov=module_name --cov-report .
-```
-
-余分なファイルをcoverageの計測から省く場合は、`.coveragerc`に以下のような設定をかく。
-細かい設定については、Coverage.pyの設定をみる。
-
-* [Configuration files — Coverage.py 4.4.1 documentation](http://coverage.readthedocs.io/en/latest/config.html)
-
-```
-[run]
-omit =
-    test_*.py
-    .eggs/*
-    setup.py
-```
-
-## check PEP8
-
-```
-pip install pytest-pep8
-```
-
-pytest実行時に`--pep8`をつける。
-
-```
-pytest --pep8 .
-```
 
 ## pytest fixtures: explicit, modular, scalable
 テストを繰り返し実行したり、確実にするためのテスト用のクラスやモジュールなど。
@@ -180,6 +140,32 @@ module_dir/
 
 となる。
 
+## Function
+* [Reference — pytest documentation](https://docs.pytest.org/en/latest/reference.html#pytest-approx)
+
+* `pytest.approx(expected, rel=None, abs=None, nan_ok=False)[source]`
+    * default value of `abs` is `1e-12`
+    * default value of `rel` is `1e-6`
+    * `expected == approx(actual)`
+    * `abs(expected - actual) < tolerance`
+    * `abs`
+        * if `rel=None`, `tolerance` is the value of `abs`
+    * `rel`
+        * `tolerance` is the value of `max(rel * abs(expected), abs)`
+
+```python
+from pytest import approx
+# 0.01120946664130403 - 0.0112093559873 = 1.1065400403083292e-07
+# False
+0.01120946664130403 == approx(0.0112093559873)
+# False
+0.01120946664130403 == approx(0.0112093559873, rel=1e-6)
+# 1e-6 * 0.01120946664130403 = 1.120946664130403e-08
+# False
+0.01120946664130403 == approx(0.0112093559873, rel=5e-4)
+# 5e-4 * 0.01120946664130403 = 5.604733320652015e-06
+```
+
 ## Fixtures
 * [Pytest API and builtin fixtures — pytest documentation](https://docs.pytest.org/en/latest/builtin.html)
 
@@ -188,40 +174,7 @@ module_dir/
         * teardown methodを定義
         * testが全て終了したときに呼ばれる
 
-
-
-## Tips
-
-### Could not load conftest
-cacheにconftestが残っている場合に起こる。
-conftestのあるディレクトリなどにある`__pycache__`を消せば良い。
-
-```
-Traceback (most recent call last):
-  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 336, in _getconftestmodules
-    return self._path2confmods[path]
-KeyError: local('/tmp/spark/tests')
-
-During handling of the above exception, another exception occurred:
-Traceback (most recent call last):
-  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 367, in _importconftest
-    return self._conftestpath2mod[conftestpath]
-KeyError: local('/tmp/spark/tests/conftest.py')
-
-During handling of the above exception, another exception occurred:
-Traceback (most recent call last):
-  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 373, in _importconftest
-    mod = conftestpath.pyimport()
-  File "/usr/lib/python3.4/site-packages/py/_path/local.py", line 680, in pyimport
-    raise self.ImportMismatchError(modname, modfile, self)
-py._path.local.ImportMismatchError: ('conftest', '/tmp/conftest.py', local('/tmp//conftest.py'))
-ERROR: could not load /tmp/spark/tests/conftest.py
-```
-
 ## ignore eggs files
-
-```
-```
 
 ## Template for setup.py
 
@@ -339,6 +292,41 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## Tips
+
+### Could not load conftest
+cacheにconftestが残っている場合に起こる。
+conftestのあるディレクトリなどにある`__pycache__`を消せば良い。
+
+```
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 336, in _getconftestmodules
+    return self._path2confmods[path]
+KeyError: local('/tmp/spark/tests')
+
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 367, in _importconftest
+    return self._conftestpath2mod[conftestpath]
+KeyError: local('/tmp/spark/tests/conftest.py')
+
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/site-packages/_pytest/config.py", line 373, in _importconftest
+    mod = conftestpath.pyimport()
+  File "/usr/lib/python3.4/site-packages/py/_path/local.py", line 680, in pyimport
+    raise self.ImportMismatchError(modname, modfile, self)
+py._path.local.ImportMismatchError: ('conftest', '/tmp/conftest.py', local('/tmp//conftest.py'))
+ERROR: could not load /tmp/spark/tests/conftest.py
+```
+
+
+### Measure coverage
+Use `pytest-cov`.
+
+### check PEP8
+Use `pytest-pep8`
 
 ## Reference
 * [pytest fixtures: explicit, modular, scalable — pytest documentation](https://docs.pytest.org/en/latest/fixture.html?highlight=conftest)

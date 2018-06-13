@@ -6,6 +6,7 @@
 /.jekyll-metadata
 /vendor
 /.ruby-version
+.ipynb_checkpoints
 
 
 # OSX

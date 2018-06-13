@@ -13,5 +13,16 @@ title: GitHub API
         * default: open
 
 
+* release
+    * tag
+    * tag_name
+    * commitish
+    * prerelease
+    * body
+* release asset
+    * path
+    * label
+        * displayed name of this asset
+
 ## Reference
 

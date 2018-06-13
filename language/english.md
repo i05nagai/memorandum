@@ -170,6 +170,546 @@ I cross off the customer's name from the reservation list.
 * good call/bad call
 * demarcation
 * give a deposition
+* well-placed source
+* whizz
+* surveillance
+* perspiration
+* outrage
+* canvassing
+   * [Canvassing - Wikipedia](https://en.wikipedia.org/wiki/Canvassing)
+* diabetic
+* diabetic coma
+* numbness
+* tingling
+* deprive
+* numb
+* subdue
+* disguise
+* garrote
+* corpse
+* demise
+* strap in
+* interrogate
+* formaldehyde
+* filthy
+* take hood off
+* city attorney
+* bloodborne pathogen
+* bacterium
+* muling
+    * [Mule (smuggling) - Wikipedia](https://en.wikipedia.org/wiki/Mule_(smuggling))
+    * courier
+* smuggle drugs
+* smuggle
+* jumble
+* set one's up
+    * はめる
+* boom
+* espionage
+* extortion
+* thuggish
+* self-esteem
+* self-confidence
+* prestigious
+* couture
+* back into a corner
+* throne
+* lucrative
+* iconic
+* glamorous
+* heyday
+* hawkish
+* intel
+* sinister
+* blend in
+* dongle
+* sublime
+* self-indulgent
+* wordy
+* eerie
+* nutcase
+* obnoxious
+* angst-ridden
+* aristocrat
+* aristocracy
+* gynophobia
+    * fear of woman
+* spearhead of
+* strike a chord
+* taunted by girls
+* manipulated by his mother
+* cripple
+* megalomania
+* lab head on the virus project
+* suburban
+* manifest
+    * adj, v
+    * demonstrate
+* leftfield
+    * n, adj
+    * left filed
+    * radical/experimental
+* perseverance
+    * medicine is a field which requires dedication and perseverance
+* covet
+* yearn
+* compassion
+* a qualm with 
+* sensuous
+* lethal
+* carry on
+* infiltrate
+* vicinity
+* hazmat suit
+* it doesn't ring a bell
+    * Does seeing this ring any bells?
+* bludgeoned
+* dismemberment
+* limb
+* pun intended
+    * [Urban Dictionary: no pun intended](https://www.urbandictionary.com/define.php?term=no%20pun%20intended)
+* no pun intended
+    * [What does it mean "No pun intended" - Learn english - italki Answers](https://www.italki.com/question/319277)
+* pun
+* lay a hand on
+* solicitation
+* hare
+* chump
+* redact
+* drown
+* unleash
+* pacify
+* quell
+* embezzle
+    * v
+* misappropriate
+* Ponzi scheme
+* estrange
+* estranged
+    * estranged daughter
+* tenacious
+* con
+    * persuade (someone) to do or believe something by lying to them
+    * "I conned him into giving me your home number"
+* cunning
+* quaint
+* jovial
+    * adj
+    * cheeful, friendly
+    * jolly
+* trench
+* conspiracy
+* impersonate
+* intrigue
+* arouse
+* evoke
+* slumber
+    * sleep
+* versie
+    * n, v
+* balladry
+    * n
+* deceptive
+    * misleading
+* ruthless
+    * adj
+    * pitiless
+* aloof
+    * adj
+* inner circle
+    * 権力中枢部の側近
+    * 組織内で実権を握る少数の人々
+* lust
+    * n, v
+* lure
+* find one's true calling
+    * [Find your calling - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/find+your+calling)
+* spleen
+* mushy
+* fatality rate
+* let someone down
+* hang out
+    * [「hang out」の意味と、「hangout」との違い ー 誰かと遊びたい時はこのフレーズを使おう](http://www.eigowithluke.com/2011/05/hang-out/)
+* what's holding up
+* hoard
+* delinquency
+* lithe
+* agile
+* melee
+* the long arm of the law
+    * the police
+* evade
+    * escape
+    * elude
+* botch
+* bungle
+* clumsily
+* deftly
+    * adv
+* facade
+* crave
+* emancipation
+* captivity
+* lyrical
+* lashing out
+* accident or not
+* in a row
+* empire
+    * n, adj
+* grieving
+    * grieve over
+* fixer
+* devious
+* esteem
+* propel into
+* acquit
+* affluenza
+    * rich kid syndrome
+* malaise
+    * n
+    * a general feeling of discomfort, illness, or unease whose exact cause is difficult to identify.
+* penthouse
+* bribe
+* melee
+* seer
+* peerage
+    * the title and rank of peer or peeress.
+* peerage of england
+    * `Baron < viscount < ealr < marquess < duke`
+    * earl
+    * marquess
+    * duke
+* prophet
+* disappearance
+* Someone is branded n
+* smell like a rose
+    * To be regarded as appealing, virtuous, or respectable; to be untainted or unharmed.
+* silver-tongued
+* miled-mannered
+* courteous
+    * polite
+    * respectful
+* bon vivant
+    * a person who devotes themselves to a sociable and luxurious lifestyle.
+* diplomat
+    * ambassador
+    * envoy
+* tactful
+* annihilate
+* obliterate
+    * [Obliterate vs Annihilate - What's the difference? | WikiDiff](https://wikidiff.com/obliterate/annihilate)
+* smear
+    * v, n
+* fluid
+* streak
+* sully
+* defile
+* tarnish
+* taint
+* tincture
+* sloppy
+* calsium stain
+* lawyer up
+* emetic
+* scorch mark
+* tarry
+* plague
+* cerebral edema
+* swell
+    * v, n, adj, adv
+* neurovascular
+    * of, relating to, or involving both nerves and blood vessels
+* atrocity
+    * i
+* neurovascular constriction
+* urine
+* booze
+    * alcoholic drink
+* exhume
+* manner of death
+    * [Cause & Manner of Death | Snohomish County, WA - Official Website](https://snohomishcountywa.gov/806/Cause-Manner-of-Death)
+    * cause of death
+    * Manner of death is the way to categorize death as required by the Washington State Department of Health.
+* inducement
+* for the greater good
+* averse
+    * google-averse
+* acne
+* laceration
+* makeover
+* grudge
+* serene
+* suffocate
+* fret
+    * v, n
+* seduce
+* entice
+* sophomoric
+    * adj
+    * pretentious or juvenile.
+* sophomore
+    * n
+    * a second-year university or high-school student.
+    * denoting the second recording, film, etc. released or created by a particular musician, group, director, etc.
+* denial
+    * n
+* heinous
+* wicked
+* mischievous
+* pervert
+* hypocritical
+* owe me
+* detention camp
+* sneak around one's back
+* hook up with
+* beneath
+    * adv, preposition
+* stilt
+    * n
+* foot
+    * pl. feet
+* Celsius degree
+* Fahrenheit degree
+* rambling
+* make a fuss
+* blush
+    * v
+* brush
+* moron
+* condolence
+    * n
+    * my condolence
+    * sympathy
+* retard
+    * v
+* motive/motivation
+    * [Motives vs. Motivation](https://painintheenglish.com/case/35)
+* hard candy
+    * [英語の「candy」って「キャンディ（飴）」だけじゃないという話 | 英語びより](https://ipa-mania.com/candy/)
+    * 粉を使ったものは含まれない
+* lolipop
+* pequod
+    * the name of ship in a old noveol
+    * moby-dick
+* act
+    * v, n
+* deed
+    * act
+* heatbroken
+* whine
+* gerund
+    * -ing form
+* avenge
+    * v
+    * take revnge for
+* vengeance
+    * n
+    * retribution
+* inflict
+    * v
+* aquifer
+* retribution
+    * veangeance
+* marry someone
+    * [Marry/ Get Married/ Be Married](http://www.5minuteenglish.com/apr2.htm)
+    * get married to someone
+* be married
+    * be married to someone
+* scornful eyes
+* psychiatrist
+* Psychologist
+* physician
+    * medical practitioner
+* patronize
+* insubordination
+* defiance
+    * n
+    * open resistance; bold disobedience.
+* cleanse
+* crow
+    * v
+    * 
+* crow
+    * n
+* utter
+    * adj
+    * complete, absolute
+* cock
+    * n, v
+* fowl
+* rooster
+* cockerel
+* triumph
+    * n, v
+* gloat
+    * v, n
+* dwell
+* smugness
+    * n
+* ardour
+    * n
+    * great enthusiasm or passion.
+* dampen
+    * v
+* petty
+    * adv
+    * petty victory
+* like a cockrel on a dung heap
+    * not idiom?
+* dung heap
+    * dunghill
+* dung
+    * n, v
+* courtyard
+* stunt
+    * v
+* commiserate
+* smart as a whip
+* predicament
+    * difficult
+* perk
+    * v
+    * perk someone up
+* perk
+    * n
+* fester
+    * v
+    * becom septic
+    * suppurate
+* suppurate
+    * fester
+* septic
+* burnout
+* empathy
+    * n
+    * [Empathy vs. Sympathy - Everything After Z by Dictionary.com](http://www.dictionary.com/e/empathy-vs-sympathy/)
+        * The prefix sym- comes from the Greek sýn meaning “with, together with”
+        * the prefix em- derives from the Greek en- meaning “within, in"
+* epitomized
+* mockery
+* jaw-dropping
+    * british
+    * adj
+    * extremely surprising, impressive, or shocking.
+* jaw-droppingly
+    * adv
+* loin
+    * n
+* stirringly
+    * rousing, inspiring
+* homunculus
+* lavish
+* sumptuous
+* splendid
+* bestow
+* confer
+* gun-toting
+    * carrying and using a gun usually for criminal purposes.
+* narcotiic
+    * n
+    * an additive drug
+* procreate
+* put oneself in someone's shoes
+    * (idiomatic) To try to look at a situation from a different point of view; as if one were the other person; to empathise.
+* hideous
+    * extremely ugly
+* carnal
+    * sexual
+* pound town
+* crack is wack
+    * 
+* wack
+* crack
+    * crack-cocaine
+* coined
+    * invent (a new word or phrase)
+* bagful
+    * pl. bagsful
+* fella
+    * non-standard spelling of fellow, used in representing speech in various dialects.
+* scam
+    * a dishonest scheme, a fraud
+    * swindle
+* penmanship skill
+* uncanny
+    * eerie
+* infuriating
+* unsettling way
+* childish
+* derange
+* affiliate
+* doornob
+* decor
+* decent
+* The informant
+    * informaer
+    * [Informant - Wikipedia](https://en.wikipedia.org/wiki/Informant)
+* innate
+    * inborn
+    * natural
+* instinct
+* psst
+* my office/my workpace
+* bag of bones
+    * skinny
+* derogatory
+* disparaging
+* bag of nails
+* conjuror
+* conjuring
+* smidge
+    * smidgen
+* bite me
+    * fuck off
+    * [bite me - Wiktionary](https://en.wiktionary.org/wiki/bite_me)
+* mess with
+* meddle
+* top bunk
+* I got it
+    * [「I got it」と「You got it」を使いこなそう！ | 英語学習サイト：Hapa 英会話](https://hapaeikaiwa.com/2014/04/24/%E3%80%8Ci-got-it%E3%80%8D%E3%81%A8%E3%80%8Cyou-got-it%E3%80%8D%E3%82%92%E3%82%AD%E3%83%83%E3%83%81%E3%83%AA%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%9D%E3%81%86%EF%BC%81/)
+    * I understood
+* you got it
+* coerce
+* mighty
+    * the pen is mightier than the sword
+* unabridged
+* come through
+* double one's cut
+* go toros
+    * [What does "Go Toros" mean?](https://www.usingenglish.com/forum/threads/153336-What-does-quot-Go-Toros-quot-mean)
+* tactful
+* evasive
+* it's on me
+* diplomatic
+* seethe
+* self-loathing
+* tumor
+* benign
+* maligant
+* inflammation
+* look up the word in a dictionary
+
+
+
+[数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
+
+comparative
+
+* [～ならば～なほど良いって英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/2472/)
+* [英語の「比較」が苦手な人へ！比較級で知っておくべき6つのこと｜ 英語学習ボックス](http://eigo-box.jp/grammar/comparison-1/)
+* [The 比較級, the 比較級はかなり深い？応用を含めて完全に理解しよう！【やさしく語る英文法】 | まこちょ英語ブログ](https://www.makocho0828.net/entry/2017-09-06-the_%E6%AF%94%E8%BC%83%E7%B4%9A_the_%E6%AF%94%E8%BC%83%E7%B4%9A%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8A%E6%B7%B1%E3%81%84%EF%BC%9F%E5%BF%9C%E7%94%A8%E3%82%92%E5%90%AB%E3%82%81%E3%81%A6)
+* comparative degree
+    * 比較級
+* superlative degree
+    * 最上級
+* positive degree
+    * 元級
+* He is older than I by three years.
+* He is three years older than I
+* S+V the comparative degree the comparative degree S+V
+    * The comparative degree S+V, the comparative degree S+V
+
+
 
 
 

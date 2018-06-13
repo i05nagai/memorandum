@@ -16,6 +16,12 @@ files
 * LICENSE.txt
 
 ## Pckagign your porject
+* [Packaging Python Projects — Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/)
+
+```
+pip install setuptools wheel
+```
+
 Create source distributions
 
 ```
@@ -25,7 +31,18 @@ python setup.py sdist
 Create Wheels
 
 ```
+python3 setup.py bdist_wheel
+```
 
+This command generate two files in `dist` directory
+
+* `.tar.gz`
+    * source archive
+* `.whl`
+    * built distribution
+
+```
+pip install twine
 ```
 
 ## Reference

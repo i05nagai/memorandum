@@ -54,6 +54,30 @@ export GOPATH="/opt/local/go"
 ## API server
 * [7 Frameworks To Build A REST API In Go | Nordic APIs |](https://nordicapis.com/7-frameworks-to-build-a-rest-api-in-go/)
 
+## Packaging
+* variables in a package is initialized when the package is imported
+    * [Effective Go - The Go Programming Language](https://golang.org/doc/effective_go.html#init)
+* `func init()` in a file is used for initializing a package
+    * is called after all the variable declarations in the package have evaluated their initializers, and those are evaluated only after all the imported packages have been initialized.
+
+
+## Enum
+`iota` operator
+
+```go
+const (
+    _           = iota // ignore first value by assigning to blank identifier
+    KB float64  = 1 << (10 * iota)
+    MB
+    GB
+    TB
+    PB
+    EB
+    ZB
+    YB
+)
+```
+
 ## Naming convention
 * package name
     * lower case

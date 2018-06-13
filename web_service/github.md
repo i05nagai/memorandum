@@ -102,26 +102,17 @@ Be sure to use SSH url for `git-clone`.
 
 ## Generating a new SSH key and adding it to the ssh-agent - User Documentation
 * [Using SSH Agent Forwarding | GitHub Developer Guide](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
+* [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 1. Terminalを開く
 2. `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 3. 
 
-### Reference
-* [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-
 ## Adding a new SSH key to your GitHub account - User Documentation
-
-
-### Reference
 * [Adding a new SSH key to your GitHub account - User Documentation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-
-
-### Reference
 * [Error: Permission denied (publickey) - User Documentation](https://help.github.com/articles/error-permission-denied-publickey/)
-
-### Reference
 * [Travis-CI でコミットして GitHub にプッシュする - 公開鍵認証を利用してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/)
+
 
 ## Search in Github
 検索対象にできるのは以下。
@@ -306,6 +297,14 @@ https://github.com/<user-name>.keys
 * [andela/code-review-guidelines: Code Review Guidelines for Andela](https://github.com/andela/code-review-guidelines)
 * [How to write the perfect pull request | The GitHub Blog](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/)
 * [GitHub「完璧なプルリクの書き方を教えるぜ」 - Qiita](https://qiita.com/umanoda/items/93aec41213f8e3ce14c8)
+
+## Release
+* When you create a release
+    * it will add automatically source codes as zip and tar.gz files as release assets.
+    * it will add git-tag to the refered commit/branch.
+
+You can create git tag first.
+After creating the tag, you can create release to existing tags.
 
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)

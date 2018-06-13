@@ -1,3 +1,7 @@
+---
+title: pytest-pep8
+---
+
 ## pytest-pep8
 
 ```
@@ -5,9 +9,10 @@ pip install pytest-pep8
 ```
 
 pytsetでpep8の確認ができる。
+pytest実行時に`--pep8`をつける。
 
 ```
-pytest --pep8
+pytest --pep8 .
 ```
 
 ## Settings

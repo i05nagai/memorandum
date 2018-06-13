@@ -25,8 +25,8 @@ backend : Tkagg
 に変更。
 `matplotlibrc`の場所は以下のコマンドでわかる。
 
-```shell
-$python -c "import matplotlib;print(matplotlib.matplotlib_fname())"
+```
+$ python -c "import matplotlib;print(matplotlib.matplotlib_fname())"
 ```
 
 * 行列のマス目で描画

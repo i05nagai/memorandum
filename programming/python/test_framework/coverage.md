@@ -1,15 +1,19 @@
+---
+tilte: coverage
+---
+
 # coverage
 python package for code coverage.
 
-```python
+```
 pip install coverage
 ```
 
 ## Integration with unit testing frameworks
 * for py.test
 
-```python
-pip install py
+```
+pip install pytest-cov
 ```
 
 * for nosetests
