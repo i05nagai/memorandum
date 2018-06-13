@@ -1,8 +1,8 @@
 ---
-title: Vundle
+title: Vundle.vim
 ---
 
-## Vundle
+## Vundle.vim
 Vundle, the plug-in manager for Vim.
 Not activly maintained.
 
