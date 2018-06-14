@@ -638,3 +638,4 @@ $$
 
 ## Reference
 * http://jeff560.tripod.com/set.html
+* [axioms - Is the Bourbaki treatment of Set Theory outdated? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/929303/is-the-bourbaki-treatment-of-set-theory-outdated)
