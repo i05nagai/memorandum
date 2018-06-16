@@ -5,38 +5,71 @@ title: Anaconda
 ## Anaconda
 * condaはpackage manager
 * anacondaはplatform
+    * with many packages
+* minicondaはplatform
+    * without packages
 
-仮想環境構築
+## Install
+* [Installing on Linux — Conda documentation](https://conda.io/docs/user-guide/install/linux.html#install-linux-silent)
+
+For Linux,
+
+Get shell scripts. [Miniconda — Conda](https://conda.io/miniconda.html)
 
 ```
+curl -L -O https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+bash Miniconda2-latest-Linux-x86_64.sh
+```
+
+* license agreement
+* install location
+    * default `~/miniconda2`
+* Add install location to PATH
+
+## CLI
+
+```
+conda list
+```
+
+## Usage
+
+Create virtual environment 
+
+```
+# Create with packages
 conda create -n py2 python=2.7 numpy scipy pandas jupyter
-#anacondaとしてまとめて入れることも可能。
+# Create with anaconda packages
 conda create -n anaconda2 python=2.7 anaconda
 ```
 
-仮想環境確認
+List all virtual environment
 
 ```
 conda env list
-# こちらでも出る。
+# or
 conda info -e
 ```
 
-仮想環境の出入り
+Activate virtual environment
 
 ```
-# 仮想環境に入る
+# Activate
 source activate py2
-# windowsではactivate py2
-# 仮想環境から抜ける
+# for windows, 'activate py2'
+```
+
+Deactivate virtual environment
+
+```
 source deactivate
-# windowsではdeactivate
+# In windows, 'deactivate'
 ```
 
-仮想環境の削除
+Delete virtual enviornment
 
 ```
-conda remove -n py2 --all
+conda remove -n <evn-name> --all
 ```
 
 ## managing packages
@@ -106,6 +139,11 @@ Delete environment
 ```
 conda remove -n py2 --all
 ```
+
+## Tips
+
+### Difference between anaconda and miniconda
+* [python \- Anaconda vs miniconda \- Stack Overflow](https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda)
 
 ## Reference
 * [What is Anaconda? | Anaconda](https://www.anaconda.com/what-is-anaconda/)
