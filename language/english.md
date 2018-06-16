@@ -688,6 +688,17 @@ I cross off the customer's name from the reservation list.
 * maligant
 * inflammation
 * look up the word in a dictionary
+* aethetic
+    * next up is the overall aesthetic look of the resume
+* ample
+    * make ample use of white space
+* texty
+    * too texty
+* fragment sentence
+    * sentence fragment
+    * [Sentence Fragments](http://grammar.ccc.commnet.edu/grammar/fragments.htm)
+* leave something/someone out
+    * fail to include
 
 
 
