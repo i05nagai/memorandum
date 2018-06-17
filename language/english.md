@@ -688,6 +688,64 @@ I cross off the customer's name from the reservation list.
 * maligant
 * inflammation
 * look up the word in a dictionary
+* aethetic
+    * next up is the overall aesthetic look of the resume
+* ample
+    * make ample use of white space
+* texty
+    * too texty
+* fragment sentence
+    * sentence fragment
+    * [Sentence Fragments](http://grammar.ccc.commnet.edu/grammar/fragments.htm)
+* leave something/someone out
+    * fail to include
+* cliche
+    * please dont't say it was your mother. that'd be too cliched
+* run it down
+    * let me run it down for you
+    * to tell the whole story
+* clingy
+    * adj
+    * you killed someone because she was getting too clingy
+    * too emotionally dependent
+* bug
+    * v
+    * she bugged you
+* v.a. check
+    * veterans affairs
+    * v.a. benefits payment
+    * [VA Benefit Payments Calendar for 2018 \| Military\.com](https://www.military.com/paycheck-chronicles/2018/01/30/va-benefit-payments-calendar-2018.html)
+* binge
+    * n, v
+    * he goes on a binge, drinks till he blacks out
+* indulge
+    * a period of excessive indulgence in an activity, especially drinking alcohol or eating.
+* flimsy
+    * flimsy yellow metrocards that must be swiped at precisely the right speed.
+* lycanthropy
+* cane toad
+* undercover
+    * adj
+    * you're working undercover
+* transfix
+    * up to the moment you left, you had them transfixed.
+* bottoms up!
+* cardiac arrest
+    * this man will go into cardiac arrest
+* artery
+* biofeedback
+    * little biofeedback trick
+* gut-rot
+    * rotgut
+    * poor-quality and potentially harmful alcoholic drink.
+* ripple
+    * same gut-rot you shot into ripple
+* navel
+    * do you know the one part of the body that coroners rarely inspect for needle marks? inside the navel
+    * a rounded knotty depression in the centre of a person's belly caused by the detachment of the umbilical cord after birth; the umbilicus.
+* belly
+* umbilical cord
+
 
 
 

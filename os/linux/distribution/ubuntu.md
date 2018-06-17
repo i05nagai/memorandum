@@ -235,6 +235,40 @@ You can change to default keybinds by
 gsettings set org.gnome.desktop.interface gtk-key-theme "Default"
 ```
 
+### Backlight
+* [grub2 \- What is the difference between GRUB\_CMDLINE\_LINUX and GRUB\_CMDLINE\_LINUX\_DEFAULT in /etc/default/grub \- Ask Ubuntu](https://askubuntu.com/questions/575651/what-is-the-difference-between-grub-cmdline-linux-and-grub-cmdline-linux-default)
+* [echo xx \| sudo tee /sys/class/backlight/intel\_backlight/brightness](https://askubuntu.com/questions/471847/brightness-fn-key-shortcut-doesnt-work-on-asus-laptop)
+
+Chagne backlight brightness from CLI
+
+```
+# check backlight device
+$ ls -la /sys/class/backlight
+
+# check max value of brightness
+$ sudo cat /sys/class/backlight/intel_backlight/max_brightness
+
+# change value of brightness
+$ echo 5000 | sudo tee /sys/class/backlight/intel_backlight/brightness
+
+# get current brightness
+$ cat /sys/class/backlight/intel_backlight/brightness
+```
+
+```
+sudo vim /etc/default/grub
+```
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor"
+```
+
+Execute
+
+```
+sudo update-grab
+```
+
 
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)

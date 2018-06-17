@@ -1,59 +1,11 @@
+---
+title: Travis Ci
+---
 
-<!-- vim-markdown-toc GFM -->
-
-* [Travis CI](#travis-ci)
-	* [Customizing the Build](#customizing-the-build)
-		* [The Build Lifecycle](#the-build-lifecycle)
-		* [Installing Packages Using apt](#installing-packages-using-apt)
-		* [Builds Time out](#builds-time-out)
-		* [Git clone depth](#git-clone-depth)
-		* [Building specific branches](#building-specific-branches)
-		* [Skipping a build](#skipping-a-build)
-		* [Build Matrix](#build-matrix)
-			* [Excluding Jobs](#excluding-jobs)
-	* [Installing Dependencies](#installing-dependencies)
-	* [Validating .travis.yml files](#validating-travisyml-files)
-		* [online](#online)
-		* [offline](#offline)
-	* [Building a Python  Project](#building-a-python--project)
-		* [What This Guide Covers](#what-this-guide-covers)
-		* [Choosing Python versions to test against](#choosing-python-versions-to-test-against)
-		* [Travis CI Uses Isolated virtualenv](#travis-ci-uses-isolated-virtualenv)
-		* [PyPy Support](#pypy-support)
-		* [Default Python Version](#default-python-version)
-		* [Specifying Test Scrip](#specifying-test-scrip)
-	* [Building a C++ Project](#building-a-c-project)
-		* [What This Guide Covers](#what-this-guide-covers-1)
-		* [CI environment for C++ Projects](#ci-environment-for-c-projects)
-		* [Dependency Management](#dependency-management)
-		* [Default Test Script](#default-test-script)
-		* [Choosing compilers to test against](#choosing-compilers-to-test-against)
-		* [Build Matrix](#build-matrix-1)
-	* [Configuring Build Notifications](#configuring-build-notifications)
-		* [Notifications](#notifications)
-	* [Notifications](#notifications-1)
-		* [slack](#slack)
-		* [Encrypting your credentials](#encrypting-your-credentials)
-	* [CI Environment Reference](#ci-environment-reference)
-		* [The OS X Build Environment - Travis CI](#the-os-x-build-environment---travis-ci)
-	* [Encrypting Files and Data](#encrypting-files-and-data)
-		* [Usages](#usages)
-			* [Note on escaping certain symbols](#note-on-escaping-certain-symbols)
-			* [Notifications Example](#notifications-example)
-			* [Detailed Discussion](#detailed-discussion)
-	* [tips](#tips)
-		* [travis command line tools](#travis-command-line-tools)
-	* [.travis.yml](#travisyml)
-		* [C++](#c)
-			* [reference](#reference)
-
-<!-- vim-markdown-toc -->
-
-
-# Travis CI
+## Travis CI
 
 * `dist:trusty`
-   . * g++-4.8.4がdefautlで使える
+   * g++-4.8.4がdefaultで使える
 * `g++-4.6`
 
 ## Customizing the Build
@@ -96,7 +48,7 @@ buildのライフサイクルは以下のようになる。
 ### Installing Packages Using apt
 依存関係の解決方法
 
-```yml
+```yaml
 before_install:
 - sudo apt-get update -qq
 - sudo apt-get install -qq [packages list]
@@ -129,7 +81,7 @@ buildするbranchとbuildしないbranchを指定できる。
 `gh-pages`はsafelistにいれるない限りbuildされない。
 `only`と`except`の両方に書いた場合は、`only`が優先される。
 
-```yml
+```yaml
 branches:
   # blocklist
   except:
@@ -153,11 +105,6 @@ branches:
 
 ### Skipping a build
 commit messageに`[ci skip]`, `[skip ci]`を入れてコミットするとbuildがskipされる。
-
-### Build Matrix
-各言語ごとに
-
-#### Excluding Jobs
 
 
 ## Using Docker in Builds
@@ -227,221 +174,33 @@ before_install:
   - sudo apt-get -y install docker-ce
 ```
 
-## Installing Dependencies
-
-
-## Validating .travis.yml files
-
-### online
-以下のサイトでonlineのvalidationができる。
-* [Validate your .travis.yml file](http://lint.travis-ci.org/)
-
-### offline
-オフラインの場合は下記が必要。
-* Ruby1.9.3
-* RubyGem
-
-インストール
-
-```yml
-gem install travis --no-rdoc --no-ri
-```
-
-実行
-
-```yml
-travis lint /path/to/.travis.yml
-```
-
-## Building a Python  Project
-
-### What This Guide Covers
-
-### Choosing Python versions to test against
-pythonの2.6, 2.7,...3.6でテストしたいときは以下のようにかく。
-```yml
-language: python
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.5-dev" # 3.5 development branch
-  - "3.6-dev" # 3.6 development branch
-  - "nightly" # currently points to 3.7-dev
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
-script: pytest
-```
-
-### Travis CI Uses Isolated virtualenv
-ciのpythonは全てvirtualenv上で実行される。
-なのでpythonのpackageはaptではなくpipでいれる。
-
-
-### PyPy Support
-Travis CIはPyPyとPyPy3に対応している。
-
-```yml
-python:
-  - "2.6"
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  # PyPy versions
-  - "pypy"
-  - "pypy"  # PyPy2 2.5.0
-  - "pypy3" # Pypy3 2.4.0
-  - "pypy-5.3.1"
-```
-
-### Default Python Version
-defaultは2.7
-
-### Specifying Test Scrip
-testの実行方法を記載。
-以下では`pytest`というコマンドが実行される。
-`script`がないとfailする。
-
-```yml
-# command to run tests
-script: pytest
-```
-
-### Build Matrix
-pythonのBuild matrixは`python`と`env`によって生成される。
-
-
-## Building a C++ Project
-
-### What This Guide Covers 
-先にGetting Startedとgeneral build configurationを見るように。
-
-### CI environment for C++ Projects
-Travis CIのVirtual Machineは64bitで
-* gcc
-* clang
-* core GNU build toolchain (autotools, make), cmake, scons
-
-が備わっている。
-travis-ci.orgはデフォルトでAutotoolsとMakeを使うことを想定している。
-
-### Dependency Management
-C++は他の言語のように標準的なdependency managementがないので、Travis CIでは特に何もしない。
-必要なものがある場合は、`.travis.yml`の`install:`に記述する。
-
-```yml
-install: make get-deps
-```
-
-上記の場合は`make`にルールを書いておく必要がある。
-
-
-### Default Test Script
-Travis CIはデフォルトでは以下のコマンドでtestを実行する。
-
-```yml
-./configure && make && make test
-```
-
-上記でbuildとtestのチェックができるが、この処理を上書きたい場合は他の言語同様`script:`を上書きする。
-
-```yml
-script: cmake; ctest
-```
-
-### Choosing compilers to test against
-gcc, clangの両方でテストが可能。
-`compiler:`で指定する。
-
-```yml
-#clangのみ
-compiler: clang
-#clangとgcc
-compiler:
-  - clang
-  - gcc
-```
-
-`compiler:`を設定すると環境変数として以下が設定される。
-* `CXX`に`g++` or `clang++`
-* `CC`に`gcc` or `clang`
-
-後述のbuild matrix
-
-### Build Matrix
-C++のbuild matrixの変数は、`env`と`compiler`の2つである。
-つまり、`env`と`compiler`で指定した組み合わせの数だけbuildが実行される。
-
-## Configuring Build Notifications
-### Notifications
-
 ## Notifications
+
 ### slack
 1. slackの`App & Integraiton`より、Travis CIを選択
 2. 登録するとTokenが発行される
 3. 以下のいずれかを`.travis.yml`に記載
     * simple
 
-```yml
+```yaml
 notifications:
   slack: i05nagai:Onqc91K8U1WKSLYGgThWftTY
 ```
 
-    * multi-channel
+multi-channel
 
-```yml
+```yaml
 notifications:
   slack:
     rooms:
       - account_name:token#channel
       - account_name:token#channel
 ```
-
-    * 
 
 ### Encrypting your credentials
-tokenがわかると誰でも通知できてしまうので、tokenを暗号化したものを`.travis.yml`に記載する。
-暗号化はCommand line toolsをインストールし、以下を実行する。
+Use travis CLI.
 
-```shell
-travis encrypt "account_name:token#channel"
-```
-
-実行すると下記が出力される。
-
-```
-Detected repository as repository/name, is this correct? |yes| yes
-Please add the following to your .travis.yml file:
-
-  secure: "key"
-
-  Pro Tip: You can add it automatically by running with --add.
-```
-
-`secure: "key"`の部分をコピーして`.travis.ylm`に以下のように貼り付ける。　
-
-```
-notifications:
-  slack:
-    rooms:
-      - secure: "key"
-```
-
-## CI Environment Reference
-
-### The OS X Build Environment - Travis CI
-* [The OS X Build Environment - Travis CI](https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
-
-```
-brew install gcc48
-```
-
-### Environment Variables
+## Environment Variables
 * [Environment Variables - Travis CI](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 
 Defining Variables in Repository Settings
@@ -454,40 +213,14 @@ Travisで利用可能な環境変数の一覧
     * Travis CIにcopyされたrepositoryのtop directory
 
 
-
 ## Encrypting Files and Data
 
-### Usages
-Travis CLIで、暗号化ができる。
-どのくらい信頼度があるかは不明。
-
-```shell
-gem install travis
-```
-
-```shell
-travis encrypt SOMEVAR=secretvalue
-```
-
-を実行すると
-
-```shell
-secure: ".... encrypted data ...."
-```
-
-と暗号化されたデータが得られる。
-これを暗号化前のkeyとしてymlにおけば良い。
-
-#### Note on escaping certain symbols
-
-#### Notifications Example 
-
-#### Detailed Discussion
+### Detailed Discussion
 どのように暗号化されたテキストが復号化されるかを説明する。
 
 以下のようになっているとすると
 
-```yml
+```yaml
 notifications:
   campfire:
     rooms:
@@ -496,7 +229,7 @@ notifications:
 
 次のように解釈される。
 
-```yml
+```yaml
 notifications:
   campfire:
     rooms: "decrypted string"
@@ -504,7 +237,7 @@ notifications:
 
 一方、次の場合は
 
-```yml
+```yaml
 notifications:
   campfire:
     rooms:
@@ -513,7 +246,7 @@ notifications:
 
 次のようになる。
 
-```yml
+```yaml
 notifications:
   campfire:
     rooms:
@@ -522,62 +255,39 @@ notifications:
 
 環境変数も同様である。
 
-```yml
+```yaml
 env:
   - secure: "encrypted string"
 ```
 
-```yml
+```yaml
 env:
   - "decrypted string"
 ```
 
 
-## tips
+## Tips
+
 ### travis command line tools
 * [travis-ci/travis.rb: Travis CI Client (CLI and Ruby library)](https://github.com/travis-ci/travis.rb)
 
 
-## .travis.yml
-### C++
-下記指定でC++としてのbuildとなる。
-```yml
-language:cpp
-```
-デフォルトでは、`autotool`想定で書きコマンドが実行される。
-
-```shell
-./configure && make && make test
-```
-
-compilerの指定は次のようにする。
-```cpp
-compiler:
-	- clang
-	- gcc
-```
-もしくは
-```shell
-compiler: gcc
-```
-
-### Private key
+### Adding private key
 Private keyを追加する方法。
 
 * [squeezing private SSH key into .travis.yml file](https://gist.github.com/lukewpatterson/4242707)
 * [Travis-CI でコミットして GitHub にプッシュする - 公開鍵認証を利用してみる | そんなこと覚えてない](http://blog.eiel.info/blog/2014/02/18/github-push-from-travis/)
 
-## OSXのビルドの開始が遅い
-SXのビルドは、物理マシンを利用しているので、利用者が多い場合は開始に時間がかかる。 下記にTravis CIのビルドステータスがある。
+### OSXのビルドの開始が遅い
+OSXのビルドは、物理マシンを利用しているので、利用者が多い場合は開始に時間がかかる。 下記にTravis CIのビルドステータスがある。
 
 * [Travis CI Status](https://www.traviscistatus.com/)
 
 OSXでのjob数はずっと同じ値になっており、Jobがスタックしているのが分かる。
 
-### Reference
 * [OSX builds extremely slow to start · Issue #7304 · travis-ci/travis-ci](https://github.com/travis-ci/travis-ci/issues/7304)
 
-## PRのブランチは全てビルド、pushはmasterのみにする場合
+### PRのブランチは全てビルド、pushはmasterのみにする場合
 `.travis.yml`に以下を記載。
 
 ```yaml
@@ -593,8 +303,24 @@ travis ciのsettingsから`Build pushs`と`Build pull requests`をONにすれば
 pushでのビルドをオフにすると、merge後のmaster branchのビルドが行われない為、badgeが更新されない。
 PRでのビルドはOSSの場合必須なので、ビルドは抑えたい場合はこのような設定が必要。
 
+### Use GCC48
+For OSX, [The OS X Build Environment - Travis CI](https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
 
-#### reference
+```
+brew install gcc48
+```
+
+
+### Validating .travis.yml files
+以下のサイトでonlineのvalidationができる。
+
+* [Validate your .travis.yml file](http://lint.travis-ci.org/)
+
+```
+travis lint /path/to/.travis.yml
+```
+
+## Reference
 * [C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
 * [http://packsaddle.org/articles/differences-between-travis-ci-and-circle-ci/ TravisCIとCircleCIでちょっとずつ違うビルド環境の考え方の違い – Saddler - checkstyle to anywhere]
 * [Travis CIからgithub.ioにデプロイする方法 - Qiita](http://qiita.com/dora56/items/cafae475daec802b6b8f)

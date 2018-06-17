@@ -3,6 +3,7 @@ title: setup.py
 ---
 
 ## setup.py
+
 * [Packaging and distributing projects — Python Packaging User Guide](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
 
 * `setup.py`
@@ -153,6 +154,12 @@ install_requires = [str(r.req) for r in install_reqs]
 # you should specify `setup_requires` and 
 setup_requires = ['pip==10.0.1']
 ```
+
+### Custom commands
+* [setuptools/\_\_init\_\_\.py at bb71fd1bed9f5e5e239ef99be82ed57e9f9b1dda · pypa/setuptools](https://github.com/pypa/setuptools/blob/bb71fd1bed9f5e5e239ef99be82ed57e9f9b1dda/setuptools/__init__.py#L137)
+    * inherits `distutils.core.Command`
+    * https://github.com/python/cpython/blob/master/Lib/distutils/cmd.py#L12
+    * `user_options` does not support list
 
 # Reference
 * [4. ソースコード配布物を作成する — Python 2.7.x ドキュメント](http://docs.python.jp/2/distutils/sourcedist.html)

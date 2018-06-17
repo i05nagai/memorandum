@@ -22,10 +22,10 @@ brew install rbenv
 `~/.bash_profile`か`~/.zprofile`に以下を記載する。
 
 ```shell
-## renv
+# renv
 if which rbenv > /dev/null 2>&1; then
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	eval "$(rbenv init -)"
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
 fi
 ```
 
@@ -48,8 +48,6 @@ Then add following lines to shell env
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
-
-
 
 ## Usage
 pyenv と同じ。

@@ -5,11 +5,13 @@ title: setuptools
 ## setuptools
 
 
-## Command
+## API
+setuptools.Command class
+
 * [setuptools/\_\_init\_\_\.py at bb71fd1bed9f5e5e239ef99be82ed57e9f9b1dda · pypa/setuptools](https://github.com/pypa/setuptools/blob/bb71fd1bed9f5e5e239ef99be82ed57e9f9b1dda/setuptools/__init__.py#L137)
     * inherits `distutils.core.Command`
-        o
-
+    * https://github.com/python/cpython/blob/master/Lib/distutils/cmd.py#L12
+    * `user_options` does not support list
 
 
 ## Reference

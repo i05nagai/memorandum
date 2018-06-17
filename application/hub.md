@@ -2,29 +2,41 @@
 title: hub
 ---
 
-# hub
-
+## hub
 
 ## Install
+For OSX
 
-* OSX
-
-```shell
+```
 brew install --HEAD hub
 ```
 
 `hub`コマンドを`git`コマンドのかわりに使用する場合は、以下のコマンドでaliasをふる。
 `.bash_profile`や`.zprofile`などに記載する。
 
-```shell
+```
 eval "$(hub alias -s)"
+```
+
+For Linux, use single compiled binary
+[Releases · github/hub](https://github.com/github/hub/releases)
+
+```
+curl -L -O https://github.com/github/hub/releases/download/v2.4.0/hub-linux-amd64-2.4.0.tgz
+tar xfv hub-linux-amd64-2.4.0.tgz
+cd hub-linux-amd64-2.4.0
+./install 
 ```
 
 ## Usage
 
-### hub clone
+```
+hub clone
+```
 
-### hub pull-request
+```
+hub pull-request
+```
 
 Reviewをつける
 
