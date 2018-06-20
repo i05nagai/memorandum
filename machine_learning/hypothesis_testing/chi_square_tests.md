@@ -6,17 +6,16 @@ title: Chi-square tests
 
 
 ## Chi-Square test for the Population Variance
-* True ditribution is normal distribution
-* $X \sim \mathrm{N}(\mu, \sigma)$,
+
+* True ditribution: $X \sim \mathrm{N}(\mu, \sigma^{2})$,
 * $X_{1}, \ldots, X_{N}$,
-    * $X$のi.i.d
-* $\sigma^{2}$,
-    * unkown
+    * i.i.d. of $X$
+* $\mu$ is unknown
 
 ### Example
 * $\sigma_{0} \in \mathbb{R}_{>0}$
     * std deviation for null hypothesis
-* $n \in \mathbb{N}$,
+* $N \in \mathbb{N}$,
     * sample size
 * $x_{i} := X_{i}(\omega)$,
 * $\alpha \in (0, 1)$,
@@ -27,15 +26,17 @@ $$
 \begin{eqnarray}
     \bar{x}
     & := &
-        \bar{X}_{n}(\omega)
+        \bar{X}_{N}(\omega)
     \nonumber
     \\
     s
     & := &
-        \sqrt{V_{n}(X_{1}, \ldots, X_{n})(\omega)}
+        \sqrt{V_{n}(X_{1}, \ldots, X_{N})(\omega)}
     \nonumber
 \end{eqnarray}
 $$
+
+The steps for chi-square test for population variance are as follos;
 
 * (1) State the hypotheses:
     * null hypothesis
@@ -55,37 +56,62 @@ $$
     y
     & = &
         \frac{
-            (n - 1)s^{2}
+            (N - 1)s^{2}
         }{
             \sigma_{0}^{2}
         }
-    .
 \end{eqnarray}
 $$
 
 * (3) Compute the $p$ value
-    * $Y$: $\chi^{2}$ distribution with $n - 1$ degree of freedom
+    * $Y$: $\chi^{2}$ distribution with $N - 1$ degree of freedom
     * (a) 
-        * If $y$ is less than the median, $$
-p := 2P(Y \le y)$$,
-        * If $y$ is greater than the median, $$
-p := 2P(Y \ge y)$$,
+        * If $y$ is less than the median, $$p := 2P(Y \le y)$$,
+        * If $y$ is greater than the median, $$p := 2P(Y \ge y)$$,
     * (b) $p := P(Y > y)$,
     * (c) $p := P(Y < y)$,
 * (4)
     * If $p < \alpha$, reject $H_{0}$,
     * otherwise, fail to reject $H_{0}$,
 
+### Theory
+
+#### Corollary 9.
+* $X \sim \mathrm{N}(\mu, \sigma^{2})$,
+* $X_{1}, \ldots, X_{N}$,
+    * i.i.d. of $X$
+
+Then
+
+$$
+\begin{eqnarray}
+    \frac{
+        (N - 1) V_{N}(X_{1}, \ldots, X_{N})
+    }{
+        \sigma^{2}
+    }
+    & \sim &
+        \chi(N - 1)
+    \nonumber
+\end{eqnarray}
+$$
+
+#### proof.
+By Theorem 19.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 
 ## Chi-square test for goodness of fit
+The test is also known as Pearson's chi-squared test.
 This approximation known as Peason's approximation.
 
-* True ditribution is multinomial distribution
-* $X \sim f(p_{1}, \ldots, p_{m})$,
-    * $f$ multinomial distribution
+* True ditribution: $X \sim f(p_{1}, \ldots, p_{m})$,
+    * multinomial distribution
+    * $f$: p.d.f. of multinomial distribution
     * $\sum_{j=1}^{m} p_{j} = 1$,
     * $$X \in \{1, \ldots, m\}$$,
-* $n \in \mathbb{N}$,
+* $N \in \mathbb{N}$,
     * sample size
 * $X_{1}, \ldots, X_{n}$,
     * $X$のi.i.d
@@ -93,7 +119,7 @@ This approximation known as Peason's approximation.
 * All expected values are at least 5
 
 ### Example
-
+The steps for chi-square test for goodness of fit are as follows;
 
 * (1) State the hypothesis
     * null hypothesis
@@ -119,14 +145,14 @@ $$
             \frac{
                 (u_{j} - n p_{j})^{2}
             }{
-                np_{j}
+                Np_{j}
             }
     \nonumber
 \end{eqnarray}
 $$
 
 * (3) Compute $p$ value
-    * $T \sim \mathrm{t}(n-1)$,
+    * $T \sim \mathrm{t}(N-1)$,
     * (a) $$
     p := P(T \le |t| \cup T \ge |t|)$$
     * (b) $p := P(T > t)$
@@ -135,7 +161,9 @@ $$
     * If $p < \alpha$, reject $H_{0}$,
     * otherwise, fail to reject $H_{0}$,
 
-### Theorem21
+### Theory
+
+#### Theorem21
 $$X_{1}, \ldots, X_{N}$$, $$Y_{1}, \ldots, Y_{N}$$が正規分布に従っているとする。
 また、$X_{i}$と$Y_{i}$が各$i$について独立とする。
 このとき、
@@ -175,8 +203,12 @@ $$
     }
 $$,
 
+#### proof.
 
-### Proposition 3
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
+#### Proposition 3
 * $X \sim f(p_{1}, \ldots, p_{m})$,
     * $f$ is multinomial distribution
     * $\sum_{j=1}^{m}p_{j} = 1$,
@@ -217,10 +249,14 @@ Then $W$ has an approximate $\chi^{2}$ distribution with
 
 * $r - m$ degree of freedom
 
-### proof.
+#### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Chi square tests for Independence
+[Serge Langg]Algebra
 
 ## Chi square tests for Homegenity
+
+## Reference
+* [Pearson's chi\-squared test \- Wikipedia](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test)
