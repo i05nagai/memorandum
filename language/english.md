@@ -745,7 +745,104 @@ I cross off the customer's name from the reservation list.
     * a rounded knotty depression in the centre of a person's belly caused by the detachment of the umbilical cord after birth; the umbilicus.
 * belly
 * umbilical cord
-
+* pertinent
+    * adj
+    * that's pertinent to just about any job.
+* apposite
+* The red mile
+    * [The Red Mile \- Wikipedia](https://en.wikipedia.org/wiki/The_Red_Mile)
+* hustle out
+* jostle
+    * v, b
+* hassle
+    * n, v
+    * irritaging incovenience
+    * [「面倒くさい」を自然な英語でどう言いますか？｜英会話｜アルク](https://www.alc.co.jp/speaking/article/question/100712.html)
+* pester
+* drawn
+    * your face looks drawn
+* take its course
+    * run its course
+    * I have no interest in letting nature take its course.
+* have no interest in doing something
+    * to not want to do something
+* have an arrangement
+    * a plan or preparation for a future event.
+* deputy
+    * n
+* carny
+    * n
+    * a carnival or funfair
+* funfair
+    * n
+* blond
+    * for male
+* blondes
+    * for female
+* deal-breaker
+    * no snoring, thats's deal-breaker.
+* boldness
+* attentiveness
+* be an open book to
+    * you are an open book to me.
+* decipher
+    * v
+* gullible
+    * you're as gullible as he was.
+    * credulous
+* credulous
+    * gullible
+* couldn't care less about someone
+    * [What does “I couldn’t care less” mean, and which is correct, couldn't or could? \| Ask The Editor \| Learner's Dictionary](http://www.learnersdictionary.com/qa/I-COULDN-T-care-less-or-I-COULD-care-less)
+    * I could care less about him
+    * Tom says he couldn't care less if he gets fired. (=Tom says he doesn’t care if he gets fired; it won’t matter to him.)
+        * correct
+    * Tom says he could care less if he gets fired.
+        * incorret but frequently used
+        * meaning can be opposite or same as couldn't
+* anger management
+    * psyco-therapeutic program
+* stash
+* hydrangea
+    * n
+* barely
+    * hardly
+* hardly
+    * [Hardly ever, rarely, scarcely, seldom \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/adverbs-of-time-and-frequency/hardly-ever-rarely-scarcely-seldom)
+* scarcely
+    * hardly but more formal than hardly
+* trout
+    * a type of fish
+* modal verb
+* baroque
+* primary auxiliary verb
+    * be, do and have
+* modal auxiliary verb
+    * can, could, may, might, must, shall, should, will, and would.
+    * modal verb
+* gallant
+    * adj, n, v
+    * brave, heroic
+* scavenger
+    * scavenger hunt.
+* scavenge
+    * v
+* rummage
+* feminine
+* culprit
+* jog
+    * jog your memory
+* Tupperware
+* hustler
+* barge in
+* get off on
+    * you get off on danger
+    * be excited or aroused by (something)
+* wars of the roses
+    * [Wars of the Roses \- Wikipedia](https://en.wikipedia.org/wiki/Wars_of_the_Roses)
+* keep something pushing
+    * continue to try hard
+* abiding
 
 
 
@@ -768,6 +865,11 @@ comparative
     * The comparative degree S+V, the comparative degree S+V
 
 
+* afraid of / afraid to do
+    * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
+    * afraid to do = araid doing
+    * afirad of doing
+        * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
 
 
 
