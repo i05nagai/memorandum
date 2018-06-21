@@ -636,5 +636,11 @@ $$
 \end{eqnarray}
 $$
 
+### Existense of emptyset
+* [set theory - The existence of the empty set is an axiom of ZFC or not? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/278863/the-existence-of-the-empty-set-is-an-axiom-of-zfc-or-not)
+
+$\exists x (x = x)$ is a formal statements of 
+
 ## Reference
 * http://jeff560.tripod.com/set.html
+* [axioms - Is the Bourbaki treatment of Set Theory outdated? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/929303/is-the-bourbaki-treatment-of-set-theory-outdated)

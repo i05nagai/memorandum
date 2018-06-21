@@ -3,12 +3,14 @@ title: Code Climate CLI
 ---
 
 ## Code Climate CLI
+CLI for reporting to Code Climate.
+In Code Climate 1.0, it's provided as single binary file for any languages.
 
+## Install
 ```
 curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
 chmod +x ./cc-test-reporter
 ```
-
 
 ## CLI
 ```
@@ -132,3 +134,4 @@ cc-test-reporter after-build --coverage-input-type coverage.py
 
 ## Reference
 * [CC\_TEST\_REPORTER\_ID: ABC123](https://docs.codeclimate.com/docs/configuring-test-coverage)
+* [codeclimate/test-reporter: Code Climate Test Reporter](https://github.com/codeclimate/test-reporter)

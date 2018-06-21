@@ -224,6 +224,38 @@ virtualenv package not installed
 Circle CIにsshでログインして、`asv run`を実行すると、入力画面がでて`~/.asv-machine.json`が生成される。
 この中身をコピーしておき、`asv run`の前に`~/.asv-machine.json`を配置する。
 
+### KeyError
+Fixed in `master` branch.  0.21 has this problem.
+
+```
+executing 'asv publish'
+-[ 11.11%]  Loading machine info
+-[ 22.22%]  Getting params, commits, tags and branches
+-[ 33.33%]  Loading results
+-[ 44.44%]  Detecting steps
+-[ 55.56%]  Generating graphs
+-[ 66.67%]  Generating output for SummaryGrid
+-[ 77.78%]  Generating output for SummaryList
+-[ 88.89%]  Generating output for RegressionsTraceback (most recent call last):
+  File "/usr/local/bin/asv", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.6/site-packages/asv/main.py", line 38, in main
+    result = args.func(args)
+  File "/usr/local/lib/python3.6/site-packages/asv/commands/__init__.py", line 48, in run_from_args
+    return cls.run_from_conf_args(conf, args)
+  File "/usr/local/lib/python3.6/site-packages/asv/commands/publish.py", line 69, in run_from_conf_args
+    return cls.run(conf=conf, env_spec=args.env_spec)
+  File "/usr/local/lib/python3.6/site-packages/asv/commands/publish.py", line 193, in run
+    cls.publish(conf, repo, benchmarks, graphs, revisions)
+  File "/usr/local/lib/python3.6/site-packages/asv/plugins/regressions.py", line 61, in publish
+    cls._save_feed(conf, benchmarks, regressions, revisions, revision_to_hash)
+  File "/usr/local/lib/python3.6/site-packages/asv/plugins/regressions.py", line 124, in _save_feed
+    revision = revisions[results.commit_hash]
+KeyError: '4b10ae58a3aa6b8d6f9096f8f85ed06d4f88973a'
+```
+
+You need to delete all `commithash-....json` in your result dir.
+
 ## Reference
 * [GitHub - spacetelescope/asv: Airspeed Velocity: A simple Python benchmarking tool with web-based reporting](https://github.com/spacetelescope/asv)
 * [airspeed velocity — airspeed velocity 0.3.dev1064+aa11c73c documentation](http://asv.readthedocs.io/en/latest/)

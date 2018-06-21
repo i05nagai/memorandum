@@ -254,6 +254,7 @@ I cross off the customer's name from the reservation list.
 * covet
 * yearn
 * compassion
+    * for compassion's sake and humanity more than any particular personal worth I might have,
 * a qualm with 
 * sensuous
 * lethal
@@ -348,6 +349,11 @@ I cross off the customer's name from the reservation list.
     * adv
 * facade
 * crave
+    * v
+    * feel a powerful desire for (something).
+* archaic
+    * adj
+    * very old or old-fashioned.
 * emancipation
 * captivity
 * lyrical
@@ -444,6 +450,7 @@ I cross off the customer's name from the reservation list.
     * v, n
 * seduce
 * entice
+    * attract
 * sophomoric
     * adj
     * pretentious or juvenile.
@@ -745,6 +752,472 @@ I cross off the customer's name from the reservation list.
     * a rounded knotty depression in the centre of a person's belly caused by the detachment of the umbilical cord after birth; the umbilicus.
 * belly
 * umbilical cord
+* rant
+* lament
+* treatise
+* disquisition
+* essay
+* extinct
+* diatrive
+* cavalier
+* sabotage
+* precaution
+    * n
+* jaded
+    * adj
+* ghoulish
+* eloquent
+* choke
+* irk
+* despite all efforts
+* supplicant
+* flask
+* go by
+* snub
+* asylum
+* pan out
+    * end up
+    * conclude
+* hoax
+    * strong word
+* ruse
+    * a trick
+* gambit
+* siphon
+* angavite baa
+    * "Red Water" in the Native American language spoken by the Shoshone tribe.
+    * [Aingavite Baa | The Mentalist Wiki | FANDOM powered by Wikia](http://thementalist.wikia.com/wiki/Aingavite_Baa)
+* fluff
+    * n, v
+* anticlimactic
+* dignify
+* stoic
+* jackie o.
+    * Jacqueline Kennedy Onassis
+* first redy of the united states
+* have a good arm
+* arm fat
+* errand
+* barkeeper
+* soiree
+    * n
+* entrapment
+    * n
+* bad penny
+    * a counterfeit or damaged penny
+    * A person or thing which is unpleasant, disreputable, or otherwise unwanted, especially one which repeatedly appears at inopportune times.
+* premonition
+* pass over
+* mumbo jumbo
+    * language or ritual causing or intended to cause confusion or bewilderment.
+* maze
+* ritual
+* solemn
+* pious
+* dismay
+* inside joke
+    * in-joke
+* sleazeball
+    * slezebag
+* sheepdip
+* redneck
+* vulgar
+* expletive
+* oath
+* cagney and lacey
+* outfox
+* cavity
+* pointless
+* scram
+    * go away
+* e.m.t.
+    * emergency medical technician
+* puncture wound
+* i.v.
+    * Intravenous therapy
+* brood
+    * brooding silence
+* spectacle
+* morbid
+    * ghoulish
+* disturb
+* repellent
+* carte blanche
+    *  a French phrase, meaning "unlimited discretionary power to act; unrestricted authority"
+* discretion
+* unfurl
+* cute as a button
+* ballistic
+* reimbursement
+* reimburse
+* high up
+* probation
+    * period of supervision over an offender
+* lame
+    * [Lameの意味　(ネイティブのスラング辞典と英語発音辞典) - 英語 with Luke英語 with Luke](http://www.eigowithluke.com/2011/02/lame/)
+* feeble
+* bogus
+    * fake
+* legs falls asleep
+    * legs are asleep
+* absurd
+    * unreasonable
+* adrenaline
+* subsonic
+    * massive subsonic explosive device
+* blast
+    * blast seat was under the conference table
+* flirting
+    * flirting with someone
+* hurdle
+    * think of each person asa a hurdle
+* toupee
+    * n
+* memorabilia
+    * n
+    * death memorabilia
+* intriguing
+* arouse
+* ricochet
+    * v
+    * ballet ricocheting
+    * rebound off a surface.
+* projectile
+* yikes
+* I asked him point-blank
+* jousting armour
+* retrun policy
+    * they have a return policy
+* cranky
+    * eccentric or strange.
+* slut
+    * promiscuous woman
+* promiscuous
+    * promiscuous woman
+* groom
+    * you're very well-groomed for a crazy person
+* not a hair out of place
+    * very neat
+* meticulous
+    * showing great attention to detail; very careful and precise.
+* fickle
+    * whereas recruiters hae a standard review process, hiring managers are much more fickle
+* motherless
+* pigeon-toedo
+    * with a slight pigeon-toed stance
+* point-blank
+    * the bullet, fired at point-blank range, hit him in the middle of the back
+* sly
+    * a sly one
+* handful
+    * in a handoful of 
+* electrifying
+    * an electrifying performance
+* acumen
+    * n
+    * It includes general business acumen such as an understanding of accounting, finance, manufacturing, or distribution, along with expertise in specific industrues such as high tech or telecom.
+* encompass
+    * the life competency encompasses your skills, experience, and education relating to life in general.
+* accountability
+    * responsibility
+* sober
+    * This is a five-minute activity, but for a lot of people, it is pretty sobering.
+* sift
+    * Rather than, make the reader sift through his work history and figure this out, he addresses this fact head on.
+* sieve
+    * n, v
+    * strainer
+* strain
+    * v, n
+* utensil
+    * n
+    * kitchen utensils
+    * a tool, container, or other article, especially for household use.
+* clemency
+    * mercy; lenience.
+* tedious
+* testify on someone's behalf
+    * I need people to testify on someone's behalf, ta ask for clemency
+    * testify for someone
+* possible grounds
+    * on what possible grounds?
+    * possible grounds for
+    * grounds for
+        * the basis or cause for legal action such as a lawsuit
+        * [Grounds for - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/grounds+for)
+* rageful
+    * but I don't thinkg he realizes the rageful feelings his trickery can provoke
+    * full of rage
+* trickery
+* obsessed
+    * she was obsessed with someone and exceedingly hostile toward him
+* hostile
+    * adj
+* hygienic
+    * that's not very hygienic
+    * sanitary
+* jolt
+    * v, n
+    * takes real jolt to get them going
+    * push
+    * bump
+* devaste
+    * she's devastaed, doesnt know whether to go to the police or kill herself
+* cordial
+    * wam and friendly
+* joust
+* bombmaker
+    *  she is a radical activist nd bombmaker wanted for serveral accounts of political terrorism
+* outback
+    * 
+* reclusive
+* marxist
+* acolytes
+* allegedly
+    * Allegedly, she did not meet a non-collective member until he was ten yeras old, when a team of AFP agents stormed the compound
+* childcare
+    * she was placed in childcare
+* propensity
+    * she had a propensity for violence that alienated him from most mainstream groups
+    * tendency
+* alienate
+* anarcho primitivist
+* mastermind
+    * over the next years, Someone,who had taught himself explosives, masterminded a seried of non-lethal pubilc bombings around the world.
+* vacated
+    * vacated government office
+* apprehended
+    * all leaders of The Pristine Army where apprehended
+* freelancing
+    * take up freelancing
+* resurface
+    * after months off the grid, she resurfaced in someplace
+* mogul
+    * media mogul
+* self-righteous
+    * Confident, passionate and self-righteous, she is natural demagogue who sees the world in black and white and rarely tolerates conflicting views
+* fanatic
+* inexplicably
+    * she briefly led the international manhunt against Name, the terrorist whose network she inexplicably now appears to have joined
+* formidable
+    * she could have been a formidable asset to ICA
+* suburban
+* ransom
+    * during the inspecting of a West Bank housing projecti, his entire family was take hostage by Somone and held for ransom.
+* plight
+    * come to sympathize with the plight of his captors
+* captor
+* inhumane
+    * he ws still committed to the safety of his nation, but the came to resent his government's harsh and inhumane treatment of a vastly inferior enemy
+* psychoactive
+    * psycoactive medication
+* repertoire
+* dabbling
+    * he began expanding his repertoire, dabbling in drung induced hypnosis, memory wipes and subliminal mind control
+* huffing and puffing
+    * huff and puff
+* promiscuity
+* indict
+    * v
+    * he was indicted for murdering his wife
+* move on
+* underlings
+    * we both have a problem a little problem controlling our underlings
+    * a person lower in status or rank
+* easy as pie
+* the way back
+    * log ago
+* mundane
+    * adj
+    * some developers, as you may know, don't like doing mundane tasks such as documentation and testing.
+* tunrns something into
+    * he turns it into a strength.
+* atypical
+    * adj
+    * if the title they use is atypical for the IT industry , then describe yourself using a similar title that would be considered more standard.
+* flip
+    * v, n
+    * to get started, flip to appendisx B, where you'll see skills listed for eacy competency.
+* jot down
+    * jot down a few skills that apply to you.
+* well rounded
+    * the ability to master a variety of skills is important to any well-rounded person
+* plump
+    * adv, v
+* curvaceous
+    * adj
+* longplay
+    * [Longplay (video games) - Wikipedia](https://en.wikipedia.org/wiki/Longplay_(video_games))
+* Let's play
+    * LP
+* walk-through
+    * n, adj
+    * A longplay is a play-through of a video game, created with the intent of completing it as fully as possible, mainly for the purposes of nostalgia, preservation, and possibly as a walkthrough.
+* like-minded
+    * adj
+    * Walkthroughs may be considered guides on helping to enhance the experience of players, to assist towards unlocking game achievements or simply as a means to socialise with like-minded individuals as a distraction from everyday life.
+* sprinkle
+    * v, n
+    * a technical analyst would start with business skills, follow with technical skills, and sprinkle in some management and life skills.
+* oddball
+    * n, adj
+    * the oddball here might be conflict resolution.
+    * strange, bizarre
+* conflict resolution
+* desktop skills
+    * skills related to desktop applications
+* legitimate
+* zero in on
+    * they could zero in on any one of the specific skills you call out and strt asking questions about it.
+    * zero in on someone
+    * to direct all of one's attention to (someone or something)
+* latch on
+* latch onto
+    * the intervieweers will each latch on to something different on your resume.
+    * stay close to someone
+* nipple
+* call out
+* knock someone's socks off
+    * The role overview does'nt need to knock anyone's socks off.
+    * To thoroughly impress, overwhelm, or excite one.
+* bullet point
+    * You give the reader some context, before diving into bullet points.
+* streamlined
+* checkout
+    * n
+    * the action of examining and testing something for performance, suitability, or readiness
+    * [Checkout | Definition of Checkout by Merriam-Webster](https://www.merriam-webster.com/dictionary/checkout)
+* the big/bigger picture
+    * It is now clear that you understand and care about how your work fits into the bigger picture
+* dawg
+    * n
+    * dog
+* steer clear
+    * I would steer clea of the tall one, if I were you.
+* level with someone
+    * to tell someone the truth about something
+* keeper
+    * some of them are keepers
+* bless one's heart
+    * he was an absolute treasure, bless his heart
+* ante
+    * the final version ups the ante.
+* brag
+    * n, v, adj
+* hit a nerve with
+    * you've hit a nerve with this one.
+    * To evoke a strong emotional reaction, such as anger, sadness, or disgust, upon being encountered, heard, read, etc.
+* cup of Joe
+    * cup of coffee
+* point of sales
+* spiked drink
+    * I spiked the coffee
+    * Spiked is used to describe when an alcoholic beverage is mixed in with another, non-alcoholic drink
+    * Drink spiking is the illegal act of placing a substance into a drink with the intention of causing harm to the drinker.
+* detox
+    * n, v
+* abstain
+* spiral into
+    * somebody in this room is about to spiral into a rapid detox.
+    * to continuously become worse, more, or less
+* shakes
+    * 
+* nausea
+    * n
+    * the shakes, nausea, those dreaded cravings for the rush of a fresh hit
+* trembling
+    * adj
+    * shaking or quivering, typically as a result of anxiety, excitement, or frailty.
+* tremble
+* quiver
+    * v
+    * tremble or shake with a slight rapid motion.
+* shiver
+    * shake slightly and uncontrollably as a result of being cold, frightened, or excited.
+* dreaded
+    * adj
+    * regarded with great fear or apprehension.
+* dread
+    * v, n, adj
+* reverence
+    * n, v
+    * deep respect for someone or something.
+* apprehension
+* apprehensive
+    * anxious or fearful that something bad or unpleasant will happen.
+* craving
+    * n
+    * a powerful desire for something.
+* anesthesiologist
+* perioperative
+* a word of caution
+    * a word of caution about metrics.
+* get carried away
+    * It's easy to get carried away and exaggerate
+    * be carried away
+    * lose self-control
+* foil
+    * v, n
+* riddance
+    * n
+* stich
+    * you'll pop your stiches
+* man up
+* more of a man
+    * more of a gentle lover or a brute?
+* more of something than anything
+* brute
+* glow
+* jump out of one's skin
+    * be xtremely startied
+    * you practically jumped out of your skin at 
+* remind of
+* bail enforcement agent
+    * bouncy hunter
+    * fugitive recovery agents
+* fugitive
+    * n, adj
+    * escapee
+* a skip
+    * used by bouncy hunter
+        * someone who has skipped bail
+* auntie
+    * aunt
+* don't you dare
+    * If you say to someone 'don't you dare' do something, you are telling them not to do it and letting them know that you are angry.
+* sprain
+    * it's either a sparained muscle in your back or ruptured disc
+* ruptured disc
+    *  herniated disc
+* rip
+* lunacy
+    * your lunacy is the lunacy of an innocent woman
+* do a doube take
+    * [二度見するって英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/6774/)
+    * I saw my colleague with my (his) girlfriend, and I was so surprised I did a double take.
+* loudmouth
+    * you're loudmouthed jerk overcompensating for childhood issues.
+* overcompensate
+* nibble
+    * v, n
+    * any nibbles?
+* dangle
+    * let's danlge another worm
+* baby blanket
+* pathetic
+    * tha'ts how pathetic I think you are
+* the more, the merrier
+    * the more people or things there are, the better a situation will be.
+* dissociative fugue
+    *  the temporary loss of personal identity.
+* pull through
+    * pull something/someone through
+    * we're just glad you pulled thgough
+* khaki
+    * a color
+* full-frontal
+    * adj
+    * full-frontal with
 
 
 
@@ -805,6 +1278,7 @@ comparative
     * 1/2の確率で
 * similarly
     * 同様にして
+* divide n into groups whose size is at most m
 
 
 * [数学用語と英語 - TakaPの数学日記](http://blog.goo.ne.jp/math19575/e/74f71716db2f9919e68865cf0c6848d0)
@@ -815,6 +1289,7 @@ comparative
 * [数学で使う英語](http://home.hiroshima-u.ac.jp/nyoho/mathenglish.html)
 * [意外な数学英語](http://math-eng.blogspot.jp/)
 * [英語の文章表現](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main018.html)
+* [Translating Words into Algebra](http://www.leeward.hawaii.edu/files/mathlab/handouts/translating_words_into_algebra.pdf)
 
 
 # Others
