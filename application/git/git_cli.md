@@ -116,10 +116,25 @@ git tag -l 'v1.4.2.*'
 git tag -a v1.4 -m 'my version 1.4'
 ```
 
-タグのついたコミッとを見る。
+tagのついたcommitを見る。
 
 ```
 git show v1.4
+```
+
+repalce git tag.
+
+```
+# delete existence tag
+git tag -d tag1
+git tag -a tag1
+git push -f origin tag1
+```
+
+Delete remote git tag
+
+```
+git push -f origin :tag1
 ```
 
 ## git stash
