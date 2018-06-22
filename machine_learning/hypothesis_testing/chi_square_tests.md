@@ -254,7 +254,7 @@ Then $W$ has an approximate $\chi^{2}$ distribution with
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Chi square tests for Independence
-[Serge Langg]Algebra
+
 
 ## Chi square tests for Homegenity
 
