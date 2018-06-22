@@ -49,18 +49,6 @@ func TestFoo(t *testing.T) {
 }
 ```
 
-## CLI
-Run all tests
-
-```
-go test -run ''
-```
-
-Run tests maching `Foo/A=`
-
-```
-go test -run Foo/A=
-```
-
 ## Reference
 * [testing - The Go Programming Language](https://golang.org/pkg/testing/)
+* [Go advanced testing tips & tricks – Povilas Versockas – Medium](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859)

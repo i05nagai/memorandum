@@ -4,9 +4,42 @@ title: gcc
 
 ## gcc
 
+## Install
+For ubuntu 16.04,
+
+```
+# for 4
+apt-get install gcc
+apt-cache search gcc | grep 'gcc'
+apt-cache show 'gcc'
+# for 5
+apt-get install gcc-5
+apt-cache search gcc | grep 'gcc-5'
+apt-cache show 'gcc-5'
+```
+
+To install `6>=`
+
+```
+add-apt-repository ppa:ubuntu-toolchain-r/test
+apt-get update
+```
+
+```
+# for 6
+apt-get install gcc-6
+apt-cache search gcc | grep 'gcc-6'
+apt-cache show 'gcc-6'
+# for 7
+apt-get install gcc-7
+apt-cache search gcc | grep 'gcc-7'
+apt-cache show 'gcc-7'
+```
+
 ## CLI
 
 ```
+
 ```
 
 

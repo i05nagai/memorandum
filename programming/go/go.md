@@ -83,6 +83,8 @@ const (
     * lower case
     * `src/encoding/base64`
     * `encoding/base64`
+    * mixedCap or underscore
+        * [Package names \- The Go Blog](https://blog.golang.org/package-names)
 
 ## Method
 * recieverを定義できるのは`type`で定義した型だけ
@@ -129,6 +131,52 @@ Type switch
 		fmt.Printf("I don't know about type %T!\n", v)
 	}
 ```
+
+## Tips
+
+### Project structure Standard 
+* [golang\-standards/project\-layout: Standard Go Project Layout](https://github.com/golang-standards/project-layout)
+
+
+* `/cmd/`
+    * main applicatoin
+    * executables
+* `/internal/`
+    * private applicatoin and library code
+    * `app/`
+    * `pkg/`
+* `/pkg/`
+    * library code used by external application
+* `/vendor/`
+    * application dependency
+* `/api/`
+    * open API/Swagger
+    * protocol definition
+    * json schema file
+* `/web/`
+    * web applicatoin specific
+    * static web assets
+    * server side template
+    * SPA
+* `/configs/`
+* `/init/`
+* `/scripts/`
+* `/build/`
+    * `ci/`
+        * scripts for ci
+* `/deployments/`
+    * e.g. docker-compose, kubernetes/helm, mesos, terraform
+* `/test/`
+    * `data/`
+* `/docs/`
+* `/tools/`
+* `/examples/`
+* `/third_party/`
+* `/githooks/`
+* `/assets/`
+
+
+`src/` is not needed.
 
 
 ## Reference

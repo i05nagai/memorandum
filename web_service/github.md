@@ -194,6 +194,26 @@ Qualifiersの一覧は以下。
 
 ## Tips
 
+### mirroring git repository
+* [Duplicating a repository \- User Documentation](https://help.github.com/articles/duplicating-a-repository/)
+* [Keep in sync your Git repos on GitHub, GitLab & Bitbucket](https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/)
+* [mirroring \- Creating an official github mirror \- Stack Overflow](https://stackoverflow.com/questions/11370239/creating-an-official-github-mirror)
+
+Create mirror repository without fork.
+
+* `git://want/to/mirror/repository.git`
+    * this can be a GitHub repository
+* `https://github.com/exampleuser/new-repository.git`
+    * the repository where you will mirror repository
+
+```
+git clone --bare git://want/to/mirror/repository.git
+cd repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+cd ..
+rm -rf repository.git
+```
+
 ### Requesting organization approval
 * [Requesting organization approval for OAuth Apps - User Documentation](https://help.github.com/articles/requesting-organization-approval-for-oauth-apps/)
 

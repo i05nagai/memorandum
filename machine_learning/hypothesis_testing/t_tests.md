@@ -9,14 +9,17 @@ title: t tests
     * skewness can be ignored if $n \le 40$
 * the population standard deviation $\sigma$ is unkown
 
-## Definition
-推定量といった場合は確率変数。
-基本的に添え字なしの$X$, $Y$などは真の分布を表すのに使用する。
+## Note
+* An estimator is a r.v.
+    * 推定量といった場合は確率変数
+* Variable without subscption such as $X$, $Y$ denote true desitribution
+    * 基本的に添え字なしの$X$, $Y$などは真の分布を表すのに使用する
 
+## Definition
 * $$X, X_{1}, \ldots, X_{N}$$,
-    * 確率変数
+    * r.v.
 * $$Y, Y_{1}, \ldots, Y_{M}$$,
-    * 確率変数
+    * r.v.
 * $$
     \displaystyle
     \bar{X}_{N}
@@ -28,12 +31,12 @@ title: t tests
             N
         }
 $$,
-    * 標本の平均
+    * sample mean
     * 平均の不偏推定量
 * $$
     \displaystyle
     V_{N}(X_{1}, \ldots, X_{N})
-    := 
+    :=
     \frac{
         \sum_{i=1}^{N} (X_{i} - \bar{X}_{N})^{2}
     }{
@@ -41,7 +44,7 @@ $$,
     }
     \label{def_sample_variance}
 $$,
-    * 分散の不偏推定量
+    * unbiased estimator of variance
 * $$
     \displaystyle
     V_{N}^{S}
@@ -80,9 +83,9 @@ sample sizeが増えれば標本分散は減る。
 ## one sample t-tests for population mean
 正規分布に従う確率変数の平均値の検定。
 
-* 真の分布$X \sim \mathrm{N}(\mu, \sigma)$
-* $\sigma$の値は不明だが、一致していることは事前に知っている
-* the sample size s large enough that the mean is normally distributed
+* True distribution: $X \sim \mathrm{N}(\mu, \sigma)$
+* The value of $\sigma$ is unkown
+* the sample size is large enough that the mean is normally distributed
     * $n \ge 15$,
 * skew can be ignored if $n \ge 40$,
 * the population standard deviation $\sigma$ is unkown
@@ -112,6 +115,8 @@ $$
     \nonumber
 \end{eqnarray}
 $$
+
+The steps for one-sample t-test for population mean are as follows;
 
 * (1) State the hypotheses:
     * null hypothesis
@@ -557,10 +562,11 @@ $$
 ## paired samples t-test for the population mean of paired samples
 正規分布に従う確率変数差の平均値の検定。
 
-* 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma)$
-* 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma)$
-* two samples are dependent
-* $\sigma$の値は不明だが、一致していることは事前に知っている
+* True distribution: $X \sim \mathrm{N}(\mu_{X}, \sigma)$
+* True distribution: $Y \sim \mathrm{N}(\mu_{Y}, \sigma)$
+* two samples are paired
+    * Here paired means that $X$ and $Y$ has same sample size $n$
+* The value of $\sigma$ is uknown but $X$ and $Y$ has same $\sigma$
 * both normal distribution
 * both simze sizes are large enough
     * $n \ge 15$,
@@ -577,7 +583,7 @@ $$
     * i.i.d. of $Y$
 * $D_{1} := X_{1} - Y_{1}, \ldots, D_{n} := X_{n} - Y_{n}$,
     * i.i.d. of $D := X - Y$,
-* $s_{d} := \mathrm{Var}_{n}(D_{1}, \ldots, D_{N})(\omega)$,
+* $$s_{d} := \mathrm{Var}_{n}(D_{1}, \ldots, D_{N})(\omega)$$,
     * sample standard deviation of $D$
 * $\alpha \in (0, 1)$,
     * significance level
@@ -665,35 +671,54 @@ $D_{i}$は正規分布に従うから、前定理の結果をそのままあて�
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Two sample t-test for population means (equal variances)
-分散が等しい場合の正規分布に従う2つの確率変数の平均値の検定
+Test for means of two random variables with normal distribution whose variances are equal.
 
-* 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma)$が正規分布に従う
-* 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma)$が$X$と分散の等しい正規分布に従う
+* True distribution: $X \sim \mathrm{N}(\mu_{X}, \sigma)$
+* True distribution: $Y \sim \mathrm{N}(\mu_{Y}, \sigma)$
+* $X$, $Y$ are independent
+* $n$ is the sample size of $X$
+* $m$ is the sample size of $Y$
+* Two sample means that the sample size can be different
 * $\sigma$ are unkown but euqal to the other
     * weired situation
 
+In practical, $D = 0$.
+
 ## Example
 * $D \in \mathbb{R}$,
-    * the difference mean
+    * the difference of means to be tested
 * $n \in \mathbb{N}$,
-    * the sample size
-* $X_{1}, \ldots, X_{n}$,
+    * the sample size of $X$
+* $m \in \mathbb{N}$,
+    * the sample size of $Y$
+* $X_{1}, \ldots, X_{N}$,
     * i.i.d. of $X$
-* $Y_{1}, \ldots, Y_{n}$,
+* $Y_{1}, \ldots, Y_{M}$,
     * i.i.d. of $Y$
-* $D_{1} := X_{1} - Y_{1}, \ldots, D_{n} := X_{n} - Y_{n}$,
-    * i.i.d. of $D := X - Y$,
-* $s_{d} := \mathrm{Var}_{n}(D_{1}, \ldots, D_{N})(\omega)$,
-    * sample standard deviation of $D$
+* $\bar{X}_{N}$,
+    * estimator of mean of $X$,
+* $\bar{Y}_{M}$,
+    * estimator of mean of $Y$,
+* $\mu_{X} := \bar{X}_{N}(\omega)$,
+* $\mu_{Y} := \bar{Y}_{M}(\omega)$,
+* $$S_{X} := \mathrm{Var}_{N}(X_{1}, \ldots, X_{N})$$,
+    * sample standard deviation of $X$
+* $$S_{Y} := \mathrm{Var}_{M}(Y_{1}, \ldots, Y_{M})$$,
+    * sample standard deviation of $Y$
+* $$s_{X} := S_{X}(\omega)$$,
+* $$s_{Y} := S_{Y}(\omega)$$,
 * $\alpha \in (0, 1)$,
     * significance level
+
+The steps for two-sample t-tests for population mean are as follows;
+
 * (1) State the hypothesis
     * null hypothesis
-        * $H_{0}:\mu_{D} = D $
+        * $H_{0}:\mu_{X} - \mu_{Y} = D$,
     * alternative hypothesis
-        * (a) $H_{A}:\mu_{D} \neq D $
-        * (b) $H_{A}:\mu_{D} > D $
-        * (c) $H_{A}:\mu_{D} < D $
+        * (a) $H_{A}:\mu_{X} - \mu_{Y} \neq D $
+        * (b) $H_{A}:\mu_{X} - \mu_{Y} > D $
+        * (c) $H_{A}:\mu_{X} - \mu_{Y} < D $
 * (2) compute the test statistic
 
 
@@ -702,30 +727,29 @@ $$
     t
     & = &
     \frac{
-        (\bar{x} - \bar{y})
+        (\mu_{X} - \mu_{Y})
         -
         D
     }{
         \sqrt{
             s_{P}^{2}
             \left(
-                \frac{1}{n}
+                \frac{1}{N}
                 +
-                \frac{1}{m}
+                \frac{1}{M}
             \right)
         }
     }
     \nonumber
     \\
-    s_{P}
+    s_{P}^{2}
     & := &
         \frac{
-            (n - 1)^{2}s_{X}^{2}
+            (N - 1)^{2}s_{X}^{2}
             +
-            (m - 1)^{2}s_{Y}^{2}
-            
+            (M - 1)^{2}s_{Y}^{2}
         }{
-            n + m - 2
+            N + M - 2
         }
     \nonumber
 \end{eqnarray}
@@ -742,13 +766,14 @@ $$
     * otherwise, fail to reject $H_{0}$,
 
 ### Lemma 6
-$$\{ X_{i} \}_{i=1}^{N}$$と$$\{ Y_{i}\}_{i=1}^{M}$$が独立とする。
+Suppose that $$\{ X_{i} \}_{i=1}^{N}$$ and $$\{ Y_{i}\}_{i=1}^{M}$$ are independent.
 
 * $$X_{i} \sim \mathrm{N}(\mu_{X}, \sigma^{2})$$,
+    * i.i.d.
 * $$Y_{i} \sim \mathrm{N}(\mu_{Y}, \sigma^{2})$$,
+    * i.i.d.
 
-とする。
-このとき、
+Then
 
 $$
     \bar{X}_{N} - \bar{Y}_{M}
@@ -766,7 +791,7 @@ $$
 $$
 
 ### proof.
-Lemma3より
+By Lemma3, it follows that
 
 $$
 \begin{eqnarray}
@@ -775,14 +800,15 @@ $$
         \mathrm{N}(\mu_{X}, \frac{\sigma^{2}}{N}),
     \nonumber
     \\
-    \bar{Y}_{N}
+    \bar{Y}_{M}
     & \sim &
         \mathrm{N}(\mu_{Y}, \frac{\sigma^{2}}{M}),
+    \nonumber
 \end{eqnarray}
+.
 $$
 
-となる。
-また、2つの正規分布に従う確率変数の和はまた、正規分布に従うので、
+Since the sum of the independet normally distributed r.v.s follows normal distribution, we have
 
 $$
 \begin{eqnarray}
@@ -792,17 +818,18 @@ $$
     \nonumber
     \\
     & \sim &
-       \mathrm{N}(\mu_{X} - \mu_{Y},
+        \mathrm{N}
+        \left(
+           \mu_{X} - \mu_{Y},
            \frac{ \sigma^{2} }{ N }
            +
            (-1)^{2}
            \frac{ \sigma^{2} }{ M }
-       )
+        \right)
     \nonumber
 \end{eqnarray}
+.
 $$
-
-となる。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -810,12 +837,12 @@ $$
 * $$X \sim \mathrm{N}(\mu_{X}, \sigma^{2})$$,
 * $$Y \sim \mathrm{N}(\mu_{Y}, \sigma^{2})$$,
 * $$X_{1}, \ldots, X_{N}$$,
-    * $X$と同分布
+    * i.i.d. of $X$
 * $$Y_{1}, \ldots, Y_{M}$$,
-    * $Y$と同分布
-* $$\{X_{i} \}$$と$$\{Y_{i}\}$$が独立
+    * i.i.d. of $Y$
+* $$\{X_{i} \}$$ and $$\{Y_{i}\}$$ are independent
 
-このとき、
+Then
 
 $$
     \frac{
@@ -837,7 +864,7 @@ $$
 $$
 
 ### proof.
-前Lemmaより、
+By lemma6, it follows that
 
 $$
     \bar{X}_{N}
@@ -854,9 +881,10 @@ $$
                     \frac{1}{M}
                 \right)
         \right)
+    .
 $$
 
-なので、平均を引いて標準偏差で割ったものを考えれば良い。
+Thus, the statement holds.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -864,12 +892,12 @@ $$
 * $$X \sim \mathrm{N}(\mu_{X}, \sigma)$$,
 * $$Y \sim \mathrm{N}(\mu_{Y}, \sigma)$$,
 * $$X_{1}, \ldots, X_{N}$$,
-    * $X$と同分布
+    * i.i.d. of $X$
 * $$Y_{1}, \ldots, Y_{M}$$,
-    * $Y$と同分布
-* $$\{X_{i} \}$$と$$\{Y_{i}\}$$が独立
+    * i.i.d. of $Y$
+* $$\{X_{i} \}$$ and $$\{Y_{i}\}$$ are independent
 
-このとき、
+Then
 
 $$
     T
@@ -892,8 +920,7 @@ $$
     t(N + M - 2)
 $$
 
-である。
-ただし、
+where
 
 $$
 \begin{eqnarray}
@@ -904,11 +931,10 @@ $$
         }{
             N + M - 2
         }
+    .
     \nonumber
 \end{eqnarray}
 $$
-
-である。
 
 ### proof.
 まず、 前定理より
@@ -1076,35 +1102,45 @@ $$
 分散が等しくない場合の正規分布に従う2つの確率変数の平均値の検定。
 検定において、分布を近似しているので、この近似の意味で検定が成り立つことに注意する。
 
-* 真の分布$X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$が正規分布に従う
-* 真の分布$Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$が正規分布に従う
+* True distribution: $X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$
+* True distribution: $Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$
+* $N$ is the sample size of $X$
+* $M$ is the sample size of $Y$
+* Two sample means that the sample size can be different
 * $\sigma_{X}$ and $\sigma_{Y}$ are unkown but are not equal.
 * $\mu_{X} - \mu_{Y} = D$ is null hypothesis 
 
-## Example
+### Example
 * $D \in \mathbb{R}$,
-    * the difference mean
-* $n \in \mathbb{N}$,
+    * the difference of means
+* $N \in \mathbb{N}$,
     * the sample size of $X$,
-* $m \in \mathbb{N}$,
+* $M \in \mathbb{N}$,
     * the sample size of $Y$,
-* $X_{1}, \ldots, X_{n}$,
+* $X_{1}, \ldots, X_{N}$,
     * i.i.d. of $X$
-* $Y_{1}, \ldots, Y_{n}$,
+* $Y_{1}, \ldots, Y_{M}$,
     * i.i.d. of $Y$
-* $s_{x} := \mathrm{Var}_{n}(X_{1}, \ldots, X_{n})(\omega)$,
+* $$\bar{x}_{N} := \bar{X}_{N}(\omega)$$,
+* $$\bar{y}_{M} := \bar{Y}_{M}(\omega)$$,
+* $$S_{X} := \mathrm{Var}_{n}(X_{1}, \ldots, X_{N})$$,
     * sample standard deviation of $X$
-* $s_{y} := \mathrm{Var}_{m}(Y_{1}, \ldots, Y_{m})(\omega)$,
+* $$S_{Y} := \mathrm{Var}_{m}(Y_{1}, \ldots, Y_{M})$$,
     * sample standard deviation of $Y$
+* $$s_{X} := S_{X}(\omega)$$,
+* $$s_{Y} := S_{Y}(\omega)$$,
 * $\alpha \in (0, 1)$,
     * significance level
+
+The steps for two sample t-tests are as follows;
+
 * (1) State the hypothesis
     * null hypothesis
-        * $H_{0}:\mu_{D} = D $
+        * $$H_{0}:\bar{x}_{N} - \bar{y}_{M} = D$$,
     * alternative hypothesis
-        * (a) $H_{A}:\mu_{D} \neq D $
-        * (b) $H_{A}:\mu_{D} > D $
-        * (c) $H_{A}:\mu_{D} < D $
+        * (a) $$H_{A}:\bar{x}_{N} - \bar{y}_{M} \neq D$$,
+        * (b) $$H_{A}:\bar{x}_{N} - \bar{y}_{M} > D $$,
+        * (c) $$H_{A}:\bar{x}_{N} - \bar{y}_{M} < D $$,
 * (2) compute the test statistic
 
 
@@ -1113,14 +1149,14 @@ $$
     t
     & = &
         \frac{
-            (\bar{x} - \bar{y})
+            (\bar{x}_{N} - \bar{y}_{M})
             -
             D
         }{
             \sqrt{
-                \frac{s_{x}^{2}}{n}
+                \frac{s_{X}^{2}}{N}
                 +
-                \frac{s_{y}^{2}}{m}
+                \frac{s_{Y}^{2}}{M}
             }
         }
     \nonumber
@@ -1129,21 +1165,21 @@ $$
     & := &
         \frac{
             \left(
-                \frac{s_{x}^{2}}{n}
+                \frac{s_{X}^{2}}{N}
                 +
-                \frac{s_{y}^{2}}{m}
+                \frac{s_{y}^{2}}{M}
             \right)^{2}
         }{
             \frac{
-                s_{x}^{4}
+                s_{X}^{4}
             }{
-                n^{2}(n - 1)
+                N^{2}(N - 1)
             }
             +
             \frac{
-                s_{y}^{4}
+                s_{Y}^{4}
             }{
-                m^{2}(m - 1)
+                M^{2}(M - 1)
             }
         }
     \nonumber
@@ -1160,12 +1196,14 @@ $$
     * If $p < \alpha$, reject $H_{0}$,
     * otherwise, fail to reject $H_{0}$,
 
-### Lemma 8
+### Theory
+
+#### Lemma 8
 * $$X \sim \mathrm{N}(\mu, \sigma)$$,
 * $$X_{1} ,\ldots, X_{N}$$,
-    * $X$と同分布
+    * i.i.d. of $X$
 
-このとき、
+Then
 
 $$
 \begin{equation}
@@ -1182,8 +1220,8 @@ $$
 \end{equation}
 $$
 
-### proof.
-Theorem 19 より、
+#### proof.
+By Theorem 19, it follows that
 
 $$
 \begin{equation}
@@ -1197,8 +1235,7 @@ $$
 \end{equation}
 $$
 
-である。
-よって、
+Hence
 
 $$
     \mathrm{Var}
@@ -1211,10 +1248,10 @@ $$
     \right]
     =
     2 (N - 1)
+    .
 $$
 
-である。
-一方
+On the other hand,
 
 $$
 \begin{eqnarray}
@@ -1239,8 +1276,7 @@ $$
 \end{eqnarray}
 $$
 
-である。
-よって、
+Thus,
 
 $$
 \begin{eqnarray}
@@ -1275,7 +1311,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorem 23
+#### Theorem 23
 
 $$
     \hat{\beta}
@@ -1344,20 +1380,20 @@ $$
 \end{equation}
 $$
 
-### proof.
+#### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-### Theorem 24
+#### Theorem 24
 * $X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$,
 * $Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$,
 * $$X_{1}, \ldots, X_{N}$$,
-    * $X$と同分布
+    * i.i.d. of $X$
 * $$Y_{1}, \ldots, Y_{M}$$,
-    * $Y$と同分布
+    * i.i.d. of $y$
 
-このとき、
+Then
 
 $$
     T
@@ -1421,7 +1457,7 @@ $$
 
 である。
 
-### proof.
+#### proof.
 まず、
 
 $$
@@ -1615,4 +1651,4 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
-
+* [Student's t\-test \- Wikipedia](https://en.wikipedia.org/wiki/Student%27s_t-test#Slope_of_a_regression_line)

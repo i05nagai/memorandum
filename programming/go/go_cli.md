@@ -10,6 +10,26 @@ title: go CLI
 * `-n`
     * cleanのdry-run
 
+## doc
+
+```
+go doc [-u] [-c] [package|[package.]symbol[.methodOrField]]
+```
+
+* -c
+    * symbol matching honors case (paths not affected)
+* -cmd
+    * show symbols with package docs even if package is a command
+* -u
+    * show unexported symbols as well as exported
+
+### Usage
+Show documentation for current package
+
+```
+go doc
+```
+
 ## Tips
 
 
