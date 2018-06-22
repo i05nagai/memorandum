@@ -280,10 +280,9 @@ git commit -m '#1 Commit message'
         command2 = "!f(){ echo $1 $2;};f"
 ```
 
-
 ## 現在のcommitのtagを取得
 
-```shell
+```
 git_tag=$(git rev-parse HEAD | xargs git tag --contains)
 ```
 
