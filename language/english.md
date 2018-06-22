@@ -843,6 +843,53 @@ I cross off the customer's name from the reservation list.
 * keep something pushing
     * continue to try hard
 * abiding
+* burgundy
+* thrifty
+    * adj
+    *  you're famously thrifty man
+* stingy
+    * adj
+    * [meaning \- How can I explain the difference between "thrifty" and "stingy"? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/119983/how-can-i-explain-the-difference-between-thrifty-and-stingy)
+* stringy
+* authoritarian
+    * I don't mean to be authoritarian
+* obedience
+    * n
+    * favouring or enforcing strict obedience to authority at the expense of personal freedom.
+* judiciously
+    * adv
+* misdial
+* cripple
+    * she's just goona cripple you
+* grace
+    * right now you gotta clean this mess up with some grace, some dignity
+* speaking of which
+* peckish
+    * i'm little peckish
+    * hungry
+* S.A.T.
+    * SAT test
+* sharpen one's pencils
+    * [What does the idiom 'sharpen your pencil' mean? What are its origins? \- Quora](https://www.quora.com/What-does-the-idiom-sharpen-your-pencil-mean-What-are-its-origins)
+    * be sure and give me a deal
+    * the rest of kids stick inside sharpening their pencils
+* roam
+    * you're out here roaming free
+* be square
+    * he is square
+    * conventional and old-fashioned
+* clean-cut
+    * sharply outlined
+    * (of person) appearing neat and respectable
+* goody two shoes
+    * you're a boring goody-two-shoes
+* touche
+* pervy
+* perv
+* profoundly
+    * that is profoundly illegal
+* C.I.
+    * Confidential Informant
 
 
 
