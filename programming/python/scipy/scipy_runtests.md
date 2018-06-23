@@ -112,4 +112,11 @@ python runtests.py -t scipy.fftpack.tests.test_real_transforms::TestIDSTIIIInt
 
 ## Configuration
 
+## API
+
+
+* `scipy/_lib/_testutils.py`
+    * `def __call__(self, label="fast", verbose=1, extra_argv=None, doctests=False, coverage=False, tests=None):`
+        * executed by `runtests.py`
+
 ## Reference
