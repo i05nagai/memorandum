@@ -1363,6 +1363,10 @@ I cross off the customer's name from the reservation list.
     * that is profoundly illegal
 * C.I.
     * Confidential Informant
+* humdrum
+    * mundane
+* counteract
+* afflict
 
 
 
