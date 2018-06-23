@@ -6,12 +6,19 @@ title: GDB
 
 ## Install
 
-### MacOSX
+For MacOSX,
 * [OS XでGDBを使う（ためにコード署名をする） - Qiita](http://qiita.com/takahashim/items/204ffa698afe09bd4e28)
 
 ```
 brew install gdb
 ```
+
+For ubuntu16.04,
+
+```
+apt-get install gdb
+```
+
 
 ## Tips
 
