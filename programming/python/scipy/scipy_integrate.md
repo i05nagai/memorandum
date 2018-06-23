@@ -37,6 +37,12 @@ fixed_quad
 * [numpy\.trapz — NumPy v1\.14 Manual](https://docs.scipy.org/doc/numpy/reference/generated/numpy.trapz.html)
 * Simpthon methods
 
+### cumtrapz
+* `def cumtrapz(y, x=None, dx=1.0, axis=-1, initial=None):`
+
+
+
+* `def simps(y, x=None, dx=1, axis=-1, even='avg'):`
 
 ## Reference
 * [Integration \(scipy\.integrate\) — SciPy v1\.1\.0 Reference Guide](https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html)
