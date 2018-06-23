@@ -105,6 +105,6 @@ TBD.
 
 
 ## Reference
-1. [Z検定 - Wikipedia](https://ja.wikipedia.org/wiki/Z%E6%A4%9C%E5%AE%9A)
+* [Z検定 - Wikipedia](https://ja.wikipedia.org/wiki/Z%E6%A4%9C%E5%AE%9A)
 * [Statistical hypothesis testing - Wikipedia](https://en.wikipedia.org/wiki/Statistical_hypothesis_testing)
-
+* [Lecture Notes \| Statistics for Applications \| Mathematics \| MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-443-statistics-for-applications-fall-2006/lecture-notes/)
