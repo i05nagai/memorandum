@@ -15,19 +15,19 @@ jedi-vim is a VIM binding to the autocompletion library Jedi.
 vim上で以下のcommandで対応しているか確認できる。
 
 ```
-:python3 import sys; print(sys.version
+:python3 import sys; print(sys.version)
 ```
 
 ```
-:python import sys; print(sys.version
+:python import sys; print(sys.version)
 ```
 
-
-
+```
+pip install jedi
+```
 
 
 ## Configuraition
-
 bufferではなくtabで定義に移動
 
 ```vim
@@ -64,6 +64,21 @@ completionが不要の場合は下にcheck
 let g:jedi#completions_enabled = 0
 ```
 
+## Keybinding
+* `<leader>g`
+    * go to assignment
+* `K`
+    * documentation
+* `<leader>r`
+    * rename variable
+* `<leader>n`
+    * Show usages of a name
+* `:Pyimport os`
+    * open module by name
+* `<leader>d`
+    * go to definition or assignment
+* `<Ctrl-Space>`
+    * start completion
 
 ## Reference
 * [davidhalter/jedi-vim: Using the jedi autocompletion library for VIM.](https://github.com/davidhalter/jedi-vim)
