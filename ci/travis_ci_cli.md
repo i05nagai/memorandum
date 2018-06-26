@@ -23,6 +23,57 @@ travis encrypt
 travis encrypt-file
 ```
 
+```
+travis sshkey
+```
+
+* -i, --[no-]interactive
+    * be interactive and colorful
+* -E, --[no-]explode
+    * don't rescue exceptions
+* --skip-version-check
+    * don't check if travis client is up to date
+* --skip-completion-check
+    * don't check if auto-completion is set up
+* -e, --api-endpoint URL
+    * Travis API server to talk to
+* -I, --[no-]insecure
+    * do not verify SSL certificate of API endpoint
+* --pro
+    * short-cut for --api-endpoint 'https://api.travis-ci.com/'
+* --org
+    * short-cut for --api-endpoint 'https://api.travis-ci.org/'
+* --staging
+    * talks to staging system
+* -t, --token [ACCESS_TOKEN]
+    * access token to use
+* --debug
+    * show API requests
+* --debug-http
+    * show HTTP(S) exchange
+* -X, --enterprise [NAME]
+    * use enterprise setup (optionally takes name for multiple setups)
+* --adapter ADAPTER
+    * Faraday adapter to use for HTTP requests
+* -r, --repo SLUG
+    * repository to use (will try to detect from current git clone)
+* -R, --store-repo SLUG
+    * like --repo, but remembers value for current directory
+* -D, --delete
+    * remove SSH key
+* -d, --description DESCRIPTION
+    * set description
+* -u, --upload FILE
+    * upload key from given file
+* -s, --stdin
+    * upload key read from stdin
+* -c, --check
+    * set exit code depending on key existing
+* -g, --generate
+    * generate SSH key and set up for given GitHub user
+* -p, --passphrase PASSPHRASE
+    * pass phrase to decrypt with when using --upload
+
 ## Usage
 
 ## Configuration
@@ -84,4 +135,7 @@ secure: ".... encrypted data ...."
 と暗号化されたデータが得られる。
 これを暗号化前のkeyとしてymlにおけば良い。
 
+
 ## Reference
+* [Private Dependencies \- Travis CI](https://docs.travis-ci.com/user/private-dependencies/)
+* [Encrypting Files \- Travis CI](https://docs.travis-ci.com/user/encrypting-files)
