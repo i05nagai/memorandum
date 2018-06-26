@@ -34,6 +34,23 @@ numerical integration library written in fortran77.
 * GSL documentation is helpful
     * [Numerical Integration — GSL 2\.5 documentation](https://www.gnu.org/software/gsl/doc/html/integration.html#qng-non-adaptive-gauss-kronrod-integration)
 
+### Meaning of prefixm
+
+* Q- quadrature routine
+
+* N - non-adaptive integrator
+* A - adaptive integrator
+
+* G - general integrand (user-defined)
+* W - weight function with integrand
+
+* S - singularities can be more readily integrated
+* P - points of special difficulty can be supplied
+* I - infinite range of integration
+* O - oscillatory weight function, cos or sin
+* F - Fourier integral
+* C - Cauchy principal value
+
 ## Reference
 * [quadpack](http://www.netlib.org/quadpack/)
 * [QUADPACK \- Wikipedia](https://en.wikipedia.org/wiki/QUADPACK)
