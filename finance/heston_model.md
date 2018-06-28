@@ -36,6 +36,40 @@ $$
 \end{eqnarray}
 $$
 
+This can be write with vector fields
+
+$$
+\begin{eqnarray}
+    X(t)
+    & = &
+        \left(
+            \begin{array}{c}
+                X_{1}(t)
+                \\
+                X_{2}(t)
+            \end{array}
+        \right)
+    \\
+    & = &
+        \left(
+            \begin{array}{c}
+                x_{1}
+                \\
+                x_{2}
+            \end{array}
+        \right)
+        +
+        \int_{0}^{t}
+            V_{0}(X(t))
+        \ ds
+        +
+        \int_{0}^{t}
+            V_{1}(X(t))
+        \ dW(s)
+    \\
+\end{eqnarray}
+$$
+
 where
 
 $$
@@ -47,29 +81,32 @@ $$
                 \mu
                 y_{1}
                 \\
-                \vdots 
-                \\
-                y_{1}
-                \sqrt{y_{2}}
+                \alpha
+                (\theta - y_{2})
             \end{array}
         \right)
-        +
-        \int_{0}^{t}
-        \ dW^{1}(s)
     \\
-    X_{2}(t)
+    V_{1}(t)
     & = &
-        x_{2}
-        +
-        \int_{0}^{t}
-            \alpha
-            (\theta - X_{2}(s))
-        \ ds
-        +
-        \int_{0}^{t}
-            \beta
-            \sqrt{X_{2}(s)}
-        \ dW^{2}(s)
+        \left(
+            \begin{array}{c}
+                y_{1}
+                \sqrt{y_{2}}
+                \\
+                0
+            \end{array}
+        \right)
+    \\
+    V_{2}(t)
+    & = &
+        \left(
+            \begin{array}{c}
+                0
+                \\
+                \beta
+                    \sqrt{y_{2}}
+            \end{array}
+        \right)
 \end{eqnarray}
 $$
 
