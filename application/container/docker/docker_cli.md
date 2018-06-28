@@ -85,7 +85,30 @@ docker run <image> /bin/bash -c "cd /path/to/somewhere; python a.py"
         * で現在のディレクトリが使える。
 * `--workdir`
 * `--env "var_name=value"`
-    * 複数の場合は複数個つける？
+    * 複数の場合は複数個つける
+* `--cap-add=`
+    * add linux capability
+    * Runtime privilege and Linux capabilities
+* `--cap-drop=`
+    * drop linux capability
+    * Runtime privilege and Linux capabilities
+* `--privileged=false`
+    * Runtime privilege and Linux capabilities
+* `--device=[]`
+    * `--device=/dev/snd:/dev/snd:w`
+        * `/path/to/dev:[wmr]`
+            * `w`: read and write
+            * `r`: read
+            * `m`: mknod
+    * Allows you to run devices inside the container without the --privileged flag.
+    * If you want to limit access to a specific device or devices you can use the --device flag. It allows you to specify one or more devices that will be accessible within the container.
+
+[List of capablility](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
+
+* `IPC_LOCK`
+    * Lock memory (mlock(2), mlockall(2), mmap(2), shmctl(2)).
+
+
 
 ## docker exec
 container上でcommandを実行。
