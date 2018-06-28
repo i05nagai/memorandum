@@ -2,7 +2,7 @@
 title: Black Scholes
 ---
 
-# Black Scholes
+## Black Scholes
 
 $$
 \begin{equation}
