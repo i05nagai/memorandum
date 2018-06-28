@@ -761,6 +761,9 @@ I cross off the customer's name from the reservation list.
 * diatrive
 * cavalier
 * sabotage
+    * he views her hobby as a sabotage and resents it
+* resent
+    * v
 * precaution
     * n
 * jaded
@@ -1367,7 +1370,126 @@ I cross off the customer's name from the reservation list.
     * mundane
 * counteract
 * afflict
+* put you on speaker
+* portly
+* chubby
+    * he is chubby
+* missy
+    * missy is naturally thin and a gourmet baker
+* white-water rafting
+* gambit
+* cut to the chase
+    * come to the point
+    * get to the point without wasting the time
+* forthcoming
+    * I was not forthcoming with someone
+* forthcoming with information
+* as would
+    * [Odd Grammar "As Would"?](https://www.englishforums.com/English/OddGrammarAsWould/pmdvz/post.htm)
+* subjanctive mood
+* locksmith
+* airtight
+* duty calls
+* allegiance
+* loyalty
+* ex-con
+    * ex-convict
+* unmanned
+* tad
+    * a tad eccentric
+* adore
+* make up with someone
+* abscissa
+    * n
+    * the distance from a point to the vertical or y -axis, measured parallel to the horizontal or x -axis; the x -coordinate.
+* volumertic flask
+* titration
+    * a volumetric flask is for general mixing and titration
+* flunk
+* adulterant
+* faggot
+* scante
+    * crystal meth
+* lay eyes on
+* dime on
+    * you dimed on him
+* red phosphorus
+    * red phosphorus yields phosphorus hydride
+* phosphorus
+* one good whiff
+* flood
+* go double for
+    * that goes doubel for me
+* lymph nodes
+* solicitous
+* frenzy
+    * meth-monkey had a feeding frenzy in here
+* badass
+* dope
+* fulminated mercury
+* tweak
+    * a little tweak of chemistry
+* moral clearity
+* crib
+* luminol
+* RV
+    * recreational vehicle
+* waddle
+* respirator
+* realistically
+* antiemetics
+* holistic
+* enlighten
+    * englithen me
+* modicum
+    * without a modicum of evidence,
+* posse
+* baby shower
+* dale
+* DEA
+    * Drug Enforcement Administration
+* swishing 
+    * swishing wine
+* hypothermia
+* ditch
+    * ditched me
+* raid
+* hide out
+* blink
+* wand
+* in the line of duty
+* open offer
+    * [open offer Meaning in the Cambridge English Dictionary](https://dictionary.cambridge.org/dictionary/english/open-offer)
+* gloat
+* squirm
+    * watch us squirm
+* accomplice
+* swag
+* sign of zodiac
+    * Aquarius
+    * capricorn
+    * sagittarius
+    * scorpius
+    * libra
+    * virgo
+    * leo
+    * cancer
+    * gemini
+    * taurus
+    * aries
+    * pisces
+* forfeiture
+* hush
+    * v, n
+* soft spot
+* brunette
+* obesity
 
+
+
+Subjanctive mood
+
+* [Subjunctive Mood](http://englishplus.com/grammar/00000031.htm)
 
 
 [数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
@@ -1476,4 +1598,4 @@ comparative
     * pagedutyなどの障害の電話通知
 
 ## Reference
-
+* [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)
