@@ -13,6 +13,12 @@ For OSX,
 brew install scala
 ```
 
+For ubuntu 16.04,
+
+```
+
+```
+
 ## Syntax
 * operator notation associavity
     * if the method ends with a colon, the method is called by right operand
@@ -25,6 +31,7 @@ brew install scala
 ### Styleguide
 * [Scala Style Guide | Scala Documentation](https://docs.scala-lang.org/style/index.html)
 * [Scalacheat | Scala Documentation](https://docs.scala-lang.org/cheatsheets/index.html)
+
 
 ## Reference
 * [learning Scalaz — learning Scalaz](http://eed3si9n.com/learning-scalaz/)

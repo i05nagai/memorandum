@@ -4,6 +4,20 @@ title: java
 
 ## java
 
+## Install
+For ubuntu 16.04,
+
+```
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+# oracle jdk
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java9-installer
+```
+
+
 ## final
 * referenceに対しては参照先の変更は可能
 
@@ -128,3 +142,4 @@ object Obj {
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
 * [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)
+* [How To Install Java with Apt\-Get on Ubuntu 16\.04 \| DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04)

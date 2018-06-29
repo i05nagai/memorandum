@@ -64,3 +64,4 @@ interactive shellかどうかなどで読み込まれるかどうかがかわる
         * 右辺をregex3で評価
 
 ## Reference
+* [bash\(1\): GNU Bourne\-Again SHell \- Linux man page](https://linux.die.net/man/1/bash)

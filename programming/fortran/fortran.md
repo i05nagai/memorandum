@@ -9,7 +9,6 @@ For ubuntu,
 
 ```
 apt-get install gfortran
-
 ```
 
 Development files

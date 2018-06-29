@@ -196,5 +196,10 @@ next(a)
 # un initialized variable: seq
 ```
 
+### built-in function
+* `class slice(stop)`
+* `class slice(start, stop[, step])`
+
+
 ## Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
