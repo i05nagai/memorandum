@@ -7,6 +7,25 @@ title: scipy integrate
 
 ## API
 
+
+### quad
+Implemented in `quadpack.py`, which is wrapper for quadpack written in fortran.
+
+* `dblquad`
+    * `quad` for 2-dim
+* `tplquad`
+    * `quad` for 3-dim
+    * call `nquad`
+* `nquad`
+    * `quad` for n-dim
+    * wrapper of `quad`
+    * [scipy\.integrate\.nquad — SciPy v1\.1\.0 Reference Guide](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.nquad.html#scipy.integrate.nquad)
+
+
+* `def nquad(func, ranges, args=None, opts=None, full_output=False):`
+    * `ranges`
+        * `((a1, b1), ..., (an, bn))`
+
 ### quadrature
 
 * Compute a definite integral using fixed-tolerance Gaussian quadrature.
@@ -43,6 +62,16 @@ fixed_quad
 
 
 * `def simps(y, x=None, dx=1, axis=-1, even='avg'):`
+
+### qmc
+
+Supported dimension `?`
+
+
+Comparison with other methods
+
+* quadrature
+
 
 ## Reference
 * [Integration \(scipy\.integrate\) — SciPy v1\.1\.0 Reference Guide](https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html)
