@@ -306,5 +306,15 @@ https://github.com/<user-name>.keys
 You can create git tag first.
 After creating the tag, you can create release to existing tags.
 
+### Delete release
+git tag is treated as relase in github.
+
+```
+# delete git tag
+git push orign :tag-name
+```
+
+Then you can delete release in GitHub.
+
 ### Reference
 * [Searching GitHub - User Documentation](https://help.github.com/articles/searching-github/)
