@@ -45,5 +45,9 @@ This command generate two files in `dist` directory
 pip install twine
 ```
 
+## Tips
+* wheel files need to be created in each platform (e.g. osx, windows)
+    * To create and upload via CI service is not easy
+
 ## Reference
 * [Packaging and distributing projects — Python Packaging User Guide](https://packaging.python.org/tutorials/distributing-packages/)
