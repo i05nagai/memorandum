@@ -44,4 +44,11 @@ Create platform wheel
 python setup.py bdist_wheel
 ```
 
+## Tips
+
+#### Media type of wheel file
+* [WHL file extension | How to open a .WHL file](https://www.filesuffix.com/en/extension/whl)
+
+The media type is not defined in specification but `application/octet-stream` is reasonable.
+
 ## Reference

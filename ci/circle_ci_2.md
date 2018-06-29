@@ -226,6 +226,8 @@ jobのつながりを記述する。
 triggersを指定しない場合はgitへのpushに応じて動作する。
 branchやgit tagなどでfilterも可能。
 
+* branchはfilterをjobが動く
+* tagsはfilterをonlyを指定しないととjobは動かない
 
 ```yaml
 workflows:

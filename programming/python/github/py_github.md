@@ -34,6 +34,19 @@ for repo in g.get_user().get_repos():
 ## API
 * [Reference — PyGithub 1.40a3 documentation](http://pygithub.readthedocs.io/en/latest/reference.html)
 
+Github
+
+* https://github.com/PyGithub/PyGithub/blob/master/github/MainClass.py#L87
+* timeout
+    * default 15s
+
+## Tips
+
+### Change timeout
+
+```pytton
+Github(timeout)
+```
 
 ## Reference
 * [PyGithub/PyGithub: Typed interactions with the GitHub API v3](https://github.com/PyGithub/PyGithub)
