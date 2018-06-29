@@ -51,8 +51,13 @@ I cross off the customer's name from the reservation list.
 * hoodie
     * sweatt
 * furrow
+    * n, v
+* rut
 * nemesis
 * shroud
+    * n, v
+    * he was buried in a linen shroud
+    * the body was washed and shrouded
 * profusely
 * frantically
 * partake
@@ -139,6 +144,7 @@ I cross off the customer's name from the reservation list.
     * veteran
     * veterinarion
 * bait
+    * n, v
 * baked
     * you are baked
 * counterfeit
@@ -229,6 +235,9 @@ I cross off the customer's name from the reservation list.
 * eerie
 * nutcase
 * obnoxious
+* grandeur
+    * n
+* spkendour
 * angst-ridden
 * aristocrat
 * aristocracy
@@ -551,6 +560,7 @@ I cross off the customer's name from the reservation list.
 * gloat
     * v, n
 * dwell
+    * we're talk about peace, not dwell on he said/she said.
 * smugness
     * n
 * ardour
@@ -763,6 +773,7 @@ I cross off the customer's name from the reservation list.
 * sabotage
 * precaution
     * n
+    * take precaution
 * jaded
     * adj
 * ghoulish
@@ -1218,7 +1229,343 @@ I cross off the customer's name from the reservation list.
 * full-frontal
     * adj
     * full-frontal with
-
+* coffin
+* on second thought
+* hype up
+    * I'm hyped up
+* honeydew
+* narcotic
+    * n
+* dismiss
+* temple
+    * your temples are pulsing
+    * the flat area on each side of your head in front of the top of your ear
+* hothead
+    * he is hothead
+* break it up!
+* occasion
+    * for just such an occasion
+* finger crossed
+    * I had my finger corssed
+* belladonna
+    * the devil's cherry
+* dilute
+    * thats' why users dilute it with tea
+* hold one's own
+    * to maintain your position or condition despite difficulties
+* by far the best
+    * 
+* shphered
+    * n, v
+* go/jump through hoops
+    * to do a lot of difficult things before you are allowed to have or do something you want
+* shrewdness
+* savvy
+    * n, adj, v
+    * [Urban Dictionary: Savvy?](https://www.urbandictionary.com/define.php?term=Savvy%3F)
+* exceptional
+* proven
+* principled
+* inspirational
+* autonomy
+* detail oriented
+* dependable
+* budgeting
+* pride
+    * he prides himself on being above such crass specifics as texture and flavor
+* plebeian
+    * he does not dirty his palate with plebeian things
+* plebs
+* crusade
+* diatribe
+* intake
+    * ensure a sufficient calorie intake
+* meticulously
+* urbane
+    * he is urbane
+* epicurean
+    * he has a dedication to epicurean perfection that is unmatched
+* diatribe
+    * he livestreamed an extended diatribe triggered by his urglacial water being 2 degrees overchilled
+* truffles
+    * Sicillian truffles
+* forage
+* berating
+* provenance
+* separation into
+* by sheer luck
+    * by sheer luck, I happend upon a very nice tree shrew
+* flesh
+    * n
+* strip
+    * strip the flesh off to keep the skelton
+* flesh-eating bugs
+* duffle bag
+* doctorate
+    * her doctorate was on the diet of the northern flicker
+* flicker
+    * v, n
+* congeal
+* slice of life
+* sitcom
+    * situation comedy
+* soap opera
+* japanese idol
+* pop star
+* attic
+* outnumbered
+* fleek
+* there is that
+* it's been awhile
+* state agency
+* gibberish
+    * he talks gibberish
+* wedding pavillion
+* laxative
+* stool
+    * substances that loosen stools
+    * human fece
+* migraine
+    * she had a migraine last night
+* adulterer
+    * a person who commits adultery
+* adulteress
+* adultery
+    * she was committing adultery with a much younger man
+* inebriate
+    * v
+    * where did this inebriated smooch take place?
+* smooch
+    * [Difference between Kiss and Smooch | Kiss vs Smooch](http://www.differencebetween.info/difference-between-kiss-and-smooch)
+* splash
+    * we heard a splash
+* bella vista
+    * nice view in itallian
+* departmental
+    * departmental memo
+* putty
+* darwinian
+* spooky
+* no hard feelings
+    * If you say ' no hard feelings', you are making an agreement with someone not to be angry or bitter about something.
+* resentment
+* right as rain
+* genial
+* oaf
+    * genial oaf
+* BFF
+    * best frined
+* chore
+    * n
+    * you gonna help him with his chores
+* ferociously
+* salute
+    * I salute your patriotism
+* au pair
+    * my au pair
+* quack
+    * n, v
+    * you're not gonna quack under the pressure
+* make a quack
+* standing ovasion
+    * i gota standing ovasion
+* scantily clad
+    * scantily clad bait
+* yearbook
+* photo-shopped
+* knocker
+* squeezable
+* infested
+* rodent
+    * infested with rodents
+* slash
+    * meating a Navy SEAL slash bestselling romanc novelist
+* naughty
+* neurosurgeon
+    * you are the lonely neurosurgeon
+* boxcar
+* banged up
+    * you are banged up
+* tool shed
+* capsize
+* wiped out
+    * cause to overturn
+* corn chip
+* jaguar
+* dog-chipped
+* in someone's defence
+* pollo
+    * chicken
+* loco
+    * locomotive
+* locomotion
+* butt
+* nailed it
+    * past tence
+    * to complete a task successfully or get something right
+* cosmo
+* reupholster
+    * we have the whole couch reupholstered
+* upholstery
+    * n
+* encrust
+    * all family memory isencrusted into it
+* boozer
+* make out
+* Waiver
+* dumpster fire
+* ventilation
+* second opinion
+* oncology
+* HMO
+    * Health Maintenace Organization
+* inroad
+* tumour
+* touch base
+* skunk-weed
+* instalment
+* toke
+* rusty
+* remission
+* growing pain
+* intervention
+* hit a homer
+* pinch hitter
+* chip in
+* chemotherapy
+* plier
+* household tool
+* anterior
+    * the anterior margin's jagged and iregular
+* fungi
+* pay dirt
+* feedlot
+* thumb breaker
+* dame
+* hit on someone
+    * he was hitting on one of dames
+* aspire
+    * v
+    * he was an aspiring thumb breaker 
+* hit it off
+    * to be friendly with each other immediately
+* no wallflower
+* crease
+* go south
+    * thigs went south
+* skim
+* loan-shark
+* jar
+* frown
+    * my wife frowns on that kind of thing
+* scent
+* rub
+    * If I rub it, will it get bigger
+* blubbering 
+    * blubbering like baby
+* scum
+* scumbag
+* bae
+* acting out
+* out of action
+* conspiration
+* wiggle
+* hunky
+* fend off
+* whatevs
+* baffle
+* forfeit
+* jointly prepared
+* mal
+* pay phone
+* dollinger
+* hindsight
+* lousy
+* tipper
+    * lousy tipper
+    * big tipper
+* twenty-twenty
+    * hindsight is twenty-twenty
+* dank
+    * dank storeroom
+* shoplifting
+* detain
+* i'm over it
+* sterile
+    * they're sterile AF
+* AF
+    * as fuck
+* be meant to do something
+* be meant for
+* mean something by
+* whitewashed
+* endearing
+* her character endeared her to everyone who met her
+* tryna
+    * trying to
+* pet peeve
+    * here are some of my biggest pet peeves in general.
+* teehee
+    * tee-hee
+* weed something out
+    * we must raise the level of research and weed out the porrest work.
+* SCOTUS
+    * Supreme Court of the United Staes
+* make it to
+    * I don't make it to 9:30
+* corncob
+* macrothinking
+* micromanaging
+* neurotic
+    * even dad was'nt this neurotic
+* vacuum
+    * he used to vacuum the fridge
+* crack-a-lacking
+    * crackalackin
+    * what's crackalackin?
+    * what's happening?
+* fist bumps
+* true dat
+* blazing
+    * should have seen me blazing through fresno
+* posse
+    * my posse
+* up high
+    * the opposite of down low
+    * up high, white breaid
+* down low
+    * the opposite of up high
+    * down low, home slice.
+* home slice
+* most def
+    * most definitely
+* getting jiggy with it
+    * you and she been getting jiggy with it?
+    * to get into the groove
+* look something up
+* pit bull
+* butternuts
+* honey bear
+* racid
+* bunk with
+* i wear makeup
+* pillow fight
+* TSA
+    * Transaction Security Administaration
+* accurate manner
+* compromise
+    * compromise quality to release software on time
+* cramp
+    * I have cramps
+* doom
+    * I'm doomed
+* punk
+* thorax
+    * he loves being stroked on his fuzzy little thorax
+* depressed
+    * withdrawn
+* agitated
+* chevrolet
 
 
 
@@ -1243,6 +1590,12 @@ comparative
 
 
 
+* Company name
+    * [Does a Comma Go in Front of LLC or Inc.? | LegalZoom](https://www.legalzoom.com/articles/does-a-comma-go-in-front-of-llc-or-inc)
+    * Inc.
+    * corp.
+    * L.L.C./LLC
+        * limited liability company
 
 * thorazine
 * chlorpromazine
