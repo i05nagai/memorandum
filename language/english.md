@@ -1484,7 +1484,7 @@ I cross off the customer's name from the reservation list.
 * soft spot
 * brunette
 * obesity
-
+* dubbing
 
 
 Subjanctive mood
