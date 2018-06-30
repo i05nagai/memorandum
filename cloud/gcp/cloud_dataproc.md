@@ -100,9 +100,21 @@ gcloud dataproc clusters update cluster-name \
 ```
 
 
+## Cluster Web Interface
+[Cluster Web interfaces  \|  Cloud Dataproc Documentation  \|  Google Cloud](https://cloud.google.com/dataproc/docs/concepts/accessing/cluster-web-interfaces#create_an_ssh_tunnel)
+
+| Web UI               | Port  | URL                          |
+|----------------------|-------|------------------------------|
+| YARN ResourceManager | 8088  | http://master-host-name:8088 |
+| HDFS NameNode        | 9870* | http://master-host-name:9870 |
 
 ## Configuration
 
+
+## Tips
+
+### Install jupyter notebook
+[Install and run a Jupyter notebook on a Cloud Dataproc cluster  \|  Cloud Dataproc Documentation  \|  Google Cloud](https://cloud.google.com/dataproc/docs/tutorials/jupyter-notebook)
 
 ## Pricing
 
