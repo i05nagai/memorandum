@@ -523,6 +523,7 @@ I cross off the customer's name from the reservation list.
     * retribution
 * inflict
     * v
+    * inflict break
 * aquifer
 * retribution
     * veangeance
@@ -1833,6 +1834,97 @@ I cross off the customer's name from the reservation list.
 * brunette
 * obesity
 * dubbing
+* yardstick
+    * about yardstick 21
+* eyeball
+    * they eyeballed him
+* deadheading
+    * he is deadhead
+* big pete
+* hum
+    * v, n
+* gig
+* meaning of life type
+* scooch over
+* dewey decimal
+* sell cat to mice
+* antecedent
+* consequent
+* natural deduction
+* as you were
+    * [phrase meaning \- What does 'as you were' mean? \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/8099/what-does-as-you-were-mean)
+* narcs
+    * narcotics agent
+    * narcotics officer
+* mint condition
+    * [Mint condition \- Wikipedia](https://en.wikipedia.org/wiki/Mint_condition)
+    * in mint condition
+* ticklish
+    * you're ticklish
+* flip-flops
+    * you wear the flip-flops
+* petri dish
+    * theh floor is a petri dish
+* cha-cha
+    * we're doing cha-cha
+* veneer
+    * likes to hide her emotions under a hard veneer
+* tough cookie.
+    * a tough cookie
+* con artist
+* confidence trick
+* supermax prison
+    * super maximum security
+    * administrative maximum
+* resilient
+* recoil
+    * able to recoil or spring back into shape after bending, stretching, or being compressed.
+* flinch
+* spring back
+    * the capacity or tendency of a bent or shaped elastic material (such as a metal) to revert to its original form
+* albino
+* retrovirus
+* whellbarrow
+* hypotenuse
+* elm
+* thrashing
+* beaut
+    * beatiful
+    * she is a beaut
+* lame
+    * that's lame
+    * ["This is lame\."\-\-What does it mean? \- Learn english \- italki Answers](https://www.italki.com/question/85437)
+* aggro
+* dent
+    * dent me
+* maggot
+* It's been a while
+* ill
+    * ILL is "Cool, tight, etc"
+* sweet
+* chill
+    * great, awesome; "cool".
+    * [What does chill mean? chill Definition\. Meaning of chill\. OnlineSlangDictionary\.com](http://onlineslangdictionary.com/meaning-definition-of/chill)
+* munchikin
+    * a child or short person
+* indiscretion
+    * forgive my discretion
+* indiscreet
+* divulge
+    * i shall not be divulging anythong to common passers-by
+* passer-by
+    * n
+    * passerby
+* high and mighty
+    * she is a bit ahigh and mighty
+* have a clue
+* reckon
+    * we reckon it's our betst change of making it to the top
+* contemplation
+* out of pity
+* come in handy
+
+
 
 
 Subjanctive mood

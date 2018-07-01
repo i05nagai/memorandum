@@ -6,6 +6,12 @@ title: Vim Syntax
 
 ## Syntax of syntax file
 
+## Type
+
+* bool
+    * `1` is true
+    * `0` is false
+
 ## Configuration
 * [Creating your own syntax files | Vim Tips Wiki | FANDOM powered by Wikia](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 

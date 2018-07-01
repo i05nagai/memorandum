@@ -223,15 +223,43 @@ resource "google_compute_disk" "default" {
         * `%` anyhost
         * documentにsecond generationは指定するなと記載があるが、多分問題ない
 
-* `google_kms_key_ring`
-    * KMSのkeyring
-* `google_kms_crypto_key`
-    * KMSのkeyを作成
-* `google_kms_crypto_key_iam_binding`
-    * keyに対してIAMを付与
-    * `crypto_key_id`
-    * `members`
-    * `role`
+`google_kms_key_ring`
+KMSのkeyring
+
+`google_kms_crypto_key`
+KMSのkeyを作成
+
+`google_kms_crypto_key_iam_binding`
+keyに対してIAMを付与
+
+* `crypto_key_id`
+* `members`
+* `role`
+
+`google_dataproc_cluster`
+[Google: google\_dataproc\_cluster \- Terraform by HashiCorp](https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html)
+
+* `name`
+* `region`
+* `labels`
+* `cluster_config`
+    * `staging_bucket`
+    * `delete_autogen_bucket`
+    * `gce_cluster_config`
+    * `master_config`
+    * `worker_config`
+    * `preemptible_worker_config`
+    * `software_config`
+    * `initialization_action`
+* `cluster_config.gce_cluster_config`
+    * `zone`
+    * `network`
+    * `subnetwork`
+    * `service_account`
+    * `service_account_scopes`
+    * `tags`
+    * `internal_ip_only`
+
 
 ## Tips
 
@@ -245,19 +273,19 @@ replicaを作る時にのみ値を設定する。
 resource "google_sql_database_instance" "replica" {
   name                 = "instance-replica"
   region               = "us-west1"
-  project              = "${google_project_service.service.project}"           
-  master_instance_name = "${google_sql_database_instance.master.name}"         
+  project              = "${google_project_service.service.project}"
+  master_instance_name = "${google_sql_database_instance.master.name}"
 
   settings {
     tier = "db-f1-micro"
 
-    availability_type = "ZONAL"        
-    disk_autoresize = true             
-    disk_size       = 100              
-    disk_type       = "PD_SSD"         
+    availability_type = "ZONAL"
+    disk_autoresize = true
+    disk_size       = 100
+    disk_type       = "PD_SSD"
 
-  }                                    
-} 
+  }
+}
 ```
 
 ## Reference
