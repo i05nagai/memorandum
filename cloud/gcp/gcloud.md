@@ -12,6 +12,22 @@ title: gcloud
     * components
     * compute
 
+## Install
+
+For ubuntu 16.04,
+
+```
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk
+```
+
+```
+gcloud init
+```
+
+
 ## gcloud auth
 
 利用中のaccountの一覧
@@ -74,6 +90,10 @@ emailを省略した場合のaccountを指定する。
 
 ```
 gcloud config set account <service-account@gmail.com> 
+```
+
+```
+gcloud config 
 ```
 
 ## components
