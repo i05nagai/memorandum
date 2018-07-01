@@ -16,7 +16,7 @@ brew install scala
 For ubuntu 16.04,
 
 ```
-
+apt-get install scala
 ```
 
 ## Syntax
@@ -31,6 +31,10 @@ For ubuntu 16.04,
 ### Styleguide
 * [Scala Style Guide | Scala Documentation](https://docs.scala-lang.org/style/index.html)
 * [Scalacheat | Scala Documentation](https://docs.scala-lang.org/cheatsheets/index.html)
+
+
+### Scala project templates with graddle
+* [chronodm/scala\-project\-template: A skeletal Scala/Gradle project](https://github.com/chronodm/scala-project-template)
 
 
 ## Reference
