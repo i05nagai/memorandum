@@ -4,6 +4,7 @@ title: Terraform Error Tip
 
 ## Terraform Error Tip
 
+
 ### terraform init with backend
 Error messsage is like below.
 
@@ -29,6 +30,8 @@ Thus, you need to disable backends to see actual error.
 ```
 terraform init -backend=false
 ```
+
+Delete `.terraform` directory to initialize incomplete states.
 
 ### netrpc
 以下のようなerrorが出たらterraformのversionをあげる。
