@@ -59,7 +59,9 @@ set clipboard=unnamedplus
 
 組み込みの整形コマンド`\tsp`と`\tab`
 
-`>`はタブ。`-`は空白を表す。
+`>` denotes a tab.
+`-` denotes a space.
+
 ```
 one>>---two>>--->---three>--->---four>--five
 six>>--->---seven>--eight>--nine>---ten
@@ -67,6 +69,7 @@ eleven>-twelve>--thirteen>--->--->---fourteen>---fifteen
 ```
 
 `\tsp`での整形は、空白文字を境目に整形。
+
 ```
 one    two    three    four     five
 six    seven  eight    nine     ten
@@ -74,6 +77,7 @@ eleven twelve thirteen fourteen fifteen
 ```
 
 `\tab`での整形は、タブ文字基準で整形。(TSV形式の整形）
+
 ```
 one               two                        three                four   five
 six                          seven   eight   nine       ten
@@ -153,20 +157,6 @@ vimのindentの設定をするのもの。
 `help cinkeys-format`で設定方法が見られる。
 
 * [Vimで心地良い自動インデント設定を書くためのポイント9個 - TIM Labs](http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html)
-
-### 編集中のファイルのディレクトリを開く
-`%:p:h`で編集のファイルのディレクトリとなる。
-
-```
-:e %:p:h
-```
-
-### filename modifier
-`%:p`とかの`:p`はfilename-modifiersという。
-
-```
-:help filename-modifiers
-```
 
 ### text object
 * [Vimのテキストオブジェクトについてまとめた - Qiita](http://qiita.com/kasei-san/items/143af11bb2559cf0e540)
