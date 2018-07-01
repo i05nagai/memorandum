@@ -16,6 +16,24 @@ Built-in funcitons `:help functions`
 * `system()`
 * `split()`
 * `call()`
+* `winnr([{arg}])`
+    * The result is a Number, which is the number of the current window.
+    * The top window has number 1.
+    * When the optional argument is `$`, the number of the last window is returned (the window count). 
+    * When the optional argument is `#`, the number of the last
+* `bufname({expr})`
+    * the result of `:ls`
+* `fnamemodify({fname}, {mods})`
+    * `mods` are filename-modifiers
+
+Tab
+
+* `tabpagewinnr({tabarg} [, {arg}])`
+    * `winnr` for tabs
+    *  When omitted the current window number is returned.
+    *  This is the window which will be used when going to this tab page.
+    *  When `$` the number of windows is returned.
+    *  When `#` the previous window nr is returned.
 
 ## Defining functions
 user-functions.
