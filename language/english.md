@@ -188,6 +188,7 @@ I cross off the customer's name from the reservation list.
 * numbness
 * tingling
 * deprive
+    * their removal will deprive her of some powerful allies
 * numb
 * subdue
 * disguise
@@ -473,6 +474,8 @@ I cross off the customer's name from the reservation list.
 * wicked
 * mischievous
 * pervert
+    * v, n
+* deviant
 * hypocritical
 * owe me
 * detention camp
@@ -650,6 +653,7 @@ I cross off the customer's name from the reservation list.
 * penmanship skill
 * uncanny
     * eerie
+    * unnatural
 * infuriating
 * unsettling way
 * childish
@@ -1711,6 +1715,120 @@ I cross off the customer's name from the reservation list.
     * withdrawn
 * agitated
 * chevrolet
+* home pay
+    * net income
+    * net pay
+    * salary after deduction
+    * disposal income
+    * your net income
+    * your recieved income
+    * your take home pay
+* gross income
+* deducted
+    * my taxes are deducted
+* perverse
+    * a perverse person
+* twisted
+    * twisted person
+* cross-grained
+* devious
+* crooked
+* devil’s advocate
+* watch your mouth
+* plea
+* engulf
+* pipsqueak
+* basin
+* flummoxed
+* bewildered
+    * confused and indecisive; puzzled.
+* perplexed
+    * completely baffled; very puzzled.
+    * she gave him a perplexed look
+* pound it
+* hey yourself
+    * [phrases - Is it appropriate to use "Hey yourself"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/73608/is-it-appropriate-to-use-hey-yourself)
+* goner
+    * n
+    * a person or thing that is doomed or cannot be saved.
+* inherently
+* connotation
+* dismissively
+* destine
+* gotta
+* hard core
+* diehard
+* menacingly
+    * in a way that suggests the presence of danger; threateningly.
+* flirtatiously
+* cordially
+* impart
+* leave it to me
+* ministry
+* consort
+    * first consort
+* hinder
+* hamper
+* ritual
+* heritage
+* cusp
+    * n
+* resurrection
+* resurrect
+* revive
+* fucked up
+    * [What does fucked up mean? fucked up Definition. Meaning of fucked up. OnlineSlangDictionary.com](http://onlineslangdictionary.com/meaning-definition-of/fucked-up)
+* silver spoon
+    * [Silver spoon - Wikipedia](https://en.wikipedia.org/wiki/Silver_spoon)
+    * her silver spoon accent was a clue
+    * born with a silver spoon in his mouth
+        * Born into a wealthy family. 
+* crown princess
+    * the wife of a crown prince
+    * a female heir to a throne
+* heir
+* next in line
+* fickle
+    * changing frequently, especially as regards one's loyalties or affections.
+* savage
+* ferocious
+* ally
+    * n, v
+    * combine or unite a resource or commodity with (another) for mutual benefit.
+* perpetuate
+    * make (something) continue indefinitely.
+* wretched
+    * adj
+* inquisitor
+    * a person making an inquiry, especially one seen to be excessively harsh or searching.
+* as you wish
+* befall
+    * (especially of something bad) happen to (someone).
+    * a tragedy befell his daughter
+* spank
+* grub
+    * food
+* high expectation leads to disappointment
+* banquet
+    * an elaborate and formal evening meal for many people.
+* shackle
+    * shackle me
+* foremost
+* fade
+* whisk
+    * whisk him back here in a heatbeat
+* regent
+    * n
+* victorious
+    * i will return victorious with him
+        * adj
+    * having won a victory; triumphant.
+* pompous
+* condescending
+* audience chamber
+* embellish
+    * decorate
+    * adorn
 
 
 
@@ -1731,7 +1849,17 @@ comparative
 * He is three years older than I
 * S+V the comparative degree the comparative degree S+V
     * The comparative degree S+V, the comparative degree S+V
+* THe longer he's away, the more chance his feelings for you will fade
 
+
+* most pleased
+    * [phrase usage - Is "most pleased" pompous or condescending? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/237895/is-most-pleased-pompous-or-condescending)
+    * It's my pleasure to...
+        * is a common phrase if you want to be polite.
+    * I am pleased to...
+        * is also common.
+    * I am most pleased to...
+        * is NOT commonly used conversationally.
 
 * afraid of / afraid to do
     * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
