@@ -44,11 +44,17 @@ pygmentsを使うと対応言語を増やせる。
 
 ## Install
 
-### Mac
+For Mac
 pygments optionをつけておけば、defaultのparserで対応していない言語まで対応可能。
 
 ```
 brew install global --with-ctags --with-pygments
+```
+
+For ubuntu 16.04,
+
+```
+
 ```
 
 ## Usage
