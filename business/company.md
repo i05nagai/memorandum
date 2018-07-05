@@ -87,6 +87,7 @@ title: company
     * [VideoAmp \- Scala Data Engineer, Digital Delivery](https://jobs.lever.co/videoamp.com/b5200a18-3b94-4e62-817f-3ea84061af26)
 * General Electric
 * Netflix
+    * [Netflix Open Connect \| Open Connect](https://openconnect.netflix.com/en/)
     * [Data Engineer \- Content Delivery Network](https://jobs.netflix.com/jobs/864557)
     * [Streaming Data Engineering Team Overview \- External \- Google Slides](https://docs.google.com/presentation/d/1OxQPvEi5v1JoZrMDmLGxYdDY2zaAylKWpe18X9sirC0/edit#slide=id.g35d30ccc82_0_25)
     * [Netflix Secrets to Success: Cell Towers, Dubbing, Codecs – Variety](https://variety.com/2018/digital/news/netflix-success-secrets-1202721847/)
