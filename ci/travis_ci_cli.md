@@ -14,6 +14,40 @@ gem install travis --no-rdoc --no-ri
 ```
 
 ## CLI
+You need to login with github authentification.
+
+```
+travis login
+```
+
+* -i, --[no-]interactive           be interactive and colorful
+* -E, --[no-]explode               don't rescue exceptions
+* --skip-version-check         don't check if travis client is up to date
+* --skip-completion-check      don't check if auto-completion is set up
+* -e, --api-endpoint URL           Travis API server to talk to
+* -I, --[no-]insecure              do not verify SSL certificate of API endpoint
+* --pro                        short-cut for --api-endpoint 'https://api.travis-ci.com/'
+* --org                        short-cut for --api-endpoint 'https://api.travis-ci.org/'
+* --staging                    talks to staging system
+* -t, --token [ACCESS_TOKEN]       access token to use
+* --debug                      show API requests
+* --debug-http                 show HTTP(S) exchange
+* -X, --enterprise [NAME]          use enterprise setup (optionally takes name for multiple setups)
+* --adapter ADAPTER            Faraday adapter to use for HTTP requests
+* -g, --github-token TOKEN         identify by GitHub token
+* -T, --auto-token                 try to figure out who you are automatically (might send another apps token to Travis, token will not be stored)
+* -p, --auto-password              try to load password from OSX keychain (will not be stored)
+* -a, --auto                       shorthand for --auto-token --auto-password
+* -u, --user LOGIN                 user to log in as
+* -M, --no-manual                  do not use interactive login
+* --list-github-token          instead of actually logging in, list found GitHub tokens
+* --skip-token-check           don't verify the token with github
+
+Check logined user.
+
+```
+travis accounts
+```
 
 ```
 travis encrypt
