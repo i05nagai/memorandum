@@ -208,8 +208,13 @@ I cross off the customer's name from the reservation list.
 * smuggle drugs
 * smuggle
 * jumble
-* set one's up
+* set someone up
     * はめる
+* exsanguination
+    * exssanguination due to multiple sharp injuries
+* delusion
+* misapprehension
+    * misunderstanding
 * boom
 * espionage
 * extortion
@@ -373,6 +378,7 @@ I cross off the customer's name from the reservation list.
     * n, adj
 * grieving
     * grieve over
+    * we will grieve for them
 * fixer
 * devious
 * esteem
@@ -387,6 +393,8 @@ I cross off the customer's name from the reservation list.
 * bribe
 * melee
 * seer
+    * if the divine seer were to intervene
+    * prophet
 * peerage
     * the title and rank of peer or peeress.
 * peerage of england
@@ -440,6 +448,17 @@ I cross off the customer's name from the reservation list.
 * urine
 * booze
     * alcoholic drink
+* hold someone's liquor
+    * hold someone's booze
+    * I could usually hold my booze
+* roofie
+    * Rohypnol
+    * Flunitrazepam
+* insomnia
+    * sleep disorder
+    * sleeplessness
+* date rape drug
+    * predator drug
 * exhume
 * manner of death
     * [Cause & Manner of Death | Snohomish County, WA - Official Website](https://snohomishcountywa.gov/806/Cause-Manner-of-Death)
@@ -621,6 +640,9 @@ I cross off the customer's name from the reservation list.
 * splendid
 * bestow
 * confer
+    * to exchange ideas on a particular subject, often in order to reach a decision on what action to take:
+    * I need some time to confer with my lawyer.
+    * to give an official title, honour, or advantage to someone:
 * gun-toting
     * carrying and using a gun usually for criminal purposes.
 * narcotiic
@@ -1623,6 +1645,7 @@ I cross off the customer's name from the reservation list.
 * fend off
 * whatevs
 * baffle
+    * perplexed
 * forfeit
 * jointly prepared
 * mal
@@ -1923,6 +1946,170 @@ I cross off the customer's name from the reservation list.
 * contemplation
 * out of pity
 * come in handy
+* newt
+* animorph
+    * book
+* ivy
+* shin
+* prophecy
+* prophecise
+* imperial sanction
+* let someone down
+* throne
+* drivel
+    * enough of yoru drivel
+* havoc
+    * The Telethia rained havoc on countless veteran knights
+* divine
+    * a divine weapon
+* wielder
+    * the wielder of the Monado
+* gasp
+    * pant
+* take a gamble for
+* tomb
+    * tomb rader
+* geyser
+* puerile
+    * that's the puerile reason
+    * childishly silly and immature.
+* ravage
+    * ravaged our home
+* tyranny
+* feed off/on
+    * to increase because of something, or to use something to succeed or get advantages:
+* fortress
+    * by the fortress
+* sustenance
+    * he absorbs the either of someone and uses it for sustenance.
+    * nourishment
+* thorazine
+* chlorpromazine
+* chummy
+    * friendly
+* yapping
+* ring true
+    * If something someone says or writes rings true, it seems to be true: 
+* daze
+    * I'm dazed with/by
+* counteract
+* yearn
+    * v
+* further
+    * We further this goal by localizing Netflix traffic as close as possible to our members
+* dig it
+    * i like it
+    * [dig \- Dictionary Definition : Vocabulary\.com](https://www.vocabulary.com/dictionary/dig)
+    * [Dig it \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/dig+it)
+* vibe
+* frail
+* get bossed
+* boss up
+* futile
+* big softy
+* take it as a compliment
+* watch over
+* peekaboo
+    * n, adj
+* hold your horses
+* eradicate
+    * eradicate all innocent life
+* deplete
+* butchery
+* easy-peasy
+* "aha" mooment
+* parole violater
+* call someone's bluff
+    * call someone's bluff, to expose a person's deception; challenge someone to carry out a threat:
+* no-scope
+    * v
+    * [Urban Dictionary: no scope](https://www.urbandictionary.com/define.php?term=no%20scope)
+    * i no-scope you for a team wipe
+* pick and roll
+* deep pocket
+    * sometimes big pocket
+* reverend
+    * the reason that the reverend stopped by.
+* clergy
+* felon
+* felony
+    * a crime regarded in the US and many other judicial systems as more serious than a misdemeanour.
+* misdemeanour
+    * misdemeanor
+    * a minor wrongdoing.
+    * a non-indictable offence, regarded in the US (and formerly in the UK) as less serious than a felony.
+* in lieu of
+* fluenitrazepam
+* on the record
+    * statement on the record
+* off the record
+* black out
+* maul
+    * v, n
+    * (of an animal) wound (a person or animal) by scratching and tearing.
+* viral
+* blood borne
+    * adj
+    * (of a disease, bacterium, virus, etc.) carried by the blood.
+* cold feet
+    * loss of nerve or confidence.
+* lass
+    * a girl or young woman
+* discerp
+    * v
+    * dicerped lass
+* slow play
+* show off
+    * show off my beautiful wife
+* oh-so
+    * extremely
+    * Who's oh-so flattered, but too pregnat to stand. and too cheap to let you waste both hundred-dollar tickets.
+* go into labor
+    * What if you go run into labor and I'm not here?
+* afar
+    * from afar
+* crab puff
+* mutilate
+* carotid artery
+* transect
+    * transecting the carotid artery
+* cold sore
+* gorge
+    * you think the giant gorge ripped through my throat
+* canker sore
+    * i have a canker sore
+* mouth ulcer
+    * I got a mough ulcer
+* laceration
+* sales commision
+    * [How Do Employers Approach Paying Sales Commission?](https://www.thebalancecareers.com/what-is-a-sales-commission-1917856)
+    * Employees with a job in sales make base salary and often a sales commission for meeting or exceeding particular sales targets. 
+* defuse
+* tracheostomy
+* inclination
+* disposition
+* thigh
+* progenitor
+    * a person or thing from which a person, animal, or plant is descended or originates; an ancestor or parent.
+    * progenitor of Homs
+* devastate
+    * to destroy a place or thing completely or cause great damage
+* sworn
+    * sworn enemy
+* assiduous testing
+* vitamin shake
+* pharmaceutical
+    * pharmaceutical giant
+* snake oil
+* fossilize
+* gain the upper hand
+* nifty
+* publicize
+* tunny
+* vessel
+* bamboozle
+    * cheat or feel
+* good lord
 
 
 
@@ -1956,6 +2143,8 @@ comparative
     * afraid to do = araid doing
     * afirad of doing
         * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
+* I'am he
+    * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
 
 
 * Company name
@@ -1964,9 +2153,9 @@ comparative
     * corp.
     * L.L.C./LLC
         * limited liability company
+* as to/as for
+    * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
 
-* thorazine
-* chlorpromazine
 
 
 ## Math
