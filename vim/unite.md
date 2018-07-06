@@ -28,6 +28,36 @@ call unite#custom#default_action("source/bookmark/directory", "tabvimfiler")
 call unite#custom#default_action("source/file/*", "tabdrop")
 ```
 
+## Configuration
+
+
+* `g:unite_source_menu_menus`
+    * create cutome `menu:<your-command>`
+    * dictionary
+
+
+
+```vim
+" Example of creating menu:test command
+let g:unite_source_menu_menus = get(g:,'unite_source_menu_menus',{})
+let g:unite_source_menu_menus.test = {
+      \     'description' : 'Test menu',
+      \ }
+let g:unite_source_menu_menus.test.candidates = {
+      \   'ghci'      : 'VimShellInteractive ghci',
+      \ }
+function g:unite_source_menu_menus.test.map(key, value)
+  return {
+      \       'word' : a:key, 'kind' : 'command',
+      \       'action__command' : a:value,
+      \     }
+endfunction
+```
+
+```
+:Unite menu:test
+```
+
 
 ## Reference
 * [unite.vim の action の設定方法いろいろ - C++でゲームプログラミング](http://d.hatena.ne.jp/osyo-manga/20131006/1381065976)
