@@ -9,6 +9,12 @@ title: jq
 echo "{'python': 1}" |  jq '{"hoge": 1}'
 ```
 
+You need to `'.'` to pipe output of jq.
+
+```
+echo "{'python': 1}" |  jq '.' | cat
+```
+
 ## Install
 For OSX,
 
