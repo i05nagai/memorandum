@@ -4,7 +4,7 @@ title: Visual Studio Code cpp
 
 ## Visual Studio Code cpp
 Install Microsoft C/C++ extension.
-
+Do not forget to compile with `-g` option.
 
 ## Configuration
 Generated for each workspace.
