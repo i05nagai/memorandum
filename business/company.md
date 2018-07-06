@@ -99,3 +99,4 @@ title: company
 
 
 ## Reference
+[fejes713/30\-seconds\-of\-interviews: A curated collection of common interview questions to help you prepare for your next interview\.](https://github.com/fejes713/30-seconds-of-interviews)
