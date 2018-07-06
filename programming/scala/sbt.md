@@ -38,13 +38,13 @@ In usual, the directory containing `build.sbt`.
     * Generated files (compiled classes, packaged jars, managed files, caches, and documentation) will be written to the target directory by default.
 * `src/`
     * `main/`
-        * resources/
+        * `resources/`
            * files to include in main jar here
-        * scala/
+        * `scala/`
            * main Scala sources
-        * java/
+        * `java/`
            * main Java sources
-    * test/
+    * `test/`
         * resources
            * files to include in test jar here
         * scala/
