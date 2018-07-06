@@ -38,5 +38,14 @@ Debug
 * `${env:Name}`
 
 
+## Keymarp
+
+On linux,
+
+* `Ctlr+Alt+-`
+    * navigate back
+* `Ctlr+Shift+-`
+    * navigate fort
+
 ## Reference
 
