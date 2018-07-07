@@ -40,4 +40,5 @@ apt-get install scala
 ## Reference
 * [learning Scalaz — learning Scalaz](http://eed3si9n.com/learning-scalaz/)
 * [Introduction · Scala研修テキスト](https://dwango.github.io/scala_text/)
+* [deanwampler/prog\-scala\-2nd\-ed\-code\-examples: The code examples used in Programming Scala, 2nd Edition \(O'Reilly\)](https://github.com/deanwampler/prog-scala-2nd-ed-code-examples)
 

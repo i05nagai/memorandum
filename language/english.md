@@ -194,6 +194,8 @@ I cross off the customer's name from the reservation list.
 * garrote
 * corpse
 * demise
+    * a person's death.
+    * someone's demise
 * strap in
 * interrogate
 * formaldehyde
@@ -208,8 +210,13 @@ I cross off the customer's name from the reservation list.
 * smuggle drugs
 * smuggle
 * jumble
-* set one's up
+* set someone up
     * はめる
+* exsanguination
+    * exssanguination due to multiple sharp injuries
+* delusion
+* misapprehension
+    * misunderstanding
 * boom
 * espionage
 * extortion
@@ -342,6 +349,7 @@ I cross off the customer's name from the reservation list.
     * [「hang out」の意味と、「hangout」との違い ー 誰かと遊びたい時はこのフレーズを使おう](http://www.eigowithluke.com/2011/05/hang-out/)
 * what's holding up
 * hoard
+    * to collect large amounts of something and keep it in a safe, often secret, place
 * delinquency
 * lithe
 * agile
@@ -373,6 +381,7 @@ I cross off the customer's name from the reservation list.
     * n, adj
 * grieving
     * grieve over
+    * we will grieve for them
 * fixer
 * devious
 * esteem
@@ -387,6 +396,8 @@ I cross off the customer's name from the reservation list.
 * bribe
 * melee
 * seer
+    * if the divine seer were to intervene
+    * prophet
 * peerage
     * the title and rank of peer or peeress.
 * peerage of england
@@ -411,6 +422,7 @@ I cross off the customer's name from the reservation list.
     * envoy
 * tactful
 * annihilate
+    * my blade will annihilate every last one of your people
 * obliterate
     * [Obliterate vs Annihilate - What's the difference? | WikiDiff](https://wikidiff.com/obliterate/annihilate)
 * smear
@@ -440,6 +452,17 @@ I cross off the customer's name from the reservation list.
 * urine
 * booze
     * alcoholic drink
+* hold someone's liquor
+    * hold someone's booze
+    * I could usually hold my booze
+* roofie
+    * Rohypnol
+    * Flunitrazepam
+* insomnia
+    * sleep disorder
+    * sleeplessness
+* date rape drug
+    * predator drug
 * exhume
 * manner of death
     * [Cause & Manner of Death | Snohomish County, WA - Official Website](https://snohomishcountywa.gov/806/Cause-Manner-of-Death)
@@ -621,6 +644,9 @@ I cross off the customer's name from the reservation list.
 * splendid
 * bestow
 * confer
+    * to exchange ideas on a particular subject, often in order to reach a decision on what action to take:
+    * I need some time to confer with my lawyer.
+    * to give an official title, honour, or advantage to someone:
 * gun-toting
     * carrying and using a gun usually for criminal purposes.
 * narcotiic
@@ -726,6 +752,7 @@ I cross off the customer's name from the reservation list.
     * adj
     * you killed someone because she was getting too clingy
     * too emotionally dependent
+* clinging to
 * bug
     * v
     * she bugged you
@@ -1623,6 +1650,7 @@ I cross off the customer's name from the reservation list.
 * fend off
 * whatevs
 * baffle
+    * perplexed
 * forfeit
 * jointly prepared
 * mal
@@ -1923,6 +1951,228 @@ I cross off the customer's name from the reservation list.
 * contemplation
 * out of pity
 * come in handy
+* newt
+* animorph
+    * book
+* ivy
+* shin
+* prophecy
+* prophecise
+* imperial sanction
+* let someone down
+* throne
+* drivel
+    * enough of yoru drivel
+* havoc
+    * The Telethia rained havoc on countless veteran knights
+* divine
+    * a divine weapon
+* wielder
+    * the wielder of the Monado
+* gasp
+    * pant
+* take a gamble for
+* tomb
+    * tomb rader
+* geyser
+* puerile
+    * that's the puerile reason
+    * childishly silly and immature.
+* ravage
+    * ravaged our home
+* tyranny
+* feed off/on
+    * to increase because of something, or to use something to succeed or get advantages:
+* fortress
+    * by the fortress
+* sustenance
+    * he absorbs the either of someone and uses it for sustenance.
+    * nourishment
+* thorazine
+* chlorpromazine
+* chummy
+    * friendly
+* yapping
+* ring true
+    * If something someone says or writes rings true, it seems to be true: 
+* daze
+    * I'm dazed with/by
+* counteract
+* yearn
+    * v
+* further
+    * We further this goal by localizing Netflix traffic as close as possible to our members
+* dig it
+    * i like it
+    * [dig \- Dictionary Definition : Vocabulary\.com](https://www.vocabulary.com/dictionary/dig)
+    * [Dig it \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/dig+it)
+* vibe
+* frail
+* get bossed
+* boss up
+* futile
+* big softy
+* take it as a compliment
+* watch over
+* peekaboo
+    * n, adj
+* hold your horses
+* eradicate
+    * eradicate all innocent life
+* deplete
+    * to reduce something in size or amount, especially supplies of energy, money, etc.:
+* butchery
+* easy-peasy
+* "aha" mooment
+* parole violater
+* call someone's bluff
+    * call someone's bluff, to expose a person's deception; challenge someone to carry out a threat:
+* no-scope
+    * v
+    * [Urban Dictionary: no scope](https://www.urbandictionary.com/define.php?term=no%20scope)
+    * i no-scope you for a team wipe
+* pick and roll
+* deep pocket
+    * sometimes big pocket
+* reverend
+    * the reason that the reverend stopped by.
+* clergy
+* felon
+* felony
+    * a crime regarded in the US and many other judicial systems as more serious than a misdemeanour.
+* misdemeanour
+    * misdemeanor
+    * a minor wrongdoing.
+    * a non-indictable offence, regarded in the US (and formerly in the UK) as less serious than a felony.
+* in lieu of
+* fluenitrazepam
+* on the record
+    * statement on the record
+* off the record
+* black out
+* maul
+    * v, n
+    * (of an animal) wound (a person or animal) by scratching and tearing.
+* viral
+* blood borne
+    * adj
+    * (of a disease, bacterium, virus, etc.) carried by the blood.
+* cold feet
+    * loss of nerve or confidence.
+* lass
+    * a girl or young woman
+* discerp
+    * v
+    * dicerped lass
+* slow play
+* show off
+    * show off my beautiful wife
+* oh-so
+    * extremely
+    * Who's oh-so flattered, but too pregnat to stand. and too cheap to let you waste both hundred-dollar tickets.
+* go into labor
+    * What if you go run into labor and I'm not here?
+* afar
+    * from afar
+* crab puff
+* mutilate
+* carotid artery
+* transect
+    * transecting the carotid artery
+* cold sore
+* gorge
+    * you think the giant gorge ripped through my throat
+* canker sore
+    * i have a canker sore
+* mouth ulcer
+    * I got a mough ulcer
+* laceration
+* sales commision
+    * [How Do Employers Approach Paying Sales Commission?](https://www.thebalancecareers.com/what-is-a-sales-commission-1917856)
+    * Employees with a job in sales make base salary and often a sales commission for meeting or exceeding particular sales targets. 
+* defuse
+* tracheostomy
+* inclination
+* disposition
+* thigh
+* progenitor
+    * a person or thing from which a person, animal, or plant is descended or originates; an ancestor or parent.
+    * progenitor of Homs
+* devastate
+    * to destroy a place or thing completely or cause great damage
+* sworn
+    * sworn enemy
+* assiduous testing
+* vitamin shake
+* pharmaceutical
+    * pharmaceutical giant
+* snake oil
+* fossilize
+* gain the upper hand
+* nifty
+* publicize
+* tunny
+* vessel
+* bamboozle
+    * cheat or feel
+* good lord
+* back crack
+* grab-and-go
+* devour
+* imminent
+    * if a catastrophe were imminent, it would naturally be preceded by a sign
+    * coming or likely to happen very soon:
+* precede
+    * to be or go before something or someone in time or space:
+* hear, hear
+    * It represents a listener's agreement with the point being made by a speaker.
+    * said to strongly agree with what someone else has just said
+    * is an expression used as a short, repeated form of hear him
+* imperative
+    * extremely important or urgent:
+* intimidate
+    * to frighten or threaten someone, usually in order to persuade them to do something that you want them to do:
+* whatchamacallit
+    * you talkin' about that Apocry-whatchamacallit thing?
+    * used when you are speaking about something or someone whose name you can not remember:
+* Apocryph
+* lay waste to something
+* flawless
+    * perfect or without mistakes
+* come through
+    * If a piece of information or a document comes through, you receive it:
+    * Have the test results come through yet?
+* back on track
+    * Continuing as planned or expected, typically after a problem or distraction.
+* fall into place
+    * (of a series of events or facts) begin to make sense.
+* shady
+* lurk
+    * that thing lurking with in Homs
+* brat
+    * little brat
+* desciple
+    * the desciple of Jesus
+* worthy
+* corpse
+    * a dead body, especially of a human being rather than an animal.
+* pompous
+    * too serious and full of importance:
+* wrath
+* reside
+* grow tired
+* putrid
+* glimmer
+    * to shine with a weak light or a light that is not continuous:
+* cadaver
+* succumb
+    * to lose the determination to oppose something; to accept defeat
+* marvel
+    * n, v
+    * it's a marvel to exist outside the passage of fate
+* signify
+* overdo
+* ingrate
 
 
 
@@ -1956,6 +2206,8 @@ comparative
     * afraid to do = araid doing
     * afirad of doing
         * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
+* I'am he
+    * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
 
 
 * Company name
@@ -1964,9 +2216,9 @@ comparative
     * corp.
     * L.L.C./LLC
         * limited liability company
+* as to/as for
+    * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
 
-* thorazine
-* chlorpromazine
 
 
 ## Math
@@ -2006,6 +2258,11 @@ comparative
 * Putting a := b
 * We put a:=b
 
+
+* cadaver/corpse/body
+    * [word choice \- Cadaver/corpse/body for a dead human body \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/126546/cadaver-corpse-body-for-a-dead-human-body)
+    * Corpse and cadaver are both medical/legal terms for a dead body.
+    * cadaver is older
 
 * [数学で使う英語](http://home.hiroshima-u.ac.jp/nyoho/mathenglish.html)
 * [意外な数学英語](http://math-eng.blogspot.jp/)

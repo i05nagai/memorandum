@@ -415,6 +415,11 @@ docker image
     * gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.5
     * [kubernetes/dns: Kubernetes DNS service](https://github.com/kubernetes/dns)
 
+## GPU
+* [GPUs  \|  Kubernetes Engine  \|  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/gpus)
+
+* node pools equipped with NVIDIA Tesla® V100, P100, and K80 GPUs
+
 ## Reference
 * https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
 * [GKEのRegional Clusters(Beta)を試してみた - nFact](http://nokok.hatenablog.com/entry/2017/12/20/000043)

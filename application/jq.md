@@ -1,9 +1,33 @@
+---
+title: jq
+---
+
 ## jq
 `jq`コマンドは、基本的には標準入力からしか受け取らない。
 
 ```
 echo "{'python': 1}" |  jq '{"hoge": 1}'
 ```
+
+You need to `'.'` to pipe output of jq.
+
+```
+echo "{'python': 1}" |  jq '.' | cat
+```
+
+## Install
+For OSX,
+
+```
+brew install jq
+```
+
+For ubuntu16.04,
+
+```
+apt-get install jq
+```
+
 
 ## Types and Values
 * Array construction

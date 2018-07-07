@@ -4,10 +4,24 @@ title: Bazel
 
 ## Bazel
 
+* workspace
+    * Directory contains `WORKSPACE` file
+* package
+    * a directory within the workspace that contains `BUILD` file
+
 ## Install
+For OSX,
 
 ```
 brew install bazel
+```
+
+For ubuntu 16.04
+
+```
+echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install bazel
 ```
 
 ## Data type
@@ -29,70 +43,13 @@ brew install bazel
 }
 ```
 
-## CLI
+## Target patterns
+[Command\-Line Reference \- Bazel](https://docs.bazel.build/versions/master/command-line-reference.html#target-pattern-syntax)
 
-
-```
-<target name>
-:<target name>
-//<package name>
-//<package name>:<target name>
-```
-
-```
-bazel build //<package name>:<target name>
-```
-
-```
-bazel clean
-```
-
-```
-bazel run //<package name>:<target name>
-```
+All target patterns starting with `//` are resolved relative to the current workspace.
 
 ## Rules
 
-## General
-* genrule
-    * `cmd`のcommandを実行
-    * `name`
-    * `srcs`
-        * `$<`で指定したファイルを参照できる
-    * `outs`
-        * `$@`で指定したファイルを参照できる
-    * `executable`
-        * 出力が実行ファイルなら1
-    * `output_to_bindir`
-        * `bazel-bin` directoryに出力するなら1
-    * `cmd`
-
-```
-genrule(
-  name = "hello",
-  srcs = [
-    "hello.c",
-  ],
-  outs = [
-    "hello",
-  ],
-  executable = 1,
-  output_to_bindir = 1,
-  cmd = "gcc $< -O2 -o $@",
-)
-```
-
-### C/C++
-
-```
-cc_binary(
-    name = "hello",
-    srcs = [
-        "hello.c",
-    ],
-    copts = ["-O2"],
-)
-```
 
 ### Docker
 * [bitnami/bazel_containers: poc of bazel bitnami containers](https://github.com/bitnami/bazel_containers)

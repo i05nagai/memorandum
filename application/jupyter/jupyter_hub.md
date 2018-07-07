@@ -3,6 +3,8 @@ title: JupyterHub
 ---
 
 ## JupyterHub
+With JupyterHub you can create a multi-user Hub which spawns, manages, and proxies multiple instances of the single-user Jupyter notebook server.
+
 
 
 ## Reference

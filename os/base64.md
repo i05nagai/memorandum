@@ -36,4 +36,8 @@ echo 'aaa' | base64 | tr -d '\n'
     * 0で折り返しなし
 * `--decode`
 
+```
+echo 'aaa' | base64 --wrap=0
+```
+
 ## Reference
