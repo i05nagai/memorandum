@@ -40,6 +40,12 @@ Directory `.vsocode` is created in the root of workspace.
 * `F12`
     * Go to definition
 
+Command
+
+* `Switch Header/Source`
+    * from command pallet
+
+
 
 ## Reference
 * [C\+\+ programming with Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp)
