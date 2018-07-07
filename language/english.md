@@ -194,6 +194,8 @@ I cross off the customer's name from the reservation list.
 * garrote
 * corpse
 * demise
+    * a person's death.
+    * someone's demise
 * strap in
 * interrogate
 * formaldehyde
@@ -347,6 +349,7 @@ I cross off the customer's name from the reservation list.
     * [「hang out」の意味と、「hangout」との違い ー 誰かと遊びたい時はこのフレーズを使おう](http://www.eigowithluke.com/2011/05/hang-out/)
 * what's holding up
 * hoard
+    * to collect large amounts of something and keep it in a safe, often secret, place
 * delinquency
 * lithe
 * agile
@@ -419,6 +422,7 @@ I cross off the customer's name from the reservation list.
     * envoy
 * tactful
 * annihilate
+    * my blade will annihilate every last one of your people
 * obliterate
     * [Obliterate vs Annihilate - What's the difference? | WikiDiff](https://wikidiff.com/obliterate/annihilate)
 * smear
@@ -748,6 +752,7 @@ I cross off the customer's name from the reservation list.
     * adj
     * you killed someone because she was getting too clingy
     * too emotionally dependent
+* clinging to
 * bug
     * v
     * she bugged you
@@ -2015,6 +2020,7 @@ I cross off the customer's name from the reservation list.
 * eradicate
     * eradicate all innocent life
 * deplete
+    * to reduce something in size or amount, especially supplies of energy, money, etc.:
 * butchery
 * easy-peasy
 * "aha" mooment
@@ -2110,6 +2116,63 @@ I cross off the customer's name from the reservation list.
 * bamboozle
     * cheat or feel
 * good lord
+* back crack
+* grab-and-go
+* devour
+* imminent
+    * if a catastrophe were imminent, it would naturally be preceded by a sign
+    * coming or likely to happen very soon:
+* precede
+    * to be or go before something or someone in time or space:
+* hear, hear
+    * It represents a listener's agreement with the point being made by a speaker.
+    * said to strongly agree with what someone else has just said
+    * is an expression used as a short, repeated form of hear him
+* imperative
+    * extremely important or urgent:
+* intimidate
+    * to frighten or threaten someone, usually in order to persuade them to do something that you want them to do:
+* whatchamacallit
+    * you talkin' about that Apocry-whatchamacallit thing?
+    * used when you are speaking about something or someone whose name you can not remember:
+* Apocryph
+* lay waste to something
+* flawless
+    * perfect or without mistakes
+* come through
+    * If a piece of information or a document comes through, you receive it:
+    * Have the test results come through yet?
+* back on track
+    * Continuing as planned or expected, typically after a problem or distraction.
+* fall into place
+    * (of a series of events or facts) begin to make sense.
+* shady
+* lurk
+    * that thing lurking with in Homs
+* brat
+    * little brat
+* desciple
+    * the desciple of Jesus
+* worthy
+* corpse
+    * a dead body, especially of a human being rather than an animal.
+* pompous
+    * too serious and full of importance:
+* wrath
+* reside
+* grow tired
+* putrid
+* glimmer
+    * to shine with a weak light or a light that is not continuous:
+* cadaver
+* succumb
+    * to lose the determination to oppose something; to accept defeat
+* marvel
+    * n, v
+    * it's a marvel to exist outside the passage of fate
+* signify
+* overdo
+* ingrate
 
 
 
@@ -2195,6 +2258,11 @@ comparative
 * Putting a := b
 * We put a:=b
 
+
+* cadaver/corpse/body
+    * [word choice \- Cadaver/corpse/body for a dead human body \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/126546/cadaver-corpse-body-for-a-dead-human-body)
+    * Corpse and cadaver are both medical/legal terms for a dead body.
+    * cadaver is older
 
 * [数学で使う英語](http://home.hiroshima-u.ac.jp/nyoho/mathenglish.html)
 * [意外な数学英語](http://math-eng.blogspot.jp/)
