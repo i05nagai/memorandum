@@ -1829,6 +1829,66 @@ I cross off the customer's name from the reservation list.
 * embellish
     * decorate
     * adorn
+* white orchid
+    * Orchidaceae
+* operating income
+    * earning before interest and taxes
+    * EBIT
+* operating expense
+* net income
+* ravine
+    * a deep, narrow gorge with steep sides.
+* figures in thousands
+    * 4,345 in thousands
+        * 4,345,000
+* depreciation
+    * Depreciation and amortization
+* scratch someone's back
+    * Do someone a favor in hopes that a favor will be returned.
+* sissy
+    * coward
+    * he looks like sissy
+* effeminate
+    * (of a man) having characteristics regarded as typical of a woman; unmanly.
+* get under skin
+* self-proclaimed
+    * self-proclaimed leader
+* have to hand it to someone
+    * I have to hand it to her
+    * You've got to hand it to them
+    * you admire someone for their skills or achievements and you think they deserve a lot of praise.
+* run into someone
+* young'uns
+    * plural of youngun
+* young'un
+    * young one
+* remnant
+    * remnant of memory
+* thorn in someone's side
+    * thorn in my side
+    * a person or thing that causes a lot of problems for someone
+* might as well
+    * [meaning - what does the term "might as well" mean? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/95962/what-does-the-term-might-as-well-mean)
+    * I might as well do something
+* plow
+* callous
+* bear with someone
+    * bear with me
+* in a tie
+* flan
+* gay vibes
+    * get them gay vibes
+* suage
+* assuage
+* statutory
+    * statutory rape
+* statute
+* low-carb diet
+    * with a low carb diet and excersise
+    * A low-carb diet is a diet that restricts carbohydrates, such as those found in sugary foods, pasta and bread. It is high in protein, fat and healthy vegetables.
+* ghostwriter
+* ghostwritering
+    * freelance writing
 
 
 
@@ -1850,6 +1910,10 @@ comparative
 * S+V the comparative degree the comparative degree S+V
     * The comparative degree S+V, the comparative degree S+V
 * THe longer he's away, the more chance his feelings for you will fade
+
+
+* pp. or p.
+    * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
 
 
 * most pleased
