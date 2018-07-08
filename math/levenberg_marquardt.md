@@ -29,10 +29,13 @@ $$
 
 $$
 \begin{equation}
-S(x) 
-    = \left\| y - f(x) \right\|^{2}
+    S(x)
+    =
+    \left\| y - f(x) \right\|^{2}
 \end{equation}
 $$
+
+とかける。
 
 ## Theory
 Levenberg-Marquardt法は、関数$f$とある真値のベクトル$y$との2乗誤差を最小にする問題に対する効率的なNewton法である。

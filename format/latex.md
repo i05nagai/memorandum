@@ -75,6 +75,14 @@ $$
 \end{diagram}
 $$
 
+### Rightarrow implies
+* [\Rightarrow vs. \implies, and "does not imply" symbol - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/47063/rightarrow-vs-implies-and-does-not-imply-symbol)
+
+* Is it better to use \Rightarrow or \implies to symbolize logical implications? Why?
+    * Use `\implies`
+
+
+
 ## Reference
 * [oda_tex.dvi](https://www.math.tohoku.ac.jp/tmj/oda_tex.pdf)
-
+* [List of LaTeX mathematical symbols - OeisWiki](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
