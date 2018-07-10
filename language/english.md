@@ -2351,7 +2351,27 @@ I cross off the customer's name from the reservation list.
 * ghostwriter
 * ghostwritering
     * freelance writing
-
+* manada
+* yoink
+* etymology
+* on one's feet
+    * standing
+    * she's in the shop on her feet all day
+* concussion
+    * a usually temporary injury to the brain caused by a fall or hit on the head or by violent shaking
+* nosy
+    * adj, v
+    * showing too much curiosity about other people's affairs.
+* elision
+* penpal
+* straght edge
+    * straightedge
+    * having a way of life that does not involve doing anything considered to be unhealthy or immoral
+        * I'm straightedge, have been for years
+* malignant
+    * A malignant disease or growth is likely to get worse and lead to death:
+* expanged
+    * to rub off or remove information from a piece of writing
 
 
 
