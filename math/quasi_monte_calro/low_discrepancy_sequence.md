@@ -6,7 +6,7 @@ title: Low Discrepancy Sequence
 
 * $N \in \mathbb{N}$,
     * the number of points,
-* $\mathcal{P} := \{x_{1}, x_{2}, \ldots\} \subset [0, 1)^{s}$,
+* $$\mathcal{P} := \{x_{1}, x_{2}, \ldots\} \subset [0, 1)^{s}$$,
     * point set
 * $1_{A}$,
     * indicator function of a subset $A$,
