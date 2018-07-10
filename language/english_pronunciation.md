@@ -30,11 +30,12 @@ Vowels
     * ə
     * ɜː
     * ɔː
+        * [intrusive r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-5)
 * mouth is open, sound comes from bottom of mouth
     * æ
     * ʌ
     * ɑː
-    * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
+        * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
 
 Diphthongs
@@ -78,6 +79,8 @@ Consonant Pairs
     * b
 * 2
     * t
+        * [Elision of /t/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-4)
+            * between two consonents
     * d
         * [IPA /d/ Pronunciation: How To Pronounce – DESK – DOLLAR – DANCE - YouTube](https://www.youtube.com/watch?v=ISumskR6FHw)
 * 3
@@ -110,6 +113,7 @@ Single Consonatns
 * ŋ
 * l
 * r
+    * [Linking r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-2)
 * j
 * w
 
