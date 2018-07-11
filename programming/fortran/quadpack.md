@@ -6,6 +6,11 @@ title: QUADPACK
 numerical integration library written in fortran77.
 
 ## Methods
+* method endign in `e`
+    * more detailed version with a name ending in E, as `dqage`.
+    * These provide more information and control than the easier versions.
+
+
 * qags
 * qagi
     * general-purpose routine for infinite intervals
@@ -14,11 +19,22 @@ numerical integration library written in fortran77.
 * qng
     * simple non-adaptive integrator
 * qag
+    * simple adaptive integrator
 * qagp
 * qawo
 * qawf
 * qas
 * qawc
+* `dqk15i.f`
+    * 15 point rule for (semi)infinite interval.
+* `qk15w.f`
+    * 15 point rule for special singular weight functions.
+* `dqc25c.f`
+    * 25 point rule for Cauchy Principal Values
+* `dqc25f.f`
+    * 25 point rule for sin/cos integrand.
+* `dqmomo.f`
+    * Integrates k-th degree Chebychev polynomial times function with various explicit singularities.
 
 
 
