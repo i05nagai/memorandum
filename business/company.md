@@ -96,7 +96,12 @@ title: company
     * [Optimized shot\-based encodes: Now Streaming\! – Netflix TechBlog – Medium](https://medium.com/netflix-techblog/optimized-shot-based-encodes-now-streaming-4b9464204830)
     * [Using Machine Learning to Improve Streaming Quality at Netflix \| Chaitanya \(Chaitu\) Ekanadham \| Pulse \| LinkedIn](https://www.linkedin.com/pulse/using-machine-learning-improve-streaming-quality-chaitanya-ekanadham/)
     * [A/B Testing and Beyond: Improving the Netflix Streaming Experience with Experimentation and Data…](https://medium.com/netflix-techblog/a-b-testing-and-beyond-improving-the-netflix-streaming-experience-with-experimentation-and-data-5b0ae9295bdf)
+* bol.com
+    * [Bol\.com \- Wikipedia](https://en.wikipedia.org/wiki/Bol.com)
+
 
 
 ## Reference
-[fejes713/30\-seconds\-of\-interviews: A curated collection of common interview questions to help you prepare for your next interview\.](https://github.com/fejes713/30-seconds-of-interviews)
+* [fejes713/30\-seconds\-of\-interviews: A curated collection of common interview questions to help you prepare for your next interview\.](https://github.com/fejes713/30-seconds-of-interviews)
+* [How to find a software engineering job abroad – Jobbatical Blog](https://blog.jobbatical.com/how-to-find-a-software-engineering-job-abroad-a94d19a737ca)
+* [ YBorder success stories Johanna, French data analyst hired in New York \- YBorder blog](https://blog.yborder.com/2017/09/13/yborder-success-stories-johanna-french-data-analyst-hired-new-york/)
