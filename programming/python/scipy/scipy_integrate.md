@@ -26,6 +26,20 @@ Implemented in `quadpack.py`, which is wrapper for quadpack written in fortran.
     * `ranges`
         * `((a1, b1), ..., (an, bn))`
 
+* `nquad->NQuad->quad`
+    * `->_quad`
+        * `->_quadpack._qagse`
+        * `-> _quadpack._qagie`
+       * `-> _quadpack._qagpe`
+    * `->_quad_weight`
+        * `->_quadpack._qawoe`
+        * `->_quadpack._qawfe`
+        * `->_quadpack._qawfe`
+        * `->_quadpack._qawse`
+        * `->_quadpack._qawce`
+
+
+
 ### quadrature
 
 * Compute a definite integral using fixed-tolerance Gaussian quadrature.
