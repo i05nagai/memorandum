@@ -221,6 +221,8 @@ I cross off the customer's name from the reservation list.
 * boom
 * espionage
 * extortion
+* enraged
+    * very angry; furious
 * thuggish
 * self-esteem
 * self-confidence
@@ -243,6 +245,9 @@ I cross off the customer's name from the reservation list.
 * eerie
 * nutcase
 * obnoxious
+    * extremely unpleasant,
+    * very unpleasant or rude:
+    * very unpleasant or offensive:
 * grandeur
     * n
 * spkendour
@@ -712,6 +717,8 @@ I cross off the customer's name from the reservation list.
     * [bite me - Wiktionary](https://en.wiktionary.org/wiki/bite_me)
 * mess with
 * meddle
+    * I don't want him meddling in our affairs
+    * to try to change or have an influence on things that are not your responsibility, especially by criticizing in a damaging or annoying way:
 * top bunk
 * I got it
     * [「I got it」と「You got it」を使いこなそう！ | 英語学習サイト：Hapa 英会話](https://hapaeikaiwa.com/2014/04/24/%E3%80%8Ci-got-it%E3%80%8D%E3%81%A8%E3%80%8Cyou-got-it%E3%80%8D%E3%82%92%E3%82%AD%E3%83%83%E3%83%81%E3%83%AA%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%9D%E3%81%86%EF%BC%81/)
@@ -749,6 +756,7 @@ I cross off the customer's name from the reservation list.
     * fail to include
 * cliche
     * please dont't say it was your mother. that'd be too cliched
+    * showing a lack of originality; based on frequently repeated phrases or opinions.
 * run it down
     * let me run it down for you
     * to tell the whole story
@@ -1382,6 +1390,11 @@ I cross off the customer's name from the reservation list.
     * she's just goona cripple you
 * grace
     * right now you gotta clean this mess up with some grace, some dignity
+    * leapt with incredible grace
+* valiantly
+    * with courage or determination.
+* dignity
+    * calm, serious, and controlled behaviour that makes people respect you
 * speaking of which
 * peckish
     * i'm little peckish
@@ -1807,9 +1820,12 @@ I cross off the customer's name from the reservation list.
     * meth-monkey had a feeding frenzy in here
 * badass
 * dope
+    * the music is dope
+    * a stupid or foolish person:
 * fulminated mercury
 * tweak
     * a little tweak of chemistry
+    * tweak on nose
 * moral clearity
 * crib
 * luminol
@@ -2372,6 +2388,260 @@ I cross off the customer's name from the reservation list.
     * A malignant disease or growth is likely to get worse and lead to death:
 * expanged
     * to rub off or remove information from a piece of writing
+* don't have the faintest idea
+    * used for emphasizing that you do not know or understand something
+    * I haven’t the faintest idea what you mean.
+* nom nom nom
+    * The sound of a person chewing or eating with childlike enthusiasm
+* by whisper
+* envious of
+* lighten up
+* thump
+    * to hit something and cause a noise
+* lexicographical
+* angle trisection
+* snippy
+* condenscending
+* fed up with
+    * I'm fed up with your money and your whole condenscending attitude
+* rejuvenate
+* slimed
+    * you get slimed
+* gender inclusive
+* send-off
+    * farewell
+    * an occasion at which people can express good wishes and say goodbye to someone who is leaving a place:
+    * We'll have to give her a good send-off when she leaves the office.
+* stagnant
+    * not flowing or moving, and smelling unpleasant:
+* proclaim
+* go hand in hand with smth
+    * If something goes hand in hand with something else, it is closely related to it and happens at the same time as it or as a result of it:
+* retreat
+* what's your twenty?
+    * [Where does the phrase 'what's your 20' come from? \- Quora](https://www.quora.com/Where-does-the-phrase-whats-your-20-come-from)
+* plume
+    * a large feather
+* white plumed arrow
+* heralded
+    * awhite plumed arrow heralded the comming sacrifice
+* dubbed
+    * be dubbed NAME
+    * be dubbed by someone NAME
+* thwart
+    * his attempts were thwarted by someone's swift movement
+* piercing
+    * adj, n
+    * Piercing the sky, the arrow sunk its shaft squarely into
+* shaft
+    * n, v
+* squarely
+    * directly and firmly
+* harboring/harbouring
+    * harboring a secret love for someone
+* nary
+    * the blade left nary a scratch
+    * informal form of not
+* stand your ground
+    * to refuse to be pushed backwards, or to continue in your beliefs in an argument:
+* staring death in the face
+    * to be close to having sth unpleasant happening to you:
+* baring
+    * bearing its feasome claws
+* gallantly
+    * he fight gallantly to gain the upper hand
+* best
+    * v
+    * to defeat someone in a fight or competition
+* gash
+    * covered in gashed
+* majestic
+    * majestic coat dyed crimson
+    * beautiful, powerful, or causing great admiration and respect:
+* heavenward
+    * upwards
+* glinted off
+    * light from above glinted off something
+* incest
+    * sexual activity involving people who are closely related and not legally allowed to marry:
+    * it is incest
+* sordid
+    * dirty and unpleasant:
+    * morally wrong and shocking:
+* humus
+* mor
+* wicca
+    * a modern religious form of witchcraft (= the activity of performing magic to help or harm other people)
+* paganism
+* pagan
+    * adj
+* pantywaist
+    * n, adj
+    * a feeble or effeminate man
+    * effeminate or feeble.
+* pentacle
+* pentagram
+* out cold
+    * If someone is out cold, they are unconscious or sleeping very heavily.
+* jock butt
+* improvised
+* furtive
+    * done or acting secretly and quietly to avoid being noticed:
+    * (of people) behaving secretly and often dishonestly, or (of actions) done secretly and often dishonestly:
+* paternal
+    * of or appropriate to a father.
+    * characteristic of or befitting a father; fatherly:
+* paternal authority
+    * rights and jurisdiction of a father and of a mother over their children
+* pain in the ass
+* for what it's worth
+    * said when you are giving someone a piece of information and you are not certain if that information is useful or important:
+    * used to show that you know someone may not care, but you are going to say something anyway:
+* boil down to
+    * they boil down to three words
+* contemptible
+    * you contemptible little buffoon
+* contempt
+* buffoon
+    * a ridiculous but amusing person; a clown
+* swan around
+    * swaning around in a monkey suit
+    * move about or go somewhere in a casual, irresponsible, or ostentatious way.
+* monkey suit
+    * a man's formal suit worn in the evening
+* punch
+    * drink punch
+* the seas boiled and the skies fell
+    * sentence from the Bible
+    * [Ghostbusters: Quotes about The Supernatural Page 3](https://www.shmoop.com/ghostbusters/supernatural-quotes-3.html)
+* zing
+    * energy, enthusiasm, or liveliness.
+        A
+* deception
+* gaze
+    * gaze at
+* napping
+* slobber
+    * v, n
+    * saliva
+* saliva
+* copiously
+* copious
+    * in large amounts, or more than enough:
+* keep someone's eye peeled
+* pouch
+* astral
+* enshrine
+* constellation
+* celestial
+* growl
+* deity
+* turnip
+* clobber
+    * if he does that I'll clobber him
+* blabber
+    * v
+    * talk foolishly, indiscreetly, or excessively.
+* off the wall
+    * adj
+    * surprising and unusual:
+    * strange or very different, often intentionally:
+* do the laundry
+* mangy
+* mange
+* scabby
+* boulder
+    * n
+    * a large rock, typically one that has been worn smooth by erosion.
+* corrosive
+* who on eath ...?
+    * who on eath did this?
+* mended
+* foul
+    * foul beast
+* withered
+* buff
+* sapling
+* crawfish
+* Goby
+* giant salmon
+* a young tree, especially one with a slender trunk.
+* untenable
+* omnipotent
+* gratify
+* Elvis has left the building
+* encore
+* preppy
+    * n, adj
+* pupil
+* goose
+    * bird
+* sleep with
+* weeper
+* weep
+    * shed tears
+* shed
+* exude
+    * If you exude love, confidence, pain, etc., you show that you have a lot of that feeling:
+* suds
+    * no suds
+* soapsuds
+* lather
+* foam
+    * n, v
+    * a mass of very small bubbles formed on the surface of a liquid
+    * a substance like cream that is filled with bubbles of air:
+* weasel
+    * kind of mammal
+* stoat
+    * kind of mammal
+* squirrel
+* marshmallow
+* inflate
+    *  to make something increase in size by filling it with air:
+* appalachia
+    * cocktails in appalachia
+        * [Where does the phrase "Cocktails in Appelacia" come from? \| Yahoo Answers](https://answers.yahoo.com/question/index?qid=20070814100952AAnsLAt&guccounter=1)
+    * region of u.s.
+* rambunctious
+    * you've never gotten a little rambunctious with him?
+* boisterous
+    * noisy, energetic, and rough:
+* pant leg
+* monogamy
+* anthropologically
+* raggedy
+    * scruffy; shabby.
+* kook
+    * a mad or eccentric person.
+* landry detergent
+* spout
+    * easy-pour spout
+* nozzle
+* liz
+* expatiate
+* bead
+* inquisitive
+* nosy
+* busybody
+    * a meddling or prying person.
+    * a person who is too interested in things that do not involve them:
+* bead
+    * n, v
+    * droplet
+* condensation
+    * water which collects as droplets on a cold surface when humid air is in contact with it.
+    * the conversion of a vapour or gas to a liquid.
+* inch
+    * to move very slowly or in a lot of short stages:
+* droplet
+* double
+    * n
+    * a person who looks exactly like another.
+* opening
+* clench
+* vestible
+
 
 
 
@@ -2464,6 +2734,8 @@ comparative
 * similarly
     * 同様にして
 * divide n into groups whose size is at most m
+* angle trisection
+    * [Angle trisection \- Wikipedia](https://en.wikipedia.org/wiki/Angle_trisection)
 
 
 * [数学用語と英語 - TakaPの数学日記](http://blog.goo.ne.jp/math19575/e/74f71716db2f9919e68865cf0c6848d0)
