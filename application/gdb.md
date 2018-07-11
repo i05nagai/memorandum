@@ -66,4 +66,4 @@ apt-get install gdb
 
 ### Reference
 * [GDBでポインタを配列として表示する | Pistolfly](https://www.pistolfly.com/weblog/2012/02/gdbint.html)
-
+* [GDB Command Reference \- sharedlibrary command](http://visualgdb.com/gdbreference/commands/sharedlibrary)
