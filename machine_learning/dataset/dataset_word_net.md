@@ -10,7 +10,6 @@ title: WordNet
 curl -O http://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.gz
 ```
 
-##
 wnidという一意なidがついてる。
 
 * `n00021265`
