@@ -5,15 +5,40 @@ title: Barnard Test
 ## Barnard Test
 Barnard exact model
 
+* $n_{t} \in \mathbb{N}$,
+    * the number of things in treatment group
+* $N \in \mathbb{N}$,
+    * the number of things in treatment group and control group
 * $X_{i}^{c}$,
     * i.i.d. of bernoulli r.v with probability $p_{c}$.
     * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$x_{i}^{c} := X_{i}^{c}(\omega) \ (i = 1, \ldots, n)$$,
+* $$x_{i}^{c} := X_{i}^{c}(\omega) \ (i = 1, \ldots, n_{c})$$,
 * $X_{i}^{t}$,
     * i.i.d. of bernoulli r.v.with probability $p_{t}$
     * i.e. $$\{X_{i}^{t}\}$$ follows binomial distribution.
-* $$x_{i}^{t} := X_{i}^{t}(\omega) \ (i = 1, \ldots, n)$$,
+* $$x_{i}^{t} := X_{i}^{t}(\omega) \ (i = 1, \ldots, n_{t})$$,
 * $\Theta := [0, 1] \times [0, 1] $,
+
+
+the number of YES condition in treatment group and the number of YES condition in control group are
+
+$$
+\begin{eqnarray}
+    x^{t}
+    & := &
+        \sum_{i=1}^{n_{t}}
+            x_{i}^{t}
+    \nonumber
+    \\
+    x^{c}
+    & := &
+        \sum_{i=1}^{n_{c}}
+            x_{i}^{c}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
 
 
 | Condition | treatment group | control group   | total               |
@@ -30,7 +55,9 @@ $$
 \begin{eqnarray}
     f(x^{c}, x^{t}; p_{c}, p_{t})
     & := &
-        f(x_{1}^{c}, \ldots, x_{n}^{c}, x_{1}^{t}, \ldots, x_{n}^{t}; p_{c}, p_{t})
+        f(
+            x_{1}^{c}, \ldots, x_{n_{c}}^{c}, x_{1}^{t}, \ldots, x_{n_{t}}^{t}; p_{c}, p_{t}
+        )
     \nonumber
     \\
     & := &
@@ -49,31 +76,32 @@ $$
     \nonumber
     \\
     & = &
-        \mathrm{Bi}(x_{1}^{c}, \ldots, x_{n}^{c}; p_{c})
-        \mathrm{Bi}(x_{1}^{t}, \ldots, x_{n}^{t}; p_{t})
+        \mathrm{Bi}(x_{1}^{c}, \ldots, x_{n_{c}}^{c}; p_{c})
+        \mathrm{Bi}(x_{1}^{t}, \ldots, x_{n_{t}}^{t}; p_{t})
     \nonumber
     \\
     & = &
         \left(
             \begin{array}{c}
-                n \\
+                n_{c} \\
                 x_{c}
             \end{array}
         \right)
         p_{c}^{x_{c}}
-        (1 - p_{c})^{n - x_{c}}
+        (1 - p_{c})^{n_{c} - x_{c}}
         \left(
             \begin{array}{c}
-                n \\
+                n_{t} \\
                 x_{t}
             \end{array}
         \right)
         p_{t}^{x_{t}}
-        (1 - p_{t})^{n - x_{t}}
+        (1 - p_{t})^{n_{t} - x_{t}}
 \end{eqnarray}
 $$
 
-In Barnard's exact model, under null hypothesis is $$H_{0} := \{(p , p) \in \Theta \mid p \in [0, 1]\}$$. The p.d.f is given by
+In Barnard's exact model, the null hypothesis is $$H_{0} := \{(p , p) \in \Theta \mid p \in [0, 1]\}$$.
+Under the null hypothesis, the p.d.f is given by
 
 $$
 \begin{eqnarray}
@@ -81,13 +109,13 @@ $$
     & = &
         \left(
             \begin{array}{c}
-                N \\
+                n_{c} \\
                 x_{c}
             \end{array}
         \right)
         \left(
             \begin{array}{c}
-                N \\
+                n_{t} \\
                 x_{t}
             \end{array}
         \right)
@@ -230,8 +258,25 @@ $$
 \end{eqnarray}
 $$
 
-
 Let $\alpha \in [0, 1]$ be significance level.
+
+
+## Difference between Fisher's exact test and Barnard test
+See <a href="{{ site.baseurl }}/fisher_exact_test.html">Fisher's exact test</a>.
+
+Fisher's exact test considers a set of experiments is single random variable.
+For instance, the number of Treatment Groups with YES condition is a random varaible with hypergeometric distribution.
+The each experiment in Treatment Groups is not considered as a random variable.
+In this model, adding another result of experiment is a bit off because the each experiment is not modeled as a random variable.
+Intuitively, the set of experiments should be conducted at the (almost) same time.
+
+On the other hand, in Barnard test, each experiment is a random variable with bernoulli distribution and the experiments are independent.
+Each experiment could be conducted at the same situation to ensure independence of each experiment.
+Note that this does not mean we can add another result of experiment after observation of experiments.
+Modyfing the results of experiments are not allowed.
+
+Intuitively, the Fisher's exact test seems less flexible than Barnard test.
+
 
 ## Example
 * $N = 15$,
@@ -297,3 +342,5 @@ Let $\alpha \in [0, 1]$ be significance level.
 * [Lecture 14: Statistical Significance of 2x2 Contingency Tables, Part 2](https://www2.stat.duke.edu/courses/Spring12/sta10.1/Lectures/Lec14.pdf)
 * [chi squared \- Which test for cross table analysis: Boschloo or Barnard? \- Cross Validated](https://stats.stackexchange.com/questions/169864/which-test-for-cross-table-analysis-boschloo-or-barnard)
 * [breakfast\-club\-python/barnard\.py at master · roemera/breakfast\-club\-python](https://github.com/roemera/breakfast-club-python/blob/master/barnard/barnard.py)
+* Peter, C. (2016). Package ‘ Exact .’ Journal of the American Statistical Association, 89, 1012–1016.
+* Mehta, C. R., & Senchaudhuri, P. (2003). Conditional versus Unconditional Exact Tests for Comparing Two Binomials.
