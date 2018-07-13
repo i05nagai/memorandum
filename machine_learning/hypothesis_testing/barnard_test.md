@@ -259,6 +259,17 @@ $$
 $$
 
 Let $\alpha \in [0, 1]$ be significance level.
+If
+
+$$
+    \sup_{p \in (0, 1)}
+        \hat{p}(p)
+    \le
+    \alpha
+    ,
+$$
+
+the null hypothesis is rejected.
 
 
 ## Difference between Fisher's exact test and Barnard test
@@ -337,6 +348,17 @@ $$
 $$
 
 Let $\alpha \in [0, 1]$ be significance level.
+If
+
+$$
+    \sup_{p \in (0, 1)}
+        \hat{p}(p)
+    \le
+    \alpha
+    ,
+$$
+
+the null hypothesis is rejected.
 
 ## Reference
 * [Lecture 14: Statistical Significance of 2x2 Contingency Tables, Part 2](https://www2.stat.duke.edu/courses/Spring12/sta10.1/Lectures/Lec14.pdf)
