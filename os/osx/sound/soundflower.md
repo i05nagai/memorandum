@@ -24,5 +24,9 @@ Run `Soundflower.pkg`.
 * RESTART your computer
 
 
+## Usage
+* System Preference->Sound->Output->`Soundflower(2ch)`
+* System Preference->Sound->Input->`Soundflower(2ch)`
+
 ## Reference
 * [mattingalls/Soundflower: MacOS system extension that allows applications to pass audio to other applications.](https://github.com/mattingalls/Soundflower)
