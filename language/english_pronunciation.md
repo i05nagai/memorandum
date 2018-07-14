@@ -76,16 +76,29 @@ Consonant Pairs
 
 * 1
     * p
+        * plosive
     * b
+        * plosive
 * 2
     * t
+        * plosive
         * [Elision of /t/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-4)
-            * between two consonents
+            * between two consonants
+        * [Assimilation of /t/ followed by /j/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-29)
+        * [The gemination of /t/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-23)
+            * after a consonant
+        * [Assimilation of /t/ and /p/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-1)
+            * if one word ends in a /t/ sound and the next word begins in a /p/ sound, the /t/ is pronounced slightly differently.
     * d
+        * plosive
         * [IPA /d/ Pronunciation: How To Pronounce – DESK – DOLLAR – DANCE - YouTube](https://www.youtube.com/watch?v=ISumskR6FHw)
+        * [Assimilation of /d/ to /g/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-15)
+            * a /d/ changes to a /g/ when it comes before a /g/ or a /k/.
 * 3
     * k
+        * plosive
     * g
+        * plosive
 * .
     * tʃ
     * dʒ
@@ -100,6 +113,9 @@ Consonant Pairs
 * .
     * s
         * [How To Pronounce SHE - Improve English Pronunciation 英語の発音 pronunciación de Inglés 美國英語 - YouTube](https://www.youtube.com/watch?v=gIyQ6dJETDA)
+        * [assimilation of /s/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-21)
+            * /s/ + /j/ -> /ʃj/
+            * /s/ + /ʃ/ -> /ʃʃ/
     * z
 * .
     * ʃ
@@ -107,19 +123,39 @@ Consonant Pairs
 
 Single Consonatns 
 
+* catenation
+    * [Consonant to vowel linking](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-14)
+    * when a word ends in a consonant sound and the next word begin with a vowel sound, the two words can link toghether
+
 * h
+    * [Elision of /h/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-27)
+        * /h/ is often not pronounced after a consonant
 * m
 * n
 * ŋ
 * l
 * r
     * [Linking r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-2)
+    * [r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/otherconst6)
 * j
+    * [Linking /j/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-19)
 * w
 
 
 * Homophones
 * Heteronyms
 
+
+Weak form
+
+* [Pronuciation From](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-eP-22)
+* [Pronunnciation Been](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-20)
+    * -> /bɪn/
+
+Plosive
+
+* [Plosives](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-17)
+    * when one word ends in a plosive sound and the next begins in another consonant sound, we don’t always hear the release of the plosive sound
+    * a stop with no audible release
 
 ## Reference
