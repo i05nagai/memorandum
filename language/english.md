@@ -289,6 +289,15 @@ I cross off the customer's name from the reservation list.
 * lethal
 * carry on
 * infiltrate
+    * to secretly become part of a group in order to get information or to influence the way that group thinks or behaves:
+        * A journalist managed to infiltrate the powerful drug cartel.
+    * to move slowly into a substance, place, system, or organization:
+        * At about this time the new ideas about "corporate management" had begun to infiltrate (into) local government.
+* permeate
+    * spread throughout (something); pervade.
+* pervade
+    * (especially of a smell) spread through and be perceived in every part of.
+    * a smell of stale cabbage pervaded the air
 * vicinity
 * hazmat suit
 * it doesn't ring a bell
@@ -419,6 +428,12 @@ I cross off the customer's name from the reservation list.
     * marquess
     * duke
 * prophet
+    * a person who is believed to have a special power that allows them to say what a god wishes to tell people, especially about things that will happen in the future:
+    * a person who supports a new system of beliefs and principles:
+* whelp
+    * puppy
+    * a boy or young man (often as a disparaging form of address).
+    * (of a female dog) give birth to (a puppy).
 * disappearance
 * Someone is branded n
 * smell like a rose
@@ -917,6 +932,8 @@ I cross off the customer's name from the reservation list.
 * lame
     * [Lameの意味　(ネイティブのスラング辞典と英語発音辞典) - 英語 with Luke英語 with Luke](http://www.eigowithluke.com/2011/02/lame/)
 * feeble
+    * lacking physical strength, especially as a result of age or illness.
+    * week
 * bogus
     * fake
 * legs falls asleep
@@ -2040,6 +2057,10 @@ I cross off the customer's name from the reservation list.
 * get bossed
 * boss up
 * futile
+    * adj
+    * incapable of producing any useful result; pointless.
+    * (of actions) having no effect or achieving nothing:
+    * Attempts to get supplies to the region are futile because troops will not allow the aid convoy to enter the city.
 * big softy
 * take it as a compliment
 * watch over
@@ -2903,6 +2924,77 @@ I cross off the customer's name from the reservation list.
 * dweller
     * city dweller
 * charcoal
+* whirlpool
+    * a small area of the sea or other water in which there is a powerful, circular current of water that can pull objects down into its centre
+* fiddlestick
+    * nonsence
+    * a violin bow
+* imbecile
+    * stupid person
+    * stupid, idiodic
+* marlin
+    * kind of fish
+* lupine
+    * of, like, or relating to a wolf or wolves.
+* lay worker bee
+* unfertilized egg
+* squashy
+    * easily crushed or squeezed into a different shape; having a soft consistency.
+* busty
+    * (of a woman) having large breasts.
+* pumped
+    * excited about something that is going to happen:
+    * I'm pumped
+* manage to do
+* infuse
+    * fill; pervade
+* soak
+    * to make something very wet, or (of liquid) to be absorbed in large amounts:
+    * to leave something in liquid, especially in order to clean it, make it softer, or change its flavour:
+        * You can usually soak out a stain.
+        * Leave the beans to soak overnight./Let the beans soak overnight.
+* jiffy
+    * a very short time; a moment.
+    * we'll be back in a jiffy
+* arc
+* abridge
+    * to make a book, play, or piece of writing shorter by removing details and information that is not important:
+        * The book was abridged for children.
+    * to reduce someone's freedom, rights, etc.:
+* tie up
+    * to attach, fasten, or bind securely; also : to wrap up and fasten. 
+    * to connect closely : join
+    * tie up the loose ends.
+* tie up loose ends
+    * To deal with the minor consequences of a previous action; to tidy up, finish, or complete.
+* deal with
+    * to take action in order to achieve something or in order to solve a problem:
+* ARC
+    * Advanced reader copy. 
+    * A part of a story line.
+* if you insist
+* at any rate
+    * whatever happens or may have happened.
+* stray
+    * n
+    * a pet that no longer has a home or cannot find its home:
+    * a stray dog
+* stray
+    * v
+    * to travel along a route that was not originally intended, or to move outside a limited area:
+    * A herd of cattle had strayed into the road.
+* thumb drive
+    * USB flash drive
+    * blank thumb drive
+* gimmick
+    * n, C
+    * a trick or device intended to attract attention, publicity, or trade.
+* score points off/score points over
+    * to say things that make someone else seem silly or wrong:
+* incense
+    * n, v, U
+    * a substance that is burnt to produce a sweet smell, especially as part of a religious ceremony:
+    * to cause someone to be extremely angry:
 
 
 Subjanctive mood
