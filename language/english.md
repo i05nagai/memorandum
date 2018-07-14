@@ -194,6 +194,9 @@
     * misunderstanding
 * boom
 * espionage
+    * n
+    * the discovering of secrets, especially political or military information of another country or the industrial information of a business:
+    * spy
 * extortion
 * enraged
     * very angry; furious
@@ -211,6 +214,10 @@
 * hawkish
 * intel
 * sinister
+    * giving the impression that something harmful or evil is happening or will happen.
+* menacing
+    * suggesting the presence of danger; threatening.
+* menace
 * blend in
 * dongle
 * sublime
@@ -256,6 +263,15 @@
 * lethal
 * carry on
 * infiltrate
+    * to secretly become part of a group in order to get information or to influence the way that group thinks or behaves:
+        * A journalist managed to infiltrate the powerful drug cartel.
+    * to move slowly into a substance, place, system, or organization:
+        * At about this time the new ideas about "corporate management" had begun to infiltrate (into) local government.
+* permeate
+    * spread throughout (something); pervade.
+* pervade
+    * (especially of a smell) spread through and be perceived in every part of.
+    * a smell of stale cabbage pervaded the air
 * vicinity
 * hazmat suit
 * it doesn't ring a bell
@@ -386,6 +402,12 @@
     * marquess
     * duke
 * prophet
+    * a person who is believed to have a special power that allows them to say what a god wishes to tell people, especially about things that will happen in the future:
+    * a person who supports a new system of beliefs and principles:
+* whelp
+    * puppy
+    * a boy or young man (often as a disparaging form of address).
+    * (of a female dog) give birth to (a puppy).
 * disappearance
 * Someone is branded n
 * smell like a rose
@@ -886,6 +908,8 @@
 * lame
     * [Lameの意味　(ネイティブのスラング辞典と英語発音辞典) - 英語 with Luke英語 with Luke](http://www.eigowithluke.com/2011/02/lame/)
 * feeble
+    * lacking physical strength, especially as a result of age or illness.
+    * week
 * bogus
     * adj
     * fake
@@ -1051,7 +1075,8 @@
 * indict
     * v
     * he was indicted for murdering his wife
-* move on
+* move on someone
+     * attempt to pick up someone; to attempt to seduce someone.
 * underlings
     * we both have a problem a little problem controlling our underlings
     * a person lower in status or rank
@@ -1516,6 +1541,7 @@
 * putty
 * darwinian
 * spooky
+    * strange and frightening
 * no hard feelings
     * If you say ' no hard feelings', you are making an agreement with someone not to be angry or bitter about something.
 * resentment
@@ -2008,6 +2034,10 @@
 * get bossed
 * boss up
 * futile
+    * adj
+    * incapable of producing any useful result; pointless.
+    * (of actions) having no effect or achieving nothing:
+    * Attempts to get supplies to the region are futile because troops will not allow the aid convoy to enter the city.
 * big softy
 * take it as a compliment
 * watch over
@@ -2350,6 +2380,12 @@
     * freelance writing
 * manada
 * yoink
+    * Onomatopoeic
+    * (onomatopoeia) To make a yoink sound.
+    * (colloquial) To hop or bounce.
+    * (colloquial) To yank or snatch.
+* yank
+    * to pull something forcefully with a quick movement:
 * etymology
 * on one's feet
     * standing
@@ -2573,7 +2609,12 @@
     * a mass of very small bubbles formed on the surface of a liquid
     * a substance like cream that is filled with bubbles of air:
 * weasel
+    * n
     * kind of mammal
+* weasel
+    * v
+    * achieve something by use of cunning or deceit
+    * you'll weasel your way into it.
 * stoat
     * kind of mammal
 * squirrel
@@ -2744,6 +2785,320 @@
 * bad girl
 * plosive
 * in slow motion
+* vestibule
+* crapweasel
+    * crap weasel
+* throw a party
+    * have a party
+* mardi gras
+    * the holida of mardi gras
+* costume
+* outfit
+* uniform
+* bobo
+* shoop
+    * stupid
+* venereal disease
+    * VD
+    * contageous disease
+    * a disease spreads through sexual activity with an infected person
+* venereal
+    * caused or spread by sexual activity with another person
+* infectious
+* acoustcal
+    * adj
+    * relating to sound or hearing
+    * used to refer to a musical instrument that is not made louder by electrical equipment:
+* smirky
+* smirk
+* throb
+    * her feet throb with pain
+* beaming
+    * smiling broadly; grinning.
+* poconos
+* weave
+    * open weave
+* booby
+* mitten
+* not know from adam
+    * To not know who one is just by looking at them; to have never met someone before
+* tit for tat
+    * actions done intentionally to punish other people because they have done something unpleasant to you:
+* nip
+    * cheese nip
+* embolism
+* weeble
+    * trademark of toys
+* poodle
+* stuffer
+    * stuffs
+* sparrow
+    * kind of birds
+* pet
+    * let me pet you
+* psych
+    * mentally prepare (someone) for a testing task or occasion.
+* chicken out
+* rejoice
+    * feel or show great joy or delight.
+    * Everyone rejoiced at the news of his safe return.
+    * She rejoiced in her good fortune.
+* sccurry off
+* flurry
+* couldn't help oneself
+    * I couldn't help myself
+    * to be unable to stop yourself from doing somehting you should not do
+* like a moth to a flame
+* calcify
+* a bit off
+    * it's a bit off
+* chew up
+* dispel
+    * make (a doubt, feeling, or belief) disappear.
+* banish
+* that's neat
+    * that's cool
+* laurel
+* wallop
+* pinwheel
+* slather
+* weenus
+* cuddle
+* cubicle
+* caress
+* doobie
+    * blaze up doobie
+    * marijuana
+* tartlet
+    * tart
+* smack
+* caress
+* lick off
+    * to remove something from something by licking with the tongue. (
+* slather
+* singe
+    * to remove something from something by licking with the tongue. (
+* cornerstone
+    * something of great importance that everything else depends on:
+* smush
+* peruse
+    * read (something), typically in a thorough or careful way.
+* degenerate
+    * adj, n, v
+* STAT
+    * A common medical abbreviation for urgent or rush.
+    * From the Latin word statum, meaning immediately
+* trident
+* pagan
+    * adj
+* blunt
+    * A blunt pencil, knife, etc. is not sharp and therefore not able to write, cut, etc. well.
+    * not sharp
+* lurch
+* emergency
+    * we've got an emergency
+* retainer
+    * retainer for teeth
+* hygiene
+* disobedience
+    * n
+    * failure or refusal to obey rules or someone in authority.
+* bijan
+    * bijan for men
+* hombre
+    * a man, especially one who is strong or violent:
+* cologn
+    * eau de cologne
+    * a toilet water with a strong scent, originally made in Cologne.
+* breast milk
+* cantaloupe juice
+* howdy
+* habit
+* keep something down
+    * to be quieter:
+    * Hey you guys, keep it down in there – I’m on the phone!
+* take down something
+    * to remove something that was previously put up or put in place:
+* darn it
+    * You can say darn it to show that you are very annoyed about something.
+* palenontologist
+* put something off
+    * postpone something
+* pop something in somewhere
+    * to visit briefly
+    * If you pop into a place, you visit there briefly, usually for some purpose
+* nubbin
+    * a small lump or residual part
+* lump
+    * a piece of a solid substance, usually with no particular shape:
+    * a hard swelling found in or on the body, especially because of illness or injury:
+* telephone pole
+* apiece
+    * adv
+* Onomatopoeia
+    * the formation of a word from a sound associated with what is named (e.g. cuckoo, sizzle ).
+* cha ching
+    * imitative of the sound of a mechanical cash register when an amount is rung up
+* hicky
+    * hickie
+    * love bite
+* recite
+* behold
+    * see
+* vile
+* plushie
+    * stuffed animal
+* lowly
+* nudge
+* rechristen
+    * give a new name to
+* unbridled
+    * uncontrolled
+    * uncostrained
+* better safe than sorry
+    * prov
+    * it's wiser to be cautious and careful than to be hasty or rash and so do something you may later regret.
+* eye of a needle
+    * a whole of sewing needle
+    * a metaphor for a very narrow opening
+* cicada
+    * cicada's shell
+    * a cicada sheds off it shell
+* sealed away
+* elvis is back
+* traumatized
+    * I'm not traumatized
+* dangly
+    * hanging loosely:
+* pesky
+    * causing trouble; annoying.
+* crack addict
+    * crack cocaine
+* jerk
+    * a quick sharp sudden movement
+    * with a jerk
+        * quick movement
+* yawn
+* fragnance
+* cedar wood
+* sendalwood
+* neroli
+    * kind of absolutes
+* musk
+    * kind of animal extracts
+* ambergris
+* synthetic fragnance
+* sort something out
+    * separate something from a mixed group.
+    * arrange or organize something.
+    * to do something that stops a problem:
+    * we'll sort this out when get out to your location.
+* semper fi
+    * semper fidelis
+    * is a Latin phrase that means "always faithful" or "always loya
+* britches
+    * breeches
+    * kind of clothing
+* trouser
+    * pants in americal english
+* shrivel
+    * v
+    * to become dry, smaller, and covered with lines as if by crushing or folding, or to make something do this:
+* cherub
+* twitching
+* lilac
+    * kind of flower
+* bert
+    * [Urban Dictionary: Bert](https://www.urbandictionary.com/define.php?term=Bert)
+* compost
+    * n
+    * decayed organic material used as a fertilizer for growing plants.
+* snoop
+    * to try to find out about other people's private lives:
+    * to look around a place secretly, in order to discover things or find out information about someone or something:
+* run low on something
+    * to near the end of a supply of something. 
+    * We are running low on salt. It's time to buy more.
+    * The car is running low on gas.
+* insribe
+    * to write words in a book or carve (= cut) them on an object:
+* lily pad
+* Nymphaeaceae
+    * family of aquatic plant
+* dweller
+    * city dweller
+* charcoal
+* whirlpool
+    * a small area of the sea or other water in which there is a powerful, circular current of water that can pull objects down into its centre
+* fiddlestick
+    * nonsence
+    * a violin bow
+* imbecile
+    * stupid person
+    * stupid, idiodic
+* marlin
+    * kind of fish
+* lupine
+    * of, like, or relating to a wolf or wolves.
+* lay worker bee
+* unfertilized egg
+* squashy
+    * easily crushed or squeezed into a different shape; having a soft consistency.
+* busty
+    * (of a woman) having large breasts.
+* pumped
+    * excited about something that is going to happen:
+    * I'm pumped
+* manage to do
+* infuse
+    * fill; pervade
+* soak
+    * to make something very wet, or (of liquid) to be absorbed in large amounts:
+    * to leave something in liquid, especially in order to clean it, make it softer, or change its flavour:
+        * You can usually soak out a stain.
+        * Leave the beans to soak overnight./Let the beans soak overnight.
+* jiffy
+    * a very short time; a moment.
+    * we'll be back in a jiffy
+* arc
+* abridge
+    * to make a book, play, or piece of writing shorter by removing details and information that is not important:
+        * The book was abridged for children.
+    * to reduce someone's freedom, rights, etc.:
+* tie up
+    * to attach, fasten, or bind securely; also : to wrap up and fasten. 
+    * to connect closely : join
+    * tie up the loose ends.
+* tie up loose ends
+    * To deal with the minor consequences of a previous action; to tidy up, finish, or complete.
+* deal with
+    * to take action in order to achieve something or in order to solve a problem:
+* ARC
+    * Advanced reader copy. 
+    * A part of a story line.
+* if you insist
+* at any rate
+    * whatever happens or may have happened.
+* stray
+    * n
+    * a pet that no longer has a home or cannot find its home:
+    * a stray dog
+* stray
+    * v
+    * to travel along a route that was not originally intended, or to move outside a limited area:
+    * A herd of cattle had strayed into the road.
+* thumb drive
+    * USB flash drive
+    * blank thumb drive
+* gimmick
+    * n, C
+    * a trick or device intended to attract attention, publicity, or trade.
+* score points off/score points over
+    * to say things that make someone else seem silly or wrong:
+* incense
+    * n, v, U
+    * a substance that is burnt to produce a sweet smell, especially as part of a religious ceremony:
+    * to cause someone to be extremely angry:
 
 
 Subjanctive mood
@@ -2832,6 +3187,22 @@ comparative
     * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
 
 
+
+* costume/outfit/uniform
+    * [What is difference between costume and outfit? \- Quora](https://www.quora.com/What-is-difference-between-costume-and-outfit)
+* I've been meaning to tell you
+    * I've been meaning to tell you about it since the weekend.
+    * The -ing form is a bit more natural and emphasizes that the intention to tell you has been continuous since the weekend.
+    * [EN: I've been meaning to tell you \| WordReference Forums](https://forum.wordreference.com/threads/en-ive-been-meaning-to-tell-you.1219428/)
+* nasty/naughty
+    * [What is the difference between nasty and naughty ? \| HiNative](https://hinative.com/en-US/questions/961467)
+    * Naughty means not obeying or disobedient.
+    * Nasty means smelling bad.
+    * That kid is so naughty
+    * She smells nasty.
+    * She was naughty in bed.
+* perfume/eau de toilette/eau de cologne
+    * [What is the difference between perfume, eau de toilette, and eau de Cologne?](http://www.slate.com/blogs/quora/2015/03/12/what_is_the_difference_between_perfume_eau_de_toilette_and_eau_de_cologne.html)
 
 
 ## Math

@@ -1,8 +1,8 @@
 ---
-title: ImageNet
+title: Dataset ImageNet
 ---
 
-## ImageNet
+## Dataset ImageNet
 現在 14,197,122 images, 21841 synsets indexed.
 
 * [ImageNet Tree View](http://image-net.org/synset?wnid=n02084071)

@@ -12,9 +12,11 @@ synclient <option> [KEY=VALUE]
 ```
 
 * `-l --list`
-    * 現在の設定値を表示
+    * show current configuration
 
 ## Configuration
+Reboot is needed if you update configuraiton.
+Or you can update `synclient KEY=VALUE` command.
 One of the following directories
 
 * `/etc/X11/xorg.conf.d/`
@@ -73,28 +75,27 @@ Palm detection
     * two finger swipe
     * 1 enable, 0 disable
 
-
 ## Usage
-現在の設定を表示
+Show current configuration
 
 ```
 synclient -l
 ```
 
-OSXと同じswipeの方向にする
+Change two finger swipe direction as OSX
 
 ```
 synclient VertScrollDelta=-73
 synclient HorizScrollDelta=-73
 ```
 
-2 finger swipeをenable
+Enabled 2 finger swipe
 
 ```
 synclient HorizTwoFingerScroll=1
 ```
 
-Palm detectionの例
+Example of Palm detection
 
 ```
 synclient PalmDetect=1

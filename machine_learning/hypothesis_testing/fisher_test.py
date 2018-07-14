@@ -21,11 +21,18 @@ def fisher_exact_test(df, label, col_c, col_t):
     factor2 = special.comb(sum_t, x_t)
     denominator = special.comb(sum_c + sum_t, x)
     pvalue = factor1 * factor2 / denominator
-    print('pvalue: {0}'.format(pvalue))
     return pvalue
 
 
 def gen_data(xc=12, xt=7, totalc=15, totalt=15):
+    """gen_data
+    Generate 2x2 contingency table
+
+    :param xc:
+    :param xt:
+    :param totalc:
+    :param totalt:
+    """
     data = {
         'infection': [1, 0],
         'control': [xc, totalc - xc],
@@ -39,14 +46,9 @@ def fisher_exact_test_scipy(df, label, col_c, col_t):
 
     xs = df[columns].values
 
-    print('xs: {0}'.format(xs))
-    print('xs[0, 1]: {0}'.format(xs[0, 1]))
-    pvalue = stats.fisher_exact(xs)
-    print('pvalue: {0}'.format(pvalue))
-    pvalue = stats.fisher_exact(xs, 'less')
-    print('pvalue: {0}'.format(pvalue))
+    # pvalue = stats.fisher_exact(xs)
+    # pvalue = stats.fisher_exact(xs, 'less')
     pvalue = stats.fisher_exact(xs, 'greater')
-    print('pvalue: {0}'.format(pvalue))
     return pvalue
 
 
@@ -55,9 +57,7 @@ def fisher_exact_test_scipy_mine(df, label, col_c, col_t):
     x_t = xs[col_t][0]
     # N, n, K
     M, N, n = _get_M_N_n(df, label, col_c, col_t)
-    print('M, N, n: {0}, {1}, {2}'.format(M, N, n))
     pvalue = stats.hypergeom.cdf(x_t, M, n, N)
-    print('pvalue: {0}'.format(pvalue))
     return pvalue
 
 
@@ -153,12 +153,7 @@ def barnard_test_pdf(df, label, col_c, col_t, pi):
     factor_t = special.comb(sum_t, x_t)
     factor1 = pi ** (x_c + x_t)
     factor2 = (1.0 - pi) ** (sum_c + sum_t - x_c - x_t)
-    print('factor_c: {0}'.format(factor_c))
-    print('factor_t: {0}'.format(factor_t))
-    print('factor1: {0}'.format(factor1))
-    print('factor2: {0}'.format(factor2))
     pdf = factor_c * factor_t * factor1 * factor2
-    print('pdf: {0}'.format(pdf))
     return pdf
 
 
@@ -169,37 +164,55 @@ def barnard_test(df, label, col_c, col_t, pi):
     sum_t = row_sums[col_t]
 
     statistics = score_statistics(df, label, col_c, col_t)
-    print('statistics: {0}'.format(statistics))
-    print('sum_t: {0}'.format(sum_t))
-    print('sum_c: {0}'.format(sum_c))
+    # if you want to reproduce the result of
+    # Mehta, C. R., & Senchaudhuri, P. (2003). Conditional versus Unconditional Exact Tests for Comparing Two Binomials.
+    # statistics = round(statistics, 3)
     summand = 0.0
     for xc in range(sum_c + 1):
         for xt in range(sum_t + 1):
             df_new = gen_data(xc=xc, xt=xt)
             statistics_new = score_statistics(df_new, label, col_c, col_t)
+            # statistics_new = round(statistics_new, 3)
             if statistics <= statistics_new:
                 summand += barnard_test_pdf(df_new, label, col_c, col_t, pi)
-                print('xc: {0}, xt: {1}'.format(xc, xt))
-                print('statistics_new: {0}'.format(statistics_new))
-                print('summand: {0}'.format(summand))
 
     return summand
 
 
-def draw_barnard_test(df, label, col_c, col_t):
+def barnard_test_pvalue(df, label, col_c, col_t):
+    # TODO
+    # compute sup{barnard_test(pi) | pi in (0, 1)}
+    pass
+
+
+def draw_barnard_test(df, label, col_c, col_t, columns):
     xs = [0.1 * x for x in range(10)]
     ys = [barnard_test(df, 'infection', columns[0], columns[1], x) for x in xs]
     return hv.Curve((xs, ys), label='label')
 
 
-df = gen_data()
-columns = ['control', 'treatment']
-wald_statistics(df, 'infection', columns[0], columns[1])
-score_statistics(df, 'infection', columns[0], columns[1])
-fisher_exact_test(df, 'infection', columns[0], columns[1])
-fisher_exact_test_scipy(df, 'infection', columns[0], columns[1])
-fisher_exact_test_scipy_mine(df, 'infection', columns[0], columns[1])
-fisher_exact_test_k_alpha(df, 'infection', columns[0], columns[1], 0.05)
-barnard_test(df, 'infection', columns[0], columns[1], 0.3365)
-barnard_test(df, 'infection', columns[0], columns[1], 0.5)
-draw_barnard_test(df, 'infection', columns[0], columns[1])
+def run_fisher_test():
+    df = gen_data()
+    columns = ['control', 'treatment']
+    fet_pvalue = fisher_exact_test(df, 'infection', columns[0], columns[1])
+    print('fisher_exact_test pvalue: {0}'.format(fet_pvalue))
+    fets_pvalue = fisher_exact_test_scipy(df, 'infection', columns[0], columns[1])
+    print('fisher_exact_test scipy_pvalue: {0}'.format(fets_pvalue))
+    fetsm_pvalue = fisher_exact_test_scipy_mine(df, 'infection', columns[0], columns[1])
+    print('fisher_exact_test scipy_mine_pvalue: {0}'.format(fetsm_pvalue))
+    # fisher_exact_test_k_alpha(df, 'infection', columns[0], columns[1], 0.05)
+
+
+def run_barnard_test():
+    df = gen_data()
+    columns = ['control', 'treatment']
+    # wald_statistics(df, 'infection', columns[0], columns[1])
+    # ss = score_statistics(df, 'infection', columns[0], columns[1])
+    # expect 0.026551737528245266
+    bt = barnard_test(df, 'infection', columns[0], columns[1], 0.3365)
+    print(bt)
+    draw_barnard_test(df, 'infection', columns[0], columns[1], columns)
+
+
+run_fisher_test()
+run_barnard_test()
