@@ -1,30 +1,4 @@
 ## English
-* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
-* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
-    * There are still
-        * normal
-    * There still are
-        * strong
-* [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
-
-
-* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
-I cross the customer's name off the reservation list.
-I cross off the customer's name from the reservation list.
-
-* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
-    * they decided not to stay ...
-        * `they decide` is important
-    * the decided to not stay ...
-        * they decided to stay another night before but now `they will not stay`
-    * I asked her quietly to leave
-        * `quietly` is unclear
-    * I asked her to quietly leave
-        * `quietly` is clear
-
-* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
-    * month-on-motth, month-over-month
-    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
 * there you go
     * [「There you go」の5つの用法 | 英語学習サイト：Hapa 英会話](https://hapaeikaiwa.com/2017/01/12/%E3%80%8Cthere-you-go%E3%80%8D%E3%81%AE5%E3%81%A4%E3%81%AE%E7%94%A8%E6%B3%95/)
 * you beat
@@ -504,6 +478,7 @@ I cross off the customer's name from the reservation list.
 * detention camp
 * sneak around one's back
 * hook up with
+    * to meet someone and become friendly with them
 * beneath
     * adv, preposition
 * stilt
@@ -679,6 +654,7 @@ I cross off the customer's name from the reservation list.
     * swindle
 * penmanship skill
 * uncanny
+    * strange or mysterious; difficult or impossible to explain:
     * eerie
     * unnatural
 * infuriating
@@ -903,6 +879,7 @@ I cross off the customer's name from the reservation list.
     * [Lameの意味　(ネイティブのスラング辞典と英語発音辞典) - 英語 with Luke英語 with Luke](http://www.eigowithluke.com/2011/02/lame/)
 * feeble
 * bogus
+    * adj
     * fake
 * legs falls asleep
     * legs are asleep
@@ -2029,6 +2006,10 @@ I cross off the customer's name from the reservation list.
 * easy-peasy
 * "aha" mooment
 * parole violater
+* parole
+    * n, v
+    * parole officer
+    * the temporary or permanent release of a prisoner before the expiry of a sentence, on the promise of good behaviour.
 * call someone's bluff
     * call someone's bluff, to expose a person's deception; challenge someone to carry out a threat:
 * no-scope
@@ -2372,13 +2353,133 @@ I cross off the customer's name from the reservation list.
     * A malignant disease or growth is likely to get worse and lead to death:
 * expanged
     * to rub off or remove information from a piece of writing
-
+* roll with the X's
+    * trip with ecstasy
+* vigorish/vig
+    * n
+    * an excessive rate of interest on a loan, typically one from an illegal moneylender.
+    * he charges a heavy vig
+* diss/dis
+    * v, n
+    * he can't tolerate any kind of diss
+    * speak disrespectfully to or criticize.
+* reach out sb
+    * to try to communicate with a person or a group of people, usually in order to help or involve them:
+    * to offer help and support to someone:
+* cuss sb out
+    * he cusses him out
+    * to shout offensive words at someone because you are annoyed with them.
+* dead bolt
+    * a bolt engaged by turning a knob or key, rather than by spring action.
+* rat out
+    * To reveal incriminating or embarrassing information about (someone), especially to a person in authority:
+* incliminate
+    * make (someone) appear guilty of a crime or wrongdoing.
+    * to make someone seem guilty, especially of a crime:
+* self-inclimination
+* willy nilly
+    * adv
+    * whether one likes it or not
+    * without direction or planning; haphazardly.
+* hobgoblin
+    * (in mythology and fairy stories) a mischievous imp or sprite.
+    * A foolish consistency is the hobgoblin of little minds
+* compulsive
+* irresistible
+    * impossible to refuse, oppose, or avoid because it is too pleasant, attractive, or strong:
+* bend the law
+* grumpy
+    * easily annoyed and complaining:
+* knucle cracking
+    * constatn knucle cracking
+* overpronounce
+    * he overpronounces every word
+* well up
+* plunk
+* deja vu
+* agitate
+* It takes two to tango
+    * said when you want to emphasize that both people involved in a difficult situation must accept the blame, or that an activity needs two people who are willing to take part for it to happen:
+* vox pop
+    * voxpop
+* snort
+* anus
+* remember back
+    * remember back in college
+* cupping
+    * a therapy in which heated glass cups are applied to the skin along the meridians of the body, creating suction and believed to stimulate the flow of energy.
+    * cupping therapy
+* Q-tip
+    * cotton swabs 
+* ear canal
+* earwax
+* eardrum
+* astutely
+    * accurately assessing situations or people; perceptively
+    * able to understand a situation quickly and see how to take advantage of i
+* beard
+    * a growth of hair on the chin and lower cheeks of a man's face.
+    * a person who carries out a transaction, typically a bet, for someone else in order to conceal the other's identity.
+* sham
+    * the marriage is a sham
+* purport
+    * appear to be or do something, especially falsely.
+* pillow sham
+* club
+    * 
+* walk away
+    * to stop being involved in a situation because it is difficult to deal with or does not give you any advantages:
+    * to escape an accident without being badly hurt:
+* polygraph
+    * take the polygraph
+    * a lie-detector test carried out with a polygraph.
+* vent
+    * n, v
+    * an opening that allows air, smoke, or gas to escape or enter an enclosed space:
+* icky
+    * adj
+    * unpleasantly sticky.
+* head rush
+    * headrush
+    * A sudden feeling of euphoria, especially as a result of taking drugs. A sudden feeling of dizziness; orthostatic hypotension.
+* euphoria
+    * a feeling or state of intense excitement and happiness
+* rewind
+    * (with reference to a film or tape) wind or be wound back to the beginning.
+* know the score
+    * to know all the important facts in a situation, especially the unpleasant ones
+* black widow
+    * a highly venomous American spider which has a black body with red markings.
+* courtesy
+    * the showing of politeness in one's attitude and behaviour towards others.
+* advent
+    * the arrival of a notable person or thing.
+    * the fact of an event happening, an invention being made, or a person arriving:
+    * Life was transformed by the advent of the steam engine.
+    * the advent of television
+* bicentenary
+    * bicentennial
+    * the two-hundredth anniversary of a significant event.
+    * relating to a two-hundredth anniversary.
+* lapsed catholic
+    * A lapsed Catholic is a baptized Catholic who is non-practicing. Such a person may still identify as a Catholic and remains a Catholic according to canon law.
+* baptize
+* under the weather
+    * express that they're feeling ill or unwell
+    * I'm feeling a bit under the weather - I think I'm getting a cold.
+* sneeze
+* creature of habit
+    * a person who follows an unvarying routine.
+* man's best friends
+    * dog?
+* bad girl
+* plosive
+* in slow motion
 
 
 Subjanctive mood
 
 * [Subjunctive Mood](http://englishplus.com/grammar/00000031.htm)
-
 
 [数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
 
@@ -2402,8 +2503,6 @@ comparative
 
 * pp. or p.
     * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
-
-
 * most pleased
     * [phrase usage - Is "most pleased" pompous or condescending? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/237895/is-most-pleased-pompous-or-condescending)
     * It's my pleasure to...
@@ -2412,7 +2511,6 @@ comparative
         * is also common.
     * I am most pleased to...
         * is NOT commonly used conversationally.
-
 * afraid of / afraid to do
     * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
     * afraid to do = araid doing
@@ -2420,8 +2518,12 @@ comparative
         * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
 * I'am he
     * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
-
-
+* How are you?/How are you doing?/How do you do?
+    * [meaning - Difference between "How are you?" and "How are you doing?" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/73766/difference-between-how-are-you-and-how-are-you-doing)
+    * How do you do?
+        * How do you do?
+    * How are you doing?/How are you?
+        * Fine, thanks!/Very well, thank you.
 * Company name
     * [Does a Comma Go in Front of LLC or Inc.? | LegalZoom](https://www.legalzoom.com/articles/does-a-comma-go-in-front-of-llc-or-inc)
     * Inc.
@@ -2430,10 +2532,41 @@ comparative
         * limited liability company
 * as to/as for
     * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
+* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
+* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
+    * There are still
+        * normal
+    * There still are
+        * strong
+* [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
+* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
+    * I cross the customer's name off the reservation list.
+    * I cross off the customer's name from the reservation list.
+* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
+    * they decided not to stay ...
+        * `they decide` is important
+    * the decided to not stay ...
+        * they decided to stay another night before but now `they will not stay`
+    * I asked her quietly to leave
+        * `quietly` is unclear
+    * I asked her to quietly leave
+        * `quietly` is clear
+* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
+    * month-on-motth, month-over-month
+    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
+* Q-tips
+    * [What does Chandler mean by 'You have to stop the Q-tip when there is resistance'? - Quora](https://www.quora.com/What-does-Chandler-mean-by-You-have-to-stop-the-Q-tip-when-there-is-resistance)
+
+## Greeting
+* What have you been up to?
+* What are you up to?
+    * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
+
 
 
 
 ## Math
+* [Pronunciation of mathematical symbols](http://www.uefap.com/speaking/symbols/symbols.htm)
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
 
 * A follow B
