@@ -334,6 +334,9 @@
     * 組織内で実権を握る少数の人々
 * lust
     * n, v
+    * strong sexual desire.
+    * have strong sexual desire for someone.
+        * he really lusted after me in those days
 * lure
 * find one's true calling
     * [Find your calling - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/find+your+calling)
@@ -774,7 +777,9 @@
     * n, v
     * he goes on a binge, drinks till he blacks out
 * indulge
+    * v, I, T
     * a period of excessive indulgence in an activity, especially drinking alcohol or eating.
+    * to allow yourself or another person to have something enjoyable, especially more than is good for you:
 * flimsy
     * flimsy yellow metrocards that must be swiped at precisely the right speed.
 * lycanthropy
@@ -1852,6 +1857,7 @@
     * swishing wine
 * hypothermia
 * ditch
+    * n, C, v
     * ditched me
 * raid
 * hide out
@@ -2553,6 +2559,7 @@
 * celestial
 * growl
 * deity
+    * a god or goddess:
 * turnip
 * clobber
     * if he does that I'll clobber him
@@ -3099,6 +3106,140 @@
     * n, v, U
     * a substance that is burnt to produce a sweet smell, especially as part of a religious ceremony:
     * to cause someone to be extremely angry:
+* zeal
+    * n, U
+    * great energy or enthusiasm in pursuit of a cause or an objective.
+* praise
+* desolate
+    * adj
+    * A desolate place is empty and not attractive, with no people or nothing pleasant in it:
+    * The house stood in a bleak and desolate landscape.
+* hedeous
+    * extremely ugly.
+* acquaintance
+* glacier
+    * a large mass of ice that moves slowly
+* stir
+    * v
+    * cause emotion
+        * If something stirs you, it makes you feel a strong emotion:
+            * I was deeply stirred by her performance.
+        * If an emotion stirs within you, you begin to feel it:
+            * Hope stirred within her heart.
+        * to cause trouble intentionally between other people, especially by telling false or secret information:
+            * There's a lot of gossip about me going around. Have you been stirring?
+* bring something on
+    * to make something happen, usually something bad:
+        * The loud music brought on another one of his headaches.
+* prowl
+    * to move around quietly in a place trying not to be seen or heard, such as an animal does when hunting:
+    * to be moving around quietly in a place trying not to be seen or heard:
+* snag
+    * n, C
+    * a problem, difficulty, or disadvantage:
+    * dagame
+        * a tear, hole, or loose thread in a piece of clothing or cloth caused by a sharp or rough object:
+* rite
+    * n, C
+    * (a usually religious ceremony with) a set of fixed words and actions:
+        * funeral/marriage/fertility rites
+* devilry
+* imbue something with
+    * v
+    * to fill something or someone with a particular feeling, quality, or idea:
+* glaive
+    * n
+    * a sword
+* gramp
+* aloud
+    * audibly; not silently or in a whisper.
+    * loudly.
+* etch
+* cresent
+* galestorm
+* relish
+    * to like or enjoy something:
+    * If you relish the idea or thought of something, you feel pleasure that it is going to happen:
+* frostbite
+* flounder
+    * v, I
+    * to experience great difficulties or be completely unable to decide what to do or say next:
+* heeded
+    * v, T
+    * pay attention to; take notice of.
+    * The airline has been criticized for failing to heed advice/warnings about lack of safety routines.
+* bear with me
+    * incorrect: bare with me
+* tryst
+    * an emotional tryst
+    * a private romantic rendezvous between lovers.
+    * keep a private, romantic rendezvous with a lover.
+* fling
+    *  to throw something or someone suddenly and with a lot of force:
+    * n
+        * a short period of enjoyment:
+        * a brief sexual or romantic affair.
+* get a grip
+* linger
+    * v, I
+    * to take a long time to leave or disappear:
+    * Flings are temporary but their effects can linger.
+* out of the blue
+    * without warning; unexpectedly.
+* indulgence
+* maternity leave
+* save something up
+    * to keep money so that you can buy something with it in the future:
+    * she's saving up for a new bike
+* spunk
+    * n, U
+    * courage and determination
+    * semen
+* dodge
+    * avoid (someone or something) by a sudden quick movement.
+* gut 
+    * n, 
+    * gut feeling/reaction informal
+        * a strong belief about someone or something that cannot completely be explained and does not have to be decided by reasoning:
+    * sb's gut
+        * a way of deciding what should be done or what is right, that is based on how someone feels rather than thinking about reasons:
+* tacky
+    * of cheap quality or in bad style:
+* stiletto
+    * a woman's shoe with a narrow, high heel:
+* landlady
+    * n
+        * a woman who is paid rent by people for the use of a room, building, or piece of land that she owns
+* tempt
+    * v, T
+    * to make someone want to have or do something, especially something that is unnecessary or wrong:
+* hot streak
+    * a period of repeated successes
+* wuv
+    * Love
+* second nature
+    * n, U
+    * If something is second nature to you, you are so familiar with it that you can do it easily without needing to think very much about it:
+    * I used to hate computers, but using them is second nature to me now.
+* snap out of
+    * to stop experiencing something unpleasant or stop behaving in a negative way:
+    * Johnson has finally snapped out of a four-week hitting slump.
+* chick
+    * n, C
+    * a young bird, especially one newly hatched.
+* hatch
+    * v
+        * egg
+            * to (cause an egg to) break in order to allow a young animal to come out
+        * plan
+             * to make a plan, especially a secret plan:
+             * He hatched a plot to forge documents that would embarrass the company.
+* rascal
+    * n
+    * a person, especially a child or a man, who does things that you disapprove of, but who you still like:
+     * I caught those little/young rascals dressing up in my clothes.
+* do a complete 180
+
 
 
 Subjanctive mood
@@ -3162,6 +3303,8 @@ comparative
         * normal
     * There still are
         * strong
+* I'm running late
+    * [meaning in context \- Be "running late" and "run my appointment" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/127289/be-running-late-and-run-my-appointment)
 * [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
 * [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
     * I cross the customer's name off the reservation list.
