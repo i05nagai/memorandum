@@ -18,5 +18,8 @@ For OSX,
 
 ### Find Skype ID
 * [What is my Skype Account ID/Name? – italki Help and Support](https://support.italki.com/hc/en-us/articles/228022428-What-is-my-Skype-Account-ID-Name-)
+* [How to find out my Skype ID - Quora](https://www.quora.cOm/How-can-I-find-out-my-Skype-ID)
+
+`live:eamil prefix`
 
 ## Reference
