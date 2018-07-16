@@ -140,4 +140,3 @@ pip install pandas-gbq
 * [Python Pandasでのデータ操作の初歩まとめ − 後半：データ集計編 - Qiita](http://qiita.com/hik0107/items/0ae69131e5317b62c3b7)
 * [Python Pandasでのデータ操作の初歩まとめ − 後半：データ集計編 - Qiita](http://qiita.com/hik0107/items/0ae69131e5317b62c3b7)
 
-
