@@ -278,6 +278,9 @@
     * Does seeing this ring any bells?
 * bludgeoned
 * dismemberment
+* dismember
+    * to cut, tear, or pull the arms and legs off a human body:
+    * to divide a country or an empire into different parts
 * limb
 * pun intended
     * [Urban Dictionary: no pun intended](https://www.urbandictionary.com/define.php?term=no%20pun%20intended)
@@ -3099,30 +3102,122 @@
     * n, v, U
     * a substance that is burnt to produce a sweet smell, especially as part of a religious ceremony:
     * to cause someone to be extremely angry:
+* debrief
+* put up with something/someone
+    * How long will I have to put up with you?
+* deafen
+    * cause (someone) to lose the power of hearing permanently or temporarily.
+* pestering
+* scoop
+    * n, C, v, T
+    * to move something with a scoop or with something used as a scoop:
+    * He scooped the sand into a bucket with his hands.
+* i blow it
+    * Used to tell someone that you made a big mistake. Explanation: When something blows up, it is destroyed.
+* ironclad
+    * n, v
+    * covered or protected with iron.
+* sit tight
+    * to stay where you are:
+    * to refuse to change your mind
+* allure
+    * n
+    * the quality of being attractive, interesting, or exciting:
+    * the allure of working in television
+* swirl
+* call it in the air
+* phobia
+* flash
+    * give (a swift look).
+    * (of a man) show one's genitals briefly in public.
+* coordinate clause
+* subordinate clause
+* main clause
+* incision
+    * a surgical cut made in skin or flesh.
+* surgical incisions
+* fetal pig
+    * Fetal pigs are unborn pigs used in elementary as well as advanced biology classes as objects for dissection.
+* dissection
+* slam
+    * v, n
+    * shut (a door, window, or lid) forcefully and loudly.
+    * she slammed the door
+* at a red light
+    * a red traffic light or similar signal that instructs moving vehicles to stop.
+* jiggle
+    * she jiggled her foot
+    * to move from side to side or up and down with quick short movements, or to make something do this:
+    * If the door won't open, try jiggling the key in the lock.
+* sculptor
+    * an artist who makes sculptures.
+* sculpture
+* seasick
+    * she get seasick
+    * suffering from sickness or nausea caused by the motion of a ship at sea.
+* skimpy
+    * in skimpy bathing suits
+    * (of clothes) short and revealing.
+* meagre
+    * (of something provided or available) lacking in quantity or quality.
+* bathing suits
+    * simwear
+* punctuate
+    * v
+    * to add punctuation marks (= symbols) to writing so that people can see when a sentence starts and finishes, see that something is a question, etc.
+* loom
+    * v, 
+* be better off
+    * to have more money than you had in the past or more money than most other people:
+    * to be in a better situation, if or after something happens:
+    * As one reviewer put it, highlighting the best parts of this book is a fruitless endeavor as you’d be better off dipping the whole thing in yellow highlighter. No matter what style or medium, it is a book that every writer should read.
+* fruitless
+    * adj
+    * ailing to achieve the desired results; unproductive or useless.
+* mediocrity
+    * the quality or state of being mediocre.
+* raccoon
+    * n
+* obligatory
+* mallet
+    * n, C
+* reincarnation
+* do my things
+    * let me do my thing
+    * doing what I enjoy
+* grown-up
+    * grownup
+    * (especially in children's use) an adult.
+* aspire
+    * aspire to sth
+        * Most of his students aspired to a career in business.
+    * aspire to do sth
+        * We aspire to become full-service providers to our clients.
+* pectus excavatum
+* pectus carinatum
+    * pigeon chest
+* stewdship
+    * the job of supervising or taking care of something.
+* adventurous
+    * adj
+    * willing to take risks or to try out new methods, ideas, or experiences.
+* try a new thing
+* neophile
+* monarchist
+* by any stretch of the imagination
+    * If you say that something is not true or possible by any stretch of the imagination, you are emphasizing that it is completely untrue or absolutely impossible.
+* v-card
+* good-looking
+* spleen
+    * an abdominal organ involved in the production and removal of blood cells in most vertebrates and forming part of the immune system.
+* yolk
+    * the yolk remains unbroken
+* in the first place
+    * Who thought this up in the first place?
+    * in the beginning:
 
 
-Subjanctive mood
 
-* [Subjunctive Mood](http://englishplus.com/grammar/00000031.htm)
-
-[数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
-
-comparative
-
-* [～ならば～なほど良いって英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/2472/)
-* [英語の「比較」が苦手な人へ！比較級で知っておくべき6つのこと｜ 英語学習ボックス](http://eigo-box.jp/grammar/comparison-1/)
-* [The 比較級, the 比較級はかなり深い？応用を含めて完全に理解しよう！【やさしく語る英文法】 | まこちょ英語ブログ](https://www.makocho0828.net/entry/2017-09-06-the_%E6%AF%94%E8%BC%83%E7%B4%9A_the_%E6%AF%94%E8%BC%83%E7%B4%9A%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8A%E6%B7%B1%E3%81%84%EF%BC%9F%E5%BF%9C%E7%94%A8%E3%82%92%E5%90%AB%E3%82%81%E3%81%A6)
-* comparative degree
-    * 比較級
-* superlative degree
-    * 最上級
-* positive degree
-    * 元級
-* He is older than I by three years.
-* He is three years older than I
-* S+V the comparative degree the comparative degree S+V
-    * The comparative degree S+V, the comparative degree S+V
-* THe longer he's away, the more chance his feelings for you will fade
 
 
 * pp. or p.
@@ -3180,14 +3275,11 @@ comparative
     * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
 * Q-tips
     * [What does Chandler mean by 'You have to stop the Q-tip when there is resistance'? - Quora](https://www.quora.com/What-does-Chandler-mean-by-You-have-to-stop-the-Q-tip-when-there-is-resistance)
-
-## Greeting
-* What have you been up to?
-* What are you up to?
-    * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
-
-
-
+* I will flash you
+    * [I'll flash you | WordReference Forums](https://forum.wordreference.com/threads/ill-flash-you.377843/)
+* I'm over you
+    * [What does "I'm so over you." mean? - Learn english - italki Answers](https://www.italki.com/question/92825)
+    * it means that at one time I had feelings for you , but now those feelings are gone and now I am indifferent to those feelings.
 * costume/outfit/uniform
     * [What is difference between costume and outfit? \- Quora](https://www.quora.com/What-is-difference-between-costume-and-outfit)
 * I've been meaning to tell you
@@ -3203,11 +3295,24 @@ comparative
     * She was naughty in bed.
 * perfume/eau de toilette/eau de cologne
     * [What is the difference between perfume, eau de toilette, and eau de Cologne?](http://www.slate.com/blogs/quora/2015/03/12/what_is_the_difference_between_perfume_eau_de_toilette_and_eau_de_cologne.html)
+* compare with/compare to
+    * [Compare with or compare to? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/compare-with-or-compare-to)
+    * Individual schools compared their facilities with those of others in the area.
+    * It is difficult to compare our results to studies conducted in the United States.
+* site/website
+    * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
+
+## Greeting
+* What have you been up to?
+* What are you up to?
+    * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
+
 
 
 ## Math
 * [Pronunciation of mathematical symbols](http://www.uefap.com/speaking/symbols/symbols.htm)
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
+* [数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
 
 * A follow B
 * B is followed by A
@@ -3289,3 +3394,4 @@ comparative
 
 ## Reference
 * [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)
+
