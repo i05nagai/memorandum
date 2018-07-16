@@ -3,37 +3,44 @@ title: English Pronunciation
 ---
 
 ## English Pronunciation
+* [Rachel's English - YouTube](https://www.youtube.com/user/rachelsenglish/playlists)
+* [Learn The 43 Sounds of American English Pronunciation — Pronuncian: American English Pronunciation](https://pronuncian.com/sounds/)
+* [The American English Pronunciation Podcast — Pronuncian: American English Pronunciation](https://pronuncian.com/podcasts)
 * [English Language Club - YouTube](https://www.youtube.com/user/EngLanguageClub/videos)
 * [BBC Learning English - Pronunciation](http://www.bbc.co.uk/learningenglish/english/features/pronunciation)
-* [International Phonetic Alphabet chart for English dialects - Wikipedia](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet_chart_for_English_dialects)
 * [Phonetic symbols](http://www.ling.upenn.edu/courses/Fall_2014/ling115/phonetics.html)
 * [Phonetic symbols for English](https://www.phon.ucl.ac.uk/home/wells/phoneticsymbolsforenglish.htm)
 * [Phonemic Chart Animated (Complete) - YouTube](https://www.youtube.com/watch?v=Ufdm3ufV6pg)
 
 Vowels
 
-| Mouth | open |   |    | close |
-|-------|------|---|----|-------|
-| mouth close | iː   | ɪ | ʊ  | uː    |
-|  | e    | ə | ɜː | ɔː    |
-| mouth open      | æ    | ʌ | ɑː | ɒ     |
-| tongue |      |   |    |       |
+|        | tongue up |   |    | tongue down |
+|-------------|------|---|----|-------|
+| mouth close | iː | ɪ | ʊ  | uː |
+|             | e  | ə | ɜː | ɔː |
+| mouth open  | æ  | ʌ | ɑː | ɒ  |
+|       |    |   |    |    |
 
 
 * mouth is almost closed, sound comes from top of the mouth
     * iː
+        * [Pronounce long e — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-long-e)
     * ɪ
+        * [Learn to Pronounce the 'short i' sound /ɪ/ — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-short-i)
     * ʊ
     * uː
 * mouth is a little more open, sound comes from middle of the mouth
     * e
     * ə
+        * [Schwa /ə/: the Reduced (and Most Common) Vowel Sound of English — Pronuncian: American English Pronunciation](https://pronuncian.com/intro-to-schwa)
     * ɜː
     * ɔː
         * [intrusive r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-5)
 * mouth is open, sound comes from bottom of mouth
     * æ
+        * [Short Vowels - 7](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel7)
     * ʌ
+        * [Short Vowels - 3](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel3)
     * ɑː
         * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
@@ -61,12 +68,16 @@ Diphthongs
     * ɔɪ
         * [The Sounds of English: Diphthongs - 4](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs4)
     * aɪ
+        * [Pronounce long i — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-long-i)
         * [The Sounds of English: Diphthongs - 3](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs3)
+        * [English: How to Pronounce AI aɪ diphthong: American Accent - YouTube](https://www.youtube.com/watch?v=uyKgPH0kmrU&index=3&list=PLrqHrGoMJdTQo20-rW0JS_ofnnrDponMy)
 * ʊ
     * əʊ
         * [The Sounds of English: Diphthongs - 5](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs5)
     * aʊ
         * [The Sounds of English: Diphthongs - 7](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs7)
+        * [English: How to Pronounce OW aʊ diphthong: American Accent - YouTube](https://www.youtube.com/watch?v=cdPImmffXzc&list=PLrqHrGoMJdTQo20-rW0JS_ofnnrDponMy&index=2)
+    * [English: How to Pronounce OH oʊ diphthong: American Accent - YouTube](https://www.youtube.com/watch?v=1YNdpFbG318&list=PLrqHrGoMJdTQo20-rW0JS_ofnnrDponMy)
     * http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs1
 
 Consonant Pairs
