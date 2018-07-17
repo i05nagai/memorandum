@@ -3239,6 +3239,115 @@
     * a person, especially a child or a man, who does things that you disapprove of, but who you still like:
      * I caught those little/young rascals dressing up in my clothes.
 * do a complete 180
+* mantis
+    * kind of insects
+    * also known as praying mantis
+* mating
+    * mating (or mateing in British English) is the pairing of either opposite-sex or hermaphroditic organisms, usually for the purposes of sexual reproduction.
+* what's your take on something
+    * asking someone what they thought of a situation
+* zone out
+* chug
+    * drink
+        * to swallow a drink completely without stopping to breathe:
+    * make sound
+* munchies
+    * snacks or small items of food.
+    * a sudden strong desire for food.
+* up and vanished
+* pay the tab
+* homewrecker
+    * n
+    * A homewrecker (sometimes styled as home wrecker or home-wrecker) is a person, object or activity that causes or comes close to causing the breakup of a marriage (or similar partnership).
+* siblings
+* deviated septum
+    * deviated nasal septum
+    * is a physical disorder of the nose, involving a displacement of the nasal septum. 
+* camera adds ten pounds
+* stumped
+    * are you still stumped?
+* smite
+    * you are smitten
+* twinkie
+* bimbo
+    * A person, typically a woman, regarded as being intellectually vacuous and having an inordinate interest in appearing sexually seductive.
+* feel up
+* diaphragm
+    * thoracic diaphragm
+    * birth control
+        * a circular rubber device that a woman puts inside her vagina before having sex, to avoid becoming pregnant
+* casa
+    * casa particular
+    * private house
+* indictive
+    * adj
+    * being or relating to a sign that something exists, is true, or is likely to happen:
+* chipmunk
+* mustache comb
+* brisk
+    * adj
+        * active and energetic.
+    * v
+        * quicken something.
+* blow someone/something
+    * to treat someone or something as unimportant, for example by not meeting someone or not going to an event
+* bearer
+    * a person or thing that carries or holds something.
+* goddess
+    * a female deity
+    * a woman who is greatly admired, especially for her beauty.
+* recollection
+    * a memory of something:
+    * the ability to remember things:
+* take up something
+    * begin
+        * to begin to do something:
+    * discuss
+        * to discuss or manage something:
+    * shorten
+        * to shorten clothes:
+* cantaloupe
+* ovum
+    * plural: ova
+    * a mature female reproductive cell, especially of a human or other animal, which can divide to give rise to an embryo usually only after fertilization by a male cell.
+    * an egg cell produced by a woman or female animal:
+* ovulate
+    * discharge ova or ovules from the ovary.
+* ovary
+    * he ovary is an organ found in the female reproductive system that produces an ovum.
+* abdomen
+    * the belly
+    * stomach
+    * tummy
+    * midriff
+* bifocal
+    * a pair of glasses with bifocal lenses.
+    * glasses with lenses that are divided into two parts. The upper half is for looking at things far away and the lower half is for reading or for looking at things that are near.
+* creme de menthe
+    * kind of beverage
+* berverage
+* chickenpox
+    * varicella
+* smallpox
+* skin rash
+* rash
+    * A rash is a change of the human skin which affects its color, appearance, or texture.
+* eczema
+    * a medical condition in which patches of skin become rough and inflamed with blisters which cause itching and bleeding.
+* phoney
+    * not genuine; fraudulent.
+    * fraudulent person or thing.
+* impostor
+    * a person who pretends to be someone else in order to deceive others, especially for fraudulent gain
+* get straight
+    * have straight.
+    * Understand correctly or make something clear,
+    * as in Now let's get it straight
+    * you'll take over at four, or Do I have it straight about when you're leaving? This expression uses straight in the sense of in proper order or not confused.
+* stiff
+    * firm or hard:
+    * not easily bent or moved:
+    * If you are stiff or part of your body is stiff, your muscles hurt when they are moved:
 
 
 
