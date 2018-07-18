@@ -3345,7 +3345,7 @@
     * as in Now let's get it straight
     * you'll take over at four, or Do I have it straight about when you're leaving? This expression uses straight in the sense of in proper order or not confused.
 * stiff
-    * firm or hard:
+    * firm or hard
     * not easily bent or moved:
     * If you are stiff or part of your body is stiff, your muscles hurt when they are moved:
 
