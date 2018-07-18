@@ -18,3 +18,4 @@ title: Interviews Data Scientist
         * SQL/R/Python stuff and define the right metric for certain FB products  
 
 ## Reference
+* [How to land a Data Scientist job at your dream company - My journey to Airbnb](https://towardsdatascience.com/how-to-land-a-data-scientist-job-at-your-dream-company-my-journey-to-airbnb-f6a1e99892e8)
