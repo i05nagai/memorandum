@@ -45,6 +45,19 @@ active voices and passive voices
 [Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
 
 
+## Punctuation
+* [Em dash -- The Punctuation Guide](http://www.thepunctuationguide.com/em-dash.html)
+    * The em dash is typically used without spaces on either sid
+    * A paire of em dashes can be used in place of commas. However, that dashes are always more emphatic than commas
+    * Em dashes in place of parentheses
+        * When used in place of parentehses at the end of a sentence, only a single dash is used.
+        * The dash is less formal than parentheses.
+    * The em dash in place of a colon
+        * The dash is less formal than the colon.
+    * Multiple em dashes
+        * Two em dashes can be used to indicate missing portions of a word, whether unknown or intentionally omitted.
+    * Spaces with the em dash
+
 ## Book
 * [10 Amazing Books That Will Improve Your Writing Skills | Grammarly](https://www.grammarly.com/blog/books-that-improve-writing-skills/)
 * [5 Books That Will Improve Your Writing | HuffPost](https://www.huffingtonpost.com/gregory-ciotti/5-books-that-will-improve_b_7489272.html)
