@@ -3347,8 +3347,45 @@
 * stiff
     * firm or hard
     * not easily bent or moved:
-    * If you are stiff or part of your body is stiff, your muscles hurt when they are moved:
-
+* tickle
+* lunge
+    * to move forward suddenly and with force, especially in order to attack someone:
+* dingy
+    * dark and often also dirty:
+* gloomy
+    * unhappy and without hope:
+    * not expecting or believing anything good in a situation:
+* curtain
+    * pull the curtains open
+    * pull the curtains shut
+    * draw the curtain
+        * usually, pull the curtains shut
+    * draw the curtain back
+        * pull the curtains open
+* honorary
+    * (especially of a degree) given as an honour to someone who has not done a course of study:
+    * An honorary position in an organization is one for which no payment is made:
+* sleepover
+    * a type of party when a young person or a group of young people stay for the night at the house of a friend
+* chipper
+    * a person or thing that turns something into chips.
+    * a machine for chipping timber.
+* judgemental
+    * too quick to criticize people:
+    * You must try not to be so judgmental about people.
+    * tending to form opinions too quickly, esp. when disapproving of someone or something:
+* cut somebody off
+    * phone
+        * to stop people from continuing a phone conversation by breaking the phone connection:
+        * We got cut off before she could give me directions.
+    * drink
+        * If someone serving drinks in a bar cuts you off, that person stops serving you alcoholic drinks because they think you have drunk too many:
+* get to
+    * to have an opportunity to do something:
+    * to begin to do or be:
+* nougat
+* USS nimitz
+    * USS Nimitz (CVN-68) is a supercarrier of the United States Navy, and the lead ship of her class. 
 
 
 Subjanctive mood
