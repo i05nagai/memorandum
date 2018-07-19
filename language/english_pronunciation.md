@@ -56,8 +56,13 @@ title: English Pronunciation
     * æ
         * [Short Vowels - 7](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel7)
     * ʌ
+        * The body of the tongue is relaxed and set low in the mouth. 
+        * The jaw is kept in a neutral position, and the lips are relaxed.
+        * [Pronounce short u — Pronuncian](https://pronuncian.com/pronounce-short-u)
         * [Short Vowels - 3](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel3)
     * ɑː
+        * the jaw is held more open and the back of the tongue is held lower for this sound than any other American English vowel sound pronunciation
+        * [Pronounce short o — Pronuncian](https://pronuncian.com/pronounce-short-o)
         * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
 * r controlled vowel
