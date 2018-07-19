@@ -1108,10 +1108,28 @@
 * flip
     * v, n
     * to get started, flip to appendisx B, where you'll see skills listed for eacy competency.
-* jot down
+* jot something down
     * jot down a few skills that apply to you.
+    * to write something quickly on a piece of paper so that you remember it:
+* hammered
+    * very drunk
 * well rounded
     * the ability to master a variety of skills is important to any well-rounded person
+* topnotch
+    * top-notch
+    * excellent
+* squirt
+    * (to force a liquid) to flow out through a narrow opening in a fast stream:
+    * He squirted some tomato sauce on his burger.
+    * to hit someone or something with a liquid or gas:
+* get over
+    * recover from
+    * overcome
+* off balance
+* squatting position
+* bent-over posture
+* soberly
+    * seriously and reasonably:
 * plump
     * adv, v
 * curvaceous
@@ -3471,6 +3489,41 @@
     * adj
     * occasional lapse
     * not happening or done often or regularly:
+* function
+    * an activity that is natural to or the purpose of a person or thing.
+* genderqueer
+    * adj
+    * having a gender identity that is not simply male or female
+* niche
+    * position
+        * a job or position that is very suitable for someone, especially one that they like:
+            * He has carved/made a niche for himself as a financial advisor.
+        * an area or position that is exactly suitable for a small group of the same type:
+            * an ecological niche.
+* grant
+    * n, C
+        * an amount of money given especially by the government to a person or organization for a special purpose:
+    * give
+        * v, T
+        * to give or allow someone something, usually in an official way:
+            * They granted her an entry visa.
+    * accept
+        * v, T
+        * to accept that something is true, often before expressing an opposite opinion:
+            * I grant that it must have been upsetting but even so I think she overreacted.
+* take something for granted
+    * to believe something to be the truth without even thinking abount it
+        * I didn't realize that Melanie hadn't been to college - I suppose I just took it for granted.
+* take something/someone for granted
+    *  If you take situations or people for granted, you do not realize or show that you are grateful for how much you get from them
+* sublet
+    * v, T
+        * to allow someone to rent all or part of a house or other building that you are renting from someone else:
+        * Our rental contract states that we are not allowed to sublet the house.
+    * n
+        * a lease of a property by a tenant to a subtenant.
+* itinerary
+    * a detailed plan or route of a journey:
 
 
 ## Nuance
@@ -3572,8 +3625,13 @@
 * through and throught
     * in every aspect; thoroughly or completely.
 * rubric
+    * a set of instructions, especially on an exam paper, usually printed in a different style or colour:
+    * Read/Follow the rubric carefully.
 * juncture
+    * n, C
     * key juncture
+    * a particular point in time
+    * At this juncture, it is impossible to say whether she will make a full recovery.
 * cave art
 * rock art
 * weaving
@@ -3589,7 +3647,9 @@
     * is the study of the physical and biological aspects of the ocean
 * ice ages
 * optics
+    * is the branch of physics which involves the behaviour and properties of light, including its interactions with matter and the construction of instruments that use or detect it.
 * seismology
+    * the branch of science concerned with earthquakes and related phenomena.
 * tectonics
 * continental drift
 * anthropology
@@ -3622,6 +3682,74 @@
     * adv
     * expressed in speech, not writing:
 * in herd
+* herd
+    * a large group of people that is considered together as a group and not separately:
+* fall for something
+    * to be tricked int obelieving something that is not true
+* fall for someone
+    * to be attracted to someone and start to love that person:
+        * Make his fallen for Heather.
+* I'm not falling for that one!
+    * said when you recognized a trick and refuse to be deceived by it
+* exposition
+    * explanation
+        * a clear and full explanation of an idea or theory:
+    * show
+        * a show in which industrial goods, works of art, etc. are shown to the public:
+* demeaning
+    * causing someone to become or feel less respected:
+    * That advertisement is demeaning to women.
+* arthritic
+* arthritis
+    * a serious condition in which a person's joints (= the places where two bones are connected) become painful, swollen, and stiff:
+* doody
+    * solid bodily waste; feces
+* noticeable
+    * easy to see or recognize:
+* feces
+    * faeces
+    * the solid waste passed out of the body of a human or animal through the bowels:
+* pass out
+    * become unconscious
+    * leave college
+        * to leave a military college after successfully finishing the course:
+* digress
+    * to move away from the main subject you are writing or talking about and to write or talk about something else:
+* dist
+* gist
+    * the most important pieces of information about something, or general information without details:
+* utterance
+    * a spoken word, statement, or vocal sound.
+        * The senator's recent utterances were promptly rebutted by three of his colleagues on Monday.
+    * the action of saying or expressing something aloud.
+* give utterance to something
+    * to express your ideas or feelings in spoken words
+        * She has one great fear to which she will never give utterance.
+* stance
+    * 
+* stick down
+    * to write something quickly and without taking much care
+* stick someone's tongue down someone's throat
+    * I definitely stuck my tongue down her throat.
+* overbearing
+* soggy
+* snog
+* fool around
+    * v
+    * silly
+        * to behave in a silly way, especially in a way that might have dangerous results:
+            * Don't fool around with matches.
+    * have a sexual relationship
+        * She'd been fooling around with someone at work.
+        * If a married person fools around, they have a sexual relationship with someone who is not their husband or wife:
+* domestication
+    * the process of taming an animal and keeping it as a pet or on a farm.
+    * the cultivation of a plant for food.
+* paraphrase
+    * to repeat something written or spoken using different words, often in a humorous form or in a simpler and shorter form that makes the original meaning clearer
+* look into something
+    * to examine the facts about a problem or situation:
+
 
 
 
