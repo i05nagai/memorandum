@@ -26,6 +26,41 @@ apt-get install scala
     * otherwise, the method is called by left operand
         * `a * b` is `a.*(b)`
 
+
+traits
+
+* inherited trait by `with` or `extends` keyword
+* mixin
+* method can be overrided
+* java interface + maintain state and declare fields
+* no primary constructor
+* `abstract class` can inherit `trait`
+* `traits` inherits class
+
+to trait or not to trait
+
+* if the behaivor will not be reused
+    * make it a concrete class
+* if it might be resused in multiple, unrelated classes
+    * make it a trait
+* if you want to inherit from it in Java code,
+    * use an abstract class
+* if you plan to distribute it in compiled form and you expect outside groups to write classes inheriting from it
+    * you might lean towards using an abstract class
+* if efficient is very important
+    * lean towards using a class
+* if you still do not know
+    * start by making it as a trait
+
+
+package
+
+* may appear anywhere
+* may refer to objects (singleton or regular) in addition to package
+* let you rename and hide some of the imporeted members
+* member of packages can be labeled with the acess modifiers `private` and `protected`
+* no access modifier means `public`
+
 ## Tips
 
 ### Styleguide

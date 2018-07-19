@@ -7,13 +7,18 @@ title: pandas
 
 ## Install
 
-```sh
+```
 pip install pandas
 ```
 
 ## Term
 * `index`は行
 * `columns`は列
+* `Series`
+    * One-dimensional ndarray with axis labels (including time series).
+    * [pandas\.Series — pandas 0\.23\.1 documentation](https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.Series.html)
+    * `data`
+    * `index`
 
 ## Usage
 
@@ -121,17 +126,6 @@ df[true_false_list]
 
 
 ## API
-* `pandas.read_gbq(query, project_id=None, index_col=None, col_order=None, reauth=False, verbose=True, private_key=None, dialect='legacy', **kwargs)`
-    * Google bigqueryから読み込む
-    * dialectは`standard`か'legacy'
-    * index_col
-        * 結果のcolumnのDataFrame名
-    * private_key
-        * jupyter notebookを別serverで動かしている場合に有用
-
-```
-pip install pandas-gbq
-```
 
 ## Reference
 * [Python Pandasでのデータ操作の初歩まとめ − 前半：データ作成＆操作編 - Qiita](http://qiita.com/hik0107/items/d991cc44c2d1778bb82e)
@@ -139,5 +133,4 @@ pip install pandas-gbq
 * [Python pandas データ選択処理をちょっと詳しく <中編> - StatsFragments](http://sinhrks.hatenablog.com/entry/2014/11/15/230705)
 * [Python Pandasでのデータ操作の初歩まとめ − 後半：データ集計編 - Qiita](http://qiita.com/hik0107/items/0ae69131e5317b62c3b7)
 * [Python Pandasでのデータ操作の初歩まとめ − 後半：データ集計編 - Qiita](http://qiita.com/hik0107/items/0ae69131e5317b62c3b7)
-
 

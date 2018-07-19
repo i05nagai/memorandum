@@ -4,6 +4,18 @@ title: Skype
 
 ## Skype
 
+## Install
+For OSX,
+
+```
+brew cask install Skype
+```
+
+For ubuntu 16.04
+
+```
+sudo snap install skype --channel
+```
 
 ## Uinstall
 

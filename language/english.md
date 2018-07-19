@@ -337,6 +337,9 @@
     * 組織内で実権を握る少数の人々
 * lust
     * n, v
+    * strong sexual desire.
+    * have strong sexual desire for someone.
+        * he really lusted after me in those days
 * lure
 * find one's true calling
     * [Find your calling - Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/find+your+calling)
@@ -777,7 +780,9 @@
     * n, v
     * he goes on a binge, drinks till he blacks out
 * indulge
+    * v, I, T
     * a period of excessive indulgence in an activity, especially drinking alcohol or eating.
+    * to allow yourself or another person to have something enjoyable, especially more than is good for you:
 * flimsy
     * flimsy yellow metrocards that must be swiped at precisely the right speed.
 * lycanthropy
@@ -1855,6 +1860,7 @@
     * swishing wine
 * hypothermia
 * ditch
+    * n, C, v
     * ditched me
 * raid
 * hide out
@@ -2556,6 +2562,7 @@
 * celestial
 * growl
 * deity
+    * a god or goddess:
 * turnip
 * clobber
     * if he does that I'll clobber him
@@ -3215,6 +3222,286 @@
 * in the first place
     * Who thought this up in the first place?
     * in the beginning:
+* zeal
+    * n, U
+    * great energy or enthusiasm in pursuit of a cause or an objective.
+* praise
+* desolate
+    * adj
+    * A desolate place is empty and not attractive, with no people or nothing pleasant in it:
+    * The house stood in a bleak and desolate landscape.
+* hedeous
+    * extremely ugly.
+* acquaintance
+* glacier
+    * a large mass of ice that moves slowly
+* stir
+    * v
+    * cause emotion
+        * If something stirs you, it makes you feel a strong emotion:
+            * I was deeply stirred by her performance.
+        * If an emotion stirs within you, you begin to feel it:
+            * Hope stirred within her heart.
+        * to cause trouble intentionally between other people, especially by telling false or secret information:
+            * There's a lot of gossip about me going around. Have you been stirring?
+* bring something on
+    * to make something happen, usually something bad:
+        * The loud music brought on another one of his headaches.
+* prowl
+    * to move around quietly in a place trying not to be seen or heard, such as an animal does when hunting:
+    * to be moving around quietly in a place trying not to be seen or heard:
+* snag
+    * n, C
+    * a problem, difficulty, or disadvantage:
+    * dagame
+        * a tear, hole, or loose thread in a piece of clothing or cloth caused by a sharp or rough object:
+* rite
+    * n, C
+    * (a usually religious ceremony with) a set of fixed words and actions:
+        * funeral/marriage/fertility rites
+* devilry
+* imbue something with
+    * v
+    * to fill something or someone with a particular feeling, quality, or idea:
+* glaive
+    * n
+    * a sword
+* gramp
+* aloud
+    * audibly; not silently or in a whisper.
+    * loudly.
+* etch
+* cresent
+* galestorm
+* relish
+    * to like or enjoy something:
+    * If you relish the idea or thought of something, you feel pleasure that it is going to happen:
+* frostbite
+* flounder
+    * v, I
+    * to experience great difficulties or be completely unable to decide what to do or say next:
+* heeded
+    * v, T
+    * pay attention to; take notice of.
+    * The airline has been criticized for failing to heed advice/warnings about lack of safety routines.
+* bear with me
+    * incorrect: bare with me
+* tryst
+    * an emotional tryst
+    * a private romantic rendezvous between lovers.
+    * keep a private, romantic rendezvous with a lover.
+* fling
+    *  to throw something or someone suddenly and with a lot of force:
+    * n
+        * a short period of enjoyment:
+        * a brief sexual or romantic affair.
+* get a grip
+* linger
+    * v, I
+    * to take a long time to leave or disappear:
+    * Flings are temporary but their effects can linger.
+* out of the blue
+    * without warning; unexpectedly.
+* indulgence
+* maternity leave
+* save something up
+    * to keep money so that you can buy something with it in the future:
+    * she's saving up for a new bike
+* spunk
+    * n, U
+    * courage and determination
+    * semen
+* dodge
+    * avoid (someone or something) by a sudden quick movement.
+* gut 
+    * n, 
+    * gut feeling/reaction informal
+        * a strong belief about someone or something that cannot completely be explained and does not have to be decided by reasoning:
+    * sb's gut
+        * a way of deciding what should be done or what is right, that is based on how someone feels rather than thinking about reasons:
+* tacky
+    * of cheap quality or in bad style:
+* stiletto
+    * a woman's shoe with a narrow, high heel:
+* landlady
+    * n
+        * a woman who is paid rent by people for the use of a room, building, or piece of land that she owns
+* tempt
+    * v, T
+    * to make someone want to have or do something, especially something that is unnecessary or wrong:
+* hot streak
+    * a period of repeated successes
+* wuv
+    * Love
+* second nature
+    * n, U
+    * If something is second nature to you, you are so familiar with it that you can do it easily without needing to think very much about it:
+    * I used to hate computers, but using them is second nature to me now.
+* snap out of
+    * to stop experiencing something unpleasant or stop behaving in a negative way:
+    * Johnson has finally snapped out of a four-week hitting slump.
+* chick
+    * n, C
+    * a young bird, especially one newly hatched.
+* hatch
+    * v
+        * egg
+            * to (cause an egg to) break in order to allow a young animal to come out
+        * plan
+             * to make a plan, especially a secret plan:
+             * He hatched a plot to forge documents that would embarrass the company.
+* rascal
+    * n
+    * a person, especially a child or a man, who does things that you disapprove of, but who you still like:
+     * I caught those little/young rascals dressing up in my clothes.
+* do a complete 180
+* mantis
+    * kind of insects
+    * also known as praying mantis
+* mating
+    * mating (or mateing in British English) is the pairing of either opposite-sex or hermaphroditic organisms, usually for the purposes of sexual reproduction.
+* what's your take on something
+    * asking someone what they thought of a situation
+* zone out
+* chug
+    * drink
+        * to swallow a drink completely without stopping to breathe:
+    * make sound
+* munchies
+    * snacks or small items of food.
+    * a sudden strong desire for food.
+* up and vanished
+* pay the tab
+* homewrecker
+    * n
+    * A homewrecker (sometimes styled as home wrecker or home-wrecker) is a person, object or activity that causes or comes close to causing the breakup of a marriage (or similar partnership).
+* siblings
+* deviated septum
+    * deviated nasal septum
+    * is a physical disorder of the nose, involving a displacement of the nasal septum. 
+* camera adds ten pounds
+* stumped
+    * are you still stumped?
+* smite
+    * you are smitten
+* twinkie
+* bimbo
+    * A person, typically a woman, regarded as being intellectually vacuous and having an inordinate interest in appearing sexually seductive.
+* feel up
+* diaphragm
+    * thoracic diaphragm
+    * birth control
+        * a circular rubber device that a woman puts inside her vagina before having sex, to avoid becoming pregnant
+* casa
+    * casa particular
+    * private house
+* indictive
+    * adj
+    * being or relating to a sign that something exists, is true, or is likely to happen:
+* chipmunk
+* mustache comb
+* brisk
+    * adj
+        * active and energetic.
+    * v
+        * quicken something.
+* blow someone/something
+    * to treat someone or something as unimportant, for example by not meeting someone or not going to an event
+* bearer
+    * a person or thing that carries or holds something.
+* goddess
+    * a female deity
+    * a woman who is greatly admired, especially for her beauty.
+* recollection
+    * a memory of something:
+    * the ability to remember things:
+* take up something
+    * begin
+        * to begin to do something:
+    * discuss
+        * to discuss or manage something:
+    * shorten
+        * to shorten clothes:
+* cantaloupe
+* ovum
+    * plural: ova
+    * a mature female reproductive cell, especially of a human or other animal, which can divide to give rise to an embryo usually only after fertilization by a male cell.
+    * an egg cell produced by a woman or female animal:
+* ovulate
+    * discharge ova or ovules from the ovary.
+* ovary
+    * he ovary is an organ found in the female reproductive system that produces an ovum.
+* abdomen
+    * the belly
+    * stomach
+    * tummy
+    * midriff
+* bifocal
+    * a pair of glasses with bifocal lenses.
+    * glasses with lenses that are divided into two parts. The upper half is for looking at things far away and the lower half is for reading or for looking at things that are near.
+* creme de menthe
+    * kind of beverage
+* berverage
+* chickenpox
+    * varicella
+* smallpox
+* skin rash
+* rash
+    * A rash is a change of the human skin which affects its color, appearance, or texture.
+* eczema
+    * a medical condition in which patches of skin become rough and inflamed with blisters which cause itching and bleeding.
+* phoney
+    * not genuine; fraudulent.
+    * fraudulent person or thing.
+* impostor
+    * a person who pretends to be someone else in order to deceive others, especially for fraudulent gain
+* get straight
+    * have straight.
+    * Understand correctly or make something clear,
+    * as in Now let's get it straight
+    * you'll take over at four, or Do I have it straight about when you're leaving? This expression uses straight in the sense of in proper order or not confused.
+* stiff
+    * firm or hard
+    * not easily bent or moved:
+* tickle
+* lunge
+    * to move forward suddenly and with force, especially in order to attack someone:
+* dingy
+    * dark and often also dirty:
+* gloomy
+    * unhappy and without hope:
+    * not expecting or believing anything good in a situation:
+* curtain
+    * pull the curtains open
+    * pull the curtains shut
+    * draw the curtain
+        * usually, pull the curtains shut
+    * draw the curtain back
+        * pull the curtains open
+* honorary
+    * (especially of a degree) given as an honour to someone who has not done a course of study:
+    * An honorary position in an organization is one for which no payment is made:
+* sleepover
+    * a type of party when a young person or a group of young people stay for the night at the house of a friend
+* chipper
+    * a person or thing that turns something into chips.
+    * a machine for chipping timber.
+* judgemental
+    * too quick to criticize people:
+    * You must try not to be so judgmental about people.
+    * tending to form opinions too quickly, esp. when disapproving of someone or something:
+* cut somebody off
+    * phone
+        * to stop people from continuing a phone conversation by breaking the phone connection:
+        * We got cut off before she could give me directions.
+    * drink
+        * If someone serving drinks in a bar cuts you off, that person stops serving you alcoholic drinks because they think you have drunk too many:
+* get to
+    * to have an opportunity to do something:
+    * to begin to do or be:
+* nougat
+* USS nimitz
+    * USS Nimitz (CVN-68) is a supercarrier of the United States Navy, and the lead ship of her class. 
 
 
 
@@ -3257,6 +3544,8 @@
         * normal
     * There still are
         * strong
+* I'm running late
+    * [meaning in context \- Be "running late" and "run my appointment" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/127289/be-running-late-and-run-my-appointment)
 * [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
 * [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
     * I cross the customer's name off the reservation list.

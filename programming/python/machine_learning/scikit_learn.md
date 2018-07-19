@@ -4,6 +4,16 @@ tittle: scikit-learn
 
 ## scikit-learn
 
+## Install
+
+```
+pip install sklearn
+```
+
+```
+conda install -c anaconda scikit-learn
+```
+
 ### model_selection
 * `train_test_split`
     * データを訓練データとテストデータに分ける
