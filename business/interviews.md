@@ -96,7 +96,6 @@ Data Engineer install data into data warehousing.
 * [How to answer the technical interview question 'What is your biggest challenge and how did you solve it?' - Quora](https://www.quora.com/How-do-you-answer-the-technical-interview-question-What-is-your-biggest-challenge-and-how-did-you-solve-it)
 * [Here's How to Prepare for Tech Interviews : cscareerquestions](https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/)
 
-
 1. Why did you decide to change careers?/ Why did you choose to become a software developer?
 2. What is your understanding of what we do at Forty2?
 3. Describe your career path up until now. 
