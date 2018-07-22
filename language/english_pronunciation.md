@@ -24,6 +24,9 @@ title: English Pronunciation
 * similar sounds
     * iː/ɪ
         * [Long Vowels - 1](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/longvowel1)
+    * e/ɪ
+        * [Short Vowels - 6](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel6)
+    * æ/a
 
 * mouth is almost closed, sound comes from top of the mouth
     * iː
@@ -41,8 +44,10 @@ title: English Pronunciation
     * uː
 * mouth is a little more open, sound comes from middle of the mouth
     * e/ɛ
+        * head/dres/bed/many
+        * [Short Vowels - 6](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel6)
     * ə
-        * [Schwa /ə/: the Reduced (and Most Common) Vowel Sound of English — Pronuncian: American English Pronunciation](https://pronuncian.com/intro-to-schwa)
+        * [Schwa /ə/: the Reduced (and Most Common) Vowel Sound of English — Pronuncian](https://pronuncian.com/intro-to-schwa)
         * [Short Vowels - 5](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel5)
     * ɜː
         * [Pronounce short e — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-short-e)
@@ -54,7 +59,11 @@ title: English Pronunciation
         * [intrusive r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-5)
 * mouth is open, sound comes from bottom of mouth
     * æ
+        * Near-open front unrounded vowel
+        * The front of the tongue is pushed further forward and is held lower in the mouth when forming the 'short a'
+        * The jaw is lowered and the lips are held apart, allowing the entire oral cavity to remain open.
         * [Short Vowels - 7](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel7)
+        * [Learn to Pronounce the 'short a' sound /æ/ — Pronuncian](https://pronuncian.com/pronounce-short-a)
     * ʌ
         * The body of the tongue is relaxed and set low in the mouth. 
         * The jaw is kept in a neutral position, and the lips are relaxed.
@@ -65,6 +74,12 @@ title: English Pronunciation
         * [Pronounce short o — Pronuncian](https://pronuncian.com/pronounce-short-o)
         * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
+        * [Open back rounded vowel - Wikipedia](https://en.wikipedia.org/wiki/Open_back_rounded_vowel)
+        * short o sound
+        * Open back rounded vowel
+    * ɑ
+        * similar to ɒ
+        * [Open back unrounded vowel - Wikipedia](https://en.wikipedia.org/wiki/Open_back_unrounded_vowel)
 * r controlled vowel
     * American english
     * ɚ
