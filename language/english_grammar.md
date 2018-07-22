@@ -45,6 +45,28 @@ active voices and passive voices
 [Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
 
 
+* present perfect tense
+    * The present perfect is normally used to denote the present state of an action's being completed, that is, that the action took place before the present time.
+* present perfect progressive
+* past perfect tense
+
+
+* adjective + to
+    * It is diffucult to understand him
+    * He is difficult to understand
+    * easy/nice/safe/cheap/exciting/impossible/hard/good/dangerous/expensive/interesting
+* adjective + noun + to
+    * This is a difficult question for me to answer
+* adj of somebody to do
+    * kind/(in)considerate/generous/mean/careless/silly/stuipid/unfair
+    * It's silly of Ruth to give up her job when she needs the oney
+* The first/next + to
+    * the first/the second/the third, the last/the next/the only
+    * The next train to arrive at platform 4 will be the 10:50 to Livepool
+    * I was the only one to arrive on time+ 
+
+
+
 ## Punctuation
 * [Em dash -- The Punctuation Guide](http://www.thepunctuationguide.com/em-dash.html)
     * The em dash is typically used without spaces on either sid
