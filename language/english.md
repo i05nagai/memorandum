@@ -1695,6 +1695,11 @@
     * dank storeroom
 * shoplifting
 * detain
+    * v, T, often passive
+        * to force someone officaly to stay in a place
+            * A suspect has been detained by the police for questioning
+        * to delay someone for a short length of time
+            * I'm sorry I'm late -- I was unavoidably detained.
 * i'm over it
 * sterile
     * they're sterile AF
@@ -2444,6 +2449,8 @@
 * go hand in hand with smth
     * If something goes hand in hand with something else, it is closely related to it and happens at the same time as it or as a result of it:
 * retreat
+    * to go away from a place or person in order to escape from fighting a danger
+    * to go to a quit safe place in order to avoid a difficult situation
 * what's your twenty?
     * [Where does the phrase 'what's your 20' come from? \- Quora](https://www.quora.com/Where-does-the-phrase-whats-your-20-come-from)
 * plume
@@ -3483,6 +3490,8 @@
     * An honorary position in an organization is one for which no payment is made:
 * sleepover
     * a type of party when a young person or a group of young people stay for the night at the house of a friend
+* slumber party
+    * a party when a group of children spend the night at one's child's house
 * chipper
     * a person or thing that turns something into chips.
     * a machine for chipping timber.
@@ -3497,11 +3506,37 @@
     * drink
         * If someone serving drinks in a bar cuts you off, that person stops serving you alcoholic drinks because they think you have drunk too many:
 * get to
-    * to have an opportunity to do something:
-    * to begin to do or be:
+    * have chance
+        * auxiliary verb
+        * to have an opportunity to do something:
+    * begin
+        * auxiliary verb
+        * to begin to do or be:
+* auxiliary
+    * adj
+    * giving help or support, especially to a more important person or thing
+    * auxiliary stuff/nurce
 * nougat
+    * is a family of confections made with sugar or honey, roasted nuts, whipped eggs white, and sometimes chopped candied fruit.
+* candied fruit
+    * crystallized fruit, glace fruit
+    * 
 * USS nimitz
     * USS Nimitz (CVN-68) is a supercarrier of the United States Navy, and the lead ship of her class. 
+* wimp
+    * n, C
+        * a person who is not stong, brave, or confident
+* feud
+    * an argument that has existed for a long time between two people or groups, causing a lot of anger or violence
+* desertion
+    * n, C or U,
+        * the act of leaving the armed forces without permission
+    * n, C or U
+        * the act of leaving someone befind in a diffuclut situation
+* honoray
+    * adj
+
+
 
 
 
@@ -3590,6 +3625,9 @@
     * It is difficult to compare our results to studies conducted in the United States.
 * site/website
     * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
+* get/got/gotten
+    * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
+    * have got/'ve got/got -> have or must
 
 ## Greeting
 * What have you been up to?
