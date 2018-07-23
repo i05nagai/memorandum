@@ -19,7 +19,7 @@ regretを最小にするような選択肢$I_{T} \in \mathcal{A}_{T}$を決め�
 
 ## 3.5 確率一致方法とトンプソン抽出
 
-### 3.5.2 トンプソン抽出
+### 3.5.2 Thompson Sampling
 
 
 #### Algorithm 3.4
@@ -32,7 +32,7 @@ regretを最小にするような選択肢$I_{T} \in \mathcal{A}_{T}$を決め�
 * $K$,
     * the number of arms
 
-
+The steps in algorithm
 
 * Step1. For each arm $i$, $n_{i} \leftarrow 0$, $m_{i} \leftarrow 0$,
 * Step2. for $t = 1, \ldots, T$ do
