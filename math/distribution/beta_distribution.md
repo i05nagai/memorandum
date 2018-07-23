@@ -30,7 +30,7 @@ $\mathrm{Beta}(\alpha, \beta)$ is the p.d.f of Beta distribution given $\alpha$ 
 $$
     x \in [0, 1],
     \
-    \mathrm{Beta}(\alpha, \beta)(x)
+    \mathrm{Beta}(x; \alpha, \beta)
     :=
     \frac{
         x^{\alpha-1}
