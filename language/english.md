@@ -2255,6 +2255,10 @@
     * n
     * a person or thing that is doomed or cannot be saved.
 * inherently
+* inherent
+    * existing as a natural or basic part of something
+    * There are dangers inherent in almost every sports.
+    * I have an inherent distrust of lawyers
 * connotation
 * dismissively
 * destine
@@ -3535,6 +3539,14 @@
         * the act of leaving someone befind in a diffuclut situation
 * honoray
     * adj
+* 101
+    * adj
+    * comprising the introductory material in or as if in a course of study
+    * economics 101
+* va fa napoli
+    * [What does 'Va fa Napoli' mean? \- Quora](https://www.quora.com/What-does-Va-fa-Napoli-mean)
+    * go fuck yourself
+* we"ve got company
 
 
 
@@ -3628,6 +3640,7 @@
 * get/got/gotten
     * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
     * have got/'ve got/got -> have or must
+
 
 ## Greeting
 * What have you been up to?
