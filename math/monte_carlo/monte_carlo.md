@@ -24,7 +24,7 @@ The convergence is ensured by the strong law of large numbers.
 * $N$,
     * the number of simulations
 * $O(N^{1/2})$,
-    * convergence
+    * rate of convergence
 
 ## Variance Reduction Techniques
 To reduce the variance of the integrator are imporant for fast convergence.
