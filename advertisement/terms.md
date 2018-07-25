@@ -1,6 +1,8 @@
 ## Terms
 
 * remnant
+    * remnant inventory
+    * stock of advertizement in a publisher
 * media
     * 広告枠をもっているweb site
 * advertiser
@@ -81,6 +83,9 @@
         * 閲覧可能な広告枠か、非表示広告枠でないかなど
     * [Viewability Rate Definition | The Online Advertising Guide](https://theonlineadvertisingguide.com/glossary/viewability-rate/)
     * pageの下部にある広告は、page下部がin viewになった時に広告requestを投げればviewablity rateをあげられる
+* advertising arbitrage
+    * there is no strict definition
+    * something dirty which agencies do
 
 
 定義はIABのstudy guideによる
@@ -119,3 +124,4 @@ If you are paying 100,000USD for a campaign and you get 1,000,000 impressions, C
 * [インターネット広告用語「CVR,CPC,CPA,CTR,CPM」の意味まとめ](http://deaimobi.com/mbnk-181/)
 * [11 Ad Tech Terms Everyone Should Know](https://blog.adroll.com/trends/ad-tech-terms-glossary)
 * [CPM, CPC, CPA, and the Transfer of Risk | Ad/Tech/Biz & Random Stuff](http://www.ronkato.com/cpm-cpc-cpa-and-the-transfer-of-risk/)
+* [WTF is advertising arbitrage? \- Digiday](https://digiday.com/marketing/wtf-arbitrage/)

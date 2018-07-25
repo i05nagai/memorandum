@@ -2309,6 +2309,10 @@
     * n
     * a person or thing that is doomed or cannot be saved.
 * inherently
+* inherent
+    * existing as a natural or basic part of something
+    * There are dangers inherent in almost every sports.
+    * I have an inherent distrust of lawyers
 * connotation
 * dismissively
 * destine
@@ -4331,6 +4335,14 @@
     * the fighting continued unabated through the night
 * stay up
     * not go to bed
+* 101
+    * adj
+    * comprising the introductory material in or as if in a course of study
+    * economics 101
+* va fa napoli
+    * [What does 'Va fa Napoli' mean? \- Quora](https://www.quora.com/What-does-Va-fa-Napoli-mean)
+    * go fuck yourself
+* we"ve got company
 
 
 ## Nuance
@@ -4615,11 +4627,9 @@
 * nit
     * [code review - What does "nit" mean in hacker-speak? - Stack Overflow](https://stackoverflow.com/questions/27810522/what-does-nit-mean-in-hacker-speak)
     * short for `nitpicking`
-
 * on the internet / in the internet
     * on the internet is correct
     * [word choice - "In the Internet" vs. "on the Internet" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/4419/in-the-internet-vs-on-the-internet/4433)
-
 * Edge case/Corner case
     * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
 * code/codes
