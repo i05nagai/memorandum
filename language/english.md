@@ -86,7 +86,9 @@
 * nip
     * v,n
 * procrastinate
-    * v
+    * v, I
+    * to keep delaying something that must be done, often because it is unpleasant or boring
+    * I know I've got to deal with the problem at some point. I'm just procrastinating
 * ledge
     * n
 * brimstone
@@ -273,6 +275,14 @@
     * (especially of a smell) spread through and be perceived in every part of.
     * a smell of stale cabbage pervaded the air
 * vicinity
+    * the place around a place or where speaker is
+* refuge
+* take refuge
+    * to find safe place
+    * they takes refuge on the Moon
+* infantry
+    * the part of an army that fights on foot
+    * the infantry was sent into battle
 * hazmat suit
 * it doesn't ring a bell
     * Does seeing this ring any bells?
@@ -327,6 +337,7 @@
     * n
 * deceptive
     * misleading
+    * making you believe something that is not true
 * ruthless
     * adj
     * pitiless
@@ -356,6 +367,8 @@
 * lithe
 * agile
 * melee
+    * n, C
+    * a situation that is confused and not under control, especially a fight involving a number of people
 * the long arm of the law
     * the police
 * evade
@@ -381,9 +394,15 @@
 * in a row
 * empire
     * n, adj
-* grieving
+* grieve
     * grieve over
     * we will grieve for them
+    * v, I
+        * to feel or express great sadness, especially when someone dies:
+            * He is still grieving for/over his wife.
+    * v, T
+        * to make you feel sad and angry
+            * It grieves me to see all this food going to waste.
 * fixer
 * devious
 * esteem
@@ -729,6 +748,9 @@
     * I understood
 * you got it
 * coerce
+    * v, T
+    * to persuade someone forcefully to do something that they are unwilling to do:
+* coercive
 * mighty
     * the pen is mightier than the sword
 * unabridged
@@ -747,7 +769,9 @@
 * maligant
 * inflammation
 * look up the word in a dictionary
-* aethetic
+* aesthetic
+    * relating to the enjoyment or study of beauty:
+    * An aesthetic object or a work of art is one that shows great beauty:
     * next up is the overall aesthetic look of the resume
 * ample
     * make ample use of white space
@@ -1102,10 +1126,28 @@
 * flip
     * v, n
     * to get started, flip to appendisx B, where you'll see skills listed for eacy competency.
-* jot down
+* jot something down
     * jot down a few skills that apply to you.
+    * to write something quickly on a piece of paper so that you remember it:
+* hammered
+    * very drunk
 * well rounded
     * the ability to master a variety of skills is important to any well-rounded person
+* topnotch
+    * top-notch
+    * excellent
+* squirt
+    * (to force a liquid) to flow out through a narrow opening in a fast stream:
+    * He squirted some tomato sauce on his burger.
+    * to hit someone or something with a liquid or gas:
+* get over
+    * recover from
+    * overcome
+* off balance
+* squatting position
+* bent-over posture
+* soberly
+    * seriously and reasonably:
 * plump
     * adv, v
 * curvaceous
@@ -1372,9 +1414,14 @@
 * Tupperware
 * hustler
 * barge in
+* barge
+    * v, I, T adv/prep
+    * to hurry somewhere or through a place in a rude and forceful way
 * get off on
     * you get off on danger
     * be excited or aroused by (something)
+* get off
+    * to leave a place, usually in order to start a journey
 * wars of the roses
     * [Wars of the Roses \- Wikipedia](https://en.wikipedia.org/wiki/Wars_of_the_Roses)
 * keep something pushing
@@ -1680,6 +1727,11 @@
 * baffle
     * perplexed
 * forfeit
+    * v, T
+        * to loose the right to do or have something because you have broken a rule
+        * if you cancel now, you forfeit your deposit
+        * these people fofeited the right to live in society
+* to the extent
 * jointly prepared
 * mal
 * pay phone
@@ -1853,7 +1905,7 @@
 * antiemetics
 * holistic
 * enlighten
-    * englithen me
+    * I don't understand this. Could you englithen me?
 * modicum
     * without a modicum of evidence,
 * posse
@@ -2192,6 +2244,8 @@
 * fall into place
     * (of a series of events or facts) begin to make sense.
 * shady
+    * to be shady
+    * dishonorouble, corrupt, sneaky
 * lurk
     * that thing lurking with in Homs
 * brat
@@ -2294,6 +2348,10 @@
 * fickle
     * changing frequently, especially as regards one's loyalties or affections.
 * savage
+    * adj
+        * extremely violent, wild, or frightening
+        * very serious or cruel
+        * very large and severe
 * ferocious
 * ally
     * n, v
@@ -2406,6 +2464,10 @@
     * she's in the shop on her feet all day
 * concussion
     * a usually temporary injury to the brain caused by a fall or hit on the head or by violent shaking
+    * Over the past 5 years; I've experienced two depression pereiods: one after I fractured my leg
+* fracture
+    * v, I, T
+        * If something hard, such as a bone, fractures, or is fracture, it breask or cracks
 * nosy
     * adj, v
     * showing too much curiosity about other people's affairs.
@@ -2488,6 +2550,7 @@
     * to defeat someone in a fight or competition
 * gash
     * covered in gashed
+    * a long, deep cut, especially in the skin
 * majestic
     * majestic coat dyed crimson
     * beautiful, powerful, or causing great admiration and respect:
@@ -2693,6 +2756,7 @@
 * reach out sb
     * to try to communicate with a person or a group of people, usually in order to help or involve them:
     * to offer help and support to someone:
+* reach out to
 * cuss sb out
     * he cusses him out
     * to shout offensive words at someone because you are annoyed with them.
@@ -2790,6 +2854,15 @@
     * relating to a two-hundredth anniversary.
 * lapsed catholic
     * A lapsed Catholic is a baptized Catholic who is non-practicing. Such a person may still identify as a Catholic and remains a Catholic according to canon law.
+* lapse
+    * n, C
+        * a temporary failure:
+            * a memory lapse
+            * a lapse of concentration
+        * a period of time passing between two things happening:
+            * He turned up again after a lapse of two years.
+    * v
+        * to end legally or officially by not being continued or made effective for a longer period:
 * baptize
 * under the weather
     * express that they're feeling ill or unwell
@@ -2967,6 +3040,7 @@
     * stuffed animal
 * lowly
 * nudge
+    * she gave her a nudge
 * rechristen
     * give a new name to
 * unbridled
@@ -3535,13 +3609,843 @@
         * the act of leaving someone befind in a diffuclut situation
 * honoray
     * adj
+* insolent
+    * adj
+    * she hated the insolent tone of his voice
+* trooper
+    * a private soldier in a cavalry or armoured unit.
+* hold somebody/something dear
+    * (formal) feel that somebody/something is of great valuE
+* hang on every word
+    * If you hang on someone's every word, you listen very carefully to what they are saying, because you admire or respect them.
+* grab a bite
+* stay golden
+* snag
+    * n
+    * problem
+        a problem, difficulty, or disadvantage:
+    * damage
+        * a tear, hole, or loose thread in a piece of clothing or cloth caused by a sharp or rough object:
+* snag
+    * v
+    * get
+        * to get or catch something by acting quickly:
+    * DAMAGE
+* guppy
+* threesome
+* buzz
+* weigth down
+    * If you weight something down, you put something heavy on it or in it in order to prevent it from moving easily.
+* cave
+* subside
+* at hand
+    * close by
+    * near in time or position:
+* speaking of which
+* quippy
+* quip
+    * n
+        * a witty remark
+    * v
+        * make a witty remark.
+* cut something out
+    * stop doing that:
+    * Cut it out, you two – I'm tired of listening to you argue!
+* cut someone out
+    * exclude someone
+* get real!
+    * used for telling someone that they should try to understand the true facts of a situation and not hope for what is impossible:
+* syphilis
+    * a chronic bacterial disease that is contracted chiefly by infection during sexual intercourse, but also congenitally by infection of a developing fetus.
+* yank someone
+    * to jerk or pull someone or something into something.
+* girth
+    * measurement
+        * the distance around the outside of a thick or fat object, like a tree or a body
+* in honor of
+    * in honour of
+    * in order to celebrate or show great respect for someone or something:
+* interchangeably
+    * can they be used interchangeably?
+* honor
+    * regard with great respect.
+        * Joyce has now learned to honour her father's memory
+    * fulfil (an obligation) or keep (an agreement).
+* make someone proud and happy by doing or being something
+    * to make someone proud and happy by doing or being something:
+* exchange
+    * exchange yen for dollars
+* by the trigger of
+    * I began to study English by the trigger of 
+* cuss out
+    * to shout offensive words at someone because you are annoyed with them
+* reciprocal
+* outreach
+    * n, U
+    * an effort to bring services or information to people where they live or spend time:
+    * bringing medical or other services to people at home or to where they spend time:
+* bullseye
+* buckshot
+    * n, U
+    * many small balls of metal shot from a shotgun
+    * coarse lead shot used in shotgun shells.
+* brrage
+* bombardment
+    * n, C or U
+    * a continuous attack on a place with guns or bombs
+        * aerial bombardment
+* alveolar ridge
+    * tooth ridge
+* burn one's bridge
+    * To destroy one's path, connections, reputation, opportunities, etc., particularly intentionally.
+* business travel
+* start off on the wrong foot
+    * To have a bad start. Said of something that goes or has gone awry at the very beginning.
+* forte
+    * a strong ability, something that a person can do well:
+    * Cooking was not exactly her forte.
+* in the market
+    * I am currently not in the market
+* engineered
+    * adj
+        * designed and built using scientific principles:
+            *  Our products are engineered for security
+* Polysemy
+    * is the capacity for a sign (such as a word, phrase, or symbol) to have multiple meanings (that is, multiple semes or sememes and thus multiple senses), usually related by contiguity of meaning within a semantic field
+* superb
+    * of excellent quality; very great:
+    * He is a superb dancer.
+* tailor
+    * n
+    * v
+        * (of a tailor) make (clothes) to fit individual customers.
+        * o make or prepare something following particular instructions:
+* off the hook
+    * If you leave the phone off the hook, you do not put it back correctly and it will not ring.
+    * If you are off the hook, you have escaped from a difficult situation
+        * John's agreed to go to the meeting in my place so that gets/lets me off the hook.
+* eat like a horse
+* glutton
+* foodie
+* big eater
+* hollow legs
+    * he must have hollow legs
+    * an ability or inclination to drink large quantities of alcoholic beverages, especially without evident drunkenness.
+* duck
+    * to move your head or the top part of your body quickly down, especially to avoid being hit:
+    * to push someone underwater for a short time:
+        * The boys were splashing around and ducking each other in the pool.
+    * to move quickly to a place, especially in order not to be seen:
+        * When he saw them coming, he ducked into a doorway.
+* feign
+    * v, T
+        * pretend to be affected by (a feeling, state, or injury).
+        * to pretend to have a particular feeling, problem, etc. 
+            * You know how everyone feigns surprise when you tell them how old you are.
+* go down the rabbit whole
+    * To enter into a situation or begin a process or journey that is particularly strange, problematic, difficult, complex, or chaotic, especially one that becomes increasingly so as it develops or unfolds.
+* thrive
+    * v
+    * (of a child, animal, or plant) grow or develop well or vigorously.
+    * to grow, develop, or be successful
+* versatile
+    * able to adapt or be adapted to many different functions or activities.
+    * able to change easily from one activity to another or able to be used for many different purposes:
+* range
+* abound
+    * v, I
+    * exist in large numbers or amounts.
+        * Theories abound about how the universe began
+* grave danger
+    * severe danger
+* burrow
+    * n
+        * a hole or tunnel dug by a small animal, especially a rabbit, as a dwelling.
+    * v
+        * (of an animal) make a hole or tunnel, typically for use as a dwelling.
+* passage
+    * n
+        * connecting way
+            * a usually long and narrow part of a building with rooms on one or both sides, or a covered path that connects places:
+                * A narrow passage led directly through the house into the garden.
+            * a hollow part of the body through which something goes:
+        * part
+            * a short piece of writing or music that is part of a larger piece of work:
+                * Several passages from the book were printed in a national newspaper before it was published.
+        * travel
+            * travel, especially as a way of escape
+    * v
+* work one's passage
+    * to work on a ship during someone's trip instead of paying for a ticket
+* entail
+    * v, T
+    * to make something necessary, or to involve something:
+        * Such a large investment inevitably entails some risk.
+* have a voice in something
+    * team members who have a voice in making a decision
+    * to have an acive and participatory role in making or influencing a decision about something
+* no doubt
+    * certainly:
+    * He will no doubt tell you all about his vacation
+* emphatic
+    * Note, however, that dshses are always more emphatic than commas
+* masochistic
+* count against sb/sth
+    * to make someone or something more likely to fail
+    * language error will not count against you as long as they do not cause you to misrepresent the meaning of the points
+* misrepresent
+    * to describe falsely an idea, opinion, or situation, often in order to get an advantage:
+* come out of something
+    * if something comes out of a process or event, it is one of the results
+* notwithstanding
+    * prep, adv
+    * despite the fact or thing menthioned
+    * Notwithstanding some members's objections, I think we must go ahead with the plan.
+    * Injuries notwithstanding, the team won the semifinal
+* in place of
+    * instead of
+* yet
+    * adv
+        * until now
+            * still, until the presenttime,
+        * in the future
+            * from now and for a particular period of time in the future
+        * even now
+            * event at this stage or time
+                * He may win yet
+        * more
+            * used to add emphasis to words such as another and again, especially to show an increase in amount or the number of times somehitng happens
+    * conj
+        * (and) despite that, used to add something that seems suprising because of what you have just said
+            * simple yet effective
+            * He's overweight and bald, (and) yet somehow, he's attractive
+* have yet to do
+    * if you have yet to do something, you have not done it
+* as yet
+    * until and including this time
+        * we haven't needed extra staff as yet, but we may in the future
+* rather
+    * adv
+        * samll amount
+            * quite; to a slight degree
+            * It:s rather cold today, isn't it?
+        * more exactly
+            * more accurately; more exaxtly
+                * She'll fly to California on Thursday, or rather, she will if she has to
+            * used to express 
+* make out
+    * v
+        * succeed
+            * to deal with a situation, usually in a successful way
+        * have sex
+            * to kiss and touch in a sexual way or to succeed in having sex with someone
+* set off
+    * to start on a trip
+* IANAL
+    * I am not a lawyer
+* occasional
+    * adj
+    * occasional lapse
+    * not happening or done often or regularly:
+* function
+    * an activity that is natural to or the purpose of a person or thing.
+* genderqueer
+    * adj
+    * having a gender identity that is not simply male or female
+* niche
+    * position
+        * a job or position that is very suitable for someone, especially one that they like:
+            * He has carved/made a niche for himself as a financial advisor.
+        * an area or position that is exactly suitable for a small group of the same type:
+            * an ecological niche.
+* grant
+    * n, C
+        * an amount of money given especially by the government to a person or organization for a special purpose:
+    * give
+        * v, T
+        * to give or allow someone something, usually in an official way:
+            * They granted her an entry visa.
+    * accept
+        * v, T
+        * to accept that something is true, often before expressing an opposite opinion:
+            * I grant that it must have been upsetting but even so I think she overreacted.
+* take something for granted
+    * to believe something to be the truth without even thinking abount it
+        * I didn't realize that Melanie hadn't been to college - I suppose I just took it for granted.
+* take something/someone for granted
+    *  If you take situations or people for granted, you do not realize or show that you are grateful for how much you get from them
+* sublet
+    * v, T
+        * to allow someone to rent all or part of a house or other building that you are renting from someone else:
+        * Our rental contract states that we are not allowed to sublet the house.
+    * n
+        * a lease of a property by a tenant to a subtenant.
+* itinerary
+    * a detailed plan or route of a journey:
+* write it down
+    * to write something on piece of paper so that you do not forget it
+* recount
+* nuance
+    * n
+        * a subtle difference in or shade of meaning, expression, or sound.
+    * v
+        * give nuances to.
+* relax
+    * listening to the ocean waves on the beach relaxes me and help me to relieve stress
+* escape
+    * get free
+        * v, I, T
+        * to get free from something, or to avoid something:
+            * A lion has escaped from its cage.
+            * She was lucky to escape serious injury.
+    * computer
+        * v
+        * to press the key on a computer keyboard that allows you to leave a particular screen and return to the previous one or to interrupt a process
+    * get free
+        * n
+        * the act of successflly getting out of a place or a dangerous or bad situation
+* prone
+    * adj
+        * lying face down
+* be prone to sth/do sth
+    * likely to suffer from an illness or show a particular negative characteristic:
+* give off something
+    * to produce something as a result of a natural process:
+        * The forest fire gave off thick black smoke
+* refute
+    * v, T
+    * to say or prove that a person, statement, opninon, etc. is wrong or false
+* sneaky
+    * adj
+        * sneaky method
+            * doing things in a secret and unfair way
+        * used to describe something you do, eat or drink especially when you do it without telling anyone or when you should not really do it;
+* cause obj to do
+    * reason
+        * to make something happen, especially something bad
+* pay attention to
+* draw attention to
+* catch/get someone's attention
+    * make someone attention notice you
+* wave at
+    * I waved at him to get his attention
+* draw attention away from something
+* draw
+    * picture
+    * attract
+    * make
+    * move
+    * cause
+    * pull
+    * choose
+    * takeout
+    * get
+    * breathe
+    * equal
+    * money
+* through and throught
+    * in every aspect; thoroughly or completely.
+* rubric
+    * a set of instructions, especially on an exam paper, usually printed in a different style or colour:
+    * Read/Follow the rubric carefully.
+* juncture
+    * n, C
+    * key juncture
+    * a particular point in time
+    * At this juncture, it is impossible to say whether she will make a full recovery.
+* cave art
+* rock art
+* weaving
+* mosaics
+* ceramics
+* tribal art
+* extinction
+    * a situation in which something no longer exists:
+* one-celled organism
+* foraging
+* oeanography
+    * oceanology
+    * is the study of the physical and biological aspects of the ocean
+* ice ages
+* optics
+    * is the branch of physics which involves the behaviour and properties of light, including its interactions with matter and the construction of instruments that use or detect it.
+* seismology
+    * the branch of science concerned with earthquakes and related phenomena.
+* tectonics
+* continental drift
+* anthropology
+    * anthropology of nonindustrialized civilizations
+* lisp
+    * v
+    * spea with a lisp
+* baby talk
+    * childish talk used by or to young children.
+    * the words that a very young child uses, or the words used by adults when they talk to babies
+* intrude
+    * v, I
+    * to go into a place or situation in which you are not wanted or not expected to be:
+        * Newspaper editors are being urged not to intrude on/into the grief of the families of missing servicemen.
+* rigid
+    * stiff or fixed; not able to be bent or moved:
+    * not able to be changed or persuaded:
+* taut
+    * tight or completely stretched:
+    * a taut rope
+* xenophobia
+    * extreme dislike or fear of foreigners, their customs, their religions, etc.
+* prose
+    * written language in its ordinary form rather than poetry:
+* verse
+* antelope
+    * n
+    * An antelope is a member of a number of even-toed ungulate species indigenous to various regions in Africa and Eurasia.
+* orally
+    * adv
+    * expressed in speech, not writing:
+* in herd
+* herd
+    * a large group of people that is considered together as a group and not separately:
+* fall for something
+    * to be tricked int obelieving something that is not true
+* fall for someone
+    * to be attracted to someone and start to love that person:
+        * Make his fallen for Heather.
+* I'm not falling for that one!
+    * said when you recognized a trick and refuse to be deceived by it
+* exposition
+    * explanation
+        * a clear and full explanation of an idea or theory:
+    * show
+        * a show in which industrial goods, works of art, etc. are shown to the public:
+* demeaning
+    * causing someone to become or feel less respected:
+    * That advertisement is demeaning to women.
+* arthritic
+* arthritis
+    * a serious condition in which a person's joints (= the places where two bones are connected) become painful, swollen, and stiff:
+* doody
+    * solid bodily waste; feces
+* noticeable
+    * easy to see or recognize:
+* feces
+    * faeces
+    * the solid waste passed out of the body of a human or animal through the bowels:
+* pass out
+    * become unconscious
+    * leave college
+        * to leave a military college after successfully finishing the course:
+* digress
+    * to move away from the main subject you are writing or talking about and to write or talk about something else:
+* dist
+* gist
+    * the most important pieces of information about something, or general information without details:
+* utterance
+    * a spoken word, statement, or vocal sound.
+        * The senator's recent utterances were promptly rebutted by three of his colleagues on Monday.
+    * the action of saying or expressing something aloud.
+* give utterance to something
+    * to express your ideas or feelings in spoken words
+        * She has one great fear to which she will never give utterance.
+* stance
+    * 
+* stick down
+    * to write something quickly and without taking much care
+* stick someone's tongue down someone's throat
+    * I definitely stuck my tongue down her throat.
+* overbearing
+* soggy
+* snog
+* fool around
+    * v
+    * silly
+        * to behave in a silly way, especially in a way that might have dangerous results:
+            * Don't fool around with matches.
+    * have a sexual relationship
+        * She'd been fooling around with someone at work.
+        * If a married person fools around, they have a sexual relationship with someone who is not their husband or wife:
+* domestication
+    * the process of taming an animal and keeping it as a pet or on a farm.
+    * the cultivation of a plant for food.
+* paraphrase
+    * to repeat something written or spoken using different words, often in a humorous form or in a simpler and shorter form that makes the original meaning clearer
+* look into something
+    * to examine the facts about a problem or situation:
+* The Himalayas
+* picnic
+    * n
+        * an occasion when a packed meal is eaten outdoors, especially during an outing to the countryside.
+    * v
+        * to have a picnic somewhere:
+* hard-pressed
+    * adj
+    * having a lot of difficulties doing something especially because there is not enough time or money
+* stick in the mud
+    * n, C
+    * someone who is old-fashioned and too serious and avoid enjoiyable activities
+* sketchy
+    * adj
+        * not detailed
+        * containing few details
+* sever
+    * v, T
+        * to break or separate, especially by cutting
+        * to end a connection with someone or something
+* guise
+    * U
+        * the apperance of someone or sometihng, especially intended to decieve
+* squadron
+    * n, C
+        * a unit of one of the armed forces, especially the air foce or the navy
+* dress
+    * put on clothes
+        * I or T
+            * to put clothes on yourself r someone else, especially a child
+        * I adv/prep
+            * to wear a particular type of clothes
+            * I have to dress in a suit and tie for work
+        * dress for dinner
+            * to put on formal clothes for a meal
+    * prepare food
+        * T
+            * to add a liquid, especially a mixutre of oil and vinegar, to a salada for extra flavour
+            * a dressed salada
+        * T
+            * to prepare meat, chicken, fish or crab so it can be eaten,
+            * a whole dressed crab
+    * treat injury
+        * T
+            * to treat an injury by clearing it and putting medicine or a covering on it to protect it
+            * Clean and dress wound immediately
+    * show window
+        * T
+            * to decoreate a showp window, usually with an arrangement of good
+            * they're dressing the store's wndows for Christmas.
+* sortie
+    * C
+        * a short, quick attack by a military force, such as a small group of solidiers or an aircraft, made against an enemy position
+        * a short journey to somewhere you have not been before, often with a partiuclar purpose
+        * an attempt to do something
+* push forward
+    * push something forward
+        * to continue doing something or making progress in something, with effort or enthusiasm
+* squint
+    * v, I
+        * to partly close your eyes in order to see more clearly
+    * eyes
+* obsequous
+    * adj
+    * too eager to praise or obey someone
+* dredge
+    * remove
+        * v, T
+        * to remove unwated things from the bottom of a river, lake, etc. using a boat or special device
+        * to search an area of water by dredging
+            * The police were dreding the lake for his body
+    * food
+        * v, T
+        * to drop flour, sugar etc. over food
+* dredge up
+    * bring to the surface
+* canal
+    * n, C
+    * water route
+    * a long thin stretch of water that is artifucially made either for boats to travel along or for taking water from one are to another
+* praise
+    * show approval
+        * T
+        * to express admiration or approval of the achievements or characteristics of person or thing
+        * He should be praised for his honesty
+        * My parents always praised me when I did well at school
+    * worship
+        * T
+* hymn
+    * n, C
+    * a song of praise that Christians sing to God
+* reflex
+    * n, C
+    * a physical reaction to something that you cannot control
+    * I'm sorry I pushed him, I was a reflex action/response.
+* reflexes
+    * the ability to react quickly
+    * Fighter pilot need good/fast reflexes
+* puddle
+    * n, C
+    * foot in the puddle
+    * a small pool of liquid on the ground, especially from rain
+* -monger
+    * suffix
+* daredevil
+* jeopardize
+* go nuts
+    *  to become extremely angry
+* penetrate
+    * move into
+    * understand
+* bummer
+    * n
+    * something that is very annoying or not convenient
+* cut glass
+    * glass with a decorative pattern cut into the surface
+* mosey
+    * to walk or go slowly, usually without a special purpose
+    * I'll just mosey down to the beach for a while
+* sulk
+    * v, I, n
+    * to be silient and to smile or be pleasant to people because you are angry about something that they have done
+    * He's sulking in his room because I wouldn't let hime have any more chocolate
+* jimmy
+    * n, C
+        * a short, strong metal bar with a curved end, often used to force things open, for example by thieves to force open windows or doors,
+    * v, T
+        * to force a window or lock open with a jimmy
+* tushy
+    * n, C
+    * tushie
+    * a person's buttocks
+* buttock
+    * either side of a person's bottom
+* on display
+* testy
+    * adj
+    * easily annoyed and not patient
+    * a testy old man
+    * My wife getss testy if we don't have dessert
+* glitch
+    * n, C,
+        * a small problem or fault that prevents something from being successful or working as well as it should
+            * we'd expected a few glitches, but everyting's gone remarkably smoothly
+    * v, I
+        * to experience a small problem or fault, especially one that stops something from woking
+* insurmountable
+    * so great that it cannot be dealt with successfully
+* forsake
+    * leave
+        * v, T
+        * to leave someone for ever, especially they need you
+* affirmative
+    * relating to a statement that shows agreement or says yes
+* forsaken
+    * in the forsaken wasteland
+* deserter
+    * a person who leaves the armed forces without permission
+* deserted
+    * if a place is deserted, there are no people in it
+* out of breath
+    * shortness of breath
+    * gasping for air, typcically after excercise
+    * you're out of breath
+* classy
+    * adj
+    * stylish and sophisticated, fashionable
+* fashionable
+    * popular at a particular time
+* hurl
+    * v, T
+    * to throw something with a lot of force, usually in an angry or violent way
+* for one's sake
+    * for the sake of sb
+    * in order to help or bring advantage to someone
+* eye gouging
+    * is the act of pressing or tearing the eye using the fingers or instruments
+* fishhooking
+    * is the act of inserting a finger or fingers of one or both hands into the mouth, nostrils or other orifices of a person and pulling away from the centerline of the body
+* nostril
+    * n, C
+    * is one of the two channles of  the nose
+* bifurcate
+    * v, I
+    * to divide into two parts
+* sentinel
+    * n, C
+        * a person employed to guard something
+* contrary to
+* i might be a dog
+    * [On the Internet, nobody knows you're a dog - Wikipedia](https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you%27re_a_dog)
+* anonymity
+* waive
+    * v, T
+* malevolent
+    * adj
+    * causing or wanting to cause harm or evil
+* Algonquin Round Table
+    * [Algonquin Kid's Table - Straight Dope Message Board](https://boards.straightdope.com/sdmb/showthread.php?t=8308)
+* satirical
+* satire
+    * n
+    * a way of criticizing people or ideas in a humorous way, or a piece of writing or play that uses this style
+    * satirical humor
+* foreign car
+* phlegm
+* foregoing
+* thereof
+* hereunder
+* unconstitutional
+    * adj
+    * not allowed by the constituion of a country or organization
+* watchword
+    * n, C,
+    * (a word or phrase represents) the main idea or principles directing the way that someone behave or the way that something is done
+* sit about
+    * sit around
+    * to spent dime sitting down and doing very little
+* canoe
+* intermission
+    * n, C or U
+    * a short period between the parts of play, film, concert, etc.
+* bitchin
+    * bitchen
+    * adj
+    * Thas's bitchen
+* poofy
+* stern
+    * adj
+        * servere, or showing disapproval
+        * If something, such as a job, is stern, it is difficult
+    * n
+        * the back part of a ship or boat
+* poofy
+    * adj
+    * poofy hair or clothes look big and soft or filled with air
+* cockney
+* find onself
+    * to discover and pursue one's true and inherent character, passion, skill or vocation
+        * 
+    * to discover, recognize, or realize one's location, thoughts, or sentiments.
+* life-altering
+* cradle
+     * the baby sleeping in the cradle was cute
+* veterinarian
+    * veterinary surgeon
+    * vet
+* reconnaissance
+    * recon
+    * the process of getting information about enemy forces or positions by sending out small groups of soliders or by using aircraft, etc.
+    * Aerial reconnaissance of the enemy position showed they were ready to attack.
+* aerial
+    * n, C
+        * in or from the air, especially from an aircraft
+        * meanwhile, the massive aerial bombardment of military targets continued unabated.
+* unabated
+    * adj
+    * without weaker in strength or force
+    * the fighting continued unabated through the night
+* stay up
+    * not go to bed
 
 
-
-
-
-
-
+## Nuance
+* although/even though/though
+    * [Although or though ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/although-or-though)
+    * tough/although
+        * after main clause, it can also mean `but it is also true that`
+    * tough
+        * spoken english
+        * sometimes even though
+        * in spoken english, though meaning however
+            * It’s expensive. It's nice, though.
+    * as though
+        * very similar to as if
+        * as if is much more common
+        * You look as though/as if you have seen a ghost!
+* as/because/since/
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv27.shtml)
+    * because
+        * the reason is the most imporant part of the sentence or utterance
+        * the because clause usually comes at the end
+    * as/since
+        * the reason is already well known and is therefore usually less important
+        * the as/since clause is usually placed at the begining of the sentence
+    * for
+        * the reason is given as an afterthought
+        * it is never placed at the beginning of the sentence
+        * more characteristic of written, rather than spoken English
+        * 'I decided to stop the work I was doing - for it was very late and I wanted to go to bed.'
+* known to/known by
+    * [grammar - Which is correct: "The facts are known by us" or "The facts are known to us"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/227635/which-is-correct-the-facts-are-known-by-us-or-the-facts-are-known-to-us)
+    * known to
+        * is idiomatic
+        * known to is better
+    * known by
+        * passive voice
+        * active voice is prefered in many cases
+* made from/made of/makde out of/made with
+    * [Made from, made of, made out of, made with - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/word-order-and-focus/made-from-made-of-made-out-of-made-with)
+    * made from
+        * how something is manufactured
+        * Plastic is made from oil
+        * The ealiest canoes were made from tree trunks
+    * made of
+        * the basic materials or qualities of something
+        * it has meanig similar to compose of
+        * What's this made of? it's Americal white oak.
+    * made out of
+        * something that has been changed or transformed from one thing into another
+        * In the 1970s, it was popular to have candle-holders made out of wine bottles
+        * they were living in tents made out of old plastic sheets.
+    * made with
+        * ingredients of food and drink
+        * This dish is made with beef, red peppers and herbs.
+* refuse/reject/decline/deny
+    * [The words refuse, reject, decline and deny](https://www.englishgrammar.org/words-refuse-reject-decline-deny/)
+    * opposite of deny is admit
+    * opposite of refuse/reject/decline is accept
+    * deny
+        * To deny is to say that something is not true
+        * to deny somebody something is to refuse to give it to them
+    * refuse
+        * to refuse to do something is to say that you won't do that
+    * reject
+        * to reject a proposal is to refuse to accept it
+    * decline
+        * Decline is relatively formal. It has more or less the same meaning as refuse. 
+        * To decline something is to politely refuse to accept it.
+        * Decline can also mean become less or become worse
+* refuse/refute
+    * [Refuse and Refute](https://www.usingenglish.com/forum/threads/22425-Refuse-and-Refute)
+    * unwilling to accept
+    * prove wrong
+* don't die on me
+    * [Don't Die On Me/ Don't Give Up On Me?](https://www.englishforums.com/English/DontDieOnMeDontGiveUpOnMe/kwxkv/post.htm)
+* more than me/more than I do
+    * A likes B more than me
+    * A likes B more than I do
+* more than me/more than I
+    * [Which is correct, better than I or better than me? | Ask The Editor | Learner's Dictionary](http://www.learnersdictionary.com/qa/better-than-I-or-better-than-me)
+    * more than I
+        * formal
+    * more than me
+        * informal
+* lately/recently
+    * [meaning - "Lately" and "recently" in Present Perfect - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/111386/lately-and-recently-in-present-perfect)
+* can/be able to
+* would you please/could you please/would you mind/would you mind ... please?
+    * [politeness - How much more polite does the word "please" make a request? - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/52105/how-much-more-polite-does-the-word-please-make-a-request?rq=1)
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv239.shtml)
+* oneself/one's self
+    * [Oneself vs. one’s self - Grammarist](http://grammarist.com/spelling/oneself-ones-self/)
+    * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+        * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+* in order that/so that
+    * [So that or in order that ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/so-that-or-in-order-that)
+    * in order that is more formal
+    * When referring to the future, we can use the present simple or will/’ll after so that. We usually use the present simple after in order that to talk about the future:
+        * I’ll post the CD today so that you get it by the weekend. (or … so that you will get it …)
+        * We will send you a reminder in order that you arrive on time for your appointment. (or … so that you arrive on time … or … so that you’ll arrive on time …)
+    * So that (but not in order that) can also mean ‘with the result that’
+* make me start to do
+    * I wanted to talk to foreigners. That is why I started studying English.
+* interchange/exchange
+    * [word choice - "Interchange" and "exchange" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/34545/interchange-and-exchange)
+    * exchange
+        * to give or receive something/somebody of the same type or of equal value in return for another
+    * interchange
+        * to share or exchange something
+        * to put each of two things or people in the other's place
+* in honor of/in memory of
+    * [What's The Difference Between "In Honor Of" And "In Memory Of"?](https://www.englishforums.com/English/WhatsDifferenceBetweenHonorMemory/bcgcqn/post.htm)
+    * in memory of
+        * is normally followed by a noun phrase that refers to the dead.
+    * in memory of is to in honor of as remember is to honor.
 * pp. or p.
     * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
 * most pleased
@@ -3629,12 +4533,18 @@
     * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
     * have got/'ve got/got -> have or must
 
+
 ## Greeting
 * What have you been up to?
 * What are you up to?
     * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
 
 
+## Slang
+* [The BEST British Street Slang - YouTube](https://www.youtube.com/watch?v=9Z8JqutRWrs)
+* [American English slangs | Street Talk Savvy](http://streettalksavvy.com/american-english-slang/)
+    * no worries
+    * laid back
 
 ## Math
 * [Pronunciation of mathematical symbols](http://www.uefap.com/speaking/symbols/symbols.htm)
@@ -3721,4 +4631,5 @@
 
 ## Reference
 * [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)
-
+* [アメリカの会社で三ヶ月仕事して必要だと思った英語力 - Jeffsuke is not a pen.](http://jeffsuke.hatenablog.com/entry/2016/01/18/004556)
+* [The Daily Show with Trevor Noah - YouTube](https://www.youtube.com/channel/UCwWhs_6x42TyRM4Wstoq8HA)

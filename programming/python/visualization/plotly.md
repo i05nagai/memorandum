@@ -3,6 +3,7 @@ title: Plotly
 ---
 
 ## Plotly
+Browser based visualization.
 
 ```
 pip install plotly

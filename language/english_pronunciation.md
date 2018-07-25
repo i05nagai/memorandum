@@ -12,40 +12,83 @@ title: English Pronunciation
 * [Phonetic symbols for English](https://www.phon.ucl.ac.uk/home/wells/phoneticsymbolsforenglish.htm)
 * [Phonemic Chart Animated (Complete) - YouTube](https://www.youtube.com/watch?v=Ufdm3ufV6pg)
 
-Vowels
+## Vowels
 
-|        | tongue up |   |    | tongue down |
+|        |  |   |    |  |
 |-------------|------|---|----|-------|
 | mouth close | iː | ɪ | ʊ  | uː |
 |             | e  | ə | ɜː | ɔː |
 | mouth open  | æ  | ʌ | ɑː | ɒ  |
 |       |    |   |    |    |
 
+* similar sounds
+    * iː/ɪ
+        * [Long Vowels - 1](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/longvowel1)
+    * e/ɪ
+        * [Short Vowels - 6](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel6)
+    * æ/a
 
 * mouth is almost closed, sound comes from top of the mouth
     * iː
+        * 
         * [Pronounce long e — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-long-e)
+        * [Long Vowels - 1](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/longvowel1)
     * ɪ
+        * [Short Vowels - 1](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel1)
         * [Learn to Pronounce the 'short i' sound /ɪ/ — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-short-i)
     * ʊ
+        * the back of the tongue is raised to a mid-high position
+        * The jaw is slightly closed and the lips are pulled into a loose circle.
+        * [Short Vowels - 2](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel2)
+        * [Pronounce other u sound](https://pronuncian.com/pronounce-other-u)
     * uː
 * mouth is a little more open, sound comes from middle of the mouth
-    * e
+    * e/ɛ
+        * head/dres/bed/many
+        * [Short Vowels - 6](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel6)
     * ə
-        * [Schwa /ə/: the Reduced (and Most Common) Vowel Sound of English — Pronuncian: American English Pronunciation](https://pronuncian.com/intro-to-schwa)
+        * [Schwa /ə/: the Reduced (and Most Common) Vowel Sound of English — Pronuncian](https://pronuncian.com/intro-to-schwa)
+        * [Short Vowels - 5](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel5)
     * ɜː
+        * [Pronounce short e — Pronuncian: American English Pronunciation](https://pronuncian.com/pronounce-short-e)
     * ɔː
+        * The back of the tongue has only a slight rounding upward at the very rear of the mouth.
+        * The lips are made into an oval shape, and may stick slightly outward.
+        * [Pronounce aw sound — Pronuncian](https://pronuncian.com/pronounce-aw-sound)
+        * [Long Vowels - 4](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/longvowel4)
         * [intrusive r](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-5)
 * mouth is open, sound comes from bottom of mouth
     * æ
+        * Near-open front unrounded vowel
+        * The front of the tongue is pushed further forward and is held lower in the mouth when forming the 'short a'
+        * The jaw is lowered and the lips are held apart, allowing the entire oral cavity to remain open.
         * [Short Vowels - 7](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel7)
+        * [Learn to Pronounce the 'short a' sound /æ/ — Pronuncian](https://pronuncian.com/pronounce-short-a)
     * ʌ
+        * The body of the tongue is relaxed and set low in the mouth. 
+        * The jaw is kept in a neutral position, and the lips are relaxed.
+        * [Pronounce short u — Pronuncian](https://pronuncian.com/pronounce-short-u)
         * [Short Vowels - 3](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel3)
     * ɑː
+        * the jaw is held more open and the back of the tongue is held lower for this sound than any other American English vowel sound pronunciation
+        * [Pronounce short o — Pronuncian](https://pronuncian.com/pronounce-short-o)
         * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
+        * [Open back rounded vowel - Wikipedia](https://en.wikipedia.org/wiki/Open_back_rounded_vowel)
+        * short o sound
+        * Open back rounded vowel
+    * ɑ
+        * similar to ɒ
+        * [Open back unrounded vowel - Wikipedia](https://en.wikipedia.org/wiki/Open_back_unrounded_vowel)
+* r controlled vowel
+    * American english
+    * ɚ
+        * Schwa+r
+            * [schwa+r video — Pronuncian: American English Pronunciation](https://pronuncian.com/schwa-r-video)
+    * ɑr
+    * ɛr
 
-Diphthongs
+## Diphthongs
 
 [IPA (International Phonetic Alphabet) - Diphthongs - YouTube](https://www.youtube.com/watch?v=-D5BK8K1Mcg)
 
@@ -80,10 +123,13 @@ Diphthongs
     * [English: How to Pronounce OH oʊ diphthong: American Accent - YouTube](https://www.youtube.com/watch?v=1YNdpFbG318&list=PLrqHrGoMJdTQo20-rW0JS_ofnnrDponMy)
     * http://www.bbc.co.uk/learningenglish/english/features/pronunciation/diphthongs1
 
-Consonant Pairs
+## Consonant Pairs
 
 [IPA (International Phonetic Alphabet) CONSONANTS Part 1 - YouTube](https://www.youtube.com/watch?v=Sw36F_UcIn8)
 
+* similar sounds
+    * ʃ/s
+        * [Voiceless Consonants - 8](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/vlessconst8)
 
 * 1
     * p
@@ -130,6 +176,7 @@ Consonant Pairs
     * z
 * .
     * ʃ
+        * [Voiceless Consonants - 8](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/vlessconst8)
     * ʒ
 
 Single Consonatns 

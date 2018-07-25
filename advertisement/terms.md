@@ -87,9 +87,10 @@
 
 * CPM
     * Cost Per Mille
+    * Advertiser pays the publisher per 1000 of visitors who the advertisement is shown to.
     * CPM = cost / 1000 impression
 * CPA
-    * Cost Per Action
+    * Cost Per Action/Acquisition
     * CPA = cost / action
 * CPC
     * Cost Per Click
@@ -107,6 +108,8 @@
 * CVR
     * ConVersion Rate
 
+If you are paying 100,000USD for a campaign and you get 1,000,000 impressions, CTR = 10% and CVR=10%, what are the CPM, CPC, and CPA?
+
 
 ## Reference
 * [IAB-DMSC-Study-Guide-February-2017_v1.pdf](https://www.iab.com/wp-content/uploads/2017/02/IAB-DMSC-Study-Guide-February-2017_v1.pdf)
@@ -114,3 +117,5 @@
 * [プログラマティックと自動取引 -媒体社の視点から- | プラットフォーム・ワン](https://www.platform-one.co.jp/IAB_Digital_Simplified_Programmatic_Sept_2013_JP.html)
 * [ダイナミック アロケーション - DoubleClick for Publishers ヘルプ](https://support.google.com/dfp_premium/answer/3721872?hl=ja)
 * [インターネット広告用語「CVR,CPC,CPA,CTR,CPM」の意味まとめ](http://deaimobi.com/mbnk-181/)
+* [11 Ad Tech Terms Everyone Should Know](https://blog.adroll.com/trends/ad-tech-terms-glossary)
+* [CPM, CPC, CPA, and the Transfer of Risk | Ad/Tech/Biz & Random Stuff](http://www.ronkato.com/cpm-cpc-cpa-and-the-transfer-of-risk/)

@@ -91,9 +91,22 @@ Data Engineer install data into data warehousing.
     3. Check the substring in the string
     4. Question on exceptions  
 
-* 
 
+## Common Questions
+* [How to answer the technical interview question 'What is your biggest challenge and how did you solve it?' - Quora](https://www.quora.com/How-do-you-answer-the-technical-interview-question-What-is-your-biggest-challenge-and-how-did-you-solve-it)
+* [Here's How to Prepare for Tech Interviews : cscareerquestions](https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/)
+
+1. Why did you decide to change careers?/ Why did you choose to become a software developer?
+2. What is your understanding of what we do at Forty2?
+3. Describe your career path up until now. 
+4. What piece of code are you most proud of?
+5. Has there ever been a time where you have had to compromise quality to release software on time?
+6. What book has had a positive impact on you? 
+7. What are your strengths and weaknesses? 
+8. What is your expected salary / What are you getting paid now?
 
 ## Reference
-
-
+* [サンフランシスコで転職活動をしました - Jeffsuke is not a pen.](http://jeffsuke.hatenablog.com/entry/2017/04/30/062502)
+* [ベルリンにて転職しました。 - zakisan's blog](http://kenzan100.hatenadiary.jp/entry/2016/12/01/044603)
+* [Interview questions that should not surprise you – Developer Davo – Medium](https://medium.com/@developerdavo/interview-questions-that-should-not-surprise-you-2ffed3f7d1b6)
+* [Coderust 3.0: Faster Coding Interview Preparation with Interactive Challenges & Visualizations](https://www.educative.io/collection/5642554087309312/5679846214598656)

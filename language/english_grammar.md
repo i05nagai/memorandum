@@ -45,6 +45,61 @@ active voices and passive voices
 [Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
 
 
+* present perfect tense
+    * The present perfect is normally used to denote the present state of an action's being completed, that is, that the action took place before the present time.
+* present perfect continuous
+    * for an activity that has recently stopped or just stopped
+        * You're out of breath. Have you been running?
+        * Paul is very tired. He's been working very hard.
+    * for activity that is still happening, especially with how long.
+        * It has been raining for two hours.
+        * How long have you been learning English?
+        * Tim is still watching TV. He's been watching TV all day.
+        * Where have you been? I've been looking for you for the last half hour.
+        * Chris hasn't been feeling well recently
+    * for actions repated over a period of time
+        * Silvia is a very good tennis player. She's been playing since she was eight.
+        * Every morning they meet in the same cafe. They've been going there for years.
+* past perfect tense
+
+
+* adjective + to
+    * It is diffucult to understand him
+    * He is difficult to understand
+    * easy/nice/safe/cheap/exciting/impossible/hard/good/dangerous/expensive/interesting
+* adjective + noun + to
+    * This is a difficult question for me to answer
+* adj of somebody to do
+    * kind/(in)considerate/generous/mean/careless/silly/stuipid/unfair
+    * It's silly of Ruth to give up her job when she needs the oney
+* The first/next + to
+    * the first/the second/the third, the last/the next/the only
+    * The next train to arrive at platform 4 will be the 10:50 to Livepool
+    * I was the only one to arrive on time+ 
+
+
+Interrogative pronouns
+
+[Interrogative structures](https://www.englishgrammar.org/interrogative-structures/)
+
+* s + v + interrogative + clause
+* s + v + n/pronoun + interrogative + clause
+* s + v + interrogative + to infinitive
+* s + v + n/pronoun + interrogative + to infinitive
+
+## Punctuation
+* [Em dash -- The Punctuation Guide](http://www.thepunctuationguide.com/em-dash.html)
+    * The em dash is typically used without spaces on either sid
+    * A paire of em dashes can be used in place of commas. However, that dashes are always more emphatic than commas
+    * Em dashes in place of parentheses
+        * When used in place of parentehses at the end of a sentence, only a single dash is used.
+        * The dash is less formal than parentheses.
+    * The em dash in place of a colon
+        * The dash is less formal than the colon.
+    * Multiple em dashes
+        * Two em dashes can be used to indicate missing portions of a word, whether unknown or intentionally omitted.
+    * Spaces with the em dash
+
 ## Book
 * [10 Amazing Books That Will Improve Your Writing Skills | Grammarly](https://www.grammarly.com/blog/books-that-improve-writing-skills/)
 * [5 Books That Will Improve Your Writing | HuffPost](https://www.huffingtonpost.com/gregory-ciotti/5-books-that-will-improve_b_7489272.html)

@@ -561,4 +561,4 @@ simulatorと実機の1回目のfilter処理の差
 * [Advanced Image Processing with Core Image](https://academy.realm.io/posts/tryswift-gladman-simon-advanced-core-image/)
 * [GitHub - YuAo/Vivid: Filters and Utilities for Core Image](https://github.com/YuAo/Vivid)
 * [PDF32000.book](http://wwwimages.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf)
-
+* [GPUImage/GPUImageHazeFilter.m at 167b0389bc6e9dc4bb0121550f91d8d5d6412c53 · BradLarson/GPUImage](https://github.com/BradLarson/GPUImage/blob/167b0389bc6e9dc4bb0121550f91d8d5d6412c53/framework/Source/GPUImageHazeFilter.m)

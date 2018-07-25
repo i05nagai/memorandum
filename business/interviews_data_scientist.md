@@ -19,3 +19,4 @@ title: Interviews Data Scientist
 
 ## Reference
 * [How to Ace the In Person Data Science Interview – Towards Data Science](https://towardsdatascience.com/how-to-ace-the-in-person-data-science-interview-584ca11df08a)
+* [How to land a Data Scientist job at your dream company - My journey to Airbnb](https://towardsdatascience.com/how-to-land-a-data-scientist-job-at-your-dream-company-my-journey-to-airbnb-f6a1e99892e8)
