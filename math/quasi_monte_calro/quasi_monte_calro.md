@@ -18,8 +18,6 @@ $$
 
 where $f: [0, 1]^{s} \rightarrow \mathbb{R}$ and $$\{x^{i}\} \subset \mathbb{R}^{s}$$ is low-descrepancy sequence.
 
-By the
-
 
 ## Reference
 
