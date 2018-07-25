@@ -1,6 +1,8 @@
 ## Terms
 
 * remnant
+    * remnant inventory
+    * stock of advertizement in a publisher
 * media
     * 広告枠をもっているweb site
 * advertiser
@@ -81,6 +83,9 @@
         * 閲覧可能な広告枠か、非表示広告枠でないかなど
     * [Viewability Rate Definition | The Online Advertising Guide](https://theonlineadvertisingguide.com/glossary/viewability-rate/)
     * pageの下部にある広告は、page下部がin viewになった時に広告requestを投げればviewablity rateをあげられる
+* advertising arbitrage
+    * there is no strict definition
+    * something dirty which agencies do
 
 
 定義はIABのstudy guideによる
@@ -114,3 +119,4 @@
 * [プログラマティックと自動取引 -媒体社の視点から- | プラットフォーム・ワン](https://www.platform-one.co.jp/IAB_Digital_Simplified_Programmatic_Sept_2013_JP.html)
 * [ダイナミック アロケーション - DoubleClick for Publishers ヘルプ](https://support.google.com/dfp_premium/answer/3721872?hl=ja)
 * [インターネット広告用語「CVR,CPC,CPA,CTR,CPM」の意味まとめ](http://deaimobi.com/mbnk-181/)
+* [WTF is advertising arbitrage? \- Digiday](https://digiday.com/marketing/wtf-arbitrage/)
