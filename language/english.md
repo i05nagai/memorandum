@@ -86,7 +86,9 @@
 * nip
     * v,n
 * procrastinate
-    * v
+    * v, I
+    * to keep delaying something that must be done, often because it is unpleasant or boring
+    * I know I've got to deal with the problem at some point. I'm just procrastinating
 * ledge
     * n
 * brimstone
@@ -273,6 +275,14 @@
     * (especially of a smell) spread through and be perceived in every part of.
     * a smell of stale cabbage pervaded the air
 * vicinity
+    * the place around a place or where speaker is
+* refuge
+* take refuge
+    * to find safe place
+    * they takes refuge on the Moon
+* infantry
+    * the part of an army that fights on foot
+    * the infantry was sent into battle
 * hazmat suit
 * it doesn't ring a bell
     * Does seeing this ring any bells?
@@ -327,6 +337,7 @@
     * n
 * deceptive
     * misleading
+    * making you believe something that is not true
 * ruthless
     * adj
     * pitiless
@@ -353,6 +364,8 @@
 * lithe
 * agile
 * melee
+    * n, C
+    * a situation that is confused and not under control, especially a fight involving a number of people
 * the long arm of the law
     * the police
 * evade
@@ -1396,9 +1409,14 @@
 * Tupperware
 * hustler
 * barge in
+* barge
+    * v, I, T adv/prep
+    * to hurry somewhere or through a place in a rude and forceful way
 * get off on
     * you get off on danger
     * be excited or aroused by (something)
+* get off
+    * to leave a place, usually in order to start a journey
 * wars of the roses
     * [Wars of the Roses \- Wikipedia](https://en.wikipedia.org/wiki/Wars_of_the_Roses)
 * keep something pushing
@@ -1704,6 +1722,11 @@
 * baffle
     * perplexed
 * forfeit
+    * v, T
+        * to loose the right to do or have something because you have broken a rule
+        * if you cancel now, you forfeit your deposit
+        * these people fofeited the right to live in society
+* to the extent
 * jointly prepared
 * mal
 * pay phone
@@ -1872,7 +1895,7 @@
 * antiemetics
 * holistic
 * enlighten
-    * englithen me
+    * I don't understand this. Could you englithen me?
 * modicum
     * without a modicum of evidence,
 * posse
@@ -2210,6 +2233,8 @@
 * fall into place
     * (of a series of events or facts) begin to make sense.
 * shady
+    * to be shady
+    * dishonorouble, corrupt, sneaky
 * lurk
     * that thing lurking with in Homs
 * brat
@@ -2312,6 +2337,10 @@
 * fickle
     * changing frequently, especially as regards one's loyalties or affections.
 * savage
+    * adj
+        * extremely violent, wild, or frightening
+        * very serious or cruel
+        * very large and severe
 * ferocious
 * ally
     * n, v
@@ -2424,6 +2453,10 @@
     * she's in the shop on her feet all day
 * concussion
     * a usually temporary injury to the brain caused by a fall or hit on the head or by violent shaking
+    * Over the past 5 years; I've experienced two depression pereiods: one after I fractured my leg
+* fracture
+    * v, I, T
+        * If something hard, such as a bone, fractures, or is fracture, it breask or cracks
 * nosy
     * adj, v
     * showing too much curiosity about other people's affairs.
@@ -2504,6 +2537,7 @@
     * to defeat someone in a fight or competition
 * gash
     * covered in gashed
+    * a long, deep cut, especially in the skin
 * majestic
     * majestic coat dyed crimson
     * beautiful, powerful, or causing great admiration and respect:
@@ -2992,6 +3026,7 @@
     * stuffed animal
 * lowly
 * nudge
+    * she gave her a nudge
 * rechristen
     * give a new name to
 * unbridled
@@ -3336,6 +3371,9 @@
     * coarse lead shot used in shotgun shells.
 * brrage
 * bombardment
+    * n, C or U
+    * a continuous attack on a place with guns or bombs
+        * aerial bombardment
 * alveolar ridge
     * tooth ridge
 * burn one's bridge
@@ -3524,104 +3562,68 @@
         * a lease of a property by a tenant to a subtenant.
 * itinerary
     * a detailed plan or route of a journey:
+* write it down
+    * to write something on piece of paper so that you do not forget it
+* recount
+* nuance
+    * n
+        * a subtle difference in or shade of meaning, expression, or sound.
+    * v
+        * give nuances to.
+* relax
+    * listening to the ocean waves on the beach relaxes me and help me to relieve stress
+* escape
+    * get free
+        * v, I, T
+        * to get free from something, or to avoid something:
+            * A lion has escaped from its cage.
+            * She was lucky to escape serious injury.
+    * computer
+        * v
+        * to press the key on a computer keyboard that allows you to leave a particular screen and return to the previous one or to interrupt a process
+    * get free
+        * n
+        * the act of successflly getting out of a place or a dangerous or bad situation
+* prone
+    * adj
+        * lying face down
+* be prone to sth/do sth
+    * likely to suffer from an illness or show a particular negative characteristic:
+* give off something
+    * to produce something as a result of a natural process:
+        * The forest fire gave off thick black smoke
+* refute
+    * v, T
+    * to say or prove that a person, statement, opninon, etc. is wrong or false
+* sneaky
+    * adj
+        * sneaky method
+            * doing things in a secret and unfair way
+        * used to describe something you do, eat or drink especially when you do it without telling anyone or when you should not really do it;
+* cause obj to do
+    * reason
+        * to make something happen, especially something bad
+* pay attention to
+* draw attention to
+* catch/get someone's attention
+    * make someone attention notice you
+* wave at
+    * I waved at him to get his attention
+* draw attention away from something
+* draw
+    * picture
+    * attract
+    * make
+    * move
+    * cause
+    * pull
+    * choose
+    * takeout
+    * get
+    * breathe
+    * equal
+    * money
 
-
-## Nuance
-* make me start to do
-    * I wanted to talk to foreigners. That is why I started studying English.
-* interchange/exchange
-    * [word choice - "Interchange" and "exchange" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/34545/interchange-and-exchange)
-    * exchange
-        * to give or receive something/somebody of the same type or of equal value in return for another
-    * interchange
-        * to share or exchange something
-        * to put each of two things or people in the other's place
-* in honor of/in memory of
-    * [What's The Difference Between "In Honor Of" And "In Memory Of"?](https://www.englishforums.com/English/WhatsDifferenceBetweenHonorMemory/bcgcqn/post.htm)
-    * in memory of
-        * is normally followed by a noun phrase that refers to the dead.
-    * in memory of is to in honor of as remember is to honor.
-* pp. or p.
-    * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
-* most pleased
-    * [phrase usage - Is "most pleased" pompous or condescending? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/237895/is-most-pleased-pompous-or-condescending)
-    * It's my pleasure to...
-        * is a common phrase if you want to be polite.
-    * I am pleased to...
-        * is also common.
-    * I am most pleased to...
-        * is NOT commonly used conversationally.
-* afraid of / afraid to do
-    * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
-    * afraid to do = araid doing
-    * afirad of doing
-        * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
-* I'am he
-    * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
-* How are you?/How are you doing?/How do you do?
-    * [meaning - Difference between "How are you?" and "How are you doing?" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/73766/difference-between-how-are-you-and-how-are-you-doing)
-    * How do you do?
-        * How do you do?
-    * How are you doing?/How are you?
-        * Fine, thanks!/Very well, thank you.
-* Company name
-    * [Does a Comma Go in Front of LLC or Inc.? | LegalZoom](https://www.legalzoom.com/articles/does-a-comma-go-in-front-of-llc-or-inc)
-    * Inc.
-    * corp.
-    * L.L.C./LLC
-        * limited liability company
-* as to/as for
-    * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
-* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
-* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
-    * There are still
-        * normal
-    * There still are
-        * strong
-* [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
-* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
-    * I cross the customer's name off the reservation list.
-    * I cross off the customer's name from the reservation list.
-* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
-    * they decided not to stay ...
-        * `they decide` is important
-    * the decided to not stay ...
-        * they decided to stay another night before but now `they will not stay`
-    * I asked her quietly to leave
-        * `quietly` is unclear
-    * I asked her to quietly leave
-        * `quietly` is clear
-* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
-    * month-on-motth, month-over-month
-    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
-* Q-tips
-    * [What does Chandler mean by 'You have to stop the Q-tip when there is resistance'? - Quora](https://www.quora.com/What-does-Chandler-mean-by-You-have-to-stop-the-Q-tip-when-there-is-resistance)
-* I will flash you
-    * [I'll flash you | WordReference Forums](https://forum.wordreference.com/threads/ill-flash-you.377843/)
-* I'm over you
-    * [What does "I'm so over you." mean? - Learn english - italki Answers](https://www.italki.com/question/92825)
-    * it means that at one time I had feelings for you , but now those feelings are gone and now I am indifferent to those feelings.
-* costume/outfit/uniform
-    * [What is difference between costume and outfit? \- Quora](https://www.quora.com/What-is-difference-between-costume-and-outfit)
-* I've been meaning to tell you
-    * I've been meaning to tell you about it since the weekend.
-    * The -ing form is a bit more natural and emphasizes that the intention to tell you has been continuous since the weekend.
-    * [EN: I've been meaning to tell you \| WordReference Forums](https://forum.wordreference.com/threads/en-ive-been-meaning-to-tell-you.1219428/)
-* nasty/naughty
-    * [What is the difference between nasty and naughty ? \| HiNative](https://hinative.com/en-US/questions/961467)
-    * Naughty means not obeying or disobedient.
-    * Nasty means smelling bad.
-    * That kid is so naughty
-    * She smells nasty.
-    * She was naughty in bed.
-* perfume/eau de toilette/eau de cologne
-    * [What is the difference between perfume, eau de toilette, and eau de Cologne?](http://www.slate.com/blogs/quora/2015/03/12/what_is_the_difference_between_perfume_eau_de_toilette_and_eau_de_cologne.html)
-* compare with/compare to
-    * [Compare with or compare to? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/compare-with-or-compare-to)
-    * Individual schools compared their facilities with those of others in the area.
-    * It is difficult to compare our results to studies conducted in the United States.
-* site/website
-    * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
 * through and throught
     * in every aspect; thoroughly or completely.
 * rubric
@@ -3749,8 +3751,463 @@
     * to repeat something written or spoken using different words, often in a humorous form or in a simpler and shorter form that makes the original meaning clearer
 * look into something
     * to examine the facts about a problem or situation:
+* The Himalayas
+* picnic
+    * n
+        * an occasion when a packed meal is eaten outdoors, especially during an outing to the countryside.
+    * v
+        * to have a picnic somewhere:
+* hard-pressed
+    * adj
+    * having a lot of difficulties doing something especially because there is not enough time or money
+* stick in the mud
+    * n, C
+    * someone who is old-fashioned and too serious and avoid enjoiyable activities
+* sketchy
+    * adj
+        * not detailed
+        * containing few details
+* sever
+    * v, T
+        * to break or separate, especially by cutting
+        * to end a connection with someone or something
+* guise
+    * U
+        * the apperance of someone or sometihng, especially intended to decieve
+* squadron
+    * n, C
+        * a unit of one of the armed forces, especially the air foce or the navy
+* dress
+    * put on clothes
+        * I or T
+            * to put clothes on yourself r someone else, especially a child
+        * I adv/prep
+            * to wear a particular type of clothes
+            * I have to dress in a suit and tie for work
+        * dress for dinner
+            * to put on formal clothes for a meal
+    * prepare food
+        * T
+            * to add a liquid, especially a mixutre of oil and vinegar, to a salada for extra flavour
+            * a dressed salada
+        * T
+            * to prepare meat, chicken, fish or crab so it can be eaten,
+            * a whole dressed crab
+    * treat injury
+        * T
+            * to treat an injury by clearing it and putting medicine or a covering on it to protect it
+            * Clean and dress wound immediately
+    * show window
+        * T
+            * to decoreate a showp window, usually with an arrangement of good
+            * they're dressing the store's wndows for Christmas.
+* sortie
+    * C
+        * a short, quick attack by a military force, such as a small group of solidiers or an aircraft, made against an enemy position
+        * a short journey to somewhere you have not been before, often with a partiuclar purpose
+        * an attempt to do something
+* push forward
+    * push something forward
+        * to continue doing something or making progress in something, with effort or enthusiasm
+* squint
+    * v, I
+        * to partly close your eyes in order to see more clearly
+    * eyes
+* obsequous
+    * adj
+    * too eager to praise or obey someone
+* dredge
+    * remove
+        * v, T
+        * to remove unwated things from the bottom of a river, lake, etc. using a boat or special device
+        * to search an area of water by dredging
+            * The police were dreding the lake for his body
+    * food
+        * v, T
+        * to drop flour, sugar etc. over food
+* dredge up
+    * bring to the surface
+* canal
+    * n, C
+    * water route
+    * a long thin stretch of water that is artifucially made either for boats to travel along or for taking water from one are to another
+* praise
+    * show approval
+        * T
+        * to express admiration or approval of the achievements or characteristics of person or thing
+        * He should be praised for his honesty
+        * My parents always praised me when I did well at school
+    * worship
+        * T
+* hymn
+    * n, C
+    * a song of praise that Christians sing to God
+* reflex
+    * n, C
+    * a physical reaction to something that you cannot control
+    * I'm sorry I pushed him, I was a reflex action/response.
+* reflexes
+    * the ability to react quickly
+    * Fighter pilot need good/fast reflexes
+* puddle
+    * n, C
+    * foot in the puddle
+    * a small pool of liquid on the ground, especially from rain
+* -monger
+    * suffix
+* daredevil
+* jeopardize
+* go nuts
+    *  to become extremely angry
+* penetrate
+    * move into
+    * understand
+* bummer
+    * n
+    * something that is very annoying or not convenient
+* cut glass
+    * glass with a decorative pattern cut into the surface
+* mosey
+    * to walk or go slowly, usually without a special purpose
+    * I'll just mosey down to the beach for a while
+* sulk
+    * v, I, n
+    * to be silient and to smile or be pleasant to people because you are angry about something that they have done
+    * He's sulking in his room because I wouldn't let hime have any more chocolate
+* jimmy
+    * n, C
+        * a short, strong metal bar with a curved end, often used to force things open, for example by thieves to force open windows or doors,
+    * v, T
+        * to force a window or lock open with a jimmy
+* tushy
+    * n, C
+    * tushie
+    * a person's buttocks
+* buttock
+    * either side of a person's bottom
+* on display
+* testy
+    * adj
+    * easily annoyed and not patient
+    * a testy old man
+    * My wife getss testy if we don't have dessert
+* glitch
+    * n, C,
+        * a small problem or fault that prevents something from being successful or working as well as it should
+            * we'd expected a few glitches, but everyting's gone remarkably smoothly
+    * v, I
+        * to experience a small problem or fault, especially one that stops something from woking
+* insurmountable
+    * so great that it cannot be dealt with successfully
+* forsake
+    * leave
+        * v, T
+        * to leave someone for ever, especially they need you
+* affirmative
+    * relating to a statement that shows agreement or says yes
+* forsaken
+    * in the forsaken wasteland
+* deserter
+    * a person who leaves the armed forces without permission
+* deserted
+    * if a place is deserted, there are no people in it
+* out of breath
+    * shortness of breath
+    * gasping for air, typcically after excercise
+    * you're out of breath
+* classy
+    * adj
+    * stylish and sophisticated, fashionable
+* fashionable
+    * popular at a particular time
+* hurl
+    * v, T
+    * to throw something with a lot of force, usually in an angry or violent way
+* for one's sake
+    * for the sake of sb
+    * in order to help or bring advantage to someone
+* eye gouging
+    * is the act of pressing or tearing the eye using the fingers or instruments
+* fishhooking
+    * is the act of inserting a finger or fingers of one or both hands into the mouth, nostrils or other orifices of a person and pulling away from the centerline of the body
+* nostril
+    * n, C
+    * is one of the two channles of  the nose
+* bifurcate
+    * v, I
+    * to divide into two parts
+* sentinel
+    * n, C
+        * a person employed to guard something
+* contrary to
+* i might be a dog
+    * [On the Internet, nobody knows you're a dog - Wikipedia](https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you%27re_a_dog)
+* anonymity
+* waive
+    * v, T
+* malevolent
+    * adj
+    * causing or wanting to cause harm or evil
+* Algonquin Round Table
+    * [Algonquin Kid's Table - Straight Dope Message Board](https://boards.straightdope.com/sdmb/showthread.php?t=8308)
+* satirical
+* satire
+    * n
+    * a way of criticizing people or ideas in a humorous way, or a piece of writing or play that uses this style
+    * satirical humor
+* foreign car
+* phlegm
+* foregoing
+* thereof
+* hereunder
+* unconstitutional
+    * adj
+    * not allowed by the constituion of a country or organization
+* watchword
+    * n, C,
+    * (a word or phrase represents) the main idea or principles directing the way that someone behave or the way that something is done
+* sit about
+    * sit around
+    * to spent dime sitting down and doing very little
+* canoe
+* intermission
+    * n, C or U
+    * a short period between the parts of play, film, concert, etc.
+* bitchin
+    * bitchen
+    * adj
+    * Thas's bitchen
+* poofy
+* stern
+    * adj
+        * servere, or showing disapproval
+        * If something, such as a job, is stern, it is difficult
+    * n
+        * the back part of a ship or boat
+* poofy
+    * adj
+    * poofy hair or clothes look big and soft or filled with air
+* cockney
+* find onself
+    * to discover and pursue one's true and inherent character, passion, skill or vocation
+        * 
+    * to discover, recognize, or realize one's location, thoughts, or sentiments.
+* life-altering
+* cradle
+     * the baby sleeping in the cradle was cute
+* veterinarian
+    * veterinary surgeon
+    * vet
+* reconnaissance
+    * recon
+    * the process of getting information about enemy forces or positions by sending out small groups of soliders or by using aircraft, etc.
+    * Aerial reconnaissance of the enemy position showed they were ready to attack.
+* aerial
+    * n, C
+        * in or from the air, especially from an aircraft
+        * meanwhile, the massive aerial bombardment of military targets continued unabated.
+* unabated
+    * adj
+    * without weaker in strength or force
+    * the fighting continued unabated through the night
+* stay up
+    * not go to bed
 
 
+## Nuance
+* although/even though/though
+    * [Although or though ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/although-or-though)
+    * tough/although
+        * after main clause, it can also mean `but it is also true that`
+    * tough
+        * spoken english
+        * sometimes even though
+        * in spoken english, though meaning however
+            * It’s expensive. It's nice, though.
+    * as though
+        * very similar to as if
+        * as if is much more common
+        * You look as though/as if you have seen a ghost!
+* as/because/since/
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv27.shtml)
+    * because
+        * the reason is the most imporant part of the sentence or utterance
+        * the because clause usually comes at the end
+    * as/since
+        * the reason is already well known and is therefore usually less important
+        * the as/since clause is usually placed at the begining of the sentence
+    * for
+        * the reason is given as an afterthought
+        * it is never placed at the beginning of the sentence
+        * more characteristic of written, rather than spoken English
+        * 'I decided to stop the work I was doing - for it was very late and I wanted to go to bed.'
+* known to/known by
+    * [grammar - Which is correct: "The facts are known by us" or "The facts are known to us"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/227635/which-is-correct-the-facts-are-known-by-us-or-the-facts-are-known-to-us)
+    * known to
+        * is idiomatic
+        * known to is better
+    * known by
+        * passive voice
+        * active voice is prefered in many cases
+* made from/made of/makde out of/made with
+    * [Made from, made of, made out of, made with - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/word-order-and-focus/made-from-made-of-made-out-of-made-with)
+    * made from
+        * how something is manufactured
+        * Plastic is made from oil
+        * The ealiest canoes were made from tree trunks
+    * made of
+        * the basic materials or qualities of something
+        * it has meanig similar to compose of
+        * What's this made of? it's Americal white oak.
+    * made out of
+        * something that has been changed or transformed from one thing into another
+        * In the 1970s, it was popular to have candle-holders made out of wine bottles
+        * they were living in tents made out of old plastic sheets.
+    * made with
+        * ingredients of food and drink
+        * This dish is made with beef, red peppers and herbs.
+* refuse/reject/decline/deny
+    * [The words refuse, reject, decline and deny](https://www.englishgrammar.org/words-refuse-reject-decline-deny/)
+    * opposite of deny is admit
+    * opposite of refuse/reject/decline is accept
+    * deny
+        * To deny is to say that something is not true
+        * to deny somebody something is to refuse to give it to them
+    * refuse
+        * to refuse to do something is to say that you won't do that
+    * reject
+        * to reject a proposal is to refuse to accept it
+    * decline
+        * Decline is relatively formal. It has more or less the same meaning as refuse. 
+        * To decline something is to politely refuse to accept it.
+        * Decline can also mean become less or become worse
+* refuse/refute
+    * [Refuse and Refute](https://www.usingenglish.com/forum/threads/22425-Refuse-and-Refute)
+    * unwilling to accept
+    * prove wrong
+* don't die on me
+    * [Don't Die On Me/ Don't Give Up On Me?](https://www.englishforums.com/English/DontDieOnMeDontGiveUpOnMe/kwxkv/post.htm)
+* more than me/more than I do
+    * A likes B more than me
+    * A likes B more than I do
+* more than me/more than I
+    * [Which is correct, better than I or better than me? | Ask The Editor | Learner's Dictionary](http://www.learnersdictionary.com/qa/better-than-I-or-better-than-me)
+    * more than I
+        * formal
+    * more than me
+        * informal
+* lately/recently
+    * [meaning - "Lately" and "recently" in Present Perfect - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/111386/lately-and-recently-in-present-perfect)
+* can/be able to
+* would you please/could you please/would you mind/would you mind ... please?
+    * [politeness - How much more polite does the word "please" make a request? - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/52105/how-much-more-polite-does-the-word-please-make-a-request?rq=1)
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv239.shtml)
+* oneself/one's self
+    * [Oneself vs. one’s self - Grammarist](http://grammarist.com/spelling/oneself-ones-self/)
+    * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+        * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+* in order that/so that
+    * [So that or in order that ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/so-that-or-in-order-that)
+    * in order that is more formal
+    * When referring to the future, we can use the present simple or will/’ll after so that. We usually use the present simple after in order that to talk about the future:
+        * I’ll post the CD today so that you get it by the weekend. (or … so that you will get it …)
+        * We will send you a reminder in order that you arrive on time for your appointment. (or … so that you arrive on time … or … so that you’ll arrive on time …)
+    * So that (but not in order that) can also mean ‘with the result that’
+* make me start to do
+    * I wanted to talk to foreigners. That is why I started studying English.
+* interchange/exchange
+    * [word choice - "Interchange" and "exchange" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/34545/interchange-and-exchange)
+    * exchange
+        * to give or receive something/somebody of the same type or of equal value in return for another
+    * interchange
+        * to share or exchange something
+        * to put each of two things or people in the other's place
+* in honor of/in memory of
+    * [What's The Difference Between "In Honor Of" And "In Memory Of"?](https://www.englishforums.com/English/WhatsDifferenceBetweenHonorMemory/bcgcqn/post.htm)
+    * in memory of
+        * is normally followed by a noun phrase that refers to the dead.
+    * in memory of is to in honor of as remember is to honor.
+* pp. or p.
+    * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
+* most pleased
+    * [phrase usage - Is "most pleased" pompous or condescending? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/237895/is-most-pleased-pompous-or-condescending)
+    * It's my pleasure to...
+        * is a common phrase if you want to be polite.
+    * I am pleased to...
+        * is also common.
+    * I am most pleased to...
+        * is NOT commonly used conversationally.
+* afraid of / afraid to do
+    * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
+    * afraid to do = araid doing
+    * afirad of doing
+        * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
+* I'am he
+    * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
+* How are you?/How are you doing?/How do you do?
+    * [meaning - Difference between "How are you?" and "How are you doing?" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/73766/difference-between-how-are-you-and-how-are-you-doing)
+    * How do you do?
+        * How do you do?
+    * How are you doing?/How are you?
+        * Fine, thanks!/Very well, thank you.
+* Company name
+    * [Does a Comma Go in Front of LLC or Inc.? | LegalZoom](https://www.legalzoom.com/articles/does-a-comma-go-in-front-of-llc-or-inc)
+    * Inc.
+    * corp.
+    * L.L.C./LLC
+        * limited liability company
+* as to/as for
+    * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
+* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
+* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
+    * There are still
+        * normal
+    * There still are
+        * strong
+* [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
+* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
+    * I cross the customer's name off the reservation list.
+    * I cross off the customer's name from the reservation list.
+* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
+    * they decided not to stay ...
+        * `they decide` is important
+    * the decided to not stay ...
+        * they decided to stay another night before but now `they will not stay`
+    * I asked her quietly to leave
+        * `quietly` is unclear
+    * I asked her to quietly leave
+        * `quietly` is clear
+* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
+    * month-on-motth, month-over-month
+    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
+* Q-tips
+    * [What does Chandler mean by 'You have to stop the Q-tip when there is resistance'? - Quora](https://www.quora.com/What-does-Chandler-mean-by-You-have-to-stop-the-Q-tip-when-there-is-resistance)
+* I will flash you
+    * [I'll flash you | WordReference Forums](https://forum.wordreference.com/threads/ill-flash-you.377843/)
+* I'm over you
+    * [What does "I'm so over you." mean? - Learn english - italki Answers](https://www.italki.com/question/92825)
+    * it means that at one time I had feelings for you , but now those feelings are gone and now I am indifferent to those feelings.
+* costume/outfit/uniform
+    * [What is difference between costume and outfit? \- Quora](https://www.quora.com/What-is-difference-between-costume-and-outfit)
+* I've been meaning to tell you
+    * I've been meaning to tell you about it since the weekend.
+    * The -ing form is a bit more natural and emphasizes that the intention to tell you has been continuous since the weekend.
+    * [EN: I've been meaning to tell you \| WordReference Forums](https://forum.wordreference.com/threads/en-ive-been-meaning-to-tell-you.1219428/)
+* nasty/naughty
+    * [What is the difference between nasty and naughty ? \| HiNative](https://hinative.com/en-US/questions/961467)
+    * Naughty means not obeying or disobedient.
+    * Nasty means smelling bad.
+    * That kid is so naughty
+    * She smells nasty.
+    * She was naughty in bed.
+* perfume/eau de toilette/eau de cologne
+    * [What is the difference between perfume, eau de toilette, and eau de Cologne?](http://www.slate.com/blogs/quora/2015/03/12/what_is_the_difference_between_perfume_eau_de_toilette_and_eau_de_cologne.html)
+* compare with/compare to
+    * [Compare with or compare to? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/compare-with-or-compare-to)
+    * Individual schools compared their facilities with those of others in the area.
+    * It is difficult to compare our results to studies conducted in the United States.
+* site/website
+    * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
 
 
 ## Greeting
@@ -3759,6 +4216,11 @@
     * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
 
 
+## Slang
+* [The BEST British Street Slang - YouTube](https://www.youtube.com/watch?v=9Z8JqutRWrs)
+* [American English slangs | Street Talk Savvy](http://streettalksavvy.com/american-english-slang/)
+    * no worries
+    * laid back
 
 ## Math
 * [Pronunciation of mathematical symbols](http://www.uefap.com/speaking/symbols/symbols.htm)
