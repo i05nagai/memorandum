@@ -4342,7 +4342,9 @@
 * va fa napoli
     * [What does 'Va fa Napoli' mean? \- Quora](https://www.quora.com/What-does-Va-fa-Napoli-mean)
     * go fuck yourself
-* we"ve got company
+* we've got company
+* transcendental
+    * 
 
 
 ## Nuance
