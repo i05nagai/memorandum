@@ -5,10 +5,10 @@ title: Convex function
 ## Convex Function
 Properties of convex function.
 
-## Definition
+### Definition
 * $f: \mathbb{R}^{N}\rightarrow \mathbb{R}$
 
-$f$が凸関数であるとは、
+$f$ is said to be convex function if
 
 $$
 \begin{equation}
@@ -19,12 +19,11 @@ $$
     f(\lambda x_{1} + (1 - \lambda)x_{2})
     \le
     \lambda f(x_{1}) + (1 - \lambda) f(x_{2})
+    .
 \end{equation}
 $$
 
-を満たすことを言う。
-
-$f$が狭義凸関数であるとは、　
+$f$ is said to be strictly convex function if
 
 $$
 \begin{equation}
@@ -37,41 +36,50 @@ $$
     f(\lambda x_{1} + (1 - \lambda)x_{2})
     <
     \lambda f(x_{1}) + (1 - \lambda) f(x_{2})
+    .
 \end{equation}
 $$
 
-を満たすことを言う。
-
 $f$ is concave if $-f$ is convex.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Properties
 
 ### Property. 1
-開区間で定義された凸関数は、連続
+Convex function defined in open interval is continuous.
 
 ### proof.
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Property. 2
-開区間で定義された凸関数は、高々可算個の点を除いて微分可能。
+Convex function defined in open interval is differentialble except for at most countably infinite points.
 
 ### proof.
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Property. 3
-$f$を凸関数とする。
-$f$が$C^{2}$級とすると、以下は同値。
+* $f$,
+    * convex function
+* $f$
+    * $C^{2}$ function
 
-* $f$が凸関数
-* 凸集合の内部で、$f$のヘッセ行列が半正定値
+The follwoing statements are equivalent:
+
+* (1) $f$ is convex
+* (2) 凸集合の内部で、$f$のヘッセ行列が半正定値
 
 ### proof.
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
 ### Proposition 1
-* $f:\mathbb{R}^{N} \rightarrow \mathbb{R}$, $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$を凸関数とする。
-* $a, b \in \mathbb{R}_{\ge 0}$とする。
+* $f:\mathbb{R}^{N} \rightarrow \mathbb{R}$, $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$,
+    * convex function
+* $a, b \in \mathbb{R}_{\ge 0}$,
 
 $a f + b g$ is convex.
 
@@ -1216,8 +1224,76 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Optimum
-* 狭義凸関数は最小値を取る点が存在するならば、1点である
+### Theorem 13
+* $f$,
+    * strictly convex
+
+The point the value of which is the minimum value of $f$ is unique.
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition 14
+* $f: \mathbb{R} \rightarrow \mathbb{R}$,
+    * convex function
+* $x \in [a, b]$,
+
+$$
+    f(x)
+    \le
+    \frac{
+        b - x
+    }{
+        b - a
+    }
+    f(a)
+    +
+    \frac{
+        x - a
+    }{
+        b - a
+    }
+    f(b)
+$$
+
+### proof.
+
+$$
+\begin{eqnarray}
+    \frac{
+        b - x
+    }{
+        b - a
+    }
+    a
+    +
+    \frac{
+        x - a
+    }{
+        b - a
+    }
+    b
+    & = &
+        \frac{
+            ba - xa
+            +
+            bx - ba
+        }{
+            b - a
+        }
+    \nonumber
+    \\
+    & = &
+        x
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Thus, by convexity of $f(x)$, the statement is proved.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 
 ## Example of convex functions
