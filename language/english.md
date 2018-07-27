@@ -2711,7 +2711,6 @@
     * noisy, energetic, and rough:
 * pant leg
 * monogamy
-* anthropologically
 * raggedy
     * scruffy; shabby.
 * kook
@@ -3923,6 +3922,8 @@
 * cause obj to do
     * reason
         * to make something happen, especially something bad
+* cause obj obj
+    * I hope that the children haven't caused you too much trouble
 * pay attention to
 * draw attention to
 * catch/get someone's attention
@@ -3973,8 +3974,11 @@
     * the branch of science concerned with earthquakes and related phenomena.
 * tectonics
 * continental drift
+* anthropologically
 * anthropology
     * anthropology of nonindustrialized civilizations
+* anthropologist
+    * is a person engaged in the practice of anthropology
 * lisp
     * v
     * spea with a lisp
@@ -4331,9 +4335,104 @@
     * the fighting continued unabated through the night
 * stay up
     * not go to bed
+* in need
+    * People in need do not have enough of essential things such as money, food or good health
+        * The education authority
+* materialistic
+    * beleiving that having money and posessions is the most important thing in life
+* underlying
+    * not obvious
+        * real but not immediately obvious
+        * underlying motivation
+* in effect
+    * in fact, actually
+    * used when you are describing what you see as the real facts of a situation
+    * in effect, we’ll be earning less than we were last year.
+* affect
+    * influence
+        * v, T
+        * to have an influence on someone or something, or to cause a change in someone or something
+        * The divorce affected every aspect of her life
+    * pretend
+        * to pretend to feel or think something
+        * To all problems she affected indifference
+* menstruate
+    * v, I
+    * When a woman menstruates, blood flow from her uterus for a few days every mongh
+* uterus
+    * the organ in the body of a woman or other femaile mammal in which a baby develops before birth
+    * Conception is the moment when a fertilized egg implants itself in a woman's uterus
+* by and by
+    * after a short period
+    * by and by a man appeared
+* equate
+    * v, T
+    * to consider one thing to be the same as or equal to another thing
+    * He complained that there was a tendency to equate right-wing politics with self-interest
+* dichotomy
+    * n, C
+    * a difference between two completely opposite ideas or things
+    * There is often a dichotomy between what politicians say and what they do
+* necessity
+    * n, U
+        * the need for something
+        * You can come early if you want to, but there's no necessity for it.
+    * n, C
+        * something that you need, especially in order to live
+        * we bought only the bare necessities with us
+* fulfill a need
+    * to provide something that people need
+* graduate student
+* mood swing
+    * n
+    * a sharp and inexplicable change in mood
+    * how are those mood swings comming?
+* inexplicable
+    * if something is inexplicable, you cannot explain why it happens or why it is true
+    * His behaviour was extraordinary and inexplicable
+* bladder
+    * an organ like a bag inside the body of a person or animal, where urine is stored before it leaves the body
+    * to empty your bladder
+* hormones
+* bachelor party
+* a tad
+    * I seem a tad edgy
+    * somewhat
+* edgy
+    * nervous
+        * nervous, not calm
+    * unusual
+* waterworks
+    * here come the waterworks
+* how much of
+* on your own
+    * alone
+* indivisual
+    * single
+        * n, C
+        * a single person or thing, especially when compared to the group or set to which they belong
+    * different
+        * n, C
+        * a person who thinks or behaves in their own original way
+* if nothing else
+    * used to say that something is probably the only thing that is true, acceptable, desirable, or certain because there are no better/worse possibilities.
+    * if nothing else, there's the party this evening
+    * if nothing else, you should send him a card
+* scholar
+    * n, C
+    * a person who studies a subect in great detail, especially at a university,
+    * someone who is inteligent or good at leaning by studiying
+        * David's never been much of scholar
 
 
 ## Nuance
+* with regard to/in terms of/regarding
+    * [with regard to vs in terms of | WordReference Forums](https://forum.wordreference.com/threads/with-regard-to-vs-in-terms-of.2219081/)
+    * 
+[Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv35.shtml)
+* in effect/in fact
+    * [meaning - "in effect" vs. "in fact" - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/49700/in-effect-vs-in-fact)
+    * [Does 'in effect' mean the same thing as 'in fact'? - Quora](https://www.quora.com/Does-in-effect-mean-the-same-thing-as-in-fact)
 * although/even though/though
     * [Although or though ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/although-or-though)
     * tough/although
