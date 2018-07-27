@@ -4435,6 +4435,7 @@
     * a person who studies a subect in great detail, especially at a university,
     * someone who is inteligent or good at leaning by studiying
         * David's never been much of scholar
+* woof
 
 
 ## Nuance
