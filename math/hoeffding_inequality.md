@@ -435,17 +435,49 @@ $$
     * $X_{i} \in [a_{i}, b_{i}]$,
 
 $$
+\begin{eqnarray}
     \bar{X}
-    :=
-    \frac{1}{N}
-    \sum_{i=1}^{N}
-        X_{i}
+    & := &
+        \frac{1}{N}
+        \sum_{i=1}^{N}
+            X_{i}
+    \nonumber
+    \\
+    S_{N}
+    & := &
+        X_{1} + \cdots + X_{N}
+    \nonumber
+\end{eqnarray}
     .
 $$
 
-Then $0 < t < \bar{X} - \mathrm{E}[\bar{X}]$,
+For all $t \ge 0$,
 
 $$
+\begin{eqnarray}
+    P(
+        S_{N}
+        -
+        \mathrm{E}
+        \left[
+           S_{N} 
+        \right]
+        \ge
+        t
+    )
+    & \le &
+        \exp
+        \left(
+            -
+            \frac{
+                2t^{2}
+            }{
+                \sum_{i=1}^{N}
+                    (b_{i} - a_{i})
+            }
+        \right)
+    \label{hoeffding_inequality_inequality_statement_sum}
+    \\
     P(
         \bar{X} - \mathrm{E}
         \left[
@@ -454,13 +486,261 @@ $$
         \ge
         t
     )
-    \le
-    e^{-2nt^{2}}
-    .
+    & \le &
+        \exp
+        \left(
+            -
+            \frac{
+                2N^{2}t^{2}
+            }{
+                \sum_{i=1}^{N}
+                    (b_{i} - a_{i})
+            }
+        \right)
+    \label{hoeffding_inequality_inequality_statement_mean}
+    \\
+    P(
+        \left|
+            \bar{X} - \mathrm{E}
+            \left[
+                \bar{X}
+            \right]
+        \right|
+        \ge
+        t
+    )
+    & \le &
+        2
+        \exp
+        \left(
+            -
+            \frac{
+                2N^{2}t^{2}
+            }{
+                \sum_{i=1}^{N}
+                    (b_{i} - a_{i})
+            }
+        \right)
+        \label{hoeffding_inequality_inequality_statement_absolute}
+\end{eqnarray}
 $$
 
 ### proof.
+We first prove $$\eqref{hoeffding_inequality_inequality_statement_sum}$$.
 
+Let $s, t \ge 0$ be fixed.
+
+$$
+\begin{eqnarray}
+    P(S_{N} - \mathrm{E} \left[ S_{N}\right] \ge t)
+    & \le &
+        e^{-st}
+        \mathrm{E}
+        \left[
+            \exp
+            \left(
+               s
+               (S_{N} - \mathrm{E}[ S_{N}] )
+            \right)
+        \right]
+        \quad
+        (\because \text{apply Markov inequality with } \phi(t) := e^{st})
+    \nonumber
+    \\
+    & = &
+        e^{-st}
+        \prod_{i=1}^{N}
+            \mathrm{E}
+            \left[
+                \exp
+                \left(
+                   s
+                   (X_{i} - \mathrm{E} \left[ X_{i} \right] )
+                \right)
+            \right]
+        \quad
+        (\because \text{independence})
+    \nonumber
+    \\
+    & \le &
+        e^{-st}
+        \prod_{i=1}^{N}
+            \exp
+            \left(
+               \frac{1}{8}
+               s^{2}
+               (b_{i} - a_{i})^{2}
+            \right)
+        \quad
+        (\because \text{Hoeffding lemma})
+    \nonumber
+    \\
+    & = &
+        \exp
+        \left(
+            -st
+            +
+            \frac{1}{8}
+            s^{2}
+            \sum_{i=1}^{N}
+                (b_{i} - a_{i})^{2}
+        \right)
+    \label{hoeffding_inequality_inequality_derived}
+    .
+\end{eqnarray}
+$$
+
+Define $g: \mathbb{R} \rightarrow \mathbb{R}$
+
+$$
+\begin{eqnarray}
+    g(c)
+    & := &
+        -ct
+        +
+        \frac{c^{2}}{8}
+        \sum_{i=1}^{N}
+            (b_{i} - a_{i})^{2}
+    \nonumber
+    \\
+    & = &
+        \frac{A}{8}
+        \left(
+            c
+            -
+            t
+            \frac{
+                4
+            }{
+                A
+            }
+        \right)^{2}
+        -
+        \frac{2t^{2}}{A}
+    .
+\end{eqnarray}
+$$
+
+where $A := \sum_{i=1}^{N} (b_{i} - a_{i})^{2}$.
+$g$ achieves the minimum at
+
+$$
+    c
+    =
+    -\frac{2t^{2}}{A}
+    .
+$$
+
+Hence $$\eqref{hoeffding_inequality_inequality_derived}$$ can be written
+
+$$
+    P(S_{N} - \mathrm{E} \left[ S_{N}\right] \ge t)
+    \le
+    \exp
+    \left(
+        -\frac{
+            2t^{2}
+        }{
+            \sum_{i=1}^{N}
+                (b_{i} - a_{i})^{2}
+        }
+    \right)
+    .
+$$
+
+$$\eqref{hoeffding_inequality_inequality_statement_mean}$$ is immediate consequence of $$\eqref{hoeffding_inequality_inequality_statement_sum}$$ by taking $t$ as  $Nt$.
+We show $$\eqref{hoeffding_inequality_inequality_statement_absolute}$$.
+
+$$
+\begin{eqnarray}
+    P(
+        \left|
+            \bar{X} - \mathrm{E}
+            \left[
+                \bar{X}
+            \right]
+        \right|
+        \ge
+        t
+    )
+    & = &
+        P
+        \left(
+            (
+                \bar{X}
+                -
+                \mathrm{E}
+                \left[
+                    \bar{X}
+                \right]
+                \ge
+                t
+            )
+            \cap
+            (
+                \bar{X}
+                -
+                \mathrm{E}
+                \left[
+                    \bar{X}
+                \right]
+                \ge
+                0
+            )
+        \right)
+        +
+        P
+        \left(
+            (
+                -
+                (
+                    \bar{X}
+                    -
+                    \mathrm{E}
+                    \left[
+                        \bar{X}
+                    \right]
+                )
+                \ge
+                t
+            )
+            \cap
+            (
+                \bar{X}
+                -
+                \mathrm{E}
+                \left[
+                    \bar{X}
+                \right]
+                \le
+                0
+            )
+        \right)
+    \nonumber
+    \\
+    & \le &
+        \exp
+        \left(
+            -\frac{
+                2N^{2}t^{2}
+            }{
+                \sum_{i=1}^{N}
+                    (b_{i} - a_{i})^{2}
+            }
+        \right)
+        +
+        \exp
+        \left(
+            -\frac{
+                2N^{2}t^{2}
+            }{
+                \sum_{i=1}^{N}
+                    (b_{i} - a_{i})^{2}
+            }
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
