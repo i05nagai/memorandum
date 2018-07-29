@@ -1,9 +1,10 @@
 ---
-title: Hoeffding Lemma
+title: Hoeffding inequality
 ---
 
-## Hoeffding Lemma
+## Hoeffding Inequality
 
+### Hoeffding Lemma
 * $a, b \in \mathbb{R}$,
     * $a \le 0 \le b$,
 * $X$,
@@ -392,37 +393,101 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Heoffding inequality
-* $X_{1}, \ldots, X_{N}$,
-    * independent r.v.s
-    * $X_{i} \in [0, 1]$,
+It's immediate consequence of the lemma in the case that the mean of $X$ is not zero.
+
+### Corollary. hoeffding lemma
+* $a, b \in \mathbb{R}$,
+    * $a < b$,
+* $X$,
+    * $\mathbb{R}$ valued r.v.
+    * $\mathrm{E}[X] < \infty$,
+    * $X \in [a, b]$ almost surely
+
+Then
 
 $$
-    \bar{X}
-    :=
-    \frac{1}{N}
-    \sum_{i=1}^{N}
-        X_{i}
-    .
-$$
-
-Then $0 < t < \bar{X} - \mathrm{E}[\bar{X}]$,
-
-$$
-    P(
-        \bar{X} - \mathrm{E}
-        \left[
-            \bar{X}
-        \right]
-        \ge
-        t
-    )
+    \forall \lambda \in \mathbb{R},
+    \
+    \mathrm{E}
+    \left[
+        e^{\lambda X}
+    \right]
     \le
-    e^{-2nt^{2}}
+    \exp
+    \left(
+        \lambda \mathrm{E}[X]
+        +
+        \frac{
+            \lambda^{2}
+            (b - a)^{2}
+        }{
+            8
+        }
+    \right)
     .
 $$
 
 ### proof.
+Let $Y := X - \mathrm{E}[X]$.
+$Y$ satisfies the condition of Hoeffding inequality.
+
+$$
+\begin{eqnarray}
+    & &
+        \forall \lambda \in \mathbb{R},
+        \
+        \mathrm{E}
+        \left[
+            e^{\lambda Y}
+        \right]
+    \le
+        \exp
+        \left(
+            \frac{
+                \lambda^{2}
+                (b - a)^{2}
+            }{
+                8
+            }
+        \right)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mathrm{E}
+        \left[
+            e^{\lambda (X - \mathrm{E}[X])}
+        \right]
+        \le
+        \exp
+        \left(
+            \frac{
+                \lambda^{2}
+                (b - a)^{2}
+            }{
+                8
+            }
+        \right)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mathrm{E}
+        \left[
+            e^{\lambda X}
+        \right]
+        \le
+        e^{\lambda \mathrm{E}[X]}
+        \exp
+        \left(
+            \frac{
+                \lambda^{2}
+                (b - a)^{2}
+            }{
+                8
+            }
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
@@ -649,7 +714,7 @@ $$
 $$
 
 $$\eqref{hoeffding_inequality_inequality_statement_mean}$$ is immediate consequence of $$\eqref{hoeffding_inequality_inequality_statement_sum}$$ by taking $t$ as  $Nt$.
-We show $$\eqref{hoeffding_inequality_inequality_statement_absolute}$$.
+Now, we show $$\eqref{hoeffding_inequality_inequality_statement_absolute}$$.
 
 $$
 \begin{eqnarray}
