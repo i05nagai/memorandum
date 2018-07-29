@@ -32,10 +32,30 @@ title: English Writing
 * normally
 * it's claim to 
 * As a result,
+* it is questionable that/whether
+* rightly or wrongly
+* Personally, 
+* Besides,
+* Similarly,
+* nothing but
+* organize something in a logical way
+* In one study, 
+* Specifically,
 
+
+* good control of grammar and vocabulary
+* thoughtful answer
+* obscure the meaning of his idea
+* interfere with meaning
+* disrupt the flow of the response
+* have negative effect on 
+* bring negative consequence
+* the public
 * get reputation
 * lose reserach funding
 * get fewer invitations to academic converence
 * be considered entertainers by their peers
+
+
 
 ## Reference
