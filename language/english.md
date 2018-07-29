@@ -1040,6 +1040,16 @@
     * she was obsessed with someone and exceedingly hostile toward him
 * hostile
     * adj
+        * unfriendly
+            * unfriendly and not liking something
+            * a hostile crowd
+        * disagreeing
+            * not agreeing with someone
+            * I'm not hostile to/against the idea of change as such
+        * difficult
+            * difficult or not suitable for living or growing
+            * hostile weather condition
+            * a hostile environment
 * hygienic
     * that's not very hygienic
     * sanitary
@@ -1095,7 +1105,9 @@
     * come to sympathize with the plight of his captors
 * captor
 * inhumane
-    * he ws still committed to the safety of his nation, but the came to resent his government's harsh and inhumane treatment of a vastly inferior enemy
+    * adj
+        * cruel and causing suffering to people or animals
+        * he ws still committed to the safety of his nation, but the came to resent his government's harsh and inhumane treatment of a vastly inferior enemy
 * psychoactive
     * psycoactive medication
 * repertoire
@@ -2250,6 +2262,11 @@
     * that thing lurking with in Homs
 * brat
     * little brat
+    * a badly behaved child
+    * now go away, you nasty little brat.
+* bratty
+    * adj
+    * adj of brad
 * desciple
     * the desciple of Jesus
 * worthy
@@ -2316,6 +2333,12 @@
 * connotation
 * dismissively
 * destine
+* destined
+    * purpose
+        * intended
+        * The money was destined for the relief of poverty, but was deverted by corrupt officials
+    * place
+    * future
 * gotta
 * hard core
 * diehard
@@ -4188,6 +4211,8 @@
     *  to become extremely angry
 * penetrate
     * move into
+        * to move into or through something
+        * Amazingly, the bullet did not penetrate his brain
     * understand
 * bummer
     * n
@@ -4435,6 +4460,82 @@
     * a person who studies a subect in great detail, especially at a university,
     * someone who is inteligent or good at leaning by studiying
         * David's never been much of scholar
+* we've got company
+* transcendental
+* fall into the trap
+* namby pamby
+    * weak silly or emotional
+    * I'd deleete all of his namby pamby ways.
+* ungulates
+* anti-inflammation
+* analgesic
+* stratum
+    * Made up of 256 stratum
+* turbid
+    * (of a liquid) not transparent because a lot of small pieces of matter are held in it
+* turbidity
+    * It can filter and compress information with a turbidity of less than 2,300
+* stratum
+    * n, C
+    * plural, strata
+    * one of the parts layers into which something is separated
+        * The report showed that drugs have penetrated every stratum of American society
+    * a layer of rock, soil, or similar material
+* succeed in
+* consciousness
+    * n, U
+        * understanding
+        * the state of understanding and realizing something
+        * Her consciousness that she's different makes her feel uneasy.
+        * Working in an unemployment office had helped to raise his political consciousness
+    * n, U
+        * awake
+        * the state of being awake, thinking, and knowing what is happening around you
+        * He lost his consciousness after his accident and never recovered/regained  it.
+* taunt
+    * v, T
+        * to intentionally annoy and upset someoneby making unkind remarks to them, laughing unkindly, etc.
+        * the other kids used to taunt him in the playground because he was fat and wore glasses.
+* upset
+    * upsetting/upset/upset
+    * v,T
+        * worry
+            * to make someone angry, unhappy, or worried.
+            * It still upset him when he thinks about the accident
+        * change
+* playground
+* detect
+    * v, T
+        * to notice something that is partly hidden or not clear, or to discover something, especially using a special method
+            * Some sounds cannot be detected the human ear
+        * to discover something, usually using special equipment
+* subjugate
+    * v, T
+        * defeat
+            * to defeat people or a countly and rule them in a way that allows them no freedom
+        * control
+            * to treat yourself, your wishes, or your beliefs as being less important than other people or their wishes or beliefs
+* wedgie
+    * n, C
+* alack
+    * alas and alack
+    * an expression of sadness
+* conscientious
+    * adj
+    * putting a lot of effort into your work
+        * a conscientious student
+* conscience
+    * n, C or U
+* detest
+    * to hate someone or something very much
+        * I detest any kind of cruelty
+        * I detest having to get up when it's dark outside
+* clunker
+    * n, C
+        * an old car or other machine that does not work well
+        * something that is completely unscuccessful because people think it is stupid or wrong
+    * Studio executive should have put 
+* you have my word
 
 
 ## Nuance
