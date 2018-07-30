@@ -186,10 +186,10 @@ $$
     \
     \mathrm{E}
     \left[
-        e^{-\lambda X_{i}}
+        e^{\lambda X_{i}}
     \right]
     \le
-    e^{-\lambda^{2}\sigma^{2}/2}
+    e^{\lambda^{2}\sigma^{2}/2}
     .
 $$
 
@@ -350,29 +350,239 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ### Proposition 5
-* $$A = \{a_{i}, \ldots, a_{N}\} \subseteq \mathbb{R}^{n}$$,
+* $$A = \{a_{1}, \ldots, a_{N}\} \subseteq \mathbb{R}^{n}$$,
     * a finite set
+    * $$a_{j} := (a_{j, 1}, \ldots, a_{j, n})$$,
 
 $$
 \begin{eqnarray}
     R_{n}(A)
-    \le
-    \max_{j = 1, \ldots, N}
-    \|
-        a_{j}
-    \|
-    \frac{
-        \sqrt{2 \log N}
-    }{
-        n
-    }
+    & \le &
+        \max_{j = 1, \ldots, N}
+        \|
+            a_{j}
+        \|_{1}
+        \frac{
+            \sqrt{2 \log N}
+        }{
+            n
+        }
+    \nonumber
+    \\
+    R_{n}(A)
+    & \le &
+        \max_{j = 1, \ldots, N}
+        \|
+            a_{j}
+        \|_{2}
+        \frac{
+            \sqrt{2 \log N}
+        }{
+            \sqrt{n}
+        }
 \end{eqnarray}
 $$
 
 ### proof
+Let
+
+$$
+    X_{j}
+    :=
+    \frac{1}{n}
+    \sum_{i=1}^{n}
+        r_{i}a_{j, i}
+    \quad
+    (j \in = 1, \ldots, N)
+    .
+$$
+
+It's easy to confirm that $$X_{j} \in [\underline{L}_{j}, \bar{L}_{j}]$$ almost surely where
+
+$$
+    \underline{L}_{j}
+    :=
+    -
+    \frac{
+        \|
+        a_{j}
+        \|_{2}
+    }{
+        \sqrt{n}
+    }
+    ,
+    \
+    \bar{L}_{j}
+    :=
+    -\underline{L}_{j}
+    .
+$$
+
+Indeed,
+
+$$
+\begin{eqnarray}
+    \frac{1}{n}
+    \sum_{i=1}^{n}
+        r_{i}a_{j, i}
+    & \le &
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            |
+            a_{j, i}
+            |
+    \nonumber
+    \\
+    & = &
+        \frac{1}{n}
+        \|
+        a_{j}
+        \|_{1}
+    \nonumber
+    \\
+    & \le &
+        \frac{1}{\sqrt{n}}
+        \|
+        a_{j}
+        \|_{2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Moreover, since $r_{j}$ is an I.I.D sequence, $X_{j}$ satisfies
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        X_{j}
+    \right]
+    =
+    0
+    .
+\end{eqnarray}
+$$
+
+By Hoeffding inequality, we have for all $j = 1, \ldots, n$, $\lambda > 0$,
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        e^{-\lambda X_{j}}
+    \right]
+    & \le &
+        \exp
+        \left(
+            \mathrm{E}
+            \left[
+                -\lambda X_{j}
+            \right]
+            +
+            \frac{
+                \lambda^{2}(\bar{L}_{j} - \underline{L}_{j})^{2}
+            }{
+                8
+            }
+        \right)
+    \nonumber
+    \\
+    & = &
+        \exp
+        \left(
+            \frac{
+                \lambda^{2}
+                \|
+                a_{j}
+                \|_{1}^{2}
+            }{
+                2n^{2}
+            }
+        \right)
+    \nonumber
+    \\
+    & \le &
+        \exp
+        \left(
+            \frac{
+                \lambda^{2}
+                \sigma^{2}
+            }{
+                2
+            }
+        \right)
+    \nonumber
+    \\
+    \sigma
+    & := &
+        \frac{
+            \max_{j = 1, \ldots, N}
+                \|
+                a_{j}
+                \|_{1}
+        }{
+            n
+        }
+        .
+    \nonumber
+\end{eqnarray}
+$$
+
+
+Now we can apply <a href="#lemma-4">lemma 4</a>,
+
+$$
+\begin{eqnarray}
+    R_{n}(A)
+    & = &
+        \mathrm{E}
+        \left[
+            \max_{j = 1, \ldots, N}
+                X_{j}
+        \right]
+    \nonumber
+    \\
+    & \le &
+        \sigma
+        \sqrt{2 \ln N}
+        \quad
+        (\because \text{lemma})
+    \nonumber
+    \\
+    & = &
+        \max_{j = 1, \ldots, N}
+            \|
+            a_{j}
+            \|_{1}
+        \frac{
+            \sqrt{2 \ln N}
+        }{
+            n
+        }
+\end{eqnarray}
+$$
+
+For the other inequality, we know
+
+$$
+\begin{eqnarray}
+    \|
+    a_{j}
+    \|_{1}
+    & \le &
+        \sqrt{n}
+        \|
+        a_{j}
+        \|_{2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
 * [Rademacher distribution \- Wikipedia](https://en.wikipedia.org/wiki/Rademacher_distribution)
 * https://ocw.tudelft.nl/wp-content/uploads/Lecture03.pdf
+* Prediction, Learning, and Games
