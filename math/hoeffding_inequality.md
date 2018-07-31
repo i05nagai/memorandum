@@ -367,7 +367,7 @@ $$
     \\
     & = &
         \frac{1}{8}
-        s^{2}
+        \lambda^{2}
         (b - a)^{2}
     \nonumber
 \end{eqnarray}
@@ -385,7 +385,7 @@ $$
     \exp
     \left(
         \frac{1}{8}
-        s^{2}
+        \lambda^{2}
         (b - a)^{2}
     \right)
     .

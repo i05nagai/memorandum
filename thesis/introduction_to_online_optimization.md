@@ -549,8 +549,95 @@ $$
 ### 2.4 lower bound
 
 #### Lemma 2.2
+* $$(\sigma_{i, t})_{1 \le i \le d, 1 \le t \le n}$$,
+    * I.I.D. Rademacher r.v.s
+
+$$
+    \lim_{d \rightarrow \infty} 
+    \lim_{n \rightarrow \infty} 
+        \frac{
+            \mathrm{E}
+            \left[
+                \max_{i = 1, \ldots, d}
+                    \sum_{t=1}^{n}
+                        \sigma_{i, t}
+            \right]
+        }{
+            \sqrt{2 n \log d}
+        }
+    =
+    1
+    .
+$$
 
 #### proof.
+Taking $N := d$, $a_{j, i} := 1$, then applying <a href="{{ site.baseurl }}/math/distribution/rademacher_distribution.html#proposition-5">proposition 5</a>,
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        \max_{i = 1, \ldots, d}
+            \sum_{t=1}^{n}
+                \sigma_{i, t}
+    \right]
+    & = &
+        n
+        \mathrm{E}
+        \left[
+            \max_{i = 1, \ldots, d}
+                \frac{1}{n}
+                \sum_{t=1}^{n}
+                    a_{i, t}
+                    \sigma_{i, t}
+        \right]
+    \nonumber
+    \\
+    & \le &
+        n
+        \max_{i = 1, \ldots, d}
+            \|
+            a_{i}
+            \|_{1}
+        \frac{
+            \sqrt{
+                2 \ln d
+            }
+        }{
+            n
+        }
+    \nonumber
+    \\
+    & = &
+        n
+        \sqrt{
+            2 \ln d
+        }
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \frac{
+        \mathrm{E}
+        \left[
+            \max_{i = 1, \ldots, d}
+                \sum_{t=1}^{n}
+                    \sigma_{i, t}
+        \right]
+    }{
+        \sqrt{2 n \log d}
+    }
+    & \le &
+        \frac{
+            \sqrt{2 n \log d}
+        }{
+            \sqrt{2 n \log d}
+        }
+        \quad
+        (\because \text{proposition})
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -560,5 +647,6 @@ $$
 #### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
 
 ## Reference
