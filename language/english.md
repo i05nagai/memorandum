@@ -18,16 +18,55 @@
     * [Have a burr under saddle \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/have+a+burr+under+saddle)
     * irritated by something
 * bareback
-    * on an unsaddled horse
+    * on horse
+        * on an unsaddled horse
+        * without a saddle on the back of a horse that is being ridden
+        * Is it difficult to ride bareback?
+    * sex
+        * (of a sexual activity) performed without using a condom
 * with a grain of salt
-    * [｢take it with a grain of salt」ネイティブが良く使うイディオム \- 英会話をマスターするためのブログ](http://improve-yourenglish.seesaa.net/article/387607307.html)
+    * take something with a grain of salt
+    * to understand that something is likely to be untrue or incorrect
+    * I've heard he got married, but I took that with a grain of salt
 * judge and jury
 * hoodie
     * sweatt
+    * sweatshirt
+    * a person who wears a hoodie
+    * he declined to wear his hoodie
 * furrow
     * n, v
+    * a long line or hollow that is formed or cut into the surface of something
+        * a deep furrow has formed in the rock, where water has run it for centuries.
+* brow
+    * face
+        * the forehead; part of the head above the eyes
+        * She wrinkled her brow as she though
+    * eyebrow
+* wrinkled
+    * adj
+    * (of skin) having small lines because of old age
+        * a wrinkled face
+    * created (of cloth) having cmall lines or folds in it
+* wrinkle
+    * noun, C
+    * a small line in the skin caused by old age,
+    * She got a lot of wrinkles when she became 40.
+    * The expensive anti-wrinkle creams doesn't affect for her.
+* wrinkle one's brow
+* wrinke up one's nose
+    * wrinke one's nose
 * rut
+    * hole
+        * n, C
+        * a deep, narrow mark made in soft ground especially by a wheel
+    * sexually active period
+        * the period of the year during which particular male animals, especially deer and sheep, are sexually active.
+        * in rat
+            * sexually excited
 * nemesis
+    * n, C
+    * someone's nemesis is a person or thing that is very difficult for them to defeat
 * shroud
     * n, v
     * he was buried in a linen shroud
@@ -36,6 +75,9 @@
 * frantically
 * partake
 * outage
+    * Even a one-day outage
+    * During outages,
+    * Play was delayed for two hours by a poweroutage
 * partake
     * join in
     * eat or drink something
@@ -264,6 +306,10 @@
 * sensuous
 * lethal
 * carry on
+    * to behave in an uncontrolled, excited, or anxious way
+    * to have a sexual relationship
+    * baggage
+        * a small case of bag that you take onto a plane with you
 * infiltrate
     * to secretly become part of a group in order to get information or to influence the way that group thinks or behaves:
         * A journalist managed to infiltrate the powerful drug cartel.
@@ -2329,6 +2375,9 @@
 * consort
     * first consort
 * hinder
+    * v, T
+    * to limit the ability of someone to do something, or to limit the development of something;
+    * High winds have hindered firefighters in their eforts to put out the blaze
 * hamper
 * ritual
 * heritage
@@ -3835,7 +3884,10 @@
         * more exactly
             * more accurately; more exaxtly
                 * She'll fly to California on Thursday, or rather, she will if she has to
-            * used to express 
+            * used to express  an opposite opinion
+                * The ending of the war is not cause for celebration, but rather for regret that it ever happend.
+        * preference
+            * instead of, used especially when you prefer one thing to another
 * make out
     * v
         * succeed
@@ -4076,6 +4128,10 @@
     * the cultivation of a plant for food.
 * paraphrase
     * to repeat something written or spoken using different words, often in a humorous form or in a simpler and shorter form that makes the original meaning clearer
+    * to express in a shorter, clearer, or different way that someone has said or written
+    * summarize
+    * To paraphrase Finkelstein, mathmetics is a language, like English
+    * The article only paraphrased Castro's words, and gave no direct quotes
 * look into something
     * to examine the facts about a problem or situation:
 * The Himalayas
@@ -4194,6 +4250,11 @@
     * something that is very annoying or not convenient
 * cut glass
     * glass with a decorative pattern cut into the surface
+* cut into something
+    * If an activity cuts into a period of time, it fills part of it, often a large part of it
+        * I don't like doing the shopping on Saturday afternoon because it cuts into my weekend.
+    * to make something less or smaller
+        * High costs cut into profit margins.
 * mosey
     * to walk or go slowly, usually without a special purpose
     * I'll just mosey down to the beach for a while
@@ -4436,9 +4497,213 @@
     * someone who is inteligent or good at leaning by studiying
         * David's never been much of scholar
 * woof
-
+* the public
+    * all ordinary people
+    * the public has right to know
+* research grant
+* further
+    * adv
+    * comparative of fur
+        * to a greater distance or degree, or at a more advanced level
+* go futher/take something further
+    * if you go or take something further, you take it to a more advanced stage
+* rightly or wrongly
+* customary
+* overcrowded
+* cut back to
+* off campus
+    * adv, adj
+    * outside of the area of land that contains the main buildings of a university or college
+* neighbourhood
+    * the area of a town that surrounds someone's home, or the people who live in this area
+    * they live in a wealthy neighbourhood
+    * I wouldn't like to live in the neighbourhood of an airport
+* congested
+    * adj
+    * too blocked or crowded and causing difficulties
+* be aware of
+    * people are aware of being observed
+* these days
+    * I'm keeping so many tihngs to myself thse days something was bound to slip out
+* bound
+    * certain
+        * adj
+        * certain or extremly like to happen
+            * be bound to
+            * You are bound to forget people's name occasionally
+        * be bound and determined
+        * to be seriously intending to do something
+        * I'll be bound
+            * I am certain
+    * forced
+        * having a moral or legal duty to do something
+            * The company is bound by a special agreement to involve the union in important decisions
+    * fastened
+    * direction
+* fog
+    * fogging/fogged/fogged
+    * weather
+        * n
+    * confusion
+        * v
+            * to make someone or something confused or uncertain
+            * alcohol fogs the brain
+            * to cover or be covered with fog
+* torment
+    * stop tourmenting me
+    * great mental suffering and unhappiness, or great physical pain
+        * The family said that they had endured years of torment and abuse at the hands of their neighbours
+* intercom
+* doorbell
+* buzzer
+* afford
+* pay for itself
+    * if something pays for itself, it works so well that it saves the same amount of money that it cost
+* competitive
+    * adj
+    * involving competition
+        * competitive sports
+        * a competitive person
+    * wanting very much to win or be more successful than other people
+* haywire
+* go haywire
+    * to stop working, often in a way that is very sudden and noticeable
+    * to start working in completely the wrong way
+        * my computer's gone haywire
+* amplify
+    * v, T
+    * to make something louder
+    * to increase the effects or strength of something
+        * These stories only amplified her fears.
+    * to explain something that you have said by giving more information about it
+        * would you care to amplify that remark?
+* death threat
+    * a treat to kill someone
+    * Our family have been getting death threats
+    * A plice guard was placed on her house after she received death threats
+* spin
+* backlash
+    * n, C
+* get in shape
+    * make body more beautiful; bring body to peak physical condition; get stronger, become physically strong; get in good physical condition
+    * I need to get in shape
+    * I used to be in terrible shape
+    * My brother wants to get in shape for basket ball
+* out of shape
+    * not physically  healthy enough for difficult excericse beacause you have not been involved in physical activities
+    * I'm so out of shpae that I get out of breath climbing the stairs
+* backlash
+    * a strong feeling among a group of people in reaction to a change or recent events in society or politics
+    * the 60s backlash against bourgeois mateliasm
+* in a reaction to
+* speculate
+    * guess
+    * trade
+* assess
+    * interviewers assess you relative to other candidates on that same question by the same interviewer
+* gril
+    * cook
+    * question
+        * to aska someone a lot of question for a long time
+        * he grils you on technical question
+* prep
+    * school work
+        * a school work that students, especially students at private schools, do at home or not during school time
+        * do you have much prep tonigh?
+    * preposition
+    * prepare
+        * to prepare youself or someone else to do something
+            * She said she was prepping for her new moview
+            * Are your staff fully prepped for managing the new system?
+* interview
+    * you will interwith four to six people, one f whom will be a lunch interviewer.
+* discouraged
+* it takes it out on someone
+    * to treat someone badly because you are upset or angry, even if they have done nothing wrong
+        * I know you had a bad day, but you done't have to take it out on me.
+* rapport
+    * a good understanding of someone and an ability to communicate well with them
+    * why do you think apologizing is important in maintaining good rapport?
+* audience
+* golf clubs
+* darts
+    * a game of darts
+    * play darts
+* dart
+    * a small pointed object that is thrown or shot as a weapon, or one that is thrown in the game of darts
+* adverse effect
+    * It would end up having adverse effect?
+    * The proposal could have an adverse effect
+* negative effect
+* opposite effect
+* subordinate
+    * Giving too much advice to your subordinate could have an opposite effect
+* abducted
+    * He got abducted by aliens!
+    * The granny was sure someone had abducted her cat, but everyone thought it just run away.
+* petrol
+* lie
+    * position
+        * lying/lay/lain
+        * to be in or move into a horizontal position on a surface
+            * to lie in bed
+            * to lie on a beach
+            * A cat lay in front of the fire
+            * He lies awake at night, worrying
+        * if something lies in particular place, position, or direction, it is in that place, position, or direction
+            * The river lies 30km to the south
+            * The team is lying third in the league
+            * Here lies the body of Mary Taylor
+            * There are several houses lying empty in the town
+            * The town lay in ruin
+            * The ship lies off the coast of Spain
+    * speak falsely
+        * lying/lied/lied
+* mean
+    * to intend
+        * I've been meaning to call you all week
+        * be meant to do something
+            * to be intendted to 
+            * These barries meant to 
+* compensate
+    * v, I
+        * to replace or balance the effect of something bad
+        * Beause my left eye is so weak, my right eye has to work harder to compensate
+        * compensate for
+    * v, T
+        * to pay someone money  because they have suffered injury, loss or damage
+        * compensate someone for something
+            * Nothing can compensate for this loss
+            * You compensate someone for something
+        * The goverment's promise to compensate victims of flood.
+        * The firm will compensate workers for their loss of earnings
+* make up for
+    * compensate for
+    * What she lacks in patience she makes up for in determination
+* refine
+    * it is commonly refined into various types of fuels
+* sabbatical
+    * a period of time when college or university teachers are allowed to stop their usual work in order to study or travel, usually while continuing to be paid
+    * to take/have a sabbatical
+    * She is on sabbatical for six monghs
+* nostalgic
+    * feeling happy and slightly sad when you think about things that happend in the past
+* straight
+    * adv
 
 ## Nuance
+* get it to work/get it working
+    * [meaning - “Get something to do” vs ”Get something doing” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/123991/get-something-to-do-vs-get-something-doing)
+* probably/perhaps/possibly/maybe
+    * [What is the difference between maybe, perhaps, possibly and probably? - Quora](https://www.quora.com/What-is-the-difference-between-maybe-perhaps-possibly-and-probably)
+* make an/the effor/take an/the effor
+    * [word choice - Can I say "take effort"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/146234/can-i-say-take-effort)
+* farther/further
+    * [‘Farther’ or ‘further’? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/farther-or-further)
+    * furtheest/furthest
+    * there is no difference in meaning
+    * further
+        * much more common
 * with regard to/in terms of/regarding
     * [with regard to vs in terms of | WordReference Forums](https://forum.wordreference.com/threads/with-regard-to-vs-in-terms-of.2219081/)
     * 
@@ -4643,14 +4908,17 @@
     * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
 * get/got/gotten
     * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
+    * [word choice - Difference between "I have got" and "I have gotten" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/5531/difference-between-i-have-got-and-i-have-gotten)
     * have got/'ve got/got -> have or must
+    * have gotten -> in US present perfect of to get
+    * have got -> in UK present perfect of to get
 
 
-## Greeting
+## Sentence
 * What have you been up to?
 * What are you up to?
     * [AEE 504: How to Respond to "What Are You Up To?" in English | All Ears English Podcast](https://www.allearsenglish.com/aee-504-respond-english/)
-
+* take me off speaker phone
 
 ## Slang
 * [The BEST British Street Slang - YouTube](https://www.youtube.com/watch?v=9Z8JqutRWrs)
@@ -4738,6 +5006,10 @@
     * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
 * on-call
     * pagedutyなどの障害の電話通知
+* False positive
+    * prediction was positive but prediction was false
+* True Negative
+    * prediction was negative and the prediction was true
 
 ## Reference
 * [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)
