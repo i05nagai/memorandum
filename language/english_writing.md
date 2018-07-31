@@ -41,6 +41,15 @@ title: English Writing
 * organize something in a logical way
 * In one study, 
 * Specifically,
+* It can be seen that
+* Subsequently
+* after that
+* finally
+* in the final stage
+* first of all
+* then
+* next
+* From the company's perspective
 
 
 * good control of grammar and vocabulary
