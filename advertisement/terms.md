@@ -94,12 +94,16 @@
     * Cost Per Mille
     * Advertiser pays the publisher per 1000 of visitors who the advertisement is shown to.
     * CPM = cost / 1000 impression
-* CPA
-    * Cost Per Action/Acquisition
-    * CPA = cost / action
+    * In CPM model, the advertiser is bearing both the risk in CTR and CVR
 * CPC
     * Cost Per Click
     * CPC = cost / clicks
+    * In CPC model, the advertiser is bearing the risk in CVR. the publisher is in the risk of CTR.
+* CPA
+    * Cost Per Action/Acquisition
+    * Action is such as a filled-out form
+    * CPA = cost / action
+    * In CPA model, the advertiser is bearing the no risk, but the publisher is bearing the both risk in CTR and CVR.
 * CPS
     * Cost Per Sale
     * CPS = Cost / Sales
@@ -109,11 +113,39 @@
 * CTR
     * Click Through Rate
     * CTR = clicks / impressions
-
 * CVR
     * ConVersion Rate
+* the number of clicks = the number of impressions x CTR
+* the number of actions = the number of clicks * CVR = the number of impressions * CVR * CTR
+
+
+Examples
 
 If you are paying 100,000USD for a campaign and you get 1,000,000 impressions, CTR = 10% and CVR=10%, what are the CPM, CPC, and CPA?
+
+* CPM = 100,000 USD / (1,000,000/1000) = 100 USD
+* CPC = 100,000 USD / (1,000,000 * CTR) = 1 USD
+* CPA = 100,000 USD / (1,000,000 * CVR * CTR) = 10 USD
+
+* CPM campaign
+    * eCPM = CPM
+    * Advertiser $a$ pay $m_{a}$ for a CPM-based campaign with a CPM rate $x_{a}$
+* CPC model
+    * Advertiser $a$ pay $m_{a}$ for a CPC-based campaign with a CPC rate $x_{a}$
+    * Observe the followings in given period
+        * the number of impressions
+        * the number of clicks
+        * the number of conversions/actions
+    * Revenue = the number of clicks * CPC
+    * eCPM = Revenue / (the number of impressions / 1000)
+* CPA model
+    * Advertiser $a$ pay $m_{a}$ for a CPA-based campaign with a CPA rate $x_{a}$
+    * Observe the followings in given period
+        * the number of impressions
+        * the number of clicks
+        * the number of conversions/actions
+    * Revenue = the number of conversions * CPA
+    * eCPM = Revenue / (the number of impressions / 1000)
 
 
 ## Reference
@@ -125,3 +157,4 @@ If you are paying 100,000USD for a campaign and you get 1,000,000 impressions, C
 * [11 Ad Tech Terms Everyone Should Know](https://blog.adroll.com/trends/ad-tech-terms-glossary)
 * [CPM, CPC, CPA, and the Transfer of Risk | Ad/Tech/Biz & Random Stuff](http://www.ronkato.com/cpm-cpc-cpa-and-the-transfer-of-risk/)
 * [WTF is advertising arbitrage? \- Digiday](https://digiday.com/marketing/wtf-arbitrage/)
+* [What is eCPM and how is it calculated? \- Revive Support](http://www.reviveconsultant.com/articles/what-is-ecpm-and-how-is-it-calculated/)
