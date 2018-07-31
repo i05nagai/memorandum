@@ -153,6 +153,11 @@ title: English Speaking
     * There used to be four cinema in the town. Now there is only one.
     * Did you use to eat a lot of sweets when you were a child?
     * I didn't use to like him / I used not to like him
+* get used to / be used to
+    * I can't used to getting up so early. I'm tired all the time
+    * He's not used to the weather here yet. He's finding it very cold
+    * You might find it strange at first but you'll get used to it
+    * He wasn't get used to the heat and he caught sunstroke
 * afford
 * have
     * I had an accident on my way home yesterday
