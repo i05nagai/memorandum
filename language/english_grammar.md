@@ -6,6 +6,16 @@ title: English Grammar
 Subjanctive mood
 
 * [Subjunctive Mood](http://englishplus.com/grammar/00000031.htm)
+* If you had just kept to yourself, none of this would have happend
+* If S past, S would/could
+    * If I were/If I was
+    * could
+        * would be able to
+        * was/were able to
+        * She could get a better job if she could speak English
+* If I had past, S would have past
+    * 
+* I wish past
 
 comparative
 
@@ -13,20 +23,52 @@ comparative
 * [英語の「比較」が苦手な人へ！比較級で知っておくべき6つのこと｜ 英語学習ボックス](http://eigo-box.jp/grammar/comparison-1/)
 * [The 比較級, the 比較級はかなり深い？応用を含めて完全に理解しよう！【やさしく語る英文法】 | まこちょ英語ブログ](https://www.makocho0828.net/entry/2017-09-06-the_%E6%AF%94%E8%BC%83%E7%B4%9A_the_%E6%AF%94%E8%BC%83%E7%B4%9A%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8A%E6%B7%B1%E3%81%84%EF%BC%9F%E5%BF%9C%E7%94%A8%E3%82%92%E5%90%AB%E3%82%81%E3%81%A6)
 * comparative degree
-    * 比較級
-* superlative degree
-    * 最上級
-* positive degree
-    * 元級
-* He is older than I by three years.
-* He is three years older than I
+    * He is older than I by three years.
+    * He is three years older than I
+* much/a lot/far/a bit/ a little/slightly
+* no/any
+* better and better/ more and more
+    * something changes continuously
+    * As I listend to hist story, I became more and more convinced that he was lying
+    * These days more and more people are leaning English
+* not as ... as/not so ... as
+    * Jack isn't as older as he looks
+    * Jack isn't as younger as he looks
+    * The twon centre wasn't as crowded as usual
+    * The weathe ris better today. It's not as cold
+    * Lisa didn't do as well in the exam as she had hoped
+* as ... as
+    * I got here as fast as I could
+    * Let's walk. It's as quick as taking the bus
+* twice as ... as/ three times as ... as
+    * Petrol is twice as pexpensive as it was a few years ago
+    * their house is about three times as big as ours.
+* the same as
+    * Laura's salary is the same as mine
+    * Laura's get the same salary as me.
+    * David's the same age as James
+    * Sarah hasn't changed. She still looks the same as she did ten years ago
+* The ... The ...
+    * The sooner the better
+    * The bigger the better
+    * When you're travelling, the less luggage you have the better
+    * The warmer the weather, the better I feel
+    * The sooner we leave, the earlier we will arrive
+    * The younger you are, the easier it is to learn
+    * The more expensive the hotel, the better the service
+    * The more electricity you use, the higher you bill will be
+    * The more I thought about the plan, the less I liked it
 * S+V the comparative degree the comparative degree S+V
     * The comparative degree S+V, the comparative degree S+V
 * The longer he's away, the more chance his feelings for you will fade
+* superlative degree
+* positive degree
 
 Coodinating conjunction
 
 * [Grammar Bytes! :: The Coordinating Conjunction](http://www.chompchomp.com/terms/coordinatingconjunction.htm)
+    * Coordinating conjunctions connect words, phrases, and clauses.
+    * subordination clause
 
 
 verb
@@ -45,8 +87,17 @@ active voices and passive voices
 [Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
 
 
+* past simple
+    * yesterday / last week/ from 2007 to 2010
+        * It didn't rain last week
+        * Did you see Anna this morning?
+        * Did you see Tim on Sunday?
 * present perfect tense
     * The present perfect is normally used to denote the present state of an action's being completed, that is, that the action took place before the present time.
+    * today/this week/since 2007
+        * It hasn't rained this week
+        * Have you seen Anna this mornign?
+        * Have you seenTim recently?
 * present perfect continuous
     * for an activity that has recently stopped or just stopped
         * You're out of breath. Have you been running?
@@ -61,6 +112,7 @@ active voices and passive voices
         * Silvia is a very good tennis player. She's been playing since she was eight.
         * Every morning they meet in the same cafe. They've been going there for years.
 * past perfect tense
+
 
 
 * adjective + to
