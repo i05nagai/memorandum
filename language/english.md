@@ -1962,6 +1962,11 @@
 * realistically
 * antiemetics
 * holistic
+    * dealing with or treating the whole of something or someone and not just a part
+    * My doctor takes a holistic approach to disease
+    * Ecological problem usually require holistic solutions
+* wholistic
+    * holistic
 * enlighten
     * I don't understand this. Could you englithen me?
 * modicum
@@ -4743,23 +4748,6 @@
     * He got abducted by aliens!
     * The granny was sure someone had abducted her cat, but everyone thought it just run away.
 * petrol
-* lie
-    * position
-        * lying/lay/lain
-        * to be in or move into a horizontal position on a surface
-            * to lie in bed
-            * to lie on a beach
-            * A cat lay in front of the fire
-            * He lies awake at night, worrying
-        * if something lies in particular place, position, or direction, it is in that place, position, or direction
-            * The river lies 30km to the south
-            * The team is lying third in the league
-            * Here lies the body of Mary Taylor
-            * There are several houses lying empty in the town
-            * The town lay in ruin
-            * The ship lies off the coast of Spain
-    * speak falsely
-        * lying/lied/lied
 * mean
     * to intend
         * I've been meaning to call you all week
@@ -4791,8 +4779,109 @@
     * feeling happy and slightly sad when you think about things that happend in the past
 * straight
     * adv
+* acrid odor
+    * I smell acrid odor and know that some of my fair has been signed off
+* comrade
+    * a friend, especially one who you have been involved in difficult or dangerous, usually military, activities with
+    * Many of his comrades were killed in the battle
+* street cred
+    * street credibility
+    * a quality that makes you likely to be accepted by ordinary young people who live in towns and cites because you have the same fashions, styles, culture, or opinions
+    * many celebrities develop a working class accent to increase their street credibility
+    * He was the first person to really bring street cred to white rap
+* odorless
+    * odourless
+* Philology
+* exhibition
+* someone's number is up
+    * when your number is up, you are going to die
+* suck it up
+    * to endure something painful, unpleasant, or otherwise dissatisfactory; to deal with or recover from some hardship or stress
+* gut check
+    * it's gut-check timae
+    * a moment in which one stops to seriously evaluate something or one's state
+    * It's gut check time for the defending champions, who find themselves down 10 points with just two minutes left in the game
+* recess
+    * pause
+        * a period of time in the year when the members of a parliament, court of law, or other government organization are not meeting
+        * in school, a period of time between classes when children do not study
+    * space
+        * a small area in a room that is formed by one part of a wall being set back further than other parts
+            * The room has a recess designed to hold bookshelves
+        * a secret or hidden place
+            * Psychoanalysts aim to explore the deepest/innermost recesses of the mind.
+* slouch
+* paper bill
+* briny
+    * briny water is water that contains a lot of sal
+    * the briny sea
+* drive someone bananas
+    * drive someone crazy
+* allegiance
+    * loyalty and support for a ruler, country, group, or belief
+    * Soldiers have to sear allegiance to the Crown
+    * In many American shools, the students pledge allegiance to the flag at the begining of the shool day
+* breathable
+* rub
+    * She yawn
+* entertain with
+    * My brother and I entertained our parents with dancing and songs on Parents' Day
+* experience failure
+    * Experiencing failure should not dissuade you from trying to reach your goals
+* dissuade
+    * to persuade someone not to do something
+    * I tried to dissuade her from leaving
+* get weight
+    * Many sutudents gain weight during the first year of college
+* gather together
+    * The girl Scounts gather together at school every Friday
+* get into debt
+    * My friend's family got into debt due to his father's business failure
+* give a lesson in
+    * Our school librarian gave us lessons in how to use the library
+* give support to
+    * My parents are always trying to give support to me
+* have a chat with
+    * Father had a chat with my younger sister about her behavior at shool
+* have a passion for
+    * I really have a passion for music
+* have an influence on
+    * Friends have a avery strong influence onteenagers
+* rye
+    * grow a rye plant in water
+* crabgrass
+* unity of command
+* rationale
+    * the reasons or intentions that cause a particular set of beliefs or actions
+    * I dont't undersnatd the rationale for these restrictions
+* registance gene
+* jumping gene
+    * transposons
+* excerpt
+    * a short part taken from a speech, book, film
+    * The beginning of this excerpt shows t hat the profesor is talking about different ways to maange natrual resources
+* aquifer
+    * a layer of rock, sand, or earth that contains water or allows water to pass through it
+    * dryp up the natural discharge points of those aquifer systems
+* pump out
+* kids' kids
+    * your kids' kids
+* chute
+    * plural: shoots
+* shoot
+    * plant
+        * C
+        * The first part of a plant to appear above the ground as it develops from a seed or any new growth on an laready existing plant
+        * Both produce many shoots from a single seed
+* doodle
+    * to draw pictures or patterns while thinking about something else or when you are boring
+    * she's doodled all over her textbooks.
+* flat tire
+
 
 ## Nuance
+* work a job/do a job
+    * [Do we "work a job"? Or "do a job"? Or both?](https://www.usingenglish.com/forum/threads/133423-Do-we-quot-work-a-job-quot-Or-quot-do-a-job-quot-Or-both)
 * get it to work/get it working
     * [meaning - “Get something to do” vs ”Get something doing” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/123991/get-something-to-do-vs-get-something-doing)
 * probably/perhaps/possibly/maybe
