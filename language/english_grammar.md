@@ -82,9 +82,9 @@ noun
 * uncountable noun
 
 
-active voices and passive voices
-
-[Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
+* passive
+    * active voices and passive voices
+    * [Voice:  Active and Passive](https://webapps.towson.edu/ows/activepass.htm)
 
 
 * past simple
