@@ -1,5 +1,8 @@
 ## Terms
 
+* billboard/banner
+    * boxes on web pages to display ads
+    * billboard is a bit larger/wider than banner
 * remnant
     * remnant inventory
     * stock of advertizement in a publisher

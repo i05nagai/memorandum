@@ -1,49 +1,15 @@
 ---
-title: Introduction to Online Optimization
+title: Introduction to Online Optimization Chapter02
 ---
 
 ## Introduction to Online Optimization
 
-
-## 1. Introduction
-
-
-* $\mathcal{Z}$,
-    * domain of observations
-* $Z_{1}, \ldots, Z_{n} \in \mathcal{Z}$,
-    * i.i.d
-* $\mathcal{A}$,
-    * set of possible actions
-* $a(Z_{1}, \ldots, Z_{n}) \in \mathcal{A}$,
-    * decision function
-* $l:\mathcal{A} \times \mathcal{Z} \rightarrow \mathbb{R}_{\ge 0}$,
-    * loss function
-* $\mathrm{E}[l(a(Z_{1}, \ldots, Z_{n}), Z)]$,
-    * average loss
-
-Objectives is the minimize the exccess risk:
-
-$$
-    r_{n}
-    :=
-    \mathrm{E}
-    \left[
-        l(a(Z_{1}, \ldots, Z_{n}), Z)
-        -
-        \inf_{a \in \mathcal{A}}
-            l(a, Z)
-    \right]
-    .
-$$
-
-
 ## 2. Online optimization on the simplex
-
 
 #### Definition.
 * $d \ge 2$,
-
-$(d-1)$-simplex $\Delta_{d}$
+* $\Delta_{d}$,
+    * $(d-1)$-simplex
 
 $$
     \Delta_{d}
@@ -57,10 +23,23 @@ $$
     .
 $$
 
+<div class="end-of-statement" style="text-align: right">■</div>
+
+We only consider the problem in case that
+
+* $\mathcal{A} := \Delta_{d}$,
+* $$\mathcal{Z} := \{1, \ldots, d\}$$,
+
+#### Definition.
+
 Cumulative regret for action set $\Delta_{d}$ is defined by
 
 $$
-    R_{n}
+    p := (p_{1}, \ldots, p_{n}),\
+    \
+    z := (z_{1}, \ldots, z_{n}),\
+    \
+    R_{n}(p, z)
     :=
     \sum_{t=1}^{n}
         l(p_{t}, z_{t})
@@ -75,7 +54,11 @@ If action set is unit vectors, we write regret for the action set
 
 $$
 \begin{eqnarray}
-    R_{n}^{E}
+    p := (p_{1}, \ldots, p_{n}),\
+    \
+    z := (z_{1}, \ldots, z_{n}),\
+    \
+    R_{n}^{E}(p, z)
     :=
     \sum_{t=1}^{n}
         l(p_{t}, z_{t})
@@ -89,8 +72,85 @@ $$
 
 where $e_{i}$ is $i$-dim unit vector.
 
-The upper bound of $R_{N}$ is called regret bounds.
-The upper bound of $R_{N}^{E}$ is called expert regret bounds.
+In case of randomized predition,
+
+* $$\bar{\mathcal{A}}$$,
+    * a set of $$\{1, \ldots, d\}$$-valued multinomial random variables
+* $$\mathcal{Z} := \{1, \ldots, d\}$$,
+* $Z_{t}$,
+    * $\mathcal{Z}$-valued r.v.s
+* $I_{t}$,
+    * $\mathcal{Z}$-valued multinomial r.v.s
+    * player choice at $t$,
+* $\bar{\ell}:\mathcal{Z} \times \mathcal{Z} \rightarrow \mathbb{R}_{\ge 0}^{d}$,
+    * loss function for randomized prediction
+
+$$
+\begin{eqnarray}
+    I := (I_{1}, \ldots, I_{n}),\
+    \
+    Z := (Z_{1}, \ldots, Z_{n}),\
+    \
+    R_{n}(I, Z)
+    :=
+    \mathrm{E}
+    \left[
+        \sum_{t=1}^{n}
+            \bar{\ell}(I_{t}, Z_{t})
+        -
+        \inf_{I \in \mathcal{A}}
+            \sum_{t=1}^{n}
+                \bar{\ell}(I, Z_{t})
+    \right]
+\end{eqnarray}
+$$
+
+The p.d.f. of multinomial distribution is identified as an element of $\Delta_{d}$.
+We can interpret the randomized prediction to a non-randomized problem.
+
+$$
+\begin{eqnarray}
+    \mathcal{A}
+    & := &
+        \{
+            p \in \Delta_{d}
+            \mid
+            \exists I \in \bar{\mathcal{A}}, p \text{ is distribution of } I
+        \}
+    \nonumber
+    \\
+    \ell(p, Z_{t})
+    & := &
+        \mathrm{E}
+        \left[
+            \bar{\ell}(I(p), Z_{t})
+        \right]
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    I := (p_{1}, \ldots, p_{n}),\
+    \
+    Z := (Z_{1}, \ldots, Z_{n}),\
+    \
+    R_{n}(p, Z)
+    :=
+    \sum_{t=1}^{n}
+        \ell(p_{t}, Z_{t})
+    -
+    \inf_{p \in \mathcal{A}}
+        \sum_{t=1}^{n}
+            \ell(p, Z_{t})
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition.
+* The upper bound of $R_{N}$ is called regret bounds.
+* The upper bound of $R_{N}^{E}$ is called expert regret bounds.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -373,6 +433,7 @@ $$
         }
         \quad
         (\because \eqref{exp_strategy_prediction})
+        \label{theorem_02_01_inequality}
     .
 \end{eqnarray}
 $$
@@ -642,11 +703,342 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 #### Theorem 2.3
+* $(\sigma_{i, t})_{i = 1, \ldots, d, t = 1, \ldots, n}$,
+    * I.I.D. Rademacher r.v.s
+* $$\mathcal{Z} := \{0, 1\}^{d}$$,
+* $$l:\{1, \ldots, d\} \times \mathcal{Z} \rightarrow \mathbb{R}$$,
+    * a loss function
+    * $\ell(p_{t}, z_{t})) := p^{\mathrm{T}}z$,
 
+$$
+    \sup_{n \in \mathbb{N}, d \in \mathbb{N}}
+    \sup_{z \in \mathcal{Z}}
+        \frac{
+            R_{n}(a, z)
+        }{
+            \sqrt{(n/2)\log d}
+        }
+    \ge
+    1
+    .
+$$
 
 #### proof.
+Let $$(\epsilon_{t, i})_{i = 1, \ldots, d, t = 1, \ldots, n}$$ be I.I.D. Bernoulli random variables with parameter $1/2$.
+Let $$Z_{t} := (\epsilon_{1, t}, \ldots, \epsilon_{n, t})$$ be probablistic adversary.
+We compute the expected regret.
+Let $I_{t}$ be player choice at $t$.
+$I_{t}$ is probablistic choise based on observations $$(Z_{1}, \ldots, Z_{t-1})$$, that is, a $$\sigma(Z_{1}, \ldots, Z_{t-1})$$ measurable $$\{1, \ldots, d\}$$-valued multinomial random variable.
+The distribution of $I_{t}$ is given by $p_{t} \in \Delta_{d}$.
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        Z_{t, I_{t}}
+    \right]
+    & = &
+        \mathrm{E}
+        \left[
+            \mathrm{E}
+            \left[
+            \left.
+                Z_{t, I_{t}}
+            \right|
+                Z_{1},
+                \ldots,
+                Z_{t-1}
+            \right]
+        \right]
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}
+        \left[
+            \mathrm{E}
+            \left[
+            \left.
+                \epsilon_{t, I_{t}}
+            \right|
+                Z_{1},
+                \ldots,
+                Z_{t-1}
+            \right]
+        \right]
+    \nonumber
+    \\
+    & = &
+        \frac{1}{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        R_{n}(I, Z)
+    \right]
+    & = &
+        \mathrm{E}
+        \left[
+            \sum_{t=1}^{n}
+                Z_{t, I_{t}}
+            -
+            \min_{I_{t} \in \bar{\mathcal{A}}}
+                \sum_{t=1}^{n}
+                    Z_{t, I_{t}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \frac{ n }{ 2 }
+        -
+        \mathrm{E}
+        \left[
+            \min_{I_{t}}
+                \sum_{t=1}^{n}
+                    \epsilon_{t, I_{t}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \frac{ n }{ 2 }
+        +
+        \mathrm{E}
+        \left[
+            \max_{I_{t}}
+                \sum_{t=1}^{n}
+                    -
+                    \epsilon_{t, I_{t}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \frac{ 1 }{ 2 }
+        \mathrm{E}
+        \left[
+            \max_{I_{t}}
+                \sum_{t=1}^{n}
+                    \left(
+                        1
+                        -
+                        2\epsilon_{t, I_{t}}
+                    \right)
+        \right]
+    \nonumber
+    \\
+    & = &
+        \frac{ 1 }{ 2 }
+        \mathrm{E}
+        \left[
+            \max_{I_{t}}
+                \sum_{t=1}^{n}
+                    \sigma_{t, I_{t}}
+        \right]
+    \nonumber
+    \\
+    & \ge &
+        \frac{ 1 }{ 2 }
+        \mathrm{E}
+        \left[
+            \max_{i=1, \ldots, d}
+                \sum_{t=1}^{n}
+                    \sigma_{t, i}
+        \right]
+\end{eqnarray}
+$$
+
+where $\sigma_{i, t} := 1 - 2 \epsilon_{i,t}$.
+For all $n, d \in \mathbb{N}$,
+
+$$
+\begin{eqnarray}
+    \sup_{n, d \in \mathbb{N}}
+    \sup_{z \in \mathcal{Z}}
+        \frac{
+            R_{n}(a, z)
+        }{
+            \sqrt{(n/2)\log d}
+        }
+    & \ge &
+        \frac{
+            \mathrm{E}
+            \left[
+                R_{n}(I, Z)
+            \right]
+        }{
+            \sqrt{(n/2)\log d}
+        }
+    \nonumber
+    \\
+    & \ge &
+        \frac{
+            \mathrm{E}
+            \left[
+                \max_{i = 1, \ldots, d}
+                    \sum_{t=1}^{n}
+                        \sigma_{t, i}
+            \right]
+        }{
+            \sqrt{2}
+            \sqrt{n\log d}
+        }
+    .
+\end{eqnarray}
+$$
+
+Taking the limit of the right hand side, we obtain the equation.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.5 Anytime strategy
+
+
+#### Theorem 2.4
+* $\ell:\mathcal{A} \times \mathcal{Z} \rightarrow [0, 1]$,
+    * convex loss
+
+The Exp strategi wyt time-varying parameter $$\eta_{t} := 2\sqrt{\frac{\log d}{t}}$$ satisfies for all $n \ge 1$,
+
+$$
+    R_{n}^{E}
+    \le
+    \sqrt{n \log d}
+    .
+$$
+
+#### proof.
+Let 
+
+$$
+\begin{eqnarray}
+    w_{t, i}
+    & := &
+        \exp
+        \left(
+            -\eta_{t}
+            \sum_{s=1}^{t-1}
+                \ell(e_{i}, z_{s})
+        \right)
+    \nonumber
+    \\
+    W_{t}
+    & := &
+        \sum_{i=1}^{d}
+            w_{t, i}
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \zeta_{t}
+    & := &
+        \frac{1}{\eta_{t}}
+        \log
+        \left(
+            \mathrm{E}
+            \left[
+                \exp
+                \left(
+                    -\eta_{t}
+                    \ell(e_{I}, z_{t})
+                \right)
+            \right]
+        \right)
+    \nonumber
+    \\
+    P(I = i)
+    & := &
+        \frac{
+            w_{t, i}
+        }{
+            W_{t}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+As we already proved in $$\eqref{theorem_02_01_inequality}$$, $\zeta_{t}$ satisfies
+
+$$
+    \zeta_{t}
+    \le
+    -\ell(p_{t}, z_{t})
+    +
+    \frac{\eta_{t}}{8}
+    .
+$$
+
+
+$$
+\begin{eqnarray}
+    L_{i, t}
+    & := &
+        \sum_{s=1}^{t}
+            \ell(e_{i}, z_{t})
+    \nonumber
+    \\
+    \Phi_{t}(\eta)
+    & := &
+        \frac{1}{\eta}
+        \log
+        \left(
+            \frac{1}{d}
+            \sum_{i=1}^{d}
+                \exp(-\eta L_{i, t})
+        \right)
+\end{eqnarray}
+
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.7 Online finite optimization
+
+* $$\mathcal{A} := \{1, \ldots, d\}$$,
+* $\ell: \mathcal{A} \times \mathcal{Z} \rightarrow [0, 1]$,
+
+
+#### Example
+* $$\mathcal{A} := \mathcal{Z} := \{0, 1\}$$,
+* $\ell(a, z) := 1_{a \neq z}$,
+* $a_{t}$,
+    * player's choice
+
+Suppose $$z_{t} := 1 - a_{t}$$.
+
+$$
+\begin{eqnarray}
+    \ell(a_{t}, z_{t})
+    & = &
+        1
+    \nonumber
+    \\
+    \sum_{t=1}^{n}
+        \ell(a_{t}, z_{t})
+    & = &
+        n
+    \nonumber
+    \\
+    \min_{a \in \mathcal{A}}
+        \sum_{t=1}^{n}
+            \ell(a_{t}, z_{t})
+    & = &
+        n
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+### 2.7.1. Linearization of the game
+
 
 
 ## Reference

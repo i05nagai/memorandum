@@ -1,3 +1,7 @@
+---
+title: Methods for constructing a Yield Curve
+---
+
 # Methods for constructing a Yield Curve
 
 ## Symbol

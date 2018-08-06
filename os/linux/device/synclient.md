@@ -109,6 +109,22 @@ Use 3 finger as middle clik
 synclient TapButton2=3 TapButton3=2
 ```
 
+### Stop scrolling after my fingers don't touch
+[touchpad \- Stop Scrolling on fingers up \- Ask Ubuntu](https://askubuntu.com/questions/640444/stop-scrolling-on-fingers-up)
+
+```
+# must be 0
+synclient | grep CoastingSpeed
+```
+
+* Option "CoastingSpeed" "float"
+    * Coasting threshold scrolling speed. 0 disables coasting. Property: "Synaptics Coasting Speed"
+
+```
+synclient CoastingSpeed=0
+```
+
 ## Reference
 * [Touchpad Synaptics \- ArchWiki](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
 * [Looking for a way to improve synaptic/touchpad palm detection \- Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/28306/looking-for-a-way-to-improve-synaptic-touchpad-palm-detection)
+* [SYNAPTICS\(4\) manual page](https://www.x.org/releases/X11R7.5/doc/man/man4/synaptics.4.html)
