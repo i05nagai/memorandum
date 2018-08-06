@@ -8,7 +8,7 @@ title: English Math
 * [数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
 
 
-* Taking the limit of function on the left hand side
+* Taking the limit of the function on the left hand side
 * A follow B
 * B is followed by A
 * It follows that A
