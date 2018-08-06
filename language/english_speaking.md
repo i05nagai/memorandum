@@ -193,6 +193,15 @@ title: English Speaking
 * Urgent business kept me from coming yesterday
 * What Made you think that he could defeat that wrestler?
 * If I had to guess, I would say it's a proof that is clever or amusing in some way but not particularly important, meaningful
+* delay
+    * Long delays are expected on the motorways
+    * The opening of this section of the road is delayed until September
+    * Our meeting was delayed for ten minutes
+    * Big companies often delay paying their bills
+* subsequent
+    * The book discusses his illness and subsequent resignation from politics
+    * Those explosions must have been subsequent to our departure, because we didn't here anything
+    * The mistakes were corrected in a subsequent edition of the book
 
 
 
