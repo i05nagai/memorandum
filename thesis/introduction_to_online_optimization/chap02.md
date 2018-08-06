@@ -433,6 +433,7 @@ $$
         }
         \quad
         (\because \eqref{exp_strategy_prediction})
+        \label{theorem_02_01_inequality}
     .
 \end{eqnarray}
 $$
@@ -853,6 +854,7 @@ For all $n, d \in \mathbb{N}$,
 
 $$
 \begin{eqnarray}
+    \sup_{n, d \in \mathbb{N}}
     \sup_{z \in \mathcal{Z}}
         \frac{
             R_{n}(a, z)
@@ -870,7 +872,7 @@ $$
         }
     \nonumber
     \\
-    & = &
+    & \ge &
         \frac{
             \mathrm{E}
             \left[
@@ -886,9 +888,157 @@ $$
 \end{eqnarray}
 $$
 
-Taking left side 
+Taking the limit of the right hand side, we obtain the equation.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.5 Anytime strategy
+
+
+#### Theorem 2.4
+* $\ell:\mathcal{A} \times \mathcal{Z} \rightarrow [0, 1]$,
+    * convex loss
+
+The Exp strategi wyt time-varying parameter $$\eta_{t} := 2\sqrt{\frac{\log d}{t}}$$ satisfies for all $n \ge 1$,
+
+$$
+    R_{n}^{E}
+    \le
+    \sqrt{n \log d}
+    .
+$$
+
+#### proof.
+Let 
+
+$$
+\begin{eqnarray}
+    w_{t, i}
+    & := &
+        \exp
+        \left(
+            -\eta_{t}
+            \sum_{s=1}^{t-1}
+                \ell(e_{i}, z_{s})
+        \right)
+    \nonumber
+    \\
+    W_{t}
+    & := &
+        \sum_{i=1}^{d}
+            w_{t, i}
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \zeta_{t}
+    & := &
+        \frac{1}{\eta_{t}}
+        \log
+        \left(
+            \mathrm{E}
+            \left[
+                \exp
+                \left(
+                    -\eta_{t}
+                    \ell(e_{I}, z_{t})
+                \right)
+            \right]
+        \right)
+    \nonumber
+    \\
+    P(I = i)
+    & := &
+        \frac{
+            w_{t, i}
+        }{
+            W_{t}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+As we already proved in $$\eqref{theorem_02_01_inequality}$$, $\zeta_{t}$ satisfies
+
+$$
+    \zeta_{t}
+    \le
+    -\ell(p_{t}, z_{t})
+    +
+    \frac{\eta_{t}}{8}
+    .
+$$
+
+
+$$
+\begin{eqnarray}
+    L_{i, t}
+    & := &
+        \sum_{s=1}^{t}
+            \ell(e_{i}, z_{t})
+    \nonumber
+    \\
+    \Phi_{t}(\eta)
+    & := &
+        \frac{1}{\eta}
+        \log
+        \left(
+            \frac{1}{d}
+            \sum_{i=1}^{d}
+                \exp(-\eta L_{i, t})
+        \right)
+\end{eqnarray}
+
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.7 Online finite optimization
+
+* $$\mathcal{A} := \{1, \ldots, d\}$$,
+* $\ell: \mathcal{A} \times \mathcal{Z} \rightarrow [0, 1]$,
+
+
+#### Example
+* $$\mathcal{A} := \mathcal{Z} := \{0, 1\}$$,
+* $\ell(a, z) := 1_{a \neq z}$,
+* $a_{t}$,
+    * player's choice
+
+Suppose $$z_{t} := 1 - a_{t}$$.
+
+$$
+\begin{eqnarray}
+    \ell(a_{t}, z_{t})
+    & = &
+        1
+    \nonumber
+    \\
+    \sum_{t=1}^{n}
+        \ell(a_{t}, z_{t})
+    & = &
+        n
+    \nonumber
+    \\
+    \min_{a \in \mathcal{A}}
+        \sum_{t=1}^{n}
+            \ell(a_{t}, z_{t})
+    & = &
+        n
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+### 2.7.1. Linearization of the game
+
 
 
 ## Reference
