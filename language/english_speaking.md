@@ -718,6 +718,7 @@ title: English Speaking
 * At the risk of boring you, let me give you just an overview of Plato's ethcal theory.
 * focus
     * His focus is on the safe yield approch to managing underground water supplies
+    * Attension has also focused on add deposition effects on a wide range of crops
 * point of view
     * What is the professor's point of view cncerning the method of safe yield?
 * view
@@ -761,6 +762,8 @@ title: English Speaking
     * In real speach, people somtimes misspeak
 * redunduncy
     * to eliminate redunduncy
+* associated with
+    * a mental illness associated with particular personality traits
 
 
 ## comparative
