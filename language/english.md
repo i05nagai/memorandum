@@ -4877,6 +4877,11 @@
     * to draw pictures or patterns while thinking about something else or when you are boring
     * she's doodled all over her textbooks.
 * flat tire
+* blooper
+    * a ffunny mistake made by an actor during the making of a film or television programme and usually removed before the film or progamme is shown
+    * bloopers show
+* outtake
+    * a short part of a film or television progamme or music record that that was removed and not included, usually because it contains mistakes
 
 
 ## Nuance
