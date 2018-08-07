@@ -4,7 +4,7 @@ title: English Writing
 
 ## English Writing
 
-* Contrary to
+* Basically
 * It/That would be nice of you
     * [What is the exact meaning of "That would be nice of you"? - Learn english - italki Answers](https://www.italki.com/question/337044)
     * "that would be ___" to accept someone's offer
@@ -24,20 +24,17 @@ title: English Writing
 * tend to be
 * vary from one person to another
 * be capable of
-* on the other hand
 * In one's opinion,
 * in terms of
 * when it comes to this point,
-* to sum up
 * normally
 * it's claim to 
-* As a result,
 * it is questionable that/whether
 * rightly or wrongly
 * Personally, 
-* Besides,
 * Similarly,
 * nothing but
+* anything but
 * organize something in a logical way
 * In one study, 
 * Specifically,
@@ -50,6 +47,37 @@ title: English Writing
 * then
 * next
 * From the company's perspective
+* In that case,
+* Those who support ... argue that 
+    * e.g. Those who support building off campus argume that building new housing on campus would further increase the number of cars on and around campus and consume space that could be better used for future projects that the entire university community could benefit from.
+* supporting opinition
+    * Supporters also say that 
+* reasons
+    * Two of the meajor factors influencing the decision will be parking and space.
+* Comparison
+    * Contrary to
+    * on the other hand
+* colclusion
+    * to sum up
+    * Therefore
+    * As a result,
+    * Consequently
+    * Accordingly
+    * Hence
+    * Thus,
+    * Because of this,
+    * For these reasons,
+* adding information
+    * Further,
+    * Besides,
+    * Furthermore,
+    * Moreover,
+    * In addition to
+    * What is more,
+* introducin reason
+    * I feel this way for the following reasons.
+* middle class
+* I believe there is no person in my community more ... than ...
 
 
 * good control of grammar and vocabulary
@@ -64,6 +92,7 @@ title: English Writing
 * lose reserach funding
 * get fewer invitations to academic converence
 * be considered entertainers by their peers
+* There are minor pronunciation and intonation erros.
 
 
 

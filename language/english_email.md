@@ -4,7 +4,6 @@ title: English Email
 
 ## English Email
 
-
 * I'm contacting you becauase
 * I’ve attached
 

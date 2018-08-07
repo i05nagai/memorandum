@@ -4,6 +4,8 @@ title: company
 
 ## company
 
+* Quoine
+    * [QUOINE | Financial Services on the Blockchain](https://quoine.com/)
 * GumGum
     * [About \| GumGum](https://gumgum.com/about-us)
     * GumGum is an artificial intelligence company with a focus on computer vision. 

@@ -27,6 +27,8 @@ title: English Pronunciation
     * e/ɪ
         * [Short Vowels - 6](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel6)
     * æ/a
+    * æ/ʌ
+        * [Short Vowels - 3](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel3)
 
 * mouth is almost closed, sound comes from top of the mouth
     * iː
@@ -75,6 +77,7 @@ title: English Pronunciation
         * [IPA /ɑ/ Pronunciation: How To Pronounce – TOP – HOT – PALM - YouTube](https://www.youtube.com/watch?v=JJfm4ZiqXWk)
     * ɒ
         * [Open back rounded vowel - Wikipedia](https://en.wikipedia.org/wiki/Open_back_rounded_vowel)
+        * [Short Vowels - 4](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/shortvowel4)
         * short o sound
         * Open back rounded vowel
     * ɑ
@@ -144,8 +147,13 @@ title: English Pronunciation
         * [Assimilation of /t/ followed by /j/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-29)
         * [The gemination of /t/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-23)
             * after a consonant
+            * it takes two to tango become ittakes two to tango
         * [Assimilation of /t/ and /p/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-1)
             * if one word ends in a /t/ sound and the next word begins in a /p/ sound, the /t/ is pronounced slightly differently.
+        * [assimilation of /t/ followed by /k/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-28)
+            * get cold, short cut, that cake
+            * If the sound /k/ comes after a vowel and before /k/, it can change to /k/
+            * If you want to maintain your street cred
     * d
         * plosive
         * [IPA /d/ Pronunciation: How To Pronounce – DESK – DOLLAR – DANCE - YouTube](https://www.youtube.com/watch?v=ISumskR6FHw)
@@ -173,6 +181,10 @@ title: English Pronunciation
         * [assimilation of /s/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-21)
             * /s/ + /j/ -> /ʃj/
             * /s/ + /ʃ/ -> /ʃʃ/
+        * ['Twinning' or Gemination](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-3)
+            * he looks sad' becomes 'he lookssad'
+            * when a word ends in /s/ and the next word begin with /s/, the two sounds come together
+
     * z
 * .
     * ʃ
@@ -190,6 +202,8 @@ Single Consonatns
         * /h/ is often not pronounced after a consonant
 * m
 * n
+    * [Assimilation of /n/ followed by /p/](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-8)
+    * when a word ends with /n/ and the next word begins with /p/, /b/, /w/ or /m/, the /n/ may change to /m/
 * ŋ
 * l
 * r
@@ -204,16 +218,38 @@ Single Consonatns
 * Heteronyms
 
 
-Weak form
-
-* [Pronuciation From](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-eP-22)
-* [Pronunnciation Been](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-20)
-    * -> /bɪn/
 
 Plosive
 
 * [Plosives](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-17)
     * when one word ends in a plosive sound and the next begins in another consonant sound, we don’t always hear the release of the plosive sound
     * a stop with no audible release
+
+Special words
+
+* and
+    * when and is an unstressed conjunciton, the /d/ sound at the end is often not pronounced and the /æ/ become /ə/ or is not pronounced at all
+    * [And](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-12)
+* been
+    * weak form
+    * [Pronunnciation Been](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-20)
+        * /biːn/ -> /bɪn/
+        * I should've been more careful
+* was/were
+    * ['was' and 'were'](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-13)
+        * /wəz/
+        * /wə/
+        * You were thinking I was going to have an accident
+* have to
+* have
+    * [Contracted 'have'](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-ep-26)
+    * /əv/
+    * I'd've been late
+    * I should've read the instructions
+* can
+* from
+    * weak form
+    * [Pronuciation From](http://www.bbc.co.uk/learningenglish/english/features/pronunciation/tims-pronunciation-workshop-eP-22)
+
 
 ## Reference
