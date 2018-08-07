@@ -265,9 +265,87 @@ title: English word
     * In wine marking, grape sugar is fermented by the action of yeast
 * downfall
     * The scandal that led to the president's downfall
+    * an addiction to gambling that proved to be her downfall
+    * It was this which led to his downfall
 * mentor
+    * The key feature of effective mentor scheme is a genuine consistent interest the part of the mentor for the young person
 * statue
 * opponent
+* refine
+    * This plant refines sugar
+* pier
+* contemplate
+    * We have been contemplating a plan for a graduation trip
+    * He had been contemplated suicide
+    * Did you ever contemplate resigning?
+* crucial
+    * The exam is crucial for you
+* frantic
+    * We were all frantic, cheering our team after it won the game
+    * There was a still no news of Jill, and her here parents are getting frantic
+    * Your mother's been frantic with worry wondering where you've been
+    * Despite our frantic efforts, we were unable to save the boy's life
+* arid
+    * People have been to irrigate arid lands by drilling wells
+    * semi-arid region
+* index
+    * Consumer Price Index
+* combustible
+    * Don't use fire here! All the materials are combustible
+* estuary
+    * Hong Kong was just accross the Pearl estuary within clear broadcast range
+    * I sould like to see the rivers that flow int othe estuary, and ideed the entire Bristol channel cleaned
+* vent
+    * hydrothermal vent
+* endure
+    * There will be a time when you will have to endure hardship
+* transition
+* bounce
+    * Tom bounced on the trampoline like a gymnast
+* statutory
+    * You must keep the statutory speed on the expressway
+* constitution
+* dtrain
+    * Facing increasing rainfall in the past couple of years, the municipal government has drawn up plants to better drain this district's road and public facilities
+* demanding
+    * This work is demanding. But i know its importanc
+* aquatic
+    * A water strider is aquatic
+* geothermal
+    * Geothermal power plants may be a promissing alternative
+* branch
+* ornament
+* trait
+    * a mental illness associated with particular personality traits
+    * She shows both traits assigned to the men, immportality and dishonesty
+    * Pride seems to be one of our family traits
+* flora
+    * Tourism is damaging the flora and fauna of the island
+    * the flola of the Alps
+* contaminate
+* innovation
+* dormant
+    * The seed remain dormant until the spring
+    * a huge dormant volcano
+    * Dan's arrival had aroused all her dormant sexuality
+* opposition
+* deposition
+    * The deposition of marine sediments
+    * Attension has also focused on add deposition effects on a wide range of crops
+* implicit
+* scruitiny
+    * Careful scrutiny of the company's accounts revlead a whole series of erros
+    * They activities have come under police scrutiny
+* fallacious
+* quiescent
+* glacial
+* aquifer
+* Orient
+* fur
+* enchant
+* cave
+* concern
+
 
 ## plant
 https://study.com/cimages/multimages/16/diagramplanteudicot.png
