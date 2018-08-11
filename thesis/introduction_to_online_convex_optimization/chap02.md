@@ -27,34 +27,70 @@ We write $A \preccurlyeq B$ if $B-A$ is positive semidefinite.
 $f$ is said to be $\alpha$-strongly convex if
 
 $$
-    f(x)
-    +
-    \nabla f(x)^{\mathrm{T}}
-    (y - x)
-    +
-    \frac{\alpha}{2}
-    \|
-        y - x
-    \|^{2}
-    \le
-    f(y)
+\begin{eqnarray}
+    & &
+        f(x)
+        +
+        \nabla f(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+        \le
+        f(y)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \nabla f(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+        \le
+        f(y)
+        -
+        f(x)
+        \label{definition_alpha_strongly}
+\end{eqnarray}
     .
 $$
 
 $f$ is said to be $\beta$-smooth if
 
 $$
-    f(x)
-    +
-    \nabla f(x)^{\mathrm{T}}
-    (y - x)
-    +
-    \frac{\beta}{2}
-    \|
-        y - x
-    \|^{2}
-    \ge
-    f(y)
+\begin{eqnarray}
+    & &
+        f(x)
+        +
+        \nabla f(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\beta}{2}
+        \|
+            y - x
+        \|^{2}
+        \ge
+        f(y)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \nabla f(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\beta}{2}
+        \|
+            y - x
+        \|^{2}
+        \ge
+        f(y)
+        -
+        f(x)
+        \label{definition_beta_smooth}
+\end{eqnarray}
     .
 $$
 
@@ -63,6 +99,7 @@ $$
 
 #### Proposition
 * $f$,
+    * convex
 * $\beta > 0$,
 
 Then the following conditions are equivalent;
@@ -171,6 +208,13 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### 2.1.1 Introduction to optimality conditions
+In this section, we assume
+
+$$
+    x^{*}
+    \in
+    \arg\min_{x \in \mathcal{K}}f(x)
+$$
 
 #### Theorem 2.2 KKT
 * $\mathcal{K} \subseteq \mathbb{R}^{d}$,
@@ -189,8 +233,30 @@ $$
 
 #### proof.
 
-
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.2 Gradient / subgradient descent
+In this section, we prove the convergence rate of Gradient descent and Accelerated GD for each cases,  $f$ is gamma-well-conditioned, $f$ is beta-smooth, and $f$ is alpha strongly convex.
+
+Gradient descent
+
+* general convex
+    * $O(1/\sqrt{T})$,
+* $\alpha$-strongly convex
+    * $O(\frac{1}{\alpha T})$,
+* $\beta$-smooth convex
+    * $O(\frac{\beta}{T})$,
+* $\gamma$-well-conditioned
+    * $O(e^{-\gamma T})$,
+
+Accelerated GD
+
+* $\beta$-smooth convex
+    * $O(\frac{\beta}{T^{2}})$,
+* $\gamma$-well-conditioned
+    * $O(e^{-\sqrt{\gamma} T})$,
+
+### 2.2.1 Basic Gradient descent
 
 #### ALgorithm 2 Gradient Decent Method
 * $f:\mathcal{K} \rightarrow \mathbb{R}$,
@@ -234,24 +300,98 @@ Step4. $x_{T + 1}$,
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Lemma
+* $b > 0$,
 
 $$
+\begin{eqnarray}
     x
     -
     \frac{1}{b}
     a
-    =
+    & = &
     \arg\min_{z}
+        f(z)
+    \nonumber
+    \\
+    f(z)
+    & := &
         \sum_{i=1}^{d}
             a_{i}(z_{i} - x_{i})
         +
         \frac{b}{2}
         \|
-            z - y
+            z - x
         \|^{2}
+    \nonumber
+\end{eqnarray}
 $$
 
 #### proof
+
+$$
+\begin{eqnarray}
+    & &
+        \frac{\partial f}{\partial z_{i}}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        a_{i}
+        +
+        b
+        (z_{i} - x_{i})
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        z_{i}
+        =
+        \frac{
+            -a_{i}
+        }{
+            b
+        }
+        +
+        x_{i}
+\end{eqnarray}
+$$
+
+Then,
+
+$$
+\begin{eqnarray}
+    f
+    \left(
+        x
+        -
+        \frac{1}{b}
+        a
+    \right)
+    & = &
+        -
+        \sum_{i=}^{d}
+            \frac{
+                a_{i}^{2}
+            }{
+                b
+            }
+        +
+        \frac{1}{2b}
+        \|
+            a
+        \|^{2}
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{1}{2b}
+        \|
+            a
+        \|^{2}
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -315,8 +455,691 @@ $$
         \|
             \nabla f(x)
         \|^{2}
+        \quad
+        (\because z := x - \frac{1}{\alpha}\nabla f(x))
+    \nonumber
 \end{eqnarray}
+$$
 
+Hence
+
+$$
+\begin{eqnarray}
+    & &
+        f(x^{*})
+        \ge
+        f(x_{t})
+        -
+        \frac{1}{2 \alpha}
+        \|\nabla f(x_{t}) \|^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \|\nabla f(x_{t}) \|^{2}
+        \ge
+        2 \alpha
+        (
+            f(x_{t})
+            -
+            f(x^{*})
+        )
+        =
+        2 \alpha
+        h_{t}
+        \label{eq02_01}
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    -
+    h_{t}
+    & = &
+        f(x_{t+1} - x_{t})
+        -
+        f(x_{t})
+    \nonumber
+    \\
+    & \le &
+        (\nabla f(x_{t}))^{\mathrm{T}}
+        (x_{t + 1} - x_{t})
+        +
+        \frac{\beta}{2}
+        \|
+            x_{t+1} - x_{t}
+        \|
+    \nonumber
+    \\
+    & = &
+        - \eta_{t}
+        \|
+            \nabla f(x_{t})
+        \|^{2}
+        +
+        \frac{\beta}{2}
+        \eta_{t}^{2}
+        \|
+            \nabla f(x_{t})
+        \|^{2}
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{1}{2\beta}
+        \|
+            \nabla f(x_{t})
+        \|^{2}
+    \nonumber
+    \\
+    & \le &
+        -\frac{\alpha}{\beta}
+        h_{t}
+        \quad
+        (\because \eqref{eq02_01})
+    \nonumber
+    \\
+    & = &
+        -\gamma
+        h_{t}
+    .
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    \le
+    h_{t}
+    \left(
+        1 - \gamma
+    \right)
+    \le
+    \cdots
+    h_{1}
+    \left(
+        1 - \gamma
+    \right)^{t}
+    \le
+    h_{1}
+    e^{-\gamma t}
+    \nonumber
+\end{eqnarray}
 $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+#### Theorem 2.4
+* $\Gamma > 0$,
+* $f$,
+    * $\gamma$-well-conditioned function
+* $$h_{t} := f(x_{t}) - f(x^{*})$$,
+* $\eta_{t} :- \frac{1}{\beta} > 0$,
+* $\mathcal{K}$,
+    * convex set
+
+Then
+
+$$
+    h_{t+1}
+    \le
+    h_{1}
+    \exp
+    \left(
+        -
+        \frac{
+            \gamma t
+        }{
+            4
+        }
+    \right)
+    .
+$$
+
+#### proof
+From $\beta$ smoothness, for every $x, x_{t} \in \mathcal{K}$,
+
+$$
+\begin{equation}
+    \nabla f(x_{t})
+    (x - x_{t})
+    \le
+    f(x)
+    -
+    f(x_{t})
+    -
+    \frac{\alpha}{2}
+    \|
+        x - x_{t}
+    \|^{2}
+    \label{eq02_02}
+\end{equation}
+    .
+$$
+
+By algorithm's definition, we have
+
+$$
+\begin{equation}
+    x_{t + 1}
+    =
+    \arg \min_{x \in \mathcal{K}}
+    \left\{
+        \nabla f(x_{t})^{\mathrm{T}}
+        (x - x_{t})
+        +
+        \frac{\beta}{2}
+        \|
+            x - x_{t}
+        \|^{2}
+    \right\}
+    \label{eq02_03}
+\end{equation}
+    .
+$$
+
+To see this, letting $\nabla_{t} := \nabla f(x_{t})$,
+
+$$
+\begin{eqnarray}
+    \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \|
+                x
+                -
+                (x_{t} - \eta_{t} \nabla_{t})
+            \|^{2}
+        \right\}
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \sum_{i=1}^{d}
+             \left(
+                    x_{i}
+                    -
+                    (x_{t,i} - \eta_{t} \nabla_{t, i})
+             \right)^{2}
+        \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \sum_{i=1}^{d}
+             \left(
+                    x_{i}^{2}
+                    -
+                    2
+                    x_{i}
+                    (x_{t,i} - \eta_{t} \nabla_{t, i})
+                    +
+                    x_{t,i}^{2}
+                    -
+                    2x_{t, i}\eta_{t} \nabla_{t, i}
+                    +
+                    \eta_{t}^{2} \nabla_{t, i}^{2}
+             \right)
+        \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \sum_{i=1}^{d}
+             \left(
+                    x_{i}^{2}
+                    -
+                    2
+                    x_{i}
+                    x_{t,i}
+                    +
+                    x_{t,i}^{2}
+                    -
+                    2
+                    x_{i}
+                    \eta_{t} \nabla_{t, i}
+                    -
+                    2x_{t, i}\eta_{t} \nabla_{t, i}
+                    +
+                    \eta_{t}^{2} \nabla_{t, i}^{2}
+             \right)
+        \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \sum_{i=1}^{d}
+             \left(
+                    (x_{i} - x_{t, i})^{2}
+                    +
+                    2
+                    x_{i}
+                    \eta_{t} \nabla_{t, i}
+                    -
+                    2x_{t, i}\eta_{t} \nabla_{t, i}
+             \right)
+        \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \sum_{i=1}^{d}
+            2 \eta_{t}
+             \left(
+                \frac{1}{2 \eta_{t}}
+                (x_{i} - x_{t, i})^{2}
+                +
+                \nabla_{t, i}
+                \left(
+                    x_{i}
+                    -
+                    x_{t, i}
+                \right)
+             \right)
+        \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+        \left\{
+            \frac{1}{2 \eta_{t}}
+            \|
+                x - x_{t, i}
+            \|^{2}
+            +
+            \nabla_{t}^{\mathrm{T}}
+            \left(
+                x
+                -
+                x_{t}
+            \right)
+        \right\}
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    x_{t + 1}
+    & = &
+        \Pi_{\mathcal{K}}
+            (x_{t} - \eta_{t} \nabla f(x_{t}))
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+            \left\{
+                \|
+                    x
+                    -
+                    (x_{t} - \eta_{t} \nabla f(x_{t}))
+                \|
+            \right\}
+    \nonumber
+    \\
+    & = &
+        \arg\min_{x \in \mathcal{K}}
+            \left\{
+                \nabla f(x_{t})^{\mathrm{T}}
+                (x - x_{t})
+                +
+                \frac{1}{2 \eta_{t}}
+                \|
+                    x
+                    -
+                    x_{t}
+                \|^{2}
+            \right\}
+\end{eqnarray}
+$$
+
+Thus, $\forall \eta \in [0, 1]$,
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    -
+    h_{t}
+    & = &
+        f(x_{t + 1})
+        -
+        f(x_{t})
+    \nonumber
+    \\
+    & \le &
+        \nabla f(x_{t})^{\mathrm{T}}
+        (x_{t + 1} - x_{t})
+        +
+        \frac{\beta}{2}
+        \|
+            x_{t + 1}
+            -
+            x_{t}
+        \|^{2}
+        \quad
+        (\because \text{smoothness})
+    \nonumber
+    \\
+    & = &
+        \min_{x \in \mathcal{K}}
+            \left\{
+                \nabla f(x_{t})
+                (x - x_{t})
+                +
+                \frac{\beta}{2}
+                \|
+                    x - x_{t}
+                \|^{2}
+            \right\}
+        \quad
+        (\because \eqref{eq02_03})
+    \nonumber
+    \\
+    & \le &
+        \min_{x \in \mathcal{K}}
+            \left\{
+                f(x)
+                -
+                f(x_{t})
+                +
+                \frac{\beta - \alpha}{2}
+                \|
+                    x - x_{t}
+                \|^{2}
+            \right\}
+        \quad
+        (\because \eqref{eq02_02})
+    \nonumber
+    \\
+    & \le &
+        \min_{x \in [x_{t}, x^{*}]}
+            \left\{
+                f(x)
+                -
+                f(x_{t})
+                +
+                \frac{\beta - \alpha}{2}
+                \|
+                    x - x_{t}
+                \|^{2}
+            \right\}
+    \nonumber
+    \\
+    & = &
+        f
+        \left(
+            (1 - \eta)
+            x_{t}
+            +
+            \eta x^{*}
+        \right)
+        -
+        f(x_{t})
+        +
+        \frac{\beta - \alpha}{2}
+        \|
+            (1 - \eta)
+            x_{t}
+            +
+            \eta x^{*}
+            -
+            x_{t}
+        \|^{2}
+    \nonumber
+    \\
+    & \le &
+        (1 - \eta)
+        f(x_{t})
+        +
+        \eta 
+        f(x^{*})
+        -
+        f(x_{t})
+        +
+        \frac{(\beta - \alpha)\eta^{2}}{2}
+        \|
+            -
+            x_{t}
+            +
+            x^{*}
+        \|^{2}
+        \quad
+        (\because \text{convexity})
+    \nonumber
+    \\
+    & = &
+        -\eta
+        f(x_{t})
+        +
+        \eta 
+        f(x^{*})
+        +
+        \frac{(\beta - \alpha)\eta^{2}}{2}
+        \|
+            -
+            x_{t}
+            +
+            x^{*}
+        \|^{2}
+    \nonumber
+    \\
+    & \le &
+        -
+        \eta
+        h_{t}
+        +
+        \frac{(\beta - \alpha)\eta^{2}}{2}
+        \|
+            -
+            x_{t}
+            +
+            x^{*}
+        \|^{2}
+\end{eqnarray}
+$$
+
+where
+
+$$
+    [x_{t}, x^{*}]
+    :=
+    \{
+        (1 - \eta)x_{t}
+        +
+        \eta x^{*}
+        \mid
+        \eta \in [0, 1]
+    \}
+    .
+$$
+
+For the second term,
+
+$$
+\begin{eqnarray}
+    \frac{\alpha}{2}
+    \|
+        x^{*} - x_{t}
+    \|^{2}
+    & \le &
+        \frac{\alpha}{2}
+        \|
+            x^{*} - x_{t}
+        \|^{2}
+        +
+        \nabla f(x^{*})^{\mathrm{T}}
+        (x_{t} - x^{*})
+        \quad
+        (\because \text{ KKT condition})
+    \nonumber
+    \\
+    & \le &
+        f(x_{t})
+        -
+        f(x^{*})
+        \quad
+        (\because \ \alpha\text{-strongly})
+    \nonumber
+    \\
+    & = &
+        h_{t}
+    \nonumber
+\end{eqnarray}
+$$
+
+Combining the above result, $\forall \eta \in [0, 1]$,
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    -
+    h_{t}
+    & \le &
+        -
+        \eta
+        h_{t}
+        +
+        \frac{(\beta - \alpha)\eta^{2}}{\alpha}
+        h_{t}
+    \nonumber
+    \\
+    & \le &
+        -
+        \eta
+        h_{t}
+        +
+        \frac{\beta\eta^{2}}{\alpha}
+        h_{t}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \frac{\beta}{\alpha}
+            \eta^{2}
+            -
+            \eta
+        \right)
+        h_{t}
+    \nonumber
+    \\
+    & = &
+        \left\{
+            \frac{\beta}{\alpha}
+            \left(
+                \eta
+                -
+                \frac{\alpha}{2\beta}
+            \right)^{2}
+            -
+            \frac{\alpha}{4\beta}
+        \right\}
+        h_{t}
+\end{eqnarray}
+$$
+
+Moreover, since $\gamma$-well-conditioned,
+
+$$
+    0
+    \le
+    \eta
+    =
+    \frac{
+        \alpha
+    }{
+        2 \beta
+    }
+    \le
+    \frac{1}{2}
+    .
+$$
+
+Thus, we can achieve the minimizer
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    -
+    h_{t}
+    & \le &
+        \min_{\eta \in [0, 1]}
+            -
+            \eta
+            h_{t}
+            +
+            \frac{\beta\eta^{2}}{\alpha}
+            h_{t}
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{\alpha}{4 \beta}
+        h_{t}
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{\gamma}{4}
+        h_{t}
+    .
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    h_{t+1}
+    \le
+    h_{t}
+    \left(
+        1
+        -
+        \frac{\gamma}{4}
+    \right)
+    \le
+    h_{t}
+    e^{-\gamma/4}
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## 2.3 Reductions to non-smooth and non-strongly convex functions
+
+
+### 2.3.1
+
+#### Algorithm 3 gradient descent, reduction to beta-smooth functions
+* $f$,
+* $T$,
+* $x_{1} \in \mathcal{K}$,
+* $\tilde{\alpha}$,
+    * parameter
+
+Step1. Let
+
+$$
+    g(x)
+    :=
+    f(x) + \frac{
+        \tilde{\alpha}
+    }{
+        2
+    }
+    \|
+        x - x_{1}
+    \|^{2}
+    .
+$$
+
+Step2. Apply Algorithm2 with parameters $g, T, \eta_{t} := 1/\beta$, $x_{1}$ and get $x_{T}$,
+
+Step3 return $x_{T}$ in Step2.
+
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
