@@ -122,14 +122,30 @@ $$
     \\
     \mathrm{CPA}_{d, a}^{1}
     & := &
-        0
+        \begin{cases}
+            \frac{
+                \mathrm{CPC}_{d, a}^{1}
+                \times
+                \mathrm{Clk}_{d, a}^{1}
+            }{
+                \mathrm{Cvr}_{d, a}^{1}
+            }
+            =
+            \mathrm{tCPA_{a}}
+            &
+                (\mathrm{Cvr} \neq 0)
+            \\
+            0
+            &
+                (\mathrm{Cvr} = 0)
+        \end{cases}
     \nonumber
 \end{eqnarray}
 $$
 
 **Step1.** For $t = 1, \ldots, T$,
 
-**Step2.** Choose an advertisement $a^{t} \in \mathcal{A}$ based on a choice $x^{t} \in \mathcal{K}$ for an impression $t$. The advertisement $a^{t} \in \mathcal{A}$ must satisify the following conditions for CPA and budget.
+**Step2.** Choose an advertisement $a^{t} \in \mathcal{A}$ based on a choice $x^{t} \in \mathcal{K}$ for an impression $t$. The advertisement $a^{t}$ must satisify the following conditions for CPA and budget.
 
 $$
 \begin{eqnarray}
@@ -150,12 +166,6 @@ $$
 $$
 
 **Step3.** Observe click event $y^{t} \in \mathcal{Y}$, conversion event $z^{t} \in \mathcal{Z}$, and display $d^{t} \in \mathcal{D}$
-
-$$
-\begin{eqnarray}
-    
-\end{eqnarray}
-$$
 
 **Step4.** Update parameters based on the observations
 
@@ -188,7 +198,7 @@ $$
             \sum_{s=1}^{t}
                 \mathrm{CPC}_{d^{s}, a}^{s}
                 \times
-                z_{d^{s}, a}^{s}
+                y_{d^{s}, a}^{s}
         }{
             \mathrm{Cvr}_{d^{t}, a}^{t+1}
         }
@@ -208,14 +218,26 @@ $$
 
 **Step5.** Back to Step2 until $t = T$,
 
+Our objective is to maximize the revenue
+
+
+$$
+    \sum_{t=1}^{T}
+    \sum_{d=1}^{M}
+    \sum_{a=1}^{N}
+        \mathrm{CPC}_{d, a}^{t}
+        y_{d, a}^{t}
+$$
+
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 Additional problems
 
-* Observations of click events and conversion events in Step3 are usually delayed for a while, so Step3 and Step4 may be skipped in some iterations.
-* Suggesting the same advertisement in subsequent impressions (i.e. $a^{t} = a^{t+1}$) may reduce user satisfaction
-* Budget pacing
+1. Observations of click events and conversion events in Step3 are usually delayed for certain period, so Step3 and Step4 may be skipped in some iterations.
+1. Suggesting the same advertisement in subsequent impressions (i.e. $a^{t} = a^{t+1}$) may reduce customer satisfaction
+1. Budget pacing
+1. Choice of creatives
 
 ### online convex optimization
 
