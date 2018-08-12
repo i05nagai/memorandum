@@ -4824,6 +4824,17 @@
             * she found a lump in her breast
     * person
         * a heavy, awkward, stupid person
+* But there&s no way the big guy's taking any any chances with his little sister in the car
+* cram
+* roomy
+* Two adjacent ropes can be tied together with a knot, and the length of the tied rope is the sum of lengths of both ropes
+* The resulting new rope can then be tied again.
+* For a given integer K, the goal is to tie the ropes in such a way that the number of ropes whose length is greater than or equal to K is maximal.
+* that, given an integer K and a non-empty array A of N integers, returns the maximum number of ropes of length greater than or equal to K that can be created.
+* take something to heart
+    * if you take criticism, or advice to heart, you think about it seriously, often because it upsets you
+* stray
+    * don't stray too far
 
 
 ## Nuance
