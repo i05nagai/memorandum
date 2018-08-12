@@ -3,15 +3,16 @@ title: Two Pointer Technique
 ---
 
 ## Two Pointer Technique
+* Calculate summation of subsequence in constant-time. It's worths consder whether the condition can be written in summation form.
+* It is also known as Caterpillar method
 
-* Calculate summation of subsequence in constant-time. It worthes consder whether the condition can be written in summation form.
 
 ## Example
 * $a_{0}, \ldots, a_{n-1}$,
     * $a_{i} \in \mathbb{N}$,
 * $S \in \mathbb{N}$,
 
-Let $I(s)$ be the first index after $s$ to which summation from $i$ is over S.
+Let $I(s)$ be the first index after $s$ to which summation from $s$ is over S.
 
 $$
     I(s)
@@ -20,8 +21,8 @@ $$
         \{
             j \ge s
             \mid
-            \sum_{j=s:i}
-                a_{j}
+            \sum_{i=s:j}
+                a_{i}
             \ge
             S
         \}
@@ -113,3 +114,4 @@ $$
 
 ## Reference
 * [Two Pointers Technique - GeeksforGeeks](https://www.geeksforgeeks.org/two-pointers-technique/)
+* [13\-CaterpillarMethod](https://codility.com/media/train/13-CaterpillarMethod.pdf)

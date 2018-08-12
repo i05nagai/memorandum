@@ -172,3 +172,13 @@ $$
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example. Portfolio selection
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example. Matrix completion and recommendation systems
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
