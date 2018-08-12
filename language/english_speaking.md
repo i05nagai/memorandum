@@ -202,6 +202,10 @@ title: English Speaking
     * The book discusses his illness and subsequent resignation from politics
     * Those explosions must have been subsequent to our departure, because we didn't here anything
     * The mistakes were corrected in a subsequent edition of the book
+* pass
+    * someone I can pass on my wisdom to
+* take something to heart
+    * Dont't take it to heart. he was only joking about your hair
 
 
 
