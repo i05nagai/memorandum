@@ -1,3 +1,7 @@
+---
+title: terms
+---
+
 ## Terms
 
 * billboard/banner
@@ -62,7 +66,7 @@
 * Black swan
     * ブランドセーフティーソリューション
 * incremental reach
-    * [動画広告が勃興するいま、見落としてはいけない3つの視点 | DIGIDAY［日本版］](http://digiday.jp/brands/suvt-3-point-of-view/)
+    * [動画広告が勃興するいま、見落としてはいけない3つの視点 DIGIDAY［日本版］](http://digiday.jp/brands/suvt-3-point-of-view/)
     * TV CMのreachの不足分をmobileの動画広告などで補った分
 * brand lift
     * 
@@ -84,7 +88,7 @@
     * 定義は一つに定まってない
         * 実際に広告が見られたかどうか
         * 閲覧可能な広告枠か、非表示広告枠でないかなど
-    * [Viewability Rate Definition | The Online Advertising Guide](https://theonlineadvertisingguide.com/glossary/viewability-rate/)
+    * [Viewability Rate Definition The Online Advertising Guide](https://theonlineadvertisingguide.com/glossary/viewability-rate/)
     * pageの下部にある広告は、page下部がin viewになった時に広告requestを投げればviewablity rateをあげられる
 * advertising arbitrage
     * there is no strict definition
