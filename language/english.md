@@ -4993,6 +4993,45 @@
 * holdover, dropouts, graduate
 * alumnus
     * plural, alumni
+* warp
+    * if wood warps, or if water or heat warps it, it becomes damaged by bending or twisting
+    * After being left in the damp garage, the wooden frame had warped
+    * the heat had warped the boards
+* damp
+    * slightly wet, especialy in a way that is not pleasant or comfortable
+    * the grass is still damp
+    * the shirt still feels a bit damp
+    * it was a damp, misty morning
+    * damp socks
+    * a cold, damp day
+* dump
+    * put down
+        * He came in with four shopping bags and dumped them on the table
+    * get rid of
+    * end relationship
+* unforgettable
+* pensioners
+* N-word
+* podium
+    * n, C
+    * a raised are aon which a person stands to speak to a large number of people, to conduct music, or to recieve a prize in a sports competition
+    * Tears ran down her face as she stood on the sinner's podium
+* administration
+    * Teachers complain that more of their time is taken up with administration than with teaching
+    * She has littl eexperience in admin
+    * Keeping noise levels low is the bane of airport administration
+    * The decision to cancel the trip was made by the school administration
+    * the Obama administration / the last Rapublican administration
+    * There are strickt controls of the administration of drugs
+    * the company has gone into administration, in order for money to be returned to creditors
+* political aide
+    * does the legwork that allows the Politician to be effective
+    * forming a close relationship with one Politician
+* mononymous
+    * known mononymously as Omarosa
+* binoculars
+* towed
+    * your car is about to be towed
 
 ## Sentence
 * What have you been up to?
