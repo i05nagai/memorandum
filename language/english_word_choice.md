@@ -4,6 +4,9 @@ title: English word choice
 
 ## English word choice
 
+* rug/carpet
+    * floor covering
+    * table cover
 * how about/what about
 * ensure/assure/insure/gurantee
     * [assure vs. ensure vs. insure : Choose Your Words : Vocabulary.com](https://www.vocabulary.com/articles/chooseyourwords/assure-ensure-insure/)
