@@ -133,7 +133,14 @@ $$
     .
 $$
 
-<div class="end-of-statement" style="text-align: right">■</div>
+#### proof
+(1) $\Rightarrow$ (2)
+
+Let $x \in \mathbb{R}^{n}$ and $h > 0$ be fixed.
+Let $y := x + h(1, \ldots, 1)^{\mathrm{T}}$.
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 #### Definition gamma-well-conditioned
 * $f$,
@@ -1111,18 +1118,19 @@ $$
 ## 2.3 Reductions to non-smooth and non-strongly convex functions
 
 
-### 2.3.1
+### 2.3.1 Reductions to smooth and non-strongly convex functions
 
 #### Algorithm 3 gradient descent, reduction to beta-smooth functions
 * $f$,
 * $T$,
 * $x_{1} \in \mathcal{K}$,
-* $\tilde{\alpha}$,
+* $\tilde{\alpha} > 0$,
     * parameter
 
 Step1. Let
 
 $$
+\begin{eqnarray}
     g(x)
     :=
     f(x) + \frac{
@@ -1133,6 +1141,8 @@ $$
     \|
         x - x_{1}
     \|^{2}
+    \label{algorithm03_definition_g}
+\end{eqnarray}
     .
 $$
 
@@ -1140,6 +1150,223 @@ Step2. Apply Algorithm2 with parameters $g, T, \eta_{t} := 1/\beta$, $x_{1}$ and
 
 Step3 return $x_{T}$ in Step2.
 
-
-
 <div class="end-of-statement" style="text-align: right">■</div>
+
+#### Lemma 2.5
+* $\beta > 0$
+* $f$,
+    * $\beta$-smooth function,
+* $D > 0$
+    * upper bound of diameter in $\mathcal{K}$,
+
+$$
+    x, y \in \mathcal{K},
+    \
+    \|
+        x - y
+    \|
+    \le
+    D
+    .
+$$
+
+Algorithm 3 with parameter $\hat{\alpha} := \frac{\beta \log t}{D^{2} t}$ converges as
+
+$$
+    h_{t + 1}
+    \le
+    .
+$$
+
+
+#### proof
+$g$ defined in $$\eqref{algorithm03_definition_g}$$ is $\hat{\alpha}$-strongly convex.
+Indeed, TODO
+
+$$
+\begin{eqnarray}
+    g(y) - g(x)
+    & = &
+        f(y) - f(x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \|
+            y - x_{1}
+        \|^{2}
+        -
+        \frac{\hat{\alpha}}{2}
+        \|
+            x - x_{1}
+        \|^{2}
+    \nonumber
+    \\
+    & \ge &
+        \nabla f(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            \|
+                x - x_{1}
+            \|^{2}
+            -
+            \|
+                y - x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \nabla f(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            \|
+                x - x_{1}
+            \|
+            -
+            \|
+                y - x_{1}
+            \|
+        \right)
+        \left(
+            \|
+                x - x_{1}
+            \|
+            +
+            \|
+                y - x_{1}
+            \|
+        \right)
+    \nonumber
+    \\
+    & \ge &
+        \nabla f(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            \|
+                x - x_{1}
+            \|
+            -
+            \|
+                y - x_{1}
+            \|
+        \right)
+        \|
+            y - x
+        \|
+    \nonumber
+    \\
+    & \ge &
+        \nabla f(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            \|
+                x - y
+            \|
+            -
+            \|
+                y - x_{1}
+            \|
+            -
+            \|
+                y - x_{1}
+            \|
+        \right)
+        \|
+            y - x
+        \|
+    \nonumber
+\end{eqnarray}
+$$
+
+$g$ is $(\beta + \hat{\alpha})$-smooth.
+
+Thus, it is $\gamma = \frac{\hat{\alpha}}{\hat{\alpha} + \beta}$-well-conditioned.
+
+$$
+\begin{eqnarray}
+    h_{t}
+    & = &
+        f(x_{t})
+        -
+        f(x^{*})
+    \nonumber
+    & = &
+        g(x_{t})
+        -
+        g(x^{*})
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            \|
+                x^{*}
+                -
+                x_{1}
+            \|^{2}
+            -
+            \|
+                x_{t}
+                -
+                x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & \le &
+        h_{t}^{g}
+        +
+        \frac{\hat{\alpha}}{2}
+        \left(
+            D^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        h_{t}^{g}
+        +
+        \frac{\hat{\alpha}}{2}
+        D^{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+where $h_{t}^{g} := g(x_{t}) - g(x^{*})$.
+Since $g$ is $\frac{\hat{\alpha}}{\hat{\alpha} + \beta}$-well-conditioned,
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    & \le &
+        h_{t + 1}^{g}
+        +
+        \frac{\hat{\alpha}}{2}
+        D^{2}
+    \nonumber
+    \\
+    & \le &
+        h_{1}^{g}
+        \exp
+        \left(
+            -
+            \frac{
+                -\hat{\alpha}t
+            }{
+                4(\hat{\alpha} + \beta)
+            }
+        \right)
+        +
+        \frac{\hat{\alpha}}{2}
+        D^{2}
+        \quad
+        (\because \text{theorem 2.4})
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
