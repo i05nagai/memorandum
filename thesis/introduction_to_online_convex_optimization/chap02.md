@@ -169,8 +169,6 @@ $\gamma$ is called the condition number of $f$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-
-
 ### 2.1.1 Projections onto convex sets
 
 #### Definition. projection onto convex sets
@@ -1181,7 +1179,41 @@ $$
 
 #### proof
 $g$ defined in $$\eqref{algorithm03_definition_g}$$ is $\hat{\alpha}$-strongly convex.
-Indeed, TODO
+Indeed,
+
+$$
+\begin{eqnarray}
+    \nabla g(x)
+    & = &
+        \nabla f(x)
+        +
+        \frac{\alpha}{2}
+        \nabla
+        \|
+            x
+            -
+            x_{1}
+        \|^{2}
+    \nonunber
+    \\
+    & \le &
+        \nabla f(x)
+        +
+        \alpha
+        \left(
+            \begin{array}{c}
+                x^{1} - x_{1}^{1}
+                \\
+                \vdots 
+                \\
+                x^{n} - x_{1}^{n}
+            \end{array}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus,
 
 $$
 \begin{eqnarray}
