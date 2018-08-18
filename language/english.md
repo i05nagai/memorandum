@@ -4926,6 +4926,55 @@
     * if you take criticism, or advice to heart, you think about it seriously, often because it upsets you
 * stray
     * don't stray too far
+* get under
+    * I got under him
+* flaunt
+    * so as not to flaunt our new love
+* tiptoe
+    * you don't have to tiptoe around me
+* eminent
+* sheep herder
+    * a worker in charge of sheep especially on open range
+* flock
+    * a flock of sheep
+* wafer thin ice
+    * You were already on thin ice with me, and it's getting thinner all the time!
+* circumcision
+    * removal of the foreskin from the human pennis
+* 14th amendement
+* qeustionable
+    * 14th amendement is very quetionable as to whether or not somebody can come over, have a baby, and, immediately, that baby is a citizen
+* crone
+    * old crone
+* matrimony
+* cranker
+    * I have a pain from a cranker sore on the inside of the lower lip while eating and drinking
+* loath
+    * I am loath to acquiesce unless we stand to profit.
+* acquiesce
+* estate
+    * come to my estate
+* oblique
+    * she can be obliquie at the best of times
+    * she made several obliquie references to the current financial situation
+* assure
+    * I assure you her heat is in the right place
+* scouge
+* mope
+    * when you&re not too busy moping, you can look around and give ashit about someone worse off than you
+* worse off
+    * poorer or in a more difficult situation
+    * If Rick loses his job, we'll be even worse off
+* get a grip
+    * keep or recover one's self-control
+    * I just htink he ought to get a grip on himself
+* awry
+* got killed
+* floral
+* phenomenon
+* paranormal
+* prelude
+
 
 
 ## Nuance
