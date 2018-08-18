@@ -104,6 +104,8 @@ Data Engineer install data into data warehousing.
 6. What book has had a positive impact on you? 
 7. What are your strengths and weaknesses? 
 8. What is your expected salary / What are you getting paid now?
+9. What Challenges Are You Looking For?
+    * [Interview Question: What Challenges Are You Looking For?](https://www.thebalancecareers.com/what-challenges-looking-for-2061250)
 
 ## Reference
 * [サンフランシスコで転職活動をしました - Jeffsuke is not a pen.](http://jeffsuke.hatenablog.com/entry/2017/04/30/062502)
