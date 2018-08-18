@@ -4,6 +4,70 @@ title: English Speaking
 
 ## English Speaking
 
+* discrimination
+    * racial/sex/age discrimination
+    * Until 1986 most companies would not even allow women to take the exams, but such blatant discrimination is now disappearing
+* it's no use
+    * There's nothing you can do about the situation, so it's no use worrying about it
+    * It's no use cramming the day before the test
+* it's no good
+    * It's no good trying to persuade me. You won't succeed
+    * It's no good telling him. he won't listen
+    * It's no good printing my letter if you're just goind to do it again
+    * Here we are on the hills, and it's no better
+* There's no point in
+    * If you try to do something, it's not going to work
+    * There's no point in having a car if you never use it
+    * There's no point in cramming the day before the test. If I don't know it by now, an extra day of studying isn't going to help
+    * If you try to do somethin,g it will work but there won't be any benefit
+        * There's no point in studying for Professor Clint's exam. His tests are alwasy so easy
+* What's the point of doing
+    * The reason for doing it
+    * what's the point?
+    * there's no point
+    * I don't see the point
+    * What the point of Facebook? I don't get it
+    * What's the point of studying math in school anyway? No one ever uses it in real life
+* It's worth
+    * I live only a short walk from here, so it's not worth taking a taxi
+    * Our flight was very early in the morning, so it wasn't worth going to bed
+    * What was the film like? Was it worth seeing?
+    * Thieves broke into the house, but didn't take anything. There was nothing worth stealing.
+* corner
+    * Once the police had cornered her in the basement, she gave herself up
+    * it's a powerful car, but it doesn't corer well
+* find
+    * Actually, I find Marriam's views far too progressionist
+    * I've just found a ten-pound note in my pocket
+    * Has he found miself a place to live yet?
+    * She was found uncounscious and bleeding
+    * The study found that men who were married lived longer than those who were not
+    * Do you think they'll ever find a way of bringing peace to the region?
+    *  discover
+        * I found that I could easily swim a mile
+        * Vitamin C is found in citrus fruit
+        * I had a map but I still couldn't find my way backto the hotel
+        * She's always finding fault with the way he works
+        * He'll find himself with no friends at all if he carries on behaving this way
+        * Simon spent spent a year in an ashram in India to find himself
+    * experience a feeling
+        * Do you find John difficult to talk to?
+        * I don't find him an easy person to get on with
+        * I find living n the city very stressful
+    * judge
+        * In a unanimous verdict, the jury found him guilty not guility of the murder
+* jeopardy
+    * your future at the company would be in jeopardy
+* brush up
+    * here to brush up on Merriam's views on evolution?
+* have trouble doing, have difficulty doing
+    * I had no trouble finding a place to stay
+    * Did you have any difficulty getting a visa?
+    * People sometimes have problems reading my wrting
+* spend time/waste time/be busy
+    * He spent hours trying to repair the clock
+    * I waste a lot of time doing nothing
+    * She said she couldn't see me. She was too busy doing other things.
 * can afford to do
     * we couldn't afford to pay the lawyer's fee
     * We can't afford another trip around this year
@@ -18,7 +82,6 @@ title: English Speaking
     * It afords her the opportunity to improve her tennis skills
     * The new law will afford protection to employees
     * My parents used to say that their son would have the best education they could afford
-    * 
 * She couldn't affort the time off work to see him
 * pay
     * How much did you pay for the ticket?
@@ -39,7 +102,12 @@ title: English Speaking
 * pick
 * carry on
 * gives two examples to explain 
-* people are aware of being observed
+* aware
+    * wer are aware of problems you'are refering to
+    * people are aware of being observed
+    * Be aware of the difference between hard problems and hard knowledges
+* mind
+    * Did you change your mind?
 * tie your shoes
 * your shoelace is untied
 * your shoelaces are undone
@@ -132,6 +200,8 @@ title: English Speaking
     * You need to be confident using specific vocabulary
     * We are confident next year's profit will be higher
     * The Prime Minister appeard relaxed and confident of winning an overall majority
+    * I'm quite confident about something
+    * The team is confident of victory or success, or doing something
     * I feel quite confident about the future
     * He began to read in a calm confident voice
     * He was very self-assured/self-confident nad spoke without notes.
@@ -175,7 +245,22 @@ title: English Speaking
     * He wasn't get used to the heat and he caught sunstroke
 * have
     * I had an accident on my way home yesterday
+* darn
+    * Darn! I forgot my keys
+    * darn it! I'll have to do it all myself
+    * The darn fool got lost on the way
+    * Her cardigan had been darned at the elbows
+* ditch
+    * the gataway car had been ditched a couple of miles away from thescene of the robbery
+    * Did you know Sara ditched her boyfriend last week?
+    * The goverment has ditched plans to privatise the prison
+    * Meg adn Neil ware due to marry, but she ditched him
+    * did you ditch class today?
+    * two baloons had to ditch during the race
+* stop
 * remember
+    * The thing I remember the most of all is ...
+    * what impressed me most was
     * Do you remember Rosa Davies?
     * I can't remember her exact words.
     * I remember you two couldn't stand each other at first.
@@ -205,6 +290,7 @@ title: English Speaking
 * reminisce
     * They wre reminiscing about old times
     * I used to spend hours listening to my grandfather reminisce
+    * We got reminiscing. We talked through most of the night and we realized that the reason that we're so angury with each other is because there's still feelings there.
 * bear something in mind
     * Bear in mind that this is the first time he's done this
 * something is on the tip of your tongue
@@ -243,7 +329,6 @@ title: English Speaking
 * Her expression showed us that she was not pleased with the present
 * Urgent business kept me from coming yesterday
 * What Made you think that he could defeat that wrestler?
-* If I had to guess, I would say it's a proof that is clever or amusing in some way but not particularly important, meaningful
 * delay
     * Long delays are expected on the motorways
     * The opening of this section of the road is delayed until September
@@ -309,6 +394,7 @@ title: English Speaking
     * I want to see the film. It's supporsed to be good
     * Fireworks are supporsed to have been invented in China. is it true?
 * supposed to
+    * What am I suppose to do, just keep going back there and watch him get worse and worse?
     * The plan is supposed to be a secret, but everybody seems to know about it
     * What are you doing at work? You're supposed to be on holiday
     * Our guests were supposed to come at 7:30, but they were late
@@ -349,6 +435,16 @@ title: English Speaking
             * The ship lies off the coast of Spain
     * speak falsely
         * lying/lied/lied
+        * I would never lie to you
+        * I could tell from her face that she was lying
+        * She lied about her age
+        * Statistics can often lie
+        * The camera never lies
+        * She had lied to protect her son
+        * Are you accusing me of teling lies?
+        * Dan's fibbing. I dind't hit him
+        * I didn't want to go so I made up an excuse and said I as busy
+        * He invented the tale to prevent his parents from finding out the truth
 * let something int osomething
     * It was time to let the rest of family into the secret
     * Two larget windows were let into the wall each side of the door
@@ -377,7 +473,21 @@ title: English Speaking
 * influence
     * You're a bad influence on her
 * put
+    * put something through
+        * Could you put me through to customer services, please?
     * they put you on whole an hour?
+    * If you are not put in situations that leverage our best skills, you may become frustrated by your perforamnce and your situation.
+    * put in
+        * We decided to have a new bathroom put in
+        * Dorothy had put in a lot of hard work during her xis years as chairperson
+        * 'How old are you?' 'Sixteen.' 'I'm sixteen too.' put in Dixie
+        * She put in an insurance claim
+        * We must put in an order by tonight
+        * I put in for a pay increase
+        * He put in a brilliant performance in the British Grand Prix
+        * There was an hour yet before she needed to put in an apperance at the restaurant
+    * put your faith/trust/confidence in somebody/something
+        * I'm putting my faith in the appeal judges
 * How is it different?
 * That's so original.
 * mindless
@@ -395,8 +505,11 @@ title: English Speaking
     * It's too cliche. I need more original
 * overate
     * I've been here before. it's so overated
-* bias
+* bias/prejudiced/my owne perspective/ my point of view/my own experience
     * waht's the best smartphone now? the iPhone. but I'm an apple fan, so I'm biased.
+    * This is from my owen perspective
+    * This is from my point of view
+    * This is from my own experience
 * The review said it was worse than garbage. That's harsh.
 * decent
     * Is the food good? it's decent.
@@ -450,9 +563,98 @@ title: English Speaking
 * field trip
 * help out
 * try to/try ing
-* take place in
-
+    * I was very tired. I tryied to keep my eyes open but I couldnt'
+    * I tried to move the table, but it was too heavy
+    * Please try to be quiet when you come home. Everyone will be asleep
+    * These case are delicious. You should try one
+    * We couldn't find anywhere to stay. We tried every hotel in the town, but they were all full.
+    * The photocopier doesn't seem to be working. Try pressing the green button
+    * I didnt' like the way the furniture was arranged, so I tried moving the table to the other side of the room. But It didn't look right, so I moved it back again.
+* believe in 
+    * Do you believe in God?
+    * I believe in saying what I think
+    * The story can't be true. I don't believe it
+* specialized in
+    * Helen iss a lawyer. She specialises in company law.
+* succed in
+    * I hope you succeed in finding the job you want
+* break
+    * break into
+        * Our house was broke into a few days ago, but nothign was stolen
+* crash/drive/bump/run
+    * He lost control of the car and crashed into a wall
+* divide/cut/split somethin ginto two or more parts
+    * the book is divided into three parts
+* collide
+    * collide with
+        * There was an accident this mornig. A bus collided with a car
+* fill
+    * fill something with
+* provide
+    * provide somebody with
+        * The school provides all its stuents with books
+* supply
+    * supply somebody with
+* translate a bookfrom one to another
+    * She's famouswrite. Her books have been translated into many languages
+* need to/ need ing
+    * I need to get more excercise
+    * He needs to work harder if he wants to make progress
+    * I don't need to come to the meeting, do I?
+    * My phone needs charging
+    * Do you think this jacket needs clearning?
+    * It's a difficult problem. It needs thinking about very carefully.
+* help/can't help
+    * You can say help to do or help do
+    * Everybody helped to clean up after the party
+    * Everybody helped clean up
+    * Can you help me to move this table?
+    * Can you help me move this table?
+    * I dont't like him, but he has a lot of problems. I can't help feel sorry for him.
+    * She tried to be serious, but she couln't help laughing
+    * I'm sorry I'm so nervous. I cant' help it.
+* like /love/hate
+    * Do you like getting up early?
+    * Do you liek to get up early?
+    * Stephany hates flying
+    * Stephanie hatest to fly
+    * I love meeting people
+    * I love to meet people
+    * I don't like being kept waitng
+    * I like to be kept waiting
+    * He likes living there
+    * Do you like being a student?
+    * The office I worked in was horrible. I hated working there
+    * I like clearning the kitchen
+    * It's not my favorite job, but I like to clean th kitchen as often as possible
+    * I enjoy cleaning the kitchen
+    * I don't mind cleaning the kitchen
+    * It's a shame we dind't see Anna when we were in London. I would like to have seen her again
+    * We'd like to have gone away, but we were too busy at home
+* puberty
+    * Fourteen is a fairly normal age for a girl to reach puberty
+* settle down
+    * Shh! settle donw, please! Now turn to page 57.
+    * WHen kyle was a baby, we used to take him for rides in the car to settle him down
+    * Have you settled down in your new house yet?
+    * Eventually, I'd like to settle down and have a family, but not yet
+* preposition + ing
+    * Are you interested in working for us?
+    * I'm not good at learning langugages.
+    * Sum must be fed up with studying
+    * What are the advantages of having a car?
+    * Thanks very much for inviting me to your party.
+    * How about metting for lunch tomorrow?
+    * Why don't you go out instead of sitting at home all the time?
+    * Amy went to work in spite of feeling ill.
+    * I'm fed up with people telling me what to do
+    * The burglars got into the house by breaking a window and climbing in
+    * You can improve your English by reading more
+    * She made herself ill by not eating properly
+* even
+    * How do you know it's even broken?
 * if I did
+    * if we had a big fight and we broke up for a few hours, technically we could have sex again
     * If we went by bus, it would be the ceaper, but the train is quicker
     * What would you do if you won a lot of money?
     * If there was/were an election tommorow, who would you vote for?
@@ -484,6 +686,7 @@ title: English Speaking
     * She could get a better job If she could speak English
     * I wish I could help you
 * If I had done
+    * it would have hurt a lot less if I'd have finished that last beer.
     * If I'd known you were in hospital, I would have gone to see you
     * If I'd seen you, of course I would have said hello
     * I didn't go out last night. I would have gone out If I hadn't been so tired
@@ -581,8 +784,27 @@ title: English Speaking
     * Beads were used as barter in the early days of settlement
 * pacifier
 * bib
+* lay a finger
 * take
+    * engineers take pride and ownership in what they do
+    * take in
+        * understand
+            * I had to read the letter twice before I could take all in
+            * It was an interesting exhibition, but there was toomuch to take in at once
+        * include
+            * to include something
+        * moeny
+    * take place in
     * If you take a taxi ride, you could use vegetables as payment for the cab ride
+    * take on
+        * Dont' tkae on too much work. the extra cash isn't worth it
+        * Her face took on a fiece expression
+        * His life had taken on a new dimension
+        * Nigeria will take on Agentina in the first round of the World Cup on Saturday
+        * He was prepared to take on anyone who laid a finger on us
+        * We're taking on 50 new staff this year
+        * We stopped to take on fuel
+        * Gibson is taking on the post of vice president
 * consist
     * Substance can consist of fine gravel, aquarium sand or powdered lava
     * Later tombs here have no tumulus above but consist of a single room cut into the stone
@@ -595,6 +817,7 @@ title: English Speaking
     * The book is dedicated to every great software engineer
 * Her words and ideas flow easily from one idea to the next.
 * apply
+    * Do you think I should apply for this job?
 * adapt
     * apapt to
         * The children are finding it hard to adapt to the new school
@@ -726,6 +949,14 @@ title: English Speaking
     * The lecture makes clear that the professor does not think the safe yield approch is appropriate
     * Plato's theory that society is made up of three groups
     * The lecturer says that 'one thousand kilometers of roots' did not make any sense to her.
+    * make someone become very upset or mentally ill
+    * Sometimes your life situation changes in ways that make certain cultures less desirable
+* laggard
+    * These companies are often laggards on the technology adoption curve, and their code base is not pretty
+    * The companies were split into three groups: top performers, average firms and laggards
+    * Technology adoption laggards
+* adaption curve
+    * a technology adoption curve
 * neither
     * The professor's describing Plato's ideas, and she dows not say whether they are true, so neither choice 1 nor choice 2 can be correct
 * concern
@@ -782,17 +1013,625 @@ title: English Speaking
 * cut some slack
     * I should cut him some slack
     * Andrew's late again. Cut him some sack -- his wife just had a baby
+* It's got a surround system
+* Why are you sitting there topless?
+* drinking way too much
+* do you know how to change a flat tire?
+* I have to get to class
+* objective
+    * I should take an objective look at myself
+    * I sould take an unprejudiced look at myself
+    * I sould take an unbiasedl look at myself
+* order
+    * I got second place in school
+    * I placed second in college
+    * I came second in school
+    * I won second place in university
+    * I ended up 2nd
+    * I was number 2
+    * I took second place
+    * I was next to best
+    * I was second in
+* lead
+    * lead somebody to/into etc something
+        * A nurce took her arm and led her to a chair
+        * The horsed were led to safety
+    * lead somebody away/down
+        * She was led away from courtroom in tears
+        * The manager led the way through the office
+    * go in front
+        * A firetruck was leading the parade
+    * be in charge
+        * He has led the party for over twenty years
+        * Some people say she is too old to lead the country
+        * Beckham led his team to victory
+* decision
+    * Do you ever wonder if you made the right decision?
+    * She refused to discuss her dicision to quit the group
+    * I'm taking a year off from university to study overseas.
+    * I'm going to take my 3rd year off from university to study overseas
+    * I want to think about it a bit longer before I make a decision
+    * I fully accept the decision taken by the committee
+    * We hope they will their decision as soon as possible
+    * I was already regretting my decision to go on holiday with him
+* will take a leave of absense
+* I'm going to take a break from school and study abroad
+* deserve
+    * We didn't deserve to win
+    * the success he so richly/fuly/thoroughly deserves
+    * I think we deserve a rest after all that hard work
+    * Paula deserves a special mention for all help she has given us
+    * I would never hit anyone, even if they deserved it
+    * deserve all/anything you get
+        * he deserves all hegets for being so dishonest
+        * Poeple who are sent to prison for drunk-driving get what they deserve
+* worth
+    * be worth something
+        * The house must be quite a lot of money now
+        * One of the pictures is worth 5000usd
+        * Do you know how much the ring is worht?
+        * This art collectio is worth a fortuane
+        * It's a very old machine so I shouldn't think It's worth anythin
+        * That party was worth every penny
+    * be worth it
+        * It was a lot of hard work, but it was worth it
+* study aboard
+    * take in a new culture
+    * hone your language skill
+    * carieer opportunities
+    * find new interest
+    * life experience
+    * The benfit of studying aboard include the opportunity to see new terrains, natural wonders, museums and landmarks of your host nation.
+* amusing/entertaining/suprising/amazing/fun/
+    * I dont't find his jokes at all amusing
+    * a highly amusing film
+    * The book is full of amusing stories about his childhood
+* If I had to guess, I would say it's a proof that is clever or amusing in some way but not particularly important, meaningful
+* fascinate
+    * The idea of travelling through time fascinated him
+    * this is fascinating and imporant stuff
+    * Baseball still fascinates Americans
+    * I have always been fascinated by Maagritte's work
+    * Anything to do with computers fascinates him
+* scoot
+    * Scoot over and make room for your sister
+* move over
+* benefit
+    * I never had the benefit of a university education
+    * The new credit cards will be o great benefit to our customers
+    * I hope that the decision taken today will be to the benefit of the whole nation
+    * You might be eintitled to housing benefit
+    * We offer an excellent benefits packages
+* if neither of you are married by the time you're 40, youre gonna marry with him
+* stifle
+    * to be unable to breathe because you have no air
+        * He is said to have stifled his victim with a pillow
+        * we almost stifled in the heat of the city
+    * to prevent something from happening, being expressed, or continuing
+        * She stifled a cough/yawn/scream/sneeze
+        * I don't know how I managed to stifle my anger
+        * We should encourage new ideas, not stifiling them
+* sore/hurt/painful
+    * I had a sore throad and aching limbs
+    * My arms are sore from all the lifting
+* keep back/hide/
+    * if you feel that someone is keeping back information from you, you might feel that you want to confront them about the situation
+* I plan to take entrance exams for second choice and third choice universities because I don' want to end up without a university.
+* still, yet, already
+    * It's 10 o'clock and joe is still in bed
+    * When I went to bed, Chris was still working
+    * Do you still want to go away or have you changed your mind?
+    * Yet shows that the speaker is expecting something to happen
+    * It's 10 o'clock and Joe isn't here yet
+    * have you met your new neightbour yet?
+    * where are you going on holiday? we don't know yet.
+    * Mike lost his job six months ago and is still unemployed.
+    * Mike lost his job six monthg ago and hasn't found another job yet
+    * Is it stil raining?
+    * Has it stopped raining yet?
+    * She said she would be here an hour ago and she still hasn't come
+    * I sent him an invitation last week. He hasn't replied yet
+        * I expect he will reply soon
+    * I sent him an invitation weels ago and he still hasn't replied.
+        * He should have replied before now
+* even
+    * something is unusual or surprising
+    * She has a TV in every romm of the house even the bathroom
+    * These pictures are really awful. Even I take better pictures than these.
+    * He always wears a coat, even in hot weather.
+    * The print was very small. I couldn't read it, even with glasses.
+    * Nobody would help her, not even her best frinds.
+    * Not even her best frind would help her
+    * I can't cook. I can't even boil an egg
+    * They weren't very frindly to us. They didn't even say hello
+* She has a degree in computer science
+* It said that girls were overlooked in the classroom and trailed boys in mathmetics and computer science
+* university
+    * Her daughter was about to go to university
+    * we were at university together
+    * She studied law at Edinburgh University
+    * I applied for university without any real idea of what I wanted to do
+    * Some people take a year off before they start university
+    * Students often find work sonn after leaving university
+    * She graduated from Livepool university in 2006.
+    * He dropped out of university in order to join a rock band
+* same
+    * He sits in the same chair every night
+    * They went to the same school
+    * She was born on the same day as me
+    * It is those same poeple who voted for the Dermocrats who now complain about hteir policies
+    * We stand in front of the very same house in which Shakespeare wrote his plays
+    * Both women were wearing the same dress
+    * The same thing could happen again
+    * He gets the same pay as me but he gets his own office
+* pull off
+    * The goalkeeper pulled off six terrific saves
+    * We pulled off the road to get some food
+* upset
+    * It still upset him when he thinks about the accident
+    * Don't upset yourself by thinking about what might have been
+    * Any mechanical problems would upset our plans of driving accross the desert
+    * Our dog upset the picnic table , spilling food everywhere
+    * He can't eat grapes - they upset him/his stomach
+    * I have an upset stomach/tummy - serves me right for eating so much.
+    * How much upset will the new monitoring procedures cause?
+    * It would be quite an upset if the favorite didn't win
+    * Melanie has a stomach/tummy upset so sche won't be going to school today
+* She learns lesson from other people's mistake
+* The walls are thin and cheaply constructed, so you can totally hear everything from upstairs, downstairs and next door
+* avenge/revenge/vengeance
+* compliment
+    * I take it as a compliment when people say I look like my mother
+    * I'm pleased  when people say I look like my mom
+    * Are you fishing for compliments?
+    * I'm not trying to fish for compliments, but do youlike my new hiarcut?
+    * He complained that his husband never paid him any copliments anymore
+* hum
+    * he hums when he pees.
+* counterpart
+* so that
+    *  
+* have done
+    * How long have we been home?
+* disgrace
+    * n, U
+    * They were sent home in disgrace
+    * He brought disgrace on the whole team by falsifying the results
+    * Three families living in oneroom - it's a disgrace
+    * smith faced total public disgrace after the incident
+    * Toranaga sent us away in disgrace
+* contemplate/think
+    * Have you been contemplating job changes?
+* How'd it go?
+    * How did it go?
+    * How waas it?
+* have got to/have to
+    * I've got to study for the exam
+    * I have to study for the exam
+    * I'll haveto study for the exam
+    * I had to study for the exam
+    * He's got to be in the room for that to work
+* dance
+    * it was the first time I new that you were the woman I wanted to dance all my dances with
+* onece
+    * it's all up to you once you have finished reading this book
+* by no means
+    * The book was designed as a supplementary handbook for non-English speakeing international ESL Students but by no means only for ESL students wanting to learn English Academic Writing.
+* type
+    * There are many different types of essays you will be expected to write
+    * The most common types of essay you will be asked to write when studying academically will probably be
+* whereas
+    * A comparison describes two or more things that are similar, whereas, a contrast describes differences
+* undress
+    * we undress each other and hold each other, it's really sweet and tender
+* tender
+    * gender
+        * a tender look/smile
+        * What you need is some tender loving care
+* sloppy
+    * careless
+        * sloppy work
+        * His written reports are incredibly sloppy
+    * loose-fitting
+        * Ann was dressed in a sloppy brown sweater
+    * slushy
+        * The film is sloppy romance
+    * not solid enough
+        * sloppy jelly
+* wedding
+    * the wedding is off
+* they're spring up like mushrooms after the rain
+* pop up
+    * their restaruant pop-up everywhere, like mushroom after the rain
+* professional/expertise
+    * What he's bringing to the company is financial expertise
+    * tranee engineers with varying degrees of computer exerptise
+    * have expertise
+        * Each scientist had expertise in either mammals, insects, birds, or plants
+    * need/require expertise
+         * It's a specialist job that requires expertise
+    * lack expertise
+        * The country lack the expertise, equipment and finance to deal with the disaster
+    * expertise in the management of hotels
+* profound
+    * profound effect/influence/impact/consequence
+    * Tolstoy's experiences of war had a profound effect on his work
+    * The mother's behavior has a profound impact on the developing child
+    * profound change in society
+    * a profound sense of guilt
+    * a profound question
+* amortize
+    * All acquisition expenses are amortized over 10 years
+* mitigate/reduce/ease/relax/alleviate
+    * Our organization will ask national to ease such regulations
+    * the new medicine was expected to ease the symptoms of AIDS
+    * The new traffic circle will ease traffic jams in the intersection
+    * The Russia government will relax export controls of grain
+    * The Philippines goverment will relax requirements of Retirement Visa
+    * The Japanse government relaxed travel restrictions with China and Russia
+    * alleviate the problem/situation/suffering
+    * a new medicine to alleviate the symptoms of flu
+    * measures to alleviate poverty
+* difficult/challenging/severe
+* figure out
+    * I can't figure out why he did it
+    * I find him really odd - I can't figure him out at all
+    * Can you figure out the answer to question 5?
+* exhausted/worn out
+    * He was driving through the night and he arrived in a exhausted state
+    * Many of the runners collapses, exhausted, as they crossed the finishing line
+    * You look worn out
+* become tired/ tire
+    * She's been leading throughout the race, but it now looks as if she's tiring
+    * Even walking up the staires at work tires me these days
+* community
+    * He is well known in the local community
+    * There's large black/white/Jewish community living in this area
+* fame
+    * he claims he is not really interested in fame
+    * win/gain
+        * He won fame when he appeared in the film
+    * achieve/find
+        * Amy johnson found fame as a pilot
+    * bring/win
+* rip-off
+    * what a rip-off
+    * 300USD for that shirt? That's a complete rip-off.
+    * Don't eat in the museum restaurant. it's a rip-off
+* win
+    * we win the first place
+* he didn't who I was
+* he just said today was one of his best days he's had in a long time.
+* deep
+* cicada
+    * Hear the birds and cicadas, listen for the gentle breeze rustling the leaves
+    * Outside there were evening cicadas, and the sounds of children in the street
+    * The larvae of the cicadas that sit shrilling on trees spend their lives below ground sucking sap from roots
+    * There were cicadas in the mimosa and gulls cyring on the wing
+* cactus
+    * cactuar
+    * pl: cacti/cactuses
+    * It is a perfect location for a cactus
+* alimony
+    * a husband's (or wife's) provision for a spouse after separation or divorce; maintenance.
+    * he is said to have paid 30000USD alimony to his first wife
+* call
+    * call into question
+        * The fact that a party can be voted into power by a minority of the electrorate calls into question the countr's electoral system.
+* cope with
+    * It muset be really hard to cope with three young children and a job
+    * It's only been a year since he died. how's she coping
+* center of interest
+* devastate/destroy
+    * It would be beyond devastating
+    * Rob was devastated by the news of her death
+    * The city center was devastaded by the bomb
+* bombshell
+    * My sister dropped a bobmshell by anouncing she was leaving her job
+    * He dropped a bombshell when he announced he would resign
+    * a blonde bombshell
+* anecdote
+    * He told one or two amusing anecdoutes about his years as a policeman
+    * He told some funny anecdoute about famous peopole
+* come/turn/go full circle
+    * i feel like we've come full circle here
+    * Things have come full circle now that long skirt are back in fashion
+* rally
+    * Trump's at another rally
+    * 5000 people held an anti-nuclear rally
+    * an election/campaign rally
+    * I don't know what for they held the rally
+* utter
+    * That's utter nonsense
+    * This company terat tits eomployees with  utter contempt
+    * I watched in complete and utter horror as he pulled out a gun
+* whenever
+    * whenever trumps cross the line, it only emboldens people who follow him
+* allegation
+    * Several of her patients have made allegations of proefssional misconduct about/against her
+    * Allegations thtat Mr Dwight was receiving money from known criminals have caused a scandal
+    * The allegation of corruption were not true
+    * There is no substance to the allegation
+    * Are you able to verify your allegation?
+    * He's demanding a full apology from the newspaper for making untrue allegations about his personal life
+* unhinge
+    * The terrible experience seemed to have unhinged him slightly
+    * The stress of the job has unhinged many workers
+* fall out/lash out/blut out
+* athletics
+* gymnastics
+    * Gymnastics is my favourte sport
+* news
+* rumor/gossip/grapevine
+    * I heared the rumor that
+    * The rumor said
+    * You know, I heard the rumor that
+    * I heard through the grapevine
+* suit
+    * If the shoe no longer fits, you should begin seeking an organization that is more culturally suited to your current life situation
+* leverage
+    * action
+        * Using ropes and wooden poles for leverage, they haul seeks of cement up the track
+    * power
+        * If the United Nations had more troops in the area, It would have greater leverage
+    * finance
+        * With leverage, the investor's 1000USD buys 500000USD or more of stock if we wants
+    * use
+        * we can gain a market advantage by leveraging our network of partners
+    * business
+        * Home equity is invaluable if you leverage it to build wealt
+        * h
+    * if you are not leveraging your stronget skills, you might want to consider a new position
+    * if you are not put in situations that leverage your best skills, you may become frustrated by your performance and your situation
+* once
+    * I was once asked during an interview what I would doif the job became boring
+* lull
+    * Don't be lulled into complacency when you realize it is time to move on
+    * lull somebody into something/doing something
+        * The police lulled me into believing that they did not suspect us
+        * Earthquakes here are rare and this has lulled people into a  false sense of security
+    * lull in
+        * a brief lull in the conversation
+        * a lull in the fighting
+    * the lull before the storm
+* complacency
+    * Doctors have warned against complacency in fighting common disease
+    * Despite yesterday's win, there is clearly no room for complacency if the team want to stay top of the league
+    * The fast money lulled people into complacency
+* dust
+    * dust off
+        * They were dusting off leaves and twigs
+        * he got to his feet and dusted himself off
+        * The government is dusting off schemes for supporting creative industries
+        * Dust off your resume and start searching.
+* brick and mortar
+    * brick and mortar business vs ecommerse stores
+* embrace
+    * Jack warmly embraced his som
+    * Maggie and Laure embraced
+    * we hope thse regions will embrace democratic reforms
+    * Most West European countries have embraced the concept of high-speed rail networks with enthusiasm
+    * This caurse embraces several different aspect of psychology
+    * brick-and-mortar businesses need to embrace technology to stay relevant
+* innovative
+    * The traditional organizations who found new and innovative ways to deliver a better customer experience
+* overrun
+    * Companies that didn't embrace technology were overrun by competitors
+* correlation
+    * While tehre is certainly a correlation between knowledge and productivity, the relationship is not transitive.
+* competency
+* criteria/sign
+    * While it is good to know which companies should be avoided, it is even more important to have a set of criteria that will help you identify great companies
+* code
+    * YOu should also expect to be asked to code up a solution to some problems
+    * coding skill
+* interview
+    * during the interview process
+* automate
+    * When seeking job opportunities, you should seek organizations that have automated every possible aspect of development, because that means you will be spending less time doing boring and repetitie atasks that don't help you grow and learn
+* attract
+    * Having industry experts and though leaders in an organizations is a great way to attract elite talent
+* tacit
+    * tacit agreement/approval/suport
+    * He gave tacit approval to the plan
+    * they are providing that company with a tacit endorsement as a great workpace
+* endorsement
+* virtue
+    * By virtue of accepting employment at a particular company
+* approve/endorsement
+    * The campaign hasn't received any political endorsement
+    * products that crry an endorsement form a celebrity
+    * driving license
+        * He's got a couple of endorsements on his license already
+* demotivate
+    * You will find this type of environment mentally draining and demotivating over time
+* motivate
+* motivation
+    * he lacks motivation
+    * efforts to improve employees motivation
+    * There is suspicion about the motivation behind the changes wer are debating
+    * Aspirations, a sense of how we can realize our potential, give us power and motivation
+* proactive
+    * Companies without clear testing strategies are going to spend more time reactively fixing issues instead of proactively adding value with new customer features.
+* incur
+    * If you are continuouslly wasting time by using inefficient tools, opportunity cost is incurred by both you and your organization
+    * The play has incurred the wrath/anger of both audiences and critics
+    * incur debts/fines/bills
+* vibe
+    * There is a positve vibe,adn employees feel a sens of security
+* energize
+    * Teams are energized and feel valued because they can see that their efforts are paying dividends
+* beat/defeat
+* schedule
+    * a production schedule
+    * a hectic/tight schedule
+    * Eerything went according to schedule
+    * The class schedule is available on the website
+    * a head of schedule
+    * on schedule
+    * fall behind schedule
+    * We are already two months befind schedule
+    * The training schedule wans't very well thought out
+    * The flight is cheduled to arrive at 8:45, but it's running 20 minutes late
+    * The meeting has been scheduled for tomorrow afternoon
+    * The film is scheduled to begin production in August
+* suggest
+    * What do you suggest we should do?
+    * What do you suggest we do?
+    * What do you suggest doing?
+    * I suggested that she should buy a car with the money she's won
+    * I suggested that she buy a new car
+    * I suggested that she bought a car
+* identify/recognize
+    * He was too far away to be able to identify faces
+    * The police took fingerprints and identified the faces
+    * Eyewitnesses identified the gunman as an army sergeant
+    * The aircraft was identified as American
+    * Scientists have identified the gene that causes abnormal growth
+    * They identified the number of problem areas
+    * His accent identified him as a Frenchman
+    * Workers will wear badges to identify them as park employees
+* tend to do /be prone to something/do something
+    * This stretch of road is prone to foggy patches
+    * I've always been prone to haeadaches
+    * He was prone to depression even as a stranger
+* present
+    * In paragraph 2, it prensets reasons why younger people may enjoy life more but ends by explaining why these same responsibility can fulfilling for older people.
+* different/varied
+    * Our sons are very different from each other
+    * Her jocaket's different to mine
+    * We found women had significantly different politial view from men
+    * a slightly different way of doing things
+    * There are many different types/kinds of bacteria
+* feeling/emotion/sentiment/nostargia/self-indulgent/tendereness/sadness
 
+
+## clothes
+* trousers
+    * My trousers are too long
+* jeans
+    * Those are nice jeans
+    * That's a nice pair of jeans
+* tights
+* shorts
+* pants
+* pyjamas
+* glasses
+    * I need some new glasses
+    * I need a new pair of glasses
+
+
+## politics
+* department of commerce
+    * concerned with prmoting ecnomic growth
+* the Obama administraiton/the Trump administration
+
+## excercise
+* I do maybe handred sit-ups every day
+* I do maybe handred push-ups every day
+* [What Causes Muscle Spasms? Back, Legs, Neck, Treatment, Symptoms](https://www.medicinenet.com/muscle_spasms/article.htm#what_is_skeletal_muscle)
+    * Spasmas can affect many different types of muscles in the body, leading to many diferent symptoms
+* muscle
+    * cardiac muscle
+        * heart muscle pumps blood
+    * skeletal muscle
+        * moves the exgernal body parts, like the arms and legs, neck, back, trunk, and the face
+    * smooth muscle
+        * moves partitions of hollow structures inside the body
+        * esophagus, stomach, intestines, muscle that line large arteries, the muscles of the uterus
+
+## health
+* migraine
+* ALzheimer's disease
+    * the nurse told me that Eddie is showing the early signs of Alzheimer's disease.
+    * It affects his memory and sometimes he doesn't know where he is or what he's doing
+    * If he has Alzheimer's, he's goona get worse
 
 ## computer
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
+* There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
+* Generally, the more complete the evaluation during the interview process, the better you should feel about potentially accepting an offer
+* Staying at an organiation that no longer fits you is much costlier than you may realize
 * I believe there is no person in my community more influential than the local newspaper editor
 * It's safer to travel with others than travel alone.
-* 
+* She also thinks students will miss opportunities to be involved in on-campus activities, which are just as important as the experience of living in town
+* What I'm doing isn't nearly as bad as mwhat he didi to me
+* That was not as good as batch 17
+    * The ones we had right after you almost threw up
+* Are there any more form the good batch?
+* Let's drive. it's cheaper
+* Dont' go by train. It's more expensive
+* It's cheaper to drive than go by train
+* Going by train is more expensive than driving
+* Can you walk a bit faster?
+* I'd like to have a bigger car
+* Last night I went to bed earlier than usual
+* I don't play tennis much these days. I used to play more often.
+* It's too noisy here. Can we go somewhere quieter/more quiet?
+* The garden looks better since you tidied it up
+* I know him well - probably better than anybody else knows him
+* How's your headache? Better? no it's worse
+* He did very badly in the exam. worse than expected
+* It's a long walk from here to the park - further than I thought
+* Let me know if you hear any further news.
+* much a lot
+    * Let's go by car. It's much cheaper
+    * It's a lot cheaper
+    * How do you feel now? much better, thanks.
+    * Could you speak a bit more slowly?
+    * This bag is slightly heavier than the other one
+    * Her illness was far more  serious than we thought at first
+* any 
+    * I've waited long enough. I'm not waiting any longer.
+    * We expected their apartment to be very big, but it's no bigger than ours. it isn't any bigger than ours.
+    * How do you feel now? Do you feel any better?
+    * This hotel is better than the other one, and it's no more expensive
+* more and more/ better and better
+    * Your English is improving. it's getting better and better.
+    * The city has grown fast in recent years. it's got bigger and bigger.
+    * As I lostend to his story, I became more and more convinced that he is lying
+    * These days more and more people are learning English
+* The ... The ..
+    * What time the shall we leave? The sooner The better.
+    * The bigger the better.
+    * When you're traveling, the less luggage you have the better.
+    * The warmer the weather, the better I feel
+    * The sooner we leave, the earlier we will arrive
+    * The younger you are, it is easier to learn
+    * The more expensive the hotel, the better the service
+    * The more electricity you use, The higher your bill will be
+    * The more thought about the plan, the less I liked it
+    * I guest the more muscle you have, the more they an spasm out of control
 
-## Personality
+## Superatives
+* What is the longest river in the world?
+* What was the most enjoyable holiday you've ever had?
+* Yesterday was the hottest day of the year
+* The moview was really boring. It's the most boring moview I've ever seen
+* She is a really nice person. One of the nicest person I know
+* Why does he always come to me at the worst possible time 
+* The hotel is the cheapst in town
+* It's cheaper than all the others in town
+* He's the most patient person I've ever seen
+* He's much more patient than I am
+* in (place, organization, groups of people)
+    * What's the longest river in the world?
+    * We had a nice room. It was one of the nicest room in the hotel
+    * Who is the youngest student in the class?
+* of, time
+    * Yesterday was the hottest day of the year
+    * What was the happiest day of your life?
+* What's the most important decision you've ever had to make?
+* That was the best holiday I've had for a long time.
+
+
+## personality
+* extrovert
+    * most ators are natural extroverts
+* obsessive
+    * an obsessive concern with cleanliness and order
 * He has no awareness
 * Your girlfiriend is really high maintenance
 * You don't look like such a person
@@ -804,6 +1643,13 @@ title: English Speaking
 * I wanna make it a habit.
     * I wanna make it a habbit of waking up early
 * I guess we just click
+* What do you think, bossy and domineering?
+* domineering
+    * What do you think bossy and domineering?
+    * I thought he was arrogant and domineering
+    * a domineering personality
+* arrogant
+* immature
 
 
 ## Telephone
@@ -828,6 +1674,59 @@ title: English Speaking
 * I'll call you back shortly
 * let me put you on hold
 * Is now a good time?
+* They give birth to live young
+* disguise
+    * Maybe you could disguise yourself as a waiter and sneak in there
+    * He escaped across the border disguise as a priest
+    * There's no disguising the fact that business is bad
+    * a letter bomb disguised as a musical greeting s card
+    * Try as he might, Dan couldn't disguise his feelings for Katie
+    * Their streamlined bodies, the absense of hind legs, and the presence of a fluke and blowhole cannot disguise their affinities with land-dwelling 
+* affinity
+    * his remarkable affinity with/for/between animals
+    * The affinity between Christian and Chinese concepts of the spirit
+* deposit
+    * leave
+        * The flood water fell, depositing mud over th whole area
+        * The bus deposited me miles from anywhere
+        * The cuckoo deposits her eggs in other birds's nest
+    * money
+        * I depositied 500USD in my acount this morning
+        * You deposit 20 percent now and pay the rest when the car is delivered
+
+
+## slang
+* Let's give it a shot
+* I screwed up.
+* nothing much, we're just chilling
+* you're just horny
+* Your fly is open
+* it cracks me up every time
+* it's cinch
+    * it's piece of cake
+    * it's nothing
+    * the exam was cinch
+* I had a blast
+* That was so sick
+    * That's so dope
+    * that's so badass
+* dont't flip out, OK? I lost your iPad.
+* I'm so wasted
+* what a bummer
+* it blows my mind she is still single
+    * I was blown away
+* that's so messed up
+    * thas's so fucked up
+* dont't be a party pooper
+* they rock
+* that's a hot chick
+* I got shot down
+* heaters gonna hate
+* it's so ghetto
+* that's awsome
+    * that's insane
+* he is a baller now
+* he got swagger/swag man
 
 
 ## Number
@@ -868,85 +1767,150 @@ title: English Speaking
     * twenty eight degrees centigrade/Celcius
     * ninety two degrees Fahrenheit
 
-## Graph
+## graph
+* introduction
+    * The provided chart shows the number of leaisure
+    * The provided graph represent information about the male and female workers of Freedonia in six different sectors in 1975 and 1995
+    * The graph reflects that
 * A striking feature of the graph is
 * By 2005 the number of members had reached a peak of 300
 * the same as
 * far more/less
-* as as
 * three times more
 * twice as much
 * The number of tourists visiting Paris increased significantly between 1990 and 2000 while those going to London in the same period dropped slightly.
+* As is overved form the graph, ... had more ... than the other type of people.
+* ... had about ... hours of ... time on an average per week compared to the 38 hours of ... time for ...
+* ... were occupied by men whereas women were very small in number in ...
+    * Job sectors like defence were mostly occupied by men whereas women wer every small in number in this sector
+* The scenario changed remarkably
+    * in the year 1975, the smallest gap between the number of male and female wokrers could be observed in the communication sector. After 20 years, in 1995 the scenario changed remarkably.
+* the opposite is true for ...
+    * the number of male employees had declined in defence and the opposite is true for women.
+* X axis represents the time and Y axis represents the area in million hectares where grain was harvested
+* type
+    * diagram
+        * the diagram shows employment rates among adults in four European countries from 1925 to 1985
+        * The given pie charts represent the propostion of male and female employees in 6 broad categories, dividing into manual and non-manual occupation in Australia, between 2010 and 2015
+    * table
+    * figure
+    * illustration
+    * graph
+    * chart
+    * flow chart
+    * picture
+    * presentation
+    * pie chart
+    * bar grph
+    * column graph
+    * line graph
+    * table data
+    * data
+    * information
+    * pictorial
+    * process diagram
+    * map
+* description
+    * the comparison of
+    * the differences
+    * the changes
+    * the number of
+    * information on
+    * data on
+    * the propotion of
+    * the amount of
+    * data about
+    * comparative data
+    * the trend of
+    * the percentages of
+    * the ratio of
+    * how the
+    * the piza was the most consumed item in 70's
+* time
+    * in later years
+    * in this year
+    * from 1990 to 1999
+    * initially
+    * over the time, pizza consumption declined and fish & chips became the most consumed item in 1990 with 500 gm consupmption per person
+* reasoning
+    * According to the bar graph
 * [How can I describe a graph? IELTS writing task Part 1 | St George International](http://www.stgeorges.co.uk/blog/how-can-i-describe-a-graph-ielts-writing-task-part-1-business-english)
+* comparison
+    * if we compare that with Europe, it's not such a dramatic rises
+    * In spain, it's kind of similar pattern
+    * if we compare q1 and q3, in the UK there was a massive drop in usage of central heating
+* difference
+    * Overall, expenditure on fast food varied based on people's income
+* peak
+    * Unlike the UK, the peak was in Q4
+    * It bottoms out in q3
+* upward
     * there was a dramatic rise in sales
     * throughout the period 2008 to 2014, sales shot up
     * sales climbed dramatically all describing upward trends
-    * if we compare that with Europe, it's not such a dramatic rises
     * there is a little bit of an increase over this time period
     * sales increased slightly from 2008 to 2014
     * sales increased slowly year on year 
+    * from Q3 to Q4, there was a drastic increase in central usage
+    * there was a upward trend
+    * there was a steady increase
+    * iceceam sales rose significantly
+    * iceceam sales went up incredible amount
+    * from January to Feburary, there was a upward trend
+    * to climb
+    * to increase
+    * to rise
+    * to go up
+    * to shoot up
+    * to rocket
+    * to soar
+* downward
     * we've got a downward torend in this line graph
     * from 2006 to 2014, there was a gradual decline in the number of complaint
-    * from 2010 onwards, therew was severe drop in the number of complaints
+    * from 2010 onwards, there was severe drop in the number of complaints
     * there was a dramatic fall
     * there was a drastic decline
     * there was a sudden decrease
-    * from 2009 to 2010, the number of complaints stayed the same
     * the number of complaints levelled off
     * there was a dramatic downard trend
-    * if we compare q1 and q3, in the UK there was a massive drop in usage of central heating
-    * from Q3 to Q4, there was a drastic increase in central usage
-    * In spain, it's kind of similar pattern
-    * Unlike the UK, the peak was in Q4
-    * It bottoms out in q3
     * there was a significant drop between q1 and q3
-    * from January to Feburary, there was a upward trend
-    * iceceam sales went up incredible amount
-    * iceceam sales rose significantly
     * there was a significant drop after september
     * there was a sudden or a steep decline
-    * upward
-        * there was a upward trend
-        * there was a steady increase
-        * to climb
-        * to increase
-        * to rise
-        * to go up
-        * to shoot up
-        * to rocket
-        * to soar
-    * downward
-        * to decrease
-        * to fall
-        * to go down
-        * to drop
-        * to decline
-        * to drop
-        * to plunge
-        * to plummet
-    * adv to describe big changes
-        * dramatically
-        * sharply
-        * significantly
-        * drastically
-        * noticeably
-        * sheeply
-    * adverbs to describe small changes
-        * gradually
-        * slightly
-        * steadly
-        * gently
-        * moderately
-        * little by little
-        * step by step
-    * how to describe no change
-        * remained the same
-        * remained constant
-        * stabllised
-        * levelled off
-        * moderatley
-        * little by little
-        * step by step
+    * to decrease
+    * to fall
+    * to go down
+    * to decline
+    * to drop
+    * to plunge
+    * to plummet
+* how to describe no change
+    * from 2009 to 2010, the number of complaints stayed the same
+    * but the number of women workers remained almost the same as it was in 1975
+    * remained the same
+    * remained constant
+    * stabllised
+    * levelled off
+    * moderatley
+    * little by little
+    * step by step
+* adv to describe big changes
+    * remarkably
+    * incredible amount
+    * dramatically
+    * sharply
+    * significantly
+    * drastically
+    * noticeably
+    * sheeply
+* adverbs to describe small changes
+    * gradually
+    * slightly
+    * steadly
+    * gently
+    * moderately
+    * little by little
+    * step by step
 * [IELTS Exam Prep: How to Describe a Graph, Diagram, Chart or Table | St George International](http://www.stgeorges.co.uk/blog/ielts-exam-how-to-describe-a-graph-diagram-chart-table)
 
 ## Reference
+* [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)

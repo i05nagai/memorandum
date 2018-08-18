@@ -73,6 +73,39 @@ Data Engineer install data into data warehousing.
     * The entire process was very non-standard compared to other big companies and when you don't move to the next level for such a technical role without even being tested on your technical skills you are bound to have some amount of resentment.
 
 
+## Indeed
+* [Indeed Interview Questions in Tokyo, Japan | Glassdoor](https://www.glassdoor.com/Interview/Indeed-Tokyo-Interview-Questions-EI_IE100561.0,6_IL.7,12_IM1071.htm?sort.sortType=RD&sort.ascending=false)
+
+
+* 1
+    * IT support
+    * Skype call with recruiter
+    * hangout call with department head
+    * group hangout with hiring.
+    * The interviews start general and get more technical.
+    * The department head provides technical questions for the recruiter to ask. Prepare a lot of mac knowledge as the staff is 95% mac users.
+    * How would you find the mac address?  
+    * How would you boot a mac into safe mode? 
+    * Difference between PRAM and SMC on a mac?  
+    * What are crossover cables and why would you use one?  
+* 2
+    * UX
+    * Phone Screen > Homework assignment > In-person interview
+* 3
+    * SWE
+        * Completed an online skills test with 4 questions via AtCoder.
+        * One 30 minute interview with an engineer via Skype.
+        * Three 30 minute interviews with 3 engineers via Skype.
+        * tree traversal and dynamic programming
+* 4
+    * SWE
+        * online tests; 1 hard, 3 medium in two hours
+* 5
+    * SWE
+        * 3 online tests
+        * 1 skype call
+        * 1 onsite interview 3 technical interviews of 50m
+    * What's the largest value of an int in C++?  
 
 
 ### Questions

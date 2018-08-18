@@ -1,0 +1,293 @@
+---
+title: English word choice
+---
+
+## English word choice
+
+* rug/carpet
+    * floor covering
+    * table cover
+* how about/what about
+* ensure/assure/insure/gurantee
+    * [assure vs. ensure vs. insure : Choose Your Words : Vocabulary.com](https://www.vocabulary.com/articles/chooseyourwords/assure-ensure-insure/)
+    * assure
+        * to tell someone everything is ok
+        * to remove doubt, or confidently tell someone about something
+        * Rest assured Brazil will have a great World Cup in 2014
+        * I assure you I mean no harm
+        * He considered retirement before doctors assured him he could still fight
+    * ensure
+        * to make certain
+        * Aides said the leaders conferred by telephone to ensure that their speeches, while different in tone, would not be incompatible
+    * insure
+        * to protect finacially
+        * Very well then, listen: You know our houses was insured for a good deal of money -- fifteen thousand dollar
+* have got to/have to
+    * [Have got to and have to - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/have-got-to-and-have-to)
+* How did it go?/How was it?
+    * [English Phrase: How'd (something) go? | PhraseMix.com](http://www.phrasemix.com/phrases/howd-something-go)
+    * How was
+        * asking for someone's opinion or evaluation of an event
+    * How did it go?
+        * when someone has tried to  do something and you want to know the result
+        * How'd your meeting with Microsoft go?
+* revenge/avenge/vengeance
+    * [What is the difference between revenge, avenge and vengeance? - Quora](https://www.quora.com/What-is-the-difference-between-revenge-avenge-and-vengeance)
+    * revenge
+        * n
+    * avenge
+        * v
+        * Poeple avenge something
+        * Poeple avenge themselves on somebody
+    * vengeance
+        * vengeance against
+        * vengeance for
+        * vengeance on/uopon
+
+* wage/pay/salary/revenue/income
+    * [where is difference between WAGE, PAY, SALARY, REVENUE, INCOME? - Learn english - italki Answers](https://www.italki.com/question/291751)
+    * wage
+        * The amount of money someone who is paid by the hour receives per hour, such as 10USD per hour
+        * The total amount of the money earned by such a person over a period of time. His wages last month warer 2000USD
+    * salary
+        * the amount earned for each ttime period, by someone paid not by the hour. His salary is 50000 a year
+    * pay
+        * usually means same as wage, but can sometimes to applied to salary, as well. His pay last month was 200USD
+    * income
+        * For an individual,
+            * in means all inflows of money, from woking and any other source
+            * If you had a salary of 500USD a year and received 100 from your investment earnings, your income would be 600.
+        * For an individual as related to tax
+            * the above would be called gross income
+            * You then get to subtract certain expenses, and calculate numbers such as taxable income
+        * For a business,
+            * There is gross income which is all the money earned or received by the company
+            * There is net income which is gross income minus expenses.
+    * revenue
+        * this is very similar to gross income for a company
+        * it measures inflow to a company 
+        * enerally just from selling goods or services, but sometimes meaning inflows from all sources. It does not reflect any deductions for expenses, in most situations.
+* work a job/do a job
+    * [Do we "work a job"? Or "do a job"? Or both?](https://www.usingenglish.com/forum/threads/133423-Do-we-quot-work-a-job-quot-Or-quot-do-a-job-quot-Or-both)
+* get it to work/get it working
+    * [meaning - “Get something to do” vs ”Get something doing” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/123991/get-something-to-do-vs-get-something-doing)
+* probably/perhaps/possibly/maybe
+    * [What is the difference between maybe, perhaps, possibly and probably? - Quora](https://www.quora.com/What-is-the-difference-between-maybe-perhaps-possibly-and-probably)
+* make an/the effor/take an/the effor
+    * [word choice - Can I say "take effort"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/146234/can-i-say-take-effort)
+* farther/further
+    * [‘Farther’ or ‘further’? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/farther-or-further)
+    * furtheest/furthest
+    * there is no difference in meaning
+    * further
+        * much more common
+* with regard to/in terms of/regarding
+    * [with regard to vs in terms of | WordReference Forums](https://forum.wordreference.com/threads/with-regard-to-vs-in-terms-of.2219081/)
+    * 
+[Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv35.shtml)
+* in effect/in fact
+    * [meaning - "in effect" vs. "in fact" - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/49700/in-effect-vs-in-fact)
+    * [Does 'in effect' mean the same thing as 'in fact'? - Quora](https://www.quora.com/Does-in-effect-mean-the-same-thing-as-in-fact)
+* although/even though/though
+    * [Although or though ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/although-or-though)
+    * tough/although
+        * after main clause, it can also mean `but it is also true that`
+    * tough
+        * spoken english
+        * sometimes even though
+        * in spoken english, though meaning however
+            * It’s expensive. It's nice, though.
+    * as though
+        * very similar to as if
+        * as if is much more common
+        * You look as though/as if you have seen a ghost!
+* as/because/since/
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv27.shtml)
+    * because
+        * the reason is the most imporant part of the sentence or utterance
+        * the because clause usually comes at the end
+    * as/since
+        * the reason is already well known and is therefore usually less important
+        * the as/since clause is usually placed at the begining of the sentence
+    * for
+        * the reason is given as an afterthought
+        * it is never placed at the beginning of the sentence
+        * more characteristic of written, rather than spoken English
+        * 'I decided to stop the work I was doing - for it was very late and I wanted to go to bed.'
+* known to/known by
+    * [grammar - Which is correct: "The facts are known by us" or "The facts are known to us"? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/227635/which-is-correct-the-facts-are-known-by-us-or-the-facts-are-known-to-us)
+    * known to
+        * is idiomatic
+        * known to is better
+    * known by
+        * passive voice
+        * active voice is prefered in many cases
+* made from/made of/makde out of/made with
+    * [Made from, made of, made out of, made with - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/word-order-and-focus/made-from-made-of-made-out-of-made-with)
+    * made from
+        * how something is manufactured
+        * Plastic is made from oil
+        * The ealiest canoes were made from tree trunks
+    * made of
+        * the basic materials or qualities of something
+        * it has meanig similar to compose of
+        * What's this made of? it's Americal white oak.
+    * made out of
+        * something that has been changed or transformed from one thing into another
+        * In the 1970s, it was popular to have candle-holders made out of wine bottles
+        * they were living in tents made out of old plastic sheets.
+    * made with
+        * ingredients of food and drink
+        * This dish is made with beef, red peppers and herbs.
+* refuse/reject/decline/deny
+    * [The words refuse, reject, decline and deny](https://www.englishgrammar.org/words-refuse-reject-decline-deny/)
+    * opposite of deny is admit
+    * opposite of refuse/reject/decline is accept
+    * deny
+        * To deny is to say that something is not true
+        * to deny somebody something is to refuse to give it to them
+    * refuse
+        * to refuse to do something is to say that you won't do that
+    * reject
+        * to reject a proposal is to refuse to accept it
+    * decline
+        * Decline is relatively formal. It has more or less the same meaning as refuse. 
+        * To decline something is to politely refuse to accept it.
+        * Decline can also mean become less or become worse
+* refuse/refute
+    * [Refuse and Refute](https://www.usingenglish.com/forum/threads/22425-Refuse-and-Refute)
+    * unwilling to accept
+    * prove wrong
+* don't die on me
+    * [Don't Die On Me/ Don't Give Up On Me?](https://www.englishforums.com/English/DontDieOnMeDontGiveUpOnMe/kwxkv/post.htm)
+* more than me/more than I do
+    * A likes B more than me
+    * A likes B more than I do
+* more than me/more than I
+    * [Which is correct, better than I or better than me? | Ask The Editor | Learner's Dictionary](http://www.learnersdictionary.com/qa/better-than-I-or-better-than-me)
+    * more than I
+        * formal
+    * more than me
+        * informal
+* lately/recently
+    * [meaning - "Lately" and "recently" in Present Perfect - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/111386/lately-and-recently-in-present-perfect)
+* can/be able to
+* would you please/could you please/would you mind/would you mind ... please?
+    * [politeness - How much more polite does the word "please" make a request? - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/52105/how-much-more-polite-does-the-word-please-make-a-request?rq=1)
+    * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv239.shtml)
+* oneself/one's self
+    * [Oneself vs. one’s self - Grammarist](http://grammarist.com/spelling/oneself-ones-self/)
+    * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+        * The two-word phrase one's self is only justifiable when self is used in a piritual, philosophical, or psychological sense. In all other cases, one's self can be replaced with the pronoun oneself
+* in order that/so that
+    * [So that or in order that ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/so-that-or-in-order-that)
+    * in order that is more formal
+    * When referring to the future, we can use the present simple or will/’ll after so that. We usually use the present simple after in order that to talk about the future:
+        * I’ll post the CD today so that you get it by the weekend. (or … so that you will get it …)
+        * We will send you a reminder in order that you arrive on time for your appointment. (or … so that you arrive on time … or … so that you’ll arrive on time …)
+    * So that (but not in order that) can also mean ‘with the result that’
+* make me start to do
+    * I wanted to talk to foreigners. That is why I started studying English.
+* interchange/exchange
+    * [word choice - "Interchange" and "exchange" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/34545/interchange-and-exchange)
+    * exchange
+        * to give or receive something/somebody of the same type or of equal value in return for another
+    * interchange
+        * to share or exchange something
+        * to put each of two things or people in the other's place
+* in honor of/in memory of
+    * [What's The Difference Between "In Honor Of" And "In Memory Of"?](https://www.englishforums.com/English/WhatsDifferenceBetweenHonorMemory/bcgcqn/post.htm)
+    * in memory of
+        * is normally followed by a noun phrase that refers to the dead.
+    * in memory of is to in honor of as remember is to honor.
+* pp. or p.
+    * [abbreviations - Usage of "p." versus "pp." versus "pg." to denote page numbers and page ranges - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14533/usage-of-p-versus-pp-versus-pg-to-denote-page-numbers-and-page-ranges)
+* most pleased
+    * [phrase usage - Is "most pleased" pompous or condescending? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/237895/is-most-pleased-pompous-or-condescending)
+    * It's my pleasure to...
+        * is a common phrase if you want to be polite.
+    * I am pleased to...
+        * is also common.
+    * I am most pleased to...
+        * is NOT commonly used conversationally.
+* afraid of / afraid to do
+    * [Afraid of vs afraid to](https://www.tolearnenglish.com/forum/lire.php?num=6&msg=57210&titre=Afraid+of+vs+afraid+to)
+    * afraid to do = araid doing
+    * afirad of doing
+        * To talk about fear of things that happen accidentally, we prefer afraid of + -ing.
+* I'am he
+    * [“I Am He” \- ensign](https://www.lds.org/ensign/1999/04/i-am-he?lang=eng)
+* How are you?/How are you doing?/How do you do?
+    * [meaning - Difference between "How are you?" and "How are you doing?" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/73766/difference-between-how-are-you-and-how-are-you-doing)
+    * How do you do?
+        * How do you do?
+    * How are you doing?/How are you?
+        * Fine, thanks!/Very well, thank you.
+* Company name
+    * [Does a Comma Go in Front of LLC or Inc.? | LegalZoom](https://www.legalzoom.com/articles/does-a-comma-go-in-front-of-llc-or-inc)
+    * Inc.
+    * corp.
+    * L.L.C./LLC
+        * limited liability company
+* as to/as for
+    * [prepositions \- Difference between "As For" and "As To" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
+* [とりあえずの英語表現](http://www.ensenada-realestate.com/article/449468304.html?seesaa_related=related_article)
+* [meaning - "There are still problems" vs. "there still are problems" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/130705/there-are-still-problems-vs-there-still-are-problems)
+    * There are still
+        * normal
+    * There still are
+        * strong
+* I'm running late
+    * [meaning in context \- Be "running late" and "run my appointment" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/127289/be-running-late-and-run-my-appointment)
+* [このごろ家事は手抜きしてます。って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/4582/)
+* [来店客って英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/27681/)
+    * I cross the customer's name off the reservation list.
+    * I cross off the customer's name from the reservation list.
+* [What is the difference between "to not" and "not to" and can they be used interchangeably? | Ask The Editor | Learner's Dictionary](http://learnersdictionary.com/qa/Split-Infinitives)
+    * they decided not to stay ...
+        * `they decide` is important
+    * the decided to not stay ...
+        * they decided to stay another night before but now `they will not stay`
+    * I asked her quietly to leave
+        * `quietly` is unclear
+    * I asked her to quietly leave
+        * `quietly` is clear
+* [yoyとmomとqoqやytdの意味や違い](https://fromportal.com/kakei/invest/glossary/yoy-mom-ytd.html)
+    * month-on-motth, month-over-month
+    * YoYは前年比だが、前年同期比、前年同月比なのかは文脈による
+* Q-tips
+    * [What does Chandler mean by 'You have to stop the Q-tip when there is resistance'? - Quora](https://www.quora.com/What-does-Chandler-mean-by-You-have-to-stop-the-Q-tip-when-there-is-resistance)
+* I will flash you
+    * [I'll flash you | WordReference Forums](https://forum.wordreference.com/threads/ill-flash-you.377843/)
+* I'm over you
+    * [What does "I'm so over you." mean? - Learn english - italki Answers](https://www.italki.com/question/92825)
+    * it means that at one time I had feelings for you , but now those feelings are gone and now I am indifferent to those feelings.
+* costume/outfit/uniform
+    * [What is difference between costume and outfit? \- Quora](https://www.quora.com/What-is-difference-between-costume-and-outfit)
+* I've been meaning to tell you
+    * I've been meaning to tell you about it since the weekend.
+    * The -ing form is a bit more natural and emphasizes that the intention to tell you has been continuous since the weekend.
+    * [EN: I've been meaning to tell you \| WordReference Forums](https://forum.wordreference.com/threads/en-ive-been-meaning-to-tell-you.1219428/)
+* nasty/naughty
+    * [What is the difference between nasty and naughty ? \| HiNative](https://hinative.com/en-US/questions/961467)
+    * Naughty means not obeying or disobedient.
+    * Nasty means smelling bad.
+    * That kid is so naughty
+    * She smells nasty.
+    * She was naughty in bed.
+* perfume/eau de toilette/eau de cologne
+    * [What is the difference between perfume, eau de toilette, and eau de Cologne?](http://www.slate.com/blogs/quora/2015/03/12/what_is_the_difference_between_perfume_eau_de_toilette_and_eau_de_cologne.html)
+* compare with/compare to
+    * [Compare with or compare to? | Oxford Dictionaries](https://en.oxforddictionaries.com/usage/compare-with-or-compare-to)
+    * Individual schools compared their facilities with those of others in the area.
+    * It is difficult to compare our results to studies conducted in the United States.
+* site/website
+    * [word choice - “Site” vs. “website” - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/297984/site-vs-website)
+* get/got/gotten
+    * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
+    * [word choice - Difference between "I have got" and "I have gotten" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/5531/difference-between-i-have-got-and-i-have-gotten)
+    * have got/'ve got/got -> have or must
+    * have gotten -> in US present perfect of to get
+    * have got -> in UK present perfect of to get
+
+## Reference

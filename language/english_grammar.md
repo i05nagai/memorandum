@@ -163,4 +163,539 @@ The Sense of Style: The Thinking Person’s Guide to Writing in the 21st Century
 Revising Prose by Richard Lanham
 100 Ways to Improve Your Writing by Gary Provost
 
+## noun
+* accommodation
+    * There's a shortage of cheap accommodation
+    * We have first and second class accommodation on this flight
+* travel/a trip/a journey
+    * They spend a lot of money on travel
+    * We had a very good trip/journey
+* a job/work/career
+    * I'm lookin for a job
+    * I'm looking for work
+* a view/scenery
+    * What a beautiful view
+    * What beautiful scenery
+* a bag/a case/baggage/luggage
+    * We had a lot of bags and cases
+    * We had a lot of baggage/ luggage
+* a chair/furniture
+    * These chairs are mine
+    * This furniture is mine
+* a suggestion/advice
+    * That's a good suggestion
+    * That's good advice
+* Jac has a long nose
+* Jack has blue eyes
+* some
+    * a number of/a few of/a pair of
+        * I've seen some good movies recnetly
+        * Some friends of mine are coming to stay at the weekend
+        * I need some new sunglasses
+    * some but not all
+        * Some children lean very quickly
+        * Tomorrow there will be rain in some places, but most of the coutry will be dry
+* Can you turn off the light?
+* I took a taxi to the station
+* (in a shop) I'd like to speak to the manager, please
+* I have to go to the bank and then I'm going to the post office
+* Clare isnt very well. She's gone to the doctor
+* I don't like going to the dentist
+* I have to go to the bank today
+* Is there a bank near here?
+* I don't like going to the dentist
+* My sister is a dentist
+* the cinema/the theatre
+    * we do not necessarily mean a specific cinema or theatre
+    * I go to the cinema a lot, but I haven't been to the theatre for ages
+* the radio/television/TV
+    * I listen to theradio a lot
+    * I watch television a lot
+    * We heard it on the radio
+    * We watched it on TV
+* The television/the TV
+    * the television set
+    * Can you turn off the television?
+* What did you have for breakfast?
+* We had lunch in a very nice restaurant
+* We had a very nice lunch
+* We had a very wonderful dinner
+* We had an early breakfast
+* noun + number
+    * Our train leaves from Platform 5
+    * (in a shop) Do you have these shoes in size 43?
+    * Room 126
+    * page 29
+    * question 3
+    * Gate 10
+* school/the school
+    * Every day she goes to school
+    * She's at school
+    * School starts at 9 and finishes at 3
+    * She has gone to the school to see her.
+    * She's at the school now
+* prision/the prison
+    * Ken's brother is in prison for robbery
+    * Ken went tot the prison to visit his brother
+* jail /the jail
+* hospital/the hospital
+    * Joe had an accident last week. He was taken to hospital. He's still in hospital now
+    * Jane has gone to the hospital to visit joe. She's at the hospital now
+* university/the university/college/the college
+    * When I leave shool, I plan to go to university/college
+    * I went to the university to meet Professor Thomas
+* church/the church
+    * Sally's father goes to church every Sunday
+    * Some workmen went to the church to repair the roof
+* the yong/ the rich/the sick/the injured/the old/the poor/the disabled/ the dead/the elderly/the homeless/the unemployed
+    * a group of people
+    * Do you think the rich should pay higher taxes?
+    * We need to do more to help the homeless.
+    * a yuong man/the injured woman
+* the nationality
+    * the French/ the English/the Spanish
+    * The French are famous for their food
+    * a Frenchman/an Englishwoman
+    * the Chinese/the Sudanese/the Japanese
+    * The Chinese invented printing
+    * a Chinese/a Japanese
+    * a Swiss and the Swiss
+    * an Italian/Italians
+    * a Mexicam/Mexicans
+    * a Turk/Turks
+* the giraffe/the bicycle/the telephone/the dollar/the guiter/the piano
+    * the dollar is the currency of the United States
+* names without the
+    * naems of people
+    * most names of places
+        * continets
+            * Africa, Europe, South America
+        * countries, states
+            * France, Jpan, Brazil, Texas
+        * islands
+            * Sicily
+            * Bermuda
+            * Tasmania
+        * cities, towns
+            * Ciro, New York, Bangkok
+        * mountains
+            * Everest, Etna, Kilimanjaro
+        * northern Brazil
+        * south-eastern Spain
+    * most city streets/roads/squares/parks
+        * Union Street
+        * Fifth Avenue
+        * Hyde park
+        * Queens Road
+        * Broadway
+        * Times Square
+    * important public buildings and instituions, airports/stations/universities
+        * Manchester Airport
+        * Harvard University
+        * Cambridge University
+        * Victoria Station
+        * Canterbury Cathedral
+        * Edinburgh Castle
+        * Buckingham Palace
+        * Sydney Harbour
+    * Many shops/restaurants/hotels/banks are named after people
+        * McDonald's
+        * Barclays bank
+        * Joe's Dinner restaurant
+        * Macy's department store
+    * churches are named after saints
+        * St John's Church
+        * St Patrick's Cathedral
+    * company
+        * Fiat
+        * Sony
+        * Singapore Airlines
+        * Kodak
+        * IBM
+        * Yale University Press
+* names with the
+    * republic, kingdom, States
+        * the Czech Republic
+        * the United Kingdom
+        * the UK
+        * the Dominican Republic
+        * the United States of America
+        * the USA
+    * oceans, seas, rivers and canals
+        * the Atralntic Ocean
+        * the Red Sea
+        * the Amazon
+        * the Indian Ocean
+        * the Channel
+        * the Nile
+        * the Mediterranean Sea
+        * the Suez Canal
+    * desert
+        * the Sahara Desert
+        * the Gobi Desert
+    * plural names of people and places
+        * the Taylors, the Taylor family
+        * the Johnsons
+        * the Netherlands
+        * The Philippines
+        * The United States
+        * the Canaries/the Canary Islands
+        * the Bahamas
+        * the Rocky Mountains/ the Rockies
+        * the Andes
+        * the Alps
+    * the north of Brazil
+    * the south-east of Spain
+    * Most other buildings
+        * hotels
+            * the Sheraton Hotel
+            * the Holiday Inn
+        * cinemas/theatres
+            * the Palace Tehatre
+            * the Odeon cinema
+        * museums/galleries
+            * the Guggenheim Museum
+            * the National Gallery
+        * other buildings
+            * the Empire State Building
+            * the White House
+            * the Eiffel Tower
+            * the Acropolis
+            * the Kremlin
+            * the Pentagon
+    * name with of
+        * the Bank of England
+        * the Museum of Modern Art
+        * the Great Wall of China
+        * the Twoer of London
+        * the University of Cambridge
+    * Most newspapers/many organizations
+        * newspapers
+            * the Washington Post
+            * the Financial Times
+            * the Sun
+        * organization
+            * the European Union
+            * the BBC
+            * the Red Cross
+* The highest mountain in the Andes is Mount Aconcagua
+* Have you been to Canada or the USA?
+* singluar
+    * athletics
+    * economics
+    * electronics
+    * gymnastics
+    * maths
+    * physics
+    * politics
+    * news
+    * a sum of money, a period of time, a distance
+        * Fifty thousand pounds was stole in the robbery
+        * Three years is a long time to be without a job
+        * Two miles isn't very far to walk
+* plural
+    * We often think of them as a number of people, not as one thing
+    * audience
+    * committee
+    * company
+    * family
+    * firm
+    * government
+        * The government have decided to increase taxes
+    * staff
+        * The staff at the company are not happy with their working conditions
+    * team
+    * name of a sports team/ a company
+        * Italy are paying Brazil next Sunday in a football match
+        * Shell have increased the price of petrol
+    * police
+        * The police are investigating the crime, but haven't arrested anyone yet
+        * but a police office/a policeman/a policewoman
+* singluar/plural
+    * means
+        * a means of transport
+        * We need to find some other means of transportation
+        * They had no means of transportation
+        * We need to use every means at our disposal
+        * may means of transport
+    * series
+        * a television series
+        * two television series
+    * species
+        * a species of bird
+        * 200 species of bird
+* noun with apostrophe
+    * people/amimals
+        * Be careful. Don't step on the cat's tail
+        * This isn't my book. It's my sister's
+        * Your friend's name
+        * a woman's hat
+        * a boy's name
+        * a bird's egg
+    * apostraphe before s
+        * my sister's room
+        * the Carters' house
+        * the men's changing room
+        * a achildren's book
+        * Jack and Karen's wedding
+        * Mr and Mrs Carter's house
+    * apostraphe after s
+        * my sisters' room
+    * organisation
+        * the government's decision
+        * the company's success
+    * place
+        * the city's streets
+        * the world's population
+        * Italy's prime ministei
+    * timae
+        * Do you still have yesterday's newspaper?
+        * Next week's meeting has been cancelled
+        * today's/tomorrow's/this evening's/Monday's
+        * I've got a week's holiday starting on Monday
+        * Julia has got three weeks' holiday
+        * I live near the station. it's only about ten minutes' walk
+* noun without apostrophe
+    * the name of the woman sitting by the door
+    * things/ideas
+        * the temperature of the water
+        * the name of the book
+        * the owner of the restaurant
+        * the water temparature
+        * the restaurant owner
+    * the beginning/end/middle of /the top/bottom of / the front/back/side of
+        * the begining of the mongth
+        * the top f the hill
+        * the back of the car
+    * organisation
+        * the decision of the government
+        * the success of the company
+
+## auxiliary verb
+modal verb
+
+* can
+    * something is possible or allowed
+        * we can see the lake from our hotel
+        * You can use mine
+        * I can come and see you tomorrow if you like
+        * The word dream can be a noun and a verb
+        * I'm afraid I cannot come to the party on Friday
+    * somebody has the general ability to do something
+        * Can you speak any foreign languages?
+    * possible actions now/in the future
+        * could is less sure than can
+        * What shall we do tonight? We can go to the cinema
+        * When you go to Paris next month, you can stay with Sarah. Yes I suppose I can
+    * you believe something is not possible
+        * You've just had lunch. You can't be hungry already
+        * They haven't lived here for very long. They can't know many people.
+    * past of you believe something is not possible
+* is about to
+    * can is more usual
+        * We are able to see the lake from our hotel
+    * after auxiliary verb
+        * I haven't been able to sleep recently
+        * Tom might be able to come tomorrow
+        * Applicants for the job must be able to speak two foreign languages
+    * somebody did something in a specifi situation
+        * The fire spread through the building very quickly, but fortunately everybody was able to escape/ managed to escape
+        * We didn't know wher David was, but we managed to find/were able to find him in the end
+        * Jack and Andy palyed a match yesterday. Andy played well, but Jack managed to beat him
+* could
+    * past of can
+        * We had a lovely room in the hotel. We could see the lake.
+        * As soon as I walked into the room, I could smell gas
+        * I was sitting at the back of the theatre adn couldn't hear very well
+        * My grandfather couldn't swim
+    * past of can: general ability or permission
+        * My grandfather could speak five languages
+        * We were totally free. We could do what we wanted
+        * Jack was an excellent tennis player when he was younger. He could beat anybody
+    * somebody didn't something in a specific situation
+        * Jack and Andy palyed a match yesterday. Andy played well, but Jack couldn't beat him
+        * We looked for David everywhere, but we couldn't find him
+        * Andy played well, but he couldn't beat Jack
+    * possible actions now/in the future
+        * could is less sure than can
+        * What shall we do tonight? We could go to the cinema
+        * When you go to Paris next month, you could stay with Sarah. Yes I suppose I could
+    * actions that are not realistic
+        * I'm so tired, I could sleep for a week
+        * I can stay with Sarah when I go to Paris
+            * realistic
+        * Maybe I could stay with Sarah when I go to Paris
+            * less sure
+        * This is a wonderful place. I could stay here for ever
+            * not realistic
+    * something (a situation or a happening) is possible now/in the future
+        * similar to might or may
+        * The story could be true, but I don't think it is
+        * I don't know what time Lisa is coming. She could get here at any time
+        * The weather can change very quickly in the mountains
+            * in general
+        * The weather is nice now, but it could change
+    * could have done to talk about the past
+        * I'm so tired, I could sleep for a week
+            * now
+        * I was so tired, I could have slept for a week
+            * past
+        * The situation is bad, but it could be worse
+            * now
+        * The situation was bad, but it could have been worse
+            * past
+    * something could have happened = it was possible but did not happen
+        * Why did you stay at a hotel when you were in Paris? You could have stayed with Sarah
+        * David was lucky. He could have hurt himself when he fell, but he's OK
+    * couldn't to say that something would not be possible
+        * I couldn't live in a big city. I'd hate it.
+        * Everything is fine right now. Things couldn't be better
+        *  we had a really good holiday. It couldn't have been better
+        *  The trip was cancelled last week. Paul couldn't have gone anyway because he was ill
+* must
+    * you believe something is certain
+        * It must be very noisy
+        * You've been travelling allday. You must be tired
+        * Joe is hard worker. Joe? You must be joking. He doesn't do anything
+        * Louise must get very bored in her job. She does the same thing every day
+        * I'm sure Sally gave me her address. I must have it somewhere
+    * past of you believe something is certain
+        * There's nobady at home. They must have gone out
+        * We used to live very near the mortorway. Did you? it must have been noisy
+        * I've lost one of my gloves. You must have dropped it somewhere
+        * Sarah hasn't contacted me. She can't have got my message
+        * Tom walked into a wall. He can't have been looking where he was going
+    * give your own opinion, what you think is necessary, recomment someone to do something
+        * I haven't spoken to Sue for ages. I must phone her.
+        * Mark is really nice person. You must meet him
+    * written rules anre instructions
+        * Applications for the job must be received by 18 May
+        * Answe rall the question. You must write your answers in ink
+    * mustn't = it is necessary that you do not do it
+        * You must keep this a secret
+        * You mustn't tell anyone
+        * I promised I would be on time. I mustn't be late
+* need
+    * needn't do = don't need to do = It's not necessary to do it
+        * We've got plenty of time. We needn't hurry
+        * Joe can stay here. He needn't come with us
+        * We don't need to hurry
+    * needn't have done
+        * We needn't have reserved a table
+* may
+    * something is possible
+        * It may be true
+        * she may know
+        * He may be in his office
+    * negative of something is possible
+        * coudln't is different from may not
+        * It may not be true
+        * It mayn't be true
+    * past of something is possible
+        * I wonder why Kate didn't answer her phone. She may have been asleep
+* might
+    * something is possible
+        * It might be true
+        * She might know
+        * He might be having lunch
+    * negative of something is possible
+        * coudln't is different from might not
+        * She might not work here any more
+        * She mightn't work here any more
+    * past of something is possible
+        * I can't find my phone anywhere. You might have left it at work
+        * Why wasn't Amy at the meeting yesterday? She might not have known about it
+        * I wonder why David was in such a bad mood yesterday. He might not have been feeling well
+* have to
+    * it is necessary to do it, I am oblieged to do it
+        * You can't turn right here. You hve to turn left here
+        * I have to wear glasses for reading
+        * Robert can't come out with us this evening. He has to work late
+        * Last week Tina broke her arm and had to go to hospital
+        * I haven't had to go to the doctor for ages
+        * They can't fix my computer, so I'll have to buy a new one
+        * I'm going to have to buy a new one
+        * Tom might have to work late tomorrow.
+        * Tom may have to work late tomorrow
+    * something is obliged to do
+        * not usually must
+        * I have to work from 8:30 to 5:30 every day
+        * Jane has to travel a lot for her work
+    * questions and negative
+        * What do I have to do to get a new driving license?
+        * Karen doesn't have to work Saturday
+        * Why did you have to leave early?
+    * past of it is necessary to do it, I am oblieged to do it
+        * cannot use must
+        * We didn't have much time. We had to hurry
+    * don't have to = you don't need to do it
+        * You don't have to tell Tom what happend. I can tell him myself
+        * I don't have to be at the meeting, but I think I'll go anyway
+    * have to = have got to
+* should
+    * It is good thing to do/the right thing to do/give advice/give an opinion
+        * You look tired. you should go to bed
+        * The government should do more to improve education
+        * I think the government should d omore to improve education
+        * I don't think you should work so hard
+        * Do you think I sould apply for this job?
+    * Should is not as strong as must and have to
+        * You should apologize
+        * You must apologize
+    * expect something to happen
+        * Helen has been studying hard for the exam. She should pass
+        * There are plenty of hotels in the town. It shouldn't be hard to find a place to stay
+    * ought to = should
+    * insist/recomment/suggest/demand/propose
+        * I insisted that he should apologize
+        * Doctors recommend that everyone should eat plenty of fruit
+        * What do you suggest we should do?
+        * Many people are demanding that something should be done about the problem
+    * it's important/vital/necessary/essential
+        * It's esesntial that everyone should be here on time
+    * strange/odd/funny/typical/natural/intresting/surprised/surprising
+        * It's strange that he should be late. He's usually on time
+        * I was surprised that he should say such a thing
+    * If should do
+        * the speaker feels that the possibility is smaller than If do
+        * We have no jobs at present, but if the situation should change, we will contact you
+        * Should the situation change, we will contact you
+    * give somebody advice
+        * Shall I leave now? No, I should wait a bit
+            * I should wait = I would wait If I were you
+        * I'm going out now. Is it cold out? Yes, I should wear a coat
+        * I shouldn't stay up too late. You have to be up early tomorrow
+* Had better, I'd better
+    * It is advisable to do it. If don't do it, there will be a problem or a danger
+        * I have to meet Amy in ten minutes. I'd better go now or I'll be late
+        * Shall I take an umbrella? Yes, you'd better. It might rain
+        * We'd better stop for pestrol soon. The tank is almost empty
+        * The jacket looks good on you. Are you gonna buy it? I'd better not. it's too expensive
+        * You don't look very well. You'd better not go out tonight
+        * I'd better phone Chris, hadn't I?
+        * I'd better go to the bank now/tomorrow
+        * We'd btter take an umbrella
+    * only for a specific situation, not for things in general
+        * you can use should in all types of situations
+        * It's late. You'd better go/You should go
+        * You're always at home. You should go out more often
+    * with a danger or a problem
+        * It's great film. YOu should go and see it
+            * good thing
+        * The film starts at 8:30. You'd better go now or you'll be late
+* would
+    * we imagine a situation or action/we think of something that is not real
+        * It sould be nice to buy a new car, but we can't afford it
+        * I'd love to live by the sea
+        * Shall I tell Chris What happend? No, I wouldn't say anything
+    * past: we imagine situations or actions in the past
+        * They helped us a lot. I don't know what we'd have done without their help
+        * I didn't tell Sam what happend. He wouldn't have been pleased
+    * I would call Lisa, but I don't have the nunmber
+    * I would have called Lisa, But I dind't her number
+    * I'm not going to invite them to the party. They wouldn't come anyway
+    * I didn't invite them to the party. They wouldn't have come anyway
+
+
+
 ## Reference
