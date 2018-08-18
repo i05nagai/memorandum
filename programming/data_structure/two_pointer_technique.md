@@ -66,6 +66,7 @@ $$
 $$
 
 Since $$\eqref{two_pointer_technique_relation}$$, if we find $I(s)$, $I(s+1)$ is in $[I(s), n)$.
+We hold the value of $s$ and $I(s)$, then 
 
 ## Generalize
 We can generalize this discussion as binary search.
