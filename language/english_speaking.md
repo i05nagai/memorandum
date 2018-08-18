@@ -779,7 +779,13 @@ title: English Speaking
     * to eliminate redunduncy
 * associated with
     * a mental illness associated with particular personality traits
+* cut some slack
+    * I should cut him some slack
+    * Andrew's late again. Cut him some sack -- his wife just had a baby
 
+
+## computer
+* The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
 * I believe there is no person in my community more influential than the local newspaper editor

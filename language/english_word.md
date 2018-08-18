@@ -369,6 +369,10 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 ## academic
 * Life Science
 * anatomy
+* genealogy
+
+## health
+* gonorrhea
 
 ## body
 * organ
