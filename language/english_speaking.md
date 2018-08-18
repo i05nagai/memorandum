@@ -469,6 +469,8 @@ title: English Speaking
 * influence
     * You're a bad influence on her
 * put
+    * put something through
+        * Could you put me through to customer services, please?
     * they put you on whole an hour?
     * If you are not put in situations that leverage our best skills, you may become frustrated by your perforamnce and your situation.
     * put in
@@ -811,6 +813,7 @@ title: English Speaking
     * The book is dedicated to every great software engineer
 * Her words and ideas flow easily from one idea to the next.
 * apply
+    * Do you think I should apply for this job?
 * adapt
     * apapt to
         * The children are finding it hard to adapt to the new school
@@ -1451,6 +1454,50 @@ title: English Speaking
     * There is a positve vibe,adn employees feel a sens of security
 * energize
     * Teams are energized and feel valued because they can see that their efforts are paying dividends
+* beat/defeat
+* schedule
+    * a production schedule
+    * a hectic/tight schedule
+    * Eerything went according to schedule
+    * The class schedule is available on the website
+    * a head of schedule
+    * on schedule
+    * fall behind schedule
+    * We are already two months befind schedule
+    * The training schedule wans't very well thought out
+    * The flight is cheduled to arrive at 8:45, but it's running 20 minutes late
+    * The meeting has been scheduled for tomorrow afternoon
+    * The film is scheduled to begin production in August
+* suggest
+    * What do you suggest we should do?
+    * What do you suggest we do?
+    * What do you suggest doing?
+    * I suggested that she should buy a car with the money she's won
+    * I suggested that she buy a new car
+    * I suggested that she bought a car
+* identify/recognize
+    * He was too far away to be able to identify faces
+    * The police took fingerprints and identified the faces
+    * Eyewitnesses identified the gunman as an army sergeant
+    * The aircraft was identified as American
+    * Scientists have identified the gene that causes abnormal growth
+    * They identified the number of problem areas
+    * His accent identified him as a Frenchman
+    * Workers will wear badges to identify them as park employees
+* tend to do /be prone to something/do something
+    * This stretch of road is prone to foggy patches
+    * I've always been prone to haeadaches
+    * He was prone to depression even as a stranger
+* present
+    * In paragraph 2, it prensets reasons why younger people may enjoy life more but ends by explaining why these same responsibility can fulfilling for older people.
+* different/varied
+    * Our sons are very different from each other
+    * Her jocaket's different to mine
+    * We found women had significantly different politial view from men
+    * a slightly different way of doing things
+    * There are many different types/kinds of bacteria
+* feeling/emotion/sentiment/nostargia/self-indulgent/tendereness/sadness
+
 
 ## clothes
 * trousers
