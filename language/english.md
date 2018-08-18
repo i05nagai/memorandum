@@ -5032,6 +5032,8 @@
 * binoculars
 * towed
     * your car is about to be towed
+* xerox
+    * Why are you xeroxing a passport?
 
 ## Sentence
 * What have you been up to?
