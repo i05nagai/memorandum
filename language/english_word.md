@@ -22,7 +22,13 @@ title: English word
     * I do not accept your superficial apology
 * mammoth
 * quarrel 
+    * They had a bitter quarrel about/over some money three years ago and they haven't spoken to eachother since
+    * what didyouquarrel about/over?
+    * She quarrelled with everyone in the village
 * assemble
+    * we assembled in the meeting room after lunch
+    * Within hours of the tragedy happening, an emergency rescue team had been assembled
+    * furniture that is easy to assemble
 * diverse
 * quote
 * evaporate
@@ -59,6 +65,8 @@ title: English word
     * This document should be kept strictly credential
 * restrain
     * The organizer couldn't restrain participants from taking another direction
+    * restrain order
+    * when hestarted fighting, it took four police officers to restrain him
 * inherent
     * He has an inherent ability to remember things easily
 * coherent
@@ -66,7 +74,17 @@ title: English word
 * drizzle
     * rain in very small, light drops
     * Tomorrow will be cloudy with outbreaks of rain and drizzle
+* outbreak
+    * a time when something suddeny begins, especially a disease or something else dangerous or unpleasant
+    * an outbreak of cholera/food poisning/rioting/war
+    * Last weekend saw further thundery outbreaks
 * immunity
+    * The vaccination gives you immunity against the disease for up to six months
+    * official protection from legal action, for example, not being judged in a court or punished for a crime
+        * He was granted immunity from prosecution because he confessed the names of the other spies
+        * grant/give someone immunity
+            * Taken before a federal judge, he was grantedimmunity but ordered to tetify or face punishment for contempt
+            * legal/judicial/diplomatic immunity
 * pump
     * a petrolpump
     * a water/bicycle/fuel pump
@@ -346,6 +364,13 @@ title: English word
 * cave
 * concern
 
+## animals
+* sea otters
+    * marine otters
+* river otters
+    * otters
+* seal
+* whale
 
 ## plant
 https://study.com/cimages/multimages/16/diagramplanteudicot.png
@@ -369,6 +394,47 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 ## academic
 * Life Science
 * anatomy
+* biology
+* taxonomy
+
+* cetaceans
+    * infraorder
+    * including whales, propoise, dolphin
+* whales
+* porpoise
+* dolphin
+* gill
+* hind leg
+    * the back
+* fluke
+* blowhole
+* pinniped
+    * seals
+* seals
+* sea ion
+* walruse
+* fossil
+* archaeology
+    *  the study of the buildings, graves, tools, and other objects that belonged to people who lived in the past, in order to learn about their culture and society
+* undergraduate student
+* university student
+* graduate student
+
+
+## taxonomy
+[Taxonomy (biology) - Wikipedia](https://en.wikipedia.org/wiki/Taxonomy_(biology))
+
+* life
+* domain
+* Kingdom
+* Phylum
+* Class
+* Order
+* Suborder
+* Infraorder
+* family
+* genus
+* species
 
 ## body
 * organ
@@ -436,5 +502,6 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
     * heel
     * ankle
     * sole
+
 
 ## Reference
