@@ -60,22 +60,6 @@ Convex function defined in open interval is differentialble except for at most c
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Property. 3
-* $f$,
-    * convex function
-* $f$
-    * $C^{2}$ function
-
-The follwoing statements are equivalent:
-
-* (1) $f$ is convex
-* (2) 凸集合の内部で、$f$のヘッセ行列が半正定値
-
-### proof.
-
-<div class="QED" style="text-align: right">$\Box$</div>
-
-
 ### Proposition 1
 * $f:\mathbb{R}^{N} \rightarrow \mathbb{R}$, $g: \mathbb{R}^{N} \rightarrow \mathbb{R}$,
     * convex function
@@ -1295,6 +1279,369 @@ Thus, by convexity of $f(x)$, the statement is proved.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Proposition 15
+* $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
+    * function
+
+$$
+    \mathrm{epi}(f)
+    :=
+    \{
+        (x, \mu)
+        \mid
+        \mu \in \mathbb{R},
+        \
+        f(x)
+        \le
+        \mu
+    \}
+    .
+$$
+
+Then the following statements are equivalent;
+
+* (1) $f$ is convex,
+* (2) $\mathrm{epi}(f)$ is convex set.
+
+### proof
+(1) $\Rightarrow$ (2)
+
+Let $$(x_{1}, \mu_{1}), (x_{2}, \mu_{2}) \in \mathrm{epi}(f)$$ and $\lambda \in [0, 1]$ be fixed.
+For simplicity, let $$x := \lambda x_{1} + (1 - \lambda) x_{2}$$ and $$\mu := \lambda \mu_{1} + (1 - \lambda) \mu_{2}$$.
+
+$$
+\begin{eqnarray}
+    f(x)
+    & \le &
+        \lambda f(x_{1})
+        + (1 - \lambda)f(x_{2})
+    \nonumber
+    \\
+    & \le &
+        \lambda \mu_{1}
+        + (1 - \lambda)\mu_{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus, $(x, \mu) \in \mathrm{epi}(f)$.
+
+(1) $\Leftarrow$ (2)
+
+Let $x_{1}, x_{2} \in \mathbb{R}^{n}$ and $\lambda \in [0, 1]$ be fixed.
+For simplicity, let $$x := \lambda x_{1} + (1 - \lambda) x_{2}$$ and $$\mu := \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$$.
+Since $(x_{1}, f(x_{1})$, $(x_{2}, f(x_{2})) \in \mathrm{epi}(f)$, $(x, \mu) \in \mathrm{epi}(f)$.
+Thus,
+
+$$
+    f(x)
+    \le
+    \mu
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition 16. First order condition
+* $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
+    * convex function
+* $f$
+    * $C^{1}$ function
+
+The follwoing statements are equivalent:
+
+* (1) $f$ is convex
+* (2)
+
+$$
+    \forall y, x \in \mathbb{R}^{n},
+    f(y)
+    \ge
+    f(x)
+    +
+    \nabla f(x)^{\mathrm{T}}(y - x)
+    .
+$$
+
+### proof.
+(1) $\Rightarrow$ (2)
+
+We first consider the case $n = 1$.
+Let $x, y \in \mathbb{R}$ and $t \in [0, 1]$ be fixed.
+
+$$
+\begin{eqnarray}
+    & &
+        f(x + t(y - x))
+        =
+        f((1 - t)x + ty)
+        \le
+        (1 - t)
+        f(x)
+        +
+        tf(y)
+        =
+        (1 - t)
+        f(x)
+        +
+        tf(y)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \frac{
+            f(x + t(y - x))
+            -
+            f(x)
+        }{
+            t
+        }
+        \le
+        f(y)
+        -
+        f(x)
+\end{eqnarray}
+    .
+$$
+
+Then taking the limit as $t \rightarrow 0$ yields the equation.
+
+Now we assume $n > 1$.
+Again, let $x, y \in \mathbb{R}^{n}$ be fixed.
+We define $g: [0, 1] \rightarrow \mathbb{R}$ by $g(t) := f(x + t(y - x))$.
+$g$ is convex.
+Indeed, for all $s, t \in [0, 1]$,
+
+$$
+\begin{eqnarray}
+    g(\lambda t + (1 - \lambda)s)
+    & = &
+        f(x + \lambda t(y - x) + (1 - \lambda)s(y - x))
+    \nonumber
+    \\
+    & = &
+        f(
+            (1 - \lambda)x
+            +
+            \lambda x
+            +
+            \lambda t(y - x)
+            +
+            (1 - \lambda)s(y - x)
+        )
+    \nonumber
+    \\
+    & = &
+        f(
+            \lambda 
+            (
+                x
+                +
+                t(y - x)
+            )
+            +
+            (1 - \lambda)
+            (
+                x
+                +
+                s(y - x)
+            )
+        )
+    \nonumber
+    \\
+    & \le &
+        \lambda 
+        f(
+            x
+            +
+            t(y - x)
+        )
+        +
+        (1 - \lambda)
+        f
+            x
+            +
+            s(y - x)
+        )
+    \nonumber
+    \\
+    & = &
+        \lambda
+        g(t)
+        +
+        (1 - \lambda)
+        g(s)
+    \nonumber
+\end{eqnarray}
+.
+$$
+
+Since $g$ is one dimensional convex function,
+
+$$
+\begin{eqnarray}
+    & &
+        g(1)
+        \ge
+        g(0)
+        +
+        g^{\prime}(0)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        f(y)
+        \ge
+        f(x)
+        +
+        \nabla f(x)^{\mathrm{T}}
+        (y - x)
+    \nonumber
+\end{eqnarray}
+$$
+
+(1) $\Leftarrow$ (2)
+
+We first show the case of $n = 1$.
+Let $x, y \in \mathbb{R}^{n}$ and $\theta [0, 1]$ be fixed.
+Let $z := \theta x + (1 - \theta) y$.
+
+$$
+\begin{eqnarray}
+    x - z
+    & = &
+        -(1 - \theta)
+        (x + y)
+    \nonumber
+    \\
+    y - z
+    & = &
+        -\theta
+        (x + y)
+    \nonumber
+\end{eqnarray}
+$$
+
+Applying the first oder inequality twice
+
+$$
+\begin{eqnarray}
+    f(y)
+    & \ge &
+        f(z)
+        +
+        \nabla
+        f(z)^{\mathrm{T}}
+        (-\theta(x + y))
+    \nonumber
+    \\
+    f(x)
+    & \ge &
+        f(z)
+        +
+        \nabla
+        f(z)^{\mathrm{T}}
+        (1 - \theta)
+        (x + y)
+    \nonumber
+\end{eqnarray}
+$$
+
+Multyplying $1 - \theta$ to the first inequality and $\theta$ to the second inequility, then we have
+
+$$
+\begin{eqnarray}
+    \theta f(x)
+    +
+    (1 - \theta)f(x)
+    & \ge &
+        \theta
+        f(z)
+        +
+        (1 - \theta)
+        f(z)
+        =
+        f(z)
+    .
+\end{eqnarray}
+$$
+
+Now we assume $n > 1$.
+Again, let $x, y \in K$ be fixed.
+We define $g: [0, 1] \rightarrow \mathbb{R}$ by $g(\bar{t}) := f(z_{\bar{t}})$ where $$z_{t} := x + \bar{t}(y - x)$$.
+Let $t, s \in [0, 1]$.
+Since $K$ is convex, $z_{t}, z_{s}\in K$.
+
+$$
+\begin{eqnarray}
+    g^{\prime}(t)
+    =
+    \nabla f(z_{t})^{\mathrm{T}}
+    (y - x)
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    & &
+        f(z_{t})
+        \ge
+        f(z_{s})
+        +
+        \nabla f(z_{s})^{\mathrm{T}}
+        (z_{t} - z_{s})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        g(t)
+        \ge
+        g(s)
+        +
+        \nabla f(z_{s})^{\mathrm{T}}
+        (t - s)
+        (y - x)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        g(t)
+        \ge
+        g(s)
+        +
+        \nabla g(s)
+        (t - s)
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $g$ is one dimensional, $g$ is convex.
+
+$$
+\begin{eqnarray}
+    g(1)
+    +
+    g(0)
+    \ge
+    g(0)
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition 17. Second order condition
+* $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
+    * convex function
+* $f$
+    * $C^{2}$ function
+
+The follwoing statements are equivalent:
+
+* (1) $f$ is convex
+* (2) Hessian matrix $\nabla^{2} f$ is a positive semidefinite
+
+### proof.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
+
 
 ## Example of convex functions
 * $f: \mathbb{R}^{N} \rightarrow \mathbb{R}$
@@ -1678,3 +2025,4 @@ $$
 * [Convex function - Wikipedia](https://en.wikipedia.org/wiki/Convex_function)
 * [Hyperplane separation theorem - Wikipedia](https://en.wikipedia.org/wiki/Hyperplane_separation_theorem)
 * [chapitre_3.pdf](https://ljk.imag.fr/membres/Anatoli.Iouditski/cours/convex/chapitre_3.pdf)
+* Reliable Methods for Computer Simulation: Error Control and Posteriori Estimates
