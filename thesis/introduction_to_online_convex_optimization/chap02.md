@@ -1150,6 +1150,154 @@ Step3 return $x_{T}$ in Step2.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Proposition
+* $\alpha > 0$,
+
+$$
+    h(x)
+    :=
+    \frac{\alpha}{2}
+    \|
+        x - x_{1}
+    \|^{2}
+    .
+$$
+
+* (1) $h$ is convex.
+* (2) $h$ is $\alpha$ smooth and $\alpha$ strongly convex.
+
+#### proof
+(1)
+
+Hessian matrix of $h$ is diagonal matrix, that is, positve semidefinite.
+
+(2)
+
+$$
+\begin{eqnarray}
+    \nabla h(x)
+    & = &
+        \alpha
+
+    \nonumber
+    \\
+    h(y) - h(x)
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            -
+            \|
+                x - x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            +
+            \|
+                y - x
+            \|^{2}
+            -
+            \|
+                y - x
+            \|^{2}
+            +
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            \|
+                x - x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            +
+            \|
+                y - x
+            \|^{2}
+            +
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            \|
+                (y - x)
+                +
+                (x - x_{1})
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \alpha
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+    \nonumber
+    \\
+    & = &
+        \nabla h(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition
+* $\beta_{1} > 0$,
+* $h_{1}$,
+    * $\beta_{1}$ -smooth
+* $\beta_{2} > 0$,
+* $h_{2}$,
+    * $\beta_{2}$ -smooth
+
+* (1) $h_{1} + h_{2}$ is $(\beta_{1} + \beta_{2})$-smooth
+
+#### proof
+
+$$
+\begin{eqnarray}
+    h_{1}(y) + h_{2}(y)
+    -
+    h_{1}(x) + h_{2}(x)
+    & \le &
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 #### Lemma 2.5
 * $\beta > 0$
 * $f$,
@@ -1187,20 +1335,21 @@ $$
     & = &
         \nabla f(x)
         +
-        \frac{\alpha}{2}
+        \frac{\hat{\alpha}}{2}
         \nabla
         \|
             x
             -
             x_{1}
         \|^{2}
-    \nonunber
+    \nonumber
     \\
     & \le &
         \nabla f(x)
         +
-        \alpha
+        \hat{\alpha}
         \left(
+        Q
             \begin{array}{c}
                 x^{1} - x_{1}^{1}
                 \\
@@ -1239,11 +1388,11 @@ $$
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
+                y - x_{1}
             \|^{2}
             -
             \|
-                y - x_{1}
+                x - x_{1}
             \|^{2}
         \right)
     \nonumber
@@ -1252,68 +1401,87 @@ $$
         \nabla f(y)^{\mathrm{T}}
         (y - x)
         +
+        \hat{\alpha}
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        -
+        \hat{\alpha}
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        +
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
-            \|
+                y - x_{1}
+            \|^{2}
             -
             \|
-                y - x_{1}
-            \|
+                x - x_{1}
+            \|^{2}
         \right)
+    \nonumber
+    \\
+    & = &
+        \nabla g(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
-            \|
+                y - x_{1}
+            \|^{2}
             +
             \|
-                y - x_{1}
+                y - x
+            \|^{2}
+            -
             \|
-        \right)
-    \nonumber
-    \\
-    & \ge &
-        \nabla f(y)^{\mathrm{T}}
-        (y - x)
-        +
-        \frac{\hat{\alpha}}{2}
-        \left(
+                y - x
+            \|^{2}
+            -
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
             \|
                 x - x_{1}
-            \|
-            -
-            \|
-                y - x_{1}
-            \|
+            \|^{2}
         \right)
-        \|
-            y - x
-        \|
     \nonumber
     \\
-    & \ge &
-        \nabla f(y)^{\mathrm{T}}
+    & = &
+        \nabla g(y)^{\mathrm{T}}
         (y - x)
         +
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - y
+                y - x_{1}
+            \|^{2}
+            +
             \|
+                y - x
+            \|^{2}
             -
             \|
-                y - x_{1}
-            \|
-            -
-            \|
-                y - x_{1}
-            \|
+                (y - x)
+                +
+                (x - x_{1})
+            \|^{2}
         \right)
+    \nonumber
+    \\
+    & = &
+        \nabla g(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
         \|
             y - x
-        \|
-    \nonumber
+        \|^{2}
 \end{eqnarray}
 $$
 
