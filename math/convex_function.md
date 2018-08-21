@@ -46,13 +46,6 @@ $f$ is concave if $-f$ is convex.
 
 ## Properties
 
-### Property. 1
-Convex function defined in open interval is continuous.
-
-### proof.
-
-<div class="QED" style="text-align: right">$\Box$</div>
-
 ### Property. 2
 Convex function defined in open interval is differentialble except for at most countably infinite points.
 
@@ -1354,12 +1347,15 @@ The follwoing statements are equivalent:
 * (2)
 
 $$
+\begin{equation}
     \forall y, x \in \mathbb{R}^{n},
     f(y)
     \ge
     f(x)
     +
     \nabla f(x)^{\mathrm{T}}(y - x)
+    \label{equation_first_order_condition}
+\end{equation}
     .
 $$
 
@@ -1612,23 +1608,222 @@ $$
 $$
 
 Since $g$ is one dimensional, $g$ is convex.
-
-$$
-\begin{eqnarray}
-    g(1)
-    +
-    g(0)
-    \ge
-    g(0)
-\end{eqnarray}
-$$
+By proposition 19, $f$ is convex.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Proposition 17. Second order condition
-* $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
+#### Proposition 17
+* $K \subseteq \mathbb{R}^{n}$,
+    * convex
+* $f: K \rightarrow \mathbb{R}$,
     * convex function
-* $f$
+
+(1) If $n = 1$,
+
+$$
+\begin{equation}
+    \forall x, z, y \in K,
+    \
+    x \le z \le y,
+    \
+    \frac{
+        f(z) - f(x)
+    }{
+        z - x
+    }
+    \le
+    \frac{
+        f(y) - f(z)
+    }{
+        y - z
+    }
+    \label{proposition_17_01_slope_monotonicity}
+\end{equation}
+    .
+$$
+
+(2) If $n = 1$,
+
+$$
+\begin{equation}
+    \forall z \in K,
+    \
+    f(z-)
+    \le
+    f(z+)
+\end{equation}
+    .
+$$
+
+(3) If $n = 1$ and $K$ is open interval, $f$ is continuous.
+
+
+#### proof
+(1)
+
+Let $x , y \in K$, $x \le y$, and $t \in [0, 1]$ be fixed.
+Let $z_{t} := x + (1 - t)y$.
+Then $x \le z_{t} \le y$.
+By definition of covexity,
+
+$$
+\begin{eqnarray}
+    & &
+        f(z_{t})
+        \le
+        tf(y)
+        +
+        (1 - t)
+        f(x)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        f(z_{t})
+        -
+        t
+        f(z_{t})
+        \le
+        tf(y)
+        +
+        (1 - t)
+        f(x)
+        -
+        t
+        f(z_{t})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        (1 - t)
+        f(z_{t})
+        -
+        (1 - t)
+        f(x)
+        \le
+        t
+        (
+            f(y)
+            -
+            f(z_{t})
+        )
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \frac{
+            f(z_{t})
+            -
+            f(x)
+        }{
+            t(y - x)
+        }
+        \le
+        \frac{
+            f(y)
+            -
+            f(z_{t})
+        }{
+            (1 - t)
+            (y - x)
+        }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \frac{
+            f(z_{t})
+            -
+            f(x)
+        }{
+            ty
+            -
+            (1 - t)x
+            -
+            x
+        }
+        \le
+        \frac{
+            f(y)
+            -
+            f(z_{t})
+        }{
+            y
+            -
+            (
+                yt
+                -
+                (1 - t)
+                x
+            )
+        }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \frac{
+            f(z_{t})
+            -
+            f(x)
+        }{
+            z_{t}
+            -
+            x
+        }
+        \le
+        \frac{
+            f(y)
+            -
+            f(z_{t})
+        }{
+            y
+            -
+            z_{t}
+        }
+    .
+\end{eqnarray}
+$$
+
+(2)
+
+In (1), we take the limit as $x \nearrow z_{t}$,
+
+$$
+\begin{eqnarray}
+    f(z_{t}-)
+    \le
+    \frac{
+        f(y)
+        -
+        f(z_{t})
+    }{
+        y
+        -
+        z_{t}
+    }
+    .
+\end{eqnarray}
+$$
+
+Moreover, taking $y \searrow z_{t}$,
+
+$$
+\begin{eqnarray}
+    f(z_{t}-)
+    \le
+    f(z_{t}+)
+    .
+\end{eqnarray}
+$$
+
+Hence $x, y$ are arbitrary, the statement is proved.
+
+(3)
+TODO
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Proposition 18. Second order condition
+* $K \subseteq \mathbb{R}^{n}$,
+    * convex
+    * open
+* $f: K \rightarrow \mathbb{R}$,
+    * convex function
     * $C^{2}$ function
 
 The follwoing statements are equivalent:
@@ -1637,9 +1832,223 @@ The follwoing statements are equivalent:
 * (2) Hessian matrix $\nabla^{2} f$ is a positive semidefinite
 
 ### proof.
+(1) $\Rightarrow$ (2)
+
+We first show the case of $n = 1$.
+Let $x_{1}, y_{2}, x_{2}, y_{2} \in K$, $x_{1} \le y_{1} \le x_{2} \le y_{2}$.
+By applying $$\eqref{proposition_17_01_slope_monotonicity}$$ twice,
+
+$$
+\begin{eqnarray}
+    \frac{
+        f(y_{1})
+        -
+        f(x_{1})
+    }{
+        (y_{1} - x_{1})
+    }
+    \le
+    \frac{
+        f(x_{2})
+        -
+        f(y_{1})
+    }{
+        (x_{2} - y_{1})
+    }
+    \le
+    \frac{
+        f(y_{2})
+        -
+        f(x_{2})
+    }{
+        (y_{2} - x_{2})
+    }
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Then taking $y_{1} \rightarrow x_{1}$ and $y_{2} \rightarrow x_{2}$, we obtain
+
+$$
+    f^{\prime}(x_{1})
+    \le
+    f^{\prime}(x_{2})
+    .
+$$
+
+Thus, $f^{\prime}$ is non decreasing, that is,
+
+$$
+    \forall x \in K,
+    \
+    f^{\prime\prime}(x)
+    \ge
+    0
+    .
+$$
+
+Now we assume $n > 1$,
+Let $x, y \in K$ be fixed.
+Let $g(t) := f(x + t(y - x)) \ (t \in [0, 1])$.
+This is well-defined since $x + t(y - x) \in K$ from the convexity of $K$.
+Obviously,
+
+$$
+\begin{eqnarray}
+    g^{\prime}(t)
+    & = &
+        \nabla f(x + t(y - x))^{\mathrm{T}}
+        (y - x)
+    \nonumber
+    \\
+    g^{\prime\prime}(t)
+    & = &
+        (y - x)^{\mathrm{T}}
+        \nabla^{2} f(x + t(y - x))
+        (y - x)
+    \nonumber
+\end{eqnarray}
+$$
+
+Moreover, since $g$ is one dimensional convex function, by the above argument,
+
+$$
+    (y - x)^{\mathrm{T}}
+    \nabla^{2} f(x + t(y - x))
+    (y - x)
+    \ge
+    0
+    .
+$$
+
+In particular,
+
+$$
+\begin{equation}
+    (y - x)^{\mathrm{T}}
+    \nabla^{2} f(x)
+    (y - x)
+    \ge
+    0
+    \label{proposition_18_01}
+\end{equation}
+    .
+$$
+
+To complete proof, we need to show that for some $r > 0$ and some $a \in \mathbb{R}^{n}$, 
+
+$$
+    \forall z \in B_{a, r},
+    \
+    (z - a)^{\mathrm{T}}
+    \nabla^{2} f(x)
+    (z - a)
+    \ge
+    0
+    .
+$$
+
+Since $K$ is open, there is a open ball $B_{a, r} \subseteq K$ for some $r > 0$. and $a \in \mathbb{R}^{n}$.
+$x, y \in K$ in $$\eqref{proposition_18_01}$$ is arbitrary choosen in $K$.
+Thus, the above equation holds.
+
+(1) $\Leftarrow$ (2)
+
+We first show the case of $n = 1$.
+Let $x, y \in K$ and $x \le y$.
+By Taylor's theorem, for some $z \in [x, y]$,
+
+$$
+\begin{eqnarray}
+    f(y)
+    & = &
+        f(x)
+        +
+        f^{\prime}(x)
+        (y - x)
+        +
+        \frac{1}{2}
+        f^{\prime\prime}(z)
+        (y - x)^{2}
+    \nonumber
+    \\
+    & \ge &
+        f(x)
+        +
+        f^{\prime}(x)
+        (y - x)
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Since $f$ satisfies the first order condition, $f$ is convex.
+Again, let $x, y \in K$ be fixed.
+Let $g(t) := f(x + t(y - x))$.
+
+$$
+    \nabla^{2}g(t)
+    =
+    (y - x)^{\mathrm{T}}
+    \nabla^{2}f(x + t(y - x))
+    (y - x)
+    \ge
+    0
+    .
+$$
+
+Hence $g$ is convex.
+By proposition 19, $f$ is convex.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+### Proposition 19
+* $K \subseteq \mathbb{R}^{n}$,
+    * convex
+* $f: K \rightarrow \mathbb{R}$,
+    * convex function
+* $g(t; x, y) := f(x + t(y - x))$,
+    * $x, y \in K$, $t \in [0, 1]$,
+
+The follwoing statements are equivalent:
+
+* (1) $f$ is convex
+* (2) $g(\cdot; x, y)$ is convex for all $x, y \in K$,
+
+### proof
+
+$$
+\begin{eqnarray}
+    f(ty + (1 - t)x)
+    & = &
+        g(t)
+    \nonumber
+    \\
+    & = &
+        g(t1 + (1 - t)0)
+    \nonumber
+    \\
+    & \le &
+        t
+        g(1)
+        +
+        (1 - t)
+        g(0)
+    \nonumber
+    \\
+    & = &
+        t
+        f(y)
+        +
+        (1 - t)
+        f(x)
+    \nonumber
+\end{eqnarray}
+$$
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 
 
@@ -2026,3 +2435,4 @@ $$
 * [Hyperplane separation theorem - Wikipedia](https://en.wikipedia.org/wiki/Hyperplane_separation_theorem)
 * [chapitre_3.pdf](https://ljk.imag.fr/membres/Anatoli.Iouditski/cours/convex/chapitre_3.pdf)
 * Reliable Methods for Computer Simulation: Error Control and Posteriori Estimates
+* http://www.princeton.edu/~amirali/Public/Teaching/ORF523/S16/ORF523_S16_Lec7_gh.pdf
