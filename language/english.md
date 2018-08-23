@@ -262,6 +262,8 @@
 * menacing
     * suggesting the presence of danger; threatening.
 * menace
+    * Drun drivers are a menace to everyone
+    * A tiny menace that twisted men into monsters, the likes of which you've seen
 * blend in
 * dongle
 * sublime
@@ -2132,6 +2134,7 @@
     * childishly silly and immature.
 * ravage
     * ravaged our home
+    * an incurable scourge ravaged mankind
 * tyranny
 * feed off/on
     * to increase because of something, or to use something to succeed or get advantages:
@@ -5093,6 +5096,38 @@
     * your car is about to be towed
 * xerox
     * Why are you xeroxing a passport?
+* hog
+* mommentary lapse
+* tepid
+    * the water is tepid
+* dissolve
+    * the salt didn't disollve
+* effervesce
+    * the bath salts, they're starting to effervesce
+* lodged places
+* scent
+    * the scents I used don't complement each other
+* Eucalptus and chamomile
+* bath decorum
+* incurable
+* scourge
+    * an incurable scourge ravaged mankind
+* ostracized
+* scant
+* ordain
+* brazen
+    * how brazen she was
+* don't get your hopes up
+* needy
+    * you come off a little needy
+* give my bouillabaisse another change
+* abysmal
+    * your soup is abysmal
+* I'm torn between my integrity and my desire to avoid a beating
+* hollandaise
+    * a bearnaise has shallots, chervil and most importantly, tarragon
+* bearnaise sauce
+
 
 ## Sentence
 * What have you been up to?
