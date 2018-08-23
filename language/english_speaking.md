@@ -1504,6 +1504,54 @@ title: English Speaking
     * a slightly different way of doing things
     * There are many different types/kinds of bacteria
 * feeling/emotion/sentiment/nostargia/self-indulgent/tendereness/sadness
+* hog
+    * He's always hogging the bathroom
+* Now the filet mignon what comes with that?
+* irresistible
+    * If I want to kiss girl, first things I do is make my lips look irresistible
+* menace
+    * Dogs running loose are a public menace
+* moor
+    * His father's ship is moored at shore
+* abide
+    * can't abide something
+        * I can't abide her
+        * He couldn't abide laziness
+    * He abided in the wilderness for forty days
+* none the worse for
+    * They were trapped in the cave of a couple of days but they were none the worse for their experience
+* dubious
+    * on dubious charge
+* miss
+    * you miss the button
+* into
+    * I'm into SM
+* thirsty
+    * cheese made me thirsty
+* hats off to the chef
+* duty
+    * responsibility
+    * tax
+    * off duty
+        * He summoned his entire unit to a crisis meeting, even though many are off duty
+        * when your manager goes off duty, the alarm system will be monitored by a remote system
+    * on duty
+        * during office hours there is always a planning officer on duty who deals with enquiries
+        * the night shift goes on duty at 10 pm
+* I wish I could do something
+* I wish I were a sea horse
+* if the two of you had sex, the repercussions would be catastrophic
+* do you have a compact in your purse
+* molest
+    * I caught him molesting himself
+    * The girl had been molested frequently by her stepfather from the age of eight
+    * The man had been arrested serveral times for molesting young boys
+    * United states premises were looted and personnel were molested by demonstrators
+* loot
+* rabid dog
+    * a rabid dog would be feasting on your danglers
+* dangler
+    * tisticle
 
 
 ## clothes
