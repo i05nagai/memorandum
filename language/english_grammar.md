@@ -606,6 +606,7 @@ modal verb
         * I can't find my phone anywhere. You might have left it at work
         * Why wasn't Amy at the meeting yesterday? She might not have known about it
         * I wonder why David was in such a bad mood yesterday. He might not have been feeling well
+    * might as well
 * have to
     * it is necessary to do it, I am oblieged to do it
         * You can't turn right here. You hve to turn left here
@@ -695,6 +696,12 @@ modal verb
     * I would have called Lisa, But I dind't her number
     * I'm not going to invite them to the party. They wouldn't come anyway
     * I didn't invite them to the party. They wouldn't have come anyway
+    * offer/invite
+        * Would you like a cup of cofee?
+        * Would you like to eat with us tonigh? I'd love tokk
+    * polite way of saying what you want
+        * I'd like some information about hotels, please
+        * I'd like to try on this jacket, please
 
 
 
