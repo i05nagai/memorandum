@@ -143,7 +143,7 @@ $$
 * (3) Compute the $p$ value
     * $T$ t distribution with $n - 1$ degree of freedom
     * (a) $$
-p := P(T \le - |t| \cup T \ge - |t|)$$,
+p := P(T \le - |t| \cup T \ge |t|)$$,
     * (b) $p := P(T > t)$,
     * (c) $p := P(T < t)$,
 * (4)
@@ -620,7 +620,7 @@ $$
 * (3) Compute $p$ value
     * $T \sim \mathrm{t}(n-1)$,
     * (a) $$
-    p := P(T \le |t| \cup T \ge |t|)$$
+    p := P(T \le -|t| \cup T \ge |t|)$$
     * (b) $p := P(T > t)$
     * (c) $p := P(T < t)$
 * (4)
