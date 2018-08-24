@@ -5,6 +5,7 @@ title: Interviews Data Scientist
 ## Interviews Data Scientist
 
 
+
 ## Facebook
 
 * 1-1
@@ -15,7 +16,7 @@ title: Interviews Data Scientist
     * SQL queries(data problems): some data related to comments and posts
 * 1-3
     * Q
-        * SQL/R/Python stuff and define the right metric for certain FB products  
+        * SQL/R/Python stuff and define the right metric for certain FB products
 
 
 
