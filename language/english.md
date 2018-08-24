@@ -2833,10 +2833,11 @@
     * v, n
     * he can't tolerate any kind of diss
     * speak disrespectfully to or criticize.
-* reach out sb
-    * to try to communicate with a person or a group of people, usually in order to help or involve them:
-    * to offer help and support to someone:
-* reach out to
+* reach
+    * reach out sb
+        * to try to communicate with a person or a group of people, usually in order to help or involve them:
+        * to offer help and support to someone:
+    * reach out to
 * cuss sb out
     * he cusses him out
     * to shout offensive words at someone because you are annoyed with them.
@@ -4098,11 +4099,6 @@
 * in herd
 * herd
     * a large group of people that is considered together as a group and not separately:
-* fall for something
-    * to be tricked int obelieving something that is not true
-* fall for someone
-    * to be attracted to someone and start to love that person:
-        * Make his fallen for Heather.
 * I'm not falling for that one!
     * said when you recognized a trick and refuse to be deceived by it
 * exposition
@@ -4533,7 +4529,13 @@
         * David's never been much of scholar
 * we've got company
 * transcendental
-* fall into the trap
+* fall
+    * fall for something
+        * to be tricked int obelieving something that is not true
+    * fall for someone
+        * to be attracted to someone and start to love that person:
+            * Make his fallen for Heather.
+    * fall into the trap
 * namby pamby
     * weak silly or emotional
     * I'd deleete all of his namby pamby ways.
@@ -4728,6 +4730,7 @@
             * Are your staff fully prepped for managing the new system?
 * interview
     * you will interwith four to six people, one f whom will be a lunch interviewer.
+    * Often when I am conducting interviews, I have been surposed by the ccandidate's lack of preparation
 * discouraged
 * it takes it out on someone
     * to treat someone badly because you are upset or angry, even if they have done nothing wrong
@@ -5093,6 +5096,13 @@
     * your car is about to be towed
 * xerox
     * Why are you xeroxing a passport?
+* ingenuity
+    * skill at inventing things and thinking of new ideas
+* translate
+    * You will also need to be able to articualte how those skills can translate into value in the position you are interviewing for
+* dog-eat-dog
+* commandment
+
 
 ## Sentence
 * What have you been up to?
@@ -5113,30 +5123,6 @@
 * order of magnitude
     * 桁, 倍
     * e.g. 3 orders of magnitude = 3 倍の
-
-## Computer
-* headroom
-    * [Engineering tolerance - Wikipedia](https://en.wikipedia.org/wiki/Engineering_tolerance)
-* on the website / in the website
-    * on the website is correct
-* nit
-    * [code review - What does "nit" mean in hacker-speak? - Stack Overflow](https://stackoverflow.com/questions/27810522/what-does-nit-mean-in-hacker-speak)
-    * short for `nitpicking`
-* on the internet / in the internet
-    * on the internet is correct
-    * [word choice - "In the Internet" vs. "on the Internet" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/4419/in-the-internet-vs-on-the-internet/4433)
-* Edge case/Corner case
-    * [terminology - What are the difference between an edge case, a corner case, a base case and a boundary case? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/125587/what-are-the-difference-between-an-edge-case-a-corner-case-a-base-case-and-a-b)
-* code/codes
-    * [grammatical number - Is it wrong to use the word "codes" in a programming context? - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/20455/is-it-wrong-to-use-the-word-codes-in-a-programming-context)
-* maintenace cost
-    * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
-* on-call
-    * pagedutyなどの障害の電話通知
-* False positive
-    * prediction was positive but prediction was false
-* True Negative
-    * prediction was negative and the prediction was true
 
 ## Reference
 * [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)

@@ -11,9 +11,7 @@ title: t tests
 
 ## Note
 * An estimator is a r.v.
-    * 推定量といった場合は確率変数
 * Variable without subscption such as $X$, $Y$ denote true desitribution
-    * 基本的に添え字なしの$X$, $Y$などは真の分布を表すのに使用する
 
 ## Definition
 * $$X, X_{1}, \ldots, X_{N}$$,
@@ -32,7 +30,6 @@ title: t tests
         }
 $$,
     * sample mean
-    * 平均の不偏推定量
 * $$
     \displaystyle
     V_{N}(X_{1}, \ldots, X_{N})
@@ -55,10 +52,9 @@ $$,
         N
     }
 $$,
-    * 標本の分散(標本分散）
+    * sample variance
 
-$X_{1}, \ldots, X_{N}$が$X$のi.i.dとすれば、以下が成立する。
-$N$をsample sizeという。
+If $X_{1}, \ldots, X_{N}$ is I.I.D. sequence of $X$, the follwoing statement holds true.
 
 $$
 \begin{eqnarray}
@@ -78,10 +74,11 @@ $$
 \end{eqnarray}
 $$
 
-sample sizeが増えれば標本分散は減る。
+$N$ is called sample size.
+The more sample size, the less sample variance.
 
 ## one sample t-tests for population mean
-正規分布に従う確率変数の平均値の検定。
+Statistical test for mean of one normal r.v.
 
 * True distribution: $X \sim \mathrm{N}(\mu, \sigma)$
 * The value of $\sigma$ is unkown
@@ -146,7 +143,7 @@ $$
 * (3) Compute the $p$ value
     * $T$ t distribution with $n - 1$ degree of freedom
     * (a) $$
-p := P(T \le - |t| \cup T \ge - |t|)$$,
+p := P(T \le - |t| \cup T \ge |t|)$$,
     * (b) $p := P(T > t)$,
     * (c) $p := P(T < t)$,
 * (4)
@@ -167,7 +164,9 @@ Easy to check.
 ### Theorem 19
 * $X \sim \mathrm{N}(\mu, \sigma)$,
 * $$X_{1}, \ldots, X_{N}$$,
-    * $X$のi. i. d
+    * i.i.d. of $X$
+
+Then
 
 $$
     \frac{
@@ -177,12 +176,11 @@ $$
     }
     \sim
     \chi^{2}(N-1)
+    .
 $$
 
-が成立。
-
 ### proof.
-まず、
+Firstly, we have
 
 $$
     \frac{
@@ -196,10 +194,11 @@ $$
     \frac{ 1 }{ \sigma^{2} }
     \sum_{i=1}^{N}
         (X_{i} - \bar{X}_{N})^{2}
+    .
 $$
 
-となるから、右辺の分布を求めれば良い。
-天下り的に以下を計算する。
+Hence we will evaluate the distribution of the right hand.
+We can obvserve that
 
 $$
 \begin{eqnarray}
@@ -281,10 +280,11 @@ $$
         \right)^{2}
     \nonumber
 \end{eqnarray}
+.
 $$
 
-4つめの等式はLemma 5による。
-ここで、
+where 4th inequality is consequence of lemma 5.
+Now, let
 
 $$
 \begin{eqnarray}
@@ -314,12 +314,14 @@ $$
                 }
             }
         \right)^{2}
+    .
 \end{eqnarray}
 $$
 
-とおくと、$W = U + V$である。
+Then $W = U + V$.
 
-まず、$W$の分布を求める。
+We calculate the distribution of $W$.
+Let
 
 $$
     Z_{i}
@@ -329,10 +331,11 @@ $$
     }{
         \sigma
     }
+    .
 $$
 
-とおくと、$$Z_{i} \sim \mathrm{N}(0, 1)$$で、各$Z_{i}$は独立である。
-よって、
+Hence $$Z_{i} \sim \mathrm{N}(0, 1)$$ and $$\{Z_{i}\}$$ is independent.
+Since
 
 $$
 \begin{eqnarray}
@@ -375,13 +378,13 @@ $$
     \\
     & = &
         \sum_{i=1}^{N}
-            Z_{i}^{2}
+            Z_{i}^{2},
 \end{eqnarray}
 $$
 
-となって、$W \sim \chi^{2}(N)$である。
-定理より、$\sqrt{V} \sim \mathrm{N}(0, 1)$で、特に$V \sim \chi^{2}(1)$である。
-また、$W - V = U$であるから、両辺のMoment generating functionを計算すると
+we have $W \sim \chi^{2}(N)$.
+By theorem, $\sqrt{V} \sim \mathrm{N}(0, 1)$ and especially $V \sim \chi^{2}(1)$.
+Moreover, since $W - V = U$, we calculate moment generating function of both the side of the equation;
 
 $$
 \begin{eqnarray}
@@ -404,19 +407,20 @@ $$
     \\
     & = &
         (1 - 2t)^{-(n-1)/2}
+    .
 \end{eqnarray}
 $$
 
-となる。
-よって、$U \sim \chi^{2}(N-1)$である。
+Therefore, $U \sim \chi^{2}(N-1)$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-
 ### Thereom 20
-$$X_{1}, \ldots, X_{N}$$が独立な確率変数とする。
-$$X_{i} \sim \mathrm{N}(\mu, \sigma^{2})$$とする。
-このとき、
+* $X_{1}, \ldots, X_{N}$,
+    * independent r.v.s
+* $$X_{i} \sim \mathrm{N}(\mu, \sigma^{2})$$,
+
+Then
 
 $$
     \frac{
@@ -432,9 +436,8 @@ $$
     }
     \sim
     t(N-1)
+    .
 $$
-
-である。
 
 ### proof.
 まず、
@@ -617,7 +620,7 @@ $$
 * (3) Compute $p$ value
     * $T \sim \mathrm{t}(n-1)$,
     * (a) $$
-    p := P(T \le |t| \cup T \ge |t|)$$
+    p := P(T \le -|t| \cup T \ge |t|)$$
     * (b) $p := P(T > t)$
     * (c) $p := P(T < t)$
 * (4)
@@ -625,9 +628,13 @@ $$
     * otherwise, fail to reject $H_{0}$,
 
 ### Theorem21
-$$X_{1}, \ldots, X_{N}$$, $$Y_{1}, \ldots, Y_{N}$$が正規分布に従っているとする。
-また、$X_{i}$と$Y_{i}$が各$i$について独立とする。
-このとき、
+* $$X_{1}, \ldots, X_{N}$$,
+    * normal distribution
+* $$Y_{1}, \ldots, Y_{N}$$,
+    * normal distribution
+
+Moreover, for each $i$, $X_{i}$ and $Y_{i}$ are independent.
+Then
 
 $$
     Z
@@ -647,8 +654,7 @@ $$
     t(N - 1)
 $$
 
-は、
-ここで、
+where
 
 * $$D_{i} := X_{i} - Y_{i}$$,
 * $$\bar{D}_{N} := \frac{\sum_{i=1}^{N} D_{i}}{N}$$,
@@ -665,8 +671,7 @@ $$
 $$,
 
 ### proof.
-$D_{i}$は正規分布に従うから、前定理の結果をそのままあてはめれば良い。
-
+Since $D_{i}$ follows normal distribution, we can apply theorem 20 directly.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 

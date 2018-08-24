@@ -292,6 +292,8 @@ title: English word
 * refine
     * This plant refines sugar
 * pier
+    * a yacht moored at a pier
+    * strolling along Brighton Pier
 * contemplate
     * We have been contemplating a plan for a graduation trip
     * He had been contemplated suicide
@@ -306,8 +308,10 @@ title: English word
 * arid
     * People have been to irrigate arid lands by drilling wells
     * semi-arid region
+    * The desert is so arid that nothing can grow there
 * index
     * Consumer Price Index
+    * index finger
 * combustible
     * Don't use fire here! All the materials are combustible
 * estuary
@@ -315,6 +319,7 @@ title: English word
     * I sould like to see the rivers that flow int othe estuary, and ideed the entire Bristol channel cleaned
 * vent
     * hydrothermal vent
+    * The skirt is long and straight with two side vents
 * endure
     * There will be a time when you will have to endure hardship
 * transition
@@ -322,11 +327,24 @@ title: English word
     * Tom bounced on the trampoline like a gymnast
 * statutory
     * You must keep the statutory speed on the expressway
+* gymnast
+    * a person who is skilled in gynastics
 * constitution
 * dtrain
     * Facing increasing rainfall in the past couple of years, the municipal government has drawn up plants to better drain this district's road and public facilities
+* municipal
+    * of or belonging to a town or city
+    * municipal authoriteis
+    * municipal elections
+    * This is municipal swimming pool
 * demanding
     * This work is demanding. But i know its importanc
+    * She's a very demanding child
+    * a demanding job/task
+    * She's hoping to find a job which is more demanding intellectually
+    * Police work is physically demanding and stressful
+    * My present job is doesn't stretch me, so I'm looking for something more demanding
+    * I'm trying to learn English, and I find it very demanding
 * aquatic
     * A water strider is aquatic
 * geothermal
@@ -363,6 +381,39 @@ title: English word
 * enchant
 * cave
 * concern
+* articulate
+    * an intelligent and highly articulate young woman
+    * She gave a witty, entertaining, and articualte speech
+    * I found myself unable to articualte my feelings
+    * When children first learn to talk, there are some sound that they find difficult to articulate
+    * Practice talking through them so that you are comfortable articulating during your interviews
+* exhibit
+    * Be prepared to provide specific exmaples of how you exhibit them
+    * He frequnetly exhibits at the art gallery
+    * In the summar the academy will exhibit several prints that are rarely seen.
+    * He exhibited great self-contorl considereing her rudeness
+    * The museum has a fascinating collection of exhibits ranging from Iron Aage pottery to inuit clothing
+    * Let's go see the new dinosaur exhibit
+* parepare
+    * Be prepared to provide specific exmaples of how you exhibit them
+    * Prepare toaking points about each of the traits you possess
+    * You should be prepared to talk baout the characteristics you possess during the interview
+* possess
+    * Possessing this awareness will help you be more prepared and less likely to be surprised by the various types of questions you may encounter during your interview experience
+* litany
+    * THe manufactures are reported to have received a litany of complaints from dissatisfied customers
+    * an endless litany of complaints
+    * The litany was long and gruesome
+* gruesome
+    * Police desribed it as a particularly gruesome attack
+    * Spare met the gruesome details
+* delve
+    * resaerch that delves deeply into this issue
+    * He delved into his pocket and brought out a notebook
+    * While focusing exclusively on skills doesn't necessarily yield the candidate who is the best overall fit, organizations with less mature hirring practices may not delve into your competencies and characteristics.
+* encounter
+    * don't be surprised if you encounter an experience in which you are drilled exclusively on skills for the entire course of the interview or interviews.
+
 
 ## animals
 * sea otters
@@ -440,6 +491,14 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 * species
 
 ## body
+[体の部位の英語| アメリカ生活 101](http://www.xn--ccks5nkbz150dj5j.net/english/body_english.html)
+
+* nasal congestion
+    * stuffy nose
+    * stuffed nose
+* nosebleed
+* runny nose
+
 * organ
     * brain
     * vein
@@ -452,20 +511,42 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
     * small intestine
     * large intestine
 * head
-    * forehead
+    * pupil
+    * iris
+        * plural: irises, irides
     * eyes
+        * eyelid
+        * eyebrow
+        * eyelash
+        * tear
+        * eye discharge
+            * eye mucus
     * nose
+        * booger
+        * nasal mucus
+        * nostril
+    * forehead
     * mouth
+        * saliva
+        * mucus
+        * teeth
+        * cavity
+        * lip
+        * tongue
+    * burp
+    * cough
     * chin
         * Why do you always rub your chin like that?
         * He rubbed his chin thoughtfully
     * cheek
     * jaw
     * ear
+        * eawaxa
+        * eardrum
     * hair
-    * lip
-    * teeth
-    * tongue
+    * scalp
+    * temple
+    * dandruff
 * neck
 * back
 * shoulder

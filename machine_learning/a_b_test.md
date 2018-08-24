@@ -16,3 +16,5 @@ title: A/B test
 ## Reference
 * Dmitriev, P., Gupta, S., Kim, D. W., & Vaz, G. (n.d.). A Dirty Dozen: Twelve Common Metric Interpretation Pitfalls in Online Controlled Experiments. Permissions@acm.org. KDD ’, 17. https://doi.org/10.1145/3097983.3098024
 * Johari, R., Koomen, P., Pekelis, L., & Walsh, D. (n.d.). Peeking at A/B Tests. https://doi.org/10.1145/3097983.3097992
+* [A/B Testing: The Complete Guide with Expert Tips from Google & HubSpot](https://www.shopify.com/blog/the-complete-guide-to-ab-testing)
+* [Sample Size Calculator (Evan's Awesome A/B Tools)](https://www.evanmiller.org/ab-testing/sample-size.html)

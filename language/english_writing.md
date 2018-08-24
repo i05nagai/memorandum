@@ -219,6 +219,9 @@ title: English Writing
     * 77%: approximately three quarter, more than three-quarter
     * 79%: well over three quarters
 * proportion
+    * one reason accounts for 50 to 60 percent of the whole
+    * the ratio of food budget
+        * The pie charts elucidate the ratio of food budget average Austrarian families spent for preparing foods at home and for dining in easteries in four decasdes.
     * 2%: a tiny portion, a very small proportion
     * 4%: an insignificant minority, an insignificant proportion
     * 16%: a small minority, a small portion
@@ -252,7 +255,7 @@ title: English Writing
     * then
     * in that case
     * admitedly
-* introducin reason
+* introducing reason
     * I feel this way for the following reasons.
 * great change
     * overwhelmingly
@@ -292,6 +295,12 @@ title: English Writing
 * be considered entertainers by their peers
 * There are minor pronunciation and intonation erros.
 
+## CV
+[Job Interview Question: Why Do You Want This Job?](https://www.thebalancecareers.com/why-do-you-want-this-job-2061202)
+
+* I recently got my certificate in XXXX, and I look forward to applying those skills
+* I've been polishing my presentation skills, and I look forward to crafting compelling ones for your department.
+* I'm motivated when there is a challenging deadline. I dive right in so the job is done with time to spare to polish the project
 
 
 ## Reference
