@@ -28,18 +28,21 @@ title: English Speaking
     * I don't see the point
     * What the point of Facebook? I don't get it
     * What's the point of studying math in school anyway? No one ever uses it in real life
-* It's worth
-    * I live only a short walk from here, so it's not worth taking a taxi
-    * Our flight was very early in the morning, so it wasn't worth going to bed
-    * What was the film like? Was it worth seeing?
-    * Thieves broke into the house, but didn't take anything. There was nothing worth stealing.
+* worth
+    * All his hard work was made worth it when he saw his book in print
+    * It's worth
+        * I live only a short walk from here, so it's not worth taking a taxi
+        * Our flight was very early in the morning, so it wasn't worth going to bed
+        * What was the film like? Was it worth seeing?
+        * Thieves broke into the house, but didn't take anything. There was nothing worth stealing.
+        * It's worth finding them
 * corner
     * Once the police had cornered her in the basement, she gave herself up
     * it's a powerful car, but it doesn't corer well
 * find
     * Actually, I find Marriam's views far too progressionist
     * I've just found a ten-pound note in my pocket
-    * Has he found miself a place to live yet?
+    * Has he found himself a place to live yet?
     * She was found uncounscious and bleeding
     * The study found that men who were married lived longer than those who were not
     * Do you think they'll ever find a way of bringing peace to the region?
@@ -132,11 +135,6 @@ title: English Speaking
     * Let's stop fighting amongst ourselves
 * Knok it off! I'm trying to work here.
 * the feelgs will fade
-* rank
-    * What is your rank in class?
-    * where does your team rank in the league?
-    * How many stops away is Tokyo-station?
-    * How many presidents were there before Lincoln?
 * I can't get in. I've lost my key
 * Where does Y stand on the list of ...?
 * The book was literally an eye-opener to me.
@@ -160,9 +158,6 @@ title: English Speaking
     * He was bragging about his promotion to his friend
     * He is still boasting that he became a board member at the youngest age in history even though it was 10 years ago
 * get mad at
-    * He'd kept me waiting for an hour so I was pissed off t ostart with
-    * She seemed a bit pissed off that she hadn't been invited
-    * I was getting really pissed off at him and finally I exploded
     * please don't angry with me
     * they are angry at the way they have been treated
     * the workers are angry that they haven't been paid for the week
@@ -173,6 +168,12 @@ title: English Speaking
     * He's always bad-tempered when he doesn't get what he wants
     * I woke up in a bad mood
     * I don't know what's wrong. She must have got up on the wrong side of the bed.
+* piss
+    * piss off
+        * I was getting really pissed off at him and finally I exploded
+        * He'd kept me waiting for an hour so I was pissed off to start with
+        * She seemed a bit pissed off that she hadn't been invited
+        * everyone just pissed off and leave me to clean up
 * spin
     * The room started spinning and I felt faint
 * get it doing
@@ -312,7 +313,6 @@ title: English Speaking
     * His habbit of reading book
     * She has a desire to succeed as an opera singer
     * her mood to go out
-* keep from/prevent from
 * tell/show/say/
     * The meter tells you the temparature in Fahrenheit
     * The graph shows a sharp rise in prices
@@ -435,6 +435,7 @@ title: English Speaking
             * The ship lies off the coast of Spain
     * speak falsely
         * lying/lied/lied
+        * I really sorry I lied to you.
         * I would never lie to you
         * I could tell from her face that she was lying
         * She lied about her age
@@ -473,6 +474,7 @@ title: English Speaking
 * influence
     * You're a bad influence on her
 * put
+    * The theory behind how a tool is supposed to work and the realities of putting it into practice are often at odds with each toher
     * put something through
         * Could you put me through to customer services, please?
     * they put you on whole an hour?
@@ -633,11 +635,6 @@ title: English Speaking
     * We'd like to have gone away, but we were too busy at home
 * puberty
     * Fourteen is a fairly normal age for a girl to reach puberty
-* settle down
-    * Shh! settle donw, please! Now turn to page 57.
-    * WHen kyle was a baby, we used to take him for rides in the car to settle him down
-    * Have you settled down in your new house yet?
-    * Eventually, I'd like to settle down and have a family, but not yet
 * preposition + ing
     * Are you interested in working for us?
     * I'm not good at learning langugages.
@@ -747,6 +744,8 @@ title: English Speaking
 * might as well
     * I have nothing to do the day, I might as well go.
     * For the little extra it'll cost, we might just as well stay for another night
+    * I'm not doing anything else, so I might as well go to the party
+    * We might as well go to 
 * Let's get to know each other
 * part-time
     * She wants to work part-time after she's had the baby
@@ -805,6 +804,7 @@ title: English Speaking
         * We're taking on 50 new staff this year
         * We stopped to take on fuel
         * Gibson is taking on the post of vice president
+        * I took on many additional responsibilites over the years
 * consist
     * Substance can consist of fine gravel, aquarium sand or powdered lava
     * Later tombs here have no tumulus above but consist of a single room cut into the stone
@@ -944,7 +944,18 @@ title: English Speaking
 * liable
     * She is liable to get nervoous in front of audience
     * people who are liable for income tax at a higher rate
+* head
+    * head off
 * make
+    * make oneself understood
+        * I made myself understand her reasons for deserting me
+        * Since they spoke only Swahili, we used signs and gestures to make ourselves understood
+    * make someone do something
+        * My father made me stay at home on Friday night
+        * That film always makes me laugh my head off
+    * make too much of something
+        * She loved the fact that he'd sent her flowers, but she didn't want to make too much of it in case it meant nothing
+        * It's probably nothing. children often get these strange ideas. You shouldn't make too much of them.
     * How some bacterias acure genes that make them resistant to antibiotics
     * The lecture makes clear that the professor does not think the safe yield approch is appropriate
     * Plato's theory that society is made up of three groups
@@ -965,8 +976,11 @@ title: English Speaking
 * focus
     * His focus is on the safe yield approch to managing underground water supplies
     * Attension has also focused on add deposition effects on a wide range of crops
-* point of view
-    * What is the professor's point of view cncerning the method of safe yield?
+* pint
+    * point of view
+        * What is the professor's point of view cncerning the method of safe yield?
+    * point out
+        * he points out the strength, design flows, and are aof improvements for the framework.
 * view
     * To help explain Plato's view about the natrue of the human soul
 * for a while
@@ -1114,8 +1128,11 @@ title: English Speaking
 * sore/hurt/painful
     * I had a sore throad and aching limbs
     * My arms are sore from all the lifting
-* keep back/hide/
-    * if you feel that someone is keeping back information from you, you might feel that you want to confront them about the situation
+* keep
+    * you want to keep your skills up-to-date
+    * keep from/prevent from
+    * keep back/hide/
+        * if you feel that someone is keeping back information from you, you might feel that you want to confront them about the situation
 * I plan to take entrance exams for second choice and third choice universities because I don' want to end up without a university.
 * still, yet, already
     * It's 10 o'clock and joe is still in bed
@@ -1318,6 +1335,8 @@ title: English Speaking
 * call
     * call into question
         * The fact that a party can be voted into power by a minority of the electrorate calls into question the countr's electoral system.
+    * call for
+        * the complexity calls for new technologies that enable to effecitvely analyze large sets of data and dtermine the statistacal modesl that could predict the perforamnce of online marketing campaign
 * cope with
     * It muset be really hard to cope with three young children and a job
     * It's only been a year since he died. how's she coping
@@ -1357,7 +1376,21 @@ title: English Speaking
 * unhinge
     * The terrible experience seemed to have unhinged him slightly
     * The stress of the job has unhinged many workers
-* fall out/lash out/blut out
+* fall
+    * fall asleep
+    * Computer, software and semiconductor shares fell for a second day
+    * More than 7 stocks fell for every 4 that rose on the NYSE
+    * fall for something/someone
+        * He is too smart to fall for that trick
+        * That was summer I worked at fairground, and met and fell for Lucy
+        * Make his fallen for Heather.
+    * fall into the trap
+    * fall into something
+        * She turned and fell into his arms
+        * We fell into bed, exhausted
+        * I fell into the job really
+        * I'm just going to go home and fall into a hot bath
+    * fall out/lash out/blut out
 * athletics
 * gymnastics
     * Gymnastics is my favourte sport
@@ -1427,6 +1460,7 @@ title: English Speaking
     * coding skill
 * interview
     * during the interview process
+    * There are also a number of competencies that you will be rated on during the course of an interview
 * automate
     * When seeking job opportunities, you should seek organizations that have automated every possible aspect of development, because that means you will be spending less time doing boring and repetitie atasks that don't help you grow and learn
 * attract
@@ -1446,6 +1480,8 @@ title: English Speaking
 * demotivate
     * You will find this type of environment mentally draining and demotivating over time
 * motivate
+    * You are motivated by challenges, have the abllity to effecitvely meet challenges, and have the flexibility and skills necessary to handle a challenging job.
+    * I'm motivated when there is a challenging deadline
 * motivation
     * he lacks motivation
     * efforts to improve employees motivation
@@ -1504,9 +1540,395 @@ title: English Speaking
     * a slightly different way of doing things
     * There are many different types/kinds of bacteria
 * feeling/emotion/sentiment/nostargia/self-indulgent/tendereness/sadness
+* advertising
+    * power their online advertising campaigns, especially the user reengagement (retargeting) and customer acuisition (prospecting).
+* compel/force
+    * As a schoolboy he was compelled to wear shorts even in winter
+    * Over the years her work has compelled universal admiration and trust
+* glitch
+    * we'd expected a few glitches, but everything's gone remarkably smoothly
+    * The system has been plagued with glitches ever since its launch
+* thrive/grow/develop/prosper
+    * His business thrived in the years before the war
+    * She seems to thrive on stress
+    * planst that thrive in tropical rain forests
+    * a business which managed to thrive during a recession
+* decal
+    * How about decal?
+    * Rental cars can no longer be signed out for attack by identifying decals or by special license plates
+* ambush
+    * Five soldiers died after their bus was ambushed on a country road
+* disciplined
+    * The young gymnasts who won the competition were a talented and disciplined team
+    * Those children and 
+* treat
+    * software engineers are treated as commodities
+* perpetual/forever
+    * the perpetual job opening
+    * they lived in perpetual fear of being discovered
+* as
+    * as an engineer, you want to keep your skills up-to-date
+* ordain
+    * He was ordained as a priest in Ely cathedral in 1967
+    * There is stong support here for the tough economic reforms ordained in the federal capital
+* delight
+    * he'll be delighted to see you
+* blow/explode
+    * blow up
+    * The problem really has been blown up out of all propotion
+* cherish
+* implacable
+    * an implacable enemy
+    * implacable hosltility
+    * The government faces implacable opposition on the issue of nuclear waste
+* implacably
+* patch
+    * patch up
+        * Try to patch up your differences before he leaves
+        * He went back to patch things up with his wife
+        * We'll have to patch up the hole in the roof
+        * We patched up the wounded as best we could
+    * we finally found a patch of grass to sit down on
+* harbor
+    * have in mind
+        * He harbored the suspicion that someone in the agency was spying for the enemy
+    * hide
+        * They were accused of harboring a fugitive
+* arcanaa
+* encompaass
+    * arcana encompasses three powerful spells
+* facility
+    * all facilities are still down
+* consign
+    * The goods have been consigned to you by air
+* horde
+    * There were hordes of peole inside the station
+    * Alterna consigns entire hordes of enemmies to the void at the cost of all MP
+* exaggerate/overemphasize/overstate/overplay/glorify/overrated/idealized/make too much of something/blow something up out of all propotion
+    * I couldn't sleep for three days. I'm not exaggerate
+    * It's difficult to exaggerate the importance of sleep
+    * It is difficult to exaggerate the strength of people's feelings on this matter
+    * It is easy to exaggeerate the importance of tehse rather minor factors
+    * Personally, I think society exaggerates the importance of marrigage
+    * The army exaggerated the extent to which the operation was a success
+    * we believe the Chancellor is exaggerating the impact these proposals will have
+    * I'm sure Tommy is exaggerating the size of the problem
+    * He yawned widely, exaggerating the effect by stretching his arms wide
+* overemphasize
+    * The importance of cleanliness in the preparation of food cannot be oveeeremphasized
+* sake
+    * I don't want people to see it for your sake
+* bow/loop/knot
+    * They bowed to the Queen
+    * We bowed our head in prayer
+    * He bowed down before the king and begged for mercy
+    * I tied the ribbon around the present in a pretty bow
+    * bow and arrows
+* tow
+    * Your shouldn't drive fast when your car is towing a caravan
+    * You are not allowed to park there. your car will be towed away
+* sting
+    * it's flown into your blouse and you better undo your buttons lest it sting you
+* lest
+* blink
+    * The red traffic light is blinking
+    * The traffic signal starts blinking
+    * This flashlight can blink in red in case of emergency
+    * Blink a hazard lamp when you are caught in traffic and stop your vehicles
+* flash
+    * The digital camera has an electronic flash
+    * The ship's light is flashing right now
+* flicker
+    * The LED light is flickered in red when intruders are detected
+    * These solar lights flicker automatically at night
+    * The warning light is flickering on and off in cases of emergency
+* stretch
+    * reach
+        * I tripped on piece of wire that someone had stretched accross the path
+        * She stretched out her hand and helped him from his chair
+* cause
+    * to cause something to reach, often as far as possible, in a particualr direction
+* anthem
+    * The national anthems of the teams are played at the begining of international foot ball matches.
+* feed
+    * feed up
+        * you've lost a lot of wieght. you need feeding up a bit
+    * I usually feed the neighbours' cat while she's away
+* depress
+    * I'm depressed
+* follow
+    * follow up
+        * This meeting is a follow up to the one we had last month
+        * Large number of unpaid tickets are beign written off without any follow-up
+        * make follow-up calls to these contacst in the hopse of generating additional publicity
+    * in the following sections of this chapter,
+* rate
+    * There are also a number of competencies that you will be rated on during the course of an interview
+* rank
+    * What is your rank in class?
+    * where does your team rank in the league?
+    * How many stops away is Tokyo-station?
+    * How many presidents were there before Lincoln?
+    * Rank yourself on a scale of one to ten in each of the areas outlined
+* thrilled
+    * Joey's going to be thrilled.
+* slutty
+    * He was hoping you'd come by as a slutty nurse
+* fight
+    * who could kick whose ass in a fight
+* arm wrestle
+    * you guys could arm wrestle
+* dignity
+* if anything
+    * Wait, if anything, you've to let me win.
+* wimp
+    * My wife thinks I'm a wimp
+* crotch
+    * I drop a pen in my lap and it left an ink stain on the crotch
+* Isn't possible that the company that sold the jeans made more than just one pair?
+* snoop
+    * snooping around her crotch
+* mission
+    * we're on a mission
+* off
+    * something was off about the job description
+* flummoxed
+    * I was a bit flummoxed
+    * I have to say that last question flummoxed me
+* perplexed
+* bewildered
+* baffle
+* mystify
+* puzzle
+* craing
+* place
+    * by clicking the Place your order button below, 
+* tick-all-the-boxes
+    * The new album shoud tick all the right boxes for their many fans
+* fulfill
+    * to fulfill all the requirements
+* complete
+    * to complete all the steps in a process in an orderly manner
+* There's thin line between love and hate
+* Love and hate are practically the same
+* two side of the same coin
+    * Love and hate are two sides of the same coin
+    * Poverty and affluence are two sides of the same coin
+    * Peace and reconstruction are two sides of the same coin
+    * These problems may seem unrrelated but they are really two sides of the same coin
+    * Success and failure are two sides of the same coin
+* bum
+    * bum out
+        * That comment just bummed me out
+        * You bummed him out
+* ballsy
+    * She's one ballsy lady
+* I hope you don't take this wrong way
+* haunt
+    * it haunts me
+* pregnant
+    * I got her pregnant
+    * She is five and a half months pregnant
+    * My mother stopped smoking when she became pregnant
+    * My sister is pregnant with twins
+    * He believes that men who get young woman pregnant should be severly punished
+* cheer up
+    * She was sick so I sent some flower to cheer her up
+    * He cheered up at the prospect of a meal
+* become
+* explain/describe/show/elucidate/express/make something clear/clarify
+    * I don't understand. You'll have to elucidate
+    * The reasons for the change in weather conditions have been elucidated by several scientsits
+* employ
+    * use
+        * Initially, we employed a brute force approach.
+        * Sophisticated statistical analysis was employed to obtain these results
+* comb
+    * search
+        * I and another developer would comb through our application code and make sure that every database resource 
+* reward
+    * There's reward for whoever finishes first
+    * The reward of motherhood outweigh the anguish
+    * The police offered a reward for any information about the robbery
+    * T
+        * The company rewarded him for his years of service with a grand farewell party and several presents
+        * All his hard work was rewarded when he saw his book in print
+* suffer
+* outweigh
+    * The benefits of this treatment far outweigh any risks
+    * The benefits of increased immigration outwiegh the costs
+    * Annual wether variations still seem to be outweighning any global warming trends
+* motherhood
+    * I don't feel ready for motherhood yet
+    * the challenge of combining a career with motherhood
+    * teenagers who are unprepared for motherhood
+    * Women weren't expected to work in those days. The accepted pattern was marriage and motherhood.
+* anguish
+    * His anguish at the outcome of the court case was very clear
+    * In her anguish, she forgot to leave a message
+    * Somehow we deal with the anguish of serious illness
+* gynecologist
+    * my gynecologist tried to kill me
+* zest
+* nod
+    * nod along
+* mitzvahs
+* Let's call a spade a spade
+* I gues it could've been
+* endearment
+    * terms of endearment such as darling or sweetheart
+    * Between kisses, he was murmuring endearments
+* nag/critisize/complain
+    * My mum's always nagging me to get hair cut
+    * If you stop nagging at me, I might actually do it
+    * I'm always nagging him about his diet
+    * The goverment is being widely critisized in the media for falling to limit air popllution
+    * We'll get nowhere if all you can do is critisize
+* push
+    * people push PR
+* project
+* wedlock
+    * born out wedlock
+        * Babies born out of wedlock are commonplace
+        * A baby born out of wedlock was a horrible sin for which there was no forgiveness
+        * child is born out of wedlock
+* out of box
+    * The company's latest video game console has come out of the box very well and proven widely popular.
+    * think outside the box
+    * The company has a reputatin for delivering the best out-of-box experience when it comes to cell phones
+* Information should be presented in bullet point format or as a numbered list
+* degrade
+    * lose respect
+        * Pornography degrades woman
+    * spoil
+        * Everyday the environment is further degraded by toxic wastes
+    * change structure
+        * These chemicals quickly degrade into harmless compounds
+    * reduce
+        * The state is funding projects to restore egrades wetlands
+    * lessen worth
+        * The dolphin's habitat is beling rapidly degraded
+* curious
+    * I'm curious
+* battle-tested
+* capability
+* page
+    * He was paged at the airport and told to return home immediately
+    * Have you tried to page him?
+    * What page are the baseball standings on?
+    * it's a terrific novel, but it's over 800 pages long
+    * the article is continued on page 43
+    * Do you have a home page?
+    * it took her only 20 miuntes to customize a web page
+* gear
+    * gear toward/to
+        * The museum is geared towards  children
+        * Most public places are simply not geared to the needs of people with disabilities
+        * The workshops are geared toward helping people to become more employable
+        * These advertisements are geared towards a younger audience
+* settle
+    * settle down
+        * Shh! settle donw, please! Now turn to page 57.
+        * WHen kyle was a baby, we used to take him for rides in the car to settle him down
+        * Have you settled down in your new house yet?
+        * Eventually, I'd like to settle down and have a family, but not yet
+    * settle on
+        * Have you settled on a name for the baby?
+    * live
+        * After they got married, they settled in rookyln
+        * America was first settled by people who came across from Asia over 25,000 years ago
+    * move lower
+    * pay
+    * quiet
+    * be in a certain state
+* installation
+    * equipement/furniture
+        * Do you have to pay extra for installtion?
+        * you will receieve a message confirming correct installation of the program
+    * place
+        * a nuclear installation
+        * the military still have several bases and installations on the island
+    * job
+    * art
+* day
+    * from day to day
+* shoehorn
+* end
+    * end up doing
+        * He came round for a cofee and we ended up having a meal together
+        * I wondered where the pictures would end up after the auction
+        * Most slimmers end up putting weight back on
+        * anyone who swims in the river end up with a nasty stomach upset
+        * He could end up as president
+        * I don't want to end up like my parents
+* matchmaking
+    * formal marriage interview
+    * marriage interview
+    * a marriage-hunting party
+    * a party for peopple searching for a marriage partner
+    * a party for those looking to get married
+    * I'm gonna have a matchmaking lunch with the guy and his mother on Sunday. My mom is gonna come with me
+
+
+
+## relative clause
+* when I look around this room, I'm saddend by the thought o those who could  ont be with us
+* Nana, my beloeved grandmother, who would so want to be here
+* if in 35 years we're half as happy as you gusy are, we'll count ourselves the luckiest people in the world
+* I just wish Nana were herew 
+
+## -ed and -ing clause
+* The boy injured in the accident was taken to hospital
+* -ing to describe somebody is doing at a particular time
+    * Do you know the woman takling to Tom?
+    * Police investigating the crime are looking for three men
+    * Who were those people waiting outside?
+    * I was woken up by a bell ringing
+    * There was a big red car parked outside the house
+* -ing to describe what happens all the time
+    * The road connecting the two villages is very narrow
+    * I have a large room overlooking the garden
+    * Can you think of the name of the flowere begining with T?
+    * There were some children swimming in the river
+    * Is there anybody waiting?
+
+## if past
+* If I were a salmon shirt, where would I be?
+
+## Business
+* overtime
+* It's very normal in my company that we work overtime without pay
+* introduce
+    * I was introduced to you by Mr.A
+    * My friend introduced this job to me
+    * Please allow me to introduce my friend
+* refer
+    * I was referred to this company by Mike
+    * My friend reffered me to this job
+* Ivan told me about this job
+* Ryo recommended me that Ishould apply for this position
+* Do you have a referral system?
+* How do I make a referral?
+* tick all the boxes
+* work-ready
+    * a work-read \y graduate
+* battle-ready
+* hit the ground running
+    * we need someone who can hit the ground running
+    * we are looking for someone who has an immediate fighting strength
+* subordinate/team member
+    * He is my team member
+* collegues/co-worker
+* boss/supervisor
+* He is our marketing director, James
+* She is my sales manager, Tracy
+* He is my boss
+* He is my team member
 
 
 ## clothes
+* blouse
+    * it's flow into your blouse
 * trousers
     * My trousers are too long
 * jeans
@@ -1519,6 +1941,80 @@ title: English Speaking
 * glasses
     * I need some new glasses
     * I need a new pair of glasses
+* tissue
+* wet wipe
+* baby wipes
+* paper towel
+* napkin
+* trash can/trash bin
+* trash bag
+* plastic bag
+* paper bag/paper sack
+* aluminum foil
+* plastic wrap
+* parchment paper
+    * backery release paper
+    * baking paper
+    * bakery paper
+* rubber band
+* latex gloves
+* food containers/ tapperware
+* strainer
+* mixing bowl
+* bottle
+* toothpick
+* chopstick
+* sponge
+* mop
+* bucket
+* spray bottle
+* brush
+* vase
+* candle holder
+* clothe hanger
+* incense
+* lighter
+* battery
+* flashlight
+* calculator
+* clock
+* light bulb
+* fluorescent light
+* thermometer
+* scale
+    * bathroom scale
+* nail clipper
+* hand sanitizer
+* medicine
+* first aid kit
+* medical face mask
+* gauze
+    * gauze pad
+* bandage
+* ointment
+* laundry detergent
+* fabric softener
+* dish soap
+* cleaner
+    * cleaning agents
+* bleach
+* citric acid
+* cleanser
+* air freshner
+* bug spray
+    * insect repellent
+* insecticide
+* pesticide
+* roach spray
+* disinfectant
+
+## daily necessities
+* I'm going to go stock up on some everyday items
+* I'm going to pick up a few daily necessities
+* groceris
+* stock up on
+* I'll swing by stop the drug store to get some everyday items
+* I'll stop the drug store to get some everyday items
 
 
 ## politics
@@ -1526,7 +2022,8 @@ title: English Speaking
     * concerned with prmoting ecnomic growth
 * the Obama administraiton/the Trump administration
 
-## excercise
+## exercise
+* exercise the joints after you have been in the same place or position for a long time
 * I do maybe handred sit-ups every day
 * I do maybe handred push-ups every day
 * [What Causes Muscle Spasms? Back, Legs, Neck, Treatment, Symptoms](https://www.medicinenet.com/muscle_spasms/article.htm#what_is_skeletal_muscle)
@@ -1593,6 +2090,17 @@ title: English Speaking
     * The city has grown fast in recent years. it's got bigger and bigger.
     * As I lostend to his story, I became more and more convinced that he is lying
     * These days more and more people are learning English
+    * It gets more and more difficult to understand what is goind on
+    * More and more peopole are becoming fed up with the corruption in government
+    * More and more, we are finding that people want to continue working beyond 60
+    * As the disease worsened, he found walking more and more difficult
+    * I find myself thinking about it more and more
+    * People seem toe be getting allergies more and more
+* more or less
+    * a place where the ground was more or less flat
+    * The've settled here more or less permanently
+    * This report says more or less the same thing as the previous one
+* That oner shot with the sun rising was breathtaking for both my filmmaker and musci-loving side.
 * The ... The ..
     * What time the shall we leave? The sooner The better.
     * The bigger the better.
@@ -1628,6 +2136,16 @@ title: English Speaking
 
 
 ## personality
+* polymath
+    * You are an open-minded craving for transforming your ideas into real-world impact
+* open-minded
+    * some people are less open-minded
+* easy-going
+    * an easy-going boss
+    * counselors at the summer camp are pretty easygoing
+* flexible
+    * startup companies may llok for engineers who are flexible, adaptable, willing to work on diverse projects, and eager to learn new things.
+* adaptable
 * extrovert
     * most ators are natural extroverts
 * obsessive
@@ -1841,10 +2359,17 @@ title: English Speaking
     * if we compare q1 and q3, in the UK there was a massive drop in usage of central heating
 * difference
     * Overall, expenditure on fast food varied based on people's income
+    * the gap
+    * discrimination
 * peak
     * Unlike the UK, the peak was in Q4
     * It bottoms out in q3
-* upward
+* frequency
+    * every 10 years
+    * every a year
+    * in four decades
+        * the pie charts elucidate 
+* badgetupward
     * there was a dramatic rise in sales
     * throughout the period 2008 to 2014, sales shot up
     * sales climbed dramatically all describing upward trends
