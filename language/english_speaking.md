@@ -1511,6 +1511,19 @@ title: English Speaking
     * If I want to kiss girl, first things I do is make my lips look irresistible
 * menace
     * Dogs running loose are a public menace
+    * the menace of industrial pollutino
+    * He had a slight air of menace which made me uneasy
+    * He spoke with a hint of menace
+    * demand money with menaces
+        * He was accused of unlawfully demanding money with menaces
+    * v
+        * Hurricane Hugo menaced the eastern coast for a week
+* ordane
+    * church
+        * He was ordained as a priest in Ely cathedral in 1987
+    * order
+        * There is strong support here for the tough economic reforms ordained in the fedal capital, Prague
+        * I don't know who came up with this idea, but the city council has ordained that all local libraries will close on Mondays
 * moor
     * His father's ship is moored at shore
 * abide
@@ -1518,6 +1531,13 @@ title: English Speaking
         * I can't abide her
         * He couldn't abide laziness
     * He abided in the wilderness for forty days
+* abysmal
+    * absymal working condition
+    * The food was abysmal
+    * The standard of the studnet's work is abysmal
+    * titanic height and abysmal depths
+* sleep deprivation
+    * the biggest challenge she faced as a new mother was something most parents can relate to -- sleep deprivation
 * none the worse for
     * They were trapped in the cave of a couple of days but they were none the worse for their experience
 * dubious
@@ -1552,6 +1572,23 @@ title: English Speaking
     * a rabid dog would be feasting on your danglers
 * dangler
     * tisticle
+* vito
+    * The president has the power of veto over any bill that comes across his desk
+    * in theory British government could use its veto to block this proposal
+    * In 1961, President de gaulle voted Britain's entry into the Common Market
+    * My boss voted my taking any more time off this year
+* incurable
+    * Parkinson's disease is a debilitating and incurable disease of the nervous system
+    * an incurable romantic/opitimist/pessimist
+* scourge
+    * the scourge of war/poverty/drugs
+    * Pop-ups ads have been described as the scourge of the internet
+    * cause suffering
+        * the country has been scourged by famine in recent years
+    * beat
+        * when jesus was scourged by the Roman soldiers he bled like a man
+* relive
+    * whenever I smell burning, I relive the final moment of the crash
 
 
 ## clothes
