@@ -4,8 +4,14 @@ title: Introduction to Online Convex Optimization Chapter02
 
 ## 2.1 Basic definitons and setups
 
+* $D > 0$,
+    * we use this symbol for the upper bound of the 
+* $G > 0$,
+    * we use this symbol for the constant of Lipschitz function
 * $\mathcal{K} \subseteq \mathbb{R}^{d}$,
-    * bounded convex, compact
+    * diameter is bounded by $D$
+    * convex
+    * compact
 * $f: \mathcal{K} \rightarrow \mathbb{R}$,
 
 #### Definition positive definite
