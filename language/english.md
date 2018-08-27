@@ -252,11 +252,8 @@
 * back into a corner
 * throne
 * lucrative
-* iconic
-* glamorous
-* heyday
-* hawkish
 * intel
+* opulent
 * sinister
     * giving the impression that something harmful or evil is happening or will happen.
 * menacing
@@ -5102,6 +5099,7 @@
     * You will also need to be able to articualte how those skills can translate into value in the position you are interviewing for
 * dog-eat-dog
 * commandment
+* gate
 
 
 ## Sentence
