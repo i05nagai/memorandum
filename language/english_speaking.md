@@ -40,6 +40,10 @@ title: English Speaking
     * Once the police had cornered her in the basement, she gave herself up
     * it's a powerful car, but it doesn't corer well
 * find
+    * find it adj to do
+        * opinions or feelings that you have
+        * I find it interesting to sit outside and what the differnt people walking by at lunch time
+        * I find it hard to believe that you're really going to need all that lugage just for 3 days
     * Actually, I find Marriam's views far too progressionist
     * I've just found a ten-pound note in my pocket
     * Has he found himself a place to live yet?
@@ -524,14 +528,16 @@ title: English Speaking
 * She dumped you just like that? On the top of that, she said I'm boring person.
 * defence
     * In my defence, I thought we had already broken up.
-* come along
-    * He opened the oven door to see how the food was comming along
-    * Your English was comming along really well
-    * A bus should come along any minute now
-    * Take any job opportunity that comes along
-    * do you wan to come along?
-    * I'll come along later
-    *
+* come
+    * come along
+        * He opened the oven door to see how the food was comming along
+        * Your English was comming along really well
+        * A bus should come along any minute now
+        * Take any job opportunity that comes along
+        * do you wan to come along?
+        * I'll come along later
+    * come off
+        * come off as needy
 * rather
     * I would rather play than study
     * I would rather be rich than poor
@@ -556,6 +562,8 @@ title: English Speaking
     * Bill dropped out of college after his first year
     * One third of the city's students drop out before graduation
 * leave
+    * leave on/off
+        * I left car lights on all night and now the battery is flat
     * The plane leaves at 12:30
     * I tried to call him, but he'd already left for work
     * If he left immediately, he'd catch the 7:30
@@ -810,6 +818,12 @@ title: English Speaking
     * Later tombs here have no tumulus above but consist of a single room cut into the stone
     * Happiness does not consist in how many possessions you own
 * engage
+    * engage in/on/upon
+        * Only 10% of American adults engage in regular excercise
+        * The two parties engaged upon an escalating political struggle
+        * Mr Armstrong was engaged in prayer
+    * engage in doing something
+        * despite her illness, she remains actively engaged in shaping policy
     * Have you heard? Sally and Ray are getting engaged
     * She is engaged to be married
     * He has engaged in a dispute with his former business partner
@@ -947,6 +961,9 @@ title: English Speaking
 * head
     * head off
 * make
+    * make a noise
+    * make a living
+        * they make a living
     * make oneself understood
         * I made myself understand her reasons for deserting me
         * Since they spoke only Swahili, we used signs and gestures to make ourselves understood
@@ -962,6 +979,12 @@ title: English Speaking
     * The lecturer says that 'one thousand kilometers of roots' did not make any sense to her.
     * make someone become very upset or mentally ill
     * Sometimes your life situation changes in ways that make certain cultures less desirable
+    * make of
+        * if you ask someone what they make of someone or something, you want to know their opinion about htat peroson or thing
+        * what do you make of this letter?
+        * I don't know what to make of him
+        * Tom could see that McCarron didn't know hwat to make of the information
+        * Have you read Dawson's letter? What do you make of it?
 * laggard
     * These companies are often laggards on the technology adoption curve, and their code base is not pretty
     * The companies were split into three groups: top performers, average firms and laggards
@@ -1498,6 +1521,7 @@ title: English Speaking
 * energize
     * Teams are energized and feel valued because they can see that their efforts are paying dividends
 * beat/defeat
+    * I have to beat your high score
 * schedule
     * a production schedule
     * a hectic/tight schedule
@@ -1692,6 +1716,7 @@ title: English Speaking
     * we're on a mission
 * off
     * something was off about the job description
+    * With Location History off, the places you go are no longer stored
 * flummoxed
     * I was a bit flummoxed
     * I have to say that last question flummoxed me
@@ -1732,9 +1757,11 @@ title: English Speaking
     * My mother stopped smoking when she became pregnant
     * My sister is pregnant with twins
     * He believes that men who get young woman pregnant should be severly punished
-* cheer up
-    * She was sick so I sent some flower to cheer her up
-    * He cheered up at the prospect of a meal
+* cheer
+    * cheer up
+        * She was sick so I sent some flower to cheer her up
+        * He cheered up at the prospect of a meal
+        * she went shopping to cheer herself up
 * become
 * explain/describe/show/elucidate/express/make something clear/clarify
     * I don't understand. You'll have to elucidate
@@ -1770,6 +1797,23 @@ title: English Speaking
 * gynecologist
     * my gynecologist tried to kill me
 * zest
+    * excitement
+        * enthusiasm, eagerness, energy, and interest
+    * fruit
+* roost
+    * In the city, pigeons roost on the ledges of buildings
+* side
+    * surface
+    * edge
+    * next to
+    * part
+    * opposing group
+    * opinion
+    * part of situation
+    * character
+* reside
+    * The family now resides in southern France
+    * The family resides in Arkansas
 * nod
     * nod along
 * mitzvahs
@@ -1868,8 +1912,398 @@ title: English Speaking
     * a party for peopple searching for a marriage partner
     * a party for those looking to get married
     * I'm gonna have a matchmaking lunch with the guy and his mother on Sunday. My mom is gonna come with me
+* that being said
+    * Rose are usually red. That being said, they are also
+* that said
+    * I like turtles, Having said that, I will now proceed to show
+    * Christmas is exploited by capitalism. That said, it is still a religious festival.
+* hustle
+    * push
+        * After giving his speech, Johnson was hustled out of the hall by bodyguard
+    * persuade
+        * to hustle for business/customers
+        * They made a living hustling stolen goods on the streets
+        * 
+* resonant
+    * sound
+        * a deep, resonant voice
+        * a resonant concert hall
+    * quality
+        * we felt privileged to be the first group of Western visitors to enter the historic palace, resonant with past conflicts
+    * resonant with something
+        * filled with a particular meaning, quality, or sound
+        * prints resonant with traditions of Russian folk art
+* conflict
+* priviledge
+* odd
+    * at odds
+        * They're at odds over the funding of the project
+        * Her version of events was at odds with the police report
+            * very different from
+* clever/smart/intelligent
+    * I thought you handled the situation very cleverly
+* a slice of the cake
+    * a slice of the pie
+    * a share of the cake
+    * A portion of the money or profits that are being shared by everyone involved in generating them.
+    * The employees applauded when the boss announced that everyone was getting a slice of the cake in the form of a holiday bonus
+    * Third-world countries are discovering how their natural resources have been exploited by the rest of the world and now they want a bigger slice of the cake
+* zest
+* sell
+    * money
+    * persuade
+        * my boss is very old-fashioned and I'm having a lot of trouble sellng the idea of working at home occasionally
+        * The filmmaker sold me on the idea that my book would work on the screen
+        * The change of greater access to European markets would help sell the president the plan
+        * The change of greater access to European markets would help sell the plan to the president
+        * In an interview, you have to sell yourself to the employer
+    * sell off
+    * sell out
+    * sell up
+    * sell your soul to the devil
+* hepatitis
+    * until I got the hipatitis because this pimp spit in my mouth
+* private
+    * I would feel more confortable if I was having this conversation in private
+* tape
+    * That tape was never meant to be seen by
+    * that bastard taped over me
+* insult
+    * it's just so insulting
+* spring
+    * season
+    * curved metal
+    * water
+    * move quickly
+    * appear suddenly
+    * sprint for
+        * they offered to spring for the tickets
+        * spring for a new blank tape
+    * spring from
+    * spring on
+    * spring up
+* downstream
+    * in the direction a river or stream is flowing
+        * the current carried her downstream
+    * He was expanded the glass manufacturing firm by purchasing downstream business such as a glass distribution company
+* free
+    * free up
+        * I need to free up some time this weekend to finish the report
+* quantitative
+* cutover
+    * a change from old computer systems, equipment, etc. to new ones
+        * The cutover left with no interruption in services during the transition
+    * The company has been growing again thanks to a cutover of all production to its trademark green logneck bottles
+* alongside
+    * A car pulled up alongside ours
+    * The new pill will be used alogside existing medicines
+* safeguard
+* timer
+    * timer goes off
+* go
+    * go off
+        * stop working
+            * timer goes off
+            * the light went off in several villages because of the storm
+            * The damage to the fuse box caused the power to go off
+            * the light goes off when the batteries are flat
+            * it's getting cold. the heater must have gone off
+        * explode
+            * The bomb went off at midday
+            * His gun went off accidently
+        * food
+            * This bacon smells a bit funny. do you think it's gone off
+        * noise
+            * if a warming device goes off, it starts to ring loudly or make a loud noise
+            * The alarm shoudl go off automatically as soon as smoke is detected
+            * Didn't you har your alarm clock going off this morning?
+            * everyday my alarm goes off but I can't get up
+        * leave
+            * She's gone off on holiday with Tony
+        * happen
+            * the protest match went off peacefully
+        * become worse
+            * That paper's really gone off since they got that new editor
+* It's nice to not have to kill anything
+* nifty/good/effective
+    * a nifty piece of work/footwork
+    * a nifty little gadget
+* go for the gold
+* terrible
+    * unpleasant
+        * The weather was terrible
+        * I felt terrilbe last night
+    * bat at
+        * You're a terrible liar
+        * I'm a terrible skier/swimmer/dancer
+    * very great
+        * This project is a terrible waste of money
+        * She's terrible nuisance
+* nuisance
+    * something or someone that annoys you or causes trouble for you
+        * I've forgotten my umbrella. What a nuisance
+        * I hate to be a nuisance, but could you help me?
+    * make a nuisance of yourself
+* attendant
+* squash
+    * play squash
+* iconic
+    * 
+* glamorous
+* heyday
+* hawkish
+* aesthetics
+    * the formal study of art, especially in relation to the idea of beauty
+        * You look like a guy with a strong sense of aesthetics
+* ornament
+    * an object that is beautiful rather than useful
+        * a glass ornament
+        * garden ornaments such as statues and fountains
+    * decoration that is added to increase the beauty of something
+        * which ornament will you place here?
+    * v
+        * She ornamented here letters with little drawings in the margin
+* portion
+    * A large/major portion o the company's profit goes straight back into new projects
+    * I accept my portion of the blame
+    * the amount of a particular food that is served to one person, especially in a restaurant or a shop that sells food ready to be eaten
+        * The portions are very generous in this restaurant
+* industry
+    * production
+        * trade and industry
+        * industry and commerce
+        * The city need to attract more industry
+    * type of work
+        * the gas/electricity industry
+        * the tourist industry
+        * manufacturing industry
+        * the cmputer industry has been booming
+    * quality
+        * I must say I'm very impressed by her industry
+* commerce
+    * the activities involved in buying and selling things
+        * The world of commerce and industry
+        * we are trying to develop a model for best practice in electronic commerce
+        * He won't last long in world of commerce
+        * They are trying to promote commerce between their countries
+        * There has been a lot of commerce with their country
+* constructive
+    * If advice, criticism, or actions are constructive, they are useful and intented to help or improve something
+    * She criticized my writing, but in a way that was very constructive
+    * If you don't have anything constructive to say, it's better to say nothing
+* misuse
+    * to use something in an unsustainable way or in a way that was not intended
+        * She was accused of misusing the company's funds
+        * The directors were charged with misuse of funds
+* illicit
+    * illicit drugs such as cocaine and cannabis
+    * the illicit trade in stolen vehicles
+    * an illicit love affair
+* budget
+    * The firm has drawn up a budget for the coming financial year
+    * Libraries are finding it increasingly difficult to remain within budget
+    * an annual budget of 40 million dallar
+    * cut budget
+        * The school budget is gonna be cut again this year
+    * go over budget
+        * the project went over budget because of miscalculation at the plannging stage
+        * She managed to complete her last film well within budget
+    * v
+        * An extra 20 million dollar has been budged for schools this year
+* turn
+    * turn off
+        * Google has a location history setting, which users can turn off at any time
+* criminal
+    * a dangerous/violent criminal
+    * criminal activity
+    * a criminal act/offence
+    * it's criminal to charge so much for a book
+* battery
+    * a rechargeable battery
+    * a battery-operated hairdryer
+    * this alarm clock takes two medium-sized batteries
+    * run down
+        * You'll run batteyr down if you leave your car lights on
+    * be flat/dead
+        * I think the battery is dead/flat
+        * I left car lights on all night and now the battery is flat
+* It's hard to tell between the two
+* die
+    * Twelve people died in the accidend
+    * die of/from
+        * She died of/from hunger/cancer/aheart attack/her injuries
+    * It is a brave person who will die for their beliefs
+    * I would like to die in my sleep
+    * Many people have a fear of dying
+    * Our love will never die
+    * The secret will die with her
+    * die a natural/violent death
+        * He died a violent death
+        * My grandfather died a natural death, as she would have wnated
+    * The engine just died on us
+    * I'm sorry I didn't reply to your text. My phone died.
+    * die away
+    * die down
+    * die off
+    * die out
+* dice
+    * roll/throw
+        * You roll/throw the dice and whoever getst the highest score goes first
+        * Let's play dice
+* I've got a good sense of diretion
+* I never forget the road I pass
+* Once I go somewhere, I dond't forget how to get there
+* I'm good with directions
+* I am good at remembering routes and places
+* stay
+    * stay fit
+    * stay on this road
+* follow this road
+* allergy
+    * allergy to
+        * I have an allergy to cats
+        * a food allergy
+        * Hay fever is really an allergy to pollen and the peak time is early June
+    * She gets shots for her allergies
+* recent
+    * These devices have become increasingly popylar in recent yeras
+    * Saint Lous University recently announced it will equip every students housing room with a digital assistant
+* minute
+    * time
+    * message
+        * the written record of what was said at a meeting
+        * Could you take/do the minutes, Daniel?
+        * The minutes of the last meeting were approved unanimously
+        * I've just received a minute from Clark authorizing the purchase of six more computers
+    * angle
+    * the minute
+        * at the exact or first moment when
+        * The minute I saw him, I knew something was wrong
+    * not for one moment
+        * certainly not
+        * used in negative statements for emphasizing what you are saying
+        * I'm not suggesting for one minute that she meant to cause any trouble
+* search/look for/look up
+    * search for
+        * The police searched the woods for the missing boy
+        * She searched his face for some sign of forgiveness, but it remained expressionless
+        * He searched in/through his pockets for some change
+    * serach high and low
+        * I've searched high and low, but I cannot find my birth certificate
+        * I searched the internet for the best deal
+* save
+    * make safe
+        * Wearing seat belts has saved many lives
+        * save from
+            * He fell in the river but his friend saved him from dwoning
+        * He had to borrow money to save his business
+        * we all need to do our part to save the planet
+    * keep
+        * TOm's been saving his pocket money every week
+        * save for
+            * We're saving up for a new car
+        * I save all my old letters in case I want to read them again
+        * Don't forget to save your work regularly
+    * not waste
+        * to prevent time, money, or effort being wasted or spent
+        * You'll save time if you take the car
+        * Thanks for your help. It saved me a lot of work
+        * I'll lend you a bag for your trip. it'll save you buying one
+        * Can you save it for later
+    * sport
+    * save on
+    * save up
+* online
+    * adj
+    * an online newspaper/magazine/dictionary
+    * we're linked to the online database at our head office
+    * click on this link to visit our online bookstore
+    * adv
+        * internet
+            * DO you like to shop online?
+            * This dictionary went online in 1999
+            * I'll send you my email address once I'm online
+        * connected
+            * The new power station is expected to be online by July
+            * WHen will the new factory come online
+* query
+    * If you have any queries about yoru treatment, the doctor will answer them
+* downcast
+    * unhappy
+        * I thought you were looking a little downcast this morning
+    * eyes down
+        * people sat silently, her eyes downcast
+        * He said nothing and kept hist eyes downcast
+    * The photograph of her sitting on her own made her look lonely and downcast
+* surgery
+    * he got surgery recently
+* ban/prohibit
+    * France has passed a law banning smartphones in schools
+* spot
+    * circle
+        * He had a spot of grease on his tie
+        * I wore that skirt with the green spots
+        * Teenagers often suffer a lot from spots
+        * I felt a few spots of rain
+    * place
+        * This looks like a nice spot for a picnic
+        * The police were called and they were on the spot within three minutes
+    * see
+        * to see or notice someone or something, usually because you are looking hard
+        * if you spot any mistakes in the article just mark them with a pencil
+        * I've just spotted Mark, he's over there, near the entrance
+        * The police spotted him driving a stolen car
+        * well spotted
+            * I've just seen your glasses. they're uner the table. Ah, well spotted
+    * rain
+* praise
+* loaf
+    * bread
+        * two loaves of white bread
+        * bread that is shaped and baked in a single piece and can be sliced for eating
+    * food
+    * v
+        * to avoid activity, especially work
+        * stop loafing about/around and get on with cleaning the windows
+* funky
+    * music
+        * used to describe a style of music, usually for dancing to, with a strong rhythm based on jazz and a tune that repeats
+        * Have you heard htier new record? it's really funky
+    * fashionable
+        * she has some really funky clothes
+    * bad
+        * The sour cream smells kind of funky
+* sit
+    * sit around
+        * I like stting around at home
+* resource
+    * The country's greatest resource is the dedication of its worker
+    * Britain's mineral resources include coal and gas deposits
+    * The school must be properly resourced with musical instrument and audio equipment
+    * have the resources to do
+        * The company has the resources and infrastructure to manage a global brand
+        * We lack the resources to do the job properly
+    * limited/scare resources
+        * The department has limited resources, and would struggle to cope in such a situation
+    * pool/share resources
+        * Wehn times are hard we are asked to pool our resources, but it doesn't always work
+    * financial/capital resources
+    * IT/technical resources
+    * natural resources
+        * All plastics that are created annually consume 2 to 4% of American's energy resources
+        * 
 
-
+## Nuclear energy
+* Solar energy
+* wind energy
+* geothermal energy
+* hydrogen energy
+* tidan energy
+* wave energy
+* hydroelectric energy
+* biomass energy
+* nuclear power
+* fossil fuels
 
 ## relative clause
 * when I look around this room, I'm saddend by the thought o those who could  ont be with us
@@ -1919,11 +2353,15 @@ title: English Speaking
 * subordinate/team member
     * He is my team member
 * collegues/co-worker
+    * so you like new co-workers?
 * boss/supervisor
 * He is our marketing director, James
 * She is my sales manager, Tracy
 * He is my boss
 * He is my team member
+
+## time
+* all the time
 
 
 ## clothes
@@ -2088,10 +2526,10 @@ title: English Speaking
 * more and more/ better and better
     * Your English is improving. it's getting better and better.
     * The city has grown fast in recent years. it's got bigger and bigger.
-    * As I lostend to his story, I became more and more convinced that he is lying
+    * As I listened to his story, I became more and more convinced that he is lying
     * These days more and more people are learning English
     * It gets more and more difficult to understand what is goind on
-    * More and more peopole are becoming fed up with the corruption in government
+    * More and more people are becoming fed up with the corruption in government
     * More and more, we are finding that people want to continue working beyond 60
     * As the disease worsened, he found walking more and more difficult
     * I find myself thinking about it more and more
@@ -2136,19 +2574,102 @@ title: English Speaking
 
 
 ## personality
+* stubborn
+    * you are so stubborn
+* nuisance
+    * he is a nuisance
+* pushover
+    * Tony's a pushover for blondes
+* pushy
+    * he is pushy
+* persistent
+    * he is persistent
+* moody
+    * he is moody
+* dense
+    * you're so dense
+* organized
+    * you're very organized
+* competitive
+    * you're so competitive
+* playful
+    * they're just being playful
+* greedy
+    * don't be greedy
+* stingy
+    * you're stingy
+* impatient
+    * you're so impatient. just relax
+* shallow
+    * he is really shallow
+* arrogant
+    * you are so arrogant
+* scatterbrained
+    * you're so scatterbained
+* temper
+    * he has short temper
+    * he has good temper
+* modest
+    * you are so modest
+* absent-minded
+    * someone who is absent-minden often forgets things or does not pay attention to what is happening near them because they are thinking about other things
+    * you are so absent-minded
+* laid-back
+    * he is laid-back
+* womanizer
+    * he is a womanizer
+* sassy
+    * rude and showing no respect
+        * a sassy young girl
+    * confident or showing confidence
+        * a sassy little black dress
+* sissy
+    * a boy who other boys dislike and laugh at because they think he is weak or interested in activities girls usually like, or a person who is weak and cowardly
+    * Kevin is such a sissy
+* cuddly
+    * liking to cuddle, or making you want to cuddle
+    * a very cuddly child
+* You're so down to earth
+* That's who I am
+* I'm not kind of person
+* she wuoldn't do that
+* we don't get along
+* she just likes to play a victim
+* she needs attention
+* he is out of control
+* ebullent
+    * very happy and excited
+    * My father is a naturally ebullient personality
 * polymath
-    * You are an open-minded craving for transforming your ideas into real-world impact
+    * a person of wide knowledge of learning
+    * He is either a polyath or an extremly through researcher
+    * His ebullient personality is a vivid remainder of the polymath of past times
 * open-minded
+    * You are an open-minded craving for transforming your ideas into real-world impact
     * some people are less open-minded
 * easy-going
+    * not easily upset, annoyed, or worried
     * an easy-going boss
     * counselors at the summer camp are pretty easygoing
+    * Her easy-going nature made her popular
 * flexible
+    *  person, plan etc that is flexible can change or be changed easily to suit any new situation 
     * startup companies may llok for engineers who are flexible, adaptable, willing to work on diverse projects, and eager to learn new things.
+    * we can be flexible about your starting date
 * adaptable
 * extrovert
+    * someone who is active and confident, and who enjoys spending time with other people
     * most ators are natural extroverts
+* introvert
+    * someone who is quiet and shy, and does not enjoy being with other people
+* uptight
+    * behaving in an angry way because you are feeling nervous and worried
+    * You have to learn to laugh instead of getting uptight about things
+    * I wish you would stop being so uptight
 * obsessive
+    * someone whose behaviour is obsessive
+    * thinking or worrying about something all the time, so that you do not think about other things enough
+    * I try to stay fit, but I'm not obsessive about it
     * an obsessive concern with cleanliness and order
 * He has no awareness
 * Your girlfiriend is really high maintenance
@@ -2162,10 +2683,22 @@ title: English Speaking
     * I wanna make it a habbit of waking up early
 * I guess we just click
 * What do you think, bossy and domineering?
+* It comes naturally to me
+* I always make a mess
+* you don't look the type
+* I can't see myself doing that
+* skeptic
+    * I'm a skeptic
+    * I'm skeptical
+* He wants attention
+* self-control
+    * I have no self-control
+* I don't want to come off too strong
 * domineering
     * What do you think bossy and domineering?
     * I thought he was arrogant and domineering
     * a domineering personality
+* they were very patient with me
 * arrogant
 * immature
 
