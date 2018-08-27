@@ -677,7 +677,9 @@ title: English Speaking
     * We wouldn't have any money if we didn't work
     * If you were in my position, what would you do?
     * it's a pity he can't drive. It would be useful if he could
+    * If I wasn't married, she'd be rejecting me right now
     * I wish I knew Paul's phone number
+    * I wish I could say the same
     * Do you ever wish you could fly?
     * It rains a lot there. I wish it didn't rain  so much
     * It's crowded here. I with there weren't so many people
@@ -793,6 +795,12 @@ title: English Speaking
 * bib
 * lay a finger
 * take
+    * take something to heart
+        * Dont't take it to heart. he was only joking about your hair
+    * take a rain check on
+        * Mind if I take a rain check on that drink? I have to work late tonight
+    * take a stroll/trip/walk down memory lane
+        * to remmber happy times in the past
     * engineers take pride and ownership in what they do
     * take in
         * understand
@@ -804,7 +812,7 @@ title: English Speaking
     * take place in
     * If you take a taxi ride, you could use vegetables as payment for the cab ride
     * take on
-        * Dont' tkae on too much work. the extra cash isn't worth it
+        * Dont' take on too much work. the extra cash isn't worth it
         * Her face took on a fiece expression
         * His life had taken on a new dimension
         * Nigeria will take on Agentina in the first round of the World Cup on Saturday
@@ -961,6 +969,8 @@ title: English Speaking
 * head
     * head off
 * make
+    * make fun of
+        * You're always making fun of me
     * make a noise
     * make a living
         * they make a living
@@ -2228,6 +2238,16 @@ title: English Speaking
             * WHen will the new factory come online
 * query
     * If you have any queries about yoru treatment, the doctor will answer them
+    * What was their response to your query?
+* footling
+    * silly or not important
+    * He could always do something useful instead of wasting my time with footing queries
+    * I've got a query about my tax
+    * we have received many written queries about the product
+    * v
+        * to ask questions, especially in order to check if something is true or correct
+        * a few students have queried their marks
+        * She queried whether three mo
 * downcast
     * unhappy
         * I thought you were looking a little downcast this morning
@@ -2291,7 +2311,103 @@ title: English Speaking
     * IT/technical resources
     * natural resources
         * All plastics that are created annually consume 2 to 4% of American's energy resources
-        * 
+* set
+    * set up
+* dominance
+    * The company needs to change its strategy in order to gain dominance in the market
+* proponent
+* satellite
+* missile
+    * North Korea closed a major missile testing facility last month
+* a solution in search of problem
+    * People tend to let capability mislead priority
+    * a solution that is come up with before perceiving a problem which is looked for to use the solution
+    * why would a person come up with a solution and then look for a problem, rather than perceiving a problem and then looking for a solution?
+* interact
+    * The back-end application may interact directly with the front-end, or perhaps more typically, is a program called from an intermediate program that mediates front-end and back-end
+* interface
+    * a front-end application might interface directly with users and forward requests to a remotely-located back-end program in another computer to get requested data or perform a requested service
+* mediate
+* everything under the sun
+    * everything that exists or is possible
+    * I've tried everything under the sun on this stain, I just can't get rid of it
+* skydiving
+    * Parachuting
+    * The first skydive performed without a parachute was by stuntman 
+* separate
+    * existing or happening independently or in a different physical space
+        * the art department and the music department are in two separate buildings
+        * I try to keep meat separate from other food in the fridge
+        * I have my public life and my private life, and as far as possible I try to keep them separate
+        * Three youths have been shot and killed in seperate incidents this month
+    * go your separate ways
+        * if two or more people go their separate ways, they stop being together
+        * in 1983, the grouop disbanded and went their separate ways
+    * divide
+        * Please separate the garbage
+        * The north and south of the country are separated by a mountain range
+        * you can get a special device for seprating egg whites from yolks
+        * the top and bottom sections are quite difficult to separate
+    * move apart
+* mourn
+    * you can mourn
+    * to feel or express great sadness, especially because of someone's death
+        * she was still mourning for her brother
+* shove
+    * push
+        * shoves pennies up is nose
+    * put
+    * move body
+* divide
+* if you could just realize it on your own
+* divorce
+    * He's been divorced, and I had some experience in that area
+* talk
+    * he and I have a lot of talk about that
+    * pep talk
+        * a short speech intended to encourage people to work harder or try to win a game or competition
+        * The boss gave the staff a pepe talk this morning in an attempt to bost sales
+* arouse
+    * It's a subject that has aroused a lot of interest
+    * Our suspicions were first aroused when we heard a muffled scream
+    * He works hard to arouse his students curiousity
+* pan
+    * pan out
+        * to develop in a particular way or in successful way
+        * we'll have to see how things pan out
+        * their attempt to start a new business didn't pan out
+        * not all his ideas have panned out as he would have liked
+* weak
+    * weak at the knees/weak in the knees
+        * If you go weak at the knees, you lose your strength and feel you are going to fall over, usually because of seeing or talking about either someone you are very attracted to or because of something unpleasant or frightening
+        * The thought of kissing him made me go weak at the knees
+        * after last night, I'm a little weak in the knees
+* fake
+    * I will not fake it this time
+* transmit
+    * they transmit leptospirosis and hantavirus
+* off-limits
+    * if an area of land is off-limits, you are not allowed to enter it
+        * she is off-limits
+* restrict
+    * measures to restrict the sale of alcohol
+    * The government has restricted freedom of movement into and out of the country
+    * Having small children really restricts your social life
+* cusp
+* mediocre
+    * mediocre porno
+    * mediocre novel
+* All those boys had a bet to see if he could knock you over
+
+
+## US
+* CDC
+    * Centers for Disease Control and Prevention
+    * bacterial disease that affects humans and animals
+    * it is caused by bacteria of the genus Leptospira
+    * In humans, it can cause a wide range of symptoms, some of which may be mistaken for other diseases. Some infected persons, however, may have no symptoms at all.
+    * Without treatment, Leptospirosis can lead to kidney damage, meningitis (inflammation of the membrane around the brain and spinal cord), liver failure, respiratory distress, and even death.
+
 
 ## Nuclear energy
 * Solar energy
@@ -2362,6 +2478,9 @@ title: English Speaking
 
 ## time
 * all the time
+* in the past
+* in the future
+* at the momemnt
 
 
 ## clothes
@@ -2481,6 +2600,11 @@ title: English Speaking
     * the nurse told me that Eddie is showing the early signs of Alzheimer's disease.
     * It affects his memory and sometimes he doesn't know where he is or what he's doing
     * If he has Alzheimer's, he's goona get worse
+* leptospirosis
+    * they transmit leptospirosis
+* hantavirus
+    * they transmit hantavirus
+    * infection with hantavirus can progress to Hantavirus Pulmonary Syndrome, which can be fatal
 
 ## computer
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
