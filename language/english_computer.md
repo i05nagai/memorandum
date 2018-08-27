@@ -30,6 +30,9 @@ title: English Computer
     * prediction was negative and the prediction was true
 * HA pattern
     * High Availavility patterns
+    * [Architectural Patterns for High Availability](https://www.getfilecloud.com/blog/2015/12/architectural-patterns-for-high-availability/#.W3528JMzafc)
+* software rot
+    * [Software rot - Wikipedia](https://en.wikipedia.org/wiki/Software_rot)
 
 
 ## Reference
