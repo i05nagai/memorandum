@@ -1589,6 +1589,35 @@ title: English Speaking
         * when jesus was scourged by the Roman soldiers he bled like a man
 * relive
     * whenever I smell burning, I relive the final moment of the crash
+* sketchy
+    * not detailed
+        * so far we only have sketchy information about what caused the explosion
+    * not safe
+        * a sketchy guy
+* mind boggling
+    * she was paid the mind boggling sum of ten million dollars for that film
+* the answer to this question is two-fold
+* in lieu of
+    * instead of
+    * The company is allowing workes to recieve cash in lief of vacation time
+* spell
+    * spell out
+        * to explain something in a very clear way with details
+        * The government has so far refused to spell out its plan/policies
+        * What do you mean you don't understand. do I have to spell it out for you?
+    * form words
+        * 
+    * result
+    * do instead
+* device
+    * machine
+    * method
+    * bomb
+* devise
+    * to invent a plan, system, object, etc., usually using your intelligence or imagination
+    * He's good at devising language games that you can play with students in class
+    * The cartoon characters Snoopy and Charllie Brown were devised by Charles M.Schulz
+
 
 
 ## clothes
@@ -1636,6 +1665,7 @@ title: English Speaking
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
+* we can devise a much faster algorithm than the one presented in the previous chapter
 * There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
 * Generally, the more complete the evaluation during the interview process, the better you should feel about potentially accepting an offer
 * Staying at an organiation that no longer fits you is much costlier than you may realize
