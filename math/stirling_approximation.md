@@ -402,32 +402,45 @@ $$
 $$
 
 Let $p=1$.
+By Wallis' product, $e^{y} = \sqrt{2\pi}$.
 
 $$
 \begin{eqnarray}
     n!
-    =
-    \left(
-        \frac{n}{e}
-    \right)^{n}
-    n^{1/2}
-    \exp
-    \left(
-        \sum_{k=2}^{p}
-            (-1)^{-1}
-            \frac{B_{k}}{(k - 1)k}
-            \frac{1}{n^{k-1}}
-    \right)
-    e^{y}
-    \exp
-    \left(
-        O
+    & = &
         \left(
-            \frac{1}{n^{p}}
+            \frac{n}{e}
+        \right)^{n}
+        n^{1/2}
+        \sqrt{2\pi}
+        \exp
+        \left(
+            O
+            \left(
+                \frac{1}{n}
+            \right)
         \right)
-    \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            \frac{n}{e}
+        \right)^{n}
+        \sqrt{2\pi n}
+        \exp
+        \left(
+            O
+            \left(
+                \frac{1}{n}
+            \right)
+        \right)
 \end{eqnarray}
 $$
+
+TODO
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 
 ## Reference
 * [Stirling's approximation \- Wikipedia](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
