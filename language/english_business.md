@@ -11,3 +11,4 @@
 
 ## Reference
 * [How to Write the Address and Name - Japan Post](https://www.post.japanpost.jp/int/use/writing/normal_en.html)
+* [What is commerce? definition and meaning - BusinessDictionary.com](http://www.businessdictionary.com/definition/commerce.html)

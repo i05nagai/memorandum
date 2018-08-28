@@ -251,11 +251,8 @@
 * back into a corner
 * throne
 * lucrative
-* iconic
-* glamorous
-* heyday
-* hawkish
 * intel
+* opulent
 * sinister
     * giving the impression that something harmful or evil is happening or will happen.
 * menacing
@@ -5141,6 +5138,7 @@
 * hollandaise
     * a bearnaise has shallots, chervil and most importantly, tarragon
 * bearnaise sauce
+* gate
 
 
 ## Sentence

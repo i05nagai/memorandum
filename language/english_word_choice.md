@@ -4,6 +4,26 @@ title: English word choice
 
 ## English word choice
 
+* along/alognside
+    * [Along or alongside ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/along-or-alongside)
+    * along
+        * preposition
+            * There were lots of shops along the main street
+            * I saw three different boats along the bank of the river
+        * adv
+            * Why don't you come along with us to the party?
+            * They said they'd bring the bikes along and we can ride to the swimming pool
+    * alongside
+        * preposition
+            * close beside, next to, together with
+            * The trees alongside the fence have all been damaged by the wind
+                * near
+            * Put your bike alongisde mine
+                * next to
+            * I find it difficult to cope with this illness alongside all my other problems
+        * adv
+            * along the side of, next to
+            * I parked my car in the drive and William parked his alongside
 * rug/carpet
     * floor covering
     * table cover

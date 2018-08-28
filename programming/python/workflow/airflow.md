@@ -3,6 +3,11 @@ title: airflow
 ---
 
 ## airflow
+Always write a function in dag file which returns the DAG instance.
+Then call the function in main clause in dag file.
+
+* You can unit-test the tasks by testing Dag instances to check whether the instance has expected values or data
+* subdag operators can be easy to access other dag instances
 
 ## Install
 

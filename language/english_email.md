@@ -6,6 +6,7 @@ title: English Email
 
 * I'm contacting you becauase
 * I’ve attached
+* I may have a colleague who could be a good fit for this role; would you mind if I passed your contact information on to them?
 
 
 ## Reference
