@@ -112,6 +112,9 @@ private keyをimportすればpublic keyもimportされる。
 
 ```
 $ gpg --import /path/to/private.key
+```
+
+```
 $ gpg --edit-key <KEY-ID>
 ...
 ...
