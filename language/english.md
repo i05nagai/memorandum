@@ -87,9 +87,8 @@
     * to tease or joke with someone
     * [Put someone on \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/put+someone+on)
 * fugue
-    * フーガ
 * get back on one's feet with
-    * to have enough money again, or to be successful again after having problems
+* to have enough money again, or to be successful again after having problems
 * Back off!
     * leave me alone
     * [Urban Dictionary: Back off](https://www.urbandictionary.com/define.php?term=Back%20off)
@@ -5097,6 +5096,12 @@
 * xerox
     * Why are you xeroxing a passport?
 * hog
+    * a pig, especially one that is allowd to grow large so that it can be eaten
+    * a male pig with its sexual organs removed, kept fo its meat
+    * someone who takes much more than a fair share of something, especilly by eating too much
+        * you've eaten t all? you hog
+    * to take or use more than your share of something
+        * He's always hogging the bathroom
 * mommentary lapse
 * tepid
     * the water is tepid
@@ -5127,6 +5132,7 @@
 * hollandaise
     * a bearnaise has shallots, chervil and most importantly, tarragon
 * bearnaise sauce
+
 
 
 ## Sentence
