@@ -2260,5 +2260,145 @@ Thus, we have the same inequality in lemme 2.7.
 However, there is an algorithm which gives the better inequality than the inequality from lemma 2.7, which is $O(\frac{1}{\sqrt{t}})$.
 We will show this in next chapter.
 
-## 2.4 Example; Support Vector Machine training
+## 2.4 Example: Support Vector Machine training
+General linear classfication problem is stated as below.
+
+* $d \in \mathbb{N}$,
+    * the dimension of feature/input vector
+* $n \in \mathbb{N}$,
+* $a_{i} \in \mathbb{R}^{d} \ (i = 1, \ldots, n)$,
+    * input vector
+* $$b_{i} \in \{-1, 1\}$$,
+    * label corresponding to input $a_{i}$,
+
+A lot of loss functions can be considered for this classfication problems, but here we consider one of the simplest loss function.
+The following equation is the problem to solve.
+
+$$
+\begin{equation}
+    \min_{x \in \mathbb{R}^{d}}
+        \sum_{i=1}^{n}
+            1_{\mathrm{sign}(x^{\mathrm{T}} a_{i} \neq b_{i})}
+    \label{equation_02_05}
+\end{equation}
+    .
+$$
+
+General classi
+
+Support Vector Machine is pracitically used for classification.
+The soft margin SV relaxation replaces the 0/1 loss in $$\eqref{equation_02_05}$$ with a convex loss, called the hinge-loss, given by
+
+$$
+\begin{eqnarray}
+    \ell_{a, b}(x)
+    & := &
+        \mathrm{hinge}(b x^{\mathrm{T}}a)
+    \nonumber
+    \\
+    & := &
+        \max
+        \{
+            0,
+            1 - b x^{\mathrm{T}}a
+        \}
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Here we consider the loss function with regularization.
+
+$$
+\begin{equation}
+    \min_{x \in \mathbb{R}^{d}}
+    \left(
+        \lambda
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \ell_{a_{i}, b_{i}}(x)
+        +
+        \frac{1}{2}
+        \|
+            x
+        \|^{2}
+    \right)
+    \label{equation_02_06}
+\end{equation}
+    .
+$$
+
+#### Algorithm 5 SVM training via subgradient descent
+* $$\{(a_{i}, b_{i})\}$$,
+* $T \in \mathbb{N}$,
+* $x_{1} := 0$,
+* $\eta_{t} := \frac{2}{t + 1}$,
+* $\lambda > 0$,
+    * regulariztion parameter
+
+**Step1.**
+
+$$
+\begin{eqnarray}
+    \nabla_{t}
+    & := &
+        \lambda
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \ell_{a_{i}, b_{i}}(x_{t})
+        +
+        x_{t}
+    \nonumber
+    \\
+    \nabla\ell_{a, b}(x)
+    & = &
+        \begin{cases}
+            0
+            &
+                (b x^{\mathrm{T}}a > 1)
+            \\
+            -b a
+            &
+                \text{otherwise}
+        \end{cases}
+    \nonumber
+\end{eqnarray}
+$$
+
+**Step2.** Update
+
+$$
+\begin{eqnarray}
+    x_{t + 1}
+    :=
+    x_{t}
+    -
+    \eta_{t} \nabla_{t}
+    \nonumber
+\end{eqnarray}
+$$
+
+**Step3.** end for
+
+**Step4.** Return $\tilde{x} := \frac{1}{T} \sum_{t=1}^{T} \frac{2t}{T + 1}x_{t}$,
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Theorem
+In Algorithm 5, if $T > \frac{1}{\epsilon}$,
+
+
+$$
+    f(\tilde{x})
+    -
+    f(x^{*})
+    \in 
+    O(\epsilon)
+    .
+$$
+
+#### proof
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 
