@@ -839,6 +839,7 @@ title: English Speaking
 * Her words and ideas flow easily from one idea to the next.
 * apply
     * Do you think I should apply for this job?
+    * we pply the principles of computer science and engineering to the design and development of computing systems: generally, large distributed one.
 * adapt
     * apapt to
         * The children are finding it hard to adapt to the new school
@@ -2363,7 +2364,11 @@ title: English Speaking
     * pep talk
         * a short speech intended to encourage people to work harder or try to win a game or competition
         * The boss gave the staff a pepe talk this morning in an attempt to bost sales
+* arise
+    * it is no surprise that it arose in the fast moving world of web services, and perhaps in origin owes something to the peculiarities of our infrastructure.
+* rise
 * arouse
+    * to cause someone to have a particular feeling
     * It's a subject that has aroused a lot of interest
     * Our suspicions were first aroused when we heard a muffled scream
     * He works hard to arouse his students curiousity
@@ -2441,6 +2446,88 @@ title: English Speaking
     * on a contingency basis
         * if you work for someone on a contingency basis, you agree that you will only be paid if you achieve a particular aim, for example, getting a successful result in a court of law
         * in personal injury cases many attorneys work on a contingency basis, so you will not have to pay them a fee up front
+    * Add up your outgoings
+* outgoing
+    * amounts of money that regularly have to be spent, for example to pay for heating or rent
+    * money that a person or business has to spend regularly, rather than money tha they earn or receive
+        * a financial statement of income and outgoings
+        * monthly/annual/regularly outgoings
+        * cover/reduce/cut your outgoings
+            * Increasing numbers of people are finding it more difficult to cover their monthly outgoings
+* yet
+    * adv, conj
+        * despite that; used to add something that seems surprising because of what you have just said
+        * simple yet effective
+        * he's overweight and bald, yet somehow, he's attractive
+* conceive
+    * imagine
+        * I think my uncle still conceives of me as a four-year-old
+        * He couldn't conceive of a time when he would have no job
+    * invent
+        * he conceived the plot for this film while he was still a studnet
+    * become pregnant
+* discipline
+    * trainning
+    * subject
+    * punish
+    * control
+* decommission
+    * to take quipement or weapons out of user
+        * The government has decided to decommission two battleships
+        * It would cost 300dollar million to decomission the nuclear installation
+        * The company's closure was announced in 2010, but 55 people still work there decommissioning the plant
+* expend/spend
+    * to use of spend time, effort or money
+    * we expend effor in this directino only up to a point: whe nsystems are reliable enough, we instead invest our efforts in adding features or building new products.
+* comparatively
+* emerge
+    * appear
+        * she emerged from the sea, blue with cold
+        * The Prince emerged unscathed from the scandal
+    * become known
+        * The facts behind the scandals are sure to emerge eventually
+        * It has emerged that secret talks had been going on between the two companies before the takeover was announced
+        * She's the most exciting British singer to ermge on the pop sense for a decade
+* unscathed
+    * without injuries or damages beling caused
+        * He husband died in the accident but she amazingly escaped unscathed
+* indulge
+    * to allow yourself or another person to have something enjoyable, especially more than is good for you
+        * The socer fans indulged their patriotism, waving flags and singing songs
+        * I love champagne but I don't often indulge myself
+        * we took a deliverate decision to indulge in a little nostalgia
+    * indulge in
+        * most of us were too busy to indulge in heavy lunchtime drinking
+        * Eva had never been one to indulge in self-pity
+    * to give someone anything they want and not to mind if thei behave badly
+        * my aunt indulges the children dreadfully
+* orient
+    * find direction
+        * to disxover the position of yourself in relation to your surroundings
+        * after she came out of the station, she puased to orient herself
+    * make familiar
+        * to make someone familiar with a new place
+        * incoming freshman have advisers to help orient them to the university
+* fold
+    * bend
+        * I folded the letter in half and put it in an evelope
+        * He had neatly folded handkerchief in his jacket pocket
+        * will you help me to fold the sheets?
+        * the table folds up when not in use
+    * to wrap
+        * she folded her baby in a blacket
+        * he folded his arm around her
+    * fold your arms
+    * she sat with her legs folded under her
+    * fail
+        * many small business fold within the first year
+* umbrella
+    * folding umbrellas
+    * compact umbrellas
+* deteriorate/get worth/get down/go downhill/decline/degenerate/escalate/spiral out of control
+    * to become worse
+        * Ethel's heals has deteriorated
+        * America's deteriorating economy
 
 
 ## US
