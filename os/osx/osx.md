@@ -1,3 +1,7 @@
+---
+title: osx
+---
+
 ## osx
 
 ## OS X で Shift+Space で入力ソースを切り替える方法
@@ -10,8 +14,21 @@ xcodeが必要。
 open ~/Library/Preferences/com.apple.symbolichotkeys.plist
 ```
 
+```
+# you can find list of keycode
+vim /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+```
+
 1. 61 > value > parameters > item 2 の値を 1572864 を Shift のキーコードである 131072 に変更します
+    * default opt+ctrl+space
+    * 32
+    * 49
+    * 786432
 2. 60 > value > parameters > item 2 の値を 1048576 を Option-Shift キーの値である 655360 に変更します
+    * default ctrl+space
+    * 32
+    * 49
+    * 262144
 3. 保存して再起動する
 
 System Preferences->Keyboard->Shortcutsの一覧がこのファイルに記録されている。

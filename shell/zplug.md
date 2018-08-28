@@ -16,7 +16,7 @@ antigenとの比較は以下の記事を見れば良い。
 curl -fLo ~/.zplug/zplug --create-dirs git.io/zplug
 ```
 
-For OSX
+For ubuntu
 
 ```
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh

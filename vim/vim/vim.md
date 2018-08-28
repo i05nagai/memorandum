@@ -14,7 +14,7 @@ title: Vim
 ### OSX
 
 ```
-brew install vim --with-lua --with-python3 --with-override-system-vi
+brew install vim --with-lua --with-gettext --with-override-system-vi
 ```
 
 * `--with-python3`
