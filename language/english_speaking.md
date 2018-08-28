@@ -75,16 +75,17 @@ title: English Speaking
     * He spent hours trying to repair the clock
     * I waste a lot of time doing nothing
     * She said she couldn't see me. She was too busy doing other things.
-* can afford to do
-    * we couldn't afford to pay the lawyer's fee
-    * We can't afford another trip around this year
-    * We can't afford to go on vacation this year
-    * I couldn't afford the rent on my own
-    * How can she afford to eat out every night?
-    * Dad can't afford any more time off work
-    * We can't afford to wait any longer or we'll miss the plane
-    * It gives them a power that shouldn't be unquestioningly afforded to any indivisuals
 * afford/allow
+    * not everyone can afford help
+    * can afford to do
+        * we couldn't afford to pay the lawyer's fee
+        * We can't afford another trip around this year
+        * We can't afford to go on vacation this year
+        * I couldn't afford the rent on my own
+        * How can she afford to eat out every night?
+        * Dad can't afford any more time off work
+        * We can't afford to wait any longer or we'll miss the plane
+    * It gives them a power that shouldn't be unquestioningly afforded to any indivisuals
     * The room affords a beautiful view out over the city
     * It afords her the opportunity to improve her tennis skills
     * The new law will afford protection to employees
@@ -344,8 +345,6 @@ title: English Speaking
     * The mistakes were corrected in a subsequent edition of the book
 * pass
     * someone I can pass on my wisdom to
-* take something to heart
-    * Dont't take it to heart. he was only joking about your hair
 
 * offer/give/ask/pay/show/teach/tell
     * Somebody gave the police the information
@@ -1057,9 +1056,6 @@ title: English Speaking
     * to eliminate redunduncy
 * associated with
     * a mental illness associated with particular personality traits
-* cut some slack
-    * I should cut him some slack
-    * Andrew's late again. Cut him some sack -- his wife just had a baby
 * It's got a surround system
 * Why are you sitting there topless?
 * drinking way too much
@@ -2398,6 +2394,53 @@ title: English Speaking
     * mediocre porno
     * mediocre novel
 * All those boys had a bet to see if he could knock you over
+* mug
+* formula
+    * a liquid food mixture that is fed to babies instead of mother's milk
+* propotioned
+    * we wandered through the beautifully proportioned rooms of the Winter Palace
+    * kj
+* yore pants is undone
+* cut
+    * cut some slack
+        * I should cut him some slack
+        * Andrew's late again. Cut him some sack -- his wife just had a baby
+    * cut back on
+        * to spend less, do less, or use less of something
+        * the government has announced plans to cut back on defence spending by 10 percent next year
+        * if excercise is causing you pain, you should cut back
+* shorthand
+    * a system of fast writing that uses lines and simple signs to represent words and phrases
+    * The conversations were taken down in shorthand by a secretary
+* short
+    * distance
+    * time
+    * lacking
+        * be short of/on
+            * to be short of space/time
+            * we're on short of coffee. I'd better get some more
+            * she is alwasy short of breath when she climbs the stairs
+            * I'm a little short this week. Could you lend me ten dollars?
+        * be in short supply
+            * Free desks are in short supply in this office
+        * go short
+            * My parents didn't have much money, but they made sure we didn't go short of anything
+    * not patient
+        * I'm sorry if I was a bit short with you on the phone this morning
+    * short-circuit
+        * The plumber shorted the washing machine
+* air conditioner
+    * raise the temperature on the AC by one degree
+    * turn up the air conditioner by one degree
+    * turn down the air conditioner by one degree
+    * It's rather chilly back here. Could you turn up the thermostat?
+* contingency
+    * something that might possibly happen in the future, usually causing problems or makeing further arrangements necessary
+    * You must be able to deal with all possible contingencies
+    * Have you made any contingency plans?
+    * on a contingency basis
+        * if you work for someone on a contingency basis, you agree that you will only be paid if you achieve a particular aim, for example, getting a successful result in a court of law
+        * in personal injury cases many attorneys work on a contingency basis, so you will not have to pay them a fee up front
 
 
 ## US
