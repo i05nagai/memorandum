@@ -40,14 +40,13 @@ $M$ is positive definite matrix (p.s.d. for short) if
 $$
     z \in \mathbb{R}^{N} \setminus \{0\},
     \
-    z \ge 0,
-    \
     z^{\mathrm{T}}Mz > 0
 $$
 
 We denote $$\mathcal{S}_{n}^{+}$$ as a set of all p.d.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
 
 ### Definition. nonnegative definite.
 * $$M$$,
@@ -57,8 +56,6 @@ $M$ is nonnegative definite matrix if
 
 $$
     z \in \mathbb{R}^{N},
-    \
-    z \ge 0,
     \
     z^{\mathrm{T}}Mz \ge 0
 $$
@@ -77,6 +74,108 @@ That is, there are some nonnull vectors $z$ such that $$z^{\mathrm{T}}Mz = 0$$
 We denote $$\mathcal{S}_{n}$$ as a set of all p.s.d.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+### Proposition1 equivalence
+The definition of p.d. are equivalent to
+
+$$
+\begin{equation}
+    \exists r > 0,
+    \
+    \text{ s.t. }
+    \
+    \forall z \in B_{0, r} \setminus \{0\},
+    \
+    z^{\mathrm{T}}Mz > 0
+    .
+\end{equation}
+$$
+
+where $B_{0, r}$ is unit ball centered at 0,
+
+$$
+    a \in \mathbb{R}^{n},
+    \
+    r \in > 0,
+    \
+    B_{a, r}
+    :=
+    \{
+        y \in \mathbb{R}^{n}
+        \mid
+        \|a - y \|
+        \le
+        r
+    \}
+    .
+$$
+
+### proof
+For any $$z \in \mathbb{R}^{n} \setminus \{0\}$$, letting $$t := \max_{i}|z_{i}|$$, $x := z / t$, $x \in B_{0, 1}$ and $z = tx$, that is,
+
+$$
+    \forall z \in \mathbb{R}^{n} \setminus \{0\},
+    \
+    \exists t > 0,
+    \
+    \exists x \in B_{0, 1} \setminus \{0\}
+    \text{ s.t. }
+    z = xt
+    .
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    & &
+        \forall x \in B_{1} \setminus \{0\},
+        \
+        x^{\mathrm{T}}Mx
+        > 0
+    \nonumber
+    \\
+    & \Rightarrow &
+        \forall t > 0,
+        \
+        \forall x \in B_{1} \setminus \{0\},
+        \
+        (tx)^{\mathrm{T}}M(tx)
+        > 0
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Coverse is obvious.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### Corollary2 equivalence
+The definition of p.d. are equivalent to
+
+$$
+\begin{equation}
+    \exists r > 0,
+    \
+    \exists a \in \mathbb{R}^{n},
+    \
+    \text{ s.t. }
+    \
+    \forall z \in B_{a, r} \setminus \{0\},
+    \
+    z - a \neq 0,
+    \
+    (z - a)^{\mathrm{T}}M(z - a) > 0
+    .
+\end{equation}
+$$
+
+### proof
+$z - a \in B_{0, r}$ if and only if $z \in B_{a, r}$.
+The result is immediate consequence of the previous proposition.
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ### Remark.
 * If $M$ is positve definite, then $M$ is nonnegative definite.

@@ -13,10 +13,10 @@ book_chapter: 4
 
 ### Definition. Unbiased
 * $\phi: \mathcal{X} \rightarrow [0, 1]$
-    * 検定
+    * test
 * $\alpha \in [0, 1]$
 
-検定が水準$\alpha$の不偏検定であるとは、
+test is said to be $\alpha$-unbiased test if
 
 $$
 \begin{eqnarray}
@@ -29,18 +29,18 @@ $$
     & &
         \theta \in \Theta_{K}
     \label{chap04_04_01_unbiasesed_test}
+    .
 \end{eqnarray}
 $$
 
-満たすことをいう。
-第一式は、Error of the first kindである。
-第二式は、powerである。
-また、水準$\alpha$の検定は定義より第一式を満たす。
+The first equation is error of the first kind.
+The second equation is power of test.
+Note that level-$\alpha$ test satisfies the first equation by definition.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Remarks
-検定におけるRisk function $$R(\theta, \delta_{\phi})$$
+Risk function $R(\theta, \delta_{\phi})$ in statistical test is defined as
 
 $$
 \begin{equation}
@@ -63,12 +63,12 @@ $$
             &
                 (\theta \in \Theta_{K}) 
         \end{cases}
+    .
     \nonumber
 \end{equation}
 $$
 
-であった。
-検定が不偏検定であれば、riskの意味では
+If the test is a unbiased test, we can re-write the definiont of the unbiasedness in termso of risk function;
 
 $$
 \begin{eqnarray}
@@ -84,11 +84,10 @@ $$
         1 - \alpha,
         \quad
         (\theta \in \Theta_{K}) 
+    .
     \nonumber
 \end{eqnarray}
 $$
-
-となる。
 
 また、$\forall \phi$について、$\beta_{\phi}$が$\theta$について連続で、$$\Theta_{H}^{f} \cap \Theta_{K}^{f} \neq \emptyset$$(これは、$$\Theta_{K}, \Theta_{H}$$が$$\Theta$$の分割であれば、成り立つ)とすれば
 
@@ -205,15 +204,15 @@ $$
 * $$\mathcal{P} := \{P_{\theta}\}_{\theta \in \Theta}$$,
 * $$\theta = (\theta_{1}, \ldots, \theta_{m}) \in \Theta$$,
 * $g: \mathcal{X} \rightarrow \mathbb{R}$
-    * 可測関数
+    * measurable function
 * $T_{i}: \mathcal{X} \rightarrow \mathbb{R}$
-    * 可測関数
+    * measurable function
 * $\psi:\Theta \rightarrow \mathbb{R}$
-    * 実数値関数
+    * real-valued funtion
 * $a_{i}:\Theta \rightarrow \mathbb{R}$
-    * 実数値関数
+    * real-valued funtion
 
-$\mathcal{P}$が以下を満たす時、$\mathcal{P}$を指数型分布族という。
+$\mathcal{P}$ is said to be exponential family if
 
 $$
     \theta \in \Theta,
@@ -233,13 +232,14 @@ $$
             \phi(\theta)
     \right)
     g(x)
+    .
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-以下では、指数型分布族の中で、$m = 1$で$$a_{i}$$を恒等写像で、$\phi(\theta) = -\log(C(\theta))$の場合を考える。
-また、記法を本に合わせるために、$h=g$として書く。
-つまり、
+In this section, we consider the case that $m = 1$, $a_{i}$ is identity map, and$\phi(\theta) = -\log(C(\theta))$.
+We denote $h=g$ to be consistent with the book.
+With these notation, the above equation can be written as
 
 $$
     \theta \in \Theta,
@@ -257,28 +257,29 @@ $$
         T(x)
     \right)
     h(x)
+    .
 $$
 
 * case1
-    * Corollary 3.4.1
+    * By Corollary 3.4.1, there exists UMP test
     * $$H: \theta \le \theta_{0}$$,
     * $$K: \theta > \theta_{0}$$,
 * case2: $$\theta_{1} < \theta_{2}$$,
-    * Theorem 3.7.1
+    * By Theorem 3.7.1, there exists UMP test
     * $H$: $$\theta \le \theta_{1}$$ or $$\theta \ge \theta_{2}$$,
     * $$K: \theta_{1} < \theta < \theta_{2}$$,
 * case3: $$\theta_{1} < \theta_{2}$$,
     * $$H: \theta_{1} \le \theta \le \theta_{2}$$,
     * $K$: $$\theta < \theta_{1}$$ or $$\theta > \theta_{2}$$,
 
-ここでは、case3の場合にUMP unbiased testがあることを示す。
-このとき、test $\phi$は
+We will show that there exists unbiased UMP test in the case3.
+We define test $\phi$ as
 
 $$
 \begin{equation}
     \phi(x)
     :=
-    \begin{cases}	
+    \begin{cases}
         1
         &
             T(x) < C_{1} \text{ or } T(x) > C_{2}
@@ -293,6 +294,7 @@ $$
             \\
     \end{cases}
     \label{chap04_04_03_test}
+    .
 \end{equation}
 $$
 

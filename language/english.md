@@ -87,9 +87,8 @@
     * to tease or joke with someone
     * [Put someone on \- Idioms by The Free Dictionary](https://idioms.thefreedictionary.com/put+someone+on)
 * fugue
-    * フーガ
 * get back on one's feet with
-    * to have enough money again, or to be successful again after having problems
+* to have enough money again, or to be successful again after having problems
 * Back off!
     * leave me alone
     * [Urban Dictionary: Back off](https://www.urbandictionary.com/define.php?term=Back%20off)
@@ -262,6 +261,8 @@
 * menacing
     * suggesting the presence of danger; threatening.
 * menace
+    * Drun drivers are a menace to everyone
+    * A tiny menace that twisted men into monsters, the likes of which you've seen
 * blend in
 * dongle
 * sublime
@@ -2132,6 +2133,7 @@
     * childishly silly and immature.
 * ravage
     * ravaged our home
+    * an incurable scourge ravaged mankind
 * tyranny
 * feed off/on
     * to increase because of something, or to use something to succeed or get advantages:
@@ -5102,6 +5104,43 @@
     * You will also need to be able to articualte how those skills can translate into value in the position you are interviewing for
 * dog-eat-dog
 * commandment
+* hog
+    * a pig, especially one that is allowd to grow large so that it can be eaten
+    * a male pig with its sexual organs removed, kept fo its meat
+    * someone who takes much more than a fair share of something, especilly by eating too much
+        * you've eaten t all? you hog
+    * to take or use more than your share of something
+        * He's always hogging the bathroom
+* mommentary lapse
+* tepid
+    * the water is tepid
+* dissolve
+    * the salt didn't disollve
+* effervesce
+    * the bath salts, they're starting to effervesce
+* lodged places
+* scent
+    * the scents I used don't complement each other
+* Eucalptus and chamomile
+* bath decorum
+* incurable
+* scourge
+    * an incurable scourge ravaged mankind
+* ostracized
+* scant
+* ordain
+* brazen
+    * how brazen she was
+* don't get your hopes up
+* needy
+    * you come off a little needy
+* give my bouillabaisse another change
+* abysmal
+    * your soup is abysmal
+* I'm torn between my integrity and my desire to avoid a beating
+* hollandaise
+    * a bearnaise has shallots, chervil and most importantly, tarragon
+* bearnaise sauce
 
 
 ## Sentence

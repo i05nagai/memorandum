@@ -1868,6 +1868,119 @@ title: English Speaking
     * a party for peopple searching for a marriage partner
     * a party for those looking to get married
     * I'm gonna have a matchmaking lunch with the guy and his mother on Sunday. My mom is gonna come with me
+* hog
+    * He's always hogging the bathroom
+* Now the filet mignon what comes with that?
+* irresistible
+    * If I want to kiss girl, first things I do is make my lips look irresistible
+* menace
+    * Dogs running loose are a public menace
+    * the menace of industrial pollutino
+    * He had a slight air of menace which made me uneasy
+    * He spoke with a hint of menace
+    * demand money with menaces
+        * He was accused of unlawfully demanding money with menaces
+    * v
+        * Hurricane Hugo menaced the eastern coast for a week
+* ordane
+    * church
+        * He was ordained as a priest in Ely cathedral in 1987
+    * order
+        * There is strong support here for the tough economic reforms ordained in the fedal capital, Prague
+        * I don't know who came up with this idea, but the city council has ordained that all local libraries will close on Mondays
+* moor
+    * His father's ship is moored at shore
+* abide
+    * can't abide something
+        * I can't abide her
+        * He couldn't abide laziness
+    * He abided in the wilderness for forty days
+* abysmal
+    * absymal working condition
+    * The food was abysmal
+    * The standard of the studnet's work is abysmal
+    * titanic height and abysmal depths
+* sleep deprivation
+    * the biggest challenge she faced as a new mother was something most parents can relate to -- sleep deprivation
+* none the worse for
+    * They were trapped in the cave of a couple of days but they were none the worse for their experience
+* dubious
+    * on dubious charge
+* miss
+    * you miss the button
+* into
+    * I'm into SM
+* thirsty
+    * cheese made me thirsty
+* hats off to the chef
+* duty
+    * responsibility
+    * tax
+    * off duty
+        * He summoned his entire unit to a crisis meeting, even though many are off duty
+        * when your manager goes off duty, the alarm system will be monitored by a remote system
+    * on duty
+        * during office hours there is always a planning officer on duty who deals with enquiries
+        * the night shift goes on duty at 10 pm
+* I wish I could do something
+* I wish I were a sea horse
+* if the two of you had sex, the repercussions would be catastrophic
+* do you have a compact in your purse
+* molest
+    * I caught him molesting himself
+    * The girl had been molested frequently by her stepfather from the age of eight
+    * The man had been arrested serveral times for molesting young boys
+    * United states premises were looted and personnel were molested by demonstrators
+* loot
+* rabid dog
+    * a rabid dog would be feasting on your danglers
+* dangler
+    * tisticle
+* vito
+    * The president has the power of veto over any bill that comes across his desk
+    * in theory British government could use its veto to block this proposal
+    * In 1961, President de gaulle voted Britain's entry into the Common Market
+    * My boss voted my taking any more time off this year
+* incurable
+    * Parkinson's disease is a debilitating and incurable disease of the nervous system
+    * an incurable romantic/opitimist/pessimist
+* scourge
+    * the scourge of war/poverty/drugs
+    * Pop-ups ads have been described as the scourge of the internet
+    * cause suffering
+        * the country has been scourged by famine in recent years
+    * beat
+        * when jesus was scourged by the Roman soldiers he bled like a man
+* relive
+    * whenever I smell burning, I relive the final moment of the crash
+* sketchy
+    * not detailed
+        * so far we only have sketchy information about what caused the explosion
+    * not safe
+        * a sketchy guy
+* mind boggling
+    * she was paid the mind boggling sum of ten million dollars for that film
+* the answer to this question is two-fold
+* in lieu of
+    * instead of
+    * The company is allowing workes to recieve cash in lief of vacation time
+* spell
+    * spell out
+        * to explain something in a very clear way with details
+        * The government has so far refused to spell out its plan/policies
+        * What do you mean you don't understand. do I have to spell it out for you?
+    * form words
+        * 
+    * result
+    * do instead
+* device
+    * machine
+    * method
+    * bomb
+* devise
+    * to invent a plan, system, object, etc., usually using your intelligence or imagination
+    * He's good at devising language games that you can play with students in class
+    * The cartoon characters Snoopy and Charllie Brown were devised by Charles M.Schulz
 
 
 
@@ -1891,6 +2004,14 @@ title: English Speaking
     * Can you think of the name of the flowere begining with T?
     * There were some children swimming in the river
     * Is there anybody waiting?
+
+
+
+
+
+
+
+
 
 ## if past
 * If I were a salmon shirt, where would I be?
@@ -2048,6 +2169,7 @@ title: English Speaking
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
+* we can devise a much faster algorithm than the one presented in the previous chapter
 * There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
 * Generally, the more complete the evaluation during the interview process, the better you should feel about potentially accepting an offer
 * Staying at an organiation that no longer fits you is much costlier than you may realize

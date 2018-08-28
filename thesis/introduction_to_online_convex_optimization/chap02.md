@@ -4,8 +4,14 @@ title: Introduction to Online Convex Optimization Chapter02
 
 ## 2.1 Basic definitons and setups
 
+* $D > 0$,
+    * we use this symbol for the upper bound of the 
+* $G > 0$,
+    * we use this symbol for the constant of Lipschitz function
 * $\mathcal{K} \subseteq \mathbb{R}^{d}$,
-    * bounded convex, compact
+    * diameter is bounded by $D$
+    * convex
+    * compact
 * $f: \mathcal{K} \rightarrow \mathbb{R}$,
 
 #### Definition positive definite
@@ -1150,36 +1156,155 @@ Step3 return $x_{T}$ in Step2.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-#### Lemma 2.5
-* $\beta > 0$
-* $f$,
-    * $\beta$-smooth function,
-* $D > 0$
-    * upper bound of diameter in $\mathcal{K}$,
+#### Proposition propety of norm
+* $\alpha > 0$,
 
 $$
-    x, y \in \mathcal{K},
-    \
+    h(x)
+    :=
+    \frac{\alpha}{2}
     \|
-        x - y
-    \|
-    \le
-    D
+        x - x_{1}
+    \|^{2}
     .
 $$
 
-Algorithm 3 with parameter $\hat{\alpha} := \frac{\beta \log t}{D^{2} t}$ converges as
-
-$$
-    h_{t + 1}
-    \le
-    .
-$$
-
+* (1) $h$ is convex.
+* (2) $h$ is $\alpha$ smooth and $\alpha$ strongly convex.
 
 #### proof
-$g$ defined in $$\eqref{algorithm03_definition_g}$$ is $\hat{\alpha}$-strongly convex.
-Indeed,
+(1)
+
+Hessian matrix of $h$ is diagonal matrix, that is, positve semidefinite.
+
+(2)
+
+$$
+\begin{eqnarray}
+    \nabla h(x)
+    & = &
+        \alpha
+
+    \nonumber
+    \\
+    h(y) - h(x)
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            -
+            \|
+                x - x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            +
+            \|
+                y - x
+            \|^{2}
+            -
+            \|
+                y - x
+            \|^{2}
+            +
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            \|
+                x - x_{1}
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \left(
+            \|
+                y - x_{1}
+            \|^{2}
+            +
+            \|
+                y - x
+            \|^{2}
+            +
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
+            \|
+                (y - x)
+                +
+                (x - x_{1})
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \alpha
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+    \nonumber
+    \\
+    & = &
+        \nabla h(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|^{2}
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition alpha-strongnize
+* $K \subseteq \mathbb{R}^{n}$,
+    * convex
+* $f: K \rightarrow \mathbb{R}$,
+    * convex function
+* $\hat{\alpha} > 0$,
+
+$$
+    g(x)
+    :=
+    f(x)
+    +
+    \frac{\hat{\alpha}}{2}
+    \|
+        x
+        -
+        x_{1}
+    \|^{2}
+    .
+$$
+
+Then $g$ is $\alpha$-strongly convex.
+
+#### proof
 
 $$
 \begin{eqnarray}
@@ -1187,20 +1312,21 @@ $$
     & = &
         \nabla f(x)
         +
-        \frac{\alpha}{2}
+        \frac{\hat{\alpha}}{2}
         \nabla
         \|
             x
             -
             x_{1}
         \|^{2}
-    \nonunber
+    \nonumber
     \\
     & \le &
         \nabla f(x)
         +
-        \alpha
+        \hat{\alpha}
         \left(
+        Q
             \begin{array}{c}
                 x^{1} - x_{1}^{1}
                 \\
@@ -1239,87 +1365,215 @@ $$
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
+                y - x_{1}
             \|^{2}
             -
             \|
-                y - x_{1}
+                x - x_{1}
             \|^{2}
         \right)
+        \quad
+        (\because \text{convexity})
     \nonumber
     \\
     & = &
         \nabla f(y)^{\mathrm{T}}
         (y - x)
         +
+        \hat{\alpha}
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        -
+        \hat{\alpha}
+        \sum_{i=1}^{n}
+            (x^{i} - x_{1}^{i})
+            (y^{i} - x^{i})
+        +
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
-            \|
+                y - x_{1}
+            \|^{2}
             -
             \|
-                y - x_{1}
-            \|
+                x - x_{1}
+            \|^{2}
         \right)
+    \nonumber
+    \\
+    & = &
+        \nabla g(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - x_{1}
-            \|
+                y - x_{1}
+            \|^{2}
             +
             \|
-                y - x_{1}
+                y - x
+            \|^{2}
+            -
             \|
-        \right)
-    \nonumber
-    \\
-    & \ge &
-        \nabla f(y)^{\mathrm{T}}
-        (y - x)
-        +
-        \frac{\hat{\alpha}}{2}
-        \left(
+                y - x
+            \|^{2}
+            -
+            2
+            \sum_{i=1}^{n}
+                (x^{i} - x_{1}^{i})
+                (y^{i} - x^{i})
+            -
             \|
                 x - x_{1}
-            \|
-            -
-            \|
-                y - x_{1}
-            \|
+            \|^{2}
         \right)
-        \|
-            y - x
-        \|
     \nonumber
     \\
-    & \ge &
-        \nabla f(y)^{\mathrm{T}}
+    & = &
+        \nabla g(y)^{\mathrm{T}}
         (y - x)
         +
         \frac{\hat{\alpha}}{2}
         \left(
             \|
-                x - y
+                y - x_{1}
+            \|^{2}
+            +
             \|
+                y - x
+            \|^{2}
             -
             \|
-                y - x_{1}
-            \|
-            -
-            \|
-                y - x_{1}
-            \|
+                (y - x)
+                +
+                (x - x_{1})
+            \|^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \nabla g(y)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\hat{\alpha}}{2}
+        \|
+            y - x
+        \|^{2}
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition additivity of beta smooth
+* $\beta_{1} > 0$,
+* $h_{1}$,
+    * $\beta_{1}$ -smooth
+* $\beta_{2} > 0$,
+* $h_{2}$,
+    * $\beta_{2}$ -smooth
+
+* (1) $h_{1} + h_{2}$ is $(\beta_{1} + \beta_{2})$-smooth
+
+#### proof
+
+$$
+\begin{eqnarray}
+    h_{1}(y) + h_{2}(y)
+    -
+    h_{1}(x) + h_{2}(x)
+    & \le &
+        \nabla h_{1}(x) ^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\beta_{1}}{2}
+        \|
+            y - x
+        \|^{2}
+        +
+        \nabla h_{2}(x)^{\mathrm{T}}
+        (y - x)
+        +
+        \frac{\beta_{1}}{2}
+        \|
+            y - x
+        \|^{2}
+    \nonumber
+    \\
+    & = &
+        \nabla
+        (h_{1}(x) + h_{2}(x)) ^{\mathrm{T}}
+        (y - x)
+        +
+        \left(
+            \frac{\beta_{1}}{2}
+            +
+            \frac{\beta_{2}}{2}
         \right)
         \|
             y - x
-        \|
+        \|^{2}
+    .
     \nonumber
 \end{eqnarray}
 $$
 
-$g$ is $(\beta + \hat{\alpha})$-smooth.
+<div class="QED" style="text-align: right">$\Box$</div>
 
-Thus, it is $\gamma = \frac{\hat{\alpha}}{\hat{\alpha} + \beta}$-well-conditioned.
+#### Lemma 2.5
+* $\beta > 0$
+* $f$,
+    * $\beta$-smooth function,
+* $D > 0$
+    * upper bound of diameter in $\mathcal{K}$,
+
+$$
+    x, y \in \mathcal{K},
+    \
+    \|
+        x - y
+    \|
+    \le
+    D
+    .
+$$
+
+Algorithm 3 with parameter $\hat{\alpha} := \frac{\beta \log t}{D^{2} t}$ converges as
+
+$$
+    h_{t + 1}
+    \le
+    h_{1}^{g}
+    \exp
+    \left(
+        -
+        \frac{
+            t
+            \log t
+        }{
+            4
+            \left(
+                \log t
+                +
+                D^{2}t
+            \right)
+        }
+    \right)
+    +
+    \frac{\beta \log t}{2t}
+    .
+$$
+
+
+#### proof
+$g$ defined in $$\eqref{algorithm03_definition_g}$$ is $\hat{\alpha}$-strongly convex.
+Indeed,
+
+
+By <a href="#proposition-additivity-of-beta-smooth">the previous proposition</a> and <a href="#proposition-propety-of-norm">proposition above</a>, $g$ is $(\beta + \hat{\alpha})$-smooth.
+
+Thus, $g$ is $\gamma = \frac{\hat{\alpha}}{\hat{\alpha} + \beta}$-well-conditioned.
 
 $$
 \begin{eqnarray}
@@ -1387,7 +1641,7 @@ $$
         \left(
             -
             \frac{
-                -\hat{\alpha}t
+                \hat{\alpha}t
             }{
                 4(\hat{\alpha} + \beta)
             }
@@ -1398,7 +1652,753 @@ $$
         \quad
         (\because \text{theorem 2.4})
     \nonumber
+    \\
+    & = &
+        h_{1}^{g}
+        \exp
+        \left(
+            -
+            \frac{
+                t
+                \beta \log t
+            }{
+                4
+                \beta
+                \left(
+                    \log t
+                    +
+                    D^{2}t
+                \right)
+            }
+        \right)
+        +
+        \frac{\beta \log t}{2t}
+    \nonumber
+    \\
+    & = &
+        h_{1}^{g}
+        \exp
+        \left(
+            -
+            \frac{
+                t
+                \log t
+            }{
+                4
+                \left(
+                    \log t
+                    +
+                    D^{2}t
+                \right)
+            }
+        \right)
+        +
+        \frac{\beta \log t}{2t}
+    \nonumber
 \end{eqnarray}
 $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+
+### 2.3.2 Reduction to strongly convex, non-smooth functions
+
+
+#### Algorithm 4 Gradient descent reduction to non-smooth functions
+* $f$,
+    * $\alpha$ strongly convex
+    * $G$-Lipschitz continuous
+* $x_{1}$,
+    * initial point
+* $T \in \mathbb{N}$,
+* $\delta > 0$,
+* $U := (U_{1}, \ldots, U_{n})$,
+    * $(-1, 1)^{n}$-valued uniformly r.v.
+
+$$
+    \hat{f}_{\delta}(x)
+    :=
+    \mathrm{E}
+    \left[
+        f(x + \delta U)
+    \right]
+$$
+
+**Step1** Apply algorithm 2 on $\hat{f}$, $x_{1}$, $T$, $$\{\eta_{t} = \delta\}$$, return $x_{T}$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Lemma 2.6
+* $\hat{f}_{\delta}$,
+    * Algorithm 4
+
+Assume $f$ is integrable over $\mathbb{B}$.
+
+$$
+
+$$
+
+Then
+
+* (1) If $f$ is $\alpha$-strongly convex, then so is $\hat{f}_{\delta}$,
+* (2) $\hat{f}_{\delta}$ is $\frac{d G}{\delta}$-smooth
+* (3) $$|
+\hat{f}_{\delta}(x) - f(x)
+| \le \delta G$$ for all $x \in \mathcal{K}$,
+
+#### proof
+(1) TODO
+
+$$
+\begin{eqnarray}
+    \hat{f}_{\delta}(y)
+    -
+    \hat{f}_{\delta}(x)
+    & \ge &
+        \int_{\mathbb{B}}
+            f(y + \delta u)
+            -
+            f(x + \delta u)
+        \ du
+    \nonumber
+    \\
+    & \ge &
+        \int_{\mathbb{B}}
+            \frac{\alpha}{2}
+            \|
+                y - x
+            \|
+            +
+            \nabla
+            f(x + \delta u) ^{\mathrm{T}}
+            (y - x)
+        \ du
+        \quad
+        (\because \text{strongly convex})
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|
+        +
+        \nabla
+        \int_{\mathbb{B}}
+            f(x + \delta u) ^{\mathrm{T}}
+        \ du
+        (y - x)
+    \nonumber
+    \\
+    & = &
+        \frac{\alpha}{2}
+        \|
+            y - x
+        \|
+        +
+        \nabla
+        \hat{f}(x)^{\mathrm{T}}
+        (y - x)
+    \nonumber
+\end{eqnarray}
+$$
+
+The 3rd inequality follows from the fact that $f$ is integrable over unit cube and differentiable and Lebesgue dominated convergence theorem.
+
+
+(2)
+TODO
+
+$$
+    \mathbb{S}
+    :=
+    \{
+        y \in \mathbb{R}^{d}
+        \mid
+        \|y\|
+        =
+        1
+    \}
+    .
+$$
+
+By Stokes theorem,
+
+$$
+\begin{equation}
+    \int_{\mathbb{S}}
+        f(x + \delta u)
+        u
+    \ du
+    =
+        \frac{\delta}{d}
+        \nabla
+        \hat{f}_{\delta}(x)
+\end{equation}
+$$
+
+$$
+\begin{eqnarray}
+    \|
+        \nabla \hat{f}_{\delta}(x)
+        -
+        \nabla \hat{f}_{\delta}(y)
+    \|
+    & = &
+        \frac{d}{\delta}
+        \|
+            \int_{\mathbb{S}}
+                f(x + \delta u)
+                u
+            \ du
+            -
+            \int_{\mathbb{S}}
+                f(y + \delta u)
+                u
+            \ du
+        \|
+    \nonumber
+    \\
+    & = &
+        \frac{d}{\delta}
+        \|
+            \int_{\mathbb{S}}
+                f(x + \delta u)
+                u
+                -
+                f(y + \delta u)
+                u
+            \ du
+        \|
+    \nonumber
+    \\
+    & \le &
+        \frac{d}{\delta}
+        \int_{\mathbb{S}}
+            \|
+                f(x + \delta u)
+                u
+                -
+                f(y + \delta u)
+                u
+            \|
+        \ du
+        \quad
+        (\because \text{Jensen's inequality})
+    \nonumber
+    \\
+    & = &
+        \frac{d}{\delta}
+        \int_{\mathbb{S}}
+            |
+                \left(
+                    f(x + \delta u)
+                    -
+                    f(y + \delta u)
+                \right)
+            |
+            \|
+                u
+            \|
+        \ du
+    \nonumber
+    \\
+    & \le &
+        \frac{d}{\delta}
+        G
+        \int_{\mathbb{S}}
+            \|
+                x - y
+            \|
+            \|
+                u
+            \|
+        \ du
+        \quad
+        (\because \text{Lipschitz continity})
+    \nonumber
+    \\
+    & \le &
+        \frac{d}{\delta}
+        G
+        \|
+            x - y
+        \|
+        \int_{\mathbb{S}}
+            1
+        \ du
+        \quad
+        (\because u \in \mathbb{S})
+    \nonumber
+    \\
+    & = &
+        \frac{d}{\delta}
+        G
+        \|
+            x - y
+        \|
+        .
+    \nonumber
+\end{eqnarray}
+$$
+
+By proposition, $\hat{f}_{\delta}$ is $ \frac{d}{\delta} G$-smooth.
+
+(3)
+
+$$
+\begin{eqnarray}
+    |
+        \hat{f}_{\delta}(x)
+        -
+        f(x)
+    |
+    & = &
+        \left|
+            \int_{\mathbb{B}}
+                f(x + \delta u)
+                -
+                f(x)
+            \ du
+        \right|
+    \nonumber
+    \\
+    & \le &
+        \int_{\mathbb{B}}
+            \left|
+                f(x + \delta u)
+                -
+                f(x)
+            \right|
+        \ du
+        \quad
+        (\because \text{Jensen's inequality})
+    \nonumber
+    \\
+    & \le &
+        G
+        \int_{\mathbb{B}}
+            \|
+                \delta u
+            \|
+        \ du
+        \quad
+        (\because \text{Lipschitz})
+    \nonumber
+    \\
+    & = &
+        G
+        \delta
+        \int_{\mathbb{B}}
+            1
+        \ du
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Lemma 2.7
+
+$$
+    \delta
+    :=
+    \frac{
+        d G
+    }{
+        \alpha
+    }
+    \frac{
+        \log t
+    }{
+        t
+    }
+    .
+$$
+
+Algorithm 4 converges as
+
+$$
+    h_{t + 1}
+    \le
+    h_{1}
+    \exp
+    \left(
+        -
+        \frac{
+            \log t
+        }{
+            4
+        }
+    \right)
+    +
+    \frac{
+        2 d G^{2}
+        \log t
+    }{
+        \alpha t
+    }
+$$
+
+#### proof
+By lemma 2.6, the function $\hat{f}_{\delta}$ is $\gamma$-well conditioned for 
+
+$$
+    \gamma
+    :=
+    \frac{
+        \alpha \delta
+    }{
+        d G
+    }
+    .
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    h_{t + 1}
+    & = &
+        f(x_{t + 1})
+        -
+        f(x^{*})
+    \nonumber
+    \\
+    & = &
+        \hat{f}(x_{t+1})
+        +
+        f(x_{t + 1})
+        -
+        \hat{f}(x_{t + 1})
+        -
+        \hat{f}(x^{*})
+        +
+        \hat{f}(x^{*})
+        -
+        f(x^{*})
+    \nonumber
+    \\
+    & \le &
+        \hat{f}(x_{t+1})
+        +
+        \delta G
+        -
+        \hat{f}(x^{*})
+        +
+        \delta G
+        \quad
+        (\because \text{lemma 2.6 (3)})
+    \nonumber
+    \\
+    & \le&
+        h_{1}
+        e^{
+            -
+            \frac{
+                \gamma t
+            }{
+                4
+            }
+        }
+        +
+        2\delta G
+        \quad
+        (\because \text{lemma 2.4})
+    \nonumber
+    \\
+    & \le&
+        h_{1}
+        \exp
+        \left(
+            -
+            \frac{
+                \alpha \delta t
+            }{
+                4 d G
+            }
+        \right)
+        +
+        2\delta G
+    \nonumber
+    \\
+    & \le&
+        h_{1}
+        \exp
+        \left(
+            -
+            \frac{
+                \log t
+            }{
+                4
+            }
+        \right)
+        +
+        \frac{
+            2 d G^{2}
+            \log t
+        }{
+            \alpha t
+        }
+    \nonumber
+    \\
+    & \le&
+        h_{1}
+        \exp
+        \left(
+            -
+            \frac{
+                \log t
+            }{
+                4
+            }
+        \right)
+        +
+        \frac{
+            2 d G^{2}
+            \log t
+        }{
+            \alpha t
+        }
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+There is an algorithm for $\alpha$-strongly convex function, which does not rely on expectation.
+Even more the bound of the algorithm does not depend on the dimension $d$.
+
+#### Theorem 2.8
+* $f$,
+    * $\alpha$-strongly convex
+* $$x_{1}, \ldots, x_{t}$$,
+    * the iterates of Algorithm 2 appied to $f$ with $\eta_{t}$
+
+$$
+    \eta_{t}
+    :=
+    \frac{
+        2
+    }{
+        \alpha(t + 1)
+    }
+    .
+$$
+
+Then
+
+$$
+    f
+    \left(
+        \frac{1}{t}
+        \sum_{s=1}^{t}
+            \frac{
+                2s
+            }{
+                t + 1
+            }
+            x_{x}
+    \right)
+    -
+    f(x^{*})
+    \le
+    \frac{
+        2G
+    }{
+        \alpha(t + 1)
+    }
+    .
+$$
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+### 2.3.3 Reduction to general convex function
+We can apply both the technique 
+
+$$
+\begin{eqnarray}
+    g(x)
+    & := &
+        f(x)
+        +
+        \frac{\alpha}{2}
+        \|
+            x
+            -
+            x_{1}
+        \|^{2}
+    \nonumber
+    \\
+    \hat{f}_{\delta}(x)
+    & := &
+        \int_{\mathbb{B}}
+            g(x + \delta u)
+        \ du
+    \nonumber
+    \\
+    & = &
+        \int_{\mathbb{B}}
+            f(x + \delta u)
+            +
+            \frac{\alpha}{2}
+            \|
+                x + \delta u
+                -
+                x_{1}
+            \|^{2}
+        \ du
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Then by <a href="#proposition-alpha-strongnize">proposition</a> $g$ is $\alpha$-strongly convex.
+Moreover, by lemma 2.6, $\hat{f}_{\delta}$ is $dG/\delta$ smooth.
+Thus, we have the same inequality in lemme 2.7.
+
+However, there is an algorithm which gives the better inequality than the inequality from lemma 2.7, which is $O(\frac{1}{\sqrt{t}})$.
+We will show this in next chapter.
+
+## 2.4 Example: Support Vector Machine training
+General linear classfication problem is stated as below.
+
+* $d \in \mathbb{N}$,
+    * the dimension of feature/input vector
+* $n \in \mathbb{N}$,
+* $a_{i} \in \mathbb{R}^{d} \ (i = 1, \ldots, n)$,
+    * input vector
+* $$b_{i} \in \{-1, 1\}$$,
+    * label corresponding to input $a_{i}$,
+
+A lot of loss functions can be considered for this classfication problems, but here we consider one of the simplest loss function.
+The following equation is the problem to solve.
+
+$$
+\begin{equation}
+    \min_{x \in \mathbb{R}^{d}}
+        \sum_{i=1}^{n}
+            1_{\mathrm{sign}(x^{\mathrm{T}} a_{i} \neq b_{i})}
+    \label{equation_02_05}
+\end{equation}
+    .
+$$
+
+General classi
+
+Support Vector Machine is pracitically used for classification.
+The soft margin SV relaxation replaces the 0/1 loss in $$\eqref{equation_02_05}$$ with a convex loss, called the hinge-loss, given by
+
+$$
+\begin{eqnarray}
+    \ell_{a, b}(x)
+    & := &
+        \mathrm{hinge}(b x^{\mathrm{T}}a)
+    \nonumber
+    \\
+    & := &
+        \max
+        \{
+            0,
+            1 - b x^{\mathrm{T}}a
+        \}
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Here we consider the loss function with regularization.
+
+$$
+\begin{equation}
+    \min_{x \in \mathbb{R}^{d}}
+    \left(
+        \lambda
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \ell_{a_{i}, b_{i}}(x)
+        +
+        \frac{1}{2}
+        \|
+            x
+        \|^{2}
+    \right)
+    \label{equation_02_06}
+\end{equation}
+    .
+$$
+
+#### Algorithm 5 SVM training via subgradient descent
+* $$\{(a_{i}, b_{i})\}$$,
+* $T \in \mathbb{N}$,
+* $x_{1} := 0$,
+* $\eta_{t} := \frac{2}{t + 1}$,
+* $\lambda > 0$,
+    * regulariztion parameter
+
+**Step1.**
+
+$$
+\begin{eqnarray}
+    \nabla_{t}
+    & := &
+        \lambda
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \ell_{a_{i}, b_{i}}(x_{t})
+        +
+        x_{t}
+    \nonumber
+    \\
+    \nabla\ell_{a, b}(x)
+    & = &
+        \begin{cases}
+            0
+            &
+                (b x^{\mathrm{T}}a > 1)
+            \\
+            -b a
+            &
+                \text{otherwise}
+        \end{cases}
+    \nonumber
+\end{eqnarray}
+$$
+
+**Step2.** Update
+
+$$
+\begin{eqnarray}
+    x_{t + 1}
+    :=
+    x_{t}
+    -
+    \eta_{t} \nabla_{t}
+    \nonumber
+\end{eqnarray}
+$$
+
+**Step3.** end for
+
+**Step4.** Return $\tilde{x} := \frac{1}{T} \sum_{t=1}^{T} \frac{2t}{T + 1}x_{t}$,
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Theorem
+In Algorithm 5, if $T > \frac{1}{\epsilon}$,
+
+
+$$
+    f(\tilde{x})
+    -
+    f(x^{*})
+    \in 
+    O(\epsilon)
+    .
+$$
+
+#### proof
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+

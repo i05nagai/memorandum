@@ -4,6 +4,7 @@ title: Inverse Transform Method
 
 ## Inverse Transform Method
 Inverse transform method is also known as inversion method.
+The method generates random vairable with cumulative distribution $F$ from an uniformly distributed random variable.
 
 ### One-dimensional case
 * $$(\Omega, \mathcal{F}, P)$$,
@@ -86,7 +87,7 @@ $$
 * $$J_{n}: \mathbb{R}^{n} \rightarrow \mathcal{I}_{n}$$,
     * $$J_{n}(x) := (-\infty, x_{1}] \times \cdots \times (-\infty, x_{n}]$$,
 
-Cumulative distribution function of $X$ is defined by
+Cumulative distribution function of $X$ is defined as
 
 $$
     x \in \mathbb{R}^{n},
@@ -219,5 +220,76 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
+### Example1 uniform distribution over unit ball
+
+$$
+\begin{eqnarray}
+    h: (-1, 1) \rightarrow \mathbb{R},
+    \quad
+    h(x)
+    & := &
+        \mathrm{tanh}^{-1}(x)
+    \nonumber
+    \\
+    C_{a, b}
+    & := &
+        (a, b)^{n}
+        \subseteq
+        \mathbb{R}^{n}
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+$$
+\begin{eqnarray}
+    \phi_{0}: C_{0, 1} \rightarrow C_{-1, 1},
+    \quad
+    \phi_{0}(x)
+    & := &
+        2x - 1
+    \nonumber
+    \\
+    \phi_{1}: C_{-1, 1} \rightarrow \mathbb{R},
+    \quad
+    \phi_{1}(x_{1}, \ldots, x_{n})
+    & := &
+        (
+            h(x_{1}),
+            \cdots
+            h(x_{n})
+        )
+    \nonumber
+    \\
+    \phi_{2}: \mathbb{R} \rightarrow B_{0, 1},
+    \quad
+    \phi_{2}(x)
+    & := &
+        \frac{
+            x
+        }{
+            \sqrt{
+                1
+                +
+                |x|^{2}
+            }
+        }
+    \nonumber
+    \\
+    \phi: C_{0, 1} \rightarrow B_{0, 1},
+    \quad
+    \phi(x_{1}, \ldots, x_{n})
+    & := &
+        \phi_{2}(\phi_{1}(\phi_{0}(x_{1}, \ldots, x_{n})))
+    .
+    .
+\end{eqnarray}
+    .
+$$
+
+$\phi$ is bijection.
+$\phi^{-1}: real$ is continuous.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
