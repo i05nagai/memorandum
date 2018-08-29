@@ -1868,6 +1868,801 @@ title: English Speaking
     * a party for peopple searching for a marriage partner
     * a party for those looking to get married
     * I'm gonna have a matchmaking lunch with the guy and his mother on Sunday. My mom is gonna come with me
+* hog
+    * He's always hogging the bathroom
+* Now the filet mignon what comes with that?
+* irresistible
+    * If I want to kiss girl, first things I do is make my lips look irresistible
+* menace
+    * Dogs running loose are a public menace
+    * the menace of industrial pollutino
+    * He had a slight air of menace which made me uneasy
+    * He spoke with a hint of menace
+    * demand money with menaces
+        * He was accused of unlawfully demanding money with menaces
+    * v
+        * Hurricane Hugo menaced the eastern coast for a week
+* ordane
+    * church
+        * He was ordained as a priest in Ely cathedral in 1987
+    * order
+        * There is strong support here for the tough economic reforms ordained in the fedal capital, Prague
+        * I don't know who came up with this idea, but the city council has ordained that all local libraries will close on Mondays
+* moor
+    * His father's ship is moored at shore
+* abide
+    * can't abide something
+        * I can't abide her
+        * He couldn't abide laziness
+    * He abided in the wilderness for forty days
+* abysmal
+    * absymal working condition
+    * The food was abysmal
+    * The standard of the studnet's work is abysmal
+    * titanic height and abysmal depths
+* sleep deprivation
+    * the biggest challenge she faced as a new mother was something most parents can relate to -- sleep deprivation
+* none the worse for
+    * They were trapped in the cave of a couple of days but they were none the worse for their experience
+* dubious
+    * on dubious charge
+* miss
+    * you miss the button
+* into
+    * I'm into SM
+* thirsty
+    * cheese made me thirsty
+* hats off to the chef
+* duty
+    * responsibility
+    * tax
+    * off duty
+        * He summoned his entire unit to a crisis meeting, even though many are off duty
+        * when your manager goes off duty, the alarm system will be monitored by a remote system
+    * on duty
+        * during office hours there is always a planning officer on duty who deals with enquiries
+        * the night shift goes on duty at 10 pm
+* I wish I could do something
+* I wish I were a sea horse
+* if the two of you had sex, the repercussions would be catastrophic
+* do you have a compact in your purse
+* molest
+    * I caught him molesting himself
+    * The girl had been molested frequently by her stepfather from the age of eight
+    * The man had been arrested serveral times for molesting young boys
+    * United states premises were looted and personnel were molested by demonstrators
+* loot
+* rabid dog
+    * a rabid dog would be feasting on your danglers
+* dangler
+    * tisticle
+* vito
+    * The president has the power of veto over any bill that comes across his desk
+    * in theory British government could use its veto to block this proposal
+    * In 1961, President de gaulle voted Britain's entry into the Common Market
+    * My boss voted my taking any more time off this year
+* incurable
+    * Parkinson's disease is a debilitating and incurable disease of the nervous system
+    * an incurable romantic/opitimist/pessimist
+* scourge
+    * the scourge of war/poverty/drugs
+    * Pop-ups ads have been described as the scourge of the internet
+    * cause suffering
+        * the country has been scourged by famine in recent years
+    * beat
+        * when jesus was scourged by the Roman soldiers he bled like a man
+* relive
+    * whenever I smell burning, I relive the final moment of the crash
+* sketchy
+    * not detailed
+        * so far we only have sketchy information about what caused the explosion
+    * not safe
+        * a sketchy guy
+* mind boggling
+    * she was paid the mind boggling sum of ten million dollars for that film
+* the answer to this question is two-fold
+* in lieu of
+    * instead of
+    * The company is allowing workes to recieve cash in lief of vacation time
+* spell
+    * spell out
+        * to explain something in a very clear way with details
+        * The government has so far refused to spell out its plan/policies
+        * What do you mean you don't understand. do I have to spell it out for you?
+    * form words
+        * 
+    * result
+    * do instead
+* device
+    * machine
+    * method
+    * bomb
+* devise
+    * to invent a plan, system, object, etc., usually using your intelligence or imagination
+    * He's good at devising language games that you can play with students in class
+    * The cartoon characters Snoopy and Charllie Brown were devised by Charles M.Schulz
+* that being said
+    * Rose are usually red. That being said, they are also
+* that said
+    * I like turtles, Having said that, I will now proceed to show
+    * Christmas is exploited by capitalism. That said, it is still a religious festival.
+* hustle
+    * push
+        * After giving his speech, Johnson was hustled out of the hall by bodyguard
+    * persuade
+        * to hustle for business/customers
+        * They made a living hustling stolen goods on the streets
+        * 
+* resonant
+    * sound
+        * a deep, resonant voice
+        * a resonant concert hall
+    * quality
+        * we felt privileged to be the first group of Western visitors to enter the historic palace, resonant with past conflicts
+    * resonant with something
+        * filled with a particular meaning, quality, or sound
+        * prints resonant with traditions of Russian folk art
+* conflict
+* priviledge
+* odd
+    * at odds
+        * They're at odds over the funding of the project
+        * Her version of events was at odds with the police report
+            * very different from
+* clever/smart/intelligent
+    * I thought you handled the situation very cleverly
+* a slice of the cake
+    * a slice of the pie
+    * a share of the cake
+    * A portion of the money or profits that are being shared by everyone involved in generating them.
+    * The employees applauded when the boss announced that everyone was getting a slice of the cake in the form of a holiday bonus
+    * Third-world countries are discovering how their natural resources have been exploited by the rest of the world and now they want a bigger slice of the cake
+* zest
+* sell
+    * money
+    * persuade
+        * my boss is very old-fashioned and I'm having a lot of trouble sellng the idea of working at home occasionally
+        * The filmmaker sold me on the idea that my book would work on the screen
+        * The change of greater access to European markets would help sell the president the plan
+        * The change of greater access to European markets would help sell the plan to the president
+        * In an interview, you have to sell yourself to the employer
+    * sell off
+    * sell out
+    * sell up
+    * sell your soul to the devil
+* hepatitis
+    * until I got the hipatitis because this pimp spit in my mouth
+* private
+    * I would feel more confortable if I was having this conversation in private
+* tape
+    * That tape was never meant to be seen by
+    * that bastard taped over me
+* insult
+    * it's just so insulting
+* spring
+    * season
+    * curved metal
+    * water
+    * move quickly
+    * appear suddenly
+    * sprint for
+        * they offered to spring for the tickets
+        * spring for a new blank tape
+    * spring from
+    * spring on
+    * spring up
+* downstream
+    * in the direction a river or stream is flowing
+        * the current carried her downstream
+    * He was expanded the glass manufacturing firm by purchasing downstream business such as a glass distribution company
+* free
+    * free up
+        * I need to free up some time this weekend to finish the report
+* quantitative
+* cutover
+    * a change from old computer systems, equipment, etc. to new ones
+        * The cutover left with no interruption in services during the transition
+    * The company has been growing again thanks to a cutover of all production to its trademark green logneck bottles
+* alongside
+    * A car pulled up alongside ours
+    * The new pill will be used alogside existing medicines
+* safeguard
+* timer
+    * timer goes off
+* go
+    * go off
+        * stop working
+            * timer goes off
+            * the light went off in several villages because of the storm
+            * The damage to the fuse box caused the power to go off
+            * the light goes off when the batteries are flat
+            * it's getting cold. the heater must have gone off
+        * explode
+            * The bomb went off at midday
+            * His gun went off accidently
+        * food
+            * This bacon smells a bit funny. do you think it's gone off
+        * noise
+            * if a warming device goes off, it starts to ring loudly or make a loud noise
+            * The alarm shoudl go off automatically as soon as smoke is detected
+            * Didn't you har your alarm clock going off this morning?
+            * everyday my alarm goes off but I can't get up
+        * leave
+            * She's gone off on holiday with Tony
+        * happen
+            * the protest match went off peacefully
+        * become worse
+            * That paper's really gone off since they got that new editor
+* It's nice to not have to kill anything
+* nifty/good/effective
+    * a nifty piece of work/footwork
+    * a nifty little gadget
+* go for the gold
+* terrible
+    * unpleasant
+        * The weather was terrible
+        * I felt terrilbe last night
+    * bat at
+        * You're a terrible liar
+        * I'm a terrible skier/swimmer/dancer
+    * very great
+        * This project is a terrible waste of money
+        * She's terrible nuisance
+* nuisance
+    * something or someone that annoys you or causes trouble for you
+        * I've forgotten my umbrella. What a nuisance
+        * I hate to be a nuisance, but could you help me?
+    * make a nuisance of yourself
+* attendant
+* squash
+    * play squash
+* iconic
+    * 
+* glamorous
+* heyday
+* hawkish
+* aesthetics
+    * the formal study of art, especially in relation to the idea of beauty
+        * You look like a guy with a strong sense of aesthetics
+* ornament
+    * an object that is beautiful rather than useful
+        * a glass ornament
+        * garden ornaments such as statues and fountains
+    * decoration that is added to increase the beauty of something
+        * which ornament will you place here?
+    * v
+        * She ornamented here letters with little drawings in the margin
+* portion
+    * A large/major portion o the company's profit goes straight back into new projects
+    * I accept my portion of the blame
+    * the amount of a particular food that is served to one person, especially in a restaurant or a shop that sells food ready to be eaten
+        * The portions are very generous in this restaurant
+* industry
+    * production
+        * trade and industry
+        * industry and commerce
+        * The city need to attract more industry
+    * type of work
+        * the gas/electricity industry
+        * the tourist industry
+        * manufacturing industry
+        * the cmputer industry has been booming
+    * quality
+        * I must say I'm very impressed by her industry
+* commerce
+    * the activities involved in buying and selling things
+        * The world of commerce and industry
+        * we are trying to develop a model for best practice in electronic commerce
+        * He won't last long in world of commerce
+        * They are trying to promote commerce between their countries
+        * There has been a lot of commerce with their country
+* constructive
+    * If advice, criticism, or actions are constructive, they are useful and intented to help or improve something
+    * She criticized my writing, but in a way that was very constructive
+    * If you don't have anything constructive to say, it's better to say nothing
+* misuse
+    * to use something in an unsustainable way or in a way that was not intended
+        * She was accused of misusing the company's funds
+        * The directors were charged with misuse of funds
+* illicit
+    * illicit drugs such as cocaine and cannabis
+    * the illicit trade in stolen vehicles
+    * an illicit love affair
+* budget
+    * The firm has drawn up a budget for the coming financial year
+    * Libraries are finding it increasingly difficult to remain within budget
+    * an annual budget of 40 million dallar
+    * cut budget
+        * The school budget is gonna be cut again this year
+    * go over budget
+        * the project went over budget because of miscalculation at the plannging stage
+        * She managed to complete her last film well within budget
+    * v
+        * An extra 20 million dollar has been budged for schools this year
+* turn
+    * turn off
+        * Google has a location history setting, which users can turn off at any time
+* criminal
+    * a dangerous/violent criminal
+    * criminal activity
+    * a criminal act/offence
+    * it's criminal to charge so much for a book
+* battery
+    * a rechargeable battery
+    * a battery-operated hairdryer
+    * this alarm clock takes two medium-sized batteries
+    * run down
+        * You'll run batteyr down if you leave your car lights on
+    * be flat/dead
+        * I think the battery is dead/flat
+        * I left car lights on all night and now the battery is flat
+* It's hard to tell between the two
+* die
+    * Twelve people died in the accidend
+    * die of/from
+        * She died of/from hunger/cancer/aheart attack/her injuries
+    * It is a brave person who will die for their beliefs
+    * I would like to die in my sleep
+    * Many people have a fear of dying
+    * Our love will never die
+    * The secret will die with her
+    * die a natural/violent death
+        * He died a violent death
+        * My grandfather died a natural death, as she would have wnated
+    * The engine just died on us
+    * I'm sorry I didn't reply to your text. My phone died.
+    * die away
+    * die down
+    * die off
+    * die out
+* dice
+    * roll/throw
+        * You roll/throw the dice and whoever getst the highest score goes first
+        * Let's play dice
+* I've got a good sense of diretion
+* I never forget the road I pass
+* Once I go somewhere, I dond't forget how to get there
+* I'm good with directions
+* I am good at remembering routes and places
+* stay
+    * stay fit
+    * stay on this road
+* follow this road
+* allergy
+    * allergy to
+        * I have an allergy to cats
+        * a food allergy
+        * Hay fever is really an allergy to pollen and the peak time is early June
+    * She gets shots for her allergies
+* recent
+    * These devices have become increasingly popylar in recent yeras
+    * Saint Lous University recently announced it will equip every students housing room with a digital assistant
+* minute
+    * time
+    * message
+        * the written record of what was said at a meeting
+        * Could you take/do the minutes, Daniel?
+        * The minutes of the last meeting were approved unanimously
+        * I've just received a minute from Clark authorizing the purchase of six more computers
+    * angle
+    * the minute
+        * at the exact or first moment when
+        * The minute I saw him, I knew something was wrong
+    * not for one moment
+        * certainly not
+        * used in negative statements for emphasizing what you are saying
+        * I'm not suggesting for one minute that she meant to cause any trouble
+* search/look for/look up
+    * search for
+        * The police searched the woods for the missing boy
+        * She searched his face for some sign of forgiveness, but it remained expressionless
+        * He searched in/through his pockets for some change
+    * serach high and low
+        * I've searched high and low, but I cannot find my birth certificate
+        * I searched the internet for the best deal
+* save
+    * make safe
+        * Wearing seat belts has saved many lives
+        * save from
+            * He fell in the river but his friend saved him from dwoning
+        * He had to borrow money to save his business
+        * we all need to do our part to save the planet
+    * keep
+        * TOm's been saving his pocket money every week
+        * save for
+            * We're saving up for a new car
+        * I save all my old letters in case I want to read them again
+        * Don't forget to save your work regularly
+    * not waste
+        * to prevent time, money, or effort being wasted or spent
+        * You'll save time if you take the car
+        * Thanks for your help. It saved me a lot of work
+        * I'll lend you a bag for your trip. it'll save you buying one
+        * Can you save it for later
+    * sport
+    * save on
+    * save up
+* online
+    * adj
+    * an online newspaper/magazine/dictionary
+    * we're linked to the online database at our head office
+    * click on this link to visit our online bookstore
+    * adv
+        * internet
+            * DO you like to shop online?
+            * This dictionary went online in 1999
+            * I'll send you my email address once I'm online
+        * connected
+            * The new power station is expected to be online by July
+            * WHen will the new factory come online
+* query
+    * If you have any queries about yoru treatment, the doctor will answer them
+    * What was their response to your query?
+* footling
+    * silly or not important
+    * He could always do something useful instead of wasting my time with footing queries
+    * I've got a query about my tax
+    * we have received many written queries about the product
+    * v
+        * to ask questions, especially in order to check if something is true or correct
+        * a few students have queried their marks
+        * She queried whether three mo
+* downcast
+    * unhappy
+        * I thought you were looking a little downcast this morning
+    * eyes down
+        * people sat silently, her eyes downcast
+        * He said nothing and kept hist eyes downcast
+    * The photograph of her sitting on her own made her look lonely and downcast
+* surgery
+    * he got surgery recently
+* ban/prohibit
+    * France has passed a law banning smartphones in schools
+* spot
+    * circle
+        * He had a spot of grease on his tie
+        * I wore that skirt with the green spots
+        * Teenagers often suffer a lot from spots
+        * I felt a few spots of rain
+    * place
+        * This looks like a nice spot for a picnic
+        * The police were called and they were on the spot within three minutes
+    * see
+        * to see or notice someone or something, usually because you are looking hard
+        * if you spot any mistakes in the article just mark them with a pencil
+        * I've just spotted Mark, he's over there, near the entrance
+        * The police spotted him driving a stolen car
+        * well spotted
+            * I've just seen your glasses. they're uner the table. Ah, well spotted
+    * rain
+* praise
+* loaf
+    * bread
+        * two loaves of white bread
+        * bread that is shaped and baked in a single piece and can be sliced for eating
+    * food
+    * v
+        * to avoid activity, especially work
+        * stop loafing about/around and get on with cleaning the windows
+* funky
+    * music
+        * used to describe a style of music, usually for dancing to, with a strong rhythm based on jazz and a tune that repeats
+        * Have you heard htier new record? it's really funky
+    * fashionable
+        * she has some really funky clothes
+    * bad
+        * The sour cream smells kind of funky
+* sit
+    * sit around
+        * I like stting around at home
+* resource
+    * The country's greatest resource is the dedication of its worker
+    * Britain's mineral resources include coal and gas deposits
+    * The school must be properly resourced with musical instrument and audio equipment
+    * have the resources to do
+        * The company has the resources and infrastructure to manage a global brand
+        * We lack the resources to do the job properly
+    * limited/scare resources
+        * The department has limited resources, and would struggle to cope in such a situation
+    * pool/share resources
+        * Wehn times are hard we are asked to pool our resources, but it doesn't always work
+    * financial/capital resources
+    * IT/technical resources
+    * natural resources
+        * All plastics that are created annually consume 2 to 4% of American's energy resources
+* set
+    * set up
+* dominance
+    * The company needs to change its strategy in order to gain dominance in the market
+* proponent
+* satellite
+* missile
+    * North Korea closed a major missile testing facility last month
+* a solution in search of problem
+    * People tend to let capability mislead priority
+    * a solution that is come up with before perceiving a problem which is looked for to use the solution
+    * why would a person come up with a solution and then look for a problem, rather than perceiving a problem and then looking for a solution?
+* interact
+    * The back-end application may interact directly with the front-end, or perhaps more typically, is a program called from an intermediate program that mediates front-end and back-end
+* interface
+    * a front-end application might interface directly with users and forward requests to a remotely-located back-end program in another computer to get requested data or perform a requested service
+* mediate
+* everything under the sun
+    * everything that exists or is possible
+    * I've tried everything under the sun on this stain, I just can't get rid of it
+* skydiving
+    * Parachuting
+    * The first skydive performed without a parachute was by stuntman 
+* separate
+    * existing or happening independently or in a different physical space
+        * the art department and the music department are in two separate buildings
+        * I try to keep meat separate from other food in the fridge
+        * I have my public life and my private life, and as far as possible I try to keep them separate
+        * Three youths have been shot and killed in seperate incidents this month
+    * go your separate ways
+        * if two or more people go their separate ways, they stop being together
+        * in 1983, the grouop disbanded and went their separate ways
+    * divide
+        * Please separate the garbage
+        * The north and south of the country are separated by a mountain range
+        * you can get a special device for seprating egg whites from yolks
+        * the top and bottom sections are quite difficult to separate
+    * move apart
+* mourn
+    * you can mourn
+    * to feel or express great sadness, especially because of someone's death
+        * she was still mourning for her brother
+* shove
+    * push
+        * shoves pennies up is nose
+    * put
+    * move body
+* divide
+* if you could just realize it on your own
+* divorce
+    * He's been divorced, and I had some experience in that area
+* talk
+    * he and I have a lot of talk about that
+    * pep talk
+        * a short speech intended to encourage people to work harder or try to win a game or competition
+        * The boss gave the staff a pepe talk this morning in an attempt to bost sales
+* arise
+    * it is no surprise that it arose in the fast moving world of web services, and perhaps in origin owes something to the peculiarities of our infrastructure.
+* rise
+* arouse
+    * to cause someone to have a particular feeling
+    * It's a subject that has aroused a lot of interest
+    * Our suspicions were first aroused when we heard a muffled scream
+    * He works hard to arouse his students curiousity
+* pan
+    * pan out
+        * to develop in a particular way or in successful way
+        * we'll have to see how things pan out
+        * their attempt to start a new business didn't pan out
+        * not all his ideas have panned out as he would have liked
+* weak
+    * weak at the knees/weak in the knees
+        * If you go weak at the knees, you lose your strength and feel you are going to fall over, usually because of seeing or talking about either someone you are very attracted to or because of something unpleasant or frightening
+        * The thought of kissing him made me go weak at the knees
+        * after last night, I'm a little weak in the knees
+* fake
+    * I will not fake it this time
+* transmit
+    * they transmit leptospirosis and hantavirus
+* off-limits
+    * if an area of land is off-limits, you are not allowed to enter it
+        * she is off-limits
+* restrict
+    * measures to restrict the sale of alcohol
+    * The government has restricted freedom of movement into and out of the country
+    * Having small children really restricts your social life
+* cusp
+* mediocre
+    * mediocre porno
+    * mediocre novel
+* All those boys had a bet to see if he could knock you over
+* mug
+* formula
+    * a liquid food mixture that is fed to babies instead of mother's milk
+* propotioned
+    * we wandered through the beautifully proportioned rooms of the Winter Palace
+    * kj
+* yore pants is undone
+* cut
+    * cut some slack
+        * I should cut him some slack
+        * Andrew's late again. Cut him some sack -- his wife just had a baby
+    * cut back on
+        * to spend less, do less, or use less of something
+        * the government has announced plans to cut back on defence spending by 10 percent next year
+        * if excercise is causing you pain, you should cut back
+* shorthand
+    * a system of fast writing that uses lines and simple signs to represent words and phrases
+    * The conversations were taken down in shorthand by a secretary
+* short
+    * distance
+    * time
+    * lacking
+        * be short of/on
+            * to be short of space/time
+            * we're on short of coffee. I'd better get some more
+            * she is alwasy short of breath when she climbs the stairs
+            * I'm a little short this week. Could you lend me ten dollars?
+        * be in short supply
+            * Free desks are in short supply in this office
+        * go short
+            * My parents didn't have much money, but they made sure we didn't go short of anything
+    * not patient
+        * I'm sorry if I was a bit short with you on the phone this morning
+    * short-circuit
+        * The plumber shorted the washing machine
+* air conditioner
+    * raise the temperature on the AC by one degree
+    * turn up the air conditioner by one degree
+    * turn down the air conditioner by one degree
+    * It's rather chilly back here. Could you turn up the thermostat?
+* contingency
+    * something that might possibly happen in the future, usually causing problems or makeing further arrangements necessary
+    * You must be able to deal with all possible contingencies
+    * Have you made any contingency plans?
+    * on a contingency basis
+        * if you work for someone on a contingency basis, you agree that you will only be paid if you achieve a particular aim, for example, getting a successful result in a court of law
+        * in personal injury cases many attorneys work on a contingency basis, so you will not have to pay them a fee up front
+    * Add up your outgoings
+* outgoing
+    * amounts of money that regularly have to be spent, for example to pay for heating or rent
+    * money that a person or business has to spend regularly, rather than money tha they earn or receive
+        * a financial statement of income and outgoings
+        * monthly/annual/regularly outgoings
+        * cover/reduce/cut your outgoings
+            * Increasing numbers of people are finding it more difficult to cover their monthly outgoings
+* yet
+    * adv, conj
+        * despite that; used to add something that seems surprising because of what you have just said
+        * simple yet effective
+        * he's overweight and bald, yet somehow, he's attractive
+* conceive
+    * imagine
+        * I think my uncle still conceives of me as a four-year-old
+        * He couldn't conceive of a time when he would have no job
+    * invent
+        * he conceived the plot for this film while he was still a studnet
+    * become pregnant
+* discipline
+    * trainning
+    * subject
+    * punish
+    * control
+* decommission
+    * to take quipement or weapons out of user
+        * The government has decided to decommission two battleships
+        * It would cost 300dollar million to decomission the nuclear installation
+        * The company's closure was announced in 2010, but 55 people still work there decommissioning the plant
+* expend/spend
+    * to use of spend time, effort or money
+    * we expend effor in this directino only up to a point: whe nsystems are reliable enough, we instead invest our efforts in adding features or building new products.
+* comparatively
+* emerge
+    * appear
+        * she emerged from the sea, blue with cold
+        * The Prince emerged unscathed from the scandal
+    * become known
+        * The facts behind the scandals are sure to emerge eventually
+        * It has emerged that secret talks had been going on between the two companies before the takeover was announced
+        * She's the most exciting British singer to ermge on the pop sense for a decade
+* unscathed
+    * without injuries or damages beling caused
+        * He husband died in the accident but she amazingly escaped unscathed
+* indulge
+    * to allow yourself or another person to have something enjoyable, especially more than is good for you
+        * The socer fans indulged their patriotism, waving flags and singing songs
+        * I love champagne but I don't often indulge myself
+        * we took a deliverate decision to indulge in a little nostalgia
+    * indulge in
+        * most of us were too busy to indulge in heavy lunchtime drinking
+        * Eva had never been one to indulge in self-pity
+    * to give someone anything they want and not to mind if thei behave badly
+        * my aunt indulges the children dreadfully
+* orient
+    * find direction
+        * to disxover the position of yourself in relation to your surroundings
+        * after she came out of the station, she puased to orient herself
+    * make familiar
+        * to make someone familiar with a new place
+        * incoming freshman have advisers to help orient them to the university
+* fold
+    * bend
+        * I folded the letter in half and put it in an evelope
+        * He had neatly folded handkerchief in his jacket pocket
+        * will you help me to fold the sheets?
+        * the table folds up when not in use
+    * to wrap
+        * she folded her baby in a blacket
+        * he folded his arm around her
+    * fold your arms
+    * she sat with her legs folded under her
+    * fail
+        * many small business fold within the first year
+* umbrella
+    * folding umbrellas
+    * compact umbrellas
+* deteriorate/get worth/get down/go downhill/decline/degenerate/escalate/spiral out of control
+    * to become worse
+        * Ethel's heals has deteriorated
+        * America's deteriorating economy
+* aspire
+    * we have aspired to bring society and our customers the highest quality of products and services.
+* communicate
+    * You will need to write and speak clearly, easily communicating complex ideas
+* perform
+    * you will perform analysis, implement and support large scale data and analytics for our company
+* scale
+    * measuring system
+    * series of marks
+    * size/level
+        * we had underestimated the scale of the problem
+        * There has been housing development on a massive scale since 1880
+    * range
+        * Some rural schools have 50 pupils, while at the other end of the scale are city schools with nearly 5,000 pupils
+        * She gradually made her way up the social scale
+        * animals which are lower down the evolutionary scale
+    * weighing device
+    * size relationship
+    * music
+    * skin
+    * climb
+    * scale up/back
+    * I reliazed that our dev ops deployment model was not going to scale well
+* evolutionary
+    * relating to the way in which living things develop over millions f years
+    * involving a gradual process of change and development
+        * The change has been evolutionary rather than revolutionary
+    * evolutionary change/progess/development
+        * Sustainable business development involves systematically creating a better future through evolutionary changes
+* copacetic
+* entitle
+* involve
+    * include
+        * to include someone or something in an activity
+        * the accident involved two cars and a truck
+        * the operation involves nserting a small tube into the heart
+        * Researcher involves 
+        * What will the job involve?
+        * i didn't realize putting on a play involved so much work
+        * Running your own business usually involves working long hours
+        * a good manager will try to involve everyone in the decision making process
+    * make interested
+        * to make someone interested in taking part in something
+        * a good teacher involves children in activities where they interact with each other
+* entail
+* proof-of-concept
+    * I created a proof-of-concept, and demonstrated its functionality to the dev ops team
+* colossal/large/huge
+    * very great, especially something bad
+        * the whole business has been a colossal failure/mistakes.
+        * It was a colossal waste of time
+    * extremely large
+* vary
+    * Companies have been expanding lobally or decades, with varying degree of success
+* pros and cons
+    * Do your due diligence before making that decision by asking for help from those who know the pros and cos of doing business in a foreign country
+* serve
+    * serve customers better experience from wholistic point of view
+* concentrate
+    * give attention
+        * to direct a lot of attention and thought to an activity or subject, or to direct effort toward achieving a result
+        * In her later years, she concentrated on her writing and teaching
+        * The police are concentrating their search in the area where the child was last seen
+    * come together
+        * most of the country's opulation is concentrated in the cities
+    * change substance/remove water
+    * substance
+* if any
+* stilted
+    * too formal and not smooth or natural
+    * Legal language tends to be very stilted
+    * He writes 
+* lubricant
 
 
 
@@ -1925,6 +2720,16 @@ title: English Speaking
 * He is my boss
 * He is my team member
 
+<<<<<<< HEAD
+=======
+## time
+* for decades
+* all the time
+* in the past
+* in the future
+* at the momemnt
+
+>>>>>>> 47f1c6d0... Update language/english_speaking.md
 
 ## clothes
 * blouse
