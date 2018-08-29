@@ -68,7 +68,7 @@ title: English word choice
     * [where is difference between WAGE, PAY, SALARY, REVENUE, INCOME? - Learn english - italki Answers](https://www.italki.com/question/291751)
     * wage
         * The amount of money someone who is paid by the hour receives per hour, such as 10USD per hour
-        * The total amount of the money earned by such a person over a period of time. His wages last month warer 2000USD
+        * The total amount of the money earned by such a person over a period of time. His wages last month were 2000USD
     * salary
         * the amount earned for each ttime period, by someone paid not by the hour. His salary is 50000 a year
     * pay

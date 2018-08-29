@@ -2641,6 +2641,80 @@ title: English Speaking
     * to become worse
         * Ethel's heals has deteriorated
         * America's deteriorating economy
+* aspire
+    * we have aspired to bring society and our customers the highest quality of products and services.
+* communicate
+    * You will need to write and speak clearly, easily communicating complex ideas
+* perform
+    * you will perform analysis, implement and support large scale data and analytics for our company
+* scale
+    * measuring system
+    * series of marks
+    * size/level
+        * we had underestimated the scale of the problem
+        * There has been housing development on a massive scale since 1880
+    * range
+        * Some rural schools have 50 pupils, while at the other end of the scale are city schools with nearly 5,000 pupils
+        * She gradually made her way up the social scale
+        * animals which are lower down the evolutionary scale
+    * weighing device
+    * size relationship
+    * music
+    * skin
+    * climb
+    * scale up/back
+    * I reliazed that our dev ops deployment model was not going to scale well
+* evolutionary
+    * relating to the way in which living things develop over millions f years
+    * involving a gradual process of change and development
+        * The change has been evolutionary rather than revolutionary
+    * evolutionary change/progess/development
+        * Sustainable business development involves systematically creating a better future through evolutionary changes
+* copacetic
+* entitle
+* involve
+    * include
+        * to include someone or something in an activity
+        * the accident involved two cars and a truck
+        * the operation involves nserting a small tube into the heart
+        * Researcher involves 
+        * What will the job involve?
+        * i didn't realize putting on a play involved so much work
+        * Running your own business usually involves working long hours
+        * a good manager will try to involve everyone in the decision making process
+    * make interested
+        * to make someone interested in taking part in something
+        * a good teacher involves children in activities where they interact with each other
+* entail
+* proof-of-concept
+    * I created a proof-of-concept, and demonstrated its functionality to the dev ops team
+* colossal/large/huge
+    * very great, especially something bad
+        * the whole business has been a colossal failure/mistakes.
+        * It was a colossal waste of time
+    * extremely large
+* vary
+    * Companies have been expanding lobally or decades, with varying degree of success
+* pros and cons
+    * Do your due diligence before making that decision by asking for help from those who know the pros and cos of doing business in a foreign country
+* serve
+    * serve customers better experience from wholistic point of view
+* concentrate
+    * give attention
+        * to direct a lot of attention and thought to an activity or subject, or to direct effort toward achieving a result
+        * In her later years, she concentrated on her writing and teaching
+        * The police are concentrating their search in the area where the child was last seen
+    * come together
+        * most of the country's opulation is concentrated in the cities
+    * change substance/remove water
+    * substance
+* if any
+* stilted
+    * too formal and not smooth or natural
+    * Legal language tends to be very stilted
+    * He writes 
+* lubricant
+
 
 
 
@@ -2728,12 +2802,23 @@ title: English Speaking
 * He is my boss
 * He is my team member
 
+<<<<<<< HEAD
 ## time
+=======
+<<<<<<< HEAD
+=======
+## time
+* for decades
+>>>>>>> branch3
 * all the time
 * in the past
 * in the future
 * at the momemnt
 
+<<<<<<< HEAD
+=======
+>>>>>>> 47f1c6d0... Update language/english_speaking.md
+>>>>>>> branch3
 
 ## clothes
 * blouse
