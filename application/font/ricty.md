@@ -9,13 +9,15 @@ For OSX
 
 ```
 brew tap sanemat/font
+brew install ricty --with-powerline
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
+
+# the follwing packages may be necessary
 brew cask install xquartz
 brew install autoconf
 brew install automake
 brew install pkg-config
-brew install ricty --with-powerline
-cp -f /usr/local/Cellar/ricty/3.2.4/share/fonts/Ricty*.ttf ~/Library/Fonts/
-fc-cache -vf
 ```
 
 For Ubuntu 16.04
