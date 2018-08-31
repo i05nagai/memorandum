@@ -84,3 +84,113 @@ title: English Speaking 01
 * a case in point
     * a good example of something
     * Supermarkets oftehn charge too much for goods. Bananas are a case in point
+* reinvent
+* hindrance
+    * something that makes it more difficult for you to do something or for something to develop
+        * I've never considered my disability a hindrance, but other people have
+* counterpart
+    * a person or thing that has the same purpose as another one in a different place or organization
+    * the president will meet with his Brazillian counterpart tomorrow
+* acquainted
+    * knowing or being familiar with someone or something
+    * we're not acquainted
+    * we got acquainted when they gave us a ride home last night
+    * Do you know Daphne? No, I'm afraid we're not acquianted
+    * be acquainted with
+        * to know or be familiar with something, because you have studied t or have experienced it before
+        * Police said the thieves were obviously well acquianted with the alarm at the department store
+* novice
+    * a person who is beginning to learn a job or an activity and has little or no experience or skill in it
+    * I'm just a novice at making videos
+    * I'm a complete novice
+    * This plant can be difficult for novice gardeners to grow
+* markedly
+* pathology
+    * the scientific study of disease
+    * This outcome is pathology
+* blad
+    * both groups understand that it is unacceptable to state hteir interest in the baldest possible terms
+    * without hair
+        * as bald as coot
+            * completely bald
+    * plain
+        * basic and with no unnecessary words or details
+    * smooth
+        * a bald tyre is one that has worn away to become very smooth and is therefore dangerous
+            * the tyre was completely bald
+* resort
+    * resort to
+        * to do something that you do not want to do because you can not find any other way of achieving something
+        * I had to resort to violence/threats to get my money
+        * both groups often resort to a familiar form of trench warfare to advance their interests
+* trench warfare
+    * a type of combat in which opposing troops fight from trenches facing each other
+* launch
+    * launch reviews may contain an explicit check for every problem that has ever caused an outage in the past
+* inevitable
+    * conflict isn't an inevitable part of offering a software service
+* matured
+    * like an adult
+    * physically grown
+    * food
+    * finance
+    * develop mentally
+        * girls are said to mature faster than boys
+        * he matured a lot while he was in college
+    * grow physically
+        * it took several years for her ideas to mature
+    * food
+    * finance
+* envision
+    * He envisioned a partnership between business and government
+    * the company envisions adding at least five stores next year
+    * That group has since matured to become Google's present-day SRE team, which remains true to its origins as envisioned by a life long software engineer
+* aptitude
+    * Common to all SREs is the belief in and aptitude for developing software systems to solve complex problems
+    * a natural ability or skill
+    * My son has no/little aptitude for sport
+    * we will take your personal aptitudes and abilities into account
+* date
+    * day
+    * meeting
+    * fruit
+    * to date
+        * up to now
+        * I wrote to you two months ago, but I have not recieved any resposen to date
+    * write date
+    * meet socially
+* track
+    * path
+    * marks
+    * sports
+    * music
+    * on track
+    * on the right track
+    * on the wrong track
+    * make marks
+* banking
+    * bank on
+        * to depend on someone doing something or something happening
+        * Chrissie might arrive on time, but I wouldn't bank on it
+        * Therefore, SRE is fundamentally doing work that has historically been done by an operations team, but using engineers with software expertise, and banking on the fact that these engineers are inherently both predisposed to, and have the abiility to, design and implementat automation with software to replace human labor
+* predispose/influence
+    * to influence someone to behave or think in a particular way or to have a particular condition
+        * indivisualism predisposes many people to look for individual solutions to social problems
+    * be predisposed to/toward
+        * to be more likely than other poepple to have a medical condition or to behave in a particular way
+        * Researchers have discovered that the children of these patients are genetically predisposed to cancner
+* load
+    * operations load increase and teams will need more peopole just to keep pace with the workload
+    * weight carried
+    * amount of work
+    * put into
+    * weight carried
+* linearly
+    * eventually, a traditonal ops-focused group scales linearly with service size
+* drown
+    * die
+        * to die by being under water and unable to breathe, or kill someone by causing this happen
+        * he drowned in a boating accident
+    * to have or experience too much something
+        * drowning in debt/sorrow
+    * to avoid this fate, the team tasked with managing a service needs to code or it will drown
