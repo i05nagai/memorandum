@@ -109,7 +109,6 @@ title: English Speaking
     * She started searing recently
 * pick
 * carry on
-* gives two examples to explain 
 * aware
     * wer are aware of problems you'are refering to
     * people are aware of being observed
@@ -568,6 +567,43 @@ title: English Speaking
     * If he left immediately, he'd catch the 7:30
 * stand
     * How she stands out as an idivisuals
+    * be vertical
+        * I stood motionless as the snake slithered by
+        * Please stand back so the paramedics can get through
+        * I stood the ironing board against the wall
+        * stand on your hands
+    * be in situation
+        * to be or get into a particular state or situation
+        * As things stand right now, there's no telling who will win
+        * Let the mixture stand for fifteen minutes
+    * be in place
+    * accept
+    * have opinion
+    * stand around
+    * stand by
+        * to continue doing what you said you would when you made a decision, agreement, or promise
+            * Despite its financial problems, the company is standing by the no-redundancy agreement
+        * to continue to believe that something you have said before is still true
+            * I stand by the statement I made earlier. there is no reason for the minister to resign
+    * stand for
+        * represent
+            * to represnet something
+            * she explained that DIN stands for Do It Now
+            * Uncle Sam stands for the US
+        * support
+            * I'm not sure what the Republican candidate stands for
+            * Maybe you think his behavior is OK, but I won't stand for it
+    * stand out
+        * to be easily seen or notices
+        * the black lettering really stands out against that background
+        * the applicant we hired so well qualified, she stood out from all the rest
+        * we had a lot of good applicants for the job, but one stood out from the rest
+    * stand over
+        * to watch someone closely
+        * when you stand over me all the time, it makes me nervous
+    * stand up
+* braces
+    * a set of wires attached to a person's teeth to move them gradually in order to straithen them
 * I can't think of it.
 * field trip
 * help out
@@ -840,13 +876,6 @@ title: English Speaking
 * apply
     * Do you think I should apply for this job?
     * we pply the principles of computer science and engineering to the design and development of computing systems: generally, large distributed one.
-* adapt
-    * apapt to
-        * The children are finding it hard to adapt to the new school
-        * flowers which are well adapted to harsh winters
-    * How do these insects adapt themselves to new environments?
-    * The car has been adapted to take unleaded gas
-    * These teaching materials can be aadapted for older children
 * medium
     * medium of exchange
 * drive
@@ -1366,7 +1395,17 @@ title: English Speaking
     * call into question
         * The fact that a party can be voted into power by a minority of the electrorate calls into question the countr's electoral system.
     * call for
-        * the complexity calls for new technologies that enable to effecitvely analyze large sets of data and dtermine the statistacal modesl that could predict the perforamnce of online marketing campaign
+        * the complexity calls for new technologies that enable to effecitvely analyze large sets of data and determine the statistacal modesl that could predict the perforamnce of online marketing campaign
+        * to need or deserve a particular action, remark, or quality
+            * the calls for a celebration
+            * it's the sort of work that calls for a high level concentration
+            * he told you that you were an idiot? well, I don't think that was called for
+        * to demand that something happens
+            * members have called for his resignation
+        * to say publicly that something should happen or is necessary
+            * call for a ban/inquiry/investigation
+            * they called for an investigation into how the investments were made and who is responsible
+            * He called for the results of the survey to be made public
 * cope with
     * It muset be really hard to cope with three young children and a job
     * It's only been a year since he died. how's she coping
@@ -1525,6 +1564,7 @@ title: English Speaking
     * incur debts/fines/bills
 * vibe
     * There is a positve vibe,adn employees feel a sens of security
+    * I just don't get a real good vibe
 * energize
     * Teams are energized and feel valued because they can see that their efforts are paying dividends
 * beat/defeat
@@ -1589,9 +1629,6 @@ title: English Speaking
     * Rental cars can no longer be signed out for attack by identifying decals or by special license plates
 * ambush
     * Five soldiers died after their bus was ambushed on a country road
-* disciplined
-    * The young gymnasts who won the competition were a talented and disciplined team
-    * Those children and 
 * treat
     * software engineers are treated as commodities
 * perpetual/forever
@@ -1695,6 +1732,9 @@ title: English Speaking
     * in the following sections of this chapter,
 * rate
     * There are also a number of competencies that you will be rated on during the course of an interview
+    * 
+    * gT
+    * Facebook gives every user a rating between zero and one.
 * rank
     * What is your rank in class?
     * where does your team rank in the league?
@@ -1835,8 +1875,6 @@ title: English Speaking
     * I'm always nagging him about his diet
     * The goverment is being widely critisized in the media for falling to limit air popllution
     * We'll get nowhere if all you can do is critisize
-* push
-    * people push PR
 * project
 * wedlock
     * born out wedlock
@@ -1987,11 +2025,11 @@ title: English Speaking
     * a rabid dog would be feasting on your danglers
 * dangler
     * tisticle
-* vito
+* veto
     * The president has the power of veto over any bill that comes across his desk
     * in theory British government could use its veto to block this proposal
-    * In 1961, President de gaulle voted Britain's entry into the Common Market
-    * My boss voted my taking any more time off this year
+    * In 1961, President de gaulle vetoed Britain's entry into the Common Market
+    * My boss vetoed my taking any more time off this year
 * incurable
     * Parkinson's disease is a debilitating and incurable disease of the nervous system
     * an incurable romantic/opitimist/pessimist
@@ -2485,6 +2523,9 @@ title: English Speaking
     * It's a subject that has aroused a lot of interest
     * Our suspicions were first aroused when we heard a muffled scream
     * He works hard to arouse his students curiousity
+* arousal
+    * state of being secually excited
+    * a state in which you feel excited or very alert, for example, as a result of fear, stress, or anger
 * pan
     * pan out
         * to develop in a particular way or in successful way
@@ -2507,12 +2548,10 @@ title: English Speaking
     * measures to restrict the sale of alcohol
     * The government has restricted freedom of movement into and out of the country
     * Having small children really restricts your social life
-* cusp
 * mediocre
     * mediocre porno
     * mediocre novel
 * All those boys had a bet to see if he could knock you over
-* mug
 * formula
     * a liquid food mixture that is fed to babies instead of mother's milk
 * propotioned
@@ -2579,11 +2618,23 @@ title: English Speaking
     * invent
         * he conceived the plot for this film while he was still a studnet
     * become pregnant
+* disciplined
+    * The young gymnasts who won the competition were a talented and disciplined team
+    * Those children and 
 * discipline
     * trainning
+        * traning that produces obedience or self-control, often in the form of rules and punishments if these are broken, or the obedience or self-control produced by this training
+            * military discipline
+        * discipline is also the ability to control a mental activity
+            * learning a foreign language requires discipline
     * subject
+        * a particular area of study, especially studied at a colleage or university
+        * an academic discipline
     * punish
+        * to punish someone
+        * he was disciplined for his bad conduct
     * control
+        * I'm trying to discipline myself to eat less chocolate
 * decommission
     * to take quipement or weapons out of user
         * The government has decided to decommission two battleships
@@ -2592,7 +2643,6 @@ title: English Speaking
 * expend/spend
     * to use of spend time, effort or money
     * we expend effor in this directino only up to a point: whe nsystems are reliable enough, we instead invest our efforts in adding features or building new products.
-* comparatively
 * emerge
     * appear
         * she emerged from the sea, blue with cold
@@ -2670,8 +2720,6 @@ title: English Speaking
         * The change has been evolutionary rather than revolutionary
     * evolutionary change/progess/development
         * Sustainable business development involves systematically creating a better future through evolutionary changes
-* copacetic
-* entitle
 * involve
     * include
         * to include someone or something in an activity
@@ -2685,7 +2733,6 @@ title: English Speaking
     * make interested
         * to make someone interested in taking part in something
         * a good teacher involves children in activities where they interact with each other
-* entail
 * proof-of-concept
     * I created a proof-of-concept, and demonstrated its functionality to the dev ops team
 * colossal/large/huge
@@ -2693,6 +2740,8 @@ title: English Speaking
         * the whole business has been a colossal failure/mistakes.
         * It was a colossal waste of time
     * extremely large
+        * in the center of the hall stood a colossal wooden statue, decorated in ivory and gold
+        * they were asking a colossal amount of money for the house
 * vary
     * Companies have been expanding lobally or decades, with varying degree of success
 * pros and cons
@@ -2708,13 +2757,208 @@ title: English Speaking
         * most of the country's opulation is concentrated in the cities
     * change substance/remove water
     * substance
-* if any
 * stilted
     * too formal and not smooth or natural
     * Legal language tends to be very stilted
+    * something sounds stiled
     * He writes 
+* wary/leery
+    * careful because you do not completely trust someone or something or are not certain about what you should do
+    * Teachers are often wary of standrdized tests
+* unwary
+* if any
+    * meaning depends on context
+    * Its original manufacturer’s warranty, if any, still applies, with warranty details included in the item details.
+        * if there is any warranty
+* devote
+    * devote to
+        * to give your time or effort completely to something you believe in or to a person, or to use a particular amount of time or energy oing something
+        * He devoted his life to serving his family, frineds and neighbors
+        * Over half his speech was devoted to the issue of saving Social Security
 * lubricant
-
+* copacetic
+* entitle
+* entail
+* comparatively
+* cusp
+    * the dividing line between two very different things
+    * on the cusp of adulthoods
+* mug
+* foster
+    * take care of
+        * to take someone else's child into your family for a period of time but without becoming their legal parent
+        * the couple wanted to adopt a black child they had been fostering
+    * encourage/promote
+        * the bishop helped foster the sense of a community embracing classes
+* undertake
+    * do
+        * to take responsibilty for and begin doing something
+        * The president directed the Department of Justice to undertake an investigation of the allegations
+        * I undertook to help him learn English
+    * promise
+        * to promise that you will do something
+        * she undertook not to publish the names of the people involved
+        * the government undertook that the buildings would not be redeveloped
+* insecure
+    * he is realy insecure
+* intimidate
+    * frightend or nervous because you are not confident in a situation
+        * he was really intimidated by the guy I dated before him
+        * Older people can feel very intimidated by computer
+* niche
+    * position
+        * a job or position that is very suitable for someone, especially one that they like
+            * Hihg-quality web development has generated by lots of new niche roles in organizations
+        * He has carved/made a niche for himself as a financial advisor
+        * an ecological niche
+    * hollow
+        * a hollow in a wall
+    * an opportunity for a business to offer a product or service that is not offered by other businesses
+        * a niche in
+            * There is a niche in the market for this kind of product
+        * create/carve a niche
+            * the company has carved a niche for itself in the watch-making business
+        * look for/find a niche
+            * they found a niche by selling their line of leather good through small boutiques that could offer personalized service
+        * exploit/expand a niche
+* lineage
+    * the members of a person's 
+* identity
+    * the identity of the suspect
+    * His true identity
+* entrepreneurship
+    * the activity of starting a business or businesses
+    * He pointed out that the key to entrepreneuship is taking risks 
+* statistic
+    * a single number in a range of statistics
+        * the city's most shocking statistic is its infant mortality rate
+    * Statistics show/suggest that women live longer than men
+    * According to official statistics, the Japanese work longer hours than workers in most industrialized countries
+    * the city's most shocking statistics is its high infant mortality rate
+    * the euro area's economic slowdown was confirmed by another statistic
+    * the most interesting statistic is that the average time on the site is 14 minutes
+* race
+    * competition
+    * people
+        * discrimination because of race is against the law
+    * compete
+* culture
+    * way of life
+        * he studies the culture of the Sioux Indians
+        * In our culture, 
+        * kkk
+    * arts
+    * artificial growth
+    * grow artifically
+* strive
+    * to try hard to do something or make something happen, especially for a long or against difficulties
+    * Neither Jefferson nor Madison was a pacifist, though both strove to keep America peace
+    * Mr Roe has kindled expectations that he must now strive to live up to
+* inhosipitable
+    * not welcoming or generous to people who visit you
+        * I'll have to cook them a meal or they'll think I'm inhospitable
+    * place
+        * they had to trek for miles through inhospitable countryside
+* trek
+    * to walk a long way or with some difficulty
+        * many people trekked for miles to reach safety
+    * n
+        * we did an eight-hour trek yesterday
+        * you can walk to town from here, but it's quite a trek
+* countryside
+    * land not in town, cities, or industrial areas which is either used for farming or left in its natural condition
+    * Much of Connecticut's countryside is dotted with large estates and horse farms
+* inseminate
+    * to put male's sperm into a female and make her pregnant
+    * insemination
+* surrogacy
+    * the action of woman having a baby for another woman who is unable to do so herself
+* insemination
+* acrimonious
+    * angry and including strong accusations
+    * After an acrimonious debate, the proposal was adopted
+    * an acrimonious dispute
+* adapt
+    * to change, or to change something, to suit different conditons or uses
+        * The play had been adapted fro children
+        * to remain competitive the company has to be able to adapt to the chanigng marketplace
+    * apapt to
+        * The children are finding it hard to adapt to the new school
+        * flowers which are well adapted to harsh winters
+    * How do these insects adapt themselves to new environments?
+    * The car has been adapted to take unleaded gas
+    * These teaching materials can be adapted for older children
+    * We adopted Business Plus accounting software. Now we need an adept accountant to adapt our booking system to the new software.
+    * It took me a while to adapt to the new job
+* adopt
+    * to take and treat as one's own
+    * take child
+        * they adopted Raphel last September
+    * start
+        * the new law means companies will adopt energy-saving measures
+        * if an organization adopts a rule, it votes to accept it
+            * the motion to increase fee was adopted
+* adept
+    * adept at
+    * skilled
+        * He's adept at making people feel at ease
+    * having a natural ability to do something that needs skill
+        * she's very adept at dealing with the media
+        * he gave a techinically adept performance on the piano
+* give
+    * gives two examples to explain 
+    * give birth to
+        * she gave birth to twins
+        * our cat gave birth last night
+* markedly
+    * in a way that is very easy to notice
+    * he and she have markedly different leadership styles
+    * Trade has increased markedly
+* pessimistic
+    * thiking that bad things are more likely to happen or emphasizing the bad part of a situation
+    * the tone of the meeting was very pessimistic
+    * the doctors are pessimistic about his chances of recovery
+* cooperative
+    * helpful
+        * willing to help or do what people ask
+        * I asked them to turn down their music, but they're not being very cooperative
+        * he went voluntarily and was very cooperative
+    * done with others
+        * done together with other people
+        * Purchase of the ranch was very cooperative effort between many groups and agencies
+        * the work is the result of a cooperative venture of approximately 80 physicits from around the world
+* ranch
+    * a type of large farm on which animas are kept
+    * a cattle ranch
+* quite
+    * quite a bit/a lot
+* restless
+    * moving because you are unable to relax, especially, because you are worried or bored, or having a lot of movement as a characteristic
+        * he dozed off to a restless sleep
+        * the audience began to get restless
+    * restless can also mean not satisfied with your situation and wanting a change
+        * the opposition parties provide no clear alternative for restless voters
+* vote
+    * 
+* suffice
+    * to be enough
+    * suffice to do
+    * the problems were of global importance, and only an international effort would suffice to deal with them
+    * I'm taking 400USD. I think that should suffice
+* even if my sperm worked fine, I think he'd be the way to go
+* unjust/unfair/inequitable
+    * not morally right, not fair
+    * new laws will protect employees against unjust dismissals
+    * they should repeal this unjust law
+* assertive
+    * behaving confidently and able to say in a direct way what you want or believe
+    * if you really want the promotion, you'll have to be more assertive
+* submissive
+    * showing a willingness to be controlled by other people
+    * a submissive gesture
+* effort
+    * facebook announced a system that rates the trustworthiness of news organizations in an effort to fight fake news
+* match
 
 
 
@@ -2760,16 +3004,11 @@ title: English Speaking
     * There were some children swimming in the river
     * Is there anybody waiting?
 
-
-
-
-
-
-
-
-
 ## if past
 * If I were a salmon shirt, where would I be?
+
+## if had
+* If I had known I was coming to this party, I never would've gotten married
 
 ## Business
 * overtime
@@ -2802,23 +3041,13 @@ title: English Speaking
 * He is my boss
 * He is my team member
 
-<<<<<<< HEAD
-## time
-=======
-<<<<<<< HEAD
-=======
 ## time
 * for decades
->>>>>>> branch3
 * all the time
 * in the past
 * in the future
 * at the momemnt
 
-<<<<<<< HEAD
-=======
->>>>>>> 47f1c6d0... Update language/english_speaking.md
->>>>>>> branch3
 
 ## clothes
 * blouse
@@ -2932,6 +3161,11 @@ title: English Speaking
         * esophagus, stomach, intestines, muscle that line large arteries, the muscles of the uterus
 
 ## health
+* gout
+    * a painful disase of the joints, esp. in a toe or finger
+    * he spent his final years under house arrest suffereing from gout
+* diabete
+    * Do you or any of your blood relative have diabetes?
 * migraine
 * ALzheimer's disease
     * the nurse told me that Eddie is showing the early signs of Alzheimer's disease.
@@ -2947,6 +3181,7 @@ title: English Speaking
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
+* much like security, the earlier you care about reliability, the better
 * we can devise a much faster algorithm than the one presented in the previous chapter
 * There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
 * Generally, the more complete the evaluation during the interview process, the better you should feel about potentially accepting an offer
@@ -3036,6 +3271,11 @@ title: English Speaking
 
 
 ## personality
+* optimistic
+* pessimistic
+* nymphomaniac
+    * nympho
+    * a woman who likes to have sex very often, esp. with a lot of different men
 * stubborn
     * you are so stubborn
 * nuisance
