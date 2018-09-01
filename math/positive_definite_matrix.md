@@ -607,5 +607,94 @@ Since $P$ is nonsigular, $Px = 0$ implies $x = 0$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Proposition 9
+* $x := (x^{i})_{i} \in \mathbb{R}^{n}$,
+* $A, B \in \mathbb{R}^{n \times n}$,
+    * positive definite
+
+Then
+
+(1) $xx^{\mathrm{T}}$ is positive definite.
+
+(2) $A + B$ is positive definite.
+
+
+#### proof.
+(1)
+
+$$
+\begin{eqnarray}
+    \forall y \in \mathbb{R}^{n},
+    \
+    y^{\mathrm{T}}
+    xx^{\mathrm{T}}
+    y
+    & = &
+        (x^{\mathrm{T}}y)^{\mathrm{T}}
+        x^{\mathrm{T}}
+        y
+    \nonumber
+    \\
+    & = &
+        \|x^{\mathrm{T}}y\|^{2}
+    \nonumber
+    \\
+    & \ge &
+        0
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Moreover, if $y \neq 0$,
+
+$$
+\begin{eqnarray}
+    & &
+        \|x^{\mathrm{T}}y\|^{2}
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \forall i,
+        \
+        x_{i}
+        =
+        0
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+(2)
+
+
+$$
+\begin{eqnarray}
+    \forall y \in \mathbb{R}^{n} \setminus \{0\},
+    \
+    y^{\mathrm{T}}
+    (A + B)
+    y
+    & = &
+        y^{\mathrm{T}}
+        A
+        y
+        +
+        y^{\mathrm{T}}
+        B
+        y
+    \nonumber
+    \\
+    & > &
+        0
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## Reference
 * [Positive-definite matrix - Wikipedia](https://en.wikipedia.org/wiki/Positive-definite_matrix)

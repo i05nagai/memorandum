@@ -24,6 +24,51 @@ We write $A \preccurlyeq B$ if $B-A$ is positive semidefinite.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Proposition property of positive definite
+* $A$,
+    * $n \times n$-matrix
+* $B$,
+    * $n \times n$-matrix
+* $\alpha > 0$,
+
+(1) If $\alpha A \preccurlyeq  B$ and $A$ is nonnegative definite, then for all $\beta < \alpha$,
+
+$$
+    \beta A \preccurlyeq  B
+    .
+$$
+
+#### proof
+(1)
+
+Since $A$ is positive semidefinite,  $x^{\mathrm{T}}Ax \ge 0$.
+Then
+
+$$
+\begin{eqnarray}
+    x \mathbb{R}^{n},
+    \
+    x^{\mathrm{T}}(B - \beta A)x
+    & = &
+        x^{\mathrm{T}}Bx
+        -
+        \beta x^{\mathrm{T}} Ax
+    \nonumber
+    \\
+    & \ge &
+        x^{\mathrm{T}}Bx
+        -
+        \alpha x^{\mathrm{T}} Ax
+    \nonumber
+    \\
+    & > &
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 #### Definition alpha strongly convex and beta smooth
 * $f$,
     * convex

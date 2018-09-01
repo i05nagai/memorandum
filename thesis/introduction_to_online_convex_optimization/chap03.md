@@ -77,20 +77,20 @@ $$
     * convex functions
     * $C^{1}$-functions
 
-In Algorithm 6,
+In Algorithm 6, for any $x \in \mathcal{K}$,
 
 $$
 \begin{eqnarray}
     \|
         x_{t + 1}
         -
-        x^{*}
+        x
     \|
     & \le &
         \|
             x_{t}
             -
-            x^{*}
+            x
         \|
         +
         \eta_{t}^{2}
@@ -100,16 +100,23 @@ $$
         -
         2 \eta_{t}
         \nabla f(x_{t})^{\mathrm{T}}
-        (x_{t} - x^{*})
-        \label{lemma1_difference_between_optimal_points}
+        (x_{t} - x)
+        \label{lemma1_difference_between_optimal_points_01}
     \\
-    x^{*}
-    & := &
-        \arg\min_{x \in \mathcal{K}}
-            \sum_{t=1}^{T}
-                f_{t}(x_{t})
-    .
-    \nonumber
+    & \le &
+        \|
+            x_{t}
+            -
+            x
+        \|
+        +
+        \eta_{t}^{2}
+        G^{2}
+        -
+        2 \eta_{t}
+        \nabla f(x_{t})^{\mathrm{T}}
+        (x_{t} - x)
+        \label{lemma1_difference_between_optimal_points_02}
 \end{eqnarray}
 $$
 
@@ -120,14 +127,14 @@ $$
     \|
         x_{t+1}
         -
-        x^{*}
+        x
     \|^{2}
     & = &
         \|
             \Pi_{\mathcal{K}}
             (x_{t} - \eta_{t}\nabla f(x_{t}))
             -
-            x^{*}
+            x
         \|^{2}
     \nonumber
     \\
@@ -135,7 +142,7 @@ $$
         \|
             (x_{t} - \eta_{t}\nabla f(x_{t}))
             -
-            x^{*}
+            x
         \|^{2}
         \quad
         (\because \text{theorem 2.1})
@@ -146,13 +153,13 @@ $$
         \|
             x_{t}
             -
-            x^{*}
+            x
         \|^{2}
         -
         2
         \eta_{t}
         \nabla f(x_{t})^{\mathrm{T}}
-        (x_{t} - x^{*})
+        (x_{t} - x)
         +
         \|
             \eta_{t}\nabla f(x_{t}))
@@ -163,16 +170,17 @@ $$
         \|
             x_{t}
             -
-            x^{*}
+            x
         \|^{2}
         -
         2
         \eta_{t}
         \nabla f(x_{t})^{\mathrm{T}}
-        (x_{t} - x^{*})
+        (x_{t} - x)
         +
         \eta_{t}^{2}
         G^{2}
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -186,17 +194,17 @@ $$
     * convex
     * $D$-bounded
 
-In Algorithm 6,
+In Algorithm 6, for any $x \in \mathcal{K}$,
 
 $$
 \begin{eqnarray}
     2
     \sum_{t=1}^{T}
         \nabla f_{t}(x_{t})^{\mathrm{T}}
-        (x_{t} - x_{*})
+        (x_{t} - x)
     & = &
         \sum_{t=1}^{T}
-            \|x_{t} - x^{*}\|^{2}
+            \|x_{t} - x\|^{2}
             \left(
                 \frac{
                     1
@@ -243,21 +251,21 @@ $$
 $$
 
 #### proof
-By <a href="#lemma1-difference-between-optimal-points">lemma</a>, we have $$\eqref{lemma1_difference_between_optimal_points}$$.
-Summing $$\eqref{lemma1_difference_between_optimal_points}$$ from $t=1$ to $T$,
+By <a href="#lemma1-difference-between-optimal-points">lemma</a>, we have $$\eqref{lemma1_difference_between_optimal_points_02}$$.
+Summing $$\eqref{lemma1_difference_between_optimal_points_02}$$ from $t=1$ to $T$,
 
 $$
 \begin{eqnarray}
     2
     \sum_{t=1}^{T}
         \nabla f_{t}(x_{t})^{\mathrm{T}}
-        (x_{t} - x_{*})
+        (x_{t} - x)
     & \le &
         \sum_{t=1}^{T}
             \frac{
-                \|x_{t} - x^{*}\|^{2}
+                \|x_{t} - x\|^{2}
                 -
-                \|x_{t + 1} - x^{*}\|^{2}
+                \|x_{t + 1} - x\|^{2}
             }{
                 \eta_{t}
             }
@@ -270,14 +278,14 @@ $$
     & = &
         \sum_{t=1}^{T}
             \frac{
-                \|x_{t} - x^{*}\|^{2}
+                \|x_{t} - x\|^{2}
             }{
                 \eta_{t}
             }
         -
         \sum_{t=2}^{T}
             \frac{
-                \|x_{t} - x^{*}\|^{2}
+                \|x_{t} - x\|^{2}
             }{
                 \eta_{t-1}
             }
@@ -289,7 +297,7 @@ $$
     \\
     & = &
         \sum_{t=1}^{T}
-            \|x_{t} - x^{*}\|^{2}
+            \|x_{t} - x\|^{2}
             \left(
                 \frac{
                     1
@@ -378,57 +386,29 @@ $$
 By convexity, we have
 
 $$
-\begin{equation}
+\begin{eqnarray}
+    f_{t}(x^{*})
+    -
+    f_{t}(x_{t})
+    & \ge &
+        \nabla f(x_{t})^{\mathrm{T}}
+        (x^{*} - x_{t})
+    \nonumber
+    \\
+    \Leftrightarrow 
+    \
     f_{t}(x_{t})
     -
     f_{t}(x^{*})
-    \le
-    \nabla f(x_{t})^{\mathrm{T}}
-    (x_{t} - x^{*})
+    & \le &
+        \nabla f(x_{t})^{\mathrm{T}}
+        (x_{t} - x^{*})
     .
     \label{equation_03_01}
-\end{equation}
-$$
-
-By <a href="#lemma1-difference-between-optimal-points">lemma</a>, we have $$\eqref{lemma1_difference_between_optimal_points}$$.
-
-Hence,
-
-$$
-\begin{eqnarray}
-    & &
-        2
-        \eta_{t}
-        \nabla f(x_{t}))^{\mathrm{T}}
-        (x_{t} - x^{*})
-        \le
-        \|x_{t} - x^{*}\|^{2}
-        -
-        \|x_{t + 1} - x^{*}\|^{2}
-        +
-        \eta_{t}^{2}
-        G^{2}
-    \nonumber
-    \\
-    & \Leftrightarrow &
-        2
-        \nabla f(x_{t}))^{\mathrm{T}}
-        (x_{t} - x^{*})
-        \le
-        \frac{
-            \|x_{t} - x^{*}\|^{2}
-            -
-            \|x_{t + 1} - x^{*}\|^{2}
-        }{
-            \eta_{t}
-        }
-        +
-        \eta_{t}
-        G^{2}
-    \nonumber
 \end{eqnarray}
 $$
 
+By <a href="#lemma1-difference-between-optimal-points">lemma</a>, we have $$\eqref{lemma1_difference_between_optimal_points_01}$$.
 Summing $$\eqref{equation_03_01}$$ from $t=1$ to $T$,
 
 $$
@@ -1061,6 +1041,7 @@ $$
 * $$\{\eta_{t}\}$$,
     * step size
 * $f: \mathcal{K} \rightarrow \mathbb{R}$,
+    * convex
 
 
 **Step1.** for $t=1$ to $T$ do
@@ -1108,6 +1089,8 @@ $$
 * $\eta_{t} := \frac{D}{G \sqrt{t}}$,
     * step sizes
 
+In Algorithm 7,
+
 $$
 \begin{eqnarray}
     \mathrm{E}
@@ -1115,7 +1098,8 @@ $$
         f(\tilde{x}_{T})
     \right]
     & \le &
-        \min_{x^{*} \in \mathcal{K}}
+        \min_{x \in \mathcal{K}}
+            f(x)
         +
         \frac{
             3 GD
@@ -1127,6 +1111,16 @@ $$
 $$
 
 #### proof
+Let
+
+$$
+    x^{*}
+    :=
+
+    \arg\min_{x \in \mathcal{K}}
+        f(x)
+$$
+
 By the regret guarantee of OGD, we have
 
 $$
@@ -1318,14 +1312,14 @@ $$
 #### Theorem
 * $\epsilon > 0$,
 
-In Algorithm 8, if $T \ge O(\frac{1}{\epsilon^{2}})$,
+In Algorithm 8, if $T \in O(\frac{1}{\epsilon^{2}})$,
 
 $$
     f(\tilde{x})
     -
     f(x^{*})
     \in
-    O(\epislon)
+    O(\epsilon)
 $$
 
 for some $\eta_{t}$.

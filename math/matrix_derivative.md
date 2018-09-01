@@ -2,22 +2,20 @@
 title: Matrix Derivative
 ---
 
-## matrix
+## Matrix Derivative
 
-## 行列の微分
-
-### 記号の定義
-* $N \in \mathbb{N}$
-* $M \in \mathbb{N}$
+## Symbols
+* $N \in \mathbb{N}$,
+* $M \in \mathbb{N}$,
 * $A = (a_{j}^{i})_{i,j}$
-    * $N \times N$の正方行列
-    * $A$の$i$行$j$番目の要素を$a_{j}^{i}$とかく
+    * $N \times N$ matrix
+    * we denote element at $i$-th row $j$-th column in $A$ by $a_{j}^{i}$,
 * $a^{i}$
-    * 行列$A$の$i$番目の行ベクトル
+    * $i$-th row vector of $A$
 * $a_{j}$
-    * 行列$A$の$j$番目の列ベクトル
+    * $j$-th column vector of $A$
 
-つまり、
+With these notation,
 
 $$
 A 
@@ -41,22 +39,23 @@ A
     \right)
 $$
 
-同様に
+Similary,
 
 * $B = (b_{j}^{i})_{i,j}$
-    * $M$行$N$列の行列
-    * $B$の$i$行$j$番目の要素を$b_{j}^{i}$とかく
+    * $M \times N$ matrix
+    * we denote element at $i$-th row $j$-th column in $B$ by $b_{j}^{i}$,
 * $b^{i}$
-    * 行列$B$の$i$番目の行ベクトル
+    * $i$-th row vector of $B$
 * $b_{j}$
-    * 行列$B$の$j$番目の列ベクトル
+    * $j$-th column vector of $B$
 
 * $x = (x^{i})_{i} \in \mathbb{R}^{N}$
-    * 長さ$N$の縦ベクトル
-    * $x$の$i$番目の要素を$x^{i}$で表す。
+    * $N$-dim vector
+    * $x^{i}$ is $i$-th element of $x$,
 
 $$
-x  = 
+    x
+    = 
     \left(
         \begin{array}{c}
             x^{1} \\
@@ -64,15 +63,16 @@ x  =
             x^{N}
         \end{array}
     \right)
-   
+    .
 $$
 
 転置をとる場合は、要素の添字を上下反転させる。
 つまり、
 
 $$
-A^{T} = (a_{i}^{j})_{i,j}
-    = \left(
+    A^{T} = (a_{i}^{j})_{i,j}
+    =
+    \left(
         \begin{array}{ccc}
             a_{1}^{1}, \ldots, a_{1}^{N} \\
             \vdots \ddots \vdots \\
@@ -85,7 +85,7 @@ $$
 また、
 
 $$
-x^{T} 
+    x^{T} 
     = ((x^{i})_{i})^{T}
     = (x_{i})_{i}
     = (x_{1}, \ldots, x_{N})
@@ -98,8 +98,9 @@ $x_{i} = x^{i} \ (\forall i)$に注意する。
 多変数関数$h: \mathbb{R}^{N} \rightarrow \mathbb{R}$の微分を以下で定義する。
 
 $$
-\frac{\partial h}{\partial x}(x) 
-    := \left(
+    \frac{\partial h}{\partial x}(x) 
+    :=
+    \left(
         \begin{array}{c}
             \frac{\partial h}{\partial x^{1}}(x) \\
             \vdots \\
@@ -112,35 +113,35 @@ $$
 
 $$
 \begin{eqnarray}
-	\frac{\partial h}{\partial x}(x) 
+    \frac{\partial h}{\partial x}(x) 
     & := &
-		\left(
-			\begin{array}{c}
-				\left( \frac{\partial h^{1}}{\partial x}(x) \right)^{T} \\
-				\vdots \\
-				\left( \frac{\partial h^{M}}{\partial x}(x) \right)^{T}
-			\end{array}
-		\right)
-	\nonumber
-	\\
+        \left(
+            \begin{array}{c}
+                \left( \frac{\partial h^{1}}{\partial x}(x) \right)^{T} \\
+                \vdots \\
+                \left( \frac{\partial h^{M}}{\partial x}(x) \right)^{T}
+            \end{array}
+        \right)
+    \nonumber
+    \\
     & = &
-		\left(
-			\begin{array}{ccc}
-				\frac{\partial h^{1}}{\partial x^{1}}(x)
-				&
-				\ldots 
-				&
-				\frac{\partial h^{1}}{\partial x^{N}}(x)
-				\\
-				\vdots & \ddots & \vdots \\
-				\frac{\partial h^{M}}{\partial x^{1}}(x)
-				&
-				\ldots
-				&
-				\frac{\partial h^{M}}{\partial x^{N}}(x)
-			\end{array}
-		\right)
-	\nonumber
+        \left(
+            \begin{array}{ccc}
+                \frac{\partial h^{1}}{\partial x^{1}}(x)
+                &
+                \ldots 
+                &
+                \frac{\partial h^{1}}{\partial x^{N}}(x)
+                \\
+                \vdots & \ddots & \vdots \\
+                \frac{\partial h^{M}}{\partial x^{1}}(x)
+                &
+                \ldots
+                &
+                \frac{\partial h^{M}}{\partial x^{N}}(x)
+            \end{array}
+        \right)
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -148,9 +149,9 @@ $$
 つまり
 
 $$
-	h(x) 
+    h(x) 
     =
-	\left(
+    \left(
         \begin{array}{c}
             h^{1}(x) \\
             \vdots \\
@@ -160,236 +161,249 @@ $$
 $$
 
 
-### 公式
+## Formula
 
-### 主要な行列演算
+### operations
+TODO
 
-### 線形関数の微分
-$f(x):\mathbb{R}^{N} \ni x \mapsto a^{\mathrm{T}} x \in \mathbb{R}$の微分。
-ここで、$a = (a^{1} ,\ldots, a^{N})^{\mathrm{T}} \in \mathbb{R}^{N}$, $c \in \mathbb{R}$である。
+#### Proposition1. derivative of linear function
+* $f(x):\mathbb{R}^{N} \ni x \mapsto a^{\mathrm{T}} x \in \mathbb{R}$,
+* $a = (a^{1} ,\ldots, a^{N})^{\mathrm{T}} \in \mathbb{R}^{N}$, $c \in \mathbb{R}$.
 
 $$
 \begin{equation}
-	(\nabla f)(x)
-	=
-	a
+    (\nabla f)(x)
+    =
+    a
 \end{equation}
 $$
 
 $$
 \begin{equation}
-	(\nabla^{2} f)(x)
-	=
-	\left(
-		\begin{array}{ccc}
-			 0 & \cdots & 0
-			 \\
-			 0 & \ddots & 0
-			 \\
-			 0 & \cdots & 0
-		\end{array}
-	\right)
-	\in \mathbb{R}^{N \times N}
+    (\nabla^{2} f)(x)
+    =
+    \left(
+        \begin{array}{ccc}
+             0 & \cdots & 0
+             \\
+             0 & \ddots & 0
+             \\
+             0 & \cdots & 0
+        \end{array}
+    \right)
+    \in \mathbb{R}^{N \times N}
 \end{equation}
 $$
 
-### 導出
-まず、
+#### proof
+We have
 
 $$
-	\frac{\partial f(x)}{\partial x^{i}} 
-	=
-	a^{i}
+    \frac{\partial f(x)}{\partial x^{i}} 
+    =
+    a^{i}
+    .
 $$
 
-より、
+Thus,
 
 $$
 \begin{eqnarray}
-	(\nabla f)(x)
-	& = &
-		\left(
-			\begin{array}{c}
-				a^{1} \\
-				\vdots \\
-				a^{N}
-			\end{array}
-		\right)
-	\nonumber
-	\\
-	& = &
-		a
-\end{eqnarray}
-$$
-
-二階微分は明らか。
-
-### 二次形式への変換の微分
-$f(x):\mathbb{R}^{N} \ni x \mapsto x^{T}Ax \in \mathbb{R}$の微分。
-
-* $A$が対称でない
-
-$$
-\begin{equation}
-	\frac{\partial f(x)}{\partial x} 
-    =
-	Ax + A^{T}x.
-	\label{derivative_bilinear_form_general}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-	\frac{\partial^{2} f(x)}{\partial x^{2}} 
-    =
-	A + A^{T}
-	\label{second_derivative_bilinear_form_general}
-\end{equation}
-$$
-
-* $A$が対称
-
-$$
-\begin{equation}
-	\frac{\partial f(x)}{\partial x} 
-    =
-	2Ax
-	\label{derivative_bilinear_form_symmetric}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-	\frac{\partial^{2} f(x)}{\partial x^{2}} 
-    =
-	2A
-	\label{second_derivative_bilinear_form_symmetric}
-\end{equation}
-$$
-
-* $A$が単位行列
-	* $x$のノルムの微分
-
-$$
-\begin{equation}
-	\frac{\partial f(x)}{\partial x} 
-    =
-	2x
-	\label{derivative_bilinear_form_identity}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-	\frac{\partial^{2} f(x)}{\partial x^{2}} 
-    =
-	2I
-	\label{second_derivative_bilinear_form_identity}
-\end{equation}
-$$
-
-### 導出
-$f(x)$の$x$での微分を考える。
-$k = 1, \ldots, N$として、$\frac{\partial f(x)}{\partial x_{k}}$を求める。
-
-まず、
-
-$$
-\begin{eqnarray}
-	x^{T}Ax
-	& = &
-		\left( \sum_{i}x_{i}a_{1}^{i}, \ldots, \sum_{i}x_{i}a_{N}^{i} \right) x 
-	\nonumber
-	\\
+    (\nabla f)(x)
     & = &
-		\sum_{j} \left( \sum_{i}x_{i}a_{j}^{i} \right) x^{j}
-	\nonumber
-	\\
+        \left(
+            \begin{array}{c}
+                a^{1} \\
+                \vdots \\
+                a^{N}
+            \end{array}
+        \right)
+    \nonumber
+    \\
     & = &
-		\sum_{j} \sum_{i} x_{i}a_{j}^{i}x^{j}
-	\nonumber
+        a
 \end{eqnarray}
 $$
 
-である。
-また、
+Hessian matrix is obvious.
+
+
+#### Proposition2. derivative of quadratic form
+* $f(x):\mathbb{R}^{N} \ni x \mapsto x^{T}Ax \in \mathbb{R}$,
+
+(1) If $A$ is not symmetric,
 
 $$
 \begin{eqnarray}
-	x^{T}Ax
+    \frac{\partial f(x)}{\partial x}
     & = &
-		\sum_{j \neq k} \sum_{i} x_{i}a_{j}^{i}x^{j} 
-			+ \sum_{i} x_{i}a_{k}^{i}x^{k} 
-	\nonumber
-	\\
-	& = &
-		\sum_{j \neq k} \sum_{i} x_{i}a_{j}^{i}x^{j} 
-			+ \sum_{i \neq k} x_{i}a_{k}^{i}x^{k} 
-			+ x_{k}a_{k}^{k}x^{k} 
-	\nonumber
+        Ax + A^{T}x.
+        \label{derivative_bilinear_form_general}
+    \\
+    \frac{\partial^{2} f(x)}{\partial x^{2}} 
+    & = &
+        A + A^{T}
+    \label{second_derivative_bilinear_form_general}
 \end{eqnarray}
 $$
 
-である。
-以上より
+(2) If $A$ is symmetric
 
 $$
 \begin{eqnarray}
-	\frac{\partial f(x)}{\partial x_{k}}
-	& = &
-		\sum_{j \neq k} a_{j}^{k}x^{j} 
-			+ \sum_{i \neq k} x_{i}a_{k}^{i}
-			+ 2a_{k}^{k}x^{k} 
-	\nonumber
-	\\
-	& = &
-		\sum_{j} a_{j}^{k}x^{j} 
-			+ \sum_{i} x_{i}a_{k}^{i}
-	\nonumber
-	\\
-	& = &
-		\langle (a^{k})^{T}, x\rangle
-			+ \langle a_{k}, x\rangle
-	\nonumber
+    \frac{\partial f(x)}{\partial x} 
+    & = &
+        2Ax
+    \label{derivative_bilinear_form_symmetric}
+    \\
+    \frac{\partial^{2} f(x)}{\partial x^{2}} 
+    & = &
+        2A
+    \label{second_derivative_bilinear_form_symmetric}
 \end{eqnarray}
 $$
 
-を得る。
-上式の第1項は、$A$の$k$番目の行ベクトルと$x$との内積である。
-上式の第2項は、$A$の$k$番目の列ベクトルと$x$との内積である。
-これに注意すると、
+(3) If $A$ is identity matrix, that is, the norm of $x$
 
 $$
-\frac{\partial f(x)}{\partial x} 
-    = Ax + A^{T}x.
+\begin{eqnarray}
+    \frac{\partial f(x)}{\partial x} 
+    & = &
+        2x
+    \label{derivative_bilinear_form_identity}
+    \\
+    \frac{\partial^{2} f(x)}{\partial x^{2}} 
+    & = &
+        2I
+    \label{second_derivative_bilinear_form_identity}
+\end{eqnarray}
 $$
 
-特に$A$が対称行列の場合は、
+#### proof
+(1)
+
+Let $k = 1, \ldots, N$ be fixed.
+We calculate $\frac{\partial f(x)}{\partial x_{k}}$.
+First, we have
 
 $$
-\frac{\partial f(x)}{\partial x} 
-    = 2Ax.
+\begin{eqnarray}
+    x^{T}Ax
+    & = &
+        \left( \sum_{i}x_{i}a_{1}^{i}, \ldots, \sum_{i}x_{i}a_{N}^{i} \right) x 
+    \nonumber
+    \\
+    & = &
+        \sum_{j} \left( \sum_{i}x_{i}a_{j}^{i} \right) x^{j}
+    \nonumber
+    \\
+    & = &
+        \sum_{j} \sum_{i} x_{i}a_{j}^{i}x^{j}
+    \nonumber
+\end{eqnarray}
 $$
 
-### 線形変換の微分
-$f(x): \mathbb{R}^{N} \ni x \mapsto Bx \in \mathbb{R}^{M}$の微分。
+Moreover,
+
+$$
+\begin{eqnarray}
+    x^{T}Ax
+    & = &
+        \sum_{j \neq k}
+        \sum_{i}
+        x_{i}a_{j}^{i}x^{j}
+        +
+        \sum_{i}
+            x_{i}a_{k}^{i}x^{k} 
+    \nonumber
+    \\
+    & = &
+        \sum_{j \neq k} \sum_{i} x_{i}a_{j}^{i}x^{j} 
+            + \sum_{i \neq k} x_{i}a_{k}^{i}x^{k} 
+            + x_{k}a_{k}^{k}x^{k} 
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    \frac{\partial f(x)}{\partial x_{k}}
+    & = &
+        \sum_{j \neq k}
+            a_{j}^{k}x^{j} 
+        +
+        \sum_{i \neq k}
+            x_{i}a_{k}^{i}
+        +
+        2a_{k}^{k}x^{k} 
+    \nonumber
+    \\
+    & = &
+        \sum_{j}
+            a_{j}^{k}x^{j} 
+        +
+        \sum_{i}
+            x_{i}a_{k}^{i}
+    \nonumber
+    \\
+    & = &
+        \langle (a^{k})^{T}, x\rangle
+            + \langle a_{k}, x\rangle
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+The first term is the inner product of $k$-th row vector of $A$ and $x$.
+The second term is the inner product of $k$-th column vector of $A$ and $x$.
+Combining this result, we obtain
+
+$$
+    \frac{\partial f(x)}{\partial x}
+    =
+    Ax + A^{T}x
+    .
+$$
+
+(2)
+
+Especially, if $A$ is symmetric,
+
+$$
+    \frac{\partial f(x)}{\partial x} 
+    =
+    2Ax
+    .
+$$
+
+(3)
+
+This is obvious from the above equation.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition3 derivative of linear transformation
+* $f(x): \mathbb{R}^{N} \ni x \mapsto Bx \in \mathbb{R}^{M}$,
 
 $$
 \begin{equation}
-	\frac{\partial f(x)}{\partial x} 
+    \frac{\partial f(x)}{\partial x}
     =
-	\left(
+    \left(
         \begin{array}{c}
             b_{1}^{T} \\
             \vdots \\
             b_{N}^{T}
         \end{array}
     \right)
-    = B^{T}
+    =
+    B^{T}
 \end{equation}
 $$
 
-### 導出
+#### proof
 まず、
 
 $$

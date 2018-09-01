@@ -725,6 +725,7 @@ title: English Speaking
     * I wish you'd do something instead of just sitting and doing nothing
     * I wish he'd have done something instaed of just sitting and doing nothing
 * regret
+    * don't make me regret about this
     * I regret leaving school so young
     * He was beginning to regret that he'd come along
     * We regret any inconvenience caused to our customers
@@ -2021,14 +2022,21 @@ title: English Speaking
         * The government has so far refused to spell out its plan/policies
         * What do you mean you don't understand. do I have to spell it out for you?
     * form words
-        * 
     * result
+        * to cause something bad to happen in the future
+        * the new regulations could spell disaster for small business
+        * this cold weather could spell trouble for gardeners
     * do instead
 * device
     * machine
     * method
     * bomb
-* devise
+* liase
+    * to speak to people in other organization, etc. in order to work with them or exchange information with them
+        * our head office will liase with the suppliers to ensure delivery
+    * to be the link between two or more people, organization
+        * her department liaises between the development team and the regional offices
+* devise/invent
     * to invent a plan, system, object, etc., usually using your intelligence or imagination
     * He's good at devising language games that you can play with students in class
     * The cartoon characters Snoopy and Charllie Brown were devised by Charles M.Schulz
@@ -2714,6 +2722,112 @@ title: English Speaking
     * Legal language tends to be very stilted
     * He writes 
 * lubricant
+* adversary
+    * an enemy
+    * He saw her as his main adversary within the company
+* congestion
+* aggravate
+    * make worse
+        * to make a bad situation worse
+            * Attempts to restrict parking in the city centre have further aggravated the problem of traffic congestions
+        * to make a disease worse
+            * the treatment only aggravated the condition
+        * to annoy someone
+            * stop aggravating me, will you!
+* obliterate
+    * to remove all signs of something, either by destroying it or by covering it so that it cannot be seen
+        * the missile strike was devastating. the target was totally obliterated
+        * All of sudden the view was obliterated by fog
+        * the hurricane virtually obliterated his small coastal town
+    * to make an idea or feeling disappear compeltely
+        * maybe she gets drunk to obliterate painful memories
+* reminiscent
+    * It is reminiscent tot the direction in which the Newton-Raphson method would proceed
+* direction
+    * position
+        * in the direction
+            * no, go that way. I said, pointing in the opposite direction
+            * he was going in the direction of betroom
+            * they drove away in opposite direction
+        * someone's direction
+            * she keeps looing in my direction
+        * sense of direction
+            * a good sense of direction
+            * which way is it? I have no/a lousy sense of direction
+    * control
+        * under direction
+            * the project was under the direction of a well-known academic
+        * I couldn't understand the directions of the packet
+        * He will be giving/issuing directions to judges on sentencing in the next few days
+    * development
+        * the way that someone or something changes or develops
+        * there is disagreement over the direction the project is taking
+        * her latest album represents a chance of direction for her
+* lousy
+    * bad
+        * lousy food/service
+        * a lousy book
+        * I had a lousy weekend
+        * I feel lousy. I'm going home
+    * insulting
+        * All he offered me was a lousy 20 bucks
+    * full
+        * lousy with
+            * used to say that something is full of something, or too much of it
+            * The internet is lousy with this kind of stuff
+* bum
+    * 
+    * bad in quality or not useful
+        * He gave us bum directions, but we eventually the place
+    * to ask someone for something without intenting to pay for it
+        * Could I bum a cigarette off you?
+    * bum around
+    * bum out
+* culture
+* comrade
+    * friend
+        * many of his comrades were killed in the battle
+    * political member
+        * a member of the same political group, especially a communist or socialist group or a trade union
+        * I know my opinion is shared by many of my combrades in the Labour movement
+* compradely
+    * the atomosphere was rather comradely and pleasant
+* swaggy/fashionable/stylish
+    * having a fashionable and confident appearance or way of behaving
+    * his swaggy attitude is the driving force behind the team chemistry
+    * she looks so swaggy with her new handband on
+* har
+    * hardy har har
+        * false or sarcastic laughter
+* shush
+    * shush it
+* insecure
+    * not confident
+        * insecure people have little confident and are uncertain about their own abilities or if other people really like them
+        * I wonder what it was about her upbringing that made her so insecure
+        * he still feels insecure about his ability to do the job
+    * not safe
+        * not safe or not protected
+        * the situation is still insecure, with many of the rebels roaming the streats
+        * Nations which are not self-sufficient in energy will face an insecure future
+* protest
+* dismissive
+    * showing that you do not think something in worth considering
+    * he is so dismissive of anybody else's suggestion
+    * a dismissive attitude
+* booze
+    * alcohol
+        * the party's at Kate's on Firday night. bring some booze
+    * drink alcohol 
+        * have you been out boozing again?
+* reassure
+    * makeing you feel less worried
+    * he smiled at me in a reassuring way
+    * the two men who called at the house were well-spoken and had a reassuring manner
+    * for more than half a century, the assuring tones of BBC newscasters have informed British television 
+* navajo
+
+
 
 
 
@@ -2760,14 +2874,6 @@ title: English Speaking
     * There were some children swimming in the river
     * Is there anybody waiting?
 
-
-
-
-
-
-
-
-
 ## if past
 * If I were a salmon shirt, where would I be?
 
@@ -2802,23 +2908,13 @@ title: English Speaking
 * He is my boss
 * He is my team member
 
-<<<<<<< HEAD
-## time
-=======
-<<<<<<< HEAD
-=======
 ## time
 * for decades
->>>>>>> branch3
 * all the time
 * in the past
 * in the future
 * at the momemnt
 
-<<<<<<< HEAD
-=======
->>>>>>> 47f1c6d0... Update language/english_speaking.md
->>>>>>> branch3
 
 ## clothes
 * blouse
@@ -2942,9 +3038,6 @@ title: English Speaking
 * hantavirus
     * they transmit hantavirus
     * infection with hantavirus can progress to Hantavirus Pulmonary Syndrome, which can be fatal
-
-## computer
-* The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 
 ## comparative
 * we can devise a much faster algorithm than the one presented in the previous chapter
