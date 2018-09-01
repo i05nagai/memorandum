@@ -2059,7 +2059,40 @@ title: English Speaking
         * I know my opinion is shared by many of my combrades in the Labour movement
 * compradely
     * the atomosphere was rather comradely and pleasant
-
+* swaggy/fashionable/stylish
+    * having a fashionable and confident appearance or way of behaving
+    * his swaggy attitude is the driving force behind the team chemistry
+    * she looks so swaggy with her new handband on
+* har
+    * hardy har har
+        * false or sarcastic laughter
+* shush
+    * shush it
+* insecure
+    * not confident
+        * insecure people have little confident and are uncertain about their own abilities or if other people really like them
+        * I wonder what it was about her upbringing that made her so insecure
+        * he still feels insecure about his ability to do the job
+    * not safe
+        * not safe or not protected
+        * the situation is still insecure, with many of the rebels roaming the streats
+        * Nations which are not self-sufficient in energy will face an insecure future
+* protest
+* dismissive
+    * showing that you do not think something in worth considering
+    * he is so dismissive of anybody else's suggestion
+    * a dismissive attitude
+* booze
+    * alcohol
+        * the party's at Kate's on Firday night. bring some booze
+    * drink alcohol 
+        * have you been out boozing again?
+* reassure
+    * makeing you feel less worried
+    * he smiled at me in a reassuring way
+    * the two men who called at the house were well-spoken and had a reassuring manner
+    * for more than half a century, the assuring tones of BBC newscasters have informed British television 
+* navajo
 
 
 ## relative clause
