@@ -582,6 +582,16 @@ $$
     .
 $$
 
+Since $\nabla f(x) \nabla f(x)^{\mathrm{T}}$ is symmetric, $A_{t}$ is symmetric for all $t$.
+Hence
+
+$$
+    (A_{t}^{-1})^{\mathrm{T}}
+    =
+    A_{t}^{-1}
+    .
+$$
+
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Theorem 4.3
@@ -605,6 +615,34 @@ $$
 $$
 
 #### proof
+We first show the upper bound of $$\sum_{t=1}^{T}f(x_{t})^{\mathrm{T}}A_{t}^{-1}\nabal f(x_{t})$$,
+
+$$
+\begin{eqnarray}
+    \nabla f(x_{t})^{\mathrm{T}}
+    A_{t}^{-1}
+    \nabla f(x_{t})
+    & = &
+        A_{t}^{-1}
+        \bullet
+        \nabla f(x_{t})
+        \nabla f(x_{t})^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        A_{t}^{-1}
+        \bullet
+        \nabla f(x_{t})
+        \nabla f(x_{t})^{\mathrm{T}}
+    \nonumber
+    \\
+    & = &
+        A_{t}^{-1}
+        \bullet
+        \nabla f(x_{t})
+        \nabla f(x_{t})^{\mathrm{T}}
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -675,4 +713,476 @@ $$
 \end{eqnarray}
 $$
 
+By definition of $y_{t+1}$,
+
+$$
+\begin{eqnarray}
+    & &
+        y_{t+1} - x^{*}
+        =
+        x_{t}
+        -
+        x^{*}
+        -
+        \frac{1}{\gamma}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+    \label{equation_04_01}
+    \\
+    & \Leftrightarrow &
+        A_{t}
+        (y_{t+1} - x^{*})
+        =
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        \frac{1}{\gamma}
+        \nabla f(x_{t})
+    \label{equation_04_02}
+\end{eqnarray}
+$$
+
+Multiplying the transpose of $$\eqref{equation_04_01}$$ by $$\eqref{equation_04_02}$$,
+
+$$
+\begin{eqnarray}
+    (y_{t+1} - x^{*})^{\mathrm{T}}
+    A_{t}
+    (y_{t+1} - x^{*})
+    & = &
+        (
+            x_{t}
+            -
+            x^{*}
+        )^{\mathrm{T}}
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        \frac{1}{\gamma}
+        \left(
+            A_{t}^{-1}
+            \nabla f(x_{t})
+        \right)^{\mathrm{T}}
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        (x_{t} - x^{*})^{\mathrm{T}}
+        \frac{1}{\gamma}
+        \nabla f(x_{t})
+        +
+        \frac{1}{\gamma}
+        \left(
+            A_{t}^{-1}
+            \nabla f(x_{t})
+        \right)^{\mathrm{T}}
+        \frac{1}{\gamma}
+        \nabla f(x_{t})
+    \nonumber
+    \\
+    & = &
+        (
+            x_{t}
+            -
+            x^{*}
+        )^{\mathrm{T}}
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        \frac{2}{\gamma}
+        \nabla f(x_{t})^{\mathrm{T}}
+        (
+            x_{t}
+            -
+            x^{*}
+        )
+        +
+        \frac{1}{\gamma^{2}}
+        \nabla f(x_{t})^{\mathrm{T}}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+    \label{equation_04_03}
+    .
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    (y_{t+1} - x^{*})^{\mathrm{T}}
+    A_{t}
+    (y_{t+1} - x^{*})
+    & = &
+        \|
+            y_{t+1} - x^{*}
+        \|_{A_{t}}^{2}
+    \nonumber
+    \\
+    & \ge &
+        \|
+            x_{t+1} - x^{*}
+        \|_{A_{t}}^{2}
+        \quad
+        (\because \text{theorem 2.1})
+    \nonumber
+    \\
+    & = &
+        (x_{t+1} - x^{*})^{\mathrm{T}}
+        A_{t}
+        (x_{t+1} - x^{*})
+    \nonumber
+\end{eqnarray}
+$$
+
+From $$\eqref{equation_04_03}$$,
+
+$$
+\begin{eqnarray}
+    & &
+        (
+            x_{t}
+            -
+            x^{*}
+        )^{\mathrm{T}}
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        \frac{2}{\gamma}
+        \nabla f(x_{t})^{\mathrm{T}}
+        (
+            x_{t}
+            -
+            x^{*}
+        )
+        +
+        \frac{1}{\gamma^{2}}
+        \nabla f(x_{t})^{\mathrm{T}}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+        \ge
+        (x_{t+1} - x^{*})^{\mathrm{T}}
+        A_{t}
+        (x_{t+1} - x^{*})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \frac{\gamma}{2}
+        (
+            x_{t}
+            -
+            x^{*}
+        )^{\mathrm{T}}
+        A_{t}(
+            x_{t}
+            -
+            x^{*}
+        )
+        -
+        \frac{\gamma}{2}
+        (x_{t+1} - x^{*})^{\mathrm{T}}
+        A_{t}
+        (x_{t+1} - x^{*})
+        +
+        \frac{1}{\gamma 2}
+        \nabla f(x_{t})^{\mathrm{T}}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+        \ge
+        \nabla f(x_{t})^{\mathrm{T}}
+        (
+            x_{t}
+            -
+            x^{*}
+        )
+\end{eqnarray}
+$$
+
+Summing up over $t=1$ to $T$,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        \nabla f(x_{t})^{\mathrm{T}}
+        (
+            x_{t}
+            -
+            x^{*}
+        )
+    & \le &
+        \sum_{t=1}^{T}
+            \frac{\gamma}{2}
+            (
+                x_{t}
+                -
+                x^{*}
+            )^{\mathrm{T}}
+            A_{t}(
+                x_{t}
+                -
+                x^{*}
+            )
+            -
+        \sum_{t=1}^{T}
+            \frac{\gamma}{2}
+            (x_{t+1} - x^{*})^{\mathrm{T}}
+            A_{t}
+            (x_{t+1} - x^{*})
+            +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & = &
+        \sum_{t=}^{T}
+            \frac{\gamma}{2}
+            (
+                x_{t}
+                -
+                x^{*}
+            )^{\mathrm{T}}
+            A_{t}(
+                x_{t}
+                -
+                x^{*}
+            )
+        -
+        \sum_{t=2}^{T}
+            \frac{\gamma}{2}
+            (x_{t} - x^{*})^{\mathrm{T}}
+            A_{t-1}
+            (x_{t} - x^{*})
+        -
+        \frac{\gamma}{2}
+        (x_{T+1} - x^{*})^{\mathrm{T}}
+        A_{T}
+        (x_{T+1} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & = &
+        \sum_{t=2}^{T}
+            \frac{\gamma}{2}
+            (
+                x_{t}
+                -
+                x^{*}
+            )^{\mathrm{T}}
+            \left(
+                A_{t}
+                -
+                A_{t-1}
+            \right)
+            (
+                x_{t}
+                -
+                x^{*}
+            )
+        +
+        \frac{\gamma}{2}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        A_{1}
+        ( x_{t} - x^{*})
+        -
+        \frac{\gamma}{2}
+        (x_{T+1} - x^{*})^{\mathrm{T}}
+        A_{T}
+        (x_{T+1} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            \frac{\gamma}{2}
+            (
+                x_{t}
+                -
+                x^{*}
+            )^{\mathrm{T}}
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+            (
+                x_{t}
+                -
+                x^{*}
+            )
+        +
+        \frac{\gamma}{2}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        \left(
+            A_{1}
+            -
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+        \right)
+        ( x_{t} - x^{*})
+        -
+        \frac{\gamma}{2}
+        (x_{T+1} - x^{*})^{\mathrm{T}}
+        A_{T}
+        (x_{T+1} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & \le &
+        \sum_{t=1}^{T}
+            \frac{\gamma}{2}
+            (
+                x_{t}
+                -
+                x^{*}
+            )^{\mathrm{T}}
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+            (
+                x_{t}
+                -
+                x^{*}
+            )
+        +
+        \frac{\gamma}{2}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        \left(
+            A_{1}
+            -
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+        \right)
+        ( x_{t} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+        \quad
+        (\because \text{positive definiteness})
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        R_{t}
+    & \le &
+        \frac{\gamma}{2}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        \left(
+            A_{1}
+            -
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+        \right)
+        ( x_{t} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & = &
+        \frac{\gamma}{2}
+        \epsilon
+        (x_{t} - x^{*})^{\mathrm{T}}
+        ( x_{t} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+        \quad
+        (\because A_{1} - 
+            \nabla f(x_{t})
+            \nabla f(x_{t})^{\mathrm{T}}
+            =
+            \epsilon E_{n})
+    \nonumber
+    \\
+    & = &
+        \frac{1}{2D^{2} \gamma}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        ( x_{t} - x^{*})
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    \nonumber
+    \\
+    & \le &
+        \frac{1}{2\gamma}
+        +
+        \sum_{t=1}^{T}
+            \frac{1}{\gamma 2}
+            \nabla f(x_{t})^{\mathrm{T}}
+            A_{t}^{-1}
+            \nabla f(x_{t})
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $\gamma := \frac{1}{2}\min(\frac{1}{4GD}, \alpha),
+
+$$
+    \frac{1}{\gamma}
+    \le
+    2
+    \left(
+        \frac{1}{\alpha}
+        +
+        4GD
+    \right)
+    \le
+    8
+    \left(
+        \frac{1}{\alpha}
+        +
+        GD
+    \right)
+    .
+$$
+
+This gives the lemma.
+
 <div class="QED" style="text-align: right">$\Box$</div>
+
+
