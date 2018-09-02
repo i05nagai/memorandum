@@ -6,6 +6,7 @@ title: English Computer
 
 
 ## Computer
+* The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 * headroom
     * [Engineering tolerance - Wikipedia](https://en.wikipedia.org/wiki/Engineering_tolerance)
 * on the website / in the website

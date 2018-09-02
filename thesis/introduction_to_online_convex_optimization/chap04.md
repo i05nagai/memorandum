@@ -615,7 +615,7 @@ $$
 $$
 
 #### proof
-We first show the upper bound of $$\sum_{t=1}^{T}f(x_{t})^{\mathrm{T}}A_{t}^{-1}\nabal f(x_{t})$$,
+We first show the upper bound of $$\sum_{t=1}^{T}f(x_{t})^{\mathrm{T}}A_{t}^{-1}\nabla f(x_{t})$$,
 
 $$
 \begin{eqnarray}
@@ -632,8 +632,11 @@ $$
     & = &
         A_{t}^{-1}
         \bullet
-        \nabla f(x_{t})
-        \nabla f(x_{t})^{\mathrm{T}}
+        \left(
+            A_{t}
+            -
+            A_{t - 1}
+        \right)
     \nonumber
     \\
     & = &
@@ -641,6 +644,217 @@ $$
         \bullet
         \nabla f(x_{t})
         \nabla f(x_{t})^{\mathrm{T}}
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        \nabla f(x_{t})^{\mathrm{T}}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+    & = &
+        \sum_{t=1}^{T}
+            A_{t}^{-1}
+            \bullet
+            \left(
+                A_{t} - A_{t-1}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            A_{t}^{-1}
+            \bullet
+            \left(
+                A_{t} - A_{t-1}
+            \right)
+    \nonumber
+    \\
+    & \le &
+    \sum_{t=1}^{T}
+        \log
+        \frac{
+            \mathrm{det}(A_{t})
+        }{
+            \mathrm{det}(A_{t-1})
+        }
+        \quad
+        (\because \text{lemma 4.5})
+    \nonumber
+    \\
+    & = &
+        \log
+        \frac{
+            \mathrm{det}(A_{T})
+        }{
+            \mathrm{det}(A_{0})
+        }
+    \nonumber
+    \\
+    & = &
+        \log
+        \frac{
+            \mathrm{det}(
+                \sum_{t=1}^{T}
+                    \nabla f(x_{t})
+                    \nabla f(x_{t})^{\mathrm{T}}
+                +
+                \epsilon E_{n}
+            )
+        }{
+            \mathrm{det}(A_{0})
+        }
+\end{eqnarray}
+$$
+
+By the Gershgorin's circle theorem, there exists $$j \in \{1, \ldots, n\}$$ such that
+
+$$
+\begin{eqnarray}
+    \lambda_{1}(
+        \nabla f(x_{t})
+        \nabla f(x_{t})^{\mathrm{T}}
+        +
+        \epsilon
+    )
+    & \le &
+        \sum_{i \neq j}
+            |
+                (\nabla f(x_{t}))_{i}
+                (\nabla f(x_{t}))_{j}
+            |
+        +
+        |
+            (\nabla f(x_{t}))_{j}
+            (\nabla f(x_{t}))_{j}
+            +
+            \epsilon
+        |
+    \nonumber
+    \\
+    & \le &
+        \sum_{i \neq j}
+            |
+                (\nabla f(x_{t}))_{i}
+                (\nabla f(x_{t}))_{j}
+            |
+        +
+        |
+            (\nabla f(x_{t}))_{j}
+            (\nabla f(x_{t}))_{j}
+        |
+        +
+        |
+            \epsilon
+        |
+    \nonumber
+    \\
+    & = &
+        \sum_{i = 1}^{n}
+            |
+                (\nabla f(x_{t}))_{i}
+                (\nabla f(x_{t}))_{j}
+            |
+        +
+        |
+            \epsilon
+        |
+    \nonumber
+    \\
+    & \le &
+        \|
+            (\nabla f(x_{t}))_{j}
+        \|^{2}
+    \nonumber
+    \\
+    & \le &
+        G^{2}
+        +
+        \epsilon
+\end{eqnarray}
+$$
+
+TODO.
+
+$$
+\begin{eqnarray}
+    |A_{T}|
+    & &
+        (TG^{2} + \epsilon)
+    \nonumber
+\end{eqnarray}
+$$
+
+Thus,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        \nabla f(x_{t})^{\mathrm{T}}
+        A_{t}^{-1}
+        \nabla f(x_{t})
+    & \le &
+        \log
+        \frac{
+            \mathrm{det}(
+                \sum_{t=1}^{T}
+                    \nabla f(x_{t})
+                    \nabla f(x_{t})^{\mathrm{T}}
+                +
+                \epsilon E_{n}
+            )
+        }{
+            \mathrm{det}(A_{0})
+        }
+    \nonumber
+    \\
+    & \le &
+        \log
+        \frac{
+            (TG^{2} + \epsilon)^{n}
+        }{
+            \epsilon^{n}
+        }
+    \nonumber
+    \\
+    & = &
+        n
+        \log
+        \left(
+            \frac{
+                TG^{2}
+            }{
+                \epsilon
+            }
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & = &
+        n
+        \log
+        \left(
+            T
+            G^{2}
+            \gamma D^{2}
+            +
+            1
+        \right)
+    \nonumber
+    \\
+    & \le &
+        n
+        \log
+        \left(
+            T
+            G^{2}
+            \gamma D^{2}
+            +
+            1
+        \right)
 \end{eqnarray}
 $$
 
@@ -1185,4 +1399,235 @@ This gives the lemma.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Lemma 4.5
+* $A \in \mathbb{R}^{n \times n}$,
+    * symmetric
+* $B \in \mathbb{R}^{n \times n}$,
+    * symmetric
+* $0 \preccurlyeq B \preccurlyeq A$,
+    * $A$ is positive definite
+    * $B$ is positive definte
+    * $A - B$ is positive definite
 
+$$
+\begin{eqnarray}
+    A^{-1}
+    \bullet
+    (A - B)
+    \le
+    \log
+        \frac{
+            \mathrm{det}(A)
+        }{
+            \mathrm{det}(B)
+        }
+    \label{lemma_04_05_equation}
+\end{eqnarray}
+$$
+
+#### proof
+
+$$
+\begin{eqnarray}
+    A^{-1}
+    \bullet
+    (A - B)
+    & = &
+        \mathrm{tr}
+        \left(
+            A^{-1}(A - B)^{\mathrm{T}}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            A^{-1}(A - B)
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            (A^{1/2}A^{1/2})^{-1}(A - B)
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            A^{-1/2}
+            (A - B)
+            A^{-1/2}
+        \right)
+        \quad
+        (\because A^{-1/2} \text{ is symmetric})
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{n}
+        \left(
+            \lambda_{i}
+            \left(
+                E_{n}
+                -
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{n}
+        \left(
+            1
+            -
+            \lambda_{i}
+            \left(
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        \sum_{i=1}^{n}
+        \left(
+            1
+            -
+            \lambda_{i}
+            \left(
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        -
+        \sum_{i=1}^{n}
+        \log
+        \left(
+            \lambda_{i}
+            \left(
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+        \quad
+        (\because 1 - x \le -\log(x))
+    \nonumber
+    \\
+    & = &
+        -
+        \log
+        \left(
+            \prod_{i=1}^{n}
+            \lambda_{i}
+            \left(
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        -
+        \log
+        \left(
+            \mathrm{det}
+            \left(
+                A^{-1/2}
+                B
+                A^{-1/2}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        -
+        \log
+        \left(
+            \mathrm{det}
+            \left(
+                A^{-1}
+            \right)
+            \mathrm{det}
+            \left(
+                B
+            \right)
+        \right)
+        \quad
+        (\because A \text{ is PSD}).
+    \nonumber
+    \\
+    & = &
+        \log
+        \left(
+            \frac{
+                \mathrm{det}
+                \left(
+                    A
+                \right)
+            }{
+                \mathrm{det}
+                \left(
+                    B
+                \right)
+            }
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Remark
+If symmetric matrix $A$ is diagonalizable, $A$ is decomposed to
+
+$$
+    A
+    =
+    V
+    D
+    V^{-1}
+$$
+
+where $V$ is orthogonal matrix and $D$ is diagonal matrix.
+In this case,
+
+$$
+\begin{eqnarray}
+    A^{1/2}
+    & = &
+        V
+        D^{1/2}
+        V^{-1}
+    \nonumber
+    \\
+    A^{-1/2}
+    & = &
+        V
+        D^{-1/2}
+        V^{-1}
+    \nonumber
+    \\
+    A^{-1}
+    & = &
+        V
+        D^{-1}
+        V^{-1}
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Note that $A{1/2}$, $A{-1/2}$, $A^{-1}$ are all symmetric matrix.
+
+<div class="end-of-statement" style="text-align: right">■</div>

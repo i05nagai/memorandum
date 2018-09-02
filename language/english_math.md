@@ -3,6 +3,47 @@ title: English Math
 ---
 
 ## English Math
+
+## Number
+* a book 300 pages long
+* a building 10 stories high
+* a lot/many/a great nuber of/a plenty of
+    * Do you have many books on history?
+    * Many students 
+    * he has a lot of friends in Korean
+* lots of/much/a great deal of/a large amount of/
+    * Kates drunk lots of wine at her birthday party
+    * We hadn't had much rain this summer.
+* a few
+    * I have a few days to finish this report
+* a little
+    * Can you add a little pepper to this salad dressing?
+* fraction
+    * a half/one half
+    * one fifth
+    * three quarters
+    * two and three seventh
+    * b over a
+    * twenty five over fifty eight
+* 3 + 5 = 8
+    * three plus five equal eight
+    * three and five is/are/make eight
+* 9 - 7 = 2
+    * nine minus 7 equal 2
+    * seven from nine is/are/leave two
+* 6 x 4 = 24
+    * six (multiplied) by four equal twenty four
+    * six times four is/are/make twenty four
+* 8 / 2 = 4
+    * Eight divided by two equals four
+    * two into eight is/are/goes four
+* a quarter
+* degree
+    * twenty eight degrees centigrade/Celcius
+    * ninety two degrees Fahrenheit
+
+
+##
 * [Pronunciation of mathematical symbols](http://www.uefap.com/speaking/symbols/symbols.htm)
 * [理系英語（数学と証明の基本英語）](http://rikei-index.blue.coocan.jp/kagakusi/eigo1.html)
 * [数・単位の英語　ちょんまげ英語塾](http://mage8.com/tango/tango21.html)
