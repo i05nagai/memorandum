@@ -3,7 +3,7 @@ title: Bazel CLI
 ---
 
 ## Bazel CLI
-
+You can query with `bazel query` command.
 
 ## CLI
 ```
@@ -124,6 +124,11 @@ bazel test
 ```
 
 ## Usage
+[bazel query 'foo/\.\.\.' \-\-output package](https://docs.bazel.build/versions/master/query-how-to.html#What_packages_exist_beneath_foo_)
+
+```
+bazel query 
+```
 
 ## Configuration
 
