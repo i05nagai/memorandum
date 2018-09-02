@@ -3,7 +3,7 @@ title: clang-format
 ---
 
 ## clang-format
-c++のformatter
+formatter for c++.
 
 
 ## Install
@@ -40,8 +40,8 @@ clang-format <filename>
 ```
 
 * `-i`
-    * 結果をおきかえる
-* `-style`
+    * in-place format
+* `-style [<option>]`
     * `google`
     * `llvm`
     * `webkit`
