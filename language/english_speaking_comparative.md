@@ -5,6 +5,7 @@ title: English Speaking Comparative
 ## English Speaking Comparative
 
 ## comparative
+* they are simpler to use, 3 to 10 times smaller, 20 to 100 times faster, and less ambiguous
 * we can devise a much faster algorithm than the one presented in the previous chapter
 * There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
 * Generally, the more complete the evaluation during the interview process, the better you should feel about potentially accepting an offer
