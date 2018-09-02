@@ -3,7 +3,23 @@ title: English word choice
 ---
 
 ## English word choice
-
+* amaze/astonish/surprise
+    * [amaze, astonish, surprise](http://problem_words.enacademic.com/107/amaze%2C_astonish%2C_surprise)
+    * [surprise vs\. astonish vs\. amaze \- MyEnglishness](https://sites.google.com/site/myenglishness/home/vocabulary/surprisevsastonishvsamaze)
+    * amaze
+        * to bewilder, to perplex, to astound, to stun
+        * we are amazed at what seems extremely difficult, impossible, or improbable
+    * astonish
+        * to strike with sudden fear or wonder
+        * to be astonished is to be dazed or silenced, to be turned to stone
+        * we are astonished when our surprise is so great as to silence or daze us
+    * surprise
+        * to take unawares
+        * we are surprised by the merely unexpected or unanticipated
+    * stun
+    * stound
+* each/every
+    * [Each, every, all \| English grammar \| English lessons by Gymglish](https://www.gymglish.com/en/english-grammar/each-every-all)
 * along/alognside
     * [Along or alongside ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/along-or-alongside)
     * along

@@ -34,6 +34,7 @@ title: English Computer
     * [Architectural Patterns for High Availability](https://www.getfilecloud.com/blog/2015/12/architectural-patterns-for-high-availability/#.W3528JMzafc)
 * software rot
     * [Software rot - Wikipedia](https://en.wikipedia.org/wiki/Software_rot)
+* what level of availability will the users be happy with, given how they user the product?
 
 
 ## Reference

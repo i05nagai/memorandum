@@ -11,13 +11,13 @@ title: GnuPG
 
 
 ## Usage
-登録されている秘密鍵の確認
+Show the list of registered private key
 
 ```
 gpg --list-secret-keys
 ```
 
-登録されている公開鍵の確認
+Show the list of registered public key
 
 ```
 gpg --list-keys
@@ -25,10 +25,10 @@ gpg --list-keys
 
 binary形式で相手に渡す公開鍵の作成(export)
 
-* `-o`
-    * 出力ファイル名
+* `-o <filename>`
+    * output file name
 * `key_user_id`
-    * 鍵作成じに指定したuser id
+    * user id that you used when you create the key
 
 ```
 gpg -o ./my.pub --export key_user_id
@@ -36,8 +36,8 @@ gpg -o ./my.pub --export key_user_id
 
 binary形式で秘密鍵の作成(export)
 
-* `-o`
-    * 出力ファイル名
+* `-o <filename>`
+    * output filename
 * `key_user_id`
     * 鍵作成じに指定したuser id
 
@@ -64,14 +64,14 @@ gpg> trust
 gpg [-o ファイル名] [-r 鍵ユーザID] 暗号化ファイル
 ```
 
-default keyの設定
+Configure default key
 
 ```
 gpg --default-key <user-id>
 ```
 
 import my key in another host.
-importした後信用する必要がある
+You need to trust the imported key.
 
 ```
 $ gpg --import /path/to/private.key

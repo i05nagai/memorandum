@@ -413,6 +413,7 @@ title: English word
     * While focusing exclusively on skills doesn't necessarily yield the candidate who is the best overall fit, organizations with less mature hirring practices may not delve into your competencies and characteristics.
 * encounter
     * don't be surprised if you encounter an experience in which you are drilled exclusively on skills for the entire course of the interview or interviews.
+* fact-checking organization
 
 
 ## animals

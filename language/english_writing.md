@@ -5,6 +5,7 @@ title: English Writing
 ## English Writing
 
 * Basically
+* Whereas
 * It/That would be nice of you
     * [What is the exact meaning of "That would be nice of you"? - Learn english - italki Answers](https://www.italki.com/question/337044)
     * "that would be ___" to accept someone's offer
@@ -294,6 +295,33 @@ title: English Writing
 * get fewer invitations to academic converence
 * be considered entertainers by their peers
 * There are minor pronunciation and intonation erros.
+
+## Conjunctions
+[Conjunction](http://www.smart-words.org/linking-words/conjunctions.html)
+
+* Concession
+    * though
+    * although
+    * even though
+    * while
+* Condition
+    * if
+    * only if
+    * unless
+    * until
+    * provided that
+    * assuming that
+    * even if
+    * in case
+    * lest
+* comparison
+    * than
+    * rather than
+    * whether
+    * as much as
+    * whereas
+* 
+    * after
 
 ## CV
 [Job Interview Question: Why Do You Want This Job?](https://www.thebalancecareers.com/why-do-you-want-this-job-2061202)
