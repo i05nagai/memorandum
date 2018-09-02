@@ -613,6 +613,52 @@ Accoding to <a href="#theorem10-orthogonal-diagonalization">theorem10</a>,
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Proposition 12
+* $A \in \mathbb{R}^{n \times n}$,
+
+(1)
+
+$$
+    \lambda_{i}(E - A)
+    =
+    1
+    -
+    \lambda_{i}(A)
+    .
+$$
+
+#### proof
+(1)
+
+If all eigenvalues are distinct,
+
+$$
+\begin{eqnarray}
+    (E - A)x
+    & = &
+        x
+        -
+        Ax
+    \nonumber
+    \\
+    & = &
+        x
+        -
+        \lambda_{i}(A)x
+    \nonumber
+    \\
+    & = &
+        (1 - \lambda_{i}(A))x
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## Reference
 * Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
