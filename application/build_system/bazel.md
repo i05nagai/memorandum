@@ -14,6 +14,8 @@ For OSX,
 
 ```
 brew install bazel
+# you may need java8
+brew cask install homebrew/cask-versions/java8
 ```
 
 For ubuntu 16.04
@@ -44,9 +46,27 @@ sudo apt-get update && sudo apt-get install bazel
 ```
 
 ## Target patterns
-[Command\-Line Reference \- Bazel](https://docs.bazel.build/versions/master/command-line-reference.html#target-pattern-syntax)
+* [Command\-Line Reference \- Bazel](https://docs.bazel.build/versions/master/command-line-reference.html#target-pattern-syntax)
+* [Concepts and Terminology \- Bazel](https://docs.bazel.build/versions/master/build-ref.html#name)
 
 All target patterns starting with `//` are resolved relative to the current workspace.
+
+* `<package>:<target>`
+* `//foo/bar:wiz`
+    * Just the single target '//foo/bar:wiz'.
+* `//foo/bar`
+    * Equivalent to '//foo/bar:bar'.
+* `//foo/bar:all`
+    * All rules in the package 'foo/bar'.
+* `//foo/...`
+    * All rules in all packages beneath the directory 'foo'.
+* `//foo/...:all`
+    * All rules in all packages beneath the directory 'foo'.
+* `//foo/...:*`
+    * All targets (rules and files) in all packages beneath the directory 'foo'.
+* `//foo/...:all-targets`
+    * All targets (rules and files) in all packages beneath the directory 'foo'.
+* `@<package-name>`
 
 ## Rules
 
