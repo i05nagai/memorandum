@@ -13,4 +13,7 @@ title: English Speaking Health
 * hantavirus
     * they transmit hantavirus
     * infection with hantavirus can progress to Hantavirus Pulmonary Syndrome, which can be fatal
-
+* arthritis
+    * a disease in which a person’s joints become swollen, and in which there is some loss in the ability to move them without pain
+    * In later life she was crippled with arthritis.
+* gout
