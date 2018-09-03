@@ -4,6 +4,10 @@ title: English Writing
 
 ## English Writing
 
+
+
+* From my understaing
+* As I undersntad it
 * Basically
 * Whereas
 * It/That would be nice of you
