@@ -20,6 +20,27 @@ title: English word choice
     * stound
 * each/every
     * [Each, every, all \| English grammar \| English lessons by Gymglish](https://www.gymglish.com/en/english-grammar/each-every-all)
+    * [Each or every ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/each-or-every)
+    * each
+        * we use every to refer to a group or list of three or more things.
+        * we use each to refer to individual things in a group or a list of two or more things
+        * all cases are considered separately
+        * Each of them is extremely qualified
+            * They are all extremely qualified
+        * Each one of them is extremely qualified
+        * Each day is an adventure
+            * Monday, ..., Sunday are all adventure
+    * every
+        * we are referring to a group
+        * we use every to refer to a group or list of three or more things.
+        * Every employee must wash his or her hands after using the bathroom.
+            * All employees must wash their hands after using the bathroom.
+        * I brush my teeth every day.
+            * I brush my teeth Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+        * Every day I learn something new.
+            * I learn something new all the time.
+        * Everyone I know is dead or in prison.
+            * All the people I know are either dead or in prison.
 * along/alognside
     * [Along or alongside ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/along-or-alongside)
     * along
