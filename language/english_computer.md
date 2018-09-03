@@ -24,7 +24,7 @@ title: English Computer
 * maintenace cost
     * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
 * on-call
-    * pagedutyなどの障害の電話通知
+    * pageduty
 * False positive
     * prediction was positive but prediction was false
 * True Negative
@@ -35,7 +35,17 @@ title: English Computer
 * software rot
     * [Software rot - Wikipedia](https://en.wikipedia.org/wiki/Software_rot)
 * what level of availability will the users be happy with, given how they user the product?
-
+* the BNS path might be a string such as `/bns/<cluster>/<user>/<jobname>/<tasknumber>`, which would resovle to 
+* when software is built, the build request is sent to build servers in a datacenter
+* Each time a CL is submitted, tests run on all software that may depend on that CL, either directly or indirectly
+* push-on-green system
+    * a new version is automatically pushed to prodution after passing tests
+* a batch component that reads all of Shakespreare's texts
+* the batch component is a MapReduce comprising three phases
+    * the mapping phase reads Shakespreare's texts and splits them into individual words
+    * The shuffle phase sorts the tupples by words
+    * In the reduce phase, a tuple of is created
+* to obtain the corresponding IP address
 
 ## Reference
 
