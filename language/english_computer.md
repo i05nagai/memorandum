@@ -46,6 +46,15 @@ title: English Computer
     * The shuffle phase sorts the tupples by words
     * In the reduce phase, a tuple of is created
 * to obtain the corresponding IP address
+* rollout
+    * deploying a system/service/database, or system/service/database changes
+* rollback
+* graceful degradation
+    * [What is graceful degradation? \- Definition from WhatIs\.com](https://searchnetworking.techtarget.com/definition/graceful-degradation)
+* handle
+    * load testing determiend that our backend server can handle about 100 QPS
+    * Trials performed with a limited set of users lead us to expect a peak load of about 3,470QPS, so we need at least 35 tasks
+* release engineering
 
 ## Reference
 
