@@ -17,7 +17,6 @@ TeX: {
 
 `\require{AMScd}`をpageに記載する。
 
-
 ### Define new commands
 You can use `Macros` parameters or `\def` command.
 
@@ -33,8 +32,10 @@ https://github.com/mathjax/MathJax-docs/wiki/TeX-Macro-with-number
 
 In mathjax, `\nulldelimiterspace` is 0pt, so just leave out `\kern-\nulldelimiterspace`.
 
+#### Macros
+* [MathJax/sample\-macros\.html at master · mathjax/MathJax](https://github.com/mathjax/MathJax/blob/master/test/sample-macros.html)
+
 ## Reference
 * [MathJax basic tutorial and quick reference - Mathematics Meta Stack Exchange](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [MathJax で利用可能な TeX コマンド（非公式）](http://memopad.bitter.jp/web/mathjax/TeXSyntax.html)
 * [TeX Commands available in MathJax](http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm)
-
