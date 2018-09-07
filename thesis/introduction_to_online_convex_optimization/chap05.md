@@ -854,6 +854,250 @@ $$
 ## 5.3 Online Mirrored Descent
 
 
-#### Algorithm 11 Online Mirrored Descent
+#### Algorithm 11 Lazy/Agile Online Mirrored Descent
+* $\eta > 0$,
+* $\mathcal{K}$,
+    * convex compact
+* $R: \mathcal{K} \rightarrow \mathbb{R}$,
+    * regularization function
+* $y \in \mathcal{K}$,
+    * $y_{1}$ satisfies $\nalba R(y_{1}) = 0$,
+
+$$
+\begin{eqnarray}
+    x_{1}
+    & := &
+        \arg\min_{x \in \mathcal{K}}
+            B_{R}(x \parallel y_{1})
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+**Step1.** for $t=1$ to $T$
+
+**Step2.** Play $x_{t}$
+
+**Step3.** Observe $f_{t}(x_{t})$,
+
+**Step4.** Update $y_{t}$ according to the rule (a) or (b),
+
+Rule for lazy OMD
+
+$$
+\begin{eqnarray}
+    \nabla R(y_{t + 1})
+    & = &
+        \nabla R(y_{t})
+        -
+        \eta \nabla f(x_{t})
+\end{eqnarray}
+$$
+
+Rule for Agile OMD
+
+$$
+\begin{eqnarray}
+    \nabla R(y_{t + 1})
+    & = &
+        \nabla R(x_{t})
+        -
+        \eta \nabla f(x_{t})
+\end{eqnarray}
+$$
+
+**Step5.** Project according to $B_{R}:$
+
+$$
+\begin{eqnarray}
+    x_{t + 1}
+    :=
+    \arg\min_{x \in \mathcal{K}}
+        B_{R}(x \parallel y_{t + 1})
+    \nonumber
+\end{eqnarray}
+$$
+
+**Step6.** end for
+
+**Step7.** Return $x_{T + 1}$,
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+### 5.3.1 Equivalence of lazy OMD and RFTL.
+
+
+#### Lemma 5.4
+* $f_{1}, \ldots, f_{T}$,
+    * linear cost functions
+* $$\{y_{t}\}$$,
+    * produced by Algorithm 11
+* $$\{x_{t}\}$$,
+    * produced by Algorithm 10
+
+$$
+    \arg\min_{x \in \mathcal{K}}
+        B_{R}(x \parallel y_{t})
+    =
+    \arg\min_{x \in \mathcal{K}}
+    \left(
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(x_{s})^{\mathrm{T}}
+            x
+        +
+        R(x)
+    \right)
+    .
+$$
+
+#### proof
+Let
+
+$$
+    x_{t}^{*}
+    :=
+    \arg\min_{x \in \mathbb{R}^{n}}
+        \left(
+            \sum_{s=1}^{t-1}
+                f_{s}(x_{s}^{\mathrm{T}}
+                x
+            +
+            \frac{1}{\eta}
+            R(x)
+        \right)
+    .
+$$
+
+By the first condition of the optimum point,
+
+$$
+\begin{eqnarray}
+    & &
+        \nabla R(x_{t}^{*})
+        +
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(x_{s})
+        =
+        0
+    \nonumber
+    \\
+    & &
+        \nabla R(x_{t}^{*})
+        =
+        -
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(x_{s})
+    \label{lemma_05_04_first_order_condition}
+        .
+\end{eqnarray}
+    .
+$$
+
+In Lazy OMD,
+
+$$
+\begin{eqnarray}
+    \nabla R(y_{t})
+    & = &
+        \nabla R(y_{t - 1})
+        -
+        \eta \nabla f_{t-1}(x_{t-1})
+    \nonumber
+    \\
+    & = &
+        \nabla R(y_{1})
+        -
+        \sum_{s=1}^{t-1}
+            \eta \nabla f_{s}(x_{s})
+    \nonumber
+    \\
+    & = &
+        -
+        \sum_{s=1}^{t-1}
+            \eta \nabla f_{s}(x_{s})
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence $y_{t}$ also satisfies $$\eqref{lemma_05_04_first_order_condition}$$.
+However, $R$ is 
+
+$$
+\begin{eqnarray}
+    B_{R}(x \parallel y_{t})
+    & = &
+        R(x)
+        -
+        R(y_{t})
+        -
+        (\nabla R(y_{t}))^{\mathrm{T}}
+        (x - y_{t})
+    \nonumber
+    \\
+    & = &
+        R(x)
+        -
+        R(y_{t})
+        +
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(s)^{\mathrm{T}}
+        (x - y_{t})
+    \nonumber
+    \\
+    & = &
+        R(x)
+        +
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(s)^{\mathrm{T}} x
+        -
+        \left(
+            R(y_{t})
+            +
+            \eta
+            \sum_{s=1}^{t-1}
+                \nabla f_{s}(s)^{\mathrm{T}} y_{t}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+Since the third term is the independent of $x$,
+
+$$
+\begin{eqnarray}
+    \arg\min_{x \in \mathcal{K}}
+    \left(
+        R(x)
+        +
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(s)^{\mathrm{T}} x
+        -
+        \left(
+            R(y_{t})
+            +
+            \eta
+            \sum_{s=1}^{t-1}
+                \nabla f_{s}(s)^{\mathrm{T}} y_{t}
+        \right)
+    \right)
+    =
+    \arg\min_{x \in \mathcal{K}}
+    \left(
+        R(x)
+        +
+        \eta
+        \sum_{s=1}^{t-1}
+            \nabla f_{s}(s)^{\mathrm{T}} x
+    \right)
+
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
