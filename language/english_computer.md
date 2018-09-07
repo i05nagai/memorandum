@@ -55,6 +55,18 @@ title: English Computer
     * load testing determiend that our backend server can handle about 100 QPS
     * Trials performed with a limited set of users lead us to expect a peak load of about 3,470QPS, so we need at least 35 tasks
 * release engineering
+* uptime
+    * With this in mind, rather than simply maximizing uptime, SRE seeks to balance the risk of unavailability with the goals of rapid innovation and efficient service operations
+* the opportunity cost
+    * the cost borne by an organization when it allocates engineering resources to build systems or features that diminish risk instead of features that are directly visible to or usable by end users
+* end users
+* technical debt
+    * that would waste opportunities to add feature to the system, clean up technical debt, or reduce its oeprational costs
+* sign-up
+    * failing a new user sign-up request is different from failing a request polling for new email in the background
+* nonserving systems
+    * batch, pipeline, storage, transactional systems
+* These product managers are charged with understanding the users and the business, and for shaping the product for success in the marketplace
 
 ## Reference
 
