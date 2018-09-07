@@ -4,6 +4,14 @@ title: English Speaking Clothes
 
 ## English Speaking Clothes
 
+* bandage dress
+    * a dress that fits very tightly to the body and looks as if it is wrapped around the body in layers
+    * She was wearing a silver satin bandage dress.
+* abaya
+    * a long piece of clothing that reaches to the ground, covering the whole of the body except the head, feet, and hands, worn by some Muslim women
+* sundress
+    * an informal dress without sleeves that is worn in hot weather
+* french tips
 * blouse
     * it's flow into your blouse
 * trousers
