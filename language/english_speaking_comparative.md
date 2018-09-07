@@ -5,6 +5,7 @@ title: English Speaking Comparative
 ## English Speaking Comparative
 
 ## comparative
+* Don't make this harder than it already is
 * they are simpler to use, 3 to 10 times smaller, 20 to 100 times faster, and less ambiguous
 * we can devise a much faster algorithm than the one presented in the previous chapter
 * There is nothing quite as inefficent as repeatedly doing manual tasks that could easily be automated
@@ -71,6 +72,23 @@ title: English Speaking Comparative
     * The more electricity you use, The higher your bill will be
     * The more thought about the plan, the less I liked it
     * I guest the more muscle you have, the more they an spasm out of control
+* not as ... as/not so ... as
+    * Jack isn't as older as he looks
+    * Jack isn't as younger as he looks
+    * The twon centre wasn't as crowded as usual
+    * The weathe ris better today. It's not as cold
+    * Lisa didn't do as well in the exam as she had hoped
+* as ... as
+    * I got here as fast as I could
+    * Let's walk. It's as quick as taking the bus
+* twice as ... as/ three times as ... as
+    * Petrol is twice as pexpensive as it was a few years ago
+    * their house is about three times as big as ours.
+* the same as
+    * Laura's salary is the same as mine
+    * Laura's get the same salary as me.
+    * David's the same age as James
+    * Sarah hasn't changed. She still looks the same as she did ten years ago
 
 ## superative
 * What is the longest river in the world?
@@ -92,3 +110,4 @@ title: English Speaking Comparative
     * What was the happiest day of your life?
 * What's the most important decision you've ever had to make?
 * That was the best holiday I've had for a long time.
+
