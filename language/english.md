@@ -5161,6 +5161,16 @@
     * 桁, 倍
     * e.g. 3 orders of magnitude = 3 倍の
 
+## TV shows
+* [Big Brother \- YouTube](https://www.youtube.com/user/bigbrother)
+* [The Real Housewives of New York City \| Bravo TV Official Site](http://www.bravotv.com/the-real-housewives-of-new-york-city)
+* [RHONY: The Official Season 6 Preview Special \(Season 6, Episode 1\) \| Bravo \- YouTube](https://www.youtube.com/watch?v=Hii3ZXKTq-k)
+* [\#KUWTK \- YouTube](https://www.youtube.com/results?search_query=%23KUWTK)
+* [The Voice \- YouTube](https://www.youtube.com/user/NBCTheVoice)
+* [Watch The Bachelor TV Show \- ABC\.com](https://abc.go.com/shows/the-bachelor)
+* [The Best TV Shows for Learning English While Having Fun\!](https://www.mosalingua.com/en/list-of-best-tv-shows-for-learning-english/)
+    * [How I Met Your Mother, Season 3 on iTunes](https://itunes.apple.com/us/tv-season/how-i-met-your-mother-season-3/id264400421)
+
 ## Reference
 * [Common Mistakes and Tricky Choices, Contents](http://englishplus.com/grammar/mistcont.htm)
 * [アメリカの会社で三ヶ月仕事して必要だと思った英語力 - Jeffsuke is not a pen.](http://jeffsuke.hatenablog.com/entry/2016/01/18/004556)

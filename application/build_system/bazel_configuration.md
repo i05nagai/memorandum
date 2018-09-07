@@ -55,6 +55,14 @@ local_repository(
     * remote non bazel project
 * `new_http_archive`
     * remote non bazel project
+    * `name`
+    * `build_file`
+        * The file to use as the BUILD file for this repository.  Either build_file or build_file_content must be specified.
+    * `strip_prefix`
+        * 
+
+* `exports_files`
+    * specifies a list of files belonging to this package that are exported to other packages but not otherwise mentioned in the BUILD file.
 
 ### C/C++
 
@@ -65,3 +73,5 @@ local_repository(
 
 
 ## Reference
+* [Functions \- Bazel](https://docs.bazel.build/versions/master/be/functions.html#exports_files)
+* [Workspace Rules \- Bazel](https://docs.bazel.build/versions/master/be/workspace.html)

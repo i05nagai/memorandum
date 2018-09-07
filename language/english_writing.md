@@ -4,6 +4,13 @@ title: English Writing
 
 ## English Writing
 
+
+* with this in mind
+    * With this in mind, rather than simply maximizing uptime, SRE seeks to balance the risk of unavailability with the goals of rapid innovation and efficient service operations
+* Put simply,
+    * Put simply, auser on a 99% reliable smartpone cannot tell the difference between 99.99% and 99.999% service reliability
+* From my understaing
+* As I undersntad it
 * Basically
 * Whereas
 * It/That would be nice of you

@@ -31,6 +31,23 @@ title: Site Reliability Engineering
         * An accurate organic demand forecast, which extends beyond the lead time require for acquiring capacity
         * An accurate incorporation of inorganic demand soruces into the deamnd forecast
 * Provisioning
+* Job and Data Organization
+    * A backend in Asia contacting a Bigtable in the USA adds a significant amount of latency, so we replicate the Bigtable in each region
+    * Bigtable replication
+        * it provides a resilience should a Bigtable server fail
+        * it lowers data-access latency
+* Risk
+    * The cost of redundant machine/compute resources
+    * The opportunity cost
+        * the cost borne by an organization when it allocates engineering resources to build systems or features that diminish risk instead of features that are directly visible to or usable by endusers. These engineers no longer work on new features and products for end users
+    * unplanned downtime
+        * the most straight forward way of representing risk tolerance is in terms of the acceptable level of unplanned downtime
+        * availability = uptime / (uptime + downtime)
+            * a system with an availability target of 99.99% can be down for up to 52.56 minutes in a year
+            * at Google, service is properly distributed, so the systems is always up
+        * availability = successful requests/(total requests)
+            * a system that serves 2.5M requests in a day with a daily availability target of 99.99% can serve up to 250 errors and still hit its target for that given day
+
 
 
 ## Reference

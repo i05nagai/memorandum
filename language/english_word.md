@@ -415,6 +415,11 @@ title: English word
     * don't be surprised if you encounter an experience in which you are drilled exclusively on skills for the entire course of the interview or interviews.
 * fact-checking organization
 
+## color
+* tan
+    * a light brown or yellow-brown color
+    * a tan jacket
+
 
 ## animals
 * sea otters

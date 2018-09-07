@@ -3,6 +3,9 @@ title: English Speaking Personality
 ---
 
 ## English Speaking Personality
+* sociable
+    * he is very sociable. he likes parties
+    * I had a headache and I wasn't feeling ery sociable
 * stubborn
     * you are so stubborn
 * nuisance

@@ -5,6 +5,14 @@ title: English Math
 ## English Math
 
 ## Number
+* Wages rose by 2.9% last year, but real earnings still fell by 1.3%.
+* One fourth of the Japanese population is over sixty five years old 
+* Japan's economy grew by 1.5% in real terms in the first quarter.
+* It's seven out of ten
+* One out of four Japanese people is over 65 years old/65 years old or older
+* One in four Japanese is over 65 years old
+* Every 4th person in the gym is older than 65
+* 25% of the Japanese population is over age 65
 * a book 300 pages long
 * a building 10 stories high
 * a lot/many/a great nuber of/a plenty of

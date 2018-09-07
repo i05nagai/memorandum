@@ -24,7 +24,7 @@ title: English Computer
 * maintenace cost
     * [Development cost versus maintenance cost - Stack Overflow](https://stackoverflow.com/questions/3477706/development-cost-versus-maintenance-cost)
 * on-call
-    * pagedutyなどの障害の電話通知
+    * pageduty
 * False positive
     * prediction was positive but prediction was false
 * True Negative
@@ -35,7 +35,38 @@ title: English Computer
 * software rot
     * [Software rot - Wikipedia](https://en.wikipedia.org/wiki/Software_rot)
 * what level of availability will the users be happy with, given how they user the product?
-
+* the BNS path might be a string such as `/bns/<cluster>/<user>/<jobname>/<tasknumber>`, which would resovle to 
+* when software is built, the build request is sent to build servers in a datacenter
+* Each time a CL is submitted, tests run on all software that may depend on that CL, either directly or indirectly
+* push-on-green system
+    * a new version is automatically pushed to prodution after passing tests
+* a batch component that reads all of Shakespreare's texts
+* the batch component is a MapReduce comprising three phases
+    * the mapping phase reads Shakespreare's texts and splits them into individual words
+    * The shuffle phase sorts the tupples by words
+    * In the reduce phase, a tuple of is created
+* to obtain the corresponding IP address
+* rollout
+    * deploying a system/service/database, or system/service/database changes
+* rollback
+* graceful degradation
+    * [What is graceful degradation? \- Definition from WhatIs\.com](https://searchnetworking.techtarget.com/definition/graceful-degradation)
+* handle
+    * load testing determiend that our backend server can handle about 100 QPS
+    * Trials performed with a limited set of users lead us to expect a peak load of about 3,470QPS, so we need at least 35 tasks
+* release engineering
+* uptime
+    * With this in mind, rather than simply maximizing uptime, SRE seeks to balance the risk of unavailability with the goals of rapid innovation and efficient service operations
+* the opportunity cost
+    * the cost borne by an organization when it allocates engineering resources to build systems or features that diminish risk instead of features that are directly visible to or usable by end users
+* end users
+* technical debt
+    * that would waste opportunities to add feature to the system, clean up technical debt, or reduce its oeprational costs
+* sign-up
+    * failing a new user sign-up request is different from failing a request polling for new email in the background
+* nonserving systems
+    * batch, pipeline, storage, transactional systems
+* These product managers are charged with understanding the users and the business, and for shaping the product for success in the marketplace
 
 ## Reference
 

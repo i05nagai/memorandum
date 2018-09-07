@@ -13,3 +13,4 @@ kafka
 
 ## Reference
 * [Apache Kafka](https://kafka.apache.org/)
+* [Top 5 Apache Kafka Books \| Complete Guide To Learn Kafka \- DataFlair](https://data-flair.training/blogs/apache-kafka-books/)

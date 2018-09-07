@@ -3,6 +3,34 @@ title: English word choice
 ---
 
 ## English word choice
+* make a good teacher/become a good teacher/be a good at teaching
+    * make a good teacher
+        * I'm sure he will make a good teacher.
+        * he is currently not a teacher, and that when (or if) he becomes a teacher, he will be a good one.
+    * become a good teacher
+        * I'm sure he will become a good teacher
+        * applies to a definite point in time, whereas "will make" applies to an unspecified (and possibly hypothetical) future time
+    * be a good at teaching
+        * I'm sure he will be a good teacher.
+        * he is currently not a good teacher, either because he is currently not a teacher, or because he is currently a bad teacher.
+* in time/in time to/on time
+    * [word usage \- Difference between "in time" and "on time" \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/9623/difference-between-in-time-and-on-time)
+    * in time
+        * typically, at or before a deadline.
+        * We finished cleaning the house in time for the guests to arrive.
+    * in time to/with time to
+        * with time remaining, sufficient to do something else.
+        * I finished cooking dinner in time to take a shower before the guests arrived.
+        * We got the kids in bed with time to watch a movie.
+    * on time
+        * exactly on schedule
+        * I arrived on time, at 8:00pm.
+* for long/fo a long time
+    * [What is the difference between 'for long' and 'for a long time'? \- Quora](https://www.quora.com/What-is-the-difference-between-for-long-and-for-a-long-time)
+    * for long
+        * refers to an interval in the recent past
+    * for a lng time
+        * tends to refer to an interval stretching further back in history
 * amaze/astonish/surprise
     * [amaze, astonish, surprise](http://problem_words.enacademic.com/107/amaze%2C_astonish%2C_surprise)
     * [surprise vs\. astonish vs\. amaze \- MyEnglishness](https://sites.google.com/site/myenglishness/home/vocabulary/surprisevsastonishvsamaze)
@@ -20,6 +48,27 @@ title: English word choice
     * stound
 * each/every
     * [Each, every, all \| English grammar \| English lessons by Gymglish](https://www.gymglish.com/en/english-grammar/each-every-all)
+    * [Each or every ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/each-or-every)
+    * each
+        * we use every to refer to a group or list of three or more things.
+        * we use each to refer to individual things in a group or a list of two or more things
+        * all cases are considered separately
+        * Each of them is extremely qualified
+            * They are all extremely qualified
+        * Each one of them is extremely qualified
+        * Each day is an adventure
+            * Monday, ..., Sunday are all adventure
+    * every
+        * we are referring to a group
+        * we use every to refer to a group or list of three or more things.
+        * Every employee must wash his or her hands after using the bathroom.
+            * All employees must wash their hands after using the bathroom.
+        * I brush my teeth every day.
+            * I brush my teeth Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+        * Every day I learn something new.
+            * I learn something new all the time.
+        * Everyone I know is dead or in prison.
+            * All the people I know are either dead or in prison.
 * along/alognside
     * [Along or alongside ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/along-or-alongside)
     * along
