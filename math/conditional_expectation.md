@@ -373,3 +373,19 @@ $$
 $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+#### Remark
+If the joint p.d.f. of $(X, Y)$ exists, the p.d.f. of $$\mathrm{E}\left[ Y \mid X \right]$$ is
+
+$$
+    p_{Y \mid X}(y)
+    :=
+    \frac{
+        f_{(X, Y)}(X, y)
+    }{
+        f_{X}(X)
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
