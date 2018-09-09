@@ -5,6 +5,9 @@ title: English Speaking Comparative
 ## English Speaking Comparative
 
 ## comparative
+* the hungrier we got the more she blamed me
+* as far as I'm concerned these fuckers got what was coming to them
+* I have about as much for them as they did for the sick and the old and anyone else they didn't think was fit to belong in their little paradise
 * Don't make this harder than it already is
 * they are simpler to use, 3 to 10 times smaller, 20 to 100 times faster, and less ambiguous
 * we can devise a much faster algorithm than the one presented in the previous chapter
