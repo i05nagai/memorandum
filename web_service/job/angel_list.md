@@ -27,18 +27,25 @@ Justin Vogel
     * In-house recruiters will ask you
         * to describe your interest in the company
         * to walk them through your resume
-    * What does the company do?
-    * What challenges do they face in their market/industry?
-    * What broadly differentiates them from their competitors?
-    * What do their employees say about their culture on Glassdoor?
-    * If the company has 50+ employees, Glassdoor will serve as a great resource to see what interviewers previously asked candidates about for specific roles
-    * Why this company?
-    * What are the top two things you want to know about this company?
-    * What excites you about working in this industry?
-    * What is the next book on your list/what are you reading now? What do you hope to learn from it?
-    * Describe a time that you came up with a new approach to an existing problem. What was the problem? What steps did you take to overcome the problem?
-    * How did you take the initiative to learn new things in your previous role(s)?
-    * Who are your mentors and what do you look for in a mentor? Who is someone you admire and why?
+    * you have to prepare for
+        * What does the company do?
+        * What challenges do they face in their market/industry?
+        * What broadly differentiates them from their competitors?
+        * What do their employees say about their culture on Glassdoor?
+        * If the company has 50+ employees, Glassdoor will serve as a great resource to see what interviewers previously asked candidates about for specific roles
+        * Why this company?
+        * What are the top two things you want to know about this company?
+        * What excites you about working in this industry?
+        * What is the next book on your list/what are you reading now? What do you hope to learn from it?
+        * Describe a time that you came up with a new approach to an existing problem. What was the problem? What steps did you take to overcome the problem?
+        * How did you take the initiative to learn new things in your previous role(s)?
+        * Who are your mentors and what do you look for in a mentor? Who is someone you admire and why?
+* questions
+    * What is the first project the person hired for this position will need to complete?
+    * After three months on the job, what would you expect this hire to have done to be a success in your mind?
+    * What performance metrics would you employ to evaluate whether I had met or exceeded your goals?
+    * How do you evaluate current team members or fellow founders?
+    * What are some of the characteristics you value most in your current teammates?
 
 ## jobs
 Visa sponsarship.
