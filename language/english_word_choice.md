@@ -3,6 +3,28 @@ title: English word choice
 ---
 
 ## English word choice
+* appear/seem
+    * [Appear \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/common-verbs/appear)
+    * appear
+        * how something looks or seems to look
+        * talk about facts and events
+        * we usually follow it by an adjective or by a to-infinitive
+        * they appear very disappeared
+        * there appears to be problem with the car
+        * The people don’t appear to know why they are here
+        * she appears quite a nervours driver
+        * we can use appear with it as a subject, followed by as if, though, or that
+            * It appears as if you got the wrong directions to the school.
+            * it appears as though they were wrong
+            * it appears that he was not the first choice
+        * suddenly the figure of a man appeared in the distance
+    * seem
+        * facts but also to talk about personal feelings and ideas
+        * seem is often used with noun
+        * his car seems/appears to have broken down
+        * It seems crazy that we should have to pay twice!
+            * not: It appear crazy ...
+        * It seemed a good choice at the time.
 * make a good teacher/become a good teacher/be a good at teaching
     * make a good teacher
         * I'm sure he will make a good teacher.
