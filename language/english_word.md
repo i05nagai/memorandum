@@ -428,6 +428,8 @@ title: English word
     * otters
 * seal
 * whale
+* lionfish
+    * pterois
 
 ## plant
 https://study.com/cimages/multimages/16/diagramplanteudicot.png
