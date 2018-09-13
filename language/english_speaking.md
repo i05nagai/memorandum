@@ -2826,7 +2826,16 @@ title: English Speaking
     * the two men who called at the house were well-spoken and had a reassuring manner
     * for more than half a century, the assuring tones of BBC newscasters have informed British television 
 * navajo
-
+* hindsight
+    * the ability to understand, after something has happened, why or how it was done and how it might have been done better
+    * they are ideas that, in hindsight, often seem hair-brained
+    * with (the benefit/ wisdom of)hindsight
+        * with hindsight, I should have taken the job
+    * In hindsight, it would have been better to wait
+* harebrained
+    * (of plans or people) not practical or silly
+    * the sounds like another of his harebrained schemes
+    * a harebrained scheme
 
 
 
