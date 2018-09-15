@@ -36,7 +36,7 @@ $$
 \end{eqnarray}
 $$
 
-We denote $i$-th leargest eignen value by $\lmabda_{i}(A)$.
+We denote $i$-th leargest eignen value by $\lambda_{i}(A)$.
 
 #### Proposition 1
 * $x \in \mathbb{R}^{n}$,
@@ -69,6 +69,40 @@ $$
         A
         (x x^{\mathrm{T}})
     \right)
+$$
+
+(3)
+
+$$
+\begin{eqnarray}
+    \mathrm{tr}
+    \left(
+        A
+        +
+        B
+    \right)
+    & = &
+        \mathrm{tr}(A)
+        +
+        \mathrm{tr}(B)
+    \nonumber
+\end{eqnarray}
+$$
+
+(4)
+
+$$
+\begin{eqnarray}
+    c \in \mathbb{R},
+    \
+    \mathrm{tr}
+    \left(
+        c A
+    \right)
+    & = &
+        \mathrm{tr}(cA)
+    \nonumber
+\end{eqnarray}
 $$
 
 #### proof
