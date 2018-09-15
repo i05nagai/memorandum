@@ -3,6 +3,12 @@ title: English Speaking Personality
 ---
 
 ## English Speaking Personality
+* charmer
+    * a person who has good qualities that make you like them
+        * She's a little charmer - you'll never meet a more likeable child.
+    * a person who use charm to influence other people, usually for their own purposes
+        * He's a real charmer, so be careful!
+* detail-oriented
 * sociable
     * he is very sociable. he likes parties
     * I had a headache and I wasn't feeling ery sociable
