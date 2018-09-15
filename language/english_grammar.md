@@ -152,6 +152,16 @@ Interrogative pronouns
         * Two em dashes can be used to indicate missing portions of a word, whether unknown or intentionally omitted.
     * Spaces with the em dash
 
+## Apositives
+* [Appositive \| What is an Appositive?](https://www.grammar-monster.com/glossary/appositive_apposition.htm)
+
+* Don't leave your shoes there, or my dog, Ollie, will munch them.
+    * (In this example, the appositive is Ollie. It is in apposition (as it's called) to my dog.)
+* My best friend, Lee, caught a whelk when he was fishing for bass.
+    * (In this example, the appositive is Lee. It is in apposition to My best friend.)
+* Dr Pat, the creator of the turnip brew, sold 8 barrels on the first day.
+    * (In this example, the appositive is the creator of the turnip brew. It is in apposition to Dr Pat.)
+
 ## Book
 * [10 Amazing Books That Will Improve Your Writing Skills | Grammarly](https://www.grammarly.com/blog/books-that-improve-writing-skills/)
 * [5 Books That Will Improve Your Writing | HuffPost](https://www.huffingtonpost.com/gregory-ciotti/5-books-that-will-improve_b_7489272.html)
@@ -702,6 +712,27 @@ modal verb
     * polite way of saying what you want
         * I'd like some information about hotels, please
         * I'd like to try on this jacket, please
+
+## apostrophe
+[Apostrophe Rules](http://grammar.yourdictionary.com/punctuation/apostrophe-rules.html)
+
+* possession
+    * an apostrophe + s
+        * Amy's ballet class
+        * if the name ends in 's', it's still ok to add 's'
+            * Ross' ballet class
+            * Ross's ballet class
+        * if a plural noun doesn’t end in 's'add an apostrophe + 's' to create the possessive form.
+            * The children’s rooms
+    * an apostrophe
+        * Use an apostrophe after the 's' at the end of a plural noun to show possession.
+        * The parents’ bedroom, the Smiths’ lives
+* contraction
+    * combine two words
+        * they + have = they’ve
+        * are + not = aren’t
+        * they + will = they’ll
+        * will + not = won't
 
 
 
