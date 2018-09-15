@@ -6,7 +6,7 @@ title: Positive Definite Matrix
 
 ## Definition
 
-### Definition. Inequality for vector
+#### Definition. Inequality for vector
 * $$z = (z_{1}, \ldots, z_{N})^{\mathrm{T}} \in \mathbb{R}^{N}$$,
 
 $$
@@ -31,7 +31,7 @@ This is equivalent to $$z \ge 0$$ and $z \le 0$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definition. positive definite matrix
+#### Definition. positive definite matrix
 * $$M$$,
     * $N \times N$
 
@@ -48,7 +48,7 @@ We denote $$\mathcal{S}_{n}^{+}$$ as a set of all p.d.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 
-### Definition. nonnegative definite.
+#### Definition. nonnegative definite.
 * $$M$$,
     * $N \times N$
 
@@ -64,7 +64,7 @@ We denote $$\mathcal{S}_{n}^{\ge 0}$$ as a set of all nonnegative definite.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definition. positive semidefinite.
+#### Definition. positive semidefinite.
 * $$M$$,
     * $N \times N$
 
@@ -75,7 +75,7 @@ We denote $$\mathcal{S}_{n}$$ as a set of all p.s.d.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Proposition1 equivalence
+#### Proposition1 equivalence
 The definition of p.d. are equivalent to
 
 $$
@@ -110,7 +110,7 @@ $$
     .
 $$
 
-### proof
+#### proof
 For any $$z \in \mathbb{R}^{n} \setminus \{0\}$$, letting $$t := \max_{i}|z_{i}|$$, $x := z / t$, $x \in B_{0, 1}$ and $z = tx$, that is,
 
 $$
@@ -151,7 +151,7 @@ Coverse is obvious.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Corollary2 equivalence
+#### Corollary2 equivalence
 The definition of p.d. are equivalent to
 
 $$
@@ -171,13 +171,13 @@ $$
 \end{equation}
 $$
 
-### proof
+#### proof
 $z - a \in B_{0, r}$ if and only if $z \in B_{a, r}$.
 The result is immediate consequence of the previous proposition.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Remark.
+#### Remark.
 * If $M$ is positve definite, then $M$ is nonnegative definite.
 * If $M$ is positve semidefinite, then $M$ is nonnegative definite.
 * Since $$x^{\mathrm{T}}I_{n}x = \sum_{i=1}^{n}x_{i}^{2}$$, $$I_{n}$$ is positive definite.
@@ -186,7 +186,7 @@ The result is immediate consequence of the previous proposition.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definitions. nonpositive definite, negative definite, negative semidefinite
+#### Definitions. nonpositive definite, negative definite, negative semidefinite
 * $$M$$,
     * $n \times n$
 
@@ -194,7 +194,7 @@ The result is immediate consequence of the previous proposition.
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-## Lemma1
+#### Lemma1
 * $$A := (a_{j}^{i})$$,
     * $n \times n$ matrix
 * $$B := (b_{j}^{i})$$,
@@ -230,7 +230,7 @@ $$
 \end{eqnarray}
 $$
 
-## proof.
+#### proof.
 ($\Rightarrow$)
 Let $$e_{i}$$ be $i$-th unit vector.
 By assumption, we observe that
@@ -376,7 +376,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Lemma2
+#### Lemma2
 * $$D := \mathrm{diag}(d_{1}, \ldots, d_{n})$$,
     * diagonal matrix
 
@@ -386,7 +386,7 @@ Then
 * (2). $D$ is positive definite if and only if $$d_{1}, \ldots, d_{n}$$ are positve.
 * (3). $D$ is positive semidefinite if and only if $$d_{1}, \ldots, d_{n}$$ are nonnegative and $$\mathrm{card}(\{i \mid d_{i} = 0\}) > 0$$.
 
-## proof.
+#### proof.
 These are obvious from the following calculation:
 
 $$
@@ -400,14 +400,14 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-## Lemma3
+#### Lemma3
 * $$A \in \mathbb{R}^{n \times n}$$,
     * symmetric
     * nonnegative definite and nonpositive definite matrix
 
 Then $M$ is null matrix.
 
-## proof.
+#### proof.
 For every vector $x \in \mathbb{R}^{n}$,
 
 $$
@@ -425,7 +425,7 @@ Since $A$ is symmetric so that by lemma1 $A = 0$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Lemma4.
+#### Lemma4.
 * $k \in \mathbb{N}$,
 * $A \in \mathbb{R}^{n \times n}$,
     * positve definite (positve semidefinite)
@@ -438,7 +438,7 @@ Then
 * (2) If $A$ and $B$ are nonnegative definite, $A + B$ is nonnegative definite.
 * (3) If $A$ is positive definite and $B$ is nonnegative definite, $A + B$ is positive definite.
 
-## proof.
+#### proof.
 
 $$
 \begin{eqnarray}
@@ -469,7 +469,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Lemma5
+#### Lemma5
 * $A \in \mathbb{R}^{n \times n}$
     * matrix
 * $B \in \mathbb{R}^{n \times n}$
@@ -495,7 +495,7 @@ $$
 \end{eqnarray}
 $$
 
-## proof.
+#### proof.
 It safies to show one of neccecity and sufficiency.
 Suppose that $$A \in \mathcal{S}_{n}$$.
 Since $$A + A^{\mathrm{T}} = (a_{j}^{i} + a_{i}^{j})$$,
@@ -531,13 +531,13 @@ Then applying lemma1 we obtain $$x^{\mathrm{T}}Ax = x^{\mathrm{T}}Bx$$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Lemma6
+#### Lemma6
 * $A$
     * positive definite matrix
 
 Then $A$ is nonsingular.
 
-## proof.
+#### proof.
 We will prove that by contradiction.
 Suppose $A$ is singular.
 Then we have $\exists x \in \mathbb{R}^{n}$ such that $Ax = 0$ and $x$ is a nonnull vector..
@@ -553,7 +553,7 @@ $$
 Hence $A$ is not positive definite.
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem7
+#### Theorem7
 * $A \in \mathbb{R}^{n \times n}$,
     * matrix
 * $P \in \mathbb{R}^{n \times m}$,
@@ -565,7 +565,7 @@ Then
 * (2) If $A$ is nonnegative definite and $$\mathrm{rank}(P) < m$$, then $$P^{\mathrm{T}}AP$$ is positive semidefinite.
 * (3) If $A$ is positive definite and $$\mathrm{rank}(P) = m$$, then $$P^{\mathrm{T}}AP$$ is positive definite.
 
-## proof.
+#### proof.
 proof of (1).
 Since $A$ is nonnegative definite, we observe
 
@@ -601,9 +601,9 @@ Since $P$ is nonsigular, $Px = 0$ implies $x = 0$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Corollary8
+#### Corollary8
 
-## proof.
+#### proof.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -690,6 +690,86 @@ $$
     & > &
         0
     .
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition 10
+* $A \in \mathbb{R}^{n \times n}$,
+    * positive semidefinite
+
+Then there exists $B \in \mathbb{R}^{n \times n}$ such that
+
+$$
+    A
+    =
+    B
+    B
+    .
+$$
+
+#### proof
+Since $A$ is symmetric, by <a href="{{ site.baseurl }}/math/eigenvalue.html#theorem10.orthogonal-diagonalization"> proposition</a>, $A$ is orthogonalizable.
+
+$$
+\begin{eqnarray}
+    A
+    & = &
+        V
+        D
+        V^{-1}
+    \nonumber
+    \\
+    D
+    & = &
+        \mathrm{diag}(\lambda_{1}(A), \ldots, \lambda_{n}(A))
+    \nonumber
+    \\
+    V
+    & = &
+        (v_{1}, \ldots, v_{n})
+\end{eqnarray}
+$$
+
+where $v_{i} \in \mathbb{R}^{n}$ is an eigenvector corresponding to the eigenvalue $\lambda_{i}(A)$.
+We define
+
+$$
+\begin{eqnarray}
+    D^{1/2}
+    & := &
+        \mathrm{diag}(\lambda_{1}(A)^{1/2}, \ldots, \lambda_{n}(A)^{1/2})
+    \nonumber
+    \\
+    B^{1/2}
+    & := &
+        V
+        D^{1/2}
+        V^{-1}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $A$ is positive semidefinite, the square root of a eigenvalue exists.
+
+$$
+\begin{eqnarray}
+    B
+    B
+    & = &
+        VD^{1/2}V^{-1}
+        VD^{1/2}V^{-1}
+    \nonumber
+    \\
+    & = &
+        VDV^{-1}
+    \nonumber
+    \\
+    & = &
+        A
     \nonumber
 \end{eqnarray}
 $$
