@@ -4,6 +4,11 @@ title: English Speaking Telephone
 
 ## English Speaking Telephone
 
+* we're breaking up a bit
+    * the connection is a bit wonky
+    * the conenctaion is unstable
+    * we've got a shaky connection. I can't hear you clearly
+    * I hope your connection gets better!
 * Just call me back tomorrow
 * Hold on, let me get apen.
 * Yes, speaking
