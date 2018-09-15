@@ -4,6 +4,7 @@ title: English Speaking Health
 
 ## English Speaking Health
 * migraine
+* nitrogylycerin pills
 * ALzheimer's disease
     * the nurse told me that Eddie is showing the early signs of Alzheimer's disease.
     * It affects his memory and sometimes he doesn't know where he is or what he's doing

@@ -47,6 +47,15 @@ title: Site Reliability Engineering
             * at Google, service is properly distributed, so the systems is always up
         * availability = successful requests/(total requests)
             * a system that serves 2.5M requests in a day with a daily availability target of 99.99% can serve up to 250 errors and still hit its target for that given day
+* target level of availability
+    * what level of service will the users expect?
+    * does this service tie directly to revenue?
+    * Is this a paid service, or is it free?
+    * If there are competitors in the marketplace, what level of service do those competitors provide?
+    * Is this service targeted at consumers, or at enterprises?
+* cost
+    * If we were to build and operate these systems at one more nine of availability, what would our incremental increase in revenue be?
+    * Does this additional revenue offset the cost of eaching that level of reliability?
 
 
 

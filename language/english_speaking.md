@@ -1063,6 +1063,7 @@ title: English Speaking
 * head
     * head off
 * make
+    * make a deal with
     * make contact with
         * it has not made contact with the tribes for more than 30 years.
     * make fun of
@@ -1121,6 +1122,15 @@ title: English Speaking
         * the results of the election are of concern to us all
     * To whom it may concern
 * worry
+    * problem
+        * try not to worry
+        * it's silly woring about things which are outside your control
+        * she's worried that she might not be able to find another job
+        * you worried your mother by not writing
+        * It worries me that he hasn't phone yet
+    * animal
+        * if a dog worries another animal, it chases and frightens it and might also bite it
+        * Any dog caught worrying sheep in these fields will be shot
 * bother
     * the loss didn't bother him, but this team's confidence concerns him
 * At the risk of boring you, let me give you just an overview of Plato's ethcal theory.
@@ -1856,6 +1866,13 @@ title: English Speaking
 * Isn't possible that the company that sold the jeans made more than just one pair?
 * snoop
     * snooping around her crotch
+    * to look around a place secretly in order to discover things about it or the people connected with i
+        * you have no business snooping aroud my office
+        * People were sent out to snoop on rival businesses
+        * She's the sort of person you can imagine snooping about your room when you're not there
+        * her husband is snooping on her because he thinks she is seeing another man
+    * someone who snoops
+        * he's such a snoop
 * mission
     * we're on a mission
 * off
@@ -3170,7 +3187,9 @@ title: English Speaking
     * restless can also mean not satisfied with your situation and wanting a change
         * the opposition parties provide no clear alternative for restless voters
 * vote
-    * 
+    * swing voter
+        * someone who does not always vote for the same political party and who might be persuaded to vote for one of several parties in an election
+        * The parties all try to maximize their appeal to swing voters in marginal constituencies.
 * suffice
     * to be enough
     * suffice to do
@@ -3783,6 +3802,9 @@ title: English Speaking
 * not for the first time
 * conversation
     * the weather is quite the popular conversation starter.
+    * it was hard to keep the conversation going/flowing
+    * it was hard to make the conversation deeper
+    * it was hard to have a deeper conversation
 * asylees
 * asylum
 * recap
@@ -3968,7 +3990,11 @@ title: English Speaking
 * obnoxious
     * very unpleasant and rude
     * some of his collegues say that's he's loud and obnoxious
-* revolve
+* revolve/rotate/spin
+    * to move in a circle or curve around a central point, to cause something to do this
+        * the plane revolved 162 degrees onto its back
+        * the earth revolves around the sun, roughly in a circle
+        * his life revolves around football
 * flood
     * Our washing machine broke down yesterday and flooded the kitchen
     * the whole town flooded when the river burst its bank
@@ -4107,6 +4133,187 @@ title: English Speaking
     * move
         * to movefast and without control
         * the bus careered down a slope and hit telephone pole
+* mentor
+    * a person who gives a younger or less experienced person help and advice over a period of time, esp. at work or school
+    * he aced as a business mentor to many young aspiring entreprenerus
+    * to support and advise someone with less experience to help them develop in their work
+        * The programme was set up to train and mentor small-business entrepreneurs.
+* metric
+    * what performance metrics would you employ to evaluate whether I had met or exceeded your goals?
+* relentless
+    * continuing in a determined way without any interruption
+        * the relentless pursuit of wealth and power
+    * continuing in a severe or extreme way
+        * relentless critism/pressure
+        * relentless heat
+* value
+* instinctively
+    She instinctively understood how I felt.
+* instinctive
+    * instinctive behaviour or reactions are not thought about, planned or developed by training
+    * an instinctive reaction
+    * My instinctive reaction was to walk away to avoid an argument.
+* grave
+    * burying place
+        * a place where a dead person or dead peole are buried, esp. when under the ground and marked by a stone
+        * a mass grave
+        * an unmarked grave
+        * a grave digger
+        * he visits his mother's grave every Sunday
+    * serious
+        * urgent and very bad; serious
+        * it was the gravest political crisis of his career
+        * grave situation
+* life-threatening
+    * able to cause death
+    * a life-threathing experience/illess
+    * life-threatening diseases such as cancer
+* clumsy
+    * a clumsy person ofteh accicidents because they do not behave in a careful, controlled way
+        * that's the third glass you've smashed this week. you're so clumsy
+    * awkward in movement or manner
+        * he gave a clumsy bow
+    * not skilful in the way you deal with or express something
+        * her clumsy handling of the situation only made it worse
+        * my attempts to apologize were very clumsy
+        * Some of the wording of the statement was a bit clumsy.
+* holdfast
+    * a firm grip
+    * something to which something else may be firmly secured
+    * a part by which a plant clings to a flat surface
+* innate
+    * (of a quality) which you are born with, or which is present naturally
+        * her dance expresses the innate beauty of the human sprit
+    * An innate quality or ability is one that you were born with, not one you have learned
+        * his most impressive quality was his innate goodness
+* jeopardize
+    * take risk
+    * to put something such as a plan or system in danger of being harmed or damaged
+        * She knew that by failing her finals she could jeopardize her whole future
+* work ethic
+    * the principle that hard work is intrinsically virtuous or worthy of reward
+* intrinsic/essential/nesessary
+    * being an extremely important and basic characteristic of a person or thing
+    * works of little intrinsic value/interest
+    * maths is an intrinsic part of the school curriculum
+    * intrinsic to
+        * design is intrinsic to every product
+    * an intrinsic part/element of
+        * stay-at-home mothers are an intrinsic part of the family finances
+* virtuous
+    * having good moral qualities and behaviour
+    * a virtuous people thinks himself or herself morally better than other poeple
+        * he only does charity work so he can feel virtuous
+* bastard
+    * unpeasant
+        * an pleasant person
+    * child
+        * a person born to parents who are not married to each other
+        * he was born in 1779, the bastard son of a country squire his mistress
+* squire
+    * owner
+        * a man who owned most of the land around a village
+    * take
+        * to take someone places; escort
+* advertise
+    * to make something known generally in public, esp. in order to sell it
+        * we advertised our car in the local newspaper
+        * he advertises his services on the company notice board
+        * I'm going to advertise for someone to clean my house
+        * There's no harm in applying for other jobs, but if I were you, I wouldn't advertise the fact at work
+    * to make it know that a job or work is available, by putting an advertisement in a newspaper or on the Internet
+        * The company is advertising for a new commercial manager.
+* this is as far as we're going
+* comfy
+* spice
+    * it's time to spice things up
+    * I can't spice up conversations with the teacher
+* medicine
+    * med
+* carcass
+    * the body of a dead animal
+        * the carcass of the deer lay near the road
+    * the frame of an old or broken object, car, ship, etc.
+        * Carcassess of 
+* prey
+    * a creature that is hunted and killed for hood by another animal
+        * the prey had been sighted
+        * a hawk hovered in the air swooping on its prey
+    * fall prey to
+        * to be harmed or deceived by someone or something
+            * The once-successful property development company has fallen prey to the current economic crisis
+        * to be bought by a larger, more powerful company or organization
+            * the bank seems likely to fall prey to a bigger organization
+        * to be influenced by someone or something
+            * we worry that our children will fall prey to the influence of bad kids
+    * someone who can be easily deceived or harmed
+        * children are seen as easy prey for this type of advertising
+    * a company that another, usually larger or stronger, company wants to control or buy
+* seem
+    * you seem very quiet today
+    * he's 16, but he seems younger
+    * the news seemed too good to be true
+    * she didn't seems to be particularly happy
+    * they seemed like such a nice couple
+    * I can't seem stay awake
+    * I suspect his claims are not all they seem. he tends to exaggerat
+    * things are seldom as/how/what they seem
+    * I seem to know more about him than anyone else
+    * they seem to be taking a long time to decide
+    * It seems to me he isn't the right person for the job
+    * It would seem no action need be taken
+* sighted
+    * able to see
+* coral reef
+    * a great barrier reef is the world's largest coral reef
+* fish tanks
+    * aquarium
+* percent
+    * you got 20 percent of the answers right
+    * only 48 percent of registered voters actually voted in election
+    * somethng like 60 percent of all married men will have an affair at some point in their marriage
+    * sales are up by 36 percent
+    * they offer a 10 percent discount discount on rail travel for students
+    * accross the country, exam results have improved by an average of eight percent
+* inhabit/live/reside
+    * if animals or people inhabits an area or place, they live there
+    * the woods are inhabited by many wild animasl
+    * inhabited island
+* reproduce
+    * copy
+        * to produce a copy of something, or to be copied in a production process
+            * his work was reproduced on leaflets and magazines
+            * they said the printing was too faint to reproduce well
+        * to show or do something again
+        * the new design unfortunately reproduced some of the problems of the earlier model
+        * when living things reproduce, they produce young plants, animals
+            * These plants can reproduce sexually and asexually.
+* reprocess
+    * to deal with waste materials so that they can be used again
+    * to reprocess nuclear waste
+    * they won the contract to reprocess fifteen thousand tonnes of waste
+    * most of the used fuel can be reprocessed
+    * the car runs on reprocessed cooking oil
+* recycle
+    * to use a special industrial process in order to make materials and products ready to be used again
+        * Remember to reduce, reuse, recycle
+        * Equipment that is too old to repair is recycled
+        * waste is seperated into four different bins in order to recycle it
+        * recycle something into something
+            * plastic bottles can be recycled into a myriad other products
+    * to use money for a different purpose from the one it was originally intended fo
+        * The original capital of 500,000USD has been recycled into loans totaling 22USD million.
+* scuba dive
+    * scuba diving
+    * she is looking forward to scuba diving and swimming in the city
+* dive
+    * move down
+        * to jump int waster, espl. with your head or arms going in first, or to move down under the water
+    * move quickly
+    * place
+    * fall
+    * quick move
+
 
 
 ## US
