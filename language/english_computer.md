@@ -7,6 +7,8 @@ title: English Computer
 
 
 ## Computer
+* product velocity
+    * Product defvelopment performance is largely evaluated on product velocity, which creates an incentive to push enw code as quickly as possible
 * by heart
     * to learn something in such a way that you can say it from memory
     * exactly and from your memory
