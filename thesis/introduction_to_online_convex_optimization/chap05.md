@@ -2868,8 +2868,479 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 #### Lemma 5.12
+In Algorithm 16,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        \nabla f_{t}(x_{t})^{\mathrm{T}}
+        G_{t}^{\dagger}
+        \nabla f_{t}(x_{t})
+    & \le &
+        2
+        \sum_{t=1}^{T}
+            \nabla f_{t}(x_{t})^{\mathrm{T}}
+            G_{T}^{\dagger}
+            \nabla f_{t}(x_{t})
+    \nonumber
+    \\
+    & \le &
+        2
+        \mathrm{tr}
+        \left(
+            G_{T}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
 
 #### proof
+We prove lemma by induction.
+Suppose that $T = 1$.
+Since $S_{0} = 0$,
+
+$$
+\begin{eqnarray}
+    S_{1}
+    & = &
+        \nabla f_{1}(x_{1})
+        \nabla f_{1}(x_{1})^{\mathrm{T}}
+    \nonumber
+    \\
+    G_{1}
+    & = &
+        \left(
+            \nabla f_{1}(x_{1})
+            \nabla f_{1}(x_{1})^{\mathrm{T}}
+        \right)^{1/2}
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    \nabla f_{1}(x_{1})^{\mathrm{T}}
+    G_{1}^{-\dagger}
+    \nabla f_{1}(x_{1})
+    & = &
+        \mathrm{tr}
+        \left(
+            G_{1}^{\dagger}
+            \nabla f_{1}(x_{1})
+            \nabla f_{1}(x_{1})^{\mathrm{T}}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            G_{1}^{\dagger}
+            G_{1}^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            G_{1}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+The first equality holds since <a href="{{ site.baseurl }}/math/matrix/matrix_operation.html#proposition-1">proposition</a>.
+
+Suppose that the inequalities hold up to $T-1$.
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        \nabla f_{t}(x_{t})^{\mathrm{T}}
+        G_{t}^{\dagger}
+        \nabla f_{t}(x_{t})
+    & \le &
+        \mathrm{tr}
+        \left(
+            G_{T - 1}
+        \right)
+        +
+        \nabla f_{T}(x_{T})^{\mathrm{T}}
+        G_{T}^{\dagger}
+        \nabla f_{T}(x_{T})
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            \left(
+                G_{T}^{2}
+                -
+                \nabla f_{T}(x_{T})^{\mathrm{T}}
+                \nabla f_{T}(x_{T})
+            \right)^{1/2}
+        \right)
+        +
+        \mathrm{tr}
+        \left(
+            G_{T}^{\dagger}
+            \nabla f_{T}(x_{T})
+            \nabla f_{T}(x_{T})^{\mathrm{T}}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+            \left(
+                G_{T}^{2}
+                -
+                \nabla f_{T}(x_{T})^{\mathrm{T}}
+                \nabla f_{T}(x_{T})
+            \right)^{1/2}
+            +
+            G_{T}^{\dagger}
+            \nabla f_{T}(x_{T})
+            \nabla f_{T}(x_{T})^{\mathrm{T}}
+        \right)
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition
+* $A$,
+    * positive definite
+* $B$,
+    * positive definite
+* $A - B$,
+    * positive semidefinite
+
+(1) $A^{1/2} \succcurlyeq B^{1/2}$,
+
+(2)
+
+$$
+    2
+    \mathrm{tr}
+    \left(
+        (A - B)^{1/2}
+    \right)
+    +
+    \mathrm{tr}
+    \left(
+        A^{-1/2}B
+    \right)
+    \le
+    2
+    \mathrm{tr}(A^{1/2})
+    .
+$$
+
+#### proof
+TODO: proof.
 
 
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Proposition
+* $A \in \mathbb{R}^{n \times n}$,
+    * positive definite
+* $\mathcal{S} \subseteq \mathbb{R}^{n \times n}$,
+    * all symmetric matrices
+
+$$
+\begin{align}
+    \min_{X \in \mathcal{S}}
+    & & &
+        \mathrm{tr}(X^{\dagger}A)
+    \nonumber
+    \\
+    \mathrm{subject\ to}
+    & & &
+        X \succ 0
+    \nonumber
+    \\
+    & & &
+        \mathrm{tr}(A)
+        \le
+        1
+    \nonumber
+\end{align}
+$$
+
+Then the minimizer and the minimum of the above problem are give by
+
+$$
+\begin{eqnarray}
+    X^{*}
+    & = &
+        \frac{
+            A^{1/2}
+        }{
+            \mathrm{tr}(A^{1/2})
+        }
+        \label{proposition_minimizer}
+    \\
+    \min
+        (X^{*})^{\dagger}
+        A
+    & = &
+        (\mathrm{tr}(A^{1/2}))^{2}
+        \label{proposition_minimum}
+\end{eqnarray}
+$$
+
+#### proof
+TODO: proof
+
+We first prove the minimizer is give by the $$\eqref{proposition_minimizer}$$.
+Note that the trace is given by the sum of eigenvalues.
+Let
+
+$$
+\begin{eqnarray}
+    \lambda_{i}
+    & := &
+        \lambda_{i}(A)
+        \quad
+        (i = 1, \ldots, n)
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+We consider the following problem.
+
+$$
+\begin{align}
+    \min_{x \in \mathbb{R}_{> 0}^{n}}
+    & & &
+        \sum_{i=1}^{n}
+            \frac{
+                \lambda_{i}
+            }{
+                x_{i}
+            }
+    \nonumber
+    \\
+    \mathrm{subject\ to}
+    & & &
+        \sum_{i=1}^{n}
+            x_{i}
+        \le
+        1
+    \nonumber
+\end{align}
+$$
+
+By <a href="{{ site.baseurl }}/math/convex_programming.html#theorem14-karush-kuhn-tucker-optimality-conditions-in-convex-case">KKT condition for convex function</a>, we can solve the above problem by Lagrange multipler method.
+Let
+
+$$
+    x \in \mathbb{R}^{n},
+    \
+    L(x, \mu)
+    :=
+    \sum_{i=1}^{n}
+        \frac{
+            \lambda_{i}
+        }{
+            x_{i}
+        }
+    -
+    \mu
+    \left(
+        1
+        -
+        \sum_{i=1}^{n}
+            x_{i}
+    \right)
+    .
+$$
+
+Then
+
+$$
+\begin{eqnarray}
+    \frac{\partial L}{\partial x_{j}}
+    & = &
+        -
+        \frac{
+            \lambda_{j}
+        }{
+            x_{j}^{2}
+        }
+        +
+        \mu
+        =
+        0
+    \nonumber
+    \\
+    \frac{\partial L}{\partial \mu}
+    & = &
+        1
+        -
+        \sum_{i=1}^{n}
+            x_{i}
+        =
+        0
+    \nonumber
+\end{eqnarray}
+$$
+
+From the first equation,
+
+$$
+\begin{eqnarray}
+    x_{j}
+    & = &
+        \sqrt{
+            \frac{
+                \lambda_{j}
+            }{
+                \mu
+            }
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+By substituting the second quality, we obtain
+
+$$
+\begin{eqnarray}
+    & &
+        1
+        -
+        \sum_{i=1}^{n}
+            \sqrt{
+                \frac{
+                    \lambda_{j}
+                }{
+                    \mu
+                }
+            }
+        =
+        0
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mu^{1/2}
+        =
+        \sqrt{
+            \sum_{i=1}^{n}
+                \lambda_{j}
+        }
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Back to the first equation, we have
+
+$$
+\begin{eqnarray}
+    x_{j}
+    & = &
+        \frac{
+            \sqrt{
+                \lambda_{j}
+            }
+        }{
+            \sum_{i=1}^{n}
+                \sqrt{
+                    \lambda_{i}
+                }
+        }
+    \label{proposition_minimizer_alternative_problem}
+\end{eqnarray}
+$$
+
+Now if we constract a matrix $X \in \mathcal{S}_{n}$ whose eigenvalues are given by $$\eqref{proposition_minimizer_alternative_problem}$$, it is the minimizer of the original problem.
+Let $X$ be $$\eqref{proposition_minimizer}$$.
+Since $A$ is positive definite, the Moore-Penrose inverse is equal to $X^{-1}$.
+By <a href="{{ site.baseurl }}/math/eigenvalue.html#proposition-12">proposition</a>
+
+$$
+\begin{eqnarray}
+    \mathrm{tr}
+    \left(
+        (X^{*})^{-1}
+        A
+    \right)
+    & = &
+        \mathrm{tr}
+        \left(
+            \mathrm{tr}(A^{1/2})
+            A^{-1/2}
+            A
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            \mathrm{tr}(A^{1/2})
+        }
+        \mathrm{tr}
+        \left(
+            A^{1/2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            \mathrm{tr}(A^{1/2})
+        }
+        \sum_{i=1}^{n}
+            \lambda_{i}(A)^{3/2}
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \sum_{i=1}^{n}
+                \lambda_{i}(A)^{3/2}
+        }{
+            \sum_{i=1}^{n}
+                \lambda_{i}(A)^{1/2}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{tr}
+    \left(
+        X^{-1}A
+    \right)
+    & = &
+        \mathrm{tr}
+        \left(
+            \left(
+                Y^{\mathrm{T}}
+                Y
+            \right)^{-1}
+            A
+        \right)
+    \nonumber
+    \\
+    & = &
+        \mathrm{tr}
+        \left(
+                Y^{\mathrm{T}}
+            \right)^{-1}
+            Q
+            \Lambda
+            Q \transopse
+        \right)
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
