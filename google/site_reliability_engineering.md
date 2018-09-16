@@ -56,6 +56,20 @@ title: Site Reliability Engineering
 * cost
     * If we were to build and operate these systems at one more nine of availability, what would our incremental increase in revenue be?
     * Does this additional revenue offset the cost of eaching that level of reliability?
+* Error budget
+    * motivation
+        * product development performance is evaluated on product velocity
+        * SRE performance is evaluated on reliability of a service
+    * common tension
+        * software fault tolerance
+        * testing
+        * push frequency
+        * canary duration and size
+    * practice
+        * Product management defines an SLO, which sets an expectation of how much uptime the service should have per quarter
+        * The actual uptime is measured by a neutral third party: our monitoring system
+        * the difference between these two numbers is the budget of how much unreliability is remaining for the quarter
+        * As long as the uptime measured is above the SLO -- in other words, as long as there is error budget remaining -- new releases can be pushed
 
 
 
