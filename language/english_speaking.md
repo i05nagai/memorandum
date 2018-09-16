@@ -246,6 +246,8 @@ title: English Speaking
     * There used to be four cinema in the town. Now there is only one.
     * Did you use to eat a lot of sweets when you were a child?
     * I didn't use to like him / I used not to like him
+    * when we were kids, we used to invent amazing games. we would imagine we were the government and we would make crazy laws that every had to obey
+    * we used to 
 * get used to / be used to
     * I can't used to getting up so early. I'm tired all the time
     * He's not used to the weather here yet. He's finding it very cold
@@ -437,10 +439,42 @@ title: English Speaking
     * When are you going to get the roof repaired?
     * I think you should get your hair cut really short
 * perplexed/confused/puzzled
-    * Perplexed investors tried to work out what the deal meant
-    * You look perplexed
-    * A little perplexed, he left the second mug of Pils on the table
-    * One is perplexed how it affects the rest of the lunar cycle
+    * puzzzled
+        * perplexed is more formal
+        * confused because you cannot understand something, esp. it is different from what you expect
+    * perplexed
+        * Perplexed investors tried to work out what the deal meant
+        * You look perplexed
+        * A little perplexed, he left the second mug of Pils on the table
+        * One is perplexed how it affects the rest of the lunar cycle
+    * confused
+        * unable to understand or think clearly about what someone is saying or what is happening
+        * confused about
+            * if you're confused about anything, phone me
+        * all road looked the same and he felt thoroughly confused
+        * not clear or not easy to understand
+            * Witness statements presented a confused picture of the incident
+            * a lot of confused ideas
+        * confused by
+        * get confused
+            * With the huge range of computers on the market, it’s easy to get confused.
+        * I was rather confused by his question
+    * baffled
+        * very confused and unable to understand something, even though you have tried hard for a long time
+        * Detectives admit they are baffled by the case
+        * a baffled expression
+    * bewildered
+        * very confused and surprised when something unusual and unexpected happens to you
+        * He was bewildered to find three policeman at front door
+        * Bewildered train passengers watched as the man was arrested
+        * At first she was bewildered by all the noise and activity of the city
+    * bemused
+        * confused and surprised by what was happened, or by what someone has said
+        * local residents seem bemused by the sudden arrival of all the tourists
+        * she told him to leave, but he just sat there with a bemused expression
+    * can't think straight
+        * to have difficulty thinking clearly, for example because you are too tired, too busy, or because a lot of things are happening around you
+        * I can’t think straight with all this noise going on.
 * lie
     * position
         * lying/lay/lain
@@ -504,6 +538,12 @@ title: English Speaking
         * Could you put me through to customer services, please?
     * they put you on whole an hour?
     * If you are not put in situations that leverage our best skills, you may become frustrated by your perforamnce and your situation.
+    * put into
+        * to spend a lot of time or effort doing something
+        * You've obviously put a lot of work in on your garden
+        * If I put in some extra hours today, I can have some time off tomorrow
+        * we've put a lot of time and effort into making the house look nice
+        * effort that should be put into engineering practices
     * put in
         * We decided to have a new bathroom put in
         * Dorothy had put in a lot of hard work during her xis years as chairperson
@@ -1442,9 +1482,14 @@ title: English Speaking
     * Both women were wearing the same dress
     * The same thing could happen again
     * He gets the same pay as me but he gets his own office
-* pull off
-    * The goalkeeper pulled off six terrific saves
-    * We pulled off the road to get some food
+* pull
+    * pull off
+        * to succeed in doing something difficult
+            * The goalkeeper pulled off six terrific saves
+        * to drive a car off a road in order to stop, or to turn into smaller road
+            * We pulled off the road to get some food
+        * If a vehicle pulls off, it starts moving:
+            * The car pulled off and sped up the road.
 * upset
     * It still upset him when he thinks about the accident
     * Don't upset yourself by thinking about what might have been
@@ -2850,6 +2895,15 @@ title: English Speaking
         * despite that; used to add something that seems surprising because of what you have just said
         * simple yet effective
         * he's overweight and bald, yet somehow, he's attractive
+    * have yet to
+        * if you have yet to do something, you have not done it
+        * they have yet to make a decision
+    * as yet
+        * until and including this time
+        * we haven't needed extra stuffs as yet, but we may in the future
+        * no ambulances had as yet managed to get across the river
+    * even now
+    * more
 * conceive
     * imagine
         * I think my uncle still conceives of me as a four-year-old
@@ -3259,6 +3313,21 @@ title: English Speaking
     * give birth to
         * she gave birth to twins
         * our cat gave birth last night
+    * given
+        * accepted fact
+            * sth that is certain to happen or to be
+            * it's a given that if he is defeated for reelection, he'll be offered a position in the administration
+        * kowing
+            * considering
+            * Given his age, he's in excellent physical condition
+            * Given (the fact) that he's had six months to do this, he hasn't made much progress
+        * arranged
+            * already decided, arranged, or agreed
+            * at any given time, the jury may reach a verdict, so we'd better stay neaby
+        * have habit
+            * be given to sth
+                * to do something regularly or as  habit
+                * she was given to staying in bed till lunchtime
 * markedly
     * in a way that is very easy to notice
     * he and she have markedly different leadership styles
@@ -4454,6 +4523,7 @@ title: English Speaking
 * stall
     * delay
     * stop working
+        * they don't want to risk using up the budget and stall their launch
         * if an engine stalls, or if you stall it, it stops working suddenly and without you intenting it to happen
         * a car may stall due to the driver braking too suddenly
     * area
@@ -4640,6 +4710,7 @@ title: English Speaking
     * doing something yourself rather than just talking about it or telling other people to do it
         * They require skilled, hands-on commitment at the top.
         * hands-on approach
+        * a chance to get some hands-on experience of the job
 * plunge
     * The statistics for how many people tune in every day have plunged
 * appositive
@@ -4840,9 +4911,17 @@ title: English Speaking
     * the toilet is blocked
 * harness
     * to put a harness on a horse
-* wager/bet
-    * an amount of money that you risk in the hope of winning more, by trying to guess something uncertain, or the agreement that you make to take this risk
-    * She put a kjo
+    * to collect or control something so that it can be used effectively
+    * harness energy/ideas/skills
+        * organizations need to harness the skills and knowledge of people who are retired or unemployed
+    * harness the power of sth
+        * Plans to help developing countries harness the power of technology are important in the fight against global warming
+*ewager/bet
+    * wager
+        * an amount of money that you risk in the hope of winning more, by trying to guess something uncertain, or the agreement that you make to take this risk
+        * to risk money by guessing the result of sth
+        * More than 2 milion dollar was wagered legally on sport in Nevada in the last 12 months
+        * He is so confident of victory he has wagered on himself
 * stereotype
     * to have a set idea about what a particular type of a person is like, esp. an idea that is wrong
         * the study claims that British advertising stereotypes women
@@ -4866,20 +4945,269 @@ title: English Speaking
         * to decide not to hurt or destroy something or someone
         * by reducing workers' hour, the company spared some people's jobs
     * avoid
+        * A quiet chat about this would spare everyone embarrasment
     * give
+        * to give or use somethng because you have enough available
+        * can you spare a dollar
+        * I'd love to come, but I'm afraid I can't spare the time
     * extra
+        * not being used, or more than what is usually needed
+        * a spare key/tyre
+        * we have a spare room if you want to stay overnight with us
+        * spare time
+            * time when you are not working
+            * I like to paint in my spare time
     * thin
+        * (of people) thin with not extra fat on the body
+        * he had the spare build of a runner
     * extra thing
+    * annoyed
+        * go spare
+            * to get very upset or angury
+            * she goes spare if I'm so much as five minutes late
+    * try hard
+        * spare no effort/expense
+            * to use a lot of effort, expense etc. to do something
+            * we will spare no effort to find out who did this
+        * not spare yourself
+            * to try as hard as you can to achieve something
+            * she nefver spare herself in the pursuit of excellence
 * rehearse
+    * to practice something, such as music or a speech, or lead a person or group in practicing it, in oder to prepare for a public performance
+        * we rehearse all day and do the show that evening
+    * when someone rehearse a story or an argument, they repeat it with all the details
+        * these are arguments that I've heard rehearsed at meetings many times before
+* hell on wheels
+    * to behave in an angry or difficult way
+        * when he was drinking, Ken was hell on wheel
+    * someone who does exactly what they want and does not care what happens as a result.
+        * she is an angelic little baby, but she is hell on wheels
+* expel
+    * to officially force someone to leave a school or organization
+        * expel somebody something
+            * two girls were expelled from school for taking drugs
+        * expel somebody for doing something
+            * he was expelled for making racist remarks
+    * to force a foreigner to leave a country, esp. because they have broken the law or for political reasons
+        * expel somebody from something
+            * foreign priests were expelled from the country
+        * expel somebody for something
+            * three diplomats were expelled for spying
 * ultimatum
+    * a demand that a person or group do something to avoid something unpleasant
+        * The workers got an ultimatum -- go back to work or face dismissal
+    * a threat in which a person or group of people are warned that if they do not do a particular thing, something unpleasant will happen to them. It is usualy the last and most extreme in a series of actions taken to bring about a particular result
+        * he gave her an ultimatum. she could either stop seeing him and come back to him or it was divorce
+    * issue/deliver/give an ultimatum
+        * the chairman has issued an ultimatum: sort out the problems, or the expansion will not take place
+    * recieve an ultimatum
+        * we received an ultimatum from the army demanding our surrender.
+    * the terms of an ultimatum
+        * The terms of the ultimatum required them to withdraw by noon.
+    * should I give him some kind of ultimatum to encourage him to retire?
 * expat
     * A Japanese friend of mine who "left" Japan  came to Canada as part of the expat community sent from Japanese HQ - & after a routine 5 year stay, to be rotated to other foreign countries
-* ostracize
+* ostracize/excluding
     * to avoid someone intentionally, or to prevent someone from taking part in the activities of a group
-    * His colleagues ostracized him after he criticized the company in public.
-
-
-
+        * His colleagues ostracized him after he criticized the company in public.
+        * a correct answer
+* correct
+    * in agreement with the true facts or with what is generally accepted
+        * a correct answer
+        * Is that correct spelling?
+        * It's not correct to describe them as students
+        * Your name is Angela Balck? That's correct
+    * to show or tell someone that something is worng and to make it right
+        * students said it was helpful if the teacher corrected their pronunciation
+        * I have 30 homework assignments to correct
+    * if a mecdical treatment corrects a particular condition, it cures the condition or makes it easier to manage
+        * glasses to correct poor visiojn
+        * a chair that corrects bad posture
+    * correct me if I'm wrong but
+        * said as a polite and slightly formal way of disagreeing with someone
+        * Correct me if I'm wrong but, I think we arranged the meeting of the 12 December 
+* look
+    * look up
+        * look it up in the dictionary
+* off-topic
+    * This question appears to be off-topic
+* reword
+    * to write something again in different words
+    * she reworded sensitive are of the report so that it wouldn't be controversial
+* fantasize
+* daunt
+* woo
+* conquer
+    * conquer their heat
+* hold
+    * hold back
+        * to not speak or state an opinion
+            * I held back during the meeting because I knew that my opinions were too controversial
+        * to not do something, often because of fear or because you do not want to make a bad situation worse
+            * He held back, 
+        * to stop something from happening or advancing, or to keep someone rom doing something
+            * she held back from ineterfering in their arguments
+            * Sandbags will hold back the flood waters for a while
+            * he admitted that somethign had gone wrong, but he held back the details
+* genie in abottle
+    * you find a genie in a bottle
+    * let the genie out of bottle
+        * to allow something to happen that cannot then be stopped
+        * when I told her the sedret, I let the genie out of the bottle
+* tell you what
+    * I'll tell you what
+    * used when you are suggesting or offering something
+        * I tell you what -- let's have a picnic in the park
+    * used in order to emphasize what you really saying
+        * I tell you what, I'm not looking foward to standing up in court tomorrow
+* benevolent
+    * kind and helpful
+    * he was a benevolent old man and wouldn't hurt a fly
+    * I grew up happily under benevolent influence of uncle walt.
+* bore
+    * fail to interest
+        * to talk or act in a way that makes someone loose interest
+        * Am I boring you? she asked anxiously
+        * bore sb silly
+            * to make sb feel very bored
+            * we were all bored silly by the play
+    * make a hole
+        * to make a hole in something using a tool
+        * he used a drill to bore a hole in the wall
+        * the workman bored throught the rock
+* let met through
+    * to permit someone or something to move through an opening or through a congested area
+* fester
+    * injury
+        * if a cut or other injuries fester, it becomes infected nd produces pus
+        * a festering sore
+    * feeling
+        * If an argument or bad feelings fesgters, it continues so that feelings of hate or lack of satisfaction increase
+        * it's better to express your anger than let it fester inside you
+        * a festering argument/dispute
+* recommend
+* childhood
+    * the time when someone is a child
+    * she had an unhappy childhood
+    * childhood is not always a happy time
+* rack
+    * to cause physical or mental plan, or trouble, to sb or sth
+    * even at the end, kk
+* twist
+    * turn
+        * to turn repeatedly, or to combine thin length of a material by turning or wrapping
+        * a river twists through the valley
+        * Vines twisted around the trunk of the old tree
+        * if you twist a part of body, you hurt it y turning it awkardly
+            * he twisted his knee in the game on Saturday
+    * change
+        * to change he meaning of facts or a statement; distort
+        * you're twisted my words -- That's not what I meant at all
+    * turn
+        * an act of twisting sth
+        * the shape of or a piece of sth that has been twisted
+            * a twist of hair
+            * a twist of lemon
+        * a tight bend
+    * change
+        * unexpected change
+        * the incident was the latest twiste in the story of the robbery
+        * walnuts give a new twist to regular banana bread
+* errand/trip/journey
+    * a short trip you make do something, such as buying or delivering things in the neighborhood
+    * he would clean, do errands, and babyshit for their 7-year-old daughter
+    * I've got to run a few errands and then stop by my mother's
+* squirt
+* curtail/redduce
+    * to reduce or limit something
+    * the Federal Reserve raised interest rates slightly to curtail inflation
+* curtailiment
+* usher
+    * to show sb where to go and where to sit
+    * a man who shows people where they should sit, especially at a formal event such as a wedding or at a theatre or cinema
+    * a person who 
+* impudent/rude
+    * rude and not showing respect
+    * rude and not showing respect, especially towards someone who is older or in a more important position
+        * an impudent remark/child
+* reckless
+    * taking risks and not caring about possilble dangers
+    * hey made increasingly reckless investments
+    * reckless borrowing/lending/spending
+        * the government wants to crack down on decades of reckless lending by banks to unprofitable companies
+* hussy
+    * you asked him out? oh, you brazen/shameless hussy, you
+* relevant
+    * directly related to the subject or problem being discussed or considered
+        * relevant documents were presented in court
+        * we recieved all the relevant informatin
+* tension
+    * how tensions can arise between producgt development teams and SRE teams
+    * stiff state
+        * the state of being tight and stiff
+        * we need more tension in the wires, so pull them tighter
+    * nervous state
+        * anxiety and worry
+            * the tension as unbearable as we waited for our exam results
+    * feeling
+        * a feeling of nervousness before an important event or difficult event
+        * you could feel the tension in the room as we waited for our exam results
+        * a feeling of fear or anger between two groups of peopole who do not trust each other
+        * ethnic/racial tension
+        * there are growing ensions between the two countries
+* incentive
+    * Product defvelopment performance is largely evaluated on product velocity, which creates an incentive to push enw code as quickly as possible
+* amplify
+    * Information asymmetry between the two teams further amplifies this inherent tension
+    * to increase the strength of a sound; make louder
+        * electric guitars are amplified through loudspeakers
+    * to amplify is also to add to the information given in something
+        * the study amplifiers earlier research
+    * to increase the size or effect of sth
+        * a funeral can amplify the feelings of regret and loss for the relatives
+* engineer
+    * design or build
+        * to plan, design, or build according to scientific principles
+        * the bridge is engineered to withstand an earthquake
+    * plan skillfully
+        * to plan or do something in a skillful way
+        * the administration engineered a compromise
+* hardened
+    * a crimal, police officer etc. who has had a lot of experience of things that are shocking and is therefore less affected by them
+        * hardened criminal/police officer
+    * become hardened
+        * to develop a way of dealing with a sad situation so that it is no longer upsets you
+        * to become used to something shocking because you have seen it many times
+        * you see all sorts of terrible things when you're a nurse so you become hardened to it
+    * used to describe someone who has had a lot of bad experiences and as a result no longer gets upset or shocked
+        * hardened detectives/reporters
+    * no longer likely to change a bad way of life or feel sorry about it
+    * How hardened do we make the software to unexpected events?
+* brittle
+    * easily broken
+        * delicate and easily broken
+        * As you get older your bones become increasingly brittle
+        * the pond was covered in a brittle layer of ice
+    * unkind
+        * unkind and unpleasant
+        * she gave a brittle laugh and turned away
+    * Too little, and we have a brittle, unusable product.
+* pond
+    * an area of water smaller than a lake, often artificially made
+        * a duck pond
+* press-worthy
+    * not enough testing and you have embarrassing outages, privacy data leaks, or a number of other press-worthy events.
+* skimp
+    * to use less of something than is necessary
+    * the district skimps on staff training
+    * many old people skimp on food and heating in order to meet their bills
+    * when choosing a hotel, do not skimp
+* drain
+    * when the budget is nearly drained, the product developers themselves will push for more testing orslower push velocity, as they don't want to risk using up the budget and stall their launch
+* eat
+    * eat into
+        * to use or take away a large part of sth valuable, such as money or time
+        * the high cost of living in London is eating into my savings
 
 ## US
 * CDC
