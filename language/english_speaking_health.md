@@ -44,6 +44,11 @@ title: English Speaking Health
         * These are not cancerous and cannot spread.
     * premalignant
     * malignant
+* cranker sore
+    * I have a cranker sore
+* ulcer
+    * I have ulcers in my mouth
+    * I got a mouth ulcer
 * blood
     * blood vessel
         * I can totally see their blood vessels on their hands.
