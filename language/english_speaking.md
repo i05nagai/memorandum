@@ -1407,6 +1407,10 @@ title: English Speaking
     * Baseball still fascinates Americans
     * I have always been fascinated by Maagritte's work
     * Anything to do with computers fascinates him
+    * to interest someone a lot
+        * Anything to do with airplanes and flying fascinates him.
+        * The children were fascinated by the story.
+    * to have someone's complete interest and attention
 * scoot
     * Scoot over and make room for your sister
 * move over
@@ -5208,6 +5212,43 @@ title: English Speaking
     * eat into
         * to use or take away a large part of sth valuable, such as money or time
         * the high cost of living in London is eating into my savings
+* boundary
+    * push boundary
+        * Seeing how close to breaking the rules you can get without receiving punishment/scolding
+        * Inventing outside-the-box solutions and seeing how much you can change the status quo
+* unravel
+    * separate
+        * (of woman cloth) to separete into thrads, or to separate the fibres of thread, rope, or cloth
+        * my sweater is unraveling
+        * the movie unraveled at the end
+    * solve
+    * cloth
+    * subject
+    * process
+* scrumptious
+    * (of food) extremely appetizing or delicious.
+* weakling
+    * sb who is weak, either physically or in character
+    * it would need more than a few excercises to turn a seven-stone weakling into a heavyweight boxer
+* detour
+    * Take no more detour via a search engine.
+* scepticism
+    * doubting that something is true or useful
+    * Many experts remain sceptical about/of his claims.
+* advisable
+    * f something is advisable, it will avoid problems if you do it
+    * it's advisable to book seats at least a week in advance.
+* diversity
+    * the fact of many different types of things or people being included in something; a range of different things or people
+    * the fact that there are many different ideas or opinions about something
+    * the fact of there being people of many different groups in society, within an organization, etc
+    * the fact of there being many different things existing together in a group
+* decade
+* disparate
+    * different in every way
+    * the two cultures were so utterly disparate that she found it hard to adapt from one to the other
+
+
 
 ## US
 * CDC
