@@ -4,7 +4,13 @@ title: English Writing
 
 ## English Writing
 
-
+* meanwhile
+    * Meanwhile, SRE performance is evaluated based upon reliability of a service
+* on the other hand
+    * from another stand point
+    * in contrast
+    * unlike
+    * alternatively
 * with this in mind
     * With this in mind, rather than simply maximizing uptime, SRE seeks to balance the risk of unavailability with the goals of rapid innovation and efficient service operations
 * Put simply,

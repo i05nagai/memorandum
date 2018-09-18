@@ -3,6 +3,22 @@ title: English word choice
 ---
 
 ## English word choice
+* arise/rise
+    * [Arise or rise ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/arise-or-rise)
+    * rise
+        * An opportunity arose and he decided to take the job in Brussels.
+        * A problem has arisen with my passport.
+    * go up
+        * The sun rises in the east and sets in the west.
+        * Food prices have risen a lot in the last few months.
+* related/relevant
+    * [meaning \- Difference between related and relevant \- English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/151832/difference-between-related-and-relevant)
+        * it's related to my topic
+        * it's relevant to my topic
+    * [What is the basic difference between Relevant and Related Content? \- Quora](https://www.quora.com/What-is-the-basic-difference-between-Relevant-and-Related-Content)
+* used to/would
+    * [Used to \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/past/used-to)
+* used to/be used to
 * appear/seem
     * [Appear \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/common-verbs/appear)
     * appear

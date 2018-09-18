@@ -43,4 +43,10 @@ title: Interview Question Data Scientist
     * draw curve whose x axis is FP rate and whose y axis is TP rate by changing the threshold of the binary-prediction model
 * Area Under the Curve
 
+
+
+* Why does Baysian assume the existence of p.d.f.?
+
+
 ## Reference
+* [A Few Reflections on Data Science – Open House – Medium](https://medium.com/opendoor-labs/a-few-reflections-on-data-science-9eb0c81c52b6)

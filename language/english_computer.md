@@ -5,7 +5,30 @@ title: English Computer
 ## English Computer
 
 
+
 ## Computer
+* product velocity
+    * Product defvelopment performance is largely evaluated on product velocity, which creates an incentive to push enw code as quickly as possible
+* by heart
+    * to learn something in such a way that you can say it from memory
+    * exactly and from your memory
+        * she backed muffins from recipes she knew by heart
+* prototype
+    * took it upon myself to fix this by prototyping a continuous integration system that eventually turned into the system our team still uses today
+* maintenance window
+    * it is sometimes acceptable to have regular outages during maintenance windows
+    * because most of this work takes place during normal business hours, we determined that occational, regular, scheduled outage in the from of maintenance windows would be aceptable
+* trade-off
+    * Ads is in a particularly good position to make this trade-off because request successes and failures can be directly translated into revenue gained or lost
+    * to mkae this trade-off equation more concrete
+* distinguishing features
+* taking down the service entirely would be appropriate during the debugging and potential cealn-up phase for the second case
+* contact management application
+* an illustrative example of the difference between full and partial outages naturally arises in systems
+* YouTube was in a very different phase of its business lifecycle than Google was at the time
+* we might set an external quartely availability target of 99.9%
+* enterprise users
+* the service is positioned in the marketplace
 * The arrangement of the gates is given as an array A consisting of N integers, whose elements specify the positions of the gates
 * headroom
     * [Engineering tolerance - Wikipedia](https://en.wikipedia.org/wiki/Engineering_tolerance)
