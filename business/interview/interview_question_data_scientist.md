@@ -49,3 +49,4 @@ title: Interview Question Data Scientist
 
 
 ## Reference
+* [A Few Reflections on Data Science – Open House – Medium](https://medium.com/opendoor-labs/a-few-reflections-on-data-science-9eb0c81c52b6)
