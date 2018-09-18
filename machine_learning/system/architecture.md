@@ -5,16 +5,11 @@ title: Architecture
 ## Architecture
 
 * Pipeline
-    * apache Beam
+    * Apache Beam
     * GCP Dataflow
-
-* Kubernetes
-
-* Amazon Lambda
-* GCP Cloud Function
-
 * messaging
     * cloud Pub/Sub
+    * Apache Kafka
 * logging
     * fluentd
 * monitoring
@@ -22,10 +17,12 @@ title: Architecture
     * DataDog
     * grafana
     * zabbix
-* workflow
-    * Airflow
+* workflow/job scheduler
+    * Apache Airflow
     * Luigi
     * Jekins
+    * kuroko2
+    * digdag
 * BI
     * tableau
     * redash
@@ -35,6 +32,8 @@ title: Architecture
     * Amazon Kinesis Streams
     * Amazon Kinesis Firehose
     * Apache Spark Streaming
+* Batch transfering
+    * Embulk
 * Data storage
     * GCP BigQuery
     * Amazon S3
@@ -45,26 +44,41 @@ title: Architecture
     * MongoDB
     * PostgreSQL
 * Search server
+    * hyperestraier
     * Apache Solr
     * Elastic Search
 * CI/CD
     * Circle CI
     * Travis CI
     * Spinnaker
-* redis
-* Amazon DynamoDB
-* Amazon Athena
-* Amazon Redshift
-* Apache Hive
+* Communication
+    * slack
+    * hipchat
+* Provisioning
+    * Terraform
+    * chef
+    * Ansible
+* Management of Container
+    * Kubernetes
+* unclassified so far
+    * Amazon Lambda
+    * GCP Cloud Function
+    * redis
+    * Amazon DynamoDB
+    * Amazon Athena
+    * Amazon Redshift
+    * Apache Hive
+    * OWASPZAP
 
 
 * 1. Data Acquisition
     * streaming
     * batch
-* 2. store data
+* 2. store raw data
 * 3. data processing
+    * feature engineering
 * 4. store prcessed data
-* 5. train models
+* 5. learning/training models
     * feature slection
 * 6. prediction
 * 7. A/B testing
@@ -84,17 +98,16 @@ title: Architecture
     * structured knowledge of data such as meaning of the URL
         * for instance, third party URL has information about page information implicitly
         * `http://example.com/items/1/1234`, `/1/` is item category such as clothes or games
-* feedback to?
+* what does this component communicate to?
 
-### Model Learning
+### Learning/Training
 
 * reporting
     * measurements of models such as precisions, acuracy 
 * feature selection
-    * 
 * sampling
 
-### Model Prediction
+### prediction
 
 ### A/B testing
 
