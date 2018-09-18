@@ -1,6 +1,9 @@
 ## Business
 * loss of eanings
 * in-game live betting
+* BHAG
+    * A Big Hairy Audacious Goal
+    * A Big Hairy Audacious Goal (BHAG) is a strategic business statement similar to a vision statement which is created to focus an organization on a single medium-long term organization-wide goal which is audacious, likely to be externally questionable, but not internally regarded as impossible.
 
 ## Address
 1st Row ： From: First name Last name
