@@ -4,6 +4,7 @@ title: English Speaking Health
 
 ## English Speaking Health
 
+* gland
 * come down with/go down with
     * if you begin to feel with a cold, the flu
     * I hope you're not coming down with a cold
