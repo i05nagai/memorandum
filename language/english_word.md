@@ -419,6 +419,8 @@ title: English word
 * tan
     * a light brown or yellow-brown color
     * a tan jacket
+* burgundy
+    * a dark reddish-purple colour, like the colour of red wine
 
 
 ## animals
@@ -430,6 +432,8 @@ title: English word
 * whale
 * lionfish
     * pterois
+* dog
+    * basset hound
 
 ## plant
 https://study.com/cimages/multimages/16/diagramplanteudicot.png
