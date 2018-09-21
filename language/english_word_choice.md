@@ -3,6 +3,16 @@ title: English word choice
 ---
 
 ## English word choice
+* as to/as for
+    * [with regard to/concerning\.](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
+    * as for
+        * with regard to/concerning.
+        * He's here. As for the others, they'll arrive later
+        * He was a nice enough person, but as for his suggesstions. I found them unhelpful
+    * as to
+        * I'm at a loss as to how to explain the error
+        * There is disagreement as to the causes of the fire
+        * I remained uncertain as to the value of his suggesstion
 * arise/rise
     * [Arise or rise ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/arise-or-rise)
     * rise
