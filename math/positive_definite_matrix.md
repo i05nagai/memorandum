@@ -611,12 +611,15 @@ Since $P$ is nonsigular, $Px = 0$ implies $x = 0$.
 * $x := (x^{i})_{i} \in \mathbb{R}^{n}$,
 * $A, B \in \mathbb{R}^{n \times n}$,
     * positive definite
+* $y_{j} := (y_{j}^{i})_{i} \in \mathbb{R}^{n}$,
 
 Then
 
 (1) $xx^{\mathrm{T}}$ is positive definite.
 
 (2) $A + B$ is positive definite.
+
+(3) $\sum_{j=1}^{K}y_{j}y_{j}^{\mathrm{T}}$ is positive definite.
 
 
 #### proof.
@@ -694,23 +697,38 @@ $$
 \end{eqnarray}
 $$
 
+(3)
+
+From (1), for all $j = 1, \ldots, K$, $y_{j}y_{j}^{\mathrm{T}}$ is positive definite.
+Then by (2) the some of $y_{j}y_{j}^{\mathrm{T}}$ is positive definite.
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
 #### Proposition 10
 * $A \in \mathbb{R}^{n \times n}$,
     * positive semidefinite
+* $B \in \mathbb{R}^{n \times n}$,
+    * positive semidefinite
 
-Then there exists $B \in \mathbb{R}^{n \times n}$ such that
+Then
+
+(1) there exists $C \in \mathbb{R}^{n \times n}$ such that
 
 $$
     A
     =
-    B
-    B
+    C
+    C
     .
 $$
 
+We denote $C$ by $A^{-1}$.
+
+(2) if $A - B$ is positive semidefinite, $A^{1/2} - B^{1/2}$ is semidefinite
+
 #### proof
+(1)
+
 Since $A$ is symmetric, by <a href="{{ site.baseurl }}/math/eigenvalue.html#theorem10.orthogonal-diagonalization"> proposition</a>, $A$ is orthogonalizable.
 
 $$
@@ -743,7 +761,7 @@ $$
         \mathrm{diag}(\lambda_{1}(A)^{1/2}, \ldots, \lambda_{n}(A)^{1/2})
     \nonumber
     \\
-    B^{1/2}
+    C^{1/2}
     & := &
         V
         D^{1/2}
@@ -757,8 +775,8 @@ Since $A$ is positive semidefinite, the square root of a eigenvalue exists.
 
 $$
 \begin{eqnarray}
-    B
-    B
+    C 
+    C
     & = &
         VD^{1/2}V^{-1}
         VD^{1/2}V^{-1}
@@ -770,11 +788,28 @@ $$
     \\
     & = &
         A
+    .
     \nonumber
 \end{eqnarray}
 $$
 
+(2)
+
+$$
+\begin{eqnarray}
+    A^{1/2} - B^{1/2}
+    & = &
+        V_{A}D_{A}^{1/2}V_{A}^{-1}
+        -
+        V_{B}D_{B}^{1/2}V_{B}^{-1}
+    \nonumber
+    \\
+    & = &
+\end{eqnarray}
+$$
+
 <div class="QED" style="text-align: right">$\Box$</div>
+
 
 ## Reference
 * [Positive-definite matrix - Wikipedia](https://en.wikipedia.org/wiki/Positive-definite_matrix)
