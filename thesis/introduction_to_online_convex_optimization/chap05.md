@@ -2353,6 +2353,8 @@ $$
 #### Algorithm 16 AdaGrad
 * $\eta > 0$,
 * $x_{1} \in \mathcal{K}$,
+* $S_{0} := 0 \in \mathbb{R}^{n \times n}$,
+* $G_{0} := 0 \in \mathbb{R}^{n \times n}$,
 
 
 Step1. For $t=1$ to $T$
@@ -2408,7 +2410,8 @@ Step6. Return $x_{T + 1}$.
 In the algorithm definition and throughout this section, the notation $A^{\dagger}$ refers to the Moore-Penrose pseudoinverse of the matrix $A$.
 The regret of AdaGrad is at most a  constant factor larger than the minimum regret of all RFTL algorithm with regularizatin functions whose Hesssian is fixed and belongs to the class $\mathcal{H}$.
 
-#### Remark
+#### Remark Algorithm 16
+
 
 $$
 \begin{eqnarray}
@@ -2423,6 +2426,42 @@ $$
     \nonumber
 \end{eqnarray}
 $$
+
+By definition,
+
+$$
+\begin{eqnarray}
+    S_{1}
+    & = &
+        \nabla f_{1}(x_{1})
+        \nabla f_{1}(x_{1})^{\mathrm{T}}
+    \label{algorithm_16_ada_grad_s1}
+    \\
+    S_{t}
+    & = &
+        \sum_{s=1}^{t}
+            \nabla f_{s}(x_{s})
+            \nabla f_{s}(x_{s})^{\mathrm{T}}
+    .
+    \label{algorithm_16_ada_grad_st}
+\end{eqnarray}
+$$
+
+From <a href="{{ site.baseurl }}/math/positive_definite_matrix.html#proposition-9">proposition 9</a>, $S_{t}$ is positive definite.
+Since $S_{t}$ is positive defnite, $G_{t}$ is also positive definite.
+Similarly, by <a href="{{ site.baseurl }}/math/positive_definite_matrix.html#proposition-9">proposition 9</a>, 
+
+$$
+\begin{eqnarray}
+    S_{t} - S_{t - 1}
+    & = &
+        \nabla f_{t}(x_{t})
+        \nabla f_{t}(x_{t})^{\mathrm{T}}
+    \nonumber
+\end{eqnarray}
+$$
+
+is positive definite.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -2990,20 +3029,221 @@ $$
         \right)
     \nonumber
     \\
-    & = &
+    & \le &
         \mathrm{tr}
         \left(
-            \left(
-                G_{T}^{2}
-                -
-                \nabla f_{T}(x_{T})^{\mathrm{T}}
-                \nabla f_{T}(x_{T})
-            \right)^{1/2}
-            +
-            G_{T}^{\dagger}
-            \nabla f_{T}(x_{T})
-            \nabla f_{T}(x_{T})^{\mathrm{T}}
+            G_{T}
         \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+where the last inequality is due to the proposition below:
+
+$$
+\begin{eqnarray}
+    2
+    \mathrm{tr}
+    \left(
+        (A - B)^{1/2}
+    \right)
+    +
+    \mathrm{tr}
+    \left(
+        A^{-1/2}B
+    \right)
+    \le
+    2
+    \mathrm{tr}(A^{1/2})
+    .
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### lemma 5.13
+In Algorith 16,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        (x_{t} - x^{*})^{\mathrm{T}}
+        (G_{t} - G_{t -1})
+        (x_{t} - x^{*})
+    & \le &
+        D^{2}
+        \mathrm{tr}
+        \left(
+            G_{T}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+#### proof
+By definition
+
+$$
+    S_{t} - S_{t - 1}
+    =
+    f_{t}(x_{t})
+    f_{t}(x_{t})^{\mathrm{T}}
+    .
+$$
+
+That is, $S_{t} \succcurlyeq S_{t - 1}$.
+See <a href="#remark-algorithm-16">remark</a>.
+Moreover, $G_{t} - G_{t-1}$.
+Hence $G_{t} - G_{t-1}$ is diagonalizable.
+Let
+
+$$
+\begin{eqnarray}
+    L_{t}
+    & := &
+        (l_{j}^{i})_{i,j=1,\ldots,n}
+    \nonumber
+    \\
+    & := &
+        \mathrm{diag}(\lambda_{1}(G_{t} - G_{t-1}), \ldots, \lambda_{n}(G_{t} - G_{t-1})),
+    \nonumber
+\end{eqnarray}
+$$
+
+and $Q_{t}$ is corresponding unitary matrix.
+For simplicity, letting $y_{t} := (y_{t, i}) := Q^{\mathrm{T}}(x_{t} - u)$,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+        (x_{t} - u)^{\mathrm{T}}
+        (G_{t} - G_{t - 1})
+        (x_{t} - u)
+    & = &
+        \sum_{t=1}^{T}
+            (x_{t} - u)^{\mathrm{T}}
+            Q_{t}
+            L_{t}
+            Q_{t}^{\mathrm{T}}
+            (x_{t} - u)
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            \left(
+                Q_{t}^{\mathrm{T}}
+                (x_{t} - u)
+            \right)^{\mathrm{T}}
+            L_{t}
+            Q_{t}^{\mathrm{T}}
+            (x_{t} - u)
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            y_{t}^{\mathrm{T}}
+            L_{t}
+            y_{t}
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            \sum_{k=1}^{n}
+            \sum_{k^{\prime}=1}^{n}
+                y_{t}^{k}
+                l_{t, k}^{k^{\prime}}
+                y_{t, k}
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            \sum_{k=1}^{n}
+                y_{t}^{k}
+                l_{t, k}^{k}
+                y_{t, k}
+        \quad
+        (\because \text{diagonal})
+    \nonumber
+    \\
+    & \le &
+        \sum_{t=1}^{T}
+            \lambda_{1}(G_{t} - G_{t-1})
+            \sum_{k=1}^{n}
+                y_{t}^{k}
+                y_{t, k}
+    \nonumber
+    \\
+    & = &
+        \sum_{t=1}^{T}
+            \lambda_{1}(G_{t} - G_{t-1})
+            \norm{
+                y_{t}
+            }_{2}^{2}
+    \nonumber
+    \\
+    & \le &
+        \sum_{t=1}^{T}
+            \lambda_{1}(G_{t} - G_{t-1})
+            \norm{
+                Q
+            }_{2}^{2}
+            \norm{
+                x_{t} - u
+            }_{2}^{2}
+    \nonumber
+    \\
+    & \le &
+        \sum_{t=1}^{T}
+            \lambda_{1}(G_{t} - G_{t-1})
+            D^{2}
+    \nonumber
+    \\
+    & \le &
+        \sum_{t=1}^{T}
+            \mathrm{tr}
+            \left(
+                G_{t} - G_{t-1}
+            \right)
+            D^{2}
+    \nonumber
+    \\
+    & = &
+        D^{2}
+        \sum_{t=1}^{T}
+        \left(
+            \mathrm{tr}
+            \left(
+                G_{t}
+            -
+            \mathrm{tr}
+            \left(
+                G_{t-1}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        D^{2}
+        \left(
+            \mathrm{tr}
+            \left(
+                G_{T}
+            \right)
+            -
+            \mathrm{tr}
+            \left(
+                G_{0}
+            \right)
+        \right)
+    \nonumber
+    \\
+    & = &
+        D^{2}
+        \mathrm{tr}
+        \left(
+            G_{T}
+        \right)
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -3310,35 +3550,6 @@ $$
                 \lambda_{i}(A)^{1/2}
         }
     \nonumber
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-    \mathrm{tr}
-    \left(
-        X^{-1}A
-    \right)
-    & = &
-        \mathrm{tr}
-        \left(
-            \left(
-                Y^{\mathrm{T}}
-                Y
-            \right)^{-1}
-            A
-        \right)
-    \nonumber
-    \\
-    & = &
-        \mathrm{tr}
-        \left(
-                Y^{\mathrm{T}}
-            \right)^{-1}
-            Q
-            \Lambda
-            Q \transopse
-        \right)
 \end{eqnarray}
 $$
 
