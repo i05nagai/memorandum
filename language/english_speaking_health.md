@@ -128,6 +128,8 @@ title: English Speaking Health
 * Hyperventilation syndrome
 * Respiratory illness
 * insomnia
+    * a medical condition in which a person is not able to sleep
+    * He suffered from insomnia after he had lost his job.
 * Manic-depressive Illness（Depression)
 * Schizophrenia
 * Autonomic ataxia
