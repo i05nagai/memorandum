@@ -5,6 +5,9 @@ title: Kadane Algorithm
 ## Kadane Algorithm
 An algorithm to find the maximum subarray.
 
+* time complexity: $O(N)$,
+* space complexity: $O(1)$,
+
 #### Problem
 Let
 
@@ -215,6 +218,100 @@ def max_subarray(A):
 #### Remark
 * The algorithm is a variety of an application of dynamic programming interpreting $C_{k}$ as memoization.
 
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Application1
+Let
+
+* $(A_{i})_{i=1,\ldots,N}$,
+    * give narray
+
+Find
+
+$$
+    B^{*}
+    :=
+    \max
+    \{
+        \sum_{i=j_{1}}^{j_{2} - 1}
+            A_{i}
+        +
+        \sum_{i=j_{2} + 1}^{j_{3}}
+            A_{i}
+        \mid
+        1
+        \le
+        j_{1}
+        <
+        j_{2}
+        <
+        j_{3}
+        \le
+        N
+    \}
+    .
+$$
+
+#### Solution of application1
+Let
+
+$$
+\begin{eqnarray}
+    C^{N}
+    & = &
+        A_{N}
+    \nonumber
+    \\
+    C^{k}
+    & = &
+        \max
+        \{
+            A_{k},
+            C_{k + 1}
+            +
+            A_{k}
+        \}
+    \nonumber
+\end{eqnarray}
+$$
+
+By similar arguments,
+
+$$
+\begin{eqnarray}
+    C^{k}
+    & = &
+        \max
+        \left\{
+            \sum_{i=k}^{\hat{j}^{k}}
+                A_{i}
+            \mid
+            k
+            \le
+            \hat{j}^{k}
+            \le
+            N
+        \right\}
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+    B^{*}
+    =
+    \max
+    \{
+        C_{k-1}
+        +
+        C^{k+1}
+        \mid
+        k = 1, \dots, N
+    \}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Maximum subarray problem \- Wikipedia](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
