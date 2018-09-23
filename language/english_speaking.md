@@ -2836,6 +2836,10 @@ title: English Speaking
     * (of plans or people) not practical or silly
     * the sounds like another of his harebrained schemes
     * a harebrained scheme
+* nook
+    * every nook and cranny
+        * every part of a place
+        * Every nook and cranny of the house was stuffed with souvenirs of their trips abroad.
 
 
 
