@@ -4,7 +4,7 @@ title: Eigenvalue
 
 ## Eigenvalue
 
-## Definition1. Eigenvector and Eigenvalues
+#### Definition1. Eigenvector and Eigenvalues
 * $$A \in \mathbb{C}^{n \times n}$$,
 
 $$\lambda \in \mathbb{C}$$ is an eigenvalue of $A$ if and only if there is a vector $x \in \mathbb{C}^{n}$ such that
@@ -20,7 +20,7 @@ $x$ is said to be an eigenvector with respect to $\lambda$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Remark2
+#### Remark2
 Eigenvector corresponding to an eigenvalue is not unique.
 The number of eigenvectors with respect to an eigenvalue is determined by the rank of $$A - \lambda I$$.
 Suppose that $\lambda$ is a eigenvalue of $A$.
@@ -38,7 +38,7 @@ So we can take linearly independent eigenvectors corresponding to eigenvalue $\l
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Theorem3. Diagolization
+#### Theorem3. Diagolization
 * $$A \in \mathbb{C}^{n \times n}$$,
 * $$x_{1}, \ldots, x_{m} \in \mathbb{C}^{n}$$,
 * $$X := (x_{1}, \ldots, x_{m})$$,
@@ -55,7 +55,7 @@ $$
 
 In this case, $$d_{i}$$ is a eigenvector of $$x_{i}$$.
 
-## proof.
+#### proof.
 To show only if part,
 
 $$
@@ -95,7 +95,7 @@ This is the definition of eigenvectors.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Corollary4.
+#### Corollary4.
 Eigenvectors $$x_{1}, \ldots, x_{m}$$ are linearly independent.
 Then There exists a diagonal matrix D such that
 
@@ -105,11 +105,11 @@ $$
     D
 $$
 
-## proof.
+#### proof.
 By the asusmption, $X$ is nonsingular so that $X^{-1}$ exists.
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem5. Linear indepence of eigenvectors
+#### Theorem5. Linear indepence of eigenvectors
 * $$A \in \mathbb{C}^{n \times n}$$,
 * $$k$$,
     * number of distinct eigenvalues.
@@ -120,7 +120,7 @@ By the asusmption, $X$ is nonsingular so that $X^{-1}$ exists.
 
 Then $$x_{1}^{1}, \ldots, x_{1}^{m_{1}}, \ldots, x_{k}^{1}, \ldots, x_{k}^{m_{k}}$$ are linearly independent.
 
-## proof.
+#### proof.
 We prove by mathematical induction with respect to the number of eigenvalues.
 $$x_{1}^{1}, \ldots, x_{1}^{m_{1}}$$ are linearlY independent by definition.
 Suppose that the set of first $$\sum_{i=1}^{s}m_{i}$$ eigenvectors $$x_{1}^{1}, \ldots, x_{1}^{m_{1}}, \ldots, x_{s}^{1}, \ldots, x_{s}^{m_{s}}$$ are linear independent for $s \le k - 1$.
@@ -236,17 +236,17 @@ This is contradiction.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Corollary6.
+#### Corollary6.
 * $$A \in \mathbb{C}^{n \times n}$$,
 
 Then $A$ is diagonalizable.
 
-## proof.
+#### proof.
 By combining corollary4 and theorem5.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Thereom7.
+#### Thereom7.
 * $$A \in \mathbb{C}^{n \times n}$$,
 
 Then
@@ -267,14 +267,14 @@ $$
         (\lambda - d_{n})
 $$
 
-## proof.
+#### proof.
 From THereom 21.5.1 in Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem8.
+#### Theorem8.
 * $A \in \mathbb{C}^{n \times n}$
 
 Then $$\exists x_{1}, x_{2}$$ such that
@@ -324,7 +324,7 @@ $$
 Moreover, if $A$ is symmetric, $$\lambda(x_{1}, A)$$ and $$\lambda(x_{2}, A)$$ is smallest and largest eigenvalus of $A$ respectively.
 $$x_{1}$$ and $$x_{2}$$ are eigenvectors corresponding to the eigenvalues.
 
-## proof.
+#### proof.
 From Theorem 21.5.6 in Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 $$
@@ -333,25 +333,25 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem9. Existence of eigenvalue
+#### Theorem9. Existence of eigenvalue
 * $A \in \mathbb{C}^{n \times n}$
     * symmetric matrix
 
 Then $A$ has an eigenvalue.
 
-## proof.
+#### proof.
 From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem10. Orthogonal diagonalization
+#### Theorem10. Orthogonal diagonalization
 * $A \in \mathbb{C}^{n \times n}$
     * symmetric matrix
 
 $A$ is orthogonally dagonalizable.
 
-## proof.
+#### proof.
 From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 We prove this by mathematical induction.
@@ -591,7 +591,7 @@ Therefore $A$ is orthogonally diagonalizable.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Corollary11
+#### Corollary11
 * $A$
     * $n \times n$ symmetric matrix
 * $$d_{1}, \ldots, d_{n}$$,
@@ -605,7 +605,7 @@ $$
     \mathrm{diag}(d_{1}, \ldots, d_{n})
 $$
 
-## proof.
+#### proof.
 From Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
 
 Accoding to <a href="#theorem10-orthogonal-diagonalization">theorem10</a>,
@@ -615,6 +615,11 @@ Accoding to <a href="#theorem10-orthogonal-diagonalization">theorem10</a>,
 
 #### Proposition 12
 * $A \in \mathbb{R}^{n \times n}$,
+* $B \in \mathbb{R}^{n \times n}$,
+    * positive definite so that its inverse exists
+* $\lambda_{i}(A)$,
+    * $i$-th largest eivenvalue of $A$,
+* $$\lambda(A) := \{\lambda_{i}(A)\}_{i}$$,
 
 (1)
 
@@ -626,6 +631,41 @@ $$
     \lambda_{i}(A)
     .
 $$
+
+(2)
+
+$$
+    \lambda_{i}(B^{-1})
+    =
+    \frac{
+        1
+    }{
+        \lambda_{n - i}(B)
+    }
+    .
+$$
+
+(3) $c > 0$,
+
+$$
+    \lambda_{i}(cA)
+    =
+    c \lambda_{i}(B)
+    .
+$$
+
+(4) $k \in \mathbb{N}$,
+
+$$
+    \lambda_{i}(B^{k/2})
+    =
+    \lambda_{i}(B)^{k/2}
+    .
+$$
+
+(5)
+
+
 
 #### proof
 (1)
@@ -654,10 +694,81 @@ $$
 \end{eqnarray}
 $$
 
+(2)
 
+$$
+\begin{eqnarray}
+    (E - A)x
+    & = &
+        x
+        -
+        Ax
+    \nonumber
+    \\
+    & = &
+        x
+        -
+        \lambda_{i}(A)x
+    \nonumber
+    \\
+    & = &
+        (1 - \lambda_{i}(A))x
+    .
+    \nonumber
+\end{eqnarray}
+$$
 
+(3)
+
+(4)
+
+Let $VDV^{-1}$ be diagonalization of $B$.
+
+$$
+\begin{eqnarray}
+    D
+    & = &
+        \mathrm{diag}(\lambda_{1}(B), \ldots, \lambda_{n}(B))
+    \nonumber
+    \\
+    D^{k/2}
+    & = &
+        \mathrm{diag}(\lambda_{1}(B)^{k/2}, \ldots, \lambda_{n}(B)^{k/2})
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Then
+
+$$
+\begin{eqnarray}
+    B^{k/2}
+    & = &
+        VD^{k/2}V^{-1}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Since eigenvalues of $$VD^{k/2}V^{-1}$$ is equals to $D^{k/2}$,
+
+$$
+\begin{eqnarray}
+    \lambda_{i}(VD^{k/2}V^{-1})
+    & = &
+        \lambda_{i}(B)^{k/2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+#### Remark
+In general, there is no relation between eigenvalues of product of matrix $\lambda(AB)$ and eigenvalues of $\lambda(A)$ and $\lambda(B)$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * Harville, David A. Matrix algebra from a statistician's perspective. Vol. 1. New York: Springer, 1997.
