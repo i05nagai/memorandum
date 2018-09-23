@@ -1115,7 +1115,7 @@ $$
 Duality theorem does not tell us how we find the optimal condition of primal problem.
 Karush-Kuhn-Tucker condition give us the way tofind value.
 
-## Theorem14 Karush-Kuhn-Tucker Optimality Conditions in Convex case
+#### Theorem14 Karush-Kuhn-Tucker Optimality Conditions in Convex case
 * $$x^{*} \in \mathrm{int}(X)$$,
     * interior feasible solution to $$\eqref{convex_programming_problem_primal_problem}$$,
 * $$f, g^{1}, \ldots,g^{M}, \ldots,  g^{m}$$,
@@ -1159,7 +1159,7 @@ Then
 * (1) Sufficiency for an optimal value: (i) $\Rightarrow$ (ii),
 * (2) Necessity and sufficiency for an optimal value: Under restricted Slater condition, (i) $$\Leftrightarrow$$ (ii).
 
-## proof.
+#### proof.
 proof of (i) $\Rightarrow$ (ii)
 
 Let $L(x, \lambda)$ be lagurange dual function of $$\eqref{convex_programming_problem_primal_problem}$$.
