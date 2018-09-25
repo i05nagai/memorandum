@@ -2840,8 +2840,20 @@ title: English Speaking
     * every nook and cranny
         * every part of a place
         * Every nook and cranny of the house was stuffed with souvenirs of their trips abroad.
-
-
+* oppose
+    * As ooposed to the OCO model,
+* pull onself together
+    * to become calm and behave normally again after being angry or upset
+    * Just pull yourself together. There's no point crying about it
+* your timing couldn't have been perfect
+* impressive
+* exhibit
+    * the MAB probelm ehibits an exploration-exploitation tradeoff
+* sprained ankle
+* throw
+    * throw sb/sth off
+        * to take off a piece of clothing in a quick careless way
+        * they threw off their clothes and drive in
 
 
 
