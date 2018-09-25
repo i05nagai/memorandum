@@ -3,6 +3,8 @@ title: English word choice
 ---
 
 ## English word choice
+* the foreseeable future
+    * [What Does "The Foreseeable Future" Mean for Investors?](https://www.fool.com/investing/general/2015/08/28/what-does-the-foreseeable-future-mean-for-investor.aspx)
 * as to/as for
     * [with regard to/concerning\.](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
     * as for
@@ -222,18 +224,37 @@ title: English word choice
     * [meaning - "in effect" vs. "in fact" - English Language Learners Stack Exchange](https://ell.stackexchange.com/questions/49700/in-effect-vs-in-fact)
     * [Does 'in effect' mean the same thing as 'in fact'? - Quora](https://www.quora.com/Does-in-effect-mean-the-same-thing-as-in-fact)
 * although/even though/though
-    * [Although or though ? - English Grammar Today - Cambridge Dictionary](https://dictionary.cambridge.org/grammar/british-grammar/although-or-though)
-    * tough/although
+    * [Although or though ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/although-or-though)
+    * though/although
         * after main clause, it can also mean `but it is also true that`
-    * tough
+    * though
         * spoken english
-        * sometimes even though
         * in spoken english, though meaning however
             * It’s expensive. It's nice, though.
+        * Though it was rainy, we put on our jackets and went for a walk
+        * spoken english
+            * though is more common than although in general
+        * for emphasis, use even though
+        * -ing
+            * The patient, though getting stronger, is still not well enough to come off his medication.
+        * In formal speaking or writing, reduced clause
+            * Though more expensive, the new model is safer and more efficient.
+        * with a meaning similar to however or nevertheless
+            * You have six hours in the airport between flights! I don’t mind, though. I have lots of work to do. I’ll just bring my laptop with me.
+            * It’s expensive. It’s nice, though. Yeah, I think I’ll buy it.
+        * but: When the although/though clause comes after a main clause, it can also mean but it is also true that
     * as though
         * very similar to as if
         * as if is much more common
         * You look as though/as if you have seen a ghost!
+    * although
+        * everyone enojyed the trip to the final although we lost the match
+        * -ing
+            * Peter, although working harder this term, still needs to put more work into mathematics.
+        * In formal speaking or writing, reduced clause
+            * Raymond, although very interested, didn’t show any emotion when she invited him to go for a walk.
+        * but: When the although/though clause comes after a main clause, it can also mean but it is also true that 
+            * Karen is coming to stay next week although I’m not sure what day she is coming.
 * as/because/since/
     * [Learning English | BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv27.shtml)
     * because
