@@ -35,7 +35,6 @@ Average regret
 
 ## 3.1 Online gradient descent
 
-
 #### Algorithm 6 online gradient descent
 * $\mathcal{K}$,
     * convex set
@@ -70,11 +69,25 @@ $$
 
 **Step4.** end for
 
+**Step5.** Return $x_{T + 1}$,
+
+We denote this algorithm by $$\mathcal{A}_{OGD}(f_{1}, \ldots, f_{T}; \{\eta_{t}\})$$, that is,
+
+$$
+    \forall t \in \{0, \ldots, T\},
+    \
+    \mathcal{A}_{OGD}(f_{1}, \ldots, f_{t}; \{\eta_{s}\}_{s=1,\ldots,t})
+    =
+    x_{t + 1}
+    .
+$$
+
 <div class="end-of-statement" style="text-align: right">■</div>
+
 
 #### Lemma1 difference between optimal points
 * $\mathcal{F}$,
-    * convex functions
+    * $G$-bounded convex functions
     * $C^{1}$-functions
 
 In Algorithm 6, for any $x \in \mathcal{K}$,
@@ -188,7 +201,7 @@ $$
 
 #### Lemma2 bound of the linear approximation
 * $\mathcal{F}$,
-    * convex functions
+    * $G$-bounded convex functions
     * $C^{1}$-functions
 * $\mathcal{K}$,
     * convex
@@ -351,7 +364,7 @@ $$
     * $D$-bounded
 * $\eta_{t} := \frac{D}{G\sqrt{t}}$,
 * $f_{t}$,
-    * convex function
+    * $G$-bounded convex function
 
 Then the regret of the Algorithm 6 is bounded by
 

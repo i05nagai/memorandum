@@ -6,6 +6,7 @@ title: Introduction to Online Convex Optimization Chapter04
 We will introduce new class of convex functions: exp-concave functions.
 In this case, there is a second-order algorithm.
 
+
 ## 4.1. Motivation: universal portfolio selection
 
 * $$\{Z_{t}\}$$,
@@ -1631,3 +1632,68 @@ $$
 Note that $A{1/2}$, $A{-1/2}$, $A^{-1}$ are all symmetric matrix.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+### Implementation and running time
+* Storage complexity
+    * $O(n^{2})$,
+    * we have to store $A_{t}$ in each iteration
+* computational complexity
+    * calculation of inversion of matrix takes $O(n^{2})$,
+        * we do not have to explicitly calculate inverse of matrix because of woodbury formula
+    * computation of projection onto $\mathcal{K}$ takes polynomial time
+
+By the <a href="{{ site.baseurl }}/math/matrix/woodbury_matrix_identity.html">woodbury formula</a>, we have
+
+$$
+\begin{equation}
+    (A + xx^{\mathrm{T}})^{-1}
+    =
+    A^{-1}
+    -
+    \frac{
+        A^{-1}xx^{\mathrm{T}}A^{-1}
+    }{
+        1
+        +
+        x^{\mathrm{T}}A^{-1}u
+    }
+\end{equation}
+    .
+$$
+
+The inverse of the $A_{t}$ is 
+
+$$
+\begin{eqnarray}
+    A_{0}^{-1}
+    & = &
+        \frac{1}{\epsilon}
+        E_{n}
+    \nonumber
+    \\
+    A_{t + 1}^{-1}
+    & = &
+        (
+            A_{t}
+            +
+            \nabla_{t}
+            \nabla_{t}^{\mathrm{T}}
+        )^{-1}
+    \nonumber
+    \\
+        A_{t}^{-1}
+        -
+        \frac{
+            A_{t}^{-1}
+            \nabla_{t}
+            \nabla_{t}^{\mathrm{T}}
+            A_{t}^{-1}
+        }{
+            1
+            +
+            \nabla_{t}^{\mathrm{T}}
+            (A_{t})^{-1}
+            \nabla_{t}
+        }
+\end{eqnarray}
+$$

@@ -12,7 +12,26 @@ title: Introduction to Online Convex Optimization Chapter02
     * diameter is bounded by $D$
     * convex
     * compact
+
+#### Definition
 * $f: \mathcal{K} \rightarrow \mathbb{R}$,
+    * convex
+* $G > 0$,
+
+$f$ is said to be $G$-bounded if
+
+$$
+    \norm{
+        \partial_{x}f
+    }
+    \ge
+    G
+$$
+
+where $\partial_{x}f$ is subgradient of $f$ at $x$.
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 #### Definition positive definite
 * $A$,

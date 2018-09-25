@@ -18,6 +18,8 @@
         argmax: '\\mathop{\\mathrm{argmax}}\\limits',
         argmin: '\\mathop{\\mathrm{argmin}}\\limits',
         deg: '\\mathrm{deg}',
+        norm: ['\\left\\| #1 \\right\\|', 1],
+        abs: ['\\left| #1 \\right|', 1],
       } 
     }
   });

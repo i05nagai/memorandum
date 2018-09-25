@@ -12,6 +12,11 @@ title: English Speaking Personality
 * sociable
     * he is very sociable. he likes parties
     * I had a headache and I wasn't feeling ery sociable
+* personable
+    * he's very personable and open, which complements his general sensitivity toward others to make him a natural leader
+* timidnesss
+    * despite his timidness
+    * shy and nervous; without much confident; easily frightend
 * stubborn
     * you are so stubborn
 * nuisance

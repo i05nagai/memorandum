@@ -5247,6 +5247,34 @@ title: English Speaking
 * disparate
     * different in every way
     * the two cultures were so utterly disparate that she found it hard to adapt from one to the other
+* hindsight
+    * the ability to understand, after something has happened, why or how it was done and how it might have been done better
+    * they are ideas that, in hindsight, often seem hair-brained
+    * with (the benefit/ wisdom of)hindsight
+        * with hindsight, I should have taken the job
+    * In hindsight, it would have been better to wait
+* harebrained
+    * (of plans or people) not practical or silly
+    * the sounds like another of his harebrained schemes
+    * a harebrained scheme
+* nook
+    * every nook and cranny
+        * every part of a place
+        * Every nook and cranny of the house was stuffed with souvenirs of their trips abroad.
+* oppose
+    * As ooposed to the OCO model,
+* pull onself together
+    * to become calm and behave normally again after being angry or upset
+    * Just pull yourself together. There's no point crying about it
+* your timing couldn't have been perfect
+* impressive
+* exhibit
+    * the MAB probelm ehibits an exploration-exploitation tradeoff
+* sprained ankle
+* throw
+    * throw sb/sth off
+        * to take off a piece of clothing in a quick careless way
+        * they threw off their clothes and drive in
 
 
 
