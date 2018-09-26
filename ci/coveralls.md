@@ -10,11 +10,11 @@ title: Coveralls
 
 ### Setup with CMake
 * [JoakimSoderberg/coveralls-cmake: Coveralls JSON coverage generator and uploader for CMake](https://github.com/JoakimSoderberg/coveralls-cmake)
-    * coverallのCMakeでの設定方法
+    * configuration of coverall with CMake
 * [JoakimSoderberg/coveralls-cmake-example: Example project for coveralls-cmake](https://github.com/JoakimSoderberg/coveralls-cmake-example)
-    * 上記のsample project
+    * sample project of the above
 
-以下の手順に従う。
+Follow the following steps.
 
 1. Include the `Coveralls.cmake` script in `CMakeLists.txt`
     * `CMakeLists.txt`に以下のように記載する
@@ -31,7 +31,7 @@ if (COVERALLS)
 endif()
 ```
 
-2. Add coverage settings to your compile flags
+2. Add coverage settings to your compile flags by writing
 
 ```cmake
 if (COVERALLS)
@@ -40,7 +40,7 @@ if (COVERALLS)
 endif()
 ```
 
-か以下で設定する。
+or
 
 ```cmake
 if (COVERALLS)
@@ -63,6 +63,13 @@ if (COVERALLS)
         ON                 # If we should upload.
         "${PROJECT_SOURCE_DIR}/CMakeModules/") # (Optional) Alternate project cmake module path.
 endif()
+```
+
+### for
+
+```
+-g -O0 -fprofile-arcs -ftest-coverage
+-g -O0 -fprofile-arcs -ftest-coverage
 ```
 
 ## Reference
