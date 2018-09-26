@@ -14,6 +14,7 @@ title: English Email
 * [Unit 4: Starting and finishing emails \| LearnEnglish \- British Council](https://learnenglish.britishcouncil.org/en/english-emails/unit-4-starting-and-finishing-emails)
 * [How to end emails \| Common Mistakes in Business English](https://blog.harwardcommunications.com/2012/11/06/how-to-end-emails/)
 * [Phrases for closing an email \- Target Training GmbH](https://www.targettraining.eu/20-phrases-closing-email/)
+* [7 Clever Ways to Say, "I Look Forward to Hearing from You" \| Grammarly](https://www.grammarly.com/blog/i-look-forward-to-hearing-from-you/)
 
 * I look forward to hearing from you.
 * I look forward to receiving your reply.
