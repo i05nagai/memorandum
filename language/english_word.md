@@ -419,6 +419,8 @@ title: English word
 * tan
     * a light brown or yellow-brown color
     * a tan jacket
+* burgundy
+    * a dark reddish-purple colour, like the colour of red wine
 
 
 ## animals
@@ -430,6 +432,8 @@ title: English word
 * whale
 * lionfish
     * pterois
+* dog
+    * basset hound
 
 ## plant
 https://study.com/cimages/multimages/16/diagramplanteudicot.png
@@ -454,8 +458,6 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 * Life Science
 * anatomy
 * genealogy
-
-## health
 * gonorrhea
 * biology
 * taxonomy
@@ -507,6 +509,8 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 * nosebleed
 * runny nose
 
+* sciatica
+    * sciatic area
 * organ
     * brain
     * vein
@@ -529,6 +533,10 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
         * tear
         * eye discharge
             * eye mucus
+        * eye ball
+        * iris
+        * pupil
+        * cornea
     * nose
         * booger
         * nasal mucus

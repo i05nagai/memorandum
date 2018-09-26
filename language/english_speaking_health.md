@@ -4,6 +4,7 @@ title: English Speaking Health
 
 ## English Speaking Health
 
+* gland
 * come down with/go down with
     * if you begin to feel with a cold, the flu
     * I hope you're not coming down with a cold
@@ -127,6 +128,8 @@ title: English Speaking Health
 * Hyperventilation syndrome
 * Respiratory illness
 * insomnia
+    * a medical condition in which a person is not able to sleep
+    * He suffered from insomnia after he had lost his job.
 * Manic-depressive Illness（Depression)
 * Schizophrenia
 * Autonomic ataxia
