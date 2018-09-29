@@ -734,6 +734,38 @@ modal verb
         * they + will = they’ll
         * will + not = won't
 
+## be + to
+* [BE \+ TO\-infinitive \| Grammaring](https://www.grammaring.com/be-to-infinitive)
+* [Learning English \| BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv103.shtml)
+
+
+* offical arrangements
+    * the prime minister is to visit India next month
+* offical orders
+    * At the end of the course, all students are to take a written exam
+* future events
+    * it expresses near cetainly that what is forecast will happen
+    * A man is to appear in court later this morning charged with the murder of the footballer, Darren Gough.
+* things that should be donw
+    * what am I to do?
+* a possible aim when saying what should be done to reach it
+    * (intend) to do
+    * if you are to work here for more than three months, you must have a residence permit
+* prohibition
+    * only in negative
+    * you are not to do that again
+
+* To be in the if clause in conditional sentences
+    * when we are talking about preconditions for something to happen
+    * if we are to catch that train, we shall have to leave now
+    * If I were to increase my offer from 500 pounds to 550 pounds, would you be interested in selling me your car then?
+    * if we are to solve the world's pollution problems, we must address environmental issues now
+* To be passive
+    * used when giving instructions, it is noticeable always on medicine bottles and can be seen on other offical notice
+    * to be taken tree times a day after meals
+    * these beaches are not to be removed from changing rooms
+    * no foods of any kinds is to be taken into the examination room
+
 
 
 ## Reference
