@@ -182,3 +182,396 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 
+### 1.3.3 Hedge
+
+#### Algorithm 1 Hedge
+* $\mathcal{L} := [0, 1]^{n}$,
+* $W_{1} := (1, \ldots, 1) \in \mathcal{L}$,
+* $I_{t} \in \{1, \ldots, n\}$,
+    * categorical distribution with probability $$(W_{t, 1}/\sum_{j=1}^{n}W_{t, j}, \ldots, W_{t, n}/\sum_{j=1}^{n}W_{t, j})$$,
+
+**Step1.** for $t=1$ to $T$ do
+
+**Step2.** Play $I_{t}$
+
+**Step3.** Observe loss $\ell_{t} \in \mathcal{L}$,
+
+**Step4.** Update weights
+
+$$
+    W_{t + 1, i}
+    :=
+    W_{t, i}
+    \exp
+    \left(
+        -\epsilon
+        \ell_{t, i}
+    \right)
+    .
+$$
+
+**Step5.** end for
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Theorem 1.5
+* $\mathcal{L} := [0, 1]^{n}$,
+* $(l_{1}, \ldots, l_{T}) \in \mathcal{L}^{T}$,
+* $W_{1} := (1, \ldots, 1) \in \mathcal{L}$,
+
+Let
+
+$$
+\begin{eqnarray}
+    t = 1, \ldots, T,
+    \
+    i = 1, \ldots, n,
+    \
+    x_{t, i}
+    & := &
+         \frac{
+             W_{t, i}
+         }{
+             \sum_{j=1}^{n}
+                W_{t, j}
+         }
+    \nonumber
+    \\
+    t = 1, \ldots, T,
+    \
+    i = 1, \ldots, n,
+    \
+    W_{t + 1, i}
+    & := &
+        W_{t, i}
+        \exp
+        \left(
+            -\epsilon
+            \ell_{t, i}
+        \right)
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Let $$I_{t}$$ be categorical distribution with probability $x_{t}$, and $I_{1}, \ldots, I_{T}$ are independent.
+
+Then
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        \sum_{j=1}^{T}
+            \ell_{t, I_{t}}
+        -
+        \min_{I \in \mathcal{I}_{\Delta_{n}}}
+            \sum_{t=1}^{T}
+                \ell_{t, I}
+    \right]
+    & \le &
+        \epsilon
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+        +
+        \frac{
+            \log N
+        }{
+            \epsilon
+        }
+    \label{chap01_algorithm_01_expected_regret}
+\end{eqnarray}
+$$
+
+where $$\mathcal{I}_{\Delta_{n}}$$ is defined in <a href="{{ site.baseurl }}/thesis/introduction_to_online_convex_optimization/notation.html#definition-independent-categorical-rvs-over-simplex">notation</a>.
+
+#### proof
+First of all, since $\ell_{t} \in \mathcal{L}$,
+
+$$
+    i^{*} \in \{1, \ldots, n\}
+    \text{ s.t. }
+    \mathrm{E}
+    \left[
+        \min_{I \in \mathcal{I}_{\Delta_{n}}}
+            \sum_{t=1}^{T}
+                \ell_{t, I}
+    \right]
+    =
+    \sum_{t=1}^{T}
+        \ell_{t, i^{*}}
+    .
+$$
+
+Moreover,
+
+$$
+    \mathrm{E}
+    \left[
+        \ell_{t, I_{t}}
+    \right]
+    =
+    \ell_{t}^{\mathrm{T}}
+    x_{t}
+    .
+$$
+
+Hence the equation we have to prove is equivalent to
+
+$$
+\begin{eqnarray}
+    \sum_{j=1}^{T}
+        \ell_{t}^{\mathrm{T}}
+        x_{t}
+    -
+    \min_{i \in \{1, \ldots, n\}}
+        \sum_{t=1}^{T}
+            \ell_{t, i}
+    & \le &
+        \epsilon
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+        +
+        \frac{
+            \log N
+        }{
+            \epsilon
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+Let
+
+$$
+\begin{eqnarray}
+    \Phi_{t + 1}
+    & := &
+        \sum_{i=1}^{n}
+            W_{t, i}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+We have
+
+$$
+\begin{eqnarray}
+    \Phi_{t + 1}
+    & = &
+        \sum_{i=1}^{n}
+            W_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \ell_{t, i}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \frac{1}{
+            \sum_{j=1}^{n}
+                W_{t, j}
+        }
+        \sum_{i=1}^{n}
+            W_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \ell_{t, i}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \sum_{i=1}^{n}
+            x_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \ell_{t, i}
+            \right)
+    \nonumber
+    \\
+    & \le &
+        \Phi_{t}
+        \sum_{i=1}^{n}
+            x_{t, i}
+            \left(
+                1
+                -
+                \epsilon
+                \ell_{t, i}
+                +
+                \epsilon^{2}
+                (\ell_{t, i})^{2}
+            \right)
+        \quad
+        (\because x \ge 0, e^{-x} \le 1 - x + x^{2})
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \left(
+            1
+            -
+            \epsilon
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+        \right)
+    \nonumber
+    \\
+    & \le &
+        \Phi_{t}
+        \exp
+        \left(
+            -
+            \epsilon
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+        \right)
+        \quad
+        (\because 1 + x \le e^{x})
+    .
+\end{eqnarray}
+$$
+
+On the other hand, for $$ k = \{1, \ldots, n\}$$,
+
+$$
+\begin{eqnarray}
+    W_{T, k}
+    & \le &
+        \Phi_{T}
+    \nonumber
+    \\
+    & \le &
+        \Phi_{1}
+        \prod_{t=1}^{T}
+        \exp
+        \left(
+            -
+            \epsilon
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        N
+        \exp
+        \left(
+            -
+            \epsilon
+            \sum_{t=1}^{T}
+                \ell_{t}^{\mathrm{T}}
+                x_{t}
+            +
+            \epsilon^{2}
+            \sum_{t=1}^{T}
+                \sum_{i=1}^{n}
+                    x_{t, i}
+                    (\ell_{t, i})^{2}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+Taking the logarithm of both sides we get
+
+$$
+\begin{eqnarray}
+    & &
+        -\epsilon
+        \sum_{t=1}^{T}
+            \ell_{t, k}
+        \le
+        \log N
+        -
+        \epsilon
+        \sum_{t=1}^{T}
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+        +
+        \epsilon^{2}
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        -
+        \sum_{t=1}^{T}
+            \ell_{t, k}
+        \le
+        \frac{
+            \log N
+        }{
+            \epsilon
+        }
+        -
+        \sum_{t=1}^{T}
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{t=1}^{T}
+            \ell_{t}^{\mathrm{T}}
+            x_{t}
+        -
+        \sum_{t=1}^{T}
+            \ell_{t, k}
+        \le
+        \frac{
+            \log N
+        }{
+            \epsilon
+        }
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\ell_{t, i})^{2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Corollary
+In algorithm 1, expected regret is given by $$\eqref{chap01_algorithm_01_expected_regret}$$.
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
