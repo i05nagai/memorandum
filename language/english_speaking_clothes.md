@@ -4,6 +4,10 @@ title: English Speaking Clothes
 
 ## English Speaking Clothes
 
+* tutu
+    * the modern tutu is a dress worn as a cosume in ballet performance
+* bodice
+    * an articule of clothing for women and girls, covering the body from the neck to the waist
 * bandage dress
     * a dress that fits very tightly to the body and looks as if it is wrapped around the body in layers
     * She was wearing a silver satin bandage dress.
