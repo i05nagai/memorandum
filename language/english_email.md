@@ -15,6 +15,7 @@ title: English Email
 * [How to end emails \| Common Mistakes in Business English](https://blog.harwardcommunications.com/2012/11/06/how-to-end-emails/)
 * [Phrases for closing an email \- Target Training GmbH](https://www.targettraining.eu/20-phrases-closing-email/)
 * [7 Clever Ways to Say, "I Look Forward to Hearing from You" \| Grammarly](https://www.grammarly.com/blog/i-look-forward-to-hearing-from-you/)
+* [How to End a Letter: Appropriate and Inappropriate Closings \| TurboFuture](https://turbofuture.com/internet/How-to-end-a-letter-in-English-Examples-of-closing-sentences)
 
 * I look forward to hearing from you.
 * I look forward to receiving your reply.
