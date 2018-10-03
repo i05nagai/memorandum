@@ -98,4 +98,11 @@ Host name
 * sshでアクセスする時、pass phraseを設定してないのにpassが求められるとき
     * identity fileが読み込めてない
 
+### Remote commands
+Executing commands or changing shell when connecting via SSH
+
+```
+ssh -t -i key user@host '/bin/zsh -l'
+```
+
 ## Rereference
