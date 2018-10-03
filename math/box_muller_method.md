@@ -3,14 +3,18 @@ title: Box Muller's method
 ---
 
 ## Box Muller's method
+Box Muller's method is the faster way to generate normal random variables from uniformly random variable.
+Box Muller's method is much faster than inverse methods, which is a general method to generate random variables with given.
 
-* $$(\Omega, \mathcal{F}, P)$$,
+
+
+* $(\Omega, \mathcal{F}, P)$,
     * probability space
 * $$U_{i}: \Omega \rightarrow (0, 1),\ (i = 1, 2)$$,
     * uniformly distributed random variable
     * $$U_{1}, U_{2}$$ are independent
 
-## Theorem1.
+#### Theorem1.
 
 $$
 \begin{eqnarray}
@@ -28,7 +32,7 @@ $$
 
 Then $$X_{1}$$, $$X_{2}$$ are independent one-dimentional normal distribution.
 
-## proof.
+#### proof.
 We show that the characteristic function of $X_{1}$ is equal to a normal distribution.
 
 $$
@@ -387,7 +391,11 @@ This is characteristic function of normal distribution.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Remark
+* if you want $N$ dimensional normal random variable, you just generate random variables with Box-Muller's method $M := N/2$ times.
+Then you can use $N$ variables as single $N$-dimentional normal variable.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
-* [ボックス＝ミュラー法 - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%9D%E3%83%9F%E3%83%A5%E3%83%A9%E3%83%BC%E6%B3%95)
-
+* [Box–Muller transform \- Wikipedia](https://en.wikipedia.org/wiki/Box%E2%80%93Muller_transform)
