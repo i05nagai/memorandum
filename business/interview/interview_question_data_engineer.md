@@ -38,6 +38,33 @@ title: Interview Question Data Engineer
     * the candidate key other than primary key is called as alternate key.
 * foreigh key
 
+## Kimball and Inmon
+* data warehouse
+    * data warehouse is where you store data from multiple data sources to be used for historical and trend analysis reporting
+* data mart
+    * data mart is a subset of data warehouse that is oriented to specific subject (e.g. sales, finance, marketing)
+
+* Kimabll
+    * Dimensional
+    * facts and dimensions, star schema
+    * less tables but have duplicate data
+    * easier for user to understand
+    * slowly changing dimension, surrogatekeys
+    * good for direct end-user access of data
+    * Business driven, user actively participate
+* Inmon
+    * IT driven, users have passive participation
+    * Relational
+    * ER model
+    * normalization rules
+    * many tables using joins
+    * history tables, natural keys
+    * good for indirect end-user access of data
+* Kimball/Inmon
+    * both skills 
+    * models are not that different, having become similar over the years
+    * in both models, no solution will be effective unless you possess
+
 ## Reference
 * [Data Warehouse Architecture - Kimball and Inmon methodologies | James Serra's Blog](https://www.jamesserra.com/archive/2012/03/data-warehouse-architecture-kimball-and-inmon-methodologies/)
 * [Building an Effective Data Warehouse Architecture](https://www.slideshare.net/jamserra/data-warehouse-architecture-16065902)
