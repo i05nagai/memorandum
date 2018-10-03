@@ -3,16 +3,19 @@ title: fstab
 ---
 
 ## fstab
-`/etc/fstab`はmountの自動化用のfile
+`/etc/fstab` file, the device automatically mounts again when the instance restarts.
 
 ## Configuration
 
 ```
 [Device] [Mount Point] [File System Type] [Options] [Dump] [Pass]
+# UUID=[UUID_VALUE] /mnt/disks/[MNT_DIR] ext4 discard,defaults,nofail 0 2
 ```
 
 * `<device>`
     * The device/partition (by /dev location or UUID) that contain a file system.
+        * `UUID=[VALUE]`
+        * `/dev/sdb`
 * `<mount point>`
     * The directory on your root file system (aka mount point) from which it will be possible to access the content of the device/partition (note: swap has no mount point). Mount points should not have spaces in the names.
     * defaultは `/media`
