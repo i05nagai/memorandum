@@ -3,6 +3,12 @@ title: English word choice
 ---
 
 ## English word choice
+* consit/comprise/compose
+    * [Consist, comprise or compose ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/consist-comprise-or-compose)
+    * consist
+        * 
+    * comprise
+    * compose
 * the foreseeable future
     * [What Does "The Foreseeable Future" Mean for Investors?](https://www.fool.com/investing/general/2015/08/28/what-does-the-foreseeable-future-mean-for-investor.aspx)
 * as to/as for
