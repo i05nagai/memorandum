@@ -767,5 +767,71 @@ modal verb
     * no foods of any kinds is to be taken into the examination room
 
 
+## Relative clause
+* https://www.grammar-quizzes.com/clauses-3.html
+* [English Grammar Today on Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses)
+* [Relative clauses referring to a whole sentence \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses/relative-clauses-referring-to-a-whole-sentence)
+
+* whose
+    * we watch the doctor whose TV show is funny
+    * Do you know the talk show host whose name is Turkish?
+    * object noun
+        * we watch the doctor whose TV show you like
+        * the man whose show we watch is a doctor
+        * Do you know the talk show host whose name I cannot Remember?
+        * the doctor whose advice we value is successful on TV
+        * the woman whose son you met is the guest speaker
+* of which
+    * https://www.grammar-quizzes.com/clauses-7.html
+        * some of  which
+        * many of who(m)
+        * most of whose (cars)
+        * none of who(m)
+        * two of who(m)
+        * half of who(m)
+        * both of which
+        * neither of who(m)
+        * each of which
+        * all of whose (money)
+        * both of whose (names)
+        * several of which
+        * a few of which
+        * a little of which
+        * a number of who(m)
+    * subject
+        * disnyland, all of which belongst to the Disney company, is located in Anaheim
+        * Disneyland, some of which is crowed with people, is a favourite tourist site
+        * Sleeping Beauty's Castle, all of which is half-scale, is located in Fantasyland
+        * California has a lot of visitors, most of whom visit Disneyland
+        * walt Disney was devoted to his children, all of whom adored their father
+        * Disney fans, many of whom Mr. Disney met personally, praised his projects
+        * the disney company has several parks, all of which are run by Disney
+        * the kids all of whom go to my school won the biking races
+    * object noun
+        * The Disney Company has several pars, all of which Disney runs
+        * the biking trophy was given to the kids (all of whom) you just met
+
+## That clause
+* [That \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns/that)
+
+* verb + That clause
+    * reporting verbs (say, tell, admit, etc.)
+    * mental process verbs (believe, think, know, hope, etc.)
+* adj + That clause
+    * to express opinions and feeling
+    * sure, certain, right, important, afraid, pleased, sorry, surprised, worried
+    * It’s important (that) we look at the problem in more detail.
+    * I’m sure (that) you’ll know a lot of people there.
+    * They were afraid (that) we were going to be late.
+* noun + That clause
+    * to express opinions and feelings, often about certainty and possibility. We also use that with reporting nouns
+    * belief, fact, hope, idea, possibility, suggestion, statement, claim, comment, argument
+    * Is there any possibility that 
+    * He is also having intensive treatment in the hope that he will be able to train on Friday.
+    * Dutch police are investigating the possibility that a bomb was planted on the jet.
+
+## That as an intensifier
+* Mine wasn't that nice
+* I don't think she's that good
 
 ## Reference
