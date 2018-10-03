@@ -404,5 +404,11 @@ ORDER BY
 * You aren't charged for queries that return an error, or for queries that retrieve results from the cache.
 * [Pricing  |  BigQuery  |  Google Cloud](https://cloud.google.com/bigquery/pricing#on_demand_pricing)
 
+## Tips
+
+### Visualize geographic data
+* [BigQuery Geo Viz](http://bigquerygeoviz.appspot.com/)
+* [Bridging the gap between data and insights \| Google Cloud Blog](https://cloud.google.com/blog/products/gcp/bridging-the-gap-between-data-and-insights)
+
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
