@@ -3,6 +3,25 @@ title: English Speaking Personality
 ---
 
 ## English Speaking Personality
+* talkative
+* chatterbox
+    * sb who talks continuously
+    * your sister is a real chatterbox
+* brosona
+    * the personality of bro
+    * Sometimes I walk around campus listening to Beyonce while keeping a straight face to maintain my brosona.
+* shy
+    * I'm shy at first
+* outgoing
+    * I'm not that out-going
+* introverted
+    * Are you introverted or extroverted?
+    * I'm introverted
+* extroverted
+    * I'm extraverted
+* reserved
+    * Reserved people do not often talk about or show their feelings or thoughts
+    * I'm a little reserved around new faces
 * charmer
     * a person who has good qualities that make you like them
         * She's a little charmer - you'll never meet a more likeable child.
