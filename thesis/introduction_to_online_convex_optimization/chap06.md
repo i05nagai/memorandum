@@ -611,7 +611,6 @@ $$
     * categorical distribution with probability $x_{t}$,
     * it's independent with respect to $t$,
 
-
 **Step1.** For $$t \in \{1, \ldots, T\}$$ do
 
 **Step2.** Play $I_{t}$ and observe loss $\ell_{t} \in [0, 1]^{n}$,
@@ -623,7 +622,7 @@ $$
     \hat{\ell}_{t, i}
     :=
     \begin{cases}
-        \frac{1}{x_{t, I_{t}}
+        \frac{1}{x_{t, I_{t}}}
         \ell_{t, I_{t}}
         &
             i = I_{t}
@@ -656,9 +655,8 @@ $$
         \frac{
             y_{t + 1}
         }{
-            \norm{
-                y_{t + 1}
-            }_{1}
+            \sum_{j=1}^{n}
+                y_{t + 1, j}
         }
     \nonumber
 \end{eqnarray}
@@ -670,6 +668,140 @@ $$
 **Step6.** Return $x_{T + 1}$,
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+#### Theorem 6.2
+* $\mathcal{L} := [0, 1]^{n}$,
+* $\epsilon > 0$,
+* $x_{1} := (1/n, \ldots, 1/n)$,
+* $y_{1} := (1, \ldots, 1)$,
+* $\ell_{1}, \ldots, \ell_{T} \in \mathcal{L}$,
+* $I_{t}$,
+    * categorical distribution with probability $x_{t}$,
+    * it's independent with respect to $t$,
+
+$$
+\begin{eqnarray}
+    \hat{\ell}_{t, i}
+    & := &
+        \begin{cases}
+            \frac{1}{x_{t, I_{t}}}
+            \ell_{t, I_{t}}
+            &
+                i = I_{t}
+            \\
+            0
+            &
+                \text{otherwise},
+        \end{cases}
+    \nonumber
+    \\
+    i = 1, \ldots, n,
+    \
+    y_{t + 1, i}
+    & := &
+        x_{t, i}
+        \exp
+        \left(
+            - \epsilon
+            \hat{\ell}_{t, i}
+        \right)
+    \nonumber
+    \\
+    x_{t + 1}
+    & := &
+        \frac{
+            y_{t + 1}
+        }{
+            \sum_{j=1}^{n}
+                y_{t + 1, j}
+        }
+        \in \Delta_{n}
+    \nonumber
+\end{eqnarray}
+$$
+
+Then
+
+$$
+    \mathrm{E}
+    \left[
+        \sum_{t=1}^{T}
+            \ell_{t, I_{t}}
+        -
+        \min_{I \in \mathcal{I}}
+            \sum_{t=1}^{T}
+                \ell_{t, I_{t}}
+    \right]
+    \le
+    2
+    \sqrt{
+        T
+        n
+        \log n
+    }
+    .
+$$
+
+
+#### proof
+First of all, we have
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        \ell_{t, I_{t}}
+    \right]
+    & = &
+        \sum_{j=1}^{n}
+            \ell_{t, j}
+            x_{t, j}
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Thus, $\ell_{t} \in \mathcal{L}$,
+
+$$
+\begin{eqnarray}
+    i^{*} \in \{1, \ldots, n\},
+    \
+    \mathrm{E}
+    \left[
+        \min_{I \in \mathcal{I}}
+            \sum_{t=1}^{T}
+                \ell_{t, I_{t}}
+    \right]
+    & = &
+        \sum_{t=1}^{T}
+            \ell_{t, i^{*}}
+    \nonumber
+\end{eqnarray}
+    .
+$$
+
+Thus, what we need to prove is 
+
+$$
+    \sum_{t=1}^{T}
+        \ell_{t, j}^{\mathrm{T}}
+        x_{t}
+        -
+        \sum_{t=1}^{T}
+            \ell_{t, i^{*}}
+    \le
+    2
+    \sqrt{
+        T
+        n
+        \log n
+    }
+    .
+$$
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 #### Lemma 6.2
 
@@ -709,7 +841,7 @@ $$
         \left[
             \ell_{t, I_{t}}
             \frac{1}{x_{t, I_{t}}}
-            1_{I_{t} = i}
+            1_{\{I_{t} = i\}}
         \right]
     \nonumber
     \\
@@ -717,7 +849,7 @@ $$
         \sum_{j=1}^{n}
             \ell_{t, j}
             \frac{1}{x_{t, j}}
-            1_{j = i}
+            1_{\{j = i\}}
             x_{j}
     \nonumber
     \\
@@ -730,8 +862,47 @@ $$
     \left[
         \sum_{j=1}^{n}
             x_{t, j}
-            (\hat_{\ell}_{t, j})^{2}
+            (\hat{\ell}_{t, j})^{2}
     \right]
+    & = &
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    x \in \mathcal{K},
+    \
+    \mathrm{E}
+    \left[
+        \hat{\ell}_{t}^{\mathrm{T}}
+        x
+    \right]
+    & = &
+        
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+        \sum_{t=1}^{T}
+            \ell_{t}(I_{t})
+        -
+        \min_{I \in \mathcal{I}}
+            \sum_{t=1}^{T}
+                \ell_{t}(I)
+    \right]
+    & = &
+        \mathrm{E}
+        \left[
+            \sum_{t=1}^{T}
+                \ell_{t}(I_{t})
+            -
+            \min_{I \in \mathcal{I}}
+                \sum_{t=1}^{T}
+                    \ell_{t}(I)
+        \right]
 \end{eqnarray}
 $$
 
