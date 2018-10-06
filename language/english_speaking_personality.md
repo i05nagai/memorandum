@@ -3,6 +3,7 @@ title: English Speaking Personality
 ---
 
 ## English Speaking Personality
+* self-initiative
 * talkative
 * chatterbox
     * sb who talks continuously
@@ -163,4 +164,6 @@ title: English Speaking Personality
 * they were very patient with me
 * arrogant
 * immature
+
+
 
