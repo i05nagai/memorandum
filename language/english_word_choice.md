@@ -3,6 +3,25 @@ title: English word choice
 ---
 
 ## English word choice
+* Ms./Mrs./Miss
+    * Miss
+        * mis
+        * unmarried
+    * Mrs.
+        * ˈmisiz,ˈmisəs
+        * married
+    * Ms.
+        * miz,məz
+        * Ms. + first name is possible
+        * Ms. + surname formal
+        * unmarried or married
+* immigration/migration/emigration
+    * emigrate
+        *  leave one's country to live in another
+    * migrate
+        * to move, like birds in the winter
+    * immigrate
+        * come into another country to live permanently
 * consit/comprise/compose
     * [Consist, comprise or compose ? \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/consist-comprise-or-compose)
     * consist
