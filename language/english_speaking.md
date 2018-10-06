@@ -2079,8 +2079,18 @@ title: English Speaking
     * He was hoping you'd come by as a slutty nurse
 * fight
     * who could kick whose ass in a fight
-* arm wrestle
-    * you guys could arm wrestle
+* arm
+    * arm wrestle
+        * you guys could arm wrestle
+    * body part
+    * weapons
+    * of land/water
+    * of organization
+    * to provide yourself or others with a weapon or weapons
+    * to provide yourself or others with equipment or knowledge in order to complete a particular task
+        * she armed herself for the interview by finding out all she could about the coumpany in advance
+        * I went to the meeting armed with the relevant facts and figures
+        * A loss on the sale of its outdoor advertising arm pre-tax profits.
 * dignity
 * if anything
     * Wait, if anything, you've to let me win.
@@ -5701,7 +5711,6 @@ title: English Speaking
     * around-the-clock working, the increasing pace of innovation and automation, and the drive for higher productivity will have negative effects on stress and mental health.
     * all day and all night
     * Doctors and nurses worked round the clock to help those injured in the train crash.
-* workforce
 * cubicle
     * a small space with walls or curatains around it, that is separate from the rest of a room and where you can be private when taking clothes off, etc.
         * a shower cubicle
@@ -6710,6 +6719,13 @@ title: English Speaking
 * harmony
     * in harmony
         * It's important for different races to live in harmony.
+* harmonious
+    * music
+        * having a pleasnt tune or harmony
+    * pleasant
+        * frinedly and peaceful
+    * having different parts of that are combined in a pleaing way
+        * a harmonious blend of colors
 * assimilate
     * to become part of a community or culture
     * Many immigrants find it difficult to assimilate into a foreign culture.
@@ -6726,6 +6742,9 @@ title: English Speaking
     * diverse workforce
         * the company hasa very diverse workforce
     * cut/slash/expand a workforce
+        * the company is cutting its workforce
+        * Women now representes almost 50% of the workforce
+    * skilled/educated/flexible workforce
 * ace
     * playing card
     * tennis
@@ -6738,7 +6757,127 @@ title: English Speaking
         * he's an ace basket ball player
         * that's an ace 
 * schlub
-
+* interactive
+    * involvining communication between people or reactions bewtween things that work together
+        * the ocean and the atomosphere form an interactive system
+* laureate
+    * a person who has been given a very high honour because of their ability in a subject of study
+* immigration
+    * the act of sb coming to live in a different country
+    * the process of examining your passport and other documents to make certain that you can be allowed to enter the country, or the place where this is done
+* migration
+    * movement from one region to another and often back again, esp. according to the season of the year
+    * the process of a person or people travelling to a new place or country, usually in order to find work and live there temporarily or permanently
+    * the process of moving or being moved from one place to another:
+* food for thought
+    * sth worth thinking seriously about
+    * thank you for your suggestion -- it gae us a lot of food for thought
+* remission
+    * of illness
+    * reduction
+    * in religion
+* radiation pneumonitis
+* transient/ephemeral/short-lived
+    * Transient fields in your function object are not transmitted to worker instances, because they are not automatically serialized.
+    * lasting for only a short time; temporary
+        * weakness was transient , soon I was feeling strong again
+        * transient workers come to pick apples and then head south to harvest other cops
+    * transient also means staying for only a short time
+* invocation
+    * call for help
+        * to call on sth or sb esp. God, for help
+    * use
+        * to cause sth to be used; bring into effect
+        * Rather than answer the question, the witness invoked the Fifth Amendment against incriminating himself
+    * to make a computer program start working
+        * You may have to invoke the program from the command line.
+* prioritize
+    * to decide which of a group of things are the most important so that you can deal with them first
+        * you must learn to prioritize your work
+* learn
+    * learn the ropes
+        * If you are learning the ropes, you are learning how a particular task or job is done.
+* petulant/cranky
+    * petulant
+        * easily annoyed and complaining in a rude way like a child
+            * He plays the part of a petulant young man in the film.
+    * cranky
+        * bad-tempered
+        * strange
+    * peevish
+    * testy
+    * tetchy
+        * easily made angry, unhappy, or upset
+    * irritable
+    * fractious
+* earthquake
+    * a sudden shaking of the Earth's surface that often causes a lot of damage
+    * an earthquake happens
+    * an earthquake hit/strike a place
+    * an earthquake destroys/damages sth
+    * an earthquake measures 5 on the Richer Scale
+    * the magnitude of an earthquake
+* PFA
+    * Please Find Attached
+* Munich
+    * myoo-nik
+    * state is Bavaria
+* knack
+    * an ability or special method for doing something easily and well
+        * there's knack to using this quick-drying paint
+    * a skill or an ability to do something easily and well
+        * a knack for remembering face
+        * she has the knack of making people feel comfortable
+* sacriface
+    * Suitable offers that don't sacrifice your privacy
+* aftermath
+    * the period that follows an unpleasant event or accident, and the effects that it causes
+        * many more people died in the aftermath of the explosion
+* meditate
+    * to think seriously about something, esp. over a period of time:
+* slim
+    * thin
+        * attractively thin
+        * slim hips/legs
+        * she has a lovely slim figure
+    * small
+        * very small
+        * they only have a slim chance of winning
+    * to try to get thinner by eating less food and doing more excersie
+        * you don't have much lunch -- are you simming?
+* exempt
+    * not having to obey a rule or to do sth that is usually necessary
+        * The H1B offered to academic positions, such as international postdoctoral scholars, falls under the cap-exempt H1B
+        * Nonprofit organizations are exempt from taxes.
+    * to excuse sb or sth from a duty, payment, etc.
+        * small business have been exempted from the tax incrase
+* secure
+    * secure
+        * free from risk and the threat of change for the worse
+    * free from danger
+    * fixed
+    * obtain
+    * fasten
+    * make safe
+    * get
+        * to get something, sometimes with difficulty
+            * he was disapponinted by his failure to secure the top job with the bank
+            * the change in the law will make it harder for the polite to secure convictions
+        * to make certain something is protected from danger or risk
+    * prtect
+        * to make certain soth is protected rom danger or risk
+    * finance
+    * fix
+* scratch
+    * scratch someone's eye out
+        * to fight or argue with someone in a very angry and cruel way
+    * scratch sb's head
+        * to have difficulty understanding sth
+            * All I can do is scratch my head and ask why
+        * to think about sth
+            * a lot of people must be scratching their heads about which way to vote
+* milf
+    * a sexually attractive older woman, typically one who has children
 
 
 ## US
