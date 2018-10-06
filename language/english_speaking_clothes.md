@@ -96,3 +96,78 @@ title: English Speaking Clothes
 * pesticide
 * roach spray
 * disinfectant
+
+## shoes
+[Different Types of Shoes in English \| List of Shoes with Pictures \- 7 E S L](https://7esl.com/types-of-shoes/)
+
+* athletic shoes
+    * chuck taylor
+    * golf shoes
+    * hiking boots
+    * high tops
+    * running shoes
+    * climing shoes
+    * soccer shoes
+    * sneakers
+        * U.S.
+        * Trainers (U.K.)
+    * old skool
+    * basketball shoes
+    * ice-skates
+* boots
+    * knee high boots
+    * insulated boots
+    * boots
+    * work boots
+    * combat boots
+    * uggs
+    * wellington boots
+    * timberland boots
+    * cowboyboots
+    * lita
+    * laced booties
+    * steel-toe boots
+    * army boots
+    * desert boots
+* heels
+    * Lita
+    * laced booties
+    * court shoes
+        * U.K.
+        * pumps (U.S.)
+    * wedges
+    * Mary Jane platforms
+    * platform heels
+    * cone heels
+    * stilettos
+    * high heels
+    * scarpin heels
+    * kitten heels
+    * almond-toe pumps
+    * platform pumps
+    * ballet flats
+    * Mary Jane
+* shoes
+    * business shoes
+    * derby shoes
+    * monk straps
+    * old skool
+    * boat shoes
+    * roller skates
+* sandal
+    * flip flops
+    * high-healed sandals
+    * Tatami sandals
+    * leather sandals
+    * rope sandals
+    * metalic sandals
+    * wedge woman sandals
+    * flat sandals
+    * rubber sandals
+    * lace shoes
+    * tip toe sandals
+    * gladiators
+    * flatbed
+
+## Reference
+
