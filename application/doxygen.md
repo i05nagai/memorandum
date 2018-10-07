@@ -91,5 +91,11 @@ doxygen <config-file>
     * 作成するxmlの出力場所
     * 相対pathを指定した場合は、OUTPUT_DIRECTORYの値から見た相対pathになる
 
+## Documentation
+* [List](https://www.stack.nl/~dimitri/doxygen/manual/lists.html)
+* [Doxygen Manual: Documenting the code](https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html)
+* [Special Commands](https://www.stack.nl/~dimitri/doxygen/manual/commands.html)
+* [Doxygenチートシート \- Qiita](https://qiita.com/yuta-yoshinaga/items/84887a89f6a21a7dcfd5)
+
 ## Reference
 * [Doxygen](http://www.doxygen.jp/manual.html)
