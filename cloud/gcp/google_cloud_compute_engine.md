@@ -4,6 +4,26 @@ title: Google Cloud Compute Engine
 
 ## Google Cloud Compute Engine
 
+## SSH key
+https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys
+
+* Compute Engine automatically creates and manages SSH keys for you when you connect to instances using SSH from the Browser or the gcloud comand-line tool
+* If you are an advanced user who needs to manage SSH keys manually, manage instance access using OS Login.
+
+```
+gcloud compute --project "project-name" ssh --zone "us-east1-b" "instance-name" --ssh-flag="-v"
+```
+
+this generats private key in `~/.ssh/google_compute_engine` and public key in `~/.ssh/google_compute_engine.pub`.
+
+## Adding storage
+
+```
+sudo mkdir -p /mnt/disks/[MNT_DIR]
+sudo mount -o discard,defaults /dev/[DEVICE_ID] /mnt/disks/[MNT_DIR]
+sudo chmod a+w /mnt/disks/[MNT_DIR]
+echo UUID=`sudo blkid -s UUID -o value /dev/sdb` /mnt/disks/disk-1 ext4 discard,defaults,nofail 0 2 | sudo tee -a /etc/fstab
+```
 
 ## Preemptible VM Instaces
 * [Preemptible VM Instances  |  Compute Engine Documentation  |  Google Cloud](https://cloud.google.com/compute/docs/instances/preemptible?hl=en_US&_ga=2.13732919.-1205531873.1513079066#preemptible_with_instance_groups)
