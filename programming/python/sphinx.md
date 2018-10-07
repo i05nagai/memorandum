@@ -3,12 +3,14 @@ title: Sphinx
 ---
 
 ## Sphinx
+Pip is recommended way to install Sphinx.
+You can install Sphinx via apt or brew, but those are prepared for dependency of other packages.
 
 ## Tutorial
 1. githubに新しくrepositoryで`repository_docs`という名前でrepositoryを作っておく。
 1. `sphinx`を使用するので、`pip`でいれる。
 
-```shell
+```
 pip install sphinx
 ```
 
@@ -378,13 +380,6 @@ breathe_projects_source = {
 * [Directives & Config Variables — Breathe 'latest' documentation](http://breathe.readthedocs.io/en/latest/directives.html)
 
 使えるdirective
-
-`autodoxygenfile`はdoxygenでのhtmlの設定を自動で行ってくれる。
-source fileの場所の設定が必要？
-
-```
-autodoxygenfile
-```
 
 `autodoxygenfile`はdoxygenでのhtmlの設定を自動で行ってくれる。
 source fileの場所の設定が必要？
