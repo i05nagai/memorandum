@@ -398,17 +398,37 @@ title: English Speaking
     * I was born in Chicago
     * Where were you born?
     * How many babies are born every day?
-* get as be
-    * There was afight at the party, but nobody get hurt
-    * I don't get invited to many parties
-    * I'm suprised Liz didn't get offered the job
-    * Jessica is liked by everybody
-    * Peter was a mystery man
-    * I get married
-    * I get divorced
-    * I get dressed
-    * I get lost
-    * I get changed
+* get
+    * get off
+        * to leave a place, usually in order to start a journey
+            * if we can get off by seven o'clock, the roads will be clearer
+        * to leave work with permission, usually at the end of the day
+            * how early can you get off this afternoon?
+    * get off sth
+        * to leave a train, bus or aircrat
+            * get off a Camden Twon
+            * I tripped as I got off the bus
+        * to avoid punishment, or to help another person to avoid punishment for sth
+            * she was charged with fraud, but her lawyer managed to get her off
+    * get off on sth
+        * to become excited by sth
+            * he really gets off on those little porcelain figurines
+        * to find sth excited, esp in a sexual way
+            * Dave likes power -- he gets of on it
+    * get off on the right foot
+        * to make a successful start
+        * he really got off on the right foot with my mother
+    * get as be
+        * There was afight at the party, but nobody get hurt
+        * I don't get invited to many parties
+        * I'm suprised Liz didn't get offered the job
+        * Jessica is liked by everybody
+        * Peter was a mystery man
+        * I get married
+        * I get divorced
+        * I get dressed
+        * I get lost
+        * I get changed
 * said/alleged/believed/considered/expected/known/reported/thought/understood
     * People say that he is 108 years old
         * It is said that he is 108 years old
@@ -488,6 +508,7 @@ title: English Speaking
 * lie
     * position
         * lying/lay/lain
+        * Considering where the power in a supply chain lies
         * to be in or move into a horizontal position on a surface
             * to lie in bed
             * to lie on a beach
@@ -3287,6 +3308,11 @@ title: English Speaking
     * give title
         * Her latest novel, entitled "The Forgotten Sex", is out this week.
 * entail
+    * to involve or make sth necessary
+        * many investment entails risk
+    * to make sth necessary, or to involve sth
+        * such a large investment inevitably entails some risk
+        * Reparing the roof will entail spending a lot of money
 * comparatively
 * cusp
     * the dividing line between two very different things
@@ -6878,6 +6904,72 @@ title: English Speaking
             * a lot of people must be scratching their heads about which way to vote
 * milf
     * a sexually attractive older woman, typically one who has children
+* strangle
+    * to kill sb by pressing the throat so that the person cannot breath
+        * she had been strangled with her own scarf and her body dumped in the woods
+    * to stop sth from developing
+        * For years, the organization was strangled by excessive bureaucracy.
+        * There is a great deal of fear that the new restrictions might strangle the country's economy.
+* strangulation
+    * An autopsy showed that he had died of strangulation.
+* prospectus
+* bullish
+    *  The market has become more bullish on the sector, giving the players that are still private significantly higher valuations and higher levels of funding than earlier companies achieved at the same stage (Exhibit 3)
+    * with prices rising, or (of people) expecting good things, esp. of business
+    * attitude
+    * financial market
+    * if a market is bullish, a lot of people are buying shares, bonds, currency, etc. because they expect the price of them to increase
+        * there is a bullish mood on Wall Street
+        * bullish n sth
+            * with growing demand for telecommunication equipment, the market is very bullish on these types of stocks
+* relentlessly
+    * in an extreme way that continues without stopping
+        * She has campaigned relentlessly for her husband's release from prison.
+        * Summer there is relentlessly hot
+* campaign
+    * a plan consisting of a number of activities directed toward the achievement of an aim
+        * election campaing
+        * launch/mount/start a campaign
+        * advertising campaign
+        * drip campaign
+    * to try to achieve something, such as the election of someone to a political office, by taking part in a number of planned activities
+    * to organize a series of activities to try to achieve sth
+    * a planned group of esp. political, business, or military activities that are intended to achieve a particular aim
+* rivalry
+* bargain
+    * agreement
+        * I'll clean the kitchen if you clean the car. OK, it's a bargain
+        * the management and employees eventually struck/made a bargain
+    * low price
+        * sth on sale at a lower price than its true value
+        * this coat was half-price -- a real bargain
+        * the airline regularly offers last-minute booking at bargain prices
+        * the sales had started and the bargain hunters were out in force
+    * low price
+        * to try to reach agreement with sb in order to get a lower price
+        * you can usually bargain with antique dealers
+    * bargain sth away
+        * to exchange sth good for sth of less value
+        * I realized that by trying to gain security I had bargained away my freedom
+    * bargain for/on sth
+        * to expect or be prepared for sth
+        * we hadn't bargained on such a long wait
+        * the strenght of opposition to the project was more than she'd bargained for
+* detrimental
+    * causing harm or damage
+    * these chemicals have a detrimental effect/impact on the environment
+    * their decision could be detrimental to the future of the company
+* availability of substitutes
+* enrish
+    * improve
+        * to improve the quality of sth by adding sth else
+        * fertilizer helps to enrish the soil
+        * my life was greatly enriched by knowing her
+    * have more money
+        * to make sth or sb richer
+        * he calimed that the larger stores were enriching themselves at the expense of their customers
+* mailbox
+* postbox
 
 
 ## US
