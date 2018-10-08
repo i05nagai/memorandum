@@ -800,11 +800,411 @@ $$
     .
 $$
 
+Now we will prove the following result with a similar discussion in Theorem 1.5.
+
+$$
+    \sum_{t=1}^{T}
+        \hat{\ell}_{t}^{\mathrm{T}}
+        x_{t}
+    -
+    \sum_{t=1}^{T}
+        \hat{\ell}_{t, k}
+    \le
+    \frac{
+        \log n
+    }{
+        \epsilon
+    }
+    +
+    \epsilon
+    \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+            x_{t, i}
+            (\hat{\ell}_{t, i})^{2}
+    .
+$$
+
+Let
+
+$$
+\begin{eqnarray}
+    \Phi_{t + 1}
+    & := &
+        \sum_{i=1}^{n}
+            y_{t, i}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+We have
+
+$$
+\begin{eqnarray}
+    \Phi_{t + 1}
+    & = &
+        \sum_{i=1}^{n}
+            y_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \hat{\ell}_{t, i}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \frac{1}{
+            \sum_{j=1}^{n}
+                y_{t, j}
+        }
+        \sum_{i=1}^{n}
+            y_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \hat{\ell}_{t, i}
+            \right)
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \sum_{i=1}^{n}
+            x_{t, i}
+            \exp
+            \left(
+                - \epsilon
+                \hat{\ell}_{t, i}
+            \right)
+    \nonumber
+    \\
+    & \le &
+        \Phi_{t}
+        \sum_{i=1}^{n}
+            x_{t, i}
+            \left(
+                1
+                -
+                \epsilon
+                \hat{\ell}_{t, i}
+                +
+                \epsilon^{2}
+                (\hat{\ell}_{t, i})^{2}
+            \right)
+        \quad
+        (\because x \ge 0, e^{-x} \le 1 - x + x^{2})
+    \nonumber
+    \\
+    & = &
+        \Phi_{t}
+        \left(
+            1
+            -
+            \epsilon
+            \hat{\ell}_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\hat{\ell}_{t, i})^{2}
+        \right)
+    \nonumber
+    \\
+    & \le &
+        \Phi_{t}
+        \exp
+        \left(
+            -
+            \epsilon
+            \hat{\ell}_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\hat{\ell}_{t, i})^{2}
+        \right)
+        \quad
+        (\because 1 + x \le e^{x})
+    .
+\end{eqnarray}
+$$
+
+On the other hand, for $$ k = \{1, \ldots, n\}$$,
+
+$$
+\begin{eqnarray}
+    y_{T, k}
+    & \le &
+        \Phi_{T}
+    \nonumber
+    \\
+    & \le &
+        \Phi_{1}
+        \prod_{t=1}^{T}
+        \exp
+        \left(
+            -
+            \epsilon
+            \hat{\ell}_{t}^{\mathrm{T}}
+            x_{t}
+            +
+            \epsilon^{2}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\hat{\ell}_{t, i})^{2}
+        \right)
+    \nonumber
+    \\
+    & = &
+        n
+        \exp
+        \left(
+            -
+            \epsilon
+            \sum_{t=1}^{T}
+                \hat{\ell}_{t}^{\mathrm{T}}
+                x_{t}
+            +
+            \epsilon^{2}
+            \sum_{t=1}^{T}
+                \sum_{i=1}^{n}
+                    x_{t, i}
+                    (\hat{\ell}_{t, i})^{2}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+Taking the logarithm of both sides we get
+
+$$
+\begin{eqnarray}
+    & &
+        -\epsilon
+        \sum_{t=1}^{T}
+            \hat{\ell}_{t, k}
+        \le
+        \log n
+        -
+        \epsilon
+        \sum_{t=1}^{T}
+            \hat{\ell}_{t}^{\mathrm{T}}
+            x_{t}
+        +
+        \epsilon^{2}
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\hat{\ell}_{t, i})^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        -
+        \sum_{t=1}^{T}
+            \hat{\ell}_{t, k}
+        \le
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        -
+        \sum_{t=1}^{T}
+            \hat{\ell}_{t}^{\mathrm{T}}
+            x_{t}
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+            \sum_{i=1}^{n}
+                x_{t, i}
+                (\hat{\ell}_{t, i})^{2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+By taking both side of equations
+
+$$
+\begin{eqnarray}
+    & &
+        \mathrm{E}
+        \left[
+            \sum_{t=1}^{T}
+                \hat{\ell}_{t}^{\mathrm{T}}
+                x_{t}
+            -
+            \sum_{t=1}^{T}
+                \hat{\ell}_{t, k}
+        \right]
+        \le
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \mathrm{E}
+        \left[
+            \epsilon
+            \sum_{t=1}^{T}
+                \sum_{i=1}^{n}
+                    x_{t, i}
+                    (\hat{\ell}_{t, i})^{2}
+        \right]
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \mathrm{E}
+        \left[
+            \sum_{t=1}^{T}
+                \ell_{t, I_{t}}
+            -
+            \sum_{t=1}^{T}
+                \ell_{t, I_{t}}
+                \frac{1}{x_{t, I_{t}}}
+                1_{\{I_{t}=k\}}
+        \right]
+        \le
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \mathrm{E}
+        \left[
+            \epsilon
+            \sum_{t=1}^{T}
+                (\ell_{t, I_{t}})^{2}
+                \frac{1}{x_{t, I_{t}}}
+        \right]
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+            \ell_{t, i}
+            x_{t, i}
+            -
+        \sum_{t=1}^{T}
+            \ell_{t, k}
+            \frac{1}{x_{t, k}}
+            x_{t, k}
+        \le
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+                (\ell_{t, i})^{2}
+                \frac{1}{x_{t, i}}
+                x_{t, i}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+            \ell_{t, i}
+            x_{t, i}
+            -
+        \sum_{t=1}^{T}
+            \ell_{t, k}
+        \le
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+            (\ell_{t, i})^{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+Since $\ell_{t} \in \mathcal{L}$,
+
+$$
+\begin{eqnarray}
+    \sum_{t=1}^{T}
+    \sum_{i=1}^{n}
+        \ell_{t, i}
+        x_{t, i}
+        -
+    \sum_{t=1}^{T}
+        \ell_{t, k}
+    & \le &
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \epsilon
+        \sum_{t=1}^{T}
+        \sum_{i=1}^{n}
+            (\ell_{t, i})^{2}
+    \nonumber
+    \\
+    & \le &
+        \frac{
+            \log n
+        }{
+            \epsilon
+        }
+        +
+        \epsilon
+        nT
+    \nonumber
+    \\
+    & \le &
+        \frac{
+            \log n
+        }{
+            \sqrt{
+                \frac{
+                    \log n
+                }{
+                    T n
+                }
+            }
+        }
+        +
+        \sqrt{
+            \frac{
+                \log n
+            }{
+                T n
+            }
+        }
+        nT
+    \nonumber
+    \\
+    & \le &
+        2
+        \sqrt{
+            nT
+            \log n
+        }
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-#### Lemma 6.2
+TODO: We use similar discussion in Theorem 1.5.
+The discussion could be generalized.
 
+#### Lemma 6.2
 In Algorithm 18,
 
 $$
@@ -828,84 +1228,81 @@ $$
 $$
 
 #### proof
-Note that
-
-$$
-\begin{eqnarray}
-    \mathrm{E}
-    \left[
-        \hat{\ell}_{t, i}
-    \right]
-    & = &
-        \mathrm{E}
-        \left[
-            \ell_{t, I_{t}}
-            \frac{1}{x_{t, I_{t}}}
-            1_{\{I_{t} = i\}}
-        \right]
-    \nonumber
-    \\
-    & = &
-        \sum_{j=1}^{n}
-            \ell_{t, j}
-            \frac{1}{x_{t, j}}
-            1_{\{j = i\}}
-            x_{j}
-    \nonumber
-    \\
-    & = &
-        \sum_{j=1}^{n}
-            \ell_{t, i}
-    \nonumber
-    \\
-    \mathrm{E}
-    \left[
-        \sum_{j=1}^{n}
-            x_{t, j}
-            (\hat{\ell}_{t, j})^{2}
-    \right]
-    & = &
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-    x \in \mathcal{K},
-    \
-    \mathrm{E}
-    \left[
-        \hat{\ell}_{t}^{\mathrm{T}}
-        x
-    \right]
-    & = &
-        
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
-    \mathrm{E}
-    \left[
-        \sum_{t=1}^{T}
-            \ell_{t}(I_{t})
-        -
-        \min_{I \in \mathcal{I}}
-            \sum_{t=1}^{T}
-                \ell_{t}(I)
-    \right]
-    & = &
-        \mathrm{E}
-        \left[
-            \sum_{t=1}^{T}
-                \ell_{t}(I_{t})
-            -
-            \min_{I \in \mathcal{I}}
-                \sum_{t=1}^{T}
-                    \ell_{t}(I)
-        \right]
-\end{eqnarray}
-$$
+By Theorem 6.2.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## 6.3 A reduction from limited information to full information
+
+### 6.3.1 Part 1: using unbiased estimators
+The key ideaa behind many of the efficient algorithms for bandit convex optimization is the following
+
+* Altough we cannot calculate the gradient of cost function $f$ explicitly, it is possible to estimate the value of gradient,
+
+In this seciton, we design a online convex problem from given first oder OCO algorithm.
+
+#### Definition 6.1 first order OCO Algorithm
+
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Algorithm 19 Reduction to bandit feedback
+* $\mathcal{K} \subseteq \mathbb{R}^{n}$,
+    * convex set
+    * $D$-bounded
+* $\mathcal{A}$,
+    * a first order OCO algorithm
+* $x_{1} := \mathcal{A}_{0}$,
+    * the inital value of the algorith $\mathcal{A}$,
+* $\theta$,
+    * parameters of the algorithm
+* $F$,
+    * distribution funciton
+* $Y_{t}$
+    * $\mathcal{K}$-valued r.v. whose distribution function is $F$,
+    * independent with respect to $t$,
+    * $$\mathrm{E}[Y_{t}] = x_{t}$$,
+* $G_{t}$
+    * $\mathbb{R}^{n}$-valued r.v.
+    * independent with respect to $t$,
+    * $$\mathrm{E}[G_{t}] = \nabla f_{t}(x_{t})$$,
+
+**Step1.** For $t=1$ to $T$ do
+
+**Step2.** Observe $Y_{t}$
+
+**Step3.** Play $Y_{t}$
+
+**Step4.** Observe $f_{t}(Y_{t})$
+
+**Step5.** Observe $G_{t}$
+
+**Step6.** Let
+
+$$
+    x_{t + 1}
+    :=
+    \mathcal{A}(f_{1}, \ldots, f_{n}, g_{1}, \ldots, g_{t}; \theta)
+    .
+$$
+
+**Step7.** end for
+
+**Step8.** Return $x_{T + 1}$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Lemma 6.3
+* $u \in \mathcal{K}$,
+* $f_{1}, \ldots, f_{T}:\mathcal{K} \rightarrow \mathbb{R}$,
+* $G_{1}, \ldots, G_{T}$,
+    * $G_{t}$: $\sigma(x_{t})$-measurable
+* $x_{1} := \mathcal{A}_{0} \in \mathcal{K}$,
+    * initial point
+
+
+$$
+    
+$$
 
 ## Reference
