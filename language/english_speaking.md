@@ -1873,6 +1873,9 @@ title: English Speaking
 * motivate
     * You are motivated by challenges, have the abllity to effecitvely meet challenges, and have the flexibility and skills necessary to handle a challenging job.
     * I'm motivated when there is a challenging deadline
+    * everyone in the department is motivated to be successful
+    * this helps to keep people motivated
+    * help people stay motivated
 * motivation
     * he lacks motivation
     * efforts to improve employees motivation
@@ -2448,11 +2451,16 @@ title: English Speaking
         * The government has so far refused to spell out its plan/policies
         * What do you mean you don't understand. do I have to spell it out for you?
     * form words
+        * to form a word or words with the letters in the correct order
+        * As a child he never learned to spell
     * result
         * to cause something bad to happen in the future
+        * the development of full artificial intelligence could spell the end of the human race
         * the new regulations could spell disaster for small business
         * this cold weather could spell trouble for gardeners
     * do instead
+    * period
+    * power
 * device
     * machine
     * method
@@ -2842,6 +2850,11 @@ title: English Speaking
     * bad
         * The sour cream smells kind of funky
 * sit
+    * sit in
+        * sit in an armchair
+    * sit on
+        * sit on a dining chair
+        * sit on a office chair
     * sit around
         * I like stting around at home
 * resource
@@ -3572,6 +3585,7 @@ title: English Speaking
         * to start or develop as the result of something
         * her problem stem from her difficult childhood
         * their disagreement stemmed from a misunderstanding
+        * his insecurities most likely stem from unmet childhood needs
 * alternative
     * What alternatives are available to users who are dissatisfied with the product's availability?
 * velocity
@@ -4517,6 +4531,26 @@ title: English Speaking
     * take risk
     * to put something such as a plan or system in danger of being harmed or damaged
         * She knew that by failing her finals she could jeopardize her whole future
+* work
+    * workout
+        * happen/develop
+            * to happen or develop in a particular, esp. a satisfactory, way or to be suitable for a particular situation
+            * nothing was working out right
+            * Is your new assitant working out OK?
+            * How is the new monitoring procedure working out?
+            * Let's hope this new job works out well for him?
+            * I hope your new job works out
+        * exercise
+            * to exercise in order to imporove health, strenght, or physical apperance, or to improve your skill in a sport
+            * I work out on my stationary bike
+            * He works out in the gym two or three times a week
+            * I try to work out once a week
+            * Make sure you dirnk plenty of water if you are working out
+        * result
+            * to be the result of a calculation
+            * These figures work out differently each time I add them
+            * the safe load for a truck of this size works out at nearly 20 tons
+            * I fact the trip worked out cheaper than we'd expected
 * work ethic
     * the principle that hard work is intrinsically virtuous or worthy of reward
 * intrinsic/essential/nesessary
@@ -5042,7 +5076,6 @@ title: English Speaking
     * a demanding job/task
 * jack of all trades
 * household chores
-* work ethic
 * flare
     * flare up
         * if an illness or medical problem suddenly gets worse, we say it flares up
@@ -6650,6 +6683,13 @@ title: English Speaking
     * make perfect
         * I’ve been honing my data analysis skills for a few years now
 * refresh
+    * feel better
+        * to give new energy and strength to sb
+        * a good night's sleep will refresh you
+        * to make sb less hot or tired
+        * It was such a hot night that I had a cold shower to refresh myself
+    * computer screen
+        * if the link does not work, try refreshing the page
 * refreshing
     * bringing new energy and strength in a pleasant and often unexpected way
         * a refreshing breeze on a hot day
@@ -6960,7 +7000,7 @@ title: English Speaking
     * these chemicals have a detrimental effect/impact on the environment
     * their decision could be detrimental to the future of the company
 * availability of substitutes
-* enrish
+* enrich
     * improve
         * to improve the quality of sth by adding sth else
         * fertilizer helps to enrish the soil
@@ -6970,6 +7010,130 @@ title: English Speaking
         * he calimed that the larger stores were enriching themselves at the expense of their customers
 * mailbox
 * postbox
+* threesome
+    * three people as a group
+    * we could have a threesome
+    * These guys do as good a job as any threesome in broadcasting
+* provincial
+    * relating to an area that is governed as part of a country or an empire
+        * provincial government
+    * in or from the parst of the country that are not the capital city
+    * having opinions and ideas are old-fashioned and simple
+        * you are so provincial
+* backslide
+* schmooze
+    * to talk informally with someone, especially in a way that is not sincere or to win some advantage for yourself
+        * he spent the entire evening schmoozing with the senator
+    * to talk informally with someone
+        * He's out on the porch schmoozing with the neighbor
+* porch
+    * a veranda
+        * we sat out on the porch to cool off
+    * a covered structure in front of the entrance to a building
+* veranda
+    * a raised, covered, sometimes partly closed area, often made of wood, on the front or side of a building
+        * I went up the walk onto the big veranda and knocked on the door.
+        * every evening we sat on the veranda watching the sun go down
+* arcade
+    * a covered are or passage containing stores
+        * shopping arcade
+* concourse
+    * a large space or room in a public building such as a station or airport that people meet in or pass through
+        * there's ticket machine in the main concourse
+* corridor
+    * passage
+        * a long passage in a building or train, esp. with rooms on either side
+        * her office is at the end of the corridor
+    * region
+    * land
+        * a long piece of one country's land that goes through another country
+* grovel
+    * to lie facing the ground, esp. in fear, or to behave toward sb in a way that shows that you are a small and unimportant and the other person is powerful
+        * my dog gravels at my feet when she's done sth wrong
+        * I'll apologize, but I won't grovel just because I made a mistake
+    * try to please
+        * to behave with too much respect towards sb to show that you are very eager to please them
+        * he sent a grovelling note of apology
+    * move
+        * to move close to or on the ground
+        * I was grovelling under the sofa, trying to find my contact lens
+* fawn
+    * deer
+        * a young deer
+    * praise
+        * to give sb a lot of attention and praise in order to get that person's approval
+        * Big movie stars are fawned over by the waiters at the restaurant
+* diaphram
+    * your dog thougth my diaphram was a chew toy
+    * muscle
+    * birth control
+        * a circular rubber device that a woman puts incide her vagina before having sex, to avoid becoming pregnant
+    * cover
+        * any thin piece of material streched across an opening
+* transcript
+    * a complete written copy of spoken or written words
+        * I had them send me a transcript to the program
+    * an exact written copy of sth
+        * Mysteriously, the transcript of what was said at the trail was lost
+    * an official college document that shows a list of a student’s classes and the results they received
+        * american english
+    * Transcript of Records
+* dissertation
+    * thesis
+* perpetrate
+    * the crime is believed to have been perpetrated by Taliban
+* deportation
+    * the illegal immigrants are facing deportation
+* genocide
+    * Turkey refuses to acknowledge the Armenian genocide that took place in 1915
+* stationary
+* track
+    * you can track your sphiment sing your ship tracking number
+* scan
+    * can you please scan the form and send it back tome?
+* model
+    * this is digital model of the hosue we are designing
+* stream
+    * Video of the protest as streamed on social media websites
+* feedback
+    * camera let instructors give feedback to users
+* stake
+    * at stake
+        * in danger of being lost
+        * About 3000 jobs are at stake if the company closes down.
+    * If something that is valuable is at stake, it is in a situation where it might be lost
+        * Thousands of lives will be at stake if emergency aid does not arrive in the city soon
+* rectify
+    * to correct or make right
+        * I am determined to take whatever action is necessary to rectify the situation
+        * every effort is made to rectify any erros/mistakes before the book is printed
+    * correct
+    * make pure
+    * electric current
+    * rectify a problem/situation/mistake
+    * be recrtified
+        * Marketing strategy appears to have been weak and this must be rectified facilitate growth
+    * to spend more money or to make additional payments in order to deal with a difficult financial situation
+        * The President failed to deliver on his promise to rectify the public finances
+* fail
+* divert
+    * change direction
+        * to cause sth or sb to turn in a different dirrection
+        * to divert sth or sb is also to cause the thing or person to be used for a different purpose
+            * our flight had to be divereted to Newart because of the storm
+    * take attention away
+        * to take attention away from sth
+        * to divert can also me to amuse
+* no apology necessary
+    * no apology
+* fret
+    * worry
+        * to worry or be unhappy about sth
+        * Don't fret - I'm sure he's OK
+        * She spent the day fretting about/over what she'd said to him
+    * raised bar
+* remorse
+    * an apology is an expression of sorrow, regret, or remorse
 
 
 ## US
