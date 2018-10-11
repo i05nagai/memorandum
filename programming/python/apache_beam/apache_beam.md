@@ -185,8 +185,48 @@ apache_beam.coders.registry.register_coder(int, BigEndianIntegerCoder)
 * processing time
     * determined by the clock on the system processing the element
 
+* `FixedWindow(size, offset=0)`
+    * [beam/window\.py at 01d8b922fbe355bc6818deebf83732ca20f79bce · apache/beam](https://github.com/apache/beam/blob/01d8b922fbe355bc6818deebf83732ca20f79bce/sdks/python/apache_beam/transforms/window.py#L319)
+    * size
+        * size of the window as seconds
+    * offset
+        * Offset of this window as seconds since Unix epoch
+        * Windows start at `t=N * size + offset` where t=0 is the epoch
+* `SlidingWindows(size, period, offset=0)`
+    * `[N * period + offset, N * period + offset + size)`
+    * size
+        * Size of the window as seconds
+    * period
+        * Period of the windows as seconds
+    * offset
+        * The offset must be a value in range `[0, period)`
+* `Sessions(gap_size)`
+    * A session is defined as a series of consecutive events separated by a specified gap size.
+    * gap_size
+        * Size of the gap between windows as floating-point seconds.
+* `GlobalWindows()`
+
 ### triger
 
+## API
+* [apache\_beam\.io\.gcp\.bigquery module — Apache Beam documentation](https://beam.apache.org/releases/pydoc/2.7.0/apache_beam.io.gcp.bigquery.html)
+    * you need to define `GOOGLE_APPLICATION_CREDENTIALS`
+* [apache\_beam\.io\.textio module — Apache Beam documentation](https://beam.apache.org/releases/pydoc/2.7.0/apache_beam.io.textio.html?highlight=readfrom#apache_beam.io.textio.ReadFromText)
+    * you can read compressed text data directly
+    * `file_pattern`
+        * `gs://path/to/txt`
+            * you need to define `GOOGLE_APPLICATION_CREDENTIALS`
+    * `min_bundle_size`
+    * `compression_type=auto`
+    * `strip_trailling_newlines`
+    * `validate`
+    * `skip_header_lines`
+    * `coder`
+* `schema`
+    * schema is required if you create table
+    * schema is one of 
+* `parse_table_schema_from_json(schema_string)`
+    * create 
 
 
 ## Examples
