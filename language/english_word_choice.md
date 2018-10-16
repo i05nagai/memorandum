@@ -3,6 +3,15 @@ title: English word choice
 ---
 
 ## English word choice
+* my apology/my apologies
+    * [“My Apology” or “My apologies”? \| Grammarly](https://www.grammarly.com/blog/my-apology-or-my-apologies/)
+    * my apologies
+        * My apologies is a way to say you’re sorry about something.
+    * my apology
+        * my apology is a reference to a previous aplogy you made
+* attach/be attaching/have attached
+    * [grammar \- I attach, I am attaching, or I have attached \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/385219/i-attach-i-am-attaching-or-i-have-attached)
+    * I have attached
 * Ms./Mrs./Miss
     * Miss
         * mis
