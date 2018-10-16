@@ -92,8 +92,10 @@ emailを省略した場合のaccountを指定する。
 gcloud config set account <service-account@gmail.com> 
 ```
 
+set default project
+
 ```
-gcloud config 
+gcloud config set project <project-id>
 ```
 
 ## components
