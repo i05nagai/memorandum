@@ -41,7 +41,8 @@ title: English Speaking
     * it's a powerful car, but it doesn't corer well
 * find
     * find it adj to do
-        * opinions or feelings that you have
+        * used to describe opinions or feelings that you have
+        * It's a slightly educated and formal-sounding phrase that you use to emphasize that what you're describing is your personal experience, not a suggestion that you are making to the listener
         * I find it interesting to sit outside and what the differnt people walking by at lunch time
         * I find it hard to believe that you're really going to need all that lugage just for 3 days
     * Actually, I find Marriam's views far too progressionist
@@ -562,6 +563,9 @@ title: English Speaking
 * influence
     * You're a bad influence on her
 * put
+    * put sb on the spot
+        * if you put sb on the spot, you cause them embarassment or difficulty by forcing them at that moment to answer a difficult question or make an important decision
+        * Mira rather put the boss on the spot by asking him when he was going to give us a pay rise.
     * put someone's foot down
         * to use your authority to stop something from happening
         * When she started borrowing my clothes without asking, I had to put my foot down.
@@ -1343,6 +1347,7 @@ title: English Speaking
         * Any dog caught worrying sheep in these fields will be shot
 * bother
     * the loss didn't bother him, but this team's confidence concerns him
+    * Sorry for bothering you.
 * At the risk of boring you, let me give you just an overview of Plato's ethcal theory.
 * focus
     * His focus is on the safe yield approch to managing underground water supplies
@@ -1507,9 +1512,27 @@ title: English Speaking
 * keep
     * you want to keep your skills up-to-date
     * keep from/prevent from
+        * to prevent sb from leraning about sth
+        * he's seriously ill, and I don't think it's right to keep it from the children
+    * keep yourself from sth
+        * to prevent yourself from doing sth
+        * we couldn't keep from laughing
+        * he couldn't keep himself from grinning at him
     * keep back/hide/
         * if you feel that someone is keeping back information from you, you might feel that you want to confront them about the situation
+    * keep sth under control
+    * keep going
+    * keep sb going
+    * keep sth quiet
+    * keep your promise/word
+    * keep an appointment
+    * keep a diary/an account/a record
     * keep track of
+    * keep a secret
+    * keep time
+        * (of a watch or clock) to show the correct time
+        * Does your watch keep good time?
+    * keep goal
 * I plan to take entrance exams for second choice and third choice universities because I don' want to end up without a university.
 * still, yet, already
     * It's 10 o'clock and joe is still in bed
@@ -2405,7 +2428,14 @@ title: English Speaking
         * the night shift goes on duty at 10 pm
 * I wish I could do something
 * I wish I were a sea horse
-* if the two of you had sex, the repercussions would be catastrophic
+* repercussion
+    * the usually bad effect of an event, action, or decision
+    * The repercussions of her comments could be serious.
+    * if the two of you had sex, the repercussions would be catastrophic
+    * have repercussions for sb/sth
+    * his case is likely to have repercussions for employees
+    * economic repercussions
+    * serious repercussions
 * do you have a compact in your purse
 * molest
     * I caught him molesting himself
@@ -3457,7 +3487,23 @@ title: English Speaking
     * having a natural ability to do something that needs skill
         * she's very adept at dealing with the media
         * he gave a techinically adept performance on the piano
+* giveaway
+    * gift
+        * sth that is given free to a customer
+    * truth
+        * sth that tells or shows sth secret, often without intending to
+        * he said he'd given up smoking, the empty packs in the bin were a dead giveaway
+    * a giveway price is very low
+        * the furniture shop's offering three-piece suites at giveaway prices
 * give
+    * give away
+        * tell
+            * to tell a secret or show your feelings unintentionally
+            * I'm not giving away any plot surprise; read the review in the paper if you want to know them
+            * the look on her face gave her away
+        * suplly free
+            * to supply sth at no charge
+            * they're giving away shopping bags
     * gives two examples to explain 
     * give birth to
         * she gave birth to twins
@@ -6353,6 +6399,10 @@ title: English Speaking
                 * water melts and freezes several times
             * snow
     * chemistry
+    * the diameter of the circular precipitation line is measured arid compared to standards for quantitation
+    * Secondly, the persistence of a canopy enhances the interception of nutrients from precipitation
+    * In the last four days, we've had three inches of precipitation
+    * The most likely cause is a local reduction in precipitation
 * dip
     * put into liquid
         * to put sth into a liquid for a short time
@@ -7134,6 +7184,140 @@ title: English Speaking
     * raised bar
 * remorse
     * an apology is an expression of sorrow, regret, or remorse
+* rigid
+    * not varying
+        * not permitting any change
+        * rigid rules of behavior
+        * I keep to a rigid schedule
+    * stiff
+        * not able to be bent
+        * rapid plastic
+    * not able to be changed or persuaded
+        * we were disapproving that they insisted on such a rigid interpretation of the rules
+    * The pure function model is not strictly rigid,
+* expunge/erase
+* allotment
+* supportability
+* redeploy
+    * you don't have to redeploy a pipeline to apply your changes
+* compendium
+* portrayed
+    * Jessica Lockhart is a fictional character on Days of our Lives, played by the fictional actor Cecilia Monroe and portrayed by Susan Sarandon. 
+* ex-con
+    * ex-convict
+    * a criminal who has been in prison but who is now free
+    * At last all seems to be coming together for the ex-con who wants to go straight.
+* barefoot
+    * I was barefoot
+* ETA
+    * estimated time of arrival
+    * What's your ETA?
+    * Is there an ETA for this, by any chance?
+* levy
+    * an amount of money such as a tax, that you have to pay to a government or organization
+        * A levy was imposed on cotton imports
+        * they imposed a five percent levy on alcohol
+    * (of a government or organization) to demand an amount of money, such as a tax, from a person or organization
+        * a new tax was levied on consumers of luxury goods
+        * levy a tax on sth
+            * the tax is levied on companies's energy use
+* blouder
+    * a very large rock
+    * a large, rounded rock that has been smoothed by the action of the weather or water
+* candor
+* ellipsoidal
+* equestrian
+* smolder
+* crack
+    * crack up
+        * he cracked me up
+* suite
+    * set of rooms
+        * a set of connected rooms, especially in a hotel
+    * set of furniture
+    * music
+        * a piece of music with several parts, usually all in the same key
+    * computer
+        * a set of related software products
+* oblige
+    * force
+        * Circumstances oblieged him to leave town
+    * help
+    * be obliged to do sth
+        * Employers are obliged to pay employees sick pay.
+* obligate/force
+    * to make sb feel morally or legally forced to do sth
+        * I'm in favor of obligating welfare recipients to do more
+    * to force sb to do sth
+        * obligate sb/sth to do sth
+            * the law doesn't obligate districts to enroll older students
+        * be legally/morally obligated
+    * to officially state that money will be used pay for sth
+* obligated
+    * feeling that you owe sth sb because you are grateful for what they have done for you
+    * be/feel obligated to sb
+        * She felt obligated to him for all help he had given her with her career
+* favor
+    * support
+        * the support or approval of sth or sb
+        * these plans are unlikely to find favor unless the cost is reduced
+        * she is out of favor with her collegues
+            * unpopular
+        * her economic theories are in favor with the current government
+            * popular
+    * be in favor of sth/doing sth
+        * to support or approve of sth
+        * Are you in favor of a ban on sth?
+        * I'm not in favor of hitting children
+    * in your favor
+        * when sth is in your favor, it give s you an advantage
+        * the candidates has a lot in her favour, esp. her experience of teaching
+    * find in sb's favor
+        * if a judge find in sb's favor, he or she says that that person is not guilty
+    * kind act
+        * a kind action that you do for sb
+            * she called to ask me a favor
+            * Could you do me a favor? would you feed my cat this weekend?
+        * an advantage that you give to sb, such as money or a good job, esp. when this is unfair
+    * present
+    * to support or prefer one particular possibility
+        * these are the running shoes favoured by marathon runners
+        * I generally favour travelling by night, when the the roads are quiet
+    * to give an advantage to sb or sth, in unfair way
+* cybercrime
+    * cybercrime costs the company millions of dollars each year.
+* negligence
+    * the accident happened because of the drive's negligence
+* neglect
+    * child neglect
+* gateway
+    * Many people think college is the gateway to success.
+* freely
+    * Luke freely admits to being a perfectionist.
+* protective
+* sabbatical
+* sobriety
+* tad
+* top-notch
+    * if you describe sb or sth as top-notch, you mean that they are of very high standard or quality
+* hiccup
+    * I've got the hiccups
+    * she coudln't stop hiccuping
+    * an attack of the hiccups
+    * I can't stop hiccuping - does anyone know a good cure?
+* adolescence
+    * the period of time in a person's life when they are developing into an adult
+    * She had a troubled adolescence
+* vis-a-vis
+    * in relation to, or in comparison with
+        * Later I asked him more directly about government’s role vis-a-vis the environment.
+        * I need to speak to James Lewis vis-à-vis the arrangements for Thursday.
+    * in comparison with
+        * What worries us is the competitive edge that foreign companies have vis-à-vis British firms.
+* mace
+    * mace spray
+        * pepper spray
+
 
 
 ## US
