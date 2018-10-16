@@ -22,8 +22,34 @@ bazel build //<package name>:<target name>
 * `-c opt`
     * Use optimized builds for C++ code
 * `--copt cc-option`
-    * pass to complier
+    * pass to gcc complier
     * e.g. `--copt="-g0" --copt="-fpic"`
+* `--cxxopt=<a string>`
+* `--host_cxxopt=<a string>`
+    * Additional options to pass to gcc for host tools. 
+
+
+```
+bazel test
+```
+
+* `--copt -g`
+* `--compilation_mode=fastbuild|opt|dbg`
+    * `fastbuild`
+        * `-gmlt -Wl,-S`
+    * `opt`
+        * `-O2 -DNDEBUG`
+    * `dbg`
+* `--test_output=errors|all`
+    * `errors`
+        * show the output from failed tests
+    * `all`
+        * show you the outputs from all the tests
+* `--collect_code_coverage`
+    * run gcov
+    * https://github.com/bazelbuild/bazel/issues/1118
+    * https://github.com/bazelbuild/bazel/issues/5128
+        * 0.15.2 has problems, but it will be fixed in 0.16
 
 ```
 bazel clean
@@ -62,6 +88,9 @@ Generates code coverage report for specified test targets.
 ```
 bazel coverage
 ```
+
+* c++
+    * lcov is needed
 
 Loads, analyzes, and queries the specified targets w/ configurations.
 
