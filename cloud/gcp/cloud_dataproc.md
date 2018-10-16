@@ -116,6 +116,8 @@ gcloud dataproc clusters update cluster-name \
 ### Install jupyter notebook
 [Install and run a Jupyter notebook on a Cloud Dataproc cluster  \|  Cloud Dataproc Documentation  \|  Google Cloud](https://cloud.google.com/dataproc/docs/tutorials/jupyter-notebook)
 
+
+
 ## Pricing
 
 Standard (Iowa)
@@ -146,6 +148,8 @@ num of vCPUs * hours * Cloud Dataproc price
 = 24 * 24h * 0.01USD/h = 5.76 USD
 
 = 24 * 24h * 30day * 0.01USD/h = 172.8 USD
+
+
 
 
 ## Reference
