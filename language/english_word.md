@@ -620,5 +620,9 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
     * ankle
     * sole
 
+## weather
+* [日米気象用語（英和）](http://www.yoho.jp/shibu/saitama/cwfas/dic_ej.html)
+
+
 
 ## Reference
