@@ -320,6 +320,11 @@ brew install gcc48
 travis lint /path/to/.travis.yml
 ```
 
+### Docker images
+* [Quay Container Registry · Quay](https://quay.io/organization/travisci)
+
+
+
 ## Reference
 * [C++14 on Travis CI with CMake](https://jonasw.de/_posts/2015-07-22-cplusplus14-on-travis-with-cmake.md)
 * [http://packsaddle.org/articles/differences-between-travis-ci-and-circle-ci/ TravisCIとCircleCIでちょっとずつ違うビルド環境の考え方の違い – Saddler - checkstyle to anywhere]
