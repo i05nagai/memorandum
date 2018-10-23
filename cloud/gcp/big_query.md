@@ -407,8 +407,28 @@ ORDER BY
 ## Tips
 
 ### Visualize geographic data
-* [BigQuery Geo Viz](http://bigquerygeoviz.appspot.com/)
 * [Bridging the gap between data and insights \| Google Cloud Blog](https://cloud.google.com/blog/products/gcp/bridging-the-gap-between-data-and-insights)
+
+* Use BigQuery Geo Viz
+    * [BigQuery Geo Viz](http://bigquerygeoviz.appspot.com/)
+* Use Google Earth Engine
+* Use GeoJSON exntension for jupyter extension
+    * https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/geojson-extension
+
+Geo Viz limitation
+
+* Geo Viz can only display up to 2,000 results on a map.
+* Geo Viz supports geometry inputs (points, lines, and polygons) in well-known text (WKT) format, stored in a STRING column. You can use BigQuery's geography functions to convert latitude and longitude to WKT.
+* Real-time, interactive analysis is handled locally by your browser and is subject to your browser's capabilities.
+* Geo Viz does not support sharing visualizations with others, saving a visualization, or downloading a visualization for offline editing.
+
+### Geographic data
+Bigquery Support the foloowing formats;
+
+* GeoJSON
+* Well-Known text
+
 
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
+* [How to load geographic data like shapefiles into BigQuery](https://medium.com/google-cloud/how-to-load-geographic-data-like-zipcode-boundaries-into-bigquery-25e4be4391c8)
