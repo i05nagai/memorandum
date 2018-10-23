@@ -16,5 +16,12 @@ gsutil cp <from> <to>
 ```
 
 * `-r`
+    * recursive
+* `-m`
+    * copying in parallel
+
+```
+gsutil cp -m gs://path/to/file[1-9].csv gs://path/to/
+```
 
 ## Reference
