@@ -3,8 +3,11 @@ title: java
 ---
 
 ## java
+There are oracle SDK and open SDK
 
 ## Install
+
+### oracle SDK
 For ubuntu 16.04,
 
 ```
@@ -15,6 +18,19 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 sudo apt-get install oracle-java9-installer
+```
+
+### open SDK
+For ubuntu 16.04
+
+```
+# to automatically agree with license
+echo debconf shared/accepted-oracle-license-v1-1 select true | \
+  sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | \
+  sudo debconf-set-selections
+# install
+apt-get install openjdk-8-jdk
 ```
 
 
