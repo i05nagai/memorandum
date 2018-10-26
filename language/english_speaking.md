@@ -371,11 +371,6 @@ title: English Speaking
 * Her expression showed us that she was not pleased with the present
 * Urgent business kept me from coming yesterday
 * What Made you think that he could defeat that wrestler?
-* delay
-    * Long delays are expected on the motorways
-    * The opening of this section of the road is delayed until September
-    * Our meeting was delayed for ten minutes
-    * Big companies often delay paying their bills
 * subsequent
     * happening after something else
     * The book discusses his illness and subsequent resignation from politics
@@ -686,11 +681,20 @@ title: English Speaking
         * sorry I'm late. my meeting ran over
     * run out
         * What should I do when I've almost run out of money.
+        * Time is running out
+            * used to say that there is not much time left in which to achieve something
+        * Time has run out now
+        * run out of
+            * We are about to run out of paper and toner.
 * drop out
     * The group gets smaller as members move away or drop out
     * Bill dropped out of college after his first year
     * One third of the city's students drop out before graduation
 * leave
+    * leave out/omit
+        * to not include sb or sth
+        * you can leave the butter out of this recipe if you're on a low-fat diet
+        * I've made a list of names - I hope I haven't left anyone out.
     * leave on/off
         * I left car lights on all night and now the battery is flat
     * The plane leaves at 12:30
@@ -1147,6 +1151,7 @@ title: English Speaking
     * Do you think I should apply for this job?
     * we apply the principles of computer science and engineering to the design and development of computing systems: generally, large distributed one.
     * many of the same principles also apply to nonserving systems with minimal modification
+    * While its' beyond the scope of this article to argue on this topic, it's easy to infer that these same reasons apply to writing ETL as it pplies to any other software
     * request
         * to request something, usually officially, esp. by writing or by sending in a form
         * to apply for a job/loan
@@ -1155,6 +1160,7 @@ title: English Speaking
         * the same rules apply to everyone
     * put on
         * to spread or rub cream, paint, etc., on a surface
+        * She applied the lotion gently to her sunburned arms.
         * Apply the cream liberally to exposed areas every three hours and after swimming.
     * use
         * to make use of something for a particular purpose
@@ -1208,6 +1214,7 @@ title: English Speaking
 * bureaucracy
 * compliant
     * The athletes were not compliant with the coach
+    * BigQuery standard SQL is compliant with the SQL 2011 standard
 * molten
     * Molten lava is highly charged with gases
 * informal
@@ -1604,6 +1611,10 @@ title: English Speaking
     * The same thing could happen again
     * He gets the same pay as me but he gets his own office
 * pull
+    * pull into somewhere/pull in somewhere
+        * if a vehicle pulls in or pulls into somewhere, it moves in that direction and stops there
+        * he pulled in at the side of the road
+        * I pulled into the empty parked space
     * pull off
         * to succeed in doing something difficult
             * The goalkeeper pulled off six terrific saves
@@ -1869,6 +1880,7 @@ title: English Speaking
 * suit
     * If the shoe no longer fits, you should begin seeking an organization that is more culturally suited to your current life situation
 * leverage
+    * most application leveraging global caches tend to use the first type, where the cache itself manages eviction and fetching data to prevent a flood of requests for the same data from the clients
     * action
         * Using ropes and wooden poles for leverage, they haul seeks of cement up the track
     * power
@@ -1937,7 +1949,10 @@ title: English Speaking
     * they are providing that company with a tacit endorsement as a great workpace
 * endorsement
 * virtue
-    * By virtue of accepting employment at a particular company
+    * by virtue of
+        * By virtue of accepting employment at a particular company
+        * as a result of sth
+        * they were excluded from voting by virtue of being too young
 * approve/endorsement
     * The campaign hasn't received any political endorsement
     * products that crry an endorsement form a celebrity
@@ -2158,6 +2173,7 @@ title: English Speaking
         * make follow-up calls to these contacst in the hopse of generating additional publicity
     * in the following sections of this chapter,
 * rate
+    * The Big Bang Theory started off slowly in the ratings
     * at any rate
         * more exactly or clearly
             * I don't think they liked my idea -- at any rate, they weren't very enthusiastic
@@ -2260,6 +2276,9 @@ title: English Speaking
 * explain/describe/show/elucidate/express/make something clear/clarify
     * I don't understand. You'll have to elucidate
     * The reasons for the change in weather conditions have been elucidated by several scientsits
+* rationalize
+    * explain
+        * to try to find reasons to explain your behaviour, decisions, etc
 * employ
     * use
         * Initially, we employed a brute force approach.
@@ -2647,6 +2666,9 @@ title: English Speaking
 * timer
     * timer goes off
 * go
+    * go south
+        * if a situation, organization, or set of standards goes south, it becomes very bad altough it was once very good
+        * it seems like all our moral standards have just gone south
     * go with someone's gut
         * You could have very clear logical reasons for making a decision, but something is holding you back. Going with your gut is bypassing logic and trusting your instincts, without knowing why
         * trust one’s instincts and feelings when making a decision
@@ -2935,6 +2957,7 @@ title: English Speaking
     * bad
         * The sour cream smells kind of funky
 * sit
+    * a load balancer sits between the client and the server
     * sit in
         * sit in an armchair
     * sit on
@@ -3062,6 +3085,25 @@ title: English Speaking
         * to spend less, do less, or use less of something
         * the government has announced plans to cut back on defence spending by 10 percent next year
         * if excercise is causing you pain, you should cut back
+    * cutoff
+        * limit
+        * road
+        * stop
+        * trousers
+    * cut off
+    * cut out
+        * stop working
+            * If an engine, machine, or piece of equipment cuts out, it suddenly stops working
+            * One of the plane's engines cut out, so they had to land with only one.
+    * cut sb out
+        * to not allow someone to share something or be included in something
+        * They cut me out of the conversation.
+    * cut out
+        * remove
+            * to remove sth or form a spahe by cutting, usually from paper or cloth
+            * she cut out his picture from the magazine
+        * to stop eating
+            * to stop eating or drinking sth, usually to improve your health
 * shorthand
     * a system of fast writing that uses lines and simple signs to represent words and phrases
     * The conversations were taken down in shorthand by a secretary
@@ -3126,6 +3168,7 @@ title: English Speaking
 * disciplined
     * The young gymnasts who won the competition were a talented and disciplined team
     * Those children and 
+    * if the teams are disciplined enough to stay within the defined boundaries of their business concerns
 * discipline
     * trainning
         * traning that produces obedience or self-control, often in the form of rules and punishments if these are broken, or the obedience or self-control produced by this training
@@ -3167,7 +3210,7 @@ title: English Speaking
     * indulge in
         * most of us were too busy to indulge in heavy lunchtime drinking
         * Eva had never been one to indulge in self-pity
-    * to give someone anything they want and not to mind if thei behave badly
+    * to give someone anything they want and not to mind if they behave badly
         * my aunt indulges the children dreadfully
 * orient
     * find direction
@@ -3196,6 +3239,8 @@ title: English Speaking
     * to become worse
         * Ethel's heals has deteriorated
         * America's deteriorating economy
+    * escalate
+        * The U.S. president threatened to further escalate the trade war with China.
 * aspire
     * we have aspired to bring society and our customers the highest quality of products and services.
 * communicate
@@ -3317,6 +3362,8 @@ title: English Speaking
         * maybe she gets drunk to obliterate painful memories
 * reminiscent
     * It is reminiscent tot the direction in which the Newton-Raphson method would proceed
+* direct
+    * the algorithm direct traffic to the server with the fewest active connections and the lowest average response time
 * direction
     * position
         * in the direction
@@ -3532,6 +3579,7 @@ title: English Speaking
     * to change, or to change something, to suit different conditons or uses
         * The play had been adapted fro children
         * to remain competitive the company has to be able to adapt to the chanigng marketplace
+        * Many software companies have adapted popular programt to the new operating system
     * apapt to
         * The children are finding it hard to adapt to the new school
         * flowers which are well adapted to harsh winters
@@ -4293,6 +4341,8 @@ title: English Speaking
 * detainee
     * someone kept in prision, esp. for policitcal reason
     * a political detainee
+* detain
+    * The suspect was detained
 * treaty
 * speak
     * speak out
@@ -4364,7 +4414,8 @@ title: English Speaking
             * the retail industry are struggling with eroding consumer confidence and a weakening sales trend
     * Unreliable systems can quickly erode user's confidence
 * align
-    * our goal is to explicitly align the risk taken by a given service with the risk the business is willingto bear
+    * our goal is to explicitly align the risk taken by a given service with the risk the business is willing to bear
+    * Right now our goal is to make sure that the why and the what are aligned.
 * risktaking
     * The key advantage of this framing is that it unlocks exp.iocit, thoughtful risktaking
 * set
@@ -5187,6 +5238,8 @@ title: English Speaking
         * have a sexual relationship
             * if a married person fools around, they have a sexual relationship with someone who is not their husband or wife
             * she'd been fooling around with someone at work
+* demand
+    * Caretakers is in demand
 * demanding
     * needing a lot of time, attention, or energy
     * she's very demanding child
@@ -5447,9 +5500,10 @@ title: English Speaking
     * he would clean, do errands, and babyshit for their 7-year-old daughter
     * I've got to run a few errands and then stop by my mother's
 * squirt
-* curtail/redduce
+* curtail/reduce
     * to reduce or limit something
     * the Federal Reserve raised interest rates slightly to curtail inflation
+    * our enthusiasm to acquire larger and larger chuncks of all of these things is curtailed significantly by const
 * curtailiment
 * usher
     * to show sb where to go and where to sit
@@ -5911,6 +5965,7 @@ title: English Speaking
         * They work in cubicles in an open-plan office.
 * per capita
     * With one for every 23 people, Japan has the highest number of vending machines per capita of any country
+    * A few years ago, the country surpassed some European countries in per capita GDP
 * dough
 * mold
     * shape
@@ -6067,6 +6122,7 @@ title: English Speaking
         * most people wouldn't remember that some ballparks were segregated in the  early years
     * to keep one thing separate from another
     * to keep one group of people apart from another and treat them differently, esp. because of race, sex, or religion
+* segregation
 * ballpark
     * place for sports
         * a place where a ball game, esp. baseball games, are played
@@ -6620,6 +6676,10 @@ title: English Speaking
     * to allow saliva to flow out of your mouth
 * slide deck
     * the presentation slides
+* slide
+    * presentation slides
+        * I published the slides for my latest KubeCon talk
+        * My slides from my talk today
 * shrewd/astute
     * shrewd
         * able to judge a situation accurately and turn it to your own advantage
@@ -7231,6 +7291,10 @@ title: English Speaking
     * the crime is believed to have been perpetrated by Taliban
 * deportation
     * the illegal immigrants are facing deportation
+* deport
+    * to force a person to leave a country
+    * the government hopes to deport the criminals
+    * Thousands of illegal immigrants are caught and deported every year.
 * genocide
     * Turkey refuses to acknowledge the Armenian genocide that took place in 1915
 * stationary
@@ -7393,7 +7457,21 @@ title: English Speaking
     * Luke freely admits to being a perfectionist.
 * protective
 * sabbatical
+* sober
+    * not drink
+        * having had no alcohol; not drink
+        * are you sober enough to drive?
+        * I'd had no wine all evening so I was stone cold sober
+        * I was too sober to enjoy the party
+    * serious
+        * the sober expression had not left her face
+        * He was in a very sober mood - I scarcely heard him laugh all night
+    * not bright
 * sobriety
+    * the state of being sober
+        * The police said his car had been weaving all over the road, so they pulled him over and gave him a sobriety test.
+    * Sobriety also means the state of being serious and calm
+        * this judge is know for his sobriety and fairness
 * tad
 * top-notch
     * if you describe sb or sth as top-notch, you mean that they are of very high standard or quality
@@ -7431,6 +7509,7 @@ title: English Speaking
         * a movement down
     * negative change
         * a change in someone's behaviour, or in a situation, from good to bad
+        * His descent into crime was rapid.
 * blimp
     * a  large aircraft without wings, consisting of a large bag filled with gas that is lighter than air and driven by engines. In the past passengers were carried in a structure hanging below
 * coitus
@@ -7880,7 +7959,430 @@ title: English Speaking
     * You shouldn't use vitamin supplements as a substitute for a healthy diet.
 * flag
     * to flag problems like overfitting or selection baias, to give an insight on how the model will generalize to an independent dataset
-    * 
+* dismissive
+* per se
+* quibble
+    * to argue or complain about small and unimportant details
+        * The issue is too important to quibble over.
+    * There's no point quibbling about/over a couple of dollars.
+    * a complaint or criticism about something that is not very important
+* pelvis
+    * the bones that form a bowl-shaped structure in the area below the waist at the top of the legs, and to which the leg bones and spine are joined
+* resemble
+* responsiveness
+    * it helps to spread the traffic across a cluster of servers to improve responsiveness and availability of applications, websites or databases.
+* elevate
+    * a server has elevated error rate
+* utilize
+    * to utilize full scalability and redunduncy
+* instead
+    * Instead, their requests are immediately passed on to a more readily available resource
+* insatiable
+* prospect
+    * possibility
+        * the possibility or likelihood that sth will happen
+        * there is little/no prospect of sth
+    * search
+    * view
+* vastly
+    * caching will enable you to make vastly better use of resources you already have, as well as making otherwise unattainable product requirements feasible
+* depict/represent
+    * to represent or show sth in a picture, story, movie, etc.; portray
+    * the movie depicts his father as a tyrant
+    * Her paintings depict the lives of ordinary people in the last century.
+* query
+    * each of the reqest nodes queries the cache in the same way it would a local one
+* disrupt
+* disruption
+    * system disruption
+* bypass
+    * This technique is similar to write through cache, but data is written directly to permanent storage, bypassing the cache
+* discard
+* range
+    * participants researced topics ranging from computational biology and pharmacology to astronomy and engineering science.
+* recruit
+    * we recruited 15 academic data analysts from 8 labolatories at UC sandie go
+* boom
+* slump
+* upsurge
+    * a sudden or large increase
+    * Department stores report a recent upsurge in credit-card fraud
+    * a sudden and usually large increase in sth
+    * an upsurge of/in violence in the district has been linked to increased unemployment
+* upturn
+    * an increase in the amount or success of sth, such as country's economic activity
+    * economic/market upturn
+    * an upturn in sth
+    * experience/see an upturn
+    * an upturn in prices/profits/sales
+    * a dramatic/sharp/significant upturn
+    * a gradual/sustained upturn
+    * a sharp upturn in the economy
+* resound
+    * to sound loudly or for a long time, or (of a place) to be filled with sound
+    * The air resounds with the delightful music of birds.
+    * The noise of the fire alarm resounded through/throughout the building.
+    * The concert hall resounded with cheers and applause.
+* resonate
+    * to produce or be filled with clear, countinuing sound
+        * the noise of bell resonated through the building
+    * An object that resonates reflects sound waves and makes them seem louder
+    * have quality/effect
+        * to be filled with a particular quality
+        * to continue to have a powerful effect or value
+        * if an experience or memory resonates, it makes you think of another similar one
+* slappy
+    * Resembling a slap, especially of sound.
+* floush
+    * succeed
+        * to grow or develop successfully
+        * parts of the city continues to flourish
+        * this is the perfect environment for our company to flourish and expand in
+    * wave
+        * to move sth in your hand in order to make people look at it
+            * she ran up to her father, flourishing her diploma
+        * a big, noticeable movement
+            * I pulled into the driveaway with a flourish
+    * with a flourish
+        * if you do sth with a flourish, you do it with one big, noticeable movement
+        * the waiter handed me the menu with a flourish
+        * he took off his hat with a flourish
+* weep
+* loofah
+* marauder
+    * a person or animal that goes from one place to another looking for people to kill or things to steal or destroy
+* slippery
+    * He is a slippery fellow, full of schemes.
+* slopper
+* extrapolate
+* chafe
+    * rub
+        * to make or become damaged or sore by rubbing
+        * to be or become annoyed or lose practice
+        * Some students chafed at the increased security presence.
+    * be annoyed
+* overtime
+    * after the usual time needed or expected in a job
+    * a period of 
+* cue
+    * signal
+        * to give sb a signal to do sth
+        * with a nod of his head, the dummer cued the lead singer in
+        * a word or action in a play or film that is used as a signal by a performer to begin saying or doing sth
+        * a signal for sb to do sth
+            * they started washing up, so that was our cue to leave the party
+        * on cue
+            * if sth happens on cue, it happens just after sb has said or throught it would happen
+            * I was just wondering where Sarah, when, right on cue, she came in
+        * take your cue from sb
+            * to take notice of sb's words or behaviour so that you know what you should do
+            * she watched his lips carefully and took her cue from him
+            * the data engineering discipiline took cues from its sibling, while also defining itself in opposition and finding its own identity
+            * to use someone else’s actions or behaviour to show you what you should do or how you should behave
+                * With interest rates, the smaller banks will take their cue from the Federal Bank.
+                * I took my cue from her, surviving the eulogy by neatly disconnecting myself from what was said.
+                *  But there was change in the air: one woman began to study and others took their cue from her.
+    * stick
+* sibling
+* subcontract
+    * to pay an outsise person or organization to do work that normally be done within an organization
+    * subcontract sth out to sb
+        * Most of the work has been subcontracted out to another company
+        * if it is a large contract, the consultant may subcontract parts of it
+* craft
+    * areas like crafting and maintaining portfolios of reports and dashboards are not a data engineer's primary forcus
+* know-how
+    * Product know-how on platforms like informatica, IBM, Datastage, Congnos, AbIntio or Microsoft SSIS isn't common amongst modern data engineers, and being replaced by more generic software engineering skills along with under standing of programmatic or configuration driven platforms like Airflow, Oozie, Azkabhan or Luigi.
+* multitude
+    * there's multitude of reasons why complex pieces of software are not developed using drag and drop tools: it's that ultimately code is the best abstraction there is for software
+* buy
+    * pay for
+    * believe
+    * buy-in
+        * a situation in which a person or group buys enough shares in a company to get control of it
+        * she led a buy-in of the group and is now its director
+        * a situation in which a company buys its own shares from shareholders
+        * the fact of agreeing with and accepting sth that sb suggessts
+            * if you want to go ahead with these plans, you'll need buy-in from the employees
+        * support for an idea or plan
+            * Effective leaders must understand how to communicate their vision, and create buy-in for it.
+    * buy sth in
+        * to buy sth for future use and not because you need it now
+        * we bought in lots of tinned food in case of heavy snow
+    * buy into sth
+        * belive
+            * to completely believe in a set of idea
+            * I don't buy into all that New Age stuff
+            * to support or believe in an idea or plan
+            * To create an effective brand, you need to convince people to buy into it.
+        * business
+            * to buy a part of a business in order to have some control over it
+            * He was trying to buy into the newspaper business
+    * a good/bad buy
+        * to be worth/not be worth the price
+        * his jacket is a really good buy, at £200.
+* tin
+* tinned
+    * food that is tinned is put in a tin in order to preserve it
+    * I don't like tinned tomatoes/spaghetti/milk
+* exile
+    * the condition of someone being sent or kept away from their own country, village, etc., especially for political reasons
+        * the king went into exile because of he political reason of his country
+        * the deposed leaders are currently in exihle in the neighbouring country
+    * to send sb away from their own country, village, etc. esp. for political reasons
+    * the monarch was exihiled because of the coup
+    * a person who is sent or kept away from their own country, etc.
+* raid
+    * to enter a place in search of illegal activity
+    * Policie raided the apartment and found a large amount of drug inside
+* interrogate
+    * to aggressively ask someone questions
+* undocumented
+    * The president has promised to crack down on undocumented immigrants.
+* tenure
+* crew
+    * all the people who work together, esp. to operate a ship or aircraft, or all the people of lower rank
+    * television crew
+    * a TV/film/camera crew
+    * an amulance/ifeboat crew
+    * The aircraft has/carries a crew of seven
+    * the people who work on a ship, aircraft, etc. who are not officers
+    * If you crew a boat, or crew for someone on their boat, you help to sail it.
+* tiresome
+    * tiring, annoying, or boring
+    * It's getting a little tiresome, istening to you complain
+    * I find it very tiresome doing the same job day after day
+    * he has the tiresome habit of finishing your setences for you
+* irksome
+    * annoying
+* tedious
+* wearisome
+    * causing a person to be tired; boring
+    * simple repetitive tasks can be very wearisome
+    * a long project becomes wearisome and loses its excitement for me
+* troublesome
+* omit
+    * to fail to include or do sth
+    * I'd be upset if my name were omitted from the list of contributions
+    * she was omitted from the list of contribution to the report
+    * She omitted to mention that she would be away next week.
+* skip
+    * let me skip our company profile
+* masuculine
+* feminine
+* underlying
+    * there are some underlying issues
+* lurk
+    * it could alo be an indication that there are some isseus lurking that they do not want to talk about
+    * (of an unpleasant feeling or quality) to exist although it is not always noticeable
+        * Danger lurks around every corner.
+* camouflage
+    * the use of leaves, branches, paints, and clothes for hiding soldiers or military equipment so that they cannot be seen against their surroudings
+        * a camouflage jacket
+    * the lizard's light brown skin acts as camouflage in the desert sand
+    * Using smoke as camouflage, the army advanced up the hill
+    * he believes that her kindness was merely a camouflage for real intentions
+* cartridge
+    * a container that is used in a larger piece of equipment, and which can be replaced with another similar part
+        * a vide game cartridge
+    * a small tube containing an explosive substance and a bullet for use in a gun
+* cramp
+    * a sudden, painful tightening of a muscle
+    * stomach cramps
+    * a foot cramp
+    * I've got cramp in my foot.
+    * stomach cramps
+    * to limit someone, especially to prevent them from enjoying a full life
+* tender
+* dimple
+    * a small hollow place, esp. in a person’s face and usually considered attractive
+    * He has a dimple in his chin.
+    * Freddie was an angelic-looking child with blond, curly hair, blue eyes, and dimples.
+    * The pane of glass had a small dimple in it.
+* circumcise
+    * to cut the protecting loose skin off a boy's penis, for medical, traditional, or religious reasons
+* circumcision 
+* interject
+    * to say something while another person is speaking
+    * He interjected questions throughout the discussion.
+* interupt
+    * Please don't interrupt unitl I'm finised
+    * The picnic was interruped by a rain shower
+    * stop speaking
+        * she tried to explain what had happend but he kept interrupting her
+        * I wish you'd stop  interrupting
+    * stop happening
+* interfere
+    * to involve yourself in a situation when your involvement is not wanted or not helpful
+    * to prevent something from working effectively or from developing successfully
+        * Even a low level of noise interferes with my concentration.
+    * I'd never interfere between (us with) a husband and wife.
+    * interfere with
+        * Interfering in other people's relationships is always a mistake.
+* tibia
+    * the large bone at the front of the lower leg
+* earn
+    * to receive money as payment for work that you do
+        * I earn 80 dollar a year
+        * How much do you earn, if you don't mind me asking?
+* strengthen
+* consolidate
+    * to strengthen the position of power or success that you have, so that it becomes more effective or continues for longer
+    * to combine things in order to make them more effective or easier to deal with
+        * we consolidate information from a wide range of sources
+* profit/wage/benefit
+    * profit
+* delay
+    * to cause to be late or to cause to happen at a later time, or to wait before acting
+        * He wants to delay the meeting until Wednesday
+    * a period when sth that might happen does not happen or does not happen quickly enough, or the failure to act quickly
+    * You need to call back without delay.
+    * Long delays are expected on the motorways
+    * The opening of this section of the road is delayed until September
+    * Our meeting was delayed for ten minutes
+    * Big companies often delay paying their bills
+* procrastination
+* procrastinate
+    * to delay doing sth
+    * when it comes to housework, I tend to procrastinate
+    * to keep delaying something that must be done, often because it is unpleasant or boring
+    * I know I've got to deal with the problem at some point -- I'm just procrastinating
+* akin
+    * having some of the same qualities; imilar
+    * they speak a language akin to French
+    * akin to cheese in our previous supermarket example
+* fudge
+    * candy
+    * cheat
+        * to chea about sth slightly, esp. by not reporting facts actually or not telling the exact truth
+        * I think the company fudged the figures to make their losses look less than they were
+    * avoid
+* rhetorical
+    * rhetorical question
+* collective
+* installation
+* projector
+    * Is there a projector I can use?
+* reptile
+    * Saltwater crocodiles are the world's largest reptiles
+* trampoline
+    * The kids were exhausted after an hour of jumping on the trampoline.
+* generation
+    * group
+    * reproduction
+    * age group
+        * the younger generation smokes less than their parents did
+        * There were at least three generations - grandparents, parents and children - at the wedding.
+        * first, second, third generation
+            * she's first-generation American
+        * the older/younger generation
+        * the new/next generation
+    * energy
+    * product
+* gauge
+* think tank
+    * She is a senior researcher at one of the most influential think tanks in North America.
+* confine
+    * be confined to
+        * If something is confined to a particular group of people, it exists only among them
+        * Research shows that poor eating habits are not confined to the developing world.
+* dismay
+    * a feeling of unhappiness and disappointment
+        * She discovered, to her dismay, that she had locked her keys inside her car.
+    * The fans watched in/with dismay as their team lost 42–11.
+    * to make sb feel unhappy and disappointed
+        * the prospect of more road-building dismays environmentalists
+* consternation
+    * a feeling of worry, shock, or confusion
+    * the prospect of so much work filled him with consternation
+    * To his consternation, he got to the airport he found he'd forgotten his passport
+* designate
+    * Advocates designated the day to mark how much longer women must work, on average, to earn as much as men averaged in the previous year.
+* archenemy
+* appeal
+    * The company plans to appeal the judge's decision.
+* impose
+    * China has imposed trade restrictions on North Korea.
+* utility
+    * This article reviews the utility of the app's new functions.
+* lobby
+    * The National Rifle Association has obviously been lobbying to prevent new gun control legislation.
+* on a scale of one to five with one being, "always initiated by him" and five being, "always initiated by you" how do you prefer your sexual encounters to begin?
+* crossroads
+* junction
+* intersection
+* crossing
+* mortality
+    * infant mortality rate of any member state
+* oncologists
+* oncology
+    * the study and treatment of tumours (= masses of cells) in the body
+* caretaker
+* as a whole
+* pediatrician
+* pediatric
+* surpass
+    * to do or be better than
+        * His time for the 100 metres surpassed the previous world record by one hundredth of a second.
+    * to do or be better or greater than something
+        * The quarterly sales figures have surpassed everyone's expectations.
+* midwife
+    * We only have 5 midwives in this hospital.
+    * a person trained to assist women in childbirth
+* more than usual
+    * fixed phrase or idiom
+    * not grammatically constructed
+* tandem
+    * in tandem
+        * at the same time
+            * the heart and lungs will be transplanted in tandem
+        * if two pieces of equipment, people, etc. are working in tandem, they are working together, esp. well or closely
+            * I want these two groups to work/operate in tandem on this project
+* parlance
+    * a group of words or style of speaking used by a particular group of people
+        * Oral contraceptives are referred to as "the pill" in common parlance.
+        * business/legal parlance
+* sinkhole
+    * a hole in the ground, esp. in an area of limestone rock, that has been formed naturally, for example by water that has worn away the rock
+    * a large whole that suddenly appears in the ground when the surface of the ground is no longer supported
+        * A massive sinkhole has been opened over old potash mines in the area
+        * A man was missing early Friday after a large sinkhole opened under the bedroom of his house in Florida.
+* characteristic
+    * characteristic of microservice architectecture
+* catalog
+    * a listing, sometimes with explanations or pictures, of items offered for sale, of items that are available for use, or of objects described for a scientific purpose
+        * AWS Glue can catalog your Amazon Simple Storage Service (Amazon S3) data
+        * Students can search the library's online catalog and order books
+    * Scientists were cataloging the plants of their regions.
+* granular
+    * characterized by a high level of granualarity
+        * a granular database 
+* coarse
+    * rough
+        * rough and not smooth or soft
+        * coarse hair
+        * coarse linen shirt
+    * rude
+* cannabis
+    * the hemp plant, whose leaves and flowers are used to make marijuana
+* spill
+    * I spilled my soup on the table
+* humanoid
+* parliament
+* in touch
+    * keep in touch
+    * nece to see you again! we should stay in touch
+* lonliness
+    * She experienced a period of loneliness after moving to the city.
+* mechanical
+    * He's good at fixing mechanical devices
+* uptime
+    * results into running in the wild with 9 nines uptime
+    * 9.99999999% uptime quals to 27 ms/year downtime
+* disposal
+* agility
+    * agility in feature delivery
+* aptitude
 
 
 
