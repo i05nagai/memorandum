@@ -17,6 +17,8 @@ title: English Conversation
         * Well, that's it, we're done - we can go home now.a
     * used to say that something is correct
         * You switch the computer on at the back. That's it.
+* long time no see
+    * Year I know, how's it going?
 
 
 ## Weather
@@ -49,6 +51,9 @@ title: English Conversation
 * hurricane
 * storm
     * powerful strom battered the country
+* It's pouring
+* raining cats and dogs
+    * it is raining very, very hard
 
 ## Goodbyye
 * Bye
