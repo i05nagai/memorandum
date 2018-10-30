@@ -96,6 +96,22 @@ title: English Speaking Clothes
 * pesticide
 * roach spray
 * disinfectant
+* blanket
+    * you would not need to specify that it is a lap blanket
+    * an electric blanket
+    * do you mind if I grab a blanket, it's really cold today.
+    * Would you mind if we/I use a blanket during the lesson? As it is quite cold
+    * would it be ok if I put a blanket over my legs
+    * Can I please bring a blanket to the lesson it is very cold?
+    * Can my child please use a blanket at the next lesson as she gets cold in this room
+* blanker
+* a bow tie
+    * wear a bow tie
+    * put on a bow tie
+    * man with a bow tie
+* pashmina
+* scarf
+
 
 ## shoes
 [Different Types of Shoes in English \| List of Shoes with Pictures \- 7 E S L](https://7esl.com/types-of-shoes/)
