@@ -3,6 +3,8 @@ title: English Speaking Personality
 ---
 
 ## English Speaking Personality
+* considerate
+    * He is always a kind and considerate host.
 * self-initiative
 * talkative
 * chatterbox
