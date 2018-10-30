@@ -70,7 +70,23 @@ title: Site Reliability Engineering
         * The actual uptime is measured by a neutral third party: our monitoring system
         * the difference between these two numbers is the budget of how much unreliability is remaining for the quarter
         * As long as the uptime measured is above the SLO -- in other words, as long as there is error budget remaining -- new releases can be pushed
-
+* SLIs
+    * examples
+    * user-facing serving systems
+        * availability
+            * could we respond to the request?
+        * latency
+            * how long did it take to respond?
+        * throughput
+            * how many requests could be handled?
+    * storage systems
+    * big data systems
+        * end-to-end latency
+            * how long does it take the data to progress from ingestion to completion?
+        * throughput
+            * how muc hdata is being processed?
+    * all systems
+        * correctness
 
 
 ## Reference
