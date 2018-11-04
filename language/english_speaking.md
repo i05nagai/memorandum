@@ -101,7 +101,7 @@ title: English Speaking
     * Would you prefer to pay with/by cash, cheque or credit card?
     * Mot of these women are very poorly paid and work in terrible conditions
     * Who's going to pay for what at the party?
-    * pay attention 
+    * pay attention
         * you werent't paying attention to what I was saying
     * pay sb/sth a call/visit
     * pay for
@@ -495,6 +495,7 @@ title: English Speaking
         * get confused
             * With the huge range of computers on the market, it’s easy to get confused.
         * I was rather confused by his question
+        * I am confused about whether
     * baffled
         * very confused and unable to understand something, even though you have tried hard for a long time
         * Detectives admit they are baffled by the case
@@ -1036,6 +1037,8 @@ title: English Speaking
         * to make a business into a corporation
     * regular load testing of the system to correlate raw capacity to service capacity\
 * take
+    * take flight and hunt
+    * take your time
     * take it upon oneself
         * to accept responsibility for something wihtout being asked to
         * He took it upon himself to personally thank each person at the meeting
@@ -1087,6 +1090,24 @@ title: English Speaking
             * some workers will lose their jobs as machines take over
             * when he died, his son took over as CEO
             * he took over from Tony as head of department last year
+        * She took over management of this department last winter.
+    * take up
+        * fill
+            * to fill an amount of space or time
+            * this desk take up too much room
+        * start
+            * to start doing a particular job or activity
+            * he's taken up the position of supervisor
+            * He took up the story where she had left off
+        * take up office
+            * to start an official job
+            * the minister took up office in December
+        * discuss
+            * the school took the matter up with the police
+        * clothing
+            * to make a piece of clothing, such as a skirt or trousers, shorter
+        * to accept an offer that sb has made
+            * Could I take you up on that offer of a lift, Rob?
 * consist
     * Substance can consist of fine gravel, aquarium sand or powdered lava
     * Later tombs here have no tumulus above but consist of a single room cut into the stone
@@ -3891,6 +3912,10 @@ title: English Speaking
     * polite behaviour
     * type
 * way
+    * He has his own way of doing things.
+    * he does things differently
+    * His way of doing things differs from others
+        * it may not be natural but correct
     * route
         * a route, decision, or path
         * do you know the way to restaurant?
@@ -3933,6 +3958,45 @@ title: English Speaking
     * condition
         * the bad condition or state of someone or something, esp. the state of a person's health
         * he's been in a bad way ever since the operation
+    * out of the way
+        * an out of the way place is an area where there are few people
+            * an out of the way spot for a picnic
+            * it's a great little pub, but a bit out of the way
+        * if sb or sht is out of the way or out of the sb's way, they are somewhere where they are not likely to cause a problem, need attention, be annoying
+        * move/put/push sth out of the way
+            * Why don't you tie your hair back, out of the way?
+            * if Uncle Tom had been drinking, I kept out of his way
+        * if a particular matter, job etc. is out of the way, it has been done or dealt with
+            * I'd rather get the interview out of the way in the morning
+            * As soon as the contract's out of the way, we can start
+    * be/get under way
+    * give way
+    * make your way
+    * behaviour
+        * sb’s typical style of behaving, especially when it seems different or unusual
+        * Don't worry if she's quiet -- that's just her way
+        * we all have our funny little ways
+    * the right way
+    * the wrong way
+    * a good way
+    * the best way
+    * a different way
+    * a sure way
+    * a quick way
+    * an easy way
+    * have a way
+    * find a way
+    * think of/device a way
+    * a way of doing sth
+        * method
+        * approach
+        * technique
+        * strategy
+    * how to go to place
+        * route
+        * directions
+        * short cut
+        * how to get to
 * successor
     * Colossus is the successor to GFS
 * succeed
@@ -4529,6 +4593,29 @@ title: English Speaking
         * Do you know of a good doctor?
 * obnoxious
 * catch
+    * take hold
+    * discover
+    * see
+    * travel
+    * become infected
+    * problem
+    * device
+    * taking hold
+    * catch on
+        * become popular
+            * to become fashionable or popular
+            * why did the electronic gadget catch on so fast?
+        * unerstand
+            * to understand
+            * we were teasing him, he was slow to catch on that we were teasing
+    * catch up
+        * to reach sb in front of you by going faster than them
+        * I ran after her and managed to catch up with her
+    * burn
+        * to begin to burn
+            * this wood's too wet, the fire won't catch
+        * catch fire
+            * to start burning
     * catch someone red handed
         * to discover someone while they are doing something bad or illegal
         * He was caught red-handed taking money from the till.
@@ -6134,6 +6221,7 @@ title: English Speaking
     * support an enemy
         * to help an enemy of your own country, esp. one which has taken control of your country
         * the Soviet government accused them of collaborating with Nazis in WW2
+    * Apple will participate in the Chinese market in collaboration with UnionPay
 * consolidation
 * pawn
     * trade for money
@@ -6422,6 +6510,10 @@ title: English Speaking
     * ask sb to leave
     * he ask for you by name
 * goof
+    * goof off
+        * to avoid work or waste time
+            * you'd better not let the boss catch you goofing off
+        * to avoid doing any work
     * goof around
         * to spend time doing nothing important or behaving in a silly way
         * the boys spent the whole summer just goofing around
@@ -6899,7 +6991,6 @@ title: English Speaking
     * I'm very envious of your new coat. It's beautiful
 * fear
 * let me know if you needs any hands
-* take your time
 * put a spanner in the works
 * how can we improve our brute force solution
 * consign
@@ -7693,6 +7784,11 @@ title: English Speaking
 * manifest
 * eradicate
 * roll
+    * roll out
+        * to make a new product, service or system availbale for the first time
+        * A media campaign is expected to roll out early next year
+        * roll sth out
+            * the company plans to roll out the scheme across Europe in the comming month
     * move
         * the coin rolled off the table
         * I rolled the spare tire around to the side of the car
@@ -8038,6 +8134,11 @@ title: English Speaking
 * she will submit a painting to an art exihibition
 * cost-effective
     * cost effective
+* cost
+* costly
+    * making you spend money
+    * making you give or lose sth
+    * expensive
 * squeal
 * promising
 * in the light of
@@ -8295,6 +8396,15 @@ title: English Speaking
 * undocumented
     * The president has promised to crack down on undocumented immigrants.
 * tenure
+    * the period of time when sb hold a job, esp. an afficial position, or the right to keep a job permanently
+    * during the tenure as mayor, relations with the police department worsened
+    * she has tenure in her new teaching position
+    * professor who don't publish enough work may not be offered tenure
+    * sb's tenure as sth
+        * seven years ago, I began my official tenuare as lab director
+    * job tenure
+        * the length of time an employee has worked for their employee
+        * average job tenure in the region has fallen from to 90 months
 * crew
     * all the people who work together, esp. to operate a ship or aircraft, or all the people of lower rank
     * television crew
@@ -8896,7 +9006,6 @@ title: English Speaking
     * the game is very atypical of how we played this year
     * the socialble behavior of lions is considered atypical of the cat family
 * until recently, they did not know her, and had no encounters in a previous location
-* take flight and hunt
 * hedge
     * bushes
     * protection
@@ -9112,6 +9221,10 @@ title: English Speaking
 * accompany
     * Payment is made via an accompanying store app that’s powered by Mastercard.
     * go with
+        * to go with sb or to be provided or exist at the same time as sth
+            * the course books are acocompanied by four CDs
+        * to show someone how to get to somewhere
+            * would you like me to accompany you to your room?
     * lay musich
 * fitting room
 * dwell time
@@ -9121,9 +9234,186 @@ title: English Speaking
     * you look scary
 * scared
     * you look scared
+* at first sight
+* ever-changing
+    * Constantly changing or developing.
+    * ever-chaning technology
+* on the fly
+    * if you do sth on the fly, you do it quickly, often while you are doing sth else, without preparing and without thinking too much about how it should be done
+    * This new rule seems to have been created on the fly.
+    * without interrupting a computer program that is already running
+        * he had written a program that could translate from Japanse on the fly
+* disturb
+    * Sorry to disturb you
+    * to make sb feel worried or upset
+    * to move sth or change its position
+    * to move sth or change its position
+    * to change a normal situation in a way that causes problems
+        * My hormone balance is disturbed by my pregnancy.
+    * disturb sb's sleep
+    * disturb sb's concentration
+    * disturb sb's throughts
+* sympathize
+    * show support
+        * to show support for sth; to agree with sth
+        * I sympathize with your position that it would be irresponsible to lower taxes now
+    * show understanding
+        * to listen to sb who has a problem and show that you understand and care
+            * I know what it's like to have migrane headaches, so I do syphasize with you
+* sympathy
+    * understanding
+        * a feeling or expression of understanding and caring for sb else who is suffering or has problems that have caused unhapiness
+        * the act of showing understanding for sb or for a particular situation
+        * sympathy for sb
+            * The prime minister expressed his sympathy for those injured in the attacks
+        * have great/little/no sympathy for sth
+            * Locals have little sympathy for the chemical company following the toxic wasate disaster
+    * offer/send your sympathies
+        * to express your sadness to sb because a relation or friend of theirs has recently died
+    * support
+        * a feeling or expression of support and agreement
+    * come/walk out in sympathy
+        * to stop working in order to show your support for a group of workers who are on strike
+        * the airline's ground staff walked out in sympathy with catering contractors
+    * in sympathy
+        * Gilts advanced 23p in sympathy with the overnight rise in US treasury bonds.
+* politic
+    * workpace politics
+        * office politics/organization politics
+* what time do you normally work until?
+* what time do you usually get off work?
+* what time do you finish work?
+* How late do you work?
+* Do you have to stay late at work?
+* How often do you work overtime?
+* answer
+    * reaction
+        * sb said or written in reaction to a question or statement
+        * An answer is also a reaction to a question asked as part of a test
+    * solution
+        * a solution to a problem
+    * react
+    * be suitable for
+        * to be suitable for and satisfy sb's needs
+        * he showed me some software that answered my reuiqrements exactly
+        * I've got some furniture in the attic that I think might answer your nees
+    * match
+* it couldn't be better
+* It is spot on
+* attic
+    * a space in a house just under the roof, often used for storing things
+* mumble
+    * to speak quietly or in an uncealr way so that the words are difficult to understand
+    * she mumbled soth about being too busy
+* murmur
+    * to speak or say very quietly
+        * I love you, she murmured
+        * I was murmurning to himself
+    * complain
+        * to complain about sht that you disagree with or dislike, but not in a public way
+        * they were murmuring about the boss's newphew getting the job
+* nozzle
+    * the nozzle of gas pump is too large for my car's gas tank
+* unlatch
+    * The child wasn't strong enough to unlatch the gate on his own.
+    * Get out of the car, unlatch the fuel pump hose and insert it in the gas tank.
+* caveat
+    * The sale of tobacco products is accompanied by a caveat about the health risks.
+* gas tank
+    * still has to get out and manually insert the fuel pump nozzle into the car's gas tank.
+* gasoline
+    * in-car touchscreens
+    * A mobile phone app called Shell allows drivers to pay for a fill-up of gasoline from their in-car touchscreens
+* downside
+    * The downside of owning your own business is working very long hours
+* upset
+    * Some analysts said Apple may have been thinking about upsetting China when it objected to efforts by the U.S. government to look into its software.
+* foray
+    * attempt
+        * a short period of time being involved in an activity that is different form and outside the range of a usual set of activities
+        * she made a brief foray into acting before becoming a teacher
+    * visti
+        * I made a quick foray into town before lunch to get my sister a present
+    * attack
+    * a foray into sth
+        * This is the company's first foray into the US market.
+    * a brief/disastrous/successful foray
+* fare
+    * payment
+    * food
+    * progress
+        * to progress or to be in a particular condition
+        * Middle-income families will fare better/worse under the new tax laws
+        * to succeed or be treated in the stated way
+        * How did you fare in our exams?
+        * Low-paid workers will fare badly/well under this government?
+    * How did the car fare during the high-speed tests?
+* back
+    * This political party is backing Mr. Johnson as he’s running for President.
+* keen
+    * a keen interest in painting
+        * strongly felt
+    * developed
+        * very developed, or very quick to understand
+    * egaer
+        * eager, interested, and enthusiastic
+        * Theresa isn't too keen on pets
+        * She's keen on (playing) tennis
+        * They were very keen to start work as soon as possible.
+* beleaguer
+    * to cause a lot of problems or difficulties of sb
+        * we have issues in our community that continue to plague and beleaguer us
+    * to surround sb in order to attack them
+        * they were beleaguered by enemy amies
+* plague
+    * cause difficulty
+        * to cause worry, pain, or difficulty to sb or sth over a period of time
+        * to annoy sb, esp. by asking repeated questions
+            * The children plagued him with questions all through lunch.
+    * disease
+    * a plague of sth
+        * a large number of things that are unpleasant and likely to cause damage
+        * a plague of insects
+* aggravate
+    * make worse
+        * to make sth bad worse
+        * Road repair work has aggravated the problem of traffic congestion
+    * annoy
+        * to make sb feel very annoyed and upset
+        * it really aggravates me when the car won't start, after all the money we put into it
+        * The treatment only aggravated the condition.
+* aggrieve
+    * to make sb unhappy and ungry
+    * Years later, this unfaireness still agreives him
+* ruffle
+    * make upset
+    * make uneven
+        * to make sth that is smooth uneven
+    * fold
+* fold
+    * bend
+        * to bend sth such as paper or cloth so that one part of it lies on the other part, or to be able bend in this way
+            * he took his clothes out of the dryer and carefully folded them
+            * she folded up and put it back in her bag
+            * the tray table folds up so that it fits in a closet
+        * if you fold your hand or hams, you bring them together and cross them
+            * he folded his arms across his ches
+    * fail
+        * to close because of failure
+        * many small business fold within the first year
+    * bend
+        * a line or mark where paper, cloth etc. was or is folded
+        * if you just make holds along the dotted line, you can seal it and mail it as an evelope
+    * shared belief
+    * number
+        * having the stated number of parts, or multiplied by the stated number:
+        * there has been more than a 30-fold increase in Internet users in the pat two years
+    * to wrap
+        * she folded her baby in blanket
+        * he folded his arms around her
+    * Could you make some space? I want to fold the futon
+    * Give me some room. I'm trying to fold the futon here. 
 
-
-He looked scary, but he made me relaxed 
 
 ## US
 * CDC
