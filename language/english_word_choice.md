@@ -3,6 +3,22 @@ title: English word choice
 ---
 
 ## English word choice
+* this/last/next day of week
+    * [semantics \- Last, This, and Next \(days of the week\) \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/239269/last-this-and-next-days-of-the-week)
+* it/that/this
+    * [It, this and that in paragraphs \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/writing/it-this-and-that-in-paragraphs)
+    * it
+    * this
+        * this highlights the information referred to much more strongly than it
+    * that
+        * That is also used to refer to ideas associated with another person:
+* shall/will
+    * [Future: will and shall \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/future/future-will-and-shall)
+    * We can use shall instead of will with I and we in statements. Its use is more formal:
+        * We shall never forget the holiday we had in Vietnam.
+    * When we use shall I and shall we in questions it is usually to make suggestions rather than to refer to future time:
+        * It’s getting late. Shall we go home?
+        * Shall I invite Louisa and Jill to the party?
 * my apology/my apologies
     * [“My Apology” or “My apologies”? \| Grammarly](https://www.grammarly.com/blog/my-apology-or-my-apologies/)
     * my apologies
