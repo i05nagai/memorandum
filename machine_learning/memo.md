@@ -18,5 +18,42 @@
 * 200GBのstorageがあるとは思って良い
 * memoryは8GB以下くらいを想定する
 
+
+
+
+## Visualization
+* Categorical Data
+    * discrete
+    * the number of category is not large
+* Integer data
+    * discrete
+    * the number of category could be large
+* Real value data
+    * the number of category could be large
+    * it is helpful to round values to integer in some cases
+        * e.g. if value in [m*k, m*(k + 1)], round to  m*k
+
+
+* small discrete
+* large discrete
+* real
+    * to small discrete value
+* timestamp
+    * date
+    * month
+    * year/month
+    * year
+    * hour
+    * days from startdate
+
+
+
+* groupby
+    * Cat, count
+        * line graph
+        * bar graph
+    * Cat1, Cat2, count
+
+
 ## Papers
 * [Research – Google AI](https://ai.google/research/)
