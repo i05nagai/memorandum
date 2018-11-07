@@ -771,6 +771,7 @@ modal verb
 * https://www.grammar-quizzes.com/clauses-3.html
 * [English Grammar Today on Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses)
 * [Relative clauses referring to a whole sentence \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses/relative-clauses-referring-to-a-whole-sentence)
+* [Relative pronouns \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns/relative-pronouns)
 
 * whose
     * we watch the doctor whose TV show is funny
@@ -810,6 +811,18 @@ modal verb
     * object noun
         * The Disney Company has several pars, all of which Disney runs
         * the biking trophy was given to the kids (all of whom) you just met
+
+In informal language, we often use where, when or why to introduce defining relative clauses instead of at which, on which or for which.
+
+* when
+    * I know a restaurant where the food is excellent
+    * I know a restaurant at which the food is excellent
+* where
+    * There isn't a day when I don't feel rushed off my feet
+    * There isn't a day on which I don't feel rushed off my feet
+* why
+    * Do you know the reason why the shop is closed today?
+    * Do you know the reason for which the shop is closed today?
 
 ## That clause
 * [That \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns/that)
