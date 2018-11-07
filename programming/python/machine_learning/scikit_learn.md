@@ -72,15 +72,59 @@ print(gs.best_params_)
 
 
 ### metrics
+* `check_scoring(estimator, scoring=None, allow_none=False)`
+    * `scoring`
+        * `<score>_<average>`
+            * `<score>`
+                * `f1`,
+                * `precision`,
+                * `precision`,
+* `fbeta_score(y_true, y_pred, beta, labels=None, pos_label=1, average='binary', sample_weight=None)`
+    * The F-beta score is the weighted harmonic mean of precision and recall
+
+```
+SCORERS = dict(explained_variance=explained_variance_scorer,
+               r2=r2_scorer,
+               max_error=max_error_scorer,
+               neg_median_absolute_error=neg_median_absolute_error_scorer,
+               neg_mean_absolute_error=neg_mean_absolute_error_scorer,
+               neg_mean_squared_error=neg_mean_squared_error_scorer,
+               neg_mean_squared_log_error=neg_mean_squared_log_error_scorer,
+               accuracy=accuracy_scorer, roc_auc=roc_auc_scorer,
+               balanced_accuracy=balanced_accuracy_scorer,
+               average_precision=average_precision_scorer,
+               neg_log_loss=neg_log_loss_scorer,
+               brier_score_loss=brier_score_loss_scorer,
+               # Cluster metrics that use supervised evaluation
+               adjusted_rand_score=adjusted_rand_scorer,
+               homogeneity_score=homogeneity_scorer,
+               completeness_score=completeness_scorer,
+               v_measure_score=v_measure_scorer,
+               mutual_info_score=mutual_info_scorer,
+               adjusted_mutual_info_score=adjusted_mutual_info_scorer,
+               normalized_mutual_info_score=normalized_mutual_info_scorer,
+               fowlkes_mallows_score=fowlkes_mallows_scorer)
+```
+
 * `accuracy_score`
     * 正解率を出す
     * 多クラスの場合は、当たった数 / 全体
 * `precision_score`
-	* 適合率、精度をだす
+    * calculate precision
 * `recall_score`
-	* 再現度をだす
-* `f1_score`
-	* F値をだす
+    * calculate recall
+* `f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
+    * calcualte F1-score
+    * `average`
+        * `None`
+        * `binary`
+        * `micro`
+            * Calculate metrics globally by counting the total true positives, false negatives and false positives.
+        * `macro`
+            * Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+        * `weighted`
+            * Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+        * `samples`
 
 ```python
 import sklearn.metrics as metrics
@@ -90,9 +134,9 @@ print("F1: {0}".format(metrics.f1_score(y_true=y_test, y_pred=y_pred)))
 ```
 
 * `roc_curve`
-	* true_positive rateとfalse positive rateとthreshfoldを計算する
-	* scoresの閾値を決めた時に、閾値以上を真、未満？を偽と予測した時のTPとFP
-	* 閾値をscoresの最小値から最大値まで変化させた時のTPとFPが計算される
+    * true_positive rateとfalse positive rateとthreshfoldを計算する
+    * scoresの閾値を決めた時に、閾値以上を真、未満？を偽と予測した時のTPとFP
+    * 閾値をscoresの最小値から最大値まで変化させた時のTPとFPが計算される
 
 ```python
 y = np.array([1, 1, 2, 2])
@@ -101,7 +145,7 @@ fpr, tpr, thresholds = metrics.roc_curve(y, scores, pos_label=2)
 ```
 
 * `roc_auc_score`
-	* ROCのAUCの値を計算
+    * ROCのAUCの値を計算
 
 ### tree
 * `export_graphviz`
@@ -116,13 +160,73 @@ fpr, tpr, thresholds = metrics.roc_curve(y, scores, pos_label=2)
         * `intercept_[0]`は0番目のクラスと残りのクラスの分類結果
         * `intercept_[1]`は1番目のクラスと残りのクラスの分類結果
 
+## svm
+* `SVC`
+    * `kernel`
+        * `precomputed`
+            * you need to pass square kernel matrix
+    * `C`
+
 ### ensemble
+
+* `RandomForestClassifier`
+    * `fit(self, X, y, sample_weight=None)`
+        * `X` is converted to `np.float32`
+        * `y` is converted to `np.float32`
+
+* `GradientBoostingClassifier`
+    * `loss`
+    * `subsample`
+        * The fraction of samples to be used for fitting the individual base learners.
+        * if smaller than 1.0 this results in Stochastic Gradient Boosting
+    * `criterion`
+        * `friedman_mse`
+            * the mean squared error with improvement score by Friedman
+        * `mse`
+            * mean squared error
+        * `mae`
+            * mean absolute error
+    * `min_samples_split`
+        * int
+            * consider min_samples_split as the minimum number.
+        * float
+            * a fraction and ceil(min_samples_split * n_samples) are the minimum number of samples for each split
+    * `min_samples_leaf`
+        * int
+        * float
+    * `min_impurity_decrease`
+    * `init`
+        * An estimator object that is used to compute the initial predictionsstimator
+        * None
+            * it uses loss.init_estimator.
+    * `max_features`
+        * int
+        * float
+        * auto
+        * sqrt
+        * log2
+        * None
+            * max_features=n_features.
+    * `max_leaf_nodes`
+    * `warm_start`
+    * `presort`
+        * bool
+        * `auto`
+    * `n_iter_no_change`
+        * None
+            * disable early stopping
+    * `validation_fraction`
+        * Only used if n_iter_no_change is set to an integer.
+    * `random_state`
+        * `None`
+            * the random number generator is the RandomState instance used by np.random.
+
 
 ### datasets
 * `make_moon`
-    * 半月状のデータを生成する
+    * create data whose points draw harf circle
 * `make_circles`
-    * 同心円のデータを生成する
+    * create data whose points draw a concentric circle
 
 ### feature_extraction
 * `text.TfidfVectorizer` 
@@ -134,5 +238,11 @@ fpr, tpr, thresholds = metrics.roc_curve(y, scores, pos_label=2)
     * 文字列から単語ごとの特徴量をつくる
     * `transform`で文字列をsparse matrixに変換した行列を得られる
         * 行が文書番号、列が単語番号で、値に特徴量が入っている
+
+## pipeline
+* `Pipeline([('name1', estimator1), ('name2', estimator2)])`
+    * `estimator` has to have `fit` or `fit_transform`, and  `transform` methods
+        * if `estimator` has `fit_transform`, `fit_transform` is called instead of `fit`
+    * the input of `estimator2` is the result of `estimator1.fit_transform()` or `estimator1.fit().transform()`
 
 ## Reference
