@@ -97,6 +97,8 @@ $$
 $$
 
 $$\mathcal{I}_{n}$$ is a $\pi$-system so that the RHS of the above equation uniquly determines probability measure over $$(\mathbb{R}^{n}, \mathcal{B}(\mathbb{R}^{n}))$$.
+
+TODO: Validate the statements from here.
 $F$ is monotonically increasing so that we can define
 
 $$
@@ -105,7 +107,7 @@ $$
     & := &
         \{
             I
-            \in \mathcal{J}_{n}
+            \in \mathcal{I}_{n}
             \mid
             \exists
             x \in \mathbb{R}^{n},
