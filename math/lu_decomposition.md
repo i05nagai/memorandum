@@ -2,7 +2,7 @@
 title: LU decomposition
 ---
 
-# LU decomposition
+## LU decomposition
 行列$A$を下三角行列$L$と上三角行列$U$に分解する方法。
 つまり、以下を満たす$L, U$を見つける。
 
@@ -12,20 +12,20 @@ $$
 
 ## Symbols
 * $A = (a_{j}^{i})_{i,j}$
-    * $M$行$N$列の行列
+    * $M$-rows $N$-cols matrix
 * $L = (l_{j}^{i})_{i,j}$
-    * $M$行$M$列のした三角行列
+    * $M$-rows $N$-cols lower triangular matrix
 * $U = (u_{j}^{i})_{i,j}$
-    * $M$行$N$列の上三角行列
+    * $M$-rows $N$-cols upper triangular matrix
 * $D = (d_{j}^{i})_{i,j}$
-    * $M$行$M$列の対角行列
+    * $M$-rows $M$-cols diagonal matrix
 
 ## Theory
-$M \le N$とする。
-$L$と$U$を下記のようにおく。
+Suppose $M \le N$.
+Let $L$ and $U$ be
 
 $$
-L = 
+L =
     \left(
         \begin{array}{ccccc}
             1 & 0 & \ldots &   & 0\\
@@ -187,6 +187,68 @@ $$
 
 $A^{(k+1)} := (a_{j}^{i,(k+1)})_{i,j}$とする。
 $k := k+1$として、Step2に戻る。
+
+## Application
+
+### Inverting matrix
+
+### Solve linear equations
+* $A \in \mathbb{R}^{n \times n}$,
+* $L \in \mathbb{R}^{n \times n}$,
+    * lower triangular matrix of $A$,
+* $U \in \mathbb{R}^{n \times n}$,
+    * upper triangular matrix of $A$,
+* $b \in \mathbb{R}^{n}$,
+
+Solve
+
+$$
+    Ax = b
+    .
+$$
+
+Firstly, we solve the following equation with respect to $y$;
+
+$$
+    Ly = b
+    .
+$$
+
+By using the solution $y$, we solve the following equation.
+
+$$
+    Ux = y
+    .
+$$
+
+$$
+    y^{i}
+    :=
+    \frac{1}{l_{i}^{i}}
+    \left(
+        b^{i}
+        -
+        \sum_{k=1}^{i-1}
+        y^{k}
+        l_{k}^{i}
+    \right)
+    .
+$$
+
+$$
+    x^{i}
+    :=
+    \frac{1}{l_{i}^{i}}
+    \left(
+        y^{i}
+        -
+        \sum_{k=1}^{n-i}
+        x^{n-k}
+        l_{n-k}^{i}
+    \right)
+    .
+$$
+
 
 ## reference
 [LU decomposition - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/LU_decomposition)
