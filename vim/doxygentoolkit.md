@@ -1,17 +1,12 @@
-# DoxygenToolkit
-C, C++, Pythonで使えるDoxygen生成用のプラグイン。
+---
+title: DoxygenToolkit
+---
 
-## 使い方
+## DoxygenToolkit
+C, C++, Pythonで使えるDoxygen comment generator.
+
+## Usage
 関数の宣言部分で`:Dox`とするとDoxygen用のコメントが生成される。
-```cpp
-int
-  foo(char mychar,
-      int myint,
-      double* myarray,
-      int mask = DEFAULT)
-{ //...
-}
-```
 
 ```cpp
 /**
@@ -24,20 +19,46 @@ int
  *
  * @return
  */
+int foo(char mychar,
+      int myint,
+      double* myarray,
+      int mask = DEFAULT)
+{ //...
+}
 ```
 
-## 設定
-`.vimrc`に下記を追加することで、タグやauthorなどを設定できる。
-```
-let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
-let g:DoxygenToolkit_paramTag_pre="@Param "
-let g:DoxygenToolkit_returnTag="@Returns   "
+## Configuration
+
+```vim
+let g:DoxygenToolkit_briefTag_pre="@brief "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@return  "
 let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
 let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
-let g:DoxygenToolkit_authorName="Mathias Lorente"
-let g:DoxygenToolkit_licenseTag="My own license"   <-- !!! Does not end with "\<enter>"
+let g:DoxygenToolkit_authorName="Author Name"
+let g:DoxygenToolkit_licenseTag="My own license" "  <-- !!! Does not end with "\<enter>"
+" If you want to use /// as a prefix of comment in C++, you need to set
+let g:DoxygenToolkit_commentType = "C++"
 ```
 
-## 参考
-[vimwiki](http://vimwiki.net/?tips%2F18)
+## Command
 
+* `:DoxLic`
+    * create doxygen license comments
+* `:DoxAuthor`
+    * This will generate the skeleton and leave the cursor just after @author tag if no variable define it, or just after the skeleton.
+* `:Dox`
+    * This will generate the skeleton and leave the cursor after the @brief tag
+* `:DoxBlock`
+* `:DoxUndoc(DEBUG)`
+    * if you want to uncomment documents created from the code between
+
+
+```cpp
+#ifdef DEBUG
+...
+#endif
+```
+
+## Reference
+[vimwiki](http://vimwiki.net/?tips%2F18)
