@@ -4,6 +4,13 @@ title: Maxima
 
 ## Maxima
 
+## Install
+
+```
+brew install maxima
+brew install wxmaxima
+```
+
 ## Commands
 
 Define functions
