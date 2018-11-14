@@ -311,7 +311,6 @@ projectdirはdocsを生成したい場所を指定。
 ```
 
 * sourceファイルと`Makefile`を分ける場合は、`sphinx-quickstart`を使う必要がある。
-* 
 
 ## sphinx-build
 ```
@@ -321,71 +320,18 @@ sphinx-build [options] <sourcedir> <outdir> [filenames ...]
 * `<sourcedir>/conf.py`を作成してbuildする
     
 
-## Breathe
-* [GitHub - michaeljones/breathe: ReStructuredText and Sphinx bridge to Doxygen](https://github.com/michaeljones/breathe)
+## Tips
 
-```
-pip install breathe
-```
-
-* documentation root path:
-    * `/home/me/docproj/`
-* breathe path:
-    * `/home/me/docproj/ext/breathe/`
-* doxygen xml output:
-    * `/home/me/docproj/doxyxml/`
-
-`conf.py`を以下のように修正する。
-breathe pathを追加
-extensionとしてbreatheを指定
-defualt projectを追加
+### Add  custom CSS or Javascript
+* [Adding Custom CSS or JavaScript to a Sphinx Project — Read the Docs 2\.7 documentation](https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html)
 
 ```python
-import os
-import sys
-sys.path.insert(0, os.path.abspath('.'))
-path_to_breathe = '/usr/local/lib/python3.6/site-packages/breathe/'
-path_to_this_dir = os.path.abspath(os.path.dirname(__file__))
-path_to_xml = os.path.join(path_to_this_dir, "../xml")
-sys.path.insert(0, os.path.abspath(path_to_breathe))
-
-# breatheにprojectの情報を伝える
-breathe_default_project = "docker-sphinx-quickstart"
-breathe_projects = {
-    "docker-sphinx-quickstart": os.path.abspath(path_to_xml)
-}
-sys.path.append( "/home/me/docproj/ext/breathe/" )
-
-extensions = ['sphinx.ext.pngmath', 'sphinx.ext.todo', 'breathe' ]
-```
-
-doxygenのbuildを自動で行いときは、sourceファイルの場所をbraetheに知らせる必要がある。
-以下のディレクトリ構成のとき
-
-```
-/some/long/path/to/myproject/file.c
-/some/long/path/to/myproject/subfolder/otherfile.c
-```
-
-以下のように設定する。
-
-```python
-breathe_projects_source = {
-   "myprojectsource" :
-       ( "/some/long/path/to/myproject", [ "file.c", "subfolder/otherfile.c" ] )
-   }
-```
-
-### Directive
-* [Directives & Config Variables — Breathe 'latest' documentation](http://breathe.readthedocs.io/en/latest/directives.html)
-
-使えるdirective
-
-`autodoxygenfile`はdoxygenでのhtmlの設定を自動で行ってくれる。
-source fileの場所の設定が必要？
-
-```
-autodoxygenfile
+# in conf.py
+def setup(app):
+    # file is placed in _static/css/custom.css
+    # file is placed in _static/js/custom.js
+    app.add_stylesheet('css/custom.css')
+    app.add_javascript('js/custom.js')
 ```
 
 ## Reference
