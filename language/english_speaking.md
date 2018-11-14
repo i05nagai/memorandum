@@ -661,6 +661,9 @@ title: English Speaking
 * defence
     * In my defence, I thought we had already broken up.
 * come
+    * come up with
+        * come up with a plan/idea/solution
+        * come up with a name/title/advert
     * come down to
         * if a situation or decision comes down to sth, that is the thing that influecnes it most
         * What it all comes down to is your incredible insecurity
@@ -749,6 +752,11 @@ title: English Speaking
         * Let the mixture stand for fifteen minutes
     * be in place
     * accept
+        * to be able to accept or bear sth unpleasant or difficult
+        * Our tent won’t stand another storm like the last one.
+        * How can you stand all that pressure at work?
+        * I can't stand her voice.
+        * I can't stand hearing her cry.
     * have opinion
     * stand around
     * stand by
@@ -1052,6 +1060,12 @@ title: English Speaking
         * to make a business into a corporation
     * regular load testing of the system to correlate raw capacity to service capacity\
 * take
+    * take the liverty of doing sth
+        * to do sth that will have an effect on sb else, without asking their permission
+        * I took the liverty of of booking theatre seats for us
+    * take the long view
+        * to think about the effects that sth will have in the future instead of in the present
+        * if you take the long view, of course, you can regard staff training as an investment for the company
     * money
         * money that is received from sales or as payment for entrance to an event
         * the box office take was huge for the new show
@@ -3601,7 +3615,13 @@ title: English Speaking
         * the situation is still insecure, with many of the rebels roaming the streats
         * Nations which are not self-sufficient in energy will face an insecure future
 * protest
-    * a strong 
+    * a strong complaint expressing disagreement, disapproval or opposition
+        * three board member walked out of the meeting in protest
+    * under protest
+        * if sth is done under protest, it is done unwillingly
+        * I only went to the meeting under protest
+    * to show that you disagree with sth by standing somewhere, shouting, carrying signs
+        * a big crowd of deonstrators were protesting against cuts in health spending
 * dismissive
     * showing that you do not think something in worth considering
     * he is so dismissive of anybody else's suggestion
@@ -4478,7 +4498,8 @@ title: English Speaking
 * recapture
 * adage
     * a wise saying
-    * he remembered the old adage "Look before you leap"
+    * a wise saying proverb
+    * he remembered an old adage, "Look before you leap."
 * proverb
     * the appetite, says the proverb, grows with eating
     * There is an old Arab proverb that everything you write or speak should pass through three gates: Is this kind? Is this necessary? Is this true?
@@ -9184,6 +9205,23 @@ title: English Speaking
     * Nicotine is the drug in tobaco causes dependence
     * Nicotine addiction
 * mimicry
+    * the act of copying the sounds or behaviour of a particular person or animal, often in order to make people laugh
+    * His exquisite mimicry had me almost crying with laughter.
+* mimic
+    * she was mimicking the various people in our office
+    * this substance mimics calcium and can replace it in bone
+    * a person who can copy the sounds or movements of other people
+        * she's fantastic mimic
+* mock
+    * insult
+    * artificial
+    * to laugh at sb, often by copyin them in a funny but unkind way
+    * to make sth appear stupid or not effective
+        * the wind mocked their attempts to reach the shore by pushing the boat further and further out to sea
+    * not real but appearing or pretending to be exactly like sth
+        * mock cream
+        * mock lether
+        * mock surprise
 * axiomatically
 * axiomatic
     * obvious and not needing proof
@@ -9419,7 +9457,14 @@ title: English Speaking
         * to show someone how to get to somewhere
             * would you like me to accompany you to your room?
     * lay musich
-* fitting room
+* fit
+    * fitting room
+    * correct size
+    * suit
+    * healthy 
+    * suit
+    * put in position
+    * illness
 * dwell time
     * how long people are likely to spend looking at an advertisement, buying goods, etc., especially while they are waiting somewhere such as an airport or train station
     * the average user dwell time on these ads 4.7 seconds
@@ -9934,10 +9979,6 @@ title: English Speaking
     * an innocuous statement
     * Some mushrooms look innocuous but are in fact poisonous.
 * innocent
-* adage
-    * a wise saying proverb
-    * he remembered an old adage, "Look before you leap."
-* proverb
 * fluffy
     * light and full of air, or soft and furry
     * a fluffy mohair sweather
@@ -10338,6 +10379,10 @@ title: English Speaking
     * signal
     * reason
         * a creative/commercial impulse
+    * impulse buy
+    * impulsive buyer
+    * impulsive purchase
+    * impulsive buying
 * puffery
     * the act of praising someone or something too much in a way that is not sincere
     * you are driven to animalistic puffery
@@ -10553,7 +10598,175 @@ title: English Speaking
         * to remove someone from a job, usually because they have done something wrong or badly, or sometimes as a way of saving the cost of employing them
         * they sacked her for being late
         * he got sacked from his last job
-    
+* parasitic
+    * caused by or relating to a parasite
+    * a parasitic disease
+    * parasitic insects
+* piggyback
+    * on sb's back
+        * Martha rode piggyback on her dad.
+    * a ride on sb's back with your arms round the person's neck and your legs round their waist
+    * I gave her a piggyback ride
+    * to use something that someone else has made or done in order to get an advantage
+        * Everyone wants to piggyback on the phenomenal success of the TV series
+* junior rodeo
+* hogtie
+* castrate
+    * I can hogtie and castrate him in 60 seconds
+    * remove the testicles of (a male animal or man)
+    * to remove the testicles of a male animal or human
+* neuter
+* geld
+* desex
+* sterilize
+* puny
+    * puny insects
+    * small; weak; not effective
+* anticipate
+* rescind
+* marginal
+    * small in amount or effect
+    * small
+    * of marginal interest
+        * of interest to only a few people
+        * articles about subjects of marginal interest
+    * politics
+        * a marginal political area or position in parliament
+    * not very important
+        * Manufacturing is only a marginal sector in the UK these days
+        * Their contribution to business strategy has been marginal.
+* anthropomorphize
+    * To endow with human qualities.
+    * To attribute human characteristics to (something that is non-human)
+* anthropomorphism
+    * the showing or treating of animals, gods, and objects as if they are human in appearance, character, or behaviour
+    * The books "Alice in Wonderland", "Peter Rabbit", and "Winnie-the-Pooh" are classic examples of anthropomorphism.
+* attribute
+* endow
+* whimsical
+    * unusual and using imagination
+        * the songs have a whimsical charm
+    * Whimsical also describes actions that change suddenly and for no obvious reason
+        * Unfortunately, his decisions are often whimsical.
+* capricious
+    * likely to change, or reacting to a sudden desire or new idea
+    * we have had capricious weather lately
+* impulsive
+    * acting or done suddenly without any planning or consideration of the results
+    * She’s an impulsive shopper and often buys things she doesn’t need.
+* whistler
+    * a person who whistle
+* whistle
+* fringe
+    * edge
+    * decoration
+    * form edge
+    * hair
+    * be fringed with
+        * if a place is fringed with sth, that thing forms a border along the edge
+        * the river is fringed with wild flowers
+* slob
+    * a person who is messy, unattractive, and rude
+        * some guys are real slobs
+        * I'm dressed like a slob today too
+    * A slob is also sb who is just an ordinal person
+    * a lazy untidy, and often rude person 
+        * he's big fat slob of a man -- I can't stand him
+* archipelago
+    * There are four very popular spots to view the archipelago
+* discount
+* conform
+    * conform to
+* criterion
+    * criteria
+    * criterion for
+    * meet/satisfy/fulfill criteria
+    * use criteria
+    * apply criteria
+    * be based on criteria
+    * establish the criteria for sth
+    * the main criterion
+    * the sole criterion
+    * a strict criterion
+    * academic/political/environmental etc criteria
+    * an objective criterion
+    * a set of criteria
+    * a list of criteria
+* how much do physicists make?
+    * how much money do physicists make?
+* nomenclature
+    * a system for naming things, esp. in a particular area of science
+    * the nomenclature of nuclear physics
+    * (the) nomenclature of organic chemicals
+    * football nomenclature for when a quarterback is tackled behind the line of scrimmage
+* scrimmage
+    * the line of scrimmage is the imaginary transverse line separating the offence from the defence
+* quidditch
+* ubiquitous
+    * present, appearing, or found everywhere
+    * the eel grass limpet used to be ubiquouts the New England coast
+* commie
+    * most texans believe to be a commie plot
+    * A communist; a person with communist sympathies; a supposed communist infiltrator
+* communism
+    * the belief in a society without different social classes in which the methods of production are owned and controlled by all its members and everyone works as much as they can and receives what they need
+* capitalism
+* fantastic
+    * fatastic
+    * terrific
+    * great
+    * excellent
+    * wonderful
+    * marvellous
+    * amazing
+    * incredible
+    * brilliant
+    * be out of this world
+    * splendid
+        * excellent, or beautiful and impressive
+        * You look splendid in that outfit
+        * we had splendid food/a splendid holiday/splendid weather
+    * magnificent
+        * very good, beautiful, or deserving to be admired
+        * a magnificent view
+        * a magnificent piece of writing
+        * causing admiraiton esp. because of an ususual quality such as great size or baeuty
+        * They gave a magnificent performance.
+* resplendent
+* glorious
+* please
+    * I'm pleased to meet you
+* sublime
+    * satisfying
+        * extremely good, beautiful, or enjoyable, and therefore satisfying
+        * sublime food/scenery
+    * change
+    * verygood
+* dislocate
+    * I slipped in the shower. I think I dislocated my shoulder
+* puffy
+    * swollen to a size slightly larger than usual
+    * his eyes were red and puffy
+    * if the skin around your eyes is puffy, it is a slightly swollen
+* there, there
+    * something you say to comfort someone, especially a child
+    * there, there don't cry
+* firebreak
+* education
+    * primary education
+    * secondary education
+        * high school
+        * junior high school
+    * upper secondary school
+    * Post-secondary non-tertiary education
+    * First stage of tertiary education
+        * college, university
+* tertiary
+    * third
+        * relating to a third level or stage
+    * education
+    * industry
+
 
 
 ## US
