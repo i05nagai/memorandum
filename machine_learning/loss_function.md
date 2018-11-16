@@ -90,25 +90,129 @@ $$
 
 $$
 
-### Softmax
+#### Softmax function
 $j$ -th softmax
 
 $$
-    (f(x))_{j}
-    :=
-    \frac{
-        \exp
-        \left(
-            z_{j}
-        \right)
-    }{
-        \sum_{i=1}^{n}
+\begin{eqnarray}
+    f(x; j)
+    & := &
+        \frac{
             \exp
             \left(
-                z_{i}
+                x^{\mathrm{T}}
+                w_{j}
             \right)
-    }
+        }{
+            \sum_{i=1}^{n}
+                \exp
+                \left(
+                    x^{\mathrm{T}}
+                    w_{i}
+                \right)
+        }
+    \nonumber
+    \\
+    P(Y=j \mid X = x)
+    & := &
+        \frac{
+            \exp
+            \left(
+                x_{j}^{\mathrm{T}}
+                w_{j}
+            \right)
+        }{
+            \sum_{i=1}^{n}
+                \exp
+                \left(
+                    x_{i}^{\mathrm{T}}
+                    w_{i}
+                \right)
+        }
+    \nonumber
+\end{eqnarray}
 $$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Binary Logistic function
+* Other names
+    * Binary logistic probability function.
+    * softmax function
+        * Special case of softmax function
+    * Binary logistic regression function
+
+$$
+\begin{eqnarray}
+    f(x; 1)
+    & := &
+        \frac{
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                w_{1}
+            \right)
+        }{
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                w_{1}
+            \right)
+                +
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                w_{2}
+            \right)
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                (w_{1} - w_{2})
+            \right)
+        }{
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                (w_{1} - w_{2})
+            \right)
+                +
+            1
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            1
+            +
+            \exp
+            \left(
+                x^{\mathrm{T}}
+                (w_{2} - w_{1})
+            \right)
+        }
+    \nonumber
+    \\
+    P(Y=1 \mid X = x)
+    & := &
+        f(x; 1)
+    \nonumber
+    \\
+    P(Y=2 \mid X = x)
+    & := &
+        1 - f(x; 1)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Cross entropy - Wikipedia](https://en.wikipedia.org/wiki/Cross_entropy)
+* [Softmax function \- Wikipedia](https://en.wikipedia.org/wiki/Softmax_function)
