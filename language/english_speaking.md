@@ -495,6 +495,7 @@ title: English Speaking
         * A little perplexed, he left the second mug of Pils on the table
         * One is perplexed how it affects the rest of the lunar cycle
     * confused
+        * we confuse feeling secure with being secure
         * unable to understand or think clearly about what someone is saying or what is happening
         * confused about
             * if you're confused about anything, phone me
@@ -1759,6 +1760,7 @@ title: English Speaking
         * if a vehicle pulls in or pulls into somewhere, it moves in that direction and stops there
         * he pulled in at the side of the road
         * I pulled into the empty parked space
+        * Pretty soon theset two lanes will merge, and a lot of cars will 
     * pull off
         * to succeed in doing something difficult
             * The goalkeeper pulled off six terrific saves
@@ -3739,6 +3741,10 @@ title: English Speaking
         * to move or go fast
         * he raced down the street
         * the summer seems to have raced by
+* hurry
+    * be in a hurry to do sth
+        * Why are you in such a hurry to leave?
+    * in a hurry
 * culture
     * way of life
         * he studies the culture of the Sioux Indians
@@ -6629,15 +6635,6 @@ title: English Speaking
     * annoy
         * to annoy someone
             * It really aggravates me when the car won't start, after all we money put into it
-* open-ended
-    * An open-ended activity or situation does not have a planned ending, so it may develop in several ways
-        * We are not willing to enter into open-ended discussions.
-    * without an end date or planned way of ending
-    * used to describe a question that cannot be answered with 'yes' or 'no'
-        * an open-ended item/question/survey
-        * The survey included an open-ended question asking employees what advice they would give to management.
-    * open-ended question
-    * Design questions are mostly open-ended
 * infringement
     * To search for copyright infringements
     * an action that breaks a rule, law
@@ -6675,6 +6672,8 @@ title: English Speaking
     * after a fashion
 * proficient
     * She's proficient in German and French.
+* proficiency
+    * proficiency in statistics is required for this position
 * ask
     * ask sb for interview
     * ask sb to leave
@@ -8862,6 +8861,9 @@ title: English Speaking
 * greasy
     * covered with or full of grease
 * nosy
+    * too interested in what other people are doing or wanting to discover too much about them
+    * I was a nosy kid
+    * she was complaining about her nosy parents
 * conversation opener
     * conversation starter
 * roam
@@ -9245,6 +9247,9 @@ title: English Speaking
     * the long tube that carries solid waste from the stomach out of the body:
     * bowel movement
         * A bowel movement is the last stop in the movement of food through your digestive tract. 
+    * move your bowel
+        * to excrete the solid waste that is contained in the bowels
+            * pass from the body
 * aneurysm
     * An aneurysm occurs when part of an artery wall weakens, allowing it to balloon out or widen abnormally.
     * brain aneurysm
@@ -9306,8 +9311,13 @@ title: English Speaking
     * The eggs are laid in a sticky, jelly-like substance that, along with the wriggling of the female pinworm, causes severe itching.
 * hygiene
     * the practice or principles of keeping yourself and your environment clean in order to maintain health and prevent disease
-    *  the degree to which people keep themselves or their environment clean, especially to prevent disease
+    * the degree to which people keep themselves or their environment clean, especially to prevent disease
+    * dental/personal hygiene
 * rectum
+    * the final section of the large intestine, terminating at the anus.
+* intestine
+    * a long tube through which food travels from the stomach and out of the body while it is being digested
+* colonoscopy
 * hemorrhoid
     * swollen veins (= tubes carrying blood) at or near the anus (= the hole where solid waste is excreted), a condition that can be painful
 * deterrent
@@ -10766,7 +10776,132 @@ title: English Speaking
         * relating to a third level or stage
     * education
     * industry
-
+* eidetec
+    * eidetec memory
+* photographic memory
+* all up in it
+    * If there were solar flares, I'd be all up in it
+    * to be nosy
+* commit
+    * promise
+    * put
+    * crime
+    * send for treatment
+* allegiance
+    * support for a leader, country, group, or belief
+    * loyalty and support for a ruler, country, group, or belief
+* bros before hoes
+    * "Bros before hoes" (that is, "friends before women") is a well-known, vulgar slang expression about how men should not abandon their male friends in order to pursue or embark on relationships with women.
+* telemetry
+    * the process of recording and transmitting the recording of an instrument
+    * the science or process of collecting information about objects that are far away and sending the information somewhere electronically
+* franchise
+    * The Harry Potter franchise is one of the most successful of all time.
+* well-rounded
+    * "Game of Thrones" is praised for having well-rounded characters.
+* blockbuster
+    * a book or movie that is very successful
+    * we all felt the movie was a potential blockbuster
+    * a blockbuster movie/book
+* trivia
+    * unimportant or little-known details or information
+* rash
+    * without thought
+        * without thought for what might happen or result, unwise, in your actions
+        * a rash statement
+        * It was rash of them to get married so quickly
+        * That was a rash decision, you didn't think about the costs involved
+        * I think it was a bit rash of them to get married when they'd only known each other for a few weeks.
+    * skin condition
+        * a lot of small red spots on the skin
+    * larger number
+        * a rash of sth
+        * a large number of unpleasnt events of the same type
+        * There has been a rash of robberies/accidents/complaints in the last two months
+* cavity search
+    * body cavity search
+    * is either a visual search or a manual internal inspection of body cavities for prohibited materials (contraband), such as illegal drugs, money, jewelrey, or weapons
+* exude
+    * to have a lot of a particular quality or feeling
+        * she just exude confidence
+    * to exude is also to produce from the inside and spread out slowly
+    * liquid/smell
+        * to produce a smell or liquid substance from inside
+* disinclination
+    * a feeling of not wanting to do sth
+    * I have a strong disclination to do any work
+* incline
+    * to lean down, or to place a sth with one part toward the ground and the opposite art raised
+    * a slope
+        * the road has a steap
+    * to make sb feel sth or want to do sth
+        * the prime minister is believed to be inclining towards an April election
+    * incline your head
+        * to bend your head slightly foward and down
+* fixate
+    * I was afraid you were going to fixate on that Mars Rover incident
+* insomnia
+    * the condition of being unable to sleep
+* cervix
+* germ
+    * a microorganism, especially one that causes disease
+    * germ phobia
+        * mysophobia
+        * Germophobia
+    * organism
+    * origin
+    * amount
+        * germ of sth
+        * a small amount, usually one that develops into sth large or important
+* tinkle
+    * to make a light ringing sournds
+    * Tinkle also means to excrete urine
+    * phone call
+        * givev sb a tinkle
+        * to make a phone call to sb
+    * tinkle
+        * an act of urination
+* fuzzy
+* prestidigitation
+    * magic tricks performed as entertainment.
+* socket
+* outlet
+* off the hook
+    * if you leave the phone off the hook, you do not put it back correctly and it will not ring
+    * if you are off the hook, you have escaped from a difficult situation
+        * John's agreed 
+* open-ended
+    * An open-ended activity or situation does not have a planned ending, so it may develop in several ways
+        * We are not willing to enter into open-ended discussions.
+    * without an end date or planned way of ending
+    * used to describe a question that cannot be answered with 'yes' or 'no'
+        * an open-ended item/question/survey
+        * The survey included an open-ended question asking employees what advice they would give to management.
+    * open-ended question
+    * Design questions are mostly open-ended
+    * open discussion
+        * Open discussion is when everyone speaks honestly.
+        * The two men at work were at a longstanding dispute, so the boss sat them down and demanded they have an open discussion in order to settle things.
+    * open to sth
+        * Receptive to or welcoming of sth
+* shrink
+* lingua franca
+* economy
+    * strong/healthy/sound
+    * weak/ailing/depressed
+        * the economy is weak and consumer confidence is low
+    * fragile
+        * the country's fragile economy depends almost exclusively on tourism
+    * stagnant
+    * a flagging economy
+        * starting to become weaker
+    * a booming economy
+* not related to ..., but
+* This road will soon change from two lanes to one, so cars will start coming into this lane
+* forestry
+    * Forestry is an important part of the New Zealand economy
+* marina
+    * My dad lives on a sailboat in a marina.
 
 
 ## US
