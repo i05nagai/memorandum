@@ -530,7 +530,7 @@ $$
     \caption{LU decomposition with Gaussian Elimination Outer PProduct}
     \begin{algorithmic}
     \REQUIRE
-        $A \in \mathbb{R}^{n \times n}$: has upper bandwidth $q$, lower bandwidth $p$
+        $A \in \mathbb{R}^{n \times n}$: has upper bandwidth $q$ and lower bandwidth $p$
     \FOR{$k = 1$ TO $n - 1$}
         \FOR{$r = k + 1$ TO $\min(k + p, n)$}
             \STATE $A(r, k) = A(r, k) / A(k, k)$
@@ -548,6 +548,54 @@ $$
 </pre>
 </p>
 
+#### Lower triangular matrix
+Solving linear equations $Lx = b$ where $L$ is lower triangular and band-diagonal.
+If $p \ll n$, the computational complexity is $O(2np)$.
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{Bandiagonal lower triangular solver}
+    \begin{algorithmic}
+    \REQUIRE \\
+        $L \in \mathbb{R}^{n \times n}$: lower triangular matrix who has lower bandwidth $p$, \\
+        $b \in \mathbb{R}^{n}$,
+    \FOR{$k = 1$ TO $n$}
+        \FOR{$r = k + 1$ TO $\min(k + p, n)$}
+            \STATE $b(r) = b(r) - L(r, k)b(k)$
+        \ENDFOR
+    \ENDFOR
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Upper triangular matrix
+Solving linear equations $Ux = b$ where $L$ is upper triangular and band-diagonal.
+If $q \ll n$, the computational complexity is $O(2nq)$.
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{Bandiagonal upper triangular solver}
+    \begin{algorithmic}
+    \REQUIRE \\
+        $U \in \mathbb{R}^{n \times n}$: upper triangular matrix who has upper bandwidth $q$, \\
+        $b \in \mathbb{R}^{n}$,
+    \FOR{$k = n - 1$ \TO $1$}
+        \STATE b(k) = b(k) / U(k, k)
+        \FOR{$r = \max(1, k - q) $ TO $k - 1$}
+            \STATE $b(r) = b(r) - U(r, k)b(k)$
+        \ENDFOR
+    \ENDFOR
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Inverting Matrix
 
