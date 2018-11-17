@@ -1799,6 +1799,7 @@ Then
 * (1) If $f$ is $\alpha$-strongly convex, then so is $\hat{f}_{\delta}$,
 * (2) $\hat{f}_{\delta}$ is $\frac{d G}{\delta}$-smooth
 * (3) $$\norm{ \hat{f}_{\delta}(x) - f(x) } \le \delta G$$ for all $x \in \mathcal{K}$,
+    * TODO: we need to chekc whether the statement is correct or not
 
 #### proof
 (1) TODO
