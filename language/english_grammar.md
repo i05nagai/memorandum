@@ -17,11 +17,13 @@ Subjanctive mood
     * 
 * I wish past
 
-comparative
+## comparative
 
 * [～ならば～なほど良いって英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/2472/)
 * [英語の「比較」が苦手な人へ！比較級で知っておくべき6つのこと｜ 英語学習ボックス](http://eigo-box.jp/grammar/comparison-1/)
 * [The 比較級, the 比較級はかなり深い？応用を含めて完全に理解しよう！【やさしく語る英文法】 | まこちょ英語ブログ](https://www.makocho0828.net/entry/2017-09-06-the_%E6%AF%94%E8%BC%83%E7%B4%9A_the_%E6%AF%94%E8%BC%83%E7%B4%9A%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8A%E6%B7%B1%E3%81%84%EF%BC%9F%E5%BF%9C%E7%94%A8%E3%82%92%E5%90%AB%E3%82%81%E3%81%A6)
+* [Twice as much/As many as/ As much as\-English](https://www.tolearnenglish.com/exercises/exercise-english-2/exercise-english-107273.php)
+
 * comparative degree
     * He is older than I by three years.
     * He is three years older than I
@@ -43,6 +45,11 @@ comparative
 * twice as ... as/ three times as ... as
     * Petrol is twice as pexpensive as it was a few years ago
     * their house is about three times as big as ours.
+    * Finanlly I got a job offer pays twice as much as I currently make
+    * How to get twice as much done in half as much time
+    * A is ten times the height of B.
+    * A is greater than B by a factor of 10.
+    * A is ten times B.
 * the same as
     * Laura's salary is the same as mine
     * Laura's get the same salary as me.
@@ -50,6 +57,7 @@ comparative
     * Sarah hasn't changed. She still looks the same as she did ten years ago
 * The ... The ...
     * The sooner the better
+    * the more I think about it, the more certain I am
     * The bigger the better
     * When you're travelling, the less luggage you have the better
     * The warmer the weather, the better I feel
@@ -130,7 +138,7 @@ noun
     * I was the only one to arrive on time+ 
 
 
-Interrogative pronouns
+## Interrogative pronouns
 
 [Interrogative structures](https://www.englishgrammar.org/interrogative-structures/)
 
