@@ -396,9 +396,10 @@ Note that
 
 $$
 \begin{eqnarray}
-    |
-        2\gamma \nabla f(y)^{\mathrm{T}} (x - y)
-    |
+    \abs{
+        2\gamma
+        \nabla f(y)^{\mathrm{T}} (x - y)
+    }
     & \le &
         2\gamma
         GD
@@ -1629,7 +1630,7 @@ $$
     .
 $$
 
-Note that $A{1/2}$, $A{-1/2}$, $A^{-1}$ are all symmetric matrix.
+Note that $A^{1/2}$, $A^{-1/2}$, $A^{-1}$ are all symmetric matrix.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
