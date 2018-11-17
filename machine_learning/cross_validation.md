@@ -148,7 +148,7 @@ $$
     +
     \mathrm{E}
     \left[
-        \norm{E_{k}^{C}}
+        \norm{E_{k}^{S}}
     \right]
 \end{eqnarray}
 $$
