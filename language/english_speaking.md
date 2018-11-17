@@ -43,6 +43,8 @@ title: English Speaking
 * worth
     * All his hard work was made worth it when he saw his book in print
     * It's worth
+        * It's worth noting that
+        * It's worht mentioning that
         * I live only a short walk from here, so it's not worth taking a taxi
         * Our flight was very early in the morning, so it wasn't worth going to bed
         * What was the film like? Was it worth seeing?
@@ -189,17 +191,6 @@ title: English Speaking
 * reverse
     * He completely reversed what was common knowlege within the advertising industry
     * It's not typically allowed to reverse conventional roles
-* get mad at
-    * please don't angry with me
-    * they are angry at the way they have been treated
-    * the workers are angry that they haven't been paid for the week
-    * Dad was mad at me for damaging the car
-    * I was annoyed no one had told me the class was cancelled
-    * I was irritated by their stupid questions
-    * a bad tempered-old man
-    * He's always bad-tempered when he doesn't get what he wants
-    * I woke up in a bad mood
-    * I don't know what's wrong. She must have got up on the wrong side of the bed.
 * piss
     * piss off
         * I was getting really pissed off at him and finally I exploded
@@ -208,11 +199,6 @@ title: English Speaking
         * everyone just pissed off and leave me to clean up
 * spin
     * The room started spinning and I felt faint
-* get it doing
-    * I didn't get it working
-    * they get plenty of studnets riding those buses
-* get it to work
-    * I didn't get it to work
 * neighbourhood
     * It only goes through the neighborhoods that've gotten too expensive for students to live in
 * account for
@@ -273,11 +259,6 @@ title: English Speaking
     * I didn't use to like him / I used not to like him
     * when we were kids, we used to invent amazing games. we would imagine we were the government and we would make crazy laws that every had to obey
     * we used to 
-* get used to / be used to
-    * I can't used to getting up so early. I'm tired all the time
-    * He's not used to the weather here yet. He's finding it very cold
-    * You might find it strange at first but you'll get used to it
-    * He wasn't get used to the heat and he caught sunstroke
 * have
     * I had an accident on my way home yesterday
 * darn
@@ -416,6 +397,27 @@ title: English Speaking
     * Where were you born?
     * How many babies are born every day?
 * get
+    * get mad at
+        * please don't angry with me
+        * they are angry at the way they have been treated
+        * the workers are angry that they haven't been paid for the week
+        * Dad was mad at me for damaging the car
+        * I was annoyed no one had told me the class was cancelled
+        * I was irritated by their stupid questions
+        * a bad tempered-old man
+        * He's always bad-tempered when he doesn't get what he wants
+        * I woke up in a bad mood
+        * I don't know what's wrong. She must have got up on the wrong side of the bed.
+    * get it doing
+        * I didn't get it working
+        * they get plenty of studnets riding those buses
+    * get it to work
+        * I didn't get it to work
+    * get used to / be used to
+        * I can't used to getting up so early. I'm tired all the time
+        * He's not used to the weather here yet. He's finding it very cold
+        * You might find it strange at first but you'll get used to it
+        * He wasn't get used to the heat and he caught sunstroke
     * get off
         * to leave a place, usually in order to start a journey
             * if we can get off by seven o'clock, the roads will be clearer
@@ -446,6 +448,17 @@ title: English Speaking
         * I get dressed
         * I get lost
         * I get changed
+    * get to
+        * have chance
+            * to have an opportunity to do sth
+            * I never get to see her now that she's moved to California
+        * begin
+            * to begin to do or be
+            * you're getting to be just like your mom
+            * you ask where people or things have got to when they do not arrive or are not where you expect them to be and you want to know where they are
+                * I wonder where my glasses have got to
+                * Where's Annabel got to? She should be here now
+                * She couldn't think where her keys had got to
 * said/alleged/believed/considered/expected/known/reported/thought/understood
     * People say that he is 108 years old
         * It is said that he is 108 years old
@@ -2984,6 +2997,21 @@ title: English Speaking
     * be flat/dead
         * I think the battery is dead/flat
         * I left car lights on all night and now the battery is flat
+    * be low
+    * change/replace the battery
+    * charge/recharge a battery
+    * use batteries
+    * put a battery in
+    * take a battery out
+    * a battery charger
+    * battery power
+        * you can plug your laptop in or use it on battery power
+    * battery life
+        * my old phone had a longer battery life
+    * battery powered/operated
+    * battery's capacity
+        * the amount of electric charge it can deliver the rate voltage
+        * Available capacity of all batteries drops with decreasing temperature
 * It's hard to tell between the two
 * die
     * Twelve people died in the accidend
@@ -7527,8 +7555,13 @@ title: English Speaking
     * free from danger
     * fixed
     * obtain
+        * to obtain sth, sometime with difficulty
+        * she managed to secure a loan from the bank
     * fasten
+        * to fasten sth firmly
+        * secure the boart to the deck
     * make safe
+        * the wall was originally built to secure the town from attack
     * get
         * to get something, sometimes with difficulty
             * he was disapponinted by his failure to secure the top job with the bank
@@ -8194,6 +8227,9 @@ title: English Speaking
 * newsworthy
 * stimulate
 * intrigue
+    * to interest sb, often because of an usual or unexpected quality
+    * I was intriuged by his slow, deliverate way of talking and the serious look in his eyes
+    * the making of secret plans to do sth, esp. sth that will harm sb
 * numbness
     * lack of physical or emotional feeling
 * detachment
@@ -10830,7 +10866,40 @@ title: English Speaking
 * disinclination
     * a feeling of not wanting to do sth
     * I have a strong disclination to do any work
+* lapel
+    * a strip of cloth that is attached to the collar and front opening of a jacket or similar piece of clothing 
+* no backsies
+    * "No backsies" is a phrase used by children (usually) when playing a game or engaging in some sort of argument. It basically means "you can't do to me what I just did to you."
+* maneuver
+    * military operation
+        * a planned and controlled movement of military forces
+    * planned action
+        * a planned action that is intended to obtain an advantage
+    * handle
+        * to handle and move sth carefully or with difficulty
+        * I maneuvered the grocery cart around piles of boxes to the checkout counter
+    * plan action
+        * to cause sb to act in a particular way
+        * the management tried to maneuver her into resigning
+* skate
+    * boot
+    * fish
+    * to move, or make a particular movement on a surface, using skates
+* skating
+    * I'm just relalizing how much he has been skating by all these years
+    * Naval slang, getting out of work, lollygagging
+        * Man, I skated on that last job
+* lollygag
+    * fool around
+    * dawdle
+    * Stop lollygagging. get to work
+* methamphetamine
+    * meth
 * incline
+    * feel
+        * to feel sth or want to do sth
+        * the prime minister is believed to be inclining toward an April election
+    * move
     * to lean down, or to place a sth with one part toward the ground and the opposite art raised
     * a slope
         * the road has a steap
@@ -10902,6 +10971,70 @@ title: English Speaking
     * Forestry is an important part of the New Zealand economy
 * marina
     * My dad lives on a sailboat in a marina.
+* stern
+    * severe
+    * ship part
+    * part of body
+        * a person's bottom
+* reciprocity
+    * behaviour in which two people or groups of people give each other help and advantage
+* provision
+    * sth needed
+    * agreement
+    * supply
+    * law
+        * Employees may be asked to go to a new and different place of work under the provisions of a mobility clause.
+    * finance
+* provisonally
+    * I was provisonally accepted at Stanford
+* provisional
+    * for the present time but likely to change; temporary
+    * a provisonal government
+    * these date are only provisional
+* booze hound
+    * a person who drinks alcohol often and heavily.
+* infernal
+    * very bad or unpleasant
+        * what an infernal noise
+    * having the quality of hell
+        * he described a journey through the infernal world
+* clinking
+    * would you booze hounds please stop that infernal clinking
+    * a short ringing sounds like pieces of glasses or metal knocking lightly together
+    * the clinking of glasses
+    * I heard the clinking sounds of keys
+* clink
+* school
+    * education
+    * group
+    * sea animals
+    * educate
+        * to train or teach
+        * she was schooled locally and then went away to college
+    * group
+    * sea creatures
+    * to train a person or animal to do sth
+        * you must school yourself to be tolerant
+    * to teach a child
+* that's all she wrote
+    * used to convey that there is or was nothing more to be said about a matter.
+* notable
+* remarkable
+* in toto
+    * as a whole
+* ambiguous
+    * having or expressing more than the one possible meaning, sometimes intentionally
+* uncertainly
+* present
+* carol
+    * The children sang Christmas carols by the fireplace.
+* devoutly
+    * Ireland is a devoutly Catholic country.
+* festive
+    * relating to a festival
+    * I enjoy being festive during Christmas
+* mistletoe
+    * an evergreen plant with small white fruits and pale yellow flowers that is used esp. as a Christmas decoration
 
 
 ## US
