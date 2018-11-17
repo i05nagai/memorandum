@@ -1,8 +1,8 @@
 ---
-title: Duffie-Singleton modelk
+title: Duffie-Singleton model
 ---
 
-## Duffie-Singleton modelk
+## Duffie-Singleton model
 
 
 #### Definition Recovery Rate according to Jarrow and Turnbull
