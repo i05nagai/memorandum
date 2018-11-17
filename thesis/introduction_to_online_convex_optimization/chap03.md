@@ -20,17 +20,6 @@ $$
 * $f$,
     * $\alpha$-strongly convex
 
-$$
-    \frac{1}{\alpha}
-    \log T
-    \le
-    f(x)
-    \le
-    \frac{1}{\alpha}
-    \log T
-    .
-$$
-
 Average regret
 
 ## 3.1 Online gradient descent
@@ -40,7 +29,7 @@ Average regret
     * convex set
 * $\mathcal{F}$,
     * convex functions
-* $T$,
+* $T \in \mathbb{N}$,
 * $x_{1} \in \mathcal{K}$,
 * $$\{\eta_{t}\}$$,
     * step size
@@ -83,7 +72,6 @@ $$
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
-
 
 #### Lemma1 difference between optimal points
 * $\mathcal{F}$,
