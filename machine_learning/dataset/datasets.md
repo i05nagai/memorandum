@@ -55,6 +55,12 @@ Annotation tool
 * [Food-101 -- Mining Discriminative Components with Random Forests](https://www.vision.ee.ethz.ch/datasets_extra/food-101/)
 * [Food Image Dataset MMSPG](http://mmspg.epfl.ch/food-image-datasets)
 
+### Geographical
+* [NYC Taxi & Limousine Commission \- Trip Record Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+
+
+### Weather
+* [Daily Summaries Station Details: NY CITY CENTRAL PARK, NY US, GHCND:USW00094728 \| Climate Data Online \(CDO\) \| National Climatic Data Center \(NCDC\)](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00094728/detail)
 
 ## Reference
 * [機械学習に使える、オープンデータ一覧　※随時更新 - Beginning AI](http://blog.beginning-ai.com/entry/open-data-index)

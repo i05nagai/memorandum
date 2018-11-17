@@ -5,9 +5,14 @@ title: riv
 ## riv
 
 ## Install
+To preview,
+
+```
+pip install rst2html5
+```
 
 ```vim
-NeoBundle `Rykka/riv.vim`
+NeoBundle `gu-fan/riv.vim`
 ```
 
 ## Settings
@@ -42,7 +47,7 @@ Covert files are placed in
 let g:riv_temp_path=''
 ```
 
-```
+```vim
 "let g:riv_web_browser = '/path/to/broweser'
 let g:riv_temp_path = 0
 let g:riv_html_code_hl_style = "friendly"
@@ -58,7 +63,7 @@ Conver to HTML. You need to install `docutils`.
 
 Convert to HTML and preview it
 
-```vim
+```
 :Riv2HtmlAndBrowse
 ```
 

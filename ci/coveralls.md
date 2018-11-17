@@ -17,7 +17,7 @@ title: Coveralls
 Follow the following steps.
 
 1. Include the `Coveralls.cmake` script in `CMakeLists.txt`
-    * `CMakeLists.txt`に以下のように記載する
+    * Configure `CMakeLists.txt` as follows
 
 ```cmake
 # Add project cmake modules to path to include `Coveralls.cmake`.
@@ -64,6 +64,35 @@ if (COVERALLS)
         "${PROJECT_SOURCE_DIR}/CMakeModules/") # (Optional) Alternate project cmake module path.
 endif()
 ```
+
+Then
+
+```
+coveralls --verbose --include <path> --exclude <path> --gcov-options '\-lp' --root . --build-root <path-to-objs>
+```
+
+## CLI
+https://github.com/eddyxu/cpp-coveralls
+Then run
+
+* `--verbose`
+* `--include`
+* `--exclude`
+* `--gcov FILE`
+    * set the location of gcov
+* `--gcov-options GCOV_OPTS`
+    * set the options given to gcov
+* `--root <DIR>`
+    * set the root directory
+* `--build-root <DIR>`
+    * set the directory from which gcov will be called
+* `--exclude-pattern REGEXP`
+* `--exclude-lines-pattern REGEXP`
+* `--coveralls-yaml FILE`
+* `--no-gcov`
+    * do not run gcov
+* `--repo-token`
+
 
 ### for
 

@@ -11,3 +11,4 @@ title: Testing
 Beautifi cuode pp95
 
 ## Reference
+* [23 guidelines for writing readable code \- Alemil: Gamedev blog](https://alemil.com/guidelines-for-writing-readable-code)

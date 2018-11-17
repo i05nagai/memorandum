@@ -3,11 +3,9 @@ title: Credit Risk
 ---
 
 ## Credit Risk
-
-
 * Structual form
-    * In structual form, we call default when the value of a company is less than the amount of company's debt
-    * we could interpret this situation as call option
+    * In structual form, we define default when the value of a company is less than the amount of company's debt
+    * we could interpret this situation as a call option
 * Reduced form
     * reduced form constructs a model of a company's default probability or credit risk
 

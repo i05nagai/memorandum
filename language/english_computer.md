@@ -7,6 +7,21 @@ title: English Computer
 
 
 ## Computer
+* FIFO
+    * the cache evicts the first block accessed first without any regard to how often or how many times it was accessed before
+* LIFO
+    * the cache evicts the block accessed most recently first without any regard to how often or how many times it was accessed before
+* LRU
+    * Discards the least recently used items first
+* MRU
+    * Discards the most recently used
+* LFU
+    * counts how often an item is needed. those that are used least often discarded first
+* RR
+    * Randomly selects a candidate item and discards it to make space when necessary.
+* availabilities of 99% and 99.999% can be referred to as "2 nines" and "5 nines" availability, respectively
+    * [High availability \- Wikipedia](https://en.wikipedia.org/wiki/High_availability)
+    * GCE availability is three and a half nines -- 99.95% availability
 * product velocity
     * Product defvelopment performance is largely evaluated on product velocity, which creates an incentive to push enw code as quickly as possible
 * by heart

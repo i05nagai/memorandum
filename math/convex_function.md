@@ -328,7 +328,7 @@ $$
 * $$C \subseteq \mathbb{R}^{n}$$,
     * closed convex set
 
-$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$を以下のように定義すると、$f$はconvex functionである。
+Let $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ be
 
 $$
 \begin{eqnarray}
@@ -353,13 +353,16 @@ $$
             \mid
             y \in C
         \}
+    .
     \nonumber
 \end{eqnarray}
 $$
 
+Then $f$ is a convex function.
+
 ### proof.
-$$x_{1}, x_{2} \in \mathbb{R}^{n}$$, $\lambda \in [0, 1]$とする。
-$\forall y \in C$について、
+Let $$x_{1}, x_{2} \in \mathbb{R}^{n}$$, $\lambda \in [0, 1]$.
+$\forall y \in C$, 
 
 $$
 \begin{eqnarray}
@@ -369,38 +372,39 @@ $$
     \nonumber
     \\
     & \le &
-        \lambda \|x_{1} - y_{1} \|
+        \lambda \norm{ x_{1} - y_{1} }
         +
-        (1 - \lambda) \| x_{2} - y_{2} \|
+        (1 - \lambda) \norm{ x_{2} - y_{2} }
 \end{eqnarray}
 $$
 
-となる。
-ここで、左辺のinfをとれば
+Taking the inf of LHS of the equation, we have
 
 $$
 \begin{eqnarray}
     f(\lambda x_{1} + (1 - \lambda) x_{2})
     & \le &
-        \lambda \|x_{1} - y_{1} \|
+        \lambda \norm{ x_{1} - y_{1} }
         +
-        (1 - \lambda) \| x_{2} - y_{2} \|
+        (1 - \lambda) \norm{ x_{2} - y_{2} }
+    .
     \nonumber
 \end{eqnarray}
 $$
 
-となる。
-左辺は$y$に依存しないから右辺の第一項の$y$についてinfをとれば、
+Since the LHS of the above equation does not depend on $y$, taking inf of the first term in RHS, we obtain
 
 $$
     f(\lambda x_{1} + (1 - \lambda) x_{2})
     \le
         \lambda f(x_{1})
         +
-        (1 - \lambda) \| x_{2} - y_{2} \|
+        (1 - \lambda)
+        \norm{ x_{2} - y_{2} }
+    .
 $$
 
-であり、 同様に
+Similarily,
 
 $$
     f(\lambda x_{1} + (1 - \lambda) x_{2})
@@ -408,9 +412,8 @@ $$
         \lambda f(x_{1})
         +
         (1 - \lambda) f(x_{2})
+    .
 $$
-
-を得る。
 
 <div class="QED" style="text-align: right">$\Box$</div>
 

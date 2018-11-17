@@ -129,7 +129,9 @@ Data Engineer install data into data warehousing.
 * [How to answer the technical interview question 'What is your biggest challenge and how did you solve it?' - Quora](https://www.quora.com/How-do-you-answer-the-technical-interview-question-What-is-your-biggest-challenge-and-how-did-you-solve-it)
 * [Here's How to Prepare for Tech Interviews : cscareerquestions](https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/)
 * [Best Phone Screening Interview Questions \| Robert Half](https://www.roberthalf.com/blog/how-to-interview-candidates/the-best-phone-screen-interview-questions)
+* [31 Common Interview Questions and Answers \- The Muse](https://www.themuse.com/advice/how-to-answer-the-31-most-common-interview-questions)
 
+* Can you tell me a little about yourself?
 1. Why did you decide to change careers?/ Why did you choose to become a software developer?
 2. What is your understanding of what we do at Forty2?
 3. Describe your career path up until now. 
@@ -140,6 +142,15 @@ Data Engineer install data into data warehousing.
 8. What is your expected salary / What are you getting paid now?
 9. What Challenges Are You Looking For?
     * [Interview Question: What Challenges Are You Looking For?](https://www.thebalancecareers.com/what-challenges-looking-for-2061250)
+
+## System design
+* [Top 10 System Design Interview Questions for Software Engineers](https://hackernoon.com/top-10-system-design-interview-questions-for-software-engineers-8561290f0444)
+* [HackingNote](https://www.hackingnote.com/en/interview/system-design-interview-questions/)
+
+## Conding tests
+* [How to: Work at Google — Example Coding/Engineering Interview \- YouTube](https://www.youtube.com/watch?v=XKu_SEDAykw)
+* [Java Coding Interview Practice on Pramp \- YouTube](https://www.youtube.com/watch?v=S2VfJh8J0gc)
+* [Interview \- Google Careers](https://careers.google.com/how-we-hire/interview/#onsite-interviews)
 
 ## Reference
 * [サンフランシスコで転職活動をしました - Jeffsuke is not a pen.](http://jeffsuke.hatenablog.com/entry/2017/04/30/062502)

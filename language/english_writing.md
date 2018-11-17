@@ -333,8 +333,6 @@ title: English Writing
     * whether
     * as much as
     * whereas
-* 
-    * after
 
 ## CV
 [Job Interview Question: Why Do You Want This Job?](https://www.thebalancecareers.com/why-do-you-want-this-job-2061202)
@@ -345,3 +343,7 @@ title: English Writing
 
 
 ## Reference
+* [Computer Science Department – Past Theses](http://www.cs.sdsu.edu/past-theses/)
+* [List of research topics](https://www.nii.ac.jp/Internship/Guidelines/2009_2nd_List_of_research_topics.htm)
+* [NYU Computer Science Department](https://cs.nyu.edu/dynamic/reports/)
+* [MIT \- Dissertations/Theses \- LibGuides at MIT Libraries](https://libguides.mit.edu/diss)

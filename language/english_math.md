@@ -106,3 +106,5 @@ title: English Math
 * [Translating Words into Algebra](http://www.leeward.hawaii.edu/files/mathlab/handouts/translating_words_into_algebra.pdf)
 
 ## Reference
+* [Signs and symbols \- London School of English](https://www.londonschool.com/blog/signs-and-symbols/)
+* [Symbols \| Mathematics Pronunciation Guide](https://howtosaymathematics.wordpress.com/symbols-2/)

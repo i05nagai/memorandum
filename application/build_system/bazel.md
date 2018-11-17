@@ -10,12 +10,24 @@ title: Bazel
     * a directory within the workspace that contains `BUILD` file
 
 ## Install
-For OSX,
+For OSX, 
 
 ```
 brew install bazel
 # you may need java8
 brew cask install homebrew/cask-versions/java8
+```
+
+However, [for some reasons](https://blog.bazel.build/2018/08/22/bazel-homebrew.html), bazel in homebrew core is not updated anymore.
+If you want the latest bazel, you need to add a tap maintained by bazel developers
+
+```
+# uninstall bazel of homebrew core
+brew uninstall bazel
+# tap and install
+brew tap bazelbuild/tap
+brew tap-pin bazelbuild/tap
+brew install bazel
 ```
 
 For ubuntu 16.04
@@ -79,6 +91,11 @@ All target patterns starting with `//` are resolved relative to the current work
 
 Dockerfileを使ったbuildはgenruleを使う必要がある。
 
+
+## Tips
+
+### Measuring coverage
+Use `bazel coverage`.
 
 ## Reference
 * [bazelbuild/bazel: a fast, scalable, multi-language and extensible build system](https://github.com/bazelbuild/bazel)

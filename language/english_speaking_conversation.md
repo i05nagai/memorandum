@@ -17,18 +17,36 @@ title: English Conversation
         * Well, that's it, we're done - we can go home now.a
     * used to say that something is correct
         * You switch the computer on at the back. That's it.
+* long time no see
+    * Year I know, how's it going?
 
 
 ## Weather
 * hot/warm
     * the wether is hot
 * cool/cold
-    * sunny/rainny
-* sunny/rainny
+    * sunny/rainy
+* sunny
+* rainy
+    * ranning a lot
+    * We had three rainy days on holiday, but otherwise it was sunny.
+    * save/keep money for a rainy day
+        * to save money for a time when it might be needed unexpectedly
+* rain
+    * drops of water that fall from clouds
+        * We had heavy/light rain all day.
+    * Rain can also mean to fall in a large amount
+        * Debris from the explosion rained down.
+    * If it rains, water falls from the sky in small drops
+        * I think it's starting to rain.
+        * It's raining hard/heavily (= a large amount of rain is falling).
 * clear / cloudy
 * dry/humid
 * foggy/misty
-* gusty/windy
+* gusty
+    * with sudden, strong winds
+    * The forecast was for gusty winds and rain
+* windy
 * thunder/lightning
     * there is thunder and lightning
 * it's warm and sunny outside
@@ -49,6 +67,9 @@ title: English Conversation
 * hurricane
 * storm
     * powerful strom battered the country
+* It's pouring
+* raining cats and dogs
+    * it is raining very, very hard
 
 ## Goodbyye
 * Bye

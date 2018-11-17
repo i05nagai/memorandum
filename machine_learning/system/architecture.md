@@ -85,6 +85,10 @@ title: Architecture
 
 ### Service
 
+### Preprocessing
+* Renaming
+* Filling missing values
+
 ### Feature Engineering
 * why this component exist?
 * which component this component communicate to?
@@ -100,6 +104,10 @@ title: Architecture
         * `http://example.com/items/1/1234`, `/1/` is item category such as clothes or games
 * what does this component communicate to?
 
+* Rescaling
+* Discretization
+* Aggregation
+
 ### Learning/Training
 
 * reporting
@@ -111,6 +119,9 @@ title: Architecture
 
 ### A/B testing
 
+
 ## Reference
-[szilard/ml\-prod: Some thoughts on how to use machine learning in production](https://github.com/szilard/ml-prod)
-[Preparing and Architecting for Machine Learning](https://www.gartner.com/binaries/content/assets/events/keywords/catalyst/catus8/preparing_and_architecting_for_machine_learning.pdf)
+* [szilard/ml\-prod: Some thoughts on how to use machine learning in production](https://github.com/szilard/ml-prod)
+* [Preparing and Architecting for Machine Learning](https://www.gartner.com/binaries/content/assets/events/keywords/catalyst/catus8/preparing_and_architecting_for_machine_learning.pdf)
+* [Designing a learning system](https://people.cs.pitt.edu/~milos/courses/cs2750-Spring03/lectures/class2.pdf)
+* [11\_Machine\_Learning\_System\_Design](http://www.holehouse.org/mlclass/11_Machine_Learning_System_Design.html)

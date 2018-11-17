@@ -12,8 +12,12 @@ pip install pandas
 ```
 
 ## Term
-* `index`は行
-* `columns`は列
+* `index`
+    * the name of a row
+    * by default consecutive interger (i.e. 1, 2, 3, ...)
+    * if you count data per date and per some ID say customerID, each data is related to a pair `((date, customerID), (col1_data1, col2_data1))`. In this case, `(date, customerID)` is a index and `(col1_data1, col2_data1` is a data of a column.
+* `columns`
+    * data
 * `Series`
     * One-dimensional ndarray with axis labels (including time series).
     * [pandas\.Series — pandas 0\.23\.1 documentation](https://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.Series.html)
@@ -22,16 +26,18 @@ pip install pandas
 
 ## Usage
 
-### データ選択
+## DataFrame
 
-```
-df.loc[]
-df.iloc[]
-df.ix[]
-# ix使えば良い
-```
+### data selection
 
-### データ選択
+* `df.loc[col_name]`
+* `df.iloc[idx_for_col]`
+* `df.iat[idx_for_index, idx_for_col]`
+    * access to data (idx_for_index, idx_for_col)
+* `df.ix[]`
+* `df[col_name]`
+
+
 
 ```python
 # columnの4番目が"Iris-setosa"のもののみ
@@ -101,8 +107,18 @@ X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_s
 
 ## Tips
 
+####
+
+```
+# co1_value: [['col2_val', col3_val],]
+df.groupby('col1').get_group('col1_value')[['col2', 'col3']].values
+```
+
+### Iterate
+
+
 ### Remove NaN
-* [<Python, pandas> データフレームから欠損値(np.nan)を除く方法 - ねこゆきのメモ](http://nekoyukimmm.hatenablog.com/entry/2015/02/25/222414)
+* [データフレームから欠損値(np.nan)を除く方法 - ねこゆきのメモ](http://nekoyukimmm.hatenablog.com/entry/2015/02/25/222414)
 
 * `df.dropna(subset=["col"])`
     * colにNanを含む行を除く
@@ -116,12 +132,12 @@ true_false_list = []
 df[true_false_list]
 ```
 
-### 全ての行/列を出力したい
+### print out all rows and columns
 * `pd.set_option("display.max_rows", 101)`
 * `pd.set_option("display.max_columns", 101)`
 
 
-### 表示の有効桁数
+### displayed significant digit
 * [ゆるふわPandasチートシート - Qiita](http://qiita.com/tanemaki/items/2ed05e258ef4c9e6caac)
 
 

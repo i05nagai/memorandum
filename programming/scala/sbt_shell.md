@@ -4,6 +4,9 @@ title: sbt shell
 
 ## sbt shell
 
+```
+sbt shell
+```
 
 ## CLI
 Compiles and runs all tests.

@@ -88,43 +88,42 @@ title: English Speaking Graph
     * every a year
     * in four decades
         * the pie charts elucidate 
-* badgetupward
-    * there was a dramatic rise in sales
-    * throughout the period 2008 to 2014, sales shot up
-    * sales climbed dramatically all describing upward trends
-    * there is a little bit of an increase over this time period
-    * sales increased slightly from 2008 to 2014
-    * sales increased slowly year on year 
-    * from Q3 to Q4, there was a drastic increase in central usage
+* upward
     * there was a upward trend
-    * there was a steady increase
-    * iceceam sales rose significantly
-    * iceceam sales went up incredible amount
     * from January to Feburary, there was a upward trend
     * to climb
+        * sales climbed dramatically all describing upward trends
     * to increase
+        * there is a little bit of an increase over this time period
+        * there was a steady increase
+        * from Q3 to Q4, there was a drastic increase in central usage
+        * sales increased slightly from 2008 to 2014
+        * sales increased slowly year on year 
     * to rise
+        * there was a dramatic rise in sales
+        * iceceam sales rose significantly
     * to go up
+        * iceceam sales went up incredible amount
     * to shoot up
+        * throughout the period 2008 to 2014, sales shot up
     * to rocket
     * to soar
 * downward
     * we've got a downward torend in this line graph
     * from 2006 to 2014, there was a gradual decline in the number of complaint
     * from 2010 onwards, there was severe drop in the number of complaints
-    * there was a dramatic fall
-    * there was a drastic decline
-    * there was a sudden decrease
-    * the number of complaints levelled off
     * there was a dramatic downard trend
-    * there was a significant drop between q1 and q3
-    * there was a significant drop after september
-    * there was a sudden or a steep decline
     * to decrease
+        * there was a sudden decrease
     * to fall
+        * there was a dramatic fall
     * to go down
     * to decline
+        * there was a drastic decline
+        * there was a sudden or a steep decline
     * to drop
+        * there was a significant drop between q1 and q3
+        * there was a significant drop after september
     * to plunge
     * to plummet
 * how to describe no change
@@ -133,7 +132,8 @@ title: English Speaking Graph
     * remained the same
     * remained constant
     * stabllised
-    * levelled off
+    * to level off
+        * the number of complaints levelled off
     * moderatley
     * little by little
     * step by step

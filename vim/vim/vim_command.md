@@ -27,6 +27,12 @@ title: Vim Command
 * `:let {var-name}[{idx1}:{idx2}] = {expr1}`
 * `:command! `
     * define commands
+* `:redir <register>`
+    * [vim \- How to redirect ex command output into current buffer or file? \- Stack Overflow](https://stackoverflow.com/questions/2573021/how-to-redirect-ex-command-output-into-current-buffer-or-file)
+    * redirecting the output of this 
+    * `:redir @a`
+    * `:redir END`
+        * end redirecting
 
 ## Define commands
 * [Vim documentation: usr_40](http://vimdoc.sourceforge.net/htmldoc/usr_40.html#40.2)

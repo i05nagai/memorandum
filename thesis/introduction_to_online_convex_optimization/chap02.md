@@ -24,7 +24,7 @@ $$
     \norm{
         \partial_{x}f
     }
-    \ge
+    \le
     G
 $$
 
@@ -1776,16 +1776,14 @@ $$
     * initial point
 * $T \in \mathbb{N}$,
 * $\delta > 0$,
-* $U := (U_{1}, \ldots, U_{n})$,
-    * $(-1, 1)^{n}$-valued uniformly r.v.
 
 $$
     \hat{f}_{\delta}(x)
     :=
-    \mathrm{E}
-    \left[
-        f(x + \delta U)
-    \right]
+    \int_{\mathbb{B}}
+        f(x + \delta u)
+    \ du
+    .
 $$
 
 **Step1** Apply algorithm 2 on $\hat{f}$, $x_{1}$, $T$, $$\{\eta_{t} = \delta\}$$, return $x_{T}$.
@@ -1796,19 +1794,12 @@ $$
 * $\hat{f}_{\delta}$,
     * Algorithm 4
 
-Assume $f$ is integrable over $\mathbb{B}$.
-
-$$
-
-$$
-
 Then
 
 * (1) If $f$ is $\alpha$-strongly convex, then so is $\hat{f}_{\delta}$,
 * (2) $\hat{f}_{\delta}$ is $\frac{d G}{\delta}$-smooth
-* (3) $$|
-\hat{f}_{\delta}(x) - f(x)
-| \le \delta G$$ for all $x \in \mathcal{K}$,
+* (3) $$\norm{ \hat{f}_{\delta}(x) - f(x) } \le \delta G$$ for all $x \in \mathcal{K}$,
+    * TODO: we need to chekc whether the statement is correct or not
 
 #### proof
 (1) TODO
@@ -1895,22 +1886,24 @@ $$
         u
     \ du
     =
-        \frac{\delta}{d}
-        \nabla
-        \hat{f}_{\delta}(x)
+    \frac{\delta}{d}
+    \nabla
+    \int_{\mathbb{B}}
+        f(x + \delta u)
+    \ du
 \end{equation}
 $$
 
 $$
 \begin{eqnarray}
-    \|
+    \norm{
         \nabla \hat{f}_{\delta}(x)
         -
         \nabla \hat{f}_{\delta}(y)
-    \|
+        }
     & = &
         \frac{d}{\delta}
-        \|
+        \norm{
             \int_{\mathbb{S}}
                 f(x + \delta u)
                 u
@@ -1920,12 +1913,12 @@ $$
                 f(y + \delta u)
                 u
             \ du
-        \|
+        }
     \nonumber
     \\
     & = &
         \frac{d}{\delta}
-        \|
+        \norm{
             \int_{\mathbb{S}}
                 f(x + \delta u)
                 u
@@ -1933,19 +1926,19 @@ $$
                 f(y + \delta u)
                 u
             \ du
-        \|
+        }
     \nonumber
     \\
     & \le &
         \frac{d}{\delta}
         \int_{\mathbb{S}}
-            \|
+            \norm{
                 f(x + \delta u)
                 u
                 -
                 f(y + \delta u)
                 u
-            \|
+            }
         \ du
         \quad
         (\because \text{Jensen's inequality})
@@ -1954,16 +1947,14 @@ $$
     & = &
         \frac{d}{\delta}
         \int_{\mathbb{S}}
-            |
+            \abs{
                 \left(
                     f(x + \delta u)
                     -
                     f(y + \delta u)
                 \right)
-            |
-            \|
-                u
-            \|
+            }
+            \norm{u}
         \ du
     \nonumber
     \\
@@ -1971,12 +1962,8 @@ $$
         \frac{d}{\delta}
         G
         \int_{\mathbb{S}}
-            \|
-                x - y
-            \|
-            \|
-                u
-            \|
+            \norm{ x - y }
+            \norm{ u }
         \ du
         \quad
         (\because \text{Lipschitz continity})
@@ -1985,9 +1972,7 @@ $$
     & \le &
         \frac{d}{\delta}
         G
-        \|
-            x - y
-        \|
+        \norm{ x - y }
         \int_{\mathbb{S}}
             1
         \ du
@@ -1998,9 +1983,7 @@ $$
     & = &
         \frac{d}{\delta}
         G
-        \|
-            x - y
-        \|
+        \norm{ x - y }
         .
     \nonumber
 \end{eqnarray}
@@ -2012,11 +1995,11 @@ By proposition, $\hat{f}_{\delta}$ is $ \frac{d}{\delta} G$-smooth.
 
 $$
 \begin{eqnarray}
-    |
+    \abs{
         \hat{f}_{\delta}(x)
         -
         f(x)
-    |
+    }
     & = &
         \left|
             \int_{\mathbb{B}}

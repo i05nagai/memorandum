@@ -3,10 +3,11 @@ title: Dataset ImageNet
 ---
 
 ## Dataset ImageNet
-現在 14,197,122 images, 21841 synsets indexed.
+* 14,197,122 images
+* 21841 synsets indexed.
 
 * [ImageNet Tree View](http://image-net.org/synset?wnid=n02084071)
-    * categoryとimageの一覧が見れる
+    * list of category and image
 
 
 ```
@@ -16,7 +17,7 @@ curl -O http://image-net.org/archive/words.txt
 ## Utility
 * [GitHub - tzutalin/ImageNet_Utils: Utils to help download images by id, crop bounding box, label images, etc.](https://github.com/tzutalin/ImageNet_Utils)
 
-画像のDL用のUtilityがある。
+There is a utility tools to download images.
 
 ```
 git clone --recursive https://github.com/tzutalin/ImageNet_Utils.git
@@ -30,9 +31,9 @@ $ ./downloadutils.py --downloadImages --wnid n02084071
 ## API
 * [ImageNet](http://image-net.org/download-API)
 
-APIが提供されている。
-WordNet 3.0に基いてclass名をつけており、wnidが付与されている。
-現在はnounにしか対応してないので、$n$から始まるwnidがついている。
+API for downloading data is provided.
+The name of category is based on the words in WordNet 3.0, having `wnid`, word net id.
+The image-net supports only noun category, so the wnid of the category starts from `n`.
 
 `http://www.image-net.org/synset?wnid=n02084071`で対応する画像の一覧が見れる。
 `n02084071`に対応するsynetは`Dog, domestic dog, Canis familiaris`である。
@@ -91,4 +92,3 @@ curl -O http://www.image-net.org/api/text/imagenet.synset.obtain_synset_list
 
 ## Reference
 * [ImageNet](http://www.image-net.org/index)
-

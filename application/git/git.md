@@ -355,3 +355,4 @@ See also: #456, #789
 
 
 ## Reference
+* https://ndpsoftware.com/git-cheatsheet.html#loc=stash;

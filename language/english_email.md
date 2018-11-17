@@ -8,6 +8,11 @@ title: English Email
 * I’ve attached
 * I may have a colleague who could be a good fit for this role; would you mind if I passed your contact information on to them?
 * I'm writing to express my strong interest
+* November 3rd at 8:30 am is fine for me
+* As for the date specified, that is fine for me.
+* I understood about the date
+* I confirmed the date.
+* Thank you verymuch for your mail. I'm looking forward to seeing you on November 3.
 
 
 ## Ending
@@ -15,6 +20,7 @@ title: English Email
 * [How to end emails \| Common Mistakes in Business English](https://blog.harwardcommunications.com/2012/11/06/how-to-end-emails/)
 * [Phrases for closing an email \- Target Training GmbH](https://www.targettraining.eu/20-phrases-closing-email/)
 * [7 Clever Ways to Say, "I Look Forward to Hearing from You" \| Grammarly](https://www.grammarly.com/blog/i-look-forward-to-hearing-from-you/)
+* [How to End a Letter: Appropriate and Inappropriate Closings \| TurboFuture](https://turbofuture.com/internet/How-to-end-a-letter-in-English-Examples-of-closing-sentences)
 
 * I look forward to hearing from you.
 * I look forward to receiving your reply.

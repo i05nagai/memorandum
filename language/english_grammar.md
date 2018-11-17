@@ -17,11 +17,13 @@ Subjanctive mood
     * 
 * I wish past
 
-comparative
+## comparative
 
 * [～ならば～なほど良いって英語でなんて言うの？ - DMM英会話なんてuKnow?](http://eikaiwa.dmm.com/uknow/questions/2472/)
 * [英語の「比較」が苦手な人へ！比較級で知っておくべき6つのこと｜ 英語学習ボックス](http://eigo-box.jp/grammar/comparison-1/)
 * [The 比較級, the 比較級はかなり深い？応用を含めて完全に理解しよう！【やさしく語る英文法】 | まこちょ英語ブログ](https://www.makocho0828.net/entry/2017-09-06-the_%E6%AF%94%E8%BC%83%E7%B4%9A_the_%E6%AF%94%E8%BC%83%E7%B4%9A%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8A%E6%B7%B1%E3%81%84%EF%BC%9F%E5%BF%9C%E7%94%A8%E3%82%92%E5%90%AB%E3%82%81%E3%81%A6)
+* [Twice as much/As many as/ As much as\-English](https://www.tolearnenglish.com/exercises/exercise-english-2/exercise-english-107273.php)
+
 * comparative degree
     * He is older than I by three years.
     * He is three years older than I
@@ -43,6 +45,11 @@ comparative
 * twice as ... as/ three times as ... as
     * Petrol is twice as pexpensive as it was a few years ago
     * their house is about three times as big as ours.
+    * Finanlly I got a job offer pays twice as much as I currently make
+    * How to get twice as much done in half as much time
+    * A is ten times the height of B.
+    * A is greater than B by a factor of 10.
+    * A is ten times B.
 * the same as
     * Laura's salary is the same as mine
     * Laura's get the same salary as me.
@@ -50,6 +57,7 @@ comparative
     * Sarah hasn't changed. She still looks the same as she did ten years ago
 * The ... The ...
     * The sooner the better
+    * the more I think about it, the more certain I am
     * The bigger the better
     * When you're travelling, the less luggage you have the better
     * The warmer the weather, the better I feel
@@ -130,7 +138,7 @@ noun
     * I was the only one to arrive on time+ 
 
 
-Interrogative pronouns
+## Interrogative pronouns
 
 [Interrogative structures](https://www.englishgrammar.org/interrogative-structures/)
 
@@ -734,6 +742,117 @@ modal verb
         * they + will = they’ll
         * will + not = won't
 
+## be + to
+* [BE \+ TO\-infinitive \| Grammaring](https://www.grammaring.com/be-to-infinitive)
+* [Learning English \| BBC World Service](http://www.bbc.co.uk/worldservice/learningenglish/youmeus/learnit/learnitv103.shtml)
 
+
+* offical arrangements
+    * the prime minister is to visit India next month
+* offical orders
+    * At the end of the course, all students are to take a written exam
+* future events
+    * it expresses near cetainly that what is forecast will happen
+    * A man is to appear in court later this morning charged with the murder of the footballer, Darren Gough.
+* things that should be donw
+    * what am I to do?
+* a possible aim when saying what should be done to reach it
+    * (intend) to do
+    * if you are to work here for more than three months, you must have a residence permit
+* prohibition
+    * only in negative
+    * you are not to do that again
+
+* To be in the if clause in conditional sentences
+    * when we are talking about preconditions for something to happen
+    * if we are to catch that train, we shall have to leave now
+    * If I were to increase my offer from 500 pounds to 550 pounds, would you be interested in selling me your car then?
+    * if we are to solve the world's pollution problems, we must address environmental issues now
+* To be passive
+    * used when giving instructions, it is noticeable always on medicine bottles and can be seen on other offical notice
+    * to be taken tree times a day after meals
+    * these beaches are not to be removed from changing rooms
+    * no foods of any kinds is to be taken into the examination room
+
+
+## Relative clause
+* https://www.grammar-quizzes.com/clauses-3.html
+* [English Grammar Today on Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses)
+* [Relative clauses referring to a whole sentence \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/relative-clauses/relative-clauses-referring-to-a-whole-sentence)
+* [Relative pronouns \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns/relative-pronouns)
+
+* whose
+    * we watch the doctor whose TV show is funny
+    * Do you know the talk show host whose name is Turkish?
+    * object noun
+        * we watch the doctor whose TV show you like
+        * the man whose show we watch is a doctor
+        * Do you know the talk show host whose name I cannot Remember?
+        * the doctor whose advice we value is successful on TV
+        * the woman whose son you met is the guest speaker
+* of which
+    * https://www.grammar-quizzes.com/clauses-7.html
+        * some of  which
+        * many of who(m)
+        * most of whose (cars)
+        * none of who(m)
+        * two of who(m)
+        * half of who(m)
+        * both of which
+        * neither of who(m)
+        * each of which
+        * all of whose (money)
+        * both of whose (names)
+        * several of which
+        * a few of which
+        * a little of which
+        * a number of who(m)
+    * subject
+        * disnyland, all of which belongst to the Disney company, is located in Anaheim
+        * Disneyland, some of which is crowed with people, is a favourite tourist site
+        * Sleeping Beauty's Castle, all of which is half-scale, is located in Fantasyland
+        * California has a lot of visitors, most of whom visit Disneyland
+        * walt Disney was devoted to his children, all of whom adored their father
+        * Disney fans, many of whom Mr. Disney met personally, praised his projects
+        * the disney company has several parks, all of which are run by Disney
+        * the kids all of whom go to my school won the biking races
+    * object noun
+        * The Disney Company has several pars, all of which Disney runs
+        * the biking trophy was given to the kids (all of whom) you just met
+
+In informal language, we often use where, when or why to introduce defining relative clauses instead of at which, on which or for which.
+
+* when
+    * I know a restaurant where the food is excellent
+    * I know a restaurant at which the food is excellent
+* where
+    * There isn't a day when I don't feel rushed off my feet
+    * There isn't a day on which I don't feel rushed off my feet
+* why
+    * Do you know the reason why the shop is closed today?
+    * Do you know the reason for which the shop is closed today?
+
+## That clause
+* [That \- English Grammar Today \- Cambridge Dictionary](https://dictionary.cambridge.org/us/grammar/british-grammar/pronouns/that)
+
+* verb + That clause
+    * reporting verbs (say, tell, admit, etc.)
+    * mental process verbs (believe, think, know, hope, etc.)
+* adj + That clause
+    * to express opinions and feeling
+    * sure, certain, right, important, afraid, pleased, sorry, surprised, worried
+    * It’s important (that) we look at the problem in more detail.
+    * I’m sure (that) you’ll know a lot of people there.
+    * They were afraid (that) we were going to be late.
+* noun + That clause
+    * to express opinions and feelings, often about certainty and possibility. We also use that with reporting nouns
+    * belief, fact, hope, idea, possibility, suggestion, statement, claim, comment, argument
+    * Is there any possibility that 
+    * He is also having intensive treatment in the hope that he will be able to train on Friday.
+    * Dutch police are investigating the possibility that a bomb was planted on the jet.
+
+## That as an intensifier
+* Mine wasn't that nice
+* I don't think she's that good
 
 ## Reference

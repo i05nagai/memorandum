@@ -2,30 +2,6 @@
 title: Circle CI
 ---
 
-<!-- vim-markdown-toc GFM -->
-
-* [Circle CI](#circle-ci)
-	* [Getting Started](#getting-started)
-		* [Configuring CircleCI](#configuring-circleci)
-			* [File Structure and Content](#file-structure-and-content)
-		* [Manual build setup](#manual-build-setup)
-			* [The anatomy of a CircleCI build](#the-anatomy-of-a-circleci-build)
-			* [Checking out code](#checking-out-code)
-			* [Setting up your dependencies](#setting-up-your-dependencies)
-			* [Setting up your test databases](#setting-up-your-test-databases)
-			* [Running your tests](#running-your-tests)
-	* [Build Image](#build-image)
-	* [Languages](#languages)
-		* [Continuous Integration and Continuous Deployment with Python](#continuous-integration-and-continuous-deployment-with-python)
-			* [Version](#version)
-	* [How-To](#how-to)
-		* [Code Coverage](#code-coverage)
-	* [Troubleshooting](#troubleshooting)
-		* [SSH access to builds](#ssh-access-to-builds)
-	* [reference](#reference)
-
-<!-- vim-markdown-toc -->
-
 # Circle CI
 
 ## Getting Started

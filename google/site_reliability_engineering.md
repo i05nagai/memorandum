@@ -70,7 +70,67 @@ title: Site Reliability Engineering
         * The actual uptime is measured by a neutral third party: our monitoring system
         * the difference between these two numbers is the budget of how much unreliability is remaining for the quarter
         * As long as the uptime measured is above the SLO -- in other words, as long as there is error budget remaining -- new releases can be pushed
-
+* SLIs
+    * examples
+    * user-facing serving systems
+        * availability
+            * could we respond to the request?
+        * latency
+            * how long did it take to respond?
+        * throughput
+            * how many requests could be handled?
+    * storage systems
+    * big data systems
+        * end-to-end latency
+            * how long does it take the data to progress from ingestion to completion?
+        * throughput
+            * how muc hdata is being processed?
+    * all systems
+        * correctness
+* Toil
+* Monitoring
+    * 4 Golden signals
+        * Latency
+            * the time it takes to service a request
+            * It's important to distinguish between the latency of successful requests and the latency of failed requests
+        * Traffic
+            * A measure of how much demand is placed on your system, measured in a high-level system-specific metric
+            * For web service
+                * HTTP requests per second
+            * For an audio streaming system
+                * network I/O rate
+                * concurrent sessions
+            * For key value storage system
+                * transactions
+                * retrievals per second
+        * Errors
+            * the rate of requests that fail
+                * fail explicitly (e.g. HTTP 500s)
+                * fail implicitly (for example, an HTTP 200 sucess response but couples with the wrong content)
+                * fail by policy
+                    * if you committed to one-second responsee times, any request over one second is an error
+        * Saturaiton
+            * How full your service is
+            * Note that many systems degrade in performance before they achieve 100% utilization
+    * worrying about your tail
+        * Consider tail
+            * mean CPU usage of your nodes
+            * the mean fullness of your database
+            * the mean latency
+    * Choosing an appropriate resolution for measurements
+    * As simple as possible
+        * Like all software systems, monitoring can become so complex that its fragile, complicated to change , and a maintenace burden
+    * questions
+        * Does this rule detect an otherwise undetected condition that is urgent, actionable and actively or imminently user-visible?
+        * Will I ever be able to ignore this alert, knowing it's benign? When and why will I be able to ignore this alert, and how can I avoid this cenario?
+        * Does this alert definitely indicate that users are being negatively affected? Are there detectable cares in which users aren't bein negatively impacted, such as drained traffic or test deployments, that should be filtered out?
+        * Can I take action in respomse tp this alert? Is that action urgent, or could it wait until mornign? Could the action be safely autmated? Will that action be a long term fix, or just a short-term workaround?
+        * Are other people getting paged for this issue, therefore rendering at least one of the pages unnecessary?
+    * fundamental philosophy on pages and pagers
+        * Every time the pager goes off, I should be able to react with a sense of urgency
+        * Every page should be actionable
+        * Every page response should require intelligence. If a page merely metrits a robotic reponse, it shouldn't be a page
+        * Pages should be about a novel problem or an event that hasn't been seen before
 
 
 ## Reference

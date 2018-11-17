@@ -4,8 +4,26 @@ title: linux/common
 
 ## linux/common
 
-## /dev/sda
+## /dev
+https://en.wikipedia.org/wiki/Device_file#Block_devices
 
+* block special devices
+    * prvoide buffered access to hardware devices, and provide some abstravtion from their specifics
+    * always allow programmers to read/write a block of any size and any alighment
+    * downside
+* character special devices
+    * provide unbuffered direct access to hardware devices.
+    * also called raw device to avoid the confusion surrounding the fact that a character device for a piece of block-based hardware will typicall require programs to read and write aligned block
+    * will normally rewuire that all read and writes are aligned to block boundaries
+* pseudo devices
+    * `/dev/null`
+    * `/dev/zero`
+    * `/dev/full`
+    * `/dev/random`
+* xvd
+    * xen disk storage devices
+
+## /dev/sda
 * `/sda`はdisk名で、`a`からalphabet順で名前がつく
 * `/sda1` disk名の数字の後ろはpartition number
 

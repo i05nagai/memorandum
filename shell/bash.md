@@ -63,5 +63,28 @@ interactive shellかどうかなどで読み込まれるかどうかがかわる
     * `=~`を含むかどうか
         * 右辺をregex3で評価
 
+## Tips
+
+### bash with spaces
+[shell \- Passing an array with spaces to a Bash function to act as its list of arguments \- Stack Overflow](https://stackoverflow.com/questions/18981748/passing-an-array-with-spaces-to-a-bash-function-to-act-as-its-list-of-arguments)
+[Bash array with spaces in elements \- Stack Overflow](https://stackoverflow.com/questions/9084257/bash-array-with-spaces-in-elements)
+
+```bash
+function foobar() {
+  local FILES=("$@")
+  for ((i = 0; i < ${#FILES[@]}; i++))
+  do
+    echo "${FILES[$i]}"
+  done
+}
+FILELIST=(
+"envs/osx/.bin" ".bin"
+"envs/osx/.tmux.conf.env" ".tmux.conf.env"
+"envs/osx/.zshrc.env" ".zshrc.env"
+"vscode/Code" "Library/Application Support/Code"
+)
+foobar "${FILELIST[@]}"
+```
+
 ## Reference
 * [bash\(1\): GNU Bourne\-Again SHell \- Linux man page](https://linux.die.net/man/1/bash)

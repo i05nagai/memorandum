@@ -455,6 +455,8 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 * Literal roots
 
 ## academic
+* anthropology
+* ethnography
 * Life Science
 * anatomy
 * genealogy
@@ -500,9 +502,24 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
 * genus
 * species
 
+## Music
+* cello
+* cellist
+    * a musician who plays the cello
+
 ## body
 [体の部位の英語| アメリカ生活 101](http://www.xn--ccks5nkbz150dj5j.net/english/body_english.html)
 
+
+* hair
+    * cowlick
+    * hair swirl/hair whorl
+* pressure point
+    * body
+        * a place on the body where an artery (= tube carrying blood from the heart) is close to the surface of the skin, where it can be pressed to partly stop the flow of blood
+    * situation
+        * a place or situation that is likely to cause problems
+        * Hospitals are a pressure point for the entire health system.
 * nasal congestion
     * stuffy nose
     * stuffed nose
@@ -602,6 +619,10 @@ https://study.com/cimages/multimages/16/diagramplanteudicot.png
     * heel
     * ankle
     * sole
+
+## weather
+* [日米気象用語（英和）](http://www.yoho.jp/shibu/saitama/cwfas/dic_ej.html)
+
 
 
 ## Reference
