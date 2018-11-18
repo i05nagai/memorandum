@@ -245,6 +245,66 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Assumptions
+
+$$
+    (A + \Delta A)x = b,
+    \
+    \abs{\Delta A} \le u W.
+$$
+
+$$
+    u
+    \norm{
+        \abs{A^{-1}}
+        W
+    }_{\infty}
+    <
+    \frac{1}{2}
+$$
+
+where $A + \Delta A$ is nonsingular.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition Forward error
+The foward error of $\hat{x}_{i}$.
+
+$$
+    \frac{
+        \norm{x - \hat{x}_{i}}_{\infty}
+    }{
+        \norm{x}_{\infty}
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{Iterative improvement of the solution of linear equations}
+    \begin{algorithmic}
+    \REQUIRE \\
+        $A \in \mathbb{R}^{n \times n}$, \\
+        $b \in \mathbb{R}^{n}$, \\
+        $r_{0} := b$, \\
+        $x_{0} := (0, \ldots, 0)^{\mathrm{T}} \in \mathbb{R}^{n}$,
+        \FOR{$i = 1$ \TO $T$}
+            \STATE Let $d_{i}$ be solution of $Ad = r_{i - 1}$ with respect to $x$,
+            \STATE $r_{i} := b - Ax_{i}$,
+            \STATE $x_{i} := x_{i - 1} + d_{i}$,
+        \ENDFOR
+        \RETURN $x_{T}$,
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+
+## Heauristic analysis
+
 #### Definition
 * $\beta$, $t$,
     * the number are stored with $t$-digit $\beta$ base accuracy
@@ -256,6 +316,8 @@ $$
     \beta^{-t}
     .
 $$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 #### Heauristic 1
 Gaussian elimination produces a solution of linear equation with a relatively small residual $r$.
@@ -281,14 +343,12 @@ If the machine precision $u$ and condition satisfy $u \approx 10^{-d}$ and $\kap
     \REQUIRE \\
         $A \in \mathbb{R}^{n \times n}$, \\
         $b \in \mathbb{R}^{n}$, \\
-        $r_{0} := b$, \\
-        $x_{0} := (0, \ldots, 0)^{\mathrm{T}} \in \mathbb{R}^{n}$,
-        \FOR{$i = 1$ \TO $T$}
-            \STATE Let $d_{i}$ be solution of $Ad = r_{i - 1}$ with respect to $x$,
-            \STATE $r_{i} := b - Ax_{i}$,
-            \STATE $x_{i} := x_{i - 1} + d_{i}$,
-        \ENDFOR
-        \RETURN $x_{T}$,
+        \STATE Let $\hat{x}$ be a solution of $Ax=b$.
+        \STATE Let $r := b - A \hat{x}$
+        \STATE Let $\hat{y}$ be $Ly=Pr$ with respect to $y$
+        \STATE Let $\hat{z}$ be a solution of $Uz=\hat{y}$ with respect to $z$
+        \STATE $x_{\mathrm{new}} := \hat{x} + z$,
+        \RETURN $x_{\mathrm{new}}$,
     \end{algorithmic}
     \end{algorithm}
 </pre>
