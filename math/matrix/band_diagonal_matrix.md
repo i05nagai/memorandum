@@ -316,8 +316,7 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 #### Cororally
-The time complexity of LU decomposition for band diagonal matrix is $O(2npq)$.
-
+The time complexity of LU decomposition for band diagonal matrix is $O(npq) \approx 2npq$.
 
 #### proof
 
@@ -531,14 +530,14 @@ $$
     \begin{algorithmic}
     \REQUIRE
         $A \in \mathbb{R}^{n \times n}$: has upper bandwidth $q$ and lower bandwidth $p$
-    \FOR{$k = 1$ TO $n - 1$}
-        \FOR{$r = k + 1$ TO $\min(k + p, n)$}
+    \FOR{$k = 1$ \TO $n - 1$}
+        \FOR{$r = k + 1$ \TO $\min(k + p, n)$}
             \STATE $A(r, k) = A(r, k) / A(k, k)$
             \COMMENT{$p$-th lower bandwidth}
         \ENDFOR
 
-        \FOR{$r = k + 1$ TO $\min(k + q, n)$}
-            \FOR{$c = k + 1$ TO $\min(k + p, n)$}
+        \FOR{$r = k + 1$ \TO $\min(k + q, n)$}
+            \FOR{$c = k + 1$ \TO $\min(k + p, n)$}
                 \STATE $A(r, c) = A(r, c) - A(r, k) / A(k, k)$
             \ENDFOR
         \ENDFOR
@@ -560,8 +559,8 @@ If $p \ll n$, the computational complexity is $O(2np)$.
     \REQUIRE \\
         $L \in \mathbb{R}^{n \times n}$: lower triangular matrix who has lower bandwidth $p$, \\
         $b \in \mathbb{R}^{n}$,
-    \FOR{$k = 1$ TO $n$}
-        \FOR{$r = k + 1$ TO $\min(k + p, n)$}
+    \FOR{$k = 1$ \TO $n$}
+        \FOR{$r = k + 1$ \TO $\min(k + p, n)$}
             \STATE $b(r) = b(r) - L(r, k)b(k)$
         \ENDFOR
     \ENDFOR
@@ -586,7 +585,7 @@ If $q \ll n$, the computational complexity is $O(2nq)$.
         $b \in \mathbb{R}^{n}$,
     \FOR{$k = n - 1$ \TO $1$}
         \STATE b(k) = b(k) / U(k, k)
-        \FOR{$r = \max(1, k - q) $ TO $k - 1$}
+        \FOR{$r = \max(1, k - q) $ \TO $k - 1$}
             \STATE $b(r) = b(r) - U(r, k)b(k)$
         \ENDFOR
     \ENDFOR
@@ -654,135 +653,5 @@ $$
 \end{eqnarray}
 $$
 
-In particular,
-
-$$
-\begin{eqnarray}
-    y_{1}^{1}
-    & = &
-        \frac{
-            b_{1}^{1}
-        }{
-            l_{1}^{1}
-        }
-    \nonumber
-    \\
-    & = &
-        1
-    \nonumber
-    \\
-    y_{1}^{2}
-    & = &
-        \frac{
-            1
-        }{
-            l_{2}^{2}
-        }
-        \left(
-            b_{1}^{2}
-            -
-            l_{1}^{2}
-            y_{1}^{1}
-        \right)
-    \nonumber
-    \\
-    & = &
-        -
-        l_{1}^{2}
-        y_{1}^{1}
-    \nonumber
-    \\
-    & = &
-        -
-        l_{1}^{2}
-    \nonumber
-    \\
-    y_{1}^{3}
-    & = &
-        \frac{
-            1
-        }{
-            l_{3}^{3}
-        }
-        \left(
-            -
-            l_{1}^{3}
-            y_{1}^{1}
-            -
-            l_{2}^{3}
-            y_{1}^{2}
-        \right)
-    \nonumber
-    \\
-    & = &
-        \left(
-            -
-            l_{1}^{3}
-            +
-            l_{2}^{3}
-            l_{1}^{2}
-        \right)
-    \nonumber
-    \\
-    & = &
-        -
-        1
-    y_{1}^{i}
-    & = &
-        \frac{
-            1
-        }{
-            l_{i}^{i}
-        }
-        \left(
-            b_{1}^{i}
-            -
-            \sum_{k=1}^{i-1}
-                l_{k}^{i}
-                y_{k}^{i}
-        \right)
-    \nonumber
-    \\
-    & = &
-        \frac{
-            1
-        }{
-            l_{i}^{i}
-        }
-        \left(
-            -
-            \sum_{k=1}^{i-1}
-                l_{k}^{i}
-                y_{k}^{i}
-        \right)
-    \nonumber
-    \\
-    y_{j}^{1}
-    & = &
-        \frac{
-            1
-        }{
-            l_{1}^{1}
-        }
-        b_{j}^{1}
-    \nonumber
-    \\
-    x_{j}^{i}
-    & = &
-        \frac{
-            1
-        }{
-            u_{i}^{i}
-        }
-        \left(
-            y_{j}^{i}
-            -
-            \sum_{k=1}^{n-i}
-                u_{k}^{i}
-                x_{k}^{i}
-        \right)
-    \nonumber
-\end{eqnarray}
-$$
 
 ## Reference
