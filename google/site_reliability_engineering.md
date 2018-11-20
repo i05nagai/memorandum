@@ -131,6 +131,16 @@ title: Site Reliability Engineering
         * Every page should be actionable
         * Every page response should require intelligence. If a page merely metrits a robotic reponse, it shouldn't be a page
         * Pages should be about a novel problem or an event that hasn't been seen before
+* Automation
+    * the Use cases for automation
+        * automation is "metasoftware" -- software to act on software
+        * User account creation
+        * Cluster turnup and turndown for service
+        * Software or hardware installation preparation and decommisiooning
+        * Rollouts of new software versions
+        * runtime configuration changes
+        * A special case of runtime config changes; changes to your dependencies
+
 
 
 ## Reference
