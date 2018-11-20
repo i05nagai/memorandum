@@ -3,6 +3,19 @@ title: English word choice
 ---
 
 ## English word choice
+* guest/customer/client
+    * [the difference between words: customer, client and guest \| English Help Online's Blog](https://englishhelponline.me/2011/04/18/the-difference-between-words-customer-client-and-guest/)
+    * customer
+        * people who buy things from store
+        * the store where I work had many customers today because It's almost Christmas
+        * this must be a good store because it has so many customers
+    * client
+        * people who hire a company to provide a service to them
+        * I work for a lawyer and he was many clients. Yesterday, he talked with eight clients
+    * guest
+        * people who pay money to stay at a hotel
+        * Thank you for being a guest at our hotel. we hope you to see you again
+        * One of our guests was complaing that he didn't receive clean towels in his room this morning
 * this/last/next day of week
     * [semantics \- Last, This, and Next \(days of the week\) \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/239269/last-this-and-next-days-of-the-week)
 * it/that/this
