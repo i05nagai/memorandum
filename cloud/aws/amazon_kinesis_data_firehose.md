@@ -1,9 +1,16 @@
 ---
-title: Kinesis Firehose
+title: Amazon Kinesis Data Firehose
 ---
 
-## Kinesis Firehose
-Amazon Kinesis Analytics、Amazon S3、Amazon Redshift、および Amazon Elasticsearch Serviceにstreaming dataをloadできる。
+## Amazon Kinesis Data Firehose
+Amazon Kinesis Data Firehose is a fully managed service for delivering real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Redshift, Amazon Elasticsearch Service (Amazon ES), and Splunk.
+
+* Amazon KDF
+    * fully managed service for delivering real-time streaming data
+* Amazon KDS
+    * not fully managed service for delivering real-time streaming data
+
+
 
 * shardによる性能調整が不要
     * 投入データ料におうじた従量課金
@@ -31,5 +38,5 @@ Amazon Kinesis Analytics、Amazon S3、Amazon Redshift、および Amazon Elasti
 
 
 ## Reference
+* [What Is Amazon Kinesis Data Firehose? \- Amazon Kinesis Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
 * [AWS再入門 Amazon Kinesis編 ｜ Developers.IO](http://dev.classmethod.jp/cloud/aws/cm-advent-calendar-2015-aws-re-entering-kinesis/)
-
