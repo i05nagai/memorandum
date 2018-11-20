@@ -12,7 +12,14 @@ title: English Email
 * As for the date specified, that is fine for me.
 * I understood about the date
 * I confirmed the date.
-* Thank you verymuch for your mail. I'm looking forward to seeing you on November 3.
+* Thank you very much for your mail. I'm looking forward to seeing you on November 3.
+* It has been a while
+* It has been a long time
+* It has been ages
+* long time no see
+* I guess we don't need anything else, but if so I will let you know!
+* I do not have any questions for now, but if a question came to my mind, I will let you know!
+* Thank you for scheduling the meeting
 
 
 ## Ending
@@ -33,3 +40,4 @@ title: English Email
 * [Email Examples: How to Respond to a Recruiter | Indeed.com](https://www.indeed.com/career-advice/finding-a-job/email-examples-how-to-respond-to-a-recruiter)
 * [How to respond to a headhunter's approach on LinkedIn - SmartCompany](https://www.smartcompany.com.au/people-human-resources/professional-development/the-right-way-to-respond-to-a-headhunters-approach-on-linkedin/)
 * [5 Ways to Write &quot;I Hope You Are Doing Well&quot; in Email | Grammarly](https://www.grammarly.com/blog/i-hope-youre-doing-well/)
+* [How to respond electronically for an invite to interview](https://www.paxus.com.au/blog/respond-electronically-invite-interview/)

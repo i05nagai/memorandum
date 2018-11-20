@@ -3,7 +3,7 @@
 ## Install
 
 ```
-pip install awscli
+pip install awscli --upgrade --user
 ```
 
 設定は以下で行う。
@@ -15,6 +15,22 @@ AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: us-west-2
 Default output format [None]: json
+```
+
+#### aws configure
+* [Named Profiles \- AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html)
+
+```
+aws configure --profile <user>
+aws configure get
+aws configure list
+aws configure set
+```
+
+You can execute command with this credential by giving `--profile` optoin like
+
+```
+aws ec2 describe-instances --profile user2
 ```
 
 

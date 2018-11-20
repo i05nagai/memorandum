@@ -145,7 +145,6 @@ title: English Speaking
 * your shoelace is untied
 * your shoelaces are undone
 * have jumped to the conclusion without seeking the truth
-* spread fake news
 * we were encouraged to learn foreign languages at school
 * wander
     * We spent the morning wandering around the old part of the city
@@ -592,6 +591,8 @@ title: English Speaking
 * influence
     * You're a bad influence on her
 * put
+    * put up
+        * put up the poster
     * put an end to
         * to make sth stop happening or existing
         * How can we put an end to the fighting?
@@ -739,10 +740,6 @@ title: English Speaking
         * Time has run out now
         * run out of
             * We are about to run out of paper and toner.
-* drop out
-    * The group gets smaller as members move away or drop out
-    * Bill dropped out of college after his first year
-    * One third of the city's students drop out before graduation
 * leave
     * leave out/omit
         * to not include sb or sth
@@ -2361,8 +2358,6 @@ title: English Speaking
     * How many stops away is Tokyo-station?
     * How many presidents were there before Lincoln?
     * Rank yourself on a scale of one to ten in each of the areas outlined
-* thrilled
-    * Joey's going to be thrilled.
 * slutty
     * He was hoping you'd come by as a slutty nurse
 * fight
@@ -2981,8 +2976,34 @@ title: English Speaking
     * v
         * An extra 20 million dollar has been budged for schools this year
 * turn
+    * turn up
+        * to appear or come to your attention, or to cause sth to become known
+        * She said she'd let me know if anything new turned up
+        * A search of his office at the college turned up a wealth of evidence
+    * turn up somewhere
+        * to arrive or appear somewhere, usually unexpectedly or in a way that was not planned
+        * Do you think many people turn up?
+        * She turned up at my house late one night
+    * turn down
+        * if the economic or market turns down, there is less business activity and fewer opportunities to make money
+        * when the market turn down, recruitment is one of the first areas companies look at to make saving
     * turn off
         * Google has a location history setting, which users can turn off at any time
+* downturn
+    * a reduction in the amount or success of sth
+    * a downturn in car sales
+    * a continuing economic downturn
+    * there is evidence of a downturn in the housing market
+    * economic/market downturn
+    * see/experience/suffer a downturn
+        * the company saw a downturn in sales over the last six month
+    * a serious/severe/sharp downturn
+    * a global/world/general downturn
+* upturn
+    * an improvement or a change to a higher level or value
+    * a sharp upturn in the economy
+    * a dramatic/sharp/significant upturn
+    * a gradual/sustained upturn
 * criminal
     * a dangerous/violent criminal
     * criminal activity
@@ -3156,10 +3177,35 @@ title: English Speaking
     * bread
         * two loaves of white bread
         * bread that is shaped and baked in a single piece and can be sliced for eating
+        * Get a loaf of white bread from the corner store.
     * food
-    * v
+    * avoid work
         * to avoid activity, especially work
         * stop loafing about/around and get on with cleaning the windows
+* croissant
+    * a piece of light bread having a curved shape with two narrow pointed ends
+* cold cut
+    * cold cut
+    * lunch meat
+    * cold meats
+    * luncheon meats, cooked meats, sliced meats, deli meats
+    * sandwitch meats
+* buffet
+    * breakfast buffet
+* speciality
+    * british term for specialty
+    * product
+        * a product that is extremely good in a particular place
+        * Oysters are a local speciality/a speciality of the area.
+    * subject
+    * behaviour
+        * a particular thing that you regularly make or do
+        * Unkind remarks are one of his specialities.
+    * used to describe a store or company that is extremely good at selling a particular product
+        * a specility store/retailer
+* sweet toothe
+    * a great liking for sweet-tasting foods.
+    * I have a sweet tooth - I can't say no to cookies.
 * funky
     * music
         * used to describe a style of music, usually for dancing to, with a strong rhythm based on jazz and a tune that repeats
@@ -3245,6 +3291,9 @@ title: English Speaking
 * divorce
     * He's been divorced, and I had some experience in that area
 * talk
+    * talk your way out o sth
+        * to escape from a bad or embarassing situation by giving explanations, excuses
+        * she's good at talking her way out of trouble
     * he and I have a lot of talk about that
     * pep talk
         * a short speech intended to encourage people to work harder or try to win a game or competition
@@ -3512,6 +3561,14 @@ title: English Speaking
     * Do your due diligence before making that decision by asking for help from those who know the pros and cos of doing business in a foreign country
 * serve
     * serve customers better experience from wholistic point of view
+    * help
+    * work
+        * to work for; to do your duty to
+    * spend time
+    * help achieve
+    * hit ball
+    * hitting ball
+    * provide food/drink
 * concentrate
     * give attention
         * to direct a lot of attention and thought to an activity or subject, or to direct effort toward achieving a result
@@ -4046,6 +4103,10 @@ title: English Speaking
     * polite behaviour
     * type
 * way
+    * on the way out/on their way out
+        * in the process of leaving
+        * dying
+        * becoming, unfashionable, obsolescent, etc.
     * He has his own way of doing things.
     * he does things differently
     * His way of doing things differs from others
@@ -4172,7 +4233,6 @@ title: English Speaking
     * to surprise a person or animal
         * she startled him when she said hello
         * she was concentrating on her book and his voice startled her
-* weird/peculiar/particular
 * like-minded
     * sharing the same opinions, ideas, or interests:
     * she is a football fan who started a magazine for like-minded woman
@@ -4318,13 +4378,27 @@ title: English Speaking
     * To provide a model of how a service would hypothetically be deployed in the Google production environment
 * terminate
     * This server is a reverse proxy that terminates the TCP connections
-* drop-in
-    * used to describe a place where people can go, usually to get help or advice, at any time without making an appointment (= an agreed date and time):
-    * a drop-in centre for the homeless
-    * a drop-in clinic/shelter
 * drop
     * drop in
         * to come for a visit, esp. without having received an invitation for a specific time:
+    * drop out
+        * The group gets smaller as members move away or drop out
+        * Bill dropped out of college after his first year
+        * One third of the city's students drop out before graduation
+    * drop off
+        * to begin to sleep
+        * if the amount, number, or quality of sth drops off, it becomes less
+        * an act of taking people, goods, mail, etc. to a place, or the place where you take them
+            * Passenger drop-off is allowed only in the designated area.
+            * recycling/waste drop-off Take anti-freeze, paint thinners, or other chemicals to a hazardous waste drop-off.
+            * drop-off area/centre/point
+    * drop off sth/sb
+        * to take someone or something, esp. by car, to a particular place
+        * I’m about to leave – can I drop you off somewhere on my way home?
+    * drop-in
+        * used to describe a place where people can go, usually to get help or advice, at any time without making an appointment (= an agreed date and time):
+        * a drop-in centre for the homeless
+        * a drop-in clinic/shelter
 * socialize
     * go out
         * to spend time with other prople for pleasure
@@ -5250,7 +5324,10 @@ title: English Speaking
     * a festival programme
         * this year's festival programme includes musicians from all over the world
 * gratitude
+    * a strong feeling of appreciation to someone or something for what the person has done to help you
     * the feeling of being grateful
+        * deep/eternal gratitude
+        * She sent me a present to show/express her gratitude
     * express your gratitude
     * show your gratitude
     * feel gratitude
@@ -5262,6 +5339,7 @@ title: English Speaking
         * my only emotions afterward were relief and deep gratitude
     * somebody's sincere gratitude
     * somebody's immerse gratitude
+* thunkfulness
 * scoop
     * tool
         * he scooped the sand into the bucket with his hands
@@ -5501,22 +5579,6 @@ title: English Speaking
     * the fact of finding interesting or valuable things by chance
     * when interesting or valuable discoveries are made by accident
     * To a large extent, luck and serendipity made us the kind of scientists we are, and brought us together.
-* regard
-    * regarding
-        * I’d create a word document answering these questions in addition to ones regarding how my background fits the position
-        * in relation to; about
-        * I have a question regarding your last statement
-        * The company is being questioned regarding its employment policy.
-    * regardless
-        * despite what has been said or done
-        * despite; not being affected by something
-    * with/in regard to sth
-        * relating to a particular subject
-        * US foreigh policy with regard to Cuba
-        * One last comment regard to scheduling your research work when it involves travel time
-        * Chaotic behaviour is important, for example, with regard to the weather
-        * important changes are being made in regard to security
-        * That power can be exercised only with regard to vessels flying the flag of the member state concerned or registered there.
 * dork
     * a stupid awkward person
     * I felt like a real dork when I realized my mistake.
@@ -6769,6 +6831,7 @@ title: English Speaking
 * versatile
 * feeble/weak/frail/shaky/puny/delicate/infirm/malnourished
 * well-being
+    * Sleeping for eight hours every day can increase your sense of well-being
 * globe
     * across the globe/all over the globe/ around the globe/round the globe
     * the globe
@@ -6864,6 +6927,16 @@ title: English Speaking
 * eerie
     * strange in a firghten and mysterious way
         * dust lay thick on a furniture, and cobwebs formed eerie patterns in the shadowy corners
+* eccentric
+* unorthodox
+* bizarre
+* weird/peculiar/particular
+    * quirky
+        * unusual in an attractive and interesting way
+        * he was tall and had a quirky, off-beat sense of humour
+    * weird
+    * pecuiliar
+    * particular
 * cobweb
      * a structure of thin, sticky threads made by a spider, esp. when the threads are covered wiht dust
         * Cobwebs hung down from the rafters.
@@ -8003,6 +8076,13 @@ title: English Speaking
 * manifest
 * eradicate
 * roll
+    * list
+        * an official list of names:
+    * bread
+        * a small loaf of bread
+    * movement
+    * sound
+    * rounded shape
     * roll out
         * to make a new product, service or system availbale for the first time
         * A media campaign is expected to roll out early next year
@@ -8019,6 +8099,13 @@ title: English Speaking
         * to form sth soft into a rounded shape
         * He rolled the clay into a ball
     * sound
+    * if a machine is rolling, it is operating
+        * Just as the television cameras started rolling, it began to pour down with run
+    * if you roll your eyes, you move them so that you are looking up, to show that you are consider sb or sth stupid or silly
+* confound
+    * to confuse sb by being difficult to explain or deal with
+    * she likes to confound others' expectations about her
+    * to confuse and very much surprise someone, so that they are unable to explain or deal with a situation
 * oligopoly
 * prudent
 * iguana
@@ -8118,6 +8205,9 @@ title: English Speaking
     * a systematic approach/way/method
 * fine-grained
     * fine grained
+* coarse-grained
+    * coarse grained
+    * we alert on coarse-grain differences like this, but it's rare for us top write the euivalent of changing the propertis of some arbitrary subset of accounts on a system
 * one byone
     * one person or thing following another in order
         * the children filed out of the bus, one by one
@@ -8209,10 +8299,20 @@ title: English Speaking
     * feel pain
 * poor circulation
 * tingle
-    * to have a feeling as if a lot of shpar points are being put quickly 
-    * to have a slight 
+    * to have a feeling as if a lot of sharp points are being put quickly and lightly into your body
+    * to have a slight stinging feeling
+        * her skin tingled after swimming in the cold, salty water
     * My fingers and toes are tingling with the cold.
+* frisson
+    * a sudden feeling of excitement or fear, esp. when you think that sth is about to happen
+    * As the music stopped, a frisson of excitement ran through the crowd
 * sting
+* thrill
+    * a feeling of great excitement and pleasure
+    * it gave me a thrill to see her again after so many years
+    * to make sb feel very excited and pleased
+* thrilled
+    * Joey's going to be thrilled.
 * what is worse
     * That is certainly not good, but what is worse is that there is so little honesty about it in the House today.
 * stress
@@ -8624,16 +8724,6 @@ title: English Speaking
     * to aggressively ask someone questions
 * undocumented
     * The president has promised to crack down on undocumented immigrants.
-* tenure
-    * the period of time when sb hold a job, esp. an afficial position, or the right to keep a job permanently
-    * during the tenure as mayor, relations with the police department worsened
-    * she has tenure in her new teaching position
-    * professor who don't publish enough work may not be offered tenure
-    * sb's tenure as sth
-        * seven years ago, I began my official tenuare as lab director
-    * job tenure
-        * the length of time an employee has worked for their employee
-        * average job tenure in the region has fallen from to 90 months
 * crew
     * all the people who work together, esp. to operate a ship or aircraft, or all the people of lower rank
     * television crew
@@ -8878,6 +8968,31 @@ title: English Speaking
     * agility in feature delivery
 * aptitude
 * considerate
+* consider
+    * consider that clause
+    * consider object to be
+    * consider object to have
+        * The ministry of trade considered the company to have the best vision for exports.
+* regard
+    * regarding
+        * I’d create a word document answering these questions in addition to ones regarding how my background fits the position
+        * in relation to; about
+        * I have a question regarding your last statement
+        * The company is being questioned regarding its employment policy.
+    * regardless
+        * despite what has been said or done
+        * despite; not being affected by something
+    * with/in regard to sth
+        * relating to a particular subject
+        * US foreigh policy with regard to Cuba
+        * One last comment regard to scheduling your research work when it involves travel time
+        * Chaotic behaviour is important, for example, with regard to the weather
+        * important changes are being made in regard to security
+        * That power can be exercised only with regard to vessels flying the flag of the member state concerned or registered there.
+    * regard (object) as + noun/adj
+        * the United states regard human rights as their main priority
+        * he is regarded as inventor of the telephone
+        * Do you regard their behaviour as good or bad?
 * relief
     * That's relief
     * What a relief
@@ -9160,6 +9275,14 @@ title: English Speaking
 * loose
     * not attached
     * not tight
+* loosely coupled
+* couple
+    * some
+    * two people
+        * to join or combine
+        * the spleeing car and restaurant car were coupled together
+    * join
+    * some
 * outlet
     * opening
     * method of expression
@@ -9897,6 +10020,7 @@ title: English Speaking
     * fear
     * sorry
         * I'm afraid
+            * I was afraid if we can run into them on the way out, I'd be obliged to do so
             * used to politely introduce bad news or disagreement
             * this is your room -- It's rather small, I'm afraid
             * I don't agree at all, I'm afraid
@@ -10047,14 +10171,6 @@ title: English Speaking
 * youthful
     * characteristic of young people, or relating to the period of life when you are young
     * her youthful enthusiasm always makes her seem ageless
-* radiate
-    * produce heat/light
-    * to produce light and/or light, or to be produced
-        * the planet Jupyter radiates twice as much heat from inside as it receives from the Sun
-        * A single beam of light radiated from the lighthouse
-    * express
-        * to show emotion or quality, or to be shown or felt
-    * spread
 * sashay
     * to walk confidently while moving your hips from side to side in a way that attracts attention
     * She sashayed down the stairs and into the hall.
@@ -10141,6 +10257,7 @@ title: English Speaking
 * undergo
     * to experience sth that is unpleasant or has a strong effect
     * he recently underwent heart bypass surgery
+    * you do not need to undergo an additional check-in procedure for your connecting flight, neither do you need to reclaim your baggage and hand it over for re-registration. 
 * endure
 * fortress
     * a large, strong building or group of buildings that can be defended from attack
@@ -10670,6 +10787,10 @@ title: English Speaking
     * small; weak; not effective
 * anticipate
 * rescind
+* marginalize
+    * Women were marginalized in western society for hundreds of years
+* revitalize
+    * the government must take measures to revitalize the sluggish economy immediately
 * marginal
     * small in amount or effect
     * small
@@ -10937,6 +11058,7 @@ title: English Speaking
 * outlet
 * off the hook
     * if you leave the phone off the hook, you do not put it back correctly and it will not ring
+        * the phone was off the hook
     * if you are off the hook, you have escaped from a difficult situation
         * John's agreed 
 * open-ended
@@ -11035,6 +11157,252 @@ title: English Speaking
     * I enjoy being festive during Christmas
 * mistletoe
     * an evergreen plant with small white fruits and pale yellow flowers that is used esp. as a Christmas decoration
+* self-discipline
+* deprioritized
+    * the proper fix will be deprioritized indefinitely
+* prioritize
+    * to decide which of a group of things are the most important so that you can deal with them first
+* credible
+    * able to be believed or trusted
+    * Investigators found no credible evidence of a crime
+* burnout
+    * break
+    * fire
+    * burn-out
+    * extreme tiredness usually caused by working too much
+        * employees complaning of/suffering burn-out
+    * if something such as a machine burns out, it stops working because of damage from heat
+    * to become too tired or unable to work, because of working too hard
+        * the relentless pressure to make money means traders burn out fast
+* turnup
+    * Cluster turnup and turndown for service
+    * fold
+        * a piece of material at the bottom of a trouser leg that is folded back
+        * trouser turn-ups
+    * event
+        * sth that happens in an unexpected way or in a way that was not planned
+* turndown
+* ice axe
+    * eipickel
+* state
+    * my state of residence
+        * domicile
+        * A state of legal residence, or domicile, or legal domicile, is the place where the service member thinks of as home, the state where you intend to live after you leave the military
+* home of record
+    * home of record is the place from which they entered the military
+* domicile
+    * legal domicile
+* layover
+    * a short stay at a place in the middle of a trip
+    * We had a three-hour layover in San Francisco and had to change planes on the way to Hawaii.
+    * We had a four-hour layover in Chicago.
+* inauguration
+    * the act of officially putting someone into an important position, or the ceremony at which this is done
+* booming
+    * A significant number of foreign companies flooded into the country to take advantage of the booming economy.
+* affordable
+* affordability
+* affordance
+    * A full language like Perl provides POSIX-level aoffordances, which in theory provide an essentially unlimited scope of automation across the APIs accessible to the system
+* decomission
+    * to take equipment or weapons out of use
+        * the government has decided to decomisson wo battleships
+    * the act of officially taking a factory or other industrial building out of use
+    * the decomission of a nuclear refactor can only take place after the appropriate license has been granted
+* use
+    * out of use
+        * not being used any longer
+    * in use
+        * being used regularly
+* rollout
+    * rollout of new software versions
+* ad infinitum
+    * again and again in the same way; forever.
+    * this list could continue essentially ad infinitum
+* extent
+    * the extent to which
+        * the degree to which sth happens or is likely to happen
+    * to the extent of
+        * so strongly that
+    * to this extent
+    * to that extent
+    * to extent that
+    * to some extent
+        * partly
+        * to some extent, she was responsible for the accident
+    * to what extent
+        * when you are discussing how true a statement is, or in what ways it is true.
+        * it's still not clear to what extent this critcism is originating from within the ruling party
+        * To this extent, SRE's automation efforts are not far off what many other poeple and organizations do
+* indebted
+    * grateful
+        * grateful to sb because of help that person has give you
+        * For her encouragement and support, I am especially indebted to my wife, Nancy.
+    * owing
+        * he campaigned for debt relief for the most heavily indebted counries
+        * owing money
+        * indeted country
+* accommodate
+    * find a place for
+        * to provide space or a place for a group
+    * suit
+        * to give what is needed to sb
+        * we certainly try to accommodate students with disabilities 
+        * accommodate yourself
+            * to change yourself or yourself behaviour to suit another person or new condition
+            * Some find it hard to accommodate themselves to the new working conditions
+    * eye
+        * (of an eye) to change the shape of the lens in order to focus
+* resolution
+    * high-res
+        * high-resolution
+        * used to describe a television or computer screen that can show things extremly clearly
+        * the system has high-resolution vide and CD-quality stereo sound
+* definition
+    * high definition
+        * a system for showing very clea pictures on a television or computer screen or for producing very clear sound
+        * The "Planet Earth" series, which is shot in high definition, captures the beauty of nature.
+* critic
+    * judge of entertainment
+    * disapproving person
+* owie
+* ouchie
+    * owie
+    * an ouchie on your pinky toe
+* overnight
+    * for or during the night
+    * time of day
+    * suddenly
+    * to stay somewhere for a night
+        * we overnighted at Frankfurt before flying on to Chennai
+    * to send sth to sb so it arrives the next day
+        * I told him to overnight the contract to me.
+* fan
+    * device
+    * admirer
+        * a baseball fan
+    * person
+    * object/piece of equipment
+    * air
+    * make worse
+    * fan out
+        * to speard over a wide area
+            * The police fanned out over the west side of the park.
+        * If a group of people fan out, they move in different directions from a single point.
+* scatter
+* spread
+    * soft food
+        * a soft food for putting on bread and biscuits
+        * sweet spreads
+        * cheese/chocolate/fish spread
+    * land
+    * meal
+    * move
+    * cover
+        * she spread out the tablecloth
+    * movement
+    * cover
+    * meal
+        * a meal, especially one for a special occasion with a lot of different dishes arranged on a table
+        * Sheila laid on (= made) a magnificent spread for us.
+    * spread fake news
+    * difference
+        * the difference between two amounts, such as two prices or interest rates
+* diffuse
+* disperse
+* radiate
+    * produce heat/light
+    * to produce light and/or light, or to be produced
+        * the planet Jupyter radiates twice as much heat from inside as it receives from the Sun
+        * A single beam of light radiated from the lighthouse
+    * express
+        * to show emotion or quality, or to be shown or felt
+    * spread
+* jurisdiction
+    * the official authority to make (esp. legal) decisions and judgments
+    * under the jurisdiction
+    * the court has no jurisdiction in/over cases of this kind
+    * School admissions are not under/within our jurisdiction.
+* anormaly
+* permit
+* stance
+* holy smoke
+    * used to say that one is very surprised, pleased, or excited Holy smoke!
+* for the first time
+    * for the first time in four years
+    * It's been 4 years since we last met
+    * I hadn't seen him in four years.
+    * I met my friend at the High school reunion for the first time in 4 years. 
+    * I went to school for the first time in 2 weeks
+* cuisine
+    * a style of cooking
+    * french cuisine
+    * Southern/Japanese/Mexican cuisine
+    * nouvelle cuisine
+        * a style of cooking in which food is lightly cooked and served in attractive patterns on the plate in small amounts
+        * Raymond Blanc, star of nouvelle cuisine, tells Paul Bailey about the philosophy behind his cooking.
+    * haute cuisine
+        * cooking of a high standard, typically French cooking
+* palate
+* punctual
+    * arriving, doing something, or happening at the expected or correct time; not late:
+    * a punctual start to the meeting
+* At the right time
+* utmost
+    * greatest or most or farthest
+        * He’s doing his utmost to disrupt the proceedings.
+    * the most or best that is possible
+    * used to emphasize how important or serious something is
+    * We will do our utmost to ensure you reach your connecting flight in time.
+* claim
+    * baggage claim
+    * baggage reclaim area
+    * the place in an airport where you get your cases and bags when you arrive after flying
+* deforestation
+* poaching
+* mind-blowing
+* unprecedented
+    * We faced unprecedented challenges last year.
+* enact
+* take (something) for granted
+    * The government recently enacted strict laws against air pollution caused by factories
+* lavish
+    * large impressive, or expensive
+        * a lavish lifestyle
+        * a royal palace on a lavish scale
+        * the food was lavish
+    * very generous
+        * lavish with/in
+        * we were always lavish with finacial aid in times of cris
+        * he was always lavish in his praise of my efforts
+    * to give someone or something a lot of love, praise, money etc
+* nepotism
+    * the act of using your power or influence to get good jobs or unfair advantages for members of your own family
+* limelight
+    * public attention and interest:
+    * She's been in the limelight recently, following the release of her controversial new film.
+    * Openly ostracising someone or pulling a key team members out of a team with only newcomers with 1 days notice is common practise.
+* turnover
+    * employee changes
+        * the rate at which employees leaves a company and are replaced
+        * high/low turnove
+        * forced/voluntary turnover
+        * The company has a staff turnover of around 12% a year.
+    * pastry
+    * business
+    * employees
+    * cake
+* tenure
+    * the period of time when sb hold a job, esp. an afficial position, or the right to keep a job permanently
+    * during the tenure as mayor, relations with the police department worsened
+    * she has tenure in her new teaching position
+    * professor who don't publish enough work may not be offered tenure
+    * sb's tenure as sth
+        * seven years ago, I began my official tenuare as lab director
+    * job tenure
+        * the length of time an employee has worked for their employee
+        * average job tenure in the region has fallen from to 90 months
+
 
 
 ## US

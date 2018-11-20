@@ -3,6 +3,7 @@ title: Kinesis Streams
 ---
 
 ## Kinessi Streams
+Amazon Kinesis Data Streams (KDS) is a massively scalable and durable real-time data streaming service.
 
 * shardで性能を調節する
     * 1 shardあたり、1MB/secのInputと2MB/secのoutput or 1000PUT/sec
@@ -12,8 +13,8 @@ title: Kinesis Streams
 料金のかかる所は以下の3箇所
 値段は参考までに、US East Ohio
 
-* 1時間あたりのシャードの利用料
-    * $0.015
+* dollars per shard per hour1
+    * 0.015 USD
 * PUT payload unit、1,000,000 unitごと
     * 25KB単位ごとに1Unitとなる
     * 5KBのrecordをPUTする場合は1 unit
@@ -28,5 +29,5 @@ title: Kinesis Streams
 * 1時間1 shardの利用で
 
 ## Referece
-* [料金 - Amazon Kinesis ストリーム | AWS](https://aws.amazon.com/jp/kinesis/streams/pricing/)
+* [Amazon Kinesis Data Streams \- AWS](https://aws.amazon.com/kinesis/data-streams/)
 * [AWS再入門 Amazon Kinesis編 ｜ Developers.IO](http://dev.classmethod.jp/cloud/aws/cm-advent-calendar-2015-aws-re-entering-kinesis/)

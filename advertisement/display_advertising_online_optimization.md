@@ -25,7 +25,7 @@ In this formulation, we assume that the clicks and conversions of ad are observe
 * $\mathcal{K} \subseteq \mathbb{R}^{N}$,
     * a set of a choice of advertisements
     * $\mathcal{K} = \Delta_{N}$ if ad is probablistically chosen
-        * where $\Delta_{N}$ is $(N-1)$-simplex
+        * where $\Delta_{N}$ is $N$-simplex
 * $x^{t} \in \mathcal{K}$,
     * the player's choice at $t$,
 * $\mathcal{Y}$,
@@ -321,4 +321,105 @@ $$
     .
 $$
 
+#### Examples
+* $N = 2$,
+* $M = 2$,
+
+$$
+\begin{eqnarray}
+    \mathrm{Clk}_{d, a}^{t+1}
+    & = &
+        \mathrm{Clk}_{d, a}^{t}
+        +
+        \sum_{s=1}^{t}
+            y_{d, a}^{s}
+    \nonumber
+    \\
+    \mathrm{Cvr}_{d, a}^{t+1}
+    & = &
+        \mathrm{Clk}_{d, a}^{t}
+        +
+        \sum_{s=1}^{t}
+            z_{d, a}^{s}
+    \nonumber
+    \\
+    \mathrm{CPA}_{d, a}^{t + 1}
+    & := &
+        \frac{
+            \sum_{s=1}^{t}
+                \mathrm{CPC}_{d, a}^{s}
+                y_{d, a}^{s}
+        }{
+            \mathrm{Cvr}_{d,a}^{1}
+            +
+            \sum_{s=1}^{t}
+                z_{d, a}^{s}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \mathrm{CPC}_{d, a}^{1}
+            +
+            \sum_{s=2}^{t}
+                y_{d, a}^{s}
+                \mathrm{tCPA}_{a}
+                \left(
+                    \mathrm{Cvr}_{d,a}^{1}
+                    +
+                    \sum_{r=1}^{s}
+                        z_{d, a}^{r}
+                \right)
+        }{
+            \mathrm{Cvr}_{d,a}^{1}
+            +
+            \sum_{s=1}^{t}
+                z_{d, a}^{s}
+        }
+    \nonumber
+    \\
+    \mathrm{CPC}_{d, a}^{t + 1}
+    & := &
+        \frac{
+            \mathrm{tCPA}_{a}
+            \left(
+                \mathrm{Cvr}_{d,a}^{1}
+                +
+                \sum_{s=1}^{t}
+                    z_{d, a}^{s}
+            \right)
+        }{
+            \mathrm{Clk}_{d,a}^{1}
+            +
+            \sum_{s=1}^{t}
+                y_{d, a}^{s}
+        }
+\end{eqnarray}
+$$
+
+$$
+    f(x; y, z, CPC, d)
+    :=
+    -
+    \sum_{a=1}^{N}
+        CPC_{d, I_{t}}^{t}
+        (1 - y_{a})
+$$
+
+$$
+    f(x; y, z, CPC, d)
+    :=
+    -
+    \sum_{a=1}^{N}
+        CPC_{d, I_{t}}^{t}
+        (1 - y_{a})
+$$
+
+Criterion of loss function
+
+* If we choose an advertisement in which a user is not interested, it should be penalized
+* If we 
+
+
 ## Reference
+* Hazan, E. (2016). Introduction to Online Convex Optimization. Foundations and Trends® in Optimization (Vol. 2). https://doi.org/10.1561/2400000013
