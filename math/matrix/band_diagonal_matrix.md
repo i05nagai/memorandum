@@ -655,3 +655,4 @@ $$
 
 
 ## Reference
+* G. H. Golub and C. F. Van Loan. Matrix Computations. Johns Hopkins University Press, Baltimore, MD, USA, fourth edition, 2012
