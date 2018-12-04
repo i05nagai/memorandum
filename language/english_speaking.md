@@ -139,7 +139,6 @@ title: English Speaking
     * pick up
     * pick up speed
         * go faster, accelerate
-* carry on
 * aware
     * wer are aware of problems you'are refering to
     * people are aware of being observed
@@ -857,6 +856,17 @@ title: English Speaking
     * collide with
         * There was an accident this mornig. A bus collided with a car
 * fill
+    * fill out
+    * fill in
+        * replace
+            * to do sb else's job temporarily
+        * to write or type information on a document in spaces that are provided for it
+            * companies will encourage customers to fill in questionnaires about themselves
+            * Please print off a copy of the agreement, fill in it, sign it and send it back
+        * to do the work of sb else for a short time
+        * to tell sb sth they do not know, espl sth that happend when they were not here
+    * fill-in
+        * a person who does a job for a short period of time, for sb who is ill
     * fill something with
 * provide/offer/give
     * provide somebody with sth
@@ -1071,7 +1081,6 @@ title: English Speaking
     * Beads were used as barter in the early days of settlement
 * pacifier
 * bib
-* lay a finger
 * agonize
     * to spend a lot of time trying to make a decision
     * she agonized for days over whether she should take the job
@@ -1229,7 +1238,6 @@ title: English Speaking
     * involved with
         * if someone is involved with someone else, they have a romantic realation
     * difficult
-* commitment
 * bring
     * take
         * to take or carry someone or something to a place or a person, or in the direction of the person speaking
@@ -1728,6 +1736,8 @@ title: English Speaking
     * I had a sore throad and aching limbs
     * My arms are sore from all the lifting
 * keep
+    * keep on
+        * keep on writing
     * you want to keep your skills up-to-date
     * keep from/prevent from
         * to prevent sb from leraning about sth
@@ -2899,6 +2909,27 @@ title: English Speaking
 * timer
     * timer goes off
 * go
+    * on the go
+        * while on the go
+        * very busy
+        * in the process of being produced
+        * It also includes other features aimed at making it easy to access these calls while on the go
+    * go through
+        * be accepted
+        * to be officially accepted or approved
+        * we're hoping that the proposal for the new mall won't go through
+    * go through sth
+        * experience
+            * to experience a difficult or unpleasant situation
+            * I've been going through a bad patch recently.
+        * examine
+            * to examine sth that contains a collection of things carefully in order to organize them to find sth
+            * I'm going through my wardrobe and throwing out all the clothes I don't wear any more.
+        * practise
+            * to do sth in order to practise or as a test
+            * Why don't we go through the whole demonstration once more?
+        * use
+            * to use a lot of sth
     * go by
         * to move past, in space or time
     * go by sth
@@ -3384,9 +3415,13 @@ title: English Speaking
     * a liquid food mixture that is fed to babies instead of mother's milk
 * propotioned
     * we wandered through the beautifully proportioned rooms of the Winter Palace
-    * kj
 * yore pants is undone
 * cut
+    * cutthroat
+        * cut-throat
+        * competing in a strong and unfair way, without considering any harm caused to others
+        * a cut-throat business/market/world
+        * Scrapping of price fixing legislation led to a cut-throat battle for supermarket customers.
     * cut some slack
         * I should cut him some slack
         * Andrew's late again. Cut him some sack -- his wife just had a baby
@@ -5445,6 +5480,23 @@ title: English Speaking
         * a report to assess the impact of advertisng on children
     * assess what/how
         * the technique is being tried in classrooms to assess what effects it may have
+* assessment
+    * the act of judging or deciding the amount, value, quality, or importance of something, or the judgment or decision that is made
+        * Would you say that is a fair assessment of the situation?
+    * conduct/give/make an assessment
+        * The first thing you must do is make an assessment of the situation.
+    * a detailed/thorough assessment
+    * initial/preliminary assessment
+    * the process of considering all the information about a situation or a person and making a judgement
+    * the process of considering the amount or value of something, or the decision that is made
+        * carry out/make an assessment
+    * risk assessment
+    * self-assessment
+    * the process of calculating how much tax someone must pay, or the amount that must be paid
+        * tax assessment
+    * the process of testing, and making a judgement about , someone's knowledge, ability, skills, etc.
+        * The diploma will be awarded based on a final exam and continuous assessment throughout the course.
+        * Every new employee will need to take an English-language assessment test.
 * no matter what
     * no matter what happens to the business cycle, people will get continue to eat and get sick
     * no matte what the execuse, make a diva seem a dangerously risky investment
@@ -6153,6 +6205,8 @@ title: English Speaking
     * the MAB probelm ehibits an exploration-exploitation tradeoff
 * sprained ankle
 * throw
+    * throw into
+        * the scandal threw into question Ghosn's future as leader of the Renault-Nissan Mitsubishi-alliance
     * throw off
         * confuse
             * to cause an amount to be wrong or a person to be confused
@@ -6165,6 +6219,11 @@ title: English Speaking
         * to take off a piece of clothing in a quick careless way
         * they threw off their clothes and drive in
 * carry
+    * carry on
+    * carry out
+        * to carry out performance evaluations and staff development
+* document
+    * to document your working hours;
 * bassinet
 * permanent
     * lasting for a long time
@@ -6611,11 +6670,6 @@ title: English Speaking
         * another crop failure could result in widespread famine
         * there were reports of refugees dying of famine
         * thousands of people emigrated during the Irish potato famine of 1845-46
-* emigrate
-    * to leave a country permanently and go to live in another one
-        * Millions of Germans emigrated from Europe to America in the 19th century
-        * Thousands of Britons emigrate every yera
-        * Opportunities to emigrate to the U.S. have been severly cut back by tightened immigration rules and border controls
 * corporation/company
 * founded
 * appetite
@@ -6735,6 +6789,8 @@ title: English Speaking
 * companionship
     * a feeling of friendship
     * we need companionship to stay healthy
+* friendship
+    * In every friendship there has to be some give-and-take.
 * frinedly
     * superative adj: friendliest
 * deliberate
@@ -6788,6 +6844,14 @@ title: English Speaking
     * even minor infringements of the law will severly punished
     * an infringement claim/lawsuit
     * copyright/patent/trademark infringement
+* infringe
+    * to break a rule, law, etc.
+        * they infringed building regulartions
+        * infringe a trademark/patent/copyright
+            * the computer giant filed papers claiming that the patent of their online sofwater had been infringed
+    * infringe on/upon sth
+        * if sth infringes on/upon sb's rights or freedom, it takes away some of their rights or limits their freedom
+        * These restrictions infringe upon basic human rights.
 * lurch
     * as long as you don’t leave your team in the lurch
 * tranquil
@@ -7076,6 +7140,8 @@ title: English Speaking
     * relating to vehicles that are rented
         * a livery cab/car/driver
 * as of
+    * As of the time of writing,
+    * There does not appear to be a way to schedule a new call from the site as of yet
     * as from
     * starting from a particular time or date
         * As of next month, all the airline's fares will be going up
@@ -7358,6 +7424,8 @@ title: English Speaking
     * send over
 * hand
     * hand over
+    * have the upper hand
+        * This team has the upper hand over their opponents because of their better training.
 * articulate
     * expressing or able to express things easily and clearly
         * an intelligent and highly articulate young woman
@@ -7589,11 +7657,19 @@ title: English Speaking
         * the ocean and the atomosphere form an interactive system
 * laureate
     * a person who has been given a very high honour because of their ability in a subject of study
+* emigrate
+    * to leave a country permanently and go to live in another one
+        * Millions of Germans emigrated from Europe to America in the 19th century
+        * Thousands of Britons emigrate every yera
+        * Opportunities to emigrate to the U.S. have been severly cut back by tightened immigration rules and border controls
+* immigrate
+    * Citizens from 17 European Union countries were given freedom to immigrate to Switzerland in 2007
 * immigration
     * the act of sb coming to live in a different country
     * the process of examining your passport and other documents to make certain that you can be allowed to enter the country, or the place where this is done
 * migration
     * movement from one region to another and often back again, esp. according to the season of the year
+        * It doesn't have to be a permanent move, but migrate is more than a weekend away, and it's not just for butterflies
     * the process of a person or people travelling to a new place or country, usually in order to find work and live there temporarily or permanently
     * the process of moving or being moved from one place to another:
 * food for thought
@@ -7676,6 +7752,10 @@ title: English Speaking
         * Nonprofit organizations are exempt from taxes.
     * to excuse sb or sth from a duty, payment, etc.
         * small business have been exempted from the tax incrase
+    * with special permission not to do or pay sth
+        * be exempt from sth
+            * who is exempt from overtime?
+        * be exempt from doing sth
 * secure
     * secure
         * free from risk and the threat of change for the worse
@@ -8637,6 +8717,10 @@ title: English Speaking
 * bypass
     * This technique is similar to write through cache, but data is written directly to permanent storage, bypassing the cache
 * discard
+* dump
+* dispose
+    * dispose of
+* disposal
 * range
     * participants researced topics ranging from computational biology and pharmacology to astronomy and engineering science.
 * recruit
@@ -9558,8 +9642,6 @@ title: English Speaking
     * Bob's your uncle
         * used to mean that sth will happen very quickly and simply
         * Just tell them yor're a frined of mine, Bob's your uncle, you'll get the job
-* tub
-    * a tub of water
 * Christianity
     * the Christian faith, a religion based on the belief in one God and on the teaching of Jesus Christ, as set forth in the Bible
     * a religion based on belief in God and the life and teachings of Jesus Christ, and on the Bible
@@ -9597,11 +9679,16 @@ title: English Speaking
     * Teachers may use their own discretion when marking the exam.
     * choice, or the right to make a choice, based on judgment
     * careful behaviour
+        * the ability to behave without causing embarrassment or attractin too much attention, esp. by keeping information secret
         * Can you trust him with this? Yes, he's the soul of discretion
     * right to choose
         * the right or ability to decide sth
         * students can be expelled at the discretion of principal
         * I leave the decision to your discretion
+        * at sb's discretion/at the discretion of sb
+        * exercise/use your discretion
+        * leave it up to sb's discretion/leave it up to the discretion of sb
+        * broad/complete/considerable discretion
     * exercise/use (your) discretion 
     * leave it to sb's discretion/leave it up to the discretion of sb
 * hassle
@@ -9668,6 +9755,10 @@ title: English Speaking
 * payment
     * payment instruction
 * sign
+    * sign in
+        * to write your name on a form when entering or leaving a place
+        * to sign your name in a book when you arrive at an office, hotel, etc. to show that you have arrived and are in the building
+            * remember to sign in when you arrive at the conference
     * sign off
 * kick
     * kick off
@@ -10203,10 +10294,6 @@ title: English Speaking
     * to drink
     * to drink, esp. alcohol
     * to receive and accept information etc.
-* hot tub
-    * a large container full of heated water in which more than one person can sit
-* jacuzzi
-    * never before has a man-sized pothole been turned into a jacuzzi.
 * lounge
     * room
     * relax
@@ -10854,6 +10941,8 @@ title: English Speaking
 * geld
 * desex
 * sterilize
+    * clean
+    * stop children
 * puny
     * puny insects
     * small; weak; not effective
@@ -11013,9 +11102,22 @@ title: English Speaking
     * to be nosy
 * commit
     * promise
+        * to promise to give yourself, your money, your time, etc. to support sth
+            * they wouldn't commit enough time or money to the project
     * put
+        * to actively put informatin in your memory or write it down
+        * these rules must be committed to memory
+        * I wouldn't want to commit these comments to paper
     * crime
+        * to do sth illegal or considered wrong
+        * he committed a crime in providing the information to a reporter
     * send for treatment
+        * to cause sb to stay in a mental hospital or treatment center
+        * he was once committed to a state mental hospital
+* commitment
+    * a promise to give yourself, your money, your time, etc. to support or buy sth
+        * Try the product for two weeks with no commitment to buy
+    * a willingness to give your time and energy to something that you believe in, or a promise or firm decision to do something
 * allegiance
     * support for a leader, country, group, or belief
     * loyalty and support for a ruler, country, group, or belief
@@ -11273,6 +11375,15 @@ title: English Speaking
     * a short stay at a place in the middle of a trip
     * We had a three-hour layover in San Francisco and had to change planes on the way to Hawaii.
     * We had a four-hour layover in Chicago.
+* lay
+    * lay a finger
+    * lay off
+    * layoff
+        * an act of ending a worker’s job, esp. when the worker has done nothing wrong
+            * Executives say no layoffs are expected as a result of the merger.
+            * the recent economic crisi has led to massive layoff
+        * work
+        * football
 * inauguration
     * the act of officially putting someone into an important position, or the ceremony at which this is done
 * booming
@@ -11314,7 +11425,10 @@ title: English Speaking
     * to some extent
         * partly
         * to some extent, she was responsible for the accident
-    * to what extent
+    * to such an extent
+        * so much
+        * the car was damaged to such an extent that it coulnd't be repared
+    * to what extent?
         * when you are discussing how true a statement is, or in what ways it is true.
         * it's still not clear to what extent this critcism is originating from within the ruling party
         * To this extent, SRE's automation efforts are not far off what many other poeple and organizations do
@@ -11499,7 +11613,11 @@ title: English Speaking
 * those people who are familiar with your talents and work ethic and are willing to vouch for you
 * attest
     * (of a person) to state with authority that something is true, or (of a situation or event) to show that something is likely to be true
-    * As one who worked there for years, I can attest that applications are carefully reviewed.
+        * As one who worked there for years, I can attest that applications are carefully reviewed.
+    * to show something or to say or prove that something is true
+        * Thousands of people came out onto the streets to attest their support for the democratic opposition party.
+        * The will needs to be attested (= officially marked to show that the signature of the person who made the will is correct) by three witnesses.
+    * to sign a document to show that you were present when it was signed by someone else
 * vouch
     * to be able from your knowledge or experience to say that something is true
     * As a medical examiner I can vouch that his death was accidental.
@@ -11510,11 +11628,6 @@ title: English Speaking
     * not asked for
     * The proposed law would force senders of unsolicited e-mail to provide a valid return address.
     * unsolicited advice
-* cutthroat
-    * cut-throat
-    * competing in a strong and unfair way, without considering any harm caused to others
-    * a cut-throat business/market/world
-    * Scrapping
 * perfunctory
     * done quickly and without showing that you care or have much interest
         * his smile was perfuctory
@@ -11531,6 +11644,15 @@ title: English Speaking
     * it seemed pointless to continue
 * compassion
     * a strong feeling of a sympathy and sadness for other people's suffering or bad luck and a desire to help
+    * I was hoping she might show a little compassion.
+    * feel compassion
+    * have compassion
+    * show compassion
+    * compassion for
+        * compassion for the sick
+    * with compassion
+        * He explores this senstive topic with compassion
+        * I was shocked by the doctor’s lack of compassion
 * mind-numbing
     * extremely boring
 * for god's sake
@@ -11600,6 +11722,11 @@ title: English Speaking
 * springboard
     * a board that bends when you jump on the end of it, used to help you jump higher in some sports or physical exercises
     * A springboard is also something that provides an opportunity to achieve something
+    * something that is a basis from which other things grow or develop
+        * a springboard for/to/into sth
+            * Manufacturing facilities abroad could be a springboard for our expansion in a market
+        * a springboard to do sth 
+            * They intend to use the £150 million acquisition as a springboard to buy other food brands.
 * humidifier
     * run the humidifier
     * If the air in your house is dry, a  mist humidifier or vaporizer can moisten it to ease congestion and coughs. 
@@ -11662,6 +11789,11 @@ title: English Speaking
 * proviso
     * a condition attached to an agreement.
     * a statement in an agreement, saying that a particular thing must happen before another can
+        * he was released from prison with/on the proviso that he doesn't leave the country
+    * a part of a legal document that states that sth must happen or be done
+        * contain/include/carry a proviso 
+        * with/on the proviso that
+            * we are currently offering a new investment fund whose return tracks the FTSE 100, with the proviso that it can only fall by 5% a quarter
 * overpayment
     * salary overpayments are to be returned in full
 * consent
@@ -11693,7 +11825,7 @@ title: English Speaking
     * the airline reimbursed me for the amount they had overchaged me
     * we will reimburse all costs
     * travel expenses will be reimbursed
-* substantiated
+* substantiate
     * to show something to be true, or to support a claim with facts
     * They have enough evidence to substantiate complaints of vandalism.
 * calendar
@@ -11701,12 +11833,20 @@ title: English Speaking
         * Twelve-month period starting with January 1 and ending with December 31, and which has 365 days in non leap years and 366 days in a leap year.
 * accrue
     * to incease over a preriod of time, or to get an amount to get an amount of sth gradually over time
-    * Interest on this savings account accrues at the rate of 4 percent
+        * Interest on this savings account accrues at the rate of 4 percent
+    * to increase in number or amount over a period of time
+        * Interest will accrue on the account at a rate of seven percent.
 * recognisable
 * seizure
     * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
     * It can cause changes in your behavior, movements or feelings, and in levels of consciousness.
 * honorary
+    * given as a reward, without qualifying in a standard way
+    * given as an honour to sb who has not done a course of study
+    * an honorary position in an organization is one for which no payment is made
+        * Charities often have a well-known person as their honorary treasuer
+    * given to sb in order to show respect for their achievements rather than through study, payment, etc.
+        * honorary award/degree/membership
 * confidentiality
     * duty of confidentiality
 * post
@@ -11731,6 +11871,14 @@ title: English Speaking
     * to tell people officially that something you said earlier is not true or correct
 * forbidden
     * The Employee is further forbidden from establishing, acquiring, or directly or indirectly holding shares in such a company for the term of this Employment Agreement
+    * not allowed, esp. by law
+        *  smoking is forbidden in the cinema
+    * not permitted, es;. by rule or law
+        * Automobiles are forbidden on the island
+        * he was strictly forbidden to talk with them
+    * forbidden fruit
+        * sth, esp. sth sexual, that is even more attractive because it is not allowed
+        * he was always drawn to other men's wives -- the forbidden fruit
 * insofar
     * insofar as
         * to the degree that
@@ -11754,23 +11902,60 @@ title: English Speaking
     * slow
         * old-fashioned or slow
 * vertical
+    * standing or pointing straight up or at an angle of 90 to a horizontal surface or line
+    * Water that had leaked from above formed a vertical line down one wall
+    * line
+    * business
+        * vertical market
+        * a market consisting of businesses that supply products and services each other
+        * their strategy is to focus on software and services for vertical markets
+        * tech verticals
+    * a vertical line, etc. goes straight up or down rather than accross
+        * the vertical columns of the table were headed with the months of the year
+    * used to describe the different ranks of managers and workers in an organization
+        * the vertical structures of the past are less popular now that decision-making and innovation are encouraged at all operating levels
+    * used to describe the different srtages of an industrial or commercial process, and the organization involved
+        * vertical agreement/market/restraint
 * glacial
     * not frinedly
+        * she gave me a glacial smile/stare
     * ice/cold
+        * made or left by a glacier
+            * glacial deposits
+        * extremly cold
+            * glacial temparatures
+            * a glacial period
 * post-contractual
 * non-competition clause
 * the non-competition clause shall not exceed a maximum duration of one year
 * lapse
     * failure
+        * a failure to do sth that happens as a particular event at a particular time
+        * a memory lapse
     * period
+        * a period of time after an event or between two events
     * end
+        * to end sth, either intentionally and accidentally, that might be continued or that should continue
+        * I must have let my subscription lapse, because I haven't received any issures of the magazine in months
 * supersede
     * to replace something older, less effective, or less important or official
     * supersede a law/regulation/sb's authority
+    * if a law, rule, agreement, etc. supersedes another, it replaces it
+        * be superseded by sth
+            * If the Bill is passed, it will supersede the Fed's authority.
+        * supersede a law/regulation/sb's authority
+    * if a process, system, or product supersedes another, it replaces it because it is more modern or becomes more popular
+        * the internet seems to have superseded every mode of communication ever invented
+        * be superceded by sth
+            * Phones using 2.5G technolgy were superseded by third-generation 3G phones
 * marital
     * marital status
         * a person's state of being single, married, separated, divorced, or widowed.
 * loophole
+    * a corporate/legal/tax loophole
+        * He has pledged to close a tax loophole that has allowed US firms to take business and jobs abroad.
+    * a loophole in sth
+        * Determined landlords found it easy to exploit loopholes in the law.
     * an opportunity to legally avoid an unpleasant responsibility, usually because of a mistake in the way rules or laws have been written
     * a small mistake in an agreement or law that gives someone the chance to avoid having to do something
 * That's the same month as Halloween
@@ -11778,6 +11963,7 @@ title: English Speaking
     * The Company is an affiliate of Super Bank (hereinafter Super )
 * inter alia
     * among other things
+    * The company began legal proceedings against their former employee, claiming, inter alia, breach of contract.
 * subcontractor
 * outsourcing agreement
 * service contact
@@ -11801,6 +11987,8 @@ title: English Speaking
 * addendum
     * plural: addenda
     * something that has been added to a book, speech, or document
+    * an addendum to sth
+        * An addendum to the contract stated that the buyer would be responsible for all transportation costs.
 * supplement
 * postscript
 * unless otherwise stated explicitly in this agreement
@@ -11812,16 +12000,24 @@ title: English Speaking
 * repatriation
 * repatriate
 * commencement
-* claw back
-    * clawback
-        * a situation in which a government or company takes back money that it has already paid
-        * A Parliamentary motion called for the clawback of tax credit overpayments
-        * a clawback clause/provision
-            * Company clawback provisions would force executives who commit fraud to return bonuses and pay
-        * a gradual increase in the price of a share after it has gone down
-            * The airline managed a clawback of 4.1% of Monday's 7% fall.
-        * an offer to investors who already own shares in a company the right to buy some of the shares that it has offered to new investors
-            * New shares were placed on a 6% discount to the market price, with a clawback to existing company shareholders.
+    * the beginning of sth
+    * A commencement is also a ceremony which students formally receive their diplomats
+* claw
+    * one of the sharp, curved nails at the end of each of the toes of some animals and birds
+    * to cut esp. flesh with calws
+    * Someone who claws his or her way somewhere uses a lot of effort to achieve something
+        * The team trailed, 24–13, after one quarter but clawed to 26–18 by halftime.
+    * claw your way
+    * claw back
+        * clawback
+            * a situation in which a government or company takes back money that it has already paid
+            * A Parliamentary motion called for the clawback of tax credit overpayments
+            * a clawback clause/provision
+                * Company clawback provisions would force executives who commit fraud to return bonuses and pay
+            * a gradual increase in the price of a share after it has gone down
+                * The airline managed a clawback of 4.1% of Monday's 7% fall.
+            * an offer to investors who already own shares in a company the right to buy some of the shares that it has offered to new investors
+                * New shares were placed on a 6% discount to the market price, with a clawback to existing company shareholders.
 * disburse
 * property
     * viewings
@@ -11838,6 +12034,371 @@ title: English Speaking
 * impeccable
     * without mistakes or faults; peferct
     * impeccable manners/taste
+* ballroom
+* ball
+    * dance party
+        * The word "ball" derives from the Latin word ballare, meaning to dance
+        * a fromal dance party
+        * royal ball
+* doofus
+    * what's doofus spelled backwards
+* handwritten
+    * handwritten wet signatures
+* substantial
+    * large
+    * general
+    * relating to the main of most important things being considered
+* line
+    * in line with
+        * similar to, or at the same level as sth
+        * the company's results are in line with stock market expectations
+        * we're seeking a pay rise that's in line with inflation
+* landloard
+    * a person who owns builiding or an area of land and is paid by other people for the use of it
+    * owner
+        * a person or organization that owns a a building or an area of land and is paid by other people for the use of it
+    * bar manager
+        * a man who is charged of a pub or bar
+    * absentee
+* landlady
+* regulate
+    * The Act regulates under what conditions it is permissible to treat various types of personal information
+* engagement
+    * external engagement
+        * External engagements are the efforts that a company makes to manage how it interacts with the external world.
+* disclose
+* up-and-running
+    * in operation; functioning
+    * The URL meet.google.com, however, is somewhat up-and-running
+* dial-in numbers
+    * is a special number used for participating in conference calls
+* underreport
+    * will be fired for allegedly underreporting his income and misusing company funds.
+* for the time being
+    * at this time
+    * the uinion voted not to strike for the time being
+    * the situation seems to be peaceful, for now at least
+* repel
+    * to enforce and repel legal claims
+        Any violation of the provisions of data protection law can be punished with imprisonment
+* rem
+    * non rem sleep
+        * and non-REM or non-rapid eye movement sleep
+    * rem sleep
+        * which stands for "rapid eye movement,"
+* secrecy
+* culprit
+* simultaneously
+* appraise
+    * to judge the quality, success, or needs of sb or sth
+        * Social wokers appraise the needs of each family
+    * Appraise also means to judge the worth of sth
+        * A professional appraised my jewelry
+    * At the end of each teaching practice, trainee teachers are aksed to arraise their own performance
+    * He coolly appraised the situation, deciding which person would be most likely to succeed
+    * to estimate the value, condition, quality, etc. of sb or sth after a careful examination
+        * appraise sth for/at sth
+            * the entire property is appraised at 7.2 million dollars
+        * appraise sth for sth
+            * the artwork was appraised for 10 million dollars
+    * to meet with an employee to discuss their progress, aims, and needs at work
+        * Senior staff appraise their day-to-day work, while mentors are on hand to offer general career advice.
+* appraisal
+    * I was pleased with the appraisal of my work.
+* abreast
+    * next to another person and facing in the same direction
+        * we were running two abreast around the track
+        * We were running/swimming two abreast
+    * if you keep abreast of a subject, you stay informed about new developments in it
+        * Staying abreast of new software releases takes a lot of time
+    * keep abreast of sth
+        * to make sure you know all the most recent facts about a subject or situation
+        * I try to keep abreast of any developments
+* veritable
+    * used to describe sth as another, more eciting, interesting, or unusual thing, as a way of emphasizing its character
+        * My garden had become a veritable jungle by the time I came back from holiday
+    * a word used to emphasize a description of someone or something
+        * The area is a veritable paradise for those who love walking and swimming
+* kaleidoscope
+    * a tube-shaped device containing loose pieces of colored glass or plastic and mirrors which reflect changing patterns as the tube is turned
+    * a changing and enjoyable mixture and pattern
+        * The street bazaar was a kaleidoscope of colours, smells, and sounds.
+* mural
+    * a large picture painted on a wall
+    * a large picture that has been painted on the wall of a room or building
+* assurance
+    * a promise
+        * she gave me her assurance that she would sign the contract immediately
+        * Despite the government's repeated assurances to the contrary, taxation has risen over the past decade.
+    * confidene
+        * confidence
+        * he spoke with calm assurance
+    * insurance
+* prosecution
+    * legal
+        * the act of prosecuting sb
+        * A number of the cases have results
+    * the prosecution
+        * the laywers in a court case who represent the side that accuses sb of committing a crime
+        * His plea of guilty to manslaughter was not accepted by the prosecution.
+    * activities
+* prosecute
+    * legal
+        * to officially accuse sb of committing a crime in a law court, or (of a lawyer) to try to prove that a person accused of committing a crime is guilgty of that crime
+        * Shoplifters will be prosecuted
+        * he was prosecuted for fraud
+        * tresspassers will be prosecuted
+        * prosecute sb for sth
+            * In this area, 26 people have been prosecuted for mortgage fraud in the past three year
+    * continue
+        * to continue to take part in a planned group of activities, esp. in a war
+            * he seemed convinced that the U.S. would prosecute the war to its end
+* clutch
+    * hold
+        * to hold or try to hold sth tightly, often because of a state of fear or anxiety
+        * The preschooler clutched his mother tightly.
+        * Slient and pale, she clutched ont her mother's hand
+    * vehicle
+    * group
+    * bag
+    * performing well
+        * able to do sth when it is esp. needed
+    * machine part
+    * group
+    * control
+        * sb's clutches
+            * the control of sb
+            * He is in the clutches of that woman
+            * he has fallen into the clutches of that woman
+* crunch
+    * make noise
+    * calculate
+    * difficulty
+    * noise
+    * an exercise
+        * an exercise in which you lie on your back on the floor with your knees bent and your feet flat on the floor, and then raise your head ans shoulder
+        * Doing crunches every day strengthens your abdominal muscles.
+    * crunch (the) numbers
+        * to deal with data by performing a large numnber of calculations
+        * we hired a major accounting firm to crunch the numbers 
+        * we believe we have made a profit, but we haven't crunched the numbers yet
+* crutch
+    * a stick with a piece that fits under or around the arm which sb who is having difficulty walking leans on for support
+    * Marty was on crutches for six weeks when he broke his leg
+* crouch
+    * to bend your knees and lower yourself so that you are close to the ground and leaning forward slightly
+    * she crouched down behind a bush to hide
+    * she saw him coming and crouched down behind a bush
+* squat
+    * sit
+    * live
+        * to live in an empty building or area of land without the permission of the owner
+        * they suatted (in) an old house in King's Cross when their money ran out
+    * short
+        * short and wide, usually in a way that is not attractive
+    * sitting
+        * a squatting position
+    * exercise
+        * an exercise in which you stand on the ground with your feet apart and raise and lower your bottom by bending and straightning your legs
+    * place to live
+        * the place that you live in when you are squatting
+    * anything
+        * she shouldn't talk -- she doesn't know squat about it
+        * his opinion isn't worth squat
+* name
+    * given name
+        * first name
+    * maiden name
+        * the family name of a woman before she gets married and begins to use her husband's family name
+* payroll
+    * a list of the people employed by a company showing how much each one earns
+        * the company is grwoning fast, and increasing the number of staff on its payroll
+    * the total number of people employed by a company, or in economy
+        * the reduction in temporary hiring has led to the second successive month of falling payrolls
+    * the total amount of money paid to the people employed by a particular company
+        * With debts of 4 million dollars and a monthly payroll of 1.2 million dollars, the venture is clearly heading for trouble.
+        * payroll costs
+    * the activity of managing the money that is paid to employees
+        * payroll administration/records/system
+        * his work is to manage the billing and payroll
+    * be on the payroll
+        * to be employed by a particular company
+        * the company yesterday confirmed that she was no longer on its payroll as a paid consultant
+* retention
+    * retention period
+        * Number of years prescribed by a law for which certain records must be kept before their final disposition.
+* severely
+    * severely disabled adult
+        * HUD "presumes" that severely disabled adults are lower income, and therefore agencies who serve this population do not have to document income status
+* outstanding
+    * excellent
+        * very much better than usual; excent
+        * you've done an outstanding job
+    * not finished
+        * not yet done, solved or paid
+        * My credit cards usually have an oustanding balance
+* sink
+* shower
+* toilet
+* bathroom
+    * Full = Tub, sink, toilet
+    * 3/4 = Shower without tub, sink, toilet
+    * 1/2 = Sink and toilet
+* washroom
+* tub
+    * a tub of water
+    * hot tub
+        * a large container full of heated water in which more than one person can sit
+* jacuzzi
+    * never before has a man-sized pothole been turned into a jacuzzi.
+* resident
+    * living or staying in a place
+        * resident in France/London etc.
+            * If you want to take a British driving test you must be resident in the UK.
+    * used to refer to sb who has a special skill or quality in a group or organization
+        * she is the university's resident expert on Italian literature
+        * He is the company's resident crown
+    * sb who stay in a hotel
+        * the hotel bar was only open to residents
+    * a person who has the legal right to live in a particular country that they were not born in
+        * you will be considered a US residnet for tax purposes
+    * sb who live in a place
+        * the local residents were angry at the lack of parking spaces
+    * medical
+* consular
+    * relating to consul or a consulate
+    * the consular office
+    * consular officers/officials/staff
+    * consular affairs/services/work
+* consul
+    * a government official who lives in a foreign city in order to take care of the people from the official’s own country who are traveling or living there and to protect the trade interests of that government
+    * an official chosen by a government to live in a foreign city, in order to take care of people from the official's own country who travel or live there, and to protect the trade interests of that government
+        * the German Consul
+        * the US Consul in Shanghai
+* consulate
+    * the offices or buuillding used by a consul
+    * the Cuban consulate in Mexico City
+* recover
+    * to get better after an illness or a period of difficulty or trouble
+    * To recover something is to find or get back the use of something lost or taken away
+    * to become completely well again after an illness or injury
+        * It took her a long time to recover from/after her heat operation
+* heal
+    * to make or become healthy or whole again
+    * The wounds were gradually healing (up)
+* whole
+    * all of sth; the full amount
+    * whole can also mean in one piece
+    * Whole can also be used to emphasize sth
+    * complete or not divided
+    * used to emphasize sth
+* likelihood
+    * There is a strong likelihood that the company will have to lay off workers.
+* jobless
+    * compared to the overall jobless rate of 4.5 percent
+* patronize
+    * treat badly
+    * act superior
+    * be customer
+* mood
+    * The mood at the office these days is very tense.
+* lexicographer
+    * Her husband is a lexicographer and now working hard on a new dictionary.
+* lexicography
+    * the activity or job of writing dictionaries
+* shortlist
+    * He made the shortlist but I don't think he'll win.
+    * a list of people who have been judged the most suitable for a job or prize, made from a longer list of people originally considered, and from which one person will be chosen
+        * we've drawn up a shortlist for the job
+        * she's on the shortlist for a first novel prize
+        * draw up a shortlist
+        * make a shortlist
+        * on a shortlist
+            * Candidates on the shortlist had three interviews each.
+        * shortlist sb for sth
+            * Two companies have been shortlisted for the contract.
+    * to put sb or sth on a shortlist
+* referendum
+    * a vote in which all the people in a country or an area are asked to give their opinion about or decide an important political or social question
+    * Is it more democratic to hold a referendum, rather than let the government alone decide?
+    * The MP insisted that it's time to hold a referendum on whether or not to stay in the European Union
+* toxic
+* poisonous
+* gammon
+    * an older middle-class white man whose face becomes [red] due to anger when expressing (typically right-wing) political opinions
+* techlash
+    * It is a negative feeling toward big technology companies like Facebook and Apple
+* youthquake
+    * cultural, political, or social change that has taken place because of the actions or influence of young people
+* comforter
+* invoice
+* stray
+    * stray cats
+* abandon
+* streak
+    * mark
+        * Streaks of gray and black colored the marble
+        * The comet appeared as a dazzling streak in the sky.
+    * characteristic
+        * an obvious characteristic in a personality
+        * an ambitous/competitive/independent streak
+        * a streak of determination/independence/arrogance
+    * period
+        * a period during which a series of things happens
+    * move fast
+        * to move quickly
+        * the space shuttle rose from its launching pad and streaked into the sky
+    * mark
+        * to make lines of a different color in or on sth
+        * her cheeks were streaked with sweat and dirt
+* tenacity
+    * the determination to continue what you are doing
+* grit
+    * stones
+        * a very small piece of stone or sand
+    * bravery
+        * baravery and strength of character
+    * grit your teeth
+        * to deal with a difficult or unpleasant situation in a determined way
+            * I hate going to the gym, but I just grit my teeth and try to get through it.
+        * to press your top and bottom teeth together, often in anger
+            * He gritted his teeth in silent fury.
+    * press
+* spade
+    * in spades
+        * in large amounts or to a very great degree
+        * my dog has personality in spades
+        * whatever you want to call it, you have it in spades!
+* MP
+    * member of parliament
+    * a person who has been elected to the parliament of a country:
+* revenue
+    * Netflix’s main source of revenue is subscriptions, which cost between $7.99 and $13.99 per month.
+* gold digger
+    * someone, usually a woman, who tries to attract a rich person, usually a man, in order to get presents or money
+* notary
+    * an official who has the legal authority to say that documents are correctly signed or true or to make an oath (= promise) official
+    * This agreement was drawn up and verified by a notary.
+* school-leaving certificate
+    * it may alternatively be known as a 
+        * school leaving certificate
+        * school leaving qualification
+        * high school diploma
+        * school certificate
+        * senior certificate
+        * certificate of education
+    * is an academic qualification awarded for the completion of high school. 
+* vocational
+    * providing skills and education that prepare you for a job
+    * vocational training/education
+    * the school offers vocational programs in welding, electrical work, and building maintenance
+    * vocational training/course/program
+        * People with inadequate vocational training find it difficult to re-enter the workforce.
+* cornerstone
+    * stone in building
+    * most important part
+        * sth of great importance on which everything else depends
+        * Rules run in Aggregation is the cornerstone of rule evaluation in a distributed environment
 
 
 
