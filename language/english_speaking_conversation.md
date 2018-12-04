@@ -91,6 +91,15 @@ title: English Conversation
 * I’m out or I’m out of here
 * I gotta jet, I gotta take off, I gotta hit the road or I gotta head out
 
+## How are you?
+* [In the U\.S\., if someone asks "How are you?" and you're feeling sick, how should you answer? \| Ask The Editor \| Learner's Dictionary](http://learnersdictionary.com/qa/How-are-you-and-How-to-answer-)
+
+* I've been better.
+* Not that great, thanks.
+* I think I'm coming down with something. (=I'm starting to get sick from a cold or other virus.)
+* Fine, thanks.
+* How are you? I'm good. How about you? 
+* I'm okay, thanks.
 
 ## Reference
 * [17 Smart Ways to Say Goodbye in English \| FluentU English](https://www.fluentu.com/blog/english/say-goodbye-english/)
