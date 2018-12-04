@@ -3,6 +3,31 @@ title: English word choice
 ---
 
 ## English word choice
+* plan/prepare/put/arrange schedule
+    * I draw up a schedule
+    * prepare a schedule
+    * create schedule
+    * work out schedule
+    * plan a aschedule
+    * design a schedule
+    * arrange a schedule
+* state/gaze/peer/glance/glimpse/peep/peek
+    * state
+        * to look at sth/sb per long time
+    * gaze
+        * to look sb for a long time, esp. with surprise or love, or because you are thinking
+    * glare
+        * to look angrily at sb/sth for long time
+    * peer
+        * to look at sth with attention
+    * glance
+        * to look at sb/sth very quickly
+    * glimpse
+        * to see something/somebody for a very short time, when you do not see the person or thing completely.
+    * peep
+        * to look quickly and secretly sth, esp. through a small opening
+    * peek
+        * to look at sb or sth secretly esp. from a hidden place
 * guest/customer/client
     * [the difference between words: customer, client and guest \| English Help Online's Blog](https://englishhelponline.me/2011/04/18/the-difference-between-words-customer-client-and-guest/)
     * customer
@@ -69,6 +94,8 @@ title: English word choice
 * the foreseeable future
     * [What Does "The Foreseeable Future" Mean for Investors?](https://www.fool.com/investing/general/2015/08/28/what-does-the-foreseeable-future-mean-for-investor.aspx)
 * as to/as for
+    * [As to ‘as to’… \| Sentence first](https://stancarey.wordpress.com/2008/08/30/as-to-as-to/)
+        * we can probably agree that as to is fine when introducing a new subject, or returning to a subject that was mentioned only briefly before
     * [with regard to/concerning\.](https://ell.stackexchange.com/questions/46168/difference-between-as-for-and-as-to)
     * as for
         * with regard to/concerning.
