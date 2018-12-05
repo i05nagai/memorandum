@@ -2752,6 +2752,9 @@ title: English Speaking
     * The man had been arrested serveral times for molesting young boys
     * United states premises were looted and personnel were molested by demonstrators
 * loot
+    * My neighbor's shop was broken into and looted two days ago.
+* clash
+    * At least 14 people were injured when protesters clashed with the police
 * rabid dog
     * a rabid dog would be feasting on your danglers
 * dangler
@@ -2785,6 +2788,11 @@ title: English Speaking
 * in lieu of
     * instead of
     * The company is allowing workes to recieve cash in lief of vacation time
+    * time-off-in-lieu
+        * time off in lieu
+            * TOIL
+        * time that an employee who has worked extra hours may take off from work
+        * Google offers time-off-in-lief or straitght cash compensation
 * spell
     * spell out
         * to explain something in a very clear way with details
@@ -5954,6 +5962,10 @@ title: English Speaking
     * she reworded sensitive are of the report so that it wouldn't be controversial
 * fantasize
 * daunt
+    * to make sb feel slightly frightened or worried about his or her ability to achieve sth; to discourage
+        * she's not at all daunted by criticism
+        * She was not at all daunted by the size of the problem.
+    * It's important that on-call SREs understand that they can rely on several rsources that make the experience of being on-call less daunting than it may seem
 * woo
 * conquer
     * conquer their heat
@@ -6452,6 +6464,7 @@ title: English Speaking
     * criticize
         * to criticize sth or sb strongly, usually for moral reason
         * the movie was condemned for glorifying violence
+        * Saudi Arabia has been repeatedly condemned for human rights violations
     * punish
         * to severely 
     * call not safe
@@ -7578,6 +7591,7 @@ title: English Speaking
         * the act of considering one thing to be the same as or equal to another
 * pressure
     * I work on pressure
+    * the importance and the impact of the services and the consequences of potential outages can create significnat pressure on the on-call engineers
 * demeanor
     * I have calm demeanor
     * a way of looking and behaving
@@ -7686,7 +7700,7 @@ title: English Speaking
         * weakness was transient , soon I was feeling strong again
         * transient workers come to pick apples and then head south to harvest other cops
     * transient also means staying for only a short time
-* invocation
+* invoke
     * call for help
         * to call on sth or sb esp. God, for help
     * use
@@ -7695,6 +7709,8 @@ title: English Speaking
     * to make a computer program start working
         * You may have to invoke the program from the command line.
         * you must learn to prioritize your work
+        * invoke sth from sth
+* invocation
 * learn
     * learn the ropes
         * If you are learning the ropes, you are learning how a particular task or job is done.
@@ -7843,6 +7859,7 @@ title: English Speaking
     * causing harm or damage
     * these chemicals have a detrimental effect/impact on the environment
     * their decision could be detrimental to the future of the company
+    * Night shifts have detrimental effects on people's health
 * availability of substitutes
 * enrich
     * improve
@@ -10619,6 +10636,7 @@ title: English Speaking
     * the process of quickly examining patients who are taken to a hospital in order to decided which ones are the most seriously ill and must be treated first
     * the casualities were triaged
     * the team spent significant amounts of time triaging the alerts to find the few that were really actionable
+    * Doing so allows the on-call engineer to focus on the incident instead of triaging duplicate alerts
 * remedy
     * to remedy the situation, 
 * pronged
@@ -11484,6 +11502,8 @@ title: English Speaking
     * air
     * make worse
     * fan out
+        * fan-out
+            * the number of inputs that can be connected to a specified output.
         * to speard over a wide area
             * The police fanned out over the west side of the park.
         * If a group of people fan out, they move in different directions from a single point.
@@ -12399,6 +12419,99 @@ title: English Speaking
     * most important part
         * sth of great importance on which everything else depends
         * Rules run in Aggregation is the cornerstone of rule evaluation in a distributed environment
+* reference
+    * mentioning
+    * statement
+    * connection
+    * authority
+    * mention
+    * in a piece of writing
+    * letter
+    * look at
+    * for future reference
+        * in order to be looked at for information in future
+    * for future reference,
+        * used when telling sb sth so they know about it in future
+    * in/with reference to sb/sth
+        * used, esp. in business letters, to say what you are writing or talking about
+        * I am writing with reference to your letter of 15th March
+    * terms of reference
+        * the subjects or questions which a study or report is intended to include
+    * to refer to sb or sth
+* capiche
+    * capeesh
+    * capiche?
+        * used to ask if sb understands, in a way that is intended to sound italian, or to sound threatning
+        * I'm not in the Mafia. Never was. Capiche?
+* what's your sign?
+    * what's your zodiac sign?
+* horoscope
+    * a description of what is going to happen to you, based on the position of the stars and planets at the time of your birth
+    * I read my horoscope most days
+    * My horoscope said I was going to be lucky in love this month
+* astology
+* holo
+    * a hologram
+    * a ring of light around or above the head of a holy person in a religious drawing or painting
+* untimely
+    * the untimely murder of one human being by another
+* acknowledge
+    * As soon as a page is received and acknowledged
+* clergy
+* tenet
+    * This chapter describes the primary tenets of the approach to on-call that Google's SREs have developed over years
+* deify
+    * to make sb or sth into a good
+    * to consider someone or something to be so important that they are almost like a god
+* inexorably
+* inexorable
+    * continuing without any possiblity of being stoppedd
+    * Aging is an inexorable process.
+* endanger
+* hormone
+    * Stress hormones like cortisol and corticotropin-releasing hormone (CRH) are known to cause behavioral consequences
+* impair
+* subsume
+    * to include something or someone as part of a larger group
+* nimble
+    * quick and exact in movement or thought; aglie
+    * a nimble mind
+    * He tried to catch his friend, but she was too nimble.
+* spry
+    * active and able to move quickly and energetically
+* demystify
+    * to make sth easier to understand
+        * What I need is a book that will demystify the working of a car engine for me
+* propagate
+    * After the update propagates, typically within a few seconds, 100% of function invocations execute the new version. 
+* instantaneously
+* instantaneous
+    * happening or completed immediately, without any delay
+    * TV has conditioned us to expect instantaneous answers to difficult questions.
+* immediately
+* instant
+    * a very short moment of time, or a particular point in timev
+* jiffy
+    * a very short time
+    * I'm on the phone, but I'll be with you in a jiffy
+* flash
+* trice
+    * in a trice
+        * in a very short time
+        * Jim had the wheel mended in a trice.
+* engulf
+    * Flames engulfed the building.
+* justify
+    * to show that something is reasonable, right, or true
+* citizen
+* habitual
+    * habitual responses are uncosidered, which means they can be disastrous
+* disastrous
+* methodology
+    * the ideal methodology in incident management strikes the perfect balance oftaking steps at the desired pace
+* blame
+* blameless
+    * A blameless postmortem culture
 
 
 
