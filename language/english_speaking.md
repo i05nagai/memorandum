@@ -2067,6 +2067,7 @@ title: English Speaking
     * The terrible experience seemed to have unhinged him slightly
     * The stress of the job has unhinged many workers
 * fall
+    * as licenses for the company's Windows system fell due to a sharp drop in sales of personal computers
     * fall asleep
     * Computer, software and semiconductor shares fell for a second day
     * More than 7 stocks fell for every 4 that rose on the NYSE
@@ -2553,6 +2554,10 @@ title: English Speaking
 * reside
     * The family now resides in southern France
     * The family resides in Arkansas
+    * to live in a place
+    * reside in sth/sb
+        * If a power or quality resides in someone or something, the person or thing has that power or quality
+        * The power to sack employees resides in the Board of Directors.
 * nod
     * nod along
 * mitzvahs
@@ -2686,15 +2691,6 @@ title: English Speaking
 * Now the filet mignon what comes with that?
 * irresistible
     * If I want to kiss girl, first things I do is make my lips look irresistible
-* menace
-    * Dogs running loose are a public menace
-    * the menace of industrial pollutino
-    * He had a slight air of menace which made me uneasy
-    * He spoke with a hint of menace
-    * demand money with menaces
-        * He was accused of unlawfully demanding money with menaces
-    * v
-        * Hurricane Hugo menaced the eastern coast for a week
 * ordane
     * church
         * He was ordained as a priest in Ely cathedral in 1987
@@ -2794,6 +2790,8 @@ title: English Speaking
         * time that an employee who has worked extra hours may take off from work
         * Google offers time-off-in-lief or straitght cash compensation
 * spell
+    * be under the spell of sb
+        * to be influenced or controlled by sb because you finds him or her fascinating, enchanting, or sedutive
     * spell out
         * to explain something in a very clear way with details
         * The government has so far refused to spell out its plan/policies
@@ -5146,8 +5144,6 @@ title: English Speaking
         * His property has appreciated as much as 40% in two years
         * we like our investment, which has appreciated significantly in value
         * the pound has appreciated against the euro
-* delicacy
-    * I don't think you quite appreciate the delicacy of the situation
 * career
     * job
         * a job for which you are trained and in which it is possible to advance your working life, so that you get greater responsibility and earn more money
@@ -5219,6 +5215,7 @@ title: English Speaking
         * her dance expresses the innate beauty of the human sprit
     * An innate quality or ability is one that you were born with, not one you have learned
         * his most impressive quality was his innate goodness
+    * but it's often viewed as an innate skill that some people have and others' dont'
 * jeopardize
     * take risk
     * to put something such as a plan or system in danger of being harmed or damaged
@@ -5707,6 +5704,9 @@ title: English Speaking
         * How could a supposedly intelligent person be so stupid?
         * Anne is coming for a visit in March, supposedly.
 * flick
+    * flick through
+        * flip through
+        * to look quickly at the pages of a magazine, book, etc.
     * quick movement
         * a sudden, quick movement
         * with a flick of its fail, the cat was gone
@@ -8117,6 +8117,8 @@ title: English Speaking
     * the accident happened because of the drive's negligence
 * neglect
     * child neglect
+* surrender
+    * I’ve decided that I’m going to surrender this case to the control of my boss.
 * gateway
     * Many people think college is the gateway to success.
 * freely
@@ -8217,6 +8219,15 @@ title: English Speaking
             * She suffocated him by holding a pillow over his head.
     * prevent
 * trip
+    * trip up
+        * fall
+            * to fall because you hit your foot on sth, or to make sb fall by putting your foot in front of the other person's foot
+            * I'm terribly sorry. I didn't mean to trip you up
+            * She tripped up on the rug
+        * fail
+            * to make a mistake, or to cause sb to make a mistake
+            * The exam went quit well, until I tripped up on the last question
+            * In the interview, they kept trying to trip me up
     * make a trip
         * errand
     * take a trip
@@ -8354,6 +8365,8 @@ title: English Speaking
 * strandkorb
 * systematic
     * a systematic approach/way/method
+* ingrained
+    * it's an ingrained process; explaning how to troubleshoot is difficult
 * fine-grained
     * fine grained
 * coarse-grained
@@ -8699,6 +8712,10 @@ title: English Speaking
         * The issue is too important to quibble over.
     * There's no point quibbling about/over a couple of dollars.
     * a complaint or criticism about something that is not very important
+* bicker
+    * to argue about unimportant matters
+    * They were bickering over what to order and where to sit.
+    * They're always bickering with each other about/over their personal problems.
 * pelvis
     * the bones that form a bowl-shaped structure in the area below the waist at the top of the legs, and to which the leg bones and spine are joined
 * resemble
@@ -8793,6 +8810,26 @@ title: English Speaking
     * a person or animal that goes from one place to another looking for people to kill or things to steal or destroy
 * slippery
     * He is a slippery fellow, full of schemes.
+* slip
+    * slide
+    * move easily
+    * get worse
+        * to change to a worse state or condition
+        * we've slipped even further behind schedule
+    * escape
+        * to get away from or get free from sth
+        * the dog slipped its leash and ran off
+    * piece of paper
+    * mistake
+    * underwear
+    * a slip of the tongue
+        * a mistake made when what someone says is different from what was meant
+        * That one slip of the tongue caused me a lot of trouble.
+    * sth slips your mind
+        * to forget sth
+* erratic
+    * changing suddenly and unexpectedly
+    * an erratic schedule
 * slopper
 * extrapolate
 * chafe
@@ -10356,7 +10393,6 @@ title: English Speaking
 * charlatan
 * fuse
 * viability
-* adverse
 * degenerative
 * spinal cord
     * This would be followed by a second procedure in which he would fuse the spinal cord of the donor body with the transplanted head
@@ -12087,6 +12123,7 @@ title: English Speaking
     * external engagement
         * External engagements are the efforts that a company makes to manage how it interacts with the external world.
 * disclose
+    * The company recently disclosed its total costs and revenues for the year
 * up-and-running
     * in operation; functioning
     * The URL meet.google.com, however, is somewhat up-and-running
@@ -12314,6 +12351,15 @@ title: English Speaking
     * used to emphasize sth
 * likelihood
     * There is a strong likelihood that the company will have to lay off workers.
+* job
+    * job security
+        * Job security has become a big issue in the current economy.
+        * if you have a job security, your job is likely to be permanent
+        * the fact of your job being permanent, so that you will probably not lose it
+    * job stability
+        * the fact of an employee, or a group of employees, being able to keep the same job for a long time
+            * There are certain industries that still offer long-term job stability.
+        * the fact of an employee not changing jobs often
 * jobless
     * compared to the overall jobless rate of 4.5 percent
 * patronize
@@ -12512,6 +12558,220 @@ title: English Speaking
 * blame
 * blameless
     * A blameless postmortem culture
+* introduce
+    * the application developers might introduce changes that cause the system to be more noisy
+* exemplify
+    * to be a typical example of sth
+        * Americal fashion is exemplified by jeans and T-shirt
+    * to be or give a typical example of sth
+        * This painting perfectly exemplifies the naturalistic style which was so popular at the time
+    * This working replationship also exemplifies how the healthy tension between these two teams and the avlues that they represent
+* newcommer
+* novice
+    * a person who is begining to learn a job or an activity and has little or no experience or skill in it
+        * I'm a just novice at making video
+        * I've never driven a car before -- I'm a complete novice
+        * a programming manual for novice
+    * a person who is training to be a monk or a nun
+* travelshoot
+    * Novices are often tripped up when troubleshooting
+* hypothesize
+    * we iteratively hypothesize potential causes for the failure and try to test those hypotheses
+    * to give a possible but not yet proven explanation for something
+* conjecture
+* speculate
+    * guess
+        * to form opinions about sth without having the necessary information or facts; to make guessess
+        * I'm just speculating about what happened
+    * trade
+* theorize
+* hypothetico
+* hypothetico-deductive
+    * hypothetico-deductive method
+    * The hypothetico-deductive model or method is a proposed description of scientific method. According to it, scientific inquiry proceeds by formulating a hypothesis in a form that can be falsifiable, using a test on observable data where the outcome is not yet known.
+* falsifiable
+* warpath
+* messiah
+    * messiah complex
+        * A messiah complex (also known as the Christ complex or savior complex) is a state of mind in which an individual holds a belief that they are destined to become a savior
+        * I did not realize the messiah complex was contagious
+* c-section
+    * a caesarean section
+* summa cum laude
+    * you're summa cum laude in theoretical physics from Stanford University
+    * with the highest distinction.
+    * he graduated summa cum laude
+    * With highest (of three degrees of) praise
+* bleak
+    * After the CEO resigned, the future of the company looked bleak.
+    * cold and not welcoming
+        * It was a bleak, unpleasant day in December.
+    * Bleak also means without hope
+        * With no job, the future looked bleak.
+    * If a place is bleak, it is empty, and not welcoming or attractive
+    * Bleak weather is cold and unpleasant
+    * If a situation is bleak, there is little or no hope for the future
+        * The economic outlook is bleak.
+* turnaround
+    * Experts are predicting a turnaround in the economy
+* license
+    * licence
+    * document
+    * freedom
+    * to give sb offical permission to do or have sth
+        * Several companies have been licensed to sell these products.
+    * to get permission to make, produce, or use sth that has been created by or belongs to another person or company, usually by paying for it
+        * the TV company is seeking to license content from providers in every language.
+* expat
+    * Contrary to his expectations, his life as an expat was full of hardship.
+* upon
+    * upon receipt of
+        * Upon receipt of a completed questionnaire
+        * upon receipt of this letter
+            * when you get this letter
+            * when you receive this letter
+* attorney
+    * power of attorney
+        * letter of attorney
+        *  A power of attorney (POA) is a document that allows you to appoint a person or organization to manage your affairs if you become unable to do so.
+        *  Each type gives your attorney-in-fact (the person who will be making decisions on your behalf) a different level of control.
+* apostille
+    * a marginal note
+    * a document used in international law that is issued by a government in accordance with the Hague Convention and that certifies that another document has been signed by a notary public
+* passport
+    * ID page of your passport
+        * that’s the page with your picture, your date of birth, etc. This can be an image scan or hard copy.
+* burp
+    * to force air from stomach to come out through the mouth with a noise; belch
+    * If you burp a baby, you help it to get rid of air in its stomach by gently rubbing or gently hitting its back.
+        * I've seen her burp you
+    * The baby gave a contented burp
+* anaphylactic
+    * anaphylactic shock
+* anaphylaxis
+    * an extreme and dangerous allergic reaction to something that a person has eaten or touched
+    * In severe cases, anaphylaxis - the swelling of the tongue and closing of the throat - can occur and is life-threatening.
+* pubis
+    * one of the three main bones of the pelvis
+    * relating to the pubic area of the abdomen
+* payback
+* desensitize
+    * to cause sb to experience sth, usually an emotion or a pain, less strongly than before
+        * Seeing too much violence on television can desensitize people to it
+        * Video games and rock music have desensitized him to violence
+* sensitize
+    * react easily
+        * to make sb sensitive to sth
+        * It seems very likely that air pollutants are sensitizing people so that they became allergic to pollen
+    * make aware
+        * to make someone familiar with something such as a problem or bad situation
+        * The association aims to sensitize employers to the problems faced by left-handed people in the workplace.
+* lunatic
+    * a foolish or crazy person
+    * he drives like a lunaticla
+    * a person who is mentally ill
+    * the lunatic fringe
+        * the members of a group whose opinions are extreme and different from those of the rest of the group
+* ominous
+    * suggesting something unpleasant will happen
+    * a ominous silence
+    * ominous dark clouds
+    * There was an ominous silence when I asked whether my contract was going to be renewed.
+    * The engine had been making an ominous sound all the way from my parents' house.
+* auspicious
+    * suggesting a positive and successful future
+        * Winning her first seven cases was an auspicious beginning for the young lawyer.
+        * They won their first match of the season 5–1 which was an auspicious start/beginning.
+* inauspicious
+* menacing
+    * making you think that someone is going to do something bad
+* sinister
+    * evil, or suggessting that sth evil is going to happen
+    * making you feel that something bad or evil might happen
+        * The ruined house had a sinister appearance.
+        * A sinister-looking man sat in the corner of the room.
+* adverse
+    * going against sth, or causing harm
+        * her policies may have adverse effects on the economy
+    * having a negative or harmful effect on sth
+        * They received a lot of adverse publicity/criticism about the changes.
+        * having a negative or harmful effect on something
+        * adverse effect/impact/change
+        * adverse conditions/consequences/circumstances
+        * adverse reaction/side-effect
+* menace
+    * Dogs running loose are a public menace
+    * the menace of industrial pollutino
+    * He had a slight air of menace which made me uneasy
+    * He spoke with a hint of menace
+    * demand money with menaces
+        * He was accused of unlawfully demanding money with menaces
+    * v
+        * Hurricane Hugo menaced the eastern coast for a week
+* poppycock
+    * nonsense
+        * He dismissed the allegations as poppycock.
+        * That's complete poppycock which she made up
+* propeller
+    * a device that causes a ship or aircraft to move, consisting of two or more blades that spin at high speed
+    * Most impressive is probably the Mustang nose and propeller at what once was the entrance to Steeple Morden.
+* parachute
+* binge
+    * binge watching
+    * binge drinking
+* surrealism
+    * Surrealism first appeared in the early 1920s.
+* parody
+    * Their costume was meant to be a parody of classic superheroes
+* edible
+    * Only a few types of seaweed are edible.
+* delicacy
+    * food
+        * I don't think you quite appreciate the delicacy of the situation
+    * need for care
+    * politeness
+    * being easily damaged
+    * care
+* culinary
+    * The local university offers several culinary programs.
+* pungent
+    * The pungent aroma of freshly chopped herbs filled the air
+* permafrost
+    * The permafrost in the Russian tundra is starting to melt.
+* bland
+    * lacking a strong or particular flavor; not interesting
+        * This sauce has a sharp taste and isn't bland at all
+    * I find chicken a little bland.
+    * Pop music these days is so bland.
+* brand
+    * product
+        * This isn’t my usual brand of deodorant.
+        * brand of sth
+            * a particular type of something, or way of doing something
+            * Do you like his brand of humour?
+        * a well-known/popular/top-selling brand
+        * a fashion/fast food/car brand
+        * domestic/international/global brands
+        * premium/luxury/quality brands
+    * mark
+        * a special symbol on the skin of an animal that shows it belongs to someone
+    * judge
+    * mark
+* repugnant
+    * It’s often found disgusting by foreigners for its repugnant taste, smell and texture.
+* slimy
+* ferment
+    * consisting of fermented beans
+    * If food or drink ferments or if you ferment it, the sugar in it changes into alcohol because of a chemical process
+    * a state of confusion, change, and lack of order or fighting
+        * The resignation of the president has left the country in ferment.
+* locust
+* cram
+    * A lot of people cram as much as they can into one carry-on bag 
+    * She crammed her sweater into her bag and rushed out the door.
+* compartment
+    * overhead compartments
+* stuff
 
 
 
