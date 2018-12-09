@@ -2,9 +2,15 @@
 title: Code Climate
 ---
 
-# code climate
-コードの品質をはかる。
-coverallsは、coverageのみだが、code climateはコードの品質という点でcoverageや
+## code climate
+There are two services;
+
+* Code Climate Velocity
+* Code Climate Quality
+    * automated code review for test coverage, maintainability and more so that you can save time and merge with confidence.
+    * Test coverage
+    * Pricing
+        * free for Opensource
 
 ## codeclimate cli
 dockerで提供されているが別途packageも入手可能。
