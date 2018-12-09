@@ -553,6 +553,9 @@ title: English Speaking
         * to have difficulty thinking clearly, for example because you are too tired, too busy, or because a lot of things are happening around you
         * I can’t think straight with all this noise going on.
 * lie
+    * catch sb in a lie
+        * to trap someone in the act of lying, to discover someone is telling you a lie
+        * did you bursh your teeth? Yes, I did. Then why is your toothbursh dry?
     * position
         * lying/lay/lain
         * Considering where the power in a supply chain lies
@@ -763,6 +766,7 @@ title: English Speaking
 * leave
     * leave out/omit
         * to not include sb or sth
+        * you left out the best part of the story
         * you can leave the butter out of this recipe if you're on a low-fat diet
         * I've made a list of names - I hope I haven't left anyone out.
     * leave on/off
@@ -816,14 +820,6 @@ title: English Speaking
     * a set of wires attached to a person's teeth to move them gradually in order to straithen them
 * I can't think of it.
 * field trip
-* try to/try ing
-    * I was very tired. I tryied to keep my eyes open but I couldnt'
-    * I tried to move the table, but it was too heavy
-    * Please try to be quiet when you come home. Everyone will be asleep
-    * These case are delicious. You should try one
-    * We couldn't find anywhere to stay. We tried every hotel in the town, but they were all full.
-    * The photocopier doesn't seem to be working. Try pressing the green button
-    * I didnt' like the way the furniture was arranged, so I tried moving the table to the other side of the room. But It didn't look right, so I moved it back again.
 * believe in 
     * Do you believe in God?
     * I believe in saying what I think
@@ -3934,11 +3930,22 @@ title: English Speaking
     * arts
     * artificial growth
     * grow artifically
-* strive/try
+* strive
     * to try hard to do something or make something happen, especially for a long or against difficulties
         * Neither Jefferson nor Madison was a pacifist, though both strove to keep America peace
         * he has kindled expectations that he must now strive to live up to
         * we strive to make a service reliable enough, but no more reliable than it needs to be
+    * strive for
+        * In her writing she strove for a balance between innovation and familiar prose forms.
+* try
+    * try to/try ing
+        * I was very tired. I tryied to keep my eyes open but I couldnt'
+        * I tried to move the table, but it was too heavy
+        * Please try to be quiet when you come home. Everyone will be asleep
+        * These case are delicious. You should try one
+        * We couldn't find anywhere to stay. We tried every hotel in the town, but they were all full.
+        * The photocopier doesn't seem to be working. Try pressing the green button
+        * I didnt' like the way the furniture was arranged, so I tried moving the table to the other side of the room. But It didn't look right, so I moved it back again.
 * inhosipitable
     * not welcoming or generous to people who visit you
         * I'll have to cook them a meal or they'll think I'm inhospitable
@@ -4898,6 +4905,18 @@ title: English Speaking
         * Do you know of a good doctor?
 * obnoxious
 * catch
+    * catch out
+        * show wrong
+            * to show that sb is doing wrong
+            * I suspected he wasn't telling me the truth, and one day I caught him out when I found some letters he'd written
+        * trick
+            * to trick sb into making a mistake
+            * the examiner will try to catch you out, so stay calm and think carefully before you speak
+        * cause difficulty
+            * to put sb in a difficult situation
+            * A lot of people were cautght out by the sudden change in the weather
+    * catch sb red-handed
+        * he was caught red-handed taking money from the till
     * take hold
     * discover
     * see
@@ -6978,6 +6997,7 @@ title: English Speaking
         * swimming was compulsory at my school
     * compulsory (for sb) (to do sth)
         * It isn't compulsory for employers to offer staff private healthcare, but many do.
+* mandatory
 * compose
     * create
         * to produce or create musci, poems, r a piece of writing
@@ -8473,10 +8493,12 @@ title: English Speaking
 * sting
 * thrill
     * a feeling of great excitement and pleasure
-    * it gave me a thrill to see her again after so many years
+        * it gave me a thrill to see her again after so many years
     * to make sb feel very excited and pleased
-* thrilled
-    * Joey's going to be thrilled.
+        * the 22-year-old swimmer thrilled the world with his performance
+        * I'm thrilled by
+        * Joey's going to be thrilled.
+        * Just standing next to him thrilled her.
 * what is worse
     * That is certainly not good, but what is worse is that there is so little honesty about it in the House today.
 * stress
@@ -8486,6 +8508,8 @@ title: English Speaking
 * absorb
 * divert
 * engross
+    * If sth engrosses you, it is so interesting that you give it all your attention
+    * What is it about Harry Potter that so engrosses children?
 * entertain
 * grip
 * newsworthy
@@ -9742,6 +9766,7 @@ title: English Speaking
         * at sb's discretion/at the discretion of sb
         * exercise/use your discretion
         * leave it up to sb's discretion/leave it up to the discretion of sb
+            * Top-up insurance cover is left to the discretion of individuals and firms
         * broad/complete/considerable discretion
     * exercise/use (your) discretion 
     * leave it to sb's discretion/leave it up to the discretion of sb
@@ -12740,7 +12765,9 @@ title: English Speaking
     * The permafrost in the Russian tundra is starting to melt.
 * bland
     * lacking a strong or particular flavor; not interesting
+        * dull
         * This sauce has a sharp taste and isn't bland at all
+    * tasteless
     * I find chicken a little bland.
     * Pop music these days is so bland.
 * brand
@@ -12759,6 +12786,20 @@ title: English Speaking
     * mark
 * repugnant
     * It’s often found disgusting by foreigners for its repugnant taste, smell and texture.
+    * causing a feeling of strong dislike or disgust
+        * The trade in wild animals was repugnant to most people.
+    * If behaviour or beliefs, etc. are repugnant, they are very unpleasant, causing a feeling of disgust
+        * a repugnant smell
+        * I find your attitude towards these women quite repugnant.
+* repugnance
+* abhorrent
+    * morally very bad
+        * an abhorrent crime
+        * Racism of any kind is abhorrent to me
+* detestable
+* repulsive
+* disgust
+* dislike
 * slimy
 * ferment
     * consisting of fermented beans
@@ -12771,7 +12812,100 @@ title: English Speaking
     * She crammed her sweater into her bag and rushed out the door.
 * compartment
     * overhead compartments
+    * one of the separate area inside a vehicle, esp. a train
+        * a first-class compartment
+    * a separate part of furniture, equipment, or a container with a particualr purpose
+    * any of the enclosed parts into which a space, a vehicle, or an object used for storing thigs is divided
 * stuff
+* resend
+    * to send a text msg, an email, etc. again
+* ravine
+    * a deep, narrow valley with steep sides
+* mortified
+    * very embarrasseed
+    * She was absolutely mortified to hear her son swearing at the teacher.
+* mortify
+    * to cause someone to feel extremely ashamed or embarrassed
+    * He’s mortified by the fact that at 38 he still lives at home with his mother.
+* humiliate
+    * to make you feel ashamed or lose respect for yourself
+    * How could you humiliate me by questioning my judgment in front of everyone like that?
+    * England were humiliated (= completely defeated) in last night's match.
+* ashame
+* embarrass
+* demean
+* benevolent
+    * kind and helpful
+        * I grew up happily under the benevolent influence of my Uncle Walt.
+    * giving money or help to people or organization that need it
+        * a benevolent organization
+* charitable
+* sire
+    * male parent
+        * the male parent of an animal with four feet
+    * king
+        * used a form of address to a king
+    * be male parent
+        * to be the male parent of an animal
+* water heater
+* coffer
+    * a large, strong box in which money or valuable objects are kept
+    * coffers
+        * the money that an organization has in its bank accounts and available to spend
+        * government/party coffers
+        * With the increased revenue coming to the state's coffers, hiring freezes can now be lifted.
+* It becomes a case-by-case question as to whether a retiree can draw a German pension, and in what amount
+* solidarity
+    * agreement between and support for the members of a group
+        * Hundreds of supporters gathered to show solidarity for the three men.
+* riddle
+    * make holes
+        * to make a lot of holes in sth
+    * question
+        * a question that has a surprisng or amusing answer, or sth that is a mystery or is hard to explain
+        * Scholars have not completely solved the riddle of the sphinx
+    * something that is confusing, or a problem that is difficult to solve
+        * Scientists may have solved the riddle of Saturn's rings.
+* keeper
+    * carer
+        * a person who takes care of animals or is in charge of valuable objects, a building, etc.
+        * a zoo keeper
+    * good person/thing
+        * someone with good qualities, who you can have a long relationship with
+    * sport
+    * something that is worth keepinga
+        * I've tried many products similar to this, but this one is a keeper!
+        * The company is doing well, and their stock is definitely a keeper.
+* middle
+    * sb's middle
+        * he was holding a towel around his middle
+    * be in the middle of (doing) sth
+        * to be busy doing sth
+        * I was in the middle of sorting some papers when the phone rang
+* Mandy
+    * mandy drug
+    * MDMA
+* glamour
+    * a quality of someone or something that causes excitement and admiration because of its style or attractive appearance
+        * Hollywood glamour
+        * The downhill race was one of the glamour events of the Winter Olympics.
+    * enchantment; magic.
+        * "that maiden, made by glamour out of flowers"
+* allure
+* glitz
+* glam
+* tinsel
+* glitter
+* parlor
+    * parlour
+    * business
+        * a business that provides a stated type of personal service or sells a stated product
+        * a beauty parlour
+        * an ice-cream/pizza parlour
+    * room
+        * a room in a private house used for relaxing, especially one that was kept tidy for entertaining guests
+        * the front parlour
+        * an Edwardian parlour
 
 
 
@@ -12889,7 +13023,14 @@ title: English Speaking
 * he is a baller now
 * he got swagger/swag man
 
+## Date
+* Anytime after 6:00pm is good for me.
+* From 6:00pm is good for me.
+* I will be available after 6 pm. 
 
+## creature
+* weevil
+    * beetle
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
