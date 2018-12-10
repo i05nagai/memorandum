@@ -50,3 +50,48 @@ title: English Speaking Telephone
         * I depositied 500USD in my acount this morning
         * You deposit 20 percent now and pay the rest when the car is delivered
 
+* Company name. May I help you
+* Mr. Name? One (just a) moment, please.
+* I'm sorry but he's on another line
+* He's comming to the phone
+* May I have your name, pleas?
+* May I ask who is calling?
+* Whom are you calling?
+* Which department (division) are you calling?
+* Are you calling Mr.Name of the xxx division?
+* Do you want to speak to Mr.A or Mr.B?
+* We have two Name. Do you know his first name?
+* I'll transfer your call to Mr.A who is in charge of time deposits
+* Mr.A is out of the office
+* He's not in the office now
+* He's not back yet
+* He'll be back in 30 minutes in 2 hours
+* He'll be back around 2 o'clock
+* Mr.A has a visitor right now
+* He's in a meeting now
+* He's taking a lunch break
+* He's left for the day
+* He's not at work today
+* He's on vacation
+* He's on a business trip to Osaka
+* He was trasnferred to A Branch last month
+* He retired from the company last month
+* He's not available, but Mr.B can help you instead
+* May I take a message?
+    * Would you like to leave a message?
+* Shall I connect you with the section in charge?
+* May I have him call you back?
+    * Do you want him to call you back?
+
+* Do you have an appointment?
+    * Did you make an appointment?
+* Let me see if she is here or available
+* There is noboday here by that name
+* I'll tell her that you're here
+* She'll be with you shortly
+* I'm afraid she's out of the office right now
+* I've been expecting you
+* Let me show you around
+* Sorry to keep you wating
+* Thank you for taking time to come over
+* Thank you for your ocontinued support
