@@ -384,6 +384,11 @@ title: English Speaking
     * Those explosions must have been subsequent to our departure, because we didn't here anything
     * The mistakes were corrected in a subsequent edition of the book
 * pass
+    * pass down
+        * to give sth to sb who is younger, less important, or at a lower level than you
+        * The word being passed down from the leadership is that the polls are showing good results
+        * If property, diseases, or biological conditions pass down, they go from parents to children:
+            * Should I pass down wealth now or wait until die?
     * someone I can pass on my wisdom to
     * I was on the way to the concert yesterday, but there was a car driving very slowly in front of me. I moved onto the right lane, and passed them
     * I was just trying to drive safe, I was passed by a truck this mornig
@@ -5239,6 +5244,8 @@ title: English Speaking
     * take risk
     * to put something such as a plan or system in danger of being harmed or damaged
         * She knew that by failing her finals she could jeopardize her whole future
+* perilous
+    * They set off on a perilous journey to the top of Mount Everest
 * work
     * workout
         * happen/develop
@@ -5278,7 +5285,7 @@ title: English Speaking
     * a virtuous people thinks himself or herself morally better than other poeple
         * he only does charity work so he can feel virtuous
 * bastard
-    * unpeasant
+    * unpleasant
         * an pleasant person
     * child
         * a person born to parents who are not married to each other
@@ -10510,6 +10517,8 @@ title: English Speaking
     * a bogus address/bank account
 * fake
     * I will not fake it this time
+    * fake a laugh
+    * I fake a orgasm
 * phoney
     * not sincere or not real
     * All salespeople seem to have the same phoney smile
@@ -10806,6 +10815,18 @@ title: English Speaking
 * flesh
     * if you promise not to chew the flesh off our bones while we sleep, you can stay
 * wind
+    * wind up
+        * become
+            * to come to be in a particular situation or condition, esp. a bad one
+            * If you aren’t careful lifting weights, you could wind up hurting yourself.
+        * to find yourself in an unexpected and usually unpleasant situation, especially as a result of what you do:
+            * If he keeps doing stuff like that he's going to wind up in prison!
+            * You don't want to wind up homeless, do you?
+    * wind-up
+        * something that is not true that you tell someone in order to make a jokea
+            * You can't be serious - is this a wind-up?
+        * A wind-up toy, watch, etc. has a key or part that you turn in order to make it operate
+            * a wind-up alarm clock
     * turn
         * wind/wound/wound
         * to turn or cauase sth to turn
@@ -11304,6 +11325,11 @@ title: English Speaking
         * to make a phone call to sb
     * tinkle
         * an act of urination
+* malarkey
+    * meaningless talk
+    * nonsense
+    * silly behaviour or nonsense:
+        * I like the socializing but I can't be bothered with dressing up and all that malarkey.
 * fuzzy
 * prestidigitation
     * magic tricks performed as entertainment.
@@ -12906,6 +12932,162 @@ title: English Speaking
         * a room in a private house used for relaxing, especially one that was kept tidy for entertaining guests
         * the front parlour
         * an Edwardian parlour
+* mint
+    * mint condition
+        * in mint condition
+        * in perfect condition; as if new
+* for the first time in my long life, she's actually paid me a compliment. That's warmed my cockles more than a hundred nips of the hard stuff
+* cockle
+    * a small, rounded sea creature with a shell, common in Europe. Cockles can be cooked and eaten
+    * a small shallow boat.
+    * warm the cockles of one's heart 
+        * give one a comforting feeling of pleasure or contentment.
+    * (of paper) bulge out in certain places so as to present a wrinkled or creased surface; pucker.
+* contentment
+    * a state of happiness and satisfaction
+    * happiness and satisfaction, often because you have everything you need
+        * His face wore a look of pure contentment.
+        * More people were finding that material things do not bring contentment
+* gratification
+    * pleasure, especially when gained from the satisfaction of a desire.
+    * a thirst for sexual gratification
+* nip
+    * to press sth hard between two often sharp objects, such as teeth r the nails on fingers
+    * the puppy kept nipping at her ancles
+    * go quickly
+        * to go somewhere quickly or be somewhere for only a short time
+        * Can you nip out/round/down to the shop for me?
+        * Shall we nip to the cafefor a bit to eat?
+    * cold
+        * a nip (in the air)
+            * if there is a nip in the air, the air outside is quite cold
+            * You can tell winter's on its way - there's a real nip in the air in the mornings.
+    * quick bite/press
+        * an occasion when something nips a person or thing
+    * drink
+        * a small amount of strong alcoholic drink:
+    * an offensive word for a Japanese person
+* the hard stuff
+    * strong alcohol
+        * Would you like a drop of the hard stuff?
+* squint
+    * to look with your eyes partly closed
+    * He squinted into the morning sun
+    * the sun was shining straight in her eyes and made her squint
+    * If a person or an eye squints, the eye looks in a different direction to the other eye, because of a weakness of the eye muscles
+        * She left eye squinted slightly when she was tired
+    * eye
+        * As a child she wore thick glasses and had a bad squint.
+    * look
+        * a quick look
+* snivel
+    * to cry slightly in a way that is weak and does not make other people feel sympathy for you
+    * He's sitting in his bedroom snivelling because he was told off for not doing his homework.
+* sniffle
+* snuffle
+* whimper
+* whine
+* weep
+* perambulator
+    * pram/pushchair/baby carriage/stroller
+    * a vehicle for moving a baby around that consists of a small bed supported by a frame on four wheels
+    * I saw her pushing a pram down the street.
+* tip
+    * tip-off
+        * a warning or information that something may happen
+        * He began cutting classes – a tip-off that he was in trouble
+        * Acting on a tip-off, the police arrested the drug dealers
+        * Follwoing a tip-off from a friend, we sold all our sahres in the company
+    * tip off
+* embryo
+    * Research on human embryos is banned in this country
+    * an animal that is developing either in its mother's womb or in an egg, or a plant that is developing in a seed:
+        * Between the eighth week of development and birth a human embryo is called a foetus.
+    * in embryo
+        * developing and not yet complete
+* womb
+* uterus
+    * the organ in the body of a woman or other female mammal in which a baby develop before birth; womb
+    * Conception is the morment when a fertilized egg implants itself in a woman's uterus
+* genital
+* ovary
+    * either of the pair of organs in a womanb's body that produce eggs, or the part of any female animal or plant that produces eggs or seeds
+* violate
+* justifiable
+* cocky
+    * too confident
+        * Hugh is knowledgeable but not cocky.
+    * used to describe a young person who is confident in a way that is unpleasant and sometimes rude
+    * He's a bit for my liking
+* journal
+    * magazine
+        * a magazine, newspaper, or website containing news and information about a particular industry or profession
+        * a medical/scientific journal
+        * a trade/industry/professional journal
+        * the Wall Street journal
+    * record
+    * diary
+        * she kept a travel journal during her trip to South America
+    * money journal
+        * I wrote in a money journal
+        * Cach receipt journal
+    * A journal is a detailed account that records all the financial transactions of a business, to be used for future reconciling of and transfer to other official accounting records, such as the general ledger.
+* ledger
+    * a book in which items are regularly recorded, esp. business activities and money received or paid
+    * The loan appears not to have been entered in the ledger.
+    * ledger accounts/books/systems
+    * a book or a computer document in which a company's accounts are recorded, especially the money it has spent and received
+* nary
+    * not one or none at all; used for emphasis
+    * Nary a word of this was mentioned.
+    * We saw nary a soul (= no one at all).
+    * They said nary a wor
+* consumer
+    * consumer confidence
+        * Consumer confidence has reached a ten-year high.
+* customer
+* wassal
+    * drink plentiful amounts of alcohol and enjoy oneself with others in a noisy, lively way.
+    * go from house to house at Christmas singing carols.
+* Wassailing
+* peasant
+* retain
+    * to keep or continue to have something
+* Francis retained control of the company.
+* fad
+    * a style, activity, or interest that is very popular for a short period of time
+        * the latest health fad
+        * There was a fad for wearing ripped jeans a few years ago.
+        * He thought computers would be just a fad.
+    * If I wanted to take up a fad, I'd get a tramp stamp
+* craze
+    * an activity, style, or fashion that is very popular, usually for a short time
+    * Cycling shorts were the latest craze/(all) the craze that year.
+    * The craze for health foods has become big business.
+* cult
+* tramp stamp
+    * a lower-back tattoo
+* plunger
+    * you didn't have a plundger
+* weenie
+    * wiener
+    * penis
+    * nerd
+    * Don't be such a weenie.
+* gullible
+    * easily deceived or tricked, and too willing to believe everything that other people say:
+    * a gullible young man
+    * There are any number of miracle cures on the market for people gullible enough to buy them.
+* idolize
+    * You idolize me
+* pedestal
+    * nothing could ever know me off that pedestal you put me on
+    * a base for a statue, or a base for a column
+    * In the riot, the statues were toppled from their pedestals.
+    * A flower arrangement in a large basket stood on a pedestal in the corner of the room.
+    * knock sb off their pedestal
+        * to show people that someone is not as perfect as they seem to be
+        * This recent scandal has really knocked the president off his pedestal.
 
 
 
@@ -13031,6 +13213,9 @@ title: English Speaking
 ## creature
 * weevil
     * beetle
+* cockle
+* possum
+    * opossum
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
