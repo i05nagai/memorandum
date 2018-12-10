@@ -93,6 +93,27 @@ chsh -s /usr/local/bin/zsh
 ## Socks
 * [ssh経由のSOCKSプロキシを通じてMac上のGoogle Chromeでブラウジング](http://blog.wktk.co.jp/ja/entry/2014/03/11/ssh-socks-proxy-mac-chrome)
 
+## Tips
+
+#### mds_worker 
+* [What is mds\_stores process? \- Apple Community](https://discussions.apple.com/thread/5595772)
+    * Meta Data Server
+    * mds_worker
+    * mds_stores
+* [mds – what MDS process is and why it uses CPU on the Mac](http://osxdaily.com/2010/08/05/mds-mac/)
+
+Disable spotlights.
+
+#### Disabling spotlights
+[MacOS Sierra: Enable/Disable Spotlight Indexing](https://www.technipages.com/macos-sierra-enable-disable-spotlight)
+
+
+```
+# Enable Indexing
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+# Disable Indexing
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+```
 
 ## Reference
 * [Macのデスクトップ切り替え時のエフェクトを減らして、切り替えを多少すばやくする - Qiita](http://qiita.com/ikedakenno/items/58daf8a961f1813b3c1b)
