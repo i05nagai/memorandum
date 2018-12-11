@@ -20,7 +20,16 @@ title: English Email
 * I guess we don't need anything else, but if so I will let you know!
 * I do not have any questions for now, but if a question came to my mind, I will let you know!
 * Thank you for scheduling the meeting
+* thank you for your consideration
+    * [What are some other ways to say 'thank you for your consideration'? \- Quora](https://www.quora.com/What-are-some-other-ways-to-say-thank-you-for-your-consideration)
+    * Thanks/Thank you for taking the time to…
 
+## Starting
+[How to Start an Email: 6 Never\-Fail Introductions and 6 to Avoid \| Grammarly](https://www.grammarly.com/blog/how-to-start-an-email/)
+
+* Hi [name]
+* Hello, Hello [name]
+* Hi everyone,
 
 ## Ending
 * [Unit 4: Starting and finishing emails \| LearnEnglish \- British Council](https://learnenglish.britishcouncil.org/en/english-emails/unit-4-starting-and-finishing-emails)

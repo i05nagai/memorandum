@@ -4,6 +4,18 @@ title: visa
 
 ## visa
 
+## Germany
+
+* Academic Recognition
+    * [anabin: Anabin \- Information System for the Recognition of Foreign Education](https://anabin.kmk.org/anabin.html)
+    * foreign university degrees can only be recognized in Germany if they have been acquired by a state or state-recognized institution
+        * These colleges are marked in the database anabin with the status H +
+    * Choose "Institution"
+    * Choose "Search" Tab
+* I would like to find out how my foreign university degree is evaluated in Germany
+    * [I would like to find out how my foreign university degree is assessed in Germany: Anabin \- Information system for the recognition of foreign educational qualifications](https://anabin.kmk.org/kurzanleitung/ich-moechte-feststellen-wie-mein-auslaendischer-hochschulabschluss-in-deutschland-bewertet-wird.html)
+    * [Academic Recognition](https://www.anerkennung-in-deutschland.de/html/en/academic_recognition.php)
+
 ## USA
 * [5 Visa Options International PhD Students Must Know To Work In The U\.S\.A\. \| Cheeky Scientist](https://cheekyscientist.com/visa-options-international-phd-students-work-in-usa/)
 * [US H\-1B visa for specialty workers \| Workpermit\.com](http://workpermit.com/immigration/usa/us-h-1b-visa-specialty-workers)

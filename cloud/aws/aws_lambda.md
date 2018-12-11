@@ -102,5 +102,9 @@ pip install ptvsd -t hello_world/build/
 cp hello_world/app.py hello_world/build/
 ```
 
+#### Canary deployments
+* [Implementing Canary Deployments of AWS Lambda Functions with Alias Traffic Shifting \| AWS Compute Blog](https://aws.amazon.com/blogs/compute/implementing-canary-deployments-of-aws-lambda-functions-with-alias-traffic-shifting/)
+
 ## Reference
 * [Best Practices for Working with AWS Lambda Functions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
+* [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=5)

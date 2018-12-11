@@ -140,6 +140,21 @@ title: Site Reliability Engineering
         * Rollouts of new software versions
         * runtime configuration changes
         * A special case of runtime config changes; changes to your dependencies
+* Practical Alerting from Time-Serires DataRule
+    * type of variable
+        * counters
+            * counters only incease in value
+        * gauges
+            * take any value they like
+    * alerting
+        * the sum of the rates of non-HTTP-200 return codes on all tasks in the cluster, divided by the sum of the rates of requests to all tasks in that cluster, is grater than some value
+            * 1. Aggregating the rates of response codes accross all tasks, outputtitng a vector of rates at that point in time, one for each node
+            * 2. Computing the total error rate as the sum of that vector, outputtting a single value for the cluster at that point in time, this total error rate exclude the 200 code from the sum, because it is not an error
+            * 3. Computing the cluster-wide ratio of errors to requests, dividing the total error rate by the rate of requests that arrived, and again outputting a single value for the cluster at that point in time
+            * each computed variable name contains a colon-separated triplet indicating the aggregation level, the variable name, and the operation that created that tname
+        * how to 
+            * the rules allow a minimum duration for which the alerting rule must be true before the alert is sent
+* on call
 
 
 
