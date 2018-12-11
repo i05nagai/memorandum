@@ -182,13 +182,6 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-#### Remark
-
-* $g_{k}^{t}$ is known at the begining of the round $t$, so we can assume $g_{k}^{t}$ is $\mathcal{F}_{t-1}$ measurable.
-* $Q_{k}^{t}$ is not known at the begining of the round $t$, so we can assume $Q_{k}^{t}$ is $\mathcal{F}_{t}$ measurable.
-
-<div class="end-of-statement" style="text-align: right">■</div>
-
 #### Lemma 1
 * $x^{t + 1}$,
 
