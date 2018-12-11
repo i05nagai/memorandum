@@ -12,6 +12,21 @@ The inequality is also known as Chernoff bound.
 * $a > 0$,
 * $t > 0$,
 
+$$
+\begin{eqnarray}
+    P(X \ge a)
+    & \le &
+        \frac{
+            \mathrm{E}
+            \left[
+                e^{t X}
+            \right]
+        }{
+            e^{ta}
+        }
+    \nonumber
+\end{eqnarray}
+$$
 
 #### proof
 
