@@ -210,7 +210,7 @@ CLIの実行時に環境変数を設定することで、実行することで�
 * `_override`で終わる`.tf`か`override.tf`のファイルで設定の上書きができる。
 
 ### Rename workspace / move state to another workspace
-* [[Improvement] Command: terraform workspace rename · Issue #16072 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/16072)
+* [Improvement Command: terraform workspace rename · Issue #16072 · hashicorp/terraform](https://github.com/hashicorp/terraform/issues/16072)
 
 ```sh
 # pull and export current state in workspace
@@ -310,6 +310,7 @@ localの場合はplain textで保存されるので、passwordなどは暗号化
     * http
     * manta
     * s3
+        * you need to create bucket before `terraform init`
     * swift
     * terraform enterprise
 * backendのblockの中に書く項目はbackendごとに異なる

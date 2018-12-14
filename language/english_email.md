@@ -41,6 +41,8 @@ title: English Email
 * I look forward to hearing from you.
 * I look forward to receiving your reply.
 
+## Follow up
+* [12 Examples of A Follow Up Email Template To Steal Right Now \- Yesware Blog](https://www.yesware.com/blog/follow-up-email-template/)
 
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)

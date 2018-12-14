@@ -48,10 +48,13 @@ Annotation tool
 
 ### Food
 * [im2recipe](http://im2recipe.csail.mit.edu/dataset/login/)
-    * 登録が必要
+    * registration required
+    * no commercial usage
     * 商用利用は禁止で、educational purpose, reserachのみ
+    * redistribution is not permitted
     * 配布は基本的に禁止、同僚に研究目的で配布する場合はTerms and conditionに同意が必要
     * emailはorganizationのものしか利用できない
+    * emails which do not belong to any organizations such as (gmail, live.com) is not allowed
 * [Food-101 -- Mining Discriminative Components with Random Forests](https://www.vision.ee.ethz.ch/datasets_extra/food-101/)
 * [Food Image Dataset MMSPG](http://mmspg.epfl.ch/food-image-datasets)
 
@@ -62,9 +65,23 @@ Annotation tool
 ### Weather
 * [Daily Summaries Station Details: NY CITY CENTRAL PARK, NY US, GHCND:USW00094728 \| Climate Data Online \(CDO\) \| National Climatic Data Center \(NCDC\)](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00094728/detail)
 
+### Advertisement
+* [UCI Machine Learning Repository: Internet Advertisements Data Set](https://archive.ics.uci.edu/ml/datasets/internet+advertisements)
+    * The features encode the geometry of the image (if available) as well as phrases occuring in the URL,
+    * the image's URL and alt text,
+    * the anchor text,
+    * words occuring near the anchor text
+    * The task is to predict whether an image is an advertisement ("ad") or not ("nonad").
+* [Webscope \| Yahoo Labs](https://webscope.sandbox.yahoo.com/catalog.php?datatype=a)
+* [Outreach \- Criteo AI Lab](http://ailab.criteo.com/outreach/)
+* [Kaggle Display Advertising Challenge Dataset \- Criteo Labs](http://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/)
+    * [Display Advertising Challenge \| Kaggle](https://www.kaggle.com/c/criteo-display-ad-challenge)
+
 ## Reference
 * [機械学習に使える、オープンデータ一覧　※随時更新 - Beginning AI](http://blog.beginning-ai.com/entry/open-data-index)
 * [Quandl Financial, Economic and Alternative Data](https://www.quandl.com/)
 * [DataSet - 機械学習の「朱鷺の杜Wiki」](http://ibisforest.org/index.php?DataSet)
 * [GitHub - caesar0301/awesome-public-datasets: An awesome list of high-quality open datasets in public domains (on-going). By everyone, for everyone!](https://github.com/caesar0301/awesome-public-datasets)
 * [Discover Published Data — Google Genomics v1 documentation](http://googlegenomics.readthedocs.io/en/latest/use_cases/discover_public_data/index.html)
+* [Datasets for Data Mining and Data Science](https://www.kdnuggets.com/datasets/index.html)
+* [Open Datasets \| Skymind](https://skymind.ai/wiki/open-datasets)

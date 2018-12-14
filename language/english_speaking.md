@@ -1227,6 +1227,19 @@ title: English Speaking
     * Have you heard? Sally and Ray are getting engaged
     * She is engaged to be married
     * He has engaged in a dispute with his former business partner
+* involve
+    * include
+        * to include someone or something in an activity
+        * the accident involved two cars and a truck
+        * the operation involves nserting a small tube into the heart
+        * Researcher involves 
+        * What will the job involve?
+        * i didn't realize putting on a play involved so much work
+        * Running your own business usually involves working long hours
+        * a good manager will try to involve everyone in the decision making process
+    * make interested
+        * to make someone interested in taking part in something
+        * a good teacher involves children in activities where they interact with each other
 * involved
     * complicated
         * difficult to understand or deal with; complicated
@@ -1444,6 +1457,10 @@ title: English Speaking
 * head
     * head off
 * make
+    * make the most of
+        * They made the most of the bad weather
+        * to use or enjoy something as much as possible
+        * We’re only in Paris for a day, so let’s make the most of it.
     * make yourself understood
         * to communicate effectively
         * Since they spoke only Swahili, we used signs and gestures to make ourselves understood.
@@ -1649,6 +1666,9 @@ title: English Speaking
     * I was next to best
     * I was second in
 * lead
+    * lead time
+        * the time between the design of a product and its production, or between ordering a product and receiving it
+        * The result of this new approach is a shorter lead time and lower costs.
     * More and more people are discovering that Tai Chi is one of the most valuable forms of exercise. This has led to a big demand for classes
     * Heavy rains and stormy conditions throughout the summer have led to severe shortage in strawberries and other soft fruits. This has led to price rises in many supermarket and shops
     * lead somebody to/into etc something
@@ -3625,19 +3645,6 @@ title: English Speaking
         * The change has been evolutionary rather than revolutionary
     * evolutionary change/progess/development
         * Sustainable business development involves systematically creating a better future through evolutionary changes
-* involve
-    * include
-        * to include someone or something in an activity
-        * the accident involved two cars and a truck
-        * the operation involves nserting a small tube into the heart
-        * Researcher involves 
-        * What will the job involve?
-        * i didn't realize putting on a play involved so much work
-        * Running your own business usually involves working long hours
-        * a good manager will try to involve everyone in the decision making process
-    * make interested
-        * to make someone interested in taking part in something
-        * a good teacher involves children in activities where they interact with each other
 * proof-of-concept
     * I created a proof-of-concept, and demonstrated its functionality to the dev ops team
 * colossal/large/huge
@@ -3746,26 +3753,6 @@ title: English Speaking
         * the way that someone or something changes or develops
         * there is disagreement over the direction the project is taking
         * her latest album represents a chance of direction for her
-* lousy
-    * bad
-        * lousy food/service
-        * a lousy book
-        * I had a lousy weekend
-        * I feel lousy. I'm going home
-    * insulting
-        * All he offered me was a lousy 20 bucks
-    * full
-        * lousy with
-            * used to say that something is full of something, or too much of it
-            * The internet is lousy with this kind of stuff
-* bum
-    * 
-    * bad in quality or not useful
-        * He gave us bum directions, but we eventually the place
-    * to ask someone for something without intenting to pay for it
-        * Could I bum a cigarette off you?
-    * bum around
-    * bum out
 * culture
 * comrade
     * friend
@@ -5613,6 +5600,7 @@ title: English Speaking
     * miltary
     * study
 * represent
+    * rep
     * act for
     * describe
         * to show or describe something or someone
@@ -6280,6 +6268,14 @@ title: English Speaking
         * He bribed immigration officials and entered the country illegally.
     * money or present that you give to sb so that they will do sth for you, usually sth dishonest
         * He was accused of accepting/taking bribes from wealthy businessmen.
+* author
+    * a writer of a book, article, etc., or a person whose main job is writing books
+    * a person who begins or creates something
+        * the authors of the proposal want it to be adopted immediately
+    * to write a book, article, etc.
+        * he has authored more than 30 books
+    * to create sth
+        * the deal is being authored by a Greek diplomat
 * authority
     * the power to control or demand obedience from others
         * the police have no legal authorities in these authority
@@ -9493,7 +9489,14 @@ title: English Speaking
     * importance
         * in essence
             * means that what follows is a brief statement of the basic meaning of sth
+            * In essense, she's saying that she may quit her job
+        * the basic meaning or importance of sth
+        * The essence of punk was a revolt against both the sound and the sytem of popular music
     * smell/taste
+        * a chemical substance obtained from plants that has a strong smell or taste and can be used to flavor foods or provide a pleasant smell, such as in perfumes
+    * to be the most important thing
+    * vanilla essence
+    * essense of violets
 * comprehensively
     * completely
     * a comperehensively illustrated book
@@ -12774,6 +12777,8 @@ title: English Speaking
     * Surrealism first appeared in the early 1920s.
 * parody
     * Their costume was meant to be a parody of classic superheroes
+* travesty
+    * a piece of writing or music that copies the style of a serious piece in a way that is intentionally humorous
 * edible
     * Only a few types of seaweed are edible.
 * delicacy
@@ -13088,7 +13093,174 @@ title: English Speaking
     * knock sb off their pedestal
         * to show people that someone is not as perfect as they seem to be
         * This recent scandal has really knocked the president off his pedestal.
-
+* commotion
+    * a sudden brief period of noise, confusion, or excited movement
+    * There was a commotion outside the embassay
+    * His arrival caused quite a commotion
+* hoo-ha
+    * an occasion when there is too much interest in or discussion about something that is not important
+    * One of the tabloids published the pictures and they caused a great hoo-ha.
+* disturbance
+    * cause a disturbance
+        * to break the law by fighting or behaving extremely noisily in public
+* kerfuffle
+    * noise, excitement, and argument
+    * Her glasses were broken in the kerfuffle.
+* ruckus
+* to-do
+    * a show of anger, worry, or excitement that is unnecessary or greater than the situation deserves
+    * Getting our passports renewed was such a to-do.
+* podiatrist
+    * a person trained in the treatment of problems and diseases of people's feet
+* posidatry
+* optometrist
+    * a person trained to test the sight of people and to decide how best to improve their sight, if necessary, by ordering glasses or contact lenses for them
+* oculist
+* ophthalmologist
+    * a doctor who specializes in treatment of the eyes
+* allergist
+    * a specialist in allergy
+* dermatologist
+    * a doctor who studies and treats skin diseases
+* urologist
+    * a doctor who specializes in treating diseases of the parts of the body that produce and carry urine
+* unbridled
+    * not controlled or limited
+    * unbridled joy/fury/greed/authority
+* belittle
+    * to make an action or a person seem unimportant
+    * to make a person or an action seem as if he, she or it is not important
+        * Stop belittling yourself -- your work is highly valued
+        * Though she had spent hours fixing the computer, he belittled her efforts
+* disparage
+    * to criticize sb or sth in a way that shows a lack of respect
+    * to criticize someone or something in a way that shows you do not respect or value him, her, or it
+        * The actor's work for charity has recently been disparaged in the press as an attempt to get publicity.
+* crappy
+    * a crappy student
+    * sick
+    * he said he was feeling really crappyl
+    * unpleasant or of very bad quality
+        * he had a series of crappy jobs
+* icky
+    * unpleasant or disgusting
+    * Rory thinks peas are icky.
+* yucky
+    * unpleasant or disgusting
+        * My daughter says broccoli is yucky and refuses to eat it
+        * a yucky green colour
+* lousy
+    * bad
+        * lousy food/service
+        * a lousy book
+        * I had a lousy weekend
+        * I feel lousy. I'm going home
+    * insulting
+        * All he offered me was a lousy 20 bucks
+    * full
+        * lousy with
+            * used to say that something is full of something, or too much of it
+            * The internet is lousy with this kind of stuff
+* bum
+    * bad in quality or not useful
+        * He gave us bum directions, but we eventually the place
+    * to ask someone for something without intenting to pay for it
+        * Could I bum a cigarette off you?
+    * bum around
+    * bum out
+* rotten
+* stinking
+    * very bad
+        * extremly bad or unpleasant
+            * I hate this stinking job
+        * having a very unpleasant smell
+            * Houses were built along stinking drainage ditches.
+    * smelling bad
+* pinot
+    * any of several varieties of wine grape, especially the chief varieties Pinot Noir, a black grape, and Pinot Blanc and Pinot Gris, white grapes
+    * wine made from Pinot grapes
+* STD
+    * sexually transmitted diseases
+* stool
+    * seat
+        * a bar/kitchen/piano stool
+        * a three-legged stool
+    * solid waste
+        * a piece of solid waste from the body
+        * He told the doctor he had been passing bloody stools.
+        * I can quit checking my stool
+    * excretion
+        * a piece of solid waste from the body
+* excretion
+    * Excretion is one of several activities common to both plants and animals.
+* excrete
+    * to get rid of waste from the cells or from the body
+    * to get rid of material such as solid waste or urine from the body
+        * Most toxins are naturally excreted from the body.
+* defecate
+* spitball
+    * a piece of paper that has been chewed and then rolled into a ball to be thrown or shot at sb
+    * to quickly sugggest ideas to be discussed without thinking about them carefully
+        * I'm just spitballing here
+        * the writers sat around for an hour, spitballing ideas for a character
+* negative reinforcement
+    * negative reinforcement involves the removal of a negative condition to strengthen a behavior
+* positive punishment
+    * Punishment involves either presenting or taking away a stimulus to weaken a behavior.
+    * Example of punishment
+        * Timmy is supposed to clean his room every Saturday morning. Last weekend, he went out to play with his friend without cleaning his room. As a result, his father made him spend the rest of the weekend doing other chores like cleaning out the garage, mowing the lawn, and weeding the garden, in addition to cleaning his room.
+* slather
+    * you slather on sunscreen to avoid getting sunburned
+* fun
+    * fun fact
+        * A fun fact is a tidbit of interesting or entertaining trivia
+* tape
+    * sticky material
+    * recording material
+    * strip
+    * use sticky material
+    * record
+* fidget
+    * He fidgeted nervously during the interview.
+    * to make continuous small movements because you are uncomfortable or bored
+    * Children can't sit still for long without fidgit
+    * a person who often fidget
+        * he is a terrible fidget
+    * the fidgets
+        * a state in which you keep fidgeting
+        * I got the fidgets halfway through the lecture.
+* private school
+    * cram school
+    * public school
+    * private tuition
+    * go to a private tutor
+    * after school classes
+    * extra tuition
+* tutor
+* blank
+    * blank out
+        * to forget sth
+        * I’ve blanked out everything about the accident
+    * empty
+        * empty or clear, or containing no information or mark
+        * a blank sheet
+        * a blank computer screen
+        * Sign your name in the blank space at the bottom of the form
+    * not reacting
+        * a blank stare/expression
+        * blank incomprehension
+        * a blank refusal/denial
+    * complete
+    * a space in a piece of writing or on a form, left empty for information to be added
+        * Fill in the blanks on this form.
+    * The starting gun fires blanks.
+    * my mind’s a blank
+    * my mind goes blank
+        * I tried to say something, but nothing came up!
+* hommage
+    * A homage, especially something in an artwork which has been done in respectful imitation of another artist. 
+* convo
+    * Conversation
 
 
 ## US

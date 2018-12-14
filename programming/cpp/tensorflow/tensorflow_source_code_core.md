@@ -4,7 +4,70 @@ title: Tensorflow source code core
 
 ## Tensorflow source code core
 
+* `PerPartitionExecutorsAndLib`
+    * DirectSession
+* `ExecutorsAndKeys`
+* `Session`
+* `DirectSession`
+    * `DirectSession::CreateExecutors`
+    * `DirectSession::CreateGraphs`
+* `GraphExecutionState`
+    * `graph_execution_state.h`
+    * `GraphExecutionState::BuildGraph`
+    * `GraphExecutionState::OptimizeGraph`
+    * `static GraphExecutionState::MakeForPrunedGraph`
+    * `static GraphExecutionState::MakeForBaseGraph`
+        * Call `GraphExecutionState::InitBaseGraph`
+    * `GraphExecutionState::InitBaseGraph`
+        * `ConvertGraphDefToGraph`
 
+* `TensorStore`
+    * `session_state.h`
+    * `std::unordered_map<string, TensorAndKey> tensors_`
+        * a map from tensor string to tensor
+
+* `Executor`
+    * `executor.h`
+* `ExecutorBarrier`
+    * A class to help run multiple executors in parallel and wait until all of them are complete.
+    * `executor.h`
+* `ExecutorFactory`
+    * `executor_factory.h`
+
+* `ConvertGraphDefToGraph`
+    * `graph_constructor.cc`
+* `GraphConstructor`
+    * `Graph* g_`
+    * `graph_constructor.cc`
+    * `GraphConstructor::TryImport`
+    * `GraphConstructor::MakeNode`
+        * Make node from `NodeDef`
+    * `GraphConstructor::MakeEdge`
+        * Make node from `EdgeDef`
+* `Graph`
+    * `Graph::AllocateNode`
+        * Call `Node::Initialize` for actual initializaiton
+    * `Graph::AddControlEdge`
+    * `Graph::AddEdge`
+* `Node`
+    * `Node::Initialize`
+    * `Node::GetNodeClassForOp`
+    * `Node::kNodeClassTable`
+* `NodeClass`
+    * enum to label the type of the node
+
+
+* `InOutTypesForNode`
+    * `node_def_util.cc`
+* `AddArgToSig`
+    * `node_def_util.cc`
+* `GetNodeAttr(`
+
+* `grappler::GrapplerItem`
+
+* `OpRegistrationDataFactory`
+* `OpRegistry::RegisterAlreadyLocked`
+    * Create `OpDef` by calling `OpRegistrationDataFactory`
 * `FunctionLibraryDefinition`
     * operators
 * `Arena`
@@ -90,3 +153,4 @@ title: Tensorflow source code core
 
 
 ## Reference
+* [Adding a New Op  \|  TensorFlow](https://www.tensorflow.org/guide/extend/op)

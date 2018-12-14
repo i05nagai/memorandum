@@ -3214,6 +3214,7 @@ $$
             \mathrm{tr}
             \left(
                 G_{t}
+            \right)
             -
             \mathrm{tr}
             \left(

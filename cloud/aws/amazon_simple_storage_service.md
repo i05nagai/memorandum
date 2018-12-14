@@ -4,6 +4,39 @@ title: Amazon Simple Storage Service
 
 ## Amazon Simple Storage Service
 
+## CLI
+
+```
+aws s3 ls <S3Uri> or NONE <option>
+```
+
+* `--recursive`
+* `--page-size <value>`
+* `--human-readable`
+* `--summarize`
+* `--request-payer <value>`
+
+```
+aws s3 cp
+aws s3 mv
+aws s3 rm
+aws s3 sync
+```
+
+```
+# Create buckets
+aws s3 mb <S3Uri> <region>
+```
+
+* `<S3Uri>`
+    * `s3://mybucket`
+* `--region us-west-1`
+
+```
+# Delete buckets
+aws s3 rb
+```
+
 
 ## Tips
 
