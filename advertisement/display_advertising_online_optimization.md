@@ -327,39 +327,77 @@ $$
 
 $$
 \begin{eqnarray}
-    \mathrm{Clk}_{d, a}^{t+1}
-    & = &
-        \mathrm{Clk}_{d, a}^{t}
+    \bar{y}_{d, a}^{t}
+    & := &
+        \sum_{s=1}^{t}
+            y_{d, a}^{t}
+    \nonumber
+    \\
+    \bar{z}_{d, a}^{t}
+    & := &
+        \sum_{s=1}^{t}
+            z_{d, a}^{t}
+\end{eqnarray}
+    .
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{Clk}_{d, a}(y_{d, a}^{1:t})
+    & := &
+        \mathrm{Clk}_{d, a}^{t+1}
+    \nonumber
+    \\
+    & := &
+        \mathrm{Clk}_{d, a}^{1}
         +
         \sum_{s=1}^{t}
             y_{d, a}^{s}
     \nonumber
     \\
-    \mathrm{Cvr}_{d, a}^{t+1}
     & = &
-        \mathrm{Clk}_{d, a}^{t}
+        \mathrm{Clk}_{d, a}^{1}
+        +
+        \bar{y}_{d, a}^{s}
+    \nonumber
+    \\
+    \mathrm{Cvr}_{d, a}(z_{d, a}^{1:t})
+    & := &
+        \mathrm{Cvr}_{d, a}^{t+1}
+    \nonumber
+    \\
+    & := &
+        \mathrm{Cvr}_{d, a}^{1}
         +
         \sum_{s=1}^{t}
             z_{d, a}^{s}
     \nonumber
     \\
-    \mathrm{CPA}_{d, a}^{t + 1}
+    & = &
+        \mathrm{Cvr}_{d, a}^{1}
+        +
+        \bar{z}_{d, a}^{s}
+    \nonumber
+    \\
+    \mathrm{CPA}_{d, a}(y_{d, a}^{1:t}, z_{d, a}^{1:t})
+    & := &
+        \mathrm{CPA}_{d, a}^{t + 1}
+    \nonumber
+    \\
     & := &
         \frac{
             \sum_{s=1}^{t}
                 \mathrm{CPC}_{d, a}^{s}
                 y_{d, a}^{s}
         }{
-            \mathrm{Cvr}_{d,a}^{1}
-            +
-            \sum_{s=1}^{t}
-                z_{d, a}^{s}
+            \mathrm{Cvr}_{d, a}^{t+1}
         }
     \nonumber
     \\
     & = &
         \frac{
             \mathrm{CPC}_{d, a}^{1}
+            y_{d, a}^{1}
             +
             \sum_{s=2}^{t}
                 y_{d, a}^{s}
@@ -378,8 +416,63 @@ $$
         }
     \nonumber
     \\
-    \mathrm{CPC}_{d, a}^{t + 1}
+    & = &
+        \frac{
+            \sum_{s=1}^{t}
+                \mathrm{CPC}_{d, a}^{s}
+                \left(
+                    \bar{y}_{d, a}^{s}
+                    -
+                    \bar{y}_{d, a}^{s - 1}
+                \right)
+        }{
+            \mathrm{Cvr}_{d, a}^{t+1}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \mathrm{CPC}_{d, a}^{1}
+            \left(
+                \bar{y}_{d, a}^{1}
+                -
+                \bar{y}_{d, a}^{0}
+            \right)
+            +
+            \sum_{s=2}^{t}
+                \left(
+                    \bar{y}_{d, a}^{s}
+                    -
+                    \bar{y}_{d, a}^{s-1}
+                \right)
+                \mathrm{tCPA}_{a}
+                \left(
+                    \mathrm{Cvr}_{d,a}^{1}
+                    +
+                    \bar{z}_{d, a}^{s}
+                \right)
+        }{
+            \mathrm{Cvr}_{d,a}^{1}
+            +
+            \bar{z}_{d, a}^{t}
+        }
+    \nonumber
+    \\
+    \mathrm{CPC}_{d, a}(y_{d, a}^{1:t}, z_{d, a}^{1:t})
     & := &
+        \mathrm{CPC}_{d, a}^{t + 1}
+    \nonumber
+    \\
+    & := &
+        \mathrm{tCPA}_{a}
+        \frac{
+            \mathrm{Clk}_{d, a}^{t}
+        }{
+            \mathrm{Cvr}_{d, a}^{t}
+        }
+    \nonumber
+    \\
+    & = &
         \frac{
             \mathrm{tCPA}_{a}
             \left(
@@ -394,31 +487,556 @@ $$
             \sum_{s=1}^{t}
                 y_{d, a}^{s}
         }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \mathrm{tCPA}_{a}
+            \left(
+                \mathrm{Cvr}_{d,a}^{1}
+                +
+                \bar{z}_{d, a}^{t}
+            \right)
+        }{
+            \mathrm{Clk}_{d,a}^{1}
+            +
+            \bar{y}_{d, a}^{t}
+        }
 \end{eqnarray}
 $$
 
 $$
-    f(x; y, z, CPC, d)
-    :=
-    -
-    \sum_{a=1}^{N}
-        CPC_{d, I_{t}}^{t}
-        (1 - y_{a})
+\begin{eqnarray}
+    f^{t}(x; y, z, CPC, d)
+    & := &
+        -
+        \mathrm{CPC}_{d_{t}, I_{t}}(y_{d_{t}, I_{t}}^{1:(t-1)}, z_{d_{t}, I_{t}}^{1:(t-1)})
+        (1 - y_{d_{t}, I_{t}})
+    \nonumber
+    \\
+    & = &
+        -
+        \mathrm{CPC}_{d_{t}, I_{t}}^{t}
+        (1 - y_{d_{t}, I_{t}})
+    \nonumber
+\end{eqnarray}
 $$
 
 $$
-    f(x; y, z, CPC, d)
-    :=
-    -
-    \sum_{a=1}^{N}
-        CPC_{d, I_{t}}^{t}
-        (1 - y_{a})
+\begin{eqnarray}
+    g_{a}^{t}(x; y, z, CPC, d)
+    & := &
+        \sum_{d=1}^{M}
+            \mathrm{CPA}_{d, a}(y_{d, a}^{1:(t-1)}, z_{d, a}^{1:(t-1)})
+        -
+        \mathrm{tCPA}_{a}
+    \nonumber
+    \\
+    & = &
+        \sum_{d=1}^{M}
+            \mathrm{CPA}_{d, a}^{t}
+        -
+        \mathrm{tCPA}_{a}
+    \nonumber
+    \\
+    h_{a}^{t}(x; y^{1:t}, z^{1:t}, CPC, d)
+    & := &
+        \sum_{s=1}^{t}
+        \sum_{d=1}^{M}
+            \mathrm{Cvr}_{d, a}(y_{d, a}^{1:(s-1)})
+            \mathrm{CPA}_{d, a}(y_{d, a}^{1:(s-1)}, z_{d, a}^{1:(s-1)})
+        -
+        B_{a}
+    \nonumber
+    \\
+    & := &
+        \sum_{s=1}^{t}
+        \sum_{d=1}^{M}
+            \mathrm{Cvr}_{d, a}^{s}
+            \mathrm{CPA}_{d, a}^{s}
+        -
+        B_{a}
+    \nonumber
+\end{eqnarray}
+    .
 $$
 
 Criterion of loss function
 
 * If we choose an advertisement in which a user is not interested, it should be penalized
 * If we 
+
+
+#### Application
+* $$(\Omega, \mathcal{F}, P, \{\mathcal{F}_{t}\}_{t \in \mathbb{N}})$$,
+    * probability space with filtration
+* $T \in \mathbb{N}$,
+* $N \in \mathbb{N}$,
+    * the number of ads
+* $M \in \mathbb{N}$,
+    * the number of display ads
+* $(Y_{d, a}^{s})_{s \in [0:T]} \ (d \in [1:M], a \in [1:N])$,
+    * the number of clicks of advertimesement $a$ at dispaly $d$,
+    * $Y_{d, a}^{0}$ is an initial value
+    * adapted
+* $(Z_{d, a}^{s})_{s \in [0:T]} \ (d \in [1:M], a \in [1:N])$,
+    * the number of conversions of advertimesement $a$ at dispaly $d$,
+    * $Z_{d, a}^{0}$ is an initial value
+    * adapted
+* $B_{a} \in \mathbb{R}_{\ge 0}$,
+
+$$
+\begin{eqnarray}
+    \Delta Y_{d, a}^{t}
+    & := &
+        Y_{d, a}^{t+1}
+        -
+        Y_{d, a}^{t}
+    \nonumber
+    \\
+    \Delta Z_{d, a}^{t}
+    & := &
+        Z_{d, a}^{t+1}
+        -
+        Z_{d, a}^{t}
+    \nonumber
+    \\
+    S_{d, a}^{t}
+    & := &
+        \sum_{s=0}^{t-1}
+        \mathrm{tCPA}_{a}
+        \frac{
+            Z_{d, a}^{s}
+        }{
+            Y_{d, a}^{s}
+        }
+        \Delta
+        Y_{d, a}^{s}
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+    & := &
+        \mathrm{tCPA}_{a}
+        \frac{
+            Z_{d, a}^{t}
+        }{
+            Y_{d, a}^{t}
+        }
+    \nonumber
+    \\
+    \mathrm{CPA}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+    & := &
+        \frac{
+            \sum_{s=0}^{t-1}
+                \mathrm{CPC}_{d, a}(Y_{d, a}^{s}, Z_{d, a}^{s})
+                \Delta Y_{d, a}^{s}
+        }{
+            Z_{d, a}^{t}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+For $t \in [0:T-1]$,
+
+$$
+\begin{eqnarray}
+    & &
+        g_{a}^{t}(x; (Y_{d, a}^{s})_{s \in [0:t+1]}, (Z_{d, a}^{s})_{s \in [0:t+1]})
+    \nonumber
+    \\
+    & := &
+        \sum_{d=1}^{M}
+            \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+            \frac{
+                Z_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
+            x_{a}
+        -
+        \mathrm{tCPA}_{a}
+        +
+        x_{a}
+        \left(
+            \frac{
+                \sum_{d=1}^{M}
+                    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
+        \right)
+\end{eqnarray}
+$$
+
+For $t \in [0:T-1]$,
+
+$$
+\begin{eqnarray}
+    & &
+        h_{a}^{t}(x; (Y_{d, a}^{s})_{s \in [0:t+1]}, (Z_{d, a}^{s})_{s \in [0:t+1]})
+    \nonumber
+    \\
+    & := &
+        \sum_{s=0}^{t}
+        \sum_{d=1}^{M}
+            \frac{
+                Y_{d, a}^{s}
+            }{
+                Z_{d, a}^{s}
+            }
+            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+        -
+        B_{a}
+        +
+        x_{a}
+        \left(
+            \sum_{d=1}^{M}
+                \frac{
+                    Y_{d, a}^{t+1}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+        \right)
+\end{eqnarray}
+$$
+
+The loss function at $t \in [0:T-1]$ is given by
+
+$$
+\begin{eqnarray}
+    & &
+        f^{t}(x; (Y_{d, a}^{s})_{s \in [t:t+1]}, (Z_{d, a}^{s})_{s \in [t:t+1]})
+    \nonumber
+    \\
+    & := &
+        -
+        \sum_{a=1}^{N}
+        \sum_{d=1}^{M}
+            \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+            \Delta Y_{d, a}^{t}
+            x_{a}
+    .
+\end{eqnarray}
+$$
+
+Gradients of the cost functions is given by
+
+$$
+\begin{eqnarray}
+    & &
+        \left(
+            \nabla f^{t}(x; (Y_{d, a}^{s})_{s \in [t:t+1]}, (Z_{d, a}^{s})_{s \in [t:t+1]})
+        \right)_{a}
+    \nonumber
+    \\
+    & = &
+        -
+        \sum_{d=1}^{M}
+            \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+            \Delta Y_{d, a}^{t}
+    \nonumber
+\end{eqnarray}
+$$
+
+Similarly,
+
+$$
+\begin{eqnarray}
+    & &
+        \left(
+            \nabla g_{a}^{t}(x; (Y_{d, a}^{s})_{s \in [t:t+1]}, (Z_{d, a}^{s})_{s \in [t:t+1]})
+        \right)_{a^{\prime}}
+    \nonumber
+    \\
+    & = &
+        1_{\{a = a^{\prime}\}}
+        \left(
+            \sum_{d=1}^{M}
+                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \frac{
+                    Z_{d, a}^{t}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+            +
+            \left(
+                \frac{
+                    \sum_{d=1}^{M}
+                        \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                        \Delta Y_{d, a}^{t}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+            \right)
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+For the badget constraints,
+
+$$
+\begin{eqnarray}
+    & &
+        \left(
+            \nabla h_{a}^{t}(x; (Y_{d, a}^{s})_{s \in [t:t+1]}, (Z_{d, a}^{s})_{s \in [t:t+1]})
+        \right)_{a^{\prime}}
+    \nonumber
+    \\
+    & = &
+        1_{\{a=a^{\prime}\}}
+        \left(
+            \sum_{d=1}^{M}
+                \frac{
+                    Y_{d, a}^{t+1}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+Let $V, \alpha > 0$.
+
+$$
+\begin{eqnarray}
+    & &
+        F^{t}(x)
+    \nonumber
+    \\
+    & := &
+        V
+        \langle
+            \nabla f^{t}(x^{t}),
+            x - x^{t}
+        \rangle
+        +
+        \sum_{a=1}^{N}
+            Q_{a}^{t}
+            \langle
+                \nabla g_{a}^{t}(x^{t}),
+                x - x^{t}
+            \rangle
+        +
+        \sum_{a=N+1}^{2N}
+            Q_{a}^{t}
+            \langle
+                \nabla h_{a}^{t}(x^{t}),
+                x - x^{t}
+            \rangle
+        +
+        \alpha
+        \norm{
+            x - x^{t}
+        }^{2}
+    \nonumber
+    \\
+    & = &
+        -
+        V
+        \sum_{a=1}^{N}
+        \sum_{d=1}^{M}
+            \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+            \Delta Y_{d, a}^{t}
+            (x_{a} - x_{a}^{t})
+        +
+        \sum_{a=1}^{N}
+            Q_{a}^{t}
+            \left(
+                \sum_{d=1}^{M}
+                    \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \frac{
+                        Z_{d, a}^{t}
+                    }{
+                        Z_{d, a}^{t+1}
+                    }
+                +
+                \left(
+                    \frac{
+                        \sum_{d=1}^{M}
+                            \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                            \Delta Y_{d, a}^{t}
+                    }{
+                        Z_{d, a}^{t+1}
+                    }
+                \right)
+            \right)
+            (x_{a} - x_{a}^{t})
+    \nonumber
+    \\
+    & &
+        +
+        \sum_{a=1}^{N}
+            Q_{N+a}^{t}
+            \left(
+                \sum_{d=1}^{M}
+                    \frac{
+                        Y_{d, a}^{t+1}
+                    }{
+                        Z_{d, a}^{t+1}
+                    }
+                    \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+            \right)
+            (x_{a} - x_{a}^{t})
+        +
+        \alpha
+        \norm{x - x^{t}}^{2}
+    \nonumber
+\end{eqnarray}
+$$
+
+The next point is defined as
+
+$$
+\begin{eqnarray}
+    x^{t+1}
+    & := &
+        \argmin_{x \in \mathcal{D}}
+            F^{t}(x)
+\end{eqnarray}
+$$
+
+If $a \in [1:N]$,
+
+$$
+\begin{eqnarray}
+    \tilde{Q}_{a}^{t+1}
+    & := &
+        Q_{a}^{t}
+        +
+        g_{a}^{t}(x^{t})
+        +
+        \langle
+            \nabla g_{a}^{t}(x^{t}),
+            x^{t+1} - x^{t}
+        \rangle
+    \nonumber
+    \\
+    & = &
+        Q_{a}^{t}
+        +
+        \sum_{d=1}^{M}
+            \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+            \frac{
+                Z_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
+            x_{a}
+        -
+        \mathrm{tCPA}_{a}
+        +
+        x_{a}
+        \left(
+            \frac{
+                \sum_{d=1}^{M}
+                    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
+        \right)
+    \nonumber
+    \\
+    & &
+        +
+        \left(
+            \sum_{d=1}^{M}
+                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \frac{
+                    Z_{d, a}^{t}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+            +
+            \left(
+                \frac{
+                    \sum_{d=1}^{M}
+                        \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                        \Delta Y_{d, a}^{t}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+            \right)
+        \right)
+        (x_{a}^{t+1} - x_{a}^{t})
+    \nonumber
+    \\
+    Q_{a}^{t+1}
+    & := &
+        \max(\tilde{Q}_{a}^{t+1}, 0)
+    .
+\end{eqnarray}
+$$
+
+If $a \in [N+1:2N]$,
+
+$$
+\begin{eqnarray}
+    \tilde{Q}_{a}^{t+1}
+    & := &
+        Q_{a}^{t}
+        +
+        h_{a}^{t}(x^{t})
+        +
+        \langle
+            \nabla h_{a}^{t}(x^{t}),
+            x^{t+1} - x^{t}
+        \rangle
+    \nonumber
+    \\
+    & = &
+        Q_{a}^{t}
+        +
+        \sum_{s=0}^{t}
+        \sum_{d=1}^{M}
+            \frac{
+                Y_{d, a}^{s}
+            }{
+                Z_{d, a}^{s}
+            }
+            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+        -
+        B_{a}
+        +
+        x_{a}
+        \left(
+            \sum_{d=1}^{M}
+                \frac{
+                    Y_{d, a}^{t+1}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+        \right)
+        +
+        \left(
+            \sum_{d=1}^{M}
+                \frac{
+                    Y_{d, a}^{t+1}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+        \right)
+        (x_{a}^{t+1} - x_{a}^{t})
+    \nonumber
+    \\
+    Q_{a}^{t+1}
+    & := &
+        \max(\tilde{Q}_{a}^{t+1}, 0)
+    .
+\end{eqnarray}
+$$
 
 
 ## Reference
