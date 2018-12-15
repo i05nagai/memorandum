@@ -558,6 +558,8 @@ title: English Speaking
         * to have difficulty thinking clearly, for example because you are too tired, too busy, or because a lot of things are happening around you
         * I can’t think straight with all this noise going on.
 * lie
+    * lie around
+        * Don't leave your keys lying around the office, please.
     * catch sb in a lie
         * to trap someone in the act of lying, to discover someone is telling you a lie
         * did you bursh your teeth? Yes, I did. Then why is your toothbursh dry?
@@ -704,6 +706,14 @@ title: English Speaking
 * defence
     * In my defence, I thought we had already broken up.
 * come
+    * come out of the closet
+        * to tell your family, friends, or the public that you are gay, after previously keeping this secret
+    * come out with sth
+        * to say sth suddenly and unexpectedly
+            * He comes out with the strangest things!
+            * She comes out with some good ideas though.
+        * to make sth available to the public
+            * The investigators are expected to come out with new findings.
     * come up with
         * come up with a plan/idea/solution
         * come up with a name/title/advert
@@ -857,6 +867,8 @@ title: English Speaking
     * collide with
         * There was an accident this mornig. A bus collided with a car
 * fill
+    * fill up
+        * fill her up
     * fill out
     * fill in
         * replace
@@ -906,23 +918,26 @@ title: English Speaking
     * She tried to be serious, but she couln't help laughing
     * I'm sorry I'm so nervous. I cant' help it.
 * like /love/hate
-    * Do you like getting up early?
-    * Do you liek to get up early?
-    * Stephany hates flying
-    * Stephanie hatest to fly
-    * I love meeting people
-    * I love to meet people
-    * I don't like being kept waitng
-    * I like to be kept waiting
-    * He likes living there
-    * Do you like being a student?
-    * The office I worked in was horrible. I hated working there
-    * I like clearning the kitchen
-    * It's not my favorite job, but I like to clean th kitchen as often as possible
-    * I enjoy cleaning the kitchen
-    * I don't mind cleaning the kitchen
-    * It's a shame we dind't see Anna when we were in London. I would like to have seen her again
-    * We'd like to have gone away, but we were too busy at home
+    * like
+        * like like
+            * is more than liking as a friend, yet different then a crush. it's a step above a crush, and step below love
+        * Do you like getting up early?
+        * Do you liek to get up early?
+        * Stephany hates flying
+        * Stephanie hatest to fly
+        * I love meeting people
+        * I love to meet people
+        * I don't like being kept waitng
+        * I like to be kept waiting
+        * He likes living there
+        * Do you like being a student?
+        * The office I worked in was horrible. I hated working there
+        * I like clearning the kitchen
+        * It's not my favorite job, but I like to clean th kitchen as often as possible
+        * I enjoy cleaning the kitchen
+        * I don't mind cleaning the kitchen
+        * It's a shame we dind't see Anna when we were in London. I would like to have seen her again
+        * We'd like to have gone away, but we were too busy at home
 * puberty
     * Fourteen is a fairly normal age for a girl to reach puberty
 * preposition + ing
@@ -2033,6 +2048,12 @@ title: English Speaking
     * a husband's (or wife's) provision for a spouse after separation or divorce; maintenance.
     * he is said to have paid 30000USD alimony to his first wife
 * call
+    * name
+    * telephone
+    * say
+    * ask to come
+    * consider
+    * ask for
     * call into question
         * The fact that a party can be voted into power by a minority of the electrorate calls into question the countr's electoral system.
     * call for
@@ -2557,12 +2578,10 @@ title: English Speaking
     * Somehow we deal with the anguish of serious illness
 * gynecologist
     * my gynecologist tried to kill me
-* zest
-    * excitement
-        * enthusiasm, eagerness, energy, and interest
-    * fruit
 * roost
+    * a place, such as a branch of a tree, where birds rest or sleep
     * In the city, pigeons roost on the ledges of buildings
+    * When birds roost, they go somewhere to rest or sleep.
 * side
     * surface
     * edge
@@ -3172,6 +3191,13 @@ title: English Speaking
     * stay fit
     * stay on this road
     * cash will stay king
+* linger
+    * to take longer than usual to leave or disappear
+        * we went to small cafes where we could linger over cappuccino
+        * the smell lingered in the kitchen for days
+    * After the play had finished, we lingered for a while in the bar hoping to catch sight of the actors.
+    * The smell from the fire still lingered days later.
+    * It's impossible to forget such horrific events - they linger (on) in the memory forever.
 * follow this road
 * allergy
     * allergy to
@@ -3617,6 +3643,7 @@ title: English Speaking
         * The U.S. president threatened to further escalate the trade war with China.
 * aspire
     * we have aspired to bring society and our customers the highest quality of products and services.
+    * She aspires to have a company of her own someday
 * communicate
     * You will need to write and speak clearly, easily communicating complex ideas
 * perform
@@ -3884,6 +3911,8 @@ title: English Speaking
 * entrepreneurship
     * the activity of starting a business or businesses
     * He pointed out that the key to entrepreneuship is taking risks 
+    * skill in starting new businesses, especially when this involves seeing new opportunities
+* entrepreneur
 * statistic
     * a single number in a range of statistics
         * the city's most shocking statistic is its infant mortality rate
@@ -4287,6 +4316,14 @@ title: English Speaking
         * directions
         * short cut
         * how to get to
+* heir
+    * a person who will receive or already has received money or property from another person at the time of that other person's death
+    * My cousin Robert is the only heir to my uncle’s fortune.
+    * heir to sth
+    * heir of sth
+    * someone who becomes the new leader of a large organization or company after the old leader leaves:
+        * He was a potential heir to retiring CEO Jack Welch.
+* legatee
 * successor
     * Colossus is the successor to GFS
 * succeed
@@ -4655,6 +4692,7 @@ title: English Speaking
         * lower yourself
             * to behave in a way that makes people lose respect for you
             * I wouldn't lower myself to respond to his insults if I were you
+    * That lowers the entry bar to the world of stream processing, providing a simple and completely interactive SQL interface for processing data in Kafka.
 * frame
     * while you don't need to remember it all, it's useful for framing many of the other systems we'll refer to later
     * express
@@ -8300,6 +8338,39 @@ title: English Speaking
     * feral cat
 * draft
     * this was drafted back in January
+    * plan
+        * a piece of writing or drawing that is done early in the development of a work to help prepare it in its final form
+    * choosing people
+        * the process by which people are ordered by law to become members of the armed forces, or the process by which players are chosen to play for professional (= paid) sports teams
+    * cold air
+        *  a current of cold air inside a room
+    * banking
+        * a written order for money to be paid by a bank
+        * a bank draft
+    * write
+        * to write sth, esp. at an early stage before it is in final form
+    * choose
+        * to order a person to become a member of the armed forces
+    * people
+        * In sports, to draft is to choose sb, esp. sb in a colleage or university to become available as a player for a team that pays its players
+    * plan
+    * military
+        * the system of ordering people by law to join the armed forces
+        * He avoided because of a foot injury
+    * sport
+        * the system by which sports teams in the US choose new young players at the begining of each people
+        * the NBA draft
+        * he was a second-rounded draft pick by the Raiders
+    * money
+        * a written order for money to be paid by a bank, esp. to another bank
+        * I arranged for some money to be sent from London to L.A. by banker's draft
+    * cold air
+    * boats
+    * beer
+    * beer
+    * animals
+    * plan
+    * military
 * digetst
     * Here’s a digest-edition of what I shared
 * amidst
@@ -9665,6 +9736,9 @@ title: English Speaking
     * His humor gives him the ability to deliver a zinger.
 * slumber party
     * a party, typically for preteen or teenage girls, in which all the guests spend the night at the house where the party is held.
+* sleepover
+    * a type of party when a young person or a group of young people stay for the night at the house of a friend
+    * a visit to another persons' home to spend the night
 * student
     * freshman student
         * 1th year
@@ -10332,12 +10406,6 @@ title: English Speaking
 * Tums
     * antacid
     * An antacid is a substance which neutralizes stomach acidity and is used to relieve heartburn, indigestion or an upset stomach.
-* hindrance
-    * sth that makes it more difficult for you to do sth or for sth to develop
-    * I've never considered my disability a hindrance, but other people have
-* hind
-    * at the back of an animal's body
-    * Phil's dog stands on her hind legs to greet me
 * overlap
     * partly cover
         * to partly cover sth with a layer of sth else
@@ -10645,6 +10713,13 @@ title: English Speaking
     * Corruption is the major impediment to the country's economic growth.
     * something that makes progress or movement difficult or impossible
     * The lack of funds is a major impediment to research.
+* hindrance
+    * sth that makes it more difficult for you to do sth or for sth to develop
+    * I've never considered my disability a hindrance, but other people have
+* hind
+    * at the back of an animal's body
+    * Phil's dog stands on her hind legs to greet me
+* handicanp
 * overhead
 * prosperity
     * He was surprised by his sudden prosperity
@@ -11224,6 +11299,15 @@ title: English Speaking
 * allegiance
     * support for a leader, country, group, or belief
     * loyalty and support for a ruler, country, group, or belief
+* fidelity
+    * being loyal
+        * the state of remaining loyal to sb and keeping the promises you made to that person
+    * accuracy
+        * the degree to which a copy of something shows the true character of the original
+    * loyalty
+        * How important do you think sexual fidelity is in a marriage?
+    * exact copy
+* homage
 * bros before hoes
     * "Bros before hoes" (that is, "friends before women") is a well-known, vulgar slang expression about how men should not abandon their male friends in order to pursue or embark on relationships with women.
 * telemetry
@@ -13261,6 +13345,331 @@ title: English Speaking
     * A homage, especially something in an artwork which has been done in respectful imitation of another artist. 
 * convo
     * Conversation
+* candle
+    * candle in the wind
+        * Something that is particularly vulnerable, weak, fragile, or precarious and likely to fail, perish, or be eliminated at any moment.
+* canoodle
+    * If two people canoodle, they kiss and hold each other in a sexual way.
+* foot
+    * foot massage
+        * foot rub
+* prune
+    * cut
+        * to reduce the number or amount of sth
+        * the plan for the next financial year is to prune 25% off the budget
+        * to cut off branches from a tree, bush, or plant, esp. so that it will grow better in the future
+            * She spent the afternoon pruning roses.
+    * fruit
+        * a dried plum
+* self-destruct
+* self-destruction
+* conscious
+    * awake
+    * noticing
+    * intentional
+    * aware
+    * self-conscious
+* subconscious
+* unconscious
+* conscientious
+    * feeling a moral responsibility to do your work carefully and to be fair to others
+        * She was a conscientious worker, and I’ll miss her.
+    * putting a lot of effort into your work:
+        * a conscientious student
+* conscientiously
+    * Employees are expected to carry out their duties conscientiously.
+* painstaking
+* coldcock
+    * to knock unconscious
+* phosphorus
+    * a poisonous, yellow-white chemical element that shines in the dark and burns when in the air
+* paddle
+* soggy
+    * (of a substance) very wet from having absorbed liquid
+    * they played on a wet, soggy filed
+    * soggy ground
+    * I hate it when cereal goes soggy.
+* boggy
+    * boggy ground is soft and wet
+* marshy
+    * A marshy area of land is always wet, like a marsh
+* marsh
+    * an area of low, wet land, usually covered with tall grasses
+    * ground near a lake, a river, or the sea that often floods and is always wet
+    * At the mouth of the river is a large area of marsh.
+    * Rain had been falling steadily all day and the ground had become a marsh.
+* swampy
+    * Swampy land is soft and very soft
+* mushy
+* squashy
+* pulpy
+* slushy
+* squishy
+* smile
+* cerebrospinal
+    * relating to the brain and spine.
+    * cerebrospinal fluid
+        * Cerebrospinal fluid (CSF) is a clear, colorless body fluid found in the brain and spinal cord
+* syphilis
+    * Syphilis is a bacterial infection usually spread by sexual contact
+    * disease
+* ward
+    * a small, hard, benign growth on the skin, caused by a virus.
+* alley
+    * a narrow road or path between buildings, esp. between the backs of buildings
+    * (right) up sb's alley
+        * to be the type of thing that you are interested in or that you enjoy doing:
+        * Kate loves dancing, so salsa lessons would be right up her alley.
+        * Perhaps this task will be a little bit more up your alley
+* abstain
+    * to not do sth you could do, esp. sth that is unhealthy or gives you pleasure
+        * Some families abstain from eating fried food.
+        * He took a vow to abstain from alcohol/smoking/sex.
+    * If you abstain from voting, you do not vote although you are permitted to vote.
+    * to stay away from work
+* monogamous
+    * nvolving marriage to one person at a time.
+* bacteria
+* spore
+    * bacteria spore
+    * I need you to count the bacteria spores on these petri dishes
+* petri
+    * petri dish
+* recite
+    * to say a piece of writing aloud from memory
+        * He was nervous about reciting in front of the class.
+        *  The children recite the Pledge of Allegiance every morning.
+* preposterous
+    * completely unreasonable and ridiculous; not to be believed
+    * It was a preposterous idea, and no one took it seriously.
+    * a preposterous suggestion
+* absurd
+* benign
+    * benign prostatic hyperplasia
+    * Benign prostatic hyperplasia (BPH) — also called prostate gland enlargement — is a common condition as men get older.
+    * An enlarged prostate gland can cause uncomfortable urinary symptoms, such as blocking the flow of urine out of the bladder. It can also cause bladder, urinary tract or kidney problems.
+* butter
+    * butter up
+        * to be very kind or friendly to someone or try to please someone, so that that person will do what you want them to do
+        * You'll have to butter them up a bit before they'll agree.
+* trash
+    * trash talk
+        * insulting or boastful speech intended to demoralize, intimidate, or humiliate someone, especially an opponent in an athletic contest
+            * he heard more trash talk from the Giants before the game than during the game
+        * use insulting or boastful speech intended to demoralize
+            * their players do not swear or tussle or trash-talk
+* smart
+    * be smart as a whip
+        * very quick-witted and intelligent.
+* I would've thought at a horse show
+    * If I had been you
+* metrosexual
+    * a man who is attracted to women sexually but who is also interested in fashion and his appearance
+* dignify
+    * to cause something to be respected and considered important
+    * I'm not even going to dignify that stupid question with an answer.
+* boogie
+    * I like to boogie with wome
+    * to dance to pop music
+* rhotacism
+    * speech impediment
+    * is the inability to pronounce or difficulty in pronouncing the sound
+* drape
+    * to hang or cover with sth loosely and often in a decorative way
+    * she draped a warm scarf around her shoulders
+    * drape sth accross/on/over
+        * to put sth such as cloth or a piece of clothing loosely over sth
+        * he draped his jacket over the back of the chair and sat down to eat
+    * be draped in/with
+        * to be loosely covered with a cloth
+        * the coffins were all draped with the national flag
+    * the way in which cloth folds or hangs as it covers sth
+        * she liked the heavy drape of the velvet
+* velvet
+    * a cloth with a soft, furry surface
+* dibs
+    * money
+    * dibs on sth
+        * a right to have or get sth from sb, or to use sth
+        * the current owner might have first dibs on buying ther rest of property
+        * Dibs on the front seat!
+* proverbial
+    * (of a statement) commonly known, esp. because it is from a proverb or saying known by many people, or because it expresses a truth known by a particular group of people
+    * Yelling at me was the proverbial straw that broke the camel’s back.
+    * as used in a proverb or other phrase
+        * the players pointed the proverbial finger at themselves as the one needing to improve
+    * well known
+        * his proverbial good humour
+* prostate
+    * a gland surrounding the neck of the bladder in male mammals and releasing prostatic fluid.
+    * relating to the prostate (= an organ near the penis that produces a liquid that carries sperm
+    * prostatic cancer
+* twinkle
+    * (of light) to shine brightly and then less brightly, as if quickly flashing on and off
+        * Stars twinkled in the clear night sky.
+    * sb whose eyes twinkle has a bright, intelligent expression
+        * his eyes twinkled with mischief
+    * a flash of light, shining brightly and then less brightly
+    * when sb was a (mere) twinkle in their father's eye
+        * at a time before sb was born
+* transvestite
+    * a person who wears the clothes of the opposite sex
+* derive
+    * to get or obtain sth
+        * the institute derives all its money from foreign investment
+    * derive sth from sth
+        * to get sth from sth else 
+        * Many people derive their self-worth from their work.
+        * I didn't derive much benefit from school.a
+        * She derived great satisfaction from helping other people.
+* impasse
+    * a point in a process at which further progress is blocked, esp. by disgreement
+        * we have reached an impasse in the negotiation -- neither side will budge
+    * The dispute had reached an impasse, as neither side would compromise.
+    * be at/remain at
+        * an impasse With negotiations at an impasse, analysts warn the uncertainty may harm supermarket stocks.
+    * to break/end/resolve an impasse
+    * to declare/reach an impasse
+* frig
+    * used as a euphemism for fuck
+    * What the frig
+* hubba hubba
+    * used to express approval, excitement, or enthusiasm, especially with regard to a person's appearance
+    * In walks the willowy Juanita. Hubba hubba
+* magnify
+    * magnifying glass
+        * Use a magnifying glass to start a fire.
+* venture
+    * We're not quite ready to venture into other markets yet
+* savvy
+* shrewdness
+* what if it's booby-trapped?
+    * Don't worry, I'm one step ahead of him
+* tuck
+    * make tight
+        * to push the ends clothing or material tightly into place
+        * if you tuck part of your body, you hold it a particular position
+    * store safely
+        * to put sth into a safe or convinience place
+        * Tuck your gloves in your pocket so that you don't lose them
+        * She had a doll tucked under her arm.
+        * Stand up straight, tuck your tummy in and tuck your bottom under.
+    * tuck away
+        * to put something in a private, safe place
+        * Grandma always kept a little of money tucked away in case of an emergency.
+    * tidy
+        * to push a loose end of a piece of clothing or material into a particular place or position, esp. to make it tidy or comfortable
+        * Shoud I tuck my shirt into my trousers
+        * He tucked the bottom of the sheet under the mattress.
+    * store safely
+    * body
+    * hidden
+        * be tucked (away)
+            * to be in a place that is hidden or where few people go
+    * fold
+        * a narrow fold sewn into sth, esp. a piece of material, either for decoration or to change its shape
+    * medical operation
+* pile
+    * pile up
+        * I need to get a lot done today; the work is starting to pile up.
+* bibliomania 
+    * the love of collecting books, whether they are read or no
+* reclassify
+    * We will need to reclassify our products after the new standards come into effect.
+* date
+    * date back to
+        * The church dates back to the 17th century.
+* stigma
+* famous
+    * known by very many or most people
+* on-bording
+    * onbording
+    * the process in which new employees gain the knowledge and skills they need to become effective members of an organization
+    * The right onboarding process can make a huge difference in the long-term performance of a new employee.
+* ravage
+    * to cause great damage to sth or sb
+    * Hurricane Mitch ravaged the tiny Central American country.
+    * The area has been ravaged by drought/floods/war.
+* voracious
+    * needing a lot of sth to be satisfied
+    * very eager for sth, esp. a lot of food
+    * he has a voracious appetite
+* instatiable
+* unquenchable
+* unappeasable
+* eager
+* zest
+    * excitement
+        * enthusiasm, eagerness, energy, and interest
+    * fruit
+* flip
+    * get a flip
+    * to cause sth to turn over quickly one or more times, or to cause sth to move by making a short, quick motion
+    * the act of turning something over quickly one or more times
+    * turn
+        * I don't want to spend the rest of my life flipping burgers.
+    * improve house
+        * an occasion when something turns over quickly or repeatedly
+    * used when you are slightly annoyed
+        * Oh, flip, I've missed the bus.
+* glare
+* glance
+* glimpse
+    * a brief look at sb or sth
+    * he caught a glimpse of her face
+    * to see sth or sb for a very short time or only partly
+    * we glimpsed the ruined abbey from the windows of the train
+* abbey
+    *  building for monks (= religious men) or nuns (= religious women) to live in
+* proposition
+    * a suggestion or statement for consideration
+    * the chairman was advised that it was a risky business proposition
+    * an offer or suggestion, usually in business
+    * an idea or opinion
+    * a statement or problem that must be solved or proved to be true or not true
+    * in some states of the United States, a new plan that is voted on by the people of a state
+        * He proposed an unsuccessful state proposition.
+    * to ask someone who you are not in a relationship with if they would like to have sex with you
+        * I was propositioned by a complete stranger.
+* legitimate
+    * allowed according to law, or reasonable and acceptable
+    * allowed by law
+    * reasonable and acceptable
+        * He claimed that the restaurant bill was a legitimate business expense.
+    * A legitimate child is one whose parents are legally married at the time of his or her birth.
+    * fair and honest
+        * legitimate complaints/questions/reasons
+* decriminalize
+* legitimize
+* legalize
+* submit
+* highlight
+    * this talk will highlight key use cases for real time data
+* sext
+* bubala
+* cue
+    * signal
+    * stick
+    * to give sb a signal to do sth
+    * on cue
+        * if sth happen on cue, it happens just after sb has said or thought it would happen
+        * I was just wondering where Sarah was, when, right on cue, she came in
+    * take your cue from sb
+        * to take notice of sb's words or behaviour so that you know what you should do
+
+
+
+
+## Japan
+* Certificate of Individual Records.
+    * I'd like you to hand in your Certificate of Individual Records, please.
+    * extract of the family register
+* Certificate of the Family Register
+    * I need you to hand in your Certificate of the Family Register to complete the process.
+    * transcript of the family register 
+* apostille
+    * An apostille is a certification by the Ministry of Foreign Affairs in the form of an allonge (= apostille) under the Convention Abolishing the Requirement of Legalisation for Foreign Public Documents (or the Apostille Convention) (Hague Convention of October 5, 1961)
+
 
 
 ## US
