@@ -389,3 +389,245 @@ $$
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+#### Proposition 1
+* $(\Omega, \mathcal{F}, P)$,
+* $\mathcal{G} \subseteq \mathcal{F}$,
+    * sub $\sigma$-algebra
+* $\mathcal{H} \subseteq \mathcal{G}$,
+    * sub $\sigma$-algebra
+* $X, Y$,
+    * r.v.
+* $(X_{n \in \mathbb{N}})$,
+    * r.v.s
+
+
+(1)
+
+$$
+\begin{equation}
+    \mathrm{E}
+    \left[
+        \mathrm{E}
+        \left[
+        \left.
+            X
+        \right|
+            \mathcal{G}
+        \right]
+    \right]
+    =
+    \mathrm{E}
+    \left[
+        X
+    \right]
+\end{equation}
+$$
+
+(2)
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        aX
+        +
+        bY
+    \right|
+        \mathcal{G}
+    \right]
+    =
+    a
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    +
+    b
+    \mathrm{E}
+    \left[
+    \left.
+        Y
+    \right|
+        \mathcal{G}
+    \right]
+\end{eqnarray}
+$$
+
+(3)
+
+$$
+\begin{eqnarray}
+    X \ge 0,
+    \
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    \ge
+    0
+\end{eqnarray}
+$$
+
+(4) If $0 \le X_{n}$, $X_{n} \nearrow X (n \rightarrow \infty)$, then
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        X_{n}
+    \right|
+        \mathcal{G}
+    \right]
+    \nearrow
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    \text{-a.s.}
+\end{eqnarray}
+$$
+
+(5) If $X_{n} \ge 0$,
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        \liminf_{n \rightarrow \infty} X_{n}
+    \right|
+        \mathcal{G}
+    \right]
+    \le
+    \liminf_{n \rightarrow \infty}
+    \mathrm{E}
+    \left[
+    \left.
+         X_{n}
+    \right|
+        \mathcal{G}
+    \right]
+    \text{-a.s.}
+\end{eqnarray}
+$$
+
+(6) If $c: \mathbb{R} \rightarrow \mathbb{R}$ is a convex function,
+
+$$
+\begin{equation}
+    c
+    \left(
+        \mathrm{E}
+        \left[
+        \left.
+            X
+        \right|
+            \mathcal{G}
+        \right]
+    \right)
+    \le
+    \mathrm{E}
+    \left[
+    \left.
+        c(X)
+    \right|
+        \mathcal{G}
+    \right]
+    \text{-a.s.}
+\end{equation}
+$$
+
+(7)
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        \mathrm{E}
+        \left[
+        \left.
+            X
+        \right|
+            \mathcal{G}
+        \right]
+    \right|
+        \mathcal{H}
+    \right]
+    =
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{H}
+    \right]
+    \text{-a.s.}
+\end{eqnarray}
+$$
+
+(8) If $Z$ is $\mathcal{G}$ measurable,
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        Z
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    =
+    Z
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    \text{-a.s.}
+\end{eqnarray}
+$$
+
+(9) If $\mathcal{H}$ is independent on $\sigma(X) \vee \mathcal{G}$,
+
+$$
+\begin{eqnarray}
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G} \vee \mathcal{H}
+    \right]
+    =
+    \mathrm{E}
+    \left[
+    \left.
+        X
+    \right|
+        \mathcal{G}
+    \right]
+    \text{-a.s.}
+\end{eqnarray}
+$$
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Reference
