@@ -44,6 +44,9 @@ title: English Email
 ## Follow up
 * [12 Examples of A Follow Up Email Template To Steal Right Now \- Yesware Blog](https://www.yesware.com/blog/follow-up-email-template/)
 
+## PFA
+* [11 Less Annoying Synonyms and Alternatives to "Please Find Attached"](https://blog.hubspot.com/sales/please-find-attached)
+
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)
 * [5 Email Templates for Responding to Recruiters -The Muse](https://www.themuse.com/advice/5-email-templates-to-respond-to-recruiters-no-matter-where-you-are-in-your-search)
