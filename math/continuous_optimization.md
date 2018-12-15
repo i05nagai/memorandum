@@ -76,3 +76,6 @@ $$
 
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## Reference
+* [primal\-dual\.pdf](http://www.stat.cmu.edu/~ryantibs/convexopt/lectures/primal-dual.pdf)
