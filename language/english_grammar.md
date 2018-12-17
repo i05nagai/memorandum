@@ -6,6 +6,8 @@ title: English Grammar
 Subjanctive mood
 
 * [Subjunctive Mood](http://englishplus.com/grammar/00000031.htm)
+* [Conditional \| English Grammar \| EF](https://www.ef.edu/english-resources/english-grammar/conditional/)
+* [Exceptions for Conditional Sentences / IF Clauses \- English Grammar](https://www.ego4u.com/en/cram-up/grammar/conditional-sentences/exceptions)
 * If you had just kept to yourself, none of this would have happend
 * If S past, S would/could
     * If I were/If I was
@@ -14,8 +16,9 @@ Subjanctive mood
         * was/were able to
         * She could get a better job if she could speak English
 * If I had past, S would have past
-    * 
 * I wish past
+* If you would have tolde me when I was a kid that someday I would be doing science next to Professor Proton, I would not have believed you
+* If sb had told me that people would still call me Professor Proton when I was 83 years old, I never would have quit smoking
 
 ## comparative
 
