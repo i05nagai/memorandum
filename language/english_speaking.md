@@ -8,6 +8,7 @@ title: English Speaking
     * racial/sex/age discrimination
     * Until 1986 most companies would not even allow women to take the exams, but such blatant discrimination is now disappearing
     * Discrimination against women at work is a problem
+* discriminatory
 * discriminate
     * Children rarely discriminate against children of a different race
     * treat worse
@@ -1681,6 +1682,7 @@ title: English Speaking
     * I was next to best
     * I was second in
 * lead
+    * we are in the lead
     * lead time
         * the time between the design of a product and its production, or between ordering a product and receiving it
         * The result of this new approach is a shorter lead time and lower costs.
@@ -2889,6 +2891,7 @@ title: English Speaking
     * the teachers and the teachers ill come into conflict
 * priviledge
 * odd
+    * what are the odds we run into this guy?
     * at odds
         * They're at odds over the funding of the project
         * Her version of events was at odds with the police report
@@ -8857,6 +8860,8 @@ title: English Speaking
     * participants researced topics ranging from computational biology and pharmacology to astronomy and engineering science.
 * recruit
     * we recruited 15 academic data analysts from 8 labolatories at UC sandie go
+* prosperous
+    * successful, usually by earning a lot of money
 * boom
 * slump
 * upsurge
@@ -10536,6 +10541,8 @@ title: English Speaking
     * part
         * a part that combines with other parts to form a whole story, subject, or situation
     * coat
+* coat
+    * sugar coat
 * stranded
     * lacking what is necessary to leave a piece or to get out of a situation
 * retrospective
@@ -11866,12 +11873,19 @@ title: English Speaking
     * evil, or caused by the Devil
 * professor
     * Contact professors you’d like to work with
+* annulment
+    * it says here you can get an annulment if any of the followoing conditions are met
+        * were you unable to consummate the marriage?
 * consummate
+    * consummation of marriage
+        * full sexual intercourse between married persons after their marriage by the insertion of the penis into the vagina. Inability to consummate because of impotence or refusal to consummate is a ground for nullity of the marriage.
     * perfect; complete in every way
     * consummate skill
     * to complete
     * to consummate a marriage is to make it complete by having sex
     * a life of consummate happiness
+    * have sex
+        * The marriage was never consummated.
 * bigamy
     * the act of marrying a person while already legally married to sb else
     * In court, he admitted that he had committed bigamy
@@ -13580,6 +13594,8 @@ title: English Speaking
     * date back to
         * The church dates back to the 17th century.
 * stigma
+* stigmatize
+    * People with mental health issues are still stigmatized in the country.
 * famous
     * known by very many or most people
 * on-bording
@@ -13656,8 +13672,142 @@ title: English Speaking
         * I was just wondering where Sarah was, when, right on cue, she came in
     * take your cue from sb
         * to take notice of sb's words or behaviour so that you know what you should do
-
-
+* diversion
+    * change of direction
+        * the act of causing something or someone to turn in a different direction, or to be used for a different purpose
+        * A snowstorm closed the airport, and the diversion of air traffic was therefore necessary.
+        * diversions of money into other projects
+    * enjoyable activity
+* form
+    * come together
+    * being having
+    * to begin sth, esp. organizing people or thing
+    * type
+        * Swimming is the best form of exercise.
+    * SHAPE/APPEARANCE
+    * document
+        * a paper or set of papers printed with spaces in which answers to questions can be written or information can be recorded in an organized way
+        * an application form (= document used for asking officially for something, for example a job)
+        * an entry form (= document used to enter a competition)
+        * Please fill in/out the form with black ink.
+        * When you have completed the form, hand it in at the desk.
+        * You will be required to sign several forms.
+    * art/music
+    * behavior
+    * ability
+        * be on good, great, form
+            * to be feeling or performing well
+    * grammar
+    * school group
+    * behaviour
+        * bad form
+        * rude behaviour
+    * seat
+        * a long, thin seat, usually without a back
+    * to create a company, organization
+    * to develop a successful relationship with a person, organization, or country, esp. for a particular purpose
+* slot
+    * hole
+    * position
+    * put in position
+    * amount of time
+    * an amount of time that is allowed for a single event in a planned order of activities or events
+        * I think I have a slot open in my diary.
+        * 1-hour/90 minute/4-hour slot
+            * What can we test in the 90-minute time slot?
+        * the 9pm/Saturday night/morning slot
+            * the show competes with 'Bob the Builder' in morning slot
+        * delivery/viewing/landing slot
+            * Airlines are competing for landing slots at Gatwick airport.
+    * If a doctor has an open slot in her schedule, that might be called "an availability."
+    * a job in a company or organization
+    * a position in a list of ransk
+        * the number 1/2/3
+            * they fought their way to the number 1 slot in the nation
+    * a small, narrow opening for something to be put in
+        * the memory card slot in your machine
+        * in/into a slot
+            * you can insert a smart card into a slot on the keyboard to verify digital signatures
+* interlocutor
+    * a person who takes part in a dialogue or conversation.
+        * someone who is involved in a conversation
+    * someone who is involved in a conversation and who is representing someone else
+        * Abraham was able to act as interpreter and interlocutor for our group.
+    * someone who arranges a deal or agreement between two organizations or groups, or who speaks on behalf of an organization or group of people
+        * The vast majority of our interlocutors from the retail sector indicated that they would not be interested in parallel trade, for fear of spoiling long-term relations with their manufacturers.
+* know-it-all
+    * a person who behaves as if they know everything.
+* smarty-pants
+* smart aleck
+* smart-ass
+* swing
+    * move sideways
+    * change
+    * be exciting
+    * arrange
+    * music
+    * change
+    * sidewasy movement
+* reverberation
+* hoist
+    * a device used for lifting heavy things
+    * to lift something heavy, often with special equipment
+    * if your plan is to hoist me on your shoulders and carry me around the cafeteria, please refrain
+    * to increase something
+* refrain
+    * not do
+        * to not let yourself do something
+        * Please refrain from talking during the lecture.
+        * We refrained from talking until we knew that it was safe.
+    * song
+        * a short part of a song or poem that is repeated, especially between the verses(= the separate parts)
+        * a phrase that is often repeated
+        * Every year we hear the same refrain, that women are making great strides in business.
+        * "Every vote counts" is a familiar refrain in politics.
+* desist
+* caseworker
+    * a caseworker is similar to a type of social worker who is employed by a government agency, non-profit organization, or another group to take on the cases of individuals and provide them with advocacy, information or other services.
+* at any point
+    * at some point
+    * At some point I decided she was no longer my friend.
+    * at some moment in time that is not made specific
+* bark
+* Go get them tiger
+    * go get them
+* chloroform
+* constraint
+* violate
+* interpret
+* interpretation
+    * open to interpretation
+        * able to be understood or explained in different ways
+        * What exactly the author meant by that statement is open to interpretation
+    * put interpretation on sth
+        * explain sth
+        * it's difficult to put an accurate interpretation on (=explain) the survey results.
+* exacerbate
+    * to make sth that is already bad worse
+    * her allergy was exacerbated by the dust
+    * She thinks the new law will only exacerbate the problem of gender discrimination.
+    * This attack will exacerbate the already tense relations between the two communities.
+* despair
+    * a feeling of being without hope or of not being able to improve a situation
+    * to lose hope or be without hope
+        * Don't despair -- things will improve
+        * he began to despair of ever finding a job
+    * be the despair of sb
+        * to cause sb such difficulties that they do not know how to deal with you
+* caffeine
+    * I can't live without caffeine
+    * The ban would prevent children from buying any drink that contains more than 150 milligrams of caffeine per liter
+* calorie
+    * food
+    * heat
+* obesity
+    * An unhealthy diet can lead to obesity
+* readily
+* Plenipotentiary
+    * hereinafter
 
 
 ## Japan
@@ -13673,6 +13823,8 @@ title: English Speaking
 
 
 ## US
+* PETA
+    * People for the Ethical Treatment of Animals
 * CDC
     * Centers for Disease Control and Prevention
     * bacterial disease that affects humans and animals
