@@ -24,6 +24,13 @@ title: English Email
     * [What are some other ways to say 'thank you for your consideration'? \- Quora](https://www.quora.com/What-are-some-other-ways-to-say-thank-you-for-your-consideration)
     * Thanks/Thank you for taking the time to…
 
+## Availability
+* [In what context would I use the word "availabilities"? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/153713/in-what-context-would-i-use-the-word-availabilities)
+
+* slots
+* openings
+* availabilities
+
 ## Starting
 [How to Start an Email: 6 Never\-Fail Introductions and 6 to Avoid \| Grammarly](https://www.grammarly.com/blog/how-to-start-an-email/)
 
@@ -55,3 +62,4 @@ title: English Email
 * [How to respond to a headhunter's approach on LinkedIn - SmartCompany](https://www.smartcompany.com.au/people-human-resources/professional-development/the-right-way-to-respond-to-a-headhunters-approach-on-linkedin/)
 * [5 Ways to Write &quot;I Hope You Are Doing Well&quot; in Email | Grammarly](https://www.grammarly.com/blog/i-hope-youre-doing-well/)
 * [How to respond electronically for an invite to interview](https://www.paxus.com.au/blog/respond-electronically-invite-interview/)
+* [More useful phrases for business emails and letters – Speakspeak](http://speakspeak.com/resources/general-english-vocabulary/more-useful-phrases-for-business-emails-and-letters)
