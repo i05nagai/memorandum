@@ -530,6 +530,7 @@ title: English word choice
 * get/got/gotten
     * [get/got/gotten](http://www.mit.edu/course/21/21.guide/get-got.htm)
     * [word choice - Difference between "I have got" and "I have gotten" - English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/5531/difference-between-i-have-got-and-i-have-gotten)
+    * [Got vs\. Gotten \| Grammarly](https://www.grammarly.com/blog/got-gotten/)
     * have got/'ve got/got -> have or must
     * have gotten -> in US present perfect of to get
     * have got -> in UK present perfect of to get
