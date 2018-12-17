@@ -113,11 +113,14 @@ Additionally, we assume
 #### Algorithm 1
 * $V, \alpha > 0$,
 * $x^{1} \in \mathcal{X}_{0}$,
-* $Q_{k}^{1} := 0 \ (k = [1:m])$,
+* $Q_{k}^{1} := 0 \ (k \in [1:m])$,
 
 Step1. For $t = 1, \ldots, T$,
 
-Step2. Play $x^{t}$
+Step2-1. Draw $N$ categorical random variable $I_{t}$ with probability $x^{t}$.
+$I_{t}$ is independent from $$(I_{s})_{s \in [0:t-1]}$$.
+
+Step2-2. Play $I_{t}$
 
 Step3. Observe a cost function $f^{t}$ and constraints $g_{k}^{t}$.
 $f^{t}$ and $g_{k}^{t}$ is $\mathcal{F}_{t + 1}$ measurable.
