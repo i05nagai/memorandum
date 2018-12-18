@@ -33,7 +33,7 @@ In this formulation, we assume that the clicks and conversions of ad are observe
     * 1 means clicked
 * $\mathcal{Z}$,
     * occurences of conversions
-    * 1 means conversion occurs
+    * 1 means conversion is observed
 
 $$
     \mathcal{Z}
@@ -239,91 +239,7 @@ Additional problems
 1. Budget pacing
 1. Choice of creatives
 
-### online convex optimization
-
-* $\mathcal{S}_{\mathrm{CPC}} \subseteq [0, 1]^{N}$,
-    * the possible values of CPCs of the advertisements
-* $\mathcal{F}^{\prime}$,
-    * the all loss functions forming
-
-$$
-    x \in \mathcal{K},
-    \
-    y \in \mathcal{Y},
-    \
-    z \in \mathcal{Z},
-    \
-    \mathrm{CPC} \in \mathcal{S}_{\mathrm{CPC}},
-    \
-    f(x; y, z, \mathrm{CPC})
-    :=
-    \sum_{a=1}^{N}
-        x_{a}
-        \mathrm{CPC}_{a}
-        (1 - y_{a})
-        (1 - z_{a})
-    .
-$$
-
-* $\mathcal{F}$,
-    * the possible loss functions
-
-$$
-    \mathcal{F}
-    :=
-    \{
-        f(\cdot; y, z, \mathrm{CPC})
-        \in
-        \mathcal{F}^{\prime}
-        \mid
-        y_{a} = 0 \Rightarrow z_{a} = 0
-    \}
-
-$$
-
-Let $A$ be an algorithm solving this problem.
-We define the regret of the algorithm,
-
-$$
-\begin{eqnarray}
-    \mathrm{regret}_{T}(A)
-    & := &
-        \sup_{(f_{1}, \ldots, f_{T}) \subseteq \mathcal{F}}
-        \left(
-            \sum_{t=1}^{T}
-                f_{t}(x^{t}; y^{t}, z^{t}, \mathrm{CPC}^{t})
-            -
-            \min_{x \in \mathcal{K}}
-                \sum_{t=1}^{N}
-                    f_{t}(x; y^{t}, z^{t}, \mathrm{CPC}^{t})
-        \right)
-    \nonumber
-    \\
-    & = &
-        \sup_{(f_{1}, \ldots, f_{T}) \subseteq \mathcal{F}}
-        \left(
-            \sum_{t=1}^{T}
-                \sum_{a=1}^{N}
-                    x_{a}^{t}
-                    (1 - y_{a}^{t})
-                    (1 - z_{a}^{t})
-                    \mathrm{CPC}_{a}^{t}
-            -
-            \min_{x \in \mathcal{K}}
-                \sum_{t=1}^{N}
-                    \sum_{a=1}^{N}
-                        x_{a}
-                        (1 - y_{a}^{t})
-                        (1 - z_{a}^{t})
-                        \mathrm{CPC}_{a}^{t}
-        \right)
-\end{eqnarray}
-    .
-$$
-
-#### Examples
-* $N = 2$,
-* $M = 2$,
+### Miscellaneous equalities
 
 $$
 \begin{eqnarray}
@@ -337,6 +253,7 @@ $$
     & := &
         \sum_{s=1}^{t}
             z_{d, a}^{t}
+    \nonumber
 \end{eqnarray}
     .
 $$
@@ -561,29 +478,27 @@ $$
     .
 $$
 
-Criterion of loss function
-
-* If we choose an advertisement in which a user is not interested, it should be penalized
-* If we 
-
-
-#### Application
+### Formulation in terms of online convex optimization with stochastic constraints
 * $$(\Omega, \mathcal{F}, P, \{\mathcal{F}_{t}\}_{t \in \mathbb{N}})$$,
     * probability space with filtration
 * $T \in \mathbb{N}$,
+    * the number of impressions or recommendations
 * $N \in \mathbb{N}$,
     * the number of ads
 * $M \in \mathbb{N}$,
-    * the number of display ads
+    * the number of displays
 * $(Y_{d, a}^{s})_{s \in [0:T]} \ (d \in [1:M], a \in [1:N])$,
-    * the number of clicks of advertimesement $a$ at dispaly $d$,
+    * the number of clicks of advertimesement $a$ at display $d$,
     * $Y_{d, a}^{0}$ is an initial value
-    * adapted
+    * $Y_{d, a}^{s} \in \mathbb{Z}_{\ge 0}$ is an initial value
+    * adapted process
 * $(Z_{d, a}^{s})_{s \in [0:T]} \ (d \in [1:M], a \in [1:N])$,
-    * the number of conversions of advertimesement $a$ at dispaly $d$,
+    * the number of conversions of advertimesement $a$ at display $d$,
     * $Z_{d, a}^{0}$ is an initial value
-    * adapted
+    * adapted process
+    * $Z_{d, a}^{s} \in \mathbb{Z}_{\ge 0}$ is an initial value
 * $B_{a} \in \mathbb{R}_{\ge 0}$,
+    * budget of ad $a$,
 
 $$
 \begin{eqnarray}
@@ -616,6 +531,8 @@ $$
 \end{eqnarray}
 $$
 
+With this notation, CPC and CPA are defined as
+
 $$
 \begin{eqnarray}
     \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
@@ -637,11 +554,12 @@ $$
         }{
             Z_{d, a}^{t}
         }
+    .
     \nonumber
 \end{eqnarray}
 $$
 
-For $t \in [0:T-1]$,
+For $t \in [0:T-1]$, constraints about target CPA are given by
 
 $$
 \begin{eqnarray}
@@ -671,10 +589,12 @@ $$
                 Z_{d, a}^{t+1}
             }
         \right)
+    \label{formulation_of_online_convex_optimization_constraints_target_cpa}
+    .
 \end{eqnarray}
 $$
 
-For $t \in [0:T-1]$,
+Similarly, for $t \in [0:T-1]$, constraints to badget for each ad are given by
 
 $$
 \begin{eqnarray}
@@ -704,6 +624,8 @@ $$
                 }
                 \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
         \right)
+    \label{formulation_of_online_convex_optimization_constraints_badget}
+    .
 \end{eqnarray}
 $$
 
@@ -726,7 +648,8 @@ $$
 \end{eqnarray}
 $$
 
-Gradients of the cost functions is given by
+The loss function are interpreted as the expected loss of choice of advertisements with a $N$-categorial random variable $I$ whose p.d.f. is determined by $(x_{a})_{a \in [1:N]}$.
+Gradients of these cost functions are easy to calculate.
 
 $$
 \begin{eqnarray}
@@ -780,7 +703,7 @@ $$
 \end{eqnarray}
 $$
 
-For the badget constraints,
+As to the badget constraints,
 
 $$
 \begin{eqnarray}
@@ -806,6 +729,7 @@ $$
 $$
 
 Let $V, \alpha > 0$.
+The next ad is chosen by minimizing the following function.
 
 $$
 \begin{eqnarray}
@@ -890,21 +814,24 @@ $$
         +
         \alpha
         \norm{x - x^{t}}^{2}
-    \nonumber
+    \label{formulation_of_online_convex_optimization_objective_function}
 \end{eqnarray}
 $$
 
-The next point is defined as
+Thus, the probability of choosing the next ad is
 
 $$
 \begin{eqnarray}
     x^{t+1}
     & := &
-        \argmin_{x \in \mathcal{D}}
+        \argmin_{x \in \mathcal{K}}
             F^{t}(x)
+    \label{formulation_of_online_convex_optimization_next_probability}
+    .
 \end{eqnarray}
 $$
 
+The parameter $(Q_{a}^{t})_{t \in [2:T]}$ need to be updated depending on a type of constraints.
 If $a \in [1:N]$,
 
 $$
@@ -931,11 +858,11 @@ $$
             }{
                 Z_{d, a}^{t+1}
             }
-            x_{a}
+            x_{a}^{t}
         -
         \mathrm{tCPA}_{a}
         +
-        x_{a}
+        x_{a}^{t}
         \left(
             \frac{
                 \sum_{d=1}^{M}
@@ -958,22 +885,46 @@ $$
                     Z_{d, a}^{t+1}
                 }
             +
-            \left(
+            \frac{
+                \sum_{d=1}^{M}
+                    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
+        \right)
+        (x_{a}^{t+1} - x_{a}^{t})
+    \nonumber
+    \\
+    & = &
+        Q_{a}^{t}
+        -
+        \mathrm{tCPA}_{a}
+        +
+        \left(
+            \sum_{d=1}^{M}
+                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
                 \frac{
-                    \sum_{d=1}^{M}
-                        \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                        \Delta Y_{d, a}^{t}
+                    Z_{d, a}^{t}
                 }{
                     Z_{d, a}^{t+1}
                 }
-            \right)
+            +
+            \frac{
+                \sum_{d=1}^{M}
+                    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
+            }{
+                Z_{d, a}^{t+1}
+            }
         \right)
-        (x_{a}^{t+1} - x_{a}^{t})
+        x_{a}^{t+1}
     \nonumber
     \\
     Q_{a}^{t+1}
     & := &
         \max(\tilde{Q}_{a}^{t+1}, 0)
+    \label{formulation_of_online_convex_optimization_update_parameter_01}
     .
 \end{eqnarray}
 $$
@@ -1008,7 +959,7 @@ $$
         -
         B_{a}
         +
-        x_{a}
+        x_{a}^{t}
         \left(
             \sum_{d=1}^{M}
                 \frac{
@@ -1031,13 +982,120 @@ $$
         (x_{a}^{t+1} - x_{a}^{t})
     \nonumber
     \\
+    & = &
+        Q_{a}^{t}
+        +
+        \sum_{s=0}^{t}
+        \sum_{d=1}^{M}
+            \frac{
+                Y_{d, a}^{s}
+            }{
+                Z_{d, a}^{s}
+            }
+            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+        -
+        B_{a}
+        +
+        \left(
+            \sum_{d=1}^{M}
+                \frac{
+                    Y_{d, a}^{t+1}
+                }{
+                    Z_{d, a}^{t+1}
+                }
+                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+        \right)
+        x_{a}^{t+1}
+    \nonumber
+    \\
     Q_{a}^{t+1}
     & := &
         \max(\tilde{Q}_{a}^{t+1}, 0)
+    \label{formulation_of_online_convex_optimization_update_parameter_02}
     .
 \end{eqnarray}
 $$
 
+#### Algorithm
+* $V, \alpha > 0$,
+* $\mathcal{K} := [0, 1]^{N}$,
+* $x^{0} \in \mathcal{K}$,
+* $Q_{a}^{0} := 0 \ (k \in [1:2N])$,
+* $$\{Y_{d, a}^{0}\}_{d, a}$$,
+    * the number of initial clicks
+* $$\{Z_{d, a}^{0}\}_{d, a}$$,
+    * the number of initial conversions
+
+**Step1.** For $t = 0, \ldots, T-1$,
+
+**Step2-1.** Draw $N$ categorical random variable $I_{t}$ with probability $x^{t}$.
+$I_{t}$ is independent from $$(I_{s})_{s \in [0:t-1]}$$.
+
+**Step2-2.** Play $I_{t}$
+
+**Step3-1.** Obverse $Y^{t + 1}$,
+
+**Step3-2.** Obverse $Z^{t + 1}$,
+
+**Step4-1.** Observe a cost function $f^{t}$
+
+**Step4-2.** Observe constraints $g_{a}^{t}$.
+
+**Step4-3.** Observe constraints $h_{a}^{t}$.
+
+**Step5.** Update $x^{t+1}$ by $$\eqref{formulation_of_online_convex_optimization_next_probability}$$
+
+**Step6.** Update $Q_{a}^{t+1}$ by $$\eqref{formulation_of_online_convex_optimization_update_parameter_01}$$ and $$\eqref{formulation_of_online_convex_optimization_update_parameter_02}$$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Interpretation of minimized funciton
+Note that samller value of $(x_{a} - x_{a}^{t})$ indicates that we recommnd ad $a$ with less probability than the probability at time $t$.
+On the other hand, larger value of $(x_{a} - x_{a}^{t})$ means that ad $a$ is likely to be recommended.
+Considering this, the last term in $$\eqref{formulation_of_online_convex_optimization_objective_function}$$ means probability changes moderately depending on $\alpha$.
+
+Suppose that $(x_{a} - x_{a}^{t}) > 0$.
+We will see what parameter and event minimizes the funciton $$\eqref{formulation_of_online_convex_optimization_objective_function}$$ for each term.
+In the first term, such conditions are
+
+* CPC at $t$ is higher
+* the recommended ad $t$ is clicked
+
+In the second term,
+
+* CPA at $t$ is smaller
+* user takes actions to increase a conversion of the recommended ad
+* If the recommended ad is clicked,
+    * CPC is smaller
+
+In the third term,
+
+* the recommended ad is not clicked
+* if the recommended ad is clicked, corresponding conversion happens
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Interpretation of parameters for constraints
+$Q_{a}^{t}$ guarantees that the longer violation of the constraint, the less probability of choice of ad $a$.
+The following events lower the probabilty $x_{a}^{t+2}$.
+
+As to target CPA constraint,
+
+* higher probability $x_{a}^{t + 1}$ of choosing ad $a$
+* conversion of the recommened ad $a$
+* higher CPA at $t$
+* In case the recommended ad $a$ is clicked,
+    * no conversion of the ad $a$
+    * higher CPC
+
+Parameters of badget constraints increase if any of the following conditions are met;
+
+* higher probability $x_{a}^{t + 1}$ of choosing ad $a$
+* higher CPA between 0 to $t+1$
+* the recommended ad is clicked but no conversion
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * Hazan, E. (2016). Introduction to Online Convex Optimization. Foundations and Trends® in Optimization (Vol. 2). https://doi.org/10.1561/2400000013
+* Yu, H., Neely, M. J., & Wei, X. (2017). Online Convex Optimization with Stochastic Constraints, 1–23. Retrieved from http://arxiv.org/abs/1708.03741
