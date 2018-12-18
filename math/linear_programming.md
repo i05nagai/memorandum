@@ -4,7 +4,7 @@ title: Linear Programming
 
 ## Linear Programming
 
-### Theorem1 Farkas
+#### Theorem1 Farkas
 * $A \in \mathbb{R}^{m \times n}$,
     * $$A = (a_{1}, \ldots, a_{n})$$,
 * $c \in \mathbb{R}^{n}$,
@@ -296,5 +296,79 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Reference
+#### Definition 3
+* $A$,
+    * $m$ rows $n$ cols matrix
+* $b \in \mathbb{R}^{n}$,
+* $c \in \mathbb{R}^{n}$,
 
+Primal LP problem is defined as
+
+$$
+\begin{align}
+    \min_{x \in \mathbb{R}^{n}}
+    & & &
+        c^{\mathrm{T}}x
+        \label{mathmatical_programming_problem_lp_primal}
+    \\
+    \mathrm{subject\ to}
+    & & &
+        Ax - b
+        \ge
+        0
+    .
+    \nonumber
+\end{align}
+$$
+
+Dual of LP problem is defined as
+
+$$
+\begin{align}
+    \min_{y \in \mathbb{R}^{m}}
+    & & &
+        b^{\mathrm{T}}y
+        \label{mathmatical_programming_problem_lp_dual}
+    \\
+    \mathrm{subject\ to}
+    & & &
+        A^{\mathrm{T}}y - c
+        \ge
+        0
+    \nonumber
+    \\
+    & & &
+        y
+        \ge
+        0
+    \nonumber
+    .
+\end{align}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Theorem
+
+(1) Dual of dual probelm is a primal problem
+
+(2) Let $y^{\prime}$ be a feasible solution of $$\eqref{mathmatical_programming_problem_lp_dual}$$.
+Let $x^{\prime}$ be a feasible solution of $$\eqref{mathmatical_programming_problem_lp_primal}$$.
+
+$$
+\begin{eqnarray}
+    b^{\mathrm{T}}y^{\prime}
+    \le
+    c^{\mathrm{T}}x^{\prime}
+    \nonumber
+\end{eqnarray}
+$$
+
+(3)
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Reference
+* [Anatoli Iouditski](https://ljk.imag.fr/membres/Anatoli.Iouditski/optimisation-convexe.htm)
