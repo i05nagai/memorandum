@@ -25,6 +25,13 @@ apt-get install scala
         * `a :: b` is `b.::(a)`
     * otherwise, the method is called by left operand
         * `a * b` is `a.*(b)`
+* `def this(elem: Type*)`
+    * repeated parameters
+
+
+class
+
+* `class Queue[T] private`
 
 
 traits
