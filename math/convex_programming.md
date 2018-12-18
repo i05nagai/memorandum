@@ -6,7 +6,7 @@ title: Convex Programming
 
 ## Definition
 
-### Definition1 Mathematical Programming problem
+#### Definition1 Mathematical Programming problem
 * $$n, m, k \in \mathbb{N}$$,
 * $$X \subset \mathbb{R}^{n}$$,
 * $$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
@@ -96,7 +96,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definition2 Convex programming problem
+#### Definition2 Convex programming problem
 * $$n, m, k \in \mathbb{N}$$,
 * $$X \subset \mathbb{R}^{n}$$,
 * $$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
@@ -132,7 +132,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Proposition3
+#### Proposition3
 * $$n, m \in \mathbb{N}$$,
 * $$X \subset \mathbb{R}^{n}$$,
     * convex
@@ -193,7 +193,7 @@ $$
 
 has no solution.
 
-## proof.
+#### proof.
 Suppose that there exists $$\lambda_{1}, \ldots, \lambda_{m}$$ such that satisfies $$\eqref{proposition_dual_problem}$$.
 Suppose $$\eqref{proposition_primal_problem}$$ has solution $$x^{*} \in X$$.
 
@@ -228,7 +228,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Definition4. Slater condition
+#### Definition4. Slater condition
 * $$X \subseteq \mathbb{R}^{n}$$,
 * $$g^{1}, \ldots, g^{m}$$,
     * real valued functions on $X$
@@ -276,7 +276,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Theorem5 Convex theorem on alternative
+#### Theorem5 Convex theorem on alternative
 * $X \subseteq \mathbb{R}^{n}$
     * convex
 * $$f, g^{1}, \ldots, g^{m}$$,
@@ -289,7 +289,7 @@ Then the following are equivalent:
 * (a) $$\eqref{proposition_primal_problem}$$ is solvable.
 * (b) $$\eqref{proposition_dual_problem}$$ is unsolvable,
 
-## proof.
+#### proof.
 (a) $\Rightarrow$ (b)
 By the proposition above.
 
@@ -578,7 +578,7 @@ This is a solution of $$\eqref{proposition_dual_problem}$$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Definiton6 Lagrange Function and Lagrange Duality
+#### Definiton6 Lagrange Function and Lagrange Duality
 * $$n, m, k \in \mathbb{N}$$,
 * $$X \subset \mathbb{R}^{n}$$,
     * convex
@@ -624,7 +624,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Theorem7 Convex programming duality theorem
+#### Theorem7 Convex programming duality theorem
 * $$n, m, k \in \mathbb{N}$$,
 * $$X \subseteq \mathbb{R}^{n}$$,
 * $$f: \mathbb{R}^{n} \rightarrow \mathbb{R}$$,
@@ -673,7 +673,7 @@ $$
     f(x^{*})
 $$
 
-## proof.
+#### proof.
 (1)
 The latter statement of (1) is immediate consequence of the former statement.
 Suppose that $$\underline{L}$$ is not lower bound of the optimal value.
@@ -687,7 +687,7 @@ $$
     .
 $$
 
-$$x^{*} \in X$$ is solution of $$\eqref{convex_programming_problem}$$ so that $$g(x^{*}) \ge 0$$.
+$$x^{*} \in X$$ is solution of $$\eqref{convex_programming_problem}$$ so that $$g(x^{*}) \le 0$$.
 Hence we have
 
 $$
@@ -696,7 +696,7 @@ $$
     f(x^{*})
     +
     \sum_{j=1}^{m}
-        \lambda_{j}g(x^{*})
+        \lambda_{j}g^{j}(x^{*})
     .
 $$
 
@@ -704,7 +704,7 @@ This is contradiction to the definition of $$\underline{L}$$.
 
 (2)
 Let $$c^{*} := f(x^{*})$$.
-Since $$x^{*}$$ is an optimal solution of $$\eqref{convex_programming_problem_primal_problem}$$, the following inequality constrained problem has no solution, tha is,
+Since $$x^{*}$$ is an optimal solution of $$\eqref{convex_programming_problem_primal_problem}$$, the following inequality constrained problem has no solution, that is,
 
 $$
     f(x)
@@ -767,7 +767,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Definition8. Primal and Dual problem
+#### Definition8. Primal and Dual problem
 The primal problem of optimization problem is 
 
 $$
@@ -779,7 +779,7 @@ $$
     \\
     \mathrm{subject\ to}
     & & &
-        g^{j}(x) \ge 0,
+        g^{j}(x) \le 0,
         \
         j = 1, \ldots, m
     \nonumber
@@ -799,12 +799,12 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Remark9
+#### Remark9
 The optimal values of primal problem and dual problem are equal to each other if primal problem is convex and satisfiesthe Slater condition.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Proposition10
+#### Proposition10
 Following statement are equivalent:
 
 * (i) $$(x^{*}, \lambda^{*})$$ is a saddle point of the Lagrange function $L$, that is,
@@ -827,7 +827,7 @@ $$
     * $$\lambda^{*}$$ is an optimal solution to $$\eqref{convex_programming_problem_dual_problem}$$,
     * optimal values of $$\eqref{convex_programming_problem_primal_problem}$$ and $$\eqref{convex_programming_problem_dual_problem}$$ are equal to each other.
 
-## proof.
+#### proof.
 proof of (i) $$\Rightarrow$$ (ii)
 
 This is <a href="#theorem11-saddle-point-formulation-of-optimality-conditions-in-convex-programming">theorem</a>.
@@ -895,7 +895,7 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
-## Theorem11 Saddle point formulation of Optimality Conditions in Convex Programming
+#### Theorem11 Saddle point formulation of Optimality Conditions in Convex Programming
 * $$x^{*} \in X$$,
 
 Statements:
@@ -938,7 +938,7 @@ Then
 
 if (ii) holds, then (i) holds
 
-## proof.
+#### proof.
 (1)
 Suppose that there exists $$\lambda^{*} \in \mathbb{R}_{\ge 0}^{m}$$ such that $$\eqref{theorem_saddle_point_of_lagrange_function}$$ is satisfied.
 We first show that $$x^{*}$$ is feasible to $$\eqref{convex_programming_problem_primal_problem}$$.
@@ -1079,14 +1079,14 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Remark12
+#### Remark12
 * The equation $$\eqref{theorem_complementary_slackness}$$ is known as complementary slackness.
 * Theorem11 (1) holds for an arbitrary inequality constrained optimization program, not necessarily convex.
 * Theorem11 does not give us how to verify whether $$(x^{*}, \lambda^{*})$$ is saddle point of lagrange function or not.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-## Definition13 restricted Slater assumption
+#### Definition13 restricted Slater assumption
 * $$X \subseteq \mathbb{R}^{n}$$,
 * $$f, g^{1}, \ldots, g^{m}$$,
 
