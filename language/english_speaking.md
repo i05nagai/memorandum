@@ -697,6 +697,23 @@ title: English Speaking
 * The review said it was worse than garbage. That's harsh.
 * decent
     * Is the food good? it's decent.
+    * acceptable, satisfactory, or reasonable
+        * we get good benefits, and the pay is decent
+        * It costs 100 dollars to buy a decent sleeping bag
+    * socially acceptable or good
+        * Everyone should be entitled to a decent wage/standard of living.
+        * It was very decent (= kind) of you to help.
+    * Decent also means good or kind
+        * They’re just decent, ordinary people.
+    * Decent also means wearing socially acceptable clothing
+        * When the players were showered and decent, the reporters were allowed in.
+        * are you decent yet?
+        * you can come in now, I'm decent
+* indecent
+    * morally offensive, esp. in a sexual way
+        * indecent language is not allowed on the radio between 6a.m. and 10p.m.
+        * an indencent photograph/act
+    * not suitable or correct for a situation
 * buffe
     * The caffeteria has a lunch buffet for only 500 yen
 * You're just nitpicking
@@ -762,6 +779,10 @@ title: English Speaking
     * We could eat later if you would rather do that
     * I would rather die than retreat
     * We forcus on the person rather than the situation
+* outrun
+    * she can outrun everyone on the team
+    * to run feather than sb, or to incease faster or do better than sth
+        * In the future, demand for tungsten will outrun supply.
 * run
     * run into
         * shareholders who sue when instituions run into financial difficulties
@@ -941,6 +962,10 @@ title: English Speaking
         * We'd like to have gone away, but we were too busy at home
 * puberty
     * Fourteen is a fairly normal age for a girl to reach puberty
+* pube
+    * one of the short, curly hairs that grow around the sexual organs after puberty
+* adolescent
+    * a young person who is developing into an adult
 * preposition + ing
     * Are you interested in working for us?
     * I'm not good at learning langugages.
@@ -1420,8 +1445,6 @@ title: English Speaking
     * The dynamics of capitalist economies
 * circular
     * Why don't we arrange the tulip bulbs in a circular pattern?
-* eliminate
-    * Please eliminate all superfluous words from this sentence
 * graze
     * Horses graze on the Mongolian steppe
 * haze
@@ -1958,6 +1981,9 @@ title: English Speaking
     * careless
         * sloppy work
         * His written reports are incredibly sloppy
+    * too wet
+    * emotional
+        * a sloppy love song
     * loose-fitting
         * Ann was dressed in a sloppy brown sweater
     * slushy
@@ -2050,6 +2076,9 @@ title: English Speaking
     * a husband's (or wife's) provision for a spouse after separation or divorce; maintenance.
     * he is said to have paid 30000USD alimony to his first wife
 * call
+    * call it square
+        * to acknowledge that a debt has been paid
+        * Thank you for paying me back  now we can call it square
     * name
     * telephone
     * say
@@ -2409,8 +2438,20 @@ title: English Speaking
     * I tied the ribbon around the present in a pretty bow
     * bow and arrows
 * tow
+    * to pull a car, boat, aircraft, etc. using a rope or a chain attached to another vehicle
+        * the town tows abandoned cars and then fines their owners
+    * the act of pulling sb's vehicle using  rope or chain attached to your vehicle
+        * my car broke down and he gave me a tow
+    * I had it towed
     * Your shouldn't drive fast when your car is towing a caravan
     * You are not allowed to park there. your car will be towed away
+    * give sb/sth a tow
+    * on tow
+        * being pulled along
+            * the car in front of us is on tow — that's why we're going so slowly
+    * in tow
+        * following or going along under someone's control
+        * She arrived with her three children in tow.
 * sting
     * it's flown into your blouse and you better undo your buttons lest it sting you
 * lest
@@ -2510,8 +2551,20 @@ title: English Speaking
 * craing
 * place
     * by clicking the Place your order button below, 
-* tick-all-the-boxes
-    * The new album shoud tick all the right boxes for their many fans
+* tick
+    * tick-all-the-boxes
+        * The new album shoud tick all the right boxes for their many fans
+    * make sound
+    * animal
+    * sounk
+    * mark
+    * short time
+    * sound
+    * paying later
+    * mark
+        * to mark sth with a tick
+        * check mark
+        * Tick (off) each item on the list as you complete it.
 * fulfill
     * to fulfill all the requirements
 * complete
@@ -2524,10 +2577,6 @@ title: English Speaking
     * Peace and reconstruction are two sides of the same coin
     * These problems may seem unrrelated but they are really two sides of the same coin
     * Success and failure are two sides of the same coin
-* bum
-    * bum out
-        * That comment just bummed me out
-        * You bummed him out
 * ballsy
     * She's one ballsy lady
 * I hope you don't take this wrong way
@@ -2696,8 +2745,14 @@ title: English Speaking
     * live
         * After they got married, they settled in rookyln
         * America was first settled by people who came across from Asia over 25,000 years ago
+    * make confortable
+    * agree
     * move lower
     * pay
+        * to pay money owed
+        * He sold his photographs to settle some old debts.
+    * live
+        * to live in a place
     * quiet
     * be in a certain state
 * installation
@@ -2938,6 +2993,9 @@ title: English Speaking
     * spring from
     * spring on
     * spring up
+        * to start to exist suddenly
+        * thousands of new businesses have sprung up in the past couple of years
+        * A number of constructs have sprung up in programming languages to alleviate this problem
 * downstream
     * in the direction a river or stream is flowing
         * the current carried her downstream
@@ -3104,7 +3162,34 @@ title: English Speaking
         * She managed to complete her last film well within budget
     * v
         * An extra 20 million dollar has been budged for schools this year
+* turnover
+    * employee changes
+        * the rate at which employees leaves a company and are replaced
+        * high/low turnove
+        * forced/voluntary turnover
+        * The company has a staff turnover of around 12% a year.
+    * pastry
+    * business
+    * employees
+    * cake
 * turn
+    * turn over
+        * if an engine turns over, its parts move in order to make the engine start running
+        * when I put the key in the ignition it turns over, but it won't start
+    * trun over sth
+        * if a business turns over a particular amount of money, it does that the amount of business during a started period
+        * to make a particular amount of money from sales in a particular period
+        * The company turned over 340 million dollars last year.
+        * to change to a different television staion
+        * this programme's boring - can I turn over to BBC?
+        * use
+            * to use or allow sth to be used for a different purpose
+            * Grants are being offered to farmars who agree to turn over their land to parkland
+        * think
+            * to think about sth for a period of time
+            * his father had been turning the idea over in his mind for some time
+    * turn sth over to sth/sb
+        * to give sth to a person or legal authority
     * turn up
         * to appear or come to your attention, or to cause sth to become known
         * She said she'd let me know if anything new turned up
@@ -3290,6 +3375,8 @@ title: English Speaking
     * The photograph of her sitting on her own made her look lonely and downcast
 * surgery
     * he got surgery recently
+* surge
+    * while a spike in traffic to the app around 20:45 could explain a bref surge in resource usage
 * ban/prohibit
     * France has passed a law banning smartphones in schools
 * spot
@@ -3822,6 +3909,12 @@ title: English Speaking
     * showing that you do not think something in worth considering
     * he is so dismissive of anybody else's suggestion
     * a dismissive attitude
+* dismiss
+    * not consider
+    * send away
+    * not take seriously
+    * end job
+    * send away
 * booze
     * alcohol
         * the party's at Kate's on Firday night. bring some booze
@@ -4645,8 +4738,10 @@ title: English Speaking
             * to go to a place in order to see what it is like
             * I'm going to check out that new club
         * get book
-            * 
 * level
+    * level off/level out
+        * if a rate or amount levels off, it stops rising or falling and stays the same level
+        * House prices now seem to be leveling off after the steep rises of the last few years
     * what level of English do you have?
     * what level of player are you?
     * what level of service will the users expect?
@@ -4721,6 +4816,7 @@ title: English Speaking
     * person
     * piece
 * eliminate
+    * Please eliminate all superfluous words from this sentence
     * hard work, esp. work that makes you feel physically tired
     * work hard
         * to work hard
@@ -5273,7 +5369,12 @@ title: English Speaking
     * to put something such as a plan or system in danger of being harmed or damaged
         * She knew that by failing her finals she could jeopardize her whole future
 * perilous
+    * dangerous
     * They set off on a perilous journey to the top of Mount Everest
+    * The country roads are quite perilous.
+* high-risk
+* hazardous
+* risky
 * work
     * workout
         * happen/develop
@@ -5563,6 +5664,14 @@ title: English Speaking
 * no matter how
 * bulge
 * trade
+    * buying and selling
+    * job
+        * a job, eps. one that needs special skills and that involves working with your hands, or the 
+        * the building trades
+        * he's an auto mechanic/electrician by trade
+    * a trade is also any business
+        * the book/tourist trade
+    * buy and sell
     * these adults simply trades one risk for another
 * trading
     * the activity of buying and selling goods and/or service
@@ -5951,17 +6060,6 @@ title: English Speaking
         * when he was drinking, Ken was hell on wheel
     * someone who does exactly what they want and does not care what happens as a result.
         * she is an angelic little baby, but she is hell on wheels
-* expel
-    * to officially force someone to leave a school or organization
-        * expel somebody something
-            * two girls were expelled from school for taking drugs
-        * expel somebody for doing something
-            * he was expelled for making racist remarks
-    * to force a foreigner to leave a country, esp. because they have broken the law or for political reasons
-        * expel somebody from something
-            * foreign priests were expelled from the country
-        * expel somebody for something
-            * three diplomats were expelled for spying
 * ultimatum
     * a demand that a person or group do something to avoid something unpleasant
         * The workers got an ultimatum -- go back to work or face dismissal
@@ -6491,6 +6589,27 @@ title: English Speaking
             * The mayor’s disdain for his opponents was well known.
         * the feeling of not liking someone or something and thinking that they do not deserve your interest or respect
             * He regards the political process with disdain.
+* book
+    * text
+    * arrange
+        * to arrange to have the use of a seat, room, etc. at a particular time in the future
+        * Our travel agent booked us on a flight to Paris
+        * sb who books a performer arranges a performance
+            * they booked the Rolling Stones for two concerts in New York
+        * I've booked us two tickets to see "Carmen"
+        * I've booked two tickets for us to see "Carmen"
+        * She'd booked a table for four at their favourite restaurant.
+        * book a flight/holiday/show
+        * book a table/room/seat
+        * book an appointment/meeting
+        * book sth for sth
+    * accuse
+        * to officially accuse sb of a crime
+        * Detectives booked him for resisting arrest
+    * text
+    * in cover
+    * money record
+    * make a record
 * appoint
     * person
         * to choose someone officially for a job or responsibility
@@ -8013,6 +8132,17 @@ title: English Speaking
     * to force a person to leave a country
     * the government hopes to deport the criminals
     * Thousands of illegal immigrants are caught and deported every year.
+* expel
+    * to officially force someone to leave a school or organization
+        * expel somebody something
+            * two girls were expelled from school for taking drugs
+        * expel somebody for doing something
+            * he was expelled for making racist remarks
+    * to force a foreigner to leave a country, esp. because they have broken the law or for political reasons
+        * expel somebody from something
+            * foreign priests were expelled from the country
+        * expel somebody for something
+            * three diplomats were expelled for spying
 * genocide
     * Turkey refuses to acknowledge the Armenian genocide that took place in 1915
 * stationary
@@ -8081,6 +8211,9 @@ title: English Speaking
         * rigid rules of behavior
         * I keep to a rigid schedule
     * stiff
+        * stiff or fixed; not able to be bent or moved
+        * a rigid steel and concrete structure
+        * I was rigid with fear
         * not able to be bent
         * rapid plastic
     * not able to be changed or persuaded
@@ -8098,6 +8231,17 @@ title: English Speaking
     * ex-convict
     * a criminal who has been in prison but who is now free
     * At last all seems to be coming together for the ex-con who wants to go straight.
+* convict
+    * have you ever convicted of a crime?
+    * to decided officially in a court of law that sb is guilty of a particular crime
+        * There might not have been enought evidence to convict him
+        * someone who has been judged guilty of a crime and is in prison as a result
+        * He has twice been convicted of robbery/arson.
+    * sb who is in prision because they are guilty of a crime
+        * an escaped convict
+* acquit
+* exculpate
+* exonerate
 * barefoot
     * I was barefoot
 * ETA
@@ -8803,7 +8947,6 @@ title: English Speaking
     * You shouldn't use vitamin supplements as a substitute for a healthy diet.
 * flag
     * to flag problems like overfitting or selection baias, to give an insight on how the model will generalize to an independent dataset
-* dismissive
 * per se
     * by or of itself
     * It is not pretty town per se, but it is where my family comes from, so I like it
@@ -9277,6 +9420,11 @@ title: English Speaking
     * consider object to be
     * consider object to have
         * The ministry of trade considered the company to have the best vision for exports.
+* deem
+    * to consider or judge
+    * to consider or judge sth in a particular way
+    * The area has now been deemed safe.
+        * We will provide help whenever you deem it appropriate.
 * regard
     * regarding
         * I’d create a word document answering these questions in addition to ones regarding how my background fits the position
@@ -9304,7 +9452,23 @@ title: English Speaking
     * I think painting a watercolor is very difficult.
 * oil painting
 * opt
-    * I opted for 100 trees
+    * to make a choice, esp. for one thing or possiblity in preference to any others
+        * I opted for 100 trees
+        * Instead of a soft drink, she opted for water
+        * He opted out of the health insurance plan (= chose not to be a part of it).
+        * he opted for early retirement
+        * Most people opt to have the operation.
+    * opt in
+        * to choose to be part of an activity, arrangement, etc.
+        * Company policy is to leave new workers out of the pension scheme, unless they choose to opt in.
+    * opt-in
+        * the fact of choosing to take part in an activity, arrangement, etc. rather than being forced to take part
+        * It is an opt-in rather than an opt-out system, which means that permission must be sought on a case-by-case basis.
+    * opt out
+        * to choose not to be part of an activity or to stop being involved in it
+    * opt-out
+        * a situation in which some members of a group have the right not to join or be involved in a process
+        * opt-out feature/policy/process 
 * appreciable
     * (esp. of amounts or changes) large enough to be noticed or to have an effect
     * if an amount or change is appreciable, it is large or noticiable enough to have an important effect
@@ -9321,12 +9485,41 @@ title: English Speaking
     * she was complaining about her nosy parents
 * conversation opener
     * conversation starter
+* bum
+    * bad in quality or not useful
+        * He gave us bum directions, but we eventually the place
+    * to ask someone for something without intenting to pay for it
+        * Could I bum a cigarette off you?
+    * bum around
+    * bum out
+        * to make someone feel sad or disappointed
+        * That comment just bummed me out
+        * You bummed him out
+* hobo
+    * a person who does not have a job or a house to live in, and so moves from one place to another
+* tramp
+    * you tramp
+    * walk
+    * poor person
+        * a person with no home, job, or money who travels around and asks for money from other people
+    * walk
+        * a long walk
+        * the sound of people all walking together with heavy steps
+    * woman
+        * a woman who has sex often, with a lot of different partners
+    * poor person
+    * to walk, esp. long distance or with heavy steps
+        * to tramp through the woods/undergrowth
+    * tramp stamp
+        * a lower-back tattoo
 * roam
     * to walk or travel without any real purpose or direction
         * our dog just likes to roam
     * to move about or travel, esp. without a clear idea of what you are going to do
         * After the bars close, gangs of youths roams the city streets
     * We have little robots that roam the sidewalk and deliver food to your neighborhood
+* trudge
+    * 
 * lamppost
     * Kiwi robots has six cameras and sensors to stop them from hitting cars, lamppost, and poeple's feet
 * menstrual
@@ -11054,8 +11247,6 @@ title: English Speaking
     * to defeat opponent very badly in a competition or election
         * England was massacred 5–0 by France in the semifinal.
 * spur
-* disseminate
-    * The tax cut was given to spur consumer spending.
 * literate
     * non-literate
     * able to read and write
@@ -11170,6 +11361,12 @@ title: English Speaking
 * whistler
     * a person who whistle
 * whistle
+    * emit a clear, high-pitched sound by forcing breath through a small hole between one's lips or teeth.
+    * wish for or expect (something) in vain
+    * a device through which air or steam is forced into a cavity or against a thin edge to produce a loud sound
+        * a factory whistle
+    * to make a demand without result
+        * he did a sloppy job, so he can whistle for his money
 * fringe
     * edge
     * decoration
@@ -11188,6 +11385,13 @@ title: English Speaking
 * archipelago
     * There are four very popular spots to view the archipelago
 * discount
+    * a reduction in the usual price for sth
+    * Students receive a 10 percent discount
+    * he gets a senior citizen discount at the theater
+    * not consider
+        * to decide that sth or sb is not worth consdieration or attention
+        * he discoutned fears about computer programming problems involving the year 2000s as exaggerated
+    * reduce price
 * conform
     * conform to
 * criterion
@@ -11425,6 +11629,13 @@ title: English Speaking
     * silly behaviour or nonsense:
         * I like the socializing but I can't be bothered with dressing up and all that malarkey.
 * fuzzy
+* fuzz
+    * light, loose hairs on fibers, or a covering or mass of these
+    * hair
+        * He's got that bit of adolescent fuzz on his upper lip.
+        * I must buy a razor today and get rid of the fuzz on my legs!
+    * the police
+        * Wathc out! it's the fuzz
 * prestidigitation
     * magic tricks performed as entertainment.
 * socket
@@ -11689,6 +11900,15 @@ title: English Speaking
             * The police fanned out over the west side of the park.
         * If a group of people fan out, they move in different directions from a single point.
 * scatter
+* disseminate
+    * The tax cut was given to spur consumer spending.
+    * to spread or give out news, informatin, ideas, etc. to many people
+    * The purpose of a university press is to disseminate knowledge by publishing books and journals.
+* broadcast
+* circulate
+* distribute
+* propagate
+    * After the update propagates, typically within a few seconds, 100% of function invocations execute the new version. 
 * spread
     * soft food
         * a soft food for putting on bread and biscuits
@@ -11766,6 +11986,7 @@ title: English Speaking
 * take (something) for granted
     * The government recently enacted strict laws against air pollution caused by factories
 * lavish
+    * spending, giving, or using more than is necessary or reasonable; more than enough
     * large impressive, or expensive
         * a lavish lifestyle
         * a royal palace on a lavish scale
@@ -11781,16 +12002,6 @@ title: English Speaking
     * public attention and interest:
     * She's been in the limelight recently, following the release of her controversial new film.
     * Openly ostracising someone or pulling a key team members out of a team with only newcomers with 1 days notice is common practise.
-* turnover
-    * employee changes
-        * the rate at which employees leaves a company and are replaced
-        * high/low turnove
-        * forced/voluntary turnover
-        * The company has a staff turnover of around 12% a year.
-    * pastry
-    * business
-    * employees
-    * cake
 * tenure
     * the period of time when sb hold a job, esp. an afficial position, or the right to keep a job permanently
     * during the tenure as mayor, relations with the police department worsened
@@ -12680,8 +12891,6 @@ title: English Speaking
 * demystify
     * to make sth easier to understand
         * What I need is a book that will demystify the working of a car engine for me
-* propagate
-    * After the update propagates, typically within a few seconds, 100% of function invocations execute the new version. 
 * instantaneously
 * instantaneous
     * happening or completed immediately, without any delay
@@ -12736,6 +12945,17 @@ title: English Speaking
         * to form opinions about sth without having the necessary information or facts; to make guessess
         * I'm just speculating about what happened
     * trade
+* speculative
+    * done for profit
+        * a speculative venture
+    * based on guess
+        * Our forecast for next year is speculative
+    * guess
+        * based on guess and not on information
+        * the article was dismissed as highly speculative
+        * bizarre and speculative theories
+    * trade
+    * job
 * theorize
 * hypothetico
 * hypothetico-deductive
@@ -13168,8 +13388,6 @@ title: English Speaking
     * Cycling shorts were the latest craze/(all) the craze that year.
     * The craze for health foods has become big business.
 * cult
-* tramp stamp
-    * a lower-back tattoo
 * plunger
     * you didn't have a plundger
 * weenie
@@ -13259,13 +13477,6 @@ title: English Speaking
         * lousy with
             * used to say that something is full of something, or too much of it
             * The internet is lousy with this kind of stuff
-* bum
-    * bad in quality or not useful
-        * He gave us bum directions, but we eventually the place
-    * to ask someone for something without intenting to pay for it
-        * Could I bum a cigarette off you?
-    * bum around
-    * bum out
 * rotten
 * stinking
     * very bad
@@ -13296,6 +13507,7 @@ title: English Speaking
     * to get rid of material such as solid waste or urine from the body
         * Most toxins are naturally excreted from the body.
 * defecate
+    * to excrete the contents of the bowels
 * spitball
     * a piece of paper that has been chewed and then rolled into a ball to be thrown or shot at sb
     * to quickly sugggest ideas to be discussed without thinking about them carefully
@@ -13458,6 +13670,10 @@ title: English Speaking
     * It was a preposterous idea, and no one took it seriously.
     * a preposterous suggestion
 * absurd
+* cockeyed
+* idiotic
+* ludicrous
+* nonsensical
 * benign
     * benign prostatic hyperplasia
     * Benign prostatic hyperplasia (BPH) — also called prostate gland enlargement — is a common condition as men get older.
@@ -13808,6 +14024,505 @@ title: English Speaking
 * readily
 * Plenipotentiary
     * hereinafter
+* fix
+    * repair
+    * arrange
+        * to arrange or put in place
+            * I need to fix my hair
+        * Shall we fix a time for our next meeting?
+        * I understand the rent is fixed at £750 a month.
+    * choose
+    * attach
+    * punish
+    * prepare food
+    * stop reproduction
+    * bad situation
+    * amount
+    * fasten
+    * sight
+    * keep
+    * cheat
+    * hair/make-up/clotheso
+        * to make your hair, make-up, clothes, etc. look tidy
+        * Give me a couple of minutes while I fix my hair.
+    * prepare
+        * to cook or prepare food or drink
+            * Can I fix you a drink?/Can I fix a drink for you?
+        * whose turn is it to fix dinner?
+        * Can I fix you a drink?
+        * Can I fix a drink for you?
+        * be fixing to
+            * to be planning to do sth
+    * preserve colours
+    * drug
+    * cheat
+    * awkward situation
+    * solution
+    * drug
+    * position
+* transfer
+* transferee
+    * a person to whom someone else sells property, shares, etc
+    * Property is transferred from the transferor to the transferee.
+* black eye
+    *  periorbital hematoma, or shiner, is bruising around the eye commonly due to an injury to the face rather than to the eye
+* permanent residence
+    * permanent residency
+    * Permanent residency refers to people's resident status in a country of which they are not citizens.
+    * This is usually for a permanent period; a person with such status is known as a permanent resident.
+    * In the United States, such a person is officially referred to as a Lawful Permanent Resident
+    * will you keep permanent residence outside of this country? if yes where?
+* allowance
+    * the amount of something available or needed for a particular purpose
+    * An allowance is also money given by parents to a child every week that the child can spend.
+* stipend
+    * a fixed, regular income that is usually not based on an amount of work done
+    * As a student advisor, she gets a monthly stipend from the college.
+* premise
+    * an idea or theory on which a statement or action is based
+    * They had started with the premise that all men are created equal
+* premises
+    * "The premises" of a business or institution are all the buildings and land that it occupies on one site
+    * a house or other building and the land on which it is built:
+        * The bread sold here is baked on the premises.
+    * the land and buildings owned by someone, especially by a company or organization
+        * off/on the premises
+            * Everything is made right here on the premises.
+        * business/commercial/company premises
+* assumption
+* indefinite
+    * indefinite period of time
+    * not exact or not clear; without clear limits
+    * It was a wonderful opportunity, but it meant leaving family and friends for an indefinite period, perhaps forever.
+    * The project has been postponed for an indefinite period.
+* applicable
+* inertia
+    * system have inertia
+    * the tendency not to change what is happening
+    * lack of activity
+    * force
+* gymnastic
+    * relating to gymnastics 
+    * a gymnastic display
+* gymnastics
+    * physical exercises and activities performed inside, often using equipment such as bars and ropes, intended to increase the body's strength and the ability to move and bend easily
+    * Legal arguments require incredible mental/verbal gymnastics (= the ability to think/speak cleverly and quickly).
+* physique
+    * the appearance, esp. shape and size, of a human body
+    * a small/lager physique
+    * a dancer's physique
+* umbilical
+    * umbilical cord
+* shotgun
+    * gun
+    * in vehicle
+        * used to refer to the seat next to the driver in a car or other vehicle
+        * the kids took turns riding shotgun
+        * "Shotgun!", she shouted, and jumped into the passenger seat.
+        * Has anyone called shotgun? If not, I do!
+    * to drink an alcoholic drink from a can very quickly, by making a hole in the can, putting your mouth over the hole and then opening the can at the top
+        * I saw some workers shotgunning beers across the street.
+* persuade
+* coerce
+    * to persuade sb forcefully to do sth that he or she may not want to do
+    * I don't think anybody should be coerced into leaving
+    * the court heard that the six defendants have been coerced into making a confession
+* leech
+    * a fat worm that lives in wet places and fastens itself onto the bodies of humans and animals to suck their blood
+    * A leech is also a person who gets money or support from someone, giving little or nothing in return.
+    * Do you know how many HBOs that leech had my mother get him?
+    * to get money, food, etc. from other people, especially without working for it or doing anything to deserve it
+        * I don't want to leech off my parents any longer.
+* rule
+    * rule out
+        * we can try to rule in or rule out our hypotheses
+* ping
+    * Trying to conencto the database with the same crednetials the application logic server uses can refute the second hypothesis, while pingin the database server may be able to refute the first, depending on network topology, firewall rules, and other factors
+* draw
+    * picture
+    * move
+    * pull/pull in
+    * take out
+    * decide on
+    * cause
+    * attraction
+    * game result
+    * drawn-out
+        * lasting longer than is usual or necessary
+            * we had another drawn-out discussion after the meeting ended
+        * when you are dealing with more complicated and drawn-out cases, this documentation may be crucial in helping you remember exactly what happend and prevent having to repeat these steps
+* lengthy
+* protracted
+    * lasting for long time or made to last longer than necessary
+    * protracted negotiations
+    * a protracted argument/discussion
+* protract
+    * I have no desire to protract the process
+* prolong
+* hodge podge
+    * hodgepodge
+    * a confused mixture of different thigs
+        * it was a hodgepodge of theories
+        * New Age thinking seems to be a hodgepodge of old and new ideas.
+    * making changes in a systematic and documented fashion will help you return the system to its pre-test setup, rather than running in an unknown hodge-podge configuration
+* farrago
+* mishmash
+* disconfirm
+    * show that (a belief or hypothesis) is not or may not be true.
+    * benchmarking tools and load generator can result just as easily from a disconfirming experiment as a supporting one
+* outlive
+    * to live or exist longer than sb or sth
+        * At 90, I've outlived most of my friends
+        * he outlived all of his brothers
+* merit
+    * encourage your peers by recongnizing that negative results are part of thoughtful risk taking and that every well-designed experiment has merit
+* file
+    * One of our internal customers filed a pronlem report indicating that they'd recently sen a dramatic increase in latency, CPU usage, and number of running processes needed to serve traffic for their app
+* quadrapled
+    * the amount of CPU time and number of serving processes had nearly quadrupled
+* flight
+    * in flight
+* refer
+    * refer sb/sth to sb/sth
+        * to direct sb or sth to a different place or person for information, help, or action
+        * the decision to refer the bid to the commission will open the way for a foreign company to launch an offer
+* idiosyncrasy
+    * a strange or unusual habit, way of behaving, or feature
+    * One of her many idiosyncrasies is always smelling a book before opening it.
+* oddity
+    * sb or sth that is strange or unusual
+    * As one of the few women in engineering in the 1950s, she was considered an oddity
+* foible
+* mannerism
+* embed
+* embedded
+    * existing or firmly attached within something or under a surface
+* speed
+    * to move, go or happen fast, or to cause sth to happen fast
+        * the train sped along at over 120 miles per hour
+* leisure
+    * at leisure
+        * free to do what you want
+        * After a stop for lunch you will be taken to the famous Keukenhof Flower Gardens where you can spend the afternoon at leisure.
+        * slowly and for as long as you like
+        * They’ll need time to think about the situation at leisure.
+* periodic
+    * repeated event
+    * time
+* woefully
+    * (of a bad situation) extremely; very:
+    * used to emphasize how bad a situation is
+    * Medical resources were woefully inadequate during the emergency.
+* achingly
+    * extremly
+    * Sung by the world's greatest tenor, this aria is achingly beautiful.
+* ooze
+    * to flow slowly out of something through a small opening, or to slowly produce a thick sticky liquid
+    * soft, sticky earth
+* seep
+* goo
+* mud
+* slime
+    * a thick brown liquid made of earth and water, found at the bottom of a river or lake
+* wraith
+    * a spirit of a dead person, sometimes represented as a pale, transparent image of that person
+    * something that is pale or weak and without a clear shape
+        * He watched the misty wraiths of moisture making patterns on the window pane
+* limb
+* unearth
+    * dig earth
+        * to find sth by digging in the ground
+    * discover
+        * to discover proof or other information, often after careful searching
+* recur
+    * to happen again or happen many times
+* thunderheads
+* cumulus
+* r and g
+    * random elment in games
+    * you can lose simply b R&G
+* nosedive
+    * (esp. of an aircraft) a fast and sudden fall to the ground with the front pointing down
+    * a sudden fast fall in prices, value, etc
+        * There was alarm in the markets when the dollar took a nosedive.
+    * to suddenly fall to the ground with the front pointing down
+        * Sepctators in the world watched in horror as the plane nosedived
+    * house price nosedived without warning
+* sassy
+    * rude but not seriously offensive
+        * I was a sassy kid who sometimes talked back to my mother.
+    * rude and showing no respect
+        * a sassy young girl
+    * confident or showing confidence
+        * a sassy little black dress
+* jiggle
+    * to move something or cause something to move from side to side or up and down with quick short movements
+    * If the door won't open, try jiggling the key in the lock.
+    * a quick short movement from side to side or up and down
+        * If the radio doesn't work, just give it a quick jiggle.
+* joggle
+* waggle
+* wiggle
+* uppity
+    * acting in a way that is too confident for someone in your social class or for your young age
+    * I was just an uppity kid.
+* ageism
+* shirk
+* courier
+    * a person who carreis or documents for sb else
+    * messanger
+        * I want to have this package delivered by motorcycle courier
+        * we can send the document by courier
+        * a courier service/company/firm
+    * on holiday
+    * to send sth using a courier
+        * I'll courier the relevant documents to you this afternoon
+        * the replacement part will be couriered to your office within 24 hours
+* assuage
+    * you could assuage your guitl through altruism
+    * to make unpleasant feelings less strong
+        * the governemtn has tried to assuage the pulic's fears
+* altruism
+    * nobody belief those people are donating money to the president's party purely out of altruism
+    * willingness to do tihngs that bring advantages to others, even if it results in disadvantages for yourself
+        * she's not known for her altruism
+* altruistic
+* egoism
+* laxative
+    * a substance that helps a person excrete the contents of the bowels
+* inland
+    * in the middle of a country, away from the sea
+    * the Black Sea is a large inland sea
+    * toward the middle of a country, away from the sea
+    * away from the sea
+    * within the borders of a country, rather than between countries
+        * Royal Mail aims to deliver 92.5% of inland mail the day after it is posted.
+    * lcoated towards the middle of a country away from the coast
+* coastal
+* upstate
+* interleave
+    * Outalator lets users view a timeinterleaved list of notificagtions for multiple queus at once
+    * to put layers or flat pieces of sth between layers or flat pieces of sth else
+        * they interleaved the pages with absorbent paper to dry them out
+    * to combine different things so that parts of one thing are put between parts of another thing
+* delve
+    * delve into
+        * to search, esp. as if by digging, in order to find a thing or information
+        * to examine something carefully in order to discover more information about someone or something
+        * she delved into her pocket to find some change
+        * It's not always a good idea to delve too deeply into someone's past.
+* dig
+* lightweight
+    * with less weight
+        * (esp. of clothes) weighing little and therefore not warm
+        * a lightweight jacket
+    * not important
+        * (of a person) of little importance, or (of ideas) created without serious thought or purpose
+        * the movie was a lightweight comedy
+    * sports person
+* twinge
+* whack
+    * whack-a-mole
+* bait
+    * food
+        * a small amount of food used to attract and catch a fish or animal
+        * bait is also anything used to persuade sb to do sth
+    * put bait on
+        * put a bait on a hook or in a trap
+        * you can bait the mousetrap with a piece of cheese
+    * make angry
+        * to intentionally make sb angry by saying or doing annoying things
+        * she enjoys baiting her brother by teasing him about his girlfrined
+        * Ignore him - he's just baiting you.
+        * I suspect he was just baiting me.
+    * fish/animal
+    * offer
+    * make angry
+    * dog
+    * fish/animal
+* the longer you wait, the harder it's gonna be for you to get out of here
+* Every sacrifice we make needs to be for the greater good
+* fiddle
+    * move things
+    * instrument
+    * cheat
+    * move about
+        * to move things about or touch things with no particualr purpose
+        * Put your papers down and stop fiddling with them!
+    * instrument
+        * a violin
+        * to play the fiddle
+    * difficulty
+    * dishonest behaviour
+        * a tax fiddle
+        * I find threading a needle a terrible fiddle.
+    * to change figures dishonestly, often in order to get more money
+        * fiddle your overtime/expenses
+            * the report criticized officers who fiddled their overtime and tax inspects how received tax-free bonuses
+    * to change sth very slightly
+        * fiddle with sth
+            * If you fiddle with the figures in the investment column, you should be able to get your budget to balance.
+    * fiddle the books
+        * to dishonestly change a company's accoutns or financial records
+    * on the fiddle
+        * involved in dishonest behaviour, usually to get money
+            * one in two holiday makers claiming for lost luggage could be on the fiddle, claims a leading travel insurance firm
+* holidaymaker
+    * a person who is on holiday away from where they usually live
+* ablaze
+    * burning or very bright
+    * her eyes were ablaze with excitement
+* scene
+    * play/move
+        * a part of a play or movie in which the actions says in one place for a continuous period
+        * the opning scene of the movie was filmed in New York City
+    * view
+    * place
+    * event
+    * area
+    * show
+    * teather/film
+    * argument
+* scrub
+    * clean
+        * to clean something by rubbing it hard
+        * After the tomato sauce boiled over, I had to scrub the stove.
+    * plants
+    * stop
+    * clothes
+* hygienic
+* unhygienic
+    * not clean, in a way that may cause disease
+    * unhygienic conditions and a lack of clean water
+* spoonful
+* per
+    * as per sth
+        * according to sth
+        * as per your instructions/letter/request
+        * the policy was not terminated as per your request
+        * as per instructions
+        * I had two spoonfuls after lunch, as per instructions.
+    * as per usual/normal
+        * as usual
+        * Carlo turned up without any money, as per usual.
+    * used when talking about pieces, rates, etc. to mean the amount for each one
+    * per day/hour/mongth
+    * per head/person
+    * per litre/million/minute
+* coop
+    * a cage where small animals are kept, esp. chickens
+        * a chicken coop
+* cooped
+    * cooped up
+        * if you are cooped up somewhere, you are in a small closed space from which you cannot space, or you feel as if you are
+        * I hate being cooped up inside working when its a sunny day outside.
+        * kept inside, or kept in a place that is too small:
+            * I hate being cooped up in the house all day long
+* penmanship
+    * the ability to write neatly, or the activity of learning to do this
+* ruse
+    * a trick intended to deceive sb
+        * you didn't fall for my ruse
+* artifice
+    * It was just a ruse to distract her while his partner took the money.
+* homeostasis
+    * the process by which a living thing or a cell keeps the conditions inside it the same despite any changes in the conditions around it
+* soot
+    * a black powder produced when coal, wood, etc., is burned
+    * It can be dangerous to let too much soot accumulate inside a chimney.
+* smut
+    * pictures, writing, language, or performances that deal with sex and are offensive
+    * sexual material
+        * magazines, books, pictures, filmsor jokes that offend some people because they relate to sex
+    * dirt
+        * dirt or ash (= powder left when something has burned) that makes a mark on something
+* limbic
+    * limbic system
+        * the paleomammalian cortex
+* digestible
+    * it presents an easily digestible guide for everyone from beginners to advanced German speakers
+* glean
+    * to collect information in small amounts
+        * From what I was able to glean, the news isn’t good.
+* exemption
+    * the fact of not having to obey a rule or do something that other people have to do
+        * he was granted exemption from military service during WW2
+    * An exemption is a particular amount of money that is not taxed
+        * a tax exemption
+    * special permission not to do or pay something
+        * Candidates with a qualification in chemistry have exemption from this course
+        * Organizations may qualify for exemption from income tax if they operate exclusively as charities
+    * exemption from
+    * exemption from doing sth
+    * personal exemption
+        * the amount of income you can earn each year before paying tax
+        * the personal exemption for all taxplayers has been increased by 200 dollars to 2600 dollars
+* dopey
+    * drugged
+        * wanting to sleep, because or as if you have taken a drug
+        * he had taken a sleeping tablet the night before and still felt dopey
+    * stupid
+        * silly or stupid
+        * he's nice, but a bit dopey
+* apprentice
+    * sb who works for an expert to learn a particular skill or job
+    * he worked for two years as a plumber's apprentice
+    * Most of the work was done by apprentices.
+    * an apprentice carpenter
+    * to make someone an apprentice
+        * Michelangelo was apprenticed to Ghirlandaio in Florence for three years.
+* substance
+* subsistence
+    * what a person needs in order to stay live
+    * Art satisfies a need beyond more subsistence
+    * the state of having what you need in order to stay alive, but no more
+        * the family was living at subsistence level
+    * enough money or food to keep yourselves alive
+* travel card
+    * a prepaid card allowing unlimited travel on buses or trains for a specified period of time.
+* outright
+    * directly and plainly, or immediately instead of in stages
+    * they bought their car outright
+    * completely or immediately
+        * I think cigarette advertising should be banned outright.
+    * complete
+        * Outsiders are regarded with outright hostility.
+* nicety
+    * the fact that something is based on very slight differences
+        * They spent a lot of time arguing about legal niceties.
+    * a detail or small difference that is only obvious after careful thought
+* bestow
+    * to give sth as an honor or present
+    * The country’s highest medal was bestowed upon him for heroism.
+    * The George Cross is a decoration that is bestowed upon/on British civilians for acts of great bravery.
+* pout
+    * to show annoyance esp. by pressing the lips together or pushing out the lower lip
+    * Our four-year-old pouts whenever she doesn't get what she wants
+    * Caroline pouts her lips when she's putting on lipstick.
+    * the act of acting
+        * She didn't say anything but I could tell from her pout that she wasn't very pleased.
+* sulk
+    * to be silent and unpleasant because you are angry or annoyed
+    * she puts and sulks, and she almost never smiles or laughs
+    * a period of time when someone refuses to smile or be pleasant because they are angry about something
+        * He spent the whole day in a sulk.
+* brood
+    * a group of young brids all born at the same time, or a person's children
+    * think
+        * to think silently for a long time about things that make you sa,d worreid and angry
+        * He brooded over the insult.
+        * I wish she wouldn't sit brooding in her room all day.
+    * a person's young children
+        * Ann was at the party with her brood.
+* pasture
+    * land covered with grass or similar plants suitable for animals, such as cows and sheep, to eat
+    * the best places to find bluebirds are open pastures
+    * he sheep were grazing on the lush green pastures.
+* uggo
+    * an angury person
+* fatty
+    * a fat person
+
 
 
 ## Japan
@@ -13949,6 +14664,21 @@ title: English Speaking
 * cockle
 * possum
     * opossum
+* leech
+    * a fat worm that lives in wet places and fastens itself onto the bodies of humans and animals to suck their blood
+    * A leech is also a person who gets money or support from someone, giving little or nothing in return.
+    * Do you know how many HBOs that leech had my mother get him?
+    * to get money, food, etc. from other people, especially without working for it or doing anything to deserve i
+
+## Medicine
+* xanax
+    * trade mark for alprazolam
+    * a drug of the benzodiazepine group, used in the treatment of anxiety.
+
+## food
+* surf and turf
+    * Surf and turf or surf 'n' turf is a main course which combines seafood and red meat
+
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
