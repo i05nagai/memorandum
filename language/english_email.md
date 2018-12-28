@@ -54,6 +54,12 @@ title: English Email
 ## PFA
 * [11 Less Annoying Synonyms and Alternatives to "Please Find Attached"](https://blog.hubspot.com/sales/please-find-attached)
 
+## Look forward to
+* [What are some synonyms for 'looking forward to'? \- Quora](https://www.quora.com/What-are-some-synonyms-for-looking-forward-to)
+
+## Asking
+* [What are some other ways of saying 'it would be greatly appreciated'? \- Quora](https://www.quora.com/What-are-some-other-ways-of-saying-it-would-be-greatly-appreciated)
+
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)
 * [5 Email Templates for Responding to Recruiters -The Muse](https://www.themuse.com/advice/5-email-templates-to-respond-to-recruiters-no-matter-where-you-are-in-your-search)
@@ -63,3 +69,5 @@ title: English Email
 * [5 Ways to Write &quot;I Hope You Are Doing Well&quot; in Email | Grammarly](https://www.grammarly.com/blog/i-hope-youre-doing-well/)
 * [How to respond electronically for an invite to interview](https://www.paxus.com.au/blog/respond-electronically-invite-interview/)
 * [More useful phrases for business emails and letters – Speakspeak](http://speakspeak.com/resources/general-english-vocabulary/more-useful-phrases-for-business-emails-and-letters)
+* [Email Greetings: 10 Ways To Start Your Message Professionally \- Yesware Blog](https://www.yesware.com/blog/email-greetings/)
+* [7 Useful English Phrases to Say When You Forget Something \| English Teacher Melanie](http://www.englishteachermelanie.com/7-useful-english-phrases-to-say-when-you-forget-something/)
