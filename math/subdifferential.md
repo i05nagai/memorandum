@@ -8,8 +8,8 @@ title: Subdifferential
 * $$f: I \rightarrow \mathbb{R}$$,
     * convex function
 
-## Definition1
-$f$の$$x_{0} \in \mathbb{R}^{n}$$におけるsubderivativeを以下で定義する。
+#### Definition1
+The subdifferential of $f$ at $$x_{0} \in \mathbb{R}^{n}$$ is defined as
 
 $$
     \partial_{x_{0}}f
@@ -23,18 +23,19 @@ $$
         \ge
         c^{\mathrm{T}} (x - x_{0})
     \}
+    .
 $$
 
-subderivativeの元を$f$の$x_{0}$でのsubderivativeという。
+An element of the subdifferential is called subderivative of $f$ at $x_{0}$.
 
 ## Property
 
-### Proposition2
-$\partial_{x_{0}} f$はclosed convex set
+#### Proposition2
+$\partial_{x_{0}} f$ is closed convex set.
 
-### proof.
-$$y, z \in \partial_{x_{0}}f$$とする。
-$\forall x \in I$, $\forall \lambda \in (0, 1)$とすると、
+#### proof.
+Let $$y, z \in \partial_{x_{0}}f$$
+$\forall x \in I$, $\forall \lambda \in (0, 1)$,
 
 $$
 \begin{eqnarray}
@@ -58,14 +59,15 @@ $$
     \\
     & = &
         (f(x) - f(x_{0}))
+    .
 \end{eqnarray}
 $$
 
-closeなのは、明らか。
+Since it is easy to confirm the set is closed, the proof completed.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Theorem3 Necessary and sufficient condition of optimality for convex function
+#### Theorem3 Necessary and sufficient condition of optimality for convex function
 * $I \subseteq \mathbb{R}^{n}$
     * open subset
 * $f: I \rightarrow \mathbb{R}$
@@ -77,7 +79,7 @@ Then (1) $$\Leftrightarrow$$ (2).
 * (1) $$x^{*}$$ is the minimizer of $f$
 * (2) $$0 \in \partial_{x^{*}}f$$,
 
-### proof.
+#### proof.
 (1) $$\Rightarrow$$ (2)
 
 By definition of subdifferential,
@@ -116,7 +118,7 @@ Hence $$0 \in \partial_{x^{*}}f$$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Definiton4
+#### Definiton4
 * $I \subseteq \mathbb{R}^{n}$
     * open subset
 * $x^{*} \in I$,
@@ -142,10 +144,9 @@ $$
 
 is said to be tangent cone of $I$.
 
-
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Proposition5
+#### Proposition5
 * $I \subseteq \mathbb{R}^{n}$
     * open subset
 * $$x^{*} \in I$$,
@@ -167,7 +168,7 @@ $$
     0,
 $$
 
-## proof.
+#### proof.
 (1) $\Rightarrow$ (2)
 
 Suppose that there exists $$h \in T_{I}(x^{*})$$ such that $$h^{\mathrm{T}}\nabla f(x^{*}) < 0$$.
@@ -236,7 +237,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-### Definition6 Normal cone
+#### Definition6 Normal cone
 * $I \subseteq \mathbb{R}^{n}$
     * convex
 * $f: I \rightarrow \mathbb{R}$
@@ -256,12 +257,12 @@ $$
 
 is said to be normal cone.
 
-### Remark7
+#### Remark7
 By theorem, $$x^{*}$$ is minimizer of $f$ on I if and only if $$\nabla f(x^{*}) \in N_{I}(x^{*})$$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Example8 Polyhedral set
+#### Example8 Polyhedral set
 We show equivalent condition being minimizer of $f$ when $I$ is polyhedral set.
 Let $I$ be arbitrary polyhedral set, that is,
 
