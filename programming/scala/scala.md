@@ -59,6 +59,9 @@ to trait or not to trait
 * if you still do not know
     * start by making it as a trait
 
+apply function
+
+* `object Greet { def apply(name: String): String = name }` then `Greet("name")`
 
 package
 
@@ -67,6 +70,23 @@ package
 * let you rename and hide some of the imporeted members
 * member of packages can be labeled with the acess modifiers `private` and `protected`
 * no access modifier means `public`
+
+
+implict conversion
+
+* use `implicit` keyword
+* you can use it to mark any variable, function, or object definition
+
+Type parametrization
+
+* We denote `T` is a subtype of `S` by `T < S`
+* `trait Queue[+T]`
+    * covariant
+    * If `T < S`, `Queue[T] < Queue[S]`
+* `trait [-T]`
+    * contravariant
+    * If `T` is subtype of S, this would imply that `Queue[S]` is a subtype of `Queue[T]`
+    * If `T < S`, `Queue[T] > Queue[S]`
 
 ## Tips
 
@@ -83,4 +103,5 @@ package
 * [learning Scalaz — learning Scalaz](http://eed3si9n.com/learning-scalaz/)
 * [Introduction · Scala研修テキスト](https://dwango.github.io/scala_text/)
 * [deanwampler/prog\-scala\-2nd\-ed\-code\-examples: The code examples used in Programming Scala, 2nd Edition \(O'Reilly\)](https://github.com/deanwampler/prog-scala-2nd-ed-code-examples)
-
+* [A Tour of Scala: Explicitly Typed Self References \| The Scala Programming Language](https://www.scala-lang.org/old/node/124)
+* [4 Fun and Useful Things to Know about Scala's apply\(\) functions](https://blog.matthewrathbone.com/2017/03/06/scala-object-apply-functions.html)
