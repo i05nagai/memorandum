@@ -14522,6 +14522,15 @@ title: English Speaking
     * an angury person
 * fatty
     * a fat person
+* squirt
+    * to quickly force a liquid out of something, or of liquids to flow through a narrow opening
+    * Squirt lemon juice on the clams and enjoys them
+    * the ball squired free and bounced out of bounds
+    * an amount of liquid that is forced to flow out through a narrow opening
+    * a squirt is laso a small person you consider unimportant
+* swat
+    * to hit sth hard by suddenly swinging your hand or an object
+    * I swatted the fly with a rolled-up newspaper.
 
 
 
