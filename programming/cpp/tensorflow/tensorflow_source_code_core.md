@@ -190,5 +190,11 @@ title: Tensorflow source code core
     * `state_ops.h`
 
 
+## cc
+* `Output`
+    * ops.h
+* `Operation`
+    * ops.h
+
 ## Reference
 * [Adding a New Op  \|  TensorFlow](https://www.tensorflow.org/guide/extend/op)
