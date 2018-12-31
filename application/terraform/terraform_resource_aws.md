@@ -109,6 +109,34 @@ $ terraform import aws_eip.bar eipalloc-00a10e96
     * `role`
     * `policy_arn`
 
+
+* `aws_s3_bucket_notification`
+    * `lambda_function`
+        * lambda function
+        * `id`
+        * `lambda_function_arn`
+        * `events`
+        * `filter_prefix`
+            * Specifies object key name prefix.
+        * `filter_suffix`
+            * Specifies object key name suffix.
+    * `topic`
+        * SNS topic
+        * `id`
+            * optional
+        * `topic_arn`
+        * `events`
+        * `filter_prefix`
+        * `filter_suffix`
+    * `queue`
+        * SQS queue
+        * `id`
+            * optional
+        * `queue_arn`
+        * `events`
+        * `filter_prefix`
+        * `filter_suffix`
+
 ## AWS IAM Policy
 * [AWS IAM Policy Documents with Terraform \- Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html)
 
