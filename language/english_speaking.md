@@ -205,6 +205,13 @@ title: English Speaking
     * The room started spinning and I felt faint
 * neighbourhood
     * It only goes through the neighborhoods that've gotten too expensive for students to live in
+* vicinity
+    * the area immediately surrounding sth
+    * there are many stores in the vicinity where she can shop
+    * an area of low pressure off the southeast coast will keep some rain showers in the vicinity of the coastline
+    * in the vicinity of sth
+        * approximately the stated amount
+        * the price for a house here is the vicinity of 450,00 dollars
 * account for
     * Solar cells account for less than 1% of the world's electricity production
 * Recent technological improvement, however, may boost this figure.
@@ -1977,6 +1984,13 @@ title: English Speaking
     * gender
         * a tender look/smile
         * What you need is some tender loving care
+* slapdash
+    * done or made in a hurry and without care
+    * He gets his work done quickly, but he's very slapdash.
+* slipshod
+    * showing lack of effor and attention
+        * slipshod repairs
+* careless
 * sloppy
     * careless
         * sloppy work
@@ -6990,11 +7004,16 @@ title: English Speaking
     * superative adj: friendliest
 * deliberate
     * intentional or planned, often with the result of being harmful to someone
-        * a deliverate insult
+        * a deliberate insult
         * he accused her of writing deliberate untruths
     * someone who moves, acts, or thinks in a deliberate way moves, acts, or thinks slowly and usually carefully
     * to think or talk seriously and carefully about something
         * The jury deliberated for two days before reaching a verdict
+* deliberately
+    * intentionally
+    * He did it deliberately to annoy me.
+    * slowly and carefully
+        * Calmly and deliberately, she cut up his suits one by one.
 * retreat
     * On the other side, Wonga is retreating from its ambitions to pivot its business (or at least expand it) from loans to payments
 * pivot
@@ -11187,6 +11206,13 @@ title: English Speaking
         * web-based company swindle customers out of 15 millon dollars
     * the action of cheating or tricking sb in order to get money from them
         * he masterminded a hi-tech swindle that emptied customer's bank accounts
+* diddle
+    * trick
+        * He diddled me! He said that there were six in a bag, but there were only five.
+    * play
+    * have sex
+        * to have sex with sb
+        * he's been diddling his secretary for years
 * con
     * to deceive sb by using a trick, or to cheat sb of money
         * I know when I'm being conned
@@ -11195,8 +11221,13 @@ title: English Speaking
     * trick
     * disadvantage
 * gyp
+    * to cheat someone
+        * I think the taxpayers are getting gypped.
+    * pain or trouble
 * rook
 * defraud
+    * to take or keep sth illegaly from sb by deceiving the person
+    * She is charged with defrauding the Internal Revenue Service.
 * mastermind
 * empty
 * wear sb like a hat
@@ -14531,7 +14562,59 @@ title: English Speaking
 * swat
     * to hit sth hard by suddenly swinging your hand or an object
     * I swatted the fly with a rolled-up newspaper.
-
+* variety
+    * a variety of sth
+        * a lot of things of the same type that are different from each other in some way
+        * the girls comes from a variety of different backgrounds
+    * the differences within a groups, set of actions etc. that make it interesting
+    * give/add/bring variety to sth
+        * make sth more interesting
+        * Occasionally working from home adds variety to a job
+    * a type of thing
+        * the lake has more than 20 varities of fish
+    * a particular type of person or thing – often used humorously
+        * of the ... variety
+            * Lon has no patience with anything of the child variety
+    * a wide/great/large variety
+    * a huge/enormous variety
+    * an infinite/endless variety
+    * a rich variety
+    * a bewildering variety
+    * an amagaing variety
+* various
+    * if there are varous things, there are several different types of things
+    * the jacket is avalable in various colors
+* bewildering
+* perchance
+    * by chance, perhaps, possibly
+    * Do you know her, perchance?
+* bankrupt
+    * to cause sb to become bankrupt
+    * a person who is officially bankrupt
+        * he was declared a bankrupt in 2007
+    * discharged bankrupt
+    * unable to pay what you owe, and having control of your financial control given, by a count of law, to a person who sells your property to pay your debt
+    * be/go bankrupt
+    * declare sb bankrupt
+* money
+    * moeny in sth
+* astroucious
+    * of very bad quality
+        * His Russian was atrocious, but he communicated.
+        * an atrocious film/piece of acting
+    * an action that is astroucious extremly rude
+        * an astroucious crime
+    * cruel
+        * violent and shocking
+* forlorn
+    * looking or feeling alone and sad because you need help but do not expect to get it
+    * As I left little Bobby on his first day of school, he gave me such a forlorn look.
+* dear
+    * dear me
+        * An expression of surprise, dismay, or indulgent disapproval. 
+* Doncaster is a large market town in South Yorkshire, England
+* bungee
+    * bungee rope
 
 
 ## Japan
