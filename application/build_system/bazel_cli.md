@@ -33,6 +33,7 @@ bazel build //<package name>:<target name>
 bazel test
 ```
 
+* Inherits all options from `bazel build`.
 * `--copt -g`
 * `--compilation_mode=fastbuild|opt|dbg`
     * `fastbuild`
@@ -50,10 +51,6 @@ bazel test
     * https://github.com/bazelbuild/bazel/issues/1118
     * https://github.com/bazelbuild/bazel/issues/5128
         * 0.15.2 has problems, but it will be fixed in 0.16
-
-```
-bazel clean
-```
 
 ```
 bazel run //<package name>:<target name>
@@ -86,11 +83,34 @@ bazel clean
 Generates code coverage report for specified test targets.
 
 ```
-bazel coverage
+bazel coverage <target>
 ```
 
-* c++
-    * lcov is needed
+* Inherits all options from `bazel test`.
+* For c++ coverage report, you need to install
+    * `lcov`
+    * `gcov`
+* log file
+    * log files are generated in `bazel-testlogs/.../test.log`
+* coverage
+    * coverage report are generated in `bazel-testlogs/.../coverage.dat`
+        * lcov coverage data
+* `--coverage_support=<a build target label>`
+    * Location of support files that are required on the inputs of every test action that collects code coverage. Defaults to '//tools/test: coverage_support'. 
+* `--coverage_report_generator=<a build target label>`
+    * Location of the binary that is used to generate coverage reports.
+    * This must currently be a filegroup that contains a single file, the binary. Defaults to '//tools/test:coverage_report_generator'. 
+* `--[no]collect_code_coverage`
+    * (a boolean; default: "false")
+    * If specified, Bazel will instrument code (using offline instrumentation where possible) and will collect coverage information during tests.
+    * Only targets that match `--instrumentation_filter` will be affected.
+    * Usually this option should not be specified directly - 'bazel coverage' command should be used instead. 
+* `--[no]experimental_cc_coverage`
+    * (a boolean; default: "false")
+    * If specified, Bazel will use gcov to collect code coverage for C++ test targets.
+    * This option only works for gcc compilation.
+* `--[no]experimental_java_coverage`
+    * (a boolean; default: "false")
 
 Loads, analyzes, and queries the specified targets w/ configurations.
 
