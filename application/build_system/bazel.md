@@ -81,6 +81,7 @@ All target patterns starting with `//` are resolved relative to the current work
 * `@<package-name>`
 
 ## Rules
+[bazel/tools/build\_defs/repo at master · bazelbuild/bazel](https://github.com/bazelbuild/bazel/tree/master/tools/build_defs/repo)
 
 
 ### Docker
