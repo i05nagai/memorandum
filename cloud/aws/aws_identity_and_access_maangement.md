@@ -7,6 +7,8 @@ title: AWS Identity and Access Management
 ## Concepts
 * [Overview of Access Management: Permissions and Policies \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html)
 
+Service -> Actions -> Resources
+
 * Principal
     * An entity in AWS that can perform actions and access resources
 * IAM user
@@ -28,9 +30,10 @@ title: AWS Identity and Access Management
     * A role that a service assumes to perform actions in your account on your behalf
 * Policy
     * Identity-based policies
-        
         * Attach managed and inline policies to IAM identities, such as users, groups to which users belong, and roles.
     * Resource-based policies
+        * attached to a resource
+        * Resource-based policies differ from resource-level permissions
     * Organizations SCPs
     * Access control lists
         * Use ACLs to control what principals can access a resource. ACLs are similar to resource-based policies, although they are the only policy type that does not use the JSON policy document structure.
@@ -102,6 +105,11 @@ JSON policy
 
 ## Role
 * [IAM Roles \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html?icmpid=docs_iam_console)
+
+## Resource
+* [Identity\-Based Policies and Resource\-Based Policies \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+
+
 
 ## Amazon Resource Nanme
 
