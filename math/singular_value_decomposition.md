@@ -26,7 +26,7 @@ where
     * $m \times n$ matrix
     * $$\sigma_{1} \ge \ldots \ge \sigma_{n} \ge 0$$,
 
-### Definition. Hermitian matrix
+#### Definition. Hermitian matrix
 * $$A = (a_{j}^{i})_{i = 1, \ldots, m, j = 1, \ldots, n} \in \mathbb{C}^{m \times n}$$,
     * matrix
 
@@ -38,7 +38,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definition. Singluar Value
+#### Definition. Singluar Value
 * $m \ge n$
 * $$A \in \mathbb{C}^{m \times n}$$,
     * Hermitian matrix
@@ -54,7 +54,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Theorem 1
+#### Theorem 1
 * $$A \in \mathbb{C}^{m \times n}$$,
     * rank $r$
 * $$\sigma_{i}$$,
@@ -65,7 +65,7 @@ $$
     * orthogonal matrix
 * $$P_{1} := AQ_{1}D_{1}^{-1} \in \mathbb{C}^{m \times r}$$,
 * $$P_{2} \in \mathbb{C}^{m \times (m - r)}$$,
-* $$P := (P_{1}, P_{2}) \in \mathbb{C}^{m times m}$$,
+* $$P := (P_{1}, P_{2}) \in \mathbb{C}^{m \times m}$$,
 * $$D_{1} \in \mathbb{C}^{r \times r}$$,
 
 Suppose $A$ satisfies
@@ -115,7 +115,7 @@ $$
     \right).
 $$
 
-### proof.
+#### proof.
 Since
 
 $$
@@ -255,7 +255,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem2. Existence of singular values
+#### Theorem2. Existence of singular values
 * $$A \in \mathbb{C}^{m \times n}$$,
     * rank $r$
 
@@ -270,7 +270,7 @@ Then there are $$Q_{1}$$, $$D_{1}$$ and $$P_{2}$$ such that
 
 and satisfy $$\eqref{singular_value_decomposition_condition_01}$$ and $$\eqref{singular_value_decomposition_condition_02}$$.
 
-## proof.
+#### proof.
 Existence of $Q$ is direct consequence from eigenvalue decomposition.
 Since $A^{\mathrm{T}}A$ is $n \times n$ symmetric matrix, we can diagonalize $A^{\mathrm{T}}A$ by <a href="{{ site.baseurl }}/math/eigenvalue.html">threorem</a>.
 Thus there are diagonal matrix $D^{\prime}$ and orthogonal matrix $Q$ such that $Q^{\mathrm{T}}A^{\mathrm{T}}AQ = D^{\prime}$.
