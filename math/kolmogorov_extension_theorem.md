@@ -391,6 +391,22 @@ $$
 * $$\{Q_{\tilde{t}}\}_{\tilde{t} \in \mathcal{T}}$$,
     * consistensy finite dimensional distributions
 
+Then there exists a probability measure $P$ on $$(\mathbb{R}^{[0, \infty)}, \mathcal{B}(\mathbb{R}^{[0, \infty)}))$$ such that
+
+$$
+    \forall \tilde{t} \in \mathcal{T},
+    \
+    Q_{\tilde{t}}(A)
+    =
+    P
+    \left(
+        \omega \in \mathbb{R}^{[0, \infty)}
+        \mid
+        \omega(\tilde{t}) \in A
+    \right)
+    .
+$$
+
 #### proof
 
 $$
