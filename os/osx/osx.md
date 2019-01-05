@@ -115,6 +115,17 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plis
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 ```
 
+#### Share iPad screen
+* [How to Draw & Display your iPad LIVE in a video chat — Catherine Madden](http://catherinemaddenrelay.com/blog/2017/12/20/ipadtutorial)
+* [Good Ways to Mirror iPad to Mac](https://airmore.com/share-ipad-screen-on-mac.html)
+* [Tip: Record your iPad's screen on your Mac with QuickTime Player](https://appleinsider.com/articles/18/03/26/tip-record-your-ipads-screen-on-your-mac-with-quicktime-player)
+
+
+* Connect iPad with a cable
+* Open QuickTime
+* File -> New Moview Recording
+* Change Camera to `iPad`
+
 ## Reference
 * [Macのデスクトップ切り替え時のエフェクトを減らして、切り替えを多少すばやくする - Qiita](http://qiita.com/ikedakenno/items/58daf8a961f1813b3c1b)
 * [macOSでディスプレイ1枚で作業する技術 - Qiita](http://qiita.com/saboyutaka/items/d6cfd2a2b60f1a374d60)
