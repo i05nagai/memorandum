@@ -36,12 +36,12 @@ $$
     \\
     A \cap B
     & = &
-        (A_{1} \cap B_{1}) \times \codts \times (A_{n} \cap B_{n})
+        (A_{1} \cap B_{1}) \times \cdots \times (A_{n} \cap B_{n})
     \nonumber
     \\
     A^{c}
     & = &
-        A_{1}^{c} \times \codts \times A_{n}^{c}
+        A_{1}^{c} \times \cdots \times A_{n}^{c}
     \nonumber
 \end{eqnarray}
 $$
@@ -172,6 +172,179 @@ $$
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+#### Proposition 2
+* $S$,
+    * set
+* $\mathcal{A}$,
+    * set of subsets of $S$
+* $A^{c}$,
+    * complement of $A$,
+    * $A \subseteq S$,
+* $A^{cc} = A$,
+    * $A \subseteq S$,
+
+$$
+\begin{eqnarray}
+    \mathfrak{M}
+    & := &
+        \left\{
+            \bigcap_{i \in \mathbb{N}}
+                A_{i}^{k_{i}}
+            \mid
+            A_{i} \in (\mathcal{A} \cup \{S\}),
+            \
+            k_{i} \in \{c, cc\}
+        \right\}
+        .
+    \nonumber
+    \\
+    \mathcal{F}
+    & := &
+        \left\{
+            \bigcup_{i \in \mathbb{N}}
+                B_{i}^{k_{i}}
+            \mid
+            B_{i} \in \mathfrak{M},
+            \
+            k_{i} \in \{c, cc\}
+        \right\}
+    \nonumber
+\end{eqnarray}
+$$
+
+Then
+
+$$
+    \sigma(\mathcal{A})
+    =
+    \mathcal{F}
+    .
+$$
+
+TODO: reconsider statement.
+
+#### proof
+
+
+$$
+\begin{equation}
+    B_{i} \in \mathfrak{M}
+    \Rightarrow
+    B_{i},
+    (B_{i})^{c}
+    \in
+    \mathcal{F}
+    \label{proposition_02_equation_01}
+    .
+\end{equation}
+$$
+
+($\subseteq$)
+
+By definition, $\mathcal{A} \subseteq \mathcal{F}$.
+If $\mathcal{F}$ is $\sigma$-algebra, the inclusion holds.
+
+(1) $S, \emptyset \in \mathcal{F}$.
+
+Indeed, by definiton, $S \in \mathcal{F}$.
+Hence
+
+$$
+    \bigcup_{i \in \mathbb{N}} S^{c}
+    \bigcap_{i \in \mathbb{N}} S^{c}
+    =
+    \emptyset
+    \in
+    \mathcal{F}
+    .
+$$
+
+(2) $A \in \mathcal{F} \Rightarrow A^{c} \in \mathcal{F}$.
+
+Indeed, let
+
+$$
+\begin{eqnarray}
+    \bigcup_{i \in \mathbb{N}}
+    \left(
+        B_{i}
+    \right)^{l_{i}}
+    & \in &
+        \mathcal{F}
+    \nonumber
+    \\
+    \bigcap_{j \in \mathbb{N}}
+        A_{i,j}^{k_{i,j}}
+    & =: &
+        B_{i}
+\end{eqnarray}
+$$
+
+be fixed.
+
+$$
+\begin{eqnarray}
+    \left(
+        \bigcup_{i \in \mathbb{N}}
+        \left(
+            \bigcap_{j \in \mathbb{N}}
+                A_{j}^{k_{j}}
+        \right)^{l_{i}}
+    \right)^{c}
+    & = &
+        \bigcap_{i \in \mathbb{N}}
+        \left(
+            \bigcap_{j \in \mathbb{N}}
+                A_{j}^{k_{j}}
+        \right)^{l_{i}c}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+By $$\eqref{proposition_02_equation_01}$$, we obtain
+
+$$
+    \left(
+        \bigcap_{j \in \mathbb{N}}
+            A_{j}^{k_{j}}
+    \right)^{l_{i}c}
+    \in
+    \mathcal{F}
+    .
+$$
+
+($\supseteq$)
+
+Let $\bigcap_{i \in \mathbb{N}} A_{i}^{k_{i}} \in \mathfrak{M}$ be fixed.
+Since $$\sigma(\mathcal{A}) \supseteq (\mathcal{A} \cup \{S\})$$,
+
+$$
+    A_{i}^{k_{i}}
+    \in
+    \sigma(\mathcal{A})
+    .
+$$
+
+Since $\sigma$-algebra is closed under countable infinite intersection,
+
+$$
+    \bigcap_{i \in \mathbb{N}}
+        A_{i}^{k_{i}}
+    \in \sigma(\mathcal{A})
+    .
+$$
+
+By definition of $\sigma$-algebra, it is closed under countable infinite uninon.
+Thus,
+
+$$
+    \mathcal{F} \subseteq \sigma(\mathcal{A})
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 
 ## Reference
