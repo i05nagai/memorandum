@@ -1253,6 +1253,12 @@ title: English Speaking
     * An annual salary shall consist of twelve monthly salaries
 * comprise
     * the batch component is a MapReduce comprising three phases
+* disengage
+    * to become separate or not changed, or to cause this to happen
+    * the US should not disengage from Europe, she said
+    * to switch off the control of sth
+        * the autopilot has been disengaged
+    * if you disengage the clutch of a car, you stop the power produced by the engine being connected to the wheels
 * engage
     * engage in/on/upon
         * Only 10% of American adults engage in regular excercise
@@ -2695,6 +2701,7 @@ title: English Speaking
     * The company has a reputatin for delivering the best out-of-box experience when it comes to cell phones
 * Information should be presented in bullet point format or as a numbered list
 * degrade
+    * a system doesn't degrade or become too expensive
     * lose respect
         * Pornography degrades woman
     * spoil
@@ -3627,6 +3634,7 @@ title: English Speaking
         * I'm sorry if I was a bit short with you on the phone this morning
     * short-circuit
         * The plumber shorted the washing machine
+        * to have or cause a bad electrical connection that makes the current flow in the wrong direction, which often has the effect of stopping the power supply
 * air conditioner
     * raise the temperature on the AC by one degree
     * turn up the air conditioner by one degree
@@ -4844,6 +4852,18 @@ title: English Speaking
         * it attempts to disentangle indicators from objectives from agreemnts,
     * I tried to disentangle the wires under my desk
 * entangle
+    * to trap sth within sth else from which it is difficutl to escape
+        * a seal become entangled in the fishing net
+* tangle
+    * a messy mass of thing
+        * she pulls the tangle of wires out of the box
+        * her hair was in a tangle
+    * to become or to cause sth to become a messy mass of things
+        * I tangled the cables and don’t know which is which.
+        * who tangled these wire up?
+    * tangle with sb
+        * to disagree or fight with sb
+        * she's not afraid to tangle with her father
 * mundane
     * very ordinary and therefore not interesting
     * mundane matters such as paying bills and shopping for food do not interest her
@@ -5101,6 +5121,22 @@ title: English Speaking
 * align
     * our goal is to explicitly align the risk taken by a given service with the risk the business is willing to bear
     * Right now our goal is to make sure that the why and the what are aligned.
+    * to put or more things into a straight line
+        * you need to align the numbers properly in a column
+    * to change sth so that it has a correct relationship to sth else
+        * Later this year, the company will introduce a price platform for its home insurance contracts, and will align all its prices.
+        * align sth with sth
+            * More scientific methods of aligning boardroom pay with shareholder returns are needed.
+    * align yourself with sth/sb
+        * if you align yourself with an organization or person, you agree with and support their aims
+        * The party is under pressure to align itself more closely with industry.
+* alliance
+    * a group of countries, political parties, or people who work together because of shared interests r aims, or the act of forming such group
+    * a military alliance
+    * The three smaller parties have forged/formed an alliance against the government.
+    * in alliance with sb/sth
+        * working together with another person, organization, etc.
+* skew
 * risktaking
     * The key advantage of this framing is that it unlocks exp.iocit, thoughtful risktaking
 * set
@@ -5448,6 +5484,8 @@ title: English Speaking
         * The company is advertising for a new commercial manager.
 * this is as far as we're going
 * comfy
+    * comfortable
+    * a comfy chair
 * spice
     * it's time to spice things up
     * I can't spice up conversations with the teacher
@@ -5565,6 +5603,9 @@ title: English Speaking
         * I had to balance the children's needs against my own
 * stall
     * delay
+        * to delay or put off action
+            * they're just stalling, trying to avoid making a decision
+            * I can stall him for a minute
     * stop working
         * they don't want to risk using up the budget and stall their launch
         * if an engine stalls, or if you stall it, it stops working suddenly and without you intenting it to happen
@@ -9806,6 +9847,8 @@ title: English Speaking
         * the spleeing car and restaurant car were coupled together
     * join
     * some
+* socket
+    * Do you have a plug socket for charging phone?
 * outlet
     * opening
     * method of expression
@@ -11669,8 +11712,6 @@ title: English Speaking
         * Wathc out! it's the fuzz
 * prestidigitation
     * magic tricks performed as entertainment.
-* socket
-* outlet
 * off the hook
     * if you leave the phone off the hook, you do not put it back correctly and it will not ring
         * the phone was off the hook
@@ -12013,6 +12054,23 @@ title: English Speaking
 * mind-blowing
 * unprecedented
     * We faced unprecedented challenges last year.
+* recede
+    * to move further away into the distance, or to become less clear
+    * if a man has a receding hairline, he is loosing the hair from the front of his head
+    * to get lower in value, amount, or number
+        * Opposition to privatisation and foreign investment is receding in response to the shock of recession.
+* recess
+    * pause
+        * a period of time in which an organized activity such as study or work is temporarily stopped
+        * Congress returns from its August recess next week.
+    * secret place
+* recession
+    * a period, usually at least six months, of low ecnomic activity, when investments lose value, businesses fails, employment rises
+    * The retail sector is now in recession.
+    * recover from recession
+    * pull out of recession
+    * a deep/shallow/mild depression
+    * enter/fail into/slid into a recession
 * enact
 * take (something) for granted
     * The government recently enacted strict laws against air pollution caused by factories
@@ -12278,6 +12336,7 @@ title: English Speaking
 * substantiate
     * to show something to be true, or to support a claim with facts
     * They have enough evidence to substantiate complaints of vandalism.
+    * Can we substantiate this claim?
 * calendar
     * calendar year
         * Twelve-month period starting with January 1 and ending with December 31, and which has 365 days in non leap years and 366 days in a leap year.
@@ -14615,7 +14674,169 @@ title: English Speaking
 * Doncaster is a large market town in South Yorkshire, England
 * bungee
     * bungee rope
+* defect
+    * sth that is lacking or that is not exactly right in sb or sth
+        * the cars have a defect in the electrical sysmte that may cause them to stall
+    * to leave a country or a group you belong to, esp. in order to join an opposing one
+        * some of the mayer's long term supporters have defected to other candidates
+* exhilarating
+* hair
+    * bad hair day
+        * a day when you feel that you do not look attravtive, because of your hair, and everything seem to go wrong
+        * I'm having a bad hair day
+    * a thick/full/good head of hair
+        * Even at sixty, he has a good head of hair
+    * drying the hair this way gives it extra body
+    * glossy hair
+        * you have such gorgeous, glossy hair
+        * attractively shinny
+    * a mop of hair
+        * a lot of hair in a thick mass
+        * she has a mop of brown curls
+    * lank hair
+        * straight and thin. it has no body
+        * unless it's just been washed, my hair is so lank
+    * straggly hair
+        * thin and untidy
+        * my hair's starting to look a bit straggly – it needs a cut
+    * tangled hair
+    * unruly hair
+        * his unruly mop of blond hair
+* unruly
+    * difficult to control or manage
+* bald
+    * go bald
+        * become bald
+    * no hair
+    * as bald as a coot
+        * completely bald
+    * plain
+        * basic and unnecessary words; not detailed
+        * she just left a bald statement of 
+    * a bald patch
+        * a small are of the head with no hair
+        * I don’t try to hide my bald patch. 
+* warfare
+    * Warfare refers to the common activities and characteristics of types of war, or of wars in general
+    * Total war is warfare that is not restricted to purely legitimate military targets, and can result in massive civilian or other non-combatant suffering and casualties.
+    * information warfare
+    * nuclear warfare
+    * ecnomic warfare
+* naval
+* guerrilla
+    * using unusual methods to get attention for your ideas, products, etc.
+    * guerrilla marketing
+* insurgent
+* procure
+    * to obtain sth, esp. after an effort
+    * to get sth, esp. after an effort
+        * she's managed somehow to procure his phone number
+    * procure capital/funds/finacing
+        * Low interest rates support bonds by making it cheaper for investors to procure funds and invest in fixed-income securities.
+* accumulate
+    * the accumulating data supplements the tested coverage, which validates the reliability being asserted for revised execution paths
+* course
+    * direction
+    * development
+    * classes
+    * sports area
+    * meal
+    * medical treatment
+* analogize
+    * to use or exhibit analogy
+    * to compare by analogy
+* analogy
+    * a comparison of the features or qualities of two different things to show their similarities
+    * he drew an analogy between the brain and a vast computer
+    * it is sometimes easier to illustrate an abstract concept by analogy with sth concrete
+* hermetic
+    * (of a container) so thightly closed that no air can leave or enter
+        * a hermetic seal
+    * if a particular group is hermetic, the people who live within it don't often communicate with those who live outside it
+        * He entered the hermetic world of the monastery at a young age.
+* slipcover
+    * I took off the slipcovers, had them dry-cleaned and fumigated the cushions
+* fumigate
+    * a removable fitted cloth cover for a chair or sofa.
+    * to remove harmful insects, bacteria, or disease, using chemical gas or smoke
+        * We had to fumigate the house to get rid of cockroaches.
+    * We had to fumigate the cellar to get rid of cockroaches.
+* Kumasutra
+* hatchet
+    * bury the hatchet
+        * to agree to end the disagreement that has divided two people or groups
+        * After years of fighting over who should have gotten Dad's money, my brothers finally burried the hatchet
+        * Can't you two just bury the hatchet?
+* bury
+    * to put the dead body into the ground
+    * To bury something is also to put it into the ground
+* improvisation
+    * improv
+    * a performance that is not practiced and that is invented by the performers
+    * a blues/jazz improvisation
+    * the act of making or doing something with whatever is available at the time
+        * I'm afraid we don't have all the necessary equipment, so a little improvisation might be required
+* tweezers
+    * a pair of tweezers
+    * eyebrow of tweezers
+    * He tried to get the splinter out with tweezers.
+* splinter
+    * a small, sharp, piece of wood, glass, or similar material that has broken off a larger piece
+    * She tried to ignore the splinter in her foot.
+    * to break into small, sharp pieces
+* pluck
+    * remove
+        * to remove sth, esp. with a sudden movement
+        * if you pluck sth, you remove hair or feathers from it by pulling
+        * She plucked her eyebrows.
+    * pull at
+        * to pull at something with your fingers and then release it
+    * bravery
+* toasty
+    * keep tushy toasty
+    * warm and comfortable
+        * You must feel nice and toasty sitting in front of the fire.
+    * flavour
+        * like toast
+        * a cheese/ham/tuna toasty
+* tushie
+    * buttocks, bottom.
+* sip
+    * to drink a liquid slowly by taking in small amounts at a time
+    * He sipped the hot coffee.
+    * a very small amount of a drink that you take into your mouth
+        * He took a slow, thoughtful sip of his coffee.
+        * I let her have a few sips of the water.
+* tenuous
+    * weak, unimportant, or in doubt
+    * The aging dictator’s hold on power is tenuous.
+    * The police have only found a tenuous connection between the two robberies.
+* dispute
+    * an argument or disagreement
+        * her skill is not in dispute
+        * a bitter/long-running dispute
+        * a border dispute
+        * they have been unable to resolve/settle dispute over working conditions
+    * beyond all dispute
+        * certainly
+    * in dispute
+        * being doubted
+    * open to dispute
+        * not certain
+    * to disagree with sth that sb says
+        * few would dispute his status as the finest artist of the period
+        * the circumstances of her death have been hotly disputed
+* gainsay
+* quarrel
+* indisputable
+    * obviously true
+    * an indisputable fact
+    * an artist of indisputable skill
 
+
+## Study
+* psychiatry
+* psychology
 
 ## Japan
 * Certificate of Individual Records.
@@ -14641,6 +14862,9 @@ title: English Speaking
 * EDA
 
 
+## cloth
+* washcloth
+* turban
 
 ## Nuclear energy
 * Solar energy
