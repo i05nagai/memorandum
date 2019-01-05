@@ -155,6 +155,53 @@ title: Site Reliability Engineering
         * how to 
             * the rules allow a minimum duration for which the alerting rule must be true before the alert is sent
 * on call
+* effective trouble shooting
+    * tests
+        * an ideal test should have mutually exclusive alternatives
+        * consider the obvious first: perform the  tests in decreasing order of likelihood, considering possible risks to the system from the test
+        * An experiement may provide misleading results due to confounding factor
+            * firewall configuration
+        * Active tets may have side effects that change future test results
+            * turning on verbose logging  might make a latency problem even worse
+        * Some tests may not be definitiv, only suggestive
+            * make race conditions or deadlocks happen in a timely and reproducible manner,
+    * Take clear notes of what ideas you had, which tests you ran, and the results you saw
+    * negative results
+        * a negative result is an experiemtanl outcome in which the expected effect is absent
+        * negative results should not be ignored or discounted
+            * often a team has two seemingly reasonable designs but progress in one direction has to address vague and speculative questions about whether the other direction might be better
+        * experiments with negative results are conclusive
+        * tools and methods can outlive the experiment and inform future work
+        * publishing negative results improves our industry's data-driven culture
+        * publish your results
+    * cure
+        * Definitively proving that a given factor caused a problem -- by reproducingt it at will -- can be dfiffficult to do in production systems
+            * Systems are complex
+            * Reproducing the problem in a live produciton system may not be an option
+* tracking outages
+    * useful information from questions
+        * how many alerts per on-call shift does this team get?
+        * What's the ratio of actionable/nonactionable alerts over the last quarter?
+        * Which of the services this team manages creates the most toil?
+* testing for reliability
+    * One key responsibility of SREs is to quantify confidence in the systems they maintain
+    * Confidence can be measure both by past reliability and future reliability
+    * Relationships between testing and mean time to repair
+    * integration tests
+        * dependency injection
+            * is an extremly powerful technique for creating mocks of complex dependencies
+            * a common example of a dependency injection is to replace a stateful database with a lightweight mock that has precisely specified behaviour
+    * system tests
+        * a system tests is the largest scale test that engineers run for an undeployed system
+        * all modules belonging to a specific component that passed integration tests are assembled into the system
+        * smoke tests/sanity testing
+            * smoke tests, in which engineers test very simple but critical behavior, are among the simples type of system tests
+        * performance tests
+            * once basic correctness is established via a smoke test, you write performance test to ensure the perforance of the system stays acceptable over the duration of its lifecycle
+        * regression tests
+            * regression tests involves preventing bugs from sneaking back int to the codebasae
+            * engineers refactoring the codebase can be sure that they don't accidentally introduce bugs
+    * tess have a cost, both in terms of times and computational resources
 
 
 
