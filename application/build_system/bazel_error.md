@@ -22,5 +22,12 @@ sudo xcodebuild -license
 bazel clean --expunge 
 ```
 
+
+#### bazel-builderror
+The code bazel execute is defined below
+
+* [bazel/collect\_coverage\.sh at master · bazelbuild/bazel](https://github.com/bazelbuild/bazel/blob/master/tools/test/collect_coverage.sh)
+* [bazel/collect\_cc\_coverage\.sh at master · bazelbuild/bazel](https://github.com/bazelbuild/bazel/blob/master/tools/test/collect_cc_coverage.sh)
+
 ## Reference
 
