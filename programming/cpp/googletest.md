@@ -97,8 +97,10 @@ EXPECT_TRUE(IsElementEqual(a, b));
 ## API
 
 * `RUN_ALL_TESTS()`
-    * 全てのtestがpassしたら0
-    * 上記以外は1を返す
+    * return 0 If all tests pass
+    * otherwise, 0
+* `FloatingPoint`
+    * `gtest/internal/gtest-internal.h`
 
 ## Reference
 * [GitHub - google/googletest: Google Test](https://github.com/google/googletest)
