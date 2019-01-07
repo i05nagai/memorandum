@@ -37,6 +37,8 @@ aws s3 mb <S3Uri> <region>
 aws s3 rb
 ```
 
+#### Enable event notification
+* [How Do I Enable and Configure Event Notifications for an S3 Bucket? \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-event-notifications.html)
 
 ## Tips
 
@@ -133,6 +135,9 @@ AmazonのGet requestは300 reuqest/sec, PUT/LIST/DELETE は100 request/sec が�
   </RoutingRule>
 </RoutingRules>
 ```
+
+#### Permission
+* [Specifying Resources in a Policy \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)
 
 
 ## Reference
