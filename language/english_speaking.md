@@ -2787,6 +2787,7 @@ title: English Speaking
     * art
 * day
     * from day to day
+    * while its' wonderful to thinkg about these types of tests and failure scenarios on day one of a project
 * shoehorn
 * end
     * end up doing
@@ -5756,6 +5757,10 @@ title: English Speaking
         * pleasant and kind
     * disease
         * a benign tumor is not likely to cause death
+* genial
+    * friendly and pleasant
+    * a genial personality
+        * The teacher is very genial/has a genial manner.
 * malignant
     * leading to death
         * The pathologist’s report said the tumor was malignant.
@@ -8114,6 +8119,12 @@ title: English Speaking
         * he calimed that the larger stores were enriching themselves at the expense of their customers
 * mailbox
 * postbox
+* three-way
+    * three way
+    * involving three people, groups, systems, direction, etc.
+    * a three-way battle/bidding war/contest
+    * a three-way agreement/alliance/deal
+    * a three-way merger/split
 * threesome
     * three people as a group
     * we could have a threesome
@@ -8673,17 +8684,10 @@ title: English Speaking
 * coarse-grained
     * coarse grained
     * we alert on coarse-grain differences like this, but it's rare for us top write the euivalent of changing the propertis of some arbitrary subset of accounts on a system
-* one byone
+* one by one
     * one person or thing following another in order
         * the children filed out of the bus, one by one
     * one after other
-* rowdy
-    * noisy and seeming likely to become violent
-    * a rowdy party
-    * a rowdy behavior
-* raucous
-* unruly
-* understandbly
 * gawk
     * to look at sth or sb in a stupoid or rude way
     * Don't stand there gawking at her, give her a hand
@@ -11097,6 +11101,9 @@ title: English Speaking
     * Forbes also gives each person on their rich list a "self-made score". A score of one means the person inherited their wealth, while a score of 10 means they made their money 
 * whiplash
     * a neck injury caused by a sudden movement forward and back of the head, as in a car accident
+* whip
+    * crack of a whip/a whip crack
+        * sound of a whip
 * venereal
 * articulation
     * pronunciation
@@ -11732,6 +11739,11 @@ title: English Speaking
     * open to sth
         * Receptive to or welcoming of sth
 * shrink
+    * become smaller
+    * move away
+    * be frightened
+    * doctor
+        * a psychiatrist, psychotherapist, or psychoanalyst
 * lingua franca
 * economy
     * strong/healthy/sound
@@ -11933,6 +11945,8 @@ title: English Speaking
             * Some find it hard to accommodate themselves to the new working conditions
     * eye
         * (of an eye) to change the shape of the lens in order to focus
+    * to consider and include something in a design or plan
+        * to accommodate wheelchairs, all he had to do was widen the doorways
 * resolution
     * high-res
         * high-resolution
@@ -13965,6 +13979,7 @@ title: English Speaking
 * legitimize
 * legalize
 * submit
+    * Once source control is in place, you can add a continuous build system that builds the software and runs tests every time code is submitted
 * highlight
     * this talk will highlight key use cases for real time data
 * sext
@@ -14702,8 +14717,6 @@ title: English Speaking
     * tangled hair
     * unruly hair
         * his unruly mop of blond hair
-* unruly
-    * difficult to control or manage
 * bald
     * go bald
         * become bald
@@ -14832,6 +14845,148 @@ title: English Speaking
     * obviously true
     * an indisputable fact
     * an artist of indisputable skill
+* calculation
+    * do/make a calculation
+    * performa a calculation
+    * a simple calculation
+    * a rough calculation
+    * a quick/rapid calculation
+    * a detailed calculation
+    * complex calculations
+    * mathematical calculation
+    * sb's calculations are right/correct/accurate
+    * sb's calculations are wrong/inaccurate
+* conspicuously
+* conspicuous
+    * easily noticed, obvious
+    * very noticeable or attaching attention, often in a way that is not wanted
+    * In China, 
+* snap
+    * he snapped
+    * break
+        * to break sth quickly with a cracking sound
+        * People who snap suddenly lose control of their behavior when they experience very strong emotions
+            * His lawyer said he just snapped.
+    * move quickly
+    * fasten/close
+    * speak
+    * take photographs
+    * something easy
+    * thing that fastens
+    * break
+    * sudden
+    * to end a particular pattern of activity
+        * She snapped a string of monthly gains
+* structure
+    * arrangement
+    * building
+    * to plan, organize, or arrange the parts of sth
+    * the condition of being well arranged or organized
+        * have/lack/need (a) structure His financial plans lack structure.
+* ship
+    * Shipping software that is ovbiously broken is among the most cardinal sins of a developer
+* cardinal
+    * priest
+    * bird
+    * important
+        * of great importance; main
+        * Finding food 
+        * a cardinal rule/error/sin
+    * cardinal number
+        * a number that represents amount, such as 1, 2, 3, rather than order, such as 1st, 2nd, 3rd
+* ay papi
+    * or daddy in spanish
+* chromosome
+    * Pick up a Y chromosome while you were there? you might be short one
+* cadence
+    * a rhythmic sequence or flow of sounds in language
+        * the grand cadence of his poetry
+    * voice
+        * the regular rise and fall of the voice
+    * music
+        * a set of chords (= different notes played together) at the end of a piece of music
+    * release cadence
+        * release cadence of the prodcut
+        * Your release cadence defines how often you release your solution both internally and externally into production (or the marketplace).
+* inflection
+    * speech
+        * change in the quality of the voice, often showing an emotion
+        * she replies without any particular inflection in her voice, "I guess I'm lazy"
+    * grammar
+        * a change in a word form or ending to show a difference in the word's meaning or use
+        * If you add the plural inflection "-s" to "dog" you get "dogs".
+* cutup
+    * a person who clowns or acts boisterously
+* boisterously
+    * noisy and not controlled
+        * The audience burst into boisterous laughter.
+* rambunctious
+    * full of energy and diffuclt to control
+    * rambunktious children
+    * a lively and rambunktious puppy
+* unruly
+    * difficult to control or manage
+* rowdy
+    * noisy and seeming likely to become violent
+    * a rowdy party
+    * a rowdy behavior
+* raucous
+    * loud and unpleasant
+    * I heard the raucous call of the crows.
+* understandbly
+* goodie goodie
+    * goody goody
+    * I'm such a goodie goodie.... I didn't even buy a lottery ticket until I was 18!
+    * A well-behaved person with no obvious human failings, with the possible exception of smugness and self-satisfaction
+* dictate
+    * give order
+        * to give orders, or state sth with total authority
+            * I dictated my order over the phone.
+        * to dictate means to make necessary
+            * the party's change of policy has been dicated by its need to win back young voters
+            * I wanted to take a year off, but my financial situation dictated that I got a job.
+        * the UN will dicrate the terms of troop withdrawal from the region
+    * an order that should be obeyed, often one that you give to yourself
+        * the dictates of conscience/common sense
+    * speak
+        * to say sth aloud for another person or for a machine to record, so that your words can be prepared in writing for use in business or a legal case
+        * she spent the morning dictating letters
+* diktat
+* kosher
+    * kosher food/meal
+        * (of food or places where food is sold, etc.) prepared or kept in conditions that follow the rules of Jewish law
+    * legal, ablet to be trusted and therefore good
+        * their business activities aren't quite kosher
+* tubby
+    * (of a person) fat
+        * Our chef was a genial, slightly tubby man.
+* fat
+* dumpy
+* podgy
+* pudgy
+* roly-poly
+* all over
+    * all over sb
+        * Crowding, covering, or in close proximity to something, especially in a way that is unwanted or unexpected
+        * I had barely walked in the door when reporters were all over me for a story
+        * to be touching someone in a sexual way everywhere on their body
+            * She was all over him, kissing him and running her hands through his hair.
+    * all over somewhere
+        * found in every place
+        * the window shattered and shards of glass were all over the place
+        * there are the aunts all over the cake
+* anthropic
+    * of or relating to human beings or the period of their existence on earth
+    * anthropic principle
+* hanky-panky
+    * hanky panky
+    * dishonest or immoral behavior
+        * financial hanky-panky
+    * unacceptable or dishonest behaviour, eps. involving sexual activity or money
+        * There was a bit of hanky-panky going on at the Christmas party.
+* meritocracy
+* catepillars rises from the dead
+
 
 
 ## Study
@@ -14985,6 +15140,8 @@ title: English Speaking
     * A leech is also a person who gets money or support from someone, giving little or nothing in return.
     * Do you know how many HBOs that leech had my mother get him?
     * to get money, food, etc. from other people, especially without working for it or doing anything to deserve i
+* leprechaun
+    * (in old Irish stories) a magical creature in the shape of a little old man who likes to cause trouble
 
 ## Medicine
 * xanax
