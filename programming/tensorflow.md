@@ -6,7 +6,7 @@ title: Tensorflow
 
 ## Install
 
-### Ubutnut
+### Ubuntu
 
 GPU setup
 
@@ -72,6 +72,14 @@ https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.4.0-cp36-cp
 ```
 docker run --rm -it gcr.io/tensorflow/tensorflow:latest-gpu bash
 ````
+
+## Tutorials
+
+#### using CIFAR 10
+* [Advanced Convolutional Neural Networks  \|  TensorFlow](https://www.tensorflow.org/tutorials/images/deep_cnn)
+* [models/tutorials/image/cifar10 at master · tensorflow/models](https://github.com/tensorflow/models/tree/master/tutorials/image/cifar10/)
+
+
 
 
 ## Reference

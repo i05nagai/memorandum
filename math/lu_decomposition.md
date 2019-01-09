@@ -3,11 +3,12 @@ title: LU decomposition
 ---
 
 ## LU decomposition
-行列$A$を下三角行列$L$と上三角行列$U$に分解する方法。
-つまり、以下を満たす$L, U$を見つける。
+LU decomposition is a method to decompose a matrix $A$ into a product of lower triangular matrix $L$ and upper triangular matrix $U$.
+In other words, it constructs $L$ and $U$ satisfying
 
 $$
-A = LU
+    A = LU
+    .
 $$
 
 ## Symbols

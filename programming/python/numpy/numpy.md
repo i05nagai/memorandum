@@ -117,6 +117,9 @@ $$
 * [numpy\.vectorize — NumPy v1\.14 Manual](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.vectorize.html#numpy.vectorize)
     * The vectorize function is provided primarily for convenience, not for performance. The implementation is essentially a for loop.
 
+#### Broadcasting
+* [Broadcasting — NumPy v1\.15 Manual](https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html)
+
 
 ## Reference
 * [Numpyでデータを生成する色々な方法(arange/linspace/logspace/zeros/ones/mgrid/ogrid) - Qiita](http://qiita.com/supersaiakujin/items/4410efe5dc81982ef208)

@@ -26,7 +26,7 @@ where
     * $m \times n$ matrix
     * $$\sigma_{1} \ge \ldots \ge \sigma_{n} \ge 0$$,
 
-### Definition. Hermitian matrix
+#### Definition. Hermitian matrix
 * $$A = (a_{j}^{i})_{i = 1, \ldots, m, j = 1, \ldots, n} \in \mathbb{C}^{m \times n}$$,
     * matrix
 
@@ -38,7 +38,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Definition. Singluar Value
+#### Definition. Singluar Value
 * $m \ge n$
 * $$A \in \mathbb{C}^{m \times n}$$,
     * Hermitian matrix
@@ -54,7 +54,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-### Theorem 1
+#### Theorem 1
 * $$A \in \mathbb{C}^{m \times n}$$,
     * rank $r$
 * $$\sigma_{i}$$,
@@ -65,7 +65,7 @@ $$
     * orthogonal matrix
 * $$P_{1} := AQ_{1}D_{1}^{-1} \in \mathbb{C}^{m \times r}$$,
 * $$P_{2} \in \mathbb{C}^{m \times (m - r)}$$,
-* $$P := (P_{1}, P_{2}) \in \mathbb{C}^{m times m}$$,
+* $$P := (P_{1}, P_{2}) \in \mathbb{C}^{m \times m}$$,
 * $$D_{1} \in \mathbb{C}^{r \times r}$$,
 
 Suppose $A$ satisfies
@@ -115,7 +115,7 @@ $$
     \right).
 $$
 
-### proof.
+#### proof.
 Since
 
 $$
@@ -255,7 +255,7 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-## Theorem2. Existence of singular values
+#### Theorem2. Existence of singular values
 * $$A \in \mathbb{C}^{m \times n}$$,
     * rank $r$
 
@@ -270,7 +270,7 @@ Then there are $$Q_{1}$$, $$D_{1}$$ and $$P_{2}$$ such that
 
 and satisfy $$\eqref{singular_value_decomposition_condition_01}$$ and $$\eqref{singular_value_decomposition_condition_02}$$.
 
-## proof.
+#### proof.
 Existence of $Q$ is direct consequence from eigenvalue decomposition.
 Since $A^{\mathrm{T}}A$ is $n \times n$ symmetric matrix, we can diagonalize $A^{\mathrm{T}}A$ by <a href="{{ site.baseurl }}/math/eigenvalue.html">threorem</a>.
 Thus there are diagonal matrix $D^{\prime}$ and orthogonal matrix $Q$ such that $Q^{\mathrm{T}}A^{\mathrm{T}}AQ = D^{\prime}$.
@@ -333,6 +333,102 @@ $$
 Hence by the theorem. singular value decomposition of $A$ exists.
 
 <div class="QED" style="text-align: right">$\Box$</div>
+
+## Algorithms
+There are a lot of algorithms to compute SVD.
+
+#### Algorithm Golub-Kahan SVD Diagonalization
+By applying Householder Bidiagonalization algorithm to $A \in \mathbb{R}^{m \times n}$, we obtain bidiagonal matrix $B \in \mathbb{R}^{m \times n}$.
+Then we apply symmetric QR algorithm to tridiagonal matrix $T := B^{\mathrm{T}}B$.
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{ComputeGolub-KahanSVDDiagonalization}
+    \begin{algorithmic}
+    \REQUIRE $A \in \mathbb{R}^{m \times n}$
+    \REQUIRE $m \ge n$
+    \PROCEDURE{ComputeGolub-KahanSVDDiagonalization}{$A$}
+        \STATE $B \leftarrow \mathrm{ComputeHouseholderBidiagonalization}(A)$,
+        \STATE $\mu$
+        \STATE $y \leftarrow t_{11} - \mu$
+        \STATE $z \leftarrow t_{12}$
+        \FOR{$k = 1$ \TO $n-1$}
+            \STATE $(c, s) \leftarrow \mathrm{ComputeGivensRotation}(y, z)$
+            \STATE $B \leftarrow B G(k, k + 1, c, s; n)$,
+            \STATE $y \leftarrow b_{k}^{k}$
+            \STATE $z \leftarrow b_{k}^{k+1}$
+            \STATE $(c, s) \leftarrow \mathrm{ComputeGivensRotation}(y, z)$
+            \STATE $B \leftarrow G(k, k + 1, c, s; m)^{\mathrm{T}}B$,
+            \IF{$k < n - 1$}
+                \STATE $y \leftarrow b_{k+1}^{k}$
+                \STATE $z \leftarrow b_{k+2}^{k}$
+            \ENDIF
+        \ENDFOR
+    \ENDPROCEDURE
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Algorithm Golub-Kahan SVD
+* $U$,
+    * orthogonal
+* $V$,
+    * orthogonal
+* $D \in \mathbb{R}^{m \times n}$,
+    * diagonal
+* $E$,
+    * $$\norm{E}_{2} \approx u \norm{A}_{2}$$ for some $u > 0$
+
+$$
+\begin{eqnarray}
+    U^{\mathrm{T}}AV
+    =
+    D + E
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{ComputeGolub-KahanSVD}
+    \begin{algorithmic}
+    \REQUIRE $A \in \mathbb{R}^{m \times n}$
+    \REQUIRE $m \ge n$
+    \REQUIRE $B \in \mathbb{R}^{n \times n}$
+    \PROCEDURE{ComputeGolub-KahanSVD}{$A$}
+        \STATE $\left(
+            \begin{array}{c}
+                B \\
+                0
+            \end{array}
+        \right) \leftarrow \mathrm{ComputeHouseholderBidiagonalization}(A)$
+        \WHILE{$q \neq 1$}
+            \FOR{$i = 1$ \TO $n - 1$}
+                \IF{$|b_{i+1}^{i}| < \epsilon (|b_{i}^{i}| + |b_{i+1}^{i+1}|)$}
+                    \STATE $b_{i+1}^{i} \leftarrow 0$
+                \ENDIF
+            \ENDFOR
+            \STATE $B \leftarrow B G(k, k + 1, c, s; n)$,
+            \STATE $(c, s) \leftarrow \mathrm{ComputeGivensRotation}(y, z)$
+            \STATE $B \leftarrow G(k, k + 1, c, s; m)^{\mathrm{T}}B$
+            \IF{$k < n - 1$}
+                \STATE $y \leftarrow b_{k+1}^{k}$
+                \STATE $z \leftarrow b_{k+2}^{k}$
+            \ENDIF
+        \ENDWHILE
+    \ENDPROCEDURE
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [lecture3.pdf](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-fall-2004/lecture-notes/lecture3.pdf)

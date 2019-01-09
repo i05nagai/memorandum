@@ -206,6 +206,10 @@ CLIの実行時に環境変数を設定することで、実行することで�
 * `[apply|plan] -parallelism=0`
     * disable parallelism
 
+```
+TF_LOG=DEBUG TF_LOG_PATH=/tmp/terraform.log terraform apply -parallelims=0
+```
+
 ## override
 * `_override`で終わる`.tf`か`override.tf`のファイルで設定の上書きができる。
 
@@ -561,7 +565,6 @@ $ terraform plan
 ```
 
 * dev/stg/prodで共通のresourceを使う場合
-    * 
 * dev/stg/prodで異なるresourceを使う場合
     * workspaceで分けていればprefixをid(name)に含めてworkspaceごとに管理すればOK
 * serviceで異なるresourceを使う場合

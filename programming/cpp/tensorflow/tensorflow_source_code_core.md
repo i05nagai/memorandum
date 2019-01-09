@@ -25,6 +25,9 @@ title: Tensorflow source code core
     * `session_state.h`
     * `std::unordered_map<string, TensorAndKey> tensors_`
         * a map from tensor string to tensor
+* `Tensor`
+* `TTypes<typename T, int NDIMS = 1, typename IndexType = Eigen::DenseIndex>`
+    * `tensor_types.h`
 
 * `Executor`
     * `executor.h`
@@ -118,7 +121,7 @@ title: Tensorflow source code core
     * `gtl::InlinedVector<DataType, 4>`
         * `DataType`
 * `DataType`
-    * `type.pb.h` ?
+    * `types.pb.h`
     * enum
 * `ClientSession`
 * `SessionOptions`
@@ -132,6 +135,20 @@ title: Tensorflow source code core
 * `DirectoSessionFactory`
     * `direct_session.h`
     * child of SessionFactory
+* `Env`
+    * `env.h`
+
+## Tape
+* `TensorTape = gtl::FlatMap<int64, int64>`
+    * Map from tensor_id to internally-defined operation-id of the operation which produced this tensor.
+    * A value of -1 means that the tensor was directly watched and not the result of any operation in the tape.
+    * `c/eager/tape.h`
+* `OpTape`
+    * `c/eager/tape.h`
+
+## Session
+
+## Device
 * `DeviceFactory`
     * `device_factory.cc`
 * `FactoryItem`
@@ -146,11 +163,38 @@ title: Tensorflow source code core
     * Instantiated by `TreadPoolDeviceFactory`
 * `DeviceMgr`
     * `device_mgr.cc`
-* `Env`
-    * `env.h`
 
 
+## test
+* `test::graph::Var`
+    * `core/graph/testlib.h`
 
+
+## OpKernel
+* `OpKernel`
+* `VariableOp`
+    * `variable_ops.h`
+* `ApplyGradientDescentOp`
+    * `training_ops.cc`
+* `GetInputTensorFromVariable`
+    * `training_op_helpers.h`
+* `functor::ApplyGradientDescent<Device, T>()`
+    * `training_ops.cc`
+* `OpKernelConstruction`
+* `OpKernelContext`
+    * `op_kernel.h`
+
+
+## Registered Operators
+* `Variable`
+    * `state_ops.h`
+
+
+## cc
+* `Output`
+    * ops.h
+* `Operation`
+    * ops.h
 
 ## Reference
 * [Adding a New Op  \|  TensorFlow](https://www.tensorflow.org/guide/extend/op)

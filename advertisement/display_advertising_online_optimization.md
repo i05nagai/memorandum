@@ -150,7 +150,7 @@ $$
 $$
 \begin{eqnarray}
     \sum_{d=1}^{M}
-        \mathrm{CPA}_{d, a}^{t}
+        \mathrm{CPA}_{a}^{t}
     & \le &
         \mathrm{tCPA}_{a}
     \nonumber
@@ -519,14 +519,20 @@ $$
     S_{d, a}^{t}
     & := &
         \sum_{s=0}^{t-1}
-        \mathrm{tCPA}_{a}
-        \frac{
-            Z_{d, a}^{s}
-        }{
+            \mathrm{CPC}_{d, a}(Y_{d, a}^{s}, Z_{d, a}^{s})
+            \Delta Y_{d, a}^{s}
+    \nonumber
+    \\
+    & = &
+        \sum_{s=0}^{t-1}
+            \mathrm{tCPA}_{a}
+            \frac{
+                Z_{d, a}^{s}
+            }{
+                Y_{d, a}^{s}
+            }
+            \Delta
             Y_{d, a}^{s}
-        }
-        \Delta
-        Y_{d, a}^{s}
     \nonumber
 \end{eqnarray}
 $$
@@ -545,14 +551,26 @@ $$
         }
     \nonumber
     \\
-    \mathrm{CPA}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+    \mathrm{CPA}_{a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
     & := &
         \frac{
+            \sum_{d=1}^{M}
             \sum_{s=0}^{t-1}
                 \mathrm{CPC}_{d, a}(Y_{d, a}^{s}, Z_{d, a}^{s})
                 \Delta Y_{d, a}^{s}
         }{
-            Z_{d, a}^{t}
+            \sum_{d=1}^{M}
+                Z_{d, a}^{t}
+        }
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \sum_{d=1}^{M}
+                S_{d, a}^{t}
+        }{
+            \sum_{d=1}^{M}
+                Z_{d, a}^{t}
         }
     .
     \nonumber
@@ -568,14 +586,30 @@ $$
     \nonumber
     \\
     & := &
-        \sum_{d=1}^{M}
-            \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-            \frac{
-                Z_{d, a}^{t}
-            }{
-                Z_{d, a}^{t+1}
-            }
+        \frac{
+            \sum_{d=1}^{M}
+                S_{d, a}^{t}
+            +
             x_{a}
+            \sum_{d=1}^{M}
+                \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
+        }{
+            \sum_{d=1}^{M}
+                Z_{d, a}^{t+1}
+        }
+        -
+        \mathrm{tCPA}_{a}
+    \nonumber
+    \\
+    & = &
+        \frac{
+            \sum_{d=1}^{M}
+                S_{d, a}^{t}
+        }{
+            \sum_{d=1}^{M}
+                Z_{d, a}^{t+1}
+        }
         -
         \mathrm{tCPA}_{a}
         +
@@ -586,11 +620,34 @@ $$
                     \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
                     \Delta Y_{d, a}^{t}
             }{
-                Z_{d, a}^{t+1}
+                \sum_{d=1}^{M}
+                    Z_{d, a}^{t+1}
             }
         \right)
     \label{formulation_of_online_convex_optimization_constraints_target_cpa}
     .
+\end{eqnarray}
+$$
+
+With categorical vector $I_{t}$, the target CPA constraints is similar to the following condition;
+
+$$
+\begin{eqnarray}
+    \frac{
+        \sum_{d=1}^{M}
+            S_{d, a}^{t}
+        +
+        \sum_{d=1}^{M}
+            \mathrm{CPC}_{d, I_{t}}(Y_{d, I_{t}}^{t}, Z_{d, I_{t}}^{t})
+            \Delta Y_{d, I_{t}}^{t}
+    }{
+        \sum_{d=1}^{M}
+            Z_{d, I_{t}}^{t+1}
+    }
+    \le
+    \mathrm{tCPA}_{a}
+    .
+    \nonumber
 \end{eqnarray}
 $$
 
@@ -603,26 +660,16 @@ $$
     \nonumber
     \\
     & := &
-        \sum_{s=0}^{t}
         \sum_{d=1}^{M}
-            \frac{
-                Y_{d, a}^{s}
-            }{
-                Z_{d, a}^{s}
-            }
-            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+            S_{d, a}^{t}
         -
         B_{a}
         +
         x_{a}
         \left(
             \sum_{d=1}^{M}
-                \frac{
-                    Y_{d, a}^{t+1}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
         \right)
     \label{formulation_of_online_convex_optimization_constraints_badget}
     .
@@ -681,23 +728,14 @@ $$
     & = &
         1_{\{a = a^{\prime}\}}
         \left(
-            \sum_{d=1}^{M}
-                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                \frac{
-                    Z_{d, a}^{t}
-                }{
+            \frac{
+                \sum_{d=1}^{M}
+                    \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
+            }{
+                \sum_{d=1}^{M}
                     Z_{d, a}^{t+1}
-                }
-            +
-            \left(
-                \frac{
-                    \sum_{d=1}^{M}
-                        \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                        \Delta Y_{d, a}^{t}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-            \right)
+            }
         \right)
     \nonumber
 \end{eqnarray}
@@ -717,12 +755,8 @@ $$
         1_{\{a=a^{\prime}\}}
         \left(
             \sum_{d=1}^{M}
-                \frac{
-                    Y_{d, a}^{t+1}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                \mathrm{CPC}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
         \right)
     \nonumber
 \end{eqnarray}
@@ -776,23 +810,14 @@ $$
         \sum_{a=1}^{N}
             Q_{a}^{t}
             \left(
-                \sum_{d=1}^{M}
-                    \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                    \frac{
-                        Z_{d, a}^{t}
-                    }{
+                \frac{
+                    \sum_{d=1}^{M}
+                        \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                        \Delta Y_{d, a}^{t}
+                }{
+                    \sum_{d=1}^{M}
                         Z_{d, a}^{t+1}
-                    }
-                +
-                \left(
-                    \frac{
-                        \sum_{d=1}^{M}
-                            \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                            \Delta Y_{d, a}^{t}
-                    }{
-                        Z_{d, a}^{t+1}
-                    }
-                \right)
+                }
             \right)
             (x_{a} - x_{a}^{t})
     \nonumber
@@ -803,12 +828,8 @@ $$
             Q_{N+a}^{t}
             \left(
                 \sum_{d=1}^{M}
-                    \frac{
-                        Y_{d, a}^{t+1}
-                    }{
-                        Z_{d, a}^{t+1}
-                    }
-                    \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                    \mathrm{CPC}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                    \Delta Y_{d, a}^{t}
             \right)
             (x_{a} - x_{a}^{t})
         +
@@ -851,14 +872,13 @@ $$
     & = &
         Q_{a}^{t}
         +
-        \sum_{d=1}^{M}
-            \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-            \frac{
-                Z_{d, a}^{t}
-            }{
+        \frac{
+            \sum_{d=1}^{M}
+                S_{d, a}^{t}
+        }{
+            \sum_{d=1}^{M}
                 Z_{d, a}^{t+1}
-            }
-            x_{a}^{t}
+        }
         -
         \mathrm{tCPA}_{a}
         +
@@ -869,7 +889,8 @@ $$
                     \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
                     \Delta Y_{d, a}^{t}
             }{
-                Z_{d, a}^{t+1}
+                \sum_{d=1}^{M}
+                    Z_{d, a}^{t+1}
             }
         \right)
     \nonumber
@@ -877,20 +898,13 @@ $$
     & &
         +
         \left(
-            \sum_{d=1}^{M}
-                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                \frac{
-                    Z_{d, a}^{t}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-            +
             \frac{
                 \sum_{d=1}^{M}
                     \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
                     \Delta Y_{d, a}^{t}
             }{
-                Z_{d, a}^{t+1}
+                \sum_{d=1}^{M}
+                    Z_{d, a}^{t+1}
             }
         \right)
         (x_{a}^{t+1} - x_{a}^{t})
@@ -898,24 +912,25 @@ $$
     \\
     & = &
         Q_{a}^{t}
+        +
+        \frac{
+            \sum_{d=1}^{M}
+                S_{d, a}^{t}
+        }{
+            \sum_{d=1}^{M}
+                Z_{d, a}^{t+1}
+        }
         -
         \mathrm{tCPA}_{a}
         +
         \left(
-            \sum_{d=1}^{M}
-                \mathrm{CPA}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
-                \frac{
-                    Z_{d, a}^{t}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-            +
             \frac{
                 \sum_{d=1}^{M}
                     \mathrm{CPC}_{d, a}(Y_{d, a}^{t}, Z_{d, a}^{t})
                     \Delta Y_{d, a}^{t}
             }{
-                Z_{d, a}^{t+1}
+                \sum_{d=1}^{M}
+                    Z_{d, a}^{t+1}
             }
         \right)
         x_{a}^{t+1}
@@ -948,36 +963,22 @@ $$
     & = &
         Q_{a}^{t}
         +
-        \sum_{s=0}^{t}
         \sum_{d=1}^{M}
-            \frac{
-                Y_{d, a}^{s}
-            }{
-                Z_{d, a}^{s}
-            }
-            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+            S_{d, a}^{t}
         -
         B_{a}
         +
         x_{a}^{t}
         \left(
             \sum_{d=1}^{M}
-                \frac{
-                    Y_{d, a}^{t+1}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                \mathrm{CPC}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
         \right)
         +
         \left(
             \sum_{d=1}^{M}
-                \frac{
-                    Y_{d, a}^{t+1}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                \mathrm{CPC}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
         \right)
         (x_{a}^{t+1} - x_{a}^{t})
     \nonumber
@@ -985,25 +986,15 @@ $$
     & = &
         Q_{a}^{t}
         +
-        \sum_{s=0}^{t}
         \sum_{d=1}^{M}
-            \frac{
-                Y_{d, a}^{s}
-            }{
-                Z_{d, a}^{s}
-            }
-            \mathrm{CPA}_{d, a}^{s}(Y_{d, a}^{s}, Z_{d, a}^{s})
+            S_{d, a}^{t}
         -
         B_{a}
         +
         \left(
             \sum_{d=1}^{M}
-                \frac{
-                    Y_{d, a}^{t+1}
-                }{
-                    Z_{d, a}^{t+1}
-                }
-                \mathrm{CPA}_{d, a}^{t+1}(Y_{d, a}^{t+1}, Z_{d, a}^{t+1})
+                \mathrm{CPC}_{d, a}^{t}(Y_{d, a}^{t}, Z_{d, a}^{t})
+                \Delta Y_{d, a}^{t}
         \right)
         x_{a}^{t+1}
     \nonumber
@@ -1050,7 +1041,7 @@ $I_{t}$ is independent from $$(I_{s})_{s \in [0:t-1]}$$.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Interpretation of minimized funciton
-Note that samller value of $(x_{a} - x_{a}^{t})$ indicates that we recommnd ad $a$ with less probability than the probability at time $t$.
+Note that smaller value of $(x_{a} - x_{a}^{t})$ indicates that we recommnd ad $a$ with less probability than the probability at time $t$.
 On the other hand, larger value of $(x_{a} - x_{a}^{t})$ means that ad $a$ is likely to be recommended.
 Considering this, the last term in $$\eqref{formulation_of_online_convex_optimization_objective_function}$$ means probability changes moderately depending on $\alpha$.
 
@@ -1058,20 +1049,21 @@ Suppose that $(x_{a} - x_{a}^{t}) > 0$.
 We will see what parameter and event minimizes the funciton $$\eqref{formulation_of_online_convex_optimization_objective_function}$$ for each term.
 In the first term, such conditions are
 
-* CPC at $t$ is higher
+* CPC at $t$ is high
 * the recommended ad $t$ is clicked
 
 In the second term,
 
-* CPA at $t$ is smaller
-* user takes actions to increase a conversion of the recommended ad
-* If the recommended ad is clicked,
-    * CPC is smaller
+* CPC at $t$ is small
+* conversion occurs
+    * $\Delta Z_{d, a}^{t} = 1$.
+* the recommeded ad is not clicked
 
 In the third term,
 
 * the recommended ad is not clicked
-* if the recommended ad is clicked, corresponding conversion happens
+* if the recommended ad is clicked
+    * CPCP at $t$ is small
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
