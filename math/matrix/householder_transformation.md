@@ -292,7 +292,7 @@ $$
     .
 $$
 
-If $x^{1} \approx \norm{x}$, that is, $x \approx x^{1}e_{1}$, catastrophic cancellation would occur.
+If $x^{1} \approx \norm{x}$, that is, $x \approx x^{1}e_{1}$, catastrophic cancellation would occur in the calculation.
 To avoid the cancellation, when $x \ge 0$, instead of the above equation we compute the following formula
 
 $$
@@ -331,7 +331,7 @@ $$
 \end{eqnarray}
 $$
 
-#### Algorithm 1
+#### Algorithm 2
 
 <p class="pseudocode-js">
 <pre class="pseudocode-js-code" style="display:none">
@@ -405,7 +405,7 @@ $$
 
 Since the algorithm requires approximately $3n$, and time complexy is $O(n)$.
 
-#### Proposition 1
+#### Proposition 3
 * $P_{v}$,
 
 (1)
@@ -509,7 +509,189 @@ This is from a fact that multiplication of orthonomal matrix is also orthonomal.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Algorithm 4 Householder Bidiagonalization
+* $A \in \mathbb{R}^{m \times n}$.
+* $m \ge n$,
+* $U \in \mathbb{R}^{m \times m}$
+    * orthogonal
+* $V \in \mathbb{R}^{n \times n}$
+    * orthogonal
+
+The algorithm to find $U$ and $V$ which satisfy
+
+$$
+\begin{eqnarray}
+    U^{\mathrm{T}} A V
+    =
+    \left(
+        \begin{array}{ccccc}
+            d_{1}   & f_{1}   & 0 & \cdots & a0
+            \\
+            0 & d_{2} & f_{2}& 0 & \vdots
+            \\
+            \vdots &  \ddots  & \ddots  & \vdots &
+            \\
+            0  & \cdots & \ddots & d_{n-1} & f_{n-1}
+            \\
+            0  & \cdots &   & 0 & d_{n}
+            \\
+            \hline
+            0  & 0 & \cdots & 0 & 0
+            \\
+            \vdots &  \vdots  & \vdots  & \vdots &
+            \\
+            0  & 0 & \cdots & 0 & 0
+        \end{array}
+    \right)
+    .
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    A
+    & := &
+        \left(
+            \begin{array}{ccccc}
+                \times  & \times & \times & \times
+                \\
+                \times  & \times & \times & \times
+                \\
+                \times  & \times & \times & \times
+                \\
+                \times  & \times & \times & \times
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    A_{1}^{(1)}
+    & := &
+        U_{1}A
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                \times  & \times & \times & \times
+                \\
+                0  & \times & \times & \times
+                \\
+                0  & \times & \times & \times
+                \\
+                0  & \times & \times & \times
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    A_{2}^{(1)}
+    & := &
+        A_{1}^{(1)}
+        V_{1}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                \times & \times & 0 & 0
+                \\
+                0  & \times & \times & \times
+                \\
+                0  & \times & \times & \times
+                \\
+                0  & \times & \times & \times
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    A_{1}^{(2)}
+    & := &
+        U_{2}
+        A_{2}^{(1)}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                \times & \times & 0 & 0
+                \\
+                0 & \times & \times & \times
+                \\
+                0 & 0 & \times & \times
+                \\
+                0 & 0 & \times & \times
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    A_{2}^{(2)}
+    & := &
+        A_{1}^{(2)}
+        V_{2}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                \times & \times & 0 & 0
+                \\
+                0 & \times & \times & 0
+                \\
+                0 & 0 & \times & \times
+                \\
+                0 & 0 & \times & \times
+            \end{array}
+        \right)
+    \nonumber
+    \\
+    A_{1}^{(3)}
+    & := &
+        U_{3}
+        A_{2}^{(2)}
+    \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{ccccc}
+                \times & \times & 0 & 0
+                \\
+                0 & \times & \times & 0
+                \\
+                0 & 0 & \times & \times
+                \\
+                0 & 0 & 0 & \times
+            \end{array}
+        \right)
+    \nonumber
+\end{eqnarray}
+$$
+
+<p class="pseudocode-js">
+<pre class="pseudocode-js-code" style="display:none">
+    \begin{algorithm}
+    \caption{Computing Householder Bidiagonalization}
+    \begin{algorithmic}
+    \REQUIRE $A \in \mathbb{R}^{m \times n}$
+    \PROCEDURE{ComputeHouseholderBidiagonalization}{$A$}
+        \FOR{$j = 1$ \TO $n$}
+            \STATE $(v, \beta) \leftarrow \mathrm{ComputeHouseholderVector}(A_{j}^{j:m})$
+            \STATE $A_{j:m}^{j:n} \leftarrow (I_{m-j+1} - \beta vv^{\mathrm{T}}) A_{j:n}^{j:m}$
+            \STATE $A_{j}^{(j+1):m} \leftarrow v^{2:(m-j+1)}$
+            \IF{$j \le n - 2$}
+                \STATE $(v, \beta) \leftarrow \mathrm{ComputeHouseholderVector}((A_{j}^{j:m})^{\mathrm{T}}))$
+                \STATE $A_{(j+1):n}^{j:m} \leftarrow A_{(j+1):n}^{j:m}(I_{n-j} - \beta vv^{\mathrm{T}})$
+                \STATE $A_{(j+2):n}^{j} \leftarrow (v^{2:(n-j)})^{\mathrm{T}}$
+            \ENDIF
+        \ENDFOR
+        \RETURN $A$
+    \ENDPROCEDURE
+    \end{algorithmic}
+    \end{algorithm}
+</pre>
+</p>
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Householder transformation \- Wikipedia](https://en.wikipedia.org/wiki/Householder_transformation)
 * [s93\.pdf](http://web.csulb.edu/~tgao/math423/s93.pdf)
+* G. H. Golub and C. F. Van Loan. Matrix Computations. Johns Hopkins University Press, Baltimore, MD, USA, fourth edition, 2012
