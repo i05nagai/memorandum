@@ -74,7 +74,7 @@ $$
         x
         -
         2
-        \langle \bar{x}, x \rangle
+        \langle \bar{v}, x \rangle
         \bar{v}
 \end{eqnarray}
 $$
@@ -89,7 +89,7 @@ $$
     Px - x
     =
     2
-    \langle \bar{x}, x \rangle
+    \langle \bar{v}, x \rangle
     \bar{v},
 $$
 
