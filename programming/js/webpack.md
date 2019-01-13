@@ -10,11 +10,12 @@ title: Webpack
 `webpack.conf.js`について。
 
 
-entry
+Entry
 
+* An entry point indicates which module webpack should use to begin building out its internal dependency graph
+* by default `./src/index.js`
 
-
-```
+```javascript
 const config = {
   entry: './path/to/my/entry/file.js'
 };
@@ -25,133 +26,64 @@ const config = {
 };
 ```
 
-## plugins
+Output
 
-### DefinePlugin
-* [DefinePlugin](https://webpack.js.org/plugins/define-plugin/)
-    * 変数を定義する
-
-###  EnivornmentPlugin
-* [EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/)
-    * 環境変数を定義する
-    * process.env.ENVIRONMENT_NAMEの形で変数が参照できるようになる
-
-### file-loader
-* [webpack-contrib/file-loader: file loader for webpack](https://github.com/webpack-contrib/file-loader)
+* The output property tells webpack where to emit the bundles it creates and how to name these files
+* By default `./dist/main.js`
 
 ```javascript
+const path = require('path');
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-            }
-          }
-        ]
-      }
-    ]
+  entry: './path/to/my/entry/file.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'my-first-webpack.bundle.js'
   }
-}
-```
-
-* `name`
-    * pack後の出力ファイル名
-    * `name: '[path][name].[ext]'`
-* `publicPath`
-    * 読み込み時のbase path
-* `outputPath`
-    * pack時の出力ファイルのpath
-
-## Loader
-loaderの設定は書き方が色々ある。
-`use`を使うと、複数かける。
-
-```javascript
-module: {
-  rules: [{
-    test: /\.js$/,
-    exclude: /node_modules/,
-    use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['env']
-        },
-      }, {
-        loader: 'jshint-loader'
-      }
-    ]
-  }],
-},
-```
-
-
-### babel-loader
-* ES2015（ES6）のコードをES5のコードに変換するローダー
-
-```
-npm install babel-loader babel-core babel-preset-env --save-dev
-```
-
-ruleにloaderの適用ruleを記載していく。
-
-```
-module.exports = {
-  module: {
-    rules: [
-    {
-      // ローダーの処理対象ファイル
-      test: /\.js$/,
-      // ローダーの処理対象から外すディレクトリ
-      exclude: /node_modules/,
-      // 利用するローダー
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['env']
-        }
-      }],
-    }
-    ],
-  },
 };
 ```
 
-### eslint-loader
-JavaScriptのコードを検証するローダー。
+Loaders
+
+* Out of the box, webpack only understands JavaScript and JSON files
+* Loaders allow webpack to process other types of files and convert them into valid modules that can be consumed by your application and added to the dependency graph.
+* two properties
+    * `test`
+        * filename
+    * `use`
+        * what loader
 
 ```
-npm install eslint eslint-loader --save-dev
+const path = require('path');
+
+module.exports = {
+  output: {
+    filename: 'my-first-webpack.bundle.js'
+  },
+  module: {
+    rules: [
+      { test: /\.txt$/, use: 'raw-loader' }
+    ]
+  }
+};
 ```
 
-## Plugin
-loaderとは別にpluginも存在する。
-bundle時に実行する処理。
+Plugins
 
-### UglifyJsPlugin
-JavaScriptを圧縮するプラグイン
 
-```
-  // プラグインの設定
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        // console.log（）などのconsole.*系の記述を取り除いて出力する
-        drop_console: true
-      },
-    }),
-  ],
-```
+Mode
+
+* you can enable webpack's built-in optimizations that correspond to each environment
+    * `development`
+    * `production`
+        * by default
+    * `none`
+
 
 ## Tips
 
 ### global variable with webpack
 * [javascript - Define global variable with webpack - Stack Overflow](https://stackoverflow.com/questions/37656592/define-global-variable-with-webpack)
 
-
 ## Reference
 * [webpack 3 入門 - Qiita](https://qiita.com/soarflat/items/28bf799f7e0335b68186)
-
+* [pinglinh/simple\_webpack\_boilerplate: 🕸📦Ever wondered how you could set up a React project from scratch? This is the repo for you\! I have also written up a blog tutorial to follow along\.](https://github.com/pinglinh/simple_webpack_boilerplate)
