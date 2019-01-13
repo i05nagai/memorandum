@@ -5,7 +5,7 @@ title: npm
 ## npm
 
 ## Install
-Nodejsに付属する。
+npm is Installed accompanied by node.js.
 
 update npm
 
@@ -63,5 +63,3 @@ scriptsのコマンドに引数を渡すことはできない。
 ## Reference
 * [npm package.json 日本語版 取扱説明書](http://liberty-technology.biz/PublicItems/npm/package.json.html)
 * [npm-scriptsについて - Qiita](http://qiita.com/axross/items/a2a0d148e40b66074858)
-
-
