@@ -60,6 +60,12 @@ title: English Email
 ## Asking
 * [What are some other ways of saying 'it would be greatly appreciated'? \- Quora](https://www.quora.com/What-are-some-other-ways-of-saying-it-would-be-greatly-appreciated)
 
+## Happy New Year
+* [Business Writing: New Year's Wishes for 2012](https://www.businesswritingblog.com/business_writing/2011/12/new-years-wishes-for-2012-.html)
+* [Happy New Year Messages for an Amazing 2019 \| Shutterfly](https://www.shutterfly.com/ideas/happy-new-year-messages/)
+* [32 Sample Business Holiday Card Messages for 2018 \| Shutterfly](https://www.shutterfly.com/ideas/business-holiday-card-messages/)
+    * Happy Holidays and warm wishes for 2018!
+
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)
 * [5 Email Templates for Responding to Recruiters -The Muse](https://www.themuse.com/advice/5-email-templates-to-respond-to-recruiters-no-matter-where-you-are-in-your-search)
@@ -71,3 +77,4 @@ title: English Email
 * [More useful phrases for business emails and letters – Speakspeak](http://speakspeak.com/resources/general-english-vocabulary/more-useful-phrases-for-business-emails-and-letters)
 * [Email Greetings: 10 Ways To Start Your Message Professionally \- Yesware Blog](https://www.yesware.com/blog/email-greetings/)
 * [7 Useful English Phrases to Say When You Forget Something \| English Teacher Melanie](http://www.englishteachermelanie.com/7-useful-english-phrases-to-say-when-you-forget-something/)
+* [FORMAL LETTERS GIVING AND REQUESTING INFORMATION – stanagexpert\.com](https://www.stanagexpert.com/formal-letters-giving-and-requesting-information/)
