@@ -212,8 +212,11 @@ title: English Speaking
     * in the vicinity of sth
         * approximately the stated amount
         * the price for a house here is the vicinity of 450,00 dollars
-* account for
-    * Solar cells account for less than 1% of the world's electricity production
+* account
+    * account for
+        * Solar cells account for less than 1% of the world's electricity production
+    * on account of
+        * because of
 * Recent technological improvement, however, may boost this figure.
 * believe
     * Do you believe in God?
@@ -891,7 +894,6 @@ title: English Speaking
             * divide
                 * to (cause to) divide into two or more parts, especially along a particular line
                 * the prize was split between Susan and Kafe
-                *
 * collide
     * collide with
         * There was an accident this mornig. A bus collided with a car
@@ -1466,6 +1468,7 @@ title: English Speaking
     * The sun was surrounded by a golden haze
     * The family is in a haze of shock and grief
 * void
+    * Won't that void the warranty?
     * null and void
         * Your passport is null and void
         * The judge declared this agreement null and void because it contravened an earlier ruling of the federal court
@@ -1473,11 +1476,14 @@ title: English Speaking
     * The amusement park will a void in this town, which has little entertainment for children
     * She looked over the clif into the void
 * vendor
+    * a person who sells things
+    * there are many vendors in the marketplace
     * newspaper/ice cream/computer/hot dog/flower vendor
     * He bought a copy from a newspaper vendor
     * The shouts of street vendors
     * leading software vendors
     * The official reason was that I accepted a gift from a vendor, something which I was told violated company policy
+    * In a supply chain, a vendor, or a seller, is an enterprise that contributes goods or services
 * grasp
     * He hasn't yet grasped the hardship of life in a situation like that
 * unite
@@ -2198,9 +2204,9 @@ title: English Speaking
         * we can gain a market advantage by leveraging our network of partners
     * business
         * Home equity is invaluable if you leverage it to build wealt
-        * h
     * if you are not leveraging your stronget skills, you might want to consider a new position
     * if you are not put in situations that leverage your best skills, you may become frustrated by your performance and your situation
+    * plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.
 * once
     * I was once asked during an interview what I would doif the job became boring
 * lull
@@ -5475,6 +5481,7 @@ title: English Speaking
         * a man who owned most of the land around a village
     * take
         * to take someone places; escort
+* escort
 * advertise
     * to make something known generally in public, esp. in order to sell it
         * we advertised our car in the local newspaper
@@ -8335,8 +8342,21 @@ title: English Speaking
 * equestrian
 * smolder
 * crack
+    * crack a rat
+    * I couldn't give a rat's ass
+        * I couldnt't give the furry crack of a rat's behind
+        * I don't care
+        * popular variations includes
+            * I don't give a rat's ass.
+            * I don't give a damn.
+            * I don't give a shit.
+            * I don't give a fuck.
     * crack up
         * he cracked me up
+* geriatric
+    * relating to the medical care and treatment of old people
+    * geriatric medicine/patients
+    * Geriatric also means old
 * suite
     * set of rooms
         * a set of connected rooms, especially in a hotel
@@ -8615,9 +8635,6 @@ title: English Speaking
         * she's always playing pranks on her little brother
     * he finally realized he'd been pranked
     * childish prank
-* vendor
-    * a person who sells things
-    * there are many vendors in the marketplace
 * marketplace
     * business condition
         * to remain competitive the company has to be able to adapt to the changing marketplace
@@ -8932,6 +8949,10 @@ title: English Speaking
 * cost-effective
     * cost effective
 * cost
+    * at any cost
+        * at all cost
+        * if sth must be done or avoided at all costs, it must be done or avoided whatever happens
+        * He wanted her at any cost, even if it meant giving up everything he had.
 * costly
     * making you spend money
     * making you give or lose sth
@@ -8994,6 +9015,7 @@ title: English Speaking
 * reductio ad ridiculum
     * extreme example
     * Reductio ad absurdum
+    * argumentum ad absurdum
     * He's engaging in reductio ad absurdum
     * It's the logical fallacy of extending sb's argument to ridiculous proportions and then criticizing the result.
 * In order to get the job or pass, you need to be better than at least 1,000 of the other applicants.
@@ -11781,6 +11803,14 @@ title: English Speaking
     * for the present time but likely to change; temporary
     * a provisonal government
     * these date are only provisional
+* makeshift
+    * temporary and of low quality, but used because of a sudden need
+        * We pulled into a makeshift parking area.
+        * Thousands of refugees are living in makeshift camps.
+* tentative
+    * not certain or not confident
+    * (of a plan or idea) not certain or agreed, or (of a suggestion or action) said or done in a careful but uncertain way because you do not know if you are right:
+    * I have tentative plans to take a trip to Seattle in July.
 * booze hound
     * a person who drinks alcohol often and heavily.
 * infernal
@@ -12258,7 +12288,6 @@ title: English Speaking
 * wheeze
     * wheezing
 * lozenge
-* seizure
 * fainting
 * fussinness
 * conscientiously
@@ -12360,9 +12389,6 @@ title: English Speaking
     * to increase in number or amount over a period of time
         * Interest will accrue on the account at a rate of seven percent.
 * recognisable
-* seizure
-    * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
-    * It can cause changes in your behavior, movements or feelings, and in levels of consciousness.
 * honorary
     * given as a reward, without qualifying in a standard way
     * given as an honour to sb who has not done a course of study
@@ -13249,7 +13275,20 @@ title: English Speaking
     * morally very bad
         * an abhorrent crime
         * Racism of any kind is abhorrent to me
+* abominable
+    * abominable bride
+    * very bad or unpleasant
+    * The abominable working conditions made many workers sick
+    * The prisoners are forced to live in abominable conditions.
+* execrable
+* odious
+    * extremly unpleasant; causing and deserving hate
+    * an odious person/task
+    * an odious crime
+    * an odious little man
 * detestable
+    * used to refer to people or things that you hate very much
+    * a detestable coward
 * repulsive
 * disgust
 * dislike
@@ -14287,6 +14326,9 @@ title: English Speaking
     * the amount of CPU time and number of serving processes had nearly quadrupled
 * flight
     * in flight
+    * flight risk
+        * a person thought likely to leave the country before a trial or bail hearing
+        * A person who appears ready to leave a job or relationship, presumably for a better opportunity elsewhere.
 * refer
     * refer sb/sth to sb/sth
         * to direct sb or sth to a different place or person for information, help, or action
@@ -14986,7 +15028,229 @@ title: English Speaking
         * There was a bit of hanky-panky going on at the Christmas party.
 * meritocracy
 * catepillars rises from the dead
+* avatar
+    * god
+        * especially in Hinduism, a god who appears on earth as a person
+    * an icon or figure representing a particular person in video games, Internet forums, etc.
+        * You can talk to other avatars with your words displayed in a cartoon bubble.
+* exploit
+    * use well
+        * to use sth for your own benefit
+        * the two companies joined forces to exploit 
+    * use unfair
+        * to use sth unfairly for your own advantage
+    * sth un
+    * daredevil exploit
+    * a web application that is vulnerable to XSS can be exploited in two major ways
+* bolt-hole
+    * bolt hole/bolthole
+    * a place that you can go to when you want to get away from your usual life and escape from other people
+    * The hotel is famous for being Winston Churchill's favourite bolthole.
+* feat
+* malicious
+    * an attacker can inject malicious script to perform unauthorized actions in the context of the victim's web session
+* tamper
+    * to touch or change something without permission or without enough knowledge of how it works
+    * Don’t tamper with the boiler.
+    * I could see immediately hat the lock had been tampered with
+    * Tampering with pipelines could result in ruptures or fires.
+    * to speak to and try to influence someone involved in a legal case
+* flakiness
+    * The characteristic or quality of being flaky.
+* flaky
+    * breaking or separating easily into small thin pieces.
+    * crazy or eccentric
+        * The central character of the play is a flaky neurotic.
+* vehemently
+    * in a strong and emotional way
+    * the president has vehemently denied having an extra-martial affair
+* canteen
+    * restaurant
+        * a small store or restaurant esp. in a factory or school where food and meals are sold
+    * container
+    * kitchen equipment
+* catchphrase
+    * A catchphrase (alternatively spelled catch phrase) is a phrase or expression recognized by its repeated utterance.
+    * a phrase that is often repeated by and therefore becomes connected with a particular organization or person, especially someone famous such as a television entertainer
+* slogan
+* precise
+* imprecise
+* laborious
+    * needing a lot of time and effort
+    * a laborious task
+* arduous
+    * difficult and tiring, or needing a great deal of effort
+    * In those days, a trip to the West was an arduous journey.
+* backbreaking
+* gruelling
+* footprint
+    * foot mark
+    * area
+    * size
+        * the amount of space on a surface that sth needs
+        * the new computer has a smaller footprint
+        * he footprint of the new Treasury building
+        * a measurement of the size, effect, etc. of something
+            * we took the decision to invest in new countries and grow our global footprint
+* I want to run service Foo at 5 nines of reliability
+* lopsided
+    * with one side bigger, higher, etc. than the other; not equally balanced
+    * a charning, lopsided grin
+* askew
+* skew-whiff
+* douchebag
+    * a small syringe for douching the vagina, especially as a contraceptive measure.a
+    * an unpleasant person
+        * Don't waste your time on that douchebag.
+* asshole
+    * arsehole
+    * a person's anus
+    * a stupid, irrtating or contemptible person
+* strasse
+    * street in German
+    * Right up your strasse
+        * Right up your alley
+* spasm
+    * a sudden, uncontrollable tightening of a muscle, or a sudden, burst of activity or energy
+    * he left the game because of back spasms
+    * the rebels spasms of resistance was short-lived
+    * a muscle/muscular spasm
+    * go into spasm
+        * My leg suddenly went into spasm.
+    * spasm of sth
+        * a short period of something, especially something that cannot be controlled
+        * a spasm of guilt/coughing/laughing
+* whimsy
+    * sth playful and amusing
+    * the second book is as full of happy whimsy as the first
+    * unusual, funny, and pleasant idea or qualities
+        * Add a touch of whimsy to your room with these cat sculptures.
+        * The film combines whimsy and tragedy in equal measure.
+    * a sudden wish or idea, especially one that cannot be reasonably explained
+        * whim
+        * Is this just one of his whimsies?
+* impertinent
+    * not showing enough respect; rude
+    * rude and not showing respect, especially towards someone older or in a higher position than you
+        * I hope he didn't think I was being impertinent when I asked him about his private life.
+        * an impertinent remark/question
+* constable
+    * an office in a town or village having some of the responsibilities of a police officer
+    * a British officer of the lowest rank
+* garble
+    * to make words or message unclear and difficult to understand
+    * It's bad when phones garble conversations
+    * text is garbled
+    * Sentences on the website are garbled
+    * text garbling
+        * character corruption
+* melodramatic
+    * Don't be melodramatic
+* outflank
+* seamstress
+    * a woman who sews, esp. one who eanrs her living by sewing
+* amount
+    * a quantity of money
+    * come to the total when added together
+        * acts that amount to treason
+    * to reach a total : add up
+        * The bill amounts to 10 dollars.
+    * to reach in kind or quality : to turn out to be
+        * wanted her son to amount to something
+        * The changes don't really amount to much
+    * not amount to much
+        * to not become successful or important
+        * he's lazy, and he'll never amount to anything
+* start
+    * start over
+        * start from the beging
+* frugal
+    * careful in spending money
+        * Lungren, a fiscal conservative when it comes to spending taxpayer's money, is frugal in his personal life as well
+        * a frugal lifestyle
+        * frugal habits/living/lifestyle
+        * frugal energy/water use
+* sparing
+    * using very little of something
+    * He certainly is sparing in his praise
+        * praises people very little
+    * Be sparing with the butter as there isn't much left.
+* synergy
+    * two plus two equals five
+    * the combined power of a group of things when they are working together that is greather than the total power archieved by each working seprately
+        * Team work at its best results in a synergy that can be very productive.
+    * create/deliver/generate synergy
+    * synergy benefits/saving/targets
+    * annual/cost/finacial synergies
+    * marketing/merger/operational synergies
+    * potential/significant/substantial synergies
+* clan
+    * a large family, or a group of people who share the same interest
+        * Is/Are the whole clan coming to visit you for Christmas?
+    * a group of families, especially in Scotland, who originally came from the same family and have the same name
+* enquire
+    * Could I enquire about your mother's health?
+    * to inquire
+* inquire
+    * to ask for information
+* flatulate
+    * To emit digestive gases from the anus, especially with accompanying sound.
+* fart
+* offend
+    * upset
+        * to make sb upset or angry
+    * commit crime
+    * to cause to be upset or to hurt the feelings of someone, esp. by being rude or showing a lack of respect
+* cavort
+    * to dance around, having a noisy good time
+        * a group of teenagers were cavorting in the park
+    * to jump or move around in a playful way, sometimes noisily, often in a sexual way
+        * They were spotted cavorting beside the swimming pool.
+* disport
+* frisk
+* frolic
+* gambol
+* romp
+* caption
+* requirement
+    * meet a requirement
+    * satisfy/fullfill a requirement
+    * comply with requirements
+    * impose requirements
+    * suit sb's requirements
+        * You could design and build your own house to suit your requirements.
+        * be suitable for someone in a particular situation
+    * a special requirements
+    * a basic requirements
+    * an essential requirements
+    * a minimum requirements
+    * a legal/statutory reqruiments
+    * safety requirements
+    * entry requirements
+    * energy requirements
+    * be surplus to requirements
+* in the heat of the moment
+    * if you say or do sth in the heat of the moment, you do it or you sai without thinking because you are very angry or excited
+    * He didn't mean it – he said it the heat of the moment
+* handyman
+    * a man who works at many small jobs in and around a building, esp. reparing things
+    * a man who is skilled at repairing and making things inside or outside the house and who does this in his own home or as a job
+* odd-job man
+    * a man who is paid to do different types of jobs, esp. in the house or garden
+* proprietorship
+    * the situation of owning sth
+    * proprietorship over sth
+        * a particular legal form for a small company in some countries:
+    * sole proprietorship
+        * a business that is owned and operated by only one person
+        * a sole proprietorship is owned by one person who reports the profits on a personla income-tax
 
+
+## disease/disorder
+* Obsessive-Compusive Personality disorder
+* seizure
+    * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
+    * It can cause changes in your behavior, movements or feelings, and in levels of consciousness.
 
 
 ## Study
@@ -15142,6 +15406,15 @@ title: English Speaking
     * to get money, food, etc. from other people, especially without working for it or doing anything to deserve i
 * leprechaun
     * (in old Irish stories) a magical creature in the shape of a little old man who likes to cause trouble
+* hummingbird
+    * Hummingbirds are birds native to the Americas and constitute the biological family Trochilidae
+
+## Flower
+* Ranunculus
+    * Members of the genus
+        * buttercups,
+        * spearworts
+        * water crowfoot
 
 ## Medicine
 * xanax
@@ -15151,7 +15424,7 @@ title: English Speaking
 ## food
 * surf and turf
     * Surf and turf or surf 'n' turf is a main course which combines seafood and red meat
-
+* snickerdoodle
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
