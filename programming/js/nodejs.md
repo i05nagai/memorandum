@@ -5,14 +5,18 @@ title: Nodejs
 ## NodeJS
 
 ## Install
-以下で、npmも入る。
+* [distributions/README\.md at master · nodesource/distributions](https://github.com/nodesource/distributions/blob/master/README.md)
+
+npm is also installed.
 
 ```
 yum install nodejs
 ```
 
 ```
-apt-get install nodejs
+# nodev10
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 ```
@@ -32,3 +36,4 @@ n stable
 ### Difference between module.exports and exports
 * [Node.js : exports と module.exports の違い（解説編） - ぼちぼち日記](http://d.hatena.ne.jp/jovi0608/20111226/1324879536)
 
+## Refeernce
