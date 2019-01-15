@@ -202,7 +202,36 @@ title: Site Reliability Engineering
             * regression tests involves preventing bugs from sneaking back int to the codebasae
             * engineers refactoring the codebase can be sure that they don't accidentally introduce bugs
     * tess have a cost, both in terms of times and computational resources
+    * Production tests
+        * configuratin test
+            * the tests become more complex when the configuration does one of the following
+                * Implicitly incorporate defaults tha tare built into the binary
+                * Passes through a preprocessor such as bash into command-line flags
+                * Specifies behavioral context for a shared runtime
+                    * making the tests depends on that runtime's release schedule
+        * Stress test
+            * Stress tests answer questions such as
+                * How full can a database get before writes start to fail?
+                * How many queries a second can can be sent to an application server before it become overloaded, causing requests to fail?
+        * canary test
+            * it's not a test, rather it's structured user accpetance
+    * Statistical tests
+        * Lemon for fuzzing
+        * Chaos Monkey
+        * Jepsen for distributed state
+        * Those tests aren't necessarily repetable tests
 
+
+
+## Security
+* [Automated Security Testing for Developers – Cossack Labs – Medium](https://medium.com/@cossacklabs/automated-security-testing-56ee1253c1fd)
+* [Google Online Security Blog: Automating web application security testing](https://security.googleblog.com/2007/07/automating-web-application-security.html)
+    * Stored XSS
+        * Commonly exploited in a web application where one user enters information that's viewed by another user
+    * Reflected XSS
+        * An application that echoes improperly sanitized user input received as query parameters is vulnerable to reflected XSS
+    * Fuzz testing
+        * also referred to as an fault-injection testing
 
 
 ## Reference
