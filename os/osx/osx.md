@@ -19,12 +19,12 @@ open ~/Library/Preferences/com.apple.symbolichotkeys.plist
 vim /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
 ```
 
-1. 61 > value > parameters > item 2 の値を 1572864 を Shift のキーコードである 131072 に変更します
+1. 61 > value > parameters > item 2 の値を 1572864 を Shift のキーコードである 131072 に変更
     * default opt+ctrl+space
     * 32
     * 49
     * 786432
-2. 60 > value > parameters > item 2 の値を 1048576 を Option-Shift キーの値である 655360 に変更します
+2. 60 > value > parameters > item 2 の値を 1048576 を Option-Shift キーの値である 655360 に変更
     * default ctrl+space
     * 32
     * 49
@@ -35,7 +35,7 @@ System Preferences->Keyboard->Shortcutsの一覧がこのファイルに記録�
 直にshort cut keyを書き換えることで、強引にショートカットとしてShiftを割り当てている。
 
 
-## 外付けドライブへの書き込み
+## Writing Extern HDD
 
 ### 事前設定
 `/sbin`のMountを書き換えるので、事前にrootユーザをONにする。
@@ -57,17 +57,19 @@ System Preferences->Keyboard->Shortcutsの一覧がこのファイルに記録�
 4. 「パスワード」フィールドに、ルートユーザアカウントの設定時に定義したパスワードを入力します。
 
 
-### インストール
+### Install
 
 1. fuse for osxをインストール
+
 ```zsh
 sudo port install osxfuse
 ```
+
 2. NTFSドライバをインストール
+
 ```zsh
 sudo port install ntfs-3g
 ```
-3. 
 
 ## update
 
@@ -107,7 +109,6 @@ Disable spotlights.
 #### Disabling spotlights
 [MacOS Sierra: Enable/Disable Spotlight Indexing](https://www.technipages.com/macos-sierra-enable-disable-spotlight)
 
-
 ```
 # Enable Indexing
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
@@ -125,6 +126,38 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.pl
 * Open QuickTime
 * File -> New Moview Recording
 * Change Camera to `iPad`
+
+#### Decompress zip file compressed in Windows without garbling text
+
+* Use 7z
+    * it does not work
+
+```
+brew install p7zip
+```
+
+* Use python script
+    * [rekka/unzip\-jp: Unzip zip archives from Japanese systems on non\-Japanese ones](https://github.com/rekka/unzip-jp)
+    * it works
+
+#### What to do before you sell
+* [What to do before you sell, give away, or trade in your Mac \- Apple Support](https://support.apple.com/en-us/HT201065)
+* [Erase process failed \- couldn't open devi… \- Apple Community](https://discussions.apple.com/thread/7739562)
+
+* Sign out
+    * iTunes
+    * iCloud
+    * iMessage
+* Remove bluetooth paired devices
+* Erase disk
+    * [How to erase a disk for Mac \- Apple Support](https://support.apple.com/en-us/HT208496#why)
+    * unmount all volumes belongs to the disk before easing the disk
+* Reinstall OSX
+
+#### Stop iTunes from opening when you conenct your iPhone
+[Stop iTunes from opening when you connect your iPhone \- CNET](https://www.cnet.com/how-to/stop-itunes-from-opening-when-you-connect-your-iphone/)
+
+* Preferences -> Devices
 
 ## Reference
 * [Macのデスクトップ切り替え時のエフェクトを減らして、切り替えを多少すばやくする - Qiita](http://qiita.com/ikedakenno/items/58daf8a961f1813b3c1b)

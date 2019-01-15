@@ -53,4 +53,5 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 
 
 ## Reference
-* 
+* [Which is the best JavaScript book? \- Quora](https://www.quora.com/Which-is-the-best-JavaScript-book) 
+* [getify/You\-Dont\-Know\-JS: A book series on JavaScript\. @YDKJS on twitter\.](https://github.com/getify/You-Dont-Know-JS)

@@ -1,3 +1,7 @@
+---
+title: aws-cli
+---
+
 ## aws-cli
 
 ## Install
@@ -23,6 +27,7 @@ Default output format [None]: json
 ```
 aws configure --profile <user>
 aws configure get
+# list configurations such as Access Key ID,...
 aws configure list
 aws configure set
 ```
@@ -36,7 +41,7 @@ aws ec2 describe-instances --profile user2
 
 ## Tips
 
-### Named profile
+#### Named profile
 * [Terraform で AWS環境を実運用する上で困ったことと、その対処 - Qiita](https://qiita.com/takumiabe/items/07943f23436aa983f397)
 
 AWSの認証情報に名前をつけてlocalで管理できる。
@@ -57,7 +62,7 @@ provider "aws" {
 }
 ```
 
-### Error
+#### Error
 [InvalidSignatureException: Signature expired · Issue #527 · aws/aws-sdk-js](https://github.com/aws/aws-sdk-js/issues/527)
 
 DockerなどでVMを使っている場合はVMの時間がずれている。

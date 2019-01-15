@@ -3,9 +3,8 @@ title: ESLint
 ---
 
 ## ESLint
-JSのlint tool.
-ECMAScript 2015をsupportしている。
-
+lint tool for Javascript.
+ECMAScript 2015(ES6)
 
 ## Install
 
@@ -167,7 +166,10 @@ gulp.task('lint', () => {
 airbnb-base
 
 ```
-npm install --save-dev eslint-config-airbnb-base
+# install dependency if you use npm 5+
+npx install-peerdeps --dev eslint-config-airbnb
+# then
+npm install --save-dev eslint-config-airbnb
 ```
 
 `.eslintrc`に設定を記載しておく。
@@ -194,6 +196,12 @@ npm install --save-dev eslint-config-airbnb
     "extends": "airbnb"
 }
 ```
+
+#### Error: window is not defined
+Specify environemnt in `.eslintrc`.
+[Configuring ESLint \- ESLint \- Pluggable JavaScript linter](https://eslint.org/docs/user-guide/configuring.html#specifying-environments)
+
+
 
 ## Reference
 * [ESLint 最初の一歩 - Qiita](http://qiita.com/mysticatea/items/f523dab04a25f617c87d)

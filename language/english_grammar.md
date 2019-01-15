@@ -124,21 +124,37 @@ noun
         * Every morning they meet in the same cafe. They've been going there for years.
 * past perfect tense
 
+## to infinitive
+* [Infinitive \| English Grammar \| EF](https://www.ef.edu/english-resources/english-grammar/infinitive/)
+* [Grammar Bytes\! :: The Infinitive](http://www.chompchomp.com/terms/infinitive.htm)
 
-
-* adjective + to
-    * It is diffucult to understand him
-    * He is difficult to understand
-    * easy/nice/safe/cheap/exciting/impossible/hard/good/dangerous/expensive/interesting
-* adjective + noun + to
-    * This is a difficult question for me to answer
-* adj of somebody to do
-    * kind/(in)considerate/generous/mean/careless/silly/stuipid/unfair
-    * It's silly of Ruth to give up her job when she needs the oney
 * The first/next + to
     * the first/the second/the third, the last/the next/the only
     * The next train to arrive at platform 4 will be the 10:50 to Livepool
     * I was the only one to arrive on time+ 
+* to indicate the purpose or intention of an action
+    * In this case to has the same meaning as in order to or so as to.
+* the to-infinitive as the subject of the sentence
+    * This is a formal usage and is far more common in written English than spoken
+    * To be or not to be, that is the question.
+* the to-infinitive to indicate what something can or will be used for
+    * In this pattern, the to-infinitive follows a noun or pronoun.
+    * The children need a garden to play in.
+* the to-infinitive after adjectives
+    * subject + to be + adjective + (for/of someone) + to-infinitive + (rest of sentence)
+    * adjective + to
+        * It is diffucult to understand him
+        * He is difficult to understand
+        * easy/nice/safe/cheap/exciting/impossible/hard/good/dangerous/expensive/interesting
+    * adjective + noun + to
+        * This is a difficult question for me to answer
+    * adj of somebody to do
+        * kind/(in)considerate/generous/mean/careless/silly/stuipid/unfair
+        * It's silly of Ruth to give up her job when she needs the oney
+* the to-infinitive to make a comment or judgement
+    * Subject + to be + noun phrase + to-infinitive
+        * It was a stupid place to park
+    * to use the to-infinitive when making a comment or judgement about a noun, the pattern is:
 
 
 ## Interrogative pronouns

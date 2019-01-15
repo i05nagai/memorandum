@@ -5,16 +5,16 @@ title: Equicontinuity
 ## Equicontinuity
 関数族に対する連続性。
 
-* $$(X, d_{X})$$,
+* $(X, d_{X})$,
     * metric sp.
-* $$(Y, d_{Y})$$,
+* $(Y, d_{Y})$,
     * metric sp.
-* $$F$$,
+* $F$,
     * familiy of functions from $X$ to $Y$
     * $f \in F$ is $f: X \rightarrow Y$
 
-### Definition.
-$$F$$が$x_{0} \in X$でequicontinuousであるとは、
+#### Definition.
+$F$ is said to be equicontinuous at $x_{0} \in X$ if
 
 $$
     \forall \epsilon > 0,
@@ -28,9 +28,10 @@ $$
     \forall f \in F,
     \
     d_{Y}(f(x_{0}), f(x)) < \epsilon
+    .
 $$
 
-つまり、$x_{0}$のまわりでは、関数族全体で連続である。
+$x_{0}$のまわりでは、関数族全体で連続である。
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
