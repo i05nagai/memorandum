@@ -89,4 +89,24 @@ terraform state show <resource-address>
 
 ## Configuration
 
+## Makefile
+
+```make
+TERRAFORM_VARIABLE = TF_VAR_somelist=\'["ami-abc123", "ami-bcd234"]\'
+TERRAFORM_VARIABLE = TF_VAR_aws='{default.aws_access_key="${AWS_IAM_ACCESS_KEY_ID}", default.aws_secret_key="${AWS_IAM_SECRET_KEY}"}'
+TERRAFORM_BIN = ${TERRAFORM_VERSION} @terraform
+
+create-s3:
+    ${TERRAFORM_BIN} apply -target=....
+```
+
+Then export varaiebls as
+
+```
+export AWS_IAM_ACCESS_KEY_ID=""
+export AWS_IAM_ACCESS_KEY=""
+make create-s3
+```
+
+
 ## Reference
