@@ -4,20 +4,173 @@ title: AWS Lambda
 
 ## AWS Lambda
 
-* Language
-* Node.js
-* Java
-* C#
-* Python
-* Go
-* Powershell
+Use case
+
+* Invoke lambda function over HTTPS
+    * [Using AWS Lambda with Amazon API Gateway \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/with-on-demand-https.html)
+    * In many cases, lambda functions are invoked from some event sources.
+    * Amazon API Gateway enables AWS lambda to have custom REST APIs and endpoints
+
+* Supported Language
+    * Node.js
+    * Java
+    * C#
+    * Python
+    * Go
+    * Powershell
+
+
+## CLI
+
+```
+aws lambda
+```
+
+```
+aws lambda create-function \
+    --function-name CreateThumbnail \
+    --zip-file fileb://deploy-package.zip \
+    --handler index.handler \
+    --runtime python3 \
+    --role role-arn \
+    --timeout 10 \
+    --memory-size 1024
+```
+
+```
+aws lambda invoke
+          --function-name <value>
+          [--invocation-type <value>]
+          [--log-type <value>]
+          [--client-context <value>]
+          [--payload <value>]
+          [--qualifier <value>]
+          outfile <value>
+#
+aws lambda invoke \
+    --function-name CreateThumbnail \
+    --invocation-type Event \
+    --payload file://inputfile.txt outputfile.txt
+```
+
+```
+aws lambda add-permission \
+          --function-name <value>
+          --statement-id <value>
+          --action <value>
+          --principal <value>
+          [--source-arn <value>]
+          [--source-account <value>]
+          [--event-source-token <value>]
+          [--qualifier <value>]
+          [--revision-id <value>]
+          [--cli-input-json <value>]
+          [--generate-cli-skeleton <value>]
+# Example
+aws lambda add-permission \
+    --function-name CreateThumbnail \
+    --principal s3.amazonaws.com \
+    --statement-id some-unique-id \
+    --action "lambda:InvokeFunction" \
+    --source-arn arn:aws:s3:::sourcebucket \
+    --source-account bucket-owner-account-id
+```
+
+* `--function-name <value>`
+    * format
+        * `MyFunction`
+        * `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`
+        * `123456789012:function:MyFunction`
+* `--statement-id <value>`
+    * A unique statement identifier.
+* `--action <value>`
+    * The AWS Lambda action you want to  allow  in  this  statement.
+    * Each Lambda  action is a string starting with lambda: followed by the API name
+* `--principal <value>`
+    * The  principal  who is getting this permission
+
+```
+aws lambda get-policy
+          --function-name <value>
+          [--qualifier <value>]
+          [--cli-input-json <value>]
+          [--generate-cli-skeleton <value>]
+#
+aws lambda get-policy \
+    --function-name function-name
+```
 
 ## Concepts
 * BatchSize
     * The largest number of records that AWS Lambda will retrieve from your event source at the time of invoking your function.
     * The default for Amazon Kinesis and Amazon DynamoDB is 100 records.
     * Both the default and maximum for Amazon SQS are 10 messages.
-            
+
+## Python
+* [AWS Lambda Function Handler in Python \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html)
+
+```
+# event is dict
+def handler_name(event, context):
+    return some_value
+```
+
+* `event`
+    * AWS Lambda uses this parameter to pass in event data to the handler. This parameter is usually of the Python dict type. It can also be list, str, int, float, or NoneType type.
+* `context`
+    * AWS Lambda uses this parameter to provide runtime information to your handler. This parameter is of the LambdaContext type.
+    * [AWS Lambda Context Object in Python \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/python-context-object.html)
+
+* [AWS Lambda Deployment Package in Python \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)
+
+
+```
+mkdir deploy-package
+cd deploy-package
+pip install -r ../requirements.txt --target .
+zip -r9 ../function.zip .
+cd ../
+# add your code
+zip -g function.zip function.py
+# upload
+aws lambda update-function-code --function-name python37 --zip-file fileb://function.zip
+```
+
+Logging
+
+* The following Python statements generate log entries
+    * Logger functions in the logging module 
+    * print statements.
+* Both print and logging.* functions write logs to CloudWatch Logs but the logging.* functions write additional information to each log entry, such as time stamp and log level.
+* Finding log
+    * In the AWS Lambda console
+    * In the response header, when you invoke a Lambda function programmatically
+        * If you invoke a Lambda function programmatically, you can add the LogType parameter to retrieve the last 4 KB of log data that is written to CloudWatch Logs
+        * `x-amz-log-results`
+    * In CloudWatch Logs
+
+Error
+
+* If your Lambda function raises an exception, AWS Lambda recognizes the failure and serializes the exception information into JSON and returns it.
+
+```json
+{
+  "errorMessage": "I failed!",
+  "stackTrace": [
+    [
+      "/var/task/lambda_function.py",
+      3,
+      "my_always_fails_handler",
+      "raise Exception('I failed!')"
+    ]
+  ],
+  "errorType": "Exception"
+}
+```
+
+Tracing
+
+* Use AWS X-ray
 
 ## Scaling behavior
 * [Understanding Scaling Behavior \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/scaling.html)
@@ -79,6 +232,10 @@ events (or requests) per second * function duration
 * Lambda VPC
     * Don't put your Lambda function in a VPC unless you have to.
 
+## Amazon API Gateway
+* [Tutorial: Using AWS Lambda with Amazon API Gateway \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/with-on-demand-https-example.html)
+
+
 
 ## Debugging
 * [Debugging Lambda Functions Locally \- AWS Serverless Application Model](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-debugging.html)
@@ -97,6 +254,7 @@ cd python-debugging/
 pip install -r requirements.txt -t hello_world/build/
 
 # Install ptvsd library for step through debugging
+
 pip install ptvsd -t hello_world/build/
 
 cp hello_world/app.py hello_world/build/
@@ -105,6 +263,29 @@ cp hello_world/app.py hello_world/build/
 #### Canary deployments
 * [Implementing Canary Deployments of AWS Lambda Functions with Alias Traffic Shifting \| AWS Compute Blog](https://aws.amazon.com/blogs/compute/implementing-canary-deployments-of-aws-lambda-functions-with-alias-traffic-shifting/)
 
+## Test
+
+From console
+
+* Click Test
+* Create test events
+    * A function can have up to 10 test events. 
+* Click Test
+
+#### Permissoins
+[Overview of Managing Access Permissions to Your AWS Lambda Resources \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/access-control-overview.html)
+
+* Function
+    * `arn:aws:lambda:region:account-id:function:function-name`
+* Function alias
+    * `arn:aws:lambda:region:account-id:function:function-name:alias-name`
+* Function version
+    * `arn:aws:lambda:region:account-id:function:function-name:version`
+* Event source mapping
+    * `arn:aws:lambda:region:account-id:event-source-mapping:event-source-mapping-id`
+
+
 ## Reference
 * [Best Practices for Working with AWS Lambda Functions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
 * [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=5)
+* [How to run Serverless Code – Amazon Web Services \(AWS\)](https://aws.amazon.com/getting-started/tutorials/run-serverless-code/)
