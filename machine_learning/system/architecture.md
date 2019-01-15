@@ -125,3 +125,4 @@ title: Architecture
 * [Preparing and Architecting for Machine Learning](https://www.gartner.com/binaries/content/assets/events/keywords/catalyst/catus8/preparing_and_architecting_for_machine_learning.pdf)
 * [Designing a learning system](https://people.cs.pitt.edu/~milos/courses/cs2750-Spring03/lectures/class2.pdf)
 * [11\_Machine\_Learning\_System\_Design](http://www.holehouse.org/mlclass/11_Machine_Learning_System_Design.html)
+* [Meet Michelangelo: Uber's Machine Learning Platform](https://eng.uber.com/michelangelo/)
