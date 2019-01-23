@@ -627,6 +627,8 @@ title: English Speaking
 * The service is a joke
 * influence
     * You're a bad influence on her
+* plop
+    * my mother dragged me there and plopped me down on your lap
 * put
     * put a wet signature on
         * A wet signature is created when a person physically marks a document. In some cultures this is done by writing a name in a stylized, cursive format (or even a simple “X”) on a piece of paper.
@@ -1152,6 +1154,12 @@ title: English Speaking
         * to make a business into a corporation
     * regular load testing of the system to correlate raw capacity to service capacity\
 * take
+    * take the fifth
+    * take issue with
+        * I take issue with the word complusive
+        * disagree with
+    * take (something) for granted
+        * The government recently enacted strict laws against air pollution caused by factories
     * take the liverty of doing sth
         * to do sth that will have an effect on sb else, without asking their permission
         * I took the liverty of of booking theatre seats for us
@@ -2847,15 +2855,6 @@ title: English Speaking
 * thirsty
     * cheese made me thirsty
 * hats off to the chef
-* duty
-    * responsibility
-    * tax
-    * off duty
-        * He summoned his entire unit to a crisis meeting, even though many are off duty
-        * when your manager goes off duty, the alarm system will be monitored by a remote system
-    * on duty
-        * during office hours there is always a planning officer on duty who deals with enquiries
-        * the night shift goes on duty at 10 pm
 * I wish I could do something
 * I wish I were a sea horse
 * repercussion
@@ -4356,6 +4355,10 @@ title: English Speaking
         * in the process of leaving
         * dying
         * becoming, unfashionable, obsolescent, etc.
+        * if you do something on the way out, you do it as you leave a place
+            * Pick up your mail on the way out
+        * soon to be replaced by someone or something else
+            * the old type of passport is on its way out
     * He has his own way of doing things.
     * he does things differently
     * His way of doing things differs from others
@@ -5281,6 +5284,10 @@ title: English Speaking
     * when I got back, my car had been vandalied
     * bored teenagers went around vandalizing phoneboxes
 * demolish/destroy
+* demolition
+    * the act of destroying something such as a building
+    * the demolition of dangerous buildings
+    * They tried unsuccessfully to stop the demolition of the old hotel.
 * elaborate
     * to add more information to or explain something that you have said
         * the congresswoman said she was resigning, but refused to elaborate on her reansos for doing so
@@ -6240,9 +6247,6 @@ title: English Speaking
     * the time when someone is a child
     * she had an unhappy childhood
     * childhood is not always a happy time
-* rack
-    * to cause physical or mental plan, or trouble, to sb or sth
-    * even at the end, kk
 * twist
     * turn
         * to turn repeatedly, or to combine thin length of a material by turning or wrapping
@@ -6626,7 +6630,15 @@ title: English Speaking
     * small group
         * a small group of people or things that are close together
     * american football
-* scron/cotempt
+* contemptible
+    * deserving blame
+    * His behavior was contemptible.
+* estimable
+    * considered with respect
+    * She ran an estimable if obscure publishing house for nearly fifty years.
+    * of a person or their behaviour , considered to be very good or deserving praise
+* respectable
+* scorn/cotempt
     * contempt
         * a strong feeling of lack of respect for sth or sb
         * they were bullies, and they showed contempt for everyone and everything
@@ -6642,7 +6654,7 @@ title: English Speaking
             * contempt of court
                 * behaviour that is illegal because it does not obey or respect the rules of a law court
                 * the tabacco companies may be guilty of contempt of court for refusing to produce the documents
-    * scron
+    * scorn
         * a very strong feeling of no respect for sb or sth that you think is stupid or has no value
             * she has nothing but scorn for the new generation of politicians
             * why do you always pour/heap scorn on my suggestion?
@@ -6996,6 +7008,7 @@ title: English Speaking
     * walk
     * take forcefully
 * feast
+    * I hope the ogres feast on your bones
     * food
         * a special meal with very good food or a large meal for many people
         * a wedding feast
@@ -7856,6 +7869,12 @@ title: English Speaking
     * nerve-racking is correct
         * something that makes you extremely nervous
 * rack
+    * rack up
+        * to obtain or achieve sth, or to score goals or points
+        * the airline was racking up losses of 1.5 millions a day
+        * Miller racked up 28 points in the first half, and kept racking them up in the second
+    * to cause physical or mental plan, or trouble, to sb or sth
+    * even at the end, kk
     * frame
         * a frame often with bars or hooks, for hiding or hanging things
         * a bike rack
@@ -8630,6 +8649,7 @@ title: English Speaking
     * she has an urge for chocolate
 * urgent
 * prank
+    * to play a trick on someone that is intended to be funny but not to cause harm or damage
     * my cousins always pull pranks on their neighbors
     * play prank on
         * she's always playing pranks on her little brother
@@ -9136,6 +9156,11 @@ title: English Speaking
         * if you do sth with a flourish, you do it with one big, noticeable movement
         * the waiter handed me the menu with a flourish
         * he took off his hat with a flourish
+* rust
+    * a red-brown substance hat forms on the surface of iron and steel as a result of decay caused by reacting with air and water
+    * stainless steel won't rust
+    * to become or cause sth to become covered with rust
+    * having a reddish-brown color
 * weep
 * loofah
 * marauder
@@ -9422,6 +9447,8 @@ title: English Speaking
     * China has imposed trade restrictions on North Korea.
 * utility
     * This article reviews the utility of the app's new functions.
+    * utilities expense
+        * The cost of usage of utilities such as lighting, water, and heat. These expenses are included on all financial statements.
 * lobby
     * The National Rifle Association has obviously been lobbying to prevent new gun control legislation.
 * on a scale of one to five with one being, "always initiated by him" and five being, "always initiated by you" how do you prefer your sexual encounters to begin?
@@ -9436,8 +9463,6 @@ title: English Speaking
     * the study and treatment of tumours (= masses of cells) in the body
 * caretaker
 * as a whole
-* pediatrician
-* pediatric
 * surpass
     * to do or be better than
         * His time for the 100 metres surpassed the previous world record by one hundredth of a second.
@@ -9508,6 +9533,7 @@ title: English Speaking
         * The ministry of trade considered the company to have the best vision for exports.
 * deem
     * to consider or judge
+        * The president asked Congress for authority to take whatever steps he deemed necessary, including the use of force.
     * to consider or judge sth in a particular way
     * The area has now been deemed safe.
         * We will provide help whenever you deem it appropriate.
@@ -9681,6 +9707,8 @@ title: English Speaking
     * match
     * position
     * clothes
+* arrange
+    * she arranged for us to get a rental car
 * arrangement
     * hotel arrangement
 * centrifuge
@@ -11450,6 +11478,11 @@ title: English Speaking
     * The books "Alice in Wonderland", "Peter Rabbit", and "Winnie-the-Pooh" are classic examples of anthropomorphism.
 * attribute
 * endow
+    * well-endowed
+        * having a lot of something, especially money or possessions
+            * The city is well endowed with modern medical facilities.
+        * having large sexual organs, or (of a woman) having large breasts
+            * He's very well endowed!
 * whimsical
     * unusual and using imagination
         * the songs have a whimsical charm
@@ -12116,8 +12149,6 @@ title: English Speaking
     * a deep/shallow/mild depression
     * enter/fail into/slid into a recession
 * enact
-* take (something) for granted
-    * The government recently enacted strict laws against air pollution caused by factories
 * lavish
     * spending, giving, or using more than is necessary or reasonable; more than enough
     * large impressive, or expensive
@@ -12167,6 +12198,7 @@ title: English Speaking
     * to be able from your knowledge or experience to say that something is true
     * As a medical examiner I can vouch that his death was accidental.
     * vouch for
+        * we vouch for these people
         * to say that you know from experience that something is true or good, or that someone is honest and has a good character
         * she has checked the reports and can vouch for the accuracy of the information.
 * unsolicited
@@ -12527,6 +12559,18 @@ title: English Speaking
     * from that cause, or of that
     * of or about the thing just mentioned
 * excessive alcohol consumption.
+* excess
+    * an amount that is more than acceptable, expected, or reasonable
+    * insurance
+        * part of the cost of an accident, injury, etc. that you agree to pay yourself when you buy insurance
+        * She has an excess of £200 on her home insurance policy.
+    * extra
+* redundant
+* deductable
+    * an amount of money that you are responsible for paying before your insurance (= protection against loss) will pay you for an expense
+        * Judy’s car insurance policy had a 500 us dollars deductible.
+    * a deductable expense is a cost that you can subtract from the earnings on which you have to pay income tax
+        * Mortgage interest is deductible.
 * come down with a cold
 * stipulate
 * notebook
@@ -12573,6 +12617,13 @@ title: English Speaking
 * insurance
     * medical insurance
     * health insurance
+        * offer/provide health insurance
+            * Employers with 200 or more workers are required to offer health insurance for employees and their dependents.
+        * have health insurance
+            * The consumer advisory council said all state residents should have health insurance.
+        * people without health insurance
+        * health insurance benefits/costs/premiums
+        * health insurance company/industry/market
     * travel insurance
     * travel accident insurance
     * insurance policy
@@ -13620,6 +13671,10 @@ title: English Speaking
         * lousy with
             * used to say that something is full of something, or too much of it
             * The internet is lousy with this kind of stuff
+* rot
+    * leave to rot
+        * If you say that someone is being left to rot in a particular place, especially in a prison, you mean that they are being left there and their physical and mental condition is being allowed to get worse and worse.
+        * Most governments simply leave the long-term jobless to rot
 * rotten
 * stinking
     * very bad
@@ -13787,6 +13842,7 @@ title: English Speaking
 * alley
     * a narrow road or path between buildings, esp. between the backs of buildings
     * (right) up sb's alley
+        * up/down your alley
         * to be the type of thing that you are interested in or that you enjoy doing:
         * Kate loves dancing, so salsa lessons would be right up her alley.
         * Perhaps this task will be a little bit more up your alley
@@ -13967,6 +14023,8 @@ title: English Speaking
     * The area has been ravaged by drought/floods/war.
 * voracious
     * needing a lot of sth to be satisfied
+        * wolves are voracious eater
+        * as a child, I had a voracious appetite for books
     * very eager for sth, esp. a lot of food
     * he has a voracious appetite
 * instatiable
@@ -15244,6 +15302,300 @@ title: English Speaking
     * sole proprietorship
         * a business that is owned and operated by only one person
         * a sole proprietorship is owned by one person who reports the profits on a personla income-tax
+* skywriting
+    * Skywriting is the process of using a small aircraft, able to expel special smoke during flight, to fly in certain patterns that create writing readable by someone on the ground.
+* stone tablet
+    * tablets of stone
+* chasm
+    * a deep opening in earth or rock
+    * I take the skelton key, toss it into the chasm
+* drawbridge
+    * lower the drawbridge
+    * upper the drawbridge
+* tic tac toe
+    * tic-tac-toe
+    * Noughts and Crosses
+* consoling
+    * making or intended to make someone feel better when they are sad or disappointed
+* aficionad
+    * a person who is very knowledgeable and enthusiastic about an activity, subject, or pastime.
+* assume
+    * accept
+        * to accept sth as true without question or proof
+        * we can't assume that he's innocent simply because he says he is
+        * I assume nobody was home because the car wasn't in the driveway
+    * pretend
+        * to pretend to be sb you are not, or to express a feeling falsely
+        * During the investigation, two detectives assumed the identities of antique dealers.
+    * take control
+        * to take control or claim authority, sometimes without the right to do so
+            * The new president assumes office in January.
+        * If you assume responsibility for something, you become responsible for it.
+        * The terrorists assumed control of the plane and forced it to land in the desert.
+* driveway
+* nibble
+    * to eat sth by taking a lot of small bites
+        * He stopped nibbling his apple
+        * keep vegetables handy to nibble on
+    * you can nibble sth by moving your teeth against it wihtout eating it
+        * Fish were nibbling at their hands
+    * the act of eating something by taking a lot of small bites
+        * The real-estate agent says she’s gotten some nibbles for our house
+    * to bite something gently and repeatedly
+        * She nibbled his ear.
+* quarry
+    * place
+        * a large hole in the ground hat workers that workers dig in order to use the stone and sand for building materials
+    * personal/animal
+        * a person, animal, or group being hunted or looked for
+        * Using video cameras can be very tricky for researchers trying to blend in with their quarry
+    * dig
+        * to dig stone and sand from a quarry
+            * The gray limestone in this area was once quarried for use in bridges and buildings.
+    * hole
+        * a granite/limestone/marble/slate quarry
+* infirmary
+    * a hospital
+    * an office esp. in a school where sb can recieve medical care
+* precarious
+    * in danger because not firmly fixed; likely to fall or suffer from
+        * I climbed onto a precarious platform to get a better view.
+    * A precarious situation is likely to get worse:
+        * Many borrowers now find themselves caught in a precarious financial position.
+* floor
+    * surface
+    * level of building
+    * bottom
+    * open space
+    * surprise
+    * go fast
+    * take the floor
+        * start speaking
+    * take to the floor
+        * to stand and begin to dance
+    * have the floor
+        * to have the right to speak
+        * Silence, please, the prime minister has the floor
+    * bottom
+        * the floor
+        * the bottom surface of the sea, a forest, a cave, etc.
+    * hit
+        * to hit sb and cause them to fall
+        * he was floored with a single punch to the head
+    * surprise/confuse
+        * to surprise or confuse sb so much that they are unable to think what to say or do next
+        * I didn't know what to say – I was completely floored
+    * the floor
+    * floor it
+        * to drive as fast as possible
+        * He was late and the road was clear, so he floored it.
+* newlywed
+    * sb who has recently married
+    * The hotel has a special discount rate for newlyweds.
+* cojones
+    * a man's testicles
+    * courage; guts
+        * he does not have the cojones to kill a flea
+* metaphorical
+    * Metaphorical language congtains metaphors
+        * her second novel is written in a very metaphorical style
+* double
+    * double up
+        * to share sth, esp. a room, with sb else
+            * the two boys will have to double up in the front bedroom
+        * to receive or use two of sth
+        * he doubled up, winning two Oscars that night
+* antsy
+    * anxious and excited in an unpleasant way; extremly nervous
+        * I’m as antsy as I was before my first class.
+            * I always get antsy about meeting my husband's boss.
+* fretful
+    * behaving in a way that shows you are unhappy, worried, or uncomfortable
+    * by midnight the children were tired and fretful
+        * complaining a lot because they were unhappy
+* shithead
+    * a stupid, unpleasant, and unpopular person
+    * that little shifthead has screwed things up again
+* formality
+    * something done because it follows the usual or accepted way of doing things, although it may not be important:
+    * something that must be done but that is unlikely to affect an agreement that has already been made
+    * formal writing, behaviour, etc. that is suitable in important or official situations
+    * something official that must be done before something else can happen or be done
+        * It is essential to observe all the formalities when setting up a business.
+        * complete/go through the formalities
+            * This should be a means of injecting share capital into a company without going through the formalities of a share issue.
+        * Approval of the documents is a legal formality.
+* memorabilia
+    * objects that are collected because they are connected with a person or event that you want to remember
+    * an auction of pop memorabilia
+    * Beatles emorabilia
+* patient
+* outpatient
+    * a person who receieves medical care from a hospital but who does not tay in the hospitabl for one or more nights
+    * she had foot surgery as an outpatient
+    * an outpatient clinic
+* inpatient
+    * a person who stay one or more nights in hospital in order to receive medical care
+    * his insurance company is unwilling to pay for inpatient treatment
+* preventive
+    * intended to stop sth before it happens
+    * preventive measures
+    * preventative health care
+* tariff
+    * a governemnt charge on goods entering or leaving country
+    * import tariffs
+    * a list of fixed prices charged by a company for services, by a hotel for rooms, etc
+* duty
+    * responsibility
+    * tax
+    * off duty
+        * He summoned his entire unit to a crisis meeting, even though many are off duty
+        * when your manager goes off duty, the alarm system will be monitored by a remote system
+    * on duty
+        * during office hours there is always a planning officer on duty who deals with enquiries
+        * the night shift goes on duty at 10 pm
+* undercut
+* render
+    * provide
+    * cause
+        * to cause someone or something to be in a particular state
+            * His rudeness rendered me speechless.
+        * to change words into a different language or form
+            * She is rendering the book into English from French.
+    * give
+    * building
+        * to put a first layer of plaster or cement on a wall
+    * represent
+* dioptre
+    * a unit of measurement of the power of a lens, used for measuring a person's eyesight
+    * diopter number
+    * A typical short-sighted person in Britain is -4.5 dioptres.
+    * a unit of refractive power that is equal to the reciprocal of the focal length (in meters) of a given lens.
+* visual aid
+    * contact lens, glasses
+    * Do you have any artificial teeth (prosthesis) or crownings?
+* c/o
+    * care of
+    * certificate of origin
+        *  document used for shipping purposes. Describes country of origin of a given product.
+* determination
+    * the ability to continue trying to do something, even if it is difficult
+        * She has a lot of determination to succeed.
+        * I admired his drive and determination
+    * the process of controlling, influencing, or deciding something
+        * The determination of policy is not your business - your job is to implement it.
+    * the process of finding something out
+        * the determination of his whereabouts
+    * an official judgement or decision
+        * The court is required to issue a final determination on those issues by the end of the year.
+* pyrotechnicians
+* roofer
+* Scaffolders
+* concrete worker
+* steel fixer
+* plaster
+    * substance
+        * a substance that becomes hard as it dries and is used esp. for spreading on walls and celling in order to give a smooth surface
+        * in plaster
+            * if a part of your body is in plaster, it has a plaster cast around it to protect it while a broken bone repairs itself
+    * sticky material
+        * band-aid
+        * sticking plaster
+        * small piece of sticky cloth or plastic that you use to cover and protect a cut in the skin
+        * a box of waterproof plasters
+        * Put a plaster on it so that it doesn't get infected.
+* carpenter
+* insure
+    * make certain
+        * to make something certain, or to be certain about something
+    * protect
+        * to protect yourself or your property against damage or loss by making regular payments to a company that will pay for the damage or loss if it happens
+            * We’ve insured our house for 100,000 usd
+* one-off
+    * something that happens or is made or done only once
+    * Will you be doing more talks in the future or was that just a one-off?
+    * They gave him a one-off payment to compensate for the extra hours that he had to work.
+    * produced or happening only once
+        * a one-off opportunity/chance
+        * a one-off cost/payment
+        * The London store is stocking 12 exclusive, one-off designs.
+    * The bank's checks indicated the error was a one-off.
+* copayment
+    * Payments you make each time you get a medical service after reaching your deductible
+* coinsurance
+    * Payments you make each time you get a medical service after reaching your deductible
+* Out-of-pocket maximum
+    * The most you have to spend for covered services in a year. After you reach this amount, the insurance company pays 100% for covered services.
+* checkup
+    * a routine visit to the doctor or dentists
+* claustrophobic
+    * A claustrophobic place is small and closed, and makes you feel uncomfortable when you are in it
+        * My room's a bit claustrophobic.
+    * used to refer to a person suffering from a fear of being in closed spaces
+* mellow
+    * smooth
+        * pleasing because of being smooth, soft, or well developed and not too sharp, bright, new or rough
+        * a mellow favor/tone
+    * relaxed
+        * relaxed and pleasant
+        * he looks mellow on stage, but he's alwasy tense before the show
+    * soften
+        * the bright orange of the fresh paint mellowed as it dried
+    * relax
+        * she used to be very impatient, but she's mellowed
+    * mellow out
+        * to become more relaxed
+        * My dad has definitely mellowed out as he's gotten older
+* hush
+    * quiet or silence, esp. after noise
+    * a hush fell over the crowd
+    * a sudden, calm silince
+        * There was a deathly hush after she made the announcement.
+        * A hush fell over the room.
+    * used to tell sb to be quiet
+        * hush! you'll wake the baby
+* stillness
+* tenancy
+    * the right to use land or live in a building in exchange for rent
+    * the period of time for which you have the right to use a building or piece of land
+        * a two-year tenancy
+    * a legal arrangement in which sb has the right to live in or use a building or land owned by sb else in exchange for paying rent to its owner
+        * grant/give/create a tenancy
+        * terminate/server/renew a tenancy
+        * a tenancy agreement/law/contract
+* trolley
+    * trolley case
+        * an electric vehicle that transports people, usually in cities, and goes along metal tracks in the road
+    * for carrying
+    * vehicle
+        * an electric vehicle that transports people, usually in cities, and goes along metal tracks in the road
+* proximity
+    * the state of being near in space or time
+    * Mexico is a popular vacation spot because of its proximity to California
+    * the best thing about the location of the house is its proximity to the town center
+* closeness
+* propinquity
+    * the fact of being near sth
+        * Don't let geographical propinquity determine your choice
+* have yet to
+    * An example of have yet to is when you mean to go to the store but haven't gotten around to it yet.
+    * used for saying that something has not happened or been done up to the present time, especially when you think it should have happened or been done
+    * The Governor has yet to make a formal announcement.
+* overruled
+* sustained
+* plead
+    * plead the Fifth
+        * take the Fifth
+        * A reference to the Fifth Amendment to the United States Constitution, which states, among other things, that it may not be required of one to testify against oneself.
+        * To decline to comment, especially on grounds that it might be incriminating.
+        * If you ask me who ate the last of the ice cream, I will simply take the fifth.
+* medallion
+    * metal disc
+        * a metal disc that is worn for decoration on a chain or string around the neck
+    * meat
+* pro bono
+    * denoting work undertaken without charge, especially legal work for a client with a low income
+    * the attorneys are representing him pro bono
 
 
 ## disease/disorder
@@ -15251,6 +15603,19 @@ title: English Speaking
 * seizure
     * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
     * It can cause changes in your behavior, movements or feelings, and in levels of consciousness.
+* rabies
+    * a serious disease of the nervous system that can cause death. Rabies can be passed on to humans by other animals
+        * Dogs, cats, foxes, and bats can all carry rabies
+* hydrophobia
+* obsterician
+    * a physician or surgeon qualified to practice in obstetrics.
+* obsterics
+    * Obstetrics is the field of study concentrated on pregnancy, childbirth, and the postpartum period.
+* physician
+* surgeon
+    * a medical practitioner qualified to practice surgery.
+* pediatrician
+* pediatric
 
 
 ## Study
@@ -15284,6 +15649,8 @@ title: English Speaking
 ## cloth
 * washcloth
 * turban
+* galosh
+    * a waterpoof overshoe, typically made of rubber
 
 ## Nuclear energy
 * Solar energy
