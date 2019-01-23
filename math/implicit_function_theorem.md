@@ -1,4 +1,8 @@
-# Implicit Function Theorem
+---
+title: Implicit Function Theorem
+---
+
+## Implicit Function Theorem
 逆関数の定理、陰関数定理
 
 ## Symbol
@@ -7,7 +11,7 @@
 * $y = (y^{1}, \ldots, y^{M})^{T} \in \mathbb{R}^{M}$
 * $g: \mathbb{R}^{N} \rightarrow \mathbb{R}^{M}$
 * $|x| := \max_{i=1, \ldots, N} x^{i}$
-    * maxノルム. $ \mathbb{R}^{N}$上ノルムを定める。
+    * max norm over $\mathbb{R}^{N}$
 
 ## Definition
 $f$を$\mathbb{R}^{N} \times \mathbb{R}^{M}$の直積集合からの写像とみなし、$f(x, y) \in \mathbb{R}^{M}$と書く。
