@@ -3,6 +3,35 @@ title: English word choice
 ---
 
 ## English word choice
+* have not yet done/have not done ... yet/have yet to
+    * [grammaticality \- Is it more correct to say "You have not yet <actioned>" or "You have not <actioned> yet"? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/147431/is-it-more-correct-to-say-you-have-not-yet-actioned-or-you-have-not-action)
+    * [What's the difference between " have yet to" and "have not yet to"? \- Learn english \- italki Answers](https://www.italki.com/question/131499)
+    * have not yet done
+        * more formal than "have not done .. yet"
+        * there is some activity, task or event, which has not started yet
+        * you want to do your homework but have not started doing it yet.
+    * have not done ... yet
+    * have yet to
+        * similar to "have not yet done"
+        * here is something, such as an activity, task or event, which has not occurred or which has not been done yet
+        * I have yet to finish my homework
+            * This sentence means that you want to finish your homework but you have not finished it yet.
+* independent worker/self-employed worker
+    * [Self\-Employment vs\. Independent Contractor \| Chron\.com](https://smallbusiness.chron.com/selfemployment-vs-independent-contractor-12156.html)
+    * self-employed
+        * not all self-employed people are independent contractors
+    * independent contractor
+        * all independent contractors are self-employed
+* due to/ because of
+    * [grammar \- Can “due to” and “because of ” be used interchangeably? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/7385/can-due-to-and-because-of-be-used-interchangeably)
+    * they are not interchangeable
+        * He was lost because of the storm
+        * He lost his way because of the storm
+    * these examples highlight the difference between "due to" and "because of"
+        * He failed because of bad planning.
+        * His failure was due to bad planning.
+    * "due to" is generally interchangeable with "caused by"
+    * "because of" is generally interchangeable with "on account of"
 * plan/prepare/put/arrange schedule
     * I draw up a schedule
     * prepare a schedule
