@@ -7896,9 +7896,6 @@ title: English Speaking
 * blunt
     * direct in search
     * not sharp
-* expat
-    * expatriate; a person who lives outside their home country
-    * Contrary to his expectations, his life as an expat was full of hardship
 * harmony
     * in harmony
         * It's important for different races to live in harmony.
@@ -8881,6 +8878,13 @@ title: English Speaking
 * objectively
 * subjectively
     * Teachers should never grade their students subjectively.
+* subject
+    * be subject to
+        * likely to experience or suffer from sth
+            * the bay is subject to heavy fog in summer
+            * if the plants are growing well, they'll be less subject to pests
+        * if an action or event is subject to sth, it needs sth to happen before it can take place
+        * the agreement will be subject to approval by the League's 30 teams and the players
 * walk of life
     * When people talk about walk(s) of life, they are referring to different types of jobs and different levels of society
     * Even though he's a celebrity, he has friends from all walks of life.
@@ -13176,7 +13180,10 @@ title: English Speaking
     * to get permission to make, produce, or use sth that has been created by or belongs to another person or company, usually by paying for it
         * the TV company is seeking to license content from providers in every language.
 * expat
-    * Contrary to his expectations, his life as an expat was full of hardship.
+    * expatriate
+        * a person who lives outside their home country
+    * Contrary to his expectations, his life as an expat was full of hardship
+    * to use force or law to remove sb from their own country
 * upon
     * upon receipt of
         * Upon receipt of a completed questionnaire
@@ -15596,6 +15603,53 @@ title: English Speaking
 * pro bono
     * denoting work undertaken without charge, especially legal work for a client with a low income
     * the attorneys are representing him pro bono
+* shenanigans
+    * humorous or dishonest trics
+    * I don't know how he puts with their shenanigans
+    * secret or dishonest activities, usually of a complicated and humorous or interesting type
+* prick
+    * to make a small hole or holes in the surface of sth
+    * the nurse pricked his finger to draw blood
+    * prick the skin of he potatos with a fork before baking them
+    * She pricked the balloon with a pin and it burst with a loud bang.
+    * feeling
+        * an unpleasant emotion that is felt for a short time
+        * with the thoguht came a tiny prick of fear
+    * body part
+        * penis
+    * man
+        * a stupid man
+        * I'm not wearigh that – I'd look a complete prick
+* pierce
+    * to go in or through sth, esp. with a pointed object, making a hole
+        * Pierce the potatos with a fork to see if they're done
+        * she got her ears pierced
+* calamity
+    * an event that causes much suffering to many people
+    * the factory closings were a calamity for the whole city
+* cataclysm
+* disaster
+* tragedy
+* chirp
+    * to make a short high sound or sounds
+    * to say something with a high, happy voice
+* rent
+    * cold rent
+        * Cold rent in Germany is no more than what you owe the landlord every month. All other extra costs will have to be undertaken by yourself.
+    * warm rent
+        * Warm rent in Germany usually corresponds to an “all inclusive” rent. It means that all extra-costs are included, should they be electricty (“Strom”), gas or water expenses
+* taxation
+    * the system of taxing people
+    * money that is collected as tax
+        * cut/reduce/raise taxation
+        * excessive/heavy taxation
+        * high/low taxation
+* tax
+* taxable
+* pest
+    * an insect or small animal that is harmful or damages crops
+    * a pest is an annoying person, esp. a child
+        * my brother is such a pest
 
 
 ## disease/disorder
