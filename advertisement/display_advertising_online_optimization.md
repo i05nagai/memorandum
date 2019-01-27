@@ -492,13 +492,20 @@ $$
     * $Y_{d, a}^{0}$ is an initial value
     * $Y_{d, a}^{s} \in \mathbb{Z}_{\ge 0}$ is an initial value
     * adapted process
+    * $$Y_{d, a}^{s}: \Omega \rightarrow \mathbb{Z}_{\ge 0}$$,
 * $(Z_{d, a}^{s})_{s \in [0:T]} \ (d \in [1:M], a \in [1:N])$,
     * the number of conversions of advertimesement $a$ at display $d$,
     * $Z_{d, a}^{0}$ is an initial value
     * adapted process
     * $Z_{d, a}^{s} \in \mathbb{Z}_{\ge 0}$ is an initial value
+    * $$Z_{d, a}^{s}: \Omega \rightarrow \mathbb{Z}_{\ge 0}$$,
 * $B_{a} \in \mathbb{R}_{\ge 0}$,
     * budget of ad $a$,
+* $$\mathcal{K} := \{x \in [0, 1]^{N} \mid \sum_{i=1}^{N} x^{a} = 1\}$$,
+    * the domain of the loss function and constraints
+    * each element denotes the probability of the choice of advertisements.
+
+For the simplicity, we define several notations.
 
 $$
 \begin{eqnarray}
@@ -536,6 +543,8 @@ $$
     \nonumber
 \end{eqnarray}
 $$
+
+$S_{d, a}^{t}$ is profit of ad $a$ on display $d$ until trial $t$.
 
 With this notation, CPC and CPA are defined as
 
@@ -1041,6 +1050,8 @@ $I_{t}$ is independent from $$(I_{s})_{s \in [0:t-1]}$$.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Interpretation of minimized funciton
+TODO: Update this section.
+
 Note that smaller value of $(x_{a} - x_{a}^{t})$ indicates that we recommnd ad $a$ with less probability than the probability at time $t$.
 On the other hand, larger value of $(x_{a} - x_{a}^{t})$ means that ad $a$ is likely to be recommended.
 Considering this, the last term in $$\eqref{formulation_of_online_convex_optimization_objective_function}$$ means probability changes moderately depending on $\alpha$.
@@ -1063,11 +1074,13 @@ In the third term,
 
 * the recommended ad is not clicked
 * if the recommended ad is clicked
-    * CPCP at $t$ is small
+    * CPC at $t$ is small
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Interpretation of parameters for constraints
+TODO: Update this section.
+
 $Q_{a}^{t}$ guarantees that the longer violation of the constraint, the less probability of choice of ad $a$.
 The following events lower the probabilty $x_{a}^{t+2}$.
 
