@@ -4837,6 +4837,9 @@ title: English Speaking
 * attain
     * the first chapter in this section, and the most important peice to read if you want to attain the widest-angle picture of what exactly SRE does
 * lump
+    * lump sum
+        * a single payment made at a particular time, as opposed to a number of smaller payments or installments.
+        * your pension plan can provide a cash lump sum at retirement as well as a regular income
     * lump it
         * to accept a situation or decision although you do not like it
             * the decision has been made, so if Tom doesn't like it, he can lump it
@@ -15634,10 +15637,31 @@ title: English Speaking
     * to make a short high sound or sounds
     * to say something with a high, happy voice
 * rent
+    * payment
+        * a fixed amount of money paid or received regulary for the use of usually an apartment, house, or business space
+        * Rents in this building are ridiculously high
+    * for rent
+        * offered by the owner for sb else to use in exchange for money
+    * hole
+        * a large hole torn in a piece of material
+    * pay to use
+        * to pay or receive a fixed amount of money for the use of a room, house, car, television
+        * I rented a car from a garage so that I could get about
     * cold rent
         * Cold rent in Germany is no more than what you owe the landlord every month. All other extra costs will have to be undertaken by yourself.
     * warm rent
         * Warm rent in Germany usually corresponds to an “all inclusive” rent. It means that all extra-costs are included, should they be electricty (“Strom”), gas or water expenses
+    * ground rent
+        * money paid by the owner of a building or apartment to the person who owns the land on which it has been built
+        * he almost lost his home because of unpaid ground rent
+    * net rent
+        * the amount received by the owner of property from rent, after tax, insurance, etc. have been paid
+    * peppercorn rent
+        * a very small amount of money that you pay as rent
+    * rack rent
+        * a rent that is agreed between the owner of a property and the person renting it, rather than being fixed or controlled by law
+        * The terms of the lease may prohibit letting except at a rack rent.
+* rend
 * taxation
     * the system of taxing people
     * money that is collected as tax
@@ -15650,6 +15674,15 @@ title: English Speaking
     * an insect or small animal that is harmful or damages crops
     * a pest is an annoying person, esp. a child
         * my brother is such a pest
+* fiscal
+    * fiscal year
+* reticle
+    * a network of very fine lines, wires, etc. in the focus of the eyepiece of an optical instrument
+* eyepiece
+    * the part of a piece of equipment, for example, a microscope, though which you look
+* tenant
+    * a person who rents a room, a building, or land
+    * For years, they were tenants on my father's propery
 
 
 ## disease/disorder
