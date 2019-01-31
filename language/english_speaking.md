@@ -5150,8 +5150,6 @@ title: English Speaking
     * in alliance with sb/sth
         * working together with another person, organization, etc.
 * skew
-* risktaking
-    * The key advantage of this framing is that it unlocks exp.iocit, thoughtful risktaking
 * set
     * by setting a target,
 * reputational
@@ -5439,9 +5437,41 @@ title: English Speaking
     * dangerous
     * They set off on a perilous journey to the top of Mount Everest
     * The country roads are quite perilous.
-* high-risk
 * hazardous
+* risk
+    * high-risk
+        * high risk
+    * low risk
+    * considerable risk
+    * a big/great/huge risk
+    * an increased/reduced risk
+    * a real risk
+    * a serious/grave risk
+    * a potential risk
+    * a financial risk
+    * a political risk
+    * attendant risk
+        * risk involving risks
+    * risk of
+        * skiers always face the risk of serious injury
+    * risk that
+        * there is a risk that the disease may spread further
+    * risk to
+        * there is no risk to public health
+    * carry a risk
+        * might be dangerous
+    * pose a risk
+        * might be dangerous
+    * involve/entail risk
+    * reduce/minimize risk
+    * increase a risk
+    * eliminate a risk
+    * avoid a risk
+    * face a risk
+    * a risk factor
 * risky
+* risktaking
+    * The key advantage of this framing is that it unlocks exp.iocit, thoughtful risktaking
 * work
     * workout
         * happen/develop
@@ -9279,6 +9309,11 @@ title: English Speaking
     * Policie raided the apartment and found a large amount of drug inside
 * interrogate
     * to aggressively ask someone questions
+* interrogative
+    * a word or sentence used when asking a question
+        * who and why are interrogative
+    * the interrogative
+        * the form of a sentence that is used for asking questions
 * undocumented
     * The president has promised to crack down on undocumented immigrants.
 * crew
@@ -15683,6 +15718,47 @@ title: English Speaking
 * tenant
     * a person who rents a room, a building, or land
     * For years, they were tenants on my father's propery
+* suspend
+    * stop
+        * to stop during an activity
+        * A person who is suspended from a job, school, or an activity is not allowed to be involved in it, usually as a punishment
+    * hang
+        * to hang down from sth
+        * the lights were suspended rom long chords
+    * I'm suspending judgement on the book I'm reading until I've finished it
+* intermediary
+    * sb who acts to arrange an agreement between people who are unwilling or unable to communicate directly
+    * act/serve as an intermediary between sb/sth and sb/sth
+    * an insurance/market/mortgage intermediary
+* pecuniary
+    * relating to money
+    * pecuniary interest/loss/benefit
+    * a pecuniary matter
+* consultation
+    * the act of exchanging information and opinions about sth in order to reach a better understanding of it or to make a cecision, or a meeting for this purpose
+        * We hope to work in cosultation with Congress on how the law should be interpreted
+    * A consultation is also a meeting with a doctor who is specially trained to give advice to you or other doctors about an illness or its treatment
+        * the consultation with the pathologist convinced me to have surgery right away
+    * a discussion with sb about sth that you are planning, in order to get their opinion or advice
+        * consultation with sb
+        * consultation document/paper
+* waiver
+    * a document that prevents or allows an action that is different from the usual thing
+    * If a sports player is on waivers he is leaving one team and joining another
+    * an agreement that you do not have to pay or obey sth
+        * We had to sign a waiver, giving up any rights to the land in the future.
+* pertain
+    * pertain to sth
+        * to relate to or have a connection with sth
+        * regulations pertaining to high-tech industries
+    * the law do not pertain to the abovementioned further registered professional licenses.
+* mediation
+    * the process by which sb tries to end a disagreement by helping the two sides to talk about and agree on a solution
+    * mediation service/process/talks
+    * mediation efforts/skills
+    * be in/enter mediation
+* arbitraction
+* abovementinoned
 
 
 ## disease/disorder
