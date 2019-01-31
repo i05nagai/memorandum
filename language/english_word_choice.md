@@ -3,6 +3,20 @@ title: English word choice
 ---
 
 ## English word choice
+* solve/resolve
+    * [word choice \- What's the difference between 'resolve' and 'solve'? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14323/whats-the-difference-between-resolve-and-solve)
+    * resolve
+        * When you resolve something (a problem, an issue, a question), you deal with it conclusively. You have finished it, it is done, there is nothing left to concern yourself about
+    * solve
+        * This means that you have dealt with it successfully, finding what was quite possibly the only way (or at most one of a few ways) to succeed.
+* something/anything
+    * [word choice \- "Is there something wrong?" or "Is there anything wrong?" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/49775/is-there-something-wrong-or-is-there-anything-wrong)
+    * something
+        * It is common for something to be used in the affirmative and sometimes when asking a question with the expectation of a positive response
+        * "Would you like something to drink"
+            * expects a positive answer.
+    * anything
+        * It is common for "anything" to be used in the negative or interrogative and more commonly than"something" with questions.
 * have not yet done/have not done ... yet/have yet to
     * [grammaticality \- Is it more correct to say "You have not yet <actioned>" or "You have not <actioned> yet"? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/147431/is-it-more-correct-to-say-you-have-not-yet-actioned-or-you-have-not-action)
     * [What's the difference between " have yet to" and "have not yet to"? \- Learn english \- italki Answers](https://www.italki.com/question/131499)
