@@ -3040,6 +3040,9 @@ title: English Speaking
     * A car pulled up alongside ours
     * The new pill will be used alogside existing medicines
 * safeguard
+    * As you are active in Germany now, there are a lot of German insurance companies available to safeguard you
+    * to protect sb or sth from harm or destruction
+        * Judges have an obligation to safeguard our right to free speech and a free press.
 * timer
     * timer goes off
 * go
@@ -6060,7 +6063,16 @@ title: English Speaking
     * she's very demanding child
     * a demanding job/task
 * jack of all trades
-* household chores
+* household
+    * household chores
+    * a group of people, often a family, who live together
+    * She became part of his household.
+* chore
+    * a job or piece of work that needs to be done regularly
+    * a chore is also sth that is difficult and unpleasant
+* toil
+    * hard and tiring work
+    * he rested from the backbreaking toil of putting in fences
 * flare
     * flare up
         * if an illness or medical problem suddenly gets worse, we say it flares up
@@ -8756,12 +8768,8 @@ title: English Speaking
         * the children filed out of the bus, one by one
     * one after other
 * gawk
-    * to look at sth or sb in a stupoid or rude way
+    * to look at sth or sb in a stupid or rude way
     * Don't stand there gawking at her, give her a hand
-* appease
-    * (in argument or war) to prevent further disagreement by giving to the other side sth that they have demanded
-    * they questioned whether, in his desire to appease the conversations in his own party, the present was selling out of them
-    * They attempted to appease international opposition by promising to hold talks
 * perk
     * perk up
         * to improve or become more exciting
@@ -12228,7 +12236,6 @@ title: English Speaking
     * notice period
     * During the probationary period, the employment period may be terminated by either party with a notice period of 4 weeks
 * secondee
-* those people who are familiar with your talents and work ethic and are willing to vouch for you
 * attest
     * (of a person) to state with authority that something is true, or (of a situation or event) to show that something is likely to be true
         * As one who worked there for years, I can attest that applications are carefully reviewed.
@@ -12237,6 +12244,7 @@ title: English Speaking
         * The will needs to be attested (= officially marked to show that the signature of the person who made the will is correct) by three witnesses.
     * to sign a document to show that you were present when it was signed by someone else
 * vouch
+    * those people who are familiar with your talents and work ethic and are willing to vouch for you
     * to be able from your knowledge or experience to say that something is true
     * As a medical examiner I can vouch that his death was accidental.
     * vouch for
@@ -13144,6 +13152,16 @@ title: English Speaking
     * A blameless postmortem culture
 * introduce
     * the application developers might introduce changes that cause the system to be more noisy
+* introductory
+    * coming before sth else
+        * introductory remarks
+    * first time
+        * existing, used, or experienced for the first time
+            * an introductory price/offer
+    * beginning
+        * written or said at the beginning
+            * an introductory chapter
+            * I'd like to make some introductory remarks before beginning the lecture
 * exemplify
     * to be a typical example of sth
         * Americal fashion is exemplified by jeans and T-shirt
@@ -14528,16 +14546,13 @@ title: English Speaking
     * to send sth using a courier
         * I'll courier the relevant documents to you this afternoon
         * the replacement part will be couriered to your office within 24 hours
-* assuage
-    * you could assuage your guitl through altruism
-    * to make unpleasant feelings less strong
-        * the governemtn has tried to assuage the pulic's fears
 * altruism
     * nobody belief those people are donating money to the president's party purely out of altruism
     * willingness to do tihngs that bring advantages to others, even if it results in disadvantages for yourself
         * she's not known for her altruism
 * altruistic
 * egoism
+* self-interest
 * laxative
     * a substance that helps a person excrete the contents of the bowels
 * inland
@@ -15759,6 +15774,90 @@ title: English Speaking
     * be in/enter mediation
 * arbitraction
 * abovementinoned
+* snafu
+    * a confused or chaotic state
+    * in utter confusion or chaos
+* mercenary
+    * primarily concerned with making money at the expense of ethics
+    * a professional soldier hired to serve in a foreign army.
+* urbanize
+    * made urban in character
+    * to build on land in the countryside so that the area becomes part of a town or city
+* wick
+    * to absorb liquid from sth and remove it
+        * these special fabrics wick moisture from athelete's skin to keep them comfortable
+    * a piece of string in the centre of a candle, or a similar part of a light, that supplies fuel to a flame
+* agility
+    * the ability to move about quickly and easily
+    * A top-rated football player, he combiens speed and agility
+* knock
+    * know it off
+        * stop doing that
+        * hey, knock it off – I'm tired of hearing you two fight
+        * Oh, knock it off Alex, I'm really not in the mood for your jokes
+* cure
+    * make well
+        * to make sb healthy again, or to cause an illness to go away
+    * preserve
+        * to treat plant or animal products by drying, smoking, salting, etc. to preseve it from decay
+        * Sodium nitrite is used to cure meat.
+    * making well
+* grease
+    * grease monkey
+        * sb whose job is repairing car or aircraft engines
+        * mechanic
+* conciliation
+* conciliate
+    * to end a disagreement or sb's anger by acting in a friendly way or slightly chaning your opinions, or to satisfy sb who disagrees with you by acting in this way
+        * An independent adviser has been brought in to conciliate between the two sides invovled in the conflict
+        * These changes have been made in an attempt to conciliate critics of the plan
+* placate
+    * to stop sb from feeling angry
+        * she's more easily placated than her husband
+* appease
+    * (in argument or war) to prevent further disagreement by giving to the other side sth that they have demanded
+    * they questioned whether, in his desire to appease the conversations in his own party, the present was selling out of them
+    * They attempted to appease international opposition by promising to hold talks
+* assuage
+    * you could assuage your guit through altruism
+    * to make unpleasant feelings less strong
+        * the governemt has tried to assuage the public's fears
+* mollify
+    * to make sb less angury or upset, or to make sb less severe or more gentle
+    * she was not mollified by his apology
+    * I tried to mollify her by giving her flowers
+* pacify
+    * to cause sb who is angry or upset to be calm and satisfied
+        * the governor later apologized, but union members weren't pacified
+        * he pacified his crying child with a bottle
+        * It was difficult for the police to pacify the angry crowd.
+    * To pacify a place is to bring peace there or end a war
+        * The US plans to send troops to pacify the country.
+    * peace
+        * to bring peace to a place or end war in a place, often using military force
+* propitiate
+    * to please and make calm a god or person who is annoyed with you
+    * in those days people might sacrifice a goat or sheep to propitiate an angry god
+    * the radicals in the party were cleary sacked to propitiate the conservative core
+* moral
+    * the moral high gound
+        * I occupy the moral high ground
+        * in ethcal or political parlance, refers to the status of being respected for remaining moral, and adhering and upholding a universally recoginized standard of ustice of goodness
+* adhere
+    * to stick or be attached firmly to a surface
+        * Glue won't adhere to any surface that's wet
+    * to stick firmly
+        * A smooth, dry surface helps the tiles adhere to the wall
+* spectrum
+    * range
+        * a range of objects, ideas, or opinions
+        * there's agreement across political spectrum
+        * A wide spectrum of opinion was represented at the meeting
+        * The MPL fills a useful space in the spectrum of free and open source software licenses
+    * colors
+        * the set of colors into which a beam of light can be separated
+        * Spectrum also means a range of waves such as light waves or radio waves
+
 
 
 ## disease/disorder
