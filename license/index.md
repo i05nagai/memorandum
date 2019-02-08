@@ -18,8 +18,21 @@ Apple
     * [MyHazeRemoval.cikernel](https://opensource.apple.com/source/pyobjc/pyobjc-37/pyobjc/pyobjc-framework-Quartz/Examples/Core%20Image/CIHazeFilterSample/MyHazeRemoval.cikernel.auto.html)
     * [Source Browser](https://opensource.apple.com/source/pyobjc/pyobjc-37/pyobjc/pyobjc-framework-Quartz/Examples/Core%20Image/CIHazeFilterSample/)
     * [LICENSE.txt](https://opensource.apple.com/source/pyobjc/pyobjc-37/pyobjc/pyobjc-framework-Quartz/LICENSE.txt.auto.html)
+        o
 
-# Reference
+## MPL
+Mozilla Pulic License
+
+#### MPL 2.0
+* [MPL 2\.0 FAQ — Mozilla](https://www.mozilla.org/en-US/MPL/2.0/FAQ/)
+    * I want to use software which is available under the MPL. What do I have to do?
+        * The MPL only creates obligations for you if you want to distribute the software outside your organization.
+    * I want to distribute software which is available under the MPL, either changed or unchanged, within my organization. What do I have to do?
+        * Nothing
+    * I want to distribute (outside my organization) complete and unchanged executable programs built from MPL-licensed software by someone other than me. What do I have to do?
+
+
+## Reference
 * [Choose an open source license - Choose a License](http://choosealicense.com/)
     * Githubが出している指針
 * [たくさんあるオープンソースライセンスのそれぞれの特徴のまとめ | コリス](http://coliss.com/articles/build-websites/operation/work/choose-a-license-by-github.html)
