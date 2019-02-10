@@ -7,15 +7,14 @@ title: Conditional Independence
 
 ## Definition
 
-### Symbols
+#### Definition 1 in measure theory
 * $(\Omega, \mathcal{F}, P)$
-    * 確率空間
+    * probability sp.
 * $X, Y, Z$
-    * 確率変数
+    * r.v.
 * $X_{1}, \ldots, X_{N}$
-    * 確率変数
+    * r.v.
 
-### By measure
 $X, Y$が$Z$の下条件付き独立であるとは、
 
 $$
@@ -40,6 +39,9 @@ $$
 $$
 
 を満たすことを言う。
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 たまに、
 
 $$
@@ -52,7 +54,7 @@ $$
 どっちが正しい？
 Bayes推定の議論が成り立つのはどっちだろ？
 
-### By Probability density function
+#### Definition 2 with probability density function
 確率密度関数を使って以下のようにできる。
 
 $X, Y$が$Z$の下条件付き独立であるとは、
@@ -119,6 +121,8 @@ $$
 $$
 
 である。
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Properties
 TBD

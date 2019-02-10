@@ -3,28 +3,36 @@ title: Spinnaker
 ---
 
 ## Spinnaker
-Spinnakerの構成要素
+Components of Spinnaker
 
 * deck
-    * web UI
+    * Spinnaker’s UI.
+    * Consists of a set of static HTML, JavaScript, and CSS files.
+    * Generally served from an Apache server, but there is nothing special about Apache that makes Deck work. Replace with your favorite HTTP(S) server if you’d like.
 * echo
+    * messaging
     * 通知サービスのメッセージングを制御
 * rosco
     * vmのイメージを作成
 * front50
-    * パイプライン、通知およびアプリケーションのデータストア
+    * datastore for pipeline, notification and appliaction
 * clouddriver
     * プラットフォームの統合
     * プラットフォームの認証情報を管理
 * rush
     * 汎用スクリプトエンジン、スクリプトの管理
 * orca
-    * ワークフローのオーケストレーションを提・供
-    * pipelineとtaskの制御                  ・
+    * providing orchestration of workflow
+    * Managing pipelines and tasks
 * gate
-    * 単一のエンドポイントとして異なるサブシステムのゲートウェイサーバとして動作
+    * Spinnaker’s API Gateway.
+    * All traffic (including traffic generated from Deck) flows through Gate.
+    * It is the point at which authentication is confirmed and one point (of several) where authorization is enforced.
 * igor
     * jenkins、stash、およびGitHubへのインタフェース(ci連携)
+* IdentityProvider
+    * This is your organization’s OAuth 2.0, SAML 2.0, or LDAP service. X.509 client certificates can be used in addition to any of these services, or used standalone.
+
 
 
 
@@ -39,11 +47,35 @@ Spinnakerの構成要素
     * GitHUb
     * HTTP
 
+## Install
+
+Install on Kubernetest cluster with Helm chart
+
+* [charts/stable/spinnaker at master · helm/charts](https://github.com/helm/charts/tree/master/stable/spinnaker)
+
+```
+heml install --name <release-name> stable/spinnaker
+```
+
 ## Pipeline
 
 Pipeline expression
 
 * [Pipeline Expressions Guide - Spinnaker](https://www.spinnaker.io/guides/user/pipeline-expressions/)
+
+### Triggering Pipelines
+
+#### From GCS
+* [Receiving artifacts from GCS \- Spinnaker](https://www.spinnaker.io/guides/user/pipeline/triggers/gcs/)
+
+
+#### From github
+* https://www.spinnaker.io/setup/triggers/github/
+
+* Under your GitHub repository, navigate to Settings > Webhooks > Add Webhook
+
+
+#### Managing Pipelines
 
 
 ## Stage
@@ -114,6 +146,16 @@ metadata:
   namespace: '${ parameters.namespace }'
 ```
 
+https://www.spinnaker.io/setup/install/providers/kubernetes-v2/#adding-an-account
+
+Spinnaker Kubernetes Providers installes the two components along with spinnaker.
+
+* `kubeconfig`
+    * The kubeconfig allows Spinnaker to authenticate against your cluster and to have read/write access to any resources you expect it to manage.
+    * `kubectl config`
+* `kubectl`
+    * Spinnaker relies on kubectl to manage all API access
+
 ## Best practices
 * [Best Practices for the Kubernetes Provider V2 - Spinnaker](https://www.spinnaker.io/guides/user/kubernetes-v2/best-practices/)
 
@@ -127,12 +169,12 @@ For Kubernetes
         * configmapが更新されるとconfig mapを参照している全てのpodsが更新される
         * 更新はdeploymentのrolling updateを設定していても全てのpodsが対象となる
         * configmapをversioningしていれば、新しくdeploymentするものについてはconfigmapのversionを変更したものをdeployするようにすれば良い
-    * You need to roll back a broken configuration change
+    * You need to roll back a broken configuration changT
         * configmapをversioningしていない場合は、deplooymentやstatefulsetsなどにconfigmapの変更は表示されない
         * configmapをrollbackkする場合は、古い設定のconfigmapの値に roll forwardする必要がある
             * configmapを参照している全てのpodsが、必要なくともroll forwardされる
-            * 
 * Ad-hoc edit featureは極力使わない
+
 
 ## Reference
 * [spinnaker/spinnaker: Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence.](https://github.com/spinnaker/spinnaker)

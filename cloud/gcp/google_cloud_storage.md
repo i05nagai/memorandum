@@ -3,10 +3,12 @@ title: Google Cloud Storage
 ---
 
 ## Google Cloud Storage
-google-cloud-sdkをインストールするとインストールされる`gsutil`を使う。
+Use `gsutil` which is installed with `google-cloud-sdk` for CLI.
 
-* Bucket名はGCS全体でunique
-* Bucket名は、小文字、hyphen, underscore, 3-63文字、という制限がある
+Restrictions
+
+* Bucket name must be unique over GCS
+* Bucket name can contain lower case alphabets, hyphen, underscore and within 3-63 chars.
 * google-cloud-sdkのgsutilがstorage用のCUI
 
 * storage class
@@ -21,6 +23,27 @@ google-cloud-sdkをインストールするとインストールされる`gsutil
     * Coldline
         * accessが殆どないもの
         * 年に1回くらい
+
+
+## Versioning
+
+## Lifecycle
+* [Object Lifecycle Management  \|  Cloud Storage  \|  Google Cloud](https://cloud.google.com/storage/docs/lifecycle)
+    * [Buckets  \|  Cloud Storage  \|  Google Cloud](https://cloud.google.com/storage/docs/json_api/v1/buckets#resource-representations)
+    * action
+        * `Delete`
+        * `SetStorageClass`
+    * condition
+        * if you specify multiple rules that contains the same action, the action is taken when an object matches the condition in any of the rules
+        * `Age`
+            * integer
+            * the number of days
+        * `CreatedBefore`
+        * `IsLive`
+        * `MatchesStorageClass`
+        * `NumberOfNewerVersions`
+            * the number of newer versions is `1`
+
 
 ## Log
 * [Access Logs & Storage Logs  |  Cloud Storage Documentation  |  Google Cloud Platform](https://cloud.google.com/storage/docs/access-logs)
@@ -40,7 +63,7 @@ Audito logと`access & storage log`の使い分け
     * You want to track the amount of data stored in your buckets.
 
 
-### Audit logs
+#### Audit logs
 * Admin activity logs
     * admin activity logs are recorded by default
     * free
@@ -84,7 +107,7 @@ version: 1
 $ gcloud projects set-iam-policy [PROJECT_ID] /tmp/policy.yaml
 ```
 
-### usage & storage logs
+#### usage & storage logs
 
 * usage log
     * 1時間ごとに生成される

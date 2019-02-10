@@ -20,19 +20,19 @@ kubectl run image
 
 ## config
 
-設定の一覧を見る
+Show current configuration
 
 ```
 kubectl config view
 ```
 
-defaultのnamespaceを設定する。
+Specify default namespace
 
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=<insert-namespace-name-here>
 ```
 
-Show cluster which you are managin
+Show cluster which you are managing
 
 ```
 $ kubectl config current-context

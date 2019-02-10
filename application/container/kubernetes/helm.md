@@ -8,8 +8,7 @@ The Kubernetes Package Manager.
 * helm
     * client
 * tiller
-    * server
-    * kubernetes clusterの中で動く
+    * Helm server-side components
 * Chart
     * Helm package
 * Repository
@@ -32,6 +31,14 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
+
+## Helm
+o
+
+## Error
+
+#### User "system:serviceaccount:kube\-system:default" cannot get namespaces in the namespace "default"
+* [User "system:serviceaccount:kube\-system:default" cannot get namespaces in the namespace "default" · Issue \#3130 · helm/helm](https://github.com/helm/helm/issues/3130)
 
 ## Reference
 * [kubernetes/helm: The Kubernetes Package Manager](https://github.com/kubernetes/helm)
