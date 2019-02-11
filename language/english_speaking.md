@@ -2589,12 +2589,18 @@ title: English Speaking
     * tick-all-the-boxes
         * The new album shoud tick all the right boxes for their many fans
     * make sound
+        * to make a quiet, short, regularly repeated sound like that made by clock
     * animal
-    * sounk
+    * sound
     * mark
+        * check a mark that shows that sth is correct or has been done
+        * Put a tick by/against the names of the people who have accepted the invitation
     * short time
+        * a very short time
     * sound
     * paying later
+        * on tick
+            * if you buy sth on tick, you pay for it later
     * mark
         * to mark sth with a tick
         * check mark
@@ -2850,6 +2856,11 @@ title: English Speaking
     * on dubious charge
 * miss
     * you miss the button
+    * not hit
+    * not do
+    * not find
+    * feel sad
+        * to feel sad that a person or thing is not present
 * into
     * I'm into SM
 * thirsty
@@ -4782,6 +4793,7 @@ title: English Speaking
     * what level of service will the users expect?
 * aim
     * TinderU App aims to help college students
+    * aimed at full metanl and physical recovery accoreding to all medical means and methods of medical healing – using state of the art techniques, treatments
 * proceed
 * self-service
     * used to describe a store, restaurant, etc. where you are not served by an employee, but collect goods or food yourself
@@ -10749,8 +10761,6 @@ title: English Speaking
     * We barely have enough money to make ends meet as it is.
 * braille
     * Her latest novel is also available in braille.
-* subsidy
-    * Many farmers rely on government subsidies
 * hike
     * Petrol prices were hiked in September.
 * veto
@@ -11978,6 +11988,14 @@ title: English Speaking
     * home of record is the place from which they entered the military
 * domicile
     * legal domicile
+    * the place where a person lives
+    * move/change/switch (sb's/sth's) domicile
+        * Companies may choose to move their domicile to tax havens such as Bermuda.
+* dwelling
+    * a place where people live
+    * a house or place to live in
+* abode
+* habitation
 * layover
     * a short stay at a place in the middle of a trip
     * We had a three-hour layover in San Francisco and had to change planes on the way to Hawaii.
@@ -14441,6 +14459,12 @@ title: English Speaking
         * he outlived all of his brothers
 * merit
     * encourage your peers by recongnizing that negative results are part of thoughtful risk taking and that every well-designed experiment has merit
+* filing
+    * the activity of putting papers, letters, or other documents into files
+    * record
+        * the act of officially recording something, for example, your accounts
+    * filing obligation
+    * metal pieces
 * file
     * One of our internal customers filed a pronlem report indicating that they'd recently sen a dramatic increase in latency, CPU usage, and number of running processes needed to serve traffic for their app
 * quadrapled
@@ -15857,7 +15881,75 @@ title: English Speaking
     * colors
         * the set of colors into which a beam of light can be separated
         * Spectrum also means a range of waves such as light waves or radio waves
-
+* impede
+    * to slow sth down or prevent an activity from making progress at its previous rate
+* subvention
+    * an amount of money given as support by an organization or government for a particular purpose
+        * a system of subventions became necessary to safegurad a minimal standard of living
+    * Up to a certain threshold, your employers pays you a subvention of circa half of the cintribution
+* subsidy
+    * Many farmers rely on government subsidies
+* legislature
+    * the group of the people in a country or part of a country who have the power to make and change the laws
+    * the legislature approves/enacts/ passes sth
+* exemplary
+    * extremely good of its type, so that it might serve as a model for others
+        * His tact was exemplary, especially considering the circumstances
+* tobacco
+* cigarettes
+* cigars
+* ongoing
+    * continuing to exist, happen, or develop
+        * the investigation is ongoing
+* attention
+    * notice
+    * care
+        * special care or treatment
+    * way of standing
+* demurrage
+    * money that must be paid when a chatered ship is used for longher than agreed, or when goods are collected later than the agreed time after taken off a chartered ship
+* casual
+    * not serious
+        * not serious or careful in attitude; only partly interested
+        * a casual glance at a magazine
+    * informal
+        * not formal; relaxed in style or manner
+        * We have a small office and I am very casual and wear slacks and sports sports shirt and thigs like that
+    * temporary
+        * not regular or frequent; temporary or done sometimes
+            * casual laborers
+            * casual workers
+            * casual sex
+        * casual also means slight
+            * he was only a casual acquaintance – i didn't know him well
+    * a worker who is not employed permanently but only when a company needs them
+        * On the whole, semi-skilled and unskilled positions are filled by casuals.
+    * not planned
+    * casual clothes/dress/attire
+* FROR
+    * Financial Reporting Oversight Role
+    * FROR includes any person in a position to, or who does, exercise influence over the contents of the financial statements or anyone who prepares them. For example, the Chief Executive Officer, President, Chief Financial Officer, Chief Operating Officer, General Counsel, Chief Accounting Officer, Controller, Director of Internal Audit, Director of Financial Reporting, Treasurer, and Director of Internal Controls Compliance
+* oversight
+    * mistake
+        * a mistake caused by a failure to notice or do sth
+        * because of a bank oversight, the money had not been credited to my account
+    * management
+        * management of an operation or process
+    * mistake
+        * a mistake made because of a failure to notice something
+    * responsibility
+        * responsibility for a job or activity and for making sure it is done correctly
+        * who has oversight of genetic test?
+* remittance
+    * an amount of money that you send to sb
+        * she sent small remittance home to her parents each month
+    * the act of sending payment to sb
+        * remittance advice/information
+    * remitances
+        * money that is sent by a foreign worker back to their own country:
+    * Remittances of income
+* claimable
+    * All relevant deductions claimable on return discussed 
 
 
 ## disease/disorder
@@ -15878,6 +15970,140 @@ title: English Speaking
     * a medical practitioner qualified to practice surgery.
 * pediatrician
 * pediatric
+* varicose veins
+* aneurysms
+* heart insufficiency
+* high blood pressure
+* chest pain
+* circulatory disorder
+* Respiratory disorder
+    * breathing problem
+    * asthma
+    * COPD
+    * pneuonia
+    * bronchitis
+    * tuberculosis
+    * allegies
+    * septum eviation
+* Endocrine disorder
+    * glandular diorder
+    * diabetes type 1 or type 2
+    * thyroid problems
+    * Cushing's syndrome
+    * Addison's disease
+    * graves diesaese
+* gastrointestinal disorder
+    * stomach
+    * intensities
+    * iver or gall bladder problem
+    * stomach inflammation
+    * ulcers
+    * irrtable bowel syndrome
+    * Crohn's disease
+    * colitis
+    * change in bowel habits
+    * hemorrhoids/piles
+    * pancreatitis
+    * liver inflammation
+    * cirrhosis
+    * gall stones
+    * hernias
+* cancer, tumours or growth
+    * polyps
+    * benign growths
+    * cysts
+    * any cancers
+    * precancerous condition
+* brain & nervous system disorder
+    * stroke
+    * dementia
+    * migraine
+    * chronic headachs
+    * multiple sclerosis
+    * epilepsy
+    * fits
+    * sciatica
+    * low muscle tone
+    * Parkinson's disease
+* Skin, hair, nail problem
+    * eczema
+    * dermatitis
+    * rashes
+    * alopecia areata psoriasis
+    * acne
+    * cysts
+    * moles that itch or bleed
+* ear disorder
+    * tinnitus
+    * vertigo
+    * hearing disorder
+    * deafness
+* problem with eyes
+    * glaucoma
+    * Cataracts
+    * corneal problem
+    * retinal detachment
+* urinary & reproductive disorder
+    * kidney failure
+    * urinary infections
+    * incontinence
+    * testicular
+    * prostate disorder
+    * infertility problem
+    * pregnancy problem
+    * childbirth problem
+    * heavy or irregular periods
+    * fibroids
+    * endomeetrosis
+    * abnormal smears
+    * polycystic ovaries
+* blood/infective/immune disorder
+    * abnormal blood tests
+    * coagulation problem
+    * high cholesterol
+    * anemia
+    * malaria
+    * autoimmune disorder
+* Psychiatric/Psychological disrder
+    * depression
+    * medically treated stress
+    * anxiety
+    * mental illness
+    * schizophrenia
+    * compulsive or eating disorder
+    * drug/alcohol dependency
+* muscle or skeletal probelm
+    * rheumatism
+    * gout
+    * arthritis back problem
+    * nech/shoulder problems
+    * cartilage and ligament problems
+    * joint replacements
+    * fractures
+    * osteroporosis
+    * inflammatory conditions
+* physical or organic defect
+    * a chronic illness
+    * congenital condition
+    * an illness or injury due to military service
+    * any reduction in your ability to work
+    * degree of disability that leads to permanent disability
+* Hepatitis B or C
+* HIV
+* inpatient or outpatient surgery
+* tablets
+* ointments
+* capsules
+* syrups
+* injections
+* creams
+* suppositories
+* inhalers
+* OT C
+* wisdom teeth
+* milk teeth
+* denture
+* postpartum
 
 
 ## Study
