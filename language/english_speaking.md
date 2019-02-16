@@ -881,6 +881,13 @@ title: English Speaking
     * break out
         * if you suddenly get spots or rash on your skin, you break out in it
 * crash/drive/bump/run
+    * bump
+        * bump off sb
+            * to kill a person
+            * They think someone bumped him off.
+        * bump into sb
+            * to meet sb unexpectedly
+                * we bumped into her in a shop
     * He lost control of the car and crashed into a wall
     * drive
         * We’re interested in how your individual strengths combine with your experience to drive impac
@@ -7281,6 +7288,7 @@ title: English Speaking
 * around
     * around the globe
 * payslip
+    * a piece of paper given to someone who is employed to show how much money they have earned and how much tax has been taken off
 * duper
 * extraterrestrial
 * backdrop
@@ -9716,7 +9724,6 @@ title: English Speaking
     * a kind of food
 * intesified
     * intesify
-* vomit
 * coitus
     * the sexual act in which a man puts his penis into a woman's vagina
 * contraindicated
@@ -15950,6 +15957,26 @@ title: English Speaking
     * Remittances of income
 * claimable
     * All relevant deductions claimable on return discussed 
+* finalize
+    * We really need to finalise the contract details, what is your availability for a buiness meeting?
+* Would you possibly be able to tell me a convenient time for us to meet? 
+* feight
+    * goods that are transported from one place to another by ship, aircraft, train, or truck
+    * A freight train is a train that carries only goods.
+* retch
+    * to make the sound and action of vomitting, esp. when nothing is actually vomitted
+    * to react in a way as if you are vomitting
+    * The sight of blood makes him retch.
+* vomit
+* barf
+    * to vomit
+* ballot
+    * a piece of paper on which you write a secret vote
+    * The ballot is also a system or occasion of secret voting
+        * Issues need to be considered in open debate or put on the ballot.
+    * put sth to the ballot
+    * to organize a secret vote by a group of people in order to find out their views
+
 
 
 ## disease/disorder
@@ -16280,6 +16307,34 @@ title: English Speaking
 * surf and turf
     * Surf and turf or surf 'n' turf is a main course which combines seafood and red meat
 * snickerdoodle
+
+## body
+* jugular
+    * of the neck or throat.
+    * jugular vein
+
+## Home appliances
+* refrigerator
+    * fridge
+* freezer
+* laundry machine
+    * waching machine
+* air conditioner
+    * heater
+* microwave
+    * microwave oven
+* vacuum
+    * vacuum clear
+* kitchen applicances
+* major appliances
+* small applicances
+* electronics
+* consumer electronics
+
+## car
+* bonnet
+    * Do you have any bonnets for 12.5 to 13 inch sized heads?
+
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
