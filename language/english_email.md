@@ -59,6 +59,8 @@ title: English Email
 
 ## Asking
 * [What are some other ways of saying 'it would be greatly appreciated'? \- Quora](https://www.quora.com/What-are-some-other-ways-of-saying-it-would-be-greatly-appreciated)
+* [Asking for a Favor in English: Lesson and Quiz](https://www.thoughtco.com/asking-a-favor-in-english-4164581)
+* [BBC World Service \| Learning English \| How To](http://www.bbc.co.uk/worldservice/learningenglish/radio/specials/142_requests_offers/page9.shtml)
 
 ## Happy New Year
 * [Business Writing: New Year's Wishes for 2012](https://www.businesswritingblog.com/business_writing/2011/12/new-years-wishes-for-2012-.html)
