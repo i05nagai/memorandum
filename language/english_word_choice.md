@@ -3,6 +3,8 @@ title: English word choice
 ---
 
 ## English word choice
+* ask you a favor/ask you for a favor
+    * [word choice \- "I would like to ask you a favour" vs\. "I would like to ask you for a favour" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/39971/i-would-like-to-ask-you-a-favour-vs-i-would-like-to-ask-you-for-a-favour)
 * solve/resolve
     * [word choice \- What's the difference between 'resolve' and 'solve'? \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/14323/whats-the-difference-between-resolve-and-solve)
     * resolve
