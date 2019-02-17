@@ -1397,6 +1397,13 @@ title: English Speaking
     * apply yourself
         * If you apply yourself to something, you work hard at it, directing your abilities and efforts in a determined way so that you succeed
         * You can solve any problem if you apply yourself.
+    * apply for
+        * she applied for a job with the local newspaper
+    * apply to
+        * I applied to four universities and was accepted by all of them
+    * apply make-up/lipstick
+        * to put or spread something such as paint, liquid, or medicine onto a surface
+        * Apply the cream evenly over the skin.
 * medium
     * medium of exchange
 * drive
@@ -8915,6 +8922,37 @@ title: English Speaking
     * euphemistic words for dead
 * guinea pig
     * a small, furry animal with rounded ears, short legs, and no tail, often kept as a pet and for use in scientific experiments
+* contract
+    * agreement
+        * a legal document that states and explains a formal agreement between two different people or groups, or the agreement itself
+        * she already has a contract for her next book with a publisher
+    * shorten
+        * to make or become shorter or narrower, or smaller
+    * become ill
+        * to catch or become ill with a disease
+        * She contracted pneumonia and was hospitalized.
+    * agree
+        * the company had been contracted to build shelters for the homeless
+        * To contract out a job is to formally arrange for other people to do it
+            * the university contracts out the cleaning to a private company
+        * put sth out to contract
+            *  if an organization, government, etc. puts something out to contract, they allow different companies to compete to provide a service or do a job for them
+    * contract for sth
+    * contract to do sth
+    * draw up a contract
+    * write up a contract
+    * enter into a contract
+    * sign a contract
+    * be awarted a contract
+    * land a contract
+    * win a contract
+    * a long-term contract
+    * a short-term contract
+    * make a contract
+        * Did he know this when he made the contract?
+    * have a contract
+    * agree to a contract
+    * negotiate a contract
 * contract manufacturing company
     * contract manufacturer
     * Original equipment manufacturer
@@ -12511,6 +12549,8 @@ title: English Speaking
     * make known
     * pay
     * letters
+        * mail letters, etc. that are delivered to homes or places of work
+        * Has the post come/arrived yet?
     * job
     * place
     * message
@@ -14497,6 +14537,7 @@ title: English Speaking
 * embedded
     * existing or firmly attached within something or under a surface
 * speed
+    * I will speed up your process to get the confimation fast
     * to move, go or happen fast, or to cause sth to happen fast
         * the train sped along at over 120 miles per hour
 * leisure
@@ -15976,10 +16017,36 @@ title: English Speaking
         * Issues need to be considered in open debate or put on the ballot.
     * put sth to the ballot
     * to organize a secret vote by a group of people in order to find out their views
-
+* imponder
+* imponderbility
+* imponderable
+    * sth that cannot be guessed or calculated because it is completely unknown
+    * There are too many imponderables to make an accurate forecast.
+* brochure
+    * In this brochure you’ll find out how this system works and what benefits it provides for you personally,
+* pillar
+    * Social insurance is based on five pillars
+* pupil
+    * student
+        * a person who is being taught, esp. a child at school
+    * eye part
+        * the circular, black area in the center of the eye that gets larger and smalelr and lets in light
+        * Pupils contract in bright light, and dilate in darkness.
+* overleaf
+    * on the other side of the page
+    * see overleafe for a list of abbreviations
+* cream
+    * having a yellowish-white color
+    * to make food into a smooth, thick liquid
+        * Cream the butter and sugar together.
 
 
 ## disease/disorder
+* bacterium
+    * bacteria
+        * plural
+* pneumonia
+    * lung inflammation caused by bacterial or viral infection
 * Obsessive-Compusive Personality disorder
 * seizure
     * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
