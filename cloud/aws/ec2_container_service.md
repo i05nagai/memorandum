@@ -15,12 +15,31 @@ ECSの利用料金はかからない。
     * GUIかjson fileで指定
     * taskをrunするときは、いずれかのclusterに属す必要がある
 * service
-    * serviceも必ずclusterに属す必要がある
+    * service must be incldued by cluster
 * task
 * logConfiguration
 
+
+## Placement strategy
+https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html
+
+* `field`
+    * `spread`
+        * `instanceId`
+        * `attribute:ecs.availability-zone`
+    * `type=binpack`
+        * `cpu`, `memory`
+    * `random`
+        * not used
+* `type`
+    * `random`, `spread`, `binpack`
+
+## Container definition
+https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html
+
 ## Task definition
 * [タスク定義パラメーター - Amazon Elastic Container Service](http://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/task_definition_parameters.html)
+* https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskDefinition.html
 
 
 awslogs log driver
@@ -49,6 +68,12 @@ hostにした場合にnetworkのperformanceは最大限になる。
 * [サービス - Amazon Elastic Container Service](http://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/ecs_services.html)
 
 
+## Networking
+* https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html
+
+awsvpc
+
+* containers that belong to the same task can communicate over the localhost interface
 
 
 ## Cluster
