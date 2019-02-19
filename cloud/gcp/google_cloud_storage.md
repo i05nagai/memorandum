@@ -312,6 +312,28 @@ a minimum storage.
         * minimum storage duration
             * 90 days
 
+## Versioning
+https://cloud.google.com/storage/docs/object-versioning
+
+
+## Lifecycle
+https://cloud.google.com/storage/docs/lifecycle
+
+* use cases1
+    * Downgrade the storage class of objects older than 365 days to Coldline Storage.
+    * Delete objects created before January 1, 2013.
+    * Keep only the 3 most recent versions of each object in a bucket with versioning enabled.
+
+* lifecycle actions
+    * Delete
+    * SetStorageClass
+* conditions
+    * Age
+    * CreateBefore
+    * IsLive
+    * MatchesStorageClass
+    * NumberOfNewerVersions
+            
 
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
