@@ -240,6 +240,26 @@ put-integration-response
 * [Deploying a REST API in Amazon API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html)
 
 
+## Monitoring
+* https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html
+
+Amazon API Gateway sends metric datat to Cloudwatch every minute
+Metrics
+
+* 4xx Error
+* 5xx Error
+* CacheHitCount
+* CacheMissCount
+* Count
+* IntegratinoLatency
+* Latency
+
+Filtering dimensions
+
+
+* ApiName
+* ApiName, Method, Resource, Stage
+* ApiName, Stage
 
 
 ## Pricing
