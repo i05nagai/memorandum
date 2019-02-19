@@ -21,7 +21,8 @@ hostsのdockerの`/var/log/containers/`のcontianerのlogへのsymbolic link
 
 Cluster level logging
 
-* kubernetesはcluster level logging の機能は提供してないが以下の方法がある
+kubernetesはcluster level logging の機能は提供してないが以下の方法がある
+
 * (1) Use a node-level logging agent that runs on every node.
     * daemonsetでnodeにlogging agentをおく
         * podsをおく、nodeのnative processを使う方法もあるが、非推奨
