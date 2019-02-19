@@ -8,18 +8,29 @@ title: Kubernetes
     <img src="http://30ux233xk6rt3h0hse1xnq9f-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/harry-image.jpg">
 </div>
 
-* kube-apiserver
+* `kube-apiserver`
     * Kubernete's REST API entry point that processes operations on Kubernetes objects, i.e. Pods, Deployments, Stateful Sets, Persistent Volume Claims, Secrets, etc. An operation mutates (create / update / delete) or reads a spec describing the REST API object(s)
-* Etcd
+* `Etcd`
     * A highly available key-value store for kube-apiserver
-* kube-controller-manager
+* `kube-controller-manager`
     * Runs control loops that manage objects from kube-apiserver and perform actions to make sure these objects maintain the states described by their specs
-* kube-scheduler
+* `kube-scheduler`
     * Gets pending Pods from kube-apiserver, assigns a minion to the Pod on which it should run, and writes the assignments back to API server. kube-scheduler assigns minions based on available resources, QoS, data locality and other policies described in its driving algorithm
-* kubelet
+* `kubelet`
     * A Kubernetes worker that runs on each minion. It watches Pods via kube-apiserver and looks for Pods that are assigned to itself. It then syncs these Pods if possible. The procedure of Syncing Pods requires resource provisioning (i.e. mount volume), talking with container runtime to manage Pod life cycle (i.e. pull images, run containers, check container health, delete containers and garbage collect containers)
-* kube-proxy
+* `kube-proxy`
     * A network proxy that reflects Service (defined in Kubernetes REST API) that runs on each node. Watches Service and Endpoint objects from kube-apiserver and modifies the underlying kernel iptable for routing and redirection.
+* `user`
+    * All kubernetes clusters have two type of users: `service account` maanged by Kubernetes and normal `user`
+    * API requests are tied to either a normal user or a service account, or are treated as anonymous requests
+    * `service account`
+        * an account that Pod uses and is assigned to a Pod when the Pod is created
+    * `user`
+        * normal users are assumed to be managed by an outside of Kubernetes
+        * Kubernetes does not have objects which represent normal user accounts.
+* `Endpoint`
+    * https://www.quora.com/What-is-an-endpoint-object-in-terms-of-Kubernetes
+    * https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#endpoints-v1-core
 
 ## Concepts
 
@@ -51,7 +62,7 @@ title: Kubernetes
         * most common
     * Pods that run multiple containers that need to work together
         * resourceを共有する必要があるような場合
-    * [Kubernetes: The Distributed System ToolKit: Patterns for Composite Containers](http://blog.kubernetes.io/2015/06/the-distributed-system-toolkit-patterns.html)
+    * [Kubernetes: The Distributed System ToolKit: Patterns for Composite Containers](http://blog.khttps://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#endpoints-v1-coreubernetes.io/2015/06/the-distributed-system-toolkit-patterns.html)
         * Sidecar containers
             * Main: Node.js
             * Sidecar: git synchronizerでfilesystemをgit repositoryに動機
@@ -201,175 +212,6 @@ ReplicaSetを直接使う場合は殆どない。Deploymentを使う。
 ### Encrypt secret data
 
 
-### Volumes
-* [Volumes | Kubernetes](https://kubernetes.io/docs/concepts/storage/volumes/)
-
-Dockerのvolumeと違い、透過的に色々なdeviceをvolumeとして扱える。
-
-* awsElasticBlockStore
-* azureDisk
-* azureFile
-* cephfs
-* csi
-* downwardAPI
-    * pods/containerのlabelなどの情報をvolumeとしてmountできる
-* emptyDir
-    * NodeにPodが作られたとき作られる
-    * PodがNodeから削除されると消える
-    * containerがcrashしても消えない
-    * defaultでnodeのvolumeに記録されている
-        * `emptyDir.medium: memory` でnodeのtmpfsにもできるが、nodeのrebootとmemory limitによる制約をうける
-    * Use case
-        * disk based merge sort
-        * checkpoint
-        * podのcontainer間での読み書き可能なshared volume
-            * git-sync sidecar
-* fc (fibre channel)
-* nfs
-    * Podがremoteされても、unmountされるだけで中身は消えない
-    * 複数のPodにmountして使うことができる
-    * Mount前にdataが保持できる
-    * NFS serverが必要
-* persistentVolumeClaim
-    * PersistentVolumeをmountするのに必要
-* flocker
-* gcePersistentDisk
-    * GCEのpersistent disk
-    * 事前にgcloudでPersistent Diskを作っておく必要がある
-    * `gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk`
-* gitRepo
-    * credeintialsがいる場合はgit-syncを検討する
-        * [kubernetes/git-sync: A sidecar app which clones a git repo and keeps it in sync with the upstream.](https://github.com/kubernetes/git-sync)
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: server
-spec:
-  containers:
-  - image: nginx
-    name: nginx
-    volumeMounts:
-    - mountPath: /mypath
-      name: git-volume
-  volumes:
-  - name: git-volume
-    gitRepo:
-      repository: "git@somewhere:me/my-git-repository.git"
-      revision: "22f1d8406d464b0c0874075539c1f2e96c253775"
-```
-
-git-syncを使う。
-
-```yaml
-    spec:
-      restartPolicy: Always
-      containers:
-      - name: git-sync
-        image: k8s.gcr.io/git-sync:v2.0.4
-        imagePullPolicy: Always
-        volumeMounts:
-        - name: git-secret
-          mountPath: /etc/git-secret
-        env:
-        - name: GIT_SYNC_REPO
-          value: "git@github.com:kubernetes/kubernetes.git"
-        - name: GIT_SYNC_DEST
-          value: "git"
-        - name: GIT_SYNC_SSH
-          value: "true"
-      - name: redis
-        image: redis
-        ports:
-        - name: management
-          containerPort: 16379
-        - name: node
-          containerPort: 6379
-        env:
-        - name: REDIS_PASSWORD
-          value: "airflow"
-```
-
-* glusterfs
-* hostPath
-    * NodeのPathをmountする
-    * containerがdokcerを使う必要があるとき、`/var/lib/docker`を使う
-* iscsi
-* local
-* nfs
-    * [examples/staging/volumes/nfs at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/staging/volumes/nfs)
-    * [external-storage/nfs at master · kubernetes-incubator/external-storage](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs)
-* persistentVolumeClaim
-* projected
-* portworxVolume
-* quobyte
-* rbd
-* scaleIO
-* secret
-* storageos
-* vsphereVolume
-
-
-### PersistentVolume
-* [Persistent Volumes | Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity)
-
-DBなどのStatufulなapplicationを使う場合に利用する。
-`PersistenVolume`で利用するvolumeを確保して、`PersistentVolumeClaim`で利用する分を確保する。
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv0003
-spec:
-  capacity:
-    storage: 5Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
-  storageClassName: slow
-  mountOptions:
-    - hard
-    - nfsvers=4.1
-  nfs:
-    path: /tmp
-    server: 172.17.0.2
-```
-
-```yaml
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: myclaim
-spec:
-  accessModes:
-    - ReadWriteOnce
-  volumeMode: Filesystem
-  resources:
-    requests:
-      storage: 8Gi
-  storageClassName: slow
-  selector:
-    matchLabels:
-      release: "stable"
-    matchExpressions:
-      - {key: environment, operator: In, values: [dev]}
-```
-
-* Acccess mode
-    * ReadWriteOnce
-        * single nodeでR/W
-    * ReadOnlyMany
-        * multi nodeでR
-    * ReadWriteMany
-        * multi nodeでR/W
-
-
-```
-gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk
-```
 
 
 ### CondigMap
@@ -584,9 +426,6 @@ namespaceをまたいで、accessすることも可能。
 [Customizing DNS Service | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#inheriting-dns-from-the-node)
 
 
-## Tips
-* [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
-
 ## Examples
 * [examples/guestbook at master · kubernetes/examples](https://github.com/kubernetes/examples/tree/master/guestbook)
 
@@ -601,15 +440,18 @@ namespaceをまたいで、accessすることも可能。
 * [GKE/Kubernetes でなぜ Pod と通信できるのか - Qiita](https://qiita.com/apstndb/items/9d13230c666db80e74d0)
 * [The Ins and Outs of Networking in Google Container Engine // Speaker Deck](https://speakerdeck.com/thockin/the-ins-and-outs-of-networking-in-google-container-engine)
 
+## Tips
+* [10 Most Common Reasons Kubernetes Deployments Fail (Part 1)](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
 
-## Evicted pods
+
+#### Evicted pods
 * [Configure Out Of Resource Handling | Kubernetes](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
 
 ```
 The node was low on resource: nodefs.
 ```
 
-### Debugging Tips
+#### Debugging Tips
 * podが落ちていたら取り敢えず `kubectl describe`
 * ちょっと、Kubernetesのpod/networkで何かを実行したい場合
     * 以下のpodをcreate
@@ -636,14 +478,14 @@ spec:
     - "10000"
 ```
 
-### Shared volumes in a Kubernetes Pod
+#### Shared volumes in a Kubernetes Pod
 * `emptyDir`を使えば同じpodの中でvolumeをshareできる
 
-### Pause container
+#### Pause container
 * [The Almighty Pause Container - Ian Lewis](https://www.ianlewis.org/en/almighty-pause-container)
 * [What is the role of 'pause' container? - Google Groups](https://groups.google.com/forum/#!topic/kubernetes-users/jVjv0QK4b_o)
 
-### Naming convention
+#### Naming convention
 * `<prefix>`
 * namespace
     * `<prefix>-<service-name>`
@@ -659,7 +501,7 @@ spec:
     * environment
         * dev/stg/prod
 
-### Adding lables to Pod template spec
+#### Adding lables to Pod template spec
 ```
 The Deployment "name of deployment" is invalid: spec.template.metadata.labels: Invalid value: map[string]string{"tier":"service-tier", "app":"deployment-name", "service":"service-name", "environment":"dev"}: `selector` does not match template `labels`
 ```
