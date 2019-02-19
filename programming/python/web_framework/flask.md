@@ -73,5 +73,20 @@ attrs = request.args.getlist('attrs[]')
 #### Flask with React
 * [realpython/ultimate\-flask\-front\-end: blog post](https://github.com/realpython/ultimate-flask-front-end)
 
+#### Production server
+* http://flask.pocoo.org/docs/1.0/tutorial/deploy/
+    * https://docs.pylonsproject.org/projects/waitress/en/stable/
+* http://flask.pocoo.org/docs/1.0/deploying/wsgi-standalone/
+
+
+```
+gunicorn -w 4 -b 127.0.0.1 5000 <filename>:<flask-app-var-name>
+```
+
+#### Monitoring
+Monitoring with DataDog
+
+https://www.datadoghq.com/blog/monitoring-flask-apps-with-datadog/
+
 ## Reference
 * [Welcome to Flask — Flask Documentation (0.12)](http://flask.pocoo.org/docs/0.12/)
