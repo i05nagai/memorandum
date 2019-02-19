@@ -3,7 +3,16 @@ title: Heapster
 ---
 
 ## Heapster
-[Tools for Monitoring Compute, Storage, and Network Resources | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
+Retired!
+
+* For basic CPU/memory Horizontal Pods Autoscaler
+* For general monitoring
+    * Consider a third-party monitoring pipeline that can gather Prometheus-formatted metrics. 
+* For event transfer
+    * Several third-party tools exist to transfer/archive Kubernetes events, depending on your sink. heptiolabs/eventrouter has been suggested as a general alternative.
+
+
+* [Tools for Monitoring Compute, Storage, and Network Resources | Kubernetes](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
 
 Heapster enables Container Cluster Monitoring and Performance Analysis for Kubernetes (versions v1.0.6 and higher), and platforms which include it.
 
@@ -36,9 +45,6 @@ Heapster enables Container Cluster Monitoring and Performance Analysis for Kuber
 
 Kubelet/cAdvisorからmemory efficientに取得する。
 `kubernetes`を指定した場合と同じmetricsは取得できる。
-
-
-
 
 ## CLI
 
@@ -113,3 +119,4 @@ ey,example.crt" or "*.foo.com,foo.com:foo.key,foo.crt". (default [])
 
 ## Reference
 * [kubernetes/heapster: Compute Resource Usage Analysis and Monitoring of Container Clusters](https://github.com/kubernetes/heapster)
+
