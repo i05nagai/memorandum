@@ -80,6 +80,27 @@ Dashboardの作成は完了。
 BigQueryのExport先は一箇所しか選べないが、tableの転送は難しくないので、あまり気にしなくてよい。
 Billing dataはexportを有効にしないと、出力されないので、projectを作ったらなるべく早めに有効にした方が良い。
 
+## Visualization without 
+* https://cloud.google.com/bigquery/audit-logs
+    * sample SQL
+* https://cloud.google.com/logging/docs/reference/audit/bigquery/rest/Shared.Types/AuditData
+    * schema definitnion
+
+```sql
+#standardSQL
+SELECT
+  TIMESTAMP_TRUNC(protopayload_auditlog.servicedata_v1_bigquery.jobCompletedEvent.job.jobStatistics.endTime, HOUR)
+  AS time_window,
+  FORMAT('%9.2f', 5.0 * (SUM(protopayload_auditlog.servicedata_v1_bigquery.jobCompletedEvent.job.jobStatistics.totalBilledBytes) / POWER(2, 40)))
+  AS Estimated_USD_Cost
+FROM
+  `AuditLogsDataSet.cloudaudit_googleapis_com_data_access_YYYYMMDD`
+WHERE
+  protopayload_auditlog.servicedata_v1_bigquery.jobCompletedEvent.eventName = 'query_job_completed'
+GROUP BY time_window
+ORDER BY time_window DESC
+```
+
 ## Access control
 * [Overview of Billing Access Control  |  Google Cloud Billing API Documentation  |  Google Cloud Platform](https://cloud.google.com/billing/docs/how-to/billing-access)
 
