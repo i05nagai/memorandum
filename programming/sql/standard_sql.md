@@ -7,7 +7,7 @@ title: Standard SQL
 ## Bigquery
 * [Functions & Operators  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators)
 
-### Extract
+#### Extract
 UTC+0からJSTに変更する場合は以下で良い。
 
 ```sql
