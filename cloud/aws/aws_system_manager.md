@@ -11,5 +11,12 @@ title: AWS System Manager
 * [hako で Parameter Store を用いて環境変数を設定する - Qiita](https://qiita.com/moaikids/items/5bbcdd618339e35cb2e1)
 * [EC2 Systems Manager のパラメータストアを利用したアプリケーション環境設定の管理 ｜ Developers.IO](https://dev.classmethod.jp/cloud/aws/parameter-store-application-config/)
 
+
+## CLI
+
+```
+aws ssm get-parameters --name /path/to/parameter
+```
+
 ## Reference
 
