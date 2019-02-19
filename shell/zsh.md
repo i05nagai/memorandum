@@ -107,3 +107,4 @@ print -l ${(ok)functions}
 * [まだ oh-my-zsh で消耗してるの？ - Qiita](http://qiita.com/b4b4r07/items/875235f6122a6d779306)
 * [widgets can only be called when ZLE is active とは何だったのか - Qiita](https://qiita.com/udzura/items/3f120b5e4733fe85078d)
 * [zle:bindkeys [ZshWiki]](http://zshwiki.org/home/zle/bindkeys)
+* http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
