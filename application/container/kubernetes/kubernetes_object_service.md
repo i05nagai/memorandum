@@ -3,9 +3,7 @@ title: Kubernetes Object Service
 ---
 
 ## Kubernetes Object Service
-* [Services | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
-
-Podsは寿命がある。
+Pods are motal.
 `ReplicationControllers`が、Podsを動的に作成し破棄する。
 Serviceは、他のPodsへ継続的に提供され続けるような機能を提供し続ける。
 kubernetesの`service`はmicro serviceのようなもの。
@@ -112,7 +110,22 @@ spec:
     targetPort: 9377
 ```
 
-**Discovering services**
+## Service Type
+https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.13/#servicespec-v1-core
+https://rendezvous.m3.com/ai/aws-ai-infra/blob/master/terraform/archimedes/prod/terraform.tfvars
+
+* ExternalName
+    * ExternalName" maps to the specified externalName
+* ClusterIP
+    * Default
+    * ClusterIP" allocates a cluster-internal IP address for load-balancing to endpoints
+    * If clusterIP is "None", no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a stable IP. 
+* NodePort
+    * NodePort" builds on ClusterIP and allocates a port on every node which routes to the clusterIP
+* LoadBalancer
+    * "LoadBalancer" builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the clusterIP
+
+## Discovering services
 
 serivceを見つける方法
 
@@ -192,4 +205,8 @@ REDIS_MASTER_PORT_6379_TCP_PORT=6379
 REDIS_MASTER_PORT_6379_TCP_ADDR=10.0.0.11
 ```
 
+## Example
+
 ## Reference
+* https://kubernetes.io/docs/concepts/services-networking/service/
+* [Services | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
