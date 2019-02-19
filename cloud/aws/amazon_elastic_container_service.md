@@ -129,7 +129,13 @@ Check route table settings.
 #### Error2: ECS was unable to assume the role 
 https://stackoverflow.com/questions/48997463/ecs-unable-to-assume-role
 
+#### Error3: The container X does not exist in the task definition.
+https://forums.aws.amazon.com/thread.jspa?threadID=217532
 
+
+#### Error4: The new ARN and resource ID format must be enabled to add tags to the service
+https://docs.aws.amazon.com/AmazonECS/latest/userguide/ecs-resource-ids.html
+https://github.com/terraform-providers/terraform-provider-aws/issues/6481
 
 ## Reference
 * https://medium.com/@pahud/ulimit-of-nofile-in-amazon-ecs-optimized-ami-6790aedee582
