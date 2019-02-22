@@ -10959,6 +10959,11 @@ title: English Speaking
     * sugar coat
 * stranded
     * lacking what is necessary to leave a piece or to get out of a situation
+    * unable to leave somewhere because of a problem such as not having any transport or money
+    * he left me stranded in twon with no car and no money for a bus
+* marooned
+    * left in a place from which you cannot escape
+    * my flight was canceled because of a snowstorm and I was marooned at the Denver airport
 * retrospective
     * looking back over the past
         * He was the subject of a retrospective exhibit.
@@ -16039,7 +16044,45 @@ title: English Speaking
     * having a yellowish-white color
     * to make food into a smooth, thick liquid
         * Cream the butter and sugar together.
-
+* cakewalk
+    * sth that is very easy to achieve
+    * the superbowl was a cakewalk for the Forty-Niners
+* relieve
+    * lessen pain
+        * to make sth bad or painful less severe
+            * the addition to the school will relieve overcrowding
+            * she was given morphine to relieve the pain
+        * to relieve yourself is to excrete urine
+    * replace
+        * to arrive or come in order to take the place of another person
+    * make better
+        * to make an unpleasant feeling, such as pain or worry, less strong
+        * to improve an unpleasnt situation
+    * to take action to improve a difficult situation
+        * relieve a burden
+        * relieve a strain
+        * relieve congestion
+        * relieve overcrowding
+    * help
+    * urinate
+* blissful
+    * extremely or completely happy
+        * a blissful childhood/holiday
+    * we spent a blissful year together before things started to go wrong
+* forward
+    * leading
+    * too confident
+        * too noticiable or confident; rude
+        * it was awfully forward of him to invite himself over for dinner
+    * send
+        * to send e-mail to sb else or to a different address after you have received it
+            * I'll forward that e-mail to you
+        * To forward something that you have received means to send it to a different place
+            * the post office will forward my email while I'm away
+    * sports
+    * direction
+    * future
+    * progress
 
 ## disease/disorder
 * bacterium
