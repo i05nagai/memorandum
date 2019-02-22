@@ -68,6 +68,12 @@ title: English Email
 * [32 Sample Business Holiday Card Messages for 2018 \| Shutterfly](https://www.shutterfly.com/ideas/business-holiday-card-messages/)
     * Happy Holidays and warm wishes for 2018!
 
+## forgiveness
+* [Thank You Messages for Forgiveness \| Sample Messages](http://www.samplemessages.com/forgiveness-messages/thank-you-messages-for-forgiveness.html)
+
+## thank you for your kinds words
+* [meaning \- "thank you for the kind words" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/147541/thank-you-for-the-kind-words)
+
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)
 * [5 Email Templates for Responding to Recruiters -The Muse](https://www.themuse.com/advice/5-email-templates-to-respond-to-recruiters-no-matter-where-you-are-in-your-search)
