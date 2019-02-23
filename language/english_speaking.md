@@ -2904,6 +2904,12 @@ title: English Speaking
     * a rabid dog would be feasting on your danglers
 * dangler
     * tisticle
+* dangle
+    * to hang loosely, or to cause sth to hang
+        * a loose wire was dangling from the wall
+        * He dangled the puppet in front her.
+    * to offer sb sth that they want in order to persuade that person to do sth
+        * I've tried dangling all kinds of offers in front of him to get him to work harder at school, but nothing work
 * veto
     * The president has the power of veto over any bill that comes across his desk
     * in theory British government could use its veto to block this proposal
@@ -16083,6 +16089,10 @@ title: English Speaking
     * direction
     * future
     * progress
+* petty
+* rivaly
+* imperialism
+
 
 ## disease/disorder
 * bacterium
