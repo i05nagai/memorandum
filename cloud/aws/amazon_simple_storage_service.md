@@ -139,6 +139,20 @@ AmazonのGet requestは300 reuqest/sec, PUT/LIST/DELETE は100 request/sec が�
 #### Permission
 * [Specifying Resources in a Policy \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)
 
+#### Lifecycle
+* [Object Lifecycle Management \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)
+
+
+Transions actions
+
+Transition to another storage class.
+
+Expiration actions
+
+* NoncurrentVersionTransition
+* NoncurrentVersionExpiration
+
+
 
 ## Reference
 * [s3 — AWS CLI 1.11.102 Command Reference](http://docs.aws.amazon.com/cli/latest/reference/s3/)
