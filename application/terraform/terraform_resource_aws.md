@@ -137,6 +137,17 @@ $ terraform import aws_eip.bar eipalloc-00a10e96
         * `filter_prefix`
         * `filter_suffix`
 
+
+* https://www.terraform.io/docs/providers/aws/r/acm_certificate.html
+
+## LoadBalancer
+* https://www.terraform.io/docs/providers/aws/r/lb_listener.html
+* https://www.terraform.io/docs/providers/aws/r/lb.html
+
+
+## ECS
+https://www.terraform.io/docs/providers/aws/r/ecs_service.html
+
 ## AWS IAM Policy
 * [AWS IAM Policy Documents with Terraform \- Terraform by HashiCorp](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html)
 

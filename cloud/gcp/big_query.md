@@ -33,11 +33,11 @@ title: BigQuery
 * [料金  |  BigQuery のドキュメント  |  Google Cloud Platform](https://cloud.google.com/bigquery/pricing?hl=ja)
 
 * ストレージ
-    * 1GBあたり$ 0.02/month
+    * 1GBあたり0.02 usd /month
 * 長期保存
-    * 1GBあたり$ 0.01/month
+    * 1GBあたり 0.01 usd /month
 * ストリーミングインサート
-    * 1GBあたり$ 0.05/month
+    * 1GBあたり 0.05 usd /month
 * クエリ
     * 1TBあたり$ 5
 
@@ -51,7 +51,7 @@ title: BigQuery
     * list, get, patch, update, deleteの呼び出し
 
 ## Query Plan Explanation
-* [Query Plan Explanation  |  BigQuery Documentation  |  Google Cloud Platform](https://cloud.google.com/bigquery/query-plan-explanation)
+* [Query Plan Explanation | BigQuery Documentation | Google Cloud Platform](https://cloud.google.com/bigquery/query-plan-explanation)
 
 * query実行時に7日間保持される
 

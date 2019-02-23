@@ -10,7 +10,7 @@ Controllerの1つ。
 * `fluentd`, `logstash`など
 * Prometheus Node explorerなどのmonitoring daemon
 
-DaemonSetと代替可能なもの
+#### Alternatives to DaemonSet
 
 * `Init scripts`
     * DaemonSetは各Nodeで、`systemd`, `upstartd`, `init`などで大体することも可能
@@ -22,5 +22,46 @@ DaemonSetと代替可能なもの
 * Static Pod
 * Deployment
 * Job
+
+#### Update damoesets
+https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/#updating-a-daemonset
+
+* if node labels are updated, 
+* Update fileds in Daemonsets
+    * Pods do not allow all fields to be updated
+
+You can perform a rolling update for Daemonset
+
+* Strategy 
+    * `OnDelete`
+        * With OnDelete update strategy, after you update a DaemonSet template, new DaemonSet pods will only be created when you manually delete old DaemonSet pods.
+    * `RollingUpdate`
+        * by default
+
+
+```
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: daemonset-sample
+spec:
+  updateStrategy:
+    type: "RollingUpdate"
+    maxUnavailable: 1
+    minUnavailable: 0
+```
+
+## Kubernetes API
+
+* `apiVersion`
+* `kind`
+* `metadata`
+* `spec`
+    * DaemonSetSpec
+    * `template`
+        * PodTemplateSpec
+        * `metadata`
+        * `spec`
+* `status`
 
 ## Reference

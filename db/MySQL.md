@@ -4,14 +4,13 @@ title: MySQL
 
 # MySQL
 
-## インストール
+## Install
 [pages](http://promamo.com/?p=2933)
 
 For alpine linux
 
 ```
 apk add mysql
-apk add mysql-client
 ```
 
 ### For CentOS
@@ -111,7 +110,7 @@ sudo service mysqld stop
 ```
 
 
-## ファイル
+## Configuration
 * `/etc/my.cnf`に設定ファイルがある。
 
 ## grant
@@ -137,111 +136,6 @@ yum remove mysql
 yum remove mysql-utilities
 yum remove mysql-server mysql-devel
 rm -rf /var/lib/mysql
-```
-
-
-## Create database 
-
-```sql
-/* DBを作成 */
-CREATE DATABASE db_name DEFAULT CHARACTER SET utf8;
-```
-
-
-### Drop database
-
-```sql
-DROP DATABASE db_name;
-```
-
-### Create user
-作成直後は、権限が何もないので、GRANTで権限を付与する
-
-```sql
-CREATE USER user_name@'%' IDENTIFIED BY 'password';
-```
-
-* @の後ろは、可能な接続元hostを指定する
-* localからしかアクセスしなければ、`@localhost`にする
-* `@%`はすべての接続元OK
-
-### Delete user
-
-```sql
-DROP USER user_name@host;
-```
-
-### Change password
-
-```sql
-SET PASSWORD FOR user_name@localhost = PASSWORD('password');
-```
-
-### List user
-
-```sql
-SELECT Host, User FROM mysql.user;
-```
-
-### Grant previledges on user
-
-```sql
-GRANT ALL PRIVILEGES ON db_name.* TO username@host IDENTIFIED BY 'password';
-```
-
-* db_nameのtable全てに対して,ALLの権限を付与
-* passwordを`password`にする
-    * `IDENTIFIED BY` 以下は省略可
-
-* [権限の種類と設定されている権限の確認(SHOW GRANTS文) - ユーザーの作成 - MySQLの使い方](https://www.dbonline.jp/mysql/user/index5.html)
-
-* [MySQL :: MySQL 5.6 リファレンスマニュアル :: 6.2.4 アクセス制御、ステージ 1: 接続の検証](https://dev.mysql.com/doc/refman/5.6/ja/connection-access.html)
-    * hostの書き方
-    * subnetmask`user@'192.168.1.%'`で良い
-    * もしくは`user@'192.168.1.0/255.255.255.0'`
-
-### Revoke previledges on user
-特定のユーザから権限全部削除
-
-```sql
-REVOKE ALL PRIVILEGES ON db_name.* FROM user_name@host;
-```
-
-### Show grant
-
-```sql
-SHOW GRANTS FOR user_name@host;
-```
-
-出力のみかた
-
-* [権限の設定(GRANT文) - ユーザーの作成 - MySQLの使い方](https://www.dbonline.jp/mysql/user/index6.html)
-
-
-### List Database/Table
-Databaseの一覧
-
-```
-SHOW databases;
-```
-
-Tableの一覧
-
-```
-SHOW tables;
-```
-
-### Changes Database
-Databaseの変更
-
-```
-USE database_name;
-```
-
-### Connect to mysql
-
-```
-mysql -u username -p -P port -h hostname
 ```
 
 ### 5.6と5.7の違い
@@ -309,14 +203,9 @@ mountするvolumeが空でないと以下のerrrorがでる。
     * 年月日にzeroを含むとだめ
     * `1990-00-01 11:11:11`はだめ
 
-## CLI
-
-* `--skip-column-names, -N`
-    * columun nameを出力しない
-
 ## Error
 
-### Invalid default value for datetime
+#### Invalid default value for datetime
 ```
 Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid default value for
 ```
@@ -324,7 +213,7 @@ Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Invalid defaul
 * https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_no_zero_date
     * sql_modeの`NO_ZERO_DATE`外す
 
-### Invalid GIS data provided to function st_astext.
+#### Invalid GIS data provided to function st_astext.
 * [MySQL: Invalid GIS data provided to function st_geometryfromtext - Stack Overflow](https://stackoverflow.com/questions/34524031/mysql-invalid-gis-data-provided-to-function-st-geometryfromtext)
 * [MySQL spatial geometry validate wkt - Stack Overflow](https://stackoverflow.com/questions/39285560/mysql-spatial-geometry-validate-wkt)
     * The query changed to invalid query in MySQL 5.7?
@@ -337,4 +226,3 @@ IF(ST_isValid(col) = 1, ASTEXT(col), NULL)
 
 ## Reference
 * [MySQL/ユーザの作成・変更・削除 - 調べる.DB](http://db.just4fun.biz/?MySQL/%E3%83%A6%E3%83%BC%E3%82%B6%E3%81%AE%E4%BD%9C%E6%88%90%E3%83%BB%E5%A4%89%E6%9B%B4%E3%83%BB%E5%89%8A%E9%99%A4)
-

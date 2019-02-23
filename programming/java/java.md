@@ -148,12 +148,30 @@ object Obj {
 }
 ```
 
-### GC allocation failure
+#### GC allocation failure
 * [garbage collection - Java GC (Allocation Failure) - Stack Overflow](https://stackoverflow.com/questions/28342736/java-gc-allocation-failure)
 
 ```
 2018-05-22T02:31:33.064+0000: [GC (Allocation Failure) 2018-05-22T02:31:33.064+0000: [ParNew: 77824K->8202K(77824K), 0.0035546 secs] 1837015K->1768418K(3009812K), 0.0036089 secs] [Times: user=0.03 sys=0.00, real=0.00 secs] 
 ```
+
+## JVM monitoring
+* https://stackoverflow.com/questions/1262328/how-is-the-java-memory-pool-divided
+
+* Heap memory
+    * Eden Space
+        * The pool from which memory is initially allocated for most objects.
+    * Survivor Space
+        * The pool containing objects that have survived the garbage collection of the Eden space.
+    * Tenured Generation or Old Gen
+        * The pool containing objects that have existed for some time in the survivor space.
+* Non-heap memory
+    * Permanent Generation
+    * Code Cache
+* Java Heap Memory
+
+## Options
+* `-Djava.security.egd=`
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)

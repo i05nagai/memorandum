@@ -137,6 +137,7 @@ For lowa
             * inter continental: 0.12USD/GB
     * IPv4 address: 0.01USD/hour while idle
 
+
 ## Cloud SQL Proxy CLI
 * [About the Cloud SQL Proxy  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/sql-proxy#flags)
 

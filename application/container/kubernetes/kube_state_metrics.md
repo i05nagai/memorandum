@@ -8,7 +8,7 @@ Add-on agent to generate and expose cluster-level metrics.
 ## Metrics
 * [kube-state-metrics/Documentation at master · kubernetes/kube-state-metrics](https://github.com/kubernetes/kube-state-metrics/tree/master/Documentation)
 
-### kube-state-metrics vs. Heapster
+#### kube-state-metrics vs. Heapster
 * Heapster
     * CPU and memory utilizationをkubernetes API serverから取得
     * metricsはkubernetesによって作られている
@@ -17,7 +17,7 @@ Add-on agent to generate and expose cluster-level metrics.
     * kubernetesのobject's stateからmetricsの値を取得
     * holds an entire snapshot of Kubernetes state in memory and continuously generates new metrics based off of it but has no responsibility for exporting its metrics anywhere.
 
-## kubernetes
+## Install
 * [kube-state-metrics/kubernetes at master · kubernetes/kube-state-metrics](https://github.com/kubernetes/kube-state-metrics/tree/master/kubernetes)
 
 deployに必要なyamlのsampleは上においてある。
@@ -30,7 +30,7 @@ kubectl apply -f kubernetes
 を実行すればOK
 
 
-### GKE
+#### GKE
 GKEの場合は、permissionの関係で上記が動かない。
 
 ```

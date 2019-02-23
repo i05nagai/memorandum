@@ -13,6 +13,9 @@ kubeletはcAdvisorからdataを取得する。
     * kubernetes上はWebUIがport `4194`で動いている
 
 
+## CLI
+
+
 ## Reference
 * [kubelet | Kubernetes](https://kubernetes.io/docs/reference/generated/kubelet/)
 

@@ -18,12 +18,14 @@ brew install vim --with-lua --with-gettext --with-override-system-vi
 ```
 
 * `--with-python3`
-    * python2ではなくpython3を使うようにする
+    * use python3 instead
+    * now python3 is on by default
     * pyenvを使っている場合は`pyenv global`のversionをあわせる
 * `--with-client-server`
     * vimの起動とともにxquartzが立ち上がるようになるので、不要であればつけない
 * `--with-luajit`
-    * JITのluaが良い場合はこっち
+    * deprecated
+    * lua jit
 
 ### For ubuntu, 
 * [installing \- How can I get a newer version of Vim on Ubuntu? \- Vi and Vim Stack Exchange](https://vi.stackexchange.com/questions/10817/how-can-i-get-a-newer-version-of-vim-on-ubuntu)
@@ -233,6 +235,20 @@ cpp用の設定などはここにかく。
 ```vim
 runtime! userautoload/*.vim
 ```
+
+## Runtime path1
+https://groups.google.com/forum/#!topic/vim_use/9CkHnKN4Vls
+http://vimdoc.sourceforge.net/htmldoc/starting.html#$VIMRUNTIME
+http://vim.wikia.com/wiki/Understanding_VIMRUNTIME
+
+`syntax on` reads `$VIMRUNTIME/syntax/syntax.vim` file when it calls.
+If you want to change `$VIMRUNTIME` environment variable, you can set environment variable before calling `vim`
+
+```
+VIMRUNTIME=/path/to/vim vim /path/to/file
+```
+
+`$VIMRUNTIME` is different from `:set runtimepath` which i
 
 ## Reference
 * [vim commands and piping](http://seejohncode.com/2014/01/27/vim-commands-piping/)

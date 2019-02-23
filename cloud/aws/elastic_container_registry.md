@@ -27,12 +27,13 @@ aws ecr get-login --no-include-email --region <region>
 
 * region
     * ap-northeast-1
-        o
+
 ```
 docker tag <image_name>:latest <repository_host>/<repository_name>/<image_name>:<tag>
 ```
 
 * `<repository_host>`
 * `<repository_name>`
+
 
 ## Reference

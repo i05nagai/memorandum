@@ -31,6 +31,11 @@ spec:
     - 1s
 ```
 
+#### Determine the request verb
+https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb
+
+## API reference
+
 * [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.9/#pod-v1-core)に引数の仕様がのっている
     * `Pod`に対するAPIの`v1`で、`metadata`の引数が`name=memory-demo`になっている
     * `spec`

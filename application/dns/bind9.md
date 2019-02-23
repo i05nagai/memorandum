@@ -124,6 +124,7 @@ www         IN CNAME    moon
 * `$TTL 2D`
     * defaultの寿命
 * SOA records
+    * start of authority record
     * `world.cosmos.`
         * domain nameがprimary nameserverと同じ場合は、`@`で良い
     * `gateway`

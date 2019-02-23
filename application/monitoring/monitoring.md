@@ -14,5 +14,4 @@ title: Monitoring
 specの低いinstanceを作って、負荷testをする。
 そのときの起こるerrorと対処法、logからの検知の方法などを考える。
 
-
 ## Reference

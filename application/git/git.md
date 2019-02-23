@@ -353,6 +353,12 @@ See also: #456, #789
 
 チケット番号を要約に含める場合もある。
 
+## Configuration
+
+#### Include
+* https://github.com/gitster/git/commit/9b25a0b52e09400719366f0a33d0d0da98bbf7b0
+
+
 
 ## Reference
 * https://ndpsoftware.com/git-cheatsheet.html#loc=stash;

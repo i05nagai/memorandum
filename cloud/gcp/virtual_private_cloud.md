@@ -120,6 +120,8 @@ Routingがあっても、firewallが空いていなければpacketは到達し�
 
 
 ## Shared VPC
+Connect to another GCP project.
+
 host projectの以下の権限が必要。
 
 ```
@@ -129,6 +131,8 @@ resourcemanager.projects.getIamPolicy for host project host-procjet-id
 
 
 ## VPN aws-gcp
+Connect to another cloud pvodier.
+
 * (1) GCPのVPNでcloud routerを作る
 * (2) AWSの`Customer gateway`を作る
     * 1のIPを指定する
@@ -181,6 +185,18 @@ neighbor.ip = inside.private.gateway.ip
     * peer_ip_address
         * Neighbor IP Address
         * 
+
+## legacy networks
+https://cloud.google.com/vpc/docs/legacy
+In a legacy network, instance IP addresses are not grouped by region or zone
+
+* legacy network is not recommended for production
+    * https://cloud.google.com/vpc/docs/vpc
+
+## Alias IP ranges
+https://cloud.google.com/vpc/docs/alias-ip
+
+
 
 
 ## Reference

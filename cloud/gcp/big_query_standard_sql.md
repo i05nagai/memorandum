@@ -5,6 +5,36 @@ title: BigQuery Standard SQL
 ## BigQuery Standard SQL
 
 
+```
+# if you execute 
+CURRENT_TIMESTAMP()
+```
+
+## Wildcard Tables
+How to filter wildcard tables by date.
+The following snippets filters the wildcard tables by date and process only not-filtered tables.
+
+```sql
+#standardSQL
+CREATE TEMPORARY FUNCTION BetweenCalculationDate(table_suffix STRING) AS (
+  table_suffix
+  BETWEEN
+  FORMAT_TIMESTAMP('%Y%m%d', TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 24 HOUR))
+  AND
+  FORMAT_TIMESTAMP('%Y%m%d', CURRENT_TIMESTAMP())
+);
+
+WITH table AS (
+  SELECT
+    *
+  FROM
+    `project.dataset.table_*`
+  WHERE
+    BetweenCalculationDate(_TABLE_SUFFIX)
+)
+
+```
+
 ## DML syntax
 * [INSERT](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax#insert_statement)
     * Column names must be specified
