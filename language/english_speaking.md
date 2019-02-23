@@ -12057,6 +12057,7 @@ title: English Speaking
     * We had a three-hour layover in San Francisco and had to change planes on the way to Hawaii.
     * We had a four-hour layover in Chicago.
 * lay
+    * lay it down straight
     * lay a finger
     * lay off
     * layoff
@@ -16092,6 +16093,7 @@ title: English Speaking
 * petty
 * rivaly
 * imperialism
+* flight manifest
 
 
 ## disease/disorder
