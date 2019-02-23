@@ -59,12 +59,20 @@ title: English Email
 
 ## Asking
 * [What are some other ways of saying 'it would be greatly appreciated'? \- Quora](https://www.quora.com/What-are-some-other-ways-of-saying-it-would-be-greatly-appreciated)
+* [Asking for a Favor in English: Lesson and Quiz](https://www.thoughtco.com/asking-a-favor-in-english-4164581)
+* [BBC World Service \| Learning English \| How To](http://www.bbc.co.uk/worldservice/learningenglish/radio/specials/142_requests_offers/page9.shtml)
 
 ## Happy New Year
 * [Business Writing: New Year's Wishes for 2012](https://www.businesswritingblog.com/business_writing/2011/12/new-years-wishes-for-2012-.html)
 * [Happy New Year Messages for an Amazing 2019 \| Shutterfly](https://www.shutterfly.com/ideas/happy-new-year-messages/)
 * [32 Sample Business Holiday Card Messages for 2018 \| Shutterfly](https://www.shutterfly.com/ideas/business-holiday-card-messages/)
     * Happy Holidays and warm wishes for 2018!
+
+## forgiveness
+* [Thank You Messages for Forgiveness \| Sample Messages](http://www.samplemessages.com/forgiveness-messages/thank-you-messages-for-forgiveness.html)
+
+## thank you for your kinds words
+* [meaning \- "thank you for the kind words" \- English Language & Usage Stack Exchange](https://english.stackexchange.com/questions/147541/thank-you-for-the-kind-words)
 
 ## Reference
 * [How to decline recruiter outreach letters (politely)](https://blog.staffingadvisors.com/2014/11/20/decline-recruiters-outreach-politely)

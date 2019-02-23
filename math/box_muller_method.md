@@ -4,8 +4,7 @@ title: Box Muller's method
 
 ## Box Muller's method
 Box Muller's method is the faster way to generate normal random variables from uniformly random variable.
-Box Muller's method is much faster than inverse methods, which is a general method to generate random variables with given.
-
+Box Muller's method is significantly faster than inverse methods, which is a general method to generate random variables with given a cumulative distribution function.
 
 
 * $(\Omega, \mathcal{F}, P)$,
@@ -33,7 +32,7 @@ $$
 Then $$X_{1}$$, $$X_{2}$$ are independent one-dimentional normal distribution.
 
 #### proof.
-We show that the characteristic function of $X_{1}$ is equal to a normal distribution.
+We show that the characteristic function of $X_{1}$ is equal to the characteristic function of a normal distribution.
 
 $$
 \begin{eqnarray}
@@ -128,7 +127,7 @@ $$
 \end{eqnarray}
 $$
 
-Substituting $$r$$ and $$\theta$$,
+Replacing $u_{1}$ and $u_{2}$ with $r$ and $\theta$,
 
 $$
 \begin{eqnarray}
@@ -183,7 +182,7 @@ $$
 \end{eqnarray}
 $$
 
-Additionaly we substitute
+Additionaly, we change the variables from $(r, \theta)$ to $(y_{1}, y_{2})$ defined as
 
 $$
 \begin{eqnarray}
@@ -201,7 +200,7 @@ $$
 \end{eqnarray}
 $$
 
-Then corresponding jacobian matrix and jacobian are given by
+Corresponding jacobian matrix and jacobian are given by
 
 $$
 \begin{eqnarray}
@@ -252,7 +251,7 @@ $$
 \end{eqnarray}
 $$
 
-Substituting $$y_{1}$$ and $$y_{2}$$,
+Replacing $r$ and $\theta$ with $y_{1}$ and $$y_{2}$$, we obtain
 
 $$
 \begin{eqnarray}

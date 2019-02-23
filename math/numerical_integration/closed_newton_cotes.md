@@ -76,7 +76,7 @@ $L(x)$ interpolates points $$(x_{i}, f(x_{i}))$$ by Lagrange Polynomial.
 $$
 \begin{eqnarray}
     \int_{x_{1}}^{x_{2}}
-        L(x; ]pi(1; x_{1}, x_{2}))
+        L(x; \pi(1; x_{1}, x_{2}))
     \ dx
     & = &
         \int_{x_{1}}^{x_{2}}

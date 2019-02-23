@@ -881,6 +881,13 @@ title: English Speaking
     * break out
         * if you suddenly get spots or rash on your skin, you break out in it
 * crash/drive/bump/run
+    * bump
+        * bump off sb
+            * to kill a person
+            * They think someone bumped him off.
+        * bump into sb
+            * to meet sb unexpectedly
+                * we bumped into her in a shop
     * He lost control of the car and crashed into a wall
     * drive
         * We’re interested in how your individual strengths combine with your experience to drive impac
@@ -1390,6 +1397,13 @@ title: English Speaking
     * apply yourself
         * If you apply yourself to something, you work hard at it, directing your abilities and efforts in a determined way so that you succeed
         * You can solve any problem if you apply yourself.
+    * apply for
+        * she applied for a job with the local newspaper
+    * apply to
+        * I applied to four universities and was accepted by all of them
+    * apply make-up/lipstick
+        * to put or spread something such as paint, liquid, or medicine onto a surface
+        * Apply the cream evenly over the skin.
 * medium
     * medium of exchange
 * drive
@@ -2589,12 +2603,18 @@ title: English Speaking
     * tick-all-the-boxes
         * The new album shoud tick all the right boxes for their many fans
     * make sound
+        * to make a quiet, short, regularly repeated sound like that made by clock
     * animal
-    * sounk
+    * sound
     * mark
+        * check a mark that shows that sth is correct or has been done
+        * Put a tick by/against the names of the people who have accepted the invitation
     * short time
+        * a very short time
     * sound
     * paying later
+        * on tick
+            * if you buy sth on tick, you pay for it later
     * mark
         * to mark sth with a tick
         * check mark
@@ -2850,6 +2870,11 @@ title: English Speaking
     * on dubious charge
 * miss
     * you miss the button
+    * not hit
+    * not do
+    * not find
+    * feel sad
+        * to feel sad that a person or thing is not present
 * into
     * I'm into SM
 * thirsty
@@ -2879,6 +2904,12 @@ title: English Speaking
     * a rabid dog would be feasting on your danglers
 * dangler
     * tisticle
+* dangle
+    * to hang loosely, or to cause sth to hang
+        * a loose wire was dangling from the wall
+        * He dangled the puppet in front her.
+    * to offer sb sth that they want in order to persuade that person to do sth
+        * I've tried dangling all kinds of offers in front of him to get him to work harder at school, but nothing work
 * veto
     * The president has the power of veto over any bill that comes across his desk
     * in theory British government could use its veto to block this proposal
@@ -4782,6 +4813,7 @@ title: English Speaking
     * what level of service will the users expect?
 * aim
     * TinderU App aims to help college students
+    * aimed at full metanl and physical recovery accoreding to all medical means and methods of medical healing – using state of the art techniques, treatments
 * proceed
 * self-service
     * used to describe a store, restaurant, etc. where you are not served by an employee, but collect goods or food yourself
@@ -7269,6 +7301,7 @@ title: English Speaking
 * around
     * around the globe
 * payslip
+    * a piece of paper given to someone who is employed to show how much money they have earned and how much tax has been taken off
 * duper
 * extraterrestrial
 * backdrop
@@ -8895,6 +8928,37 @@ title: English Speaking
     * euphemistic words for dead
 * guinea pig
     * a small, furry animal with rounded ears, short legs, and no tail, often kept as a pet and for use in scientific experiments
+* contract
+    * agreement
+        * a legal document that states and explains a formal agreement between two different people or groups, or the agreement itself
+        * she already has a contract for her next book with a publisher
+    * shorten
+        * to make or become shorter or narrower, or smaller
+    * become ill
+        * to catch or become ill with a disease
+        * She contracted pneumonia and was hospitalized.
+    * agree
+        * the company had been contracted to build shelters for the homeless
+        * To contract out a job is to formally arrange for other people to do it
+            * the university contracts out the cleaning to a private company
+        * put sth out to contract
+            *  if an organization, government, etc. puts something out to contract, they allow different companies to compete to provide a service or do a job for them
+    * contract for sth
+    * contract to do sth
+    * draw up a contract
+    * write up a contract
+    * enter into a contract
+    * sign a contract
+    * be awarted a contract
+    * land a contract
+    * win a contract
+    * a long-term contract
+    * a short-term contract
+    * make a contract
+        * Did he know this when he made the contract?
+    * have a contract
+    * agree to a contract
+    * negotiate a contract
 * contract manufacturing company
     * contract manufacturer
     * Original equipment manufacturer
@@ -9704,7 +9768,6 @@ title: English Speaking
     * a kind of food
 * intesified
     * intesify
-* vomit
 * coitus
     * the sexual act in which a man puts his penis into a woman's vagina
 * contraindicated
@@ -10749,8 +10812,6 @@ title: English Speaking
     * We barely have enough money to make ends meet as it is.
 * braille
     * Her latest novel is also available in braille.
-* subsidy
-    * Many farmers rely on government subsidies
 * hike
     * Petrol prices were hiked in September.
 * veto
@@ -10904,6 +10965,11 @@ title: English Speaking
     * sugar coat
 * stranded
     * lacking what is necessary to leave a piece or to get out of a situation
+    * unable to leave somewhere because of a problem such as not having any transport or money
+    * he left me stranded in twon with no car and no money for a bus
+* marooned
+    * left in a place from which you cannot escape
+    * my flight was canceled because of a snowstorm and I was marooned at the Denver airport
 * retrospective
     * looking back over the past
         * He was the subject of a retrospective exhibit.
@@ -11978,11 +12044,20 @@ title: English Speaking
     * home of record is the place from which they entered the military
 * domicile
     * legal domicile
+    * the place where a person lives
+    * move/change/switch (sb's/sth's) domicile
+        * Companies may choose to move their domicile to tax havens such as Bermuda.
+* dwelling
+    * a place where people live
+    * a house or place to live in
+* abode
+* habitation
 * layover
     * a short stay at a place in the middle of a trip
     * We had a three-hour layover in San Francisco and had to change planes on the way to Hawaii.
     * We had a four-hour layover in Chicago.
 * lay
+    * lay it down straight
     * lay a finger
     * lay off
     * layoff
@@ -12486,6 +12561,8 @@ title: English Speaking
     * make known
     * pay
     * letters
+        * mail letters, etc. that are delivered to homes or places of work
+        * Has the post come/arrived yet?
     * job
     * place
     * message
@@ -14441,6 +14518,12 @@ title: English Speaking
         * he outlived all of his brothers
 * merit
     * encourage your peers by recongnizing that negative results are part of thoughtful risk taking and that every well-designed experiment has merit
+* filing
+    * the activity of putting papers, letters, or other documents into files
+    * record
+        * the act of officially recording something, for example, your accounts
+    * filing obligation
+    * metal pieces
 * file
     * One of our internal customers filed a pronlem report indicating that they'd recently sen a dramatic increase in latency, CPU usage, and number of running processes needed to serve traffic for their app
 * quadrapled
@@ -14466,6 +14549,7 @@ title: English Speaking
 * embedded
     * existing or firmly attached within something or under a surface
 * speed
+    * I will speed up your process to get the confimation fast
     * to move, go or happen fast, or to cause sth to happen fast
         * the train sped along at over 120 miles per hour
 * leisure
@@ -15857,10 +15941,167 @@ title: English Speaking
     * colors
         * the set of colors into which a beam of light can be separated
         * Spectrum also means a range of waves such as light waves or radio waves
-
+* impede
+    * to slow sth down or prevent an activity from making progress at its previous rate
+* subvention
+    * an amount of money given as support by an organization or government for a particular purpose
+        * a system of subventions became necessary to safegurad a minimal standard of living
+    * Up to a certain threshold, your employers pays you a subvention of circa half of the cintribution
+* subsidy
+    * Many farmers rely on government subsidies
+* legislature
+    * the group of the people in a country or part of a country who have the power to make and change the laws
+    * the legislature approves/enacts/ passes sth
+* exemplary
+    * extremely good of its type, so that it might serve as a model for others
+        * His tact was exemplary, especially considering the circumstances
+* tobacco
+* cigarettes
+* cigars
+* ongoing
+    * continuing to exist, happen, or develop
+        * the investigation is ongoing
+* attention
+    * notice
+    * care
+        * special care or treatment
+    * way of standing
+* demurrage
+    * money that must be paid when a chatered ship is used for longher than agreed, or when goods are collected later than the agreed time after taken off a chartered ship
+* casual
+    * not serious
+        * not serious or careful in attitude; only partly interested
+        * a casual glance at a magazine
+    * informal
+        * not formal; relaxed in style or manner
+        * We have a small office and I am very casual and wear slacks and sports sports shirt and thigs like that
+    * temporary
+        * not regular or frequent; temporary or done sometimes
+            * casual laborers
+            * casual workers
+            * casual sex
+        * casual also means slight
+            * he was only a casual acquaintance – i didn't know him well
+    * a worker who is not employed permanently but only when a company needs them
+        * On the whole, semi-skilled and unskilled positions are filled by casuals.
+    * not planned
+    * casual clothes/dress/attire
+* FROR
+    * Financial Reporting Oversight Role
+    * FROR includes any person in a position to, or who does, exercise influence over the contents of the financial statements or anyone who prepares them. For example, the Chief Executive Officer, President, Chief Financial Officer, Chief Operating Officer, General Counsel, Chief Accounting Officer, Controller, Director of Internal Audit, Director of Financial Reporting, Treasurer, and Director of Internal Controls Compliance
+* oversight
+    * mistake
+        * a mistake caused by a failure to notice or do sth
+        * because of a bank oversight, the money had not been credited to my account
+    * management
+        * management of an operation or process
+    * mistake
+        * a mistake made because of a failure to notice something
+    * responsibility
+        * responsibility for a job or activity and for making sure it is done correctly
+        * who has oversight of genetic test?
+* remittance
+    * an amount of money that you send to sb
+        * she sent small remittance home to her parents each month
+    * the act of sending payment to sb
+        * remittance advice/information
+    * remitances
+        * money that is sent by a foreign worker back to their own country:
+    * Remittances of income
+* claimable
+    * All relevant deductions claimable on return discussed 
+* finalize
+    * We really need to finalise the contract details, what is your availability for a buiness meeting?
+* Would you possibly be able to tell me a convenient time for us to meet? 
+* feight
+    * goods that are transported from one place to another by ship, aircraft, train, or truck
+    * A freight train is a train that carries only goods.
+* retch
+    * to make the sound and action of vomitting, esp. when nothing is actually vomitted
+    * to react in a way as if you are vomitting
+    * The sight of blood makes him retch.
+* vomit
+* barf
+    * to vomit
+* ballot
+    * a piece of paper on which you write a secret vote
+    * The ballot is also a system or occasion of secret voting
+        * Issues need to be considered in open debate or put on the ballot.
+    * put sth to the ballot
+    * to organize a secret vote by a group of people in order to find out their views
+* imponder
+* imponderbility
+* imponderable
+    * sth that cannot be guessed or calculated because it is completely unknown
+    * There are too many imponderables to make an accurate forecast.
+* brochure
+    * In this brochure you’ll find out how this system works and what benefits it provides for you personally,
+* pillar
+    * Social insurance is based on five pillars
+* pupil
+    * student
+        * a person who is being taught, esp. a child at school
+    * eye part
+        * the circular, black area in the center of the eye that gets larger and smalelr and lets in light
+        * Pupils contract in bright light, and dilate in darkness.
+* overleaf
+    * on the other side of the page
+    * see overleafe for a list of abbreviations
+* cream
+    * having a yellowish-white color
+    * to make food into a smooth, thick liquid
+        * Cream the butter and sugar together.
+* cakewalk
+    * sth that is very easy to achieve
+    * the superbowl was a cakewalk for the Forty-Niners
+* relieve
+    * lessen pain
+        * to make sth bad or painful less severe
+            * the addition to the school will relieve overcrowding
+            * she was given morphine to relieve the pain
+        * to relieve yourself is to excrete urine
+    * replace
+        * to arrive or come in order to take the place of another person
+    * make better
+        * to make an unpleasant feeling, such as pain or worry, less strong
+        * to improve an unpleasnt situation
+    * to take action to improve a difficult situation
+        * relieve a burden
+        * relieve a strain
+        * relieve congestion
+        * relieve overcrowding
+    * help
+    * urinate
+* blissful
+    * extremely or completely happy
+        * a blissful childhood/holiday
+    * we spent a blissful year together before things started to go wrong
+* forward
+    * leading
+    * too confident
+        * too noticiable or confident; rude
+        * it was awfully forward of him to invite himself over for dinner
+    * send
+        * to send e-mail to sb else or to a different address after you have received it
+            * I'll forward that e-mail to you
+        * To forward something that you have received means to send it to a different place
+            * the post office will forward my email while I'm away
+    * sports
+    * direction
+    * future
+    * progress
+* petty
+* rivaly
+* imperialism
+* flight manifest
 
 
 ## disease/disorder
+* bacterium
+    * bacteria
+        * plural
+* pneumonia
+    * lung inflammation caused by bacterial or viral infection
 * Obsessive-Compusive Personality disorder
 * seizure
     * a seizure is a sudden, uncontrolled electrical disturbance in the brain.
@@ -15878,6 +16119,140 @@ title: English Speaking
     * a medical practitioner qualified to practice surgery.
 * pediatrician
 * pediatric
+* varicose veins
+* aneurysms
+* heart insufficiency
+* high blood pressure
+* chest pain
+* circulatory disorder
+* Respiratory disorder
+    * breathing problem
+    * asthma
+    * COPD
+    * pneuonia
+    * bronchitis
+    * tuberculosis
+    * allegies
+    * septum eviation
+* Endocrine disorder
+    * glandular diorder
+    * diabetes type 1 or type 2
+    * thyroid problems
+    * Cushing's syndrome
+    * Addison's disease
+    * graves diesaese
+* gastrointestinal disorder
+    * stomach
+    * intensities
+    * iver or gall bladder problem
+    * stomach inflammation
+    * ulcers
+    * irrtable bowel syndrome
+    * Crohn's disease
+    * colitis
+    * change in bowel habits
+    * hemorrhoids/piles
+    * pancreatitis
+    * liver inflammation
+    * cirrhosis
+    * gall stones
+    * hernias
+* cancer, tumours or growth
+    * polyps
+    * benign growths
+    * cysts
+    * any cancers
+    * precancerous condition
+* brain & nervous system disorder
+    * stroke
+    * dementia
+    * migraine
+    * chronic headachs
+    * multiple sclerosis
+    * epilepsy
+    * fits
+    * sciatica
+    * low muscle tone
+    * Parkinson's disease
+* Skin, hair, nail problem
+    * eczema
+    * dermatitis
+    * rashes
+    * alopecia areata psoriasis
+    * acne
+    * cysts
+    * moles that itch or bleed
+* ear disorder
+    * tinnitus
+    * vertigo
+    * hearing disorder
+    * deafness
+* problem with eyes
+    * glaucoma
+    * Cataracts
+    * corneal problem
+    * retinal detachment
+* urinary & reproductive disorder
+    * kidney failure
+    * urinary infections
+    * incontinence
+    * testicular
+    * prostate disorder
+    * infertility problem
+    * pregnancy problem
+    * childbirth problem
+    * heavy or irregular periods
+    * fibroids
+    * endomeetrosis
+    * abnormal smears
+    * polycystic ovaries
+* blood/infective/immune disorder
+    * abnormal blood tests
+    * coagulation problem
+    * high cholesterol
+    * anemia
+    * malaria
+    * autoimmune disorder
+* Psychiatric/Psychological disrder
+    * depression
+    * medically treated stress
+    * anxiety
+    * mental illness
+    * schizophrenia
+    * compulsive or eating disorder
+    * drug/alcohol dependency
+* muscle or skeletal probelm
+    * rheumatism
+    * gout
+    * arthritis back problem
+    * nech/shoulder problems
+    * cartilage and ligament problems
+    * joint replacements
+    * fractures
+    * osteroporosis
+    * inflammatory conditions
+* physical or organic defect
+    * a chronic illness
+    * congenital condition
+    * an illness or injury due to military service
+    * any reduction in your ability to work
+    * degree of disability that leads to permanent disability
+* Hepatitis B or C
+* HIV
+* inpatient or outpatient surgery
+* tablets
+* ointments
+* capsules
+* syrups
+* injections
+* creams
+* suppositories
+* inhalers
+* OT C
+* wisdom teeth
+* milk teeth
+* denture
+* postpartum
 
 
 ## Study
@@ -16054,6 +16429,34 @@ title: English Speaking
 * surf and turf
     * Surf and turf or surf 'n' turf is a main course which combines seafood and red meat
 * snickerdoodle
+
+## body
+* jugular
+    * of the neck or throat.
+    * jugular vein
+
+## Home appliances
+* refrigerator
+    * fridge
+* freezer
+* laundry machine
+    * waching machine
+* air conditioner
+    * heater
+* microwave
+    * microwave oven
+* vacuum
+    * vacuum clear
+* kitchen applicances
+* major appliances
+* small applicances
+* electronics
+* consumer electronics
+
+## car
+* bonnet
+    * Do you have any bonnets for 12.5 to 13 inch sized heads?
+
 
 ## Reference
 * [Vocabulary For Academic IELTS Writing Task 1 (part 1)](https://www.ielts-mentor.com/writing-sample/academic-writing-task-1/48-ielts-vocabulary/vocabulary-for-academic-ielts-writing-task-1/528-vocabulary-for-academic-ielts-writing-task-1-part-1)
