@@ -5889,7 +5889,7 @@ title: English Speaking
     * book/film
         * if critics review a book, play, film, etc. they write their opinion of it
         * I only go to see films that are reviewed favourably
-    * miltary
+    * military
     * study
 * represent
     * rep
@@ -10784,6 +10784,9 @@ title: English Speaking
 * urethra
     * a urethra that could not shake him
 * shake
+    * shake-up
+        * a large change in the way sth is organized
+        * The company is undergoing a radical shake-up.
 * long-lived
     * long-lived problem
 * swear jar
@@ -15620,6 +15623,8 @@ title: English Speaking
     * Do you have any artificial teeth (prosthesis) or crownings?
 * c/o
     * care of
+        * (mail) For distribution by (the named intermediary)
+        * Write the recipient’s name on the first line, as you do with most letters. Start the second line with “c/o” followed by the person or company name associated with the address you are using.
     * certificate of origin
         *  document used for shipping purposes. Describes country of origin of a given product.
 * determination
@@ -16094,6 +16099,41 @@ title: English Speaking
 * rivaly
 * imperialism
 * flight manifest
+* prevail
+    * to exist and be accepted among a large number of people, or to get a position of control and influence
+        * Let’s hope that common sense prevails.
+    * In spite of injuries, our team prevailed and went on to win.
+    * to get control or influence
+        * I am sure that common sense will prevail in the end
+        * And did reason prevail over emotion?
+    * to be common among a group of people or area at a particular time
+    * to win in an argument, court case, etc.
+        * prevail in sth
+            * if they prevail in the court case, they could receive up to 10,000 USD each
+* refund
+    * to pay back money recieved or spent
+        * the theater refunded our money when the performance was canceled
+    * I took the radio back to the shop and asked for/demanded/got/was given a refund.
+* one-linear
+    * a short joke or witty remark
+    * a joke or a clever and funny remark or answer that is usually one sentence long
+        * there are some very witty one-liners in the play
+* tender
+    * offer
+    * gentle
+    * painful
+    * soft
+    * young
+    * if you tender for a job, you make a formal offer to do it for a stated price
+        * five companies have tendered for the hospital contract
+        * if you tender for sth such as shares, you make a formal offer to buy them for a stated price
+    * to give or offer sth
+        * Please tender the exact fare
+    * put sth out to tender
+        * if you put work out to tender, you ask people to make offers to do it
+    * container
+    * boat
+    * chicken
 
 
 ## disease/disorder
