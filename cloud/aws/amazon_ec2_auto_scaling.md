@@ -24,7 +24,18 @@ https://docs.aws.amazon.com/autoscaling/ec2/APIReference/Welcome.html
 * 4. By default, the instance remains in a wait state for one hour, and then the Auto Scaling group continues the launch or terminate process (Pending:Proceed or Terminating:Proceed)
 
 
+## Dynamic Scaling for Amazon EC2 Auto Scaling
+* [Dynamic Scaling for Amazon EC2 Auto Scaling \- Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html)
 
+
+* Target tracking scaling
+* Step scaling
+* Simple scaling
+
+####  Target tracking scaling
+[Target Tracking Scaling Policies for Amazon EC2 Auto Scaling \- Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html)
+
+* Not all metrics work for target tracking.
 
 ## Reference
 * http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html
