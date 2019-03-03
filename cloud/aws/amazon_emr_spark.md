@@ -67,7 +67,7 @@ aws emr add-steps
 ]
 ```
 
-stepの情報を取得
+Get step information
 
 ```
 aws emr describe-step
@@ -90,7 +90,7 @@ EMRのspark history serverは以下の形式で実行されている。
 
 
 ## Logging
-* [ログファイルを表示する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
+* [View Log Files - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html)
 * [View Log Files - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html#emr-manage-view-web-log-files-debug)
 * [View Application History - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-cluster-application-history.html)
     * `EMR 5.8`からWeb UIでSpark Applicationのjobのlogがみれる
@@ -105,13 +105,11 @@ log4jのloggingは、`containers/<container-id>`に出力される。
 
 ## Configuration
 * spark.history.fs.logDirectory
-    * hdfs:///var/log/spark/apps
+    * `hdfs:///var/log/spark/apps`
 * spark.eventLog.dir
-    * hdfs:///var/log/spark/apps
+    * `hdfs:///var/log/spark/apps`
 
 `/usr/lib/spark` is SPARK_HOME.
-__main__: Read event logs from s3://retty-dpi/Logs/retty/retty-event/2018/05/17/14
-18/05/22 02:20:11 INFO 
 
 ```
 yarn logs -applicationId <application-id> -containerId <container-id>
@@ -120,7 +118,7 @@ yarn logs -applicationId <application-id> -containerId <container-id>
 
 ## Tips
 
-### spark-submit fiels
+### spark-submit fields
 spark submitの引数にS3のfileを指定できる。
 EMRの場合はS3に必要なscriptなどをuploadして、利用することになる。
 
@@ -134,8 +132,8 @@ spark-submit \
         s3://path/to/script.py <arg1> <arg2>
 ```
 
-### steps
-EMRを起動する時に、`command-runner.jar`に`spark-submit`を指定できるが、`spark-submit`を直接実行するのではなくて、`s3://`にuploadしたshell scriptを実行するようにした方が良いを実行するようにした方が良い。
+#### Add steps
+EMRを起動する時に、`command-runner.jar`に`spark-submit`を指定できるが、`spark-submit`を直接実行するのではなくて、`s3://`にuploadしたshell scriptを実行するようにした方が良い。
 開発のdebugの際などに、EMRのstepから実行commandをcopyする必要がでてくる。
 
 ```json
@@ -177,7 +175,42 @@ EMRを起動する時に、`command-runner.jar`に`spark-submit`を指定でき�
   },
 ```
 
-### Error
+#### Add environment variables to spark/pyspark
+* [Configuring Applications - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)
+
+configurationに以下を設定する。
+
+```json
+{
+  "Classification": "spark-defaults",
+  "Properties": {
+    "spark.yarn.appMasterEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}",
+    "spark.yarn.executorEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}"
+  }
+}
+```
+
+```json
+[
+    {
+        "Classification": "spark-env",
+        "Properties": {},
+        "Configurations": [
+            {
+                "Classification": "export",
+                "Properties": {
+                    "PYSPARK_PYTHON": "python34"
+                },
+                "Configurations": []
+            }
+        ]
+    }
+]
+```
+
+## Error
+
+#### Error
 * [amazon web services - Cannot create temp dir with proper permission: /mnt1/s3 - Stack Overflow](https://stackoverflow.com/questions/41221821/cannot-create-temp-dir-with-proper-permission-mnt1-s3)
 
 * 以下のerror
@@ -230,40 +263,6 @@ java.nio.file.AccessDeniedException: /mnt1
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-```
-
-### Add environment variables to spark/pyspark
-* ${RETTY_DWH_ENVIRONMENT_NAME}
-* [Configuring Applications - Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)
-
-configurationに以下を設定する。
-
-```json
-{
-  "Classification": "spark-defaults",
-  "Properties": {
-    "spark.yarn.appMasterEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}",
-    "spark.yarn.executorEnv.ENVIRONMENT_NAME": "${ENVIRONMENT_NAME}"
-  }
-}
-```
-
-```json
-[
-    {
-        "Classification": "spark-env",
-        "Properties": {},
-        "Configurations": [
-            {
-                "Classification": "export",
-                "Properties": {
-                    "PYSPARK_PYTHON": "python34"
-                },
-                "Configurations": []
-            }
-        ]
-    }
-]
 ```
 
 ## Reference
