@@ -34,6 +34,18 @@ aws emr add-steps \
     * spark-submit
     * s3-dist-cp
 
+
+## IAM, Role, Policy
+
+
+* one for the EMR Cluster to use as a service
+    * AmazonElasticMapReduceRole
+        * for the EMR service
+* one to place on your Cluster Instances to interact with AWS from those instances
+    * AmazonElasticMapReduceforEC2Role
+        * for EC2 profile
+
+
 ## Steps
 * [hadoop - How to execute a shell script on all nodes of an EMR cluster? - Stack Overflow](https://stackoverflow.com/questions/36102316/how-to-execute-a-shell-script-on-all-nodes-of-an-emr-cluster)
     * stepはmaster nodeのみで実行される
@@ -94,7 +106,7 @@ EC2のinstanceを借りるより安い。
 ## SSH
 To Master Node
 
-アカウント名は、haddoopで、keyはcluster作成時に指定したkey pairである。
+You can connect to Master node with user name `hadoop` and private key which you specify when you create the cluster
 
 ```
 ssh hadoop@ec2-###-##-##-###.compute-1.amazonaws.com -i ~/mykeypair.pem
@@ -106,7 +118,7 @@ ssh hadoop@ec2-###-##-##-###.compute-1.amazonaws.com -i ~/mykeypair.pem
 Security上の理由で、これらはmaster node上のlocalhost上でのみ閲覧可能。
 外部から見るためには、sshのport forwardingが必要。
 
-| インターフェイスの名前 | URI                                    |
+| Interface name         | URI                                    |
 |------------------------|----------------------------------------|
 | YARN ResourceManager   | http://master-public-dns-name:8088/    |
 | YARN NodeManager       | http://slave-public-dns-name:8042/     |
@@ -137,7 +149,7 @@ ssh -i ~/key -ND port_num hadoop@hostname
 
 
 ### Option1. local port forwarding
-`YARN ResourceManager`にaccessしたい場合
+`YARN ResourceManager` にaccessしたい場合
 
 ```
 ssh -i ~/mykeypair.pem -N -L 8157:ec2-###-##-##-###.compute-1.amazonaws.com:8088 hadoop@ec2-###-##-##-###.compute-1.amazonaws.com
@@ -213,7 +225,7 @@ FoxyProxyのproxyの設定をUse `emr-socks-proxy` をONにする。
 * [クラスタログとデバッグを構成する - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/ManagementGuide/emr-plan-debugging.html)
 
 SSHでmaster nodeに接続する。
-特に設定しなくともHadoopはデフォルトでmasterにログを残す。
+特に設定しなくともHadoopはdefaultでmasterにlogを残す。
 `/mnt/var/log/hadoop/`の下に、stepごと、bootstrapごとにまとまっている。
 ただし、clusterがerrorやstepの終了で、terminateになるとLogも消える。
 
@@ -354,6 +366,10 @@ View Log Files on the Master Node
         * The standard error channel of Hadoop while it processes the step.
     * `stdout`
         * The standard output channel of Hadoop while it processes the step.
+* `/emr/service-nanny `
+    * Logs written by the service nanny process.
+* `/mnt/var/log/application`
+    * Logs specific to an application such as Hadoop, Spark, or Hive.
 
 View Log Files Archived to Amazon S3
 
@@ -372,6 +388,45 @@ View Log Files Archived to Amazon S3
     * The logs for each YARN application are stored in these locations.
 
 
+## Cloudwatch
+* [Monitor CloudWatch Events \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-cloudwatch-events.html)
+
+* Amazon EMR tracks events and keeps information about them for up to seven days
+
+#### Cloudwatch Metrics
+[Monitor Metrics with CloudWatch \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_ViewingMetrics.html#UsingEMR_ViewingMetrics_MetricsReported)
+
+These metrics can be used for Autocaling.
+
+
+## Default and Custom EMR
+* [Using the Default Amazon Linux AMI for Amazon EMR \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-default-ami.html)
+* [Using a Custom AMI \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-custom-ami.html)
+
+A custom AMI is useful if you want to do the following
+
+* Encrypt the EBS root device volumes (boot volumes) of EC2 instances in your cluster. For more information
+* Pre-install applications and perform other customizations instead of using bootstrap actions. This can improve cluster start time and streamline the startup work flow. For more information and an example, see Creating a Custom Amazon Linux AMI from a Preconfigured Instance.
+* Implement more sophisticated cluster and node configurations than bootstrap actions allow.
+
+
+If you use Amazon linux AMI with creation date of 2018-08-11, the Oozie server fails to starts.
+You can get the appropriate AMI ID by the following commands
+
+```
+aws ec2 \
+    --region us-east-1 \
+    describe-images \
+        --owner amazon \
+        --query 'Images[?Name!=`null`]|[?starts_with(Name, `amzn-ami-hvm-2018.03`) == `true`].[CreationDate,ImageId,Name]' \
+        --output text | sort -rk1
+```
+
+Restrictions of custom AMI
+
+* Custom AMI 'ami-0132f06b8806d60d2' is not valid: The AMI must have only one EBS volume. AMIs with multiple EBS volumes are not supported.
+    * Thus, the default AMI is not used as Custom AMI
+
 ## Tips
 
 ### Add tags to EC2 instance
@@ -382,119 +437,16 @@ cluster内の全てのinstanceにtagを付与できる。
 aws emr add-tags --resource-id j-xxxxxxx --tags name="John Doe"
 ```
 
-## Run jupyter notebook and jupyter hub on Amazon EMR
-* [Run Jupyter Notebook and JupyterHub on Amazon EMR | AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/running-jupyter-notebook-and-jupyterhub-on-amazon-emr/)
 
-以下にEMRのsetup用のscriptが追いてある。
+## Security Groups
+* https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-sg-specify.html
 
-```sh
-s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh
-```
-
-以下のbootstrap commandで起動時にsetup可能。
-
-```sh
-aws emr create-cluster \
-    --release-label emr-5.8.0 \
-  --name 'emr-5.8.0 jupyter/ cli example' \
-  --applications Name=Hadoop Name=Hive Name=Spark Name=Pig Name=Tez Name=Ganglia Name=Presto \
-  --ec2-attributes KeyName=<your-ec2-key>,InstanceProfile=EMR_EC2_DefaultRole \
-  --service-role EMR_DefaultRole \  
-  --instance-groups \
-    InstanceGroupType=MASTER,InstanceCount=1,InstanceType=c3.4xlarge \
-    InstanceGroupType=CORE,InstanceCount=4,InstanceType=c3.4xlarge \
-  --region us-east-1 \
-  --log-uri s3://<your-s3-bucket>/emr-logs/ \
-  --bootstrap-actions \
-    Name='Install Jupyter notebook',Path="s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh",Args=[--r,--julia,--toree,--torch,--ruby,--ds-packages,--ml-packages,--python-packages,'ggplot nilearn',--port,8880,--password,jupyter,--jupyterhub,--jupyterhub-port,8001,--cached-install,--notebook-dir,s3://<your-s3-bucket>/notebooks/,--copy-samples]
-```
-
-Stepで追加する場合は、以下のstepを追加する。
-
-```sh
-aws emr add-steps
-    --cluster-id j-2AXXXXXXGAPLF
-    --steps Type=CUSTOM_JAR,Name=CustomJAR,ActionOnFailure=CONTINUE,Jar=s3://region.elasticmapreduce/libs/script-runner/script-runner.jar,Args=["s3://aws-bigdata-blog/artifacts/aws-blog-emr-jupyter/install-jupyter-emr5.sh","--toree","--ds-packages","--python-packages","'ggplot nilearn'","--ml-packages","--cached-install","--notebook-dir","s3://path/to/jupyter-notebook/","--port","8080","--jupyterhub","--jupyterhub-port","8001","--copy-samples"]
-```
-
-```json
-[
-  {
-    "Name": "Install jupyter notebook",
-    "Args": ["string", ...],
-    "Jar": "CUSTOM_JAR",
-    "ActionOnFailure": "TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE",
-    "MainClass": "string",
-    "Type": "CUSTOM_JAR"|"STREAMING"|"HIVE"|"PIG"|"IMPALA",
-    "Properties": "string"
-  }
-]
-````
-
-* --r
-    * Install the IRKernel for R.
-* --toree
-    * sparkを使う場合は必要
-    * Install the Apache Toree kernel that supports Scala, PySpark, SQL, SparkR for Apache Spark.
-* --julia
-    * Install the IJulia kernel for Julia.
-* --torch
-    * Install the iTorch kernel for Torch (machine learning and visualization).
-* --ruby
-    * Install the iRuby kernel for Ruby.
-* --ds-packages
-    * Install the Python data science-related packages (scikit-learn pandas statsmodels).
-* --ml-packages
-    * Install the Python machine learning-related packages (theano keras tensorflow).
-* --bigdl
-    * Install Intel’s BigDL deep learning libraries.
-* `--python-packages 'package1,package2'`
-    * Install specific Python packages (for example, ggplot and nilearn).
-* --port
-    * Set the port for Jupyter notebook. The default is 8888.
-* --user
-    * Set the default user for JupyterHub, default is jupyter
-* `--password string`
-    * Set the password for the Jupyter notebook.
-* --localhost-only
-    * Restrict Jupyter to listen on localhost only. The default is to listen on all IP addresses.
-* --jupyterhub
-    * Install JupyterHub.
-* --jupyterhub-port
-    * Set the port for JuputerHub. The default is 8000.
-* --notebook-dir
-    * S3にjupyter notbookを保存できる
-    * localも指定可能
-    * Specify the notebook folder. This could be a local directory or an S3 bucket.
-* --cached-install
-    * Use some cached dependency artifacts on S3 to speed up installation.
-* --ssl
-    * Enable SSL. For production, make sure to use your own certificate and key files.
-* --copy-samples
-    * Copy sample notebooks to the notebook folder.
-* --spark-opts
-    * User-supplied Spark options to override the default values.
-* --python3
-    * Packages and apps installed for Python 3 instead of Python 2.
-* --s3fs
-    * Use s3fs instead of the default, s3contents for storing notebooks on Amazon S3. This argument can cause slowness if the S3 bucket has lots of files.
-
-default
-
-* paswordなし port `8888`
-* JupyterHub
-    * port: 8000
-
-## With jupyter
-* [spark-emr-jupyter/emr_bootstrap.sh at master · mikestaszel/spark-emr-jupyter](https://github.com/mikestaszel/spark-emr-jupyter/blob/master/emr_bootstrap.sh)
-* [ETL Offload with Spark and Amazon EMR - Part 2 - Code development with Notebooks and Docker](https://www.rittmanmead.com/blog/2016/12/etl-offload-with-spark-and-amazon-emr-part-2-code-development-with-notebooks-and-docker/)
-* [SilviaTerra/docker-emr-poc](https://github.com/SilviaTerra/docker-emr-poc)
-* [AWS EMR+ Jupyter + spark 2.x – Mudit – Medium](https://medium.com/@muppal/aws-emr-jupyter-spark-2-x-7da54dc4bfc8)
-* [Jupyter Notebooks with PySpark on AWS EMR | Mike Staszel](http://mikestaszel.com/2017/10/16/jupyter-notebooks-with-pyspark-on-aws-emr/)
-* [EMR上でPython3系でpysparkする - Qiita](https://qiita.com/uryyyyyyy/items/672a4058aba754b389d1)
-
+* EmrManagedMasterSecurityGroup
+* EmrManagedSlaveSecurityGroup
+* ServiceAccessSecurityGroup
+* AdditionalMasterSecurityGroups
+* AdditionalSlaveSecurityGroups
 
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
-* [（オプション）追加のソフトウェアをインストールするためのブートストラップアクションの作成 - Amazon EMR](http://docs.aws.amazon.com/ja_jp/emr/latest/DeveloperGuide/emr-plan-bootstrap.html)
 * [Configuring Applications - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)

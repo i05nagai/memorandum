@@ -359,6 +359,7 @@ title: English Speaking
 * remind
     * It reminds me of the time when I first started teaching
     * The taste reminded him of school dinners
+* reminder
 * those who
     * 
 * Her boyfriend punched me in the face
@@ -1067,17 +1068,6 @@ title: English Speaking
     * The phone has been ringing for five minutes. I wish someboedy would answer it
     * I wish you'd do something instead of just sitting and doing nothing
     * I wish he'd have done something instaed of just sitting and doing nothing
-* regret
-    * don't make me regret about this
-    * I regret leaving school so young
-    * He was beginning to regret that he'd come along
-    * We regret any inconvenience caused to our customers
-    * I regret that I wll be unable to attend
-    * I regret to inform you that your contract will not be renewed
-    * I deply/greatly regretted what had happened
-    * I bitterly regretted my decision to leave
-    * The airline sincerly regrets any delays to passengers
-    * We very much regret that there will be job losses
 * walk into
 * choose
     * You're upse because you think I chose ross over you
@@ -1159,7 +1149,7 @@ title: English Speaking
         * incorporate sth with sth
     * make a company
         * to make a business into a corporation
-    * regular load testing of the system to correlate raw capacity to service capacity\
+    * regular load testing of the system to correlate raw capacity to service capacity
 * take
     * take the fifth
     * take issue with
@@ -2203,6 +2193,19 @@ title: English Speaking
         * I fell into the job really
         * I'm just going to go home and fall into a hot bath
     * fall out/lash out/blut out
+* lash
+    * hit
+        * to hit with a lot of force
+    * criticize
+    * tie
+        * to tie together tightly and firmly
+        * I've lashed your case to the roof rack
+    * hair
+        * an eyelash
+    * lash out at
+        * to suddenly attack sb or sth physically or criticise, him, her, or it in an agnry way
+        * I was only teasing him and suddenly he lashed out at me and hit me in the face
+        * Why's Tina in such a bad mood? She really lashed out at me when I was late for work
 * athletics
 * gymnastics
     * Gymnastics is my favourte sport
@@ -3077,6 +3080,10 @@ title: English Speaking
 * timer
     * timer goes off
 * go
+    * go into
+        * go into effect
+            * if a law or policy takes effect or comes into effect at a particular time, it officially begins to apply or be valid form that time.
+            * if it remains in effect, it still applies r is still valid
     * on the go
         * while on the go
         * very busy
@@ -5889,7 +5896,7 @@ title: English Speaking
     * book/film
         * if critics review a book, play, film, etc. they write their opinion of it
         * I only go to see films that are reviewed favourably
-    * miltary
+    * military
     * study
 * represent
     * rep
@@ -6345,9 +6352,12 @@ title: English Speaking
         * the incident was the latest twiste in the story of the robbery
         * walnuts give a new twist to regular banana bread
 * errand/trip/journey
-    * a short trip you make do something, such as buying or delivering things in the neighborhood
-    * he would clean, do errands, and babyshit for their 7-year-old daughter
-    * I've got to run a few errands and then stop by my mother's
+    * errand
+        * a short trip you make do something, such as buying or delivering things in the neighborhood
+        * he would clean, do errands, and babyshit for their 7-year-old daughter
+        * I've got to run a few errands and then stop by my mother's
+        * do errands
+        * run errands
 * squirt
 * curtail/reduce
     * to reduce or limit something
@@ -6919,8 +6929,15 @@ title: English Speaking
     * A few years ago, the country surpassed some European countries in per capita GDP
 * dough
 * mold
+    * mould
     * shape
+        * a hollow container into which you pour a soft or liquid substance so that it will cool or harden into the shape of the container
+        * to shape something into a particular form
+            * She molded the clay into little animals.
     * growth
+        * a soft green, gray, or black growth that develops on old food or on objects that have been left too long in warm, slightly wet places
+* mildew
+    * a black, green, or whitish area caused by a fungus that grows on things such as plants, paper, cloth, or buildings, usually if the conditions are warm and wet
 * affix
 * trepidation
 * fabricate/manufacture
@@ -7498,6 +7515,9 @@ title: English Speaking
     * a special pattern or design that is put on the things that a company owns and sells
     * relating to vehicles that are rented
         * a livery cab/car/driver
+* as from
+    * used for saying that something will start to happen on a particular day, and will continue after that day
+    * As from today, the bank will be open for business from 9.30 am.
 * as of
     * As of the time of writing,
     * There does not appear to be a way to schedule a new call from the site as of yet
@@ -8121,6 +8141,7 @@ title: English Speaking
         * be exempt from sth
             * who is exempt from overtime?
         * be exempt from doing sth
+    * Berlin isn't exempted from the German Bureaucratic web
 * secure
     * secure
         * free from risk and the threat of change for the worse
@@ -10784,6 +10805,9 @@ title: English Speaking
 * urethra
     * a urethra that could not shake him
 * shake
+    * shake-up
+        * a large change in the way sth is organized
+        * The company is undergoing a radical shake-up.
 * long-lived
     * long-lived problem
 * swear jar
@@ -11089,6 +11113,12 @@ title: English Speaking
     * foul up
         * to spoil sth by making a mistake or doing sth stupid
         * I don't wait David organizing this party after the way he fouled things up last year
+    * foul play
+        * crime
+            * a criminal act that results in serious damage or injury, esp. murder
+        * sport
+            * in sport, the act of playing unfairly or doing sth that is against the rules
+* foul
 * fluff
 * mishandle
 * muff
@@ -12364,6 +12394,10 @@ title: English Speaking
     * for Pete's sake
 * accredited
     * An accredited program means that it has been recognized by an official organization for providing a high level of education and training for the field.
+    * officially recognized or approved
+        * an accredited drama school
+    * officially accepted as being of a particular standard
+        * an accredited college/institution/school/university
 * syllabi
 * diabolical
     * extremely bad or shocking
@@ -13574,6 +13608,14 @@ title: English Speaking
         * The downhill race was one of the glamour events of the Winter Olympics.
     * enchantment; magic.
         * "that maiden, made by glamour out of flowers"
+* enchant
+    * please
+        * to attract or please sb very much
+    * magic
+        * to have a magical effect on sb or sth
+* enchantment
+    * a feeling of great pleasure; delight.
+    * the state of being under a spell
 * allure
 * glitz
 * glam
@@ -15453,6 +15495,7 @@ title: English Speaking
 * chasm
     * a deep opening in earth or rock
     * I take the skelton key, toss it into the chasm
+    * a very large difference between two opinions or groups of people
 * drawbridge
     * lower the drawbridge
     * upper the drawbridge
@@ -15620,6 +15663,8 @@ title: English Speaking
     * Do you have any artificial teeth (prosthesis) or crownings?
 * c/o
     * care of
+        * (mail) For distribution by (the named intermediary)
+        * Write the recipient’s name on the first line, as you do with most letters. Start the second line with “c/o” followed by the person or company name associated with the address you are using.
     * certificate of origin
         *  document used for shipping purposes. Describes country of origin of a given product.
 * determination
@@ -16086,14 +16131,185 @@ title: English Speaking
             * I'll forward that e-mail to you
         * To forward something that you have received means to send it to a different place
             * the post office will forward my email while I'm away
+        * to send a letter etlc. esp. from sb's old adresses to their new address, or to send a letter, email etc. that you have received to sb else
+            * I'll forward his email to you if you're interested
     * sports
     * direction
+        * she leaned forward to whisper sth in my ear
     * future
+        * towards the future
+        * from that day frward
+        * after that point
+        * from that day forward they never spoke to each other
     * progress
 * petty
 * rivaly
 * imperialism
 * flight manifest
+* prevail
+    * to exist and be accepted among a large number of people, or to get a position of control and influence
+        * Let’s hope that common sense prevails.
+    * In spite of injuries, our team prevailed and went on to win.
+    * to get control or influence
+        * I am sure that common sense will prevail in the end
+        * And did reason prevail over emotion?
+    * to be common among a group of people or area at a particular time
+    * to win in an argument, court case, etc.
+        * prevail in sth
+            * if they prevail in the court case, they could receive up to 10,000 USD each
+* refund
+    * to pay back money recieved or spent
+        * the theater refunded our money when the performance was canceled
+    * I took the radio back to the shop and asked for/demanded/got/was given a refund.
+* one-linear
+    * a short joke or witty remark
+    * a joke or a clever and funny remark or answer that is usually one sentence long
+        * there are some very witty one-liners in the play
+* tender
+    * offer
+    * gentle
+    * painful
+    * soft
+    * young
+    * if you tender for a job, you make a formal offer to do it for a stated price
+        * five companies have tendered for the hospital contract
+        * if you tender for sth such as shares, you make a formal offer to buy them for a stated price
+    * to give or offer sth
+        * Please tender the exact fare
+    * put sth out to tender
+        * if you put work out to tender, you ask people to make offers to do it
+    * container
+    * boat
+    * chicken
+* bluebook
+    * Blue book or bluebook is a term often referring to an almanac, buyer's guide or other compilation of statistics and information
+    * a booklet (= number of pieces of paper fastened together with a paper cover) with nothing on the pages, that college students in the US must use to write their answers to exam questions:
+        * You pretty much just had to write your name on your blue book and you passed.
+* top
+    * top up
+        * liquid
+        * extra amount
+        * extra money that is added to an amount so that the total is increased
+            * the company has offered a top-up to all those who have paid into their pension scheme for more than 10 years
+* whuup
+    * to administer a beating to especially as punishment
+    * to defeat decisively
+* Co-listening
+    * You will receive individual invitations for the Co-listening later on
+* aw
+    * used to express mild protest, entreaty, or sympathy
+    * used to express mild disappointment or self-deprecation
+* traffic
+    * human traficking
+    * vehecle
+    * trade
+    * internet
+        * the activity of data and messages passing through an online communication system or the number of visits to a particular website
+    * trafficking/trafficked
+        * to buy and sell goods illegally
+        * to illegally buy or sell people, or make money from work they are forced to do, such as sex work
+* instalment
+    * one of several parts into which a story, plan, or amount of money owed has been divided, so that each part happens or is paid at different times until the end or total is reached
+    * the novel has been serialized for radio in five instalment
+    * We agreed to pay for the car by/in instalments.
+    * pay by instalment
+    * pay/repay instalments
+    * weekly/monthly/annual instalment
+    * to keep up the instalment
+* correspond
+* correspondent
+    * a person who writes a letter or email
+        * an email correspondent
+    * a person who works for a newspaper, television station, etc. and whose job is to report on a particular subject or from another country
+        * business/labour/legal, etc. correspondent
+    * reporter
+    * letter writer
+* flair
+* apprenticeship
+* for better or worse
+    * whether the outcome is good or bad.
+    * Anyway, for better or for worse, I followed her advice.
+    * If you do something for better or (for) worse, you accept the bad results of the action as well as the good ones
+* complimentary
+    * complimentary refreshment
+    * He stopped at a bar for a little refreshment.
+* refreshment
+    * small amount of food and drink
+    * Light refreshments will be available after the meeting.
+* overdraft
+* prosecutor
+    * a legal representative who officially accuses someone of committing a crime by bringing a case against that person in a court of law
+        * Federal prosecutors intend to retry the case.
+        * a federal/public prosecutor
+* judiciary
+    * the part of a country's government that is responsible for its legal system, including all the judges in the country's courts
+    * a member of the judiciary
+    * a judiciary committee/panel
+* door-to-door
+    * The company is offering comprehensive protection on a door-to-door basis subject to the Terms and Conditions contained herein.
+* entire
+* entirety
+* perishable
+    * perishable food decays quickly
+    * food that is perishable has to be used quickly or it will decay so that you cannot eat it
+* remorseful
+    * feeling sad and guilty
+* contrite
+    * feeling very sorry and guilty for sth bad that you have done
+    * a contrite apology/expression
+* appraisal
+    * the act of examining sb or sth in order to judge their quialities, sucess, or needs
+    * a meeting in which an employee discuss his or her progress, aims, and needs at work with his or her manager or employer
+        * Many companies operate regular job appraisals, often on an annual basis.
+    * accurate/realistic/honest appraisal 
+    *
+* regretful
+* rueful
+* regret
+    * don't make me regret about this
+    * I regret leaving school so young
+    * He was beginning to regret that he'd come along
+    * We regret any inconvenience caused to our customers
+    * I regret that I wll be unable to attend
+    * I regret to inform you that your contract will not be renewed
+    * I deply/greatly regretted what had happened
+    * I bitterly regretted my decision to leave
+    * The airline sincerly regrets any delays to passengers
+    * We very much regret that there will be job losses
+* adjacent
+    * enter the value of the item(s) in the column adjacent
+* inoperable
+    * disease
+        * If a tumour (= a growth) or other medical condition is inoperable, doctors are unable to remove or treat it with an operation.
+    * not working
+        * If a system, plan, machine, etc. is inoperable, it cannot be done or made to work.
+* misconception
+    * an idea that is wrong because it has been based on a failure to understand a situation
+    * We hope our work will help to change popular misconceptions about disabled people.
+* loveseat
+* sanction
+    * order
+        * trade/economic sanction will only be lifted (=stopped) when the aggressor nation withdraws its troops
+        * a strong action takein in order to make people obey a law or rule, or a punishment given when they do not obey
+            * Without realistic sanctions, some teachers have difficulty keeping order in the classroom.
+    * approval
+        * They tried to get official sanction for the plans.
+    * punishment
+        * trade/economic sanctions
+    * to formally give permissions for sth
+    * impose sactions against/on sb
+    * drop/ease/lift sanctions
+    * apply/enforse sanctions
+    * international sanctions
+* do you have a package for me?
+* are there any messages for me?
+* last minute
+    * the last minute
+        * the latest possible opportunity for doing sth
+        * He always leaves his homework until the last minute
+        * At the last minute, we found our tickets
+    * a last-minute cancellation
+    * His attorneys hoped for a last-minute reprieve.
 
 
 ## disease/disorder

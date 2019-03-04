@@ -121,6 +121,33 @@ Take a look at examples provided by AWS.
 * [Identity\-Based Policies and Resource\-Based Policies \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
 
 
+## Principals
+* https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying
+
+* Specific AWS accounts
+    * type
+        * `AWS`
+    * values
+        * `arn:aws:iam::AWS-account-ID:root`
+* Individual IAM user or users
+    * type
+        * `AWS`
+    * values
+        * ``
+* Federated users 
+    * type
+        * ``
+    * value
+        * `cognito-identity.amazonaws.com`
+* IAM role
+    * `AWS`
+    * `arn:aws:iam::AWS-account-ID:role/role-name`
+* AWS service
+    * 
+* Everyone (anonymous users)
+    * `AWS`
+    * `*`
+
 ## Amazon Resource Nanme
 
 * user account
@@ -132,6 +159,10 @@ Take a look at examples provided by AWS.
     * `arn:aws:sts::AWS-account-ID:assumed-role/role-name/role-session-name`
 * aws service
 
+## Instance profile
+* [Using Instance Profiles \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html)
+
+An instance profile is a container for an IAM role that you can use to pass role information to an EC2 instance when the instance starts.
 
 ## Reference
 * [What Is IAM? \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)

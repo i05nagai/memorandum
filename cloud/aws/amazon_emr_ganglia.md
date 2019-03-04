@@ -20,3 +20,4 @@ wgetが使える。
 
 
 ## Reference
+* [Ganglia \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-ganglia.html)
