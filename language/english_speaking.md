@@ -429,6 +429,7 @@ title: English Speaking
     * Where were you born?
     * How many babies are born every day?
 * get
+    * get up to sth
     * get mad at
         * please don't angry with me
         * they are angry at the way they have been treated
@@ -5780,6 +5781,7 @@ title: English Speaking
         * one in which everyone gets what they want
         * shorter work weeks are a win-win situation for both employer and employee
 * assess/judge
+    * assessing of AML/CTF risks within Klarna
     * to make a judgement about a person or situation after thingking carefully about it
     * assess the impact/extent/effectiveness of something
         * a report to assess the impact of advertisng on children
@@ -13170,6 +13172,7 @@ title: English Speaking
     * most important part
         * sth of great importance on which everything else depends
         * Rules run in Aggregation is the cornerstone of rule evaluation in a distributed environment
+        * There are cornerstones of my Company's work
 * reference
     * mentioning
     * statement
@@ -16065,6 +16068,8 @@ title: English Speaking
     * to make the sound and action of vomitting, esp. when nothing is actually vomitted
     * to react in a way as if you are vomitting
     * The sight of blood makes him retch.
+* puke
+    * vomit
 * vomit
 * barf
     * to vomit
@@ -16237,6 +16242,9 @@ title: English Speaking
     * small amount of food and drink
     * Light refreshments will be available after the meeting.
 * overdraft
+* lawyer
+    * defence lawyer
+        * imagine if the defence laywer and prosecutor are the same person
 * prosecutor
     * a legal representative who officially accuses someone of committing a crime by bringing a case against that person in a court of law
         * Federal prosecutors intend to retry the case.
@@ -16310,6 +16318,75 @@ title: English Speaking
         * At the last minute, we found our tickets
     * a last-minute cancellation
     * His attorneys hoped for a last-minute reprieve.
+* soft pull
+    * soft inquiry
+* intervene
+    * get involved
+        * to intentionally become involved in a difficult situation in order to improve it or prevent it from getting worse
+    * come between
+* trippy
+    * relating to the effect produced by taking a psychedelic drug
+    * that was fucking trippy
+* phishing
+    * phising scam
+        * Phishing scams have become more sophisticated over the years 
+* phishy
+* scam
+* spam
+* basic of spotting a phisy email
+* saboteur
+* sabotage
+    * to damage or destroy equipment, weapons, or buildings in order to prevent the success of an enemy or competitor
+        * Enemy agents had sabotaged the bridge.
+    * to intetionally prevent the success of a plan or action
+        * This was a deliberate attempt to sabotage the ceasefire.
+    * the act of intentionally preventing the success of a plan or action
+        * They moved quickly to prevent further sabotage of their investigation.
+* ceasefire
+    * an agreement, usually between two armies, to stop fighting in order to allow discussions about pease
+* Learning objectives
+* dirty money can drive from any criminal activities
+* illegimate
+    * illegimate source
+* fund
+    * funding for terrorist activities
+* abuse
+    * the company can be abused in money laundering via customers
+* silo
+    * storage place
+        * a large round tower on farm for storing grain or winter food for cattle
+        * a large underground place for storing and firing missiles
+    * part
+        * a part of a company, organization, or system that does not communicate with, understand, or work well with other parts
+* high
+    * get high
+    * high on life
+        * high on marijuana
+    * high off
+        * I miss getting high off you
+* toiletries
+    * articles used in washing and taking care of one's body, such as soap, shampoo, and toothpaste.
+* backport
+    * Backporting is the action of taking parts from a newer version of a software system or software component and porting them to an older version of the same software
+* tarnish
+    * metal
+        * to make or (especially of metal) become less bright or a different colour
+    * good opinion
+        * to make people think that someone or something is less good
+* tarnished
+    * less good
+        * made to seem less good or respected
+        * By 2015, the company was starting to look a little tarnished.
+* psych
+    * psyched
+* directorship
+* confide
+* corruption
+* ongoing negotiations 
+* as a token of our appreciation 
+* overrule your professional duties
+* What is expected of you
+* Assess and decide on employees’ raised Conflict of Interests
 
 
 ## disease/disorder
