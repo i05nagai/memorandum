@@ -3,7 +3,7 @@ title: syslog
 ---
 
 ## syslog
-logの受信application
+send messages to the system logger
 logrotationは自分で設定する。
 
 defaultで存在するlog file
@@ -158,6 +158,7 @@ $ModLoad imjournal
 
 
 ## Reference
+* [syslog\(3\): send messages to system logger \- Linux man page](https://linux.die.net/man/3/syslog)
 * [【初心者でもすぐわかる】syslogとは？とsyslogの設定方法](https://eng-entrance.com/linux-log-syslog)
 * [必読！ログファイルとディレクトリ | Think IT（シンクイット）](https://thinkit.co.jp/article/711/1)
 * [syslogを押さえよう！ | Think IT（シンクイット）](https://thinkit.co.jp/article/724/1)
