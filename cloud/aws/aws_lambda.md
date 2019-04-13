@@ -284,6 +284,44 @@ From console
 * Event source mapping
     * `arn:aws:lambda:region:account-id:event-source-mapping:event-source-mapping-id`
 
+## Concurrency
+[Managing Concurrency \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+
+
+## Layer
+Layer is a library for lambda function.
+
+- python
+    - directory sturcture
+    - `<valid-directory>`
+        - `python`
+        - `python/lib/python3.7/site-packages`
+            - depends on runtime
+
+```
+/<valid-directory>/PIL
+/<valid-directory>/Pillow-5.3.0.dist-info
+```
+
+You can set permissions to layers.
+
+## VPC
+* [Configuring a Lambda Function to Access Resources in an Amazon VPC \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+
+Guidelines for Setting Up VPC-Enabled Lambda Functions
+
+* If your Lambda function accesses a VPC, you must make sure that your VPC has sufficient ENI capacity to support the scale requirements of your Lambda function. Y
+    * `Projected peak concurrent executions * (Memory in GB / 3GB)`
+    * Projected peak concurrent execution – Use the information in Managing Concurrency to determine this value.
+    * Memory – The amount of memory you configured for your Lambda function.
+* The subnets you specify should have sufficient available IP addresses to match the number of ENIs.
+
+
+## Logging
+* [AWS Lambda Function Logging in Python \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/python-logging.html)
+
+- print statements.
+- Logger functions in the logging module (for example, logging.Logger.info and logging.Logger.error).
 
 ## Reference
 * [Best Practices for Working with AWS Lambda Functions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
