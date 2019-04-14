@@ -4069,8 +4069,9 @@ title: English Speaking
         * she feels that she has her own niche in the company
     * find a niche
         * he had a hard time finding his niche academically
-* lineage
-    * the members of a person's 
+* lineaage
+    * the members of a person's family who are directedly related to that person and who lived a long time before him or her
+    * she's very proud of her ancinet royal lineage
 * identity
     * the identity of the suspect
     * His true identity
@@ -5100,6 +5101,11 @@ title: English Speaking
     * difference
 * indigenous
     * existing naturally or having always lived in a place; native:
+* reflection
+    * thought
+        * serious and careful thought
+    * On reflection (= after considering it), I decided I had been wrong.
+    * After 30 years as a judge, her reflections on/about justice were well worth listening to.
 * reflect
     * reflect on
         * to affect other people's opinion of sb or sth, esp. in a bad way
@@ -10350,6 +10356,7 @@ title: English Speaking
         * make clear
         * to clarify or supply additional information about
         * Yes, let's ask her about that tomorrow. Maybe she can shed some light on this.
+    * to cause (blood) to flow by cutting or wounding
 * spoof
     * That's not a real Hollywood movie; it's a spoof.
 * warrant
@@ -16387,6 +16394,27 @@ title: English Speaking
 * overrule your professional duties
 * What is expected of you
 * Assess and decide on employees’ raised Conflict of Interests
+* frugality
+    * the quality of being careful when using money or food
+        * she was known for her simplicity and frugality
+        * They taught that frugality must be observed in food and clothing.
+* pre-emptive
+* emptive
+    * Responding to or acting to counteract something when it happens (rather than beforehand)
+* pre-empt
+    * to do or say something before someone so that you make their words or actions unnecessary or not effective
+        * The minister held a press conference in order to pre-empt criticism in the newspapers.
+    * to replace one television programme with another, usually more important one
+        * All the networks pre-empted their regular schedules to broadcast news of the hijacking.
+    * to do or say something before someone else does, especially to prevent them doing or saying what they had planned or to prevent their action being effective
+        * The group raised its offer in an attempt to pre-empt a possible counterbid from a rival.
+* hierarchy
+    * a system in which people or things are arranged according to their importance
+        * some monkeys have a very complex socila hierarchy
+        * he rose quickly through the polictical hierarchy to become party leader
+    * the people in the upper levels of an organization who control it
+* hierarchical
+    * arranged according to people's or things' level of importance, or relating to such a system
 
 
 ## disease/disorder
