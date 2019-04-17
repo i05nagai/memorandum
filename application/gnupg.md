@@ -7,10 +7,56 @@ title: GnuPG
 秘密鍵の出力は、出力用のコマンドがある。
 また出力した秘密鍵のgpgへの登録も同様のコマンドがある。
 
-## CLi
+## CLI
 
 
 ## Usage
+
+Create gpg key. Recommended way.
+
+```
+gpg --full-generate-key
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) y
+
+Real name: <your-name>
+Email address: <your-email>
+Comment:
+You selected this USER-ID:
+    "<your-name> <your-email>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+```
+
+Create gpg key.
+
+```
+gpg --default-new-key-algo rsa4096 --gen-key
+Real name: <your name>
+Email address: <your-email-address>
+You selected this USER-ID:
+    "<your name> <your-email-address>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+```
+
 Show the list of registered private key
 
 ```
@@ -23,7 +69,8 @@ Show the list of registered public key
 gpg --list-keys
 ```
 
-binary形式で相手に渡す公開鍵の作成(export)
+Export public keys as binary format
+
 
 * `-o <filename>`
     * output file name
@@ -34,26 +81,26 @@ binary形式で相手に渡す公開鍵の作成(export)
 gpg -o ./my.pub --export key_user_id
 ```
 
-binary形式で秘密鍵の作成(export)
+Export private keys as binary format
 
 * `-o <filename>`
     * output filename
 * `key_user_id`
-    * 鍵作成じに指定したuser id
+    * user id specified when you create key
 
 ```
 gpg -o my.pri --export-secret-key key_user_id
 ```
 
-受け取った公開鍵/秘密鍵のimport
+Importing received public/private ssh key
 
 ```
 gpg --import my.pub 
 gpg --import my.pri
 ```
 
-importした鍵の信用。
-実行すると、対話モードとなるので、`trust`コマンドを実行する
+Trust imported keys with interactive mode.
+In interactive mode, you can use `trust` command to trust the key.
 
 ```
 gpg --edit-key key_user_id
@@ -61,7 +108,19 @@ gpg> trust
 ```
 
 ```
-gpg [-o ファイル名] [-r 鍵ユーザID] 暗号化ファイル
+gpg [-o filename] [-r key-userid] <encrypted-file>
+```
+
+Delete imported public keys. If you have corresponding private key, you need to delete private key first.
+
+```
+gpg --delete-key <key-user-id>
+```
+
+Delete imported private key
+
+```
+gpg --delete-secret-key <key-user-id>
 ```
 
 Configure default key
