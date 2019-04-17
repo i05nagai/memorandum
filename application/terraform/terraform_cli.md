@@ -29,23 +29,41 @@ cp terraform /usr/local/bin
 
 ## CLI
 
-* `terraform init`
-    * directoryの初期化
-    * 他のコマンドと違って、何回実行しても結果は同じ
-    * `-input=false`
-        * inputのpromptをださないようにする
-* `terraform plan`
-* `terraform apply`
-    * terraformの設定を適用する
-    * resourceの作成
-    * `terraform plan`+実行
-    * `-var 'foo=bar'`
-        * 実行時に変数の定義ができる
-        * credentialの設定などに便利
-    * `-out=path`
-        * binary形式で実行計画が出力される
-    * `-state=statefile`
-        * default は `terraform.tfstate`
+```
+terraform init
+```
+
+* directoryの初期化
+* 他のコマンドと違って、何回実行しても結果は同じ
+* `-input=false`
+    * inputのpromptをださないようにする
+* `-reconfigure`
+* `-backend-config=path`
+    * This can be either a path to an HCL file with key/value assignments (same format as terraform.tfvars) or a 'key=value' format. This is merged with what is in the configuration file. This can be specified multiple times. The backend type must be in the configuration itself.
+
+```
+terraform plan
+```
+
+```
+terraform apply
+```
+
+* terraformの設定を適用する
+* resourceの作成
+* `terraform plan` + execute configuration
+* `-var 'foo=bar'`
+    * 実行時に変数の定義ができる
+    * credentialの設定などに便利
+* `-out=path`
+    * binary形式で実行計画が出力される
+* `-state=statefile`
+    * default to `terraform.tfstate`
+* `-parallelism=n`
+    * default to 10
+
+
+
 * `terraform destroy`
     * resourceの停止
 * `terraform workspace`
@@ -86,6 +104,15 @@ terraform state show <resource-address>
 ```
 
 ## Usage
+
+```
+cat backend_config_<env.hcl>
+
+terrafrom init \
+    -reconfigure \
+    -backend-config=backend_config_<env>.hcl
+```
+
 
 ## Configuration
 
