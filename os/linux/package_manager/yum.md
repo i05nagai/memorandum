@@ -52,5 +52,11 @@ yum deplist <package>
 yum repolist
 ```
 
+Removes all cached package downloads and cached headers that contain information about remote packages. 
+
+```
+yum clean all
+```
+
 ## Reference
 - [2\.4 Using Yum from the Command Line](https://docs.oracle.com/cd/E37670_01/E37355/html/ol_creating_yum_repo.html)
