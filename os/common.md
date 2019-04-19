@@ -35,6 +35,12 @@ permissionなども保持される。
 ## /etc/fstab
 * [/etc/fstabについて その1 - Linux初心者の基礎知識](http://www.linux-beginner.com/linux_kihon64.html)
 
+## /etc/passwd
+
+```
+account:password:UID:GID:GECOS:directory:shell
+```
+
 
 ## CPU information
 ```
