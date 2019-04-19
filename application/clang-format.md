@@ -33,6 +33,14 @@ cmake -G Ninja -DCMAKE_BUILD_TYPE=MinSizeRel -DLLVM_BUILD_STATIC=true .
 ninja clang-format
 ```
 
+For ubuntu 14.04, https://apt.llvm.org/
+
+```
+# to install 5.0
+apt-add-repository "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-5.0 main"
+apt search clang-format-5.0
+```
+
 ## Usage
 
 ```
