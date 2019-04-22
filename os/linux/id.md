@@ -9,7 +9,8 @@ id command.
 Show current login user.
 
 ```
-id
+$ id
+uid=498(<username>) gid=500(<group_name>) groups=500(<gorupnames>)
 ```
 
 ## Reference

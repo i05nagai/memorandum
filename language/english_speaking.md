@@ -435,6 +435,7 @@ title: English Speaking
             * where can I get hold of some stamps?
         * to understand sth
             * this is a very difficult concept to get hold of
+    * get up to sth
     * get mad at
         * please don't angry with me
         * they are angry at the way they have been treated
@@ -4126,8 +4127,9 @@ title: English Speaking
         * she feels that she has her own niche in the company
     * find a niche
         * he had a hard time finding his niche academically
-* lineage
-    * the members of a person's 
+* lineaage
+    * the members of a person's family who are directedly related to that person and who lived a long time before him or her
+    * she's very proud of her ancinet royal lineage
 * identity
     * the identity of the suspect
     * His true identity
@@ -5159,6 +5161,11 @@ title: English Speaking
     * difference
 * indigenous
     * existing naturally or having always lived in a place; native:
+* reflection
+    * thought
+        * serious and careful thought
+    * On reflection (= after considering it), I decided I had been wrong.
+    * After 30 years as a judge, her reflections on/about justice were well worth listening to.
 * reflect
     * reflect on
         * to affect other people's opinion of sb or sth, esp. in a bad way
@@ -5841,6 +5848,7 @@ title: English Speaking
         * one in which everyone gets what they want
         * shorter work weeks are a win-win situation for both employer and employee
 * assess/judge
+    * assessing of AML/CTF risks within Klarna
     * to make a judgement about a person or situation after thingking carefully about it
     * assess the impact/extent/effectiveness of something
         * a report to assess the impact of advertisng on children
@@ -10466,6 +10474,7 @@ title: English Speaking
         * make clear
         * to clarify or supply additional information about
         * Yes, let's ask her about that tomorrow. Maybe she can shed some light on this.
+    * to cause (blood) to flow by cutting or wounding
 * spoof
     * That's not a real Hollywood movie; it's a spoof.
 * warrant
@@ -13312,6 +13321,7 @@ title: English Speaking
     * most important part
         * sth of great importance on which everything else depends
         * Rules run in Aggregation is the cornerstone of rule evaluation in a distributed environment
+        * There are cornerstones of my Company's work
 * reference
     * mentioning
     * statement
@@ -16233,6 +16243,8 @@ title: English Speaking
     * to make the sound and action of vomitting, esp. when nothing is actually vomitted
     * to react in a way as if you are vomitting
     * The sight of blood makes him retch.
+* puke
+    * vomit
 * vomit
 * barf
     * to vomit
@@ -16405,6 +16417,9 @@ title: English Speaking
     * small amount of food and drink
     * Light refreshments will be available after the meeting.
 * overdraft
+* lawyer
+    * defence lawyer
+        * imagine if the defence laywer and prosecutor are the same person
 * prosecutor
     * a legal representative who officially accuses someone of committing a crime by bringing a case against that person in a court of law
         * Federal prosecutors intend to retry the case.
@@ -16759,6 +16774,139 @@ title: English Speaking
 * exy
     * exxy
     * expensive
+* He has no awareness
+* Your girlfiriend is really high maintenance
+* You don't look like such a person
+* You're a clean freak
+* it's just a habit
+* He does things his own way
+* I'm not a people person
+* I can't give up. It's not in my nature
+* I wanna make it a habit.
+    * I wanna make it a habbit of waking up early
+* I guess we just click
+* What do you think, bossy and domineering?
+* It comes naturally to me
+* I always make a mess
+* you don't look the type
+* I can't see myself doing that
+* skeptic
+    * I'm a skeptic
+    * I'm skeptical
+* He wants attention
+* self-control
+    * I have no self-control
+* I don't want to come off too strong
+* domineering
+    * What do you think bossy and domineering?
+    * I thought he was arrogant and domineering
+    * a domineering personality
+* they were very patient with me
+* arrogant
+* immature
+* life
+    * a way of living or a prticular part of sb's life
+        * my working life
+    * everything that is alive
+        * human/marine/plant life
+    * bring sth to life
+        * to make sth more real or exicintg
+* life-threatening
+    * able to cause death
+    * a life-threathing experience/illess
+    * life-threatening diseases such as cancer
+* soft pull
+    * soft inquiry
+* intervene
+    * get involved
+        * to intentionally become involved in a difficult situation in order to improve it or prevent it from getting worse
+    * come between
+* trippy
+    * relating to the effect produced by taking a psychedelic drug
+    * that was fucking trippy
+* phishing
+    * phising scam
+        * Phishing scams have become more sophisticated over the years 
+* phishy
+* scam
+* spam
+* basic of spotting a phisy email
+* saboteur
+* sabotage
+    * to damage or destroy equipment, weapons, or buildings in order to prevent the success of an enemy or competitor
+        * Enemy agents had sabotaged the bridge.
+    * to intetionally prevent the success of a plan or action
+        * This was a deliberate attempt to sabotage the ceasefire.
+    * the act of intentionally preventing the success of a plan or action
+        * They moved quickly to prevent further sabotage of their investigation.
+* ceasefire
+    * an agreement, usually between two armies, to stop fighting in order to allow discussions about pease
+* Learning objectives
+* dirty money can drive from any criminal activities
+* illegimate
+    * illegimate source
+* fund
+    * funding for terrorist activities
+* abuse
+    * the company can be abused in money laundering via customers
+* silo
+    * storage place
+        * a large round tower on farm for storing grain or winter food for cattle
+        * a large underground place for storing and firing missiles
+    * part
+        * a part of a company, organization, or system that does not communicate with, understand, or work well with other parts
+* high
+    * get high
+    * high on life
+        * high on marijuana
+    * high off
+        * I miss getting high off you
+* toiletries
+    * articles used in washing and taking care of one's body, such as soap, shampoo, and toothpaste.
+* backport
+    * Backporting is the action of taking parts from a newer version of a software system or software component and porting them to an older version of the same software
+* tarnish
+    * metal
+        * to make or (especially of metal) become less bright or a different colour
+    * good opinion
+        * to make people think that someone or something is less good
+* tarnished
+    * less good
+        * made to seem less good or respected
+        * By 2015, the company was starting to look a little tarnished.
+* psych
+    * psyched
+* directorship
+* confide
+* corruption
+* ongoing negotiations 
+* as a token of our appreciation 
+* overrule your professional duties
+* What is expected of you
+* Assess and decide on employees’ raised Conflict of Interests
+* frugality
+    * the quality of being careful when using money or food
+        * she was known for her simplicity and frugality
+        * They taught that frugality must be observed in food and clothing.
+* pre-emptive
+* emptive
+    * Responding to or acting to counteract something when it happens (rather than beforehand)
+* pre-empt
+    * to do or say something before someone so that you make their words or actions unnecessary or not effective
+        * The minister held a press conference in order to pre-empt criticism in the newspapers.
+    * to replace one television programme with another, usually more important one
+        * All the networks pre-empted their regular schedules to broadcast news of the hijacking.
+    * to do or say something before someone else does, especially to prevent them doing or saying what they had planned or to prevent their action being effective
+        * The group raised its offer in an attempt to pre-empt a possible counterbid from a rival.
+* hierarchy
+    * a system in which people or things are arranged according to their importance
+        * some monkeys have a very complex socila hierarchy
+        * he rose quickly through the polictical hierarchy to become party leader
+    * the people in the upper levels of an organization who control it
+* hierarchical
+    * arranged according to people's or things' level of importance, or relating to such a system
+
+
 
 
 ## hair
@@ -16969,47 +17117,6 @@ title: English Speaking
     * thinking or worrying about something all the time, so that you do not think about other things enough
     * I try to stay fit, but I'm not obsessive about it
     * an obsessive concern with cleanliness and order
-* He has no awareness
-* Your girlfiriend is really high maintenance
-* You don't look like such a person
-* You're a clean freak
-* it's just a habit
-* He does things his own way
-* I'm not a people person
-* I can't give up. It's not in my nature
-* I wanna make it a habit.
-    * I wanna make it a habbit of waking up early
-* I guess we just click
-* What do you think, bossy and domineering?
-* It comes naturally to me
-* I always make a mess
-* you don't look the type
-* I can't see myself doing that
-* skeptic
-    * I'm a skeptic
-    * I'm skeptical
-* He wants attention
-* self-control
-    * I have no self-control
-* I don't want to come off too strong
-* domineering
-    * What do you think bossy and domineering?
-    * I thought he was arrogant and domineering
-    * a domineering personality
-* they were very patient with me
-* arrogant
-* immature
-* life
-    * a way of living or a prticular part of sb's life
-        * my working life
-    * everything that is alive
-        * human/marine/plant life
-    * bring sth to life
-        * to make sth more real or exicintg
-* life-threatening
-    * able to cause death
-    * a life-threathing experience/illess
-    * life-threatening diseases such as cancer
 
 
 ## disease/disorder

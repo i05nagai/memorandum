@@ -109,6 +109,17 @@ Disable spotlights.
 #### Disabling spotlights
 [MacOS Sierra: Enable/Disable Spotlight Indexing](https://www.technipages.com/macos-sierra-enable-disable-spotlight)
 
+disable
+
+```
+From the Apple menu, choose “Restart…” > “Restart“.
+Simultaneously press and hold the “Command” and “R” buttons. This will start you in Recovery Mode.
+Select “Utilities” > “Terminal“.
+Type one of the following, then press “Enter“:
+Disable System Integrity Protection: csrutil disable
+Enable System Integrity Protection: csrutil enable
+```
+
 ```
 # Enable Indexing
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist

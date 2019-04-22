@@ -7,7 +7,7 @@ title: apt-get
 ## CLI
 
 ## Usages
-インストールされてるカーネルの更新(Ubuntu)/ディストリビューションの更新(Debian)
+Upgrade the kernel in Ubuntum/ Upgrades the distribution in Debian
 
 ```
 apt-get dist-upgrade
