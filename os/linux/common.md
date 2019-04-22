@@ -24,8 +24,11 @@ https://en.wikipedia.org/wiki/Device_file#Block_devices
     * xen disk storage devices
 
 ## /dev/sda
-* `/sda`はdisk名で、`a`からalphabet順で名前がつく
-* `/sda1` disk名の数字の後ろはpartition number
+* `/sda`
+    * disk name
+    * the suffix start with `a` in alphabetic order
+* `/sda1`
+    * the number at the end of the string means the partition number e.g. `1`
 
 ## /etc/group
 
@@ -33,10 +36,10 @@ https://en.wikipedia.org/wiki/Device_file#Block_devices
 hoge_group:x:501:hoge_user3,hoge_user2
 ```
 
-| hoge_group            | グループ名                                                                                             |
+| foo_group             | group name                                                                                             |
 |-----------------------|--------------------------------------------------------------------------------------------------------|
-| x                     | 「 x 」という文字か、暗号化されたパスワード。「 x 」はシャドウパスワードを使用している事を意味します。 |
-| 501                   | グループID( GID )                                                                                      |
+| x                     | either `x` or encrypted password. `x` denotes the user are using shadow password  |
+| 501                   | group id or GID                                                                                      |
 | hoge_user3,hoge_user2 | サブグループとして所属しているユーザーアカウントのリスト。カンマ区切り。                               |
 
 * userは複数のgroupに所属できる
