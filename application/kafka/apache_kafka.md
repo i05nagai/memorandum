@@ -21,6 +21,12 @@ kafka
 * isr
     * is the set of "in-sync" replicas. This is the subset of the replicas list that is currently alive and caught-up to the leader.
 
+
+## TLS
+- [Security Tutorial — Confluent Platform](https://docs.confluent.io/current/tutorials/security_tutorial.html#generating-keys-certs)
+
+
+
 ## Reference
 * [Apache Kafka](https://kafka.apache.org/)
 * [Top 5 Apache Kafka Books \| Complete Guide To Learn Kafka \- DataFlair](https://data-flair.training/blogs/apache-kafka-books/)
