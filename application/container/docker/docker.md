@@ -360,6 +360,10 @@ docker login -u oauth2accesstoken -p "$(gcloud auth application-default print-ac
     * docker daemonのresponseは全て1`Docker-Content-Digest` HEADERを含んでいる
 
 
+## pseudo tty
+- [Containers, pseudo TTYs, and backward compatibility \[LWN\.net\]](https://lwn.net/Articles/688809/)
+
+
 ## Layer
 * [Explaining Docker Image IDs](https://windsock.io/explaining-docker-image-ids/)
 * [Odd Bits - Unpacking Docker images with Undocker](http://blog.oddbit.com/2015/02/13/unpacking-docker-images/)
