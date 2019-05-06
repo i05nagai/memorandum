@@ -10,12 +10,13 @@ title: Ansible
 
 * `when:`
 * `register: var_name`
-    * commandの結果を保存できる
+    * Store results of commands
     * 保存した結果は、templates, action line, when statementで使える
 
 
 ## inventory
 * [Working with Inventory — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
+- [Conditionals — Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
 
 hostsの一覧がinventoryになる。
 `production`や`staging`ごとにinventoryを作って管理する。
