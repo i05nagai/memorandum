@@ -719,3 +719,4 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
+- [Tanh\-sinh quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Tanh-sinh_quadrature)
