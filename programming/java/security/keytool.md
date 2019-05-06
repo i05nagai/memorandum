@@ -41,6 +41,15 @@ keytool -gencert <option>
 * -protected
 * -Jjavaoption
 
+Export a key in keystore
+
+```
+keytool \
+    -keystore server.keystore.jks \
+    -alias <alias-in-keystore> \
+    -storepass <passwowrd-for-keystore> \
+    -certreq -file credential/kafka-server.cert-file
+```
 
 ## Reference
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
