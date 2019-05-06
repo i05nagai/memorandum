@@ -173,6 +173,13 @@ object Obj {
 ## Options
 * `-Djava.security.egd=`
 
+
+## Java Key Store
+- [Difference between \.keystore file and \.jks file \- Stack Overflow](https://stackoverflow.com/questions/8985685/difference-between-keystore-file-and-jks-file)
+- [KeyStore \(Java Platform SE 6\)](https://docs.oracle.com/javase/6/docs/api/java/security/KeyStore.html)
+
+- extension is either `jks` or `keystore`
+
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
 * [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)

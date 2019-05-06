@@ -50,7 +50,7 @@ tcpdump dst 192.168.0.2 and src net and not icmp
 ## Usage
 
 Find traffic by ip
-1.2.3.4とのtraficをcapture
+Capture traffic from 1.2.3.4
 
 ```
 tcpdump host 1.2.3.4

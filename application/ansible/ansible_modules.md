@@ -127,6 +127,8 @@ private repositoryをcloneする場合は、deploy keyをgithubに登録する�
     accept_hostkey: yes
 ```
 
+#### lineinfile
+- [lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html)
 
 ## Reference
 

@@ -13,72 +13,70 @@ spark-submit --status [submission ID] --master [spark://...]
 spark-submit run-example [options] example-class [example args]
 ```
 
-* --master MASTER_URL
+* `--master MASTER_URL`
     * `spark://host:port`
     * `mesos://host:port`
     * `yarn`
     * `local`
-* --deploy-mode DEPLOY_MODE
+* `--deploy-mode DEPLOY_MODE`
     * Whether to launch the driver program locally ("client") or on one of the worker machines inside the cluster ("cluster") (Default: client).
-    * client
-        * driverがlocal, workerはremote
-    * cluster
-        * driverもremote
-* --class CLASS_NAME
+    * `client`
+        * driver is local, worker is remote
+    * `cluster`
+        * driver and worker is remote
+* `--class CLASS_NAME`
     * Your application's main class (for Java / Scala apps).
     * Java or Scalaのmain class
-* --name NAME
+* `--name NAME`
     * A name of your application.
     * spark's web UIのapplication name
-* --jars JARS
+* `--jars JAR`S
     * Comma-separated list of local jars to include on the driver and executor classpaths.
-    * classpathに置かれる JAR files
-    * third partyのJARに依存する場合は追加する
-* --packages
+    * lists of JAR files placed under classpath
+    * Specify if you use third party JAR files
+* `--packages`
     * Comma-separated list of maven coordinates of jars to include on the driver and executor classpaths.
     * Will search the local maven repo, then maven central and any additional remote repositories given by --repositories.
     * The format for the coordinates should be groupId:artifactId:version.
-* --exclude-packages
+* `--exclude-packages`
     * Comma-separated list of groupId:artifactId, to exclude while resolving the dependencies provided in --packages to avoid dependency conflicts.
-* --repositories 
+* `--repositories` 
     * Comma-separated list of additional remote repositories to search for the maven coordinates given with --packages.
-* --py-files PY_FILES
+* `--py-files PY_FILES`
     * Comma-separated list of .zip, .egg, or .py files to place on the PYTHONPATH for Python apps.
-    * PYTHONPATHに記載された場所に追加されるファイル
-    * zipやpyなど
-    * コンマ区切りで渡す
-    * `/path/to/file1,/path/to/file2`
+    * files are placed in a directory registed to `PYTHONPATH`
+    * available format: zip, py
+    * comma separated lists
+        * `/path/to/file1,/path/to/file2`
     * 実行するpythonファイルの中でimportしたいものがあるときは、こちらでファイルを渡す
-* --files FILES
+* `--files FILES`
     * Comma-separated list of files to be placed in the working directory of each executor.
-    * working directoryにおかれるファイル
-    * workerで使うdata fileとか
-    * コンマ区切りで渡す
-    * `/path/to/file1,/path/to/file2`
-* --conf PROP=VALUE
+    * the files are placed in working directory
+    * data/configuration files used in worker nodes
+    * e.g. `/path/to/file1,/path/to/file2`
+* `--conf PROP=VALUE`
     * Arbitrary Spark configuration property.
 * --properties-file FILE
     * Path to a file from which to load extra properties.
     * If not specified, this will look for conf/spark-defaults.conf.
     * SparkConfにで指定する設定を記載したファイル
-* --driver-memory MEM
+* `--driver-memory MEM`
     * Memory for driver (e.g. 1000M, 2G) (Default: 1024M).
     * driverの使用するメモリ
     * `512m`, `15g`と指定する 
-* --driver-java-options
+* `--driver-java-options`
     * Extra Java options to pass to the driver.
-* --driver-library-path
+* `--driver-library-path`
     * Extra library path entries to pass to the driver.
 * --driver-class-path
     * Extra class path entries to pass to the driver. Note that jars added with --jars are automatically included in the classpath.
-* --executor-memory MEM
+* `--executor-memory MEM`
     * Memory per executor (e.g. 1000M, 2G) (Default: 1G).
-    * 各executorの使うmemory
-    * executorの使用するメモリ
-    * `512m`, `15g`と指定する 
+    * the size of memory executor uses
+    * e.g. `512m`, `15g`
 * --proxy-user NAME
     * User to impersonate when submitting the application.  This argument does not work with --principal / --keytab.
-* --verbose, -v
+* `--verbose, -v`
     * Print additional debug output.
 
 Spark standalone with cluster deploy mode only:
@@ -154,8 +152,7 @@ ${SPARK_HOME}/bin/spark-submit \
 ### python code arguments
 * [Can I add arguments to python code when I submit spark job? - Stack Overflow](https://stackoverflow.com/questions/32217160/can-i-add-arguments-to-python-code-when-i-submit-spark-job)
 
-pythonに引数を渡す方法。
-以下の方法で渡ことができる。
+Pass arguments to python files
 
 ```
 spark-submit args.py arg1 arg2
