@@ -718,4 +718,292 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+
+## Improper Integral
+
+Let's consider the following problem.
+
+- $a, b \in \bar{\mathbb{R}}$,
+    - $a < b$ and ($a = \infty$ or $b = \infty$)
+- $f: [a, b] \rightarrow \mathbb{R}$,
+
+$$
+\begin{eqnarray}
+    I
+    & := &
+        \int_{a}^{b}
+            f(x)
+        \ dx
+    \nonumber
+\end{eqnarray}
+$$
+
+We will consider four cases
+
+- (i) One of endpoints is infinity, but another is not. i.e.
+    - $a = \infty$ and $b \neq \infty$,
+    - $a \neq \infty$ and $b = \infty$,
+- (ii)
+
+In case of (i), the substition $t = 1 / x$ yields
+
+$$
+\begin{eqnarray}
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        -
+        \int_{a}^{b}
+            \frac{1}{t^{2}}
+            f(\frac{1}{t})
+        \ dt
+    \nonumber
+    \\
+    & = &
+        \int_{1/b}^{1/a}
+            \frac{1}{t^{2}}
+            f(\frac{1}{t})
+        \ dt
+        \
+        \quad
+        ab > 0
+    \nonumber
+\end{eqnarray}
+$$
+
+The integral would be either
+
+$$
+\begin{eqnarray}
+    \int_{1/b}^{0}
+        \frac{1}{t^{2}}
+        f(\frac{1}{t})
+    \ dt
+\end{eqnarray}
+$$
+
+or
+
+$$
+\begin{eqnarray}
+    \int_{0}^{1/a}
+        \frac{1}{t^{2}}
+        f(\frac{1}{t})
+    \ dt
+    .
+\end{eqnarray}
+$$
+
+In case of (2),
+
+Let $\gamma \in [0, 1)$.
+The substitution $t(x) := (x - a)^{1-\gamma}$ yields
+
+$$
+\begin{eqnarray}
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        \int_{0}^{(b - a)^{1-\gamma}}
+            f
+            \left(
+                t^{1/(1 - \gamma)}
+                +
+                a
+            \right)
+            \frac{
+                t^{\gamma/(1 - \gamma) }
+            }{
+                (1 - \gamma)
+            }
+        \ dt
+    \nonumber
+\end{eqnarray}
+$$
+
+since
+
+$$
+\begin{eqnarray}
+    x
+    & = &
+        t^{1/(1 - \gamma)}
+        +
+        a
+    \nonumber
+    \\
+    t^{\prime}(x)
+    & := &
+        (1 - \gamma)
+        (x - a)^{-\gamma}
+    \nonumber
+    \\
+    & = &
+        (1 - \gamma)
+        t^{-\gamma/(1 - \gamma) }
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Let $\gamma \in [0, 1)$.
+The substitution $t(x) := (b - x)^{1-\gamma}$ yields
+
+$$
+\begin{eqnarray}
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        \int_{(b - a)^{1-\gamma}}^{0}
+            f
+            \left(
+                b
+                -
+                t^{1/(1 - \gamma)}
+            \right)
+            -
+            \frac{
+                t^{\gamma/(1 - \gamma) }
+            }{
+                (1 - \gamma)
+            }
+        \ dt
+    \nonumber
+    \\
+    & = &
+        \int_{0}^{(b - a)^{1-\gamma}}
+            f
+            \left(
+                b
+                -
+                t^{1/(1 - \gamma)}
+            \right)
+            \frac{
+                t^{\gamma/(1 - \gamma) }
+            }{
+                (1 - \gamma)
+            }
+        \ dt
+\end{eqnarray}
+$$
+
+since
+
+$$
+\begin{eqnarray}
+    x
+    & = &
+        b
+        -
+        t^{1/(1 - \gamma)}
+    \nonumber
+    \\
+    t^{\prime}(x)
+    & := &
+        -
+        (1 - \gamma)
+        (b - x)^{-\gamma}
+    \nonumber
+    \\
+    & = &
+        -
+        (1 - \gamma)
+        t^{-\gamma/(1 - \gamma) }
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+For example, if $\gamma := 1/2$,
+
+$$
+\begin{eqnarray}
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        \int_{0}^{(b - a)^{1/2}}
+            f
+            \left(
+                t^{2}
+                +
+                a
+            \right)
+            2
+            t
+        \ dt
+    \nonumber
+    \\
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        \int_{0}^{(b - a)^{1/2}}
+            f
+            \left(
+                b
+                -
+                t^{2}
+            \right)
+            2
+            t
+        \ dt
+    \nonumber
+\end{eqnarray}
+$$
+
+
+In case of
+
+$$
+\begin{eqnarray}
+    \int_{a}^{\infty}
+        f(x)
+    \ dx
+    & = &
+        \int_{0}^{e^{-a}}
+            f(- \log t)
+            \frac{1}{t}
+        \ dt
+    .
+\end{eqnarray}
+$$
+
+From finte space to inifinite space,
+
+$$
+\begin{eqnarray}
+    \int_{a}^{\infty}
+        f(x)
+    \ dx
+    & = &
+    \\
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    t(x)
+    & := &
+        \frac{1}{2}
+        (b + a)
+        +
+        \frac{1}{2}
+        (b - a)
+        \tanh t
+    \nonumber
+    \\
+    t^{\prime}(x)
+    & = &
+        \frac{1}{2}
+        (b - a)
+        \mathrm{sech}^{2} t
+\end{eqnarray}
+$$
+
+
+
 ## Reference
