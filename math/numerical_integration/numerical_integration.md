@@ -740,11 +740,11 @@ $$
 We say an integral $I$ is improper if one of the following conditions satisfies
 
 - integrand goes to a finite limitting value at finite upper and lower limits, but cannot be evaluated right on one of those limits
-    - e.g. $sin(x) / x \rightarrow 1 \quad (x  \rightarrow 0)$,
+    - e.g. $\sin(x) / x \rightarrow 1 \quad (x  \rightarrow 0)$,
 - upper limit is $\infty$, lower limit is $-\infty$,
     - i.e. $f(b) = \infty$, or $f(a) = \infty$,
 - integrand has integrable singularity at either upper limit or lower limit
-    - e.g. $x^{-1/2} at 0$ ($x^{-1/2} \rightarrow \infty$ as $x \rightarrow 0$,
+    - e.g. $x^{-1/2}$ at 0 ($x^{-1/2} \rightarrow \infty$ as $x \rightarrow 0$,
 - integrand has integrable singularity between lower limit and upper limit
     - e.g. $x^{-1/2} \rightarrow 0$,
 
@@ -782,7 +782,7 @@ $$
     f(b) \neq  \infty
 $$
 
-Integrate over $[a, b]$.
+Integrate over $[a, b]$ with Closed Trapezoidal.
 
 (1-2-2)
 
@@ -792,7 +792,7 @@ $$
     f(b) \neq  \infty
 $$
 
-Integrate over $(a, b)$.
+Integrate over $(a, b]$ with Open/Semi-oepn Trapezoidal.
 
 (1-2-3)
 
@@ -802,7 +802,7 @@ $$
     f(b) =  \infty
 $$
 
-Integrate over $(a, b)$.
+Integrate over $[a, b)$ with Open/Semi-oepn Trapezoidal.
 
 (1-2-4)
 
@@ -812,7 +812,7 @@ $$
     f(b) =  \infty
 $$
 
-Integrate over $(a, b)$.
+Integrate over $(a, b)$ with Open/Semi-oepn Trapezoidal.
 
 (2) Left limit is infinite
 
@@ -822,6 +822,8 @@ Apply $x(t) = 1/t$ to integrand, then go to (1).
 
 (2-2) $a = -\infty, b \neq 0$
 
+Apply $x(t) = 1/(1 + exp(-t))$ to integrand, then go to (1).
+
 (3) Right limit is infinite
 
 (3-1) $a \neq 0, b \neq \infty$,
@@ -830,13 +832,11 @@ Apply $x(t) = 1/t$ to integrand, then go to (1).
 
 (3-2) $a = 0, b = \infty$
 
+Apply $x(t) = 1/(1 + exp(-t))$ to integrand, then go to (1).
+
 (4) Left and Right limit is infinite
 
-
-
-
-- $a = \infty$ and $b \neq \infty$,
-- $a \neq \infty$ and $b = \infty$,
+Apply $x(t) = 1/(1 + exp(-t))$ to integrand, then go to (1).
 
 #### (i) Variable transformations $x(t) = 1/t$
 
@@ -1323,6 +1323,86 @@ $$
 Apply $x = \exp(t - e^{-t})$ within $(-4, 3)$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+Let's consider the following integral.
+
+$$
+    I
+    :=
+    \int_{-\infty}^{\infty}
+        f(x(t))
+        x^{\prime}(t)
+    \ dt
+    .
+$$
+
+With the trapezoidal rule, we approximate the integral $I$ as
+
+$$
+\begin{eqnarray}
+    I_{h}
+    & := &
+        h
+        \sum_{n=-\infty}^{\infty}
+            f(x(t))
+            x^{\prime}(t)
+    .
+\end{eqnarray}
+$$
+
+For computational reason, we 
+
+$$
+\begin{eqnarray}
+    I_{h, N}
+    & := &
+        h
+        \sum_{n=-N}^{N}
+            f(x(t))
+            x^{\prime}(t)
+    .
+\end{eqnarray}
+$$
+
+#### Discretization error
+
+$$
+    e_{d}(h)
+    :=
+    \norm{
+        I - I_{h}
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Truncation/Trimming error
+
+$$
+    e_{t}(h, N)
+    :=
+    \norm{
+        I_{h}
+        -
+        I_{h, N}
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+Discretization error for TANH rule is 
+
+$$
+\begin{eqnarray}
+    e_{t}(N)
+    & = &
+        O(e^{-2Nh})
+    \nonumber
+\end{eqnarray}
+$$
+
 
 
 ## Reference
