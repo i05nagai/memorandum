@@ -164,5 +164,10 @@ Take a look at examples provided by AWS.
 
 An instance profile is a container for an IAM role that you can use to pass role information to an EC2 instance when the instance starts.
 
+## Path
+* [amazon web services \- In AWS IAM, What is the Purpose/Use of the "Path" Variable? \- Stack Overflow](https://stackoverflow.com/questions/46324062/in-aws-iam-what-is-the-purpose-use-of-the-path-variable)
+
+
+
 ## Reference
 * [What Is IAM? \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)

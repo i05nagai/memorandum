@@ -201,5 +201,14 @@ next(a)
 * `class slice(start, stop[, step])`
 
 
+#### built-in type
+- [Built\-in Types — Python 3\.7\.3 documentation](https://docs.python.org/3/library/stdtypes.html#truth)
+    - Following values are evaluated as False
+        - None, False
+        - 0, 0.0, 0j, Decimal(0), Fraction(0.0),
+        - '', (), [], set(), range(0),
+
+
+
 ## Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)

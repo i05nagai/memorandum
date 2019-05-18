@@ -25,7 +25,29 @@ title: Amazon DynamoDB
     * A secondary index lets you query the data in the table using an alternate key, in addition to queries against the primary key.
     * Global secondary index
     * Local secondary index
+* High availability and durability
+    * All of your data is stored on solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region
 
+## DataTypes
+* scalar types
+    * number
+    * string
+    * binary
+    * Boolean
+    * null
+* document types
+    * list
+    * map
+* set types
+    * string set
+    * number set
+    * binary set
+
+* string
+* 
+
+## Limits
+* [Limits in DynamoDB \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html)
 
 
 ## Reference
