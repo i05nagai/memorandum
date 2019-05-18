@@ -718,7 +718,6 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
-
 ## Improper Integral
 
 Let's consider the following problem.
@@ -738,14 +737,113 @@ $$
 \end{eqnarray}
 $$
 
+We say an integral $I$ is improper if one of the following conditions satisfies
+
+- integrand goes to a finite limitting value at finite upper and lower limits, but cannot be evaluated right on one of those limits
+    - e.g. $sin(x) / x \rightarrow 1 \quad (x  \rightarrow 0)$,
+- upper limit is $\infty$, lower limit is $-\infty$,
+    - i.e. $f(b) = \infty$, or $f(a) = \infty$,
+- integrand has integrable singularity at either upper limit or lower limit
+    - e.g. $x^{-1/2} at 0$ ($x^{-1/2} \rightarrow \infty$ as $x \rightarrow 0$,
+- integrand has integrable singularity between lower limit and upper limit
+    - e.g. $x^{-1/2} \rightarrow 0$,
+
 We will consider four cases
 
-- (i) One of endpoints is infinity, but another is not. i.e.
-    - $a = \infty$ and $b \neq \infty$,
-    - $a \neq \infty$ and $b = \infty$,
-- (ii)
+(1) Finite interval
 
-In case of (i), the substition $t = 1 / x$ yields
+$$
+    a, b \in (-\infty, \infty)
+$$
+
+(1-1) integrable singurarity
+
+$$
+    \exists c \in (a, b)
+    \text{ s.t. }
+    f(c) \text{ is integrable singularity}
+    .
+$$
+
+(1-2) integrable singularity
+
+$$
+    \exists c \in (a, b)
+    \text{ s.t. }
+    f(c) \notin \{-\infty, \infty\}
+    .
+$$
+
+(1-2-1)
+
+$$
+    f(a) \neq - \infty,
+    \
+    f(b) \neq  \infty
+$$
+
+Integrate over $[a, b]$.
+
+(1-2-2)
+
+$$
+    f(a) = - \infty,
+    \
+    f(b) \neq  \infty
+$$
+
+Integrate over $(a, b)$.
+
+(1-2-3)
+
+$$
+    f(a) \neq - \infty,
+    \
+    f(b) =  \infty
+$$
+
+Integrate over $(a, b)$.
+
+(1-2-4)
+
+$$
+    f(a) = - \infty,
+    \
+    f(b) =  \infty
+$$
+
+Integrate over $(a, b)$.
+
+(2) Left limit is infinite
+
+(2-1) $a = -\infty, b \neq 0$,
+
+Apply $x(t) = 1/t$ to integrand, then go to (1).
+
+(2-2) $a = -\infty, b \neq 0$
+
+(3) Right limit is infinite
+
+(3-1) $a \neq 0, b \neq \infty$,
+
+Apply $x(t) = 1/t$ to integrand, then go to (1).
+
+(3-2) $a = 0, b = \infty$
+
+(4) Left and Right limit is infinite
+
+
+
+
+- $a = \infty$ and $b \neq \infty$,
+- $a \neq \infty$ and $b = \infty$,
+
+#### (i) Variable transformations $x(t) = 1/t$
+
+- $$(-\infty, 0) \Rightarrow (0, 1/b)$$,
+- $$(0, \infty) \Rightarrow (1/a, 0)$$,
+
+the substition $x(t) = 1 / t$ yields
 
 $$
 \begin{eqnarray}
@@ -795,10 +893,40 @@ $$
 \end{eqnarray}
 $$
 
-In case of (2),
-
+#### (ii) Variable transformations $x(t) = 1/t$
 Let $\gamma \in [0, 1)$.
-The substitution $t(x) := (x - a)^{1-\gamma}$ yields
+Consider a substitution $x(t) := t^{1/(1-\gamma)} + a$.
+
+- $(a, b]$ to $[0, (b - a)^{1-\gamma})$,
+
+$$
+\begin{eqnarray}
+    x(t)
+    & = &
+        t^{1/(1 - \gamma)}
+        +
+        a
+    \nonumber
+    \\
+    x^{-1}(x)
+    & = &
+        (x - a)^{-\gamma}
+    \nonumber
+    \\
+    x^{\prime}(t)
+    & := &
+        \frac{
+            1
+        }{
+            1 - \gamma
+        }
+        t^{\gamma / (1 - \gamma)}
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+The substitution $x(t)$ yields
 
 $$
 \begin{eqnarray}
@@ -823,33 +951,36 @@ $$
 \end{eqnarray}
 $$
 
-since
+Smiliary, the substitution $t(x) := (b - x)^{1-\gamma}$ yields
+
+- $(a, b]$ to $[0, (b - a)^{1-\gamma})$,
 
 $$
 \begin{eqnarray}
-    x
+    x(t)
     & = &
+        b
+        -
         t^{1/(1 - \gamma)}
-        +
-        a
     \nonumber
     \\
-    t^{\prime}(x)
-    & := &
-        (1 - \gamma)
+    x^{-1}(x)
+    & = &
         (x - a)^{-\gamma}
     \nonumber
     \\
-    & = &
-        (1 - \gamma)
-        t^{-\gamma/(1 - \gamma) }
+    x^{\prime}(t)
+    & := &
+        \frac{
+            1
+        }{
+            1 - \gamma
+        }
+        t^{\gamma / (1 - \gamma)}
     \nonumber
     .
 \end{eqnarray}
 $$
-
-Let $\gamma \in [0, 1)$.
-The substitution $t(x) := (b - x)^{1-\gamma}$ yields
 
 $$
 \begin{eqnarray}
@@ -955,8 +1086,18 @@ $$
 \end{eqnarray}
 $$
 
+#### (iii) Variable transformation $x(t) := -\log t$,
 
-In case of
+- $x(t) := - \log t$,
+- $x^{-1}(x) := \exp(-t)$,
+
+$$
+\begin{eqnarray}
+    
+\end{eqnarray}
+$$
+
+Then
 
 $$
 \begin{eqnarray}
@@ -1004,6 +1145,184 @@ $$
 \end{eqnarray}
 $$
 
+#### (iv) Variable transformation $x(t) := 1 / (1 + \exp(-t))$,
+
+$$
+\begin{eqnarray}
+    x(t)
+    & := &
+        -
+        \log
+        \left(
+            \frac{
+                1
+            }{
+                t
+            }
+            -
+            1
+        \right)
+    \nonumber
+    \\
+    x^{-1}(t)
+    & := &
+        \frac{
+            1
+        }{
+            1 + \exp(-t)
+        }
+    \nonumber
+    \\
+    x^{-1}(-\infty)
+    & := &
+        0,
+    \nonumber
+    \\
+    x^{-1}(\infty)
+    & := &
+        1,
+    \nonumber
+    \\
+    x(t)
+    & := &
+        -
+        \frac{
+            t
+        }{
+            1 - t
+        }
+        (- t^{-2})
+    \nonumber
+    \\
+    x(t)
+    & := &
+        -
+        \frac{
+            t
+        }{
+            1 - t
+        }
+        (- t^{-2})
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            (1 - t)t
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    \int_{a}^{b}
+        f(x)
+    \ dx
+    & = &
+        \int_{0}^{1}
+            f
+            \left(
+                
+            \right)
+            \frac{
+                1
+            }{
+                (1 - t)t
+            }
+        \ dt
+    \nonumber
+    \\
+\end{eqnarray}
+$$
+
+
+## Quadrature by variable transformation
+
+
+#### Example 1
+
+$$
+\begin{eqnarray}
+    \int_{0}^{1}
+        \log x
+        \log (1 - x)
+    \ dx
+    & = &
+        2 - \frac{\pi^{2}}{6}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Apply Double Exponential rule.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example2
+
+$$
+\begin{eqnarray}
+    \int_{0}^{\infty}
+        \frac{
+            1
+        }{
+            x^{1/2}(1 + x)
+        }
+    \ ex
+    & = &
+        \pi
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Double exponential with $c = \pi / 2$ within $(-4, 4)$.
+TANH rule within $(-90, 90)$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example3
+
+$$
+\begin{eqnarray}
+    \int_{0}^{\infty}
+        x^{-3/2}
+        \sin(\frac{x}{2}
+        e^{-x}
+    \ dx
+    & = &
+        (\pi (\sqrt{5} - 2))^{1/2}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+Apply $x = \exp(t - e^{-t})$ within $(-4.5, 5)$.
+
+- (1) 
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Example4
+
+$$
+\begin{eqnarray}
+    \int_{0}^{\infty}
+        x^{-2/7}
+        e^{-x^{2}}
+    \ ex
+    & = &
+        \frac{1}{2}
+        \Gamma(\frac{5}{14})
+    \nonumber
+\end{eqnarray}
+$$
+
+Apply $x = \exp(t - e^{-t})$ within $(-4, 3)$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 
 ## Reference

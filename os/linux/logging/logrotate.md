@@ -74,6 +74,7 @@ cat /var/lib/logrotate.status
     * logのrotate時に日付の接尾辞をつける
 * `dateformat _%Y%m%d`
     * `dateext`の日付の形式
+    * only `%Y`, `%m`, `%d`, `%s` are allowed
 * `include /etc/logrotate.d`
     * include
 * `rotate num`
