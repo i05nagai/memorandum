@@ -1324,6 +1324,86 @@ Apply $x = \exp(t - e^{-t})$ within $(-4, 3)$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+Let's consider the following integral.
+
+$$
+    I
+    :=
+    \int_{-\infty}^{\infty}
+        f(x(t))
+        x^{\prime}(t)
+    \ dt
+    .
+$$
+
+With the trapezoidal rule, we approximate the integral $I$ as
+
+$$
+\begin{eqnarray}
+    I_{h}
+    & := &
+        h
+        \sum_{n=-\infty}^{\infty}
+            f(x(t))
+            x^{\prime}(t)
+    .
+\end{eqnarray}
+$$
+
+For computational reason, we 
+
+$$
+\begin{eqnarray}
+    I_{h, N}
+    & := &
+        h
+        \sum_{n=-N}^{N}
+            f(x(t))
+            x^{\prime}(t)
+    .
+\end{eqnarray}
+$$
+
+#### Discretization error
+
+$$
+    e_{d}(h)
+    :=
+    \norm{
+        I - I_{h}
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Truncation/Trimming error
+
+$$
+    e_{t}(h, N)
+    :=
+    \norm{
+        I_{h}
+        -
+        I_{h, N}
+    }
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+Discretization error for TANH rule is 
+
+$$
+\begin{eqnarray}
+    e_{t}(N)
+    & = &
+        O(e^{-2Nh})
+    \nonumber
+\end{eqnarray}
+$$
+
+
 
 ## Reference
 - [Tanh\-sinh quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Tanh-sinh_quadrature)
