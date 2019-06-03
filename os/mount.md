@@ -50,13 +50,27 @@ sudo mount -o discard,defaults /dev/[DEVICE_ID] /mnt/disks/[MNT_DIR]
                 * this is useful for SSD devices and sparse/thinly-provisioned storage
                 * off by default
 
+#### 9p
 
-### 9p
 * [https://www.kernel.org/doc/Documentation/filesystems/9p.txt](https://www.kernel.org/doc/Documentation/filesystems/9p.txt)
 
 
 ```
 mount -t 9p -o trans=virtio,version=9p2000.L hostshare /tmp/host_files
+```
+
+#### nvme
+* [NVMe  Hetzner DokuWiki](https://wiki.hetzner.de/index.php/NVMe/en)
+* Non-Volatile Memory Express
+    * NVMe SSDs are addressed differently than SATA drives. 
+    * The first NVMe-SSD is called /dev/nvme0n1 instead of /dev/sda. The n after nvme0 stands for Namespac
+    * /dev/nvme(Controller number)n(Namespace)p(Partition)
+
+
+#### Check
+
+```
+df -aTh
 ```
 
 ## Reference
