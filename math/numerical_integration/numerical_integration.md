@@ -276,25 +276,84 @@ $$
         \int_{0}^{n}
             \prod_{j=0, j \neq i}^{n}
                 \frac{
-                    x - x_{j}
+                    (a + th) - x_{j}
                 }{
                     x_{i} - x_{j}
                 }
-        \ dx
+        \ dt
+        \quad
+        (\because x = a + t h)
     \nonumber
     \\
     & = &
         \int_{0}^{n}
             \prod_{j=0, j \neq i}^{n}
                 \frac{
-                    t - x_{j}
+                    t - j
                 }{
                     i - j
                 }
-                h
-        \ dx
+            h
+        \ dt
         \quad
-        (\because x = a + t h)
+        (\because x_{i} = a + i h)
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            \prod_{j=0, j \neq i}^{n}
+                (i - j)
+        }
+        \int_{0}^{n}
+            \frac{
+                (t - i)
+                \prod_{j=0, j \neq i}^{n}
+                    (t - j)
+            }{
+                (t - i)
+            }
+            h
+        \ dt
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            \prod_{j=0, j \neq i}^{n}
+                (i - j)
+        }
+        \int_{0}^{n}
+            \frac{
+                \prod_{j=0}^{n}
+                    (t - j)
+            }{
+                (t - i)
+            }
+            h
+        \ dt
+    \nonumber
+    \\
+    & = &
+        \frac{
+            1
+        }{
+            i!
+            (i - (i + 1))
+            \cdots
+            (i - n)
+        }
+        \int_{0}^{n}
+            \frac{
+                \prod_{j=0}^{n}
+                    (t - j)
+            }{
+                (t - i)
+            }
+            h
+        \ dt
     \nonumber
     \\
     & = &
@@ -306,14 +365,13 @@ $$
             i!
         }
         \int_{0}^{n}
-            \prod_{j=0, j \neq i}^{n}
-                \frac{
-                    t - x_{j}
-                }{
-                    i - j
-                }
-                h
-        \ dx
+            \frac{
+                \prod_{j=0}^{n}
+                    (t - j)
+            }{
+                (t - i)
+            }
+        \ dt
     \nonumber
     \\
     & = &
@@ -336,7 +394,7 @@ $$
             }{
                     t - i
             }
-        \ dx
+        \ dt
     .
 \end{eqnarray}
 $$
@@ -1407,3 +1465,4 @@ $$
 
 ## Reference
 - [Tanh\-sinh quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Tanh-sinh_quadrature)
+- [part10\.pdf](http://www.maths.lth.se/na/courses/FMN050/media/material/part10.pdf)
