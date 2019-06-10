@@ -167,6 +167,12 @@ An instance profile is a container for an IAM role that you can use to pass role
 ## Path
 * [amazon web services \- In AWS IAM, What is the Purpose/Use of the "Path" Variable? \- Stack Overflow](https://stackoverflow.com/questions/46324062/in-aws-iam-what-is-the-purpose-use-of-the-path-variable)
 
+#### Usecases
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios.html?icmpid=docs_iam_console
+
+#### Cross accounts 
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html?icmpid=docs_iam_console
+
 
 
 ## Reference
