@@ -25,5 +25,15 @@ val windowedCounts = words
     .count()
 ```
 
+## Tips
+- [Long\-running Spark Streaming Jobs on YARN Cluster \- Passionate Developer](http://mkuthan.github.io/blog/2016/09/30/spark-streaming-on-yarn/)
+- [24/7 Spark Streaming on YARN in Production \- inovex\-Blog](https://www.inovex.de/blog/247-spark-streaming-on-yarn-in-production/)
+- [How\-to: Tune Your Apache Spark Jobs \(Part 2\) \- Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)
+- [Resolve the Error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR](https://aws.amazon.com/premiumsupport/knowledge-center/emr-spark-yarn-memory-limit/)
+- [Chapter 4\. Log Aggregation for Long\-running Applications \- Hortonworks Data Platform](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.0/bk_yarn-resource-management/content/ch_log_aggregation.html)
+
+#### Checkpointing
+- [Improving Spark Streaming Checkpointing Performance With AWS EFS \- Yuval Itzchakov’s Blog](https://blog.yuvalitzchakov.com/improving-spark-streaming-checkpoint-performance-with-aws-efs/)
+
 ## Reference
 * [Structured Streaming Programming Guide \- Spark 2\.4\.0 Documentation](http://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)
