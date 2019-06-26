@@ -427,6 +427,23 @@ Restrictions of custom AMI
 * Custom AMI 'ami-0132f06b8806d60d2' is not valid: The AMI must have only one EBS volume. AMIs with multiple EBS volumes are not supported.
     * Thus, the default AMI is not used as Custom AMI
 
+## IAM
+- [Actions, Resources, and Condition Keys for Amazon Elastic MapReduce \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonelasticmapreduce.html#amazonelasticmapreduce-editor)
+
+- Resource Type
+    - cluster
+- ARN
+    - `arn:${Partition}:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}`
+- Condition key
+    - `elasticmapreduce:ResourceTag/${TagKey}`
+- Resource Type
+    - editor
+- ARN
+    - `arn:${Partition}:elasticmapreduce:${Region}:${Account}:editor/${EditorId}`
+- Condition key
+    - `elasticmapreduce:ResourceTag/${TagKey}`
+
+
 ## Tips
 
 ### Add tags to EC2 instance
