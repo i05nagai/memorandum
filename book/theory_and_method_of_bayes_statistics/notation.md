@@ -7,6 +7,113 @@ book_section: 0
 
 ## 0.0. Notation
 
+#### Definition Little O
+$$
+\begin{eqnarray}
+    & &
+        f(x)
+        =
+        o(\abs{x - a}^{b})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \lim_{x \rightarrow a}
+            \frac{
+                f(x)
+            }{
+                \abs{x - a}^{b}
+            }
+        =
+        0
+    .
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition Big O
+
+$$
+\begin{eqnarray}
+    & &
+        f(x)
+        =
+        O(\abs{x - a}^{b})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \exists M > 0
+        \text{ s.t. }
+        \limsup_{x \rightarrow a}
+            \frac{
+                f(x)
+            }{
+                \abs{x - a}^{b}
+            }
+        <
+        M
+    .
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition Little O in probablity
+$$
+\begin{eqnarray}
+    & &
+        X_{n}
+        =
+        o_{p}(\frac{1}{n^{\alpha}})
+        \quad
+        (n \rightarrow \infty)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \lim_{n \rightarrow \infty}
+            P
+            \left(
+                X_{n}
+                <
+            \right)
+            \frac{
+                f(x)
+            }{
+                \abs{x - a}^{b}
+            }
+        =
+        0
+    .
+\end{eqnarray}
+$$
+
+This definition is equivalent to $\abs{n^{\alpha} X_{n}} \overset{p}{\rightarrow} 0$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition Big O in probablity
+
+$$
+\begin{eqnarray}
+    & &
+        X_{n}
+        =
+        O_{p}(\frac{1}{n^{\alpha}})
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \exists M > 0
+        \text{ s.t. }
+        \limsup_{n \rightarrow \infty}
+            P(\abs{n^{\alpha} X_{n}} < \epsilon)
+        <
+        M
+    .
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 $$
 \begin{eqnarray}
     \mathrm{E}_{X}
@@ -27,14 +134,14 @@ $$
 \begin{eqnarray}
     p(w \mid X^{n})
     & = &
-        \frac{1}{Z_{n} \phi(w)}
+        \frac{1}{Z_{n}(\beta)}
         \phi(w)
         \prod_{i=1}^{n}
             p(X_{i} \mid w)^{\beta}
     \nonumber
     \\
     Z_{n}(\beta)
-    & = &
+    & := &
         \int_{W}
             \phi(w)
             \prod_{i=1}^{n}
@@ -43,6 +150,8 @@ $$
     .
 \end{eqnarray}
 $$
+
+Predictive distritbuion.
 
 $$
 \begin{eqnarray}
@@ -305,5 +414,99 @@ $$
     \nabla K(w)
     (\nabla K(w))^{\mathrm{T}}
     .
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    Z_{n}^{(0)}(\beta)
+    & := &
+        \int
+            \exp
+            \left(
+                - n \beta K_{n}(w)
+            \right)
+            \phi(w)
+        \ dw
+    \nonumber
+    \\
+    & = &
+        \int
+            \exp
+            \left(
+                - \beta
+                \sum_{i=1}^{n}
+                    \log
+                        \frac{
+                            p(X_{i} \mid  w_{0})
+                        }{
+                            p(X_{i} \mid  w)
+                        }
+            \right)
+            \phi(w)
+        \ dw
+    \nonumber
+    \\
+    & = &
+        \int
+            \exp
+            \left(
+                - \beta
+                \sum_{i=1}^{n}
+                    \log
+                        \frac{
+                            p(X_{i} \mid  w_{0})
+                        }{
+                            p(X_{i} \mid  w)
+                        }
+            \right)
+            \phi(w)
+        \ dw
+    \nonumber
+    \\
+    & = &
+        \int
+            \prod_{i=1}^{n}
+                    \frac{
+                        p(X_{i} \mid  w)^{\beta}
+                    }{
+                        p(X_{i} \mid  w_{0})^{\beta}
+                    }
+            \phi(w)
+        \ dw
+    \nonumber
+    \\
+    & = &
+        Z_{n}(\beta)
+        \frac{
+            1
+        }{
+            \prod_{i=1}^{n}
+            p(X_{i} \mid  w_{0})^{\beta}
+        }
+    \nonumber
+    \\
+    Z_{n}^{(1)}(\beta)
+    & := &
+        \int_{K(w) < \epsilon}
+            \exp
+            \left(
+                - n \beta K_{n}(w)
+            \right)
+            \phi(w)
+        \ mu(dx)
+    \nonumber
+    \\
+    Z_{n}^{(2)}(\beta)
+    & := &
+        \int_{K(w) \ge \epsilon}
+            \exp
+            \left(
+                - n \beta K_{n}(w)
+            \right)
+            \phi(w)
+        \ mu(dx)
+    .
+    \nonumber
 \end{eqnarray}
 $$
