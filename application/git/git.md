@@ -353,6 +353,23 @@ See also: #456, #789
 
 チケット番号を要約に含める場合もある。
 
+
+#### Difference between tilde and caret
+- [PaulBoxley\.com – Git caret and tilde](http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde)
+
+
+```
+# first parent
+HEAD^1
+# second parent
+HEAD^2
+# first parent 
+HEAD~
+# first grandparent 
+HEAD~~ HEAD~2
+```
+
+
 ## Configuration
 
 #### Include
