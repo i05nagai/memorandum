@@ -156,12 +156,20 @@ Predictive distritbuion.
 $$
 \begin{eqnarray}
     p(X^{n})
-    :=
-    \int_{}
-        \phi(w)
-        \prod_{i=1}^{n}
-            p(X_{i} \mid w)
-    \ dw
+    & := &
+        \int_{}
+            \phi(w)
+            \prod_{i=1}^{n}
+                p(X_{i} \mid w)
+        \ dw
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{w}
+        \left[
+            \prod_{i=1}^{n}
+                p(X_{i} \mid w)
+        \right]
     .
 \end{eqnarray}
 $$
@@ -219,22 +227,103 @@ $$
 \end{eqnarray}
 $$
 
-Generalization error
+Generalization error is defined in this book as
 
 $$
 \begin{eqnarray}
     G_{n}
     & := &
-        \mathrm{E}_{X}
-        \left[
-            \log
-                \mathrm{E}_{w}
-                \left[
-                    p(X \mid w)
-                \right]
-        \right]
+        -
+        \int_{\mathcal{R}(X^{n})}
+            q(x^{n})
+            \log p(x^{n})
+        \ dx
     \nonumber
     \\
+    & = &
+        -
+        \int_{\mathcal{R}(X^{n})}
+            q(x^{n})
+            \log
+            \left(
+                \int_{W}
+                    \phi(w)
+                    \prod_{i=1}^{n}
+                        p(x_{i} \mid w)
+                \ dx
+            \right)
+        \ dx
+    \nonumber
+    \\
+    & = &
+        -
+        \mathrm{E}_{X^{n}}
+        \left[
+            \log
+            \left(
+                \int_{W}
+                    \phi(w)
+                    \prod_{i=1}^{n}
+                        p(X_{i} \mid w)
+                \ dx
+            \right)
+        \right]
+    \nonumber
+\end{eqnarray}
+$$
+
+However, the follwoing definition seems to be what the author expects.
+
+$$
+\begin{eqnarray}
+    G_{n}
+    & := &
+        -
+        \int_{\mathrm{R}(X)}
+            q(x)
+            \log p(x \mid X^{n})
+        \ dx
+    \nonumber
+    \\
+    & = &
+        -
+        \int_{\mathrm{R}(X)}
+            q(x)
+            \log
+                \int_{W}
+                    p(x \mid w)
+                    p(w \mid X^{n})
+                \ dw
+        \ dx
+    \nonumber
+    \\
+    & = &
+        -
+        \int_{\mathrm{R}(X)}
+            q(x)
+            \log
+                \int_{W}
+                    p(x \mid w)
+                    \frac{
+                        \phi(w)
+                        \prod_{i=1}^{n}
+                            p(X_{i} \mid w)
+                    }{
+                        \int_{W}
+                            \phi(w)
+                            \prod_{i=1}^{n}
+                                p(X_{i} \mid w)
+                        \ dw
+                    }
+                \ dw
+        \ dx
+\end{eqnarray}
+$$
+
+Normalized generalization error
+
+$$
+\begin{eqnarray}
     G_{n}^{(0)}
     & := &
         -
@@ -387,6 +476,12 @@ $$
                 -
                 f(X_{i}, w)
             \right)
+    \nonumber
+    \\
+    \frac{ 1 }{ \sqrt{n} }
+    \eta_{n}(w)
+    & = &
+    K_{n}(w) - K(w)
     \nonumber
     \\
     \xi_{n}
