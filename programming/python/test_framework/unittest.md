@@ -3,7 +3,7 @@ title: unittest
 ---
 
 ## unittest
-python 標準のunittest module
+Standard library for unit testing.
 
 ## unittest.mock
 * [26.5. unittest.mock — モックオブジェクトライブラリ — Python 3.6.1 ドキュメント](https://docs.python.jp/3/library/unittest.mock.html#patch)
@@ -61,5 +61,7 @@ assert mock.method().child_method().call_count == 0
 ```
 
 
+#### Mocking dict
+* [python \- How to let MagicMock behave like a dict? \- Stack Overflow](https://stackoverflow.com/questions/30340170/how-to-let-magicmock-behave-like-a-dict)
 
 ## Reference
