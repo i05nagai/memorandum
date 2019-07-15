@@ -56,5 +56,13 @@ expressionは`-and`, `-or`, `-not`で条件づけることができる。
 findd path/to/dir -not -path "*/pattern/*"
 ```
 
+#### Exclude some directories
+
+```
+find /path/to/search \
+  -type d \( -path '*/.git' -o -path '*/somedir' \) -prune -o \
+  -type f
+```
+
 ## Reference
 * [Linuxコマンド集 - 【 find 】 ファイルやディレクトリを検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230777/)
