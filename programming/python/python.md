@@ -38,10 +38,10 @@ What you need to learn as pythonista
 
 ## Tips
 
-### 'module' object has no attribute '_strptime' with several threads Python
+#### 'module' object has no attribute '_strptime' with several threads Python
 * [multithreading - 'module' object has no attribute '_strptime' with several threads Python - Stack Overflow](https://stackoverflow.com/questions/32245560/module-object-has-no-attribute-strptime-with-several-threads-python)
 
-### pretty print
+#### pretty print
 * [8.18. pprint — Data pretty printer — Python 2.7.13 documentation](https://docs.python.org/2/library/pprint.html)
 
 辞書や、listをpretty printしたい場合に利用する。
@@ -85,11 +85,11 @@ import下のディレクトリは、環境変数`PYTHONPATH`で指定された�
 3. インストールごとのデフォルトのディレクトリ
 4. sys.pathに含むディレクトリ
 
-### string to date
+#### string to date
 使えるディレクティブは以下。
 * [8.1. datetime — 基本的な日付型および時間型 — Python 2.7.13 ドキュメント](http://docs.python.jp/2/library/datetime.html#strftime-and-strptime-behavior)
 
-### Inherits object
+#### Inherits object
 以下のclassのあるなしの違い。
 
 * [2 PEPs 252 and 253: Type and Class Changes](https://docs.python.org/release/2.2.3/whatsnew/sect-rellinks.html)
@@ -109,7 +109,7 @@ Python2系ではデフォルトでは古い形式なので、明示的にobject�
 Python3では継承の有無にかかわらず新しい方式での継承になるので、つけてもつけなくても良い。
 
 
-### subprocess
+#### subprocess
 標準入力からの入力をうけつけて、
 
 ```python
@@ -122,14 +122,14 @@ p = subprocess.Popen(
 result = p.communicate(input=input_str)[0]
 ```
 
-### hash
+#### hash
 pythonの2.7系はid(object) / 16を返すらしい。
 idはobjectのアドレスを返す。
 
 * [hash function in python - Stack Overflow](https://stackoverflow.com/questions/17192418/hash-function-in-python)
 * [2. Built-in Functions — Python 2.7.13 documentation](https://docs.python.org/2/library/functions.html#id)
 
-### creating directory
+#### creating directory
 * [python - How can I create a directory if it does not exist? - Stack Overflow](https://stackoverflow.com/questions/273192/how-can-i-create-a-directory-if-it-does-not-exist)
 
 以下で作成可能だが、ifの判定の後にdirectoryが作られると`OSError`で落ちる。
@@ -196,7 +196,7 @@ next(a)
 # un initialized variable: seq
 ```
 
-### built-in function
+#### built-in function
 * `class slice(stop)`
 * `class slice(start, stop[, step])`
 
@@ -208,6 +208,27 @@ next(a)
         - 0, 0.0, 0j, Decimal(0), Fraction(0.0),
         - '', (), [], set(), range(0),
 
+
+#### Magic methods
+- [A Guide to Python's Magic Methods « rafekettler\.com](https://rszalski.github.io/magicmethods/)
+
+- `__getitem__`
+    * `dict()['key']`
+    * `list()[0]`
+- `__setitem__`
+    * `dict()['key']`
+    * `list()[0]`
+
+
+#### with statements
+- [8 PEP 343: The 'with' statement](https://docs.python.org/2.5/whatsnew/pep-343.html)
+
+```
+# context.__enter__() is called and assinged to var
+with context as var:
+    var...
+    # at the end of this context, context.__exit() is called
+```
 
 
 ## Reference
