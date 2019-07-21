@@ -6,6 +6,7 @@ book_section: 0
 ---
 
 ## 0.0. Notation
+* $W \subseteq \mathbb{R}^{d}$,
 
 #### Definition Little O
 $$
@@ -70,17 +71,35 @@ $$
     \nonumber
     \\
     & \Leftrightarrow &
+        \forall \epsilon > 0,
+        \
         \lim_{n \rightarrow \infty}
             P
             \left(
-                X_{n}
+                \abs{
+                    n^{\alpha}
+                    X_{n}
+                }
                 <
+                \epsilon
             \right)
-            \frac{
-                f(x)
-            }{
-                \abs{x - a}^{b}
-            }
+        =
+        1
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        \forall \epsilon > 0,
+        \
+        \lim_{n \rightarrow \infty}
+            P
+            \left(
+                \abs{
+                    n^{\alpha}
+                    X_{n}
+                }
+                \ge
+                \epsilon
+            \right)
         =
         0
     .
@@ -102,14 +121,85 @@ $$
     \nonumber
     \\
     & \Leftrightarrow &
-        \exists M > 0
+        \exists Y: \text{r.v.},
+        \
+        \exists n^{\prime} \in \mathbb{N},
+        \
         \text{ s.t. }
-        \limsup_{n \rightarrow \infty}
-            P(\abs{n^{\alpha} X_{n}} < \epsilon)
+        \forall n \ge n^{\prime},
+        \abs{
+            n^{\alpha} X_{n}
+        }
         <
-        M
+        Y
+        \quad
+        \text{a.s.}
     .
 \end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Remark
+
+$$
+    X_{n}
+    =
+    o_{p}(\frac{1}{n^{\alpha}})
+    \Rightarrow
+    X_{n}
+    =
+    O_{p}(\frac{1}{n^{\alpha}})
+    .
+$$
+
+Indeed, $$\abs{n^{\alpha} X_{n}} \overset{p}{\rightarrow} 0$$ implies there is a subsequence $$\{X_{n_{k}}\}$$ which converge to 0 almost surely.
+Let $A$ be the event set where the subsequence converge to 0.
+Let $\omega \in A$ be fixed.
+
+$$
+\begin{eqnarray}
+    \lim_{k \rightarrow \infty}
+        \abs{X_{n_{k}(\omega)} n^{\alpha}}
+    =
+    0
+    & \Rightarrow &
+        \exists n_{\omega} \in \mathbb{N},
+        \
+        Y(\omega)
+        :=
+        \sup_{n \in \mathbb{Z}_{\ge n_{\omega}}}
+            \abs{
+                X_{n}(\omega)
+                n^{\alpha}
+            },
+        \
+        \abs{X_{n} n^{\alpha}}
+        \le
+        Y(\omega)
+        \quad
+        (\forall n \ge n_{\omega})
+\end{eqnarray}
+$$
+
+TODO: prove $Y$ is r.v.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+#### Remark
+* $x, y \in (0, \infty)$,
+    * $x < y$,
+
+$$
+    X_{n}
+    =
+    o_{p}(\frac{1}{n^{y}})
+    \Rightarrow
+    X_{n}
+    =
+    O_{p}(\frac{1}{n^{x}})
+    .
 $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
@@ -198,6 +288,27 @@ $$
     \sum_{i=1}^{n}
         \log p(X_{i} \mid w)
     .
+\end{eqnarray}
+$$
+
+Derivative of loss
+
+$$
+\begin{eqnarray}
+    J(w)
+    & := &
+        (J_{i, j}(w))
+    \nonumber
+    \\
+    & := &
+        \frac{
+            \partial^{2} L
+        }{
+            \partial w_{i}
+            \partial w_{j}
+        }(w_{0})
+    .
+    \nonumber
 \end{eqnarray}
 $$
 
