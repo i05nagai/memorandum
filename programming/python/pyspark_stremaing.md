@@ -31,6 +31,25 @@ title: pyspark streaming
     - [pyspark\.sql module — PySpark master documentation](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=explode)
 
 
+#### foreach
+- https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#using-foreach-and-foreachbatch
+
+```
+      class ForeachWriter:
+          def open(self, partition_id, epoch_id):
+              # Open connection. This method is optional in Python.
+              pass
+      
+          def process(self, row):
+              # Write row to connection. This method is NOT optional in Python.
+              pass
+      
+          def close(self, error):
+              # Close the connection. This method in optional in Python.
+              pass
+```
+
+
 ## Reference
 - [Spark streaming with PySpark reading socket – Nitin Gupta – Medium](https://medium.com/@nitingupta.bciit/spark-streaming-with-pyspark-reading-socket-c7a9e317585d)
 - [Spark Streaming \- Reading data from TCP Socket](https://sparkbyexamples.com/spark-streaming-from-tcp-socket/)
