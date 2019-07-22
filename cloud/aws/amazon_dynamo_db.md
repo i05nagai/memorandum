@@ -46,9 +46,32 @@ title: Amazon DynamoDB
 * string
 * 
 
+## Query
+- [Working with Queries \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html)
+
+- Query results are always sorted by the sort key value. If the data type of the sort key is Number, the results are returned in numeric order; otherwise, the results are returned in order of UTF-8 bytes. By default, the sort order is ascending. To reverse the order, set the ScanIndexForward parameter to false.
+
 ## Limits
 * [Limits in DynamoDB \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html)
 
+## API
+
+#### UpdateItem
+- [UpdateItem \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html)
+- [DynamoDB — Boto 3 Docs 1\.9\.181 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html#DynamoDB.Client.update_item)
+
+```
+table.update_item(
+    Key={
+        'username': 'janedoe',
+        'last_name': 'Doe'
+    },
+    UpdateExpression='SET age = :val1',
+    ExpressionAttributeValues={
+        ':val1': 26
+    }
+)
+```
 
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)
