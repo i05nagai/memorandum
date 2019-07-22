@@ -33,6 +33,23 @@ severless deploy <subcommand>
 * --aws-s3-accelerate
     * Enables S3 Transfer Acceleration making uploading artifacts much faster.
 
+
+```
+serverless config credentials <option>
+```
+
+* --provider / -p (required)
+    * Name of the provider. Supported providers: "spotinst"
+* --key / -k (required)
+    * Access key for the provider
+* --secret / -s (required)
+    * Secret key for the provider
+* --profile / -n
+    * Name of the profile you wish to create. Defaults to "default"
+* --overwrite / -o
+    * Overwrite the existing profile configuration in the credentials file
+
+
 ## Configuration
 
 
