@@ -18,4 +18,10 @@ Slave
 
 
 
+## Tips
+
+#### ERROR : JAVA_HOME is not set
+If you get the error while running `sbin/start-dfs.sh`, you need to set environment variables in `~/.bashrc` in home directory of the user which run the commands.
+
+
 ## Reference
