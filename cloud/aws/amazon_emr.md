@@ -443,16 +443,97 @@ Restrictions of custom AMI
 - Condition key
     - `elasticmapreduce:ResourceTag/${TagKey}`
 
+#### IAM Role
+- [Configure IAM Roles for Amazon EMR Permissions to AWS Services and Resources \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-roles.html)
+
+
+- EMR Role
+- EMR Role for EC2
+- Automatic Scaling Role
+- The IAM Role for EMR Notebooks
+- Service-Linked Role
+    - A service-linked role is a unique type of IAM role that is linked directly to Amazon EMR. The service-linked role is predefined by Amazon EMR and includes the permissions that Amazon EMR requires to call Amazon EC2 on your behalf to clean up cluster resources after they are no longer in use
 
 ## Tips
 
-### Add tags to EC2 instance
+#### Add tags to EC2 instance
 EC2 instanceにtagをつけたい場合は、add-tagsを使う
 cluster内の全てのinstanceにtagを付与できる。
 
 ```
 aws emr add-tags --resource-id j-xxxxxxx --tags name="John Doe"
 ```
+
+#### Load data from Dynamo DB
+- [Hive Command Examples for Exporting, Importing, and Querying Data in DynamoDB \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/EMR_Hive_Commands.html)
+
+
+```sql
+CREATE EXTERNAL TABLE hiveTableName (col1 string, col2 bigint, col3 array<string>)
+STORED BY 'org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler' 
+TBLPROPERTIES (
+    "dynamodb.table.name" = "dynamodbtable1",
+    "dynamodb.column.mapping" = "col1:name,col2:year,col3:holidays"
+);
+
+SET dynamodb.throughput.read.percent=1.0;
+
+INSERT OVERWRITE DIRECTORY 'hdfs:///user/<username>/tablename' SELECT * FROM hiveTableName;
+```
+
+#### Run query to the data in Dynamo DB
+
+```sql
+CREATE EXTERNAL TABLE hive_purchases(
+    customerId bigint,
+    total_cost double,
+    items_purchased array<String>
+)
+STORED BY 'org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler'
+TBLPROPERTIES (
+    "dynamodb.table.name" = "Purchases",
+    "dynamodb.column.mapping" = "customerId:CustomerId,total_cost:Cost,items_purchased:Items"
+);
+SET dynamodb.throughput.read.percent=1.0;
+
+SELECT max(total_cost) from hive_purchases where customerId = 717;
+```
+
+#### Yarn zombie process
+- [Yarn zombie processes \- Cloudera Community](https://community.cloudera.com/t5/Cloudera-Manager-Installation/Yarn-zombie-processes/td-p/32318)
+
+#### Yarn log aggregation
+- [AWS Blog » YARN Log aggregation on EMR Cluster – How to ?](https://aws.mannem.me/?p=1003)
+
+#### Health check of nodes
+- [Apache Hadoop 2\.9\.2 – NodeManager](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/NodeManager.html#Health_checker_service)
+
+
+#### Usercache directory in yarn
+- [yarn \+ usercache \+ folder became with huge size \- Hortonworks](https://community.hortonworks.com/questions/201820/yarn-usercache-folder-became-with-huge-size.html)
+
+#### Unbalanced HDFS
+- [Why HDFS data Becomes unbalanced](https://docs.hortonworks.com/HDPDocuments/HDP3/HDP-3.1.0/data-storage/content/why_hdfs_data_becomes_unbalanced.html)
+
+#### Safemode exception
+- [HDFS goes into read\-only mode and errors out with "Name node is in safe mode"](https://community.pivotal.io/s/article/HDFS-goes-into-readonly-mode-and-errors-out-with-Name-node-is-in-safe-mode)
+- [What is Safemode in Hadoop? \- DataFlair](https://data-flair.training/forums/topic/what-is-safemode-in-hadoop/)
+
+#### Disk space for namenodes
+- [Troubleshoot Disk Space Issues with EMR Core Nodes](https://aws.amazon.com/premiumsupport/knowledge-center/core-node-emr-cluster-disk-space/)
+- [HDFS Metadata Directories Explained](https://hortonworks.com/blog/hdfs-metadata-directories-explained/)
+- [Why are the HDFS edit logs retained after a checkpoint operation is complete? \- Hortonworks](https://community.hortonworks.com/questions/16018/why-are-the-hdfs-edit-logs-retained-after-a-checkp.html)
+- [A Guide to Checkpointing in Hadoop \- Cloudera Engineering Blog](https://blog.cloudera.com/blog/2014/03/a-guide-to-checkpointing-in-hadoop/)
+- [Edit Logs piling up under nn current directory and\.\.\. \- Cloudera Community](https://community.cloudera.com/t5/Storage-Random-Access-HDFS/Edit-Logs-piling-up-under-nn-current-directory-and-using-lot/td-p/26105)
+- [Best Practices and Tips for Optimizing AWS EMR](https://cloud.netapp.com/blog/optimizing-aws-emr-best-practices)
+- [BigInsights: Hadoop Cleaning up your HDFS Trash \- POWER me up Blog](https://www.ibm.com/developerworks/community/blogs/powermeup/entry/BigInsights_Hadoop_Cleaning_up_you_HDFS_Trash?lang=en)
+- [Top 10 NameNode\-related problems \| MapR](https://mapr.com/blog/top-10-namenode-related-problems/)
+- [Developer Blog: Don't fill your HDFS disks \(upgrading to CDH 5\.4\.2\)](http://gbif.blogspot.com/2015/05/dont-fill-your-hdfs-disks-upgrading-to.html)
+- [HDFS Architecture Guide](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)
+- [Amazon EMR: five ways to improve the way you use Hadoop](https://cloudacademy.com/blog/amazon-emr-five-ways-to-improve-the-way-you-use-hadoop/)
+- [archive\.cloudera\.com/cdh4/cdh/4/hadoop/hadoop\-project\-dist/hadoop\-hdfs/hdfs\-default\.xml](http://archive.cloudera.com/cdh4/cdh/4/hadoop/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml)
+- [What is the use of fsimage in hadoop? \| Edureka Community](https://www.edureka.co/community/33860/what-is-the-use-of-fsimage-in-hadoop)
+- [Secondary Namenode \- What it really do?](http://blog.madhukaraphatak.com/secondary-namenode---what-it-really-do/)
 
 
 ## Security Groups
