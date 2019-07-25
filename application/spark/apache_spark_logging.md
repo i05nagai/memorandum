@@ -13,6 +13,14 @@ title: Apache Spark Logging
 
 
 
+#### Logging in foreach method
+- [How to log in Apache Spark \- By](https://hackernoon.com/how-to-log-in-apache-spark-f4204fad78a#.j93k2ieu7)
+- [Spark: Log's in foreachRdd when running on the cluster \- Hortonworks](https://community.hortonworks.com/questions/75314/spark-logs-in-foreachrdd-when-running-on-the-clust.html)
+- [Alvin's Big Data Notebook : Distributed Logging in Spark App](http://alvincjin.blogspot.com/2016/08/distributed-logging-in-spark-app.html)
+
+We cannot use `log4j` logger since the `log4j` is not serializable.
+
+
 ## Reference
 * [How to Log in Apache Spark | MapR](https://mapr.com/blog/how-log-apache-spark/)
 * [How to log in Apache Spark – Hacker Noon](https://hackernoon.com/how-to-log-in-apache-spark-f4204fad78a)
