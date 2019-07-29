@@ -114,7 +114,13 @@ table.update_item(
 - [Resolve Issues with Throttled DynamoDB Tables](https://aws.amazon.com/premiumsupport/knowledge-center/throttled-ddb/)
 - Throughput exceeds the current capacity for one or more global secondary indexes. DynamoDB is automatically scaling your index so please try again shortly
 - [Designing Partition Keys to Distribute Your Workload Evenly \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-uniform-load.html)
+- [Best Practices for DynamoDB \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
 
+#### Shard and Partition
+- [How to perform ordered data replication between applications by using Amazon DynamoDB Streams \| AWS Database Blog](https://aws.amazon.com/blogs/database/how-to-perform-ordered-data-replication-between-applications-by-using-amazon-dynamodb-streams/)
+
+- When you enable a stream on a DynamoDB table, DynamoDB creates at least one shard per partition.
+- Shards in DynamoDB streams are collections of stream records.
 
 
 ## Reference
