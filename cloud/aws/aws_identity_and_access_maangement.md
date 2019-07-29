@@ -148,6 +148,26 @@ Take a look at examples provided by AWS.
     * `AWS`
     * `*`
 
+## Condition
+- [IAM JSON Policy Elements: Condition Operators \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html#Conditions_Null)
+
+
+Condition NULL.
+If `true` is specified, policy will be enabled when the does not exist.
+If `false` is specified, policy will be enabled when the does exist.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement":{
+      "Action":"ec2:*",
+      "Effect":"Allow",
+      "Resource":"*",
+      "Condition":{"Null":{"aws:TokenIssueTime":"true"}}
+  }
+```
+
+
 ## Amazon Resource Nanme
 
 * user account
