@@ -54,6 +54,43 @@ title: Amazon DynamoDB
 ## Limits
 * [Limits in DynamoDB \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html)
 
+RRU = Read Request unit
+WRU = Write Request unit
+
+- provisioned table
+    - 1 RCU = 1 strongly consistent read/sec, or 2 eventually consistent reads/sec, for items up to 4 KB in size.
+    - 1 WCU = 1 write/sec, for items up to 1 KB in size.
+        - for 10 KB data, you need 10 WCU to write data in a sec?
+    - per table (depends on region)
+        - 40,000 RCU
+        - 40,000 WCU
+    - per account (depends on region)
+        - 80,000 RCU
+        - 80,000 WCU
+    - Minimum throughput for any table or global secondary index  (depends on region)
+        - 1 RCU
+        - 1 WCU
+    - Increasing RCU/WCU
+        - The new settings do not take effect until the UpdateTable operation is complete.
+    - Decreasing RCU/WCU
+        - The new settings do not take effect until the UpdateTable operation is complete.
+- on demand
+    - 1 RRU = 1 strongly consistent read, or 2 eventually consistent reads, for items up to 4 KB in size.
+    - 1 WRU = 1 write, for items up to 1 KB in size.
+    - per table  (depends on region)
+        - 40,000 RRU
+        - 40,000 WRU
+    - per account  (depends on region)
+        - no applicable
+    - Minimum throughput for any table or global secondary index  (depends on region)
+        - no applicable
+
+
+- Partition
+    - Adaptive capacity activates within 5‑30 minutes to help mitigate short‑term workload imbalance issues. However, each partition is still subject to the hard limit of 1000 WCU and 3000 RCU
+
+
+
 ## API
 
 #### UpdateItem
@@ -72,6 +109,13 @@ table.update_item(
     }
 )
 ```
+
+#### Throttled error
+- [Resolve Issues with Throttled DynamoDB Tables](https://aws.amazon.com/premiumsupport/knowledge-center/throttled-ddb/)
+- Throughput exceeds the current capacity for one or more global secondary indexes. DynamoDB is automatically scaling your index so please try again shortly
+- [Designing Partition Keys to Distribute Your Workload Evenly \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-uniform-load.html)
+
+
 
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)
