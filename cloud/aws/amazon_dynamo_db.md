@@ -121,7 +121,32 @@ table.update_item(
 
 - When you enable a stream on a DynamoDB table, DynamoDB creates at least one shard per partition.
 - Shards in DynamoDB streams are collections of stream records.
+- For example, event source mappings that read from a stream do not scale beyond the number of shards in the stream
+    - [AWS Lambda Function Scaling \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/scaling.html)
 
+#### Read capacity unit comsumption
+- [Managing Throughput Settings on Provisioned Tables \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads)
+
+
+- Query
+    - If query returns 41KB data, it rounds up to the next 4KB multiple.
+    - 44 KB / 4 KB = consumed RCU in case of strongly consistent data
+    - 44 KB / 8 KB = consumed RCU in case of eventually consistent data
+
+
+#### Retention period of stream
+- [DynamoDB Streams Use Cases and Design Patterns \| AWS Database Blog](https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patterns/)
+- [GetShardIterator \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html)
+
+- 24 hours
+- For every DynamoDB partition, there is a corresponding shard and a Lambda function poll for events in the stream (shard). Based on the batch size you specify, it fetches the records, processes it, and then fetches the next batch.
+
+
+#### Checking the number of shards
+
+```
+aws dynamodbstreams describe-stream --stream-arn streamarn | jq '.StreamDescription.Shards | length'
+```
 
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)
