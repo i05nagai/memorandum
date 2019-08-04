@@ -264,6 +264,7 @@ $$
 \end{eqnarray}
 $$
 
+Average of loss function
 
 $$
 \begin{eqnarray}
@@ -277,6 +278,8 @@ $$
     .
 \end{eqnarray}
 $$
+
+Sample average of loss function
 
 
 $$
@@ -309,6 +312,22 @@ $$
         }(w_{0})
     .
     \nonumber
+\end{eqnarray}
+$$
+
+Loss for estimator
+
+$$
+\begin{eqnarray}
+    \mathcal{L}(w)
+    :=
+    - \frac{1}{n}
+    \sum_{i=1}^{n}
+        \log p(X_{i} \mid w)
+    -
+    \frac{1}{n \beta}
+    \log \phi(w)
+    .
 \end{eqnarray}
 $$
 
@@ -520,14 +539,31 @@ Entropy
 $$
 \begin{eqnarray}
     S
-    =
-    -
-    \int
-        q(x) \log q(x)
-    \ dx
-    .
+    & = &
+        -
+        \int
+            q(x) \log q(x)
+        \ dx
+    \nonumber
+    \\ 
+    & = &
+        -
+        \int
+            q(x) \log p(x \mid w_{0}) 
+        \ dx
+    \nonumber
+    \\ 
+    & = &
+        -
+        \mathrm{E}_{X}
+        \left[
+            p(x) \log p(x \mid w_{0}) 
+        \right]
+    \nonumber
 \end{eqnarray}
 $$
+
+where the second equality holds if q(x) is realizable.
 
 
 $$
@@ -560,13 +596,36 @@ $$
         \sum_{i=1}^{n}
             f(X_{i}, w)
     \nonumber
+    \\
+    & = &
+        -
+        L_{n}(w_{0})
+        +
+        L_{n}(w)
+    \nonumber
+    \\
+    & = &
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \log p(X_{i} \mid w_{0})
+        -
+        \frac{1}{n}
+        \sum_{i=1}^{n}
+            \log p(X_{i} \mid w)
+    \nonumber
+    \\
+    & = &
+        -L_{n}(w_{0})
+        +
+        L_{n}(w)
+    \nonumber
     .
 \end{eqnarray}
 $$
 
 $$
 \begin{eqnarray}
-    J_{i,j} 
+    J_{i,j}
     :=
     \left(
         \frac{\partial L}{\partial w_{i} \partial w_{j}} (w_{0})
@@ -700,7 +759,7 @@ $$
                 - n \beta K_{n}(w)
             \right)
             \phi(w)
-        \ mu(dx)
+        \ dx
     \nonumber
     \\
     Z_{n}^{(2)}(\beta)
@@ -711,7 +770,7 @@ $$
                 - n \beta K_{n}(w)
             \right)
             \phi(w)
-        \ mu(dx)
+        \ dx
     .
     \nonumber
 \end{eqnarray}
