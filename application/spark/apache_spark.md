@@ -64,6 +64,10 @@ http://localhost:8080
 
 * [Configuration - Spark 2.1.1 Documentation](https://spark.apache.org/docs/latest/configuration.html#available-properties)
 
+* `spark.master`
+    * available URLs
+        * https://spark.apache.org/docs/latest/submitting-applications.html#master-urls
+* `spark.app.name`
 * `spark.debug.maxToStringFields`
     * string型として扱うfieldの最大数
     * string型の出力はoverheadになるので、デフォルトで制限がある
@@ -114,8 +118,14 @@ Cacheのdataを利用可能で、stageを実行する必要がない場合にski
 ### deploy mode
 * [Deploy Mode · Mastering Apache Spark 2 (Spark 2.2+)](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-deploy-mode.html)
 
+#### Zombie processo
+- [amandeepbatra/killZombieZeppelinsAndSparkShells: Kill those Zombie Zeppelins & Spark Shells \!](https://github.com/amandeepbatra/killZombieZeppelinsAndSparkShells)
+
+
+
 ## Reference
 * [Submitting Applications - Spark 1.6.0 Documentation](https://spark.apache.org/docs/1.6.0/submitting-applications.html)
 * [Sparkアプリケーションの実行方法（spark-submit） - TASK NOTES](http://www.task-notes.com/entry/20160103/1451810637)
 * [Deep Dive into Spark SQL's Catalyst Optimizer - The Databricks Blog](https://databricks.com/blog/2015/04/13/deep-dive-into-spark-sqls-catalyst-optimizer.html)
 * [How-to: Tune Your Apache Spark Jobs (Part 2) – Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)* 
+* [The Internals of Apache Spark · GitBook \(Legacy\)](https://legacy.gitbook.com/book/jaceklaskowski/mastering-apache-spark/details)

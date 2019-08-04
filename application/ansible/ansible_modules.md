@@ -130,5 +130,29 @@ private repositoryをcloneする場合は、deploy keyをgithubに登録する�
 #### lineinfile
 - [lineinfile – Manage lines in text files — Ansible Documentation](https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html)
 
+
+#### shell
+
+## Tips
+Run locally
+[deployment \- Run command on the Ansible host \- Stack Overflow](https://stackoverflow.com/questions/18900236/run-command-on-the-ansible-host)
+
+For shell scripts,
+
+```yaml
+- name: Create a package
+  become: no
+  local_action:
+    module: make
+    target: make-target-here
+```
+
+```yaml
+- name: Decrypt the credential
+  become: no
+  local_action: command cd /path/to/somewher && do-something
+```
+
+
 ## Reference
 

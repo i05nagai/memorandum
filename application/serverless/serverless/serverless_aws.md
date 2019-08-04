@@ -5,6 +5,21 @@ title: serverless AWS
 ## serverless AWS
 
 
+## Configuration
+- https://serverless.com/framework/docs/providers/aws/guide/iam/
+
+```yaml
+provider:
+  # the role specified here will be default role for all functions
+  # if the role is not specified in the function, this role is used
+  role: myDefaultRole                                                  # must validly reference a role defined in the service
+  role: arn:aws:iam::0123456789:role//my/default/path/roleInMyAccount  # must validly reference a role defined in your account
+  role:                                                                # must validly resolve to the ARN of a role you have the rights to use
+    Fn::GetAtt:
+      - myRole
+      - Arn
+```
+
 ## Python
 
 ```

@@ -148,6 +148,26 @@ Take a look at examples provided by AWS.
     * `AWS`
     * `*`
 
+## Condition
+- [IAM JSON Policy Elements: Condition Operators \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html#Conditions_Null)
+
+
+Condition NULL.
+If `true` is specified, policy will be enabled when the does not exist.
+If `false` is specified, policy will be enabled when the does exist.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement":{
+      "Action":"ec2:*",
+      "Effect":"Allow",
+      "Resource":"*",
+      "Condition":{"Null":{"aws:TokenIssueTime":"true"}}
+  }
+```
+
+
 ## Amazon Resource Nanme
 
 * user account
@@ -166,6 +186,12 @@ An instance profile is a container for an IAM role that you can use to pass role
 
 ## Path
 * [amazon web services \- In AWS IAM, What is the Purpose/Use of the "Path" Variable? \- Stack Overflow](https://stackoverflow.com/questions/46324062/in-aws-iam-what-is-the-purpose-use-of-the-path-variable)
+
+#### Usecases
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios.html?icmpid=docs_iam_console
+
+#### Cross accounts 
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html?icmpid=docs_iam_console
 
 
 

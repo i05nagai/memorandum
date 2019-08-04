@@ -248,6 +248,12 @@ ansible-playbook foo.yml --check --diff --limit foo.example.com
 * `{{ ansible_managed }}`
     * ansibleが自動で設定していることを明示するために、config fileのcommenなどに書かれる
 
+#### ansible.cfg
+* [Ansible Configuration Settings — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory)
+
+If the directory of `ansible.cfg` is writable, ansible does not read this configuration automatically.
+You need to either change the permission of the directory or specify `ANSIBLE_CONFIG` environment variables.
+
 ## Using Vault in playbooks
 * [Ansible Vaultを利用して秘密情報を暗号化する ｜ Developers.IO](http://dev.classmethod.jp/server-side/ansible/ansible-vault-introduction/)
 
@@ -269,6 +275,8 @@ mysecret: !vault |
           34623731376664623134383463316265643436343438623266623965636363326136
 other_plain_text: othervalue
 ```
+
+
 
 ## reference
 * [Ansible コーディング規約 (の例) — そこはかとなく書くよん。](http://tdoc.info/blog/2014/10/09/ansible_coding.html)

@@ -14,7 +14,12 @@ CLI for Apache Hadoop YARN.
         * `<unix_time>` is application id's unix epoch time
         * `yyyyyy` is attemp number
 * container id
-    * `container_1526886935622_0002_02_000001`
+    * [ContainerId \(Apache Hadoop Main 2\.9\.2 API\)](https://hadoop.apache.org/docs/current/api/org/apache/hadoop/yarn/api/records/ContainerId.html)
+    * e.g. `container_<unix_time>_xxxx_zz_wwwwww`
+    * `zz`
+        * attemptID
+    * `wwwwww`
+        * container ID
 * AM
     * application master
     * master node?
@@ -170,6 +175,14 @@ Output
 * node state
 * Node-Http-Address
 * Number-of-Running-Containers
+
+Usage
+
+List all nodes
+
+```
+yarn node -all -list
+```
 
 ### daemonlog
 

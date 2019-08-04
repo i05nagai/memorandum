@@ -27,4 +27,7 @@ BSD
 
 * `-K`
 
+#### Timeout
+- https://unix.stackexchange.com/questions/122511/configuring-the-default-timeout-for-the-ssh-agent
+
 ## Reference

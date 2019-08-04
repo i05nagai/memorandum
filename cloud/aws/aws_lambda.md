@@ -323,6 +323,53 @@ Guidelines for Setting Up VPC-Enabled Lambda Functions
 - print statements.
 - Logger functions in the logging module (for example, logging.Logger.info and logging.Logger.error).
 
+## Cloudwatch log query
+Check memory usage
+
+```
+filter @type = "REPORT"
+| stats avg(@maxMemoryUsed), max(@maxMemoryUsed), min(@maxMemoryUsed) by bin(5m)
+```
+
+Check duration
+
+```
+filter @type = "REPORT"
+| stats percentile(@duration, 99), avg(@duration), max(@duration), min(@duration) by bin(5m) as bintime
+| sort bintime asc
+```
+
+Check the log with some error messages
+
+```
+filter @type != "REPORT" and @type != "START" and @type != "END"
+| filter @message like /(?i)(Exception|error|fail|5\d\d)/
+```
+
+Check the log with some error messages removing some unnecessary logs. `5\d\d` is for 5xx request.
+
+```
+filter @type != "REPORT" and @type != "START" and @type != "END"
+| filter @message not like /(?i)(Exception|error|fail|5\d\d)/
+```
+
+Check the log with some error messages removing some unnecessary logs
+
+```
+filter @type != "REPORT" and @type != "START" and @type != "END"
+| filter @message like /(?i)(Exception|error|fail)/
+| filter @message not like /<sometext>/
+```
+
+Counting the number logs which contains some text
+
+```
+filter @type != "REPORT"
+| filter @message like /UpdateItem/
+| stats count() by bin(5m) as time
+| sort time asc
+```
+
 ## Reference
 * [Best Practices for Working with AWS Lambda Functions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
 * [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=5)

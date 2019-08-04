@@ -4,7 +4,6 @@ title: Jenkins
 
 ## Jenkins
 
-
 ## Configuration
 
 - `triggers`
@@ -47,4 +46,24 @@ title: Jenkins
     - `anyOf`
     - `triggeredBy`
 
+## Tips
+
+#### Variable scope
+- [jenkins \- Strange variable scoping behavior in Jenkinsfile \- Stack Overflow](https://stackoverflow.com/questions/50571316/strange-variable-scoping-behavior-in-jenkinsfile)
+
+* variables defined with def in the main script body cannot be accessed from other methods.
+* variables defined without def can be accessed directly by any method even from different scripts. It's a bad practice.
+* variables defined with def and @Field annotation can be accessed directly from methods defined in the same script.
+
+
+#### JSON string to objects
+You need to use.
+
+```
+import groovy.json.JsonSlurperClassic
+new groovy.json.JsonSlurperClassic().parseText(json)
+```
+
+
 ## Reference
+- [Jenkins Pipeline NotSerializableException: groovy\.json\.internal\.LazyMap \- Stack Overflow](https://stackoverflow.com/questions/37864542/jenkins-pipeline-notserializableexception-groovy-json-internal-lazymap/37897833#37897833)

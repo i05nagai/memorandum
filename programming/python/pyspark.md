@@ -257,6 +257,8 @@ Local pathからの読み込みは全てのノードから同じpathで見るこ
 * `foreach(func)`
     * 各要素に対して処理をする
 
+
+
 次はpariRDDに対するTransformation
 
 * `reduceByKey(func)`

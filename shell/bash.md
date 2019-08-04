@@ -187,5 +187,8 @@ FILELIST=(
 foobar "${FILELIST[@]}"
 ```
 
+#### shopt
+- https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+
 ## Reference
 * [bash\(1\): GNU Bourne\-Again SHell \- Linux man page](https://linux.die.net/man/1/bash)

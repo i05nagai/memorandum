@@ -31,5 +31,11 @@ ssh -A username2@host-remote-remote
 # ssh username2@host-remote-remote
 ```
 
+#### Timeout
+- https://unix.stackexchange.com/questions/122511/configuring-the-default-timeout-for-the-ssh-agent
+
+- By default, timeout is infinite.
+- The value will be overridden by timeout of `ssh-add`
+
 ## Reference
 * [ssh-agentのforwardを利用し、ホストマシンとローカルVMの非公開鍵を共有する - MANA-DOT](http://blog.manaten.net/entry/ssh-agent-forward)

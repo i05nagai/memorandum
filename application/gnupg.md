@@ -157,6 +157,12 @@ Your decision? 5
 gpg> quit
 ```
 
+Import public key from keyserver
+
+```
+gpg --keyserver hkps://url.net/ --receive-keys <key-id>
+```
+
 
 ## Reference
 * [gpgでのファイルの暗号化基礎 - akihiro_obの日記](http://d.hatena.ne.jp/akihiro_ob/20120131/1328031230)
