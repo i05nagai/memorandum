@@ -36,7 +36,8 @@ aws emr add-steps \
 
 
 ## IAM, Role, Policy
-
+- [Actions, Resources, and Condition Keys for Amazon Elastic MapReduce \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonelasticmapreduce.html)
+- [Actions, Resources, and Condition Keys for AWS Services \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actions-resources-contextkeys.html#actions_table)
 
 * one for the EMR Cluster to use as a service
     * AmazonElasticMapReduceRole
@@ -44,6 +45,12 @@ aws emr add-steps \
 * one to place on your Cluster Instances to interact with AWS from those instances
     * AmazonElasticMapReduceforEC2Role
         * for EC2 profile
+
+
+#### Service roles
+- [Service Role for Amazon EMR \(EMR Role\) \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-role.html)
+
+
 
 
 ## Steps
