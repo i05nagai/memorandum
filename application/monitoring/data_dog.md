@@ -110,5 +110,31 @@ Key MySQL Statistics
     * dataの保存期間15 month
 
 
+#### Datadog metric and Cloud watch metric
+* aws.lambda.iterator_age
+    * iterator age
+    * 1 sec
+    * average
+* aws.lambda.invocation
+    * invocation
+    * 1 sec
+    * sum
+* aws.lambda.duration
+    * duration average
+    * 5 min?
+    * Average
+* aws.lambda.duration.maximum
+* aws.dynamodb.consumed_write_capacity_units
+    * sum of ConsumedWriteCapacityUnit in 1 sec / 60 sec
+    * To make it equal to table metrics, you need to add `globalsecondaryindexname: none`. Otherwise it contains ConsumedWriteCapacityUnit for global secondary index
+* aws.dynamodb.consumed_read_capacity_units
+    * sum of ConsumedReadCapacityUnit in 1 sec / 60 sec
+    * To make it equal to table metrics, you need to add `globalsecondaryindexname: none`. Otherwise it contains ConsumedReadCapacityUnit for global secondary index
+* aws.dynamodb.system_error
+    * sum of BatchWriteItem SystemError
+* aws.dynamodb.user_error
+    * this metrics shows the number of user errors in the AWS accounts
+* aws.dynamodb.write_throttle
+
 ## Reference
 * [How to monitor Google Kubernetes Engine with Datadog](https://www.datadoghq.com/blog/monitor-google-kubernetes-engine/)
