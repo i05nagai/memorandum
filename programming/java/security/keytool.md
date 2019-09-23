@@ -51,5 +51,24 @@ keytool \
     -certreq -file credential/kafka-server.cert-file
 ```
 
+#### Show list of certificates
+
+```
+keytool \
+    -keystore kafka.server.keystore.jks \
+    -alias kafka-server \
+    -storepass serverkeystore \
+    -list
+```
+
+#### Check certificates fingerprints
+
+```
+openssl x509 -noout -fingerprint -sha256 -inform pem -in [certificate-file.crt]
+openssl x509 -noout -fingerprint -sha1 -inform pem -in [certificate-file.crt]
+openssl x509 -noout -fingerprint -md5 -inform pem -in [certificate-file.crt]
+```
+
+
 ## Reference
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
