@@ -45,6 +45,12 @@ openssl x509 -days 3650 -req -signkey server.key < server.csr > server.crt
 openssl s_client -connect <host>:<port> 
 ```
 
+Check connectivity given certificate for CA,
+
+```
+openssl s_client -CAfile certiciate_ca.crt -connect <host>:<port>
+```
+
 #### req
 
 ```
@@ -275,10 +281,22 @@ Check a PKCS#12 file (.pfx or .p12)
 openssl pkcs12 -info -in keyStore.p12
 ```
 
+
+## Usage
+
+#### Check certificates fingerprints
+- [How to View a Certificate Fingerprint as SHA\-256, SHA\-1 or MD5 using OpenSSL](https://knowledge.digicert.com/solution/SO28771.html)
+
+```
+openssl x509 -noout -fingerprint -sha256 -inform pem -in [certificate-file.crt]
+openssl x509 -noout -fingerprint -sha1 -inform pem -in [certificate-file.crt]
+openssl x509 -noout -fingerprint -md5 -inform pem -in [certificate-file.crt]
+```
+
+
 ## PEM file
 * [How to SSL - PEM Files](http://how2ssl.com/articles/working_with_pem_files/)
 * [How to SSL - OpenSSL tips and common commands](http://how2ssl.com/articles/openssl_commands_and_tips/)
 
 ## Reference
-
 
