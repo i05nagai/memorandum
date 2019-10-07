@@ -1462,6 +1462,16 @@ $$
 $$
 
 
+## Gausiaan quadrature
+- [Gaussian Quadrature](http://users.umiacs.umd.edu/~ramani/cmsc460/Lecture16_integration.pdf)
+
+
+#### Gauss-Legendre quadrature
+- [Gauss–Laguerre quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Gauss%E2%80%93Laguerre_quadrature)
+
+
+
+
 
 ## Reference
 - [Tanh\-sinh quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Tanh-sinh_quadrature)
