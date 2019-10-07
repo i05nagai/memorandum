@@ -7,7 +7,7 @@ title: postman
 ## Install
 
 ```
-brew cask install postmanb
+brew cask install postman
 ```
 
 ## Reference
