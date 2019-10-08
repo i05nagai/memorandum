@@ -26,6 +26,9 @@ kafka
 - [Security Tutorial — Confluent Platform](https://docs.confluent.io/current/tutorials/security_tutorial.html#generating-keys-certs)
 
 
+## Performance
+- [Benchmarking Apache Kafka: 2 Million Writes Per Second \(On Three Cheap Machines\) \| LinkedIn Engineering](https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines)
+
 
 ## Reference
 * [Apache Kafka](https://kafka.apache.org/)
