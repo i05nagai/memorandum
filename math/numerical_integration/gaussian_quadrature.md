@@ -114,6 +114,30 @@ $$
 \end{eqnarray}
 $$
 
+Let $h$ be function.
+
+$$
+\begin{eqnarray}
+    (h f, g)
+    & = &
+        \int_{a}^{b}
+            \omega(x) h(x) f(x) g(x)
+        \ dx
+    \nonumber
+    \\
+    & = &
+        \int_{a}^{b}
+            \omega(x) f(x) h(x) g(x)
+        \ dx
+    \nonumber
+    \\
+    & = &
+        (f, h g)
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
 #### Theorem 3.6.3
 There exists $p_{j} \in \bar{\Pi}_{j}$ for $j = 0, 1, \ldots, $ such that
 
@@ -172,12 +196,7 @@ $$
             &
                 i \ge 1
         \end{cases}
-        \frac{
-            (xp_{i}, p_{i})
-        }{
-            (p_{i}, p_{i})
-        }
-        i \ge 0,
+    .
 \end{eqnarray}
 $$
 
@@ -193,22 +212,188 @@ $$
     =
     0
     \
-    j \ge i
+    j \le i
     .
 \end{eqnarray}
 $$
 
 Let $p_{i+1} \in \bar{\Pi}_{i+1}$.
+There exist constants $$\delta, c_{0}, \ldots, c_{i-1}$$ such that
+
 
 $$
     p_{i+1}(x)
     =
     x
-    p_{i}
+    p_{i}(x)
     -
-    \delta_{i+1} p_{i}(x)
+    \delta p_{i}(x)
+    +
+    \sum_{k=0}^{i-1}
+        c_{k} p_{k}(x)
+    .
 $$
 
+We have
+
+$$
+\begin{eqnarray}
+    (p_{i+1}, p_{j})
+    & = &
+        (xp_{i}, p_{j})
+        -
+        \delta(p_{i}, p_{j})
+        +
+        \sum_{k=0}^{i-1}
+            c_{k} (p_{k}, p_{j})
+    .
+\end{eqnarray}
+$$
+
+The constants must satisfy
+
+$$
+\begin{eqnarray}
+    (p_{i+1}, p_{i})
+    & = &
+        (xp_{i}, p_{j})
+        -
+        \delta(p_{i}, p_{j})
+        =
+        0
+    \label{equation_03_06_08_a}
+    \\
+    j < i,
+    \
+    (p_{i+1}, p_{j})
+    & = &
+        (xp_{i}, p_{j})
+        +
+        c_{j} (p_{j}, p_{j})
+        =
+        0
+    \label{equation_03_06_08_b}
+    .
+\end{eqnarray}
+$$
+
+From $$\eqref{equation_03_06_1_c}$$, $(p_{k}, p_{k}) \neq 0$.
+In fact, suppose that $(p_{k}, p_{k}) = 0$.
+
+$$
+\begin{eqnarray}
+    j \le i,
+    \
+    (p_{j}, p_{j})
+    & = &
+        \int_{a}^{b}
+            \omega(x)
+            p_{j}^{2}(x)
+        \ dx
+    & = &
+        0
+    .
+\end{eqnarray}
+$$
+
+Hence $p_{j} \equiv 0$.
+This contradicts to the assumption of the induction.
+
+The euqation $$\eqref{equation_03_06_08_a}$$ can be solved uniquely
+
+
+$$
+\begin{eqnarray}
+    \delta
+    & = &
+        \frac{
+            (xp_{i}, p_{i})
+        }{
+            (p_{i}, p_{i})
+        }
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+By the induction hypothesis, for $j < i$,
+
+$$
+\begin{eqnarray}
+    & &
+        p_{j}(x)
+        =
+        (x - \delta_{j}) p_{j-1}(x)
+        -
+        \gamma_{j}^{2} p_{j-2}(x)
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        x p_{j-1}(x)
+        =
+        p_{j}(x)
+        +
+        \gamma_{j}^{2} p_{j-2}(x)
+        +
+        \delta_{j} p_{j-1}(x)
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    c_{j}
+    & = &
+        -
+        \frac{
+            (xp_{j}, p_{i})
+        }{
+            (p_{j}, p_{j})
+        }
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{
+            (p_{j+1}, p_{i})
+            +
+            \gamma_{j+1}^{2}
+            (p_{j-1}, p_{i})
+            +
+            \delta_{j+1}
+            (p_{j}, p_{i})
+        }{
+            (p_{j}, p_{j})
+        }
+    \nonumber
+    \\
+    & = &
+        -
+        \frac{
+            (p_{j+1}, p_{i})
+        }{
+            (p_{j}, p_{j})
+        }
+    \nonumber
+    \\
+    & = &
+        \begin{cases}
+            0
+            &
+                (j < i-1)
+            \\
+            -
+            \frac{
+                (p_{j}, p_{i})
+            }{
+                (p_{j}, p_{j})
+            }
+            &
+                (j = i-1)
+        \end{cases}
+    .
+    \nonumber
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
