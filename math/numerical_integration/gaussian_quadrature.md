@@ -397,4 +397,112 @@ $$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+
+#### Corollary 3.6.9
+* $$\{p_{0}, \ldots, p_{n}\}$$,
+    * polynomials in theorem 3.6.3
+
+$$
+    (p, p_{n})
+    =
+    0
+    \quad
+    p \in \Pi_{n-1}
+    .
+$$
+
+#### proof
+Since $p_{j} \in \Pi_{j}$ for all $j$, $p$ is representable as a linear combination of the polynomials.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Theorem 3.6.10
+* $$\{x_{1}, \ldots x_{n}\}$$,
+    * the roots of $p_{n}$,
+
+The roots are real and simple.
+$x_{i} \in (a, b)$.
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
+#### Theorem 3.6.11
+* $t_{1}, \ldots, t_{n} \in \mathbb{R}$,
+    * $t_{i} \neq t_{j}$ for $i \neq j$,
+
+$$
+    A
+    :=
+    \left(
+        \begin{array}{ccc}
+            p_{0}(t_{1}) & \cdots p_{0}(t_{n})
+            \vdots & & \vdots
+            p_{n-1}(t_{1}) & \cdots p_{n-1}(t_{n})
+        \end{array}
+    \right)
+    .
+$$
+
+$A$ is nonsingular.
+
+#### proof
+Assume that $A$ is singular.
+There exists a vector $c^{\mathrm{T}} = (c_{0}, \ldots, c_{n-1})$ such that
+
+$$
+    c^{\mathrm{T}}A
+    =
+    0
+    .
+$$
+
+Let
+
+$$
+    q(x)
+    :=
+    \sum_{i=0}^{n-1}
+        c_{i}p_{i}(x)
+    .
+$$
+
+Since
+
+$$
+\begin{eqnarray}
+    c^{\mathrm{T}}A
+    & = &
+        \left(
+            \sum_{i=0}^{n-1} c_{i} p_{i}(t_{1}),
+            \cdots,
+            \sum_{i=0}^{n-1} c_{i} p_{i}(t_{1})
+        \right)
+    \nonumber
+    \\
+    & = &
+        \left(
+            q(t_{1})
+            \cdots,
+            q(t_{n})
+        \right)
+    \nonumber
+    \\
+    & = &
+        (0, \ldots, 0),
+    \nonumber
+\end{eqnarray}
+$$
+
+$t_{1}, \ldots, t_{n}$ are distinct roots of $q$.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Theorem 3.6.12
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## Reference
