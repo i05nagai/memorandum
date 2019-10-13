@@ -424,6 +424,52 @@ The roots are real and simple.
 $x_{i} \in (a, b)$.
 
 #### proof
+Assume that $a < x_{1}, \ldots, x_{l} < b$ are distinct roots of $p_{n}$ and $l < n$.
+Let
+
+$$
+    q(x)
+    :=
+    \prod_{j=1}^{l}
+        (x - x_{j})
+    \in
+    \bar{\Pi}_{l}
+    .
+$$
+
+Apparently, $q p_{n} \not\equiv 0$.
+That implies
+
+$$
+\begin{eqnarray}
+    0
+    & = &
+        (p_{n}, q)
+        \quad
+        (\because l < n \text{ and Theorem 3.6.3})
+    \nonumber
+\end{eqnarray}
+$$
+
+On the other hands,
+
+$$
+\begin{eqnarray}
+    (p_{n}, q)
+    & = &
+        \int_{a}^{b}
+            \omega(x)
+            p_{n}(x) q(x)
+        \ dx
+    \nonumber
+    \\
+    & \neq &
+        0
+        \quad
+        (\because \text{Assumption (c)})
+    .
+\end{eqnarray}
+$$
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
@@ -1003,9 +1049,87 @@ Gauss-Hermite
 - $\omega(x) := e^{-x^{2}}$,
 - $[a, b] := [-\infty, \infty]$,
 
+$$
+\begin{eqnarray}
+    \int_{-\infty}^{\infty}
+        \frac{
+            1
+        }{
+            \sigma \sqrt{2 \pi}
+        }
+        h(y)
+        \exp
+        \left(
+            -
+            \frac{
+                (y - \mu)^{2}
+            }{
+                2 \sigma^{2}
+            }
+        \right)
+    \ dy
+    & = &
+        \int_{-\infty}^{\infty}
+            \frac{
+                1
+            }{
+                \sigma \sqrt{2 \pi}
+            }
+            h(\sqrt{2} \sigma x + \mu)
+            \exp
+            \left(
+                -
+                x^{2}
+            \right)
+            \sqrt{2} \sigma
+        \ dy
+        \quad
+        (x = (y - \mu) / \sqrt{2 \sigma^{2}})
+    \nonumber
+    \\
+    & = &
+        \int_{-\infty}^{\infty}
+            \frac{
+                1
+            }{
+                \sqrt{\pi}
+            }
+            h(\sqrt{2} \sigma x + \mu)
+            \exp
+            \left(
+                -
+                x^{2}
+            \right)
+        \ dy
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+
+Gauss-Jacobi
+
+- $p_{k}$
+    - Hermite polynomials
+- $\omega(x) := (1 - x)^{\alpha}(1 + x)^{\beta}$,
+- $[a, b] := [-1, 1]$,
+
+
+Gauss-Radau
+
+- In naive Gaussian quadrature, all abscissas are roots of the orthonomal polynomial. Gauss-Radau allows you to use preassigned nodes.
+- A preassigned node is an endpoint of the interval, that is either $a$ or $b$.
+
+Gauss-Lobatto
+
+- In naive Gaussian quadrature, all abscissas are roots of the orthonomal polynomial. Gauss-Radau allows you to use preassigned nodes.
+- preassigned nodes are endpoints of the interval, that is either $a$ and $b$.
+
+
 Gauss-Kronrod
 
 - In naive Gaussian quadrature, $x_{i}$ and $w_{i}$ need to be re-calcualted as $n$ increase. Gauss-Kronrod allows you to use the values calcualted in $n-1$.
 
 
 ## Reference
+- Stoer, Josef, and Roland Bulirsch. Introduction to numerical analysis. Vol. 12. Springer Science & Business Media, 2013.
