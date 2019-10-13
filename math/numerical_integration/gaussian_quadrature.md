@@ -6,7 +6,7 @@ title: Gausiaan Quadrature
 
 * The abscissas
     * The abscissas are not equally spaced
-* The coefficients of integrand
+* The coefficients of integrand includes weights
 
 
 * $[a, b]$,
@@ -980,6 +980,51 @@ Since $w_{i} > 0$, we have $p_{n}(x_{i}) = 0$.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Theorem 3.6.20
+* $\delta_{i}, \gamma_{i} \ (i = 1, \ldots, n)$,
+    * defined in Theorem 3.6.3
+* $p_{0},\ldots, p_{n}$,
+    * orthonomal polynomials
+* $x_{1}, \ldots, x_{n}$,
+    * the roots of $p_{n}$,
+
+$$
+\begin{eqnarray}
+    J_{j}
+    :=
+    \left(
+        \begin{array}{ccccc}
+            \delta_{1} & \gamma_{2} & 0 & &
+            \\
+            \gamma_{2} & \delta_{2} & \gamma_{3} & &
+            \\ 
+            0 & \cdot & \cdot & \cdot &
+            \\
+             &  & \gamma_{j} &  \delta_{j-1} & \gamma_{j}
+            \\
+             &  & 0 &  \gamma_{j} & \delta_{j}
+        \end{array}
+    \right)
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+Then $x_{1}, \ldots, x_{n}$ are the eigenvalues of the $J_{n}$.
+
+#### proof
+
+$$
+    p_{j}(x)
+    :=
+    \mathrm{det}(J_{j} - xI)
+    .
+$$
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+
 
 #### Theorem 3.6.24
 - $f \in C^{2n}[a, b]$,
@@ -1133,3 +1178,6 @@ Gauss-Kronrod
 
 ## Reference
 - Stoer, Josef, and Roland Bulirsch. Introduction to numerical analysis. Vol. 12. Springer Science & Business Media, 2013.
+- [Hermite\-Gauss Quadrature \-\- from Wolfram MathWorld](http://mathworld.wolfram.com/Hermite-GaussQuadrature.html)
+- [Hermite polynomials \- Wikipedia](https://en.wikipedia.org/wiki/Hermite_polynomials)
+- [Gauss–Laguerre quadrature \- Wikipedia](https://en.wikipedia.org/wiki/Gauss%E2%80%93Laguerre_quadrature)
