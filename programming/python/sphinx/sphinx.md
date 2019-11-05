@@ -220,7 +220,15 @@ sphinx-apidoc --full -o temp --separate project
 基本的には、こちらを使えば良い。
 
 ```
-sphinx-quickstart [options] [projectdir]
+sphinx-quickstart \
+  --ext-autodoc \
+  --ext-doctest \
+  --ext-todo \
+  --ext-coverage \
+  --ext-mathjax \
+  --ext-viewcode \
+  --extentions sphinx.ext.autosummary \
+    [projectdir]
 ```
 
 projectdirはdocsを生成したい場所を指定。
