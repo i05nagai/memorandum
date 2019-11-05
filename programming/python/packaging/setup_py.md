@@ -161,5 +161,17 @@ setup_requires = ['pip==10.0.1']
     * https://github.com/python/cpython/blob/master/Lib/distutils/cmd.py#L12
     * `user_options` does not support list
 
+
+#### Manifest
+- [4\. Creating a Source Distribution — Python 2\.7\.16 documentation](https://docs.python.org/2/distutils/sourcedist.html#the-manifest-in-template)
+
+
+The list of commands
+
+- `include`
+- `exclude`
+- `prune`
+- `graft`
+
 # Reference
 * [4. ソースコード配布物を作成する — Python 2.7.x ドキュメント](http://docs.python.jp/2/distutils/sourcedist.html)
