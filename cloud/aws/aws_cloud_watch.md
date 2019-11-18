@@ -39,5 +39,8 @@ put-metric-filter
 ]
 ```
 
+#### Metric  filter
+- [Filter and Pattern Syntax \- Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)
+
 ## Reference
 
