@@ -542,6 +542,109 @@ SELECT max(total_cost) from hive_purchases where customerId = 717;
 - [What is the use of fsimage in hadoop? \| Edureka Community](https://www.edureka.co/community/33860/what-is-the-use-of-fsimage-in-hadoop)
 - [Secondary Namenode \- What it really do?](http://blog.madhukaraphatak.com/secondary-namenode---what-it-really-do/)
 
+If the namenode in the master node fills up the root volume of the master node, you need to run 
+
+```
+hdfs dfsadmin -safemode enter
+# run twice since fsimage stores the last two fs image
+hdfs dfsadmin -saveNamespace
+hdfs dfsadmin -saveNamespace
+hdfs dfsadmin -safemode leave
+```
+
+The default values is used for the configuration of fsimage and editlog.
+See https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+To reflect the chage in configuration file, you need to restart HDFS Namenode.
+Note that you get changed value when you run `hdfs getconf -confKey ` without restarting.
+However, the HDFS Namenode daemon is not updated.
+
+
+Let's say we have the following configuration.
+
+```
+  <property>
+    <name>dfs.namenode.num.extra.edits.retained</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.num.checkpoints.retained</name>
+    <value>2</value>
+  </property>
+```
+
+When we run `hdfs dfsadming -saveNamespace` command, below editlogs and fsimages are retained.
+
+- `the last fsimage tx id - dfs.namenode.num.extra.edits.retained <= editlog tx id`
+    - e.g.  `97 - 10 <= 87`
+- `the number of fs images files <= dfs.namenode.num.checkpoints.retained`
+    - e.g. `2 <= 2`
+
+```
+edits_0000000000000000087-0000000000000000088
+edits_0000000000000000089-0000000000000000090
+edits_0000000000000000091-0000000000000000092
+edits_0000000000000000093-0000000000000000093
+edits_0000000000000000094-0000000000000000095
+edits_0000000000000000096-0000000000000000097
+edits_0000000000000000098-0000000000000000099
+edits_inprogress_0000000000000000100
+fsimage_0000000000000000097
+fsimage_0000000000000000097.md5
+fsimage_0000000000000000099
+fsimage_0000000000000000099.md5
+```
+
+#### Get configuration property
+
+```
+hdfs getconf -confKey dfs.namenode.max.extra.edits.segments.retained
+```
+
+
+#### Restarting daemon process
+- [Viewing and Restarting Amazon EMR and Application Processes \(Daemons\) \- Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-process-restart-stop-view.html)
+- [Restart a Service in Amazon EMR](https://aws.amazon.com/premiumsupport/knowledge-center/restart-service-emr/)
+
+There are two types of the processes in a EMR cluster
+
+- (1) Amazon EMR processes 
+    - instance-controller
+    - Log Pusher (log pusher might be in (2))
+- (2) processes associated with application releases
+    - hadoop-hdfs-namenode
+    - hadoop-yarn-resourcemanager
+
+
+(1)
+
+```
+# to see the list of processes
+ls /etc/init.d/
+# 
+sudo /etc/init.d/processname stop
+sudo /etc/init.d/processname start
+```
+
+(2)
+
+```
+# to see the list of processes
+ls /etc/init/
+#
+sudo /sbin/stop processname
+sudo /sbin/start processname
+```
+
+(3)
+
+```
+# To show processes running on the cluster
+initctl list
+# restart
+sudo stop hadoop-hdfs-namenode
+sudo start hadoop-hdfs-namenode
+```
 
 ## Security Groups
 * https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-sg-specify.html
