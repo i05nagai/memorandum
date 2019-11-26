@@ -122,6 +122,13 @@ Cacheのdataを利用可能で、stageを実行する必要がない場合にski
 - [amandeepbatra/killZombieZeppelinsAndSparkShells: Kill those Zombie Zeppelins & Spark Shells \!](https://github.com/amandeepbatra/killZombieZeppelinsAndSparkShells)
 
 
+#### Submitting files with spark-submit commands
+You can send files to all nodes in yarn-cluster with spark-submit commands.
+The submitted files will be locoated in usercache directory of yarn container.
+Working directory is the same location as the file is lcoated. (i.e.  `/path/to/yarn/usercache/hadoop/appcache/<application_id>/<container_id>`)
+Path to zip files are `/path/to/yarn/usercache/hadoop/appcache/<application_id>/<container_id>/modulezip.zip/modulezip/filecontent.py`.
+If the file is python module, python module path is `modulezip.filecontent`.
+
 
 ## Reference
 * [Submitting Applications - Spark 1.6.0 Documentation](https://spark.apache.org/docs/1.6.0/submitting-applications.html)

@@ -30,6 +30,9 @@ aws configure get
 # list configurations such as Access Key ID,...
 aws configure list
 aws configure set
+
+aws configure set --profile <profile-name> aws_access_key_id=
+aws configure set --profile <profile-name> aws_secret_access_key
 ```
 
 You can execute command with this credential by giving `--profile` optoin like

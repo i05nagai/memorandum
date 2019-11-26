@@ -142,11 +142,28 @@ table.update_item(
 - For every DynamoDB partition, there is a corresponding shard and a Lambda function poll for events in the stream (shard). Based on the batch size you specify, it fetches the records, processes it, and then fetches the next batch.
 
 
+#### Dynamo db stremaing with KCL
+- https://aws.amazon.com/blogs/big-data/processing-amazon-dynamodb-streams-using-the-amazon-kinesis-client-library/
+
+The solution is to use KCL to consume the dynamo db stream.
+AFIK, the KCL does not allow us to modify the retention period of dynamo db stream or any configuration.
+If you use Lambdas to consume the event, there is no benefit.
+If you're already familiar with KCL and new to other service, this might be a solution.
+
 #### Checking the number of shards
 
 ```
 aws dynamodbstreams describe-stream --stream-arn streamarn | jq '.StreamDescription.Shards | length'
 ```
+
+
+#### Permissions
+In provisioned, you need permissios to create SNS topic `dynamodb` when you change the WCU/RCU  after creation of dynamo db table.
+
+```
+User: ... is not authorized to perform: SNS:CreateTopic on resource: ...:dynamodb (Service: AmazonSNS; Status Code: 403; Error Code: AuthorizationError; Request ID: )
+```
+
 
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)

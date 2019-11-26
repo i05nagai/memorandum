@@ -370,6 +370,11 @@ filter @type != "REPORT"
 | sort time asc
 ```
 
+#### Lambda logging twice
+* [python \- Getting logs twice in AWS lambda function \- Stack Overflow](https://stackoverflow.com/questions/50909824/getting-logs-twice-in-aws-lambda-function)
+
+
+
 ## Reference
 * [Best Practices for Working with AWS Lambda Functions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
 * [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=5)

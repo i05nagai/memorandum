@@ -348,5 +348,12 @@ git remote set-url origin git@github.com:username/your-repository.git
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push origin master
 ```
 
+#### Error Permission denied (publickey). at checkout step
+- https://discuss.circleci.com/t/solved-permission-denied-publickey/19562
+
+You need to remove the deploy key and add again on https://circleci.com/gh/<organization>/<project>/edit#checkout
+
+
+
 ## Reference
 * [2.0 Docs - CircleCI](https://circleci.com/docs/2.0/)

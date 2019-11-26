@@ -59,6 +59,49 @@ Hadoop fs command.
 hdfs -ls hdfs:///var/log/
 ```
 
+#### dfsadmin
+[Apache Hadoop 2\.7\.1 – HDFS Commands Guide](https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html#dfsadmin)
+
+Update the fsimage and remove editlogs if conditions are met.
+See related configuration.
+
+- dfs.namenode.num.extra.edits.retained
+- dfs.namenode.num.checkpoints.retained
+
+```
+hdfs dfsadmin -safemode enter
+hdfs dfsadmin -saveNamespace
+hdfs dfsadmin -safemode leave
+```
+
+Roll edit logs. Just rolling in progress edit logs. So it doesn't update the fsimage and delete the editlogs.
+
+
+```
+hdfs dfsadmin -rollEdits
+```
+
+```
+hdfs dfsadmin -report
+```
+
+
+- query: Query the current rolling upgrade status.
+- prepare: Prepare a new rolling upgrade.
+- finalize: Finalize the current rolling upgrade.
+
+```
+hdfs dfsadming -rollingUpgrade [<query>|<prepare>|<finalize>]
+```
+
+
+#### getconf
+- [hdfs getconf command examples \- Fibrevillage](http://fibrevillage.com/storage/646-hdfs-getconf-command-examples)
+
+```
+hdfs getconf -confKey fs.defaultFS
+hdfs getconf -confKey yarn.resourcemanager.address
+```
 
 
 ## Reference

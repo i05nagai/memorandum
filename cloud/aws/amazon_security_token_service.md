@@ -11,5 +11,12 @@ title: Amazon Security Token Service
 
 * `sts::AssumeRole`
 
+
+## Errors
+- Common Errors
+    - [Common Erros \- AWS Security Token Service](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html)
+- AssumeRole
+    - [AssumeRole \- AWS Security Token Service](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html)
+
 ## Reference
 * [Welcome \- AWS Security Token Service](https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html)
