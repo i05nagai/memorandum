@@ -294,6 +294,11 @@ jsonの形式の場合は
 ]
 ```
 
+Possible Conditions
+
+- `instance` refers to `/mnt/var/lib/info/job-flow.json/instance.json`, `isMaster` is field of JSON file.
+    - See  https://stackoverflow.com/questions/20227091/does-an-emr-master-node-know-its-cluster-id
+
 
 ### Shutdown action
 * [(Optional) Create Bootstrap Actions to Install Additional Software - Amazon EMR](http://docs.aws.amazon.com/emr/latest/DeveloperGuide/emr-plan-bootstrap.html#bootstrap_Shutown)
