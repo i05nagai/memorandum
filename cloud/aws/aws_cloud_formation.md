@@ -109,5 +109,17 @@ Parameters:
 - Fn::Or
 
 
+#### UPDATE_ROLLBACK_FAILED
+- [Continue Rolling Back an Update \- AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
+
+- You can change the state manually from `UPDATE_ROLLBACK_FAILED` to `UPDATE_ROLLBACK_COMPLETE`
+
+
+#### Reference resources accross stacks
+* [Reference Resources across Stacks in AWS CloudFormation Templates](https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-reference-resource/)
+
+You can use `Fn::ImportValue`.
+[Fn::ImportValue \- AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html)
+
 ## Referece
 * [AWS CloudFormation - Infrastructure as Code & AWS Resource Provisioning](https://aws.amazon.com/cloudformation/)
