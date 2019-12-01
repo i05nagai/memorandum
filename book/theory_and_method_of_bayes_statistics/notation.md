@@ -669,15 +669,108 @@ $$
 $$
 \begin{eqnarray}
     I(w)
-    :=
-    \mathrm{E}_{X}
-    \left[
-        \nabla f(X, w)
-        (\nabla f(X, w))^{\mathrm{T}}
-    \right]
-    -
-    \nabla K(w)
-    (\nabla K(w))^{\mathrm{T}}
+    & := &
+        \mathrm{E}_{X}
+        \left[
+            \nabla f(X, w)
+            (\nabla f(X, w))^{\mathrm{T}}
+        \right]
+        -
+        \nabla K(w)
+        (\nabla K(w))^{\mathrm{T}}
+    \nonumber
+    \\
+    I
+    & := &
+        I(w_{0})
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{X}
+        \left[
+            \nabla f(X, w_{0})
+            (\nabla f(X, w_{0}))^{\mathrm{T}}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{X}
+        \left[
+            \left(
+                \left(
+                    \log p(X \mid w_{0})
+                    -
+                    \frac{\partial }{\partial w_{i}} 
+                        \log p(X \mid w)
+                \right)
+                \left(
+                    \log p(X \mid w_{0})
+                    -
+                    \frac{\partial }{\partial w_{j}} 
+                        \log p(X \mid w)
+                \right)
+            \right)_{i,j}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{X}
+        \left[
+            \left(
+                \left(
+                    \log p(X \mid w_{0})
+                    -
+                    \frac{
+                        \frac{\partial }{\partial w_{i}} 
+                         p(X \mid w)
+                    }{
+                        p(X \mid w_{0})
+                    }
+                \right)
+                \left(
+                    \log p(X \mid w_{0})
+                    -
+                    \frac{
+                        \frac{\partial }{\partial w_{j}} 
+                         p(X \mid w)
+                    }{
+                        p(X \mid w_{0})
+                    }
+                \right)
+            \right)_{i,j}
+        \right]
+    \nonumber
+    \\
+    & = &
+        \mathrm{E}_{X}
+        \left[
+            \left(
+                (\log p(X \mid w_{0}))^{2}
+                -
+                \log p(X \mid w_{0})
+                \frac{
+                    \frac{\partial }{\partial w_{i}} 
+                     p(X \mid w)
+                }{
+                    p(X \mid w_{0})
+                }
+                -
+                \log p(X \mid w_{0})
+                \frac{
+                    \frac{\partial }{\partial w_{j}} 
+                     p(X \mid w)
+                }{
+                    p(X \mid w_{0})
+                }
+                +
+                \frac{
+                    \frac{\partial }{\partial w_{j}} 
+                     p(X \mid w)
+                }{
+                    p(X \mid w_{0})
+                }
+            \right)_{i,j}
+        \right]
     .
 \end{eqnarray}
 $$
