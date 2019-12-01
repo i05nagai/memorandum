@@ -323,6 +323,21 @@ travis lint /path/to/.travis.yml
 ### Docker images
 * [Quay Container Registry · Quay](https://quay.io/organization/travisci)
 
+#### Add deploy key for Github
+Register environment variables to travis as `DEPLOY_KEY`.
+
+```
+cat /path/to/keyfile | base64 --wrap=0
+```
+
+You can add the following line to push commits to the repository.
+
+```
+ssh-agent bash -c "
+  echo \"${DEPLOY_KEY}\" | base64 -d | ssh-add -
+  GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' git push origin master
+"
+```
 
 
 ## Reference
