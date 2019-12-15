@@ -19,7 +19,6 @@ Default initialization process
     - The PropertyConfigurator will be used to parse the URL to configure log4j unless the URL ends with the ".xml" extension, in which case the DOMConfigurator will be used. You can optionaly specify a custom configurator. The value of the `log4j.configuratorClass` system property is taken as the fully qualified class name of your custom configurator. The custom configurator you specify must implement the Configurator interface.
 
 
-
 ```
 -Dlog4j.configuration=foobar.lcf
 ```
