@@ -42,6 +42,12 @@ For OSX
 brew install gradle
 ```
 
+For Ubuntu,
+
+```
+
+```
+
 ## Usage
 
 ```
