@@ -40,9 +40,13 @@ title: Amazon API Gateway
 
 
 ## Lambda integration
+- [Build an API Gateway API with Lambda Integration \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started-with-lambda-integration.html)
+
 * Lambda Proxy
 * Lambda Custom
 * Lambda Errors in API Gateway
+
+
 
 ## Creating a REST API
 
