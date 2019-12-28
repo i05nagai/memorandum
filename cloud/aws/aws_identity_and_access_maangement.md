@@ -194,6 +194,15 @@ An instance profile is a container for an IAM role that you can use to pass role
 - https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html?icmpid=docs_iam_console
 
 
+#### Users
+- [IAM Users \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html)
+
+- `arn:aws:iam::account-ID-without-hyphens:user/<path>/<username>`
+
+
+- Users as service accounts
+
+
 
 ## Reference
 * [What Is IAM? \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
