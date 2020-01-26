@@ -84,6 +84,10 @@ All target patterns starting with `//` are resolved relative to the current work
 [bazel/tools/build\_defs/repo at master · bazelbuild/bazel](https://github.com/bazelbuild/bazel/tree/master/tools/build_defs/repo)
 
 
+#### genrule
+- [Make Variables \- Bazel](https://docs.bazel.build/versions/master/be/make-variables.html)
+
+
 ### Docker
 * [bitnami/bazel_containers: poc of bazel bitnami containers](https://github.com/bitnami/bazel_containers)
 * [Building deterministic Docker images with Bazel - Bazel](https://blog.bazel.build/2015/07/28/docker_build.html)
