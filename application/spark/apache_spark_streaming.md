@@ -72,6 +72,9 @@ log4j.logger.org.apache.spark.sql.execution.streaming.StreamExecution=DEBUG
 #### Checkpointing
 - [Improving Spark Streaming Checkpointing Performance With AWS EFS \- Yuval Itzchakov’s Blog](https://blog.yuvalitzchakov.com/improving-spark-streaming-checkpoint-performance-with-aws-efs/)
 
+#### Offset management
+- [Offset Management For Apache Kafka With Apache Spark Streaming \- Cloudera Blog](https://blog.cloudera.com/offset-management-for-apache-kafka-with-apache-spark-streaming/)
+
 #### Consuming a Kafka topic but zero events receive
 - [Re: kafka structured streaming source refuses to read](http://mail-archives.apache.org/mod_mbox/spark-user/201701.mbox/%3cCAAswR-7JG3Bo8JMJgXu8Fg9NuKZun_z6LgJsptccgL_uvXbQgQ@mail.gmail.com%3e)
 
