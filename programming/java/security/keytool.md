@@ -51,6 +51,23 @@ keytool \
     -certreq -file credential/kafka-server.cert-file
 ```
 
+#### Import a certificate
+
+```
+keytool \
+    -import \
+        -alias foo \
+        -file certfile.cer \
+        -keystore publicKey.keystore.jks
+```
+
+
+#### Deleete a certificate
+
+```
+keytool -delete -alias alias -keystore publicKey.keystore.jks
+```
+
 #### Show list of certificates
 
 ```
