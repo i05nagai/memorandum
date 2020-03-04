@@ -284,6 +284,16 @@ From console
 * Event source mapping
     * `arn:aws:lambda:region:account-id:event-source-mapping:event-source-mapping-id`
 
+[AWS Lambda Function Versions \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-permissions)
+
+Difference between ARNs for resource based poicy
+
+- If you use a qualified function name (such as `helloworld:1`), the permission is valid for invoking the helloworld function version 1 only using its qualified ARN. Using any other ARNs results in a permission error.
+- If you use an unqualified function name (such as `helloworld`), the permission is valid only for invoking the helloworld function using the unqualified function ARN. Using any other ARNs, including `$LATEST`, results in a permission error.
+- If you use the `$LATEST` qualified function name (such as `helloworld:$LATEST`), the permission is valid for invoking the helloworld function only using its qualified ARN. Using an unqualified ARN results in a permission error.
+
+
+
 ## Concurrency
 [Managing Concurrency \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 
