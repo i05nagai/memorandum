@@ -53,4 +53,8 @@ Uploading schema
     - You can find it `repositor_name` in Artfactory GUI as Name
     - You can find it `repository_path` in Artfactory GUI as repository path
 
+
+## Kubernetes plugin
+- [jenkinsci/kubernetes\-plugin: Jenkins plugin to run dynamic agents in a Kubernetes/Docker environment](https://github.com/jenkinsci/kubernetes-plugin)
+
 ## Reference
