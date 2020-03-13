@@ -23,6 +23,7 @@ Test for any known vulnerabilities.
 
 ```
 snyk test
+snyk test --all-projects --detection-depth=<number> --exclude=<comma seperated list of directory names>
 ```
 
 Configure your policy file to update, auto patch and ignore vulnerabilities in npm & yarn projects.
@@ -41,6 +42,7 @@ Record the state of dependencies and any vulnerabilities on snyk.io.
 
 ```
 snyk monitor 
+snyk monitor --all-projects --detection-depth=<number> --exclude=<comma seperated list of directory names>
 ```
 
 Display the Snyk policy for a package.
@@ -79,7 +81,9 @@ snyk config
 * `--dev`
     * Include devDependencies (defaults to production only).
 * `--file=<File>`
-    * Sets package file. For more help run `snyk help file`.
+    * Sets package file.
+    * e.g. `--file=setup.py,Dockerfile`
+    * `--file` and `--all-projects` are mutually exclusive option
 * `--org=<org-name>`
     * Specify the org machine-name to run Snyk with a specific
     * organization. For more help run `snyk help orgs`.
@@ -118,6 +122,15 @@ snyk config
 * `--fail-on=<all|upgradable|patchable>`
     * Only fail when there are vulnerabilities that can be fixed.  All fails when there is at least one vulnerability that can be either upgraded or patched.  Upgradable fails when there is at least one vulnerability that can be upgraded.  Patchable fails when there is at least one vulnerability that can be patched.  If vulnerabilities do not have a fix and this option is being used tests will pass.  
 
+
+## Usage
+
+```
+# run vulnerability check
+snyk test --all-projects --detection-depth=<number> --exclude=<comma seperated list of directory names>
+# report the issue to snyk.io
+snyk monitor --all-projects --detection-depth=<number> --exclude=<comma seperated list of directory names>
+```
 
 ## Concepts
 
