@@ -27,6 +27,10 @@ title: Apache Sparkk Tuning
 * [How-to: Tune Your Apache Spark Jobs (Part 2) – Cloudera Engineering Blog](https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-2/)
 * [Spark num-executors setting - Hortonworks](https://community.hortonworks.com/questions/56240/spark-num-executors-setting.html)
 
+* `--num-executors` or `spark.executor.instances` configuration property
+    * control the number of executors requested.
+    * you will be able to avoid setting this property by turning on dynamic allocation with the `spark.dynamicAllocation.enabled` property.
+
 * spark.executor.cores
     * 各executorの利用するcpu core
 * spark.executor.memory
@@ -35,7 +39,7 @@ title: Apache Sparkk Tuning
 memoryの構成は以下。
 
 * yarn.nodemanager.resource.memory-mb
-    * Executro container
+    * Executor container
         * spark.yarn.executor.memoryOverhead
             * executroが使用するmememoryの超過可能分
             * このoverheadの分はmemoryが利用可能
