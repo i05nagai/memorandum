@@ -118,7 +118,7 @@ Cacheのdataを利用可能で、stageを実行する必要がない場合にski
 ### deploy mode
 * [Deploy Mode · Mastering Apache Spark 2 (Spark 2.2+)](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-deploy-mode.html)
 
-#### Zombie processo
+#### Zombie process
 - [amandeepbatra/killZombieZeppelinsAndSparkShells: Kill those Zombie Zeppelins & Spark Shells \!](https://github.com/amandeepbatra/killZombieZeppelinsAndSparkShells)
 
 
@@ -128,6 +128,42 @@ The submitted files will be locoated in usercache directory of yarn container.
 Working directory is the same location as the file is lcoated. (i.e.  `/path/to/yarn/usercache/hadoop/appcache/<application_id>/<container_id>`)
 Path to zip files are `/path/to/yarn/usercache/hadoop/appcache/<application_id>/<container_id>/modulezip.zip/modulezip/filecontent.py`.
 If the file is python module, python module path is `modulezip.filecontent`.
+
+
+#### Write to AWS SQS
+- [scala \- Write to AWS SQS queue using Spark \- Stack Overflow](https://stackoverflow.com/questions/44560490/write-to-aws-sqs-queue-using-spark)
+- [Safely send data to AWS SQS from Spark worker machines \| CloudTechPro](https://www.cloudtechpro.com/safely-send-data-aws-sqs-spark-worker-machines)
+
+
+#### s3a trouble shooting
+- [Apache Hadoop Amazon Web Services support – Hadoop\-AWS module: Integration with Amazon Web Services](http://hadoop.apache.org/docs/r2.8.0/hadoop-aws/tools/hadoop-aws/index.html#Troubleshooting_S3A)
+
+#### client and cluster mode
+- https://mapr.com/blog/resource-allocation-configuration-spark-yarn/
+
+- In yarn-client mode
+    - the driver runs in the client process, and the application master is only used for requesting resources from YARN.
+- In yarn-cluster mode
+    - the Spark driver runs inside an application master process which is managed by YARN on the cluster, and the client can go away after initiating the application.
+
+
+#### Spark on Yarn
+- https://spark.apache.org/docs/latest/running-on-yarn.html
+
+- In YARN terminology, executors and application masters run inside "containers"
+
+
+- `spark.yarn.am.memory`
+    - Amount of memory to use for the YARN Application Master in client mode,
+    - In cluster mode, use `spark.driver.memory` instead.
+    - in the same format as JVM memory strings (e.g. 512m, 2g).
+Use lower-case suffixes, e.g. k, m, g, t, and p, for kibi-, mebi-, gibi-, tebi-, and pebibytes, respectively.
+- `spark.yarn.am.cores`
+    - Number of cores to use for the YARN Application Master in client mode.
+    - In cluster mode, use `spark.driver.cores` instead.
+- `spark.executor.instances`
+    - The number of executors for static allocation.
+    - With `spark.dynamicAllocation.enabled`, the initial set of executors will be at least this large.
 
 
 ## Reference
