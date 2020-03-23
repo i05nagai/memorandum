@@ -238,5 +238,25 @@ aws dynamodb restore-table-to-point-in-time \
 [ERROR] ClientError: An error occurred (ThrottlingException) when calling the UpdateItem operation (reached max retries: 9): Throughput exceeds the current capacity of your table or index. DynamoDB is automatically scaling your table or index so please try again shortly. If exceptions persist, check if you have a hot key: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-design.html
 ```
 
+## Loggging
+- [Logging DynamoDB Operations by Using AWS CloudTrail \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/logging-using-cloudtrail.html)
+
+## ARNs
+- [DynamoDB API Permissions: Actions, Resources, and Conditions Reference \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/api-permissions-reference.html)
+
+- `arn:aws:dynamodb:region:account-id:table/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name`
+- `arn:aws:dynamodb::account-id:global-table/*`
+- `arn:aws:dynamodb::account-id:global-table/global-table-name`
+- `arn:aws:dynamodb:region:account-id:table/table-name/index/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/index/index-name`
+- `arn:aws:dynamodb:region:account-id:table/table-name/backup/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name`
+- `arn:aws:dynamodb:region:account-id:*`
+- `*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/stream/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label`
+
+
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)
