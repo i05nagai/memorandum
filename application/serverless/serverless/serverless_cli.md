@@ -57,5 +57,15 @@ serverless config credentials <option>
 ${opt:some_option}
 ```
 
+## Errors
+
+#### Trying to populate non string value into a string for variable . Please make sure the value of the property is a string.
+
+```
+sls deploy -s dev # OK
+sls deploy -stage=dev # NG
+sls deploy --stage=dev # OK
+```
+
 ## Reference
 
