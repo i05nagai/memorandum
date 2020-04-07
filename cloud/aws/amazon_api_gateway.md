@@ -127,7 +127,13 @@ Additionally, `/aws/apigateway/welcome` log group might be create
 
 - You need 
 
+## Permisson
+- [Control Access to an API with IAM Permissions \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/permissions.html)
+- [Create and attach an API Gateway resource policy to an API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-create-attach.html)
+
 
 ## Reference
 * [What Is Amazon API Gateway? \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 * [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=14)
+* [Creating an Edge\-Optimized Custom Domain Name \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html)
+* [Create a REST API with Lambda Integrations in Amazon API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-getting-started-with-rest-apis.html)
