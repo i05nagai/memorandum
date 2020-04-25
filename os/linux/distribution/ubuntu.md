@@ -269,6 +269,11 @@ Execute
 sudo update-grab
 ```
 
+## Function keys
+- [Enable Fn Keys on HP Essential Laptops & Ubuntu 16\.04 \| UbuntuHandbook](http://ubuntuhandbook.org/index.php/2018/02/enable-fn-keys-hp-ubuntu-16-04/)
+- [Set F\-Keys primary instead of special keys on Lenovo \- Ask Ubuntu](https://askubuntu.com/questions/404275/set-f-keys-primary-instead-of-special-keys-on-lenovo)
+- [How to get special keys to work \- ThinkWiki](http://www.thinkwiki.org/wiki/How_to_get_special_keys_to_work)
+
 
 ## Reference
 * [Ubuntuサーバー管理チートシート - Qiita](http://qiita.com/shunichi/items/c7744878f5c02eaab18d)
