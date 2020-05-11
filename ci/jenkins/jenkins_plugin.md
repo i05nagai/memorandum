@@ -57,4 +57,45 @@ Uploading schema
 ## Kubernetes plugin
 - [jenkinsci/kubernetes\-plugin: Jenkins plugin to run dynamic agents in a Kubernetes/Docker environment](https://github.com/jenkinsci/kubernetes-plugin)
 
+## code-coverage-api
+- [Code Coverage API \| Jenkins plugin](https://plugins.jenkins.io/code-coverage-api/)
+- [Code Coverage API Plugin](https://jenkins.io/doc/pipeline/steps/code-coverage-api/)
+
+- merge
+
+## cobertura
+- [Cobertura \| Jenkins plugin](https://plugins.jenkins.io/cobertura/)
+- [Cobertura Plugin](https://jenkins.io/doc/pipeline/steps/cobertura/)
+
+
+## job dsl
+- [Job DSL \| Jenkins plugin](https://plugins.jenkins.io/job-dsl/)
+
+You ca generate pipeline job from groovy scrips.
+
+```
+job('z-emr-job-generate-job') {
+    steps {
+        dsl {
+            external("jobdsls/*.groovy")
+            removeAction("DELETE")
+        }
+    }
+}
+```
+
+If you geenrate job from dsl, you'll see the following error.
+
+- [seed job asks for script approval in jenkins \- Stack Overflow](https://stackoverflow.com/questions/43699190/seed-job-asks-for-script-approval-in-jenkins)
+- [ERROR: script not yet approved for use · Issue \#1 · robinbowes/jenkins\-job\-dsl\-seed\-all\-demo](https://github.com/robinbowes/jenkins-job-dsl-seed-all-demo/issues/1)
+- [Script Security · jenkinsci/job\-dsl\-plugin Wiki](https://github.com/jenkinsci/job-dsl-plugin/wiki/Script-Security)
+- [jenkins\-bootstrap\-shared/configure\-job\-dsl\-security\.groovy at master · samrocketman/jenkins\-bootstrap\-shared](https://github.com/samrocketman/jenkins-bootstrap-shared/blob/master/scripts/configure-job-dsl-security.groovy)
+
+
+#### Suppress automatic build
+- [2git/Jenkinsfile\.dsl at master · Praqma/2git](https://github.com/Praqma/2git/blob/master/Jenkinsfile.dsl)
+    - suppress automatic SCM build
+- [job\-dsl\-plugin/job\-dsl\-core/src/main/groovy/javaposse/jobdsl/dsl/helpers/workflow at master · jenkinsci/job\-dsl\-plugin](https://github.com/jenkinsci/job-dsl-plugin/tree/master/job-dsl-core/src/main/groovy/javaposse/jobdsl/dsl/helpers/workflow)
+- [Jenkins Job DSL for a Multi\-Branch Pipeline that includes Branch Source Strategy & custom Jenkinsfile script path](https://gist.github.com/djfdyuruiry/e3c891c6204bea602e770f9bf7a0cb1c)
+
 ## Reference
