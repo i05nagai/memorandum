@@ -86,4 +86,14 @@ Recommended path is `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agen
 - [Streaming CloudWatch Logs to Kinesis Data Streams](https://aws.amazon.com/premiumsupport/knowledge-center/streaming-cloudwatch-logs/)
 - [Using CloudWatch Logs Subscription Filters \- Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs//SubscriptionFilters.html#FirehoseExample)
 
+## Retention date of metrics
+- [Amazon CloudWatch FAQs \- Amazon Web Services \(AWS\)](https://aws.amazon.com/cloudwatch/faqs/)
+
+- from the previous 14 days to 15 months
+- Data points with a period of less than 60 seconds: 3 hours
+- 1 minute: 14 days
+- 5 minutes: 63 days
+- 1 hour: 455 days
+- if you request for 1-minute data from 5 months back, the UI will automatically change the granularity to 1-hour and the GetMetricStatistics API will not return any output.
+
 ## Reference
