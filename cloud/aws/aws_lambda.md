@@ -333,6 +333,13 @@ Guidelines for Setting Up VPC-Enabled Lambda Functions
 - print statements.
 - Logger functions in the logging module (for example, logging.Logger.info and logging.Logger.error).
 
+
+Format of `LambdaHandler` in rootlogger is below.
+
+```
+[%(levelname)s] %(asctime)s.%(msecs)dZ %(aws_request_id)s %(message)s
+```
+
 ## Cloudwatch log query
 Check memory usage
 
