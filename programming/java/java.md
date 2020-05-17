@@ -180,6 +180,20 @@ object Obj {
 
 - extension is either `jks` or `keystore`
 
+## Syncrhonized
+- [Synchronized Methods \(The Java™ Tutorials > Essential Classes > Concurrency\)](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)
+
+- First, it is not possible for two invocations of synchronized methods on the same object to interleave. When one thread is executing a synchronized method for an object, all other threads that invoke synchronized methods for the same object block (suspend execution) until the first thread is done with the object.
+- Second, when a synchronized method exits, it automatically establishes a happens-before relationship with any subsequent invocation of a synchronized method for the same object. This guarantees that changes to the state of the object are visible to all threads.
+
+[Java Synchronized Blocks](http://tutorials.jenkov.com/java-concurrency/synchronized.html)
+
+- synchronized instance method
+    - Only one thread per instance can execute inside a synchronized instance method. If more than one instance exist, then one thread at a time can execute inside a synchronized instance method per instance. One thread per instance.
+- synchronized static method
+    - Synchronized static methods are synchronized on the class object of the class the synchronized static method belongs to. Since only one class object exists in the Java VM per class, only one thread can execute inside a static synchronized method in the same class.
+- synchronized block
+
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
 * [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)
