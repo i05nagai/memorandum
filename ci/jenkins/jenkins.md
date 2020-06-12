@@ -87,5 +87,14 @@ Workaround is to skip the first build and to use it as a build to just load para
             }
 ```
 
+## Steps
+- https://www.jenkins.io/doc/pipeline/steps/
+
+
+## Security
+- [Securing Jenkins](https://www.jenkins.io/doc/book/system-administration/security/)
+- [Managing Security](https://www.jenkins.io/doc/book/managing/security/)
+- [Getting Started with Pipelines](https://www.jenkins.io/pipeline/getting-started-pipelines/)
+
 ## Reference
 - [Jenkins Pipeline NotSerializableException: groovy\.json\.internal\.LazyMap \- Stack Overflow](https://stackoverflow.com/questions/37864542/jenkins-pipeline-notserializableexception-groovy-json-internal-lazymap/37897833#37897833)
