@@ -98,4 +98,37 @@ If you geenrate job from dsl, you'll see the following error.
 - [job\-dsl\-plugin/job\-dsl\-core/src/main/groovy/javaposse/jobdsl/dsl/helpers/workflow at master · jenkinsci/job\-dsl\-plugin](https://github.com/jenkinsci/job-dsl-plugin/tree/master/job-dsl-core/src/main/groovy/javaposse/jobdsl/dsl/helpers/workflow)
 - [Jenkins Job DSL for a Multi\-Branch Pipeline that includes Branch Source Strategy & custom Jenkinsfile script path](https://gist.github.com/djfdyuruiry/e3c891c6204bea602e770f9bf7a0cb1c)
 
+
+#### AuthorizationMatrix
+- [Jenkins DSL Authorization Matrix loop \| Virtualizatio'n'automation](https://emilwypych.com/2018/06/27/jenkins-dsl-authorization-matrix-loop/?cn-reloaded=1)
+
+In Jenkinsfile, you can write in options section.
+
+```
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        authorizationMatrix(permissions:[
+            // for all logined users
+            "hudson.model.Item.Build:authenticated",
+            "hudson.model.Item.Cancel:authenticated",
+            // for all user
+            // "hudson.model.Item.Build:anonymous",
+            // "hudson.model.Item.Cancel:anonymous"
+        ])
+        timestamps()
+    }
+```
+
+## pipeline-utility-stesp
+- [pipeline\-utility\-steps\-plugin/STEPS\.md at master · jenkinsci/pipeline\-utility\-steps\-plugin](https://github.com/jenkinsci/pipeline-utility-steps-plugin/blob/master/docs/STEPS.md)
+
+
+```
+findFiles(glob: "path/to/*/file").each { path -> 
+    echo(path.getName()) // filename
+    echo(path.getPath()) // filepath
+}
+```
+
 ## Reference
+
