@@ -87,6 +87,29 @@ Workaround is to skip the first build and to use it as a build to just load para
             }
 ```
 
+## Prallel jobs
+
+```
+stage('Install') {
+    steps {
+        sh("do something")
+        script {
+            def parallel_jobs = [1, 2, 3].collectEntries { ent ->
+                [ent, {
+                    triggerRemoteJob(
+                        remoteJenkinsName: "<jenkins-name>",
+                        job: "<job-name>",
+                        token: "<token>",
+                        parameters: "commitHash=${env.GIT_COMMIT}\npath=/path/to/somewhere}",
+                        blockBuildUntilComplete: true)
+                }]
+            }
+            parallel(parallel_jobs)
+        }
+    }
+}
+```
+
 ## Steps
 - https://www.jenkins.io/doc/pipeline/steps/
 
