@@ -90,6 +90,16 @@ WRU = Write Request unit
     - Adaptive capacity activates within 5‑30 minutes to help mitigate short‑term workload imbalance issues. However, each partition is still subject to the hard limit of 1000 WCU and 3000 RCU
 
 
+## Global secondary index
+[Improving Data Access with Secondary Indexes \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html)
+
+- you define an alternate key for the index (partition key and sort key)
+- You also define the attributes that you want to be projected
+
+## Local secondary index
+- Partition key is the same as base table
+- You can define an alternate key for the sort_key
+
 
 ## API
 
@@ -163,6 +173,89 @@ In provisioned, you need permissios to create SNS topic `dynamodb` when you chan
 ```
 User: ... is not authorized to perform: SNS:CreateTopic on resource: ...:dynamodb (Service: AmazonSNS; Status Code: 403; Error Code: AuthorizationError; Request ID: )
 ```
+
+
+#### Error
+
+Projection type is `INCLUDE`.
+non_key_attributes contais table primary key and table sort key
+
+
+```
+a key attribute, primary key, is part of a list of non-key attributes, primary_key,sort_key, which is not allowed since all key attributes are added automatically and this configuration causes stack creation failure
+```
+
+ProjectionType is `INCLUDE`
+
+
+```
+dynamodb_table One or more parameter values were invalid: ProjectionType is INCLUDE, but NonKeyAttributes is not specified (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ValidationException; Request ID: )
+```
+
+#### Check if stream is eneabled or not
+`describe-table` returns `StreamSpecification` key if stream is enabled.
+
+```
+        "StreamSpecification": {
+            "StreamEnabled": true,
+            "StreamViewType": "NEW_IMAGE"
+        },
+```
+
+## Restore Dynamo DB
+- [Restoring a DynamoDB Table to a Point in Time \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery.Tutorial.html)
+
+```
+aws dynamodb update-continuous-backups \
+    --table-name Music \
+    --point-in-time-recovery-specification PointInTimeRecoveryEnabled=True 
+```
+
+Check if the PITR is enabled or not.
+
+```
+aws dynamodb describe-continuous-backups \
+--table-name Music
+```
+
+Restore table
+
+```
+aws dynamodb restore-table-to-point-in-time \
+    --source-table-name Music \
+    --target-table-name MusicMinutesAgo \
+    --use-latest-restorable-time
+
+aws dynamodb restore-table-to-point-in-time \
+    --source-table-name cloud-pipeline-db-backup-1x0-us-makus4-db \
+    --target-table-name cloud-pipeline-db-backup-1x0-us-makus4-restore-db  \
+    --use-latest-restorable-time
+```
+
+#### Error throttled exception
+
+```
+[ERROR] ClientError: An error occurred (ThrottlingException) when calling the UpdateItem operation (reached max retries: 9): Throughput exceeds the current capacity of your table or index. DynamoDB is automatically scaling your table or index so please try again shortly. If exceptions persist, check if you have a hot key: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-design.html
+```
+
+## Loggging
+- [Logging DynamoDB Operations by Using AWS CloudTrail \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/logging-using-cloudtrail.html)
+
+## ARNs
+- [DynamoDB API Permissions: Actions, Resources, and Conditions Reference \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/api-permissions-reference.html)
+
+- `arn:aws:dynamodb:region:account-id:table/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name`
+- `arn:aws:dynamodb::account-id:global-table/*`
+- `arn:aws:dynamodb::account-id:global-table/global-table-name`
+- `arn:aws:dynamodb:region:account-id:table/table-name/index/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/index/index-name`
+- `arn:aws:dynamodb:region:account-id:table/table-name/backup/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/backup/backup-name`
+- `arn:aws:dynamodb:region:account-id:*`
+- `*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/stream/*`
+- `arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label`
 
 
 ## Reference

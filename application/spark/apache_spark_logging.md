@@ -13,6 +13,10 @@ title: Apache Spark Logging
 
 
 
+#### Best practice for logging in Pyspark
+- https://gist.github.com/smartnose/9f173b4c36dc31310e8efd27c3535a14#logging-in-pyspark
+- [apache spark \- PySpark Logging? \- Stack Overflow](https://stackoverflow.com/questions/37291690/pyspark-logging)
+
 #### Logging in foreach method
 - [How to log in Apache Spark \- By](https://hackernoon.com/how-to-log-in-apache-spark-f4204fad78a#.j93k2ieu7)
 - [Spark: Log's in foreachRdd when running on the cluster \- Hortonworks](https://community.hortonworks.com/questions/75314/spark-logs-in-foreachrdd-when-running-on-the-clust.html)

@@ -150,6 +150,7 @@ Take a look at examples provided by AWS.
 
 ## Condition
 - [IAM JSON Policy Elements: Condition Operators \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html#Conditions_Null)
+- [Creating a Condition with Multiple Keys or Values \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_multi-value-conditions.html)
 
 
 Condition NULL.
@@ -164,6 +165,20 @@ If `false` is specified, policy will be enabled when the does exist.
       "Effect":"Allow",
       "Resource":"*",
       "Condition":{"Null":{"aws:TokenIssueTime":"true"}}
+  }
+```
+
+Or for condition
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement":{
+      "Condition": {
+          "ForAnyValue:StringEquals": {
+              "aws:sourceVpc": ["vpc-xxxxxxx", "vpc-xxxxxxx"]
+          }
+      }
   }
 ```
 
@@ -184,6 +199,25 @@ If `false` is specified, policy will be enabled when the does exist.
 
 An instance profile is a container for an IAM role that you can use to pass role information to an EC2 instance when the instance starts.
 
+## Policy
+- [Policy Evaluation Logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+
+
+#### Resroucd based and identity based
+- [Identity\-Based Policies and Resource\-Based Policies \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+
+This logic applies only when the request is made within a single AWS account.  For requests made from one account to another,
+
+- the requester in Account A must have an identity-based policy that allows them to make a request to the resource in Account B.
+- Also, the resource-based policy in Account B must allow the requester in Account A to access the resource.
+- If policies in both accounts don't allow the operation, the request fails. For more information about using resource-based policies for cross-account access, see How IAM Roles Differ from Resource-based Policies.
+
+List of AWS service which works with resource based permissions
+
+- [AWS Services That Work with IAM \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html)
+- [Back to School: Understanding the IAM Policy Grammar \| AWS Security Blog](https://aws.amazon.com/blogs/security/back-to-school-understanding-the-iam-policy-grammar/)
+
+
 ## Path
 * [amazon web services \- In AWS IAM, What is the Purpose/Use of the "Path" Variable? \- Stack Overflow](https://stackoverflow.com/questions/46324062/in-aws-iam-what-is-the-purpose-use-of-the-path-variable)
 
@@ -198,11 +232,22 @@ An instance profile is a container for an IAM role that you can use to pass role
 - [IAM Users \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html)
 
 - `arn:aws:iam::account-ID-without-hyphens:user/<path>/<username>`
-
-
 - Users as service accounts
 
 
+## Tips
+
+#### Request tag and resource tag
+- [Controlling Access to AWS Resources Using Resource Tags \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html)
+- [Controlling Access to and for IAM Users and Roles Using IAM Resource Tags \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html)
+
+- You can use tags to control access to your AWS resources that support tagging. Some resources don't support tagging.
+
+
+- Request
+    - `aws:RequestTag/key-name` condition key to specify what tags can be added, changed, or removed from an IAM user or role
+    - example, [Controlling Access to AWS Resources Using Resource Tags \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html#access_tags_control-requests)
+- Resource
 
 ## Reference
 * [What Is IAM? \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)

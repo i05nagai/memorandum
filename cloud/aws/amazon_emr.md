@@ -660,6 +660,29 @@ sudo start hadoop-hdfs-namenode
 * AdditionalMasterSecurityGroups
 * AdditionalSlaveSecurityGroups
 
+## EMRFS
+EMRFS consists of S3 (and optionally DynamoDB for consistent view).
+
+- If you don't need consistent view, DynamoDB is not attached
+- If you write S3 from EMR, metadata information will be stored in DynamoDB automatically
+
+#### EMRFS CLI
+[emrfs describe\-metadata](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emrfs-cli-reference.html)
+
+You can use `emrfs` commands in EMR.
+
+Delete S3 objects.
+
+```
+# the command below doesn't delete S3 objects
+$ emrfs delete <s3-path>
+$ emrfs diff <s3-path>
+
+# delete actual S3 objects
+$ aws s3 rm -r <s3-path
+$ emrfs diff <s3-path>
+```
+
 ## Reference
 * [AWS EMRを動かしてみよう。 - Qiita](http://qiita.com/uzresk/items/76ba0c9700e1d78fe5e3) 
 * [Configuring Applications - Amazon EMR](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)

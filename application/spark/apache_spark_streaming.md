@@ -72,9 +72,19 @@ log4j.logger.org.apache.spark.sql.execution.streaming.StreamExecution=DEBUG
 #### Checkpointing
 - [Improving Spark Streaming Checkpointing Performance With AWS EFS \- Yuval Itzchakov’s Blog](https://blog.yuvalitzchakov.com/improving-spark-streaming-checkpoint-performance-with-aws-efs/)
 
+#### Offset management
+- [Offset Management For Apache Kafka With Apache Spark Streaming \- Cloudera Blog](https://blog.cloudera.com/offset-management-for-apache-kafka-with-apache-spark-streaming/)
+
 #### Consuming a Kafka topic but zero events receive
 - [Re: kafka structured streaming source refuses to read](http://mail-archives.apache.org/mod_mbox/spark-user/201701.mbox/%3cCAAswR-7JG3Bo8JMJgXu8Fg9NuKZun_z6LgJsptccgL_uvXbQgQ@mail.gmail.com%3e)
 
+
+## Error
+If processed offsets are befind earliest offsest, spark cannot process further events.
+
+```
+2020-03-12 00:00:00 INFO  Fetcher:583 - [Consumer clientId=consumer-1, groupId=spark-kafka-source-id-driver-0] Resetting offset for partition <kafka-topic> to offset <offset-number>.
+```
 
 ## Reference
 * [Structured Streaming Programming Guide \- Spark 2\.4\.0 Documentation](http://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)

@@ -45,4 +45,10 @@ Team Reports
 - Look
     - Inside these dashboards, each individual visualization (table, chart or metric) is called a Look
 
+## Integration with cloudwatch
+- [Amazon CloudWatch Integration](https://docs.opsgenie.com/docs/aws-cloudwatch-integration)
+
+- Make sure that notifications are sent for all of the states ALARM, OK and INSUFFICIENT to Opsgenie. Notifications with state ALARM create alerts, and notifications with states OK and INSUFFICIENT close the matching alerts by default.
+
+
 ## Reference

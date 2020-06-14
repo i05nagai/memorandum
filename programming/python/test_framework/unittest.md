@@ -60,6 +60,30 @@ assert mock.method().child_method.call_count == 2
 assert mock.method().child_method().call_count == 0
 ```
 
+#### Mociking instance method
+
+```python
+import types
+
+def func(self, args):
+    pass
+
+instance.method = types.MethodType(func, instance)
+```
+
+#### Mocking isinstance
+If the object is mock class, mock can act like the instance
+
+```python
+class A:
+
+    pass
+
+mock_test = mock.MagicMock(spec=A)
+
+if isistance(mock_test, A):
+    print("true")
+```
 
 #### Mocking dict
 * [python \- How to let MagicMock behave like a dict? \- Stack Overflow](https://stackoverflow.com/questions/30340170/how-to-let-magicmock-behave-like-a-dict)

@@ -113,6 +113,31 @@ Price is based on
 * Transfer data
     * if you use other AWS services, the requests forwarded by API Gateway incurs costs in AWS service which receives the request, depending on the AWS service
 
+
+## Enable logging in cloud watch
+- [Enable CloudWatch Logs for API Gateway REST API or WebSocket API Troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-cloudwatch-logs/)
+- [View API Gateway Log Events in the CloudWatch Console \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/view-cloudwatch-log-events-in-cloudwatch-console.html)
+
+For a REST API, the log group's name is in this format: `API-Gateway-Execution-Logs_apiId/stageName`
+For a WebSocket API, the log group's name is in this format: `/aws/apigateway/apiId/stageName`.
+
+Additionally, `/aws/apigateway/welcome` log group might be create
+
+#### Private endpoint
+- [Introducing Amazon API Gateway Private Endpoints \| AWS Compute Blog](https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/)
+- [Troubleshoot Connection Issues with API Gateway Private API Endpoints](https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-private-endpoint-connection/)
+- [Create a Private API in Amazon API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html#apigateway-private-api-create-interface-vpc-endpoint)
+- [How to Invoke a Private API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-api-test-invoke-url.html#w20aac13c16c28c11)
+
+- You need 
+
+## Permisson
+- [Control Access to an API with IAM Permissions \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/permissions.html)
+- [Create and attach an API Gateway resource policy to an API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-create-attach.html)
+
+
 ## Reference
 * [What Is Amazon API Gateway? \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 * [Building Serverless APIs with the Amazon API Gateway and AWS AppSync \- Speaker Deck](https://speakerdeck.com/danilop/building-serverless-apis-with-the-amazon-api-gateway-and-aws-appsync?slide=14)
+* [Creating an Edge\-Optimized Custom Domain Name \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html)
+* [Create a REST API with Lambda Integrations in Amazon API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-getting-started-with-rest-apis.html)

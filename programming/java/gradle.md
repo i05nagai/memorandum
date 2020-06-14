@@ -8,6 +8,9 @@ title: Gradle
 [Gradle | Guides](https://gradle.org/guides/)
 
 
+## configuration
+- [Gradle: build\.gradle vs\. settings\.gradle vs\. gradle\.properties \| Baeldung](https://www.baeldung.com/gradle-build-settings-properties)
+
 * `build.gradle`
     * この中で記述したcodeは [Project - Gradle DSL Version 4.4.1](https://docs.gradle.org/current/dsl/org.gradle.api.Project.html)にdelegateされる
     * Project classのmethodを確認する
@@ -18,6 +21,13 @@ title: Gradle
             * `dependencies`
                 * getDependencyにdelegate
             * https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/dsl/ScriptHandler.html
+* `settings.gradle`
+* `gradle.properties`
+    * the file consists of key value pair
+    * e.g.
+        * `org.gradle.caching=(true,false)`
+        * `org.gradle.logging.level=(quiet,warn,lifecycle,info,debug)`
+        * `org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8`
 
 
 ```kotlin
@@ -51,6 +61,13 @@ For Ubuntu,
 ## Usage
 
 ```
+gradle init
+```
+
+Create a basic files for Gradle interactively.
+
+
+```
 gradle wrapper
 ```
 
@@ -58,7 +75,6 @@ gradle wrapper
 
 ```
 .
-├── build.gradle
 ├── gradle
 │   └── wrapper
 │       ├── gradle-wrapper.jar
@@ -88,6 +104,7 @@ tasks.withType(JavaCompile) {
 ```
 
 ## Build scripts
+
 * `allprojects { }`
     * Configures this project and each of its sub-projects.
 * `artifacts { }`
@@ -116,6 +133,10 @@ task zip(type: Zip) {
 }
 ```
 
+## Syntax
+- compile
+- implementation
+
 ## kotlin
 
 ```
@@ -133,6 +154,7 @@ my-kotlin-library
                 └── example
                     └── MyLibraryTest.kt
 ```
+
 
 
 ## kotlin-dsl
@@ -157,6 +179,47 @@ buildscript {
 }
 ```
 
+## Repository
+- [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html)
+
+```
+// require at least 1 repository to resolve dependency
+repositories {
+    mavenCentral()
+}
+```
+
+## Dependency
+- [Managing Dependencies of JVM Projects](https://docs.gradle.org/current/userguide/dependency_management_for_java_projects.html)
+
+## junit5 with gradle
+- [Using JUnit 5 with Gradle \| Baeldung](https://www.baeldung.com/junit-5-gradle)
+- [Test \- Gradle DSL Version 6\.3](https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html)
+
+## Pass arguments
+- [How to pass arguments from command line to gradle \- Stack Overflow](https://stackoverflow.com/questions/11696521/how-to-pass-arguments-from-command-line-to-gradle)
+
+```
+run {
+    if ( project.hasProperty("appArgsWhatEverIWant") ) {
+        args Eval.me(appArgsWhatEverIWant)
+    }
+}
+```
+
+```
+gradle run  -PappArgsWhatEverIWant="['localhost','8080']"
+```
+
+Or
+
+```
+gradle run ./gradlew run --args='This string will be passed into my.App#main arguments'
+# space is important
+gradle run ./gradlew run --args=' --p1=a --p2=a2'
+```
+
+
 ## CLI
 
 ```
@@ -168,9 +231,15 @@ gradle [options]
 * `--scan`
     * build時のprofiling
 
+```
+gradle init
+```
+
+Create project template
 
 ## Reference
 * [Gradle DSL Version 4.4.1](https://docs.gradle.org/current/dsl/)
 * [Gradle 4.4.1 Release Notes](https://docs.gradle.org/current/release-notes.html)
 * [Gradle：ビルドスクリプトの基本 - Qiita](https://qiita.com/shoma2da/items/367d0682a1b8c91f5531)
 * [Gradle wrapper のバージョン更新についてのメモ - Qiita](https://qiita.com/nobuoka/items/09cbdcd4716b930abdc4)
+* [townsfolk/gradle\-templates: A gradle project templates plugin](https://github.com/townsfolk/gradle-templates)

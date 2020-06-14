@@ -121,5 +121,16 @@ Parameters:
 You can use `Fn::ImportValue`.
 [Fn::ImportValue \- AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html)
 
+## CustomResource
+
+
+#### Response object is too long
+Custom Resource has limits of 4K for response of custom resources.
+
+```
+response object is too long.
+```
+
+
 ## Referece
 * [AWS CloudFormation - Infrastructure as Code & AWS Resource Provisioning](https://aws.amazon.com/cloudformation/)
