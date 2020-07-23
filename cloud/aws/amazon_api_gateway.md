@@ -129,7 +129,33 @@ Additionally, `/aws/apigateway/welcome` log group might be create
 - [Create a Private API in Amazon API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html#apigateway-private-api-create-interface-vpc-endpoint)
 - [How to Invoke a Private API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-api-test-invoke-url.html#w20aac13c16c28c11)
 
-- You need 
+
+Check if the private DNS is enabled
+
+- Go to endpints in VPC page
+- Check VPC endpoint for API gateway. service name would be `com.amazonaws.<region>.execute-api` 
+- 
+
+How to invoke privaite api
+
+- private DNS enabled on VPC endpoint
+    - 
+
+
+- private DNS disabled on VPC endpoint
+
+
+Accessing from another account
+
+[Access an API Gateway Private REST API in Another Account Using an Interface Endpoint](https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-private-cross-account-vpce/)
+
+- In account A, you want to call private API in account B
+
+- In account A,
+    - Create a VPC endpoint with Private DNS name enabled
+- In account B,
+    - Create a Private API
+    - Give Resource based policy to allow VPC endpoint you created in account A
 
 ## Permisson
 - [Control Access to an API with IAM Permissions \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/permissions.html)
