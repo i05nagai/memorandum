@@ -328,6 +328,9 @@ Use `pytest-cov`.
 ### check PEP8
 Use `pytest-pep8`
 
+#### xunit style setup method
+- [classic xunit\-style setup — pytest documentation](https://docs.pytest.org/en/latest/xunit_setup.html#method-and-function-level-setup-teardown)
+
 ## Reference
 * [pytest fixtures: explicit, modular, scalable — pytest documentation](https://docs.pytest.org/en/latest/fixture.html?highlight=conftest)
 * [pytest fixtures nuts and bolts - Python Testing](http://pythontesting.net/framework/pytest/pytest-fixtures-nuts-bolts/)
