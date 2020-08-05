@@ -33,6 +33,12 @@ echo debconf shared/accepted-oracle-license-v1-1 seen true | \
 apt-get install openjdk-8-jdk
 ```
 
+#### OSX
+
+```
+brew cask install adoptopenjdk
+brew cask install homebrew/cask-versions/adoptopenjdk8
+```
 
 ## final
 * referenceに対しては参照先の変更は可能
