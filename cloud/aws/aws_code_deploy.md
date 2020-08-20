@@ -103,5 +103,27 @@ targetInstances
 - `aws_cdk.aws_lambda.Alias(scope, id, *, alias_name, version, additional_versions=None, description=None)`
 
 
+## hook
+- [AppSpec 'hooks' Section \- AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#reference-appspec-file-structure-hooks-list-lambda)
+
+
+#### Lambda
+
+- BeforeAllowTraffic
+    - Use to run tasks before traffic is shifted to the deployed Lambda function version.
+- AfterAllowTraffic
+    - Use to run tasks after all traffic is shifted to the deployed Lambda function version.
+
+
+Hook implementation
+
+```python
+response = client.put_lifecycle_event_hook_execution_status(
+    deploymentId='string',
+    lifecycleEventHookExecutionId='string',
+    status='Pending'|'InProgress'|'Succeeded'|'Failed'|'Skipped'|'Unknown'
+)
+```
+
 ## Reference
 - [Implementing safe AWS Lambda deployments with AWS CodeDeploy \| AWS Compute Blog](https://aws.amazon.com/blogs/compute/implementing-safe-aws-lambda-deployments-with-aws-codedeploy/)
