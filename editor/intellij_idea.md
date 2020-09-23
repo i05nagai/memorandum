@@ -115,4 +115,26 @@ Editor -> CodeStyle -> Kotlin -> Package to use codestyle
 #### Debugging
 - [Debugging Docker with IntelliJ IDEA \| ngeor\.com](https://ngeor.com/2017/03/26/debugging-docker-with-intellij-idea.html)
 
+
+## Java
+
+#### Gradle
+Update dependency. `gradle build` doesn't udpate the dependency.
+
+* Open Gradle Window: `Ctrl+A` + `gradle`
+* Right click gradle window and choose `Refresh dependencies`
+
+## Python
+
+#### Change test runner
+- `Preference` -> `Tool` -> `Python Integrated Tool`
+    - Change `Testing` 
+
+
+#### Command Shift A opens terminal
+- https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003430700--Apropos-terminal-pops-up-when-typing-cmd-shift-A-to-get-actions-bar
+
+- Go to `Keyboard` -> `Shortcut` and find Command Shift A short cut and disbale it.
+    - probably in `Services`
+
 ## Reference
