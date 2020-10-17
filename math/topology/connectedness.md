@@ -16,7 +16,7 @@ title: Connectedness
 $B_{1}, B_{2} $ is said to be disjoint set of $A$ if
 
 $$
-    B_{1} \cap B_{2} = \emtpyset,
+    B_{1} \cap B_{2} = \emptyset,
     \
     B_{1} \cup B_{2} = A.
 $$
@@ -42,7 +42,7 @@ $$
     \
     O_{1} \cap O_{2} = \emptyset
     \Rightarrow
-    O_{1} \cup O_{2} \noteq X
+    O_{1} \cup O_{2} \neq X
     .
 $$
 
@@ -104,14 +104,14 @@ $$
 (1) $\Rightarrow$ (3)
 
 Suppose that (3) is false.
-There are $O_{1}, O_{2} \in \mathcal{O}_{X}$ such that $O_{1} \neq \emptyset$, $O_{2} \neq \emptyset$, $O_{1} \sqcup O_{2} = X$.
-However, since, $X \setminus O_{1} = O_{2} = O_{1}^{c}$, $O_{2}$ is closed.
+There are $$O_{1}, O_{2} \in \mathcal{O}_{X}$$ such that $$O_{1} \neq \emptyset$, $O_{2} \neq \emptyset$$, $$O_{1} \sqcup O_{2} = X$$.
+However, since, $$X \setminus O_{1} = O_{2} = O_{1}^{c}$$, $O_{2}$ is closed.
 Thus, $O_{2}$ is closed and open, but this contradicts to (1).
 
 (3) $\Leftrightarrow$ (4)
 
 Suppose that (4) is false.
-There are $O_{1}, O_{2} \in \mathcal{O}_{X}$ such that $O_{1}^{c} \neq \emptyset$, $O_{2}^{c} \neq \emptyset$, $O_{1}^{c} \sqcup O_{2}^{c} = X$.
+There are $$O_{1}, O_{2} \in \mathcal{O}_{X}$$ such that $$O_{1}^{c} \neq \emptyset$$, $$O_{2}^{c} \neq \emptyset$$, $$O_{1}^{c} \sqcup O_{2}^{c} = X$$.
 
 $$
     O_{1}^{c} = X \setminus O_{2}^{c},
@@ -120,8 +120,8 @@ $$
     .
 $$
 
-Hence $O_{1}^{c}$ and $O_{2}^{c}$ are also open.
-Since $O_{1}^{c} \sqcup O_{2}^{c} = X$, this contradicts to (3).
+Hence $$O_{1}^{c}$$ and $$O_{2}^{c}$$ are also open.
+Since $$O_{1}^{c} \sqcup O_{2}^{c} = X$$, this contradicts to (3).
 
 The inverse is obvious from this discussion.
 
@@ -129,7 +129,7 @@ The inverse is obvious from this discussion.
 
 Supposet that (5) is false.
 There are separated sets $A, B$ such that $A \neq \emptyset$, $B \neq \emptyset$ $A \cup B = X$.
-Since $\mathrm{cl}_{X}B \cap A = \emptyset$ and $\mathrm{cl}_{X}B \subseteq X$, $\mathrm{cl}_{X}B \subseteq B$.
+Since $$\mathrm{cl}_{X}B \cap A = \emptyset$$ and $$\mathrm{cl}_{X}B \subseteq X$$, $$\mathrm{cl}_{X}B \subseteq B$$.
 Hence $B$ is closed.
 Similarly, $A$ is closed.
 Since $A$, $B$ is closed, this contradicts to (4).
@@ -156,6 +156,21 @@ $f$ is said to be a path in $X$ from p to q if
 * $f$ is continuous.
 
 $X$ is said to be path-connected if for every point $p, q \in X$ there exists a path in $X$ from $p$ to $q$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+
+#### Definition path-connected
+* $X$,
+    * top sp
+
+$X$ is said to be path-connected if for any points $a, b \in X$, there is a continuous map $\gamma: [0, 1] \rightarrow X$ such that 
+
+$$
+    \gamma(0) = a,
+    \
+    \gamma(1) = b.
+$$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
