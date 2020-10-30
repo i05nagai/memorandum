@@ -281,6 +281,13 @@ Check a PKCS#12 file (.pfx or .p12)
 openssl pkcs12 -info -in keyStore.p12
 ```
 
+Get certificate from URL
+
+```
+
+openssl s_client -showcerts -servername <host> -connect <host>:443
+```
+
 
 ## Usage
 
