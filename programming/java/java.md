@@ -200,6 +200,10 @@ object Obj {
     - Synchronized static methods are synchronized on the class object of the class the synchronized static method belongs to. Since only one class object exists in the Java VM per class, only one thread can execute inside a static synchronized method in the same class.
 - synchronized block
 
+
+## GC
+- [Java Garbage Collection Basics](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html#:~:text=The%20Old%20Generation%20is%20used,called%20a%20major%20garbage%20collection.)
+
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
 * [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)
