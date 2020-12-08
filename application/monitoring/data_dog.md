@@ -136,5 +136,66 @@ Key MySQL Statistics
     * this metrics shows the number of user errors in the AWS accounts
 * aws.dynamodb.write_throttle
 
+## Dashboard JSON
+- [Graphing with JSON](https://docs.datadoghq.com/dashboards/graphing_json/)
+
+```json
+DASHBOARD_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "layout_type": {"enum": ["ordered", "free"]},
+        "is_read_only": {"type": "boolean"},
+        "template_variables": {"type": "array", "items": TEMPLATE_VARIABLE_SCHEMA},
+        "notify_list": {"type": "array", "items": {"type": "string"}},
+        "widgets": {
+            "type": "array",
+            "items": WIDGET_SCHEMA
+        }
+    },
+    "required": ["title", "layout_type", "widgets"],
+}
+```
+
+
+### Widget
+- [Widget JSON schema](https://docs.datadoghq.com/dashboards/graphing_json/widget_json/)
+
+
+```
+{ (...)
+  "widgets": [
+    {
+      "definition": {
+        "markers": [
+          {
+            "display_type": "ok dashed",
+            "label": "OK",
+            "value": "0 < y < 50"
+          },
+          {
+            "display_type": "error dashed",
+            "label": "ALERT",
+            "value": "y > 80"
+          },
+          {
+            "display_type": "warning dashed",
+            "label": "WARNING",
+            "value": "50 < y < 80"
+          }
+        ],
+        "requests": [(...)],
+        "title": "CPU with markers",
+        "type": "timeseries"
+      },
+(...)
+},
+```
+
+###
+- [Request JSON schema](https://docs.datadoghq.com/dashboards/graphing_json/request_json/)
+
+
 ## Reference
 * [How to monitor Google Kubernetes Engine with Datadog](https://www.datadoghq.com/blog/monitor-google-kubernetes-engine/)

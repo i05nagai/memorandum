@@ -258,5 +258,16 @@ aws dynamodb restore-table-to-point-in-time \
 - `arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label`
 
 
+## Metrics
+
+#### Dimensions for DynamoDB Metrics
+Some metrics requires to specify the dimensions
+
+- GlobalSecondaryIndexName
+- Operation
+- ReceivingRegion
+- StreamLabel
+- TableName
+
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)

@@ -41,7 +41,8 @@ snyk protect
 Record the state of dependencies and any vulnerabilities on snyk.io.
 
 ```
-snyk monitor 
+# you can define project name explictly
+snyk monitor --projcet-name=...
 snyk monitor --all-projects --detection-depth=<number> --exclude=<comma seperated list of directory names>
 ```
 
@@ -157,6 +158,11 @@ Run `synk test` by providing `SNYK_TOKEN` environment variables.
 
 ## License policy
 - [Configuring license policies – Snyk](https://support.snyk.io/hc/en-us/articles/360003520598-Configuring-license-policies)
+
+## Tips
+
+#### 413 error when run snyk monitor
+- [Snyk monitor is failing – Snyk](https://support.snyk.io/hc/en-us/articles/360001889797-Snyk-monitor-is-failing)
 
 
 ## Reference

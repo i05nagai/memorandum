@@ -47,5 +47,27 @@ On linux,
 * `Ctlr+Shift+-`
     * navigate fort
 
+## Javascript
+Install `tsd` file
+
+```
+npm install tsd -g
+```
+
+```
+tsd install node --save
+```
+
+jsconfig
+
+```
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs"
+  }
+}
+```
+
 ## Reference
 

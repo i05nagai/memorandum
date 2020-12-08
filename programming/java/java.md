@@ -33,6 +33,12 @@ echo debconf shared/accepted-oracle-license-v1-1 seen true | \
 apt-get install openjdk-8-jdk
 ```
 
+#### OSX
+
+```
+brew cask install adoptopenjdk
+brew cask install homebrew/cask-versions/adoptopenjdk8
+```
 
 ## final
 * referenceに対しては参照先の変更は可能
@@ -193,6 +199,10 @@ object Obj {
 - synchronized static method
     - Synchronized static methods are synchronized on the class object of the class the synchronized static method belongs to. Since only one class object exists in the Java VM per class, only one thread can execute inside a static synchronized method in the same class.
 - synchronized block
+
+
+## GC
+- [Java Garbage Collection Basics](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html#:~:text=The%20Old%20Generation%20is%20used,called%20a%20major%20garbage%20collection.)
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
