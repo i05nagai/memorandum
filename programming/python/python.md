@@ -36,6 +36,21 @@ What you need to learn as pythonista
 ## setup.py
 * [Python/setup.pyによるインストール - Glamenv-Septzen.net](http://www.glamenv-septzen.net/view/373#idbc17a7)
 
+#### sdist
+sdist command generates egg_info adn a package.
+`egg_info` reuses the exisitng files.
+To create a clean package, egg_info must be deleted.
+
+#### egg_info
+
+
+dependency_links.txt
+entry_points.txt
+PKG-INFO
+requires.txt
+SOURCES.txt
+top_level.txt
+
 ## Tips
 
 #### 'module' object has no attribute '_strptime' with several threads Python
