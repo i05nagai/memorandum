@@ -261,5 +261,12 @@ Response
 }
 ```
 
+## Rest API
+
+#### Access token
+- [REST Resources Provided By: Bitbucket Server \- Access Tokens](https://docs.atlassian.com/bitbucket-server/rest/5.5.2/bitbucket-access-tokens-rest.html)
+
+
+
 ## Reference
 - [REST API](https://developer.atlassian.com/server/bitbucket/reference/rest-api/)
