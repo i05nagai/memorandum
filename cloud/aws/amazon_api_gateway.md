@@ -161,6 +161,8 @@ Accessing from another account
 If you cannot access to endpoint, you will get `Nmae or Service not found`.
 If api gateway rejects the access, you will get `403 Forbidden`
 
+- VPC peering is not needed.
+
 ## Permisson
 - [Control Access to an API with IAM Permissions \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/permissions.html)
 - [Create and attach an API Gateway resource policy to an API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-create-attach.html)
