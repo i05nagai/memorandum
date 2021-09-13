@@ -119,5 +119,42 @@ stage('Install') {
 - [Managing Security](https://www.jenkins.io/doc/book/managing/security/)
 - [Getting Started with Pipelines](https://www.jenkins.io/pipeline/getting-started-pipelines/)
 
+## API
+
+- `<server-url>/queue/api/json?pretty=true&depth=0`
+    - get queue info
+    - global 
+- `<server-url>/view/all/job/<pipeline-name>/job/<branch-name>/2/api/json?pretty=true`
+- `<server-url>/queue/item/%(number)d/api/json?depth=%(depth)s`
+- `<server-url>/queue/item/%(number)d/api/json?depth=%(depth)s`
+- `<server-url>/job/<job-name>/api/json?pretty=true`
+
+
+## Credential
+- [Using a Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials)
+
+```
+withCredentials([usernamePassword(credentialsId: 'credential-id', usernameVariable: 'BITBUCKET_USER', passwordVariable: 'BITBUCKET_PASSWORD')]) {
+    sh("git push https://${BITBUCKET_USER}:${BITBUCKET_PASSWORD}@bitbucket.com/path/to/repo.git ${branch}")
+}
+```
+
+## Permissions
+
+- com.cloudbees.plugins.credentials.CredentialsProvider.Create
+- com.cloudbees.plugins.credentials.CredentialsProvider.Delete
+- com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains
+- com.cloudbees.plugins.credentials.CredentialsProvider.Update
+- com.cloudbees.plugins.credentials.CredentialsProvider.View
+- hudson.model.Item.Build
+- hudson.model.Item.Build
+- hudson.model.Item.Cancel
+- hudson.model.Item.Configure
+- hudson.model.Item.Delete
+- hudson.model.Item.Discover
+- hudson.model.Item.Move
+- hudson.model.Item.Read
+- hudson.model.Item.Workspace
+
 ## Reference
 - [Jenkins Pipeline NotSerializableException: groovy\.json\.internal\.LazyMap \- Stack Overflow](https://stackoverflow.com/questions/37864542/jenkins-pipeline-notserializableexception-groovy-json-internal-lazymap/37897833#37897833)
