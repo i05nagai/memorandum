@@ -24,13 +24,21 @@ git add .gitattributes
 git commit
 ```
 
-#### 
+#### Adding user
 
-You can 
+You can add users
 
 ```
 git-crypt add-gpg-user USER_ID
+```
+
+#### Export key
+
+You can export symetric key whic can lock/unlock repo without gpg.
+
+```
 git-crypt export-key /path/to/key
+git-crypt unlock /path/to/key
 ```
 
 ## Reference
