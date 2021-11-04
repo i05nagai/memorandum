@@ -84,17 +84,17 @@ Most books define it differently.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ### Theorem3 Neyman-Peason's fundamental lemma
-* $$\Theta_{0} := \{0\}$$,
-* $$\Theta_{1} := \{1\}$$,
+* $\Theta_{0} := \\{0\\}$,
+* $\Theta_{1} := \\{1\\}$,
 * $P_{0}, P_{1}$
     * distribution of $X$
 * $\mu$
-    * sigma-finite measure over $$(\mathcal{X}, \mathcal{A})$$
+    * sigma-finite measure over $(\mathcal{X}, \mathcal{A})$
 * $p_{0}, p_{1}$
     * radon nikodym derivative of $P_{i}$ with respect to $\mu$
-* $$H = \{P_{0}\}$$,
+* $H = \\{P_{0}\\}$,
     * hypothesis
-* $$K = \{P_{1}\}$$,
+* $K = \\{P_{1}\\}$,
     * alternatives
 * $\alpha \in [0, 1]$,
 
@@ -115,7 +115,7 @@ $$
     \right]
     & = &
         \alpha
-    \label{chap03_03_07}
+    \label{chap03-03-07}
     \\
     \phi(x)
     & = &
@@ -135,20 +135,20 @@ $$
     \nonumber
     \\
     & = &
-        1_{\{p_{1} > kp_{0}\}}(x)
+        1_{\\{p_{1} > kp_{0}\\}}(x)
         +
         \gamma
-        1_{\{p_{1} = kp_{0}\}}(x)
+        1_{\\{p_{1} = kp_{0}\\}}(x)
         \quad
         \mu
         \text{-a.e. } x
-    \label{chap03_03_08}
+    \label{chap03-03-08}
 \end{eqnarray}
 $$
 
-(2) If test $\phi$ satisifes $$\eqref{chap03_03_07}$$ and $$\eqref{chap03_03_08}$$, then $\phi$ is most powerful test at level $\alpha$.
+(2) If test $\phi$ satisifes \eqref{chap03-03-07} and \eqref{chap03-03-08}, then $\phi$ is most powerful test at level $\alpha$.
 
-(3) If $\alpha \in (0, 1)$ and test $\phi$ is the most powerful test at level $\alpha$, then there exists $k, \gamma \in \mathbb{R}$ such that $$\eqref{chap03_03_08}$$ satisfies.
+(3) If $\alpha \in (0, 1)$ and test $\phi$ is the most powerful test at level $\alpha$, then there exists $k, \gamma \in \mathbb{R}$ such that \eqref{chap03-03-08} satisfies.
 
 ### proof.
 **proof of (1)**
@@ -174,7 +174,7 @@ $$
             1_{\{\frac{p_{1}}{p_{0}} \le z\}}(x)
             p_{0}(x)
         \ \mu(dx)
-    \label{theorem_fundamental_neyman_peason_lemma_02_def_of_cdf}
+    \label{theorem-fundamental-neyman-peason-lemma-02-def-of-cdf}
 \end{eqnarray}
 $$
 
@@ -218,7 +218,7 @@ $$
 $$
 
 For (c), let $z \in \mathbb{R}$ be fixed.
-For all sequence $$\{z_{n}\}_{n \in \mathbb{N}}$$, $$z_{n} \searrow z$$, we have
+For all sequence $$\{z_{n}\_{n \in \mathbb{N}}$$, $z_{n} \searrow z$, we have
 
 $$
 \begin{eqnarray}
@@ -284,7 +284,7 @@ $$
     \le
     F(k)
     .
-    \label{theorem_fundamental_neyman_peason_lemma_01}
+    \label{theorem-fundamental-neyman-peason-lemma-01}
 \end{equation}
 $$
 
@@ -365,10 +365,10 @@ $$
 $$
 
 We can easily check this.
-Suppose there exists $n$ such that $$c < k_{n}$$.
-$F$ is non decreasing so that $$F(c) < F(k_{n})$$.
-If $$1 - \alpha \le F(k_{n})$$, $$k_{n} \in A$$ but this contradict to $$k_{n} \le k$$.
-In other hand, if we assume $$F(k_{n}) < 1 - \alpha$$, $$k_{n} \in B$$ so that $$k_{n} \le c$$.
+Suppose there exists $n$ such that $c < k_{n}$.
+$F$ is non decreasing so that $F(c) < F(k_{n})$.
+If $1 - \alpha \le F(k_{n})$, $k_{n} \in A$ but this contradict to $k_{n} \le k$.
+In other hand, if we assume $F(k_{n}) < 1 - \alpha$, $k_{n} \in B$ so that $k_{n} \le c$.
 Therefore the above statement hold.
 By combining our observations, we have
 
@@ -383,7 +383,7 @@ $$
     .
 $$
 
-The equation $$\eqref{theorem_fundamental_neyman_peason_lemma_01}$$ holds.
+The equation \eqref{theorem-fundamental-neyman-peason-lemma-01} holds.
 Now we define constant $\gamma$
 
 $$
@@ -461,8 +461,8 @@ $$
 **proof of (2)**
 
 Let $\phi$ be test.
-There exist $k, \gamma \in \mathbb{R}$ such that $\phi$ satisfies that $$\eqref{chap03_03_07}$$ and $$\eqref{chap03_03_08}$$.
-For all test $\phi^{\prime}: \mathcal{X} \rightarrow [0, 1]$ at level $\alpha$, from $$\eqref{chap03_03_08}$$,
+There exist $k, \gamma \in \mathbb{R}$ such that $\phi$ satisfies that \eqref{chap03-03-07} and \eqref{chap03-03-08}.
+For all test $\phi^{\prime}: \mathcal{X} \rightarrow [0, 1]$ at level $\alpha$, from \eqref{chap03-03-08},
 
 
 $$
@@ -690,7 +690,7 @@ $\phi$ is the unimofrmly most powerful test for hypothesis $\Theta_{H$}$ and alt
 * $\Theta \subseteq \mathbb{R}$,
 * $(\mathcal{X}, \mathcal{A})$,
     * measurable space
-* $$\mathcal{P} := \{P_{\theta} \}_{\theta \in \Theta}$$,
+* $\mathcal{P} := \{P_{\theta} \}_{\theta \in \Theta}$,
     * family of probability distribution over $(\mathcal{X}, \mathcal{A})$
 * $\mu: \mathcal{X} \rightarrow [0, \infty)$
     * $\sigma$ finite measure on $(\mathcal{X}, \mathcal{A})$
@@ -811,11 +811,12 @@ $$
         +
         \gamma
         1_{\{x \mid T(x) =c\}}(x)
-        \label{chap03_03_22_test}
+        \label{chap03-03-22-test}
 \end{eqnarray}
 $$
 
-If $$\mathrm{E}_{\theta_{0}} \left[ \phi_{0} \right] > 0$$, then $\phi_{0}$ is the most powerful test at level $$\alpha^{\prime} := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$ for hypothesis test
+If $$\mathrm{E}_{\theta_{0}} \left[ \phi_{0} \right] > 0$$,
+then $\phi_{0}$ is the most powerful test at level $$\alpha^{\prime} := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$ for hypothesis test
 
 $$
 \begin{equation}
@@ -826,7 +827,7 @@ $$
     \Theta_{K}
     :=
     \{\theta \mid \theta > \theta_{0}\},
-    \label{chap03_03_23_hypothesis_test}
+    \label{chap03-03-23-hypothesis-test}
 \end{equation}
 $$
 
@@ -839,14 +840,14 @@ $$
     \
     \text{ s.t. }
     \
-    \phi_{0}: \ \eqref{chap03_03_22_test}
+    \phi_{0}: \ \eqref{chap03-03-22-test}
     \text{ is the most powerful test at level } \alpha
 $$
 
 ### proof
 (a)
 
-Let $$\Phi(\Theta_{H}, \Theta_{K}, \alpha^{\prime})$$ be a set of tests for $$\Theta_{H}$$ and $$\Theta_{K}$$ at level $\alpha^{\prime}$.
+Let $\Phi(\Theta_{H}, \Theta_{K}, \alpha^{\prime})$ be a set of tests for $\Theta_{H}$ and $\Theta_{K}$ at level $\alpha^{\prime}$.
 We need to show
 
 $$
@@ -858,7 +859,7 @@ $$
     \mathrm{E}_{\theta_{1}}[\phi_{0}]
     \ge
     \mathrm{E}_{\theta_{1}}[\phi]
-    \label{chap03_monotone_likehood_ratio_ump_test}
+    \label{chap03-monotone-likehood-ratio-ump-test}
 \end{equation}
 $$
 
@@ -873,12 +874,12 @@ $$
         \right]
     \le
     \alpha^{\prime}
-    \label{chap03_monotone_likehood_ratio_level_alpha_test}
-\end{equation}
+    \label{chap03-monotone-likehood-ratio-level-alpha-test}
     .
+\end{equation}
 $$
 
-We first show $$\eqref{chap03_monotone_likehood_ratio_ump_test}$$.
+We first show \eqref{chap03-monotone-likehood-ratio-ump-test}.
 Let $\theta_{1} \in \Theta_{K}$ be fixed and
 
 $$
@@ -942,7 +943,7 @@ $$
     .
 $$
 
-Morever $$p_{\theta_{1}} < \infty \ \mu \text{-a.e.}$$ by definition.
+Morever $p_{\theta_{1}} < \infty \ \mu \text{-a.e.}$ by definition.
 Therefore $k < \infty$.
 
 Now we show that 
@@ -965,13 +966,13 @@ $$
     kp_{\theta_{0}}(x),
     & \Rightarrow &
         \phi_{0}(x) = 0
-        \label{chap03_03_24}
+        \label{chap03-03-24}
     .
 \end{eqnarray}
 $$
 
 Let $$x \in \mathcal{X}_{\theta_{0}, \theta_{1}}$$ be fixed.
-Suppose that $$p_{\theta_{1}}(x)/p_{\theta_{0}}(x) > k$$.
+Suppose that $p_{\theta_{1}}(x)/p_{\theta_{0}}(x) > k$.
 To show $\phi(x) = 1$, it is sufficient to see $T(x) > c$.
 By definition of $k$, there exists $$x^{\prime} \in \mathcal{X}_{\theta_{0}, \theta_{1}}$$ such that
 
@@ -1024,7 +1025,7 @@ Suppose that $$p_{\theta_{1}}(x)/p_{\theta_{0}}(x) < k$$.
 If $T(x) \ge c$, $k$ cannot be infimum.
 Hence $T(x) < c$.
 
-From <a href="#theorem3-neyman-peasons-fundamental-lemma">theorem</a> and $$\eqref{chap03_03_24}$$, test $\phi_{0}$ is the most powerful test of hypothesis test $$\Theta_{H}^{\prime} := \{\theta_{0}\}$$ and $$\Theta_{K}^{\prime} := \{\theta_{1}\}$$ at level $$\alpha^{\prime} := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$.
+From <a href="#theorem3-neyman-peasons-fundamental-lemma">theorem</a> and \eqref{chap03-03-24}, test $\phi_{0}$ is the most powerful test of hypothesis test $$\Theta_{H}^{\prime} := \{\theta_{0}\}$$ and $$\Theta_{K}^{\prime} := \{\theta_{1}\}$$ at level $$\alpha^{\prime} := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$.
 
 Let $\phi$ be test for $$\Theta_{H}$$ and $$\Theta_{K}$$ at level $$\alpha^{\prime}$$.
 Then $\phi$ is also test for $$\Theta_{H}^{\prime}$$ and $$\Theta_{K}^{\prime}$$ at level $$\alpha^{\prime}$$.
@@ -1041,14 +1042,14 @@ $$
     \left[
         \phi
     \right]
-    \label{chap03_03_26}
+    \label{chap03-03-26}
 \end{equation}
     .
 $$
 
-$$\theta_{1}$$ is arbitrary fixed so that $$\eqref{chap03_03_26}$$ holds for all $$\theta_{1} \in \Theta_{K}$$.
+$$\theta_{1}$$ is arbitrary fixed so that \eqref{chap03-03-26} holds for all $$\theta-{1} \in \Theta-{K}$$.
 
-Now we show that $$\eqref{chap03_monotone_likehood_ratio_level_alpha_test}$$.
+Now we show that \eqref{chap03-monotone-likehood-ratio-level-alpha-test}.
 It suffices to show that
 
 $$
@@ -1135,7 +1136,7 @@ $$
     .
 $$
 
-Then $\phi_{0}$ defined in $$\eqref{chap03_03_22_test}$$ is the most powerful test at level $$\alpha := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$ for hypothesis $$\Theta_{H}$$ and alternative $$\Theta_{K}$$ by (a).
+Then $\phi_{0}$ defined in \eqref{chap03-03-22-test} is the most powerful test at level $$\alpha := \mathrm{E}_{\theta_{0}}[\phi_{0}]$$ for hypothesis $$\Theta_{H}$$ and alternative $$\Theta-{K}$$ by (a).
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -1191,7 +1192,7 @@ $$
     \end{cases}
     \
     \mu \text{-a.e.}
-    \label{chap03_03_27_test}
+    \label{chap03-03-27-test}
 \end{equation}
     ,
 $$
@@ -1215,7 +1216,7 @@ $$
 $$
 
 (b) Let $$\phi_{0} \in \Phi_{c}$$.
-If there exists $$k_{1}, \ldots, k_{m} \in \mathbb{R}_{\ge 0}$$ such that $$\eqref{chap03_03_27_test}$$ is satisfied, then
+If there exists $$k_{1}, \ldots, k_{m} \in \mathbb{R}_{\ge 0}$$ such that \eqref{chap03-03-27-test} is satisfied, then
 
 $$
     \int_{\mathcal{X}}
@@ -1900,7 +1901,7 @@ $$
     \alpha
     \
     (\forall \theta \in \Theta)
-    \label{chap03_03_33}
+    \label{chap03-03-33}
     .
 \end{equation}
 $$
@@ -1928,7 +1929,7 @@ $$
     \alpha
     \quad
     P_{(b, \theta^{*})}^{T^{*}} \text{-a.s.}
-    \label{chap03_theorem_03_33_equation_for_03_34}
+    \label{chap03-theorem-03-33-equation-for-03-34}
 \end{equation}
 $$
 
@@ -1967,7 +1968,7 @@ $$
 \end{eqnarray}
 $$
 
-Then by completeness of $T^{*}$ with respect to $$\{P_{(b, \theta^{*})}\}_{\theta^{*} \in \Theta^{*}}$$, we obtain the equation $$\eqref{chap03_theorem_03_33_equation_for_03_34}$$.
+Then by completeness of $T^{*}$ with respect to $$\{P_{(b, \theta^{*})}\}_{\theta^{*} \in \Theta^{*}}$$, we obtain the equation \eqref{chap03-theorem-03-33-equation-for-03-34}.
 Now we show
 
 $$
@@ -1985,11 +1986,11 @@ $$
     \alpha
     \quad
     P_{(b, \theta^{*})} \text{-a.s.}
-    \label{chap03_03_34}
+    \label{chap03-03-34}
 \end{eqnarray}
 $$
 
-By using $$\eqref{chap03_theorem_03_33_equation_for_03_34}$$ and the definition of conditional expectation, we have
+By using $$\eqref{chap03-theorem-03-33-equation-for-03-34}$$ and the definition of conditional expectation, we have
 
 $$
 \begin{eqnarray}
@@ -2037,7 +2038,7 @@ $$
 \end{eqnarray}
 $$
 
-Then by the definition of conditional expectation, we obtain $$\eqref{chap03_03_34}$$.
+Then by the definition of conditional expectation, we obtain \eqref{chap03-03-34}.
 
 By proposition 3.17, $$\beta_{\phi}(\theta)$$ is differentialble with respect to $\theta_{1}$.
 
@@ -2186,7 +2187,7 @@ $$
         \frac{\partial}{\partial \theta_{1}} \psi(b, \theta^{*})
         \alpha
         \quad
-        (\because \eqref{chap03_03_33})
+        (\because \eqref{chap03-03-33})
         .
     \nonumber
 \end{eqnarray}
@@ -2236,7 +2237,7 @@ $$
     .
 $$
 
-With the same way discussed in $$\eqref{chap03_03_34}$$, we have
+With the same way discussed in \eqref{chap03-03-34}, we have
 
 $$
 \begin{equation}
@@ -2256,7 +2257,7 @@ $$
     \right]
     \quad
     P_{(b, \theta^{*})}^{T^{*}} \text{-a.s.}
-    \label{chap03_theorem_03_33_equation_for_03_35}
+    \label{chap03-theorem-03-33-equation-for-03-35}
 \end{equation}
 $$
 
@@ -2292,7 +2293,7 @@ $$
 \end{eqnarray}
 $$
 
-Since $T^{*}$ is completewith respect to $$\{P_{(b, \theta^{*})}\}_{\theta \in \Theta^{*}}$$, we obtain $$\eqref{chap03_theorem_03_33_equation_for_03_35}$$
+Since $T^{*}$ is completewith respect to $\{P_{(b, \theta^{*})}\}_{\theta \in \Theta^{*}}$, we obtain \eqref{chap03-theorem-03-33-equation-for-03-35}
 Now we show
 
 $$
@@ -2315,7 +2316,7 @@ $$
     \right]
     \quad
     P_{(b, \theta^{*})} \text{-a.s.}
-    \label{chap03_03_35}
+    \label{chap03-03-35}
 \end{equation}
 $$
 
@@ -2373,7 +2374,7 @@ $$
 \end{eqnarray}
 $$
 
-Then by the definition of conditional expectation, we obtain $$\eqref{chap03_03_35}$$.
+Then by the definition of conditional expectation, we obtain \eqref{chap03-03-35}.
 
 Let $$\vartheta_{0} := (b, b^{*}) \in \Theta_{0}$$, $$\vartheta_{1} := (\theta_{1}, \theta^{*}) \in \Theta_{1}$$ and $$t^{*} \in \mathbb{R}^{m - 1}$$ be fixed.
 We denote
@@ -2394,7 +2395,7 @@ $$
     \ P_{(b, b^{*})}(t^{*}, dt)
     & = &
         \alpha
-    \label{chap03_theorem_03_33_condition_01}
+    \label{chap03-theorem-03-33-condition-01}
     \\
     \int_{\mathbb{R}}
         t f(t_{1}, t^{*})
@@ -2403,7 +2404,7 @@ $$
         \int_{\mathbb{R}}
             \alpha t
         \ P_{(b, b^{*})}(t^{*}, dt)
-    \label{chap03_theorem_03_33_condition_02}
+    \label{chap03-theorem-03-33-condition-02}
     \\
     \Phi_{\alpha}^{\vartheta_{0} \vartheta_{1}, t^{*}}
     & := &
@@ -2411,11 +2412,11 @@ $$
             f \in \Phi
             \mid
             f: \text{satisfies }
-                \eqref{chap03_theorem_03_33_condition_01}
+                \eqref{chap03-theorem-03-33-condition-01}
                 \
-                \eqref{chap03_theorem_03_33_condition_02}
+                \eqref{chap03-theorem-03-33-condition-02}
         \right\}
-    \label{chap03_theorem_03_33_set_of_functions}
+    \label{chap03-theorem-03-33-set-of-functions}
 \end{eqnarray}
 $$
 
@@ -2433,7 +2434,7 @@ $$
             \bar{f}(t_{1}, t^{*})
         \ P_{\vartheta_{1}}(t^{*}, dt)
     .
-    \label{chap03_theorem_03_33_ump_condition}
+    \label{chap03-theorem-03-33-ump-condition}
 \end{eqnarray}
 $$
 
@@ -2481,7 +2482,7 @@ $$
 
 Hence $\bar{f} \circ T$ is the UMP test.
 Moreover, Since $f \equiv \alpha \in \Phi_{\alpha}^{\vartheta_{0}\vartheta_{1},t^{*}}$, $\bar{f} \circ T$ is unbiased test.
-By $$\eqref{chap03_theorem_03_33_condition_02}$$, we have
+By \eqref{chap03-theorem-03-33-condition-02}, we have
 
 $$
 \begin{eqnarray}
@@ -2603,7 +2604,7 @@ By taking
 * $c_{1} := \alpha$
 * and $c_{2} := \alpha \int_{\mathbb{R}} t_{1} P_{\vartheta_{0}}(t^{*}, dt_{1})$,
 
-$\Phi_{(c_{1}, c_{2})}$ in generalized Neyman-Peason's lemma equals to $$\eqref{chap03_theorem_03_33_set_of_functions}$$.
+$\Phi_{(c_{1}, c_{2})}$ in generalized Neyman-Peason's lemma equals to \eqref{chap03-theorem-03-33-set-of-functions}.
 
 $$
 \begin{eqnarray}
@@ -2792,7 +2793,7 @@ $$
     .
 $$
 
-$\bar{f}$ satisfies $$\eqref{chap03_theorem_03_33_condition_01}$$;
+$\bar{f}$ satisfies \eqref{chap03-theorem-03-33-condition-01};
 
 $$
 \begin{eqnarray}
@@ -2805,7 +2806,7 @@ $$
 \end{eqnarray}
 $$
 
-Moreover, $\bar{f}$ satisfies $$\eqref{chap03_theorem_03_33_condition_02}$$ by right continuity of $\Psi$ with respect to $p$, that is,
+Moreover, $\bar{f}$ satisfies \eqref{chap03-theorem-03-33-condition-02} by right continuity of $\Psi$ with respect to $p$, that is,
 
 $$
 \begin{eqnarray}
@@ -2855,7 +2856,7 @@ $$
 \end{eqnarray}
 $$
 
-This implies that $$\eqref{chap03_theorem_03_33_ump_condition}$$ holds.
+This implies that \eqref{chap03-theorem-03-33-ump-condition} holds.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
