@@ -273,7 +273,7 @@ the null hypothesis is rejected.
 
 
 ## Difference between Fisher's exact test and Barnard test
-See <a href="{{ site.baseurl }}/fisher_exact_test.html">Fisher's exact test</a>.
+See <a href="{{ site.baseurl }}/machine_learning/hypothesis_testing/fisher_exact_test.html">Fisher's exact test</a>.
 
 Fisher's exact test considers a set of experiments is single random variable.
 For instance, the number of Treatment Groups with YES condition is a random varaible with hypergeometric distribution.
