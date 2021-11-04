@@ -20,6 +20,15 @@ title: Slack
     * 個人用なのでusernameとteamnameは同じで良い。
 
 
+## Slack bot
+- [Building and deploying a Slack app with Python, Bolt, and AWS Amplify](https://www.xiegerts.com/post/slack-app-bolt-python-amplify/)
+- [Slack \| Bolt for Python](https://slack.dev/bolt-python/concepts#event-listening)
+- [Verifying requests from Slack \| Slack](https://api.slack.com/authentication/verifying-requests-from-slack)
+- [Workflow Builder: Steps from apps \| Slack](https://api.slack.com/workflows/steps)
+
+Slack bot can be implemeneted with Lambda + API Gateway (public) + Bolt app.
+
+
 ## Tips
 
 ### RSS
