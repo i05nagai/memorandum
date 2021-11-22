@@ -3,6 +3,7 @@ title: mendeley
 ---
 
 ## mendeley
+Mobile support ended.
 
 ## Install
 
