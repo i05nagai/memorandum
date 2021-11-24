@@ -161,6 +161,15 @@ patchの適用は`patch`コマンドを使う。
 patch -p0 < diff.patch
 ```
 
+Or
+
+```
+git diff > diff.patch
+git apply diff.patch
+# if you want to apply the change anyway
+git apply --reject --whitespace=fix diff.patch
+```
+
 
 ### Gitの最初のコミットは空コミット
 [Gitの最初のコミットは空コミットにしよう](http://qiita.com/NorsteinBekkler/items/b2418cd5e14a52189d19)
