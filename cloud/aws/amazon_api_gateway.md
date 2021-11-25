@@ -161,9 +161,32 @@ Accessing from another account
 If you cannot access to endpoint, you will get `Nmae or Service not found`.
 If api gateway rejects the access, you will get `403 Forbidden`
 
+- VPC peering is not needed.
+
 ## Permisson
 - [Control Access to an API with IAM Permissions \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/permissions.html)
 - [Create and attach an API Gateway resource policy to an API \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-create-attach.html)
+
+
+## Lambda integration
+- [Set up Lambda proxy integrations in API Gateway \- Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html)
+
+## Invoke
+
+Invoke public endpoint
+
+```
+curl -v -X "PUT" -H "Content-Type: application/json" \
+  -d "@data.json" \
+  'https://<rest-api-id>.execute-api.eu-west-1.amazonaws.com/path'
+```
+
+
+## Errors
+- [Resolve API Gateway “Missing Authentication Token” errors](https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-authentication-token-errors/)
+- https://aws.amazon.com/premiumsupport/knowledge-center/malformed-502-api-gateway/
+
+If body is empty, check if your request actually has body.
 
 
 ## Reference

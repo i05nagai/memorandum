@@ -28,6 +28,30 @@ Amazon Kinesis Data Streams (KDS) is a massively scalable and durable real-time 
 
 * 1時間1 shardの利用で
 
+## Lambda
+
+```python
+import base64
+import decimal
+import json
+import logging
+import os
+from aws_kinesis_agg.deaggregator import deaggregate_records
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+table = boto3.resource("dynamodb").Table("table_name")
+
+
+def handler(event, context) -> None:
+    with table.batch_writer(overwrite_by_pkeys=["partition_key", "sort_key"]) as db_writer:
+        records = deaggregate_records(event['Records'])
+        for record in event["Records"]:
+            logger.info(record)
+            data = json.loads(base64.b64decode(record["kinesis"]["data"]), parse_float=decimal.Decimal)
+            db_writer.put_item(data)
+```
+
 ## Referece
 * [Amazon Kinesis Data Streams \- AWS](https://aws.amazon.com/kinesis/data-streams/)
 * [AWS再入門 Amazon Kinesis編 ｜ Developers.IO](http://dev.classmethod.jp/cloud/aws/cm-advent-calendar-2015-aws-re-entering-kinesis/)

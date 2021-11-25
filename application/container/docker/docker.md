@@ -315,6 +315,31 @@ Containerの実行時にDataVolumeを作成すると、containerのimageのpath�
 docker run -ti --rm -v DataVolume3:/var ubuntu
 ```
 
+#### On Mac
+* https://docs.docker.com/desktop/mac/
+
+On OSX, you need to expose dirs to mount host dirs explictly.
+Otherwise, docker returns the following error.
+
+```
+docker: Error response from daemon: Mounts denied:
+The path /path/to/dir is not shared from the host and is not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> Resources -> File Sharing.
+See https://docs.docker.com/docker-for-mac for more info.
+```
+
+This is also applicable when you mount a dir in a container mounted on host.
+In the bewow example, `/home/foobar/A` must be exposed in File Sharing.
+
+* container A
+    * run from host
+    * volume: `/Users/foobar/A:/home/foobar/A`
+* container B
+    * run from container A
+    * volume: `/home/foobar/A:/home/foobar/B`
+
+
+
 
 ### As Daemon
 `tail -f /dev/null`で良い。

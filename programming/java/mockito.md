@@ -82,12 +82,42 @@ inOrder.verify(secondMock).add("was called second");
 * [Use Mockito to mock autowired fields - Lubos Krnac's blog](https://lkrnac.net/blog/2014/01/mock-autowired-fields/)
 
 ### Mock static methods
+- [Mocking Static Methods With Mockito \| Baeldung](https://www.baeldung.com/mockito-mock-static-methods)
+
 `doReturn`を使う。
 
 ```
 Mockito
   .doReturn(data)
   .when(SomeClass).doSomething(any()));
+```
+
+Mock
+
+```java
+try (MockedStatic<LoggerFactory> mockLoggerFactory = Mockito.mockStatic(LoggerFactory.class)) {
+    Logger mockLogger = Mockito.mock(Logger.class);
+    mockLoggerFactory
+            .when(() -> LoggerFactory.getLogger(Mockito.any(Class.class)))
+            .thenReturn(mockLogger);
+
+    ArgumentClass argumentClass = Mockito.mock(ArgumentClass.class);
+    // call
+    new TargetClass().testTargetMethod(argumentClass);
+    // validate
+    Mockito.verify(argumentClass, Mockito.never()).methodInMock(Mockito.any());
+    Mockito.verify(mockLogger, Mockito.calls(1)).info();
+}
+```
+
+```java
+try (MockedStatic<loggerClass> loggerClass = Mockito.mockStatic(UnexpectedEventLogger.class)) {
+    String value = "aggregateId,event";
+    Collector<AccountLimitRecord> mockCollector = Mockito.mock(Collector.class);
+    new InputFilterOperator().flatMap(value, mockCollector);
+    mockUnexpectedEventLogger.verify(
+            () -> UnexpectedEventLogger.warn(Mockito.eq(value), Mockito.any()));
+}
 ```
 
 ### Partially mock

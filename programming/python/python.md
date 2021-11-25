@@ -33,6 +33,13 @@ What you need to learn as pythonista
 ### 仮想環境
 * [link1](http://qiita.com/y__sama/items/5b62d31cb7e6ed50f02c)
 
+### install
+Install to `~/.local`
+
+```
+python3 -m venv ~/.local/share/virtualenvs/defualt
+```
+
 ## setup.py
 * [Python/setup.pyによるインストール - Glamenv-Septzen.net](http://www.glamenv-septzen.net/view/373#idbc17a7)
 

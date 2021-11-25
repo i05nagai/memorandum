@@ -64,6 +64,8 @@ AWS service -> cloud watch -> kinesis data firehose + lambda -> splunk instance
 #### Splunk endpoint
 - [Select destination \- Amazon Kinesis Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html#create-destination-splunk)
 - [SplunkDestinationConfiguration \- Amazon Kinesis Data Firehose](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkDestinationConfiguration.html#Firehose-Type-SplunkDestinationConfiguration-S3BackupMode)
+- [Install and configure the Splunk Add\-on for Amazon Kinesis Firehose on a paid Splunk Cloud deployment \- Splunk Documentation](https://docs.splunk.com/Documentation/AddOns/released/Firehose/RequestFirehose)
+    - Indexer acknowledgement should be enabled
 
 
 - CloudWatchLoggingOptions
@@ -92,6 +94,10 @@ AWS service -> cloud watch -> kinesis data firehose + lambda -> splunk instance
 * 1GB \$0.025 up to 1.5PB/month
 * 1GB \$0.020 up to 3PB/month
 * ask AWS more than 5PB/month
+
+
+## Processor
+- https://stackoverflow.com/questions/60734063/aws-firehose-where-is-the-definition-of-the-event-format-to-process-in-lambda
 
 
 ## Tip

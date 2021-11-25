@@ -136,6 +136,14 @@ Key MySQL Statistics
     * this metrics shows the number of user errors in the AWS accounts
 * aws.dynamodb.write_throttle
 
+
+Custom metrics
+
+AWS custom metrics are collected if you check the checkbox in AWS integration.
+The name of metrics in datadog will be normalized.
+e.g. `-` -> `_`. `<namespace>.<metric_name>`
+
+
 ## Dashboard JSON
 - [Graphing with JSON](https://docs.datadoghq.com/dashboards/graphing_json/)
 
