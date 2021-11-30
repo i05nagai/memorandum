@@ -16,4 +16,10 @@ title: Apache Flink
 Class class com.klarna.cloudpipeline.decisionengines.AccountLimitRecord cannot be used as a POJO type because not all fields are valid POJO fields, and must be processed as GenericType. Please read the Flink documentation on \"Data Types & Serialization\" for details of the effect on performance.
 
 
+## Flink vs Spark
+- [Apache Showdown: Flink vs\. Spark](https://engineering.zalando.com/posts/2016/03/apache-showdown-flink-vs.-spark.html)
+
 ## Reference
+- [Benchmarking Streaming Computation Engines at\.\.\. \| Yahoo Engineering](https://yahooeng.tumblr.com/post/135321837876/benchmarking-streaming-computation-engines-at)
+
+
