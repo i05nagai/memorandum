@@ -44,7 +44,6 @@ title: Amazon DynamoDB
     * binary set
 
 * string
-* 
 
 ## Query
 - [Working with Queries \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html)
@@ -256,6 +255,15 @@ aws dynamodb restore-table-to-point-in-time \
 - `*`
 - `arn:aws:dynamodb:region:account-id:table/table-name/stream/*`
 - `arn:aws:dynamodb:region:account-id:table/table-name/stream/stream-label`
+
+
+## TTL
+
+- Specify the attribute name for TTL parameter
+- TTL has to be specified as unix epochtime
+- The record will be removed wihtin 48 hours after TTL expires
+- The deletion event goes to DynamoDB Stream as well with System delete tag
+- Undeleted events can be filtered out manually with the param
 
 
 ## Metrics
