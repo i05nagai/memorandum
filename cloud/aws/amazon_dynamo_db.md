@@ -201,6 +201,63 @@ dynamodb_table One or more parameter values were invalid: ProjectionType is INCL
         },
 ```
 
+## Dynamodb Stream
+Stream types can be chosen from 
+
+- `KEYS_ONLY`
+- `NEW_IMAGE`
+- `OLD_IMAGE`
+- `OLD_IMAGE`
+
+
+- eventName
+    - `MODIFY`
+        - when a record is modified
+    - `INSERT`
+        - when a new record is inserted
+
+The example stream as below.
+
+```
+{
+  "Records": [
+    {
+      "awsRegion": "eu-west-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1600000000.0,
+        "Keys": {
+          "pkey": {
+            "S": "1"
+          },
+          "skey": {
+            "S": "1"
+          }
+        },
+        "NewImage": {
+          "pkey": {
+            "S": "1"
+          },
+          "key": {
+            "S": "1"
+          },
+          "skey": {
+            "S": "1"
+          }
+        },
+        "SequenceNumber": "10000000000000000000000000",
+        "SizeBytes": 18,
+        "StreamViewType": "NEW_IMAGE"
+      },
+      "eventID": "20aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "eventName": "MODIFY",
+      "eventSource": "aws:dynamodb",
+      "eventSourceARN": "arn:aws:dynamodb:eu-west-1:111111111111:table/table-name/stream/2021-11-11T11:11:11.111",
+      "eventVersion": "1.1"
+    }
+  ]
+}
+```
+
 ## Restore Dynamo DB
 - [Restoring a DynamoDB Table to a Point in Time \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery.Tutorial.html)
 
