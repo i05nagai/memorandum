@@ -109,21 +109,21 @@ $$
         \sum_{j=k}^{n-1}
             f(x)
             \left(
-                \begin{array}{c}
-                    n \\
-                    j
-                \end{array}
-            \right)
-            \left(
+                \frac{
+                    n!
+                }{
+                    j!(n - j)!
+                }
                 j
                 F(x)^{j-1}
                 (1 - F(x))^{n-j}
                 -
-                n
-                F(x)^{j}
-                (1 - F(x))^{n-j -1}
-                +
-                j
+                \frac{
+                    n!
+                }{
+                    j!(n - j)!
+                }
+                (n - j)
                 F(x)^{j}
                 (1 - F(x))^{n-j -1}
             \right)
@@ -134,101 +134,130 @@ $$
     \nonumber
     \\
     & = &
+        \sum_{j=k}^{n-1}
+            f(x)
+            \left(
+                \frac{
+                    n!
+                }{
+                    (j - 1)!(n - j)!
+                }
+                F(x)^{j-1}
+                (1 - F(x))^{n-j}
+                -
+                \frac{
+                    n!
+                }{
+                    j!(n - j - 1)!
+                }
+                F(x)^{j}
+                (1 - F(x))^{n- j - 1}
+            \right)
+        +
+        n
+        F(x)^{n-1}
         f(x)
-        \left(
-            \sum_{j=k}^{n-1}
-                \left(
-                    \begin{array}{c}
-                        n \\
-                        j
-                    \end{array}
-                \right)
-                \left(
-                    j
-                    F(x)^{j-1}
-                    (1 - F(x))^{n-j}
-                \right)
-            -
-            \sum_{j=k}^{n-1}
-                \left(
-                    \begin{array}{c}
-                        n \\
-                        j
-                    \end{array}
-                \right)
-                \left(
-                    n
-                    F(x)^{j}
-                    (1 - F(x))^{n-j -1}
-                \right)
-            +
-            \sum_{j=k}^{n-1}
-                \left(
-                    \begin{array}{c}
-                        n \\
-                        j
-                    \end{array}
-                \right)
-                \left(
-                    j
-                    F(x)^{j}
-                    (1 - F(x))^{n-j -1}
-                \right)
-            +
-            n
-            F(x)^{n-1}
-        \right)
     \nonumber
     \\
     & = &
         f(x)
+        n
         \left(
+            \sum_{j=k-1}^{n-2}
+                \frac{
+                    (n - 1)!
+                }{
+                    j!(n - 1  - j)!
+                }
+                F(x)^{j}
+                (1 - F(x))^{n-j-1}
+                -
             \sum_{j=k}^{n-1}
+                \frac{
+                    (n - 1)!
+                }{
+                    j!(n - j - 1)!
+                }
+                F(x)^{j}
+                (1 - F(x))^{n- j - 1}
+            \right)
+        +
+        n
+        F(x)^{n-1}
+        f(x)
+    \nonumber
+    \\
+    & = &
+        f(x)
+        n
+        \left(
+            \sum_{j=k-1}^{n-2}
                 \left(
                     \begin{array}{c}
-                        n \\
+                        n - 1 \\
                         j
                     \end{array}
                 \right)
-                \left(
-                    j
-                    F(x)^{j-1}
-                    (1 - F(x))^{n-j}
-                \right)
-            -
+                F(x)^{j}
+                (1 - F(x))^{n-j-1}
+                -
             \sum_{j=k}^{n-1}
                 \left(
                     \begin{array}{c}
-                        n \\
+                        n - 1 \\
                         j
                     \end{array}
                 \right)
-                \left(
-                    n
-                    F(x)^{j}
-                    (1 - F(x))^{n-j -1}
-                \right)
-            +
-            \sum_{j=k}^{n-1}
-                \left(
-                    \begin{array}{c}
-                        n \\
-                        j
-                    \end{array}
-                \right)
-                \left(
-                    j
-                    F(x)^{j}
-                    (1 - F(x))^{n-j -1}
-                \right)
-            +
-            n
-            F(x)^{n-1}
+                F(x)^{j}
+                (1 - F(x))^{n- j - 1}
+            \right)
+        +
+        n
+        F(x)^{n-1}
+        f(x)
+    \nonumber
+    \\
+    & = &
+        f(x)
+        n
+        \left(
+            \begin{array}{c}
+                n - 1 \\
+                k - 1
+            \end{array}
         \right)
+        F(x)^{k - 1}
+        (1 - F(x))^{n-k}
+        -
+        f(x)
+        n
+        \left(
+            \begin{array}{c}
+                n - 1 \\
+                n - 1
+            \end{array}
+        \right)
+        F(x)^{n - 1}
+        +
+        n
+        F(x)^{n-1}
+        f(x)
+    \nonumber
+    \\
+    & = &
+        f(x)
+        \frac{
+            n!
+        }{
+            (k - 1)!(n - k)!
+        }
+        F(x)^{k - 1}
+        (1 - F(x))^{n-k}
+        \label{equation_pdf_k_th_order_statistics}
 \end{eqnarray}
 $$
 
-For $X_{(n)}$ and $X_{(1)}$, it's simply
+For $X_{(n)}$ and $X_{(1)}$, they are simply
 
 $$
     F_{X_{(1)}}(x)
@@ -245,11 +274,26 @@ $$
     .
 $$
 
+The p.d.f.s are
+
+$$
+\begin{eqnarray}
+    f_{X_{(1)}}(x)
+    & = &
+        f(x)n(1 - F(x))^{n-1}
+    \nonumber
+    \\
+    f_{X_{(n)}}(x)
+    & = &
+        nf(x)F(x)^{n-1}
+\end{eqnarray}
+$$
+
 The distribution of $X_{(k)}$ is the probablity of the event where at least $k$ of $X_{i}$ is less than $x$, which is equivalent to the event where the value which is less than $x$ occurs more than $k$ times in $n$ trials.
 
 #### Proposition
-- $a, b, c \in \mathbb{R}$, $c > 0$,
-- $X_{i}$ is uniformly distirbuted in $[a, a + c]$
+- $a, b \in \mathbb{R}$, $c > 0$,
+- $X_{i}$ is uniformly distirbuted in $[a, b]$
 
 The p.d.f. of $F_{X_{(k)}}$ is given by
 
@@ -278,67 +322,148 @@ $$
 where $B(k ,n - k + 1)$ is the Beta function.
 
 #### proof
-$F_{X_{(k)}}$ is the probability that $k-1$ samples is less than $a$ and at least one sample is in $[a, a + c]$.
+From \eqref{equation_pdf_k_th_order_statistics},
 
 $$
 \begin{eqnarray}
-    F_{X_{(k)}}(x)
-    & = &
-        \sum_{j=k}^{n}
-            \frac{
-                n!
-            }{
-                (n - j)!j!
-            }
-            x^{j}(1 - x)^{n-j}
-    \nonumber
-\end{eqnarray}
-$$
-
-$$
-\begin{eqnarray}
+    x \in [a, b],
+    \
     f_{X_{(k)}}(x)
     & = &
-        \sum_{j=k}^{n}
-            \frac{
-                n!
-            }{
-                (n - j)!j!
-            }
-            \left(
-                j x^{j - 1}
-                (1 - x)^{n-j}
-                +
-                (n - j)
-                x^{j}
-                (1 - x)^{n-j - 1}
-            \right)
+        \frac{
+            n!
+        }{
+            (k - 1)!(n - k)!
+        }
+        f(x)
+        F(x)^{k-1}
+        (1 - F(x))^{n-k}
     \nonumber
     \\
     & = &
-        \sum_{j=k}^{n}
-            \left(
-                \frac{
-                    n!
-                }{
-                    (n - j)!(j - 1)!
-                }
-                x^{j - 1}
-                (1 - x)^{n-j}
-                +
-                \frac{
-                    n!
-                }{
-                    (n - j - 1)!j!
-                }
-                x^{j}
-                (1 - x)^{n - j - 1}
-            \right)
+        \frac{
+            n!
+        }{
+            (k - 1)!(n - k)!
+        }
+        \frac{
+            1
+        }{
+            b - a
+        }
+        \left(
+            \frac{
+                x - a
+            }{
+                b - a
+            }
+        \right)^{k-1}
+        \left(
+            1
+            -
+            \frac{
+                x -a 
+            }{
+                b - a
+            }
+        \right)^{n-k}
+    \nonumber
+    \\
+    & = &
+        \frac{
+            n!
+        }{
+            (k - 1)!(n - k)!
+        }
+        \frac{
+            1
+        }{
+            b - a
+        }
+        \left(
+            \frac{
+                x - a
+            }{
+                b - a
+            }
+        \right)^{k-1}
+        \left(
+            \frac{
+                b - x
+            }{
+                b - a
+            }
+        \right)^{n-k}
+    \nonumber
+    \\
+    & = &
+        \frac{
+            n!
+        }{
+            (k - 1)!(n - k)!
+        }
+        \frac{
+            1
+        }{
+            (b - a)^{n}
+        }
+        (x - a)^{k-1}
+        (b - x)^{n-k}
 \end{eqnarray}
 $$
 
+Since
+
+$$
+    B(k, n - k + 1)
+    =
+    \frac{
+        (k - 1)!(n - k + 1 - 1)!
+    }{
+        (k + n - k + 1 - 1)!
+    }
+    =
+    \frac{
+        (k - 1)!(n - k)!
+    }{
+        n!
+    },
+$$
+
+the equation can be written
+
+$$
+\begin{eqnarray}
+    \frac{
+        1
+    }{
+        B(k, n - k + 1)
+    }
+    \frac{
+        1
+    }{
+        (b - a)^{n}
+    }
+    (x - a)^{k-1}
+    (b - x)^{n-k}
+\end{eqnarray}
+$$
+
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
+
+#### Proposition
+- $a, b, \in \mathbb{R}$, $c > 0$,
+- $X_{i}$ is uniformly distirbuted in $[a, b]$
+
+The MLE of 
+
+
+#### proof
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
 - [Order statistic \- Wikipedia](https://en.wikipedia.org/wiki/Order_statistic)
