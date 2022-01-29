@@ -465,5 +465,113 @@ The MLE of
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+
+## Descrete case
+- $n \in \mathbb{N}$,
+- $X_{1}, \ldots, X_{n}$,
+    - i.i.d.
+- $f$
+    - p.d.f. of $X$,
+- $F$
+    - c.d.f. of $X$,
+
+The c.d.f. of $X_{(k)}$ is the probability of the event where there are at most $n - k$ observations are greather than $x$
+
+$$
+\begin{eqnarray}
+    F_{X_{(k)}}(x)
+    & = &
+        \sum_{j=0}^{n-k}
+            \left(
+                \begin{array}{c}
+                    n \\
+                    j
+                \end{array}
+            \right)
+            \left(
+                1 - F(x)
+            \right)^{j}
+            F(x)^{n - j}
+    .
+\end{eqnarray}
+$$
+
+
+$$
+\begin{eqnarray}
+    P(X_{(k)} < x)
+    & = &
+        \sum_{j=0}^{n-k}
+            \left(
+                \begin{array}{c}
+                    n \\
+                    j
+                \end{array}
+            \right)
+            \left(
+                1 - F(x) + f(x)
+            \right)^{j}
+            (F(x) - f(x))^{n - j}
+    .
+\end{eqnarray}
+$$
+
+
+$$
+\begin{eqnarray}
+    f_{X_{(k)}}(x)
+    & = &
+        F_{X_{(k)}}(x) - P(X_{(k)} \le x)
+    \nonumber
+    \\
+    & = &
+        \sum_{j=0}^{n-k}
+            \left(
+                \begin{array}{c}
+                    n \\
+                    j
+                \end{array}
+            \right)
+            \left(
+                1 - F(x)
+            \right)^{j}
+            F(x)^{n - j}
+        -
+        \sum_{j=0}^{n-k}
+            \left(
+                \begin{array}{c}
+                    n \\
+                    j
+                \end{array}
+            \right)
+            \left(
+                1 - F(x) + f(x)
+            \right)^{j}
+            (F(x) - f(x))^{n - j}
+    \nonumber
+    \\
+    & = &
+        \sum_{j=0}^{n-k}
+            \left(
+                \begin{array}{c}
+                    n \\
+                    j
+                \end{array}
+            \right)
+            \left(
+                \left(
+                    1 - F(x)
+                \right)^{j}
+                F(x)^{n - j}
+                -
+                \left(
+                    1 - F(x) + f(x)
+                \right)^{j}
+                (F(x) - f(x))^{n - j}
+            \right)
+\end{eqnarray}
+$$
+
+
 ## Reference
 - [Order statistic \- Wikipedia](https://en.wikipedia.org/wiki/Order_statistic)
