@@ -160,6 +160,53 @@ Expiration actions
 - [How Do I Configure a Request Metrics Filter? \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/configure-metrics-filter.html)
 
 
+## Batch
+
+#### Invoke lambda
+- [Invoke AWS Lambda function \- Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-invoke-lambda.html)
+
+
+Example request
+
+```
+{
+    "invocationSchemaVersion": "1.0",
+    "invocationId": "111111111111111111111111111111111111111111111111111",
+    "job": {
+        "id": "f3cc4f60-61f6-4a2b-8a21-d07600c373ce"
+    },
+    "tasks": [
+        {
+            "taskId": "22222222222222222222",
+            "s3Key": "customerImage1.jpg",
+            "s3VersionId": "1",
+            "s3BucketArn": "arn:aws:s3:us-east-1:0123456788:awsexamplebucket1"
+        }
+    ]
+}
+```
+
+Example response
+
+```
+{
+  "invocationSchemaVersion": "1.0",
+  "treatMissingKeysAs" : "PermanentFailure",
+  "invocationId" : "111111111111111111111111111111111111111111111111111",
+  "results": [
+    {
+      "taskId": "22222222222222222222",
+      "resultCode": "Succeeded",
+      "resultString": "[\"Mary Major", \"John Stiles\"]"
+    }
+  ]
+}
+```
+
+#### Directory marker
+- [Apache Hadoop Amazon Web Services support – Experimental: Controlling the S3A Directory Marker Behavior](https://hadoop.apache.org/docs/stable/hadoop-aws/tools/hadoop-aws/directory_markers.html)
+
+
 ## Reference
 * [s3 — AWS CLI 1.11.102 Command Reference](http://docs.aws.amazon.com/cli/latest/reference/s3/)
 * [sync — AWS CLI 1.11.102 Command Reference](http://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)
