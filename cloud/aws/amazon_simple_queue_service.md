@@ -3,6 +3,34 @@ title: Amazon Simple Queue Service
 ---
 
 ## Amazon Simple Queue Service
+FIFO cannot be used as a dead letter queue destination.
+
+
+## Concept
+- Visibility timeout
+- Message retention period
+- Delivery delay
+- Maximum message size 
+- Receive message wait time
+- Content-based deduplication
+- Enable high throughput FIFO
+    - per queue
+    - per message group ID
+
+
+## Scaling and concurrencies
+[Using Lambda with Amazon SQS \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-scaling)
+
+## Message attribute and message system attributes
+- https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-metadata.html#sqs-message-attributes
+
+Message attributes
+
+- Each message can have up to 10 metadata attribute
+
+Message system attributes
+
+message attributes for other AWS services.
 
 ## Queue type
 * [What Is Amazon Simple Queue Service? \- Amazon Simple Queue Service](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html#sqs-queue-types)
