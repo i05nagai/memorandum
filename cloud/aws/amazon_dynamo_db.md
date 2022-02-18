@@ -202,19 +202,29 @@ dynamodb_table One or more parameter values were invalid: ProjectionType is INCL
 ```
 
 ## Dynamodb Stream
+- https://docs.aws.amazon.com/lambda/latest/dg/with-ddb-example.html
+
 Stream types can be chosen from 
 
 - `KEYS_ONLY`
 - `NEW_IMAGE`
 - `OLD_IMAGE`
-- `OLD_IMAGE`
+- `NEW_AND_OLD_IMAGE`
 
 
 - eventName
     - `MODIFY`
         - when a record is modified
+        - NEW_IMAGE + OLD_IMAGE
     - `INSERT`
         - when a new record is inserted
+        - NEW_IMAGE
+    - `REMOVE`
+        - when a new record is removed
+        - OLD_IMAGE
+
+
+- if stream view type is `NEW_IMAGE`, all events come but without NEW
 
 The example stream as below.
 
@@ -253,6 +263,144 @@ The example stream as below.
       "eventSource": "aws:dynamodb",
       "eventSourceARN": "arn:aws:dynamodb:eu-west-1:111111111111:table/table-name/stream/2021-11-11T11:11:11.111",
       "eventVersion": "1.1"
+    }
+  {
+     "eventID":"2",
+     "eventName":"MODIFY",
+     "eventVersion":"1.0",
+     "eventSource":"aws:dynamodb",
+     "awsRegion":"us-east-1",
+     "dynamodb":{
+        "Keys":{
+           "Id":{
+              "N":"101"
+           }
+        },
+        "NewImage":{
+           "Message":{
+              "S":"This item has changed"
+           },
+           "Id":{
+              "N":"101"
+           }
+        },
+        "OldImage":{
+           "Message":{
+              "S":"New item!"
+           },
+           "Id":{
+              "N":"101"
+           }
+        },
+        "SequenceNumber":"222",
+        "SizeBytes":59,
+        "StreamViewType":"NEW_AND_OLD_IMAGES"
+     },
+     "eventSourceARN":"stream-ARN"
+  },
+  {
+     "eventID":"3",
+     "eventName":"REMOVE",
+     "eventVersion":"1.0",
+     "eventSource":"aws:dynamodb",
+     "awsRegion":"us-east-1",
+     "dynamodb":{
+        "Keys":{
+           "Id":{
+              "N":"101"
+           }
+        },
+        "OldImage":{
+           "Message":{
+              "S":"This item has changed"
+           },
+           "Id":{
+              "N":"101"
+           }
+        },
+        "SequenceNumber":"333",
+        "SizeBytes":38,
+        "StreamViewType":"NEW_AND_OLD_IMAGES"
+     },
+     "eventSourceARN":"stream-ARN"
+  }
+  ]
+}
+```
+
+With Lambda, by using evnet filter, you can get only `INSERT` event. Lambda event filtering - AWS Lambda https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax
+
+```
+{
+  "filters": [
+    {
+      "pattern": "{\"eventName\": [\"INSERT\"]}"
+    }
+  ]
+}
+```
+
+#### TTL
+DynamoDB Streams and Time to Live - Amazon DynamoDB https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/time-to-live-ttl-streams.html
+
+UserIdentity is not required field.
+
+
+```
+"Records": [
+    {
+        ...
+
+        "userIdentity": {
+            "type": "Service",
+            "principalId": "dynamodb.amazonaws.com"
+        }
+
+        ...
+
+    }
+]
+```
+
+```
+{
+  "Records": [
+    {
+      "awsRegion": "eu-west-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1600000000.0,
+        "Keys": {
+          "key1": {
+            "S": "1"
+          },
+          "key2": {
+            "N": "1"
+          }
+        },
+        "OldImage": {
+          "": {
+            "S": "3"
+          },
+          "s": {
+            "N": "3"
+          },
+          "ttl": {
+            "N": "1600000010"
+          }
+        },
+        "SequenceNumber": "11111111111111111111111111",
+        "SizeBytes": 19,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventID": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "eventName": "REMOVE",
+      "eventSource": "aws:dynamodb",
+      "eventSourceARN": "arn:aws:dynamodb:eu-west-1:111111111111:table/<tbale-name>/stream/2000-01-01T00:00:00.000",
+      "eventVersion": "1.1",
+      "userIdentity": {
+        "principalId": "dynamodb.amazonaws.com",
+        "type": "Service"
+      }
     }
   ]
 }
@@ -333,6 +481,9 @@ Some metrics requires to specify the dimensions
 - ReceivingRegion
 - StreamLabel
 - TableName
+
+## Mutex dynamodb
+- https://blog.revolve.team/2020/09/08/implement-mutex-with-dynamodb/
 
 ## Reference
 * [DynamoDB Core Components \- Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html)
