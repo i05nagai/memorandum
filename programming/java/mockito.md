@@ -110,13 +110,16 @@ try (MockedStatic<LoggerFactory> mockLoggerFactory = Mockito.mockStatic(LoggerFa
 }
 ```
 
+
 ```java
-try (MockedStatic<loggerClass> loggerClass = Mockito.mockStatic(UnexpectedEventLogger.class)) {
-    String value = "aggregateId,event";
-    Collector<AccountLimitRecord> mockCollector = Mockito.mock(Collector.class);
-    new InputFilterOperator().flatMap(value, mockCollector);
-    mockUnexpectedEventLogger.verify(
-            () -> UnexpectedEventLogger.warn(Mockito.eq(value), Mockito.any()));
+try (MockedStatic<LoggerClass> mockLoggerClass = Mockito.mockStatic(LoggerClass.class)) {
+    String value = "";
+    Collector<DataClass> mockCollector = Mockito.mock(Collector.class);
+    new TargetClass().targetMethod(value, mockCollector);
+    // check if it's called
+    mockLoggerClass.verify(() -> LoggerClass.warn(Mockito.eq(value), Mockito.any()));
+    // check if it's not called
+    mockLoggerClass.verify(() -> LoggerClass.warn(Mockito.eq(value), Mockito.any()), Mockito.never());
 }
 ```
 

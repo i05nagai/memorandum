@@ -117,6 +117,16 @@ Take a look at examples provided by AWS.
 ## Role
 * [IAM Roles \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html?icmpid=docs_iam_console)
 
+
+Unique ID
+
+Get unique id.
+
+```
+aws iam get-role --role-name Test-Role
+```
+
+
 ## Resource
 * [Identity\-Based Policies and Resource\-Based Policies \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
 

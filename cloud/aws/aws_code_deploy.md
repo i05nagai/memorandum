@@ -125,5 +125,13 @@ response = client.put_lifecycle_event_hook_execution_status(
 )
 ```
 
+## Rollback
+
+
+- Fail the deployment — An error is reported and the deployment status is changed to Failed.
+- Overwrite the content — The version of the file from the application revision replaces the version already on the instance.
+- Retain the content — The file in the target location is kept and the version in the application revision is not copied to the instance.
+
+
 ## Reference
 - [Implementing safe AWS Lambda deployments with AWS CodeDeploy \| AWS Compute Blog](https://aws.amazon.com/blogs/compute/implementing-safe-aws-lambda-deployments-with-aws-codedeploy/)

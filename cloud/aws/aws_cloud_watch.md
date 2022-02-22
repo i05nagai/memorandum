@@ -75,6 +75,13 @@ Recommended path is `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agen
 #### Metrics
 - [Metrics Collected by the CloudWatch Agent \- Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html)
 
+#### Comparison operator
+The specified static value (metric) will be used as a operand.
+If GreaterThanOrEqualToThreshold is specified, it will be `metric >= threshold`.
+This is same for Cloud fomration template and API.
+
+
+
 #### Tips
 - [Troubleshoot a Unified CloudWatch Agent That's Not Pushing Log Events](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-logs-with-unified-agent/)
 - [CloudWatch Logs Agent Reference \- Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html)

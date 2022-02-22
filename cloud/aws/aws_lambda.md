@@ -340,6 +340,13 @@ Format of `LambdaHandler` in rootlogger is below.
 [%(levelname)s] %(asctime)s.%(msecs)dZ %(aws_request_id)s %(message)s
 ```
 
+```
+REPORT RequestId: 11111111-c3cf-4801-894d-111111111111	Duration: 10.00 ms	Billed Duration: 10 ms	Memory Size: 512 MB	Max Memory Used: 83 MB	Init Duration: 1.00 ms
+```
+
+- Duration doesn't include init duraiton
+- init duration is initialization time of lambda contaner
+
 ## Cloudwatch log query
 Check memory usage
 
@@ -390,6 +397,31 @@ filter @type != "REPORT"
 #### Lambda logging twice
 * [python \- Getting logs twice in AWS lambda function \- Stack Overflow](https://stackoverflow.com/questions/50909824/getting-logs-twice-in-aws-lambda-function)
 
+
+
+## Concurrecies
+- https://www.serverlessguru.com/blog/scaling-aws-lambda-to-30k-request-per-second
+
+There are burst limit and concurrencies limt.
+
+## Lambda with Kafka 
+- [Using Lambda with self\-managed Apache Kafka \- AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html)
+
+Permissions
+
+- Describe your Secrets Manager secret.
+- Access your AWS Key Management Service (AWS KMS) customer managed key.
+- Access your Amazon VPC.
+
+create a secret in secret manager
+
+- (key, value) = (`username`, `<username>`)
+- (key, value) = (`password`, `<password>`)
+
+
+Max batch size is `10,000`.
+To preserve message ordering in each partition, the maximum number of consumers is one consumer per partition in the topic.
+Every 15 minutes, Lambda evaluates the consumer offset lag of all the partitions in the topic. If the lag is too high, the partition is receiving messages faster than Lambda can process them. If necessary, Lambda adds or removes consumers from the topic.
 
 
 ## Reference

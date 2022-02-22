@@ -132,5 +132,19 @@ response object is too long.
 ```
 
 
+#### Dynamic Reference
+
+Some restrictions for Dynamic Reference
+[Using AWS Systems Manager Parameter Store Secure String parameters in AWS CloudFormation templates \| AWS Management & Governance Blog](https://aws.amazon.com/blogs/mt/using-aws-systems-manager-parameter-store-secure-string-parameters-in-aws-cloudformation-templates/)
+
+
+## WaitCondition
+
+- https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html
+
+
+
+
+
 ## Referece
 * [AWS CloudFormation - Infrastructure as Code & AWS Resource Provisioning](https://aws.amazon.com/cloudformation/)

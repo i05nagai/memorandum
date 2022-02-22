@@ -177,6 +177,115 @@ cdk doctor
 cdk init sample-app --language=python
 ```
 
+## API
+
+#### Custom Resource
+Custom Resouce with `on_delete` does not work without adding `on_create` (possibly either `on_create`/`on_update`).
+
+```python
+custom_resources.AwsCustomResource(
+    self, "master_rule_remover",
+    on_delete=custom_resources.AwsSdkCall(
+        service="EC2",
+        action="revokeSecurityGroupIngress",
+        parameters={
+            "GroupId": security_group_master.security_group_id,
+            "IpProtocol": "tcp",
+            "FromPort": 0,
+            "ToPort": 65535,
+        }
+    )
+)
+```
+
+When you deploy the stack, you observe the following error
+
+```
+Invalid PhysicalResourceId
+```
+
+#### LazyValue
+- [Python: implementing IStepFunctionsTask causes jsii to throw "Don't know how to convert object to JSON" · Issue \#5410 · aws/aws\-cdk](https://github.com/aws/aws-cdk/issues/5410)
+
+```python
+@jsii.implements(core.IStringProducer)
+class Producer:
+
+    def produce(self, context: core.IResolveContext) -> Optional[str]:
+        return "some-lazy-value"
+
+    def __init__(self):
+        super().__init__()
+
+core.Lazy.string_value(producer=Producer())
+```
+
+`jsii` has an issue of copying object.
+
+```python
+    copy.deepcopy({
+    "deployment_config": aws_codedeploy.LambdaDeploymentConfig.ALL_AT_ONCE,
+    })
+```
+
+#### iam condition
+
+```
+aws_iam.PolicyStatement(
+            effect=aws_iam.Effect.ALLOW,
+            actions=[
+                "tag:GetResources",
+            ],
+            resources=[
+                f"*",
+            ],
+            conditions={
+                ""
+            }
+        )
+```
+
+## Staging buckets
+
+- `<bucket-name>/cdk/<stack-name>/<hash>.yml`
+
+
+## Metadata
+
+```
+FileAssetMetadataEntry(
+    artifact_hash_parameter='AssetParameters1111111111111111111111111111111111111111111111111111111111111111ArtifactHash970BE98F',
+    id='1111111111111111111111111111111111111111111111111111111111111111',
+    packaging='file',
+    path='asset.1111111111111111111111111111111111111111111111111111111111111111.whl',
+    s3_bucket_parameter='AssetParameters1111111111111111111111111111111111111111111111111111111111111111S3Bucket18CC822F',
+    s3_key_parameter='AssetParameters1111111111111111111111111111111111111111111111111111111111111111S3VersionKeyC8F8CC56',
+    source_hash='1111111111111111111111111111111111111111111111111111111111111111')
+```
+
+## Plugin
+Currenlty, plugin feature supports only handling credentials.
+
+- [GitHub](https://aws.amazon.com/blogs/devops/cdk-credential-plugin/)
+
+
+## Lifecycle
+[Apps \- AWS Cloud Development Kit \(AWS CDK\)](https://docs.aws.amazon.com/cdk/latest/guide/apps.html#lifecycle)
+
+
+IResolvable will be resolved 
+
+- (1) during `prepare` phase if it's `CfnReference`
+- (2) during `synthesis` phase otherwise
+
+## Error
+
+#### cdk deploy fails when the stack is being update
+
+```
+<stack> failed: Error [ValidationError]: Stack:arn:aws:cloudformation:eu-west-1:<account>:stack/<stack> is in CREATE_IN_PROGRESS state and can not be updated.
+```
+
 ## Reference
 - [What Is the AWS CDK? \- AWS Cloud Development Kit \(AWS CDK\)](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
 - [AWS CDK Tools \- AWS Cloud Development Kit \(AWS CDK\)](https://docs.aws.amazon.com/cdk/latest/guide/tools.html)
