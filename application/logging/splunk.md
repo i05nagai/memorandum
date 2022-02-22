@@ -55,6 +55,52 @@ Examples
 }
 ```
 
+## Indexer acknowledgement
+- [About HTTP Event Collector Indexer Acknowledgment \- Splunk Documentation](https://docs.splunk.com/Documentation/Splunk/8.2.1/Data/AboutHECIDXAck)
+
+
+```
+curl -k \
+  -H "Authorization: Splunk <token>" \
+  -H "X-Splunk-Request-Channel: FE0ECFAD-13D5-401B-847D-77833BD77131" \
+  https://<host>/services/collector \
+  -d '{"sourcetype": "mysourcetype", "event": "http auth ftw! with ACKS"}'
+
+curl -k \
+  -H "Authorization: Splunk <token>" \
+  -H "X-Splunk-Request-Channel: FE0ECFAD-13D5-401B-847D-77833BD77131" \
+  https://<host>/services/collector/ack \
+  -d '{"ackID":"<int>"}'
+```
+
+## Search Query
+
+#### Subsearch
+- [Use a subsearch \- Splunk Documentation](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2107/SearchTutorial/Useasubsearch)
+
+```
+sourcetype=access_* status=200 action=purchase [search sourcetype=access_* status=200 action=purchase | top limit=1 clientip | table clientip] | stats count, distinct_count(productId), values(productId) by clientip
+```
+
+## Functions
+
+- `stats`
+- `timechart`
+- `regex`
+    - exclude/include results matching regular expression
+- `search`
+- `eval`
+- `spath`
+
+
+## Tips
+
+#### Check size of event size
+
+```
+rm splunk.json && echo "{\"sourcetype\": \"mysourcetype\", \"event\": \"`seq -s '' 900000`\" }" > splunk.json && ls -lah
+```
+
 ## CLI
 
 ## Usage
