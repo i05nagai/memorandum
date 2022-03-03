@@ -20,6 +20,8 @@ npm install --save-dev @babel/preset-react
 ```
 
 #### env
+preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s).
+
 * [@babel/preset\-env · Babel](https://babeljs.io/docs/en/babel-preset-env)
     * Do not use `babel-preset-es2015`
 
