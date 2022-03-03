@@ -144,6 +144,88 @@ Some restrictions for Dynamic Reference
 
 
 
+```
+import requests
+import enum
+import typing
+import re
+import logging
+import json
+import uuid
+
+
+class ResourceHealthNotifier:
+    """Notify resource health to Cloud Formation Wait Condition.
+
+    :param endpoint: WaitConditionHandle URL.
+    """
+
+    class Status(enum.Enum):
+
+        SUCCESS = "SUCCESS"
+        FAILURE = "FAILURE"
+
+    def __init__(self, endpoint: str) -> None:
+        self._endpoint = self._get_url(endpoint)
+
+    def _send(self, payload: typing.Dict):
+        content_type = {"Content-Type": ""}
+        response = requests.put(
+            self._endpoint,
+            data=json.dumps(payload),
+            headers=content_type,
+            verify=True
+        )
+        response.raise_for_status()
+        return response
+
+    def _get_url(self, url: str) -> str:
+        if re.match(r"https?://.*", url):
+            return url
+
+        try:
+            decoded_url = base64.b64decode(url)
+        except TypeError:
+            print(f"Cannot decode WaitConditionHandle URL: {url}")
+            raise
+
+        if not re.match(r"https?://.*", decoded_url):
+            print(f"Decoded WaitConditionHandle URL is Invalid: {decoded_url}")
+            raise ValueError()
+
+    def notify(self, *, reason: str, data: str, unique_id: str, status: Status) -> typing.Dict[str, typing.Any]:
+        """Notify the status.
+
+        :param reason: Reason of the status.
+        :param data: Data is any information that you want to send back with the signal
+        :param unique_id: identifies the signal to AWS CloudFormation.
+            If the Count property of the wait condition is greater than 1, the UniqueId value must be unique across
+            all signals sent for a particular wait condition.
+        :param status:
+        """
+        payload = {
+            "Status": status.value,
+            "Reason": reason,
+            "Data": data,
+            "UniqueId": unique_id
+        }
+
+        response = self._send(payload)
+        print(f"CloudFormation signaled successfully with {payload['Status']}.")
+        return response
+
+
+endpoint = "https://cloudformation-waitcondition-eu-west-1.s3-eu-west-1.amazonaws.com/...."
+a = ResourceHealthNotifier(endpoint)
+d = a.notify(
+    reason="ok",
+    data="ok",
+    unique_id=str(uuid.uuid4()),
+    status=ResourceHealthNotifier.Status.SUCCESS,
+)
+print(d.text)
+```
+
 
 
 ## Referece
