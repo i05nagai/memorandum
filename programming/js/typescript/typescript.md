@@ -51,5 +51,9 @@ tsc helloworld.ts
 
 - By default null and undefined are subtypes of all other types. That means you can assign null and undefined to something like number.
 
+
+## JSX
+[TypeScript: Documentation \- JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)
+
 ## Reference
 
