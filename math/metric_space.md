@@ -9,7 +9,7 @@ title: Metric space
 - $(X, d)$,
     - metric space
 
-There is a metric space $(\bar{X}, \bar{d})$ and $\phi: X \rigtharrow \bar{X}$ which satisfies
+There is a metric space $(\bar{X}, \bar{d})$ and $\phi: X \rightarrow \bar{X}$ which satisfies
 
 - (1) $(\bar{X}, \bar{d})$ is a complete
 - (2) $\phi$ is metric preserving
@@ -26,7 +26,7 @@ We define a equivalence relation $R$ on $C(X)$ as
 
 $$
     (x_{n}) R (y_{n})
-    \Leftrigtharrow
+    \Leftrightarrow
     \lim_{n}d(x_{n}, y_{n}) = 0
     .
 $$
@@ -45,8 +45,8 @@ $$
 $$
 
 $\bar{d}$ is well-defined and metric in $\bar{X}$.
-Indeed, if $(x_{n})R(x^{\prime}_{n})$ and $(y_{n})R(y_{n}^{\prime})$,
-$\lim_{n}d(x_{n}, x_{n}^{\prime} = 0$ and $\lim_{n}d(y_{n}, y_{n}^{\prime} = 0$.
+Indeed, if $$(x_{n})R(x^{\prime}_{n})$$ and $(y_{n})R(y_{n}^{\prime})$,
+$\lim_{n}d(x_{n}, x_{n}^{\prime} = 0$ and $\lim_{n}d(y_{n}, y_{n}^{\prime}) = 0$.
 Hence
 
 $$
@@ -109,7 +109,7 @@ $$
 
 (3) $X$ is dense in $\bar{X}$.
 Let $[(x_{n})] \in \bar{X}$.
-The sequence $(\phi(x_{n}))_{n}$ converges to $[(x_{n})]$.
+The sequence $$(\phi(x_{n}))_{n}$$ converges to $[(x_{n})]$.
 
 $$
 \begin{eqnarray}
@@ -130,7 +130,7 @@ $$
 $$
 
 We will show that it is complete.
-Let $([(x_{n}^{i})_{n}])_{i}$ be a Cauchy sequence.
+Let $$([(x_{n}^{i})_{n}])_{i}$$ be a Cauchy sequence.
 $\phi(X)$ is dense in $X$.
 For all $i \in \mathbb{N}$, there exists $x_{i} \in X$
 
