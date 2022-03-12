@@ -37,9 +37,9 @@ The command '/bin/sh -c tlmgr install ec' returned a non-zero code: 2
 
 ### Commutative diagrams
 * [LaTeX で可換図式を描くパッケージ各種 \| 雑記帳](https://blog.miz-ar.info/2017/06/commutative-diagrams-in-latex/)
+* https://www.jmilne.org/not/Mamscd.pdf
 
-amscd
-MathJaxで使える。
+Available in Mathjax too. But diagonal arrow is not supported.
 
 * `@>>>`
     * 右向き矢印（キーボードに > キーがない人のために、代替記法として @))) が用意されている）
