@@ -152,5 +152,12 @@ Examples:
 Sentinel mode:
        ./redis-server /etc/sentinel.conf --sentinel
 
+
+## Lock
+- [11\.2\.1 Why locks in Lua? \| Redis](https://redis.com/ebook/part-3-next-steps/chapter-11-scripting-redis-with-lua/11-2-rewriting-locks-and-semaphores-with-lua/11-2-1-why-locks-in-lua/)
+
+## Lua script
+
+
 ## Reference
 * [Command reference – Redis](https://redis.io/commands)
