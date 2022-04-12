@@ -37,4 +37,4 @@ psql --user name
     * POSTGRES_INITDB_WALDIR
 
 ## Reference
-
+- https://habr.com/en/company/postgrespro/blog/649499/
