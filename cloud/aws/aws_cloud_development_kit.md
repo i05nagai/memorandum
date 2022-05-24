@@ -269,6 +269,9 @@ Currenlty, plugin feature supports only handling credentials.
 - [GitHub](https://aws.amazon.com/blogs/devops/cdk-credential-plugin/)
 
 
+## Java
+- https://github.com/xiaod-dev/demo-CDK-gradle-project
+
 ## Lifecycle
 [Apps \- AWS Cloud Development Kit \(AWS CDK\)](https://docs.aws.amazon.com/cdk/latest/guide/apps.html#lifecycle)
 
@@ -277,6 +280,15 @@ IResolvable will be resolved
 
 - (1) during `prepare` phase if it's `CfnReference`
 - (2) during `synthesis` phase otherwise
+
+## Bundling images
+
+- PYTHON_3_7: `public.ecr.aws/sam/build-python3.7`
+
+## Metadata
+Some metadata in a node is not added at the Aspect phase.
+For instance, `cd:asset:path` is not available.
+
 
 ## Error
 
