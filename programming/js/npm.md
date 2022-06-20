@@ -60,6 +60,17 @@ npm run eslint
 
 scriptsのコマンドに引数を渡すことはできない。
 
+## package.json
+
+#### peerDependencies
+- [Peer Dependencies \| Node\.js](https://nodejs.org/es/blog/npm/peer-dependencies/)
+- https://flaviocopes.com/npm-peer-dependencies/
+
+
+## npm plugin
+
+
+
 ## Reference
 * [npm package.json 日本語版 取扱説明書](http://liberty-technology.biz/PublicItems/npm/package.json.html)
 * [npm-scriptsについて - Qiita](http://qiita.com/axross/items/a2a0d148e40b66074858)
