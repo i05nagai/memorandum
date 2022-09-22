@@ -47,3 +47,5 @@ But $A$ bypasses this restriction.
 To consider such object, and to discuss properties over all sets, category theory has to analyse outsie of ZFC axioms.
 
 ## Reference
+- Book: An Introduction to the Language of Category Theory
+0 
