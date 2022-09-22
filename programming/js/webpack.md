@@ -79,6 +79,13 @@ Mode
     * `none`
 
 
+## Plugin
+
+#### html-webpack-plugin
+https://webpack.js.org/plugins/html-webpack-plugin/
+
+Create an index html as a entrypoint.
+
 ## Tips
 
 ### global variable with webpack
