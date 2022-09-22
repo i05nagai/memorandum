@@ -15,7 +15,7 @@ npm install --save-dev eslint
 以下を実行すると対話形式で、`.eslint`の初期設定を作成してくれる。
 
 ```
-./node_modules/.bin/eslint --init
+npx eslint --init
 ```
 
 `package.json`に以下を記載する。
@@ -36,8 +36,37 @@ runコマンドに引数は渡せない。
 
 ## Usage
 
-## Config
-`.eslintrc.json`について。
+## Configuration
+Multiple filenames are supported. `.eslintrc.js`.
+
+```
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/strict-boolean-expressions": [
+            2,
+            {
+                "allowString" : false,
+                "allowNumber" : false
+            }
+        ]
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}
+```
+
+- `root: true`
+    - eslint merges configuration files in parent direcotries up to home directory or root directory.
+    - if true is specified, stop 
 
 global変数を指定する。
 keyは変数名で、値はglobal変数が書き換え可能かどうかで、書き換え不可ならfalseにする。
@@ -202,9 +231,15 @@ Specify environemnt in `.eslintrc`.
 [Configuring ESLint \- ESLint \- Pluggable JavaScript linter](https://eslint.org/docs/user-guide/configuring.html#specifying-environments)
 
 
+## Plugins
+
+#### import
+- [import\-js/eslint\-plugin\-import: ESLint plugin with rules that help validate proper imports\.](https://github.com/import-js/eslint-plugin-import#resolvers)
+
+
 
 ## Reference
 * [ESLint 最初の一歩 - Qiita](http://qiita.com/mysticatea/items/f523dab04a25f617c87d)
 * [ESLint をグローバルにインストールせずに使う - Qiita](http://qiita.com/mysticatea/items/6bd56ff691d3a1577321)
 * [ESLint v4.0.0 released - ESLint - Pluggable JavaScript linter](http://eslint.org/blog/2017/06/eslint-v4.0.0-released)
-
+- [Find and fix problems in your JavaScript code \- ESLint \- Pluggable JavaScript Linter](https://eslint.org/)
