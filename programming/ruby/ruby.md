@@ -197,3 +197,61 @@ p ("0b" + a).oct
 reverse_each
 
 
+## module
+
+methods in modules
+
+- to be inherited by a class as instnce methods
+- to be used by an object as methods
+- to be used as module functions
+
+- `include`
+- `extend`
+
+
+## symbols
+
+## methods
+
+- `threads.map($:method)` -> `threads.map { |v| v.method }`
+
+```
+threads = [Tread.fork do
+    puts 'aaaa'
+end
+]
+threads.map(&:value)
+```
+
+## range
+
+- `1..5` = [1, 5]
+- `1...5` = [1, 5)
+
+## class
+
+- `def to_s`
+- `def initialize()`
+    - initializer
+
+```
+def each
+    for a in @var
+        yield a
+    end
+end
+```
+## safe level
+
+- 0
+    - IO, environment variables, command line arguments are considered as tained
+- 1
+- 2
+- 3
+
+## operators
+
+- `<=>`
+    - `1 <=> 2` -> -1
+    - `1 <=> 1` -> 0
+    - `1 <=> 0` -> 1
