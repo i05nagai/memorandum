@@ -14,6 +14,21 @@ pip install sklearn
 conda install -c anaconda scikit-learn
 ```
 
+## API
+- `estimator`
+    - `fit()`
+        - a dataset
+        - a dataset + labels
+    - `imputer.strategy`
+    - `imputer.statistics_`
+- transformers
+    - `fit()`
+    - `transform()`
+- predictors
+    - `fit()`
+    - `predict()`
+    - `score()`
+
 ### model_selection
 * `train_test_split`
     * データを訓練データとテストデータに分ける

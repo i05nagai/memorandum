@@ -101,5 +101,44 @@ Databaseの変更
 USE database_name;
 ```
 
+## Limit offset
+
+```
+# OFFSET = 1, LIMIT = 2
+SELECT * FROM `members` LIMIT 1, 2;
+```
+
+
+## Subquery
+Get the second value
+
+```
+WITH view1 AS (
+    SELECT *
+    FROM (
+        SELECT
+            o.id
+            , ROW_NUMBER() OVER (PARTITION BY o.id ORDER BY o.date) AS rn
+            , o.item_id
+        FROM orders AS o
+        )
+    WHERE rn = 2
+    )
+SELECT
+    *
+FROM users AS u
+LEFT JOIN view1 AS o ON o.id = u.id
+LEFT JOIN items AS i ON i.item_id = o.item_id
+```
+
+
+## Window functions
+- Window functions are available since 8.0.
+- in 5.7, `ROW_NUMBER() OVER (PARTITION BY ...)` is available
+
+
+## Tips
+- when you left/right outer join, you need to specify the key of
+
 
 ## Reference

@@ -4,16 +4,63 @@ title: Packer
 
 ## Packer
 
+```
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "...",
+      "secret_key": "...",
+      "region": "us-east-1",
+      "source_ami": "ami-fce3c696",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "packer {{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "setup_things.sh"
+    }
+  ]
+}
+```
+
+
 ## Builder
 
 #### AWS EBS
-https://www.packer.io/docs/builders/amazon-ebs.html
-
+https://www.packer.io/plugins/builders/amazon
 
 * `instance_type`
     *  The EC2 instance type to use while building the AMI, such as t2.smal
 
 ## Provisioner
+
+#### shell
+
+```
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "playbook_file": "./playbook.yml"
+    }
+  ],
+}
+```
+
+#### error-cleanup-provisioner
+
+```
+{
+  "error-cleanup-provisioner": {
+    "type": "shell-local",
+    "inline": ["echo 'rubber ducky'> ducky.txt"]
+  }
+}
+```
 
 #### Ansible
 https://www.packer.io/docs/provisioners/ansible.html
@@ -37,6 +84,10 @@ https://www.packer.io/docs/provisioners/ansible.html
   ],
 }
 ```
+
+## Variables
+https://www.packer.io/docs/templates/legacy_json_templates/user-variables
+
 
 ## CLI
 
