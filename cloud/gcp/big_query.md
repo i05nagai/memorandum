@@ -429,6 +429,11 @@ Bigquery Support the foloowing formats;
 * Well-Known text
 
 
+## Permission
+
+* add writer to your destination dataset's permission list
+* `BigQuery Data Editor` role.
+
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
 * [How to load geographic data like shapefiles into BigQuery](https://medium.com/google-cloud/how-to-load-geographic-data-like-zipcode-boundaries-into-bigquery-25e4be4391c8)
