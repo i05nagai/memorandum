@@ -33,4 +33,9 @@ Pull/Push
 * Public HTTPs endpoint, with non-self-signed SSL certificate, is not feasible to set up.
 
 
+## Permissions
+
+* add the writer to your destination topic's permission list
+* give the writer the `Pub/Sub Publisher` role
+
 ## Reference
