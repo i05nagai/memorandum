@@ -356,7 +356,12 @@ https://cloud.google.com/storage/docs/lifecycle
     * IsLive
     * MatchesStorageClass
     * NumberOfNewerVersions
-            
+
+
+## permissions
+
+* add the writer to your destination bucket's permission list
+* give the writer the `Storage Object Creator` role.
 
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
