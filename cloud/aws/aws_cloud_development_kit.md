@@ -27,6 +27,14 @@ cdk bootstrap aws://<account-num>/us-east-1
 
 
 
+## Permissions
+In CDK v2, 
+
+To bootstrap
+
+```
+cdk boostrap --cloudformation-execution-policies 
+```
 
 ## CLI
 
