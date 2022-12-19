@@ -79,6 +79,11 @@ jvm options and output control
     * add -X to sbt's scalacOptions (-S is stripped)
 
 ## Usage
+
+```
+sbt new scala/scala3.g8
+```
+
 Compile and execute
 
 ```
