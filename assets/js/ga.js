@@ -8,3 +8,13 @@ if (document.location.hostname != 'localhost') {
   ga('create', 'UA-103580678-1', 'auto');
   ga('send', 'pageview');
 }
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQJFQVBGSW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RQJFQVBGSW');
+</script>
+

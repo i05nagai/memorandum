@@ -5,31 +5,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/slate_style.css' | relative_url }}">
 <title>{{ page.title | default: site.github.repository_name }}</title>
 
-<script src="{{ site.baseurl }}/assets/js/ga.js"></script>
-<!--
-  MathJax
--->
-<script src="{{ site.baseurl }}/assets/js/config.mathjax.js" defer></script>
-<script type="text/javascript" id="MathJax-script" defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
-<!--
-  pseudocode.js
--->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pseudocode.min.css" type="text/css"/>
-<script src="{{ site.baseurl }}/assets/js/pseudocode.min.js"></script>
-<!--
-  KaTex
--->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.css"
-  integrity="sha384-L/SNYu0HM7XECWBeshTGLluQO9uVI1tvkCtunuoUbCHHoTH76cDyXty69Bb9I0qZ"
-  crossorigin="anonymous">
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.js"
-  integrity="sha384-ad+n9lzhJjYgO67lARKETJH6WuQVDDlRfj81AJJSswMyMkXTD49wBj5EP004WOY6"
-  crossorigin="anonymous"></script>
-
-<!-- Google Search Console -->
-<meta name="google-site-verification" content="zPgaj3-FMOh69hsxrbyRUiu4peGiHf9eWBYrYFKuvZw" />
-
+{% include common_head.html %}
 {% seo %}
