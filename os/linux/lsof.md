@@ -19,7 +19,12 @@ lsof
 - `+D D`
     - causes lsof to search for all open instances of directory `D` and all the files and directories it contains to its complete depth.
 - `-D D`
-- `-i D`
+- `-i`
+    - select IPv[46] files
+- `-P`
+    - no port names
+- `-n`
+    - no host names
 - `-u s`
     * selects the listing of files for the user whose login names or user ID numbers are in the comma-separated set s - e.g., `abe`, or `548,root`.  (There should be no spaces in the set.)
 - `-U`
@@ -36,6 +41,8 @@ lsof | grep deleted
 ```
 lsof -c <cmd>
 ```
+
+Specify PID
 
 ```
 lsof -p 1107
