@@ -24,6 +24,11 @@ Performance
 - https://hevodata.com/learn/using-mysql-binlog/#:~:text=The%20mysqlbinlog%20command%20displays%20the,which%20the%20logs%20are%20required.
 
 
+## Schema changes
+- https://debezium.io/blog/2016/04/15/parsing-ddl/
+
+
+
 ## Transformations
 https://debezium.io/documentation/reference/stable/transformations/index.html
 https://docs.confluent.io/platform/current/connect/transforms/regexrouter.html#regexrouter
