@@ -4,6 +4,11 @@ title: kafkacat
 
 ## kafkacat
 
+## install
+
+```
+```
+
 
 ## CLI
 
@@ -66,8 +71,10 @@ Consumer options:
         * absolute offset
     * `-<value>`
         * relative offset from end
--e                 Exit successfully when last message received
--f <fmt..>         Output formatting string, see below.
+* `-e`
+    * Exit successfully when last message received
+* `-f <fmt..>`
+    * Output formatting string, see below.
                      Takes precedence over -D and -K.
 * `-J`
     * Output with JSON envelope
@@ -113,17 +120,30 @@ Format string tokens:
 
 
 Consumer mode (writes messages to stdout):
-  kafkacat -b <broker> -t <topic> -p <partition>
- or:
-  kafkacat -C -b ...
+
+```
+kafkacat -b <broker> -t <topic> -p <partition>
+```
+
+```
+kafkacat -C -b ...
+```
 
 High-level KafkaConsumer mode:
-  kafkacat -b <broker> -G <group-id> topic1 top2 ^aregex\d+
+
+```
+kafkacat -b <broker> -G <group-id> topic1 top2 ^aregex\d+
+```
 
 Producer mode (reads messages from stdin):
-  ... | kafkacat -b <broker> -t <topic> -p <partition>
- or:
-  kafkacat -P -b ...
+
+```
+... | kafkacat -b <broker> -t <topic> -p <partition>
+```
+
+```
+kafkacat -P -b ...
+```
 
 Metadata listing:
   kafkacat -L -b <broker> [-t <topic>]
@@ -155,3 +175,4 @@ kafkacat -C -b mybroker -t syslog -J
 
 ## Reference
 - [edenhill/kafkacat: Generic command line non\-JVM Apache Kafka producer and consumer](https://github.com/edenhill/kafkacat)
+- https://github.com/edenhill/kcat
