@@ -26,6 +26,16 @@ DogStatsD implements StatsD protrocol and DataDog specific extensions:
 * Tagging
 
 
+## Aggregation
+https://docs.datadoghq.com/dashboards/functions/rollup/
+
+
+- `rollup()`
+    - The .rollup() function is used to aggregate your metrics data inherently in every metrics query. However, appending the .rollup() function at the end of a query allows you to perform custom time aggregation that overrides the defaults. This function enables you to define:
+    - `<interval>`: the interval of time your data is aggregated over (if larger than the query-enforced rollup interval).
+    - `<aggregator>`: How your data points are aggregated within a given rollup time interval.
+
+
 ## metrics
 https://docs.datadoghq.com/agent/faq/docker-jmx/
 
@@ -111,6 +121,9 @@ Key MySQL Statistics
 
 
 #### Datadog metric and Cloud watch metric
+https://docs.datadoghq.com/dashboards/functions/rollup/
+
+
 * aws.lambda.iterator_age
     * iterator age
     * 1 sec
