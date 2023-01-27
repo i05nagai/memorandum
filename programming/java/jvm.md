@@ -5,6 +5,22 @@ title: JVM
 ## JVM
 
 
+## Permgen
+
+- PermGen (Permanent Generation) is a special heap space separated from the main memory heap.
+- The JVM keeps track of loaded class metadata in the PermGen. 
+- the JVM stores all the static content in this memory section. This includes all the static methods, primitive variables, and references to the static objects.
+- it contains data about bytecode, names, and JIT information
+- The default maximum memory size for 32-bit JVM is 64 MB and 82 MB for the 64-bit version.
+- With its limited memory size, PermGen is involved in generating the famous OutOfMemoryError. Simply put, the class loaders weren't garbage collected properly and, as a result, generated a memory leak.
+
+## Metaspace
+https://www.baeldung.com/java-permgen-metaspace
+
+- it has replaced the older PermGen memory space.
+- Metaspace grows automatically by default.
+- The garbage collector now automatically triggers the cleaning of the dead classes once the class metadata usage reaches its maximum metaspace size.
+
 ## Tips
 
 ### CodeCache is full
