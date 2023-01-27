@@ -146,6 +146,9 @@ ga('myTracker.require', 'displayfeatures', {
 });
 ```
 
+## Recommended events
+https://support.google.com/analytics/answer/9267735
+
 ## Reference
 * [How a web session is defined in Analytics - Analytics Help](https://support.google.com/analytics/answer/2731565?hl=en)
 * [Briefmetrics - Email Reports for Google Analytics](https://briefmetrics.com/articles/remove-localhost-from-referrers)
