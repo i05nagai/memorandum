@@ -23,5 +23,8 @@ sudo docker run \
 
 `http://localhost:8080`で動く。
 
+## Monitoring
+https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md
+
 ## Reference
 * [google/cadvisor: Analyzes resource usage and performance characteristics of running containers.](https://github.com/google/cadvisor)
