@@ -38,8 +38,31 @@ title: Bigtable
 Columns that are not used in a Bigtable row do not take up any space in that row. Each row is essentially a collection of key/value entries, where the key is a combination of the column family, column qualifier and timestamp. If a row does not include a value for a specific column, the key/value entry is simply not present.
 
 #### consistency
+https://cloud.google.com/bigtable/docs/app-profiles
+
 - Single-cluster Bigtable instances provide strong consistency.
 - By default, instances that have more than one cluster provide eventual consistency, but for some use cases they can be configured to provide read-your-writes consistency or strong consistency, depending on the workload and app profile settings.
+
+## Replication
+https://cloud.google.com/bigtable/docs/replication-overview
+
+
+- You can add additional cluster to automatically replicata data
+- replication is eventual consistency (single cluster is strong consistency)
+
+
+## Application profile
+- Each connection specifies the application profile
+- Application profile defines routing policy and controls whether single-row transactions are arrowed
+
+
+- Single row transactions
+    - https://cloud.google.com/bigtable/docs/app-profiles#single-row-transactions
+    - In Bigtable mutations, such as read, write, and delete requests, are always atomic at the row level.
+    - bigtable supports row-level transaction (i.e. executes a sequence of operations atomically for a row)
+    - Supported transactions are
+        - Read-modify-write operations,
+        - Check-and-mutate operations
 
 ## Garbage collection
 
