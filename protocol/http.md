@@ -14,4 +14,9 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 - `ALLOW-FROM uri`
 - `SAMEORIGIN`
 
+
+#### X-Forwarded-For
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For
+
 ## Reference
