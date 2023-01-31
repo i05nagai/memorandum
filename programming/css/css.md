@@ -33,6 +33,29 @@ spaceで区切れば複数のfilterを指定できる。
 ```
 
 
+## Media query
+https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+if-statement for css.
+Below example changes style based on viewport width.
+
+
+
+```
+// less than max-width
+@media (max-width: 1250px) {
+  div {
+    float: left;
+  }
+}
+// more than max-width
+@media (min-width: 1250px) {
+  div {
+    float: right;
+  }
+}
+```
+
 
 ## Pseau
 
