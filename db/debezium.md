@@ -17,6 +17,10 @@ https://debezium.io/documentation/reference/stable/connectors/mysql.html
 
 Performance
 
+The connector uses MySQL binlog.
+The connector estabilish connecitons to MySQL server and listens to binlog.
+The performance impact is essentially same as replicating tables to a slave server.
+
 - https://reorchestrate.com/posts/debezium-performance-impact/
 - Dumping is done with
     - https://github.com/shyiko/mysql-binlog-connector-java/blob/dd710a5466381faa57442977b24fceff56a0820e/src/main/java/com/github/shyiko/mysql/binlog/network/protocol/command/DumpBinaryLogGtidCommand.java
