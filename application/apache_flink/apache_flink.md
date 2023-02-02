@@ -12,6 +12,26 @@ title: Apache Flink
     - The Table API Flink’s language-embedded, relational API to write SQL-like queries in Java or Scala which are automatically optimized similar to SQL queries.
 
 
+## JVM memory
+https://nightlies.apache.org/flink/flink-docs-master/docs/deployment/memory/mem_setup_tm/
+
+- JVM heap
+    - Framework heap
+    - Task heap
+- Off heap memory
+    - Managed memory
+        1. streaming jobs can use it for RocksDB state backend.
+        2. both streaming and batch jobs can use it for sorting, hash tables, caching of intermediate results.
+        3. both streaming and batch jobs can use it for executing User Defined Functions in Python processes.
+    - Direct memory
+        - Framework off-heap
+        - Task Off-heap
+        - Network
+    - JVM Metaspace
+    - JVM Overhead
+
+
+
 ## Error
 Class class com.klarna.cloudpipeline.decisionengines.AccountLimitRecord cannot be used as a POJO type because not all fields are valid POJO fields, and must be processed as GenericType. Please read the Flink documentation on \"Data Types & Serialization\" for details of the effect on performance.
 
