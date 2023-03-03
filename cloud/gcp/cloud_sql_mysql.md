@@ -235,6 +235,11 @@ ERROR: (gcloud.sql.import.sql) ERROR_RDBMS
 ```
 
 
+## connection_auth
+https://cloud.google.com/sql/docs/mysql/connect-auth-proxy
+
+
+
 ## Import/Export best branctice
 * [Best Practices for Importing and Exporting Data  |  Cloud SQL for MySQL  |  Google Cloud](https://cloud.google.com/sql/docs/mysql/import-export/)
 
