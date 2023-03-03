@@ -67,6 +67,32 @@ libraryDependencies ++= Seq(
 ## Testing
 * [sbt Reference Manual — Testing](https://www.scala-sbt.org/1.x/docs/Testing.html)
 
+## Error
+
+#### sbt-assembly: deduplication found error
+See https://github.com/sbt/sbt-assembly#merge-strategy
+See https://github.com/sbt/sbt-assembly#excluding-jars-and-files
+See https://stackoverflow.com/questions/25144484/sbt-assembly-deduplication-found-error
+See https://github.com/sbt/sbt-assembly/issues/146
+
+```
+assemblyMergeStrategy in assembly := {
+ case PathList("META-INF", _*) => MergeStrategy.discard
+ case _                        => MergeStrategy.first
+}
+```
+
+```
+java.lang.RuntimeException: deduplicate: different file contents found in the following:
+org.eclipse.jetty.orbit/javax.transaction/orbits/javax.transaction-1.1.1.v201105210645.jar:META-INF/ECLIPSEF.RSA
+org.eclipse.jetty.orbit/javax.servlet/orbits/javax.servlet-3.0.0.v201112011016.jar:META-INF/ECLIPSEF.RSA
+org.eclipse.jetty.orbit/javax.mail.glassfish/orbits/javax.mail.glassfish-1.4.1.v201005082020.jar:META-INF/ECLIPSEF.RSA
+org.eclipse.jetty.orbit/javax.activation/orbits/javax.activation-1.1.0.v201105071233.jar:META-INF/ECLIPSEF.RSA
+```
+
+
+
 ## Reference
 * [sbt - The interactive build tool](https://www.scala-sbt.org/)
 * [sbt/sbt: sbt, the interactive build tool](https://github.com/sbt/sbt)
+
