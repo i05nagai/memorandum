@@ -29,6 +29,16 @@ apt-get install scala
     * repeated parameters
 
 
+#### method
+
+```scala
+def aaa(newStack: => Int, lastItemAdded: Int): Int = {
+  return 1
+}
+
+aaa(1, 1)
+```
+
 #### class
 
 * `class Queue[T] private`
@@ -58,6 +68,7 @@ TypeTags
 #### traits
 
 * inherited trait by `with` or `extends` keyword
+    - `extend` can be used only once
 * mixin
 * method can be overrided
 * java interface + maintain state and declare fields
@@ -93,6 +104,21 @@ to trait or not to trait
 * no access modifier means `public`
 
 
+#### package object
+- https://www.scala-lang.org/docu/files/packageobjects/packageobjects.html
+
+#### case object
+https://docs.scala-lang.org/overviews/scala-book/case-objects.html
+
+- It’s serializable
+- It has a default hashCode implementation
+- It has an improved toString implementation
+
+Use cases
+
+- When creating enumerations
+- When creating containers for “messages” that you want to pass between other objects (such as with the Akka actors library)
+
 #### implict conversion
 
 * use `implicit` keyword
@@ -100,6 +126,23 @@ to trait or not to trait
 * `implicit object`
     * [scala \- What are implicit objects? \- Stack Overflow](https://stackoverflow.com/questions/22592456/what-are-implicit-objects)
     * [The Neophyte's Guide to Scala Part 12: Type classes \- Daniel Westheide](https://danielwestheide.com/blog/2013/02/06/the-neophytes-guide-to-scala-part-12-type-classes.html)
+
+```scala
+implicit class IntWithTimes(x: Int) {
+  def times[A](f: => A): Unit = {
+    def loop(current: Int): Unit =
+      if (current > 0) {
+        f
+        loop(current - 1)
+      }
+    loop(x)
+  }
+}
+
+5 times {
+  println('a')
+}
+```
 
 #### Type parametrization
 
@@ -125,6 +168,14 @@ to trait or not to trait
     * `def meth[A : ContextBound1 : ContextBoundN](a: A)`
         * is equivalent to `def meth[A](a: A)(implicit evidence: ContextBound1[A], ContextBoundN[A])`
 
+## conf
+- https://blog.knoldus.com/quickknol-reading-configuration-files-in-scala/
+- https://lightbend.github.io/config/
+    - library to read config
+
+## val and def
+- https://stackoverflow.com/questions/19642053/when-to-use-val-or-def-in-scala-traits
+
 ## Tips
 
 ### Styleguide
@@ -138,6 +189,8 @@ to trait or not to trait
 
 ### not found: value println
 If you find this error when importing `scala.Predef` or any classes or objects under `scala.Predef`, you should try remove the line importing the objectrs related to `scala.Predef`
+
+
 
 ## Reference
 * [learning Scalaz — learning Scalaz](http://eed3si9n.com/learning-scalaz/)
