@@ -9,12 +9,14 @@ title: systemctl
 
 Query or send control commands to the systemd manager.
 
-* --system         Connect to system manager
-* --user           Connect to user service manager
-* -H --host=[USER@]HOST
+* `--system`
+    * Connect to system manager
+* `--user`
+    * Connect to user service manager
+* `-H --host=[USER@]HOST`
     * Operate on remote host
-* -M --machine=CONTAINER
-                      Operate on local container
+* `-M --machine=CONTAINER`
+    * Operate on local container
 * -t --type=TYPE      List units of a particular type
 * --state=STATE    List units with particular LOAD or SUB or ACTIVE state
 * -p --property=NAME  Show only properties by this name
@@ -130,5 +132,21 @@ System Commands:
                                   time and put it into hibernate
 
 ## Usage
+
+
+```
+systemctl list-unit-files
+```
+
+```
+systemtcl start <service>
+systemtcl stop <service>
+```
+
+```
+systemctl status
+
+systemctl status <service>
+```
 
 ## Reference
