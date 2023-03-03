@@ -4,6 +4,25 @@ title: JVM
 
 ## JVM
 
+## Direct buffer
+Java NIO APIs use ByteBuffers as the source and destination of I/O calls, and come in two flavours:
+
+- Heap Byte Buffer (wrap a byte[] array, allocated in the garbage collected Java heap)
+- Direct Byte Buffer (wrap memory allocated outside the Java heap )
+
+Since only "native" memory can be passed to operating system calls, so it won't be moved by the garbage collector, it means that when you use a heap ByteBuffer for I/O, it is copied into a temporary direct ByteBuffer. The JDK caches one temporary buffer per thread, without any memory limits (i.e. an unbounded cache). As a result, if you call I/O methods with large heap ByteBuffers from multiple threads, your process can use a huge amount of additional native memory.
+
+## Young generation
+The young generation is the place where all the new objects are created. When the young generation is filled, garbage collection is performed. 
+This garbage collection is called Minor GC.
+
+## Old generation
+https://www.digitalocean.com/community/tutorials/java-jvm-memory-model-memory-management-in-java
+
+Old Generation memory contains the objects that are long-lived and survived after many rounds of Minor GC. 
+Usually, garbage collection is performed in Old Generation memory when it’s full. 
+Old Generation Garbage Collection is called Major GC and usually takes a longer time.
+
 
 ## Permgen
 
@@ -16,6 +35,7 @@ title: JVM
 
 ## Metaspace
 https://www.baeldung.com/java-permgen-metaspace
+https://stackoverflow.com/questions/39675406/difference-between-metaspace-and-native-memory-in-java
 
 - it has replaced the older PermGen memory space.
 - Metaspace grows automatically by default.
