@@ -158,4 +158,15 @@ gcloud compute disks create --size=500GB --zone=us-central1-a my-data-disk
     * `ReadOnlyMany`
     * `ReadWriteMany`
 
+## Ephemeral volumes
+https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/
+
+Some application need additional storage but don't care whether that data is stored persistently across restarts.
+
+
+- `emptyDir`: empty at Pod startup, with storage coming locally from the kubelet base directory (usually the root disk) or RAM
+- `configMap, downwardAPI, secret`: inject different kinds of Kubernetes data into a Pod
+- `CSI ephemeral volumes`: similar to the previous volume kinds, but provided by special CSI drivers which specifically support this feature
+- `generic ephemeral volumes`, which can be provided by all storage drivers that also support persistent volumes
+
 ## Reference
