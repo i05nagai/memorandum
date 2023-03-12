@@ -4,7 +4,7 @@ title: cAdviser
 
 ## cAdviser
 Analyzes resource usage and performance characteristics of running containers.
-Kubeletに組み込まれている。
+It's integrated in Kubelet.
 
 ## Quickstart
 
@@ -21,7 +21,13 @@ sudo docker run \
   google/cadvisor:latest
 ```
 
-`http://localhost:8080`で動く。
+Access via `http://localhost:8080`
+
+## metrics
+- working set memory
+    - The amount of working set memory, this includes recently accessed memory,dirty memory, and kernel memory. Working set is `<= "usage"`.
+- container_memory
+    - The amount of anonymous and swap cache memory (includes transparent hugepages).
 
 ## Monitoring
 https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md
