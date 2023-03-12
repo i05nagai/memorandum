@@ -73,4 +73,17 @@ memoryの構成は以下。
 * memoryは63 / 3 = 21から21 * 0.93でだいたい19
     * 0.93はOSとかHadoop Daemonを考慮しての掛け目
 
+
+
+## Parallelism/Partitiosn
+
+- Partitions of `sc.parallelize()`
+    - parameter from user
+    - or `spark.default.parallelism`
+- RDD with parents
+    - The number of tasks in a stage = the number of partitions in the last RDD n the stage
+    -  The number of partitions in an RDD is the same as the number of partitions in the RDD on which it depends,
+- RDD without parents
+    - RDDs produced by textFile or hadoopFile have their partitions determined by the underlying MapReduce InputFormat that’s used. Typically there will be a partition for each HDFS block being read.
+
 ## Reference
