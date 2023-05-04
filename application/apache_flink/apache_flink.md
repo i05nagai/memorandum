@@ -139,5 +139,26 @@ Scheduler execute checkpointing
 - `SourceCoordinator`
 
 
+## Security
+
+- https://www.xenonstack.com/blog/apache-flink-security
+
+Security module
+
+- security.module.factory.classes
+- security.context.factory.classes
+
+- HadoopSecurity
+- JaasSecurity
+- Zookeeper Security
+
+
+
+## Cluster
+- https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/deployment/config/#advanced-fault-tolerance-options
+
+- `cluster.uncaught-exception-handling`
+    - `LOG`, or `FAIL`
+
 ## Reference
 - [Benchmarking Streaming Computation Engines at\.\.\. \| Yahoo Engineering](https://yahooeng.tumblr.com/post/135321837876/benchmarking-streaming-computation-engines-at)
