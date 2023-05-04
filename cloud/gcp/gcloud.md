@@ -133,7 +133,17 @@ logging.getLogger('googleapiclient.discovery_cache').setLevel(logging.ERROR)
 * [google/cloud-sdk - Docker Hub](https://hub.docker.com/r/google/cloud-sdk/)
 * `~/.config`がvolumeになっているので、一度認証すれば二回目移行は認証不要
 
+## Configuration
+List of defined configuraitons
 
+```
+gcloud config configurations list
+```
+
+## Credentials
+- https://www.jhanley.com/blog/google-cloud-where-are-my-credentials-stored/
+
+`access_tokens.db` (sqlite3) stores sthe credentials.
 
 ## Reference
 * [gcloud  |  Cloud SDK  |  Google Cloud Platform](https://cloud.google.com/sdk/gcloud/reference/)
