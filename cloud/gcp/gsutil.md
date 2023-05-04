@@ -5,6 +5,9 @@ title: gsutil
 ## gsutil
 
 
+## Permissions
+- https://cloud.google.com/storage/docs/access-control/iam-gsutil
+
 ## gsutil cp
 [cp \- Copy files and objects  \|  Cloud Storage  \|  Google Cloud](https://cloud.google.com/storage/docs/gsutil/commands/cp)
 
