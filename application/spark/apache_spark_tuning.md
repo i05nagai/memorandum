@@ -74,6 +74,9 @@ memoryの構成は以下。
     * 0.93はOSとかHadoop Daemonを考慮しての掛け目
 
 
+## Disk spill
+- https://selectfrom.dev/spark-performance-tuning-spill-7318363e18cb
+
 
 ## Parallelism/Partitiosn
 
