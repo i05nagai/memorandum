@@ -26,15 +26,15 @@ SELECT
 
 ```sql
 SELECT
-   ENAME,
-   HIREDATE,
-   SAL,
+   ename,
+   hiredate,
+   sal,
    # orderby でSALを並び替えた時に、現在の行の[start, SAL-1]まででMAX
    # HIREDATEが自分より先の中でSALの最大
-   MAX(SAL) OVER (
+   MAX(sal) OVER (
       ORDER BY 
-         HIREDATE, 
-         ENAME 
+         hiredate, 
+         ename 
       ROWS BETWEEN 
          UNBOUNDED PRECEDING 
          AND 
@@ -42,10 +42,10 @@ SELECT
    ) MAX_BEFORE, 
    # orderby でSALを並び替えた時に、現在の行の[SAL+1, end]まででMAX
    # HIREDATEが自分より後の中でSALの最大
-   MAX(SAL) OVER (
+   MAX(sal) OVER (
       ORDER BY 
-         HIREDATE, 
-         ENAME 
+         hiredate, 
+         ename 
       ROWS BETWEEN 
          1 FOLLOWING 
          AND 
@@ -54,10 +54,10 @@ SELECT
 FROM
    EMP
 ORDER BY 
-   HIREDATE, 
-   ENAME;
+   hiredate, 
+   ename;
 
-ENAME      HIREDATE         SAL MAX_BEFORE  MAX_AFTER
+ename      hiredate         sal MAX_BEFORE  MAX_AFTER
 ---------- --------- ---------- ---------- ----------
 SMITH      17-DEC-80        800                  5000
 ALLEN      20-FEB-81       1600        800       5000
@@ -73,6 +73,116 @@ JAMES      03-DEC-81        950       5000       3000
 MILLER     23-JAN-82       1300       5000       3000
 SCOTT      19-APR-87       3000       5000       1100
 ADAMS      23-MAY-87       1100       5000
+```
+
+
+```
+WITH base AS (
+  SELECT
+      1 AS id, 1 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 1 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 1 AS col2, 2 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 1 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 1 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 2 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 2 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 3 AS col1, 1 AS col2, 1 AS col3
+
+)
+
+SELECT
+  id,
+  col1,
+  col2,
+  col3,
+  ROW_NUMBER() OVER(PARTITION BY col1, col2 ORDER BY col3 DESC) AS window_v
+FROM
+  base
+ORDER BY col1, col2
+```
+
+```
+id	col1	col2	col3	window_v
+1	1	1	1	2
+2	1	1	1	1
+1	1	2	1	1
+2	1	2	1	2
+2	2	1	1	2
+1	2	1	1	1
+1	2	2	1	1
+2	2	2	1	2
+2	3	1	1	1
+```
+
+
+#### Window function with Group by
+Window function is computed before gorup by.
+
+```
+
+WITH base AS (
+  SELECT
+      1 AS id, 1 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 1 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 1 AS col2, 2 AS col3
+  UNION
+  SELECT
+      1 AS id, 2 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 1 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 1 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 2 AS col1, 1 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 2 AS col1, 2 AS col2, 1 AS col3
+  UNION
+  SELECT
+      2 AS id, 3 AS col1, 1 AS col2, 1 AS col3
+
+)
+
+SELECT
+  id,
+  col1,
+  col2,
+  ROW_NUMBER() OVER(PARTITION BY col1 ORDER BY col2 DESC) AS window_r,
+  SUM(col2) OVER(PARTITION BY col1 ORDER BY col2 DESC) AS window_s,
+  COUNT() AS num
+FROM
+  base
+GROUP BY 1, 2, 3
 ```
 
 ## Function
@@ -277,6 +387,37 @@ WHERE (
 * [sql - How do I find elements in an array in BigQuery - Stack Overflow](https://stackoverflow.com/questions/42989922/how-do-i-find-elements-in-an-array-in-bigquery)
 
 
+## JOIN
+
+```
+WITH base1 AS (
+  SELECT
+    1 AS a, 1 AS b
+  UNION
+  SELECT
+    2 AS a, 2 AS b
+  UNION
+  SELECT
+    3 AS a, 2 AS b
+), base2 AS (
+  SELECT
+    1 AS a, 1 AS b
+  UNION
+  SELECT
+    2 AS a, 2 AS b
+  UNION
+  SELECT
+    3 AS a, 2 AS b
+)
+
+SELECT
+  base1.a base1_a,
+  base1.b base1_b,
+  base2.a base2_a,
+  base2.b base2_b
+FROM base1 JOIN base2 ON base1.b = base2.b
+```
+
 ## Array UNNEST
 arrayの部分の値を持つ行をarray以外の部分にjoinする。
 arrayが2つの値を持つことをcheckする必要がある場合は、下記のようなunnestをするとcheckが難しくなる。
@@ -358,3 +499,5 @@ SELECT
 FROM
   sample
 ```
+
+##o
