@@ -133,4 +133,18 @@ docker exec -d ubuntu_bash touch /tmp/execWorks
 
 tagの最大長は128char
 
+## docker ps
+
+Get a container ID by image name
+
+```
+docker ps --filter ancestor=<image> --format "{{.ID}}" | tr -d "\s"
+```
+
+Get a container ID by container name
+
+```
+docker ps --filter name=<container name> --format "{{.ID}}" | tr -d "\s"
+```
+
 ## Reference

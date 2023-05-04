@@ -23,6 +23,17 @@ Maven
 </repositories>
 ```
 
+scala
+
+```
+<dependency>
+	<groupId>com.github.erosb</groupId>
+	<artifactId>everit-json-schema</artifactId>
+	<version>1.14.1</version>
+</dependency>
+"com.github.pureconfig" %% "pureconfig-enum" % "0.15.0",
+```
+
 ## Reference
 
 

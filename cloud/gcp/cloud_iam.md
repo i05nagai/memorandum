@@ -10,19 +10,38 @@ title: Cloud IAM
     * A Policy consists of a list of bindings
 * Binding
 * Role
+    * `roles/service.roleName` e.g. `roles/storage.objectAdmin`
+* members
+    * A list of one or more principals
+* principle
+    *  principal can be a Google Account (for end users), a service account (for applications and compute workloads), a Google group, or a Google Workspace account or Cloud Identity domain that can access a resource. Each principal has its own identifier, which is typically an email address.
+    * An identifier for the principal, or member, which usually has the following form: `PRINCIPAL_TYPE:ID`
+        * `user:my-user@example.com`
+* resource_type
+    * Use `projects`, `resource-manager` `folders`, or `organizations`.
+* organizations
+* folder
+* project
+* resource
+    * GCP resources
+* allow policy
+    * allow policy consists of a list of role bindings
+
+organizations -> folder -> project -> resource
+
+## bindings
 
 
-Permissions
+## CLI
 
-* Cloud Storage,
-    * add the writer to your destination bucket's permission list
-    * give the writer the `Storage Object Creator` role.
-* BigQuery
-    * add writer to your destination dataset's permission list
-    * `BigQuery Data Editor` role.
-* Cloud Pub/Sub
-    * add the writer to your destination topic's permission list
-    * give the writer the `Pub/Sub Publisher` role
+```
+gcloud iam policies
+```
 
+
+```
+gcloud projects get-iam-policy
+
+```
 
 ## Reference

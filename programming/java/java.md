@@ -204,6 +204,21 @@ object Obj {
 ## GC
 - [Java Garbage Collection Basics](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html#:~:text=The%20Old%20Generation%20is%20used,called%20a%20major%20garbage%20collection.)
 
+## Serialization
+
+#### serialVersionUID
+https://www.baeldung.com/java-serial-version-uid
+
+
+Version ID for a class/object serialization.
+The serialization runtime associates with each serializable class a version number, called a serialVersionUID, which is used during deserialization to verify that the sender and receiver of a serialized object have loaded classes for that object that are compatible with respect to serialization.
+
+If the receiver has loaded a class for the object that has a different serialVersionUID than that of the corresponding sender's class, then deserialization will result in an `InvalidClassException`.
+
+The UID doesn't have to be unique across other classes.
+
+
+
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)
 * [jjugccc2018 app review postmortem](https://www.slideshare.net/tamrin69/jjugccc2018-app-review-postmortem)

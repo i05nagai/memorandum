@@ -106,6 +106,32 @@ sbt clean
 sbt show scalaOptions
 ```
 
+Show all keys
+
+```
+sbt settings
+```
+
+Show tasks
+
+```
+sbt tasks
+```
+
+Get into sbt console
+
+```
+sbt
+```
+
+run specific test
+
+```
+sbt 'testOnly **.Filname'
+sbt 'testOnly org.packagename.example'
+sbt 'testOnly **.StackSpec -- -z "for cars"'
+```
+
 ## Configuration
 
 ## Reference

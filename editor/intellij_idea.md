@@ -134,7 +134,7 @@ Update dependency. `gradle build` doesn't udpate the dependency.
 #### Command Shift A opens terminal
 - https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003430700--Apropos-terminal-pops-up-when-typing-cmd-shift-A-to-get-actions-bar
 
-- Go to `Keyboard` -> `Shortcut` and find Command Shift A short cut and disbale it.
+- Go to `System Settings` on OSX -> `Keyboard` -> `Shortcut` and find Command Shift A short cut and disbale it.
     - probably in `Services`
 
 ## Reference

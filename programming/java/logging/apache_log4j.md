@@ -24,5 +24,24 @@ Automatic configuration
 - If a JSON file cannot be located the XML ConfigurationFactory will try to locate log4j2.xml on the classpath.
 - If no configuration file could be located the DefaultConfiguration will be used. This will cause logging output to go to the console.
 
+## Change logging
+
+```
+Logger restClientLogger = (Logger) LoggerFactory.getLogger(SolrRestClient.class);
+restClientLogger.setLevel(Level.DEBUG);
+```
+
+```
+Logger root = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+root.setLevel(Level.INFO);
+```
+
+## Configuration
+https://logging.apache.org/log4j/2.x/manual/configuration.html
+
+#### Configuration for test
+- https://www.appsloveworld.com/scala/100/3/how-to-suppress-spark-logging-in-unit-tests
+
 ## Reference
 * [Log4j – Apache Log4j 2 - Apache Log4j 2](https://logging.apache.org/log4j/2.x/)
+- http://webcode.lemme.at/2018/12/04/update-slf4j-log-level-programmatically/

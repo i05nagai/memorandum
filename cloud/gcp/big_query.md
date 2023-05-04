@@ -429,6 +429,45 @@ Bigquery Support the foloowing formats;
 * Well-Known text
 
 
+## Permission
+
+* add writer to your destination dataset's permission list
+* `BigQuery Data Editor` role.
+
+
+## Bigtable external schema
+https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#bigtableoptions
+
+
+
+```json
+{
+    "sourceFormat": "BIGTABLE",
+    "sourceUris": [
+        "https://googleapis.com/bigtable/projects/PROJECT_ID/instances/INSTANCE_ID/tables/TABLE_NAME"
+    ],
+    "bigtableOptions": {
+        "columnFamilies" : [
+            {
+                "familyId": "FAMILY_ID",
+                "type": "INTEGER",
+                "encoding": "BINARY",
+                "columns": [
+                    {
+                        "qualifierString": "NAME",
+                        "type": "INTEGER",
+                        "encoding": "BINARY"
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+
+
+
 ## Reference
 * [How to recover a deleted dataset in BigQuery - Stack Overflow](https://stackoverflow.com/questions/31576636/how-to-recover-a-deleted-dataset-in-bigquery)
 * [How to load geographic data like shapefiles into BigQuery](https://medium.com/google-cloud/how-to-load-geographic-data-like-zipcode-boundaries-into-bigquery-25e4be4391c8)
