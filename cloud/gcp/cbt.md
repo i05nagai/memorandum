@@ -22,6 +22,8 @@ instance = quickstart-instance
 
 
 ## Usage
+You can export the crendential with `GOOGLE_APPLICATION_CREDENTIALS`.
+Or json file can be specified with `-creds`
 
 ```
 cbt -project <project> -instance <instance> [cmd]
