@@ -40,6 +40,10 @@ npm install --save-dev react-test-renderer
 npm install --save-dev react-test-renderer @types/react-test-renderer
 ```
 
+## with typescript
+
+
+
 
 ## Reference
 - https://jestjs.io/
