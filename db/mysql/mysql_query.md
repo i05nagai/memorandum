@@ -4,23 +4,37 @@ title: MySQL Query
 
 ## MySQL Query
 
+## default databases
+
+## information_schema
+
+- `SCHEMATA`
+    - schema of databases
+
+
+
+#### Change password
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'rootpassword';
+```
+
 #### Create database 
 
-```sql
-/* DBを作成 */
+```
 CREATE DATABASE db_name DEFAULT CHARACTER SET utf8;
 ```
 
 #### Drop database
 
-```sql
+```
 DROP DATABASE db_name;
 ```
 
 #### Create user
 作成直後は、権限が何もないので、GRANTで権限を付与する
 
-```sql
+```
 CREATE USER user_name@'%' IDENTIFIED BY 'password';
 ```
 
@@ -30,25 +44,25 @@ CREATE USER user_name@'%' IDENTIFIED BY 'password';
 
 #### Delete user
 
-```sql
+```
 DROP USER user_name@host;
 ```
 
 #### Change password
 
-```sql
+```
 SET PASSWORD FOR user_name@localhost = PASSWORD('password');
 ```
 
 #### List user
 
-```sql
+```
 SELECT Host, User FROM mysql.user;
 ```
 
 #### Grant previledges on user
 
-```sql
+```
 GRANT ALL PRIVILEGES ON db_name.* TO username@host IDENTIFIED BY 'password';
 ```
 
@@ -92,13 +106,19 @@ Tableの一覧
 
 ```
 SHOW tables;
+SHOW tables FROM database_name;
 ```
 
-### Changes Database
-Databaseの変更
+#### Change Database
 
 ```
 USE database_name;
+```
+
+#### Show table structure
+
+```
+DESC table_name
 ```
 
 ## Limit offset
@@ -108,6 +128,13 @@ USE database_name;
 SELECT * FROM `members` LIMIT 1, 2;
 ```
 
+
+
+#### Show binary logs.
+
+```
+show binary logs;
+```
 
 ## Subquery
 Get the second value

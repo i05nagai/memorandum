@@ -37,6 +37,30 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
     * [AsyncFunction - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
     * [Async Functions](https://tc39.github.io/ecmascript-asyncawait/)
 
+## ES6
+
+- `bind`
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+    - used to access `this` in the method
+    - §const boundGetX = unboundGetX.bind(module);`
+
+```
+const module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// expected output: 42
+```
+
 ## Style guide
 * [GitHub - airbnb/javascript: JavaScript Style Guide](https://github.com/airbnb/javascript)
 

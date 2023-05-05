@@ -9,6 +9,44 @@ Source code
 git clone https://chromium.googlesource.com/chromium/src
 ```
 
+## Build on osx
+- https://github.com/chromium/chromium/blob/main/docs/README.md
+- https://github.com/chromium/chromium/blob/main/docs/mac_build_instructions.md
+
+#### gn
+- https://groups.google.com/a/chromium.org/g/chromium-dev/c/HJqd8JCebJA?pli=1
+gn needs to be installed.
+There is a prebuild binary. But it might not work.
+
+```
+git clone https://gn.googlesource.com/gn
+cd gn
+python build/gen.py # --allow-warning if you want to build with warnings.
+ninja -C out
+cp out/cp /path/to/
+```
+
+
+```
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+export PATH="$PATH:/path/to/depot_tools"
+
+caffeinate fetch chromium
+
+cd /path/to/chromium
+brew install ninja
+
+gclient sync
+
+cd chromium
+gn gen out/Default
+```
+
+```
+# build targets
+gn ls out/Default
+```
+
 ### CSS
 画像処理部分は`skia image library`を使っている。
 `src/cc/paint`にCSSのfilter部分のcodeがある。
@@ -242,3 +280,5 @@ $$
 * [Design Documents - The Chromium Projects](https://www.chromium.org/developers/design-documents)
 
 ## Reference
+
+Hi Ryan, thank you for the kind message! It was intresting opportunity to be involeved with your well-maintained pipelines. I'll reach out to you if I need some help. Thank you :)

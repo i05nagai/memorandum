@@ -6,8 +6,10 @@ title: Webpack
 
 ## Configuration
 * [Core Concepts](https://webpack.js.org/concepts/)
+* https://stackoverflow.com/questions/59407534/can-i-use-as-es-modules-for-webpack-config
 
-`webpack.conf.js`について。
+If you use `webpack.conf.mjs`, it interpret as ES module.
+If you use `webpack.conf.cjs`, it interpret as CommonJS module.
 
 
 Entry

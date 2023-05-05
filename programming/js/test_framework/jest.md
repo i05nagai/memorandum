@@ -32,6 +32,18 @@ npm install --save-dev @types/jest
 
 ## Configuration
 
+## React
+https://jestjs.io/docs/tutorial-react
+
+```
+npm install --save-dev react-test-renderer
+npm install --save-dev react-test-renderer @types/react-test-renderer
+```
+
+## with typescript
+
+
+
 
 ## Reference
 - https://jestjs.io/
