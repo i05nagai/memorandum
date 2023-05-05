@@ -125,6 +125,41 @@ $$
     .
 $$
 
+$$
+    G
+    :=
+    \left(
+        \begin{array}{ccccccc}
+            1 & 0 & 0 & 0 & 0 & 1 & 1
+            \\
+            0 & 1 & 0 & 0 & 1 & 1 & 0
+            \\
+            0 & 0 & 1 & 0 & 1 & 0 & 1
+            \\
+            0 & 0 & 0 & 1 & 1 & 1 & 1
+        \end{array}
+    \right)
+    .
+$$
+
+$$
+    H
+    :=
+    \left(
+        \begin{array}{ccccccc}
+            1 & 0 & 1 & 0 & 1 & 0 & 1 & 0
+            \\
+            0 & 1 & 1 & 0 & 0 & 1 & 1 & 0
+            \\ 
+            0 & 0 & 0 & 1 & 1 & 1 & 1 & 0
+            \\
+            1 & 1 & 1 & 1 & 1 & 1 & 1 & 1
+        \end{array}
+    \right)
+    .
+$$
 
 ## Reference
 - https://en.wikipedia.org/wiki/Hamming_code
+- http://www-infosec.ist.osaka-u.ac.jp/~yasunaga/appmath5/introduction.pdf
+- https://users.math.msu.edu/users/halljo/classes/codenotes/Hamming.pdf
