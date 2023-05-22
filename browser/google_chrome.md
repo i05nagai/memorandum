@@ -94,6 +94,13 @@ brew cask install google-chrome-canary
 * `chrome://flags/#overscroll-history-navigation `
     * overscrollでforward/back
 
+## devtools
+
+#### remote debugging
+- https://developer.chrome.com/blog/devtools-mobile/
+
+
+
 ## Tips
 
 ### google account require login each time in ubuntu
