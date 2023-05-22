@@ -104,9 +104,9 @@ Be sure to use SSH url for `git-clone`.
 * [Using SSH Agent Forwarding | GitHub Developer Guide](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
-1. Terminalを開く
-2. `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-3. 
+```
+ssh-keygen -t ed25519 -C "circleci@circleci.com"
+```
 
 ## Adding a new SSH key to your GitHub account - User Documentation
 * [Adding a new SSH key to your GitHub account - User Documentation](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
