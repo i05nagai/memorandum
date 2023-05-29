@@ -118,6 +118,8 @@ workflows:
     * attach persisted workspace
 * `add_ssh_keys:`
     * add ssh key to ssh-agent
+    * https://circleci.com/docs/configuration-reference/#add-ssh-keys
+        * ssh key needs to be registered in the project
 * `store_artifacts`
     * [Storing and Accessing Build Artifacts - CircleCI](https://circleci.com/docs/2.0/artifacts/)
     * `path`
