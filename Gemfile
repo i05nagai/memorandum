@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 # https://pages.github.com/versions/
 group :jekyll_plugins do
-  gem "jekyll", "3.9.1"
+  gem "jekyll", "4.3.2"
   gem "kramdown", "2.3.1"
   gem "kramdown-parser-gfm", "1.1.0"
   gem "webrick", "1.7.0"  # https://github.com/jekyll/jekyll/issues/8523
