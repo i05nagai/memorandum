@@ -63,6 +63,28 @@ i.e. $\Psi$ is injection.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Definition. Bipartite
+* $G := (V, E, \Psi)$,
+    - graph
+* $X, Y \subseteq V$,
+    - $X \cap Y \eq \emptyset$,
+
+$G$ is said to be a bipartite graph or bigraph if
+
+$$
+    \forall e \in E,
+    \
+    \exists u, v \in \Psi(e)
+    \text{ s.t. }
+    u \in X,
+    v \in Y
+    .
+$$
+
+We write $G[X, Y]$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 #### Definition. Subgraph
 * $G := (V(G), E(G))$,
     * graph
@@ -204,8 +226,6 @@ $$
     v_{i} \neq v_{j}
     .
 $$
-
-$v_{i} \neq v_{j}$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -450,6 +470,27 @@ $$
     \{u, v\} \in E(G)
     .
 $$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition. Complete bipartite graph
+- $G := (V(G), E(G))$,
+    - bipartite graph
+- $X, Y \subset V(G)$,
+    - partites
+
+$G$ is said to be a complete bipartite graph or complete bigraph if
+
+$$
+    \forall x \in X,
+    \
+    \exists y \in X
+    \text{ s.t. }
+    {x, y} \in E(G)
+    .
+$$
+
+When $\|X\| = m$ and $\|Y\| = n$, we denote $K_{m, n}$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
