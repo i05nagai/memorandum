@@ -65,4 +65,12 @@ cargo test <test-name>
 cargo test --test <test-name>
 ```
 
+## Configurtion
+https://doc.rust-lang.org/cargo/reference/config.html
+
+## Build scripts
+- `build.rs` is compiled and executed before building the package
+
+
 ## Reference
+- https://doc.rust-lang.org/cargo/
