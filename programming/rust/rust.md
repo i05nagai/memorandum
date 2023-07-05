@@ -50,6 +50,19 @@ mod tests {
 ```
 
 
+## closure
+
+- borrowing immutably
+
+```
+    let list = vec![1, 2, 3];
+    println!("Before defining closure: {:?}", list);
+    let only_borrows = || println!("From closure: {:?}", list);
+```
+
+- borrowing mutably
+- taking ownership
+
 ## string
 
 ```
