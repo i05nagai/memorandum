@@ -395,6 +395,15 @@ public:
 #### morris traversal
 
 ## Topological sort
+- https://www.geeksforgeeks.org/python-program-for-topological-sorting/
+
+
+DFS
+
+
+
+
+BFS
 
 
 ## Reference

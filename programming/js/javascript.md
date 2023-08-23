@@ -36,6 +36,12 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 * AsyncFunction
     * [AsyncFunction - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
     * [Async Functions](https://tc39.github.io/ecmascript-asyncawait/)
+* await
+    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+    * It can only be used inside an async function or at the top level of a module.
+* Promise
+    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
 
 ## ES6
 
