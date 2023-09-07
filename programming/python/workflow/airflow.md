@@ -130,6 +130,8 @@ airflow.DAG(schedule_interval=@hourly)
     * Bがdownstream
 * opertor
     * 個々のtaskはscriptの中では`Operator` instanceとして作成する
+* sensor
+    * Sensors are a special type of Operator that are designed to do exactly one thing - wait for something to occur.
 * task
     * operatorがinstance化されるとtaskと呼ばれる
 * task instance
@@ -137,6 +139,8 @@ airflow.DAG(schedule_interval=@hourly)
     * `running`, `failed`, `skipped`, `up for retry`などの状態を持つ
 * DAG
     * task(or operator or task instance)の集まりに実行順序関係をつけたもの
+* plugin
+    * https://github.com/airflow-plugins/
 * Queue
     * taskをqueueして、実行するにはexecutorをCeleryExecutorに変更する必要がある
     * CeleryExecutorを使うには、airflow用のdbをMySQLなどに変更する必要がある
@@ -167,7 +171,9 @@ airflow.DAG(schedule_interval=@hourly)
     * task間でのやり取りをするための、key, value store
     * `python operator`内で、実行結果などを保存でき、他の`python operator`から取り出すことができる。
 * hooks
-    * 
+    * https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/connections.html
+    * A Hook is a high-level interface to an external platform that lets you quickly and easily talk to them without having to write low-level code that hits their API or uses special libraries
+    * Hook to S3
 * Pools
     * 並列実行するtaskをpoolすることができる
     * poolにつまれたtaskを、何個のworkerが処理するかを指定できる
