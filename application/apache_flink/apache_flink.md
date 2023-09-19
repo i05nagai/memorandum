@@ -40,10 +40,32 @@ https://nightlies.apache.org/flink/flink-docs-release-1.16/docs/dev/datastream/o
 
 Assigners
 
+- Tumbling Windows
+     - fixed window size (time).
+     - no overlap
+- Sliding Windows
+     - fixed window size (time).
+     - each window has overlap
+     - e.g. window size 10 min + slide 5 min -> [0, 10], [5, 15] [10, 20]
+- Session Windows
+    - window size is not fixed
+    - no overlap
+    - session gap 5 min -> new window will create if there is no new event 5 min.
+- Global Windows
+    - 1 window
+    - event with the same key is assigned to the same window
+
 Window functions
+
+- Reduce Function
+- Aggregate Function
+- Process Window Function
+- Process Window Function with Incremental Aggregation
 
 Triggers
 
+- Fire and purge
+- Default trigger of window assigners
 - Each window functions has the default trigger: EventTimeTrigger which triggers the window functions after the watermark passes the end of window.
 
 Evictors

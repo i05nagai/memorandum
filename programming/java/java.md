@@ -217,7 +217,37 @@ If the receiver has loaded a class for the object that has a different serialVer
 
 The UID doesn't have to be unique across other classes.
 
+## package name convention
+https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
 
+- `com.<company-name>.<package-name>`
+- `org.<organization-name>.<package-name>`
+
+
+## Data structure
+
+- String
+    - 
+- Array
+    - static
+    - `int[] priceOfPen= new int[5];`
+- ArrayList
+    - dynamic
+    - internally array with resizing
+    - `ArrayList arrayList = new ArrayList<Integer>();`
+- LinkedList
+    - `java.util.LinkedList`
+    - `LinkedList<Integer> ll = new LinkedList<Interger>();`
+- Stack
+    - `java.util.Stack`
+    - `Stack<Integer> stack = new Stack<integer>();`
+- Queue/Deque
+    - `java.util.ArrayDeque`
+    - `ArrayDeque<Integer> queue = new ArrayDeque<integer>();`
+- HashMap
+    - `java.util.HashMap`
+    - `HashMap<String, Integer> hash = new HashMap<integer>();`
+    -  `hash.put("key", 1);`
 
 ## Reference
 * [Java 8: No more loops](http://www.deadcoderising.com/java-8-no-more-loops/)

@@ -4,14 +4,13 @@ title: Bayes
 
 # Symbols
 * $(\Omega, \mathcal{F}, P)$
-    * 確率空間
+    * probablity space
 * $p_{X}(\cdot)$
     * 確率変数$X$の確率密度関数
 * $p_{X \| Y}(\cdot \| y)$
     * 確率変数$Y=y$が与えられたときの$X$の条件付き確率密度関数
 
 # Bayes
-
 
 ## Preliminary
 以下では、全ての確率変数は密度関数を持つと仮定する。
@@ -44,7 +43,7 @@ $X_{1}, \ldots, X_{N}$が$\Theta$について条件付き独立であること�
 
 機械学習では、観測された$N$個のデータの組$(x_{1}, \ldots, x_{N})$（つまり、$X_{1}(\omega), \ldots, X_{N}(\omega)$）から、$X$の分布を何らかの意味で決定するparameter $\theta$を求めるのが基本的な問題となる。
 
-Bayes Theoremより、以下が成り立つ。
+By Bayes Theorem,
 
 $$
     p_{\Theta | X}
@@ -55,24 +54,35 @@ $$
         }
 $$
 
-このとき、
+holds where
 
 * $p_{\Theta \| X}$
-    * $\Theta$の事後分布
+    * $\Theta$ a posterior distribution
     * 観測値が与えられた時のパラメータのの条件付き確率
 * $p_{X \| \Theta}$
-    * $\Theta$の尤度(関数)
+    * $\Theta$ likelihood function
     * パラメータが与えられた時の条件付き確率
 * $p_{\Theta}$
-    * $\Theta$の事前分布
+    * $\Theta$ prior distribution
     * パラメータの周辺分布
 * $p_{X}$
-    * $X$の事前分布
+    * $X$ prior distribution
 * $p_{X, \Theta}$
     * 同時分布
     * 一般的な用語
 
-という。
+By definition,
+
+$$
+    p_{X \| \Theta}
+    :=
+    \frac{
+        p_{X, \Theta}(x, \theta)
+    }{
+        p_{\Theta}(\theta)
+    }
+$$
+
 また、$X_{1}, \ldots, X_{N}$が$X$のi.i.idより、各サンプルについて以下が成り立つ。
 
 $$

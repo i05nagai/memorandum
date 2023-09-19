@@ -166,6 +166,14 @@ Use lower-case suffixes, e.g. k, m, g, t, and p, for kibi-, mebi-, gibi-, tebi-,
     - With `spark.dynamicAllocation.enabled`, the initial set of executors will be at least this large.
 
 
+## State
+- https://polarpersonal.medium.com/state-storage-in-spark-structured-streaming-e5c8af7bf509
+
+HDFSBackedStateStoreProvider
+
+- https://github.com/apache/spark/blob/v2.4.4/sql/core/src/main/scala/org/apache/spark/sql/execution/streaming/state/HDFSBackedStateStoreProvider.scala
+- state backend for HDFS-compatible system such as S3.
+
 ## Reference
 * [Submitting Applications - Spark 1.6.0 Documentation](https://spark.apache.org/docs/1.6.0/submitting-applications.html)
 * [Sparkアプリケーションの実行方法（spark-submit） - TASK NOTES](http://www.task-notes.com/entry/20160103/1451810637)

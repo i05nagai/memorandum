@@ -144,6 +144,16 @@ function greet(person: { name: string; age: number }) {
 - for in
     - iterate properties of objects
 
+## imoprt type
+
+https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html
+
+## ".d.ts"
+
+declaration file
+
+- https://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html
+
 ## JSX
 [TypeScript: Documentation \- JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)
 

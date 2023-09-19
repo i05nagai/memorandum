@@ -9,6 +9,17 @@ title: Deep Learning
 * ReLu
 
 
+## Layer
+- Dense layer/Fully connected layer
+    - neurons connect to all neurons in the preceding layer
+- Convolutional layer
+    - 
+- Pooling layer
+    - reduce the size of inputs
+- Recurrent layer
+    - Outputs of neurons are resued as inputs of neurons
+    - There are many variants
+
 ## Fine tuning
 * [A Comprehensive guide to Fine-tuning Deep Learning Models in Keras (Part I) | Felix Yu](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part1.html)
 

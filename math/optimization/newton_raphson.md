@@ -4,6 +4,7 @@ title: Newton-Raphson Method
 
 
 ## Newton-Raphson method
+Newton method.
 
 ## Good
 

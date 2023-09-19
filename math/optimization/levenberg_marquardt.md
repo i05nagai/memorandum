@@ -3,6 +3,7 @@ title: Levenberg-Marquardt method
 ---
 
 # Levenberg-Marquardt method
+Efficient Netwon method to minimize the square error..
 
 ## Symbols
 * $x = (x_{1}, \ldots, x_{N})^{T} \in \mathbb{R}^{N}$

@@ -1,4 +1,8 @@
-#gvim
+---
+title: gvim
+---
+
+# gvim
 
 ##インストール(Win7)
 VimShellやVimfilerでunixコマンドを使用するので、cygwinかMSYSをインストールする必要がある。
