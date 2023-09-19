@@ -22,7 +22,7 @@ Incremental build is faster when you edit existing pages
 bundle exec jekyll s --incremental
 ```
 
-## Travleshoots
+## Troubleshooting
 
 #### Error when installing eventmachine
 If you see the error containing,
