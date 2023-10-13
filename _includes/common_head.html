@@ -33,3 +33,17 @@
 
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="zPgaj3-FMOh69hsxrbyRUiu4peGiHf9eWBYrYFKuvZw" />
+
+<!-- mermaid.js -->
+<script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', (function (e) {
+      mermaid.initialize({
+        startOnLoad:true,
+        theme: "default",
+      });
+      window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    })
+  );
+</script>
+
