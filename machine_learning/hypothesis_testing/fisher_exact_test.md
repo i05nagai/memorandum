@@ -8,9 +8,9 @@ Fisher exact model.
 We consider following 2x2 contingency table:
 
 * $N$,
-    * the number of total groups
+    * the total number of people
 * $K$,
-    * the number of people in YES condition
+    * the number of people under YES condition
 * $n$,
     * the number of people in treatment group
 
@@ -21,7 +21,8 @@ We consider following 2x2 contingency table:
 |-----------|-----------------|-----------------|---------|
 | total     | $n$             | $N − n$         | $N$     |
 
-In Fisher exact model, we interpret $k$ is a observed value of r.v. $X^{t}$ which follows hypergeometric distribution with parameters $N$, $K$, $n$.
+In Fisher exact model, we interpret $k$ is a observed value of r.v. $X^{t}$ which follows <a href="{{ site.baseurl }}/math/distribution/hypergeometric_distribution.html">hypergeometric distribution</a> with parameters $N$, $K$, $n$.
+
 The p.d.f. and c.d.f. of $X^{t}$ is given by
 
 $$
