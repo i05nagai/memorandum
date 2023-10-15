@@ -10,7 +10,7 @@ title: Hypergeometric Distribution
 * $$n \in \{1, \ldots, N\}$$,
 * $$X: \Omega \rightarrow \{0, \ldots, N\}$$,
 
-p.d.f of hypergeometric function is defined by
+p.d.f. of hypergeometric function is defined by
 
 $$
 \begin{eqnarray}
@@ -89,7 +89,7 @@ Indeed, there are ${K \choose k}$ patterns to become YES state,
 ${N - K \choose n - k }$ patterns to become NO state
 and $\{ N \choose n}$ total patterns to be in treatment group from $N$.
 
-## Property of p.d.f
+#### Proposition
 
 $$
     \forall k \in \{0, 1, \ldots, N\},
@@ -106,7 +106,9 @@ $$
     .
 $$
 
+#### proof
 
+<div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference
 * [Hypergeometric distribution \- Wikipedia](https://en.wikipedia.org/wiki/Hypergeometric_distribution)
