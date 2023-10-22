@@ -62,8 +62,55 @@ $$
 $$
 
 
-* $O(n \log n)$,
-    * to build
+* $O(n \log n)$ to build
+* $O(\log n)$ for update
+* $O(\log n)$ for query
+
+
+## Implementation
+Min query
+
+
+```python
+class SegmentTree:
+
+    def __init__(self, n: int):
+        self.n = self._first_power_of_two(n)
+        self.data = [math.inf] * 2 * self.n
+
+    def _first_power_of_two(self, n: int) -> int:
+        size = 1
+        while size < n:
+            size *= 2
+        return size
+
+    def initialize(self, array: List[int]):
+        self.n = self._first_power_of_two(len(array))
+        self.data = [math.inf] * 2 * self.n
+        for i in range(len(array)):
+            self.update(i, array[i])
+
+    def update(self, index: int, val: int) -> None:
+        index += self.n - 1
+        self.data[index] = val
+        while index > 0:
+            index = (index - 1) // 2
+            self.data[index] = min(self.data[index * 2 + 1], self.data[index * 2 + 2])
+
+    def _query(self, left: int, right: int, index: int, l: int, r: int) -> int:
+        if right <= l or r <= left:
+            return math.inf
+        if left <= l and r <= right:
+            return self.data[index]
+
+        vl = self._query(left, right, 2 * index + 1, l, (l + r) // 2)
+        vr = self._query(left, right, 2 * index + 2, (l + r) // 2, r)
+        return min(vl, vr)
+
+    def query(self, left, right):
+        # min value in [left, right)
+        return self._query(left, right, 0, 0, self.n)
+```
 
 ## Reference
 * [Segment tree - Wikipedia](https://en.wikipedia.org/wiki/Segment_tree)
