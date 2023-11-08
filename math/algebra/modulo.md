@@ -158,6 +158,40 @@ $$
 
 #### proof
 
+$$
+\begin{eqnarray}
+    (x + y)^{p}
+    & = &
+        \sum_{i = 0}^{p}
+            \left(
+                \begin{array}{c}
+                   p \\
+                   i
+                \end{array}
+            \right)
+            x^{i}y^{p - i}
+    \nonumber
+    \\
+    & = &
+        \sum_{i = 0}^{p}
+            \frac{
+                p \cdot (i + 1)! 
+            }{
+                (p - i)!
+            }
+            \left(
+                \begin{array}{c}
+                   p \\
+                   i
+                \end{array}
+            \right)
+            x^{i}y^{p - i}
+    \nonumber
+\end{eqnarray}
+$$
+
+If $i != 0, p$, the coeeficient is a multiple of $p$.
+
 <div class="QED" style="text-align: right">$\Box$</div>
 
 #### Proposition 8
@@ -169,6 +203,7 @@ $$
 $$
 
 #### proof
+It is easy to show by using Proposition 7 repeatedly.
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
