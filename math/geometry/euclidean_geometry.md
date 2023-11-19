@@ -246,7 +246,7 @@ $$
 #### 2-d vectors
 - $a, b, c \in \mathbb{R}^{2}$,
 
-$a$ and $b$ are perpendicular if
+(1) $a$ and $b$ are perpendicular if
 
 $$
     \langle a, b \rangle
@@ -258,7 +258,7 @@ $$
     0.
 $$
 
-$a$ and $b$ are parallel if
+(2) $a$ and $b$ are parallel if
 
 $$
     a \times b
@@ -269,7 +269,7 @@ $$
     .
 $$
 
-$c$ is on the line $b - a$ if 
+(3) $c$ is on the line $b - a$ if 
 
 $$
     (b - a) \times (c - a)
@@ -282,7 +282,7 @@ $$
     .
 $$
 
-$c$ is on a line which contains $a$ and $b$ if 
+(4) $c$ is on a line which contains $a$ and $b$ if 
 
 $$
     (b - a) \times (c - a)
@@ -295,7 +295,7 @@ $$
     .
 $$
 
-$c$ is on a line between $a$ and $b$ if 
+(5) $c$ is on a line between $a$ and $b$ if 
 
 $$
     (b - a) \times (c - a)
@@ -316,19 +316,56 @@ $$
     .
 $$
 
-The intersection of the line segment $b - a$ and $c$ is given by
+(6) The intersection of the line segment $b - a$ and $d - c$ is given by
 
 $$
+\begin{eqnarray}
     a
     +
     \frac{
-        (c_{2} - c{1})(c_{1} - p_{1})
+        (d - c)
+        \times
+        (c - a)
     }{
-        (
+        (d - c)
+        \times
+        (b - a)
     }
+    (b - a)
+    & = &
+        a
+        +
+        \frac{
+            (d_{1} - c_{1})
+            (c_{2} - a_{2})
+            -
+            (d_{2} - c_{2})
+            (c_{1} - a_{1})
+        }{
+            (d_{1} - c_{1})
+            (b_{2} - a_{2})
+            -
+            (d_{2} - c_{2})
+            (b_{1} - a_{1})
+        }
+        (b - a)
+    .
+\end{eqnarray}
 $$
 
-The distance between the line $b - a$ and a point $c$ is given by
+Note that the equation cannot detect the case where the both lines are in parallel.
+Indeed, if $(b - a)$ and $(d - c)$ are in parallel,
+
+$$
+    (b - a)
+    \times
+    (d - c)
+    =
+    0
+    .
+$$
+
+(7) The distance between the line $b - a$ and a point $c$ is given by
 
 $$
 \begin{eqnarray}
@@ -343,7 +380,7 @@ $$
 \end{eqnarray}
 $$
 
-The distance between the line segment $b - a$ and a point $c$ is given by
+(8) The distance between the line segment $b - a$ and a point $c$ is given by
 
 
 
