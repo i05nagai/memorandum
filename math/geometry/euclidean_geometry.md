@@ -244,7 +244,7 @@ $$
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### 2-d vectors
-- $a, b, c \in \mathbb{R}^{2}$,
+- $a, b, c, d \in \mathbb{R}^{2}$,
 
 (1) $a$ and $b$ are perpendicular if
 
@@ -269,19 +269,6 @@ $$
     .
 $$
 
-(3) $c$ is on the line $b - a$ if 
-
-$$
-    (b - a) \times (c - a)
-    =
-        (b_{1} - a_{1})(c_{2} - a_{2})
-        -
-        (b_{2} - a_{2})(c_{1} - a_{1})
-    =
-    0
-    .
-$$
-
 (4) $c$ is on a line which contains $a$ and $b$ if 
 
 $$
@@ -295,7 +282,7 @@ $$
     .
 $$
 
-(5) $c$ is on a line between $a$ and $b$ if 
+(5) $c$ is on a line segment $b - a$ if 
 
 $$
     (b - a) \times (c - a)
@@ -316,7 +303,56 @@ $$
     .
 $$
 
-(6) The intersection of the line segment $b - a$ and $d - c$ is given by
+(7) The distance between the line $b - a$ and a point $c$ is given by
+
+$$
+\begin{eqnarray}
+    \norm{c - a} |\sin(\theta)|
+    & = &
+        \frac{
+            (b - a) \times (c - a)
+        }{
+            \norm{x}
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+(8) The minimum distance between the line segment $b - a$ and a point $c$ is given by
+
+$$
+\begin{cases}
+    \frac{
+        (b - a) \times (c - a)
+    }{
+        \norm{x}
+    }
+    &
+        (\langle a - c, b - c \rangle \neq 0)
+    \\
+    c - a
+    &
+        (\text{otherwise})
+\end{cases}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+(9) Two line seguments $b -a$ and $d - c$ are interesected if
+
+$$
+\begin{eqnarray}
+    (b - a) \times (c - a) (b - a) \times (d - a)
+        & < & 0,
+    \nonumber
+        \\
+    (d - c) \times (a - c) (d - c) \times (b - c)
+        & < &0.
+    \nonumber
+\end{eqnarray}
+$$
+
+(10) The intersection of two line seguments $b - a$ and $d - c$ is given by
 
 $$
 \begin{eqnarray}
@@ -364,27 +400,6 @@ $$
     0
     .
 $$
-
-(7) The distance between the line $b - a$ and a point $c$ is given by
-
-$$
-\begin{eqnarray}
-    \norm{c - a} |\sin(\theta)|
-    & = &
-        \frac{
-            (b - a) \times (c - a)
-        }{
-            \norm{x}
-        }
-    \nonumber
-\end{eqnarray}
-$$
-
-(8) The distance between the line segment $b - a$ and a point $c$ is given by
-
-
-
-<div class="end-of-statement" style="text-align: right">■</div>
 
 
 ## Reference
