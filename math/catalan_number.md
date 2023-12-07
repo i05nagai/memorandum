@@ -19,6 +19,7 @@ $$
                 n
             \end{array}
         \right)
+    \nonumber
     \\
     & = &
         \frac{
@@ -26,6 +27,7 @@ $$
         }{
             n! (n + 1)!
         }
+    \nonumber
     \\
     & = &
         \prod_{k=2}^{n}
@@ -34,6 +36,7 @@ $$
             }{
                 k
             }
+    \nonumber
     \\
     & = &
         \left(
@@ -49,12 +52,68 @@ $$
                 n + 1
             \end{array}
         \right)
-    .
+    \nonumber
 \end{eqnarray}
 $$
 
-1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786,...
+The first 12 values of the catalan numbers are
 
+$$
+\begin{eqnarray}
+    C_{0} & = & 1
+    \nonumber
+    \\
+    C_{1} & = & 1
+    \nonumber
+    \\
+    C_{2} & = & 2
+    \nonumber
+    \\
+    C_{3} & = & 5
+    \nonumber
+    \\
+    C_{4} & = & 14
+    \nonumber
+    \\
+    C_{5} & = & 42
+    \nonumber
+    \\
+    C_{6} & = & 132
+    \nonumber
+    \\
+    C_{7} & = & 429
+    \nonumber
+    \\
+    C_{8} & = & 1430
+    \nonumber
+    \\
+    C_{9} & = & 4862
+    \nonumber
+    \\
+    C_{10} & = & 16796
+    \nonumber
+    \\
+    C_{11} & = & 58786
+    \nonumber
+    \\
+    & \vdots &
+    \nonumber
+\end{eqnarray}
+$$
+
+The recurrence releations are given by
+
+$$
+\begin{eqnarray}
+    C_{n}
+    & = &
+        \sum_{i = 0}^{n - 1}
+            C_{i}
+            C_{n - (i + 1)}
+    .
+    \nonumber
+\end{eqnarray}
+$$
 
 
 ## Reference
