@@ -88,7 +88,14 @@ $$
 
 if part.
 
+We prove the contrapositive: if there is no perfect matching, then there is a $W \subseteq X$ such that $\|W\| \ge \|N_{G}(W)\|$.
+Let $M$ be the maximum matching of $G$.
+There is a vertex $u \in X$ which is not coverted by $M$.
+Consider all alternative paths from $u$ and denote $W$, $Z$ as a set of vertexes of the alterntive paths in $X$ and $Z$ respectively.
 
+Every $v \in Z$ is covered by $M$.
+Let $p = (w_{1} = u, w_{2}, \ldots, w_{n})$ be an alternative path.
+If $w_{2}$ is not in $M$, 
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
