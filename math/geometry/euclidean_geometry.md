@@ -401,6 +401,137 @@ $$
     .
 $$
 
+#### Translation
+
+Let $f(x) := a x + b$. The line which shifts $f(x)$ $m$ in a direction parallel to $f(x)$.
+Let $g(x)$ be the line.
+$g(x)$ has the same slope so $g(x) = ax + c$.
+There is $n$ such that
+
+$$
+    ax + c
+    =
+    a(x - n) + b
+    .
+$$
+
+By rearranging the equation
+
+$$
+    n
+    =
+    \frac{
+        b - c
+    }{
+        a
+    }
+    .
+$$
+
+The similarilty of right triangles implies
+
+$$
+    m:(b - c) = l:n
+$$
+
+That is
+
+$$
+    l
+    =
+    \frac{
+        m n
+    }{
+        (b - c)
+    }
+    =
+    \frac{
+        m
+    }{
+        a
+    }
+    .
+$$
+
+By Pythagorean theorem,
+
+$$
+\begin{eqnarray}
+    & &
+        n^{2}
+        =
+        l^{2}
+        +
+        m^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        n^{2}
+        =
+        \left(
+            \frac{ m }{ a }
+        \right)^{2}
+        +
+        m^{2}
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        n^{2}
+        =
+        \frac{
+            m^{2}
+            +
+            a^{2}m^{2}
+        }{
+            a^{2}
+        }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        n
+        & = &
+        \frac{
+            m\sqrt{1 + a^{2}}
+        }{
+            a
+        }
+    \nonumber
+\end{eqnarray}
+$$
+
+Hence
+
+$$
+\begin{eqnarray}
+    & &
+        \frac{(b - c)}{a}
+        =
+        \frac{
+            m\sqrt{1 + a^{2}}
+        }{
+            a
+        }
+    \nonumber
+    \\
+    & \Leftrightarrow &
+        c
+        =
+        b - m\sqrt{1 + a^{2}}
+    \nonumber
+\end{eqnarray}
+$$
+
+then
+
+$$
+    g(x)
+    =
+    ax
+    +
+    b - m\sqrt{1 + a^{2}}
+    .
+$$
+
 
 ## Reference
 - https://en.wikipedia.org/wiki/Outer_product
