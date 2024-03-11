@@ -7,7 +7,7 @@ title: Catalan Number
 $$
 \begin{eqnarray}
     C_{n}
-    & :=l &
+    & := &
         \frac{
             1
         }{
