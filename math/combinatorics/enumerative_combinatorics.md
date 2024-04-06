@@ -63,6 +63,15 @@ $$
             \end{array}
         \right)
     \nonumber
+    \\
+    & = &
+        \left(
+            \begin{array}{c}
+                n + k  - 1 \\
+                n
+            \end{array}
+        \right)
+    \nonumber
 \end{eqnarray}
     .
 $$
