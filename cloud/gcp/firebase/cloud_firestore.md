@@ -33,6 +33,31 @@ Data types
 https://firebase.google.com/docs/firestore/manage-data/data-types?authuser=0
 
 
+## API
+https://firebase.google.com/docs/reference/js/v8
+
+The namespace style is v8 (old) API.
+
+```
+// old API should not be used.
+import firebase from "firebase/compat/app";
+export const app = firebase.initializeApp(firebaseConfig);
+export const db = firebase.firestore();
+db.collections('cllct');
+```
+
+Moduler API is new.
+https://firebase.google.com/docs/reference/js
+
+```
+import * as firebase from "firebase/app";
+import * as firestore from "firebase/firestore";
+
+export const app = firebase.initializeApp(firebaseConfig);
+export const db = firestore.getFirestore(app);
+firestore.collections(db, 'cllct')
+```
+
 
 
 ## Reference
