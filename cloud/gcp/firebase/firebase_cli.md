@@ -27,6 +27,20 @@ firebase init [feature]
 - remoteconfig
 - storage
 
+#### hosting
+
+
+```
+firebase hosting:channel:deploy CHANNEL_ID
+```
+
+#### deploy
+
+```
+firebase deploy --only hosting
+firebase deploy --only hosting -m "Deploying the best new feature ever."
+```
+
 #### login/logout
 
 log the CLI into Firebase
@@ -119,6 +133,14 @@ start a local server for your static assets
 ```
 serve [options]
 ```
+- `-p, --port <port>`
+    - the port on which to listen (default: 5000) (default: 5000)
+- `-o, --host <host>`
+    - the host on which to listen (default: localhost) (default: "localhost")
+- `--only <targets>`
+    - only serve specified targets (valid targets are: hosting, functions)
+- `--except <targets>`
+    - serve all except specified targets (valid targets are: hosting, functions)
 
 #### setup
 
@@ -169,6 +191,10 @@ set an active Firebase project for your working directory
 ```
 use [options] [alias_or_project_id]
 ```
+
+
+## configuration
+https://firebase.google.com/docs/cli?hl=en#the_firebasejson_file
 
 
 ## Reference
