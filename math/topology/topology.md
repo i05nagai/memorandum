@@ -113,21 +113,19 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Definition. Compact
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+
+For every open covers $$\{A_{i}\}$$ of $X$ has a finite subcover.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 #### Definition Weak Hausdorff spaces
 - $(X, \mathcal{O}_{X})$
     - topological spaces
 
-$(X, \mathcal{O}_{X})$ is said to be a weak Hausdorff spaces if
-
-$$
-    p, q \in X,
-    \quad
-    \exists U, V \in \mathcal{O}_{X}
-    \text{ s.t. }
-    U \cap V,
-    \
-    p \in U, q \in V.
-$$
+$(X, \mathcal{O}_{X})$ is said to be a weak Hausdorff spaces if for any compact Hausdorff space $K$, every continuous map $f: K \rightarrow X$, $f(K)$ is closed.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
