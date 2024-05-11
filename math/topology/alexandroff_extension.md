@@ -331,12 +331,62 @@ Thus, $$\mathrm{cl}_{X^{*}}(U)$$ is a compact neighbor of $x$ in $X$.
 - $(\mathbb{Q}, \mathcal{O})$,
     - topological space with subspace topolgy of $\mathbb{R}$.
 
+$$
+\begin{eqnarray}
+    \mathbb{Q}^{*}
+    & := &
+        \mathbb{Q} \cup \{\infty\}
+    \nonumber
+    \\
+    \mathcal{O}^{*}
+    & := &
+        \{
+            O \subseteq \mathbb{Q}^{*}
+            \mid
+            \mathbb{Q}^{*} \setminus O: \text{ closed and compact in } \mathbb{Q}
+        \}
+        \cup
+        \mathcal{O}
+    .
+    \nonumber
+\end{eqnarray}
+$$
+
+(1) non-Hausdorff and compact
+
+(2) KC
+
+(3) weak Hausdorff
+
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Example
 - $(\mathbb{Q}, \mathcal{O})$,
     - topological space with subspace topolgy of $\mathbb{R}$.
+- $(\mathbb{Q}^{*}, \mathcal{O}^{*})$,
+    - Alexandroff extension of $\mathbb{Q}$.
+
+$$
+    X := \mathbb{Q}^{*} \times \mathbb{Q}^{*}
+$$
+
+with product topology.
+
+(1) non-Hausdorff and compact
+
+(2) not KC
+
+$$ \Delta: \mathbb{Q}^{*} \rightarrow X$$ $\Detal(x) := (x, x)$.
+$$D := \Delta(\mathbb{Q}^{*})$$ is compact but not closed in $X$.
+$\Delta$ and $\Delta^{-1}$ is continuous.
+$\mathbb{Q}^{*}$ is compact in $X$ so $D$ is compact.
+
+$D$ is not closed in $X$.
+
+(3) weak Hausdorff
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 ## Reference 
+- https://math.stackexchange.com/questions/632320/weak-hausdorff-space-not-kc
+- https://math.stackexchange.com/questions/465521/if-a-is-compact-and-b-is-lindel%c3%b6f-space-will-be-a-cup-b-lindel%c3%b6f/466564#466564
