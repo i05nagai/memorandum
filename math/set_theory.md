@@ -6,7 +6,38 @@ title: Set theory
 
 ## Symbol
 
-## Definition
+
+#### Proposition
+- $S$,
+- $A \subseteq S$,
+- $A_{i} \subseteq S$,
+
+(1)
+
+$$
+    \cap_{i} (A_{i})^{c}
+    =
+    (\cap_{i} A_{i})^{c}
+    .
+$$
+
+(2)
+
+$$
+    (A \cup B) \setminus C
+    =
+    (A \setminus C) \cup (B \setminus C)
+    .
+$$
+
+#### proof
+(1)
+
+Since $\cap_{i} (A_{i})^{c} = \cap_{i} (S \setminus A_{i})$, the LHS means that $x \in A_{i}$ for all $i$.
+
+On the other hand, since ($\cap_{i} A_{i})^{c} = S \setminus \cap_{i} (A_{i})^{c}$, $x \in \cap_{i} A_{i}$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 #### Definition Limit
 集合の上極限$ \limsup_{n \rightarrow \infty} A_{n}$ と下極限$ \liminf_{n \rightarrow \infty} A_{n}$を以下で定義する。
@@ -303,7 +334,7 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-#### Theorem
+#### Proposition
 
 $$
 \begin{eqnarray}
