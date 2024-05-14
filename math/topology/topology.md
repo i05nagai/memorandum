@@ -4,6 +4,30 @@ title: Topology
 
 ## Topology
 
+
+#### Example
+- $(X, \mathcal{O}_{X})$,
+    - top. sp
+- $A, B \subseteq X$
+
+The intersection of an open set and a closed set can be open/closed or neighter.
+
+$B \subseteq A$ and $A$ is open and $B$ is closed.
+$B \cap A = B$ is closed.
+
+$B \subseteq A$ and $A$ is closed and $B$ is open.
+$B \cap A = B$ is open.
+
+In $\mathbb{R}$ with the usual topology, $A := (a, a + 2)$ is open and $ B := [a + 1, a + 2]$ is closed.
+
+$$
+    A \cap B = [a + 1, a + 2)
+$$
+
+is neither oepn nor clsod.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 #### Topology in metric space
 $(S, d)$を距離空間とする。
 $a \in S$, $\epsilon > 0$について、球体$B(a; \epsilon)$を以下で定義する。
@@ -95,6 +119,201 @@ $B$は任意だったので、$$\{ \pi(A_{n}) \}_{n \in \mathbb{N}} $$がcountab
 
 <div class="QED" style="text-align: right">$\Box$</div>
 
+#### Definition Adherent point
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S \subseteq X$,
+- $x \in X$,
+
+$x$ is an adherent point, closure point, point of closure, contact point  of $S$ if
+
+$$
+    \forall U \in \mathcal{U}(x),
+    \quad
+    S \cap U \neq \emptyset
+    .
+$$
+
+We denote all adherent points of $S$ $\mathrm{Cl}(S)$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Definition Limit point/Accumulation Point
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S \subseteq X$,
+- $x \in X$,
+
+$x$ is a limit point or cluter point or accumulation point of $S$ if
+
+$$
+    \forall U \in \mathcal{U}(x),
+    \quad
+    (S \setminus \{x\}) \cap U \neq \emptyset
+    .
+$$
+
+We denote the set of all limit points of $S$ as $L(S)$.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Propositoin
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S \subseteq X$,
+- $x \in X$,
+
+(1) $x$ is a limit point of $S$ if and only if $x$ \in $\mathrm{cl}(S \setminus \{x\})$.
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Definition Boundary
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S \subseteq X$,
+
+The boundary of $S$ is
+
+$$
+    \partial S
+    :=
+    \{
+        x \in X
+        \mid
+        \forall U \in \mathcal{U}(x),
+        \
+        U \cap S \neq \emptyset,
+        \
+        O \cap (X \setminus) \neq \emptyset
+    \}
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Prposition
+The following are all equivalent.
+
+(1) $A = S \cup L(S)$.
+
+(2) $A = \mathrm{Cl}(S)$
+
+(3)
+
+$$
+    \mathcal{A}
+    :=
+    \{
+        F \subseteq X
+        \mid
+        F^{c} \in \mathcal{O}_{X},
+        \
+        S \subseteq F
+    \},
+    A = \bigcap_{F \in \mathcal{A}}F
+    .
+$$
+
+(4) $A$ is the smallest closed set containg $S$.
+
+(5) $A = S \cup \partial S$
+
+(6) 
+
+#### proof
+(3) $\Leftrightarrow$ (4)
+
+This is done by the standard procedure.
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Definition Closure
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S \subseteq X$,
+
+The closure $\mathrm{cl}(S)$ of $S$ is defined as
+
+$$
+    \mathrm{cl}(S)
+    :=
+    \mathrm{Cl}(S)
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Proposition
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+- $S, T, F \subseteq X$,
+
+(1) $S \subseteq \mathrm{cl}(S)$
+
+(2) $S$ is closed if and only if $S = \mathrm{cl}(S)$.
+
+(3) If $S \subseteq T$, $\mathrm{cl}(S) \subseteq \mathrm{cl}(T)$.
+
+(4) If $F$ is closed, $\mathrm{cl}(S) \subseteq F$ if and only if $S \subseteq F$.
+
+(5) If $S, T$ are open and $S \cap T = \emptyset$, $\mathrm{cl}(S) \cap T = \emptyset$.
+
+#### proof
+
+
+(5)
+
+Assume that $\mathrm{cl}(S) \cap T \neq \emptyset$.
+Let $x \in \mathrm{cl}(S) \cap T$.
+There is open map $U \in \mathcal{U}(x)$ such that $U \cap S \neq \emptyset$.
+Particularly, $x \in U \cap S$.
+On the other hand, $x \in T$.
+Thus $x \in U \cap T$.
+
+$$
+    \emptyset
+    \neq
+    (U \cap T)
+    \cap
+    (U \cap S)
+    =
+    U \cap T \cap S
+    =
+    \emptyset
+    .
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+#### Definition $\mathrm{T}_{1}$
+- $(X, \mathcal{O}_{X})$
+    - topological spaces
+
+$(X, \mathcal{O}_{X})$ is said to be a hausdorff spaces if
+
+$$
+    x, y \in X, x \neq y,
+    \quad
+    \exists U \in \mathcal{N}(x),
+    \exists V \in \mathcal{N}(y)
+    \text{ s.t. }
+    U \cap V = \emptyset.
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Proposition
+- $(X, \mathcal{O}_{X})$
+    - $T_{1}$ spaces
+
+(1) $\{x\}$ is closed.
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 #### Definition Hausdorff spaces
 - $(X, \mathcal{O}_{X})$
     - topological spaces
@@ -113,11 +332,24 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Proposition
+- $(X, \mathcal{O}_{X})$
+    - Hausdorff space
+
+(1) $X$ is $T_{1}$ space.
+
+(2) If $C \subseteq X$ compact, $C$ is closed.
+
+#### proof
+<div class="QED" style="text-align: right">$\Box$</div>
+
 #### Definition. Compact
 - $(X, \mathcal{O}_{X})$
     - topological spaces
 
 For every open covers $$\{A_{i}\}$$ of $X$ has a finite subcover.
+
+$X$ is said to be a locally compact if for all $x \in X$, there is a compact neighbor $x \in U \in \mathcal{O}_{X}$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
@@ -128,6 +360,7 @@ For every open covers $$\{A_{i}\}$$ of $X$ has a finite subcover.
 $(X, \mathcal{O}_{X})$ is said to be a weak Hausdorff spaces if for any compact Hausdorff space $K$, every continuous map $f: K \rightarrow X$, $f(K)$ is closed.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
 
 #### Lemma (equivalent condition to Hausdorff spaces)
 $(X, \mathcal{O}_{X})$をtopological spacesとする。
@@ -305,3 +538,48 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 
+#### Definition continuous
+- $(X, \mathcal{O}_{X})$,
+    - top space
+- $(Y, \mathcal{O}_{Y})$,
+    - top space
+- $f: X \rightarrow Y$,
+
+$f$ is said to be continuous if
+
+$$
+    \forall O \mathcal{O}_{Y},
+    \
+    f^{-1}(O) \in \mathcal{O}_{X}
+    .
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### Propositoin
+- $(X, \mathcal{O}_{X})$,
+    - top space
+- $(Y, \mathcal{O}_{Y})$,
+    - top space
+- $f: X \rightarrow Y$,
+    - continuous
+- $O_{X} \in \mathcal{O}_{X}$,
+- $O_{Y} \in \mathcal{O}_{Y}$,
+- $C$ compact in $X$
+
+(1) $f(O_{X})$ is not necessarily open
+
+(2) $f(O_{X}^{c})$ is not necessarily open
+
+(3) $f(X)$ is compact
+
+(4)
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
+## Reference
+- https://math.stackexchange.com/questions/3364/topological-properties-preserved-by-continuous-maps
+- https://mathoverflow.net/questions/88420/example-of-a-weak-hausdorff-space-that-is-not-hausdorff
+- https://math.stackexchange.com/questions/2292207/topological-space-that-is-compact-and-t-1-but-not-hausdorff-i-e-normal-but-n
