@@ -61,4 +61,36 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
+#### Proposition
+- $a_{1}, \ldots, a_{k} \in \mathbb{Z}$,
+
+(1)
+
+
+
+(2)
+
+$$
+    (a_{1}, a_{2}) = d_{2},
+    \
+    (d_{2}, a_{3}) = d_{3},
+    \ldots
+    (d_{k-1}, a_{k}) = d_{k}
+    .
+$$
+
+$d_{k}$ is the greatest common divisor of $a_{1}, \ldots, a_{k}$.
+
+
+(3) If $(a, b) = 1$ and $a \mid bc$,
+
+$$
+    a \mid c.
+$$
+
+#### proof
+
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 ## Reference
