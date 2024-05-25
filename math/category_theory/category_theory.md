@@ -56,7 +56,9 @@ $$
     .
 $$
 
-Covariant hom functor $C(a, -): C \rightarrow \mathrm{Set}$ consists of
+#### $C(a, -)$
+
+Covariant hom functor $C(a, -): C \rightarrow \mathrm{Set}$ consists of object funciton
 
 $$
 \begin{eqnarray}
@@ -66,8 +68,14 @@ $$
     & := &
         C(a, b)
     \nonumber
-    \\
-    f: x \rightarrow y \in \mathrm{Set},
+\end{eqnarray}
+$$
+
+and arrow funciton
+
+$$
+\begin{eqnarray}
+    f: x \rightarrow y \in C,
     \quad
     C(a, -)(f): C(a, x) \rightarrow C(a, y),
     \quad
@@ -79,7 +87,9 @@ $$
 \end{eqnarray}
 $$
 
-Contravariant hom functor $C(-, b): C \rightarrow \mathrm{Set}$ consists of
+#### $C(-, b)$
+
+Contravariant hom functor $C(-, b): C \rightarrow \mathrm{Set}$ consists of object function
 
 $$
 \begin{eqnarray}
@@ -89,8 +99,14 @@ $$
     & := &
         C(a, b)
     \nonumber
-    \\
-    f: x \rightarrow y \in \mathrm{Set},
+\end{eqnarray}
+$$
+
+and arrow function
+
+$$
+\begin{eqnarray}
+    f: x \rightarrow y \in C,
     \quad
     C(-, b)(f): C(x, b) \rightarrow C(y, b),
     \quad
@@ -102,7 +118,9 @@ $$
 \end{eqnarray}
 $$
 
-Covariant hom functor $C^{\mathrm{op}}(a, -): C^{\mathrm{op}} \rightarrow \mathrm{Set}$ consists of
+#### $C^{\mathrm{op}}(a, -)$
+
+Covariant hom functor $C^{\mathrm{op}}(a, -): C^{\mathrm{op}} \rightarrow \mathrm{Set}$ consists of arrow function
 
 $$
 \begin{eqnarray}
@@ -112,8 +130,14 @@ $$
     & := &
         C^{\mathrm{op}}(a, b)
     \nonumber
-    \\
-    f: x \rightarrow y \in \mathrm{Set},
+\end{eqnarray}
+$$
+
+and arrow function
+
+$$
+\begin{eqnarray}
+    f: x \rightarrow y \in C^{\mathrm{op}},
     \quad
     C^{\mathrm{op}}(a, -)(f): C^{\mathrm{op}}(a, x) \rightarrow C^{\mathrm{op}}(a, y),
     \quad
@@ -125,8 +149,136 @@ $$
 \end{eqnarray}
 $$
 
+#### $C(F-, b)$
+
+$F: D \rightarrow C$, Contravariant hom functor $C(F-, b): D \rightarrow \mathrm{Set}$ consists of object function
+
+$$
+\begin{eqnarray}
+    C(F-, b): D \rightarrow \mathrm{Set},
+    \quad
+    C(F-, b)(d)
+    & := &
+        C(Fd, b)
+    \nonumber
+\end{eqnarray}
+$$
+
+and arrow function
+
+$$
+\begin{eqnarray}
+    f: x \rightarrow y \in D,
+    \quad
+    C(F-, b)(f): C(Fx, b) \rightarrow C(Fy, b),
+    \quad
+    C(F-, b)(f)(g)
+    & := &
+        g \circ Ff
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(a, G-)$
+
+$G: D \rightarrow C$, Contravariant hom functor $C(a, G-): D \rightarrow \mathrm{Set}$ consists of object function
+
+$$
+\begin{eqnarray}
+    C(a, G-): D \rightarrow \mathrm{Set},
+    \quad
+    C(a, G-)(d)
+    & := &
+        C(a, Gd)
+    \nonumber
+\end{eqnarray}
+$$
+
+and arrow function
+
+$$
+\begin{eqnarray}
+    f: x \rightarrow y \in D,
+    \quad
+    C(a, -)(f): C(a, Gx) \rightarrow C(a, Gy),
+    \quad
+    C(a, G-)(f)(g)
+    & := &
+        Gf \circ g
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(-, -)$
+hom bi-functor $C(-, -): C \times C \rightarrow \mathrm{Set}$ consists of object function
+
+$$
+\begin{eqnarray}
+    C(-, -): C \times C \rightarrow \mathrm{Set},
+    \quad
+    C(-, -)(a, b)
+    & := &
+        C(a, b)
+    \nonumber
+\end{eqnarray}
+$$
+
+and arrow function
+
+$$
+\begin{eqnarray}
+    f: y \rightarrow x \in C,
+    \quad
+    f^{\prime}: x^{\prime} \rightarrow y^{\prime} \in C,
+    \quad
+    C(-, -)(f, f^{\prime}): C(x, x^{\prime}) \rightarrow C(y, y^{\prime}),
+    \quad
+    g: x \rightarrow x^{\prime},
+    \quad
+    C(-, -)(f, f^{\prime})(g)
+    & := &
+        f^{\prime} \circ g \circ f
+    \nonumber
+    .
+\end{eqnarray}
+$$
+
+For all $a \in C$,
+
+$$
+\begin{eqnarray}
+    f^{\prime}: x^{\prime} \rightarrow y^{\prime} \in C,
+    \quad
+    g: a \rightarrow x^{\prime}
+    \quad
+    C(-, -)(1_{a}, f^{\prime})(g)
+    & = &
+        C(a, -)(f^{\prime})(g)
+    \nonumber
+    \\
+    f: y \rightarrow x \in C,
+    \quad
+    g: x \rightarrow a
+    \quad
+    C(-, -)(f, 1_{a})(g)
+    & = &
+        C(-, a)(f)(g)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(a, -)$ and $C(a^{\prime}, -)$
+
 Let $h: a \rightarrow a^{\prime}$.
-There is a natural transformation $\tau: C(a, -) \Rightarrow C(a^{\prime}, -)$, $\tau_{x} := C(-, x)(h)$,
+There is a natural transformation $\tau: C(a, -) \Rightarrow C(a^{\prime}, -)$, $\tau_{x} := C(-, x)(k)$,
 
 $$
 \begin{CD}
@@ -146,6 +298,193 @@ $$
 \end{CD}
 $$
 
+The equality can be shown by
+
+$$
+\begin{eqnarray}
+    g \in C(a, x),
+    \quad
+    (C(a^{\prime}, f) \circ \tau_{x})(g)
+    & = &
+       C(a^{\prime}, f)(\tau_{x}(g))
+    \nonumber
+    \\
+    & = &
+       f \circ \tau_{x}(g)
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    g \in C(a, x),
+    \quad
+    (\tau_{y} \circ C(a, f))(g)
+    & = &
+       \tau_{y}(f \circ g)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(-, b)$ and $C(-, b^{\prime})$
+
+Let $k: b \rightarrow b^{\prime}$.
+There is a natural transformation $\tau: C(-, b) \Rightarrow C(-, b^{\prime})$, $\tau_{x} := C(x, -)(h)$,
+
+$$
+\begin{CD}
+    x \in C
+    \\
+    @V{f}VV
+    \\
+    y \in C
+\end{CD}
+\quad
+\begin{CD}
+    C(-, b)(x) @>{\tau_{x}}>> C(-, b^{\prime})(x)
+    \\
+    @V{C(-, b)(f)}VV    @V{C(-, b^{\prime})(f)}VV
+    \\
+    C(-, b)(y) @>{\tau_{y}}>> C(-, b^{\prime})(y)
+\end{CD}
+$$
+
+The equality can be shown by
+
+$$
+\begin{eqnarray}
+    g \in C(x, a),
+    \quad
+    (C(f, b^{\prime}) \circ \tau_{x})(g)
+    & = &
+       C(f, b^{\prime})(\tau_{x}(g))
+    \nonumber
+    \\
+    & = &
+       \tau_{x}(g) \circ f
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    g \in C(x, b),
+    \quad
+    (\tau_{y} \circ C(f, b))(g)
+    & = &
+       \tau_{y}(g \circ f)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(a, -)$ and $D(a^{\prime}, G-)$
+
+$G: C \rightarrow D$.
+Let $\tau: C(a, -) \Rightarrow D(a^{\prime}, G-)$ be a natural transformation.
+
+$$
+\begin{CD}
+    x \in C
+    \\
+    @V{f}VV
+    \\
+    y \in C
+\end{CD}
+\quad
+\begin{CD}
+    C(a, -)(x) @>{\tau_{x}}>> D(a^{\prime}, G-)(x)
+    \\
+    @V{C(a, -)(f)}VV    @V{D(a^{\prime}, -)(f)}VV
+    \\
+    C(a, -)(y) @>{\tau_{y}}>> D(a^{\prime}, G-)(y)
+\end{CD}
+$$
+
+The equality can be shown by
+
+$$
+\begin{eqnarray}
+    g \in C(a, x),
+    \quad
+    (D(a^{\prime}, Gf) \circ \tau_{x})(g)
+    & = &
+       D(a^{\prime}, Gf)(\tau_{x}(g))
+    \nonumber
+    \\
+    & = &
+       Gf \circ \tau_{x}(g)
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    g \in C(a, x),
+    \quad
+    (\tau_{y} \circ C(a, f))(g)
+    & = &
+       \tau_{y}(f \circ g)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
+#### $C(F-, b)$ and $D(-, b^{\prime})$
+$F: D \rightarrow C$.
+Let $\tau: C(F-, b) \Rightarrow D(-, b^{\prime})$ be a natural transformation.
+
+$$
+\begin{CD}
+    x \in D
+    \\
+    @V{f}VV
+    \\
+    y \in D
+\end{CD}
+\quad
+\begin{CD}
+    C(F-, b)(x) @>{\tau_{x}}>> D(-, b^{\prime})(x)
+    \\
+    @V{C(F-, b)(f)}VV    @V{D(-, b^{\prime})(f)}VV
+    \\
+    C(F-, b)(y) @>{\tau_{y}}>> D(-, b^{\prime})(y)
+\end{CD}
+$$
+
+The equality can be shown by
+
+$$
+\begin{eqnarray}
+    g \in C(Fx, a),
+    \quad
+    (D(f, b^{\prime}) \circ \tau_{x})(g)
+    & = &
+       D(f, b^{\prime})(\tau_{x}(g))
+    \nonumber
+    \\
+    & = &
+       \tau_{x}(g) \circ f
+    \nonumber
+\end{eqnarray}
+$$
+
+$$
+\begin{eqnarray}
+    g \in C(Fx, b),
+    \quad
+    (\tau_{y} \circ C(Ff, b))(g)
+    & = &
+       \tau_{y}(g \circ Ff)
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="end-of-statement" style="text-align: right">■</div>
 
 Is there a natural transformation $\tau: C(a, -) \Rightarrow C(-, b)$ such that the following diagram commutes?
 
