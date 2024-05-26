@@ -106,7 +106,7 @@ and arrow function
 
 $$
 \begin{eqnarray}
-    f: x \rightarrow y \in C,
+    f: y \rightarrow x \in C,
     \quad
     C(-, b)(f): C(x, b) \rightarrow C(y, b),
     \quad
@@ -277,8 +277,8 @@ $$
 
 #### $C(a, -)$ and $C(a^{\prime}, -)$
 
-Let $h: a \rightarrow a^{\prime}$.
-There is a natural transformation $\tau: C(a, -) \Rightarrow C(a^{\prime}, -)$, $\tau_{x} := C(-, x)(k)$,
+Let $h: a^{\prime} \rightarrow a$.
+There is a natural transformation $\tau: C(a, -) \Rightarrow C(a^{\prime}, -)$, $\tau_{x} := C(-, x)(h)$,
 
 $$
 \begin{CD}
@@ -331,7 +331,7 @@ $$
 #### $C(-, b)$ and $C(-, b^{\prime})$
 
 Let $k: b \rightarrow b^{\prime}$.
-There is a natural transformation $\tau: C(-, b) \Rightarrow C(-, b^{\prime})$, $\tau_{x} := C(x, -)(h)$,
+There is a natural transformation $\tau: C(-, b) \Rightarrow C(-, b^{\prime})$, $\tau_{x} := C(x, -)(k)$,
 
 $$
 \begin{CD}
@@ -432,6 +432,43 @@ $$
 \end{eqnarray}
 $$
 
+$\tau$ is a natural isomorphism if and only if there is a universal arrow $u: a^{\prime} \rightarrow Ga$ from $G$ to $a$.
+That is, the following are equivalent.
+
+$$
+\begin{CD}
+    x \in C
+    \\
+    @V{1_{x}}VV
+    \\
+    x \in C
+\end{CD}
+\quad
+\begin{CD}
+    C(a, -)(x) @>{\tau_{x}}>> D(a^{\prime}, G-)(x)
+\end{CD}
+$$
+
+and
+
+$$
+\begin{CD}
+    a \in C
+    \\
+    @V{f}VV
+    \\
+    x \in C
+\end{CD}
+\quad
+\begin{CD}
+    C(a, -)(a) @>{\tau_{a}}>> D(a^{\prime}, G-)(a)
+    \\
+    @V{C(a, -)(f)}VV    @V{D(a^{\prime}, -)(f)}VV
+    \\
+    C(a, -)(x) @>{\tau_{x}}>> D(a^{\prime}, G-)(x)
+\end{CD}
+$$
+
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### $C(F-, b)$ and $D(-, b^{\prime})$
@@ -486,7 +523,10 @@ $$
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
-Is there a natural transformation $\tau: C(a, -) \Rightarrow C(-, b)$ such that the following diagram commutes?
+#### $C(a, -) \circ C(-, b)$
+
+Let $h: x \rightarrow a$, $k: x \rightarrow b$.
+There is a natural transformation $\tau: C(a, -) \Rightarrow C(-, b)$ defined by $\tau_{x} := C(x, k) \circ C(h, x) = C(h, k)$.
 
 $$
 \begin{CD}
