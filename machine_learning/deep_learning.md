@@ -38,6 +38,18 @@ ImageNetの場合は、最終層は1000 categoryである。
         * 最初の幾つかのlayerは、curveやedgeなどの汎用的なものを学習しており、どのデータでも似たようなparameterになることが経験的に知られている
 
 
+## Local Minima  and Global minima
+
+
+- On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima
+    - Small Batch leads to better local minima
+- Information-Theoretic Local Minima Characterization and Regularization
+
+
+## Drop-out
+Type of layer. Use r.v. to select neurons to be used in training.
+In prediction phase, all neurons are used however the weights should be normalized to avoid high output values.
+
 ## Reference
 * [CNN による画像分類で使われる前処理・テスト時処理まとめ - (iwi) 備忘録](http://iwiwi.hatenadiary.jp/entry/2016/12/31/162059)
     * 画像のData augumentationの手法のlsit

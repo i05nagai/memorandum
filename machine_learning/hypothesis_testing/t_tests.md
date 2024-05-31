@@ -4,9 +4,9 @@ title: t tests
 
 ## t-tests
 * the population is normally distributed
-* the sample size is large enogh (e.g. $n \le 15$),
+* the sample size is large enogh (e.g. $n \ge 15$),
 * do not use this test if there are outlier or the population is very skewed
-    * skewness can be ignored if $n \le 40$
+    * skewness can be ignored if $n \ge 40$
 * the population standard deviation $\sigma$ is unkown
 
 ## Note
@@ -141,7 +141,7 @@ $$
 $$
 
 * (3) Compute the $p$ value
-    * $T$ t distribution with $n - 1$ degree of freedom
+    * $T$ follows t distribution with $n - 1$ degree of freedom
     * (a) $$
 p := P(T \le - |t| \cup T \ge |t|)$$,
     * (b) $p := P(T > t)$,
@@ -563,7 +563,7 @@ $$
 <div class="QED" style="text-align: right">$\Box$</div>
 
 ## paired samples t-test for the population mean of paired samples
-正規分布に従う確率変数差の平均値の検定。
+A test for the difference of two random variables with normal distribution whose variance is equal.
 
 * True distribution: $X \sim \mathrm{N}(\mu_{X}, \sigma)$
 * True distribution: $Y \sim \mathrm{N}(\mu_{Y}, \sigma)$
@@ -685,7 +685,7 @@ Test for means of two random variables with normal distribution whose variances 
 * $m$ is the sample size of $Y$
 * Two sample means that the sample size can be different
 * $\sigma$ are unkown but euqal to the other
-    * weired situation
+    * This assumption is not realistic.
 
 In practical, $D = 0$.
 
@@ -942,7 +942,7 @@ $$
 $$
 
 ### proof.
-まず、 前定理より
+By the lemma 7, we have
 
 $$
 \begin{eqnarray}
@@ -999,12 +999,15 @@ $$
     \\
     & \sim &
         \chi^{2}(N + M - 2)
+    .
     \nonumber
 \end{eqnarray}
 $$
 
-となる。
-$Z$は前定理より、$U$は$\chi^{2}$分布に従う確率変数の和はまた、$\chi^{2}$分布に従うことによる。
+$U_{i}$ follows $\chi^{2}$ distribution.
+Hence the sum of the$\chi^{2}$ distributions also follows $\chi^{2}$ distribution.
+
+$T$ can be represented with $U$ and $Z$.
 
 $$
 \begin{eqnarray}
@@ -1104,8 +1107,9 @@ $$
 
 
 ## Two sample t-test for population means (unequal variances)
-分散が等しくない場合の正規分布に従う2つの確率変数の平均値の検定。
-検定において、分布を近似しているので、この近似の意味で検定が成り立つことに注意する。
+A test for two random variables with Normal distirbution whose variance is unequal.
+This test uses the approximated distirbution for test statistics.
+Null-hypothesis can be rejected in terms of the approximated distribution.
 
 * True distribution: $X \sim \mathrm{N}(\mu_{X}, \sigma_{X}^{2})$
 * True distribution: $Y \sim \mathrm{N}(\mu_{Y}, \sigma_{Y}^{2})$
@@ -1349,7 +1353,7 @@ $$
     \chi_{\hat{\beta}}^{2},
 $$
 
-ここで、
+where
 
 $$
 \begin{equation}
@@ -1382,6 +1386,7 @@ $$
             M(M-1)
         }
     }
+    .
 \end{equation}
 $$
 
@@ -1426,7 +1431,7 @@ $$
     t(v)
 $$
 
-ここで、
+where
 
 $$
     v
@@ -1458,12 +1463,11 @@ $$
             M^{2}(M - 1)
         }
     }
+    .
 $$
 
-である。
-
 #### proof.
-まず、
+First, let
 
 $$
     Z
@@ -1487,10 +1491,11 @@ $$
             }
         }
     }
+    .
 $$
 
-とおくと、$Z \sim \mathrm{N}(0, 1)$となる。
-また、前定理より、
+$Z \sim \mathrm{N}(0, 1)$.
+By the previous theorem,
 
 $$
     V
@@ -1523,8 +1528,8 @@ $$
     }
 $$
 
-とすると、$$V \overset{\mathrm{approx}}{\sim} \chi_{\hat{\beta}}^{2}$$である。
-以上をふまえ、
+follows $$V \overset{\mathrm{approx}}{\sim} \chi_{\hat{\beta}}^{2}$$.
+Thus,
 
 $$
 \begin{eqnarray}
@@ -1650,6 +1655,7 @@ $$
                 }
             }
         }
+    .
 \end{eqnarray}
 $$
 

@@ -8,7 +8,7 @@ title: Chinese Remainder Theorem
 - $n_{1}, \ldots, n_{k}$,
 - $n_{i}$ are coprime
 
-If $a | n_{i}$ for all $i$, $ a | (n_{1} \cdots n_{k})$.
+If $a \| n_{i}$ for all $i$, $ a \| (n_{1} \cdots n_{k})$.
 
 #### proof
 $a = n_{1} m_{1}$ for some $m_{1}$.
@@ -47,13 +47,13 @@ $$
 $$
 
 #### proof
-Uniqueness.
+(Uniqueness)
 
 Let us assume that there are two solutions $x_{1}$ and $x_{2}$.
 For all $i$, there exists $m_{i}$ such that $x_{1} - x_{2} = n_{i} m_{i}$.
 
 
-Existence.
+(Existence)
 
 Since $n_{1}$ and $n_{2}$ are coprime, there exists two integers $m_{1}$ and $m_{2}$ such that
 
@@ -64,15 +64,16 @@ $$
 Let
 
 $$
-    x
+\begin{eqnarray}
+    a_{1, 2}
     :=
     a_{2} m_{1} n_{1}
     +
     a_{1} m_{2} n_{2}
+    \label{eq_01_existence_definition}
     .
+\end{eqnarray}
 $$
-
-Indeed,
 
 $$
 \begin{eqnarray}
@@ -105,6 +106,9 @@ $$
 $$
 
 $n_{1} n_{2}$ is pairwise coprime with $n_{3}, \ldots, n_{k}$.
+Hence if we can proove the state with $k=2$, the statement holds by induction.
+However, this has been shown by $$\eqref{eq_01_existence_definition}$$.
+
 
 <div class="QED" style="text-align: right">$\Box$</div>
 

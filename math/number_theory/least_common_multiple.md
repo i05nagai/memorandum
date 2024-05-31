@@ -1,8 +1,8 @@
 ---
-title: Lesat Common Multiple
+title: Least Common Multiple
 ---
 
-## Lesat Common Multiple
+## Least Common Multiple
 
 #### Definition Common Multiple
 - $a_{1}, \ldots, a_{n} \in \mathbb{Z}$

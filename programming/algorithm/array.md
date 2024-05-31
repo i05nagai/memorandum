@@ -98,5 +98,39 @@ for (int i = 0; i < (int)(n / 2); i++) {
 }
 ```
 
+rorate anticlockwise by 90 degree
+
+```cpp
+vector<vector<int>> m2()
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        m2[(n - 1) - j][i] = m[i][j];
+    }
+}
+m = m2;
+```
+
+rorate clockwise by 90 degree
+
+```cpp
+vector<vector<int>> m2()
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        m2[j][(n - 1) - i] = m[i][j];
+    }
+}
+m = m2;
+```
+
+rorate clockwise by 90 degree in place
+
+```cpp
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+        m2[(n - 1) - j][i] = m[i][j];
+    }
+}
+```
+
 ## Reference
 * [Array data structure - Wikipedia](https://en.wikipedia.org/wiki/Array_data_structure)
