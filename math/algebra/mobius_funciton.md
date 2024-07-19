@@ -128,9 +128,9 @@ $$
         \sum_{d|n}
             \left(
                 \sum_{d^{\prime} | \frac{n}{d}}
-                    \mu(d)
+                    F(d^{\prime})
             \right)
-            F(d^{\prime})
+            \mu(d)
     \nonumber
 \end{eqnarray}
 $$
@@ -152,30 +152,10 @@ $$
             \mid
             d | \frac{n}{d^{\prime}},
             \
-            d | n
-        \}
-    \nonumber
-    \\
-    & = &
-        \{
-            (d^{\prime}, d)
-            \mid
-            d | \frac{n}{d^{\prime}},
-            \
-            d | n
-        \}
-    \nonumber
-    \\
-    & = &
-        \{
-            (d^{\prime}, d)
-            \mid
-            d | \frac{n}{d^{\prime}},
-            \
             d^{\prime} | n
         \}
         \quad
-        (\because d | \frac{n}{d^{\prime}}, d | n \Leftrightarrow d | \frac{n}{d^{\prime}}, d^{\prime} | n ),
+        (\because d^{\prime} | \frac{n}{d}, d | n \Leftrightarrow d | \frac{n}{d^{\prime}}, d^{\prime} | n ),
     \nonumber
 \end{eqnarray}
 $$
@@ -185,9 +165,18 @@ $$
     \sum_{d|n}
         \left(
             \sum_{d^{\prime} | \frac{n}{d}}
-                \mu(d)
+                F(d^{\prime})
         \right)
-        F(d^{\prime})
+        \mu(d)
+    & = &
+    \sum_{d^{\prime}|n}
+        \left(
+            \sum_{d | \frac{n}{d^{\prime}}}
+                F(d^{\prime})
+        \right)
+        \mu(d)
+    \nonumber
+    \\
     & = &
         \sum_{d^{\prime}|n}
             \left(
