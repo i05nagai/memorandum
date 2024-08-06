@@ -1,8 +1,8 @@
 ---
-title: algorithm
+title: algorithms
 ---
 
-## algorithm
+## algorithms
 
 
 ## Reference
