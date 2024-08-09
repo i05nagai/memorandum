@@ -17,3 +17,4 @@ https://doc.akka.io/docs/akka/current/typed/guide/tutorial_1.html
 
 ## Reference
 - https://doc.akka.io/docs/akka/current/typed/guide/introduction.html
+- https://www.manning.com/books/akka-in-action
