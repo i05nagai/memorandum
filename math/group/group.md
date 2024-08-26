@@ -5,6 +5,18 @@ title: Group
 ## Group
 
 
+#### Proposition
+(1)
+
+$$
+    (aga^{-1})^{-1} = ag^{-1}a^{-1}
+    .
+$$
+
+#### proof
+
+<div class="QED" style="text-align: right">$\Box$</div>
+
 #### Definition
 - $G$,
     - group
@@ -117,5 +129,41 @@ $[G, G]$ is called the commutator group of $G$.
 <div class="end-of-statement" style="text-align: right">■</div>
 
 
+#### Propositon
+- $G$,
+    - group
+- $g, h \in G$,
+- $a \in G$,
+
+(1) $a[g, h]a^{-1} = [aga^{-1}, aha^{-1}]$
+
+(2) $[G, G]$ is the smallest normal subgroup
+
+
+#### proof
+(1)
+
+$$
+\begin{eqnarray}
+    [aga^{-1}, aha^{-1}]
+    & = &
+        (aga^{-1})^{-1}(aha^{-1})^{-1}aga^{-1}aha^{-1}
+    \nonumber
+    \\
+    & = &
+        ag^{-1}a^{-1}ah^{-1}a^{-1} aga^{-1}aha^{-1}
+    \nonumber
+    \\
+    & = &
+        ag^{-1}h^{-1}gha^{-1}
+    \nonumber
+    \\
+    & = &
+        a[g, h]a^{-1}
+    \nonumber
+\end{eqnarray}
+$$
+
+<div class="QED" style="text-align: right">$\Box$</div>
 
 ## Reference
