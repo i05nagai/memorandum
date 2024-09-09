@@ -546,5 +546,30 @@ $$
 \end{CD}
 $$
 
+
+#### Definition
+- $C, D$
+    - category
+- $S: D \rightarrow C$,
+    - functor
+- $T: D \rightarrow C$,
+    - functor
+- $\phi: S \Rightarrow T$,
+    - natural transformation
+
+$\phi$ is said to be natural isomophic if
+
+there is a natural transformation $\phi^{\prime}: T \rightarrow S$ where
+
+$$
+    \phi^{\prime} \circ \phi = 1_{S},
+    \quad
+    \phi \circ \phi^{\prime} = 1_{T}.
+$$
+
+Here $1_{S}$ is an identity arrow in Functor category.
+
+<div class="end-of-statement" style="text-align: right">■</div>
+
 ## Reference
 - Book: An Introduction to the Language of Category Theory

@@ -22,6 +22,10 @@ kafka
     * is the set of "in-sync" replicas. This is the subset of the replicas list that is currently alive and caught-up to the leader.
 
 
+## Brokers
+- https://ruan.dev/blog/2023/05/17/running-a-multi-broker-kafka-cluster-on-docker
+- https://www.upsolver.com/blog/apache-kafka-architecture-what-you-need-to-know
+
 ## topic replication
 https://community.cloudera.com/t5/Community-Articles/Kafka-0-9-Configuration-Best-Practices/ta-p/246962#:~:text=The%20replication%20factor%20for%20the,request%20for%20the%20offsets%20topic.
 

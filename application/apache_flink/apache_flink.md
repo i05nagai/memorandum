@@ -5,6 +5,10 @@ title: Apache Flink
 ## Apache Flink
 
 
+## Getting Started
+https://nightlies.apache.org/flink/flink-docs-release-1.19/docs/dev/configuration/overview/
+
+
 ## Concetps
 - DataFrame API
     - how to implement a simple DataStream application and how to extend it to be stateful and use timers
