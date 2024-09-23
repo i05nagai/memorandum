@@ -87,6 +87,7 @@ const (
         * [Package names \- The Go Blog](https://blog.golang.org/package-names)
 
 ## Method
+* In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both
 * recieverを定義できるのは`type`で定義した型だけ
 * 同じpackage内で宣言されている必要がある
 * recieverがpointer typeの場合はrecieverの値を買い換えることができる
@@ -178,6 +179,12 @@ Type switch
 
 `src/` is not needed.
 
+
+## Module
+
+```
+go mod init package
+```
 
 ## Reference
 * [Documentation - The Go Programming Language](https://golang.org/doc/)
