@@ -4,6 +4,13 @@ title: Go
 
 ## Go
 
+
+- A goroutine is a lightweight thread managed by the Go runtime.
+    - Goroutines run in the same address space, so access to shared memory must be synchronized.
+    - The `sync` package provides useful primitives, although you won't need them much in Go as there are other primitives.
+- Channels are a typed conduit through which you can send and receive values with the channel operator
+    - Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
+
 ## Install
 For ubuntu
 * [Ubuntu · golang/go Wiki](https://github.com/golang/go/wiki/Ubuntu)
@@ -87,6 +94,7 @@ const (
         * [Package names \- The Go Blog](https://blog.golang.org/package-names)
 
 ## Method
+* In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both
 * recieverを定義できるのは`type`で定義した型だけ
 * 同じpackage内で宣言されている必要がある
 * recieverがpointer typeの場合はrecieverの値を買い換えることができる
@@ -178,6 +186,12 @@ Type switch
 
 `src/` is not needed.
 
+
+## Module
+
+```
+go mod init package
+```
 
 ## Reference
 * [Documentation - The Go Programming Language](https://golang.org/doc/)
