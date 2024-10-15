@@ -4,6 +4,13 @@ title: Go
 
 ## Go
 
+
+- A goroutine is a lightweight thread managed by the Go runtime.
+    - Goroutines run in the same address space, so access to shared memory must be synchronized.
+    - The `sync` package provides useful primitives, although you won't need them much in Go as there are other primitives.
+- Channels are a typed conduit through which you can send and receive values with the channel operator
+    - Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a range loop.
+
 ## Install
 For ubuntu
 * [Ubuntu · golang/go Wiki](https://github.com/golang/go/wiki/Ubuntu)
