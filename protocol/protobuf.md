@@ -8,6 +8,10 @@ title: protobuf
 - [Download Protocol Buffers  \|  Google Developers](https://developers.google.com/protocol-buffers/docs/downloads.html)
 - [Install protobuf 3 on Ubuntu](https://gist.github.com/sofyanhadia/37787e5ed098c97919b8c593f0ec44d8)
 
+```
+protoc
+```
+
 Parse PROTO_FILES and generate output based on the options given:
 
 ```
@@ -121,6 +125,8 @@ message SearchRequest {
 ```
 
 
+## protolock
+- https://github.com/nilslice/protolock
 
 
 ## Reference
