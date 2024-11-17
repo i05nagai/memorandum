@@ -218,5 +218,16 @@ DASHBOARD_SCHEMA = {
 - [Request JSON schema](https://docs.datadoghq.com/dashboards/graphing_json/request_json/)
 
 
+## Frontend
+- https://docs.datadoghq.com/logs/log_collection/javascript/
+
+- Use the SDK as a logger. Everything is forwarded to Datadog as JSON documents.
+- Add context and extra custom attributes to each log sent.
+- Wrap and forward every frontend error automatically.
+- Forward frontend errors.
+- Record real client IP addresses and user agents.
+Optimized network usage with automatic bulk posts.
+
+
 ## Reference
 * [How to monitor Google Kubernetes Engine with Datadog](https://www.datadoghq.com/blog/monitor-google-kubernetes-engine/)
