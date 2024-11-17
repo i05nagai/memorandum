@@ -21,6 +21,10 @@ kafka
 * isr
     * is the set of "in-sync" replicas. This is the subset of the replicas list that is currently alive and caught-up to the leader.
 
+## Topic
+- name convention
+    - https://cnr.sh/essays/how-paint-bike-shed-kafka-topic-naming-conventions
+
 
 ## Brokers
 - https://ruan.dev/blog/2023/05/17/running-a-multi-broker-kafka-cluster-on-docker
