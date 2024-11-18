@@ -47,5 +47,10 @@ There are two notations for schema.
 }
 ```
 
+## Schema resolution
+- https://avro.apache.org/docs/++version++/specification/#schema-resolution
+
+
+
 ## Reference
 - Apache Avro™ 1.11.0 Specification https://avro.apache.org/docs/current/spec.html
