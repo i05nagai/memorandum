@@ -130,6 +130,7 @@ journalctl -u updatedb
 journalctl -u 'up*'
 ```
 
+
 ## Configuration
 `/etc/systemd/journald.conf`
 
@@ -138,3 +139,4 @@ journalctl -u 'up*'
 
 ## Reference
 * [RHEL7/CentOS7のjournaldについてのもろもろ - めもめも](http://enakai00.hatenablog.com/entry/20141130/1417310904)
+- https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
