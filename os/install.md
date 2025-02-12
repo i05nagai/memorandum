@@ -3,6 +3,7 @@ title: install
 ---
 
 ## install
+The install command is commonly used in Makefiles or custom scripts to place binaries, libraries, or configuration files in the appropriate system directories.
 
 ```
 install [OPTION]... SOURCE DEST
@@ -23,6 +24,10 @@ install [OPTION]... -d DIRECTORY
 
 ```
 install -d directory
+```
+
+```
+install --verbose --directory --owner postgres --group postgres --mode 1777 /var/lib/postgresql
 ```
 
 ## Reference
