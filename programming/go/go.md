@@ -132,6 +132,18 @@ Type switch
 	}
 ```
 
+```
+type MyStruct struct {
+
+}
+
+// sum of interface
+type ErrorWithErrorMessage interface {
+	error
+	errorMessager
+}
+```
+
 ## Tips
 
 ### Project structure Standard 
@@ -177,6 +189,15 @@ Type switch
 
 
 `src/` is not needed.
+
+
+## Conventions
+https://go.dev/doc/effective_go#names
+
+- pacakge name
+- interface name
+    - one-method interfaces are named by the method name plus an -er suffix or similar modification to construct an agent noun: Reader, Writer, Formatter, CloseNotifier etc.
+- Finally, the convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.
 
 
 ## Reference
