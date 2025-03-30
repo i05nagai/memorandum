@@ -24,6 +24,7 @@ kafka
 ## Topic
 - name convention
     - https://cnr.sh/essays/how-paint-bike-shed-kafka-topic-naming-conventions
+    - https://cnr.sh/posts/2017-08-29-how-paint-bike-shed-kafka-topic-naming-conventions/
 
 
 ## Brokers
