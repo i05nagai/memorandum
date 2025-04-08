@@ -14,6 +14,9 @@ https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balanci
     * Application Load Balancers support path-based routing and priority rules
 * ELB L4 LB
 
+## Healthcheck
+- https://containersonaws.com/pattern/ecs-advanced-container-health-check
+
 ## Configuration
 
 #### logConfiguration
