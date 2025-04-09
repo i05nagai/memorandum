@@ -16,4 +16,4 @@ Limitations
 
 
 ## Reference
-
+- https://medium.com/swlh/aurora-database-explained-ece9db93f6b8
