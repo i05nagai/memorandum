@@ -3,8 +3,8 @@ title: Identification
 ---
 
 ## Identification
-Here, we outline common concepts related to identification problems, including address standardization and preprocessing of the data.
-In this mathematical model, address standardization can be viewed as a special case of identification problems, and preprocessing is a technique to reduce the computational complexity of such problems.
+Here, we explain common concepts related to identification problems, including address standardization and preprocessing of the data from mathmatical point of view.
+In this mathematical model, address standardization can be viewed as a special case of identification problems, and preprocessing is simply a technique to reduce the computational complexity of such problems.
 
 #### Definition1 Identification problem
 - $X$,
@@ -25,13 +25,13 @@ $$
     .
 $$
 
-If there exists a pair $$(f, \sqcup_{i \in I}X_{i})$$ satisfying these conditions, we say that the identification problem is identifiable, and identifiable identification problem.
+If there exists a pair $$(f, \sqcup_{i \in I}X_{i})$$ satisfying these conditions, we say that the identification problem is identifiable or identifiable identification problem.
 Such a pair $$(f, \sqcup_{i \in I}X_{i})$$ is called an identifier.
 
 <div class="end-of-statement" style="text-align: right">■</div>
 
 #### Remark1
-If the $I = X$, there is a trivial identiifer
+If $I = X$, there is a trivial identiifer
 
 $$
     X_{i} = \{i\}
@@ -40,9 +40,12 @@ $$
     .
 $$
 
-Thus, we are primarily interested in $I \subset X$.
+Thus, we are primarily interested in the case of $I \subset X$.
 
 <div class="end-of-statement" style="text-align: right">■</div>
+
+For instance, $X$ is a set of texts representing a user, organiation, or address contaiminated by the user inputs.
+Then $I$ is a set of users, organizations, or addresses we want to identify.
 
 #### Proposition1
 - $X$,
