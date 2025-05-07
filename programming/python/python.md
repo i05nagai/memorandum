@@ -253,8 +253,16 @@ with context as var:
 ```
 
 
+
 ## Grammar
 - https://docs.python.org/3/reference/grammar.html
+
+## API
+
+- open('rt')
+    - read unicode text
+- open('rb')
+    - read binary data
 
 ## Reference
 * [6.2 Assert 文 (assert statement)](http://docs.python.jp/2.4/ref/assert.html)
