@@ -93,6 +93,19 @@ enum Episode {
 }
 ```
 
+# Query
+
+response
+
+```
+{
+    "data": {
+    },
+    "errors": {
+    }
+}
+```
+
 
 ## Reference
 - https://graphql.org/learn/
