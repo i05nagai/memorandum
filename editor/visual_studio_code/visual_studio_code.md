@@ -69,5 +69,42 @@ jsconfig
 }
 ```
 
+
+## .vscode directory
+
+#### settings.json
+- Contains workspace-specific settings.
+- Overrides user settings for only this workspace or folder.
+
+Example use cases:
+Turning on/off specific linters for just this project.
+Customizing editor formats or auto-save behavior for a specific codebase.
+
+#### launch.json
+Holds debug configurations for your application.
+Defines how to run or debug code for various environments (Node.js, Python, C#, etc.).
+
+Example use cases:
+
+Attaching a debugger to a running process.
+Setting breakpoints and environment variables.
+
+#### tasks.json
+Defines tasks that can be run from the VS Code Task Runner (e.g., build scripts, test runners).
+
+Example use cases:
+Running a build command (npm run build or make build) directly from the integrated terminal with a single click/shortcut.
+Automating code formatting, linting, or deployment scripts.
+
+#### extensions.json
+Specifies recommended or required extensions for your project.
+When someone opens the project, VS Code can suggest installing these extensions for a better development experience.
+
+#### Others
+
+You can add other JSON files that certain extensions or tools might require.
+For example, custom config files for third-party tools that integrate tightly with VS Code might be placed here.
+Less common, but sometimes you’ll see specialized config files that follow this pattern if an extension specifically looks for them in .vsc
+
 ## Reference
 
