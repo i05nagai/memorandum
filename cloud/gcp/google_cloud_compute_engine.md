@@ -54,4 +54,13 @@ Preemption process
 * Quotasは変更可能だが、 `Owner, Editor, and Quota Administrator`のRoleがついている必要がある。
     * permissionとしては、 `serviceusage.quotas.update`
 
+
+## Linux VM
+
+#### User management
+- https://cloud.google.com/compute/docs/instances/access-overview
+
+
+
+
 ## Reference
