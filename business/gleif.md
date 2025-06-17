@@ -4,6 +4,21 @@ title: gleif
 
 ## gleif
 
+## LEI
+https://en.wikipedia.org/wiki/Legal_Entity_Identifier
+https://cdn.standards.iteh.ai/samples/78829/91dbf00ce17b4b4293a06e5e1312c6a8/ISO-17442-1-2020.pdf
+https://cdn.standards.iteh.ai/samples/75998/2b77042cb3a346fda3b26dfd6bfd42ca/ISO-17442-2019.pdf
+
+- The Legal Entity Identifier (LEI) is a unique global identifier for legal entities participating in financial transactions
+
+- 4 digits
+     - LEI issuer
+     - Local Operating Units or LOUs
+- 14 digits
+    - eintity identifier
+    - LEI issuers assign the number
+- 2 digits
+    - verification ID
 
 ## Search
 https://search.gleif.org/#/record/549300Y7W34DK0WBPY51/record
