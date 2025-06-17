@@ -23,4 +23,7 @@ https://openid.net/specs/openid-connect-core-1_0.html
 - 5. The UserInfo Endpoint returns Claims about the End-User.
 
 
+## Well-known OpenID Provider Configuration
+https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest
+
 ## Reference
