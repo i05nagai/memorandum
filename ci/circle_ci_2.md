@@ -356,6 +356,9 @@ GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
 You need to remove the deploy key and add again on https://circleci.com/gh/<organization>/<project>/edit#checkout
 
 
+#### When circleci does not fetch the config.yaml
+https://support.circleci.com/hc/en-us/articles/360043002793-Troubleshooting-CircleCI-Access-After-Enabling-Github-SSO
+
 
 ## Reference
 * [2.0 Docs - CircleCI](https://circleci.com/docs/2.0/)
