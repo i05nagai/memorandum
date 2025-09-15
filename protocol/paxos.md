@@ -46,3 +46,4 @@ Interactive consistency is guaranteed if and only if $n \ge 3m + 1$.
 
 ## Reference
 - https://en.wikipedia.org/wiki/Paxos_(computer_science)
+-https://dev.mysql.com/blog-archive/good-leaders-are-game-changers-raft-paxos/
