@@ -29,5 +29,6 @@ https://www.infoq.com/articles/architectural-decision-record-purpose/
  
 
 ## Reference
--https://adr.github.io/
+- https://adr.github.io/
 - https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+- https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html
