@@ -106,6 +106,50 @@ response
 }
 ```
 
+## Pagination
+https://www.apollographql.com/blog/understanding-pagination-rest-graphql-and-relay
+https://medium.com/@chris.czurylo/implementing-pagination-in-graphql-and-go-using-gqlgen-2ea3786a71dc
+https://relay.dev/graphql/connections.htm
+
+
+```graphql
+query PaginatePRs(
+  $owner: String!
+  $name: String!
+  $pageSize: Int = 100
+  $cursor: String
+) {
+  repository(owner: $owner, name: $name) {
+    pullRequests(
+      first: $pageSize
+      after: $cursor
+      states: OPEN
+      orderBy: { field: UPDATED_AT, direction: DESC }
+    ) {
+      nodes {
+        number
+        title
+        createdAt
+        updatedAt
+        url
+        author { login }
+        merged
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+  rateLimit {
+    cost
+    remaining
+    resetAt
+  }
+}
+
+```
+
 
 ## Reference
 - https://graphql.org/learn/
