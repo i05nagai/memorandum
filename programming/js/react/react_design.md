@@ -15,5 +15,10 @@ The components themselves only have a render() method (they don’t need any oth
 #### Smart component container component
 the component handles logic and state management.
 
-## Reference
 
+## Bulletproof reat
+https://github.com/alan2207/bulletproof-react
+
+
+## Reference
+- https://refine.dev/blog/react-design-patterns/#introduction
