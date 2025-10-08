@@ -26,4 +26,14 @@ https://openid.net/specs/openid-connect-core-1_0.html
 ## Well-known OpenID Provider Configuration
 https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest
 
+
+
+
+## ID Token
+https://openid.net/specs/openid-connect-core-1_0.html#IDToken
+
+
+
+
+
 ## Reference
