@@ -269,5 +269,77 @@ https://docs.renovatebot.com/configuration-options/
 --cache-private-packages [boolean]                           Cache private packages in the datasource cache. This is useful for self-hosted setups
 
 
+
+## Update sha from github release attachments
+https://github.com/renovatebot/renovate/blob/main/lib/modules/datasource/github-release-attachments/index.ts
+https://docs.renovatebot.com/configuration-options/#usebasebranchconfig
+https://github.com/renovatebot/renovate/pull/10947/files
+
+```json
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Dockerfile",
+      "fileMatch": ["(^|/)Dockerfile$"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>[a-zA-Z0-9-._]+)\\s+depName=(?<depName>[^\\s]+)\\s+(ARG|ENV)\\s+\\w+_VERSION=?(?<currentValue>v[0-9]+\\.[0-9]+\\.[0-9]+)\\s+(ARG|ENV)\\s+\\w+_SHA256=(?<currentDigest>[a-f0-9]{64})\\s",
+      ]
+    }
+  ]
+```
+
+```
+# renovate: datasource=github-release-attachments depName=<org/repo>
+ARG SOME_VERSION=v2.53.9
+ARG SOME_SHA256=697d8e69bda13f30bb8d9f76ee5eeb67004cba93022148a20e7ffff8f7edee29
+```
+
+Note that github-release fetches digest from git-tag.
+
+## regex
+Adding below format is completely convetional format.
+
+```
+# renovate: datasource=github-release-attachments depName=aquaproj/aqua
+```
+
+## How to test
+https://github.com/renovatebot/renovate/issues/2496
+https://github.com/renovatebot/renovate/discussions/16108
+
+Assume that the default branch is main.
+
+(1) Create a branch, say feature/1
+
+(2) Change configuration
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":disableRateLimiting",
+    ":pinVersions",
+    "schedule:weekdays",
+  ],
+  "enabledManagers": [
+    "dockerfile",
+    "github-actions",
+    "gomod",
+    "regex",
+    "terraform"
+  ],
+  "baseBranchPatterns": ["feature/1", "main"],
+  "customManagers": []
+}
+```
+
+(3) Push a branch and run 
+
+```
+RENOVATE_CONFIG_FILE=renovate.json LOG_LEVEL=debug npx renovate --use-base-branch-config "merge" --dry-run --token $GITHUB_TOKEN <repo-name>
+```
+
+
 ## Reference
 
