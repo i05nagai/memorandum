@@ -224,6 +224,14 @@ docker-composeでhostの`/var/run/docker.sock`を`docker:dind`imageにmountす�
 RUN addgroup -g 2999 docker
 ```
 
+## Specs 
+https://docs.docker.com/reference/compose-file/services/
+
+- cap_add
+    - https://man7.org/linux/man-pages/man7/capabilities.7.html
+- security_opt
+- ports
+
 ## Reference
 * [Docker Compose — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/compose/toc.html)
 * [docker-composeを使うと複数コンテナの管理が便利に - Qiita](http://qiita.com/y_hokkey/items/d51e69c6ff4015e85fce)
