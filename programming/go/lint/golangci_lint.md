@@ -4,61 +4,106 @@ title: Golang CI Lint
 
 ## Golang CI Lint
 
+## Configurations
+
+
+
+- exhaustive
+    -  checks exhaustiveness of enum switch statements in Go source code.
+    - https://github.com/nishanths/exhaustive
+- gochecksumtype
+    - A simple utility for running exhaustiveness checks on type switch statements. Exhaustiveness checks are only run on interfaces that are declared to be "sum types."
+    - https://github.com/alecthomas/go-check-sumtype
+- gosec 
+    - inspects source code for security problems
+- errorlint
+- exhaustive
+- exptostd
+- forbidigo # forbids identifiers
+- funcorder # checks the order of functions, methods, and constructors
+- gochecksumtype # checks exhaustiveness on Go "sum types"
+- intrange # finds places where for loops could make use of an integer range
+- makezero # finds slice declarations with non-zero initial length
+- mnd # detects magic numbers
+- musttug
+- https://github.com/go-simpler/musttag?tab=readme-ov-file
+- nilerr # finds the code that returns nil even if it checks that the error is not nil
+- noctx # finds sending http request without context.Context
+- perfsprint # checks that fmt.Sprintf can be replaced with a faster alternative
+  - Golang linter for performance, aiming at usages of fmt.Sprintf which have faster alternatives.
+- predeclared # finds code that shadows one of Go's predeclared identifiers
+- protogetter # reports direct reads from proto message fields when getters should be used
+- recvcheck # checks for receiver type consistency
+  - Don’t mix receiver types. Choose either pointers or struct types for all available method
+- revive # fast, configurable, extensible, flexible, and beautiful linter for Go, drop-in replacement of golint
+- sloglint
+  - https://github.com/go-simpler/sloglint
+- spancheck # checks for mistakes with OpenTelemetry/Census spans
+- testifylint # checks usage of github.com/stretchr/testify
+- tparallel # detects inappropriate usage of t.Parallel() method in your Go test codes
+- unconvert # removes unnecessary type conversions
+- unparam # reports unused function parameters
+- unused # checks for unused constants, variables, functions and types
+- usestdlibvars # detects the possibility to use variables/constants from the Go standard library
+- wastedassign # finds wasted assignment statements
+- zerologlint # detects the wrong usage of zerolog that a user forgets to dispatch zerolog.Event
+- wrapcheck # checks that errors returned from external packages are wrapped
+
 
 ## CLI
 
 Cache control and information
 
 ```
-cache
+golangci-lint cache
 ```
 
 Generate the autocompletion script for the specified shell
 
 ```
-completion
+golangci-lint completion
 ```
 
 Config file information
 
 ```
-config
+golangci-lint config
 ```
 
 Build a version of golangci-lint with custom linters
 
 ```
-custom
+golangci-lint custom
 ```
 
 Format Go source files
 
 ```
-fmt
+golangci-lint fmt
 ```
 
 List current formatters configuration
 
 ```
-formatters
+golangci-lint formatters
 ```
 
 List current linters configuration
 
 ```
-linters
+golangci-lint linters
 ```
 
 Migrate configuration file from v1 to v2
 
 ```
-migrate
+golangci-lint migrate
 ```
 
 Run the linters
 
 ```
-run
+golangci-lint run
 ```
 
 ## Configuration
@@ -193,6 +238,25 @@ run
 https://golangci-lint.run/usage/formatters/
 
 
+## False Positives
+https://golangci-lint.run/docs/linters/false-positives/#preset-std-error-handling
+
+
+
+
+
+```yaml
+version: "2"
+linters:
+  enable:
+  - ...
+  exclusions:
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+```
 
 
 ## Reference
