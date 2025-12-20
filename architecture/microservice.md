@@ -13,6 +13,20 @@ If the frontend have to make many API calls to render the web page, the BFF laye
 - https://martinfowler.com/articles/micro-frontends.html
 - https://medium.com/simpplr-technology/microservices-workflows-orchestration-coordination-pattern-9fe246f8f10b
 
+## CQRS
+https://medium.com/@joudwawad/microservices-pattern-query-444d114e9a30
+
+## Modular monolith
+https://www.milanjovanovic.tech/blog/modular-monolith-communication-patterns
+https://samnewman.io/blog/2015/04/07/microservices-for-greenfield/
+https://martinfowler.com/bliki/MonolithFirst.html
+
+- Syncronous communication
+    - function call
+- Asynchronous communication
+    - message broker
+
+
 ## Reference
 * [Microservices Guide](https://martinfowler.com/microservices/)
 * [Microservices](https://martinfowler.com/articles/microservices.html)
