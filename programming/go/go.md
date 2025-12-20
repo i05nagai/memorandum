@@ -519,6 +519,11 @@ Vendor directories do not affect the placement of new repositories being checked
 
 ## Environment variables
 https://go.dev/ref/mod#private-modules
+https://go.dev/ref/mod#environment-variables
+
+```
+go help environment
+```
 
 - GOPROXY
     - list of module proxy URLs. The go command will attempt to download modules from each server in sequence. The keyword direct instructs the go command to download modules from version control repositories where they’re developed instead of using a proxy.
@@ -530,6 +535,18 @@ https://go.dev/ref/mod#private-modules
     — list of glob patterns of module path prefixes that should not be checked using the public checksum database, sum.golang.org.
 - GOINSECURE
     - list of glob patterns of module path prefixes that may be retrieved over HTTP and other insecure protocols.
+- GOENV
+    - The go command and the tools it invokes consult environment variables for configuration.
+    - If an environment variable is unset or empty, the go command uses a sensible default setting.
+    - To see the effective setting of the variable <NAME>, run `go env <NAME>`.
+    - To change the default setting, run `go env -w <NAME>=<VALUE>`.
+    - Defaults changed using `go env -w` are recorded in a Go environment configuration file stored in the per-user configuration directory, as reported by os.UserConfigDir.
+    - The location of the configuration file can be changed by setting the environment variable `GOENV`, and `go env GOENV` prints the effective location, but `go env -w` cannot change the default location.
+
+
+## Generics
+- https://go.dev/blog/intro-generics
+
 
 
 
