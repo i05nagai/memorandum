@@ -4,7 +4,7 @@ title: vmstat
 
 ## vmstat
 Report virtual memory statistics
-vmstat は libkstat ライブラリを使用している。
+vmstat useslibkstat library.
 `/usr/src/cmd/stat/vmstat/vmstat.c`
 
 For alpine linux,
@@ -129,7 +129,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 * sy (faults)
     * number of system call
 * cs
-    * the number of CPU context switches
+    * the number of CPU context switches per seconds
     * 多い場合はreduce threads/
 * CPU
     * us
@@ -169,3 +169,4 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 * [vmstat コマンドの読み方 | Oracle やっぱり Sun がスキ！ Blog](https://blogs.oracle.com/yappri/vmstat)
 * [Linux Performance Measurements using vmstat - Thomas-Krenn-Wiki](https://www.thomas-krenn.com/en/wiki/Linux_Performance_Measurements_using_vmstat)
 * [Linuxでvmstatの結果に時刻表示（タイムスタンプ）を付けて出力 | トミリュウ・コム](http://www.tomiryu.com/others/vmstat_timestamp/)
+- https://access.redhat.com/solutions/1160343#:~:text=cs%3A%20The%20number%20of%20context,)%20id%3A%20Time%20spent%20idle.

@@ -198,5 +198,26 @@ https://cloud.google.com/vpc/docs/alias-ip
 
 
 
+## VPC access from serverless
+- https://cloud.google.com/vpc/docs/serverless-vpc-access
+
+
+## Private Service Connect vs Private Google Access vs Private Service Access
+https://www.googlecloudcommunity.com/gc/Infrastructure-Compute-Storage/private-service-access-vs-private-service-connect-vs-private/m-p/760591
+https://cloud.google.com/vpc/docs/private-access-options
+https://cloud.google.com/blog/products/networking/tips-for-troubleshooting-private-service-connect
+
+- PSC
+- PGA
+- PSA
+    - Google Cloud implements this connection as a VPC Network Peering connection between your VPC network and the service producer's VPC network
+
+
 
 ## Reference
+
+
+
+
+
+

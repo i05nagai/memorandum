@@ -131,3 +131,4 @@ message SearchRequest {
 
 ## Reference
 - [Language Guide \(proto3\)  \|  Protocol Buffers  \|  Google Developers](https://developers.google.com/protocol-buffers/docs/proto3)
+- https://yokota.blog/2021/08/26/understanding-protobuf-compatibility/

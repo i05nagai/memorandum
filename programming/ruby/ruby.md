@@ -255,3 +255,18 @@ end
     - `1 <=> 2` -> -1
     - `1 <=> 1` -> 0
     - `1 <=> 0` -> 1
+
+
+
+# Sytnax sugar
+- https://zverok.substack.com/p/the-end-of-useless-ruby-sugar-on
+- https://news.ycombinator.com/item?id=39098803
+
+
+
+
+
+
+
+
+# Reference

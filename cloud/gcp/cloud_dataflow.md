@@ -83,5 +83,16 @@ Pricing in lowa
 
 0.58683875 + 0.0216 = 0.60843875 USD
 
+## Netwwork
+- https://cloud.google.com/dataflow/docs/guides/routes-firewall
+
+
+## service options
+
+https://cloud.google.com/dataflow/docs/reference/service-options
+
+
+
 ## Reference
 * [Google Cloud Dataflow で Google BigQuery へストリーミング ETL するの巻 - おくみん公式ブログ](http://blog.okumin.com/entry/2017/08/20/201901)
+- https://cloud.google.com/dataflow/pricing?hl=en

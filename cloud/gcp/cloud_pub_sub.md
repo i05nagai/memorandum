@@ -38,4 +38,12 @@ Pull/Push
 * add the writer to your destination topic's permission list
 * give the writer the `Pub/Sub Publisher` role
 
+## Schema
+- https://cloud.google.com/pubsub/docs/schemas
+
+
+Schema management
+https://avro.apache.org/docs/++version++/specification/#schema-resolution
+
+
 ## Reference

@@ -5,6 +5,18 @@ title: rust
 ## rust
 
 
+## Install
+https://www.rust-lang.org/tools/install
+
+rustup is preferable over homebrew.
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## Language
+
+
 `op1 + op2 -> op1.add(op2)`
 
 - refrence

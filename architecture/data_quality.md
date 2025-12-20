@@ -9,9 +9,11 @@ title: Data Quality
 - changes in the semantics of attributes
 
 Completeness
-
 Consistency
 Accuracy
 
-## Reference
+## Freshness
 
+
+## Reference
+- https://www.metaplane.dev/blog/data-quality-metrics-for-data-warehouses

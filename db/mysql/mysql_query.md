@@ -168,4 +168,7 @@ LEFT JOIN items AS i ON i.item_id = o.item_id
 - when you left/right outer join, you need to specify the key of
 
 
+## Recursive query
+https://www.egnyte.com/blog/post/12780evaluating-mysql-recursive-cte-at-scale
+
 ## Reference

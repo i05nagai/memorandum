@@ -363,5 +363,14 @@ https://cloud.google.com/storage/docs/lifecycle
 * add the writer to your destination bucket's permission list
 * give the writer the `Storage Object Creator` role.
 
+## uniform bucket level
+- https://cloud.google.com/storage/docs/uniform-bucket-level-access
+
+
+## Public access prevention
+https://cloud.google.com/storage/docs/public-access-prevention
+
+
+
 ## Reference
 * [Google Cloud Storageで適当にファイルを公開する方法 - Qiita](http://qiita.com/sinmetal/items/81395ce5fdaeb6e69310)
