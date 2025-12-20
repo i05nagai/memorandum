@@ -57,12 +57,20 @@ func BenchmarkTemplateParallel(b *testing.B) {
 ```
 
 ## Example
+https://go.dev/blog/examples
 
 ```go
 func Example_suffix() { ... }
 func ExampleF_suffix() { ... }
 func ExampleT_suffix() { ... }
 func ExampleT_M_suffix() { ... }
+```
+
+```
+func ExampleString() {
+    fmt.Println(reverse.String("hello"))
+    // Output: golly
+}
 ```
 
 ## Fuzz
