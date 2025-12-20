@@ -3,6 +3,9 @@ title: architecture
 ---
 
 ## architecture
+https://www.infoq.com/articles/what-software-architecture/
+
+- Architecting is a skill; Architect is not a role
 
 ## Book
 - Patterns of Enterprise Application Architecture
