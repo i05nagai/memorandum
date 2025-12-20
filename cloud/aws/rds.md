@@ -22,6 +22,9 @@ snapshotからの復元ができる。
 
 
 
+## Burst
+- https://joelngwt.github.io/2021/08/27/understanding-aws-rds-burst-balance.html
+
 
 ## Reference
 * [Amazon RDS での MySQL - Amazon Relational Database Service](http://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_MySQL.html)
