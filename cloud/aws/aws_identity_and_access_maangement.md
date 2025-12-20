@@ -244,6 +244,35 @@ List of AWS service which works with resource based permissions
 - `arn:aws:iam::account-ID-without-hyphens:user/<path>/<username>`
 - Users as service accounts
 
+## Web identityt
+
+#### gcloud client
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "accounts.google.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "accounts.google.com:aud": "32555940559.app.googleusercontent.com"
+                },
+                "StringLike": {
+                    "accounts.google.com:email": "*@example.com"
+                }
+            }
+        }
+    ]
+}
+```
+
+```
+aws sts assume-role-with-web-identity --role-arn arn:aws:iam::<account-id>:role/<role-name> --role-session-name session-name --web-identity-token $(gcloud auth print-identity-token)
+```
 
 ## Tips
 
@@ -258,6 +287,7 @@ List of AWS service which works with resource based permissions
     - `aws:RequestTag/key-name` condition key to specify what tags can be added, changed, or removed from an IAM user or role
     - example, [Controlling Access to AWS Resources Using Resource Tags \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html#access_tags_control-requests)
 - Resource
+
 
 ## Reference
 * [What Is IAM? \- AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
