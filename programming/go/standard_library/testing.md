@@ -49,6 +49,10 @@ func TestFoo(t *testing.T) {
 }
 ```
 
+## Mocking
+https://github.com/googleapis/google-cloud-go/blob/main/internal/examples/mock/mock.go
+https://github.com/googleapis/google-cloud-go/blob/main/testing.md
+
 ## Reference
 * [testing - The Go Programming Language](https://golang.org/pkg/testing/)
 * [Go advanced testing tips & tricks – Povilas Versockas – Medium](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859)
