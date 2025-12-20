@@ -116,8 +116,83 @@ gh repo list
 - visibility
 - watchers
 
+
+
+## gh release
+
+Create a new release
+
+```
+gh release create
+```
+
+List releases in a repository
+
+```
+gh release list
+```
+
+Delete a release
+
+```
+gh release delete
+```
+
+Delete an asset from a release
+
+```
+gh release delete-asset
+```
+
+Download release assets
+
+- `-A, --archive format`
+    - Download the source code archive in the specified format (zip or tar.gz)
+- `--clobber`
+    - Overwrite existing files of the same name
+- `-D, --dir directory`
+    - The directory to download files into (default ".")
+- `-O, --output file`
+    - The file to write a single asset to (use "-" to write to standard output)
+- `-p, --pattern stringArray`
+    - Download only assets that match a glob pattern
+- `--skip-existing` 
+    - Skip downloading when files of the same name exist
+
+```
+gh release download
+```
+
+
+```
+gh release edit
+```
+
+Upload assets to a release
+
+```
+gh release upload
+```
+
+Verify the attestation for a release
+
+```
+verify
+```
+
+Verify that a given asset originated from a release
+
+```
+verify-asset
+```
+
+View information about a release
+
+```
+view
+```
+
 ## Reference
 
 
 
-IDsのdataが
