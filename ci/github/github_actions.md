@@ -29,4 +29,17 @@ https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted
 - A self-hosted runner is automatically removed from GitHub if it has not connected to GitHub Actions for more than 14 days.
 - An ephemeral self-hosted runner is automatically removed from GitHub if it has not connected to GitHub Actions for more than 1 day.
 
+## Runner images
+https://github.com/actions/runner-images/tree/main
+
+## multiline output
+https://github.com/github/docs/issues/21529
+
+
+## OIDC
+https://docs.github.com/en/actions/concepts/security/openid-connect
+
+The value can be used workload ideneity federation in GCP.
+
+
 ## Reference
