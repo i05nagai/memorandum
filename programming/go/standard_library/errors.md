@@ -5,6 +5,16 @@ title: errors
 ## errors
 
 
+## Tips
+- https://go.dev/blog/go1.13-errors
+- When adding additional context to an error, either with fmt.Errorf or by implementing a custom type, you need to decide whether the new error should wrap the original. There is no single answer to this question; it depends on the context in which the new error is created. Wrap an error to expose it to callers. Do not wrap an error when doing so would expose implementation details.
+
+## Wrapping errors
+
+```go
+err := fmt.Errorf("access denied: %w", ErrPermission)
+```
+
 ## erros.Unwrap
 
 ```go
