@@ -95,4 +95,11 @@ gcloud projects get-iam-policy
 
 ```
 
+
+## Workload identity from EKS
+https://jasonstitt.com/google-vertex-aws-federated-workload-identity
+https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-kubernetes#eks
+
+
+
 ## Reference
