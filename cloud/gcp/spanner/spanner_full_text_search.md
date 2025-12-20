@@ -23,6 +23,13 @@ https://cloud.google.com/spanner/docs/full-text-search/combine-tokenlists
 https://cloud.google.com/spanner/docs/full-text-search/mix-full-text-and-non-text-queries
 
 
+## Internal layout
+https://docs.cloud.google.com/spanner/docs/full-text-search/search-indexes
+
+- docid
+    - 
+
+
 
 
 ## Reference
