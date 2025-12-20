@@ -6,6 +6,14 @@ title: AWS Certificate Manager
 
 
 
+## Validation
+
+### email validation
+https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html
+
+### DNS validation
+https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html
+
 #### Certificate Transparency
 - [Certificate Transparency](https://www.certificate-transparency.org/)
 

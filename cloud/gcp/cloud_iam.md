@@ -44,4 +44,15 @@ gcloud projects get-iam-policy
 
 ```
 
+## Principal Identities
+- https://cloud.google.com/iam/docs/principal-identifiers
+
+- `principalSet://iam.googleapis.com/locations/global/workforcePools/POOL_ID/attribute.ATTRIBUTE_NAME/ATTRIBUTE_VALUE`
+    - `*` can be used
+
+## CEL
+
+- extract is not part of CEL
+    - https://cloud.google.com/iam/docs/conditions-attribute-reference#extract
+
 ## Reference

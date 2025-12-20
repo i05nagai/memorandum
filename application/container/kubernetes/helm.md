@@ -33,7 +33,6 @@ chmod 700 get_helm.sh
 
 
 ## Helm
-o
 
 ## Error
 

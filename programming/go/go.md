@@ -193,6 +193,10 @@ Type switch
 go mod init package
 ```
 
+## styleguide
+https://google.github.io/styleguide/go/decisions.html
+
+
 ## Reference
 * [Documentation - The Go Programming Language](https://golang.org/doc/)
 * [Effective Go - The Go Programming Language](https://golang.org/doc/effective_go.html)
