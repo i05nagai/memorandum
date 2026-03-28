@@ -149,6 +149,56 @@ ga('myTracker.require', 'displayfeatures', {
 ## Recommended events
 https://support.google.com/analytics/answer/9267735
 
+
+## Custom dimension in looker
+https://www.tribalism.com.au/blog-post/2023/12/ga4-custom-dimensions-in-looker-studio#start
+
+
+
+## Data discrepancy betwee GA4 and Looker
+https://www.reddit.com/r/GoogleAnalytics/comments/1nw0fsh/data_discrepancy_between_ga4_and_looker_what_am_i/
+
+- GA4 uses its own aggregation logic
+- 
+
+## Channel group
+https://support.google.com/analytics/answer/9756891?hl=en
+
+
+## UTM parameters
+https://en.wikipedia.org/wiki/UTM_parameters
+https://cerebro.us/ultimate-utm-guide/
+https://support.google.com/analytics/answer/10917952?hl=en
+https://gaconnector.com/blog/7-examples-of-using-utm-parameters-effectively/
+
+- Source
+    - Which social network, search engine, or specific source drove the traffic to your site?
+    - The source of the traffic you are receiving. Normally this is the domain or business name.
+    - utm_source
+        - google, facebook, nytimes, yelp, etc
+- Medium
+    - Which channel type (e.g., organic social, paid social, email) drove the traffic to your site?
+    - The type of traffic you are receiving.
+    - utm_medium
+        - i.e. cpc, organic, post, promoted, boosted, etc
+- Term
+    - Are there paid keywords or key phrases that warrant a UTM tag?
+    - The keyword or audience who clicked on your link
+    - utm_term
+        - i.e. keyword, las vegas locals, etc.
+- Content
+    - Are there different ads within a campaign? 
+    - The type of ad or creative being used
+        - utm_content
+            - i.e. video, image, negative emotion, humor, etc
+- Campaign name
+    - Every campaign should have a unique name, so you can keep track of traffic. This could be the name of a contest, sale, deal, influencer ID, or even a product name.  
+    - The name of the campaign or promotion you are running.
+    - utm_campaign
+        - i.e. thanksgiving sale, 2 for 1 deal, etc.
+
+
+
 ## Reference
 * [How a web session is defined in Analytics - Analytics Help](https://support.google.com/analytics/answer/2731565?hl=en)
 * [Briefmetrics - Email Reports for Google Analytics](https://briefmetrics.com/articles/remove-localhost-from-referrers)

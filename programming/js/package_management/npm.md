@@ -70,6 +70,34 @@ scriptsのコマンドに引数を渡すことはできない。
 ## npm plugin
 
 
+## npm exec
+Run a command from a local or remote npm package
+
+Equivalent for npx.
+
+```
+npm exec -- <pkg>[@<version>] [args...]
+npm exec --package=<pkg>[@<version>] -- <cmd> [args...]
+npm exec -c '<cmd> [args...]'
+npm exec --package=foo -c '<cmd> [args...]'
+```
+
+- `-p, --package <package>`
+    - : Specifies the package name(s) to install and run. This option can be supplied multiple times to include multiple packages in the execution environment.
+- `-c, --call <command>`
+    - : Executes the command string within the environment where the specified packages have been installed.
+- `--no-install`
+    - Prevents npx from automatically installing a package if it's not found locally. It will only run if the package is already in your PATH or local project binaries.
+- `--version, -v`
+    - Shows the current npx version. 
+- `-w,--workspace`
+- `-ws,--workspaces`
+    - Run the command in the context of all workspaces. If the command is not found in a workspace, it will be run in the root workspace.
+- `--include-workspace-root`
+    - When used with `-w` or `-ws`, also include the root workspace when running the command. By default, the root workspace is not included when running commands in workspaces.
+- `-s,--silient`
+    -  It changes the loglevel to silent,
+
 
 ## Reference
 * [npm package.json 日本語版 取扱説明書](http://liberty-technology.biz/PublicItems/npm/package.json.html)

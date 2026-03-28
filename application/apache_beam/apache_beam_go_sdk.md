@@ -193,6 +193,10 @@ This requires that the JAVA_HOME environment variable points to your JDK install
 On dataflow
 
 
+### Expansion service
+https://beam.apache.org/documentation/programming-guide/#create-x-lang-transforms
+
+
 
 ## Reference
 - https://docs.google.com/document/d/1yj0_hxq2J1iestjFUUrm_BVQLsFxQiiqtcFhgodzIgM/edit?tab=t.0#heading=h.mgr8mrx81tnc
