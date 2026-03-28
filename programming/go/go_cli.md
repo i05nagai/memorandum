@@ -5,6 +5,7 @@ title: go CLI
 ## go CLI
 
 ## build
+https://danp.net/posts/github-actions-go-cache/
 
 
 -C dir
@@ -182,6 +183,10 @@ go vet -vettool=$(which shadow)
 
 The build flags supported by go vet are those that control package resolution and execution, such as -C, -n, -x, -v, -tags, and -toolexec.
 For more about these flags, see 'go help build'.
+
+## go test
+https://bryce.is/writing/code/go-test-and-parallelism
+https://go.dev/doc/articles/race_detector
 
 
 ## go fmt
